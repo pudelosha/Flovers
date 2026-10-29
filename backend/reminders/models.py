@@ -132,6 +132,10 @@ class ReminderTask(models.Model):
     due_date = models.DateField()
     status = models.CharField(max_length=12, choices=STATUS_CHOICES, default="pending")
     completed_at = models.DateTimeField(null=True, blank=True)
+    completed_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name="completed_care_tasks", editable=False,
+    )
 
     note = models.TextField(null=True, blank=True)
     completed_event = models.JSONField(null=True, blank=True, editable=False)
@@ -208,7 +212,7 @@ class ReminderTask(models.Model):
         return anchor_date + relativedelta(months=interval_value)
 
     @transaction.atomic
-    def mark_complete_and_spawn_next(self, note=None, completed_date=None):
+    def mark_complete_and_spawn_next(self, note=None, completed_date=None, actor=None):
         """
         Complete this task and create the next pending one.
 
@@ -218,11 +222,25 @@ class ReminderTask(models.Model):
           the next due date is strictly after today.
         - Ensure at most ONE pending task exists per reminder.
         """
+        from sharing.permissions import locked_plant_access
+
+        actor = actor or self.user
+        plant_id = Reminder.objects.values_list("plant_id", flat=True).get(pk=self.reminder_id)
+        # Sharing changes, owner edits, completion and XP use the same user ->
+        # plant -> reminder -> task lock order. Recheck the relationship below:
+        # the reminder may have moved after the first unprotected lookup.
+        with locked_plant_access(actor, plant_id, require_completion=True) as plant:
+            return self._complete_with_access(plant, actor, note, completed_date)
+
+    def _complete_with_access(self, plant, actor, note, completed_date):
         # All recurrence transitions lock parent first, then the task. Never use
         # status or recurrence settings cached by an earlier HTTP request.
         reminder = Reminder.objects.select_for_update().get(pk=self.reminder_id)
         current = type(self).objects.select_for_update().get(pk=self.pk, reminder_id=reminder.pk)
         current.reminder = reminder
+        if reminder.plant_id != plant.pk or reminder.user_id != plant.user_id or current.user_id != plant.user_id:
+            from django.http import Http404
+            raise Http404("Task no longer belongs to this plant.")
         if current.status == "completed":
             self.__dict__.update(current.__dict__)
             return None
@@ -240,12 +258,13 @@ class ReminderTask(models.Model):
             current.note = note
 
         current.status = "completed"
+        current.completed_by = actor
         receipt_now = timezone.now()
         current.completed_at = self._completed_at_for_date(completed_date)
         current.completed_event = current.current_event()
-        current.save(update_fields=["status", "completed_at", "updated_at", "note", "completed_event"])
+        current.save(update_fields=["status", "completed_at", "completed_by", "updated_at", "note", "completed_event"])
         from profiles.progression import award_task_completion
-        award_task_completion(current, receipt_now)
+        award_task_completion(current, receipt_now, actor=actor)
         self.__dict__.update(current.__dict__)
 
         rem = reminder

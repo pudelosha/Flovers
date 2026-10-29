@@ -1,0 +1,19 @@
+{
+  "createPlant": {
+    "header": {
+      "title": "Tambah tanaman"
+    },
+    "fallbackStep": {
+      "title": "Langkah “{{step}}”",
+      "subtitle": "Langkah ini akan dilaksanakan selanjutnya."
+    },
+    "common": {
+      "previous": "Sebelumnya",
+      "next": "Berikutnya",
+      "create": "Buat",
+      "cancel": "Batal",
+      "done": "Selesai",
+      "notSpecified": "Tidak ditentukan"
+    }
+  }
+}

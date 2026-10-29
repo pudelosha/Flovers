@@ -1,0 +1,72 @@
+{
+  "docs_reminders": {
+    "title": "Pengingat",
+    "sections": [
+      {
+        "heading": "Tujuan dari layar ini",
+        "body": [
+          "Layar Pengingat adalah tempat Anda mengatur jadwal perawatan berulang untuk tanaman hias Anda.",
+          "Pengingat menjelaskan apa yang harus dilakukan (jenis tugas), seberapa sering tugas tersebut diulang (interval), dan tanaman hias mana yang termasuk dalam tugas tersebut. Berdasarkan hal tersebut, Flovers menghasilkan tugas secara otomatis seiring waktu."
+        ]
+      },
+      {
+        "heading": "Dua tampilan: Daftar pengingat dan Kalender",
+        "body": [
+          "Layar ini memiliki dua mode: daftar pengingat dan tampilan kalender.",
+          "Anda dapat beralih di antara keduanya dengan menggeser ke kiri/kanan atau dengan menggunakan opsi Tombol Tindakan Mengambang (FAB) yang mengubah tampilan.",
+          "Kedua tampilan memperlihatkan data yang sama, hanya disajikan secara berbeda tergantung pada apakah Anda menginginkan daftar cepat atau ikhtisar jadwal."
+        ]
+      },
+      {
+        "heading": "Tampilan daftar pengingat",
+        "body": [
+          "Dalam tampilan daftar, setiap ubin mewakili satu pengingat yang dibuat oleh pengguna.",
+          "Ubin menunjukkan jenis tugas (ikon dan nama), nama tanaman hias, lokasi (jika ditugaskan), seberapa sering tugas tersebut diulang, dan kapan tugas berikutnya harus diselesaikan.",
+          "Tampilan ini adalah cara tercepat untuk meninjau semua aturan berulang yang saat ini aktif di akun Anda."
+        ]
+      },
+      {
+        "heading": "Tindakan ubin pengingat (Edit / Jeda / Lanjutkan / Hapus)",
+        "body": [
+          "Anda dapat mengedit, menjeda, melanjutkan, atau menghapus setiap pengingat.",
+          "Edit memungkinkan Anda mengubah parameter pengingat seperti interval, jenis tugas, tanaman hias terkait, dan pengaturan pengingat lainnya (tergantung pada jenis pengingat).",
+          "Hapus menghapus pengingat secara permanen. Dalam praktiknya, hal ini juga berarti tugas tidak akan lagi dihasilkan dari pengingat tersebut di masa mendatang.",
+          "Jeda menonaktifkan sementara pengingat tanpa menghapusnya. Saat dijeda, tugas yang harus diselesaikan akan dihapus dari Beranda dan email harian atau pemberitahuan push tidak akan menyertakannya. Saat Anda melanjutkan pengingat, Flovers menjadwalkan tugas tertunda berikutnya sesuai dengan interval pengingat."
+        ]
+      },
+      {
+        "heading": "Tampilan kalender",
+        "body": [
+          "Dalam tampilan kalender, pengingat divisualisasikan sebagai item terjadwal pada hari kalender.",
+          "Untuk melihat detail tanggal tertentu, ketuk hari di kalender; item yang dijadwalkan untuk hari itu akan muncul di bawah kalender.",
+          "Kalender menggunakan penanda visual untuk menunjukkan jenis tugas mana yang muncul pada hari tertentu, membantu Anda melihat distribusi rutin secara sekilas."
+        ]
+      },
+      {
+        "heading": "Tindakan yang luar biasa",
+        "body": [
+          "Tombol Tindakan Mengambang (FAB) menyediakan tindakan cepat untuk mengelola pengingat dan navigasi antara dua tampilan.",
+          "Tindakan yang tersedia meliputi: Tambahkan pengingat, ubah tampilan (Daftar/Kalender), Urutkan, dan Filter.",
+          "Penyortiran dapat dilakukan berdasarkan tanggal jatuh tempo, nama tanaman hias, atau lokasi.",
+          "Pemfilteran dapat diterapkan berdasarkan nama tanaman hias, lokasi, jenis tugas, dan rentang tanggal jatuh tempo."
+        ]
+      },
+      {
+        "heading": "Bagaimana pengingat menghasilkan tugas (logika umum)",
+        "body": [
+          "Pengingat adalah aturan yang berulang (misalnya: Siram setiap 7 hari sekali).",
+          "Flovers menghasilkan tugas dari pengingat dan menampilkannya di layar Utama sebagai item yang dapat ditindaklanjuti.",
+          "Ketika suatu tugas selesai, tugas berikutnya dijadwalkan sesuai dengan interval pengingat (sehingga rutinitas berlanjut secara otomatis)."
+        ]
+      },
+      {
+        "heading": "Catatan dan tip praktis",
+        "body": [
+          "Pengingat membantu Anda tetap konsisten, namun tidak menjamin kesehatan tanaman hias—kondisi nyata mungkin memerlukan interval penyesuaian.",
+          "Jika Anda mengubah lingkungan (musim, cahaya, substrat, ukuran pot bunga), pertimbangkan untuk memperbarui pengingat agar sesuai dengan kondisi baru.",
+          "Jika Anda ingin mengelola tugas dan catatan yang sudah diselesaikan, gunakan layar Riwayat Tugas (didokumentasikan secara terpisah)."
+        ]
+      }
+    ]
+  }
+}

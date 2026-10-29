@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "İptal",
+      "delete": "Sil",
+      "create": "Oluştur",
+      "save": "Kaydet",
+      "apply": "Uygula",
+      "reset": "Sıfırla"
+    },
+    "confirmDelete": {
+      "title": "Konumu sil",
+      "messagePrefix": "Silmek istediğinizden emin misiniz?",
+      "messageSuffix": "? Bu eylem geri alınamaz.",
+      "blockedTitle": "Bu konum silinemiyor",
+      "blockedMessage": "Bu konuma {{countLabel}} atanmış. Önce bu ev bitkilerini silin veya taşıyın, ardından tekrar deneyin.",
+      "blockedToast": "Bu konum, atanmış ev bitkileri olduğundan silinemez. Önce bu ev bitkilerini çıkarın veya taşıyın."
+    },
+    "edit": {
+      "titleCreate": "Konum ekle",
+      "titleEdit": "Konumu düzenle",
+      "nameLabel": "Konum adı",
+      "namePlaceholder": "örneğin Oturma odası, Mutfak rafı",
+      "categoryLabel": "Kategori",
+      "categories": {
+        "indoor": "Kapalı",
+        "outdoor": "Dış mekan",
+        "other": "Diğer"
+      },
+      "quickSuggestions": "Hızlı öneriler",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Oturma odası",
+          "kitchen": "Mutfak",
+          "diningRoom": "Yemek odası",
+          "bedroom": "Yatak odası",
+          "bathroom": "Banyo",
+          "hallway": "Koridor",
+          "office": "Ofis",
+          "kidsRoom": "Çocuk odası"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Teras",
+          "patio": "Veranda",
+          "garden": "Bahçe",
+          "frontYard": "Ön bahçe",
+          "backyard": "Arka Bahçe",
+          "porch": "Sundurma",
+          "greenhouse": "Sera"
+        },
+        "other": {
+          "staircase": "Merdiven",
+          "garage": "Garaj",
+          "basement": "Bodrum",
+          "lobby": "Lobi",
+          "sunroom": "Güneşlenme odası",
+          "workshop": "Atölye",
+          "studio": "Stüdyo",
+          "attic": "Çatı katı"
+        }
+      }
+    },
+    "sort": {
+      "title": "Konumları sırala",
+      "keyName": "Konum adı",
+      "keyCount": "Ev bitkisi sayısı",
+      "dirAsc": "Artan",
+      "dirDesc": "Azalan"
+    }
+  }
+}

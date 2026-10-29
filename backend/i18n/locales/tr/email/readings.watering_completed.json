@@ -1,0 +1,11 @@
+{
+  "subject": "Sulama tamamlandı",
+  "title": "Sulama tamamlandı",
+  "line1": "\"{device_name}\" için sulama tamamlandı.",
+  "details": "Tür: {source_label}. Bitki: {plant_name}. Konum: {location}. Tamamlanma zamanı: {completed_at}.",
+  "cta": "Sensör verilerini aç",
+  "source_manual": "Manuel",
+  "source_automatic": "Otomatik",
+  "push_title": "Sulama tamamlandı",
+  "push_body": "{device_name}: {source_label} sulama tamamlandı."
+}

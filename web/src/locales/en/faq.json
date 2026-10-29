@@ -19,9 +19,8 @@
     },
     {
       "q": "Is Flovers available in multiple languages?",
-      "a": "Yes. Flovers supports multiple languages, including English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Chinese, Japanese, and Korean."
+      "a": "Flovers supports English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Chinese, Japanese, Korean, Indonesian, Russian, and Turkish."
     },
-
     {
       "q": "How do I create an account?",
       "a": "You can register directly in the app. After registration, you need to confirm your account via an e-mail message. If needed, you can request the activation e-mail to be resent."
@@ -42,7 +41,6 @@
       "q": "How can I delete my account and data?",
       "a": "You can permanently delete your account from the Profile screen while logged in. This action is irreversible and removes all associated data."
     },
-
     {
       "q": "What is the difference between a plant definition and my own plant?",
       "a": "A plant definition is a built-in record in the Flovers database that contains general information about a plant species, such as preferences, traits, images, light requirements, soil type, and recommended watering or misting intervals. Your own plant represents a specific instance that you manage."
@@ -63,7 +61,6 @@
       "q": "Can I add notes or a diary for my plants?",
       "a": "Yes. You can add notes to your plants and also attach notes to completed tasks as part of your plant diary."
     },
-
     {
       "q": "How do reminders and tasks work?",
       "a": "You create a reminder with a recurring interval. Based on this definition, tasks are generated automatically. When you complete a task, a new one is scheduled according to the defined interval. You may receive e-mail or push notifications for tasks due today or overdue by one day, depending on your settings."
@@ -84,7 +81,6 @@
       "q": "Do reminders guarantee that my plants will stay healthy?",
       "a": "No. Flovers provides reminders and guidance, but plant care decisions and outcomes ultimately depend on the user."
     },
-
     {
       "q": "What sensors and devices can I connect to Flovers?",
       "a": "Flovers supports sensors measuring air temperature, air humidity, light level, and soil moisture. Recommended device setups can be found in the application documentation."
@@ -105,7 +101,6 @@
       "q": "Can other people see my sensor readings?",
       "a": "Currently, sensor readings are private. In the future, sharing options may be introduced. Users may also query sensor data via the API to integrate with other devices, such as automatic watering systems."
     },
-
     {
       "q": "What are QR codes used for in Flovers?",
       "a": "Users can generate and print QR codes and attach them to plant pots. Each QR code links to a specific plant instance. Scanning the code in the mobile app opens the plant details instantly."
@@ -118,7 +113,6 @@
       "q": "Can I make my plants public or share them with friends?",
       "a": "Not at the moment. Public sharing features may be introduced in the future."
     },
-
     {
       "q": "Why am I not receiving notifications?",
       "a": "Make sure push notifications are enabled on your device and in the app settings, which can be found in the Profile screen."

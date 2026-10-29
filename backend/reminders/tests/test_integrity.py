@@ -113,7 +113,11 @@ def test_completed_journal_and_task_snapshot_keep_original_plant_and_type(care):
     old = care.client.get(reverse("plant-instance-journal", args=[care.plant_a.pk]))
     new = care.client.get(reverse("plant-instance-journal", args=[care.plant_b.pk]))
     assert old.status_code == 200 and new.status_code == 200
-    assert old.json() == [{"id": task.pk, "type": "water", "completed_at": old.json()[0]["completed_at"], "note": "Watered old plant"}]
+    history = old.json()
+    assert len(history) == 1
+    assert history[0].pop("completed_by")["id"] == str(care.user.pk)
+    assert history[0].pop("access")["is_owner"] is True
+    assert history == [{"id": task.pk, "type": "water", "completed_at": history[0]["completed_at"], "note": "Watered old plant"}]
     assert new.json() == []
     row = care.client.get(reverse("reminder-tasks-list"), {"status": "completed"}).json()[0]
     assert row["completed_event"]["plant_id"] == care.plant_a.pk

@@ -178,5 +178,7 @@ def rename_contact(actor, other_id, name):
 @transaction.atomic
 def remove_contact(actor, other_id):
     row = _accepted_pair(actor, other_id)
+    from sharing.services import revoke_connection_grants
+    revoke_connection_grants(row)
     row.delete()
     return contact_snapshot(actor)

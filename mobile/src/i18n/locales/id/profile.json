@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "header": {
+      "title": "Profil"
+    },
+    "common": {
+      "save": "Simpan",
+      "cancel": "Batal",
+      "change": "Ubah",
+      "delete": "Hapus",
+      "send": "Kirim"
+    },
+    "account": {
+      "level": {
+        "currentRank": "Peringkat saat ini",
+        "level": "Tingkat",
+        "journey": "Langkah-langkah kecil, tanaman hias yang tumbuh subur.",
+        "experience": "Pengalaman",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "Untuk mencapai level {{level}}",
+        "remaining": "{{xp}} XP ke level berikutnya",
+        "nextRank": "Peringkat berikutnya di level {{level}}",
+        "maxLevel": "Level maksimum tercapai",
+        "allRanks": "Semua peringkat terbuka",
+        "pending": "Pelacakan XP segera hadir",
+        "ranks": {
+          "seedling": "Bibit",
+          "sproutKeeper": "Penjaga Tunas",
+          "leafLover": "Pencinta Daun",
+          "buddingGardener": "Pekebun Pemula",
+          "plantNurturer": "Perawat Tanaman",
+          "greenThumb": "Tangan Hijau",
+          "gardenGuardian": "Penjaga Kebun",
+          "botanicalExpert": "Ahli Botani",
+          "masterGrower": "Ahli Tanaman",
+          "plantLegend": "Legenda Tanaman"
+        },
+        "loading": "Memuat XP…",
+        "unavailable": "Tidak dapat memuat level Anda. Buka Profil lagi untuk mencoba lagi."
+      },
+      "title": "Akun",
+      "emailLabel": "Email",
+      "createdLabel": "Dibuat",
+      "changeEmail": "Ganti email",
+      "changePassword": "Ubah kata sandi",
+      "deleteAccount": "Hapus akun",
+      "logout": "Keluar"
+    },
+    "notifications": {
+      "title": "Pemberitahuan",
+      "emailSection": "Email",
+      "emailDailyLabel": "Ringkasan harian untuk tugas yang harus diselesaikan hari ini",
+      "emailDailyHint": "Satu email per hari yang merangkum semua tugas yang harus diselesaikan hari ini.",
+      "sendAt": "Kirim pukul",
+      "email24hLabel": "Kirim pengingat setelah 24 jam",
+      "email24hHint": "Jika tugas yang harus diselesaikan hari ini masih belum selesai, kirimkan email tindak lanjut besok.",
+      "mobileSection": "Seluler",
+      "pushDailyLabel": "Notifikasi telepon harian",
+      "pushDailyHint": "Pemberitahuan sistem tunggal yang merangkum tugas-tugas yang harus diselesaikan hari ini.",
+      "notifyAt": "Beri tahu pukul",
+      "push24hLabel": "Pemberitahuan tindak lanjut 24 jam",
+      "push24hHint": "Jika tugas masih tertunda, kirimkan pemberitahuan pada hari berikutnya."
+    },
+    "settings": {
+      "title": "Pengaturan",
+      "language": "Bahasa",
+      "dateTimeFormat": "Format Tanggal/Waktu",
+      "temperatureUnits": "Satuan suhu",
+      "measurementUnits": "Satuan pengukuran",
+      "fabPosition": "Posisi tombol +",
+      "background": "Latar Belakang",
+      "tileMotive": "Tema kartu",
+      "tilesTransparency": "Transparansi kartu",
+      "level": "Tingkat",
+      "temperatureOptions": {
+        "C": "°C (Celcius)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Metrik (cm / m)",
+        "imperial": "Imperial (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Kanan",
+        "left": "Kiri"
+      },
+      "backgroundOptions": {
+        "bg1": "Latar Belakang 1",
+        "bg2": "Latar Belakang 2",
+        "bg3": "Latar Belakang 3",
+        "bg4": "Latar Belakang 4",
+        "bg5": "Latar Belakang 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Terang",
+        "dark": "Gelap"
+      }
+    },
+    "support": {
+      "title": "Dukungan",
+      "contactUs": "Hubungi kami",
+      "reportBug": "Laporkan bug",
+      "aboutTitle": "Tentang aplikasi",
+      "versionLabel": "Versi",
+      "releaseDateLabel": "Tanggal rilis",
+      "contactLabel": "Kontak"
+    },
+    "toasts": {
+      "unauthorized": "Tidak sah",
+      "unauthorizedLoginAgain": "Tidak sah. Silakan masuk lagi.",
+      "failedToLoadPreferences": "Gagal memuat preferensi Profil. Silakan coba lagi.",
+      "notificationsUpdated": "Preferensi notifikasi diperbarui.",
+      "couldNotSaveNotifications": "Tidak dapat menyimpan preferensi notifikasi.",
+      "settingsUpdated": "Pengaturan diperbarui.",
+      "couldNotSaveSettings": "Tidak dapat menyimpan setelan."
+    }
+  }
+}

@@ -33,6 +33,7 @@ export type ApiPumpTask = {
 
 /** Tile model already used by the UI */
 export type ReadingTileModel = {
+  access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: string;
   name: string;                 // plant display name
   lastReadISO?: string | null;  // ISO string or null if missing
@@ -54,6 +55,7 @@ export type ReadingTileModel = {
 };
 
 export type ApiReadingDevice = {
+  access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   plant: number;
   plant_name: string;

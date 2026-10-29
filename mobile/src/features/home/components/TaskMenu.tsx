@@ -21,6 +21,8 @@ type Props = {
    * - If `undefined`, show Delete only when onDelete is provided.
    */
   showDelete?: boolean;
+  canComplete?: boolean;
+  canEdit?: boolean;
 };
 
 export default function TaskMenu({
@@ -30,6 +32,8 @@ export default function TaskMenu({
   onShowHistory,
   onDelete,
   showDelete,
+  canComplete = true,
+  canEdit = true,
 }: Props) {
   const { t } = useTranslation();
 
@@ -38,7 +42,7 @@ export default function TaskMenu({
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
-      <Pressable
+      {canComplete && <Pressable
         style={s.menuItem}
         onPress={onMarkComplete}
         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
@@ -50,9 +54,9 @@ export default function TaskMenu({
           style={{ marginRight: 8 }}
         />
         <Text style={s.menuItemText}>{t("home.menu.markAsComplete")}</Text>
-      </Pressable>
+      </Pressable>}
 
-      <Pressable
+      {canEdit && <Pressable
         style={s.menuItem}
         onPress={onEdit}
         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
@@ -64,7 +68,7 @@ export default function TaskMenu({
           style={{ marginRight: 8 }}
         />
         <Text style={s.menuItemText}>{t("home.menu.editReminder")}</Text>
-      </Pressable>
+      </Pressable>}
 
       <Pressable
         style={s.menuItem}
@@ -96,7 +100,7 @@ export default function TaskMenu({
         </Pressable>
       )}
 
-      {shouldShowDelete && (
+      {canEdit && shouldShowDelete && (
         <Pressable
           style={[s.menuItem, { marginTop: 2 }]}
           onPress={onDelete}

@@ -1,0 +1,125 @@
+{
+  "title": "Sıkça Sorulan Sorular",
+  "items": [
+    {
+      "q": "Flovers nedir ve onu ne için kullanabilirim?",
+      "a": "Flovers, canlı sensör verilerini kullanarak ev bitkileriyle ilgili görevleri düzenlemenize ve ev bitkisi koşullarını izlemenize yardımcı olarak ev bitkisi bakımını desteklemek için tasarlanmış bir uygulamadır. Günlük ev bitkisi yetiştiriciliğine yardımcı olacak hatırlatmalar, rehberlik ve bilgiler sağlar."
+    },
+    {
+      "q": "Flovers'nin kullanımı ücretsiz mi?",
+      "a": "Evet. Flovers şu anda ücretsiz olarak mevcuttur."
+    },
+    {
+      "q": "Flovers hangi platformları destekliyor?",
+      "a": "Flovers şu anda Android'de mevcuttur. Gelecekte iOS desteği planlanıyor."
+    },
+    {
+      "q": "Flovers'yi kullanmak için bir hesaba ihtiyacım var mı?",
+      "a": "Evet. Flovers'yi kullanmak ve özelliklerine erişmek için hesap oluşturmak gerekir."
+    },
+    {
+      "q": "Flovers birden fazla dilde mevcut mu?",
+      "a": "Flovers İngilizce, Lehçe, Almanca, İtalyanca, Fransızca, İspanyolca, Portekizce, Arapça, Hintçe, Çince, Japonca, Korece, Endonezce, Rusça ve Türkçe dillerinde kullanılabilir."
+    },
+    {
+      "q": "Nasıl hesap oluşturabilirim?",
+      "a": "Doğrudan uygulamaya kaydolabilirsiniz. Kayıt olduktan sonra hesabınızı bir e-posta mesajıyla onaylamanız gerekir. İhtiyaç duyulması halinde aktivasyon e-postasının tekrar gönderilmesini talep edebilirsiniz."
+    },
+    {
+      "q": "Hesap etkinleştirme e-postasını almadım; ne yapmalıyım?",
+      "a": "Doğrudan uygulama içinden yeni bir aktivasyon e-postası talep edebilirsiniz."
+    },
+    {
+      "q": "Şifremi nasıl sıfırlayabilirim?",
+      "a": "Uygulamadan şifre sıfırlama e-postası talep edebilirsiniz. Zaten giriş yaptıysanız şifrenizi doğrudan uygulama ayarlarından da değiştirebilirsiniz."
+    },
+    {
+      "q": "Hesabıma bağlı e-posta adresini değiştirebilir miyim?",
+      "a": "Evet. Giriş yaptığınızda uygulamadaki Profil ekranını kullanarak e-posta adresinizi güncelleyebilirsiniz."
+    },
+    {
+      "q": "Hesabımı ve verilerimi nasıl silebilirim?",
+      "a": "Oturum açmış durumdayken Profil ekranından hesabınızı kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz ve ilişkili tüm verileri kaldırır."
+    },
+    {
+      "q": "Bir ev bitkisi tanımı ile kendi ev bitkim arasındaki fark nedir?",
+      "a": "Ev bitkisi tanımı, Flovers veritabanındaki, tercihler, özellikler, görüntüler, ışık gereksinimleri, toprak türü ve önerilen sulama veya püskürtme aralıkları gibi bir ev bitkisi türü hakkında genel bilgiler içeren yerleşik bir kayıttır. Kendi ev bitkiniz, yönettiğiniz belirli bir örneği temsil eder."
+    },
+    {
+      "q": "Ev bitkisi tanıma özelliği ne kadar doğrudur?",
+      "a": "Doğruluk, görüntü kalitesine ve ev bitkisinin konumuna bağlıdır. Tanıma sistemi, 700'den fazla ev bitkisi türünü içeren bir veri tabanı üzerinde eğitilmiştir."
+    },
+    {
+      "q": "Ev bitkilerini tanımak için yüklediğim fotoğraflar saklanıyor mu?",
+      "a": "Hayır. Fotoğraflar arka uç tarafından yalnızca tanıma amacıyla işlenir ve kalıcı olarak saklanmaz."
+    },
+    {
+      "q": "Aynı anda birden fazla ev bitkisini takip edebilir miyim?",
+      "a": "Evet. Şu anda ekleyebileceğiniz ev bitkisi veya ölçüm cihazı sayısında herhangi bir sınırlama yoktur. Her ev bitkisi tek bir ölçüm cihazına bağlanabilir."
+    },
+    {
+      "q": "Ev bitkilerim için not veya günlük ekleyebilir miyim?",
+      "a": "Evet. Ev bitkilerinize notlar ekleyebilir ve ayrıca ev bitkisi günlüğünüzün bir parçası olarak tamamlanan görevlere notlar ekleyebilirsiniz."
+    },
+    {
+      "q": "Hatırlatıcılar ve görevler nasıl çalışır?",
+      "a": "Yinelenen aralıklarla bir hatırlatıcı oluşturursunuz. Bu tanıma göre görevler otomatik olarak oluşturulur. Bir görevi tamamladığınızda tanımlanan aralığa göre yeni bir görev planlanır. Ayarlarınıza bağlı olarak, süresi bugün veya bir gün gecikmiş görevler için e-posta veya anlık bildirimler alabilirsiniz."
+    },
+    {
+      "q": "Ne tür ev bitkisi bakımı görevleri desteklenir?",
+      "a": "Desteklenen görev türleri arasında sulama, sisleme, gübreleme, saksı değiştirme ve genel ev bitkisi bakımı yer alır."
+    },
+    {
+      "q": "Bir görevi tamamlamayı unutursam ne olur?",
+      "a": "Bir görev tamamlanmazsa uygulama 24 saat sonra bir hatırlatma gönderebilir. Aksi takdirde, siz harekete geçene kadar görev gecikmiş olarak işaretlenmiş olarak kalır."
+    },
+    {
+      "q": "Hatırlatıcıları devre dışı bırakabilir veya düzenleyebilir miyim?",
+      "a": "Hatırlatıcıları istediğiniz zaman düzenleyebilir, duraklatabilir, devam ettirebilir veya silebilirsiniz."
+    },
+    {
+      "q": "Hatırlatıcılar ev bitkilerimin sağlıklı kalacağını garanti eder mi?",
+      "a": "Hayır. Flovers hatırlatmalar ve rehberlik sağlar, ancak ev bitkisi bakımı kararları ve sonuçları sonuçta kullanıcıya bağlıdır."
+    },
+    {
+      "q": "Flovers'ye hangi sensörleri ve cihazları bağlayabilirim?",
+      "a": "Flovers, hava sıcaklığını, hava nemini, ışık seviyesini ve toprak nemini ölçen sensörleri destekler. Önerilen cihaz kurulumlarını uygulama belgelerinde bulabilirsiniz."
+    },
+    {
+      "q": "Sensör verileri ne sıklıkla güncellenir?",
+      "a": "Sensör sensörü okumaları her 5 dakikada bir sıklıkta gönderilebilir. Depolama amacıyla veriler şu anda bir saatlik aralıklarla kaydedilmektedir."
+    },
+    {
+      "q": "Sensör cihazım çevrimdışı olursa ne olur?",
+      "a": "Uygulama, eksik sensör okumaları konusunda kullanıcıları bilgilendirmez. Ancak toprak nem seviyelerinin belirli bir eşiğin altına düşmesi durumunda bildirimler tetiklenebilir."
+    },
+    {
+      "q": "Sensör verileri bulutta mı saklanıyor?",
+      "a": "Evet. Sensör verileri bir VPS bulut sunucusunda saklanır."
+    },
+    {
+      "q": "Başkaları sensör okumalarımı görebilir mi?",
+      "a": "Şu anda sensör okumaları gizlidir. Gelecekte paylaşım seçenekleri tanıtılabilir. Kullanıcılar ayrıca otomatik sulama sistemleri gibi diğer cihazlarla entegre olmak için API aracılığıyla sensör verilerini sorgulayabilir."
+    },
+    {
+      "q": "Flovers'de kullanılan QR kodları nelerdir?",
+      "a": "Kullanıcılar QR kodları oluşturup yazdırabilir ve bunları ev bitkilerinin saksılarına ekleyebilir. Her QR kodu belirli bir ev bitkisi örneğine bağlanır. Mobil uygulamadaki kodun taranması, ev bitkisi ayrıntılarını anında açar."
+    },
+    {
+      "q": "QR kodunu veya ev bitkisi bağlantısını paylaşmak güvenli midir?",
+      "a": "Genel olarak evet. Yalnızca ev bitkisine sahip olan oturum açmış kullanıcılar ayrıntılarını görebilir."
+    },
+    {
+      "q": "Ev bitkilerimi herkese açık hale getirebilir miyim veya arkadaşlarımla paylaşabilir miyim?",
+      "a": "Şu anda değil. Gelecekte herkese açık paylaşım özellikleri sunulabilir."
+    },
+    {
+      "q": "Neden bildirim almıyorum?",
+      "a": "Cihazınızda ve Profil ekranında bulunan uygulama ayarlarında anında bildirimlerin etkinleştirildiğinden emin olun."
+    },
+    {
+      "q": "Desteğe nasıl başvurabilirim veya bir sorunu nasıl bildirebilirim?",
+      "a": "Flovers web sitesindeki iletişim formunu veya uygulamada Profil ekranının altında bulunan iletişim formunu kullanabilirsiniz."
+    }
+  ]
+}

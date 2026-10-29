@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Tarayıcı"
+    },
+    "howItWorks": {
+      "title": "Nasıl çalışır?"
+    },
+    "instruction": "Kameranızı bir ev bitkisinin QR koduna doğrultun. Tanındığında uygulama o ev bitkisini otomatik olarak açacaktır.",
+    "hint1": "Her ev bitkisinin kendi QR kodu vardır. Bunu kaydedebilir, küçük bir etiket olarak yazdırabilir, saksıya yapıştırabilir ve buraya tarayarak ev bitkisini anında açabilirsiniz.",
+    "qrAvailableIn": "QR kodları şu ülkelerde mevcuttur:",
+    "qrPath1": "Ev bitkileri → bir ev bitkisine dokunun → ev bitkisi Ayrıntıları",
+    "qrPath2": "Ev bitkileri → döşeme menüsü → QR kodunu göster",
+    "permissionRequired": "Kamera izni gerekli",
+    "permissionHint": "QR kodlarını taramak için sistem ayarlarında kamera erişimini etkinleştirin.",
+    "openSettings": "Ayarları Aç",
+    "initializingCamera": "Kamera başlatılıyor…"
+  }
+}

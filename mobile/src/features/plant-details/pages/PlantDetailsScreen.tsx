@@ -39,6 +39,7 @@ import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
 import PlantRemindersTile from "../components/PlantRemindersTile";
 import PlantQrTile from "../components/PlantQrTile";
 import PlantInfoTile from "../components/PlantInfoTile";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 
 import CompleteTaskModal from "../../home/components/modals/CompleteTaskModal";
 import { markHomeTaskComplete } from "../../../api/services/home.service";
@@ -151,9 +152,10 @@ export default function PlantDetailsScreen() {
   const [photoReloadSignal, setPhotoReloadSignal] = useState(0);
 
   const openChangeImage = useCallback((plantId: string) => {
+    if (!details || !plantAccess(details.plant.access).canEdit) return;
     setChangeImgPlantId(plantId);
     setChangeImgVisible(true);
-  }, []);
+  }, [details]);
 
   const closeChangeImage = useCallback(() => {
     setChangeImgVisible(false);
@@ -327,6 +329,7 @@ export default function PlantDetailsScreen() {
           auth: true,
         });
         if (request !== editRequestRef.current) return;
+        if (!plantAccess(detail.access).canEdit) return;
 
         const resolvedName =
           detail.display_name?.trim() ||
@@ -688,6 +691,7 @@ export default function PlantDetailsScreen() {
   }, [details]);
 
   const openCompleteModal = (reminderId: string) => {
+    if (!details || !plantAccess(details.plant.access).canCompleteTasks) return;
     setCompleteReminderId(reminderId);
     setCompleteNote("");
     setCompleteDate(toYYYYMMDD());
@@ -826,6 +830,7 @@ export default function PlantDetailsScreen() {
 
             {reminders.length > 0 && (
               <PlantRemindersTile
+                access={details.plant.access}
                 key={refreshCounter}
                 collapseMenusSignal={dismissMenusTick}
                 reminders={reminders}
@@ -846,7 +851,7 @@ export default function PlantDetailsScreen() {
                 sensors={details.sensors}
                 onTileTouch={dismissMenus}
                 onMetricPress={(metric) => goHistory(metric)}
-                pumpIncluded={Boolean(details.readingDevice?.pumpIncluded)}
+                pumpIncluded={Boolean(details.readingDevice?.pumpIncluded) && plantAccess(details.plant.access).isOwner}
                 lastPumpLaunchDate={details.readingDevice?.lastPumpRunAt ?? null}
                 hasPendingWatering={Boolean(details.readingDevice?.pendingPumpTask)}
                 onScheduleWatering={() =>
@@ -856,7 +861,7 @@ export default function PlantDetailsScreen() {
               />
             )}
 
-            {!!qrCodeValue && (
+            {!!qrCodeValue && plantAccess(details.plant.access).isOwner && (
               <GlassFrame>
                 <PlantQrTile
                   qrCodeValue={qrCodeValue}

@@ -1,0 +1,56 @@
+{
+  "docs_auth": {
+    "title": "Masuk & Daftar",
+    "sections": [
+      {
+        "heading": "Membuat akun baru (Daftar)",
+        "body": [
+          "Untuk menggunakan Flovers, Anda perlu membuat akun pengguna pribadi. Pendaftaran dilakukan langsung di aplikasi mobile.",
+          "Saat pendaftaran, hanya alamat email dan kata sandi yang diperlukan. Tidak ada detail pribadi tambahan yang diminta pada tahap ini.",
+          "Kata sandi harus terdiri dari minimal 8 karakter dan menyertakan setidaknya satu nomor dan satu karakter khusus untuk memastikan keamanan dasar.",
+          "Sebelum menyelesaikan pendaftaran, Anda harus menerima Ketentuan Layanan dan Kebijakan Privasi."
+        ]
+      },
+      {
+        "heading": "Aktivasi akun melalui email",
+        "body": [
+          "Setelah mengirimkan formulir pendaftaran, email aktivasi dikirim ke alamat email yang diberikan.",
+          "Untuk mengaktifkan akun Anda, Anda harus mengklik link konfirmasi yang terdapat dalam email.",
+          "Sampai akun diaktifkan, login ke aplikasi tidak dapat dilakukan."
+        ]
+      },
+      {
+        "heading": "Mengirim ulang email aktivasi",
+        "body": [
+          "Jika Anda tidak menerima email aktivasi, Anda dapat memintanya untuk dikirim ulang dari dalam aplikasi.",
+          "Opsi ini tersedia di layar login atau registrasi dan dapat digunakan jika pesan asli hilang, tertunda, atau difilter sebagai spam.",
+          "Selalu pastikan untuk memeriksa folder spam atau junk mail Anda sebelum meminta pesan aktivasi lainnya."
+        ]
+      },
+      {
+        "heading": "Masuk ke akun yang ada",
+        "body": [
+          "Untuk masuk, Anda hanya memerlukan alamat email dan kata sandi yang terkait dengan akun Anda.",
+          "Jika akun Anda belum diaktifkan, aplikasi akan meminta Anda untuk mengkonfirmasi alamat email Anda terlebih dahulu.",
+          "Kredensial login diverifikasi dengan aman di backend; kata sandi tidak pernah disimpan dalam teks biasa."
+        ]
+      },
+      {
+        "heading": "Menyetel ulang kata sandi yang terlupa",
+        "body": [
+          "Jika Anda tidak dapat login karena lupa kata sandi, Anda dapat meminta email pengaturan ulang kata sandi.",
+          "Email pengaturan ulang berisi instruksi dan tautan aman yang memungkinkan Anda mengatur kata sandi baru.",
+          "Setelah mengatur kata sandi baru, Anda dapat langsung login menggunakan kredensial yang diperbarui."
+        ]
+      },
+      {
+        "heading": "Catatan keamanan",
+        "body": [
+          "Setiap akun pengguna dilindungi oleh kata sandi unik yang dipilih saat pendaftaran.",
+          "Demi alasan keamanan, Anda tidak boleh membagikan kredensial login Anda dengan orang lain.",
+          "Jika Anda mencurigai adanya akses tidak sah ke akun Anda, ubah kata sandi Anda sesegera mungkin."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Dokumentasi",
+  "placeholder": {
+    "heading": "Segera hadir",
+    "body": "Dokumentasi terperinci untuk layar ini akan segera ditambahkan."
+  },
+  "screens": {
+    "overview": {
+      "title": "Ikhtisar"
+    },
+    "auth": {
+      "title": "Masuk & Daftar"
+    },
+    "home": {
+      "title": "Beranda"
+    },
+    "taskHistory": {
+      "title": "Riwayat tugas"
+    },
+    "plants": {
+      "title": "Tanaman"
+    },
+    "plantDetails": {
+      "title": "Detail tanaman"
+    },
+    "createPlantWizard": {
+      "title": "Buat Wizard tanaman hias"
+    },
+    "locations": {
+      "title": "Lokasi"
+    },
+    "reminders": {
+      "title": "Pengingat"
+    },
+    "readings": {
+      "title": "Data sensor"
+    },
+    "readingsHistory": {
+      "title": "Riwayat pembacaan sensor"
+    },
+    "scanner": {
+      "title": "Pemindai (QR)"
+    },
+    "profile": {
+      "title": "Profil & Pengaturan"
+    }
+  },
+  "navigationLabel": "Navigasi dokumentasi"
+}

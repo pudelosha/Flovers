@@ -14,6 +14,7 @@ from rest_framework.views import APIView
 from core.emailing import send_templated_email
 
 from .models import PlantInstance
+from sharing.permissions import visible_plant_ids
 from .serializers import (
     PlantInstanceSerializer,
     PlantInstanceListSerializer,
@@ -50,8 +51,8 @@ class PlantInstanceListCreateView(ListCreateAPIView):
     def get_queryset(self):
         return (
             PlantInstance.objects
-            .filter(user=self.request.user)
-            .select_related("location", "plant_definition")
+            .filter(pk__in=visible_plant_ids(self.request.user))
+            .select_related("location", "plant_definition", "user")
         )
 
     def list(self, request, *args, **kwargs):
@@ -78,10 +79,11 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
+        ids = visible_plant_ids(self.request.user) if self.request.method in {"GET", "HEAD", "OPTIONS"} else PlantInstance.objects.filter(user=self.request.user).values("pk")
         return (
             PlantInstance.objects
-            .filter(user=self.request.user)
-            .select_related("location", "plant_definition")
+            .filter(pk__in=ids)
+            .select_related("location", "plant_definition", "user")
         )
 
     def retrieve(self, request, *args, **kwargs):
@@ -127,8 +129,8 @@ class PlantInstanceByQRView(APIView):
 
         plant = (
             PlantInstance.objects
-            .filter(user=request.user, qr_code=code)
-            .select_related("location", "plant_definition")
+            .filter(pk__in=visible_plant_ids(request.user), qr_code=code)
+            .select_related("location", "plant_definition", "user")
             .first()
         )
         if not plant:

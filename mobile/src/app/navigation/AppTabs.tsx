@@ -1,5 +1,5 @@
 import React from "react";
-import { BackHandler, View, Pressable, StyleSheet, Text } from "react-native";
+import { BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -22,7 +22,7 @@ import ContactsScreen from "../../features/sharing/pages/ContactsScreen";
 import SharedPlantsScreen from "../../features/sharing/pages/SharedPlantsScreen";
 import SharePlantModal from "../../features/sharing/components/SharePlantModal";
 import SharingToastHost from "../../features/sharing/components/SharingToastHost";
-import { SharingPreviewProvider } from "../../features/sharing/state/SharingPreviewProvider";
+import { SharingPreviewProvider, useSharingPreview } from "../../features/sharing/state/SharingPreviewProvider";
 import { ContactsProvider } from "../../features/sharing/state/ContactsProvider";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plant-details/pages/PlantDetailsScreen"; // hidden tab
@@ -51,7 +51,7 @@ function ResetPasswordRecovery(props: any) {
 const Placeholder: React.FC = () => <View style={{ flex: 1 }} />;
 
 export type AppTabParamList = {
-  Home: undefined;
+  Home: { plantId?: string; filterRequestId?: string } | undefined;
 
   // allow navigation params for auto-opening edit modal
   Plants:
@@ -126,10 +126,13 @@ const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
 
 const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
 const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
+const TAB_CONTENT_HEIGHT = 64;
+const MIN_TAB_BOTTOM_PADDING = 10;
 
 function GlassTabBar({ state, navigation }: any) {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
+  const { shareDraft, closeSharePlant } = useSharingPreview();
 
   const getTranslatedLabel = (routeName: string) =>
     t(`navigation.tabs.${routeName}`, { defaultValue: routeName });
@@ -210,7 +213,7 @@ function GlassTabBar({ state, navigation }: any) {
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
-      <View style={[s.tabWrap, { paddingBottom: Math.max(insets.bottom, 10) }]}>
+      <View style={[s.tabWrap, { paddingBottom: Math.max(insets.bottom, MIN_TAB_BOTTOM_PADDING) }]}>
         {/* Blur behind gradient */}
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -238,6 +241,10 @@ function GlassTabBar({ state, navigation }: any) {
                 target: route.key,
                 canPreventDefault: true,
               });
+              if (!event.defaultPrevented && shareDraft) {
+                Keyboard.dismiss();
+                closeSharePlant();
+              }
               if ((!isFocused || activeRouteName !== route.name) && !event.defaultPrevented) {
                 navigation.navigate(route.name);
               }
@@ -371,12 +378,16 @@ function AppTabsNavigator() {
 }
 
 export default function AppTabs() {
+  const insets = useSafeAreaInsets();
+  const tabBarHeight = TAB_CONTENT_HEIGHT + Math.max(insets.bottom, MIN_TAB_BOTTOM_PADDING);
   return (
     <SharingPreviewProvider>
       <ContactsProvider>
       <View style={{ flex: 1 }}>
         <AppTabsNavigator />
-        <SharePlantModal />
+        <View pointerEvents="box-none" style={[StyleSheet.absoluteFill, { bottom: tabBarHeight }]}>
+          <SharePlantModal />
+        </View>
         <SharingToastHost />
       </View>
       </ContactsProvider>
@@ -396,7 +407,7 @@ const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.20)",
   },
   tabInner: {
-    height: 64,
+    height: TAB_CONTENT_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",

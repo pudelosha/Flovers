@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { LANGS } from "../../../config.js";
 import Reveal from "./common/Reveal"; // Assuming Reveal animation component is being used
 
 import "./MultiLanguageSection.css"; // Update with the styles provided
@@ -16,10 +17,8 @@ export default function MultiLanguageSection() {
   });
   const description = t("multiLanguage.description", {
     defaultValue:
-      "Flovers is available in 12 languages to help you manage your plants from anywhere in the world.",
+      "Flovers is available in 15 languages to help you manage your plants from anywhere in the world.",
   });
-
-  const LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"];
 
   // flag-icons uses ISO country codes (GB, PL, DE, etc.)
   const flagClassFor = (code) => {
@@ -46,6 +45,12 @@ export default function MultiLanguageSection() {
         return "fi fi-cn";
       case "ja":
         return "fi fi-jp";
+      case "id":
+        return "fi fi-id";
+      case "ru":
+        return "fi fi-ru";
+      case "tr":
+        return "fi fi-tr";
       case "ko":
         return "fi fi-kr";
       default:

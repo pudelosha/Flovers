@@ -8,7 +8,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 from django.shortcuts import get_object_or_404
 from django.db import DatabaseError, transaction
-from django.db.models import Q
+from django.db.models import F, Q
 from django.utils import timezone
 
 from rest_framework import viewsets, permissions, status
@@ -32,6 +32,7 @@ from .serializers import (
 )
 from .device_auth import resolve_device
 from .utils import parse_ts_or_now
+from sharing.permissions import plant_access, visible_plant_ids
 from .throttles import (
     IngestPerDeviceThrottle, FeedPerDeviceThrottle,
     PumpPollPerDeviceThrottle, PumpCompletePerDeviceThrottle,
@@ -508,9 +509,12 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return ReadingDevice.objects.filter(
-            user=self.request.user, plant__user=self.request.user,
-        )
+        queryset = ReadingDevice.objects.filter(user_id=F("plant__user_id"))
+        # Additional GET actions include firmware/account credentials and must
+        # remain owner-only, just like every mutation and pump action.
+        if self.action in {"list", "retrieve"}:
+            return queryset.filter(plant_id__in=visible_plant_ids(self.request.user)).select_related("plant__user")
+        return queryset.filter(user=self.request.user)
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -1356,7 +1360,9 @@ def history(request):
         return Response({"detail": "device_id is required"}, status=400)
 
     try:
-        device = ReadingDevice.objects.get(id=device_id, user=request.user, plant__user=request.user)
+        device = ReadingDevice.objects.select_related("plant__user").get(
+            id=device_id, user_id=F("plant__user_id"), plant_id__in=visible_plant_ids(request.user),
+        )
     except ReadingDevice.DoesNotExist:
         raise Http404
 
@@ -1452,6 +1458,7 @@ def history(request):
             "device_name": device.device_name,
             "plant_name": device.plant_name,
             "interval_hours": device.interval_hours,
+            "access": plant_access(request.user, device.plant),
         },
         "range": range_str,
         "metric": metric,

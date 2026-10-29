@@ -1,0 +1,72 @@
+{
+  "docs_reminders": {
+    "title": "Hatırlatıcılar",
+    "sections": [
+      {
+        "heading": "Bu ekranın amacı",
+        "body": [
+          "Hatırlatıcılar ekranı, ev bitkileriniz için yinelenen bakım programlarını yönettiğiniz yerdir.",
+          "Hatırlatıcı, ne yapılması gerektiğini (görev türü), ne sıklıkta tekrarlanacağını (aralık) ve hangi ev bitkisine ait olduğunu tanımlar. Buna dayanarak Flovers, görevleri zaman içinde otomatik olarak oluşturur."
+        ]
+      },
+      {
+        "heading": "İki görünüm: Hatırlatma listesi ve Takvim",
+        "body": [
+          "Bu ekranın iki modu vardır: hatırlatıcı listesi ve takvim görünümü.",
+          "Sola/sağa kaydırarak veya görünümü değiştiren Kayan Eylem Düğmesi (FAB) seçeneğini kullanarak bunlar arasında geçiş yapabilirsiniz.",
+          "Her iki görünüm de aynı verileri gösterir; yalnızca hızlı bir liste mi yoksa programa genel bakış mı istediğinize bağlı olarak farklı şekilde sunulur."
+        ]
+      },
+      {
+        "heading": "Hatırlatma listesi görünümü",
+        "body": [
+          "Liste görünümünde her kutucuk, kullanıcı tarafından oluşturulan tek bir hatırlatıcıyı temsil eder.",
+          "Kutucuk, görev türünü (simge ve ad), ev bitkisinin adını, konumunu (atandıysa), ne sıklıkta tekrarlandığını ve bir sonraki bitiş tarihini gösterir.",
+          "Bu görünüm, hesabınızda halihazırda etkin olan tüm yinelenen kuralları incelemenin en hızlı yoludur."
+        ]
+      },
+      {
+        "heading": "Hatırlatma kutucuğu eylemleri (Düzenle / Duraklat / Devam Ettir / Sil)",
+        "body": [
+          "Her hatırlatıcıyı düzenleyebilir, duraklatabilir, devam ettirebilir veya silebilirsiniz.",
+          "Düzenle, aralık, görev türü, ilişkili ev bitkisi ve diğer anımsatıcı ayarları (hatırlatıcı türüne bağlı olarak) gibi anımsatıcı parametrelerini değiştirmenizi sağlar.",
+          "Sil, hatırlatıcıyı kalıcı olarak kaldırır. Pratikte bu aynı zamanda görevlerin bundan sonra bu hatırlatıcıdan oluşturulmayacağı anlamına da gelir.",
+          "Duraklat, bir hatırlatıcıyı silmeden geçici olarak devre dışı bırakır. Duraklatıldığında, yapılması gereken görev Ana Sayfa'dan kaldırılır ve günlük e-posta veya anlık bildirimler onu içermez. Hatırlatıcıyı devam ettirdiğinizde Flovers, hatırlatıcı aralığına göre bir sonraki bekleyen görevi zamanlar."
+        ]
+      },
+      {
+        "heading": "Takvim görünümü",
+        "body": [
+          "Takvim görünümünde hatırlatıcılar, takvim günlerinde planlanmış öğeler olarak görselleştirilir.",
+          "Belirli bir tarihin ayrıntılarını görmek için takvimdeki bir güne dokunun; o gün için planlanmış öğeler takvimin altında görünecektir.",
+          "Takvim, belirli bir günde hangi görev türlerinin görüneceğini belirtmek için görsel işaretleyiciler kullanır ve rutin dağıtımı bir bakışta görmenize yardımcı olur."
+        ]
+      },
+      {
+        "heading": "FAB eylemleri",
+        "body": [
+          "Kayan Eylem Düğmesi (FAB), hatırlatıcıları yönetmek ve iki görünüm arasında gezinmek için hızlı eylemler sağlar.",
+          "Kullanılabilir eylemler şunları içerir: Hatırlatıcı ekleme, görünümü değiştirme (Liste/Takvim), Sıralama ve Filtreleme.",
+          "Sıralama son tarihe, ev bitkisinin adına veya konumuna göre uygulanabilir.",
+          "Filtreleme ev bitkisi adına, konumuna, görev türüne ve son tarih aralığına göre uygulanabilir."
+        ]
+      },
+      {
+        "heading": "Hatırlatıcılar görevleri nasıl oluşturur (genel mantık)",
+        "body": [
+          "Hatırlatma yinelenen bir kuraldır (örneğin: 7 günde bir sulayın).",
+          "Flovers, hatırlatıcılardan görevler oluşturur ve bunları Ana ekranda işlem yapılabilir öğeler olarak sunar.",
+          "Bir görev tamamlandığında, bir sonraki görev hatırlatma aralığına göre planlanır (böylece rutin otomatik olarak devam eder)."
+        ]
+      },
+      {
+        "heading": "Notlar ve pratik ipuçları",
+        "body": [
+          "Hatırlatıcılar tutarlı kalmanıza yardımcı olur ancak ev bitkilerinin sağlığını garanti etmez; gerçek koşullar, aralıkların ayarlanmasını gerektirebilir.",
+          "Ortamınızı değiştirirseniz (mevsim, ışık, alt tabaka, saksı boyutu), hatırlatıcıları yeni koşullara uyacak şekilde güncellemeyi düşünün.",
+          "Zaten tamamlanmış görevleri ve notları yönetmek istiyorsanız Görev Geçmişi ekranını (ayrıca belgelenmiştir) kullanın."
+        ]
+      }
+    ]
+  }
+}

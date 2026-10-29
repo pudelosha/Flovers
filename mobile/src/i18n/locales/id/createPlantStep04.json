@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Pencahayaan",
+      "subtitle": "Paparan cahaya membantu kita menyesuaikan jadwal penyiraman dan pengingat perawatan. Beri tahu kami seberapa banyak cahaya yang didapat tempat ini dan arah jendelanya.",
+      "lightLevel": "Tingkat cahaya",
+      "low": "Rendah",
+      "high": "Tinggi",
+      "windowDirection": "Arah jendela",
+      "measureLightDirection": "Ukur cahaya & arah",
+      "distanceFromWindow": "Jarak dari jendela",
+      "orientations": {
+        "S": "Selatan",
+        "E": "Timur",
+        "W": "Barat",
+        "N": "Utara"
+      },
+      "modal": {
+        "title": "Ukur cahaya & arah",
+        "instructions": "Pegang telepon secara horizontal (layar menghadap ke atas), dengan tepi atas mengarah ke jendela. Gerakkan/pindai perlahan di dekat jendela, lalu ketuk Ukur untuk menjalankan tes 5 detik.",
+        "ambientLive": "Cahaya sekitar (langsung)",
+        "headingLive": "Arah kompas (langsung)",
+        "testLabel": "Pengukuran 5 detik",
+        "running": "(mengukur…)",
+        "last": "(terakhir)",
+        "done": "selesai",
+        "bestLight": "Cahaya (tertinggi dalam 5 dtk):",
+        "meanDirection": "Arah (rata-rata dalam 5 dtk):",
+        "close": "Tutup",
+        "measure5s": "Ukur (5 detik)",
+        "measuring": "Mengukur…",
+        "apply": "Terapkan",
+        "tip": "Tip: Pada banyak ponsel, sensor cahaya sekitar berada di dekat lubang suara di bagian atas. Jaga agar ponsel tetap rata dan arahkan tepi atas ke arah jendela untuk menemukan pembacaan paling terang.",
+        "notAvailable": "Tidak tersedia",
+        "noSensor": "Tidak ada sensor",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Cahaya terang langsung",
+          "brightIndirect": "Cahaya terang tidak langsung",
+          "medium": "Sedang / tersaring",
+          "low": "Cahaya rendah",
+          "veryLow": "Sangat rendah"
+        }
+      }
+    }
+  }
+}

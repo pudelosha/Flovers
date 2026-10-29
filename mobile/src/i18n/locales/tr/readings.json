@@ -1,0 +1,72 @@
+{
+  "readings": {
+    "header": {
+      "title": "Sensör verileri"
+    },
+    "defaults": {
+      "thisDevice": "bu cihaz"
+    },
+    "tile": {
+      "lastReadPrefix": "Son okuma",
+      "lastPumpRunPrefix": "Son pompa çalışması",
+      "automaticPump": "Otomatik pompa",
+      "automaticPumpThreshold": "Toprak nemi < {{value}}% olduğunda",
+      "opening": "Açılıyor...",
+      "scheduleWatering": "Sulamayı programlayın",
+      "unscheduleWatering": "Planlanan sulamayı iptal et"
+    },
+    "menu": {
+      "history": "Sensör okuma geçmişi",
+      "plantDetails": "Bitki ayrıntıları",
+      "editDevice": "Cihazı düzenle",
+      "deviceDetails": "Cihaz ayrıntıları",
+      "deleteDevice": "Cihazı sil"
+    },
+    "fab": {
+      "linkDevice": "Cihazı bağla",
+      "deviceSetup": "Cihaz kurulumu",
+      "sort": "Sırala",
+      "filter": "Filtrele",
+      "sendExport": "Dışa aktarma gönder",
+      "clearFilter": "Filtreyi temizle"
+    },
+    "empty": {
+      "title": "Henüz cihaz yok",
+      "description": "Cihazlar, bir ev bitkisinin sıcaklık, nem, ışık ve toprak nemi sensörü okumalarını almanızı sağlar.\n\nBir tane eklemek için “+ Cihaza bağlan” işlemine dokunun. Bir ev bitkisi seçin, cihazı adlandırın, sensörleri seçin ve bir örnekleme aralığı ayarlayın. Daha sonra hesap sırrınızı görüntülemek, döndürmek ve yapıştırmaya hazır bir Arduino/ESP taslağını e-postayla göndermek için Cihaz kurulumunu açabilirsiniz."
+    },
+    "toasts": {
+      "unauthorized": "Yetkisiz. Lütfen tekrar giriş yapın.",
+      "loadFailed": "Cihazlar yüklenemedi",
+      "deviceDeleted": "Cihaz silindi",
+      "deleteFailed": "Silinemedi",
+      "deleteFailedPrefix": "Silinemedi",
+      "deviceAdded": "Cihaz eklendi",
+      "deviceUpdated": "Cihaz güncellendi",
+      "addFailed": "Ekleme başarısız oldu",
+      "addFailedPrefix": "Ekleme başarısız oldu",
+      "updateFailed": "Güncelleme başarısız oldu",
+      "updateFailedPrefix": "Güncelleme başarısız oldu",
+      "setupLoadFailed": "Kurulum yüklenemedi",
+      "setupLoadFailedPrefix": "Kurulum yüklenemedi",
+      "secretRotated": "Gizli anahtar yenilendi",
+      "rotateFailed": "Gizli anahtar yenilenemedi",
+      "rotateFailedPrefix": "Gizli anahtar yenilenemedi",
+      "deviceDetailsLoadFailed": "Cihaz ayrıntıları yüklenemedi",
+      "missingDeviceId": "Eksik cihaz kimliği",
+      "codeSentByEmail": "Kod e-postanıza gönderildi",
+      "sendCodeEmailFailed": "E-posta gönderilemedi",
+      "sendCodeEmailFailedPrefix": "E-posta gönderilemedi",
+      "pumpStatusLoadFailed": "Sulama planı yüklenemedi",
+      "wateringScheduled": "Sulama planlandı",
+      "wateringScheduleFailed": "Sulama planlanamadı",
+      "wateringRecalled": "Planlanan sulama iptal edildi",
+      "wateringRecallFailed": "Sulama iptal edilemedi",
+      "autoPumpEnabled": "Otomatik pompa etkinleştirildi",
+      "autoPumpDisabled": "Otomatik pompa devre dışı",
+      "autoPumpUpdateFailed": "Otomatik pompa ayarı güncellenemedi",
+      "exportSent": "Sensör okumalarını dışa aktarma isteği gönderildi",
+      "failedToSendExport": "Sensör okumaları dışa aktarımı gönderilemedi",
+      "exportNotAvailableYet": "Dışa aktarma henüz kullanılamıyor."
+    }
+  }
+}

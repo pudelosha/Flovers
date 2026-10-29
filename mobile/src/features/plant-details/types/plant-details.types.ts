@@ -62,6 +62,7 @@ export type PlantReminderType =
  * derived from the Home tasks API.
  */
 export type PlantReminderSummary = {
+  access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   /** Reminder id – used as editReminderId when navigating to Reminders */
   id: string;
   /** Underlying Home task id – used for mark-as-complete */

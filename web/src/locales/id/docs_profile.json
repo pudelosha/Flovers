@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Profil",
+    "sections": [
+      {
+        "heading": "Tujuan dari layar ini",
+        "body": [
+          "Layar Profil adalah tempat sentral untuk mengelola informasi akun, preferensi notifikasi, pengaturan aplikasi, dan opsi dukungan.",
+          "Hal ini memungkinkan pengguna untuk mengontrol data pribadi dan bagaimana aplikasi Flovers berperilaku setiap hari."
+        ]
+      },
+      {
+        "heading": "Akun",
+        "body": [
+          "Bagian Akun menampilkan informasi akun dasar seperti alamat email terdaftar dan tanggal pembuatan akun.",
+          "Dari bagian ini, pengguna dapat mengubah alamat email (diperlukan konfirmasi dengan kata sandi saat ini), mengubah kata sandi saat ini, keluar, atau menghapus akun secara permanen.",
+          "Menghapus akun mengakibatkan penghapusan permanen semua data pengguna, termasuk tanaman hias, pengingat, tugas, pembacaan sensor, dan perangkat."
+        ]
+      },
+      {
+        "heading": "Pemberitahuan",
+        "body": [
+          "Bagian Notifikasi memungkinkan pengguna untuk mengelola persetujuan dan preferensi untuk email dan notifikasi push.",
+          "Untuk pemberitahuan email dan push, pengguna dapat mengaktifkan atau menonaktifkan dua jenis pemberitahuan: ringkasan harian yang menginformasikan apakah ada tugas yang harus diselesaikan hari ini, dan pemberitahuan pengingat yang dikirim jika tugas masih belum diselesaikan 24 jam setelah pemberitahuan pertama.",
+          "Untuk setiap jenis notifikasi, pengguna memilih waktu pengiriman (format satu jam penuh, misalnya 14:00)."
+        ]
+      },
+      {
+        "heading": "Pengaturan",
+        "body": [
+          "Bagian Pengaturan mengontrol perilaku dan tampilan aplikasi secara umum.",
+          "Pilihan yang tersedia meliputi pemilihan bahasa, format tanggal dan waktu, satuan suhu (Celcius, Fahrenheit, Kelvin), satuan pengukuran (metrik atau imperial), dan posisi Tombol Aksi Mengambang (FAB) (kiri atau kanan).",
+          "Pengguna juga dapat menyesuaikan tampilan aplikasi dengan memilih gambar latar belakang, tema ubin (terang atau gelap), dan tingkat transparansi ubin."
+        ]
+      },
+      {
+        "heading": "Dukungan",
+        "body": [
+          "Bagian Support menyediakan akses langsung bantuan dari tim Flovers.",
+          "Pengguna dapat menghubungi dukungan untuk mendapatkan bantuan atau melaporkan bug langsung dari layar ini.",
+          "Pelaporan masalah membantu meningkatkan stabilitas dan kualitas aplikasi."
+        ]
+      }
+    ]
+  }
+}

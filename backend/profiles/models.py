@@ -6,6 +6,7 @@ from django.utils import timezone
 User = settings.AUTH_USER_MODEL
 
 LANG_CHOICES = [
+    ("id", "Bahasa Indonesia"), ("ru", "Русский"), ("tr", "Türkçe"),
     ("en", "English"), ("pl", "Polski"), ("de", "Deutsch"), ("fr", "Français"),
     ("es", "Español"), ("it", "Italiano"), ("pt", "Português"), ("zh", "中文"),
     ("hi", "हिन्दी"), ("ar", "العربية"),

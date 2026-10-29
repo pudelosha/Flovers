@@ -1,0 +1,71 @@
+{
+  "docs_plant_details": {
+    "title": "Bitki ayrıntıları",
+    "sections": [
+      {
+        "heading": "Bu ekranın amacı",
+        "body": [
+          "Ev bitkisi Ayrıntıları ekranı, kullanıcı tarafından oluşturulan tek bir ev bitkisi örneğinin görüntüleneceği ve yönetileceği merkezi yerdir.",
+          "Ev bitkisine özgü bilgileri, hatırlatıcıları, görev eylemlerini, sensör okumalarını (varsa) ve o ev bitkisine ilişkin hızlı gezinme araçlarını birleştirir."
+        ]
+      },
+      {
+        "heading": "Ev bitkisi bilgisi",
+        "body": [
+          "Kullanıcı, ekranın üst kısmında ev bitkisi görüntüsünü, ev bitkisi adını, isteğe bağlı ev bitkisi tanımı adını ve atanan konumu görebilir.",
+          "Resmin altında, satın alma tarihi, notlar, ışık koşulları, yön, pencereden uzaklık, saksı türü ve toprak türü gibi ev bitkisi oluşturma sırasında sağlanan ayrıntılı parametreler görüntülenir.",
+          "Bu ayrıntılar hatırlatıcıların, sensör okumalarının ve ev bitkisi bakımı kararlarının bağlamsallaştırılmasına yardımcı olur."
+        ]
+      },
+      {
+        "heading": "Ev bitkisi düzeyinde eylemler (3 noktalı menü)",
+        "body": [
+          "Ev bitkisi başlığıyla ilişkili 3 noktalı menü, ev bitkisinin kendisiyle ilgili ek eylemler sağlar.",
+          "Mevcut eylemler arasında ev bitkisi Tanımını görüntüleme (ev bitkisi bir bitkiye bağlıysa), ev bitkisi ayrıntılarını düzenleme, ev bitkisi görüntüsünü değiştirme ve bu ev bitkisi için filtrelenen Hatırlatıcılara gitme yer alır.",
+          "Resmin değiştirilmesi, önceden tanımlanmış bir resmin değiştirilmesine, telefondan kullanıcı fotoğrafı eklenmesine veya resmin kaldırılmasına olanak sağlar."
+        ]
+      },
+      {
+        "heading": "Ev bitkisi Tanımı",
+        "body": [
+          "Ev bitkisi Flovers veritabanındaki bir ev bitkisi Tanımına bağlıysa, kullanıcı özel bir ev bitkisi Tanım görünümünü açabilir.",
+          "Bu görünüm, ev bitkisinin tanımı, bakım tercihleri, özellikler, zorluk düzeyi, sıcaklık aralığı, nem, toksisite ve büyüme özellikleri gibi tür düzeyindeki bilgileri görüntüler.",
+          "Houseplant Tanımlar genel rehberlik sağlar ve kullanıcının gerçek ortamı bağlamında yorumlanmalıdır."
+        ]
+      },
+      {
+        "heading": "Hatırlatıcılar ve görevler",
+        "body": [
+          "Hatırlatıcılar bölümü, bu ev bitkisiyle ilişkili tüm aktif hatırlatıcıları gösterir.",
+          "Her hatırlatıcıya, kullanıcının görevleri tamamlamasına, hatırlatıcıyı düzenlemesine veya görev geçmişini görüntülemesine olanak tanıyan kendi 3 noktalı menüsü aracılığıyla erişilebilir.",
+          "Bir görevi tamamlamak, ev bitkisinin bakım geçmişinin bir parçası haline gelen bir not eklemeyi içerebilir."
+        ]
+      },
+      {
+        "heading": "En son sensör okumaları",
+        "body": [
+          "Ev bitkisi bir okuma cihazına bağlıysa, en son sensör okumaları doğrudan bu ekranda görüntülenir.",
+          "Desteklenen sensör okumaları arasında hava sıcaklığı, hava nemi, ışık seviyesi ve toprak nemi bulunur.",
+          "Bu bölüm, en son alınan okumanın zaman damgasıyla birlikte en son değerleri gösterir.",
+          "Sensör okumaları kutucuğuna dokunduğunuzda, sıcaklık, nem, ışık ve toprak nemi (bir cihaz ev bitkisine bağlı olduğu sürece) için ayrıntılı tabloların ve özetlerin (günlük/haftalık/aylık) gösterildiği sensör okumaları Geçmiş ekranına yönlendirilirsiniz."
+        ]
+      },
+      {
+        "heading": "QR kodu ve hızlı erişim",
+        "body": [
+          "Her ev bitkisinin ekranın alt kısmında görüntülenen benzersiz bir QR kodu vardır.",
+          "Bu kodun Tarayıcı görünümünü kullanarak taranması, kullanıcıyı doğrudan bu ev bitkisinin Ayrıntılar ekranına yönlendirir.",
+          "QR kodu cihaza kaydedilebilir veya e-postayla gönderilebilir; bu sayede yazdırılması ve ev bitkisi saksısına hızlı erişim için eklenmesi kolaydır."
+        ]
+      },
+      {
+        "heading": "Önemli notlar",
+        "body": [
+          "Kullanıcı tarafından eklenen ev bitkisi görüntüleri yalnızca kullanıcının cihazında saklanır ve Flovers arka ucuna yüklenmez.",
+          "Önceden tanımlanmış ev bitkisi görüntüleri Flovers arka ucundan gelir ve yapay zeka tarafından oluşturulmuş olabilir.",
+          "Sensör sensörü okumaları ve bakım önerileri bilgilendiricidir ve kullanıcının kendi kararıyla birleştirilmelidir."
+        ]
+      }
+    ]
+  }
+}

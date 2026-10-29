@@ -1,0 +1,125 @@
+{
+  "plantDetails": {
+    "headerTitle": "Detail tanaman",
+    "common": {
+      "dash": "—",
+      "plant": "Tanaman"
+    },
+    "errors": {
+      "noId": "Tidak ada id tanaman hias atau kode QR yang disediakan.",
+      "failedToLoad": "Gagal memuat tanaman hias."
+    },
+    "states": {
+      "error": {
+        "title": "Kesalahan"
+      },
+      "notFound": {
+        "title": "Tidak ditemukan",
+        "msg": "Kami tidak dapat memuat tanaman hias ini."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Tugas gagal diselesaikan",
+        "msg": "Tidak dapat menyelesaikan pengingat ini."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Pengingat ditandai sebagai selesai.",
+      "qrSaved": "Kode QR disimpan ke galeri Anda.",
+      "qrSaveFailed": "Gagal menyimpan kode QR.",
+      "qrEmailed": "Email kode QR terkirim.",
+      "qrEmailFailed": "Gagal mengirim email kode QR.",
+      "qrEmailPlaceholder": "Email dengan kode QR ini akan dikirimkan ke alamat akun Anda.",
+      "missingDeviceId": "ID perangkat tidak ada",
+      "pumpStatusLoadFailed": "Gagal memuat jadwal penyiraman",
+      "wateringScheduled": "Penyiraman dijadwalkan",
+      "wateringScheduleFailed": "Gagal menjadwalkan penyiraman",
+      "wateringRecalled": "Penyiraman terjadwal ditarik kembali",
+      "wateringRecallFailed": "Gagal mengingat penyiraman"
+    },
+    "permissions": {
+      "storage": {
+        "title": "Izin penyimpanan",
+        "message": "Kami memerlukan akses untuk menyimpan kode QR ke galeri Anda.",
+        "ok": "Oke",
+        "denied": "Izin penyimpanan ditolak."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "Penyaji QR belum siap."
+    },
+    "info": {
+      "fallbackTitle": "Tanaman hias #{{id}}",
+      "purchased": "Dibeli",
+      "notes": "Catatan",
+      "light": "Cahaya",
+      "orientation": "Orientasi",
+      "distance": "Jarak",
+      "pot": "Pot bunga",
+      "soil": "Tanah",
+      "cm": "cm",
+      "in": "di",
+      "orientations": {
+        "N": "Utara",
+        "E": "Timur",
+        "S": "Selatan",
+        "W": "Barat"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Definisi tanaman hias",
+        "editPlant": "Edit tanaman",
+        "changeImage": "Ubah gambar",
+        "showReminders": "Tampilkan pengingat"
+      },
+      "noDefinitionTitle": "Definisi tanaman hias tidak tersedia",
+      "noDefinitionBody": "Tanaman hias ini belum dikaitkan dengan definisi tanaman hias.",
+      "editPlant": {
+        "title": "Edit tanaman",
+        "msg": "Pengeditan tanaman hias ini akan dilaksanakan nanti."
+      },
+      "showReminders": {
+        "title": "Tampilkan pengingat",
+        "msg": "Tautan ke pengingat akan diterapkan nanti."
+      }
+    },
+    "latestReadings": {
+      "title": "Pembacaan sensor terbaru",
+      "lastReadPrefix": "Terakhir dibaca",
+      "lastPumpRunPrefix": "Pompa terakhir dijalankan",
+      "opening": "Pembukaan...",
+      "scheduleWatering": "Jadwalkan penyiraman",
+      "unscheduleWatering": "Penyiraman tidak terjadwal",
+      "lastRead": {
+        "empty": "Terakhir dibaca: —",
+        "value": "Terakhir dibaca: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "Kode QR",
+      "desc": {
+        "primary": "Setiap tanaman hias memiliki kode unik QR. Memindainya dalam tampilan Pemindai akan membuka detail tanaman hias ini secara instan.",
+        "secondary": "Anda dapat menyimpan kode QR ke ponsel Anda atau mengirimkannya melalui email ke diri Anda sendiri, lalu mencetaknya dan melampirkannya ke pot bunga untuk akses cepat nanti."
+      },
+      "saveBtn": "Simpan",
+      "emailBtn": "Email"
+    },
+    "reminders": {
+      "title": "Pengingat",
+      "menu": {
+        "markComplete": "Tandai selesai",
+        "editReminder": "Sunting pengingat",
+        "showHistory": "Lihat riwayat"
+      },
+      "type": {
+        "watering": "Penyiraman",
+        "fertilising": "Pemupukan",
+        "moisture": "Penyemprotan",
+        "care": "Perawatan",
+        "repot": "Ganti pot"
+      }
+    }
+  }
+}

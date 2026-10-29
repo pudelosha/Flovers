@@ -1,0 +1,39 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Профиль комнатного растения",
+      "preferences": "Предпочтения",
+      "errorProfile": "Не удалось загрузить профиль комнатного растения.",
+      "labels": {
+        "sun": "Воздействие солнца",
+        "water": "Полив",
+        "difficulty": "Сложность",
+        "potMaterials": "Материалы для цветочных горшков",
+        "soilMixes": "Почвенные смеси",
+        "wateringInterval": "Полив",
+        "moistureInterval": "Проверка влажности",
+        "fertilizeInterval": "Удобрять",
+        "repotInterval": "Пересадка"
+      },
+      "values": {
+        "everyDays": "Каждые {{count}} дней",
+        "everyMonths": "Каждые {{count}} месяцев"
+      },
+      "traits": {
+        "sun": "Воздействие солнца",
+        "water": "Полив",
+        "difficulty": "Сложность",
+        "soil": "Почва",
+        "temperature": "Температура",
+        "humidity": "Влажность",
+        "toxic": "Токсично?",
+        "growth": "Рост",
+        "light": "Освещение",
+        "fertilizer": "Удобрения",
+        "recognize": "Распознать комнатное растение",
+        "problems": "Проблемы",
+        "pests": "Вредители"
+      }
+    }
+  }
+}

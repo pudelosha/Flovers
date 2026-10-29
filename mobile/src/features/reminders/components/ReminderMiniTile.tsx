@@ -8,6 +8,9 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import ReminderMiniTileMenu from "./ReminderMiniTileMenu";
+import { useNavigation } from "@react-navigation/native";
+import { plantAccess } from "../../../shared/utils/plantAccess";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 
 type Props = {
   reminder: UIReminder;
@@ -61,6 +64,8 @@ export default function ReminderMiniTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const nav = useNavigation<any>();
+  const access = plantAccess(reminder.access);
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -127,6 +132,7 @@ export default function ReminderMiniTile({
           <Text style={s.miniTitle} numberOfLines={1}>
             {reminder.plant}
           </Text>
+          <SharedPlantBadge access={reminder.access} />
 
           {!!reminder.location && (
             <View style={styles.locationRow}>
@@ -150,6 +156,8 @@ export default function ReminderMiniTile({
 
       {isMenuOpen && (
         <ReminderMiniTileMenu
+          canEdit={access.canEdit}
+          onPlantDetails={() => nav.navigate("PlantDetails", { id: reminder.plantId })}
           isActive={reminder.isActive}
           onToggleActive={onToggleActive}
           onEdit={onEdit}

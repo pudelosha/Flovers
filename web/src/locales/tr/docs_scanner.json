@@ -1,0 +1,63 @@
+{
+  "docs_scanner": {
+    "title": "QR Tarayıcı",
+    "sections": [
+      {
+        "heading": "Tarayıcı ne işe yarar?",
+        "body": [
+          "Tarayıcı ekranı, ev bitkileriniz için daha önce oluşturulmuş Flovers QR kodlarını taramanızı sağlar.",
+          "Tipik bir iş akışı, QR kodunu yazdırıp bunu ev bitkisi saksısına eklemektir; böylece doğru ev bitkisini daha sonra uygulamada hızlı bir şekilde açabilirsiniz.",
+          "QR tarama, kolaylık ve hızlı gezinme için tasarlanmıştır; manuel aramaya gerek yoktur."
+        ]
+      },
+      {
+        "heading": "Kamera erişim gereksinimi",
+        "body": [
+          "QR Tarayıcıyı kullanmak için Flovers uygulamasının cihazınızın kamerasına erişim iznine ihtiyacı vardır.",
+          "Kamera yalnızca QR kodlarını gerçek zamanlı olarak taramak için kullanılır ve tarama işlemi dışında video kaydetmek veya fotoğraf çekmek için kullanılmaz.",
+          "Kamera izni reddedilirse Tarayıcı özelliği, cihazınızın sistem ayarlarında erişim izni verilene kadar çalışmayacaktır."
+        ]
+      },
+      {
+        "heading": "Flovers QR kodu neler içerir?",
+        "body": [
+          "Flovers QR kodu, Flovers'ye bir referans ve hesabınızdaki belirli bir ev bitkisi Örneğinin kimliğini içerir.",
+          "Kod doğru şekilde taranıp tanındıktan sonra uygulama, ilgili ev bitkisine yönlendirme gerçekleştirir.",
+          "QR kodu, hesabınızda saklanan kendi ev bitkilerinizle çalışmak üzere tasarlanmıştır."
+        ]
+      },
+      {
+        "heading": "Başarılı bir taramadan sonra ne olur?",
+        "body": [
+          "Tarayıcı ekranında başarılı bir taramanın ardından uygulama sizi ev bitkisi Ayrıntılarına yönlendirir.",
+          "Ev bitkisi Ayrıntıları'nda ev bitkisinin bilgilerini, atanan görevleri ve en son sensör okumalarını (eğer bir cihaz bağlıysa) görüntüleyebilirsiniz.",
+          "Bu, Tarayıcıyı belirli bir ev bitkisiyle ilgili her şeye hızlı bir giriş noktası haline getirir."
+        ]
+      },
+      {
+        "heading": "Bir ev bitkisi için QR kodunun ön izlemesi nerede yapılır?",
+        "body": [
+          "Bir ev bitkisinin QR kodunu ev bitkileri listesinden, ev bitkisinin bağlam menüsünü (açılır menü) açıp QR kod seçeneğini seçerek önizleyebilirsiniz.",
+          "QR kodunu doğrudan ev bitkisi Ayrıntılarında da görüntüleyebilirsiniz.",
+          "Her iki görünüm de seçilen ev bitkisi için aynı QR koduna hızlı erişim sağlar."
+        ]
+      },
+      {
+        "heading": "QR kodunu kaydetme veya gönderme",
+        "body": [
+          "Hem ev bitkileri listesinden hem de ev bitkisi Detaylarından QR kodunu telefonunuza kaydedebilirsiniz.",
+          "QR kodunu, örneğin daha sonra yazdırmak veya yedek olarak saklamak için e-posta adresinize de gönderebilirsiniz.",
+          "QR kodlarını yazdırırsanız okunabilir durumda olduklarından emin olun (iyi kontrast, kırışıklık yok, parlama yok)."
+        ]
+      },
+      {
+        "heading": "Tarama sorunlarını giderme",
+        "body": [
+          "Tarama başarısız olursa, aydınlatmayı iyileştirmeyi ve kodu kamera çerçevesinde düz ve tamamen görünür tutmayı deneyin.",
+          "QR kodu hasarlıysa veya bulanıksa, kodu yeniden kaydedin veya uygulamadan yeniden gönderin ve yeni bir kopya yazdırın.",
+          "Kod yanlış iç mekan bitkisini açarsa QR kodunu oluştururken veya dışa aktarırken doğru iç mekan bitkisini seçtiğinizi doğrulayın."
+        ]
+      }
+    ]
+  }
+}

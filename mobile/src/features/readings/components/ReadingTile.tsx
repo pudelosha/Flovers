@@ -7,6 +7,8 @@ import { s } from "../styles/readings.styles";
 import { ReadingTileModel } from "../types/readings.types";
 import { ICON_BG, METRIC_UNITS } from "../constants/readings.constants";
 import ReadingMenu from "./ReadingMenu";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -192,7 +194,8 @@ export default function ReadingTile({
     [t, currentLanguage]
   );
 
-  const effectivePumpIncluded = !!data.pumpIncluded;
+  const access = plantAccess(data.access);
+  const effectivePumpIncluded = !!data.pumpIncluded && access.isOwner;
   const effectiveAutoPumpEnabled =
     autoPumpEnabled ?? data.automaticPumpLaunch ?? false;
   const effectiveSoilMoistureThreshold =
@@ -274,6 +277,7 @@ export default function ReadingTile({
         />
 
         <View pointerEvents="none" style={s.cardTint} />
+        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
@@ -287,6 +291,7 @@ export default function ReadingTile({
           <Text style={s.name} numberOfLines={1}>
             {deviceName ?? data.name}
           </Text>
+          <SharedPlantBadge access={data.access} />
 
           {!!effectiveLocation && (
             <View style={localStyles.locationRow}>
@@ -319,6 +324,7 @@ export default function ReadingTile({
 
       {isMenuOpen && (
         <ReadingMenu
+          canEdit={access.canEdit}
           onEdit={onEdit}
           onDeviceDetails={onDeviceDetails}
           onHistory={onHistory}

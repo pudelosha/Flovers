@@ -2,8 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Language constants
-const LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"];
-const DEFAULT_LANG = "en";
+import { LANGS, DEFAULT_LANG } from "../config.js";
 
 // English imports
 import enCommon from "../locales/en/common.json";
@@ -281,6 +280,70 @@ import koDocsReadingsHistory from "../locales/ko/docs_readings_history.json";
 import koDocsScanner from "../locales/ko/docs_scanner.json";
 import koDocsProfile from "../locales/ko/docs_profile.json";
 
+import idCommon from "../locales/id/common.json";
+import idHome from "../locales/id/home.json";
+import idTerms from "../locales/id/terms.json";
+import idPrivacyPolicy from "../locales/id/privacy-policy.json";
+import idContact from "../locales/id/contact.json";
+import idFaq from "../locales/id/faq.json";
+import idDocs from "../locales/id/docs.json";
+import idSchemas from "../locales/id/schemas.json";
+import idDocsOverview from "../locales/id/docs_overview.json";
+import idDocsAuth from "../locales/id/docs_auth.json";
+import idDocsHome from "../locales/id/docs_home.json";
+import idDocsTaskHistory from "../locales/id/docs_task_history.json";
+import idDocsPlants from "../locales/id/docs_plants.json";
+import idDocsPlantDetails from "../locales/id/docs_plant_details.json";
+import idDocsCreatePlantWizard from "../locales/id/docs_create_plant_wizard.json";
+import idDocsLocations from "../locales/id/docs_locations.json";
+import idDocsReminders from "../locales/id/docs_reminders.json";
+import idDocsReadings from "../locales/id/docs_readings.json";
+import idDocsReadingsHistory from "../locales/id/docs_readings_history.json";
+import idDocsScanner from "../locales/id/docs_scanner.json";
+import idDocsProfile from "../locales/id/docs_profile.json";
+import ruCommon from "../locales/ru/common.json";
+import ruHome from "../locales/ru/home.json";
+import ruTerms from "../locales/ru/terms.json";
+import ruPrivacyPolicy from "../locales/ru/privacy-policy.json";
+import ruContact from "../locales/ru/contact.json";
+import ruFaq from "../locales/ru/faq.json";
+import ruDocs from "../locales/ru/docs.json";
+import ruSchemas from "../locales/ru/schemas.json";
+import ruDocsOverview from "../locales/ru/docs_overview.json";
+import ruDocsAuth from "../locales/ru/docs_auth.json";
+import ruDocsHome from "../locales/ru/docs_home.json";
+import ruDocsTaskHistory from "../locales/ru/docs_task_history.json";
+import ruDocsPlants from "../locales/ru/docs_plants.json";
+import ruDocsPlantDetails from "../locales/ru/docs_plant_details.json";
+import ruDocsCreatePlantWizard from "../locales/ru/docs_create_plant_wizard.json";
+import ruDocsLocations from "../locales/ru/docs_locations.json";
+import ruDocsReminders from "../locales/ru/docs_reminders.json";
+import ruDocsReadings from "../locales/ru/docs_readings.json";
+import ruDocsReadingsHistory from "../locales/ru/docs_readings_history.json";
+import ruDocsScanner from "../locales/ru/docs_scanner.json";
+import ruDocsProfile from "../locales/ru/docs_profile.json";
+import trCommon from "../locales/tr/common.json";
+import trHome from "../locales/tr/home.json";
+import trTerms from "../locales/tr/terms.json";
+import trPrivacyPolicy from "../locales/tr/privacy-policy.json";
+import trContact from "../locales/tr/contact.json";
+import trFaq from "../locales/tr/faq.json";
+import trDocs from "../locales/tr/docs.json";
+import trSchemas from "../locales/tr/schemas.json";
+import trDocsOverview from "../locales/tr/docs_overview.json";
+import trDocsAuth from "../locales/tr/docs_auth.json";
+import trDocsHome from "../locales/tr/docs_home.json";
+import trDocsTaskHistory from "../locales/tr/docs_task_history.json";
+import trDocsPlants from "../locales/tr/docs_plants.json";
+import trDocsPlantDetails from "../locales/tr/docs_plant_details.json";
+import trDocsCreatePlantWizard from "../locales/tr/docs_create_plant_wizard.json";
+import trDocsLocations from "../locales/tr/docs_locations.json";
+import trDocsReminders from "../locales/tr/docs_reminders.json";
+import trDocsReadings from "../locales/tr/docs_readings.json";
+import trDocsReadingsHistory from "../locales/tr/docs_readings_history.json";
+import trDocsScanner from "../locales/tr/docs_scanner.json";
+import trDocsProfile from "../locales/tr/docs_profile.json";
+
 const resources = {
   en: {
     common: enCommon,
@@ -304,6 +367,75 @@ const resources = {
     docs_readings_history: enDocsReadingsHistory,
     docs_scanner: enDocsScanner,
     docs_profile: enDocsProfile
+  },
+  id: {
+    common: idCommon,
+    home: idHome,
+    terms: idTerms,
+    "privacy-policy": idPrivacyPolicy,
+    contact: idContact,
+    faq: idFaq,
+    docs: idDocs,
+    schemas: idSchemas,
+    docs_overview: idDocsOverview,
+    docs_auth: idDocsAuth,
+    docs_home: idDocsHome,
+    docs_task_history: idDocsTaskHistory,
+    docs_plants: idDocsPlants,
+    docs_plant_details: idDocsPlantDetails,
+    docs_create_plant_wizard: idDocsCreatePlantWizard,
+    docs_locations: idDocsLocations,
+    docs_reminders: idDocsReminders,
+    docs_readings: idDocsReadings,
+    docs_readings_history: idDocsReadingsHistory,
+    docs_scanner: idDocsScanner,
+    docs_profile: idDocsProfile
+  },
+  ru: {
+    common: ruCommon,
+    home: ruHome,
+    terms: ruTerms,
+    "privacy-policy": ruPrivacyPolicy,
+    contact: ruContact,
+    faq: ruFaq,
+    docs: ruDocs,
+    schemas: ruSchemas,
+    docs_overview: ruDocsOverview,
+    docs_auth: ruDocsAuth,
+    docs_home: ruDocsHome,
+    docs_task_history: ruDocsTaskHistory,
+    docs_plants: ruDocsPlants,
+    docs_plant_details: ruDocsPlantDetails,
+    docs_create_plant_wizard: ruDocsCreatePlantWizard,
+    docs_locations: ruDocsLocations,
+    docs_reminders: ruDocsReminders,
+    docs_readings: ruDocsReadings,
+    docs_readings_history: ruDocsReadingsHistory,
+    docs_scanner: ruDocsScanner,
+    docs_profile: ruDocsProfile
+  },
+  tr: {
+    common: trCommon,
+    home: trHome,
+    terms: trTerms,
+    "privacy-policy": trPrivacyPolicy,
+    contact: trContact,
+    faq: trFaq,
+    docs: trDocs,
+    schemas: trSchemas,
+    docs_overview: trDocsOverview,
+    docs_auth: trDocsAuth,
+    docs_home: trDocsHome,
+    docs_task_history: trDocsTaskHistory,
+    docs_plants: trDocsPlants,
+    docs_plant_details: trDocsPlantDetails,
+    docs_create_plant_wizard: trDocsCreatePlantWizard,
+    docs_locations: trDocsLocations,
+    docs_reminders: trDocsReminders,
+    docs_readings: trDocsReadings,
+    docs_readings_history: trDocsReadingsHistory,
+    docs_scanner: trDocsScanner,
+    docs_profile: trDocsProfile
   },
   pl: {
     common: plCommon,

@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Masuk",
+    "email": "Email",
+    "password": "Kata sandi",
+    "signIn": "Masuk",
+    "forgotPassword": "Lupa kata sandi?",
+    "resendActivation": "Tidak menerima email aktivasi?",
+    "noAccount": "Belum punya akun?",
+    "signUp": "Daftar",
+    "errors": {
+      "invalidCredentials": "Email atau kata sandi tidak valid.",
+      "generic": "Ada yang tidak beres. Silakan coba lagi."
+    },
+    "success": {
+      "welcome": "Selamat datang kembali!"
+    }
+  }
+}

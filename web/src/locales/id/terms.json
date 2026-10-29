@@ -1,0 +1,144 @@
+{
+  "terms": {
+    "title": "Ketentuan Layanan",
+    "lastUpdated": "Terakhir diperbarui: {{date}}",
+    "section1": {
+      "title": "§ 1. Ketentuan umum",
+      "p1": "These Terms of Service define the rules for using the Flovers website and the Flovers mobile application (Android and, in the future, iOS), as well as the conditions for providing electronic services by the Provider.",
+      "p2": "Layanan ini dioperasikan oleh Marcin Janowski Copy Paste IT Solutions, dengan alamat terdaftar di ul. hal. Francesco Nullo 30/115, 31-543 Kraków, Polandia, email: info@flovers.app, selanjutnya disebut sebagai “Penyedia”.",
+      "p3": "By using the Service, including by creating an Account, logging in, or using any functionality of the application or website, the User accepts these Terms and undertakes to comply with them.",
+      "p4": "In matters not regulated by these Terms, the applicable provisions of Polish law shall apply, in particular the Act on Providing Services by Electronic Means, the Civil Code, the Act on Consumer Rights, and relevant provisions of European Union law."
+    },
+    "section2": {
+      "title": "§ 2. Definitions",
+      "items": [
+        "Service – electronic services provided by the Provider under the Flovers brand, including the mobile application, website, and backend infrastructure",
+        "Aplikasi – aplikasi seluler Flovers tersedia untuk perangkat Android (dan iOS di masa mendatang)",
+        "Situs web – situs web Flovers bersama dengan dokumentasi dan konten informasi",
+        "Pengguna – seseorang yang menggunakan Layanan; dalam hal pendaftaran, orang yang telah membuat Akun",
+        "Akun – akun pengguna individu dalam sistem Penyedia, dilindungi oleh kata sandi",
+        "Perangkat – perangkat yang digunakan oleh Pengguna untuk mengakses Layanan (misalnya ponsel, tablet) dan, jika berlaku, perangkat pengukuran (misalnya Arduino) yang mengirimkan data sensor",
+        "Definisi tanaman hias – profil tanaman hias yang dibuat oleh Penyedia berisi karakteristik umum, preferensi, dan rekomendasi perawatan, yang mungkin mencakup konten yang dibuat secara otomatis",
+        "Mesin Virtual tanaman hias – tanaman hias yang dibuat oleh Pengguna dalam Akun mereka, mewakili spesimen mereka sendiri, secara opsional ditautkan ke Definisi tanaman hias",
+        "Data Sensor – data dari sensor seperti suhu udara, kelembapan udara, kelembapan tanah, atau tingkat cahaya, yang ditetapkan ke Instans tanaman hias",
+        "Pengingat – definisi aktivitas perawatan tanaman hias yang berulang (misalnya menyiram, menyemprot, memupuk, merepoting) yang digunakan untuk menghasilkan Tugas",
+        "Tugas – tindakan spesifik yang dihasilkan dari Pengingat, yang dapat ditandai sebagai selesai dan diberi catatan oleh Pengguna",
+        "Konten Pengguna – semua data dan konten yang dibuat, diunggah, atau dikelola oleh Pengguna dalam Layanan",
+        "Pengenalan tanaman hias – fitur yang menganalisis foto yang diberikan oleh Pengguna dan mengembalikan hasil pengenalan yang dihasilkan oleh sistem Penyedia",
+        "Ketentuan – Ketentuan Layanan ini"
+      ]
+    },
+    "section3": {
+      "title": "§ 3. Cakupan Layanan dan fungsinya",
+      "intro": "Layanan ini dapat mencakup, khususnya:",
+      "list": [
+        "pendaftaran dan pengelolaan Akun (login, konfirmasi email, pengaturan ulang kata sandi, pengiriman ulang tautan aktivasi)",
+        "akses ke perpustakaan Definisi tanaman hias dengan panduan perawatan",
+        "pembuatan instance tanaman hias dan pemeliharaan buku harian dan sejarah tanaman hias",
+        "Pengingat dan Tugas terkait perawatan tanaman hias (misalnya menyiram, menyemprot, memupuk, merepoting)",
+        "Pengenalan tanaman hias berdasarkan foto yang disediakan oleh Pengguna",
+        "integrasi dengan perangkat pengukuran dan penyimpanan serta penyajian Data Sensor",
+        "pembuatan dan pemindaian kode QR yang tertaut ke sumber daya Pengguna (misalnya Instans tanaman hias)",
+        "akses ke dokumentasi dan FAQ"
+      ],
+      "p1": "Layanan saat ini disediakan sebagai versi beta gratis. Penyedia dapat memperkenalkan paket berbayar, batasan untuk versi gratis, iklan, atau langganan di masa mendatang, yang akan diberitahukan sebelumnya kepada Pengguna.",
+      "p2": "Penyedia dapat memodifikasi, memperluas, membatasi, atau menghentikan fungsi-fungsi tertentu dari Layanan, dengan ketentuan bahwa perubahan tersebut tidak melanggar ketentuan wajib hukum."
+    },
+    "section4": {
+      "title": "§ 4. Persyaratan teknis",
+      "items": [
+        "Perangkat dengan akses ke Internet",
+        "Browser web saat ini (untuk Situs Web) atau sistem Android yang kompatibel (untuk Aplikasi)",
+        "Alamat email aktif yang diperlukan untuk pendaftaran dan pengelolaan Akun",
+        "Mengaktifkan JavaScript dan cookie di browser web, jika diperlukan untuk pengoperasian Situs Web yang benar"
+      ]
+    },
+    "section5": {
+      "title": "§ 5. Akun dan keamanan",
+      "p1": "Penggunaan sebagian besar fungsi Layanan memerlukan pembuatan Akun.",
+      "p2": "Pengguna berkewajiban untuk memberikan informasi yang akurat dan menjaga kerahasiaan kredensial loginnya.",
+      "p3": "Pengguna bertanggung jawab atas semua tindakan yang dilakukan menggunakan Akun mereka, kecuali tindakan tersebut diakibatkan oleh keadaan yang disebabkan oleh Penyedia.",
+      "p4": "Penyedia dapat memblokir atau membatasi akses terhadap Akun atau Layanan untuk sementara waktu apabila terdeteksi adanya penyalahgunaan, ancaman keamanan, atau pelanggaran terhadap Ketentuan ini."
+    },
+    "section6": {
+      "title": "§ 6. Konten Pengguna dan lisensi",
+      "p1": "Pengguna tetap memiliki hak apa pun yang mungkin mereka miliki atas Konten Pengguna mereka berdasarkan hukum yang berlaku.",
+      "p2": "Dengan menyediakan Konten Pengguna, Pengguna memberikan kepada Penyedia lisensi non-eksklusif, bebas biaya, dapat dibatalkan (dicabut dengan menghapus Akun atau konten), dapat dialihkan sejauh diperlukan untuk menyediakan Layanan, untuk menyimpan, mereproduksi, menampilkan, dan memproses konten tersebut semata-mata untuk pengoperasian dan pemeliharaan Layanan.",
+      "p3": "Foto yang digunakan untuk Pengenalan tanaman hias diproses hanya untuk tujuan pengenalan dan tidak disimpan lebih lama dari yang diperlukan, kecuali Pengguna secara eksplisit menggunakan fitur yang memerlukan penyimpanannya.",
+      "p4": "Pengguna menyatakan bahwa mereka memegang hak yang diperlukan atas konten yang mereka sediakan dan bahwa konten tersebut tidak melanggar hak pihak ketiga."
+    },
+    "section7": {
+      "title": "§ 7. Aturan penggunaan dan tindakan yang dilarang",
+      "intro": "Pengguna berjanji untuk menggunakan Layanan sesuai dengan hukum, praktik yang baik, dan menghormati hak orang lain. Secara khusus, dilarang untuk:",
+      "list": [
+        "mencoba untuk melewati otentikasi, langkah-langkah keamanan, atau batasan teknis",
+        "penyalahgunaan API, titik akhir, atau mekanisme integrasi, termasuk yang terkait dengan perangkat pengukuran",
+        "menyediakan konten yang melanggar hukum, menyinggung, menyesatkan, atau melanggar",
+        "mengirim spam atau konten promosi massal melalui fitur kontak atau dukungan",
+        "upaya untuk mendapatkan akses tidak sah ke data Pengguna lain"
+      ],
+      "p1": "Penyedia dapat membatasi akses terhadap Layanan atau Akun apabila terjadi pelanggaran terhadap peraturan di atas."
+    },
+    "section8": {
+      "title": "§ 8. Kode QR, tautan, dan kunci akses",
+      "p1": "Layanan dapat mengizinkan pembuatan kode atau tautan QR (misalnya ke Instans tanaman hias). Pengguna bertanggung jawab atas penyimpanan dan distribusinya.",
+      "p2": "Jika Pengguna membagikan tautan, pengidentifikasi, atau kunci akses dengan pihak ketiga, pihak-pihak tersebut dapat memperoleh akses ke data yang ditunjukkan dalam lingkup akses yang diberikan. Pengguna menanggung risiko yang terkait dengan pembagian tersebut."
+    },
+    "section9": {
+      "title": "§ 9. Pembayaran dan rencana (informasi masa depan)",
+      "p1": "Pada tanggal publikasi Ketentuan ini, Layanan disediakan secara gratis sebagai versi beta.",
+      "p2": "Penyedia dapat memperkenalkan paket berbayar, langganan terbarukan, iklan, atau batasan penggunaan (misalnya jumlah tanaman hias). Paket berbayar dapat ditawarkan melalui Google Play atau Apple App Store.",
+      "p3": "Jika langganan diperkenalkan, langganan dapat diperpanjang secara otomatis. Ketentuan pembayaran, penagihan, dan pengembalian dana mungkin diatur oleh kebijakan toko aplikasi terkait dan informasi yang diberikan pada saat pembelian."
+    },
+    "section10": {
+      "title": "§ 10. Tanggung jawab dan penafian",
+      "p1": "Layanan ini dimaksudkan untuk mendukung perawatan tanaman hias dan memiliki karakter informasional dan utilitas. Penyedia tidak menjamin hasil spesifik seperti pertumbuhan tanaman hias, kesehatan, atau pencegahan kesalahan perawatan.",
+      "p2": "Layanan disediakan \"sebagaimana adanya\" dan berdasarkan upaya terbaik. Waktu henti sementara atau ketersediaan terbatas dapat terjadi karena pemeliharaan, pengembangan, atau kegagalan.",
+      "p3": "Penyedia tidak bertanggung jawab atas kerugian yang diakibatkan oleh penggunaan Layanan yang tidak semestinya, kesalahan data yang disediakan Pengguna, tidak berfungsinya perangkat Pengguna, masalah konektivitas Internet, atau keadaan lain di luar kendali Penyedia, sepanjang diizinkan oleh hukum.",
+      "p4": "Tidak ada ketentuan dalam bagian ini yang membatasi atau mengecualikan hak-hak konsumen yang diberikan oleh ketentuan wajib hukum."
+    },
+    "section11": {
+      "title": "§ 11. Keluhan dan kontak",
+      "p1": "Pengguna dapat menyampaikan keluhan mengenai pengoperasian Layanan melalui email ke: info@flovers.app.",
+      "p2": "Pengaduan harus menjelaskan masalah, tanggal, dan keadaan, serta menyertakan informasi tambahan jika memungkinkan.",
+      "p3": "Penyedia akan merespons tanpa penundaan yang tidak semestinya, jika memungkinkan selambat-lambatnya dalam waktu 14 hari."
+    },
+    "section12": {
+      "title": "§ 12. Penghentian dan penghapusan akun",
+      "p1": "Pengguna dapat menghapus Akun mereka kapan saja dari dalam Aplikasi, yang mengakibatkan penghapusan Akun dan data terkait secara permanen.",
+      "p2": "Penyedia dapat menangguhkan atau menghentikan akses terhadap Layanan jika terjadi pelanggaran terhadap Ketentuan ini, tindakan melanggar hukum, atau ancaman terhadap keamanan Layanan.",
+      "p3": "Penyedia dapat menghentikan Layanan atau bagiannya karena alasan yang sah, dengan memberi tahu Pengguna terlebih dahulu jika memungkinkan."
+    },
+    "section13": {
+      "title": "§ 13. Kekayaan intelektual",
+      "p1": "Perangkat lunak, desain, logo, nama Flovers, dokumentasi, dan konten yang disediakan oleh Penyedia dilindungi oleh hukum dan menjadi milik Penyedia atau entitas yang berwenang.",
+      "p2": "Dilarang menyalin, memodifikasi, mendistribusikan, atau menggunakan elemen Layanan tanpa persetujuan Penyedia, kecuali diizinkan oleh hukum."
+    },
+    "section14": {
+      "title": "§ 14. Usia pengguna",
+      "p1": "Layanan ini ditujukan untuk orang berusia 16 tahun ke atas.",
+      "p2": "Pengguna yang berusia di bawah 16 tahun tidak boleh membuat Akun atau menggunakan Layanan."
+    },
+    "section15": {
+      "title": "§ 15. Dokumen terkait",
+      "intro": "Dokumen-dokumen berikut ini terkait dengan Layanan:",
+      "list": [
+        "Kebijakan Privasi",
+        "Kebijakan Cookie",
+        "Dokumentasi dan FAQ"
+      ]
+    },
+    "section16": {
+      "title": "§ 16. Hukum yang berlaku dan penyelesaian sengketa",
+      "p1": "Ketentuan ini diatur oleh hukum Polandia dan tunduk pada ketentuan perlindungan konsumen wajib.",
+      "p2": "Perselisihan harus diselesaikan terlebih dahulu secara damai, khususnya dengan menghubungi Penyedia.",
+      "p3": "Konsumen dapat menggunakan mekanisme penyelesaian sengketa di luar pengadilan dan platform ODR UE yang tersedia di: https://ec.europa.eu/consumers/odr/.",
+      "p4": "Yurisdiksi pengadilan dalam sengketa konsumen ditentukan sesuai dengan hukum yang berlaku."
+    },
+    "section17": {
+      "title": "§ 17. Amandemen Ketentuan",
+      "p1": "Penyedia dapat mengubah Ketentuan ini karena alasan yang sah seperti perubahan hukum, pengembangan Layanan, atau perubahan teknologi.",
+      "p2": "Pengguna akan diberitahu mengenai perubahan tersebut melalui Website dan/atau Aplikasi. Penggunaan Layanan yang berkelanjutan merupakan penerimaan terhadap Ketentuan yang diperbarui."
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "docs_scanner": {
+    "title": "Pemindai QR",
+    "sections": [
+      {
+        "heading": "Untuk apa Pemindai itu",
+        "body": [
+          "Layar Pemindai memungkinkan Anda memindai kode Flovers QR yang dibuat sebelumnya untuk tanaman hias Anda.",
+          "Alur kerja yang umum adalah mencetak kode QR dan melampirkannya ke pot bunga tanaman hias, sehingga Anda dapat dengan cepat membuka tanaman hias yang benar di aplikasi nanti.",
+          "Pemindaian QR dirancang untuk kenyamanan dan navigasi cepat—tidak diperlukan pencarian manual."
+        ]
+      },
+      {
+        "heading": "Persyaratan akses kamera",
+        "body": [
+          "Untuk menggunakan Pemindai QR, aplikasi Flovers memerlukan izin untuk mengakses kamera perangkat Anda.",
+          "Kamera hanya digunakan untuk memindai kode QR secara real time dan tidak digunakan untuk merekam video atau mengambil foto di luar proses pemindaian.",
+          "Jika izin kamera ditolak, fitur Pemindai tidak akan berfungsi hingga akses diberikan dalam pengaturan sistem perangkat Anda."
+        ]
+      },
+      {
+        "heading": "Apa isi kode Flovers QR",
+        "body": [
+          "Kode Flovers QR berisi referensi ke Flovers dan ID Mesin Virtual tanaman hias tertentu di akun Anda.",
+          "Setelah kode dipindai dan dikenali dengan benar, aplikasi melakukan pengalihan ke tanaman hias yang sesuai.",
+          "Kode QR dimaksudkan untuk bekerja dengan tanaman hias Anda yang disimpan di akun Anda."
+        ]
+      },
+      {
+        "heading": "Apa yang terjadi setelah pemindaian berhasil",
+        "body": [
+          "Setelah pemindaian berhasil di layar Pemindai, aplikasi mengarahkan Anda ke Detail tanaman hias.",
+          "Di Detail tanaman hias, Anda dapat melihat informasi tanaman hias, tugas yang diberikan, dan pembacaan sensor terbaru (jika perangkat terhubung).",
+          "Hal ini menjadikan Pemindai sebagai titik masuk cepat ke segala sesuatu yang berkaitan dengan tanaman hias tertentu."
+        ]
+      },
+      {
+        "heading": "Tempat melihat pratinjau kode QR untuk tanaman hias",
+        "body": [
+          "Anda dapat melihat pratinjau kode QR tanaman hias dari daftar tanaman hias dengan membuka menu konteks tanaman hias (tarik-turun) dan memilih opsi kode QR.",
+          "Anda juga dapat melihat kode QR langsung di Detail tanaman hias.",
+          "Kedua tampilan menyediakan akses cepat ke kode QR yang sama untuk tanaman hias yang dipilih."
+        ]
+      },
+      {
+        "heading": "Menyimpan atau mengirim kode QR",
+        "body": [
+          "Dari daftar tanaman hias dan Detail tanaman hias, Anda dapat menyimpan kode QR ke telepon Anda.",
+          "Anda juga dapat mengirimkan kode QR ke alamat email Anda, misalnya untuk dicetak nanti atau disimpan sebagai cadangan.",
+          "Jika Anda mencetak kode QR, pastikan kode tersebut tetap dapat dibaca (kontras bagus, tidak kusut, tidak silau)."
+        ]
+      },
+      {
+        "heading": "Memecahkan masalah pemindaian",
+        "body": [
+          "Jika pemindaian gagal, coba tingkatkan pencahayaan dan jaga agar kode tetap datar dan terlihat sepenuhnya di bingkai kamera.",
+          "Jika kode QR rusak atau kabur, simpan kembali atau kirim ulang dari aplikasi dan cetak salinan baru.",
+          "Jika kode membuka tanaman hias yang salah, verifikasi bahwa Anda memilih tanaman hias yang benar saat membuat atau mengekspor kode QR."
+        ]
+      }
+    ]
+  }
+}

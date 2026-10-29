@@ -1,0 +1,77 @@
+{
+  "docs_home": {
+    "title": "Beranda",
+    "sections": [
+      {
+        "heading": "Tujuan layar Beranda",
+        "body": [
+          "Beranda adalah layar utama yang Anda lihat setelah login berhasil.",
+          "Ini berfokus pada pekerjaan sehari-hari Anda: tugas-tugas yang dihasilkan dari pengingat Anda, sehingga Anda dapat dengan cepat melihat apa yang perlu diperhatikan hari ini atau apa yang sudah lewat waktu.",
+          "Jika tidak ada tugas yang harus diselesaikan, layar akan menampilkan ubin informasi yang menjelaskan bahwa saat ini tidak ada tugas yang dijadwalkan dan menyarankan langkah selanjutnya, seperti membuat pengingat."
+        ]
+      },
+      {
+        "heading": "Daftar tugas (ubin yang dihasilkan dari pengingat)",
+        "body": [
+          "Setiap ubin mewakili satu Tugas yang dihasilkan dari definisi Pengingat (misalnya: Penyiraman, Gerimis, Pemupukan, Repotting, atau Perawatan umum).",
+          "Tugas muncul secara otomatis ketika sudah jatuh tempo berdasarkan aturan pengulangan yang ditentukan dalam Pengingat.",
+          "Setiap ubin biasanya menunjukkan jenis tugas, nama tanaman hias, lokasi, dan status jatuh tempo (seperti Jatuh Tempo hari ini atau Terlambat)."
+        ]
+      },
+      {
+        "heading": "Menu ubin tugas (tindakan per tugas)",
+        "body": [
+          "Setiap ubin tugas menyertakan menu konteks (menu tiga titik) dengan tindakan yang terkait dengan tugas spesifik tersebut.",
+          "Tandai sebagai selesai: menutup tugas dan memungkinkan Anda menambahkan catatan secara opsional, membantu Anda membuat riwayat perawatan terperinci.",
+          "Edit pengingat: membuka Pengingat yang terkait dengan tugas sehingga Anda dapat mengubah pengaturan pengulangannya.",
+          "Buka tanaman hias: menavigasi langsung ke tampilan Detail tanaman hias untuk tanaman hias terkait.",
+          "Tampilkan riwayat: membuka riwayat tugas yang menampilkan tugas yang diselesaikan sebelumnya untuk tanaman hias atau pengingat yang sama."
+        ]
+      },
+      {
+        "heading": "Pintasan Tombol Tindakan Mengambang (FAB).",
+        "body": [
+          "Layar Beranda menyertakan Tombol Tindakan Mengambang (FAB) yang membuka tindakan cepat untuk mengerjakan tugas.",
+          "Tampilkan terlambat: menerapkan filter pintasan yang hanya menampilkan tugas yang terlambat.",
+          "Tampilkan batas waktu hari ini: menerapkan filter pintasan yang menampilkan tugas yang harus diselesaikan hari ini.",
+          "Sortir: mengubah urutan tugas dalam daftar.",
+          "Filter: mempersempit daftar berdasarkan kriteria yang dipilih.",
+          "Riwayat: menavigasi ke layar Riwayat Tugas, yang didokumentasikan secara terpisah."
+        ]
+      },
+      {
+        "heading": "Opsi penyortiran",
+        "body": [
+          "Penyortiran memungkinkan Anda menyesuaikan daftar tugas agar sesuai dengan alur kerja pilihan Anda.",
+          "Opsi penyortiran yang tersedia meliputi: Tanggal jatuh tempo, nama tanaman hias, dan Lokasi."
+        ]
+      },
+      {
+        "heading": "Opsi pemfilteran",
+        "body": [
+          "Filter membantu Anda fokus pada subkumpulan tugas tertentu.",
+          "Anda dapat memfilter tugas berdasarkan nama tanaman hias, Lokasi, Jenis tugas, dan rentang tanggal jatuh tempo.",
+          "Beberapa filter dapat digabungkan, misalnya untuk hanya menampilkan tugas Menyiram tanaman hias di lokasi tertentu."
+        ]
+      },
+      {
+        "heading": "Penyelesaian massal (menutup banyak tugas)",
+        "body": [
+          "Penyelesaian massal tersedia saat menggunakan tampilan pintasan cepat: Tampilkan lewat waktu atau Tampilkan jatuh tempo hari ini.",
+          "Saat salah satu filter pintasan ini aktif, Tombol Tindakan Mengambang untuk sementara menampilkan tindakan tambahan seperti “Tandai terlihat sebagai selesai”.",
+          "Tindakan ini menutup semua tugas yang terlihat saat ini sekaligus, tanpa memerlukan pemilihan tugas individual secara manual.",
+          "Penyelesaian massal dirancang untuk situasi di mana Anda melakukan tindakan perawatan yang sama untuk beberapa tanaman hias dalam satu sesi.",
+          "Bergantung pada alur yang Anda pilih, Anda mungkin masih dapat menambahkan catatan ke tugas yang telah diselesaikan setelah tindakan massal."
+        ]
+      },
+      {
+        "heading": "Navigasi dari Rumah",
+        "body": [
+          "Layar Beranda menyediakan navigasi cepat ke bagian lain aplikasi melalui tindakan tugas dan pintasan FAB.",
+          "Dari tugas individual, Anda dapat melompat langsung ke Detail tanaman hias atau riwayat tugas.",
+          "Dari FAB Anda dapat membuka Riwayat Tugas atau menyaring daftar tugas menggunakan pengurutan dan pemfilteran."
+        ]
+      }
+    ]
+  }
+}

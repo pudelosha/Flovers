@@ -1,0 +1,28 @@
+{
+  "title": "Kontak",
+  "subtitle": "Kirim pesan ke dukungan. Kami biasanya membalas dalam 1–3 hari kerja.",
+  "form": {
+    "emailLabel": "Email Anda",
+    "emailPlaceholder": "you@example.com",
+    "subjectLabel": "Subyek",
+    "subjectPlaceholder": "misalnya Masalah masuk",
+    "messageLabel": "Pesan",
+    "messagePlaceholder": "Jelaskan masalah atau pertanyaan Anda…",
+    "copyToMe": "Kirimkan saya salinannya",
+    "send": "Kirim",
+    "sending": "Mengirim…",
+    "mailtoFallback": "Email saja",
+    "note": "Jika formulir gagal, gunakan tombol email."
+  },
+  "toasts": {
+    "enterEmail": "Silakan masukkan alamat email yang valid.",
+    "rateLimited": "Terlalu banyak pesan. Silakan coba lagi nanti.",
+    "enterSubject": "Silakan masukkan subjek.",
+    "enterMessage": "Silakan masukkan pesan.",
+    "contactSent": "Pesan terkirim.",
+    "couldNotSendContact": "Tidak dapat mengirimkan pesan Anda. Silakan coba lagi nanti.",
+    "requestTimedOut": "Waktu permintaan habis. Silakan coba lagi.",
+    "unauthorizedLoginAgain": "Sesi berakhir. Silakan masuk lagi.",
+    "missingApiBase": "URL dasar API tidak dikonfigurasi."
+  }
+}

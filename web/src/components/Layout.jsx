@@ -97,6 +97,12 @@ export default function Layout() {
         return "fi fi-cn";
       case "ja":
         return "fi fi-jp";
+      case "id":
+        return "fi fi-id";
+      case "ru":
+        return "fi fi-ru";
+      case "tr":
+        return "fi fi-tr";
       case "ko":
         return "fi fi-kr";
       default:

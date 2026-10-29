@@ -23,7 +23,8 @@
       "canCompleteTasks": "Può completare le attività",
       "noEndDate": "Nessuna data di fine",
       "until": "Fino al {{date}}",
-      "you": "Tu"
+      "you": "Tu",
+      "expired": "Scaduto"
     },
     "contacts": {
       "title": "Contatti",
@@ -105,7 +106,9 @@
       "showAll": "Mostra tutte",
       "all": "Tutte le piante condivise",
       "emptyAllTitle": "Non ci sono ancora piante condivise",
-      "emptyAllBody": "Condividi piante con un contatto o chiedigli di condividere le sue con te."
+      "emptyAllBody": "Condividi piante con un contatto o chiedigli di condividere le sue con te.",
+      "displayTasks": "Mostra attività",
+      "actions": "Azioni per {{name}}"
     },
     "form": {
       "title": "Condividi piante",
@@ -113,7 +116,7 @@
       "plant": "Piante",
       "choosePlant": "Scegli le piante",
       "singlePlantHint": "Scegli le piante e i contatti con cui condividerle.",
-      "loadFailed": "Non è stato possibile caricare le tue piante.",
+      "loadFailed": "Impossibile caricare le piante e le condivisioni.",
       "retry": "Riprova",
       "noPlants": "Non ci sono piante disponibili. Aggiungi una pianta per iniziare a condividerla.",
       "contacts": "Chi può accedere a queste piante?",
@@ -136,7 +139,9 @@
       "shareSelected": "Condividi le piante selezionate",
       "mixedAccess": "Ha già accesso ad alcune piante selezionate. Seleziona il contatto per aggiungere le altre.",
       "mixedPermissions": "Le autorizzazioni sono diverse per le piante selezionate.",
-      "endDatesVary": "Le date di fine sono diverse per le piante selezionate."
+      "endDatesVary": "Le date di fine sono diverse per le piante selezionate.",
+      "reload": "Ricarica condivisione",
+      "conflictHint": "La condivisione è stata modificata nel frattempo. Ricaricala prima di salvare: la selezione attuale dei contatti verrà sostituita."
     },
     "toasts": {
       "invitationAdded": "Anteprima: invito aggiunto.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "Anteprima: invito annullato.",
       "contactUpdated": "Anteprima: contatto aggiornato.",
       "contactDeleted": "Anteprima: contatto eliminato.",
-      "sharingSaved": "Anteprima: condivisione aggiornata.",
-      "accessRemoved": "Anteprima: accesso revocato.",
-      "plantLeft": "Pianta condivisa rimossa dall'anteprima.",
+      "sharingSaved": "Condivisione aggiornata.",
+      "accessRemoved": "Accesso rimosso.",
+      "plantLeft": "Pianta condivisa rimossa.",
       "idCopied": "ID copiato.",
       "copyFailed": "Non è stato possibile copiare l'ID.",
       "previewReset": "Anteprima reimpostata.",
@@ -166,6 +171,23 @@
       "alreadyPending": "C'è già un invito in sospeso per questa persona.",
       "throttled": "Troppe richieste. Attendi un momento e riprova.",
       "unavailable": "Connessione non riuscita. Riprova."
+    },
+    "access": {
+      "sharedBy": "Condivisa da {{name}}",
+      "sharedPlant": "Pianta condivisa"
+    },
+    "live": {
+      "loadFailed": "Impossibile caricare le piante condivise."
+    },
+    "accessErrors": {
+      "invalid": "Controlla le piante, i contatti e le date di fine selezionati.",
+      "notFound": "Questa pianta o il relativo accesso non sono più disponibili.",
+      "notContact": "Puoi condividere le piante solo con contatti che hanno accettato l’invito.",
+      "notOwner": "Solo il proprietario della pianta può gestirne la condivisione.",
+      "conflict": "La condivisione è stata modificata nel frattempo. Ricarica e riprova.",
+      "expired": "Scegli una data di fine che non sia già trascorsa.",
+      "throttled": "Troppe richieste. Attendi un momento e riprova.",
+      "unavailable": "Impossibile caricare o aggiornare la condivisione. Riprova."
     }
   }
 }

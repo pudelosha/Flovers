@@ -1,0 +1,49 @@
+{
+  "title": "Dokümantasyon",
+  "placeholder": {
+    "heading": "Yakında",
+    "body": "Bu ekrana ilişkin ayrıntılı belgeler yakında eklenecektir."
+  },
+  "screens": {
+    "overview": {
+      "title": "Genel Bakış"
+    },
+    "auth": {
+      "title": "Giriş & Kayıt"
+    },
+    "home": {
+      "title": "Ana sayfa"
+    },
+    "taskHistory": {
+      "title": "Görev geçmişi"
+    },
+    "plants": {
+      "title": "Bitkiler"
+    },
+    "plantDetails": {
+      "title": "Bitki ayrıntıları"
+    },
+    "createPlantWizard": {
+      "title": "Ev bitkisi oluşturma Sihirbazı"
+    },
+    "locations": {
+      "title": "Konumlar"
+    },
+    "reminders": {
+      "title": "Hatırlatıcılar"
+    },
+    "readings": {
+      "title": "Sensör verileri"
+    },
+    "readingsHistory": {
+      "title": "Sensör okuma geçmişi"
+    },
+    "scanner": {
+      "title": "Tarayıcı (QR)"
+    },
+    "profile": {
+      "title": "Profil ve Ayarlar"
+    }
+  },
+  "navigationLabel": "Belgelerde gezinme"
+}

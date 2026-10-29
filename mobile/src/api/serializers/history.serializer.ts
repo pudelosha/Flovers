@@ -26,6 +26,7 @@ export function buildUIHistoryItems(
 
       return {
         id: String(t.id),
+        access: t.access,
         type: t.type,
         plant: t.plant,
         location: t.location,

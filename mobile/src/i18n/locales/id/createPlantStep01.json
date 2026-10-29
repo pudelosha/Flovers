@@ -1,0 +1,41 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "Pilih tanaman hias",
+      "subtitle": "Anda dapat mencari perpustakaan lengkap tanaman hias kami, memilih dari daftar populer, atau memindai tanaman hias menggunakan kamera Anda. Anda juga dapat melewati langkah ini, namun memilih tanaman hias memungkinkan kami secara otomatis menyarankan tugas perawatan seperti menyiram untuk Anda.",
+      "scanButton": "Pindai tanaman hias",
+      "searchPlaceholder": "Cari tanaman hias",
+      "popularPlants": "Tanaman hias yang populer",
+      "noPlantsAvailable": "Tidak ada tanaman hias yang tersedia",
+      "errorSearch": "Gagal memuat daftar tanaman hias.",
+      "errorPopular": "Gagal memuat tanaman hias populer"
+    },
+    "scannerModal": {
+      "title": "Pindai tanaman hias",
+      "selectPlant": "Pilih tanaman hias yang terdeteksi",
+      "scanInstructions": "Ambil foto atau pilih salah satu dari galeri Anda. Harap gunakan gambar yang jelas dan berkualitas baik yang menunjukkan bentuk daun tanaman hias dengan baik, berada di tengah dan tidak terhalang oleh tanaman atau benda lain.",
+      "noPhoto": "Tidak ada foto yang dipilih",
+      "takePhoto": "Ambil foto",
+      "fromGallery": "Dari galeri",
+      "recognize": "Kenali tanaman hias",
+      "cameraRequired": "Izin diperlukan",
+      "cameraPermissionMessage": "Harap berikan izin kamera dan media untuk mengambil foto.",
+      "libraryRequired": "Izin diperlukan",
+      "libraryPermissionMessage": "Harap berikan izin media untuk memilih foto.",
+      "cameraError": "Kesalahan kamera",
+      "libraryError": "Kesalahan pemilih",
+      "cameraFailure": "Gagal membuka kamera.",
+      "libraryFailure": "Gagal membuka galeri.",
+      "recognitionFailure": "Gagal mengenali tanaman hias.",
+      "noResults": "Tidak ada hasil yang dikembalikan. Coba foto yang lebih jelas.",
+      "resultsDescription": "Berikut 3 hasil yang paling cocok dengan foto Anda. Ketuk salah satu gambar untuk memilih profil tanaman.",
+      "matchRate": "Tingkat kecocokan",
+      "closestMatch": "Kecocokan terdekat",
+      "plantRecognitionErrorTitle": "Tanaman tidak dapat dikenali",
+      "plantRecognitionErrorMessage": "Gagal mengambil detail tanaman hias untuk {{key}}. {{message}}",
+      "tryAgain": "Silakan coba lagi.",
+      "back": "Kembali",
+      "close": "Tutup"
+    }
+  }
+}

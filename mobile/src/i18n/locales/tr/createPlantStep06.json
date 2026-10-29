@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Otomatik görevler",
+      "subtitle": "Ev bitkisi profilinize göre otomatik olarak hatırlatıcılar (sulama, saksı değişimi, sisleme, gübreleme, bakım) oluşturabiliriz.",
+      "createAutoTasks": "Bu ev bitkisi için otomatik görevler oluşturun",
+      "requiresPlantDefinition": "Bu bir ev bitkisi tanımı gerektirir.",
+      "labels": {
+        "generateWateringTask": "Sulama görevi oluştur",
+        "generateMistingTask": "Buğulanma görevi oluştur",
+        "generateFertilisingTask": "Gübreleme görevi oluştur",
+        "generateCareTask": "Bakım görevi oluştur",
+        "generateRepottingTask": "Saksı değiştirme görevi oluştur"
+      },
+      "prompts": {
+        "lastWatered": "En son ne zaman sulandı?",
+        "selectIntervalDays": "Aralığı seçin (gün)",
+        "recommendedInterval": "Önerilen aralık",
+        "lastRepotted": "En son ne zaman tekrarlandı?"
+      },
+      "notSpecified": "Belirtilmedi",
+      "notSpecifiedDesc": "Emin değilseniz atlayın.",
+      "units": {
+        "day": "gün",
+        "days": "günler",
+        "month": "ay",
+        "months": "aylar"
+      },
+      "lastWatered": {
+        "today": "Bugün",
+        "yesterday": "Dün",
+        "three-four-days": "3-4 gün önce",
+        "one-week": "Bir hafta önce",
+        "two-weeks": "2 hafta önce",
+        "unknown": "Hatırlamıyorum"
+      },
+      "lastRepotted": {
+        "this-week": "Bu hafta",
+        "one-week-ago": "1 hafta önce",
+        "two-weeks-ago": "2 hafta önce",
+        "one-month-ago": "1 ay önce",
+        "unknown": "Hatırlamıyorum"
+      }
+    }
+  }
+}

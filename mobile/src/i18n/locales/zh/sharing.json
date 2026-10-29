@@ -23,7 +23,8 @@
       "canCompleteTasks": "可完成任务",
       "noEndDate": "无结束日期",
       "until": "截至 {{date}}",
-      "you": "你"
+      "you": "你",
+      "expired": "已过期"
     },
     "contacts": {
       "title": "联系人",
@@ -105,7 +106,9 @@
       "showAll": "显示全部",
       "all": "全部共享植物",
       "emptyAllTitle": "还没有共享植物",
-      "emptyAllBody": "与联系人共享植物，或请对方向你共享他们的植物。"
+      "emptyAllBody": "与联系人共享植物，或请对方向你共享他们的植物。",
+      "displayTasks": "查看任务",
+      "actions": "{{name}} 的操作"
     },
     "form": {
       "title": "共享植物",
@@ -113,7 +116,7 @@
       "plant": "植物",
       "choosePlant": "选择植物",
       "singlePlantHint": "选择要共享的植物和联系人。",
-      "loadFailed": "无法加载你的植物。",
+      "loadFailed": "无法加载植物和共享设置。",
       "retry": "重试",
       "noPlants": "没有可用的植物。添加植物后即可开始共享。",
       "contacts": "谁可以访问这些植物？",
@@ -136,7 +139,9 @@
       "shareSelected": "共享所选植物",
       "mixedAccess": "已能访问部分所选植物。选中此联系人即可添加其余植物。",
       "mixedPermissions": "所选植物的权限设置不同。",
-      "endDatesVary": "所选植物的结束日期不同。"
+      "endDatesVary": "所选植物的结束日期不同。",
+      "reload": "重新加载共享设置",
+      "conflictHint": "共享设置已在其他地方更改。保存前请重新加载，这会替换当前选择的联系人。"
     },
     "toasts": {
       "invitationAdded": "预览：已添加邀请。",
@@ -145,9 +150,9 @@
       "invitationCancelled": "预览：已取消邀请。",
       "contactUpdated": "预览：已更新联系人。",
       "contactDeleted": "预览：已删除联系人。",
-      "sharingSaved": "预览：已更新共享设置。",
-      "accessRemoved": "预览：已移除访问权限。",
-      "plantLeft": "已从预览中移除共享植物。",
+      "sharingSaved": "共享设置已更新。",
+      "accessRemoved": "访问权限已移除。",
+      "plantLeft": "已移除共享植物。",
       "idCopied": "ID 已复制。",
       "copyFailed": "无法复制 ID。",
       "previewReset": "预览已重置。",
@@ -166,6 +171,23 @@
       "alreadyPending": "已向对方发出邀请，正在等待回应。",
       "throttled": "请求过多，请稍等片刻后重试。",
       "unavailable": "无法连接，请重试。"
+    },
+    "access": {
+      "sharedBy": "由 {{name}} 共享",
+      "sharedPlant": "共享植物"
+    },
+    "live": {
+      "loadFailed": "无法加载共享植物。"
+    },
+    "accessErrors": {
+      "invalid": "请检查所选植物、联系人和结束日期。",
+      "notFound": "此植物或共享权限已不可用。",
+      "notContact": "只能与已接受邀请的联系人共享植物。",
+      "notOwner": "只有植物所有者可以管理共享设置。",
+      "conflict": "共享设置已在其他地方更改。请重新加载后再试。",
+      "expired": "请选择尚未过去的结束日期。",
+      "throttled": "请求过多，请稍后重试。",
+      "unavailable": "无法加载或更新共享设置，请重试。"
     }
   }
 }

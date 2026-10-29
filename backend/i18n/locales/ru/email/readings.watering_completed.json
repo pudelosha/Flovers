@@ -1,0 +1,11 @@
+{
+  "subject": "Полив завершен",
+  "title": "Полив завершен",
+  "line1": "Полив «{device_name}» завершен.",
+  "details": "Режим: {source_label}. Растение: {plant_name}. Место: {location}. Время завершения: {completed_at}.",
+  "cta": "Открыть показания",
+  "source_manual": "Вручную",
+  "source_automatic": "Автоматически",
+  "push_title": "Полив завершен",
+  "push_body": "{device_name}: Полив {source_label} завершен."
+}

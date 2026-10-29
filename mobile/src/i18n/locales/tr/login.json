@@ -1,0 +1,19 @@
+{
+  "login": {
+    "title": "Giriş yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "signIn": "Giriş yap",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "resendActivation": "Aktivasyon e-postası almadınız mı?",
+    "noAccount": "Hesabınız yok mu?",
+    "signUp": "Kaydol",
+    "errors": {
+      "invalidCredentials": "Geçersiz e-posta veya şifre.",
+      "generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+    },
+    "success": {
+      "welcome": "Tekrar hoş geldiniz!"
+    }
+  }
+}

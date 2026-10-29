@@ -1,0 +1,77 @@
+{
+  "home": {
+    "header": {
+      "title": "Beranda"
+    },
+    "fab": {
+      "showOverdue": "Tampilkan tugas terlambat",
+      "showDueToday": "Tampilkan tugas hari ini",
+      "showAllTasks": "Tampilkan semua tugas",
+      "markVisibleAsComplete": "Selesaikan semua tugas yang terlihat",
+      "sort": "Urutkan",
+      "filter": "Filter",
+      "clearFilter": "Hapus filter",
+      "history": "Riwayat"
+    },
+    "menu": {
+      "markAsComplete": "Tandai selesai",
+      "editReminder": "Sunting pengingat",
+      "goToPlant": "Lihat tanaman",
+      "showHistory": "Lihat riwayat",
+      "delete": "Hapus"
+    },
+    "taskTypes": {
+      "watering": "PENYIRAMAN",
+      "moisture": "PENYEMPROTAN",
+      "fertilising": "PEMUPUKAN",
+      "care": "PERAWATAN",
+      "repot": "GANTI POT"
+    },
+    "due": {
+      "today": "Hari ini",
+      "tomorrow": "Besok",
+      "inDays": "Dalam {{count}} hari",
+      "overdueByDays": "Terlambat {{count}} hari",
+      "nextWeek": "Minggu depan"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Gagal memuat tugas",
+      "taskCompleted": "Tugas selesai",
+      "tasksCompleted": "Tugas selesai",
+      "completeFailed": "Tugas gagal diselesaikan",
+      "completeSomeFailed": "{{ok}} dari {{total}} tugas selesai",
+      "taskNotLinkedToPlant": "Tugas ini tidak terhubung ke tanaman."
+    },
+    "empty": {
+      "all": {
+        "title": "Belum ada tugas",
+        "introPrefix": "Di sini Anda dapat melihat",
+        "introBold": "pengingat perawatan tanaman",
+        "introSuffix": "— menyiram, memupuk, merepoting, dan banyak lagi.",
+        "toGetStarted": "Untuk memulai:",
+        "bullets": {
+          "createPlantsBold": "Tambahkan tanaman",
+          "createPlantsSuffix": "di",
+          "plantsTabBold": "Tanaman",
+          "addRemindersPrefix": "Tambahkan",
+          "remindersBold": "pengingat",
+          "addRemindersSuffix": "untuk setiap tanaman agar tugasnya muncul di sini.",
+          "optionallyConnectPrefix": "Jika ingin, hubungkan",
+          "iotBold": "Perangkat IoT (papan Arduino)",
+          "optionallyConnectMiddle": "di",
+          "readingsTabBold": "Data sensor",
+          "optionallyConnectSuffix": "untuk memantau suhu, kelembapan udara, cahaya, dan kelembapan tanah secara langsung."
+        },
+        "outro": "Setelah semuanya siap, Beranda akan menampilkan perawatan yang dibutuhkan setiap tanaman hari ini."
+      },
+      "overdue": {
+        "title": "Tidak ada tugas yang terlambat",
+        "body": "Tidak ada tugas yang terlambat saat ini.\n\nKetuk tombol + lalu pilih \"Tampilkan semua tugas\" untuk melihat seluruh tugas, atau ubah filter untuk melihat tugas mendatang."
+      },
+      "today": {
+        "title": "Tidak ada tugas yang harus diselesaikan hari ini",
+        "body": "Tidak ada tugas untuk hari ini.\n\nKetuk tombol + lalu pilih \"Tampilkan semua tugas\" untuk melihat tugas mendatang, atau sesuaikan jadwal pengingat tanaman."
+      }
+    }
+  }
+}

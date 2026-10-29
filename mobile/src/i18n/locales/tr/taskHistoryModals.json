@@ -1,0 +1,80 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "İptal",
+      "apply": "Uygula",
+      "delete": "Sil",
+      "selectPlant": "Ev bitkisi seçin",
+      "selectLocation": "Konum seçin",
+      "datePlaceholder": "YYYY-AA-GG",
+      "taskTypes": {
+        "watering": "Sulama",
+        "moisture": "Yaprakları püskürtme",
+        "fertilising": "Gübreleme",
+        "care": "Bakım",
+        "repot": "Saksı değişimi"
+      }
+    },
+    "delete": {
+      "title": "Geçmişi sil",
+      "scopeLabel": "Kapsam",
+      "modes": {
+        "plant": "Seçilen ev bitkisi için sil",
+        "location": "Seçilen konum için sil",
+        "types": "Türündeki görevleri sil",
+        "olderThan": "Şu tarihten daha eski görevleri sil:"
+      },
+      "noPlantsHint": "Tarihte henüz ev bitkiniz yok.",
+      "noLocationsHint": "Geçmişte henüz herhangi bir konumunuz yok.",
+      "daysValue": "{{days}} gün"
+    },
+    "filter": {
+      "title": "Filtre geçmişi",
+      "plantLabel": "Bitki",
+      "locationLabel": "Konum",
+      "taskTypesLabel": "Görev türleri",
+      "completedDateRangeLabel": "Tamamlanan tarih aralığı",
+      "fromLabel": "Gönderen",
+      "toLabel": "Kime",
+      "anyPlant": "Herhangi bir ev bitkisi",
+      "anyLocation": "Herhangi bir konum",
+      "clear": "Temizle"
+    },
+    "sort": {
+      "title": "Geçmişi sırala",
+      "sortByLabel": "Sırala",
+      "directionLabel": "Yön",
+      "keys": {
+        "completedAt": "Tamamlanma tarihi",
+        "plant": "Ev bitkisi adı",
+        "location": "Konum"
+      },
+      "directions": {
+        "asc": "Artan",
+        "desc": "Azalan"
+      },
+      "reset": "Sıfırla"
+    },
+    "export": {
+      "title": "Geçmişi dışa aktarma gönder",
+      "noticeTitle": "Excel dışa aktarımında geçerli olarak uygulanan ölçütler kullanılacaktır.",
+      "noticeFiltered": "Yalnızca aşağıda gösterilen filtrelerle eşleşen görev geçmişi dahil edilecektir. Farklı verilere ihtiyacınız varsa önce filtreleri değiştirin, ardından tekrar gönderin.",
+      "noticeAllData": "Şu anda hiçbir filtre uygulanmadığından, dışa aktarma işlemi bu ekran için mevcut tüm görev geçmişi verilerini içerecektir.",
+      "criteriaTitle": "Uygulanan kriterler",
+      "plantLabel": "Bitki",
+      "locationLabel": "Konum",
+      "taskTypesLabel": "Görev türleri",
+      "completedFromLabel": "Tamamlanma başlangıcı",
+      "completedToLabel": "Tamamlanma bitişi",
+      "sortByLabel": "Sırala",
+      "directionLabel": "Yön",
+      "anyPlant": "Herhangi bir ev bitkisi",
+      "anyLocation": "Herhangi bir konum",
+      "allTaskTypes": "Tüm görev türleri",
+      "notSet": "Ayarlanmadı",
+      "includePending": "Bekleyen görevleri de dahil et",
+      "send": "Gönder",
+      "sending": "Gönderiliyor..."
+    }
+  }
+}

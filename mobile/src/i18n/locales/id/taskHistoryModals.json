@@ -1,0 +1,80 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Batal",
+      "apply": "Terapkan",
+      "delete": "Hapus",
+      "selectPlant": "Pilih tanaman hias",
+      "selectLocation": "Pilih lokasi",
+      "datePlaceholder": "YYYY-MM-DD",
+      "taskTypes": {
+        "watering": "Penyiraman",
+        "moisture": "Penyemprotan",
+        "fertilising": "Pemupukan",
+        "care": "Perawatan",
+        "repot": "Ganti pot"
+      }
+    },
+    "delete": {
+      "title": "Hapus riwayat",
+      "scopeLabel": "Ruang lingkup",
+      "modes": {
+        "plant": "Hapus untuk tanaman hias yang dipilih",
+        "location": "Hapus untuk lokasi yang dipilih",
+        "types": "Hapus jenis tugas",
+        "olderThan": "Hapus tugas yang lebih lama dari"
+      },
+      "noPlantsHint": "Anda belum memiliki tanaman hias apa pun dalam sejarah.",
+      "noLocationsHint": "Anda belum memiliki lokasi apa pun dalam riwayat.",
+      "daysValue": "{{days}} hari"
+    },
+    "filter": {
+      "title": "Saring riwayat",
+      "plantLabel": "Tanaman",
+      "locationLabel": "Lokasi",
+      "taskTypesLabel": "Jenis tugas",
+      "completedDateRangeLabel": "Rentang tanggal selesai",
+      "fromLabel": "Dari",
+      "toLabel": "Untuk",
+      "anyPlant": "Tanaman hias apa pun",
+      "anyLocation": "Lokasi mana pun",
+      "clear": "Jelas"
+    },
+    "sort": {
+      "title": "Urutkan sejarah",
+      "sortByLabel": "Urutkan berdasarkan",
+      "directionLabel": "Arah",
+      "keys": {
+        "completedAt": "Tanggal selesai",
+        "plant": "Nama tanaman hias",
+        "location": "Lokasi"
+      },
+      "directions": {
+        "asc": "Naik",
+        "desc": "Menurun"
+      },
+      "reset": "Setel ulang"
+    },
+    "export": {
+      "title": "Kirim ekspor riwayat",
+      "noticeTitle": "Ekspor Excel akan menggunakan kriteria yang diterapkan saat ini.",
+      "noticeFiltered": "Hanya riwayat tugas yang cocok dengan filter yang ditunjukkan di bawah ini yang akan disertakan. Jika Anda memerlukan data yang berbeda, ubah filter terlebih dahulu lalu kirim lagi.",
+      "noticeAllData": "Saat ini tidak ada filter yang diterapkan, sehingga ekspor akan menyertakan semua data riwayat tugas yang tersedia untuk layar ini.",
+      "criteriaTitle": "Kriteria yang diterapkan",
+      "plantLabel": "Tanaman",
+      "locationLabel": "Lokasi",
+      "taskTypesLabel": "Jenis tugas",
+      "completedFromLabel": "Selesai mulai tanggal",
+      "completedToLabel": "Selesai hingga tanggal",
+      "sortByLabel": "Urutkan berdasarkan",
+      "directionLabel": "Arah",
+      "anyPlant": "Tanaman hias apa pun",
+      "anyLocation": "Lokasi mana pun",
+      "allTaskTypes": "Semua jenis tugas",
+      "notSet": "Tidak disetel",
+      "includePending": "Sertakan juga tugas yang tertunda",
+      "send": "Kirim",
+      "sending": "Mengirim..."
+    }
+  }
+}

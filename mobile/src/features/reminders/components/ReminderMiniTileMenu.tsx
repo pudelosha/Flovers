@@ -10,6 +10,8 @@ type Props = {
   onToggleActive?: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
+  canEdit?: boolean;
+  onPlantDetails?: () => void;
 };
 
 export default function ReminderMiniTileMenu({
@@ -17,6 +19,8 @@ export default function ReminderMiniTileMenu({
   onToggleActive,
   onEdit,
   onDelete,
+  canEdit = true,
+  onPlantDetails,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -33,6 +37,8 @@ export default function ReminderMiniTileMenu({
 
   return (
     <View style={[s.menuSheet, styles.menuSheet]} pointerEvents="auto">
+      {!canEdit && onPlantDetails && <MenuItem label={tr("plants.menu.details", "Plant details")} icon="sprout-outline" onPress={onPlantDetails} />}
+      {canEdit && <>
       <MenuItem
         label={tr("reminders.menu.edit", "Edit reminder")}
         icon="calendar-edit"
@@ -53,6 +59,7 @@ export default function ReminderMiniTileMenu({
         danger
         onPress={onDelete}
       />
+      </>}
     </View>
   );
 }

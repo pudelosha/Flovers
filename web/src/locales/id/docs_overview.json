@@ -1,0 +1,97 @@
+{
+  "docs_overview": {
+    "title": "Ikhtisar",
+    "sections": [
+      {
+        "heading": "Apa itu Flovers?",
+        "body": [
+          "Flovers adalah pendamping perawatan tanaman hias yang membantu Anda mengatur perawatan sehari-hari, melacak riwayat tanaman hias, dan memantau pembacaan sensor langsung dari perangkat IoT Anda sendiri.",
+          "Aplikasi ini menggabungkan pengingat dan tugas dengan profil tanaman hias (tanaman hias Anda) dan definisi tanaman hias (profil spesies bawaan dengan rekomendasi).",
+          "Flovers dirancang untuk mendukung keputusan Anda, bukan menggantikannya—hasil perawatan tanaman hias bergantung pada lingkungan Anda dan cara Anda menerapkan rekomendasi.",
+          "Layanan ini mencakup aplikasi seluler (Android; direncanakan iOS), backend API, dan laman landas web yang menampung dokumentasi dan informasi hukum."
+        ]
+      },
+      {
+        "heading": "Konsep utama (bagaimana aplikasi disusun)",
+        "body": [
+          "Definisi tanaman hias: profil spesies bawaan yang berisi ciri-ciri umum dan rekomendasi perawatan (cahaya, interval penyiraman/gerimis, pemupukan, dll.).",
+          "Contoh tanaman hias: entri tanaman hias pribadi Anda (spesimen Anda sendiri), secara opsional ditautkan ke Definisi tanaman hias untuk menerima panduan dan saran default.",
+          "Pengingat: aturan berulang (misalnya, menyiram setiap X hari) yang menghasilkan Tugas secara otomatis seiring waktu.",
+          "Tugas: item konkret yang dapat ditindaklanjuti yang dibuat dari Pengingat; Anda dapat menyelesaikannya dan secara opsional menambahkan catatan untuk membuat riwayat perawatan."
+        ]
+      },
+      {
+        "heading": "Sekilas fitur utama",
+        "body": [
+          "Sistem akun: mendaftar, masuk, mengonfirmasi email, mengatur ulang kata sandi, dan mengelola pengaturan profil.",
+          "Pengelolaan tanaman hias: buat tanaman hias, kelompokkan dengan Lokasi, buat catatan, dan tinjau riwayat untuk melihat apa yang telah dilakukan dan kapan.",
+          "Pengingat & tugas: tentukan rutinitas perawatan berulang (penyiraman, gerimis, pemupukan, repotting, perawatan) dan selesaikan tugas seiring berjalannya waktu.",
+          "Pembacaan sensor IoT: sambungkan perangkat Anda sendiri dan simpan pembacaan sensor seperti suhu udara, kelembapan udara, kelembapan tanah, dan tingkat cahaya."
+        ]
+      },
+      {
+        "heading": "Pengenalan tanaman hias (berbasis foto)",
+        "body": [
+          "Flovers dapat mengenali tanaman hias dari foto untuk membantu Anda menemukan Definisi tanaman hias yang paling cocok dan memulai dengan default yang lebih baik.",
+          "Pengenalan dilakukan di sisi server menggunakan sistem pembelajaran mesin milik Penyedia yang dilatih pada 700+ spesies tanaman hias.",
+          "Foto yang diberikan untuk pengenalan hanya digunakan untuk melakukan langkah pengenalan dan tidak dimaksudkan untuk disimpan secara permanen.",
+          "Hasil bergantung pada pencahayaan, fokus, visibilitas tanaman hias, dan kemiripan tanaman hias dengan spesies lain dalam kumpulan data."
+        ]
+      },
+      {
+        "heading": "Perangkat IoT dan data sensor",
+        "body": [
+          "Flovers mendukung perangkat buatan pengguna atau pihak ketiga (misalnya, berbasis Arduino) yang mengirimkan pembacaan sensor ke akun Anda.",
+          "Pembacaan sensor yang didukung meliputi: suhu udara, kelembaban udara, kelembaban tanah, dan tingkat cahaya.",
+          "Pembacaan sensor disimpan di backend dan disajikan dalam aplikasi sebagai tampilan status saat ini dan sebagai ringkasan sejarah (harian/mingguan/bulanan).",
+          "Anda mengontrol pemasangan dan penggunaan—stabilitas perangkat, kalibrasi, dan pengaturan fisik tetap menjadi tanggung jawab Anda."
+        ]
+      },
+      {
+        "heading": "Kode QR dan akses cepat",
+        "body": [
+          "Anda dapat membuat kode QR yang berisi tautan ke Mesin Virtual tanaman hias tertentu di akun Anda.",
+          "Alur kerja yang umum adalah mencetak dan melampirkan kode QR ke pot bunga, lalu memindainya untuk langsung melihat detail tanaman hias dan pembacaan sensor.",
+          "Kode QR dimaksudkan untuk kenyamanan; perlakukan mereka seperti penunjuk akses dan jangan membagikannya secara publik jika mereka mengekspos metadata sensitif.",
+          "Saat ini, detail tanaman hias hanya dapat dilihat oleh pemilik tanaman hias yang telah login."
+        ]
+      },
+      {
+        "heading": "Pemberitahuan dan pengingat",
+        "body": [
+          "Flovers dapat mengirimkan pemberitahuan push (melalui Firebase) untuk tugas yang sudah jatuh tempo atau lewat waktu, bergantung pada pengaturan Anda.",
+          "Anda dapat mengonfigurasi notifikasi di Profil & Pengaturan; pengingat tetap ada di dalam aplikasi meskipun notifikasi dinonaktifkan.",
+          "Email digunakan untuk aktivasi akun dan pengaturan ulang kata sandi. Tergantung pada pengaturan Anda, ini juga dapat memberikan ringkasan tugas harian dan pengingat tentang tugas yang terlambat.",
+          "Notifikasi bersifat mendukung—Flovers tidak menjamin tanaman hias Anda akan tetap sehat atau pengingat mencegah kerugian."
+        ]
+      },
+      {
+        "heading": "Privasi, keamanan, dan data Anda",
+        "body": [
+          "Flovers menyimpan data akun dan data terkait tanaman hias yang diperlukan untuk menyediakan Layanan (tanaman hias, pengingat, tugas, catatan, dan pembacaan sensor).",
+          "Kata sandi disimpan dalam bentuk hash; aktivasi akun dikonfirmasi melalui verifikasi email.",
+          "Flovers bertujuan untuk menyimpan data di dalam UE. Backend berjalan pada VPS Hetzner, dan notifikasi push menggunakan Firebase.",
+          "Untuk detailnya, selalu mengacu pada Kebijakan Privasi dan Ketentuan Layanan yang tersedia di situs web dan aplikasi."
+        ]
+      },
+      {
+        "heading": "Batasan dan penafian penting",
+        "body": [
+          "Flovers adalah alat untuk perencanaan dan pemantauan; ini bukan sistem konsultasi profesional dan tidak menggantikan keahlian.",
+          "Pembacaan sensor mungkin tidak akurat karena masalah kalibrasi, penempatan, atau perangkat; memverifikasi keputusan penting secara manual.",
+          "Panduan perawatan tanaman hias bersifat umum dan mungkin tidak sesuai dengan kondisi spesifik Anda (substrat, ukuran pot bunga, cahaya, kelembapan, musim).",
+          "Jika ada yang salah, gunakan penilaian Anda—sesuaikan rutinitas dan konsultasikan dengan sumber hortikultura yang dapat dipercaya bila diperlukan."
+        ]
+      },
+      {
+        "heading": "Ke mana harus pergi selanjutnya",
+        "body": [
+          "Jika Anda baru, mulailah dengan Login & Daftar, lalu buat Instans tanaman hias pertama Anda menggunakan Wizard Buat tanaman hias.",
+          "Selanjutnya, atur Pengingat dan selesaikan Tugas untuk membangun rutinitas yang konsisten dan riwayat tugas yang berguna.",
+          "Jika Anda memiliki perangkat, buka pembacaan sensor untuk memasangkannya, lalu gunakan Riwayat pembacaan sensor untuk melihat tren.",
+          "Gunakan FAQ untuk jawaban cepat dan Persyaratan/dokumen Privasi untuk detail hukum dan pemrosesan data."
+        ]
+      }
+    ]
+  }
+}

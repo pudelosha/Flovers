@@ -1,0 +1,97 @@
+{
+  "docs_overview": {
+    "title": "Genel Bakış",
+    "sections": [
+      {
+        "heading": "Flovers nedir?",
+        "body": [
+          "Flovers, günlük bakımı düzenlemenize, ev bitkilerinin geçmişini takip etmenize ve kendi IoT cihazlarınızdan canlı sensör okumalarını izlemenize yardımcı olan bir ev bitkisi bakımı arkadaşıdır.",
+          "Uygulama, hatırlatıcıları ve görevleri ev bitkisi profilleri (ev bitkileriniz) ve ev bitkisi tanımları (önerilerle birlikte yerleşik tür profilleri) ile birleştirir.",
+          "Flovers, kararlarınızın yerine geçmek için değil, onları desteklemek için tasarlanmıştır; evde bitki bakımının sonuçları ortamınıza ve önerileri nasıl uyguladığınıza bağlıdır.",
+          "Hizmet, bir mobil uygulama (Android; iOS planlanmıştır), bir arka uç API ve belgeleri ve yasal bilgileri barındıran bir web açılış sayfasını içerir."
+        ]
+      },
+      {
+        "heading": "Anahtar kavramlar (uygulamanın nasıl yapılandırıldığı)",
+        "body": [
+          "Ev bitkisi Tanım: genel özellikleri ve bakım önerilerini (ışık, sulama/buğulama aralıkları, gübreleme vb.) içeren yerleşik bir tür profili.",
+          "Ev bitkisi Örneği: rehberlik ve önerilen varsayılanları almak için isteğe bağlı olarak bir ev bitkisi Tanımına bağlanan kişisel ev bitkisi girişiniz (kendi örneğiniz).",
+          "Hatırlatma: Görevleri zaman içinde otomatik olarak oluşturan yinelenen bir kural (ör. her X günde bir su).",
+          "Görev: Bir Hatırlatıcıdan oluşturulan somut, eyleme geçirilebilir bir öğe; Bunu tamamlayabilir ve isteğe bağlı olarak bir bakım geçmişi oluşturmak için notlar ekleyebilirsiniz."
+        ]
+      },
+      {
+        "heading": "Bir bakışta ana özellikler",
+        "body": [
+          "Hesap sistemi: kaydolun, oturum açın, e-postayı onaylayın, şifreyi sıfırlayın ve profil ayarlarını yönetin.",
+          "Ev bitkisi yönetimi: ev bitkileri oluşturun, bunları Konumlara göre gruplandırın, notlar tutun ve neyin ne zaman yapıldığını görmek için geçmişi inceleyin.",
+          "Hatırlatmalar ve görevler: Yinelenen bakım rutinlerini tanımlayın (sulama, sisleme, gübreleme, saksı değiştirme, bakım) ve ilerledikçe görevleri tamamlayın.",
+          "IoT sensör okumaları: Kendi cihazlarınızı bağlayın ve hava sıcaklığı, hava nemi, toprak nemi ve ışık seviyesi gibi sensör okumalarını saklayın."
+        ]
+      },
+      {
+        "heading": "Ev bitkisi tanıma (fotoğraf tabanlı)",
+        "body": [
+          "Flovers, en yakın eşleşen ev bitkisi Tanımını bulmanıza ve daha iyi varsayılanlarla başlamanıza yardımcı olmak için bir fotoğraftan ev bitkilerini tanıyabilir.",
+          "Tanıma, Sağlayıcının 700'den fazla ev bitkisi türü üzerinde eğitilmiş kendi makine öğrenimi sistemi kullanılarak sunucu tarafında gerçekleştirilir.",
+          "Tanıma için sağlanan fotoğraflar yalnızca tanıma adımını gerçekleştirmek için kullanılır ve kalıcı olarak saklanması amaçlanmamıştır.",
+          "Sonuçlar aydınlatmaya, odağa, ev bitkisinin görünürlüğüne ve ev bitkisinin veri kümesindeki diğer türlerle benzerliğine bağlıdır."
+        ]
+      },
+      {
+        "heading": "IoT cihazları ve sensör verileri",
+        "body": [
+          "Flovers, hesabınıza sensör okumaları gönderen, kullanıcı tarafından oluşturulan veya üçüncü taraf cihazları (örn. Arduino tabanlı) destekler.",
+          "Desteklenen sensör okumaları şunları içerir: hava sıcaklığı, hava nemi, toprak nemi ve ışık seviyesi.",
+          "Sensör okumaları arka uçta saklanır ve uygulamada mevcut durum görünümü ve geçmiş özetler (günlük/haftalık/aylık) olarak sunulur.",
+          "Eşleştirmeyi ve kullanımı siz kontrol edersiniz; cihazın kararlılığı, kalibrasyonu ve fiziksel kurulumu sizin sorumluluğunuzdadır."
+        ]
+      },
+      {
+        "heading": "QR kodları ve hızlı erişim",
+        "body": [
+          "Hesabınızdaki belirli bir ev bitkisi Örneğine bağlantı içeren QR kodları oluşturabilirsiniz.",
+          "Tipik bir iş akışı, QR kodunu yazdırıp bir saksıya eklemek, ardından bunu tarayarak doğrudan ev bitkisi ayrıntılarına ve sensör okumalarına atlamak şeklindedir.",
+          "QR kodları kolaylık sağlamak içindir; bunlara erişim işaretçileri gibi davranın ve hassas meta verileri açığa çıkarıyorlarsa bunları herkese açık olarak paylaşmayın.",
+          "Şu anda ev bitkisi ayrıntılarının yalnızca ev bitkisinin oturum açmış sahibi tarafından görülebilmesi amaçlanıyor."
+        ]
+      },
+      {
+        "heading": "Bildirimler ve hatırlatıcılar",
+        "body": [
+          "Flovers, ayarlarınıza bağlı olarak süresi dolmuş veya gecikmiş görevler için anlık bildirimler (Firebase aracılığıyla) gönderebilir.",
+          "Bildirimleri Profil ve Ayarlar'da yapılandırabilirsiniz; Bildirimler devre dışı bırakılsa bile hatırlatıcılar uygulamanın içinde kalır.",
+          "E-posta, hesap aktivasyonu ve şifre sıfırlama için kullanılır. Ayarlarınıza bağlı olarak günlük görev özetleri ve gecikmiş görevlerle ilgili hatırlatıcılar da sunabilir.",
+          "Bildirimler destekleyicidir; Flovers, ev bitkilerinizin sağlıklı kalacağını veya hatırlatmaların kayıpları önleyeceğini garanti etmez."
+        ]
+      },
+      {
+        "heading": "Gizlilik, güvenlik ve verileriniz",
+        "body": [
+          "Flovers, Hizmeti sağlamak için gereken hesap verilerini ve ev bitkileriyle ilgili verileri (ev bitkileri, hatırlatıcılar, görevler, notlar ve sensör okumaları) saklar.",
+          "Parolalar karma biçimde saklanır; hesap aktivasyonu e-posta doğrulaması yoluyla onaylanır.",
+          "Flovers, verileri AB içinde tutmayı amaçlamaktadır. Arka uç Hetzner VPS'de çalışır ve anında bildirimler Firebase'i kullanır.",
+          "Ayrıntılar için her zaman web sitesinde ve uygulamada bulunan Gizlilik Politikasına ve Hizmet Şartlarına bakın."
+        ]
+      },
+      {
+        "heading": "Sınırlar ve önemli sorumluluk reddi beyanları",
+        "body": [
+          "Flovers planlama ve izleme için bir araçtır; Profesyonel bir danışmanlık sistemi değildir ve uzmanlığın yerini almaz.",
+          "Kalibrasyon, yerleştirme veya cihaz sorunları nedeniyle sensör okumaları hatalı olabilir; Kritik kararları manuel olarak doğrulayın.",
+          "Ev bitkisi bakımı kılavuzu geneldir ve sizin özel koşullarınıza (yüzey, saksı boyutu, ışık, nem, mevsim) uymayabilir.",
+          "Bir şeyler ters görünüyorsa sağduyunuzu kullanın; rutinleri ayarlayın ve gerektiğinde güvenilir bahçecilik kaynaklarına başvurun."
+        ]
+      },
+      {
+        "heading": "Bundan sonra nereye gitmeli",
+        "body": [
+          "Yeniyseniz, Oturum Aç ve Kaydol ile başlayın, ardından Ev Bitkisi Oluşturma Sihirbazı'nı kullanarak ilk ev bitkisi Örneğini oluşturun.",
+          "Daha sonra, tutarlı bir rutin ve yararlı bir görev geçmişi oluşturmak için Hatırlatıcıları ayarlayın ve Görevleri tamamlayın.",
+          "Bir cihazınız varsa eşleştirmek için sensör okumalarını açın ve ardından eğilimleri tespit etmek için sensör okumaları Geçmişini kullanın.",
+          "Hızlı yanıtlar için SSS'yi, yasal ayrıntılar ve veri işlemeyle ilgili ayrıntılar için Şartlar/Gizlilik belgelerini kullanın."
+        ]
+      }
+    ]
+  }
+}

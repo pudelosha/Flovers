@@ -1,0 +1,19 @@
+{
+  "createPlant": {
+    "header": {
+      "title": "Bitki ekle"
+    },
+    "fallbackStep": {
+      "title": "Adım “{{step}}”",
+      "subtitle": "Bu adım daha sonra uygulanacaktır."
+    },
+    "common": {
+      "previous": "Geri",
+      "next": "İleri",
+      "create": "Oluştur",
+      "cancel": "İptal",
+      "done": "Bitti",
+      "notSpecified": "Belirtilmedi"
+    }
+  }
+}

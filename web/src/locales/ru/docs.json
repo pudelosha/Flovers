@@ -1,0 +1,49 @@
+{
+  "title": "Документация",
+  "placeholder": {
+    "heading": "Скоро",
+    "body": "Подробная документация для этого экрана будет добавлена в ближайшее время."
+  },
+  "screens": {
+    "overview": {
+      "title": "Обзор"
+    },
+    "auth": {
+      "title": "Войти и зарегистрироваться"
+    },
+    "home": {
+      "title": "Главная"
+    },
+    "taskHistory": {
+      "title": "История задач"
+    },
+    "plants": {
+      "title": "Растения"
+    },
+    "plantDetails": {
+      "title": "О растении"
+    },
+    "createPlantWizard": {
+      "title": "Мастер создания комнатных растений"
+    },
+    "locations": {
+      "title": "Места"
+    },
+    "reminders": {
+      "title": "Напоминания"
+    },
+    "readings": {
+      "title": "Показания"
+    },
+    "readingsHistory": {
+      "title": "История показаний датчиков"
+    },
+    "scanner": {
+      "title": "Сканер (QR)"
+    },
+    "profile": {
+      "title": "Профиль и настройки"
+    }
+  },
+  "navigationLabel": "Навигация по документации"
+}

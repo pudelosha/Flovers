@@ -23,7 +23,8 @@
       "canCompleteTasks": "Peut terminer les tâches",
       "noEndDate": "Sans date de fin",
       "until": "Jusqu'au {{date}}",
-      "you": "Vous"
+      "you": "Vous",
+      "expired": "Expiré"
     },
     "contacts": {
       "title": "Contacts",
@@ -105,7 +106,9 @@
       "showAll": "Tout afficher",
       "all": "Toutes les plantes partagées",
       "emptyAllTitle": "Aucune plante partagée pour le moment",
-      "emptyAllBody": "Partagez des plantes avec un contact ou demandez à quelqu'un de partager les siennes avec vous."
+      "emptyAllBody": "Partagez des plantes avec un contact ou demandez à quelqu'un de partager les siennes avec vous.",
+      "displayTasks": "Afficher les tâches",
+      "actions": "Actions pour {{name}}"
     },
     "form": {
       "title": "Partager des plantes",
@@ -113,7 +116,7 @@
       "plant": "Plantes",
       "choosePlant": "Choisir les plantes",
       "singlePlantHint": "Choisissez les plantes et les contacts avec qui les partager.",
-      "loadFailed": "Impossible de charger vos plantes.",
+      "loadFailed": "Impossible de charger les plantes et les partages.",
       "retry": "Réessayer",
       "noPlants": "Aucune plante disponible. Ajoutez une plante pour commencer à la partager.",
       "contacts": "Qui peut accéder à ces plantes ?",
@@ -136,7 +139,9 @@
       "shareSelected": "Partager les plantes sélectionnées",
       "mixedAccess": "Ce contact a accès à certaines plantes sélectionnées. Sélectionnez-le pour ajouter les autres.",
       "mixedPermissions": "Les autorisations diffèrent selon les plantes sélectionnées.",
-      "endDatesVary": "Les dates de fin diffèrent selon les plantes sélectionnées."
+      "endDatesVary": "Les dates de fin diffèrent selon les plantes sélectionnées.",
+      "reload": "Recharger le partage",
+      "conflictHint": "Le partage a été modifié entre-temps. Rechargez-le avant d’enregistrer : cela remplacera la sélection actuelle des contacts."
     },
     "toasts": {
       "invitationAdded": "Aperçu : invitation ajoutée.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "Aperçu : invitation annulée.",
       "contactUpdated": "Aperçu : contact mis à jour.",
       "contactDeleted": "Aperçu : contact supprimé.",
-      "sharingSaved": "Aperçu : partage mis à jour.",
-      "accessRemoved": "Aperçu : accès retiré.",
-      "plantLeft": "Plante partagée retirée de l'aperçu.",
+      "sharingSaved": "Partage mis à jour.",
+      "accessRemoved": "Accès supprimé.",
+      "plantLeft": "Plante partagée retirée.",
       "idCopied": "Identifiant copié.",
       "copyFailed": "Impossible de copier l'identifiant.",
       "previewReset": "Aperçu réinitialisé.",
@@ -166,6 +171,23 @@
       "alreadyPending": "Une invitation est déjà en attente pour cette personne.",
       "throttled": "Trop de demandes. Patientez un instant, puis réessayez.",
       "unavailable": "Connexion impossible. Veuillez réessayer."
+    },
+    "access": {
+      "sharedBy": "Partagée par {{name}}",
+      "sharedPlant": "Plante partagée"
+    },
+    "live": {
+      "loadFailed": "Impossible de charger les plantes partagées."
+    },
+    "accessErrors": {
+      "invalid": "Vérifiez les plantes, les contacts et les dates de fin sélectionnés.",
+      "notFound": "Cette plante ou son partage ne sont plus disponibles.",
+      "notContact": "Vous ne pouvez partager des plantes qu’avec des contacts ayant accepté votre invitation.",
+      "notOwner": "Seul le propriétaire de la plante peut gérer son partage.",
+      "conflict": "Le partage a été modifié entre-temps. Rechargez-le et réessayez.",
+      "expired": "Choisissez une date de fin qui n’est pas encore passée.",
+      "throttled": "Trop de demandes. Patientez un instant et réessayez.",
+      "unavailable": "Impossible de charger ou de modifier le partage. Réessayez."
     }
   }
 }

@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "header": {
+      "title": "Профиль"
+    },
+    "common": {
+      "save": "Сохранить",
+      "cancel": "Отмена",
+      "change": "Изменить",
+      "delete": "Удалить",
+      "send": "Отправить"
+    },
+    "account": {
+      "level": {
+        "currentRank": "Текущий ранг",
+        "level": "Уровень",
+        "journey": "Маленькие шаги, процветающие комнатные растения.",
+        "experience": "Опыт",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "До уровня {{level}}",
+        "remaining": "До следующего уровня: {{xp}} XP",
+        "nextRank": "Следующий ранг на уровне {{level}}",
+        "maxLevel": "Достигнут максимальный уровень",
+        "allRanks": "Все ранги разблокированы",
+        "pending": "Отслеживание опыта XP скоро появится",
+        "ranks": {
+          "seedling": "Росток",
+          "sproutKeeper": "Хранитель ростков",
+          "leafLover": "Любитель листьев",
+          "buddingGardener": "Начинающий садовод",
+          "plantNurturer": "Заботливый садовод",
+          "greenThumb": "Умелый садовод",
+          "gardenGuardian": "Хранитель сада",
+          "botanicalExpert": "Знаток ботаники",
+          "masterGrower": "Мастер садоводства",
+          "plantLegend": "Легенда садоводства"
+        },
+        "loading": "Загрузка XP…",
+        "unavailable": "Не удалось загрузить ваш уровень. Откройте профиль еще раз, чтобы повторить попытку."
+      },
+      "title": "Аккаунт",
+      "emailLabel": "Эл. почта",
+      "createdLabel": "Создано",
+      "changeEmail": "Изменить адрес электронной почты",
+      "changePassword": "Изменить пароль",
+      "deleteAccount": "Удалить аккаунт",
+      "logout": "Выйти"
+    },
+    "notifications": {
+      "title": "Уведомления",
+      "emailSection": "Эл. почта",
+      "emailDailyLabel": "Ежедневная сводка задач на сегодня",
+      "emailDailyHint": "Одно электронное письмо в день с кратким описанием всех задач, которые необходимо выполнить на сегодня.",
+      "sendAt": "Время отправки",
+      "email24hLabel": "Отправить напоминание через 24 часа",
+      "email24hHint": "Если задачи, подлежащие выполнению сегодня, остались невыполненными, отправьте дополнительное электронное письмо завтра.",
+      "mobileSection": "Мобильный",
+      "pushDailyLabel": "Ежедневное уведомление по телефону",
+      "pushDailyHint": "Единое системное уведомление с кратким описанием текущих задач.",
+      "notifyAt": "Время уведомления",
+      "push24hLabel": "24-часовое последующее уведомление",
+      "push24hHint": "Если задачи остаются невыполненными, отправьте уведомление на следующий день."
+    },
+    "settings": {
+      "title": "Настройки",
+      "language": "Язык",
+      "dateTimeFormat": "Формат даты/времени",
+      "temperatureUnits": "Единицы измерения температуры",
+      "measurementUnits": "Единицы измерения",
+      "fabPosition": "Положение кнопки +",
+      "background": "Фон",
+      "tileMotive": "Мотив плитки",
+      "tilesTransparency": "Прозрачность плитки",
+      "level": "Уровень",
+      "temperatureOptions": {
+        "C": "°С (по Цельсию)",
+        "F": "°F (по Фаренгейту)",
+        "K": "К (Кельвин)"
+      },
+      "measureOptions": {
+        "metric": "Метрическая (см/м)",
+        "imperial": "Имперские (дюймы / футы)"
+      },
+      "fabPositionOptions": {
+        "right": "Справа",
+        "left": "Слева"
+      },
+      "backgroundOptions": {
+        "bg1": "Фон 1",
+        "bg2": "Фон 2",
+        "bg3": "Фон 3",
+        "bg4": "Фон 4",
+        "bg5": "Фон 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Светлая",
+        "dark": "Темный"
+      }
+    },
+    "support": {
+      "title": "Поддержка",
+      "contactUs": "Свяжитесь с нами",
+      "reportBug": "Сообщить об ошибке",
+      "aboutTitle": "О приложении",
+      "versionLabel": "Версия",
+      "releaseDateLabel": "Дата выхода",
+      "contactLabel": "Контакт"
+    },
+    "toasts": {
+      "unauthorized": "Несанкционированный",
+      "unauthorizedLoginAgain": "Несанкционированный. Пожалуйста, войдите снова.",
+      "failedToLoadPreferences": "Не удалось загрузить настройки профиля. Пожалуйста, попробуйте еще раз.",
+      "notificationsUpdated": "Настройки уведомлений обновлены.",
+      "couldNotSaveNotifications": "Не удалось сохранить настройки уведомлений.",
+      "settingsUpdated": "Настройки обновлены.",
+      "couldNotSaveSettings": "Не удалось сохранить настройки."
+    }
+  }
+}

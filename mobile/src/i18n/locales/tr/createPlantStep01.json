@@ -1,0 +1,41 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "Bir ev bitkisi seçin",
+      "subtitle": "Kameranızı kullanarak ev bitkileri kütüphanemizin tamamını arayabilir, popüler listeden seçim yapabilir veya bir ev bitkisini tarayabilirsiniz. Bu adımı da atlayabilirsiniz ancak bir ev bitkisi seçmek, sizin için sulama gibi bakım görevlerini otomatik olarak önermemize olanak tanır.",
+      "scanButton": "Ev bitkisini tarayın",
+      "searchPlaceholder": "Ev bitkisi ara",
+      "popularPlants": "Popüler ev bitkileri",
+      "noPlantsAvailable": "Ev bitkisi mevcut değil",
+      "errorSearch": "Ev bitki listesi yüklenemedi.",
+      "errorPopular": "Popüler ev bitkileri yüklenemedi"
+    },
+    "scannerModal": {
+      "title": "Ev bitkisini tarayın",
+      "selectPlant": "Tespit edilen ev bitkisini seçin",
+      "scanInstructions": "Bir fotoğraf çekin veya galerinizden birini seçin. Lütfen ev bitkisinin yaprak şeklini iyi gösteren, ortalanmış ve diğer ev bitkileri veya nesneler tarafından engellenmemiş, net ve kaliteli bir resim kullanın.",
+      "noPhoto": "Fotoğraf seçilmedi",
+      "takePhoto": "Fotoğraf çek",
+      "fromGallery": "Galeriden",
+      "recognize": "Ev bitkisini tanıyın",
+      "cameraRequired": "İzin gerekli",
+      "cameraPermissionMessage": "Fotoğraf çekmek için lütfen kamera ve medya izinlerini verin.",
+      "libraryRequired": "İzin gerekli",
+      "libraryPermissionMessage": "Lütfen fotoğraf seçmek için medya izinleri verin.",
+      "cameraError": "Kamera hatası",
+      "libraryError": "Seçici hatası",
+      "cameraFailure": "Kamera açılamadı.",
+      "libraryFailure": "Galeri açılamadı.",
+      "recognitionFailure": "Ev bitkisi tanınamadı.",
+      "noResults": "Hiçbir sonuç döndürülmedi. Daha net bir fotoğraf deneyin.",
+      "resultsDescription": "Bunlar, sağlanan resme göre ilk 3 eşleşmedir. Ev bitkisi tanımını seçmek için aşağıdaki 3 resimden birine dokunun.",
+      "matchRate": "Eşleşme oranı",
+      "closestMatch": "En yakın eşleşme",
+      "plantRecognitionErrorTitle": "Bitki tanınamadı",
+      "plantRecognitionErrorMessage": "{{key}} için ev bitkisi ayrıntıları getirilemedi. {{message}}",
+      "tryAgain": "Lütfen tekrar deneyin.",
+      "back": "Geri",
+      "close": "Kapat"
+    }
+  }
+}

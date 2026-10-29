@@ -1,6 +1,7 @@
 import { request } from "../client";
 
 export type ApiReminder = {
+  access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   plant: number;
   type: "water" | "moisture" | "fertilize" | "care" | "repot";
@@ -13,6 +14,7 @@ export type ApiReminder = {
 };
 
 export type ApiReminderTask = {
+  access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   reminder: number;
   due_date: string;             // YYYY-MM-DD

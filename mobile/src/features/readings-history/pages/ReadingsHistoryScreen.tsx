@@ -19,6 +19,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/readings-history.styles";
@@ -174,7 +175,7 @@ export default function ReadingsHistoryScreen() {
 
   // selected device (id + names, fetched under auth)
   const [device, setDevice] = useState<
-    Pick<ApiReadingDevice, "id" | "device_name" | "plant_name"> | null
+    Pick<ApiReadingDevice, "id" | "device_name" | "plant_name" | "access"> | null
   >(null);
 
   // selected plant (display name)
@@ -308,6 +309,7 @@ export default function ReadingsHistoryScreen() {
 
   const openDeleteReadings = useCallback(async () => {
     setChartMenuOpen(false);
+    if (device && !plantAccess(device.access).canEdit) return;
     if (!device) {
       showToast(t("readingsHistory.noDevicesFound"), "error");
       return;
@@ -327,6 +329,7 @@ export default function ReadingsHistoryScreen() {
 
   const confirmDeleteReadings = useCallback(
     async (payload: ReadingsBulkDeleteRequest) => {
+      if (!device || !plantAccess(device.access).canEdit) return;
       try {
         setLoadingHistory(true);
         const response = await bulkDeleteReadings(payload, { auth: true });
@@ -345,7 +348,7 @@ export default function ReadingsHistoryScreen() {
         setLoadingHistory(false);
       }
     },
-    [showToast, t]
+    [device, showToast, t]
   );
 
   // initial fetch: list devices, pick one (optionally based on params.id)
@@ -362,13 +365,14 @@ export default function ReadingsHistoryScreen() {
         if (params.id) {
           chosen = list.find((d) => String(d.id) === String(params.id));
         }
-        if (!chosen && list.length > 0) {
+        if (!chosen && !params.id && list.length > 0) {
           chosen = list[0];
         }
 
         if (chosen) {
           setDevice({
             id: chosen.id,
+            access: chosen.access,
             device_name: chosen.device_name,
             plant_name: chosen.plant_name,
           });
@@ -837,6 +841,7 @@ export default function ReadingsHistoryScreen() {
                         )}
                       </Pressable>
 
+                      {device && plantAccess(device.access).canEdit && <>
                       <View style={chartMenuStyles.divider} />
 
                       <Pressable
@@ -853,6 +858,7 @@ export default function ReadingsHistoryScreen() {
                           {t("readingsHistory.chartMenu.deleteReadings")}
                         </Text>
                       </Pressable>
+                      </>}
                     </View>
                   )}
                 </View>

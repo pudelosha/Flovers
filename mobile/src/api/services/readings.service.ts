@@ -91,6 +91,7 @@ export async function rotateAccountSecret(
 
 export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
   return {
+    access: api.access,
     id: String(api.id),
     name: api.plant_name || api.device_name,
     lastReadISO: api.last_read_at ?? null,

@@ -14,9 +14,10 @@ const previewImages = {
   peaceLily: require("../assets/peace-lily.jpg"),
 };
 
-export default function SharedPlantHero({ plant, preferLocalPhoto = false }: {
+export default function SharedPlantHero({ plant, preferLocalPhoto = false, action }: {
   plant: ShareablePlant;
   preferLocalPhoto?: boolean;
+  action?: React.ReactNode;
 }) {
   const { t } = useTranslation();
   const [localPhoto, setLocalPhoto] = useState<{ plantId: string; uri: string } | null>(null);
@@ -69,6 +70,7 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false }: {
               <Text style={styles.location}>{plant.location}</Text>
             </View>}
           </View>
+          {!!action && <View style={styles.action}>{action}</View>}
         </View>
       </View>
     </View>
@@ -80,6 +82,7 @@ const styles = StyleSheet.create({
   clip: { borderTopLeftRadius: 28, borderTopRightRadius: 28, overflow: "hidden" },
   hero: { width: "100%", aspectRatio: 1.8, justifyContent: "flex-end" },
   topScrim: { position: "absolute", top: 0, left: 0, right: 0, height: 55 },
+  action: { position: "absolute", top: 12, right: 12 },
   text: { paddingHorizontal: 18, paddingTop: 16, paddingBottom: 14 },
   name: { color: "#FFFFFF", fontSize: 22, fontWeight: "800", marginBottom: 5 },
   latin: { color: "rgba(255,255,255,0.92)", fontSize: 13, fontWeight: "700", fontStyle: "italic", marginBottom: 8 },

@@ -65,6 +65,7 @@ export type ApiPlantDefinitionMini = {
 };
 
 export type ApiPlantInstanceListItem = {
+  access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   display_name?: string;
   notes?: string;
@@ -77,6 +78,7 @@ export type ApiPlantInstanceListItem = {
 
 /** DETAIL (full) for editing */
 export type ApiPlantInstanceDetailFull = {
+  access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
 
   plant_definition?:
@@ -165,6 +167,7 @@ export type PlantEditForm = {
 };
 
 export type Plant = {
+  access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: string;
   name: string;
   latin?: string;

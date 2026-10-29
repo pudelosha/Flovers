@@ -1,0 +1,47 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Işık koşulları",
+      "subtitle": "Işığa maruz kalma, sulama programlarını ve bakım hatırlatıcılarını ayarlamamıza yardımcı olur. Bize bu noktanın ne kadar ışık aldığını ve pencere yönünü söyleyin.",
+      "lightLevel": "Işık seviyesi",
+      "low": "Düşük",
+      "high": "Yüksek",
+      "windowDirection": "Pencere yönü",
+      "measureLightDirection": "Işığı ve yönü ölçün",
+      "distanceFromWindow": "Pencereden uzaklık",
+      "orientations": {
+        "S": "Güney",
+        "E": "Doğu",
+        "W": "Batı",
+        "N": "Kuzey"
+      },
+      "modal": {
+        "title": "Işığı ve yönü ölçün",
+        "instructions": "Telefonu, üst kenarı pencereye bakacak şekilde yatay olarak (ekran yukarı bakacak şekilde) tutun. Pencerenin yakınında yavaşça hareket edin/tarayın ve ardından 5 saniyelik bir test çalıştırmak için Ölç'e dokunun.",
+        "ambientLive": "Anlık ortam ışığı",
+        "headingLive": "Anlık pusula yönü",
+        "testLabel": "5 saniyelik ölçüm",
+        "running": "(ölçülüyor…)",
+        "last": "(son)",
+        "done": "bitti",
+        "bestLight": "5 saniyedeki en yüksek ışık:",
+        "meanDirection": "5 saniyedeki ortalama yön:",
+        "close": "Kapat",
+        "measure5s": "Ölçü (5s)",
+        "measuring": "Ölçme…",
+        "apply": "Uygula",
+        "tip": "İpucu: Çoğu telefonda ortam ışığı sensörü üst kısımda kulaklığın yanında bulunur. En parlak okumayı bulmak için telefonu düz tutun ve üst kenarını pencereye doğru tutun.",
+        "notAvailable": "Mevcut değil",
+        "noSensor": "Sensör yok",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Parlak doğrudan ışık",
+          "brightIndirect": "Parlak dolaylı ışık",
+          "medium": "Orta / süzülmüş ışık",
+          "low": "Az ışık",
+          "veryLow": "Çok düşük"
+        }
+      }
+    }
+  }
+}

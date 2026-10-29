@@ -1,0 +1,125 @@
+{
+  "plantDetails": {
+    "headerTitle": "Bitki ayrıntıları",
+    "common": {
+      "dash": "—",
+      "plant": "Bitki"
+    },
+    "errors": {
+      "noId": "Hiçbir ev bitkisi kimliği veya QR kodu sağlanmadı.",
+      "failedToLoad": "Ev bitkisi yüklenemedi."
+    },
+    "states": {
+      "error": {
+        "title": "Hata"
+      },
+      "notFound": {
+        "title": "Bulunamadı",
+        "msg": "Bu ev bitkisini yükleyemedik."
+      }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Görev tamamlanamadı",
+        "msg": "Bu hatırlatıcı tamamlanamadı."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Hatırlatıcı tamamlandı olarak işaretlendi.",
+      "qrSaved": "QR kodu galerinize kaydedildi.",
+      "qrSaveFailed": "QR kodu kaydedilemedi.",
+      "qrEmailed": "QR kodlu e-posta gönderildi.",
+      "qrEmailFailed": "QR kodlu e-posta gönderilemedi.",
+      "qrEmailPlaceholder": "Hesap adresinize bu QR kodunu içeren bir e-posta gönderilecektir.",
+      "missingDeviceId": "Eksik cihaz kimliği",
+      "pumpStatusLoadFailed": "Sulama planı yüklenemedi",
+      "wateringScheduled": "Sulama planlandı",
+      "wateringScheduleFailed": "Sulama planlanamadı",
+      "wateringRecalled": "Planlı sulama geri çağrıldı",
+      "wateringRecallFailed": "Sulama hatırlatılamadı"
+    },
+    "permissions": {
+      "storage": {
+        "title": "Depolama izni",
+        "message": "QR kodunu galerinize kaydetmek için erişime ihtiyacımız var.",
+        "ok": "Tamam",
+        "denied": "Depolama izni reddedildi."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "QR oluşturucu hazır değil."
+    },
+    "info": {
+      "fallbackTitle": "Ev bitkisi #{{id}}",
+      "purchased": "Satın alındı",
+      "notes": "Notlar",
+      "light": "Işık",
+      "orientation": "Oryantasyon",
+      "distance": "Mesafe",
+      "pot": "Saksı",
+      "soil": "Toprak",
+      "cm": "santimetre",
+      "in": "içinde",
+      "orientations": {
+        "N": "Kuzey",
+        "E": "Doğu",
+        "S": "Güney",
+        "W": "Batı"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Ev bitkisi tanımı",
+        "editPlant": "Bitkiyi düzenle",
+        "changeImage": "Resmi değiştir",
+        "showReminders": "Hatırlatıcıları göster"
+      },
+      "noDefinitionTitle": "Ev bitkisi tanımı mevcut değil",
+      "noDefinitionBody": "Bu ev bitkisi henüz bir ev bitkisi tanımına bağlı değil.",
+      "editPlant": {
+        "title": "Bitkiyi düzenle",
+        "msg": "Bu ev bitkisinin düzenlenmesi daha sonra uygulanacaktır."
+      },
+      "showReminders": {
+        "title": "Hatırlatıcıları göster",
+        "msg": "Hatırlatıcılara bağlantı daha sonra uygulanacaktır."
+      }
+    },
+    "latestReadings": {
+      "title": "En son sensör okumaları",
+      "lastReadPrefix": "Son okuma",
+      "lastPumpRunPrefix": "Son pompa çalışması",
+      "opening": "Açılıyor...",
+      "scheduleWatering": "Sulamayı programlayın",
+      "unscheduleWatering": "Programlanmamış sulama",
+      "lastRead": {
+        "empty": "Son okuma: —",
+        "value": "Son okuma: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "QR Kodu",
+      "desc": {
+        "primary": "Her ev bitkisinin kendine özgü QR kodu vardır. Tarayıcı görünümünde taramak, bu ev bitkisinin ayrıntılarını anında açar.",
+        "secondary": "QR kodunu telefonunuza kaydedebilir veya kendinize e-postayla gönderebilir, ardından yazdırıp daha sonra hızlı erişim için saksıya ekleyebilirsiniz."
+      },
+      "saveBtn": "Kaydet",
+      "emailBtn": "E-posta"
+    },
+    "reminders": {
+      "title": "Hatırlatıcılar",
+      "menu": {
+        "markComplete": "Tamamlandı olarak işaretle",
+        "editReminder": "Hatırlatıcıyı düzenle",
+        "showHistory": "Geçmişi göster"
+      },
+      "type": {
+        "watering": "Sulama",
+        "fertilising": "Gübreleme",
+        "moisture": "Yaprakları püskürtme",
+        "care": "Bakım",
+        "repot": "Saksı değişimi"
+      }
+    }
+  }
+}

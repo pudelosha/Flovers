@@ -5,7 +5,9 @@ from datetime import timedelta
 from django.conf import settings
 from django.core.exceptions import ValidationError as DjangoValidationError
 from django.db import transaction
-from django.db.models import Q
+from django.db.models import BigIntegerField, F, Q
+from django.db.models.fields.json import KeyTextTransform
+from django.db.models.functions import Cast
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
@@ -30,6 +32,22 @@ from .serializers import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _visible_tasks(user):
+    from sharing.permissions import visible_plant_ids
+    plants = visible_plant_ids(user)
+    # Completed history follows the immutable plant in the event. A moved
+    # reminder must never reveal an earlier, unshared plant's notes/history.
+    return ReminderTask.objects.annotate(
+        _event_plant_id=Cast(KeyTextTransform("plant_id", "completed_event"), BigIntegerField()),
+    ).filter(
+        user_id=F("reminder__user_id"), reminder__user_id=F("reminder__plant__user_id"),
+    ).filter(
+        Q(user=user)
+        | Q(status="pending", reminder__plant_id__in=plants)
+        | Q(status="completed", _event_plant_id__in=plants)
+    )
 
 
 UI_TO_MODEL_TYPE = {
@@ -189,12 +207,15 @@ class ReminderListCreateView(generics.ListCreateAPIView):
     serializer_class = ReminderSerializer
 
     def get_queryset(self):
-        return Reminder.objects.filter(user=self.request.user, plant__user=self.request.user).select_related("plant")
+        from sharing.permissions import visible_plant_ids
+        return Reminder.objects.filter(user_id=F("plant__user_id"), plant_id__in=visible_plant_ids(self.request.user)).select_related("plant", "plant__user")
 
     @transaction.atomic
     def perform_create(self, serializer):
-        reminder = serializer.save(user=self.request.user)
-        reminder.ensure_one_pending_task()
+        from sharing.permissions import locked_plant_access
+        with locked_plant_access(self.request.user, serializer.validated_data["plant"].pk, require_completion=False):
+            reminder = serializer.save(user=self.request.user)
+            reminder.ensure_one_pending_task()
 
 
 class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
@@ -207,11 +228,15 @@ class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ReminderSerializer
 
     def get_queryset(self):
+        if getattr(self.request, "method", None) in {"GET", "HEAD", "OPTIONS"}:
+            from sharing.permissions import visible_plant_ids
+            return Reminder.objects.filter(user_id=F("plant__user_id"), plant_id__in=visible_plant_ids(self.request.user)).select_related("plant", "plant__user")
         return Reminder.objects.filter(user=self.request.user, plant__user=self.request.user).select_related("plant")
 
     def perform_update(self, serializer):
         schedule_fields = ("start_date", "interval_value", "interval_unit", "plant_id", "type")
-        with transaction.atomic():
+        from sharing.permissions import locked_plant_access
+        with transaction.atomic(), locked_plant_access(self.request.user, serializer.instance.plant_id, require_completion=False):
             current = get_object_or_404(self.get_queryset().select_for_update(of=("self",)), pk=serializer.instance.pk)
             previous_schedule = tuple(getattr(current, field) for field in schedule_fields)
             # Revalidate against the locked, current row: DRF's instance may have
@@ -238,11 +263,10 @@ class TaskCompleteView(APIView):
 
     def post(self, request, pk: int):
         task = get_object_or_404(
-            ReminderTask.objects.select_related("reminder", "reminder__plant"),
+            _visible_tasks(request.user).select_related("reminder", "reminder__plant"),
             pk=pk,
-            user=request.user,
-            reminder__user=request.user,
-            reminder__plant__user=request.user,
+            user_id=F("reminder__user_id"),
+            reminder__user_id=F("reminder__plant__user_id"),
         )
 
         serializer = ReminderTaskCompleteSerializer(data=request.data)
@@ -251,15 +275,15 @@ class TaskCompleteView(APIView):
         completed_date = serializer.validated_data.get("completion_date")
 
         try:
-            new_task = task.mark_complete_and_spawn_next(note=note, completed_date=completed_date)
+            new_task = task.mark_complete_and_spawn_next(note=note, completed_date=completed_date, actor=request.user)
         except (Reminder.DoesNotExist, ReminderTask.DoesNotExist):
             return Response({"detail": "Task no longer exists."}, status=status.HTTP_404_NOT_FOUND)
         except DjangoValidationError as exc:
             return Response({"detail": exc.messages}, status=status.HTTP_409_CONFLICT)
         return Response(
             {
-                "completed_task": ReminderTaskSerializer(task).data,
-                "next_task": ReminderTaskSerializer(new_task).data if new_task else None,
+                "completed_task": ReminderTaskSerializer(task, context={"request": request}).data,
+                "next_task": ReminderTaskSerializer(new_task, context={"request": request}).data if new_task else None,
             },
             status=status.HTTP_200_OK,
         )
@@ -269,12 +293,9 @@ class ReminderTaskListView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        qs = ReminderTask.objects.filter(
-            user=request.user,
-            reminder__user=request.user,
-            reminder__plant__user=request.user,
+        qs = _visible_tasks(request.user).filter(
             status__in=["pending", "completed"],
-        ).select_related("reminder", "reminder__plant")
+        ).select_related("reminder", "reminder__plant", "reminder__plant__user", "completed_by")
 
         status_param = request.query_params.get("status")
         if status_param in {"pending", "completed"}:
@@ -283,7 +304,7 @@ class ReminderTaskListView(APIView):
                 qs = qs.filter(reminder__is_active=True)
 
         qs = qs.order_by("due_date", "id")
-        data = ReminderTaskSerializer(qs, many=True).data
+        data = ReminderTaskSerializer(qs, many=True, context={"request": request}).data
         return Response(data)
 
 
@@ -547,17 +568,14 @@ class PlantJournalView(APIView):
 
     def get(self, request, plant_id: int):
         qs = (
-            ReminderTask.objects
+            _visible_tasks(request.user)
             .filter(
-                user=request.user,
-                reminder__user=request.user,
-                reminder__plant__user=request.user,
                 status="completed",
                 completed_event__plant_id=plant_id,
             )
-            .select_related("reminder")
+            .select_related("reminder", "reminder__plant", "reminder__plant__user", "completed_by")
             .order_by("-completed_at", "-id")
         )
 
-        data = ReminderTaskJournalSerializer(qs, many=True).data
+        data = ReminderTaskJournalSerializer(qs, many=True, context={"request": request}).data
         return Response(data)

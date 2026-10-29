@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Tugas otomatis",
+      "subtitle": "Kami dapat membuat pengingat secara otomatis (menyiram, merepoting, menyemprot, memupuk, merawat) berdasarkan profil tanaman hias Anda.",
+      "createAutoTasks": "Buat tugas otomatis untuk tanaman hias ini",
+      "requiresPlantDefinition": "Ini memerlukan definisi tanaman hias.",
+      "labels": {
+        "generateWateringTask": "Hasilkan tugas penyiraman",
+        "generateMistingTask": "Hasilkan tugas gerimis",
+        "generateFertilisingTask": "Menghasilkan tugas pemupukan",
+        "generateCareTask": "Hasilkan tugas perawatan",
+        "generateRepottingTask": "Hasilkan tugas repotting"
+      },
+      "prompts": {
+        "lastWatered": "Kapan terakhir kali disiram?",
+        "selectIntervalDays": "Pilih interval (hari)",
+        "recommendedInterval": "Interval yang disarankan",
+        "lastRepotted": "Kapan terakhir kali direpoting?"
+      },
+      "notSpecified": "Tidak ditentukan",
+      "notSpecifiedDesc": "Lewati jika Anda tidak yakin.",
+      "units": {
+        "day": "hari",
+        "days": "hari",
+        "month": "bulan",
+        "months": "bulan"
+      },
+      "lastWatered": {
+        "today": "Hari ini",
+        "yesterday": "Kemarin",
+        "three-four-days": "3–4 hari yang lalu",
+        "one-week": "Seminggu yang lalu",
+        "two-weeks": "2 minggu yang lalu",
+        "unknown": "Saya tidak ingat"
+      },
+      "lastRepotted": {
+        "this-week": "Minggu ini",
+        "one-week-ago": "1 minggu yang lalu",
+        "two-weeks-ago": "2 minggu yang lalu",
+        "one-month-ago": "1 bulan yang lalu",
+        "unknown": "Saya tidak ingat"
+      }
+    }
+  }
+}

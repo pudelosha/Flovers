@@ -10,9 +10,11 @@ type Props = {
   onToggleActive: () => void;
   onEdit: () => void;
   onDelete: () => void;
+  canEdit?: boolean;
+  onPlantDetails?: () => void;
 };
 
-export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelete }: Props) {
+export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelete, canEdit = true, onPlantDetails }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -28,6 +30,8 @@ export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelet
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
+      {!canEdit && onPlantDetails && <MenuItem label={tr("plants.menu.details", "Plant details")} icon="sprout-outline" onPress={onPlantDetails} />}
+      {canEdit && <>
       <MenuItem
         label={tr("reminders.menu.edit", "Edit reminder")}
         icon="calendar-edit"
@@ -50,6 +54,7 @@ export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelet
           onDelete();
         }}
       />
+      </>}
     </View>
   );
 }

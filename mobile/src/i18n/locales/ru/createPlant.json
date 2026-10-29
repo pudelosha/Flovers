@@ -1,0 +1,19 @@
+{
+  "createPlant": {
+    "header": {
+      "title": "Добавить растение"
+    },
+    "fallbackStep": {
+      "title": "Шаг «{{step}}»",
+      "subtitle": "Этот шаг будет реализован следующим."
+    },
+    "common": {
+      "previous": "Назад",
+      "next": "Далее",
+      "create": "Создать",
+      "cancel": "Отмена",
+      "done": "Готово",
+      "notSpecified": "Не указано"
+    }
+  }
+}

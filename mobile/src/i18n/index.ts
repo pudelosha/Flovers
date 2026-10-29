@@ -1,4 +1,4 @@
-﻿import i18n from "i18next";
+import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Base bundles for all 12 languages
@@ -534,9 +534,124 @@ import zhTaskHistoryModals from "./locales/zh/taskHistoryModals.json";
 import jaTaskHistoryModals from "./locales/ja/taskHistoryModals.json";
 import koTaskHistoryModals from "./locales/ko/taskHistoryModals.json";
 
+import idCreatePlant from "./locales/id/createPlant.json";
+import idCreatePlantStep01 from "./locales/id/createPlantStep01.json";
+import idCreatePlantStep02 from "./locales/id/createPlantStep02.json";
+import idCreatePlantStep03 from "./locales/id/createPlantStep03.json";
+import idCreatePlantStep04 from "./locales/id/createPlantStep04.json";
+import idCreatePlantStep05 from "./locales/id/createPlantStep05.json";
+import idCreatePlantStep06 from "./locales/id/createPlantStep06.json";
+import idCreatePlantStep07 from "./locales/id/createPlantStep07.json";
+import idCreatePlantStep08 from "./locales/id/createPlantStep08.json";
+import idCreatePlantStep09 from "./locales/id/createPlantStep09.json";
+import idLogin from "./locales/id/login.json";
+import idRegister from "./locales/id/register.json";
+import idRegisterSuccess from "./locales/id/registerSuccess.json";
+import idResendActivation from "./locales/id/resendActivation.json";
+import idConfirmEmail from "./locales/id/confirmEmail.json";
+import idForgotPassword from "./locales/id/forgotPassword.json";
+import idNavigation from "./locales/id/navigation.json";
+import idResetPassword from "./locales/id/resetPassword.json";
+import idLanguages from "./locales/id/languages.json";
+import idScanner from "./locales/id/scanner.json";
+import idPlants from "./locales/id/plants.json";
+import idPlantsModals from "./locales/id/plantsModals.json";
+import idLocations from "./locales/id/locations.json";
+import idLocationsModals from "./locales/id/locationsModals.json";
+import idPlantDetails from "./locales/id/plantDetails.json";
+import idPlantDetailsModals from "./locales/id/plantDetailsModals.json";
+import idReminders from "./locales/id/reminders.json";
+import idRemindersModals from "./locales/id/remindersModals.json";
+import idReadings from "./locales/id/readings.json";
+import idReadingsModals from "./locales/id/readingsModals.json";
+import idReadingsHistory from "./locales/id/readingsHistory.json";
+import idProfile from "./locales/id/profile.json";
+import idSharing from "./locales/id/sharing.json";
+import idProfileModals from "./locales/id/profileModals.json";
+import idHome from "./locales/id/home.json";
+import idHomeModals from "./locales/id/homeModals.json";
+import idTaskHistory from "./locales/id/taskHistory.json";
+import idTaskHistoryModals from "./locales/id/taskHistoryModals.json";
+import ruCreatePlant from "./locales/ru/createPlant.json";
+import ruCreatePlantStep01 from "./locales/ru/createPlantStep01.json";
+import ruCreatePlantStep02 from "./locales/ru/createPlantStep02.json";
+import ruCreatePlantStep03 from "./locales/ru/createPlantStep03.json";
+import ruCreatePlantStep04 from "./locales/ru/createPlantStep04.json";
+import ruCreatePlantStep05 from "./locales/ru/createPlantStep05.json";
+import ruCreatePlantStep06 from "./locales/ru/createPlantStep06.json";
+import ruCreatePlantStep07 from "./locales/ru/createPlantStep07.json";
+import ruCreatePlantStep08 from "./locales/ru/createPlantStep08.json";
+import ruCreatePlantStep09 from "./locales/ru/createPlantStep09.json";
+import ruLogin from "./locales/ru/login.json";
+import ruRegister from "./locales/ru/register.json";
+import ruRegisterSuccess from "./locales/ru/registerSuccess.json";
+import ruResendActivation from "./locales/ru/resendActivation.json";
+import ruConfirmEmail from "./locales/ru/confirmEmail.json";
+import ruForgotPassword from "./locales/ru/forgotPassword.json";
+import ruNavigation from "./locales/ru/navigation.json";
+import ruResetPassword from "./locales/ru/resetPassword.json";
+import ruLanguages from "./locales/ru/languages.json";
+import ruScanner from "./locales/ru/scanner.json";
+import ruPlants from "./locales/ru/plants.json";
+import ruPlantsModals from "./locales/ru/plantsModals.json";
+import ruLocations from "./locales/ru/locations.json";
+import ruLocationsModals from "./locales/ru/locationsModals.json";
+import ruPlantDetails from "./locales/ru/plantDetails.json";
+import ruPlantDetailsModals from "./locales/ru/plantDetailsModals.json";
+import ruReminders from "./locales/ru/reminders.json";
+import ruRemindersModals from "./locales/ru/remindersModals.json";
+import ruReadings from "./locales/ru/readings.json";
+import ruReadingsModals from "./locales/ru/readingsModals.json";
+import ruReadingsHistory from "./locales/ru/readingsHistory.json";
+import ruProfile from "./locales/ru/profile.json";
+import ruSharing from "./locales/ru/sharing.json";
+import ruProfileModals from "./locales/ru/profileModals.json";
+import ruHome from "./locales/ru/home.json";
+import ruHomeModals from "./locales/ru/homeModals.json";
+import ruTaskHistory from "./locales/ru/taskHistory.json";
+import ruTaskHistoryModals from "./locales/ru/taskHistoryModals.json";
+import trCreatePlant from "./locales/tr/createPlant.json";
+import trCreatePlantStep01 from "./locales/tr/createPlantStep01.json";
+import trCreatePlantStep02 from "./locales/tr/createPlantStep02.json";
+import trCreatePlantStep03 from "./locales/tr/createPlantStep03.json";
+import trCreatePlantStep04 from "./locales/tr/createPlantStep04.json";
+import trCreatePlantStep05 from "./locales/tr/createPlantStep05.json";
+import trCreatePlantStep06 from "./locales/tr/createPlantStep06.json";
+import trCreatePlantStep07 from "./locales/tr/createPlantStep07.json";
+import trCreatePlantStep08 from "./locales/tr/createPlantStep08.json";
+import trCreatePlantStep09 from "./locales/tr/createPlantStep09.json";
+import trLogin from "./locales/tr/login.json";
+import trRegister from "./locales/tr/register.json";
+import trRegisterSuccess from "./locales/tr/registerSuccess.json";
+import trResendActivation from "./locales/tr/resendActivation.json";
+import trConfirmEmail from "./locales/tr/confirmEmail.json";
+import trForgotPassword from "./locales/tr/forgotPassword.json";
+import trNavigation from "./locales/tr/navigation.json";
+import trResetPassword from "./locales/tr/resetPassword.json";
+import trLanguages from "./locales/tr/languages.json";
+import trScanner from "./locales/tr/scanner.json";
+import trPlants from "./locales/tr/plants.json";
+import trPlantsModals from "./locales/tr/plantsModals.json";
+import trLocations from "./locales/tr/locations.json";
+import trLocationsModals from "./locales/tr/locationsModals.json";
+import trPlantDetails from "./locales/tr/plantDetails.json";
+import trPlantDetailsModals from "./locales/tr/plantDetailsModals.json";
+import trReminders from "./locales/tr/reminders.json";
+import trRemindersModals from "./locales/tr/remindersModals.json";
+import trReadings from "./locales/tr/readings.json";
+import trReadingsModals from "./locales/tr/readingsModals.json";
+import trReadingsHistory from "./locales/tr/readingsHistory.json";
+import trProfile from "./locales/tr/profile.json";
+import trSharing from "./locales/tr/sharing.json";
+import trProfileModals from "./locales/tr/profileModals.json";
+import trHome from "./locales/tr/home.json";
+import trHomeModals from "./locales/tr/homeModals.json";
+import trTaskHistory from "./locales/tr/taskHistory.json";
+import trTaskHistoryModals from "./locales/tr/taskHistoryModals.json";
+
 // LANGS array with all supported languages
 export const LANGS = [
-  "en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"
+  "en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko", "id", "ru", "tr"
 ] as const;
 
 type AnyObj = Record<string, any>;
@@ -641,6 +756,138 @@ const resources = {
         enHomeModals,
         enTaskHistory,
         enTaskHistoryModals,
+      ] as AnyObj[]
+    ),
+  },
+  id: {
+    translation: buildTranslation(
+      idCreatePlant as AnyObj,
+      idCreatePlantStep01 as AnyObj,
+      idCreatePlantStep02 as AnyObj,
+      idCreatePlantStep03 as AnyObj,
+      idCreatePlantStep04 as AnyObj,
+      idCreatePlantStep05 as AnyObj,
+      idCreatePlantStep06 as AnyObj,
+      idCreatePlantStep07 as AnyObj,
+      idCreatePlantStep08 as AnyObj,
+      idCreatePlantStep09 as AnyObj,
+      [
+        idLogin,
+        idRegister,
+        idRegisterSuccess,
+        idResendActivation,
+        idConfirmEmail,
+        idForgotPassword,
+        idNavigation,
+        idResetPassword,
+        idLanguages,
+        idScanner,
+        idPlants,
+        idPlantsModals,
+        idLocations,
+        idLocationsModals,
+        idPlantDetails,
+        idPlantDetailsModals,
+        idReminders,
+        idRemindersModals,
+        idReadings,
+        idReadingsModals,
+        idReadingsHistory,
+        idProfile,
+        idSharing,
+        idProfileModals,
+        idHome,
+        idHomeModals,
+        idTaskHistory,
+        idTaskHistoryModals,
+      ] as AnyObj[]
+    ),
+  },
+  ru: {
+    translation: buildTranslation(
+      ruCreatePlant as AnyObj,
+      ruCreatePlantStep01 as AnyObj,
+      ruCreatePlantStep02 as AnyObj,
+      ruCreatePlantStep03 as AnyObj,
+      ruCreatePlantStep04 as AnyObj,
+      ruCreatePlantStep05 as AnyObj,
+      ruCreatePlantStep06 as AnyObj,
+      ruCreatePlantStep07 as AnyObj,
+      ruCreatePlantStep08 as AnyObj,
+      ruCreatePlantStep09 as AnyObj,
+      [
+        ruLogin,
+        ruRegister,
+        ruRegisterSuccess,
+        ruResendActivation,
+        ruConfirmEmail,
+        ruForgotPassword,
+        ruNavigation,
+        ruResetPassword,
+        ruLanguages,
+        ruScanner,
+        ruPlants,
+        ruPlantsModals,
+        ruLocations,
+        ruLocationsModals,
+        ruPlantDetails,
+        ruPlantDetailsModals,
+        ruReminders,
+        ruRemindersModals,
+        ruReadings,
+        ruReadingsModals,
+        ruReadingsHistory,
+        ruProfile,
+        ruSharing,
+        ruProfileModals,
+        ruHome,
+        ruHomeModals,
+        ruTaskHistory,
+        ruTaskHistoryModals,
+      ] as AnyObj[]
+    ),
+  },
+  tr: {
+    translation: buildTranslation(
+      trCreatePlant as AnyObj,
+      trCreatePlantStep01 as AnyObj,
+      trCreatePlantStep02 as AnyObj,
+      trCreatePlantStep03 as AnyObj,
+      trCreatePlantStep04 as AnyObj,
+      trCreatePlantStep05 as AnyObj,
+      trCreatePlantStep06 as AnyObj,
+      trCreatePlantStep07 as AnyObj,
+      trCreatePlantStep08 as AnyObj,
+      trCreatePlantStep09 as AnyObj,
+      [
+        trLogin,
+        trRegister,
+        trRegisterSuccess,
+        trResendActivation,
+        trConfirmEmail,
+        trForgotPassword,
+        trNavigation,
+        trResetPassword,
+        trLanguages,
+        trScanner,
+        trPlants,
+        trPlantsModals,
+        trLocations,
+        trLocationsModals,
+        trPlantDetails,
+        trPlantDetailsModals,
+        trReminders,
+        trRemindersModals,
+        trReadings,
+        trReadingsModals,
+        trReadingsHistory,
+        trProfile,
+        trSharing,
+        trProfileModals,
+        trHome,
+        trHomeModals,
+        trTaskHistory,
+        trTaskHistoryModals,
       ] as AnyObj[]
     ),
   },

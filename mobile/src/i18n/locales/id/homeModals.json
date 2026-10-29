@@ -1,0 +1,54 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Batal",
+      "apply": "Terapkan",
+      "reset": "Setel ulang"
+    },
+    "complete": {
+      "completionDateLabel": "Tanggal penyelesaian",
+      "completionDateHint": "Pilih tanggal penyelesaian tugas ini. Tanggal yang akan datang tidak diperbolehkan.",
+      "title": "Tandai tugas sebagai selesai",
+      "overdueInfo": "Tugas ini sudah terlambat. Tanggal jatuh tempo berikutnya akan dihitung dari tanggal penyelesaian {{intervalText}}.",
+      "noteLabel": "Catatan (opsional)",
+      "noteHint": "Catatan ini akan disimpan dan dapat dilihat nanti per tanaman hias di Jurnal tanaman hias.",
+      "notePlaceholder": "Anda dapat menambahkan catatan singkat tentang apa yang Anda lakukan, observasi, dll.",
+      "confirm": "Tandai selesai"
+    },
+    "completeBulk": {
+      "completionDateHint": "Tanggal ini akan disimpan untuk setiap tugas yang diselesaikan. Tanggal yang akan datang tidak diperbolehkan.",
+      "title": "Tandai tugas {{count}} sebagai selesai",
+      "overdueInfo": "Beberapa tugas sudah terlambat. Tanggal jatuh tempo berikutnya akan dihitung dari tanggal penyelesaian yang dipilih {{intervalText}}.",
+      "noteHint": "Catatan ini akan disimpan untuk setiap tugas yang diselesaikan dan nanti dapat dilihat per tanaman hias di Jurnal tanaman hias.",
+      "confirm": "Tandai selesai"
+    },
+    "filter": {
+      "title": "Saring tugas",
+      "plantLabel": "Tanaman",
+      "locationLabel": "Lokasi",
+      "taskTypesLabel": "Jenis tugas",
+      "dueDateRangeLabel": "Rentang tanggal jatuh tempo",
+      "fromLabel": "Dari",
+      "toLabel": "Untuk",
+      "anyPlant": "Tanaman hias apa pun",
+      "selectPlant": "Pilih tanaman hias",
+      "anyLocation": "Lokasi mana pun",
+      "datePlaceholder": "YYYY-MM-DD",
+      "clear": "Jelas"
+    },
+    "sort": {
+      "title": "Urutkan tugas",
+      "sortByLabel": "Urutkan berdasarkan",
+      "directionLabel": "Arah",
+      "keys": {
+        "dueDate": "Tanggal jatuh tempo",
+        "plant": "Nama tanaman hias",
+        "location": "Lokasi"
+      },
+      "directions": {
+        "asc": "Naik",
+        "desc": "Menurun"
+      }
+    }
+  }
+}

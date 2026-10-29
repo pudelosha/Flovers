@@ -13,6 +13,7 @@ type Props = {
   onHistory: () => void;
   onPlantDetails: () => void;
   onDelete: () => void;
+  canEdit?: boolean;
 };
 
 type ItemProps = {
@@ -42,6 +43,7 @@ export default function ReadingMenu({
   onHistory,
   onPlantDetails,
   onDelete,
+  canEdit = true,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -62,17 +64,17 @@ export default function ReadingMenu({
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
-      <Item
+      {canEdit && <Item
         icon="pencil-outline"
         label={tr("readings.menu.editDevice", "Edit device")}
         onPress={onEdit}
-      />
+      />}
 
-      <Item
+      {canEdit && <Item
         icon="information-outline"
         label={tr("readings.menu.deviceDetails", "Device details")}
         onPress={onDeviceDetails}
-      />
+      />}
 
       <Item
         icon="chart-line"
@@ -86,12 +88,12 @@ export default function ReadingMenu({
         onPress={onPlantDetails}
       />
 
-      <Item
+      {canEdit && <Item
         icon="trash-can-outline"
         label={tr("readings.menu.deleteDevice", "Delete device")}
         danger
         onPress={onDelete}
-      />
+      />}
     </View>
   );
 }

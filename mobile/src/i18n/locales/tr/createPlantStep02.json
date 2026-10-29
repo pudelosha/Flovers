@@ -1,0 +1,39 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Ev bitkisi profili",
+      "preferences": "Tercihler",
+      "errorProfile": "Ev bitkisi profili yüklenemedi.",
+      "labels": {
+        "sun": "Güneşe maruz kalma",
+        "water": "Sulama",
+        "difficulty": "Zorluk",
+        "potMaterials": "Saksı malzemeleri",
+        "soilMixes": "Toprak karışımları",
+        "wateringInterval": "Sulama",
+        "moistureInterval": "Nem kontrolü",
+        "fertilizeInterval": "Gübrele",
+        "repotInterval": "Saksı değişimi"
+      },
+      "values": {
+        "everyDays": "Her {{count}} günde bir",
+        "everyMonths": "Her {{count}} ayda bir"
+      },
+      "traits": {
+        "sun": "Güneşe maruz kalma",
+        "water": "Sulama",
+        "difficulty": "Zorluk",
+        "soil": "Toprak",
+        "temperature": "Sıcaklık",
+        "humidity": "Nem",
+        "toxic": "Zehirli mi?",
+        "growth": "Büyüme",
+        "light": "Işık",
+        "fertilizer": "Gübre",
+        "recognize": "Ev bitkisini tanıyın",
+        "problems": "Sorunlar",
+        "pests": "Zararlılar"
+      }
+    }
+  }
+}

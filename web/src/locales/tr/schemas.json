@@ -1,0 +1,246 @@
+{
+  "common": {
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "closePreview": "Resim önizlemesini kapat"
+  },
+  "title": "Cihaz API ve kablolama",
+  "retrySafety": "Support_task_retry seçeneğini true olarak ayarlayın, yalnızca ürün yazılımınız pompayı çalıştırmadan önce görev kimliklerini ve sonuçları kaydederse ve tekrarlanan bir görevi iki kez sulamadan raporlayabiliyorsa. Oluşturulan örnek bu korumayı içerir. Güvenli yeniden denemelere olanak sağlamak için mevcut cihazları yeniden oluşturun ve yeniden başlatın; eski donanım yazılımı tek seferde görev teslimini sağlar.",
+  "lead": [
+    "Bu sayfada IoT cihazlarının Flovers ile nasıl entegre olduğu belgelenmektedir.",
+    "Cihazlar, çevresel sensör okumalarını arka uca gönderebilir, mobil uygulamadan manuel bir sulama işinin planlanıp planlanmadığını kontrol edebilir ve tamamlanan pompa çalışmalarını Flovers'ye geri bildirebilir.",
+    "Oluşturulan Arduino/ESP donanım yazılımı, tek bir çizimde hem sensör okumalarını hem de sulama kontrolünü destekleyebilir. Bağlı cihaz bir su pompasıyla yapılandırılmışsa oluşturulan kod, pompa uç noktalarını ve pompa kontrol mantığını içerir. Cihaz pompasız yapılandırılmışsa oluşturulan ürün yazılımı, yalnızca sensör okumalarını gönderecek şekilde basitleştirilebilir."
+  ],
+  "firmwareIntro": {
+    "title": "Oluşturulan ürün yazılımı ne yapar?",
+    "lead": "Oluşturulan ürün yazılımı şunları yapabilir:",
+    "items": [
+      "Wi-Fi'ye bağlanın",
+      "NTP kullanarak zamanı senkronize et",
+      "okuma özellikli sensörler",
+      "sensör okumalarını Flovers'ye gönder",
+      "planlanmış manuel sulama işlerini kontrol edin",
+      "manuel sulama işi beklemedeyken pompayı çalıştırın",
+      "arka uç kontrollü otomatik sulama ayarlarını kontrol edin",
+      "toprak nemi yapılandırılmış eşiğin altında olduğunda otomatik sulamayı çalıştırın",
+      "Sulamanın tamamlandığını arka uca bildirin"
+    ],
+    "defaultTiming": "Varsayılan olarak sensör okumaları saatte bir gönderilir. Manuel sulama işleri, örneğin dakikada bir kez daha sık kontrol edilir, böylece mobil uygulamadan oluşturulan bir sulama talebi, bir sonraki saatlik okuma döngüsünü beklemeden alınabilir.",
+    "adjustmentNote": "Özellikle Wi-Fi kimlik bilgileri, pin numaraları, toprak nemi kalibrasyonu, pompa çalışma süresi, okuma aralığı, manuel iş yoklama aralığı ve otomatik sulama soğuma süresi gibi bazı değerlerin donanımınıza ve tercihlerinize göre ayarlanması gerekir."
+  },
+  "endpoints": {
+    "title": "API uç noktaları",
+    "ingest": {
+      "title": "Sensör okumalarını alın",
+      "direction": "Cihaz → arka uç",
+      "desc": [
+        "Cihazlar, sensör okumalarını göndermek için bu uç noktayı kullanır.",
+        "Arka uç, isteğin kimliğini aşağıdakileri kullanarak doğrular:",
+        "Arka uç, sensör okumalarını eşleşen cihazın altında saklar. sensör okumaları sıcaklık, nem, ışık, toprak nemi veya etkin ölçümlerin herhangi bir alt kümesini içerebilir."
+      ],
+      "authItems": [
+        "gizli",
+        "cihaz_anahtarı",
+        "isteğe bağlı olarak cihaz_id"
+      ]
+    },
+    "pumpNextTask": {
+      "title": "Sonraki pompa görevini kontrol edin",
+      "direction": "Cihaz → arka uç",
+      "desc": [
+        "Pompa desteğine sahip cihazlar, manuel bir sulama işinin beklenip beklenmediğini kontrol etmek için bu uç noktayı kullanır.",
+        "Yanıt aynı zamanda otomatik sulamanın etkinleştirilip etkinleştirilmediği ve hangi toprak nem eşiğinin kullanılması gerektiği gibi mevcut arka uç kontrollü otomatik pompa yapılandırmasını da içerir."
+      ]
+    },
+    "pumpComplete": {
+      "title": "Pompanın tamamlandığını bildir",
+      "direction": "Cihaz → arka uç",
+      "desc": [
+        "Cihazlar, pompa çalıştıktan sonra bu uç noktayı kullanır.",
+        "Bu aşağıdakilerden birini rapor edebilir:"
+      ],
+      "items": [
+        "görev_id'yi kullanarak planlanmış bir manuel sulama görevi",
+        "Source: \"automatic\" ve pompayı çalıştırmadan önce döndürülen görev_id'sini kullanan otomatik bir sulama olayı"
+      ]
+    },
+    "feed": {
+      "title": "En son feed'i oku",
+      "direction": "Cihaz → arka uç",
+      "desc": [
+        "Bu uç nokta, bir cihazın en son okuma verilerini döndürür. Basit entegrasyonlar veya teşhisler için hâlâ kullanışlıdır, ancak oluşturulan pompanın etkin olduğu donanım yazılımı, sulama kontrolü için bir sonraki pompa görevini ve pompa tamamlamayı kullanır."
+      ]
+    }
+  },
+  "ingest": {
+    "title": "POST besleme belgeleri",
+    "desc": "Bir okuma örneğini JSON olarak gönderin. Arka uç cihazın kimliğini doğrular ve sağlanan ölçümleri saklar.",
+    "payloadShape": "Yük şekli",
+    "examplePayload": "Örnek veri",
+    "powershellExample": "PowerShell örneği"
+  },
+  "pumpNextTask": {
+    "title": "POST pompa-sonraki görev belgeleri",
+    "desc": [
+      "Bu uç nokta, pompa desteğine sahip cihazlar tarafından kullanılır.",
+      "Cihaz, arka uca planlanmış bir manuel sulama işinin mevcut olup olmadığını sorar. Arka uç şunu döndürür:"
+    ],
+    "items": [
+      "pompanın şimdi çalıştırılıp çalıştırılmayacağı",
+      "manuel sulama görevi mevcutsa görev kimliği",
+      "mevcut otomatik pompa ayarları",
+      "arka ucun pompayı ve nem sensörünü etkin olarak değerlendirip değerlendirmediği"
+    ],
+    "payloadShape": "Yük şekli",
+    "examplePayload": "Örnek veri",
+    "responseNoTask": "Manuel sulama işi olmayan örnek yanıt",
+    "responseWithTask": "Manuel sulama işine örnek yanıt",
+    "powershellExample": "PowerShell örneği"
+  },
+  "pumpComplete": {
+    "title": "POST pompa komple belgeleri",
+    "desc": [
+      "Pompa çalıştıktan sonra cihaz tamamlandığını bildirir.",
+      "Manuel sulama için, sonraki pompa görevi tarafından döndürülen görev_id'sini ekleyin.",
+      "Otomatik sulama için, pompa-otomatik talep tarafından döndürülen görev_id'sini ekleyin ve kaynak kullanın: \"otomatik\"."
+    ],
+    "manualPayload": "Manuel sulama tamamlama yükü",
+    "automaticPayload": "Otomatik sulama tamamlama yükü",
+    "failedPayload": "Başarısız pompa çalıştırma yükü",
+    "powershellExample": "PowerShell örneği"
+  },
+  "feed": {
+    "title": "Feed belgelerini AL",
+    "desc": [
+      "Akış uç noktası, bir cihaz için en son okumayı döndürür.",
+      "Yalnızca en son saklanan değerlerin okunması gereken teşhis veya basit entegrasyonlar için kullanılabilir."
+    ],
+    "exampleRequest": "Örnek istek",
+    "exampleResponse": "Örnek yanıt"
+  },
+  "generatedFirmware": {
+    "title": "Oluşturulan Arduino / ESP32 ürün yazılımı",
+    "desc": [
+      "Uygulama, seçilen cihaz için ürün yazılımı oluşturabilir.",
+      "Oluşturulan ürün yazılımı, söz konusu cihaz için doğru API uç noktalarını, kimlik doğrulama sırrını, cihaz anahtarını, cihaz kimliğini, etkin sensörleri ve pompa ayarlarını içerir.",
+      "Cihaz bir su pompasıyla yapılandırılmışsa oluşturulan kod, hem sensör okumalarını hem de su pompası kontrolünü içerir. Manuel sulama işlerini saatlik okuma döngüsünden ayrı olarak kontrol eder ve otomatik sulama, arka uç tarafından kontrol edilen eşik ve geçiş özelliğini kullanır."
+    ],
+    "adjustIntro": "Çizimi yüklemeden önce donanımınız için aşağıdaki değerleri ayarlayın:",
+    "adjustItems": [
+      "Wi-Fi SSID ve şifre",
+      "SDA_PIN ve SCL_PIN",
+      "SOIL_PIN",
+      "PUMP_PIN",
+      "SOIL_DRY_VALUE ve SOIL_WET_VALUE",
+      "PUMP_RUN_MS",
+      "SEND_INTERVAL_MS",
+      "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "AUTO_PUMP_MIN_INTERVAL_MS"
+    ],
+    "codeLabel": "Oluşturulan Arduino ürün yazılımı: sensör okumaları + su pompası kontrolü"
+  },
+  "behavior": {
+    "title": "Ürün yazılımı davranışı özeti",
+    "fullCycle": {
+      "title": "Tam saatlik döngü",
+      "desc": "Her SEND_INTERVAL_MS'de, kart tam bir döngü çalıştırır:",
+      "items": [
+        "sensörleri okur",
+        "sensör okumalarını alım uç noktasına gönderir",
+        "planlanmış manuel sulamanın kontrol edilmesi",
+        "bir görev beklemedeyse manuel sulamayı çalıştırır",
+        "aksi takdirde otomatik sulama koşullarını kontrol eder",
+        "arka uç ayarları izin veriyorsa ve toprak nemi eşiğin altındaysa otomatik sulamayı çalıştırır"
+      ]
+    },
+    "manualCheck": {
+      "title": "Manuel sulama kontrolü",
+      "desc": [
+        "Her MANUAL_PUMP_CHECK_INTERVAL_MS'de, pano yalnızca planlanmış manuel sulama işlerini kontrol eder.",
+        "Bu daha kısa kontrol:",
+        "Bu, uygulamanın \"Sulamayı programla\" eyleminin, sensör okumalarının her dakika gönderilmesine gerek kalmadan hızlı bir şekilde alınmasına olanak tanır."
+      ],
+      "items": [
+        "sensör okumaları göndermiyor",
+        "otomatik sulama çalışmıyor",
+        "yalnızca mevcutsa bekleyen bir manuel sulama işini çalıştırır"
+      ]
+    },
+    "automatic": {
+      "title": "Otomatik sulama",
+      "desc": [
+        "Otomatik sulama, mobil uygulamada yapılandırılan arka uç ayarlarıyla kontrol edilir.",
+        "Kart, otomatik sulamayı yalnızca şu durumlarda çalıştırır:"
+      ],
+      "items": [
+        "pompa desteği etkin",
+        "otomatik pompa başlatma etkin",
+        "nem sensörü etkinleştirildi",
+        "en son ölçülen toprak nemi arka uç eşiğinin altında",
+        "otomatik sulama bekleme süresi doldu"
+      ],
+      "cooldown": "Manüel sulama veya otomatik sulama çalıştırmalarından sonra ürün yazılımı, otomatik sulama soğuma süresini başlatır. Bu, manuel sulama işi ile otomatik sulamanın birbirine çok yakın gerçekleşmesini önlemeye yardımcı olur."
+    },
+    "manual": {
+      "title": "Manuel sulama",
+      "desc": [
+        "Manuel sulama mobil uygulamadan planlanır.",
+        "Manuel sulama kasıtlı olarak şunları göz ardı eder:",
+        "Bu, kullanıcı sulamayı manuel olarak planladığında, kartın bunu pompanın bir kez çalıştırılması yönünde açık bir talep olarak değerlendirdiği anlamına gelir."
+      ],
+      "items": [
+        "mevcut toprak nemi",
+        "otomatik sulama eşiği",
+        "otomatik sulama soğuma süresi"
+      ]
+    }
+  },
+  "hardware": {
+    "title": "Donanım notları",
+    "desc": "Oluşturulan ürün yazılımı, ortak ESP32 uyumlu bileşenleri varsayar:",
+    "items": [
+      "BH1750 / I2C üzerinden GY-302 ışık sensörü",
+      "I2C üzerinden BME280 sıcaklık ve nem sensörü",
+      "analog pin üzerinde kapasitif toprak nemi sensörü",
+      "dijital çıkış pinine bağlı röle veya pompa sürücüsü"
+    ],
+    "verify": "Pompaya güç vermeden önce tüm kabloları doğrulayın.",
+    "relayNote": "Bazı röle modülleri DÜŞÜK olarak aktifken, diğerleri YÜKSEK olarak aktiftir. Oluşturulan örnek şunu kullanır:",
+    "relayReverse": "Röleniz ters çalışıyorsa YÜKSEK ve DÜŞÜK değerleri değiştirmeniz gerekebilir.",
+    "relayCodeLabel": "Pompa çıkışı örneği"
+  },
+  "calibration": {
+    "title": "Kalibrasyon notları",
+    "desc": [
+      "Güvenilir sonuçlar için toprak nem sensörlerinin kalibre edilmesi gerekir.",
+      "Oluşturulan kod şunu kullanır:",
+      "Bu değerler yalnızca örnektir.",
+      "Sensör değerinizi kuru toprakta veya havada ölçün, ardından ıslak toprakta veya suda tekrar ölçün ve bu sabitleri buna göre güncelleyin."
+    ],
+    "codeLabel": "Varsayılan kalibrasyon değerleri"
+  },
+  "safety": {
+    "title": "Güvenlik notları",
+    "desc": [
+      "Oluşturulan ürün yazılımı bir başlangıç noktasıdır. Pompayı gözetimsiz bırakmadan önce:",
+      "Flovers, sensör okumalarını ve sulama olaylarını saklar ancak cihazın kablolaması, kalibrasyonu, pompa davranışı ve fiziksel kurulumu kullanıcının sorumluluğundadır."
+    ],
+    "items": [
+      "pompayı manuel olarak test edin",
+      "röle mantığını onaylayın",
+      "pompanın doğru şekilde kapandığını doğrulayın",
+      "güvenli bir pompa çalışma süresi kullanın",
+      "toprak nem değerlerinin gerçekçi olduğunu doğrulayın",
+      "elektronikleri sudan koruyun",
+      "Pompa için uygun güç kaynağı ve izolasyon kullanın"
+    ]
+  },
+  "wiring": {
+    "title": "Bağlantı şemaları",
+    "desc": "Aşağıda örnek bir cihaz kablolama şeması verilmiştir. Tam ekranda açmak için resme tıklayın.",
+    "ariaPrimary": "Örnek cihaz kablolama şeması",
+    "placeholderTitlePrimary": "Örnek cihaz kablolama şeması",
+    "placeholderSubPrimary": "Tam ekranda görüntülemek için resme tıklayın."
+  },
+  "claimSafety": "Otomatik sulamadan önce, mevcut ölçümden elde edilen sır, cihaz_anahtarı ve nem dahil olmak üzere POST /sensör okumaları/pump-auto-claim/ ile izin isteyin; Device_id isteğe bağlıdır. Pompayı yalnızca run: true sonrasında çalıştırın ve tamamlandığını bildirirken döndürülen görev_id değerini kullanın. Oluşturulan ürün yazılımı bu işlemi yönetir."
+}

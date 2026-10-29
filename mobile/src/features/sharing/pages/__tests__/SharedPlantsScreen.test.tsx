@@ -1,19 +1,21 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
-import { act, fireEvent, render } from "@testing-library/react-native";
+import { BackHandler, ScrollView, StyleSheet, View } from "react-native";
+import { act, fireEvent, render, waitFor, within } from "@testing-library/react-native";
 import SharedPlantsScreen from "../SharedPlantsScreen";
 import FAB from "../../../../shared/ui/FAB";
 import ContactModalFrame from "../../components/ContactModalFrame";
+import GlassCard from "../../../profile/components/GlassCard";
 
 const mockT = (_key: string, values: any = {}) => String(values.defaultValue ?? _key).replace(/{{(\w+)}}/g, (_, key) => String(values[key] ?? ""));
 let mockSharing: any;
 let mockFocused = true;
 let mockFabPosition = "right";
 let mockBottomInset = 0;
+const mockNavigate = jest.fn();
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
 jest.mock("@react-navigation/native", () => ({
   useIsFocused: () => mockFocused,
-  useNavigation: () => ({ navigate: jest.fn(), canGoBack: () => false, goBack: jest.fn() }),
+  useNavigation: () => ({ navigate: mockNavigate, canGoBack: () => false, goBack: jest.fn() }),
 }));
 jest.mock("react-native-safe-area-context", () => ({
   useSafeAreaInsets: () => ({ top: 0, bottom: mockBottomInset, left: 0, right: 0 }),
@@ -47,10 +49,16 @@ function selectFabAction(view: ReturnType<typeof render>, label: string) {
 
 describe("SharedPlantsScreen", () => {
   beforeEach(() => {
+    jest.clearAllMocks();
+    jest.spyOn(View.prototype, "measureInWindow").mockImplementation(function (this: any, callback: any) {
+      if (this.props.testID === "shared-plants-screen") callback(0, 0, 360, 780);
+      else callback(300, 120, 36, 36);
+    });
     mockFocused = true;
     mockFabPosition = "right";
     mockBottomInset = 0;
     mockSharing = {
+      loaded: true, loading: false, error: null, pending: null, refresh: jest.fn(async () => ({})),
       contacts: [{ id: "anna", name: "Anna" }, { id: "bruno", name: "Bruno" }],
       shareDraft: null,
       shares: [
@@ -58,8 +66,53 @@ describe("SharedPlantsScreen", () => {
         { id: "s2", direction: "outgoing", plant: bird, contactId: "bruno", canCompleteTasks: false },
         { id: "s3", direction: "incoming", plant: incomingPlant, contactId: "anna", canCompleteTasks: false },
       ],
-      openSharePlant: jest.fn(), removeShare: jest.fn(), resetPreview: jest.fn(),
+      openSharePlant: jest.fn(), removeShare: jest.fn(async () => ({ ok: true })), resetPreview: jest.fn(),
     };
+  });
+  afterEach(() => jest.restoreAllMocks());
+
+  it("opens a floating two-action menu and navigates to the selected plant", async () => {
+    const view = await renderScreen();
+    const tile = view.UNSAFE_getAllByType(GlassCard)[0];
+    expect(view.queryByText("Plant details")).toBeNull();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    expect(mockNavigate).not.toHaveBeenCalled();
+    expect(view.getByRole("button", { name: "Go to plant" })).toBeTruthy();
+    expect(view.getByRole("button", { name: "Display tasks" })).toBeTruthy();
+    expect(within(tile).queryByText("Go to plant", { includeHiddenElements: true })).toBeNull();
+    expect(StyleSheet.flatten(view.getByTestId("shared-plant-actions-menu").props.style)).toMatchObject({
+      position: "absolute", backgroundColor: "#000000", right: 30, shadowOpacity: 0,
+    });
+    fireEvent.press(view.getByRole("button", { name: "Go to plant" }));
+    expect(mockNavigate).toHaveBeenCalledWith("PlantDetails", { id: "1" });
+    expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
+  });
+
+  it("opens Home filtered to the chosen received plant, including repeated requests", async () => {
+    const view = await renderScreen();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Peace lily" }));
+    fireEvent.press(view.getByRole("button", { name: "Display tasks" }));
+    expect(mockNavigate).toHaveBeenLastCalledWith("Home", { plantId: "2", filterRequestId: expect.any(String) });
+    const firstRequest = mockNavigate.mock.calls[0][1].filterRequestId;
+    fireEvent.press(view.getByRole("button", { name: "Actions for Peace lily" }));
+    fireEvent.press(view.getByRole("button", { name: "Display tasks" }));
+    expect(mockNavigate.mock.calls[1][1].filterRequestId).not.toBe(firstRequest);
+  });
+
+  it("closes the menu outside, on Android Back, and when a filter hides its tile", async () => {
+    let onBack: any;
+    jest.spyOn(BackHandler, "addEventListener").mockImplementation((_event, callback) => { onBack = callback; return { remove: jest.fn() }; });
+    const view = await renderScreen();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    fireEvent.press(view.getByRole("button", { name: "Close" }));
+    expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    act(() => expect(onBack()).toBe(true));
+    expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    selectFabAction(view, "Shared with me");
+    expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
+    expect(mockNavigate).not.toHaveBeenCalled();
   });
 
   it("defaults to all directions, uses image/Latin/location heroes and omits Back and inline controls", async () => {
@@ -153,7 +206,7 @@ describe("SharedPlantsScreen", () => {
     expect(view.queryByText("plus")).toBeNull();
     fireEvent.press(view.getByText("Remove access"));
     expect(mockSharing.removeShare).toHaveBeenCalledWith("s2");
-    expect(view.getByText("plus")).toBeTruthy();
+    await view.findByText("plus");
   });
 
   it("leaves an incoming share without exposing owner management under its filter", async () => {
@@ -182,10 +235,31 @@ describe("SharedPlantsScreen", () => {
     mockSharing.shares = [];
     const view = await renderScreen();
     expect(view.getByText("No shared plants yet")).toBeTruthy();
+    expect(view.getByTestId("shared-plants-empty")).toBeTruthy();
     selectFabAction(view, "Shared by me");
     expect(view.getByText("No plants shared yet")).toBeTruthy();
     selectFabAction(view, "Shared with me");
     expect(view.getByText("No plants shared with you")).toBeTruthy();
+  });
+
+  it("waits for real sharing data and exposes retry instead of sample tiles on failure", async () => {
+    mockSharing.loaded = false; mockSharing.loading = true;
+    const view = await renderScreen();
+    expect(view.queryByText("Bird")).toBeNull(); expect(view.UNSAFE_queryAllByType(FAB)).toHaveLength(0);
+    mockSharing.loading = false; mockSharing.error = "unavailable";
+    view.rerender(<SharedPlantsScreen />);
+    expect(view.getByText("Could not load shared plants.")).toBeTruthy();
+    fireEvent.press(view.getByText("Try again")); expect(mockSharing.refresh).toHaveBeenCalled();
+  });
+
+  it("keeps the leave confirmation and shared plant after a server failure", async () => {
+    mockSharing.removeShare.mockResolvedValue({ ok: false, reason: "unavailable" });
+    const view = await renderScreen();
+    fireEvent.press(view.getByLabelText("Leave shared plant: Peace lily"));
+    await act(async () => { fireEvent.press(view.getByText("Leave shared plant")); });
+    expect(view.getByText("Leave shared plant?")).toBeTruthy();
+    expect(view.getByText("Could not load or update sharing. Please try again.")).toBeTruthy();
+    expect(view.getByText("Peace lily", { includeHiddenElements: true })).toBeTruthy();
   });
 
   it("closes a confirmation on blur and keeps it closed when returning", async () => {

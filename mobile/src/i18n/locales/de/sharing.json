@@ -23,7 +23,8 @@
       "canCompleteTasks": "Kann Aufgaben abschließen",
       "noEndDate": "Ohne Enddatum",
       "until": "Bis {{date}}",
-      "you": "Du"
+      "you": "Du",
+      "expired": "Abgelaufen"
     },
     "contacts": {
       "title": "Kontakte",
@@ -105,7 +106,9 @@
       "showAll": "Alle anzeigen",
       "all": "Alle geteilten Pflanzen",
       "emptyAllTitle": "Noch keine geteilten Pflanzen",
-      "emptyAllBody": "Teile Pflanzen mit einem Kontakt oder bitte jemanden, seine Pflanzen mit dir zu teilen."
+      "emptyAllBody": "Teile Pflanzen mit einem Kontakt oder bitte jemanden, seine Pflanzen mit dir zu teilen.",
+      "displayTasks": "Aufgaben anzeigen",
+      "actions": "Aktionen für {{name}}"
     },
     "form": {
       "title": "Pflanzen teilen",
@@ -113,7 +116,7 @@
       "plant": "Pflanzen",
       "choosePlant": "Pflanzen auswählen",
       "singlePlantHint": "Wähle die Pflanzen und die Kontakte, mit denen du sie teilen möchtest.",
-      "loadFailed": "Deine Pflanzen konnten nicht geladen werden.",
+      "loadFailed": "Pflanzen und Freigaben konnten nicht geladen werden.",
       "retry": "Erneut versuchen",
       "noPlants": "Noch keine Pflanzen vorhanden. Füge eine Pflanze hinzu, um sie zu teilen.",
       "contacts": "Wer darf auf diese Pflanzen zugreifen?",
@@ -136,7 +139,9 @@
       "shareSelected": "Ausgewählte Pflanzen teilen",
       "mixedAccess": "Hat Zugriff auf einige ausgewählte Pflanzen. Wähle den Kontakt aus, um die übrigen hinzuzufügen.",
       "mixedPermissions": "Die Aufgabenberechtigungen sind bei den ausgewählten Pflanzen unterschiedlich.",
-      "endDatesVary": "Die Enddaten sind bei den ausgewählten Pflanzen unterschiedlich."
+      "endDatesVary": "Die Enddaten sind bei den ausgewählten Pflanzen unterschiedlich.",
+      "reload": "Freigabe neu laden",
+      "conflictHint": "Die Freigabe wurde zwischenzeitlich geändert. Lade sie vor dem Speichern neu. Dabei wird die aktuelle Kontaktauswahl ersetzt."
     },
     "toasts": {
       "invitationAdded": "Vorschau: Einladung hinzugefügt.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "Vorschau: Einladung zurückgezogen.",
       "contactUpdated": "Vorschau: Kontakt aktualisiert.",
       "contactDeleted": "Vorschau: Kontakt gelöscht.",
-      "sharingSaved": "Vorschau: Freigaben aktualisiert.",
-      "accessRemoved": "Vorschau: Zugriff entzogen.",
-      "plantLeft": "Geteilte Pflanze aus der Vorschau entfernt.",
+      "sharingSaved": "Freigabe gespeichert.",
+      "accessRemoved": "Zugriff entfernt.",
+      "plantLeft": "Geteilte Pflanze entfernt.",
       "idCopied": "ID kopiert.",
       "copyFailed": "Die ID konnte nicht kopiert werden.",
       "previewReset": "Vorschau zurückgesetzt.",
@@ -166,6 +171,23 @@
       "alreadyPending": "Für diese Person gibt es bereits eine offene Einladung.",
       "throttled": "Zu viele Anfragen. Warte kurz und versuche es erneut.",
       "unavailable": "Verbindung fehlgeschlagen. Bitte versuche es erneut."
+    },
+    "access": {
+      "sharedBy": "Geteilt von {{name}}",
+      "sharedPlant": "Geteilte Pflanze"
+    },
+    "live": {
+      "loadFailed": "Geteilte Pflanzen konnten nicht geladen werden."
+    },
+    "accessErrors": {
+      "invalid": "Prüfe die ausgewählten Pflanzen, Kontakte und Enddaten.",
+      "notFound": "Diese Pflanze oder Freigabe ist nicht mehr verfügbar.",
+      "notContact": "Du kannst Pflanzen nur mit bestätigten Kontakten teilen.",
+      "notOwner": "Nur der Eigentümer der Pflanze kann die Freigabe verwalten.",
+      "conflict": "Die Freigabe wurde zwischenzeitlich geändert. Lade sie neu und versuche es erneut.",
+      "expired": "Wähle ein Enddatum, das noch nicht vergangen ist.",
+      "throttled": "Zu viele Anfragen. Warte kurz und versuche es erneut.",
+      "unavailable": "Die Freigabe konnte nicht geladen oder gespeichert werden. Versuche es erneut."
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "locations": {
+    "headerTitle": "Konumlar",
+    "empty": {
+      "title": "Henüz konum yok",
+      "description": "Konumları ev bitkilerinize atadığınızda otomatik olarak görünür.\n\nBir ev bitkisini düzenleyin ve ev bitkilerini odalara veya alanlara göre gruplandırmaya başlamak için konumunu ayarlayın."
+    },
+    "fab": {
+      "add": "Konum ekle",
+      "sort": "Sırala"
+    },
+    "menu": {
+      "edit": "Konumu düzenle",
+      "delete": "Konumu sil"
+    },
+    "plantCount": {
+      "label": "Ev bitkisi sayısı: {{count}}"
+    },
+    "toast": {
+      "loadFailed": "Konumlar yüklenemedi",
+      "added": "Konum eklendi",
+      "deleted": "Konum silindi",
+      "updated": "Konum güncellendi",
+      "updatedLocal": "Konum güncellendi (yalnızca yerel)",
+      "saveFailed": "Konum kaydedilemedi",
+      "deleteFailed": "Bu konum silinemedi."
+    },
+    "alert": {
+      "deleteFailedTitle": "Silinemedi"
+    }
+  }
+}

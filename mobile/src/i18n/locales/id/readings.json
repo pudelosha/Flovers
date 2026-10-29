@@ -1,0 +1,72 @@
+{
+  "readings": {
+    "header": {
+      "title": "Data sensor"
+    },
+    "defaults": {
+      "thisDevice": "perangkat ini"
+    },
+    "tile": {
+      "lastReadPrefix": "Terakhir dibaca",
+      "lastPumpRunPrefix": "Pompa terakhir dijalankan",
+      "automaticPump": "Pompa otomatis",
+      "automaticPumpThreshold": "Ketika kelembaban tanah < {{value}}%",
+      "opening": "Membuka…",
+      "scheduleWatering": "Jadwalkan penyiraman",
+      "unscheduleWatering": "Batalkan jadwal penyiraman"
+    },
+    "menu": {
+      "history": "Riwayat pembacaan sensor",
+      "plantDetails": "Detail tanaman",
+      "editDevice": "Sunting perangkat",
+      "deviceDetails": "Detail perangkat",
+      "deleteDevice": "Hapus perangkat"
+    },
+    "fab": {
+      "linkDevice": "Hubungkan perangkat",
+      "deviceSetup": "Penyiapan perangkat",
+      "sort": "Urutkan",
+      "filter": "Filter",
+      "sendExport": "Kirim ekspor",
+      "clearFilter": "Hapus filter"
+    },
+    "empty": {
+      "title": "Belum ada perangkat",
+      "description": "Perangkat memungkinkan Anda menyerap pembacaan sensor suhu, kelembapan, cahaya, dan kelembapan tanah untuk tanaman hias.\n\nKetuk tindakan “+ Tautkan perangkat” untuk menambahkannya. Pilih tanaman hias, beri nama perangkat, pilih sensor, dan atur interval pengambilan sampel. Anda kemudian dapat membuka Pengaturan perangkat untuk melihat rahasia akun Anda, memutarnya, dan mengirimkan sketsa Arduino/ESP yang siap ditempel melalui email."
+    },
+    "toasts": {
+      "unauthorized": "Tidak sah. Silakan masuk lagi.",
+      "loadFailed": "Gagal memuat perangkat",
+      "deviceDeleted": "Perangkat dihapus",
+      "deleteFailed": "Penghapusan gagal",
+      "deleteFailedPrefix": "Penghapusan gagal",
+      "deviceAdded": "Perangkat ditambahkan",
+      "deviceUpdated": "Perangkat diperbarui",
+      "addFailed": "Gagal menambahkan",
+      "addFailedPrefix": "Gagal menambahkan",
+      "updateFailed": "Pembaruan gagal",
+      "updateFailedPrefix": "Pembaruan gagal",
+      "setupLoadFailed": "Gagal memuat penyiapan",
+      "setupLoadFailedPrefix": "Gagal memuat penyiapan",
+      "secretRotated": "Kunci rahasia diperbarui",
+      "rotateFailed": "Kunci rahasia gagal diperbarui",
+      "rotateFailedPrefix": "Kunci rahasia gagal diperbarui",
+      "deviceDetailsLoadFailed": "Gagal memuat detail perangkat",
+      "missingDeviceId": "ID perangkat tidak ada",
+      "codeSentByEmail": "Kode dikirim ke email Anda",
+      "sendCodeEmailFailed": "Pengiriman email gagal",
+      "sendCodeEmailFailedPrefix": "Pengiriman email gagal",
+      "pumpStatusLoadFailed": "Gagal memuat jadwal penyiraman",
+      "wateringScheduled": "Penyiraman dijadwalkan",
+      "wateringScheduleFailed": "Gagal menjadwalkan penyiraman",
+      "wateringRecalled": "Penyiraman terjadwal ditarik kembali",
+      "wateringRecallFailed": "Gagal mengingat penyiraman",
+      "autoPumpEnabled": "Pompa otomatis diaktifkan",
+      "autoPumpDisabled": "Pompa otomatis dinonaktifkan",
+      "autoPumpUpdateFailed": "Gagal memperbarui pengaturan pompa otomatis",
+      "exportSent": "Permintaan ekspor pembacaan sensor dikirim",
+      "failedToSendExport": "Gagal mengirim ekspor pembacaan sensor",
+      "exportNotAvailableYet": "Ekspor belum tersedia."
+    }
+  }
+}

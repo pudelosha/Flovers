@@ -7,6 +7,7 @@ api_patterns = [
     path("auth/", include("accounts.urls")),
     path("profile/", include("profiles.urls")),
     path("contacts/", include("contacts.urls")),
+    path("sharing/", include("sharing.urls")),
     path("plant-definitions/", include("plant_definitions.urls")),
     path("plant-instances/", include("plant_instances.urls")),
     path("locations/", include("locations.urls")),

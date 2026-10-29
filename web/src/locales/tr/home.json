@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "title": "Flovers",
+    "subtitle": "Hatırlatıcılar, bakım takvimi ve geçmişle bitkilerinize kolayca bakın.",
+    "purpose": "İsteğe bağlı canlı sensör izleme ve ev bitkisi ayrıntılarına QR tabanlı erişim ile ev bitkilerinizi ekleyin, rehberlik için tür tanımlarını bağlayın, yinelenen hatırlatıcılar tanımlayın ve bakım geçmişini takip edin.",
+    "cta": {
+      "googlePlayUrl": "",
+      "appStoreUrl": ""
+    }
+  },
+  "homeNew": {
+    "cta": {
+      "title": "Basit başlayın. Rutini tutarlı tutun.",
+      "subtitle": "Ev bitkilerinizi ekleyin, rehberlik için tanımları bağlayın, yinelenen hatırlatıcılar ayarlayın ve Flovers'nin görevleri otomatik olarak oluşturmasına izin verin. Yolda kalmak için günlük bildirimleri kullanın, doğrudan bir ev bitkisine atlamak için QR etiketlerini tarayın ve isteğe bağlı olarak rutinleri canlı sensör okumalarıyla doğrulayın."
+    },
+    "sections": {
+      "how": {
+        "title": "Nasıl çalışır?",
+        "subtitle": "Basit bir döngü: ekle → tanımla → harekete geç → tutarlı kal. Flovers rutinin devam etmesini sağlar, böylece planlamaya değil ev bitkilerine odaklanabilirsiniz."
+      }
+    },
+    "steps": {
+      "s1": {
+        "title": "Bir ev bitkisini tanıyarak veya veritabanında arama yaparak ekleyin",
+        "text": "Saniyeler içinde bir ev bitkisi yaratın. Önerilen eşleşmeyi almak için 700'den fazla ev bitkisi tanımı veritabanında arama yapın veya fotoğraf tanımayı kullanın. Eklendikten sonra bakım rutinleri, görevler ve geçmiş bu tek ev bitkisi örneğine bağlı kalır."
+      },
+      "s2": {
+        "title": "Bir tanımı bağlayın, bağlamı ayarlayın ve makul aralıklar elde edin",
+        "text": "Bakım özelliklerinin ve varsayılanların kilidini açmak için ev bitkisini bir tanıma bağlayın. Saksı boyutu, toprak türü, konum ve ışık düzeyi gibi gerçek dünya bağlamlarını ekleyin. Buna dayanarak Flovers, istediğiniz zaman ayarlayabileceğiniz gerçekçi hatırlatma aralıklarının hesaplanmasına yardımcı olur."
+      },
+      "s3": {
+        "title": "Görevleri hızla tamamlayın ve temiz bir bakım geçmişi oluşturun",
+        "text": "Hatırlatıcılar otomatik olarak zamanı gelen görevleri oluşturur. Ana Sayfa, teslim edilmesi gereken zamanı gösterirken, ev bitkisi sayfası tam bağlamı gösterir. Bir görevi tamamladığınızda notlar ekleyebilirsiniz ve Flovers bir sonraki görevi sıraya koyar, böylece rutin manuel planlama olmadan çalışmaya devam eder."
+      },
+      "s4": {
+        "title": "Günlük bildirimlerle takipte kalın",
+        "text": "Profil ayarlarında anlık veya e-posta bildirimlerini seçin ve bir teslimat süresi belirleyin. Görevlerin vadesi geçmişse isteğe bağlı takiplerle birlikte, bugün teslim edilmesi gereken görevlerin günlük özetini alırsınız, böylece hiçbir şey sessizce gözden kaçmaz."
+      }
+    }
+  },
+  "featureGrid": {
+    "header": {
+      "title": "Bakımı tutarlı tutan özellikler",
+      "subtitle": "Flovers birkaç pratik özellik etrafında oluşturulmuştur: akıllı başlangıç aralıkları, hatırlatıcılardan gelen görevler, günlük bildirimler, QR kısayolları ve isteğe bağlı IoT sensör okumaları; böylece çok fazla düşünmeden ev bitkilerini sağlıklı tutabilirsiniz."
+    },
+    "tiles": {
+      "intervals": {
+        "title": "Ev bitkisi tanımlarından önerilen aralıklar",
+        "text": "Bir ev bitkisini bir tanıma bağlayın ve Flovers, türe ve kurulumunuza göre başlangıç aralıkları önersin. Onları kabul edin, düzeltin veya kendi temponuzu koruyun."
+      },
+      "tasks": {
+        "title": "Görevlere dönüşen hatırlatıcılar",
+        "text": "Tekrarlayan bir hatırlatma ayarlayın (sulama, sisleme, gübreleme, saksı değiştirme, bakım). Flovers bunu gerekli görevlere dönüştürür. Birini tamamladığınızda bir sonraki otomatik olarak sıraya alınır."
+      },
+      "notifications": {
+        "title": "Push veya e-posta yoluyla günlük bildirimler",
+        "text": "Profil ayarlarında push veya e-postayı seçin. Flovers, seçtiğiniz saatte (ör. 14:00) bugünün yapılması gereken görevlerle ilgili günlük bir özet gönderebilir ve görevlerin süresi geçmişse isteğe bağlı olarak yaklaşık 24 saat sonra takip edebilir."
+      },
+      "qr": {
+        "title": "Doğrudan ev bitkisine atlamak için QR taraması",
+        "text": "Bir ev bitkisi için QR kodunu yazdırın ve bunu saksıya ekleyin. Ev bitkisi ayrıntılarını anında açmak için tarayın; bağlamı kontrol etmenin ve bakımı tamamlandı olarak işaretlemenin en hızlı yolu."
+      },
+      "iot": {
+        "title": "Trendlerle birlikte canlı IoT sensör okumaları",
+        "text": "ESP/Arduino cihazınızı bağlayın ve sıcaklık, nem, ışık ve toprak nemi gibi sensör okumalarını gönderin. Uygulama günlük/haftalık/aylık grafikler gösterir, böylece kalıpları tespit edebilir ve rutinleri ayarlayabilirsiniz."
+      }
+    },
+    "images": {
+      "createPlantAlt": "Ev bitkisi ekranı oluştur",
+      "readingsHistoryAlt": "Sensör okuma geçmişi ekranı"
+    }
+  },
+  "core": {
+    "title": "Flovers'nin en iyi yaptığı iki şey",
+    "lead": "Sağlam bir ev bitkisi veritabanı ve hızlı fotoğraf tanıma. Bir eşleşme seçin, bir kez bağlayın ve ev bitkilerinizin bakımı için temiz bir başlangıç ​​noktasına sahip olun.",
+    "tiles": {
+      "defs": {
+        "title": "Gerçek bakım ayrıntılarıyla 700'den fazla ev bitkisi tanımı",
+        "desc": "Fotoğraflar ve temel özelliklerle tanımlara göz atın. Ev bitkinizi bir tanıma bağlayın; Flovers size makul varsayılanlarla rehberlik edebilir.",
+        "bullets": [
+          "Işık, toprak, sulama tarzı, nem, sıcaklık gibi bakım özellikleri.",
+          "Alanınızı öğrenirken ince ayar yapabileceğiniz faydalı başlangıç noktası.",
+          "Her ev bitkisinin net bir temel çizgisine sahip olması için hızlı bağlantı."
+        ]
+      },
+      "recognition": {
+        "title": "En yakın eşleşmeyi öneren fotoğraf tanıma",
+        "desc": "Bir fotoğraf çekin veya bir fotoğraf yükleyin; Flovers neye benzediğini önerir. En iyi eşleşmeyi seçin, bağlayın ve devam edin.",
+        "bullets": [
+          "Net, iyi aydınlatılmış fotoğraflarla en iyi sonucu verir.",
+          "Doğru olanı seçebilmeniz için birkaç yakın seçenek gösterir.",
+          "Sizi bir tahmine kilitlemek için değil, zamandan tasarruf etmek için tasarlandı."
+        ]
+      }
+    }
+  },
+  "qr": {
+    "title": "QR tarama: fiziksel kısayol",
+    "lead": "Her ev bitkisi için bir QR kodu oluşturun, bunu yazdırın, saksıya ekleyin ve ardından doğrudan o ev bitkisinin ayrıntılarına ve görevlerine atlamak için tarayın.",
+    "image": {
+      "alt": "Flovers uygulamasıyla bir ev bitkisinin QR kodunu tarama"
+    },
+    "blocks": {
+      "create": {
+        "title": "Oluştur → yazdır → ekle",
+        "text": "Her ev bitkisi örneğinin kendi kimliği vardır. Ev bitkisi Ayrıntıları'nda söz konusu ev bitkisi için bir QR kodu oluşturabilir, bunu telefonunuza kaydedebilir veya e-postayla göndererek yazdırıp saksıya yapıştırabilirsiniz."
+      },
+      "scan": {
+        "title": "Tara → onayla → ev bitkisini aç Ayrıntılar",
+        "text": "Yerleşik QR tarayıcıyı kullanın. Arka uç kodu onayladıktan sonra, o ev bitkisinin tam ayrıntılarına (görevler, hatırlatıcılar, notlar, sensör okumaları ve tüm bağlam) yönlendirilirsiniz."
+      },
+      "care": {
+        "title": "Şu anda bakım",
+        "text": "Ev bitkisini sulayın, etiketi tarayın ve görevi tamamlandı olarak işaretleyin veya herhangi bir şeyin zamanı gelip gelmediğini kontrol etmek için tarayın. Fiziksel ev bitkisi ile verileriniz arasında doğrudan bir bağlantı."
+      }
+    }
+  },
+  "store": {
+    "google": {
+      "alt": "Google Play'den alın"
+    },
+    "apple": {
+      "alt": "App Store'den indirin"
+    }
+  }
+}

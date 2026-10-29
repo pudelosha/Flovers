@@ -1,0 +1,94 @@
+{
+  "docs_create_plant_wizard": {
+    "title": "Buat Wizard tanaman hias",
+    "sections": [
+      {
+        "heading": "Tujuan dari aliran ini",
+        "body": [
+          "Panduan Membuat Tanaman Hias adalah proses 9 langkah terpandu yang digunakan untuk menambahkan instance tanaman hias baru ke akun Anda.",
+          "Ini membantu Anda (opsional) menghubungkan tanaman hias ke Definisi tanaman hias dari database Flovers, menangkap konteks seperti lokasi dan paparan, dan secara opsional menghasilkan pengingat berdasarkan preferensi tanaman hias.",
+          "Wizard ini hanya digunakan untuk membuat tanaman hias baru. Pengeditan tanaman hias yang sudah ada dilakukan dalam alur terpisah."
+        ]
+      },
+      {
+        "heading": "Langkah 01 — Pilih definisi tanaman hias (opsional)",
+        "body": [
+          "Anda dapat mencari Definisi tanaman hias (profil spesies bawaan) menggunakan kolom pencarian.",
+          "Di bawah masukan pencarian, Anda akan menemukan daftar tanaman hias dalam ruangan yang populer sebagai pintasan cepat.",
+          "Secara opsional, Anda dapat menggunakan Pengenalan tanaman hias: ketuk tombol pindai, ambil atau pilih foto, dan sistem akan mengembalikan 3 yang paling cocok.",
+          "Jika Anda menerima saran pengenalan, Definisi tanaman hias yang dipilih diterapkan pada contoh tanaman hias baru."
+        ]
+      },
+      {
+        "heading": "Langkah 02 — Tinjau detail definisi",
+        "body": [
+          "Jika Anda memilih Definisi tanaman hias, langkah ini menampilkan detail definisi termasuk gambar dan sifat/preferensi inti.",
+          "Ini adalah langkah peninjauan sehingga Anda dapat mengonfirmasi profil spesies yang dipilih sebelum melanjutkan."
+        ]
+      },
+      {
+        "heading": "Langkah 03 — Pilih lokasi (wajib)",
+        "body": [
+          "Pilih Lokasi di mana tanaman hias disimpan (misalnya Dapur, Ruang Tamu, Balkon).",
+          "Anda juga dapat menambahkan Lokasi baru langsung dari langkah ini.",
+          "Saat ini, memilih Lokasi adalah wajib untuk melanjutkan."
+        ]
+      },
+      {
+        "heading": "Langkah 04 — Eksposur (pengukuran opsional)",
+        "body": [
+          "Langkah ini membantu Anda menangkap konteks paparan tanaman hias: arah, tingkat cahaya, dan jarak dari jendela.",
+          "Arah dapat diukur menggunakan kompas telepon jika izin kompas diberikan.",
+          "Tingkat cahaya dapat diukur jika izin yang diperlukan diberikan dan perangkat mendukung sensor cahaya.",
+          "Semua nilai eksposur bersifat opsional—Anda dapat memasukkannya secara manual atau melewatinya."
+        ]
+      },
+      {
+        "heading": "Langkah 05 — Wadah dan tanah (opsional)",
+        "body": [
+          "Tentukan wadah tempat tanaman hias berada (misalnya plastik, keramik) dan jenis tanah/substrat yang Anda gunakan.",
+          "Bidang ini bersifat opsional, namun dapat meningkatkan keakuratan interval perawatan yang disarankan ketika tugas otomatis diaktifkan."
+        ]
+      },
+      {
+        "heading": "Langkah 06 — Tugas otomatis (opsional, saat menggunakan Definisi tanaman hias)",
+        "body": [
+          "Jika tanaman hias Anda ditautkan ke Definisi tanaman hias, Flovers dapat menghasilkan pengingat/tugas secara otomatis berdasarkan preferensi perawatan definisi tersebut.",
+          "Aktifkan kotak centang utama untuk memungkinkan pembuatan tugas otomatis, lalu pilih jenis tugas mana yang harus dibuat (misalnya, penyiraman, gerimis, pemupukan, repotting, perawatan).",
+          "Interval yang disarankan didasarkan pada Definisi tanaman hias yang dipilih dan dapat disesuaikan menggunakan nilai dari Eksposur dan Wadah/Tanah bila tersedia.",
+          "Anda dapat melewati langkah ini sepenuhnya jika nanti Anda lebih suka membuat pengingat secara manual."
+        ]
+      },
+      {
+        "heading": "Langkah 07 — Tambahkan foto Anda sendiri (opsional)",
+        "body": [
+          "Anda dapat menambahkan foto khusus tanaman hias Anda dari ponsel Anda.",
+          "Langkah ini bersifat opsional dan dapat dilakukan nanti melalui alat pengeditan tanaman hias, bergantung pada alur aplikasi Anda."
+        ]
+      },
+      {
+        "heading": "Langkah 08 — Detail akhir (nama wajib diisi)",
+        "body": [
+          "Tetapkan nama tampilan tanaman hias (wajib).",
+          "Secara opsional tambahkan catatan dan tanggal pembelian.",
+          "Detail ini ditampilkan di Detail tanaman hias dan membantu Anda menyimpan sejarah yang bermakna untuk setiap tanaman hias."
+        ]
+      },
+      {
+        "heading": "Langkah 09 — Ringkasan dan konfirmasi",
+        "body": [
+          "Setelah pembuatan berhasil, wizard menampilkan layar konfirmasi/ringkasan.",
+          "Dari sini Anda dapat melanjutkan ke daftar tanaman hias atau membuka tanaman hias yang baru dibuat, bergantung pada alur navigasi di aplikasi Anda."
+        ]
+      },
+      {
+        "heading": "Catatan dan izin",
+        "body": [
+          "Pengenalan tanaman hias memerlukan akses ke kamera dan/atau perpustakaan media, bergantung pada cara Anda memberikan foto.",
+          "Pengukuran paparan mungkin memerlukan izin untuk menggunakan sensor perangkat (misalnya kompas) dan bergantung pada ketersediaan perangkat keras.",
+          "Menautkan ke definisi tanaman hias bersifat opsional—jika Anda melewatkannya, Anda masih dapat membuat tanaman hias dan menentukan pengingat secara manual."
+        ]
+      }
+    ]
+  }
+}

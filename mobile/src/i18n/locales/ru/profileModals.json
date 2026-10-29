@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Отправка…"
+    },
+    "support": {
+      "copyToMe": "Также пришлите мне копию"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Изменить адрес электронной почты",
+        "newEmailPlaceholder": "Новое письмо",
+        "currentPasswordPlaceholder": "Текущий пароль"
+      },
+      "changePassword": {
+        "title": "Изменить пароль",
+        "currentPasswordPlaceholder": "Текущий пароль",
+        "newPasswordPlaceholder": "Новый пароль",
+        "confirmNewPasswordPlaceholder": "Подтвердите новый пароль",
+        "update": "Обновить"
+      },
+      "deleteAccount": {
+        "title": "Удалить аккаунт",
+        "warning": "Это действие необратимо. Если вы продолжите, ваша учетная запись и данные будут удалены без возможности восстановления.",
+        "passwordPlaceholder": "Введите пароль для подтверждения"
+      },
+      "reportBug": {
+        "title": "Сообщить об ошибке",
+        "subjectPlaceholder": "Тема",
+        "descriptionPlaceholder": "Опишите проблему…"
+      },
+      "contactUs": {
+        "title": "Свяжитесь с нами",
+        "subjectPlaceholder": "Тема",
+        "messagePlaceholder": "Как мы можем помочь?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Пожалуйста, введите новый адрес электронной почты.",
+      "enterCurrentPassword": "Пожалуйста, введите текущий пароль.",
+      "emailUpdated": "Электронная почта успешно обновлена.",
+      "couldNotChangeEmail": "Не удалось изменить адрес электронной почты. Проверьте свой пароль и повторите попытку.",
+      "enterNewPassword": "Пожалуйста, введите новый пароль.",
+      "passwordsDoNotMatch": "Новые пароли не совпадают.",
+      "passwordUpdated": "Пароль успешно обновлен.",
+      "couldNotChangePassword": "Не удалось изменить пароль. Проверьте свой текущий пароль и повторите попытку.",
+      "enterSubject": "Пожалуйста, введите тему.",
+      "enterMessage": "Пожалуйста, введите сообщение.",
+      "enterDescription": "Пожалуйста, опишите проблему.",
+      "contactSent": "Сообщение отправлено. Мы скоро свяжемся с вами.",
+      "bugSent": "Отчет об ошибке отправлен. Спасибо.",
+      "couldNotSendContact": "Не удалось отправить ваше сообщение. Пожалуйста, попробуйте еще раз.",
+      "couldNotSendBug": "Не удалось отправить отчет об ошибке. Пожалуйста, попробуйте еще раз.",
+      "deleteNotImplemented": "Удаление учетной записи пока недоступно.",
+      "requestTimedOut": "Время запроса истекло. Пожалуйста, попробуйте еще раз."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Gönderiliyor…"
+    },
+    "support": {
+      "copyToMe": "Ayrıca bana bir kopyasını e-postayla gönder"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "E-postayı değiştir",
+        "newEmailPlaceholder": "Yeni e-posta",
+        "currentPasswordPlaceholder": "Mevcut şifre"
+      },
+      "changePassword": {
+        "title": "Şifreyi değiştir",
+        "currentPasswordPlaceholder": "Mevcut şifre",
+        "newPasswordPlaceholder": "Yeni şifre",
+        "confirmNewPasswordPlaceholder": "Yeni şifreyi onayla",
+        "update": "Güncelle"
+      },
+      "deleteAccount": {
+        "title": "Hesabı sil",
+        "warning": "Bu eylem geri döndürülemez. Devam ederseniz hesabınız ve verileriniz kalıcı olarak silinecektir.",
+        "passwordPlaceholder": "Onaylamak için şifreyi girin"
+      },
+      "reportBug": {
+        "title": "Hata bildir",
+        "subjectPlaceholder": "Konu",
+        "descriptionPlaceholder": "Sorunu açıklayın…"
+      },
+      "contactUs": {
+        "title": "Bize ulaşın",
+        "subjectPlaceholder": "Konu",
+        "messagePlaceholder": "Nasıl yardımcı olabiliriz?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Lütfen yeni e-postayı girin.",
+      "enterCurrentPassword": "Lütfen mevcut şifrenizi giriniz.",
+      "emailUpdated": "E-posta başarıyla güncellendi.",
+      "couldNotChangeEmail": "E-posta değiştirilemedi. Şifrenizi kontrol edip tekrar deneyin.",
+      "enterNewPassword": "Lütfen yeni bir şifre girin.",
+      "passwordsDoNotMatch": "Yeni şifreler eşleşmiyor.",
+      "passwordUpdated": "Şifre başarıyla güncellendi.",
+      "couldNotChangePassword": "Şifre değiştirilemedi. Mevcut şifrenizi kontrol edip tekrar deneyin.",
+      "enterSubject": "Lütfen bir konu girin.",
+      "enterMessage": "Lütfen bir mesaj girin.",
+      "enterDescription": "Lütfen sorunu açıklayın.",
+      "contactSent": "Mesaj gönderildi. Yakında size geri döneceğiz.",
+      "bugSent": "Hata raporu gönderildi. Teşekkür ederim.",
+      "couldNotSendContact": "Mesajınız gönderilemedi. Lütfen tekrar deneyin.",
+      "couldNotSendBug": "Hata raporunuz gönderilemedi. Lütfen tekrar deneyin.",
+      "deleteNotImplemented": "Hesabı silme henüz kullanılamıyor.",
+      "requestTimedOut": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin."
+    }
+  }
+}

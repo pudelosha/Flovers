@@ -23,7 +23,8 @@
       "canCompleteTasks": "Może oznaczać zadania jako wykonane",
       "noEndDate": "Bez daty końcowej",
       "until": "Do {{date}}",
-      "you": "Ty"
+      "you": "Ty",
+      "expired": "Wygasło"
     },
     "contacts": {
       "title": "Kontakty",
@@ -105,7 +106,9 @@
       "showAll": "Pokaż wszystkie",
       "all": "Wszystkie udostępnione rośliny",
       "emptyAllTitle": "Nie ma jeszcze udostępnionych roślin",
-      "emptyAllBody": "Udostępnij rośliny wybranej osobie lub poproś ją, by udostępniła Ci swoje."
+      "emptyAllBody": "Udostępnij rośliny wybranej osobie lub poproś ją, by udostępniła Ci swoje.",
+      "displayTasks": "Pokaż zadania",
+      "actions": "Opcje rośliny {{name}}"
     },
     "form": {
       "title": "Udostępnij rośliny",
@@ -113,7 +116,7 @@
       "plant": "Rośliny",
       "choosePlant": "Wybierz rośliny",
       "singlePlantHint": "Wybierz rośliny i osoby, którym chcesz je udostępnić.",
-      "loadFailed": "Nie udało się wczytać Twoich roślin.",
+      "loadFailed": "Nie udało się wczytać roślin i ustawień udostępniania.",
       "retry": "Spróbuj ponownie",
       "noPlants": "Nie masz jeszcze roślin. Dodaj roślinę, aby ją udostępnić.",
       "contacts": "Kto ma mieć dostęp do tych roślin?",
@@ -136,7 +139,9 @@
       "shareSelected": "Udostępnij wybrane rośliny",
       "mixedAccess": "Ma dostęp do części wybranych roślin. Zaznacz tę osobę, aby udostępnić jej pozostałe.",
       "mixedPermissions": "Dla wybranych roślin ustawiono różne uprawnienia do zadań.",
-      "endDatesVary": "Wybrane rośliny mają różne daty końcowe."
+      "endDatesVary": "Wybrane rośliny mają różne daty końcowe.",
+      "reload": "Wczytaj ponownie",
+      "conflictHint": "Udostępnianie zmieniło się w międzyczasie. Wczytaj aktualne ustawienia przed zapisem. Zastąpią obecny wybór kontaktów."
     },
     "toasts": {
       "invitationAdded": "Podgląd: dodano zaproszenie.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "Podgląd: anulowano zaproszenie.",
       "contactUpdated": "Podgląd: zapisano kontakt.",
       "contactDeleted": "Podgląd: usunięto kontakt.",
-      "sharingSaved": "Podgląd: zapisano udostępnienia.",
-      "accessRemoved": "Podgląd: odebrano dostęp.",
-      "plantLeft": "Usunięto udostępnioną roślinę z podglądu.",
+      "sharingSaved": "Zapisano udostępnianie.",
+      "accessRemoved": "Odebrano dostęp.",
+      "plantLeft": "Usunięto roślinę z udostępnionych.",
       "idCopied": "Skopiowano identyfikator.",
       "copyFailed": "Nie udało się skopiować identyfikatora.",
       "previewReset": "Przywrócono przykładowe dane.",
@@ -166,6 +171,23 @@
       "alreadyPending": "Zaproszenie dla tej osoby już oczekuje na odpowiedź.",
       "throttled": "Za dużo prób. Odczekaj chwilę i spróbuj ponownie.",
       "unavailable": "Nie udało się połączyć. Spróbuj ponownie."
+    },
+    "access": {
+      "sharedBy": "Udostępnia: {{name}}",
+      "sharedPlant": "Udostępniona roślina"
+    },
+    "live": {
+      "loadFailed": "Nie udało się wczytać udostępnionych roślin."
+    },
+    "accessErrors": {
+      "invalid": "Sprawdź wybrane rośliny, kontakty i daty zakończenia.",
+      "notFound": "Ta roślina lub dostęp do niej nie są już dostępne.",
+      "notContact": "Rośliny możesz udostępniać osobom, które przyjęły zaproszenie do kontaktów.",
+      "notOwner": "Tylko właściciel rośliny może zarządzać jej udostępnianiem.",
+      "conflict": "Udostępnianie zmieniło się w międzyczasie. Wczytaj aktualne ustawienia i spróbuj ponownie.",
+      "expired": "Wybierz datę zakończenia, która jeszcze nie minęła.",
+      "throttled": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+      "unavailable": "Nie udało się wczytać lub zapisać udostępniania. Spróbuj ponownie."
     }
   }
 }

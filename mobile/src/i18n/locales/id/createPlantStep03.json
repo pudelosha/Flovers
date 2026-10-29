@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Memuat...",
+      "title": "Pilih lokasi",
+      "subtitle": "Opsional namun bermanfaat: lokasi memungkinkan Anda mengelompokkan tanaman hias dan kemudian menyortir atau memfilternya.",
+      "errorLoadingLocations": "Gagal memuat lokasi.",
+      "createLocation": "Buat lokasi baru",
+      "yourLocations": "Lokasi Anda",
+      "categories": {
+        "indoor": "Dalam ruangan",
+        "outdoor": "Di luar ruangan",
+        "other": "Lainnya"
+      },
+      "noLocations": {
+        "indoor": "Belum ada lokasi dalam ruangan.",
+        "outdoor": "Belum ada lokasi luar ruangan.",
+        "other": "Belum ada lokasi lain."
+      },
+      "locationExists": "Lokasi dengan nama ini sudah ada.",
+      "errorCreatingLocation": "Tidak dapat membuat lokasi",
+      "quickSuggestions": "Saran cepat"
+    },
+    "locationModal": {
+      "title": "Lokasi Baru",
+      "locationName": "Nama lokasi",
+      "category": "Kategori",
+      "indoor": "Dalam ruangan",
+      "outdoor": "Di luar ruangan",
+      "other": "Lainnya",
+      "create": "Buat",
+      "cancel": "Batal",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Ruang tamu",
+          "kitchen": "Dapur",
+          "diningRoom": "Ruang makan",
+          "bedroom": "Kamar tidur",
+          "bathroom": "Kamar mandi",
+          "hallway": "Lorong",
+          "office": "Kantor",
+          "kidsRoom": "Kamar anak-anak"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Teras",
+          "patio": "Teras",
+          "garden": "Taman",
+          "frontYard": "Halaman depan",
+          "backyard": "Halaman belakang",
+          "porch": "Teras",
+          "greenhouse": "Rumah kaca"
+        },
+        "other": {
+          "staircase": "Tangga",
+          "garage": "Garasi",
+          "basement": "Ruang bawah tanah",
+          "lobby": "Lobi",
+          "sunroom": "Ruang berjemur",
+          "workshop": "Bengkel",
+          "studio": "Studio",
+          "attic": "Loteng"
+        }
+      }
+    }
+  }
+}

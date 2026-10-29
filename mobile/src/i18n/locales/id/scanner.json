@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Pemindai"
+    },
+    "howItWorks": {
+      "title": "Bagaimana cara kerjanya"
+    },
+    "instruction": "Arahkan kamera Anda ke kode tanaman hias QR. Jika dikenali, aplikasi akan membuka tanaman hias tersebut secara otomatis.",
+    "hint1": "Setiap tanaman hias memiliki kode QR sendiri. Anda dapat menyimpannya, mencetaknya sebagai label kecil, menempelkannya ke pot bunga, dan memindainya di sini untuk langsung membuka tanaman hias.",
+    "qrAvailableIn": "Kode QR tersedia di:",
+    "qrPath1": "Tanaman hias → ketuk tanaman hias → Detail tanaman hias",
+    "qrPath2": "Tanaman hias → menu ubin → Tampilkan kode QR",
+    "permissionRequired": "Izin kamera diperlukan",
+    "permissionHint": "Aktifkan akses kamera di pengaturan sistem untuk memindai kode QR.",
+    "openSettings": "Buka Pengaturan",
+    "initializingCamera": "Menginisialisasi kamera…"
+  }
+}

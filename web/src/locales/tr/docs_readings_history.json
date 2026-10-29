@@ -1,0 +1,51 @@
+{
+  "docs_readings_history": {
+    "title": "Sensör okumaları Geçmişi",
+    "sections": [
+      {
+        "heading": "Bu ekranın amacı",
+        "body": [
+          "Sensör okumaları Geçmiş ekranı, bağlı bir cihaz ve ev bitkisi için geçmiş sensör verilerine tam bir genel bakış sağlar.",
+          "Sensör okumaları listesinin (yalnızca en son değerleri gösteren) aksine, bu görünüm, grafikleri kullanarak zaman içindeki eğilimlere ve değişikliklere odaklanır."
+        ]
+      },
+      {
+        "heading": "Zaman aralıkları: Gün, Hafta, Ay",
+        "body": [
+          "Üç zaman aralığı arasında geçiş yapabilirsiniz: Gün, Hafta ve Ay.",
+          "Gün görünümü, tek bir güne ait sensör okumalarını saatlik aralıklarla gösterir (cihazın saatlik aralıklarla veri gönderdiği ve kullanıcının cihaz tarafında daha yüksek pil kullanımını kabul ettiği varsayılarak).",
+          "Haftalık ve Aylık görünümler, daha uzun sürelerdeki sensör okumalarını özetleyerek kalıpları ve eğilimleri tespit etmenize olanak tanır."
+        ]
+      },
+      {
+        "heading": "Ölçüm türleri",
+        "body": [
+          "Aşağıdaki parametreler için grafikler mevcuttur: hava sıcaklığı, hava nemi, ışık seviyesi ve toprak nemi (cihazın sağladığına bağlı olarak).",
+          "Tablonun altındaki düğmeleri (Sıcaklık, Uğultu, Işık, Nem) kullanarak parametreyi seçersiniz."
+        ]
+      },
+      {
+        "heading": "Geçmiş dönemlerde gezinme",
+        "body": [
+          "Seçilen dönemin yanındaki oklar önceki günler, haftalar veya aylar arasında geçiş yapmanızı sağlar.",
+          "Gezinme, verilerin mevcut olduğu dönemlerle sınırlıdır; gelecek dönemler görüntülenmez."
+        ]
+      },
+      {
+        "heading": "Sensör okuma geçmişinin silinmesi",
+        "body": [
+          "Grafik menüsü, seçilen cihaza ilişkin geçmiş sensör verilerini temizlemek için Sensör okumalarını sil eylemini içerir.",
+          "Belirli bir gün, hafta veya aya ait sensör okumalarını silebilir, seçilen yaştan daha eski olan sensör okumalarını silebilir veya yalnızca sıcaklık, nem, ışık veya toprak nemi gibi seçilen ölçüm türlerini kaldırabilirsiniz.",
+          "Ölçüm türüne göre silerken, Flovers mümkün olduğunda aynı okuma kaydındaki diğer değerleri korurken bu ölçümü kaldırır. Silme işlemi kalıcıdır ve dikkatli kullanılmalıdır."
+        ]
+      },
+      {
+        "heading": "Veri kullanılabilirliği ve yorumlanması",
+        "body": [
+          "Cihaz seçilen süre boyunca sensör okumaları sağlamadıysa grafik boş görünecek veya eksik değerleri gösterecektir.",
+          "Sensör verileri bilgilendiricidir ve gerçek dünya gözlemleriyle birlikte yorumlanmalıdır (kalibrasyon, yerleştirme ve ortam doğruluğu etkileyebilir)."
+        ]
+      }
+    ]
+  }
+}

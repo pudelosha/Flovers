@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Загрузка...",
+      "title": "Выберите местоположение",
+      "subtitle": "Необязательно, но полезно: локации позволяют группировать комнатные растения, а затем сортировать или фильтровать их.",
+      "errorLoadingLocations": "Не удалось загрузить местоположения.",
+      "createLocation": "Создать новое местоположение",
+      "yourLocations": "Ваши местоположения",
+      "categories": {
+        "indoor": "Крытый",
+        "outdoor": "Открытый",
+        "other": "Другое"
+      },
+      "noLocations": {
+        "indoor": "Крытых локаций пока нет.",
+        "outdoor": "Открытых локаций пока нет.",
+        "other": "Других локаций пока нет."
+      },
+      "locationExists": "Местоположение с таким названием уже существует.",
+      "errorCreatingLocation": "Не удалось создать местоположение",
+      "quickSuggestions": "Быстрые предложения"
+    },
+    "locationModal": {
+      "title": "Новое местоположение",
+      "locationName": "Название местоположения",
+      "category": "Категория",
+      "indoor": "Крытый",
+      "outdoor": "Открытый",
+      "other": "Другое",
+      "create": "Создать",
+      "cancel": "Отмена",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Гостиная",
+          "kitchen": "Кухня",
+          "diningRoom": "Столовая",
+          "bedroom": "Спальня",
+          "bathroom": "Ванная комната",
+          "hallway": "Прихожая",
+          "office": "Офис",
+          "kidsRoom": "Детская комната"
+        },
+        "outdoor": {
+          "balcony": "Балкон",
+          "terrace": "Терраса",
+          "patio": "Патио",
+          "garden": "Сад",
+          "frontYard": "Передний двор",
+          "backyard": "Задний двор",
+          "porch": "Крыльцо",
+          "greenhouse": "Теплица"
+        },
+        "other": {
+          "staircase": "Лестница",
+          "garage": "Гараж",
+          "basement": "Подвал",
+          "lobby": "Лобби",
+          "sunroom": "Солярий",
+          "workshop": "Мастерская",
+          "studio": "Студия",
+          "attic": "Чердак"
+        }
+      }
+    }
+  }
+}

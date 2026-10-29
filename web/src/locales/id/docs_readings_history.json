@@ -1,0 +1,51 @@
+{
+  "docs_readings_history": {
+    "title": "Pembacaan sensor Sejarah",
+    "sections": [
+      {
+        "heading": "Tujuan dari layar ini",
+        "body": [
+          "Layar Riwayat pembacaan sensor memberikan ikhtisar lengkap data sensor historis untuk perangkat tertaut dan tanaman hias.",
+          "Berbeda dengan daftar pembacaan sensor (yang hanya menampilkan nilai terbaru), tampilan ini berfokus pada tren dan perubahan seiring waktu menggunakan grafik."
+        ]
+      },
+      {
+        "heading": "Rentang waktu: Hari, Minggu, Bulan",
+        "body": [
+          "Anda dapat beralih di antara tiga rentang waktu: Hari, Minggu, dan Bulan.",
+          "Tampilan hari menunjukkan pembacaan sensor untuk satu hari dalam interval per jam (dengan asumsi perangkat mengirimkan data setiap jam dan pengguna menerima penggunaan baterai yang lebih tinggi di sisi perangkat).",
+          "Tampilan Minggu dan Bulan merangkum pembacaan sensor dalam periode yang lebih lama, memungkinkan Anda melihat pola dan tren."
+        ]
+      },
+      {
+        "heading": "Jenis pengukuran",
+        "body": [
+          "Grafik tersedia untuk parameter berikut: suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah (tergantung pada apa yang disediakan perangkat).",
+          "Anda memilih parameter menggunakan tombol di bawah grafik (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Menavigasi melalui periode masa lalu",
+        "body": [
+          "Panah di sebelah periode yang dipilih memungkinkan Anda berpindah antara hari, minggu, atau bulan sebelumnya.",
+          "Navigasi terbatas pada periode di mana data ada — periode mendatang tidak ditampilkan."
+        ]
+      },
+      {
+        "heading": "Menghapus riwayat pembacaan sensor",
+        "body": [
+          "Menu bagan menyertakan tindakan Hapus pembacaan sensor untuk membersihkan data sensor historis untuk perangkat yang dipilih.",
+          "Anda dapat menghapus pembacaan sensor untuk hari, minggu, atau bulan tertentu, menghapus pembacaan sensor yang lebih tua dari usia yang dipilih, atau hanya menghapus jenis pengukuran tertentu seperti suhu, kelembapan, cahaya, atau kelembapan tanah.",
+          "Saat menghapus berdasarkan jenis pengukuran, Flovers menghapus metrik tersebut sambil menjaga nilai lainnya dari catatan pembacaan yang sama jika memungkinkan. Penghapusan bersifat permanen dan harus digunakan dengan hati-hati."
+        ]
+      },
+      {
+        "heading": "Ketersediaan dan interpretasi data",
+        "body": [
+          "Jika perangkat tidak memberikan pembacaan sensor untuk periode yang dipilih, grafik akan tampak kosong atau menunjukkan nilai yang hilang.",
+          "Data sensor bersifat informatif dan harus diinterpretasikan bersama dengan pengamatan di dunia nyata (kalibrasi, penempatan, dan lingkungan dapat memengaruhi akurasi)."
+        ]
+      }
+    ]
+  }
+}

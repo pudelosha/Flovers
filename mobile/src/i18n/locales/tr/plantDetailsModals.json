@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Kapat",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "remove": "Kaldır"
+    },
+    "definition": {
+      "title": "Ev bitkisi tanımı",
+      "traits": "Özellikler",
+      "noId": "Hiçbir ev bitkisi tanımı kimliği bulunamadı.",
+      "loadFailed": "Ev bitkisi tanımı yüklenemedi.",
+      "error": "Bir şeyler ters gitti.",
+      "empty": "Tanım verisi mevcut değil.",
+      "body": "Bu bir yer tutucu modelidir. ev bitkisi tanımı ayrıntıları daha sonra uygulanacaktır."
+    },
+    "changeImage": {
+      "title": "Resmi değiştir",
+      "subtitle": "Bu fotoğraf cihazınızda yerel olarak depolanır ve yüklenmez.",
+      "noPlantId": "Hiçbir ev bitkisi kimliği bulunamadı.",
+      "loadFailed": "Yerel resim yüklenemedi.",
+      "error": "Bir şeyler ters gitti.",
+      "noPhoto": "Fotoğraf seçilmedi",
+      "removedPreview": "Fotoğraf kaldırılacak",
+      "unsaved": "Kaydedilmemiş değişiklikler",
+      "takePhoto": "Fotoğraf çek",
+      "chooseGallery": "Galeriden seç",
+      "remove": "Fotoğrafı kaldır",
+      "permissionTitle": "İzin gerekli",
+      "permissionCamera": "Fotoğraf çekmek için lütfen kamera ve medya izinlerini verin.",
+      "permissionGallery": "Lütfen medyaya fotoğraf seçme izni verin.",
+      "cameraErrorTitle": "Kamera hatası",
+      "pickerErrorTitle": "Seçici hatası",
+      "saveFailedTitle": "Kaydetme başarısız oldu",
+      "saveFailedMsg": "Bu fotoğraf yerel olarak kaydedilemedi.",
+      "confirmRemoveTitle": "Fotoğraf kaldırılsın mı?",
+      "confirmRemoveMsg": "Kaydet'e bastığınızda fotoğraf kaldırılacaktır.",
+      "confirmDiscardTitle": "Değişiklikler silinsin mi?",
+      "confirmDiscardMsg": "Değişiklikleriniz kaydedilmeyecek.",
+      "discard": "At",
+      "removeFailedTitle": "Kaldırma başarısız oldu",
+      "removeFailedMsg": "Bu yerel fotoğraf kaldırılamadı."
+    }
+  }
+}

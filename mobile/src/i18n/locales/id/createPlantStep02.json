@@ -1,0 +1,39 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Profil tanaman hias",
+      "preferences": "Preferensi",
+      "errorProfile": "Gagal memuat profil tanaman hias.",
+      "labels": {
+        "sun": "Paparan sinar matahari",
+        "water": "Penyiraman",
+        "difficulty": "Kesulitan",
+        "potMaterials": "Bahan pot bunga",
+        "soilMixes": "Campuran tanah",
+        "wateringInterval": "Penyiraman",
+        "moistureInterval": "Pemeriksaan kelembaban",
+        "fertilizeInterval": "Pupuk",
+        "repotInterval": "Ganti pot"
+      },
+      "values": {
+        "everyDays": "Setiap {{count}} hari",
+        "everyMonths": "Setiap {{count}} bulan"
+      },
+      "traits": {
+        "sun": "Paparan sinar matahari",
+        "water": "Penyiraman",
+        "difficulty": "Kesulitan",
+        "soil": "Tanah",
+        "temperature": "Suhu",
+        "humidity": "Kelembaban",
+        "toxic": "Beracun?",
+        "growth": "Pertumbuhan",
+        "light": "Cahaya",
+        "fertilizer": "Pupuk",
+        "recognize": "Kenali tanaman hias",
+        "problems": "Masalah",
+        "pests": "Hama"
+      }
+    }
+  }
+}

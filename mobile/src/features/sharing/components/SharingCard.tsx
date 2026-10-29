@@ -40,7 +40,6 @@ export default function SharingCard() {
         <MaterialCommunityIcons name="share-variant-outline" size={18} color="#FFFFFF" />
         <Text style={[controls.actionBtnFullText, s.buttonText]}>{t("sharing.profile.sharedPlants", { defaultValue: "Shared plants" })}</Text>
       </Pressable>
-      <Text style={s.note}>{t("sharing.profile.sharingPreviewNote", { defaultValue: "Plant sharing is still a preview. Contacts and invitations are live." })}</Text>
     </GlassCard>
   );
 }

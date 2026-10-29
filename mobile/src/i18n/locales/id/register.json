@@ -1,0 +1,27 @@
+{
+  "register": {
+    "title": "Daftar",
+    "email": "Email",
+    "password": "Kata sandi",
+    "confirmPassword": "Konfirmasi Kata Sandi",
+    "termsAgreement": "Saya setuju dengan",
+    "termsLink": "Syarat & Ketentuan",
+    "signUpButton": "Daftar",
+    "haveAccount": "Sudah punya akun?",
+    "loginLink": "Masuk",
+    "errors": {
+      "invalidEmail": "Masukkan email yang valid.",
+      "shortPassword": "Kata sandi minimal harus 8 karakter.",
+      "passwordsMismatch": "Kata sandi tidak cocok.",
+      "termsRequired": "Anda harus menyetujui Syarat & Ketentuan.",
+      "incompleteForm": "Silakan lengkapi formulirnya.",
+      "emailTaken": "Email ini sudah dipakai.",
+      "registrationFailed": "Pendaftaran gagal. Silakan coba lagi.",
+      "generic": "Ada yang tidak beres. Silakan coba lagi.",
+      "cannotOpenLink": "Tidak dapat membuka tautannya."
+    },
+    "success": {
+      "accountCreated": "Akun dibuat. Selamat datang!"
+    }
+  }
+}

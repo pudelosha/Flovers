@@ -114,6 +114,7 @@ function mapHomeTaskToReminderSummary(task: HomeTask): PlantReminderSummary | nu
     id: String(baseId),
     taskId: String(task.id),
     type,
+    access: task.access,
     when,
     dueDate,
   };

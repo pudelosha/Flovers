@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "title": "Flovers",
+    "subtitle": "Rawat tanaman lebih mudah dengan pengingat, jadwal, dan riwayat perawatan.",
+    "purpose": "Tambahkan tanaman hias Anda, tautkan definisi spesies untuk panduan, tentukan pengingat berulang, dan lacak riwayat perawatan, dengan pemantauan sensor langsung opsional dan akses berbasis QR ke detail tanaman hias.",
+    "cta": {
+      "googlePlayUrl": "",
+      "appStoreUrl": ""
+    }
+  },
+  "homeNew": {
+    "cta": {
+      "title": "Mulailah dengan sederhana. Jaga agar rutinitas tetap konsisten.",
+      "subtitle": "Tambahkan tanaman hias Anda, tautkan definisi untuk panduan, atur pengingat berulang, dan biarkan Flovers menghasilkan tugas secara otomatis. Gunakan notifikasi harian untuk tetap berada di jalur yang benar, pindai label QR untuk langsung menuju ke tanaman hias, dan secara opsional validasi rutinitas dengan pembacaan sensor langsung."
+    },
+    "sections": {
+      "how": {
+        "title": "Bagaimana cara kerjanya",
+        "subtitle": "Perulangan sederhana: tambahkan → tentukan → bertindak → tetap konsisten. Flovers menjaga rutinitas tetap berjalan sehingga Anda dapat fokus pada tanaman hias, bukan perencanaan."
+      }
+    },
+    "steps": {
+      "s1": {
+        "title": "Tambahkan tanaman hias dengan mengenalinya atau mencari di database",
+        "text": "Buat tanaman hias dalam hitungan detik. Cari 700+ database definisi tanaman hias atau gunakan pengenalan foto untuk mendapatkan kecocokan yang disarankan. Setelah ditambahkan, rutinitas perawatan, tugas, dan riwayat tetap terhubung dengan satu tanaman hias ini."
+      },
+      "s2": {
+        "title": "Tautkan definisi, tetapkan konteks, dan dapatkan interval yang masuk akal",
+        "text": "Hubungkan tanaman hias ke definisi untuk membuka sifat dan standar perawatan. Tambahkan konteks dunia nyata seperti ukuran pot bunga, jenis tanah, lokasi, dan tingkat cahaya. Berdasarkan hal ini, Flovers membantu menghitung interval pengingat realistis yang dapat Anda sesuaikan kapan saja."
+      },
+      "s3": {
+        "title": "Selesaikan tugas dengan cepat dan bangun riwayat perawatan yang bersih",
+        "text": "Pengingat secara otomatis menghasilkan tugas yang harus diselesaikan. Beranda menunjukkan batas waktu, sedangkan halaman tanaman hias menunjukkan konteks lengkap. Saat Anda menyelesaikan tugas, Anda dapat menambahkan catatan, dan Flovers mengantri tugas berikutnya sehingga rutinitas tetap berjalan tanpa perencanaan manual."
+      },
+      "s4": {
+        "title": "Tetap ikuti perkembangannya dengan notifikasi harian",
+        "text": "Pilih pemberitahuan push atau email di pengaturan Profil dan atur waktu pengiriman. Anda akan mendapatkan ringkasan harian tugas yang harus diselesaikan hari ini, dengan tindak lanjut opsional jika tugas terlambat, sehingga tidak ada yang terlewatkan secara diam-diam."
+      }
+    }
+  },
+  "featureGrid": {
+    "header": {
+      "title": "Fitur yang menjaga konsistensi perawatan",
+      "subtitle": "Flovers dibuat dengan beberapa fitur praktis: interval starter cerdas, tugas dari pengingat, notifikasi harian, pintasan QR, dan pembacaan sensor IoT opsional—sehingga Anda dapat menjaga tanaman hias tetap sehat tanpa terlalu memikirkannya."
+    },
+    "tiles": {
+      "intervals": {
+        "title": "Interval yang disarankan dari definisi tanaman hias",
+        "text": "Tautkan tanaman hias ke definisi dan Flovers menyarankan interval permulaan berdasarkan spesies dan pengaturan Anda. Terima, sesuaikan, atau pertahankan irama Anda sendiri."
+      },
+      "tasks": {
+        "title": "Pengingat yang berubah menjadi tugas",
+        "text": "Atur pengingat berulang (penyiraman, gerimis, pemupukan, repotting, perawatan). Flovers mengubahnya menjadi tugas yang semestinya. Ketika Anda menyelesaikan satu, yang berikutnya akan dimasukkan ke dalam antrian secara otomatis."
+      },
+      "notifications": {
+        "title": "Pemberitahuan harian melalui push atau email",
+        "text": "Pilih push atau email di pengaturan Profil. Flovers dapat mengirim ringkasan harian pada waktu yang Anda pilih (misalnya, 14:00) dengan tugas yang harus diselesaikan hari ini, dan secara opsional menindaklanjuti ~24 jam kemudian jika tugas sudah lewat waktu."
+      },
+      "qr": {
+        "title": "Pemindaian QR untuk melompat langsung ke tanaman hias",
+        "text": "Cetak kode QR untuk tanaman hias dan tempelkan ke pot bunga. Pindai untuk membuka Detail tanaman hias secara instan—cara tercepat untuk memeriksa konteks dan menandai perawatan telah selesai."
+      },
+      "iot": {
+        "title": "Pembacaan sensor IoT langsung dengan tren",
+        "text": "Hubungkan perangkat ESP/Arduino Anda dan kirimkan pembacaan sensor seperti suhu, kelembapan, cahaya, dan kelembapan tanah. Aplikasi ini menampilkan grafik harian/mingguan/bulanan sehingga Anda dapat melihat pola dan menyesuaikan rutinitas."
+      }
+    },
+    "images": {
+      "createPlantAlt": "Buat layar tanaman hias",
+      "readingsHistoryAlt": "Layar riwayat pembacaan sensor"
+    }
+  },
+  "core": {
+    "title": "Dua hal terbaik yang dilakukan Flovers",
+    "lead": "Basis data tanaman hias yang solid dan pengenalan foto cepat. Pilih yang cocok, tautkan sekali, dan Anda mendapatkan titik awal yang bersih untuk merawat tanaman hias Anda.",
+    "tiles": {
+      "defs": {
+        "title": "700+ definisi tanaman hias dengan detail perawatan nyata",
+        "desc": "Jelajahi definisi dengan foto dan ciri-ciri utama. Tautkan tanaman hias Anda ke suatu definisi dan Flovers dapat memandu Anda dengan default yang masuk akal.",
+        "bullets": [
+          "Ciri-ciri perawatan seperti cahaya, tanah, gaya penyiraman, kelembapan, suhu.",
+          "Titik awal bermanfaat yang dapat Anda sesuaikan saat mempelajari ruang Anda.",
+          "Tautan cepat sehingga setiap tanaman hias memiliki garis dasar yang jelas."
+        ]
+      },
+      "recognition": {
+        "title": "Pengenalan foto yang menunjukkan kecocokan terdekat",
+        "desc": "Ambil foto atau unggah foto dan Flovers akan menyarankan tampilannya. Pilih yang paling cocok, tautkan, dan lanjutkan.",
+        "bullets": [
+          "Berfungsi paling baik dengan foto yang jernih dan terang.",
+          "Menampilkan beberapa opsi penutupan sehingga Anda dapat memilih opsi yang tepat.",
+          "Dibuat untuk menghemat waktu, bukan untuk membuat Anda terjebak dalam tebakan."
+        ]
+      }
+    }
+  },
+  "qr": {
+    "title": "Pemindaian QR: pintasan fisik",
+    "lead": "Buat kode QR untuk setiap tanaman hias, cetak, tempelkan ke pot bunga, lalu pindai untuk langsung melihat detail dan tugas tanaman hias tersebut.",
+    "image": {
+      "alt": "Memindai kode QR tanaman hias dengan aplikasi Flovers"
+    },
+    "blocks": {
+      "create": {
+        "title": "Buat → cetak → lampirkan",
+        "text": "Setiap tanaman hias memiliki ID sendiri. Di Detail tanaman hias Anda dapat membuat kode QR untuk tanaman hias tersebut, menyimpannya ke ponsel Anda, atau mengirimkannya melalui email sehingga Anda dapat mencetaknya dan menempelkannya di pot bunga."
+      },
+      "scan": {
+        "title": "Pindai → konfirmasi → buka Detail tanaman hias",
+        "text": "Gunakan pemindai QR bawaan. Setelah backend mengonfirmasi kode, Anda akan diarahkan ke detail tanaman hias tersebut—tugas, pengingat, catatan, pembacaan sensor, dan konteks lengkap."
+      },
+      "care": {
+        "title": "Peduli pada saat ini",
+        "text": "Sirami tanaman hias, pindai labelnya, dan tandai tugas telah selesai—atau cukup pindai untuk memeriksa apakah sudah waktunya. Tautan langsung antara tanaman hias fisik dan data Anda."
+      }
+    }
+  },
+  "store": {
+    "google": {
+      "alt": "Dapatkan di Google Play"
+    },
+    "apple": {
+      "alt": "Unduh di App Store"
+    }
+  }
+}

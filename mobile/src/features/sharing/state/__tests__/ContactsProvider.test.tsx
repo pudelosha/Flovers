@@ -60,7 +60,7 @@ it("serializes mutation taps instead of creating duplicate requests", async () =
   await act(async () => { pending.resolve(snapshot()); await first; });
 });
 it("refreshes when the app returns to the foreground", async () => {
-  let onChange: any; jest.spyOn(AppState, "addEventListener").mockImplementation((_type, listener) => { onChange = listener; return { remove: jest.fn() }; });
+  const listeners: any[] = []; jest.spyOn(AppState, "addEventListener").mockImplementation((_type, listener) => { listeners.push(listener); return { remove: jest.fn() }; });
   render(tree()); await waitFor(() => expect(context.loading).toBe(false)); (api.fetchContacts as jest.Mock).mockResolvedValue(snapshot("1", ["2", "3"]));
-  await act(async () => { onChange("active"); }); expect(context.snapshot?.contacts).toHaveLength(2);
+  await act(async () => { listeners.forEach((listener) => listener("active")); }); expect(context.snapshot?.contacts).toHaveLength(2);
 });

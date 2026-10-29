@@ -1,0 +1,81 @@
+{
+  "docs_task_history": {
+    "title": "Görev Geçmişi",
+    "sections": [
+      {
+        "heading": "Görev Geçmişi ekranının amacı",
+        "body": [
+          "Görev Geçmişi, tamamlanmış (kapatılmış) görevleri gözden geçirmek ve yönetmek için kullanılır.",
+          "Hangi eylemlerin ne zaman yapıldığını ve hangi ev bitkilerinin etkilendiğini anlamanıza yardımcı olur.",
+          "Ekran, önceden tanımlanmış bir filtrenin uygulanmasıyla açılabilir (örneğin, belirli bir ev bitkisinin geçmişini göstererek) veya tamamlanan tüm görevleri görüntüleyebilir."
+        ]
+      },
+      {
+        "heading": "Tamamlanan görev kutucukları",
+        "body": [
+          "Her kutucuk, görev türü (örn. Sulama, Sisleme, Gübreleme), ev bitkisinin adı, konumu ve tamamlanma tarihi dahil olmak üzere tamamlanmış tek bir görevi temsil eder.",
+          "Tamamlanan görevler, görev kapatıldığında eklenen isteğe bağlı bir not içerebilir.",
+          "Notlar yalnızca kutucuk genişletildiğinde görüntülenir."
+        ]
+      },
+      {
+        "heading": "Notları görüntüleme: genişletme ve daraltma",
+        "body": [
+          "Tamamlanan bir göreve ilişkin notu görüntülemek için kutucuğun kendisine dokunarak kutucuğu genişletebilirsiniz.",
+          "Bir göreve ilişkin notları Genişletmek veya Daraltmak için de üç nokta menüsünü kullanabilirsiniz (geçerli duruma bağlı olarak).",
+          "Bu, gerektiğinde ayrıntılı geçmişe erişmeye devam ederken listeyi kompakt tutmanıza olanak tanır."
+        ]
+      },
+      {
+        "heading": "Görev kutucuğu menüsü (üç nokta)",
+        "body": [
+          "Tamamlanan her görev kutucuğu, söz konusu geçmiş girişiyle ilgili eylemlerin yer aldığı bir bağlam menüsü sağlar.",
+          "Genişlet/Daralt: kutucuk içindeki not bölümünü gösterir veya gizler.",
+          "Hatırlatıcıyı düzenle: yinelemeyi veya ayarları ayarlayabilmeniz için görevle ilişkili Hatırlatıcıya gider.",
+          "Ev bitkisine git: Görevle bağlantılı ev bitkisinin ayrıntılarına gider.",
+          "Görevi sil: seçilen tamamlanmış görevi hesabınızdan kalıcı olarak siler."
+        ]
+      },
+      {
+        "heading": "Kayan Eylem Düğmesi (FAB) eylemleri",
+        "body": [
+          "Görev Geçmişi ekranı, geçmiş listesiyle çalışmaya yönelik eylemlerin bulunduğu bir Kayan Eylem Düğmesi (FAB) içerir.",
+          "Sırala: tamamlanan görevlerin sırasını değiştirir.",
+          "Filtre: geçmiş listesini seçilen kriterlere göre daraltır.",
+          "Sil: Kriterlere (örneğin, seçilen bir ev bitkisine yönelik görevler, seçilen bir konuma ilişkin görevler, belirli türdeki görevler veya seçilen eşikten daha eski görevler) dayalı olarak toplu silmeyi destekler."
+        ]
+      },
+      {
+        "heading": "Sıralama seçenekleri",
+        "body": [
+          "Sıralama, geçmişi iş akışınıza en uygun sırayla incelemenize yardımcı olur.",
+          "Mevcut sıralama seçenekleri şunları içerir: Tamamlanma tarihi, ev bitkisinin adı ve Konum."
+        ]
+      },
+      {
+        "heading": "Filtreleme seçenekleri",
+        "body": [
+          "Filtreler, tamamlanan görevlerin belirli bir alt kümesine odaklanmanıza yardımcı olur.",
+          "Ev bitkisi adı, Konum, Görev türü ve Tamamlanma tarih aralığına göre filtreleme yapabilirsiniz.",
+          "Listeyi daha da daraltmak için filtreler birleştirilebilir, örneğin: Belirli bir ay içinde seçilen bir konumda tamamlanan gübreleme görevleri."
+        ]
+      },
+      {
+        "heading": "Toplu silme (Silme eylemi)",
+        "body": [
+          "Toplu silme, belirtilen kriterlere göre birden fazla tamamlanan görevi aynı anda kalıcı olarak silmenize olanak tanır.",
+          "Tipik senaryolar arasında bir ev bitkisinin geçmişinin temizlenmesi, bir konuma ilişkin görevlerin kaldırılması, yalnızca bir görev türünün silinmesi veya seçilen tarihten daha eski görevlerin silinmesi yer alır.",
+          "Toplu silme işlemi kalıcıdır ve geri alınamaz."
+        ]
+      },
+      {
+        "heading": "Görev Geçmişinin Ana Sayfa'dan farkı nedir?",
+        "body": [
+          "Ev, süresi dolmuş veya gecikmiş görevlere odaklanır ve mevcut işlerinizi tamamlamanıza yardımcı olur.",
+          "Görev Geçmişi, halihazırda tamamlanmış görevlere odaklanır ve geçmiş girdilerin incelenmesini, sıralanmasını, filtrelenmesini ve silinmesini destekler.",
+          "Bu ekranlar birlikte hem günlük yürütmeyi (Ana Sayfa) hem de uzun vadeli izlemeyi (Görev Geçmişi) kapsar."
+        ]
+      }
+    ]
+  }
+}

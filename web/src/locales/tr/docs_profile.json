@@ -1,0 +1,46 @@
+{
+  "docs_profile": {
+    "title": "Profil",
+    "sections": [
+      {
+        "heading": "Bu ekranın amacı",
+        "body": [
+          "Profil ekranı hesap bilgilerini, bildirim tercihlerini, uygulama ayarlarını ve destek seçeneklerini yönetmek için merkezi yerdir.",
+          "Kullanıcının hem kişisel verileri hem de Flovers uygulamasının günlük olarak nasıl davrandığını kontrol etmesine olanak tanır."
+        ]
+      },
+      {
+        "heading": "Hesap",
+        "body": [
+          "Hesap bölümü, kayıtlı e-posta adresi ve hesap oluşturma tarihi gibi temel hesap bilgilerini görüntüler.",
+          "Bu bölümden kullanıcı e-posta adresini değiştirebilir (geçerli parolanın onaylanması gerekir), mevcut parolayı değiştirebilir, oturumu kapatabilir veya hesabı kalıcı olarak silebilir.",
+          "Hesabın silinmesi, ev bitkileri, hatırlatıcılar, görevler, sensör okumaları ve cihazlar da dahil olmak üzere tüm kullanıcı verilerinin geri alınamayacak şekilde silinmesine neden olur."
+        ]
+      },
+      {
+        "heading": "Bildirimler",
+        "body": [
+          "Bildirimler bölümü, kullanıcının e-posta ve anlık bildirimlere ilişkin onay ve tercihleri yönetmesine olanak tanır.",
+          "Kullanıcı, hem e-posta hem de anlık bildirimler için iki bildirim türünü etkinleştirebilir veya devre dışı bırakabilir: bugün teslim edilmesi gereken görevler olup olmadığını bildiren günlük bir özet ve ilk bildirimden 24 saat sonra görevler beklemede kalırsa gönderilen bir hatırlatma bildirimi.",
+          "Her bildirim türü için kullanıcı teslimat saatini seçer (tam saat formatı, örneğin 14:00)."
+        ]
+      },
+      {
+        "heading": "Ayarlar",
+        "body": [
+          "Ayarlar bölümü genel uygulama davranışını ve görünümünü kontrol eder.",
+          "Mevcut seçenekler arasında dil seçimi, tarih ve saat formatı, sıcaklık birimleri (Santigrat, Fahrenhayt, Kelvin), ölçüm birimleri (metrik veya İngiliz) ve Değişken İşlem Düğmesi (FAB) konumu (sol veya sağ) bulunur.",
+          "Kullanıcı ayrıca bir arka plan resmi, döşeme teması (açık veya koyu) ve döşeme şeffaflık düzeyi seçerek uygulamanın görünümünü özelleştirebilir."
+        ]
+      },
+      {
+        "heading": "Destek",
+        "body": [
+          "Destek bölümü Flovers ekibinin yardımına doğrudan erişim sağlar.",
+          "Kullanıcı yardım için destek ekibiyle iletişime geçebilir veya doğrudan bu ekrandan bir hatayı bildirebilir.",
+          "Sorunların raporlanması uygulamanın kararlılığını ve kalitesini artırmaya yardımcı olur."
+        ]
+      }
+    ]
+  }
+}

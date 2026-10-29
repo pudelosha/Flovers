@@ -3,6 +3,7 @@ from datetime import timedelta
 import math
 from django.utils import timezone
 from .models import ReadingDevice, Reading, PumpTask
+from sharing.permissions import plant_access
 
 
 class ReadingDeviceAutoPumpSerializer(serializers.Serializer):
@@ -80,6 +81,19 @@ class PumpTaskSerializer(serializers.ModelSerializer):
 
 
 class ReadingDeviceSerializer(serializers.ModelSerializer):
+    access = serializers.SerializerMethodField()
+
+    def get_access(self, obj):
+        return plant_access(getattr(self.context.get("request"), "user", None), obj.plant) if obj.plant_id else None
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        caller = getattr(self.context.get("request"), "user", None)
+        if caller is not None and caller.pk != instance.user_id:
+            safe_fields = {"id", "plant", "plant_name", "plant_location", "device_name", "is_active", "interval_hours",
+                           "sensors", "last_read_at", "latest", "created_at", "updated_at", "access"}
+            data = {key: value for key, value in data.items() if key in safe_fields}
+        return data
     latest = serializers.SerializerMethodField()
     pending_pump_task = serializers.SerializerMethodField()
 
@@ -109,6 +123,7 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "device_name",
             "is_active",
             "device_key",
+            "access",
             "notes",
             "interval_hours",
             "sensors",

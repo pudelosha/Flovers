@@ -1,0 +1,28 @@
+{
+  "title": "Kişi",
+  "subtitle": "Desteğe mesaj gönderin. Genellikle 1-3 iş günü içinde yanıt veririz.",
+  "form": {
+    "emailLabel": "E-postanız",
+    "emailPlaceholder": "you@example.com",
+    "subjectLabel": "Konu",
+    "subjectPlaceholder": "örneğin Giriş sorunu",
+    "messageLabel": "Mesaj",
+    "messagePlaceholder": "Sorununuzu veya sorunuzu açıklayın…",
+    "copyToMe": "Bana bir kopyasını gönder",
+    "send": "Gönder",
+    "sending": "Gönderiliyor…",
+    "mailtoFallback": "Bunun yerine e-posta gönderin",
+    "note": "Form başarısız olursa e-posta düğmesini kullanın."
+  },
+  "toasts": {
+    "enterEmail": "Lütfen geçerli bir e-posta adresi girin.",
+    "rateLimited": "Çok fazla mesaj var. Lütfen daha sonra tekrar deneyin.",
+    "enterSubject": "Lütfen bir konu girin.",
+    "enterMessage": "Lütfen bir mesaj girin.",
+    "contactSent": "Mesaj gönderildi.",
+    "couldNotSendContact": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+    "requestTimedOut": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
+    "unauthorizedLoginAgain": "Oturumun süresi doldu. Lütfen tekrar giriş yapın.",
+    "missingApiBase": "API temel URL'si yapılandırılmamış."
+  }
+}

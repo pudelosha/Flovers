@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "Nama & catatan",
+      "subtitle": "Berikan nama tampilan pada tanaman hias Anda, tambahkan catatan apa pun, dan (opsional) tetapkan tanggal pembelian sehingga kami dapat memperkirakan umurnya.",
+      "displayNameLabel": "Nama tampilan",
+      "placeholderName": "misalnya Monstera ruang tamu",
+      "notesLabel": "Catatan",
+      "notesPlaceholder": "Kiat perawatan, masalah, di mana Anda membelinya…",
+      "purchaseDateLabel": "Tanggal pembelian (opsional)",
+      "notSet": "Tidak disetel",
+      "done": "Selesai",
+      "setPurchaseDateTitle": "Tetapkan tanggal pembelian",
+      "datePlaceholder": "YYYY-MM-DD",
+      "cancel": "Batal",
+      "set": "Tetapkan",
+      "invalidDateTitle": "Tanggal tidak valid",
+      "invalidDateMessage": "Silakan masukkan tanggal yang valid dalam format YYYY-MM-DD.",
+      "nameRequired": "Nama tanaman hias diperlukan untuk membuat tanaman hias."
+    }
+  }
+}

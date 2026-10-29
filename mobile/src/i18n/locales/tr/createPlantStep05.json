@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Konteyner ve toprak",
+      "subtitle": "Bu ayrıntılar isteğe bağlıdır. Saksı/kap malzemesini ve toprağı veya saksı karışımını seçin veya bunları \"Belirtilmedi\" olarak bırakıp devam edin.",
+      "containerMaterial": "Konteyner malzemesi",
+      "soilMix": "Toprak / saksı karışımı",
+      "notSpecified": "Belirtilmedi",
+      "notSpecifiedDesc": "Emin değilseniz bunu atlayın.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plastik",
+          "description": "Hafiftir, nemi daha uzun süre korur; ucuz ve çok yönlü."
+        },
+        "ceramic": {
+          "label": "Seramik (sırlı)",
+          "description": "Daha ağır; nemi korur; dekoratif sırlı kaplama."
+        },
+        "terracotta": {
+          "label": "Pişmiş toprak",
+          "description": "Gözenekli kil; nemi emer; sulu meyveler/kaktüsler için harika."
+        },
+        "clay": {
+          "label": "Kil (sırsız)",
+          "description": "Pişmiş topraklara benzer; nefes alabilir, daha hızlı kurur."
+        },
+        "cement": {
+          "label": "Çimento",
+          "description": "Çok ağır; modern görünüm; nemi oldukça iyi korur."
+        },
+        "concrete": {
+          "label": "Beton",
+          "description": "Dayanıklı ve ağır; açık havada stabil; nemi korur."
+        },
+        "metal": {
+          "label": "Metal (genel)",
+          "description": "Güneşte hızla ısınabilir; genellikle iç astara/saksıya ihtiyaç duyar."
+        },
+        "stainless": {
+          "label": "Paslanmaz çelik",
+          "description": "Modern görünüm; korozyona dayanıklı; güneşte ısınabilir."
+        },
+        "aluminum": {
+          "label": "Alüminyum",
+          "description": "Hafif, iletken; Parlak güneşte aşırı ısınmaya dikkat edin."
+        },
+        "iron": {
+          "label": "Demir / çelik",
+          "description": "Çok dayanıklı; paslanabilir; astar gerektirebilir."
+        },
+        "copper": {
+          "label": "Bakır / pirinç",
+          "description": "Dekoratif; toprakla reaksiyona girebilir; genellikle bir önbellek olarak."
+        },
+        "wood": {
+          "label": "Ahşap",
+          "description": "Doğal görünüm; astar gerekebilir; sürekli ıslanırsa çürüyebilir."
+        },
+        "bamboo": {
+          "label": "Bambu",
+          "description": "Hafif, sürdürülebilir; genellikle astarlıdır; kapalı alanda kullanım tercih edilir."
+        },
+        "rattan": {
+          "label": "Rattan / hasır",
+          "description": "Dekoratif önbellekler; İçinde plastik bir fidanlık saksısı kullanın."
+        },
+        "glass": {
+          "label": "Cam",
+          "description": "Teraryumlar için idealdir; drenaj yok; nemi izle."
+        },
+        "stone": {
+          "label": "Taş / mermer",
+          "description": "Çok ağır ve sağlam; serin sıcaklığı korur."
+        },
+        "resin": {
+          "label": "Reçine",
+          "description": "Hafif, dayanıklı; iyi bir dış mekan seçimi; kökleri yalıtır."
+        },
+        "fiberglass": {
+          "label": "Fiberglas",
+          "description": "Hafif, güçlü; açık hava dostu; iyi yalıtım."
+        },
+        "biodegradable": {
+          "label": "Biyolojik olarak parçalanabilir",
+          "description": "Hindistan cevizi hindistan cevizi, turba vb.; başlangıç ​​saksıları; zamanla ayrışır."
+        },
+        "fabric": {
+          "label": "Kumaş ekici",
+          "description": "Hava kuru erik kökleri; hızlı kuruma; sebzeler için iyidir."
+        },
+        "grow-bag": {
+          "label": "Büyüme çantası",
+          "description": "Kumaş çanta; taşınabilir; hızlı boşalır; sık sulamaya ihtiyaç duyar."
+        },
+        "self-watering": {
+          "label": "Kendi kendine sulama",
+          "description": "Fitillemeli rezervuar; sulama programını eşitler."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Çok amaçlı saksı karışımı",
+          "description": "Çoğu ev bitkisi için iyi bir varsayılan."
+        },
+        "green-plants": {
+          "label": "Yeşil ev bitkileri / ev bitkileri karışımı",
+          "description": "Yapraklı ev bitkileri için genel karışım (genellikle palmiyeler için de pazarlanır)."
+        },
+        "balcony-flowers": {
+          "label": "Balkon ve çiçekli ev bitkilerinin karışımı",
+          "description": "Saksılarda ve balkon saksılarında yetiştirilen çiçekli ev bitkileri için daha zengin karışım."
+        },
+        "cactus-succulent": {
+          "label": "Kaktüs / sukulent karışımı",
+          "description": "Hızlı boşaltma; sulu meyveler ve kaktüsler için idealdir."
+        },
+        "orchid": {
+          "label": "Orkide karışımı",
+          "description": "Köklerin etrafında hava akışı için kalın kabuk bazlı karışım."
+        },
+        "aroid": {
+          "label": "Aroid karışımı",
+          "description": "Monstera/Philodendron gibi aroidler için çok havadar karışım (kabuk/perlit)."
+        },
+        "seed-starting": {
+          "label": "Tohum başlangıç karışımı",
+          "description": "İnce doku; üreme ve fideler için iyidir."
+        },
+        "bonsai": {
+          "label": "Bonsai karışımı",
+          "description": "Sıkışmaya dirençli, kumlu, iyi drenajlı karışım."
+        },
+        "herbs-vegetables": {
+          "label": "Otlar ve sebzeler karışımı",
+          "description": "Yenilebilir gıdalara uygun, besin açısından zengin karışım."
+        },
+        "citrus": {
+          "label": "Narenciye karışımı",
+          "description": "Narenciye ve diğer Akdeniz ev bitkileri için uygun, iyi drenajlı karışım."
+        },
+        "fern": {
+          "label": "Eğrelti otu karışımı",
+          "description": "Eğrelti otları için nem tutucu karışım; genellikle organik madde bakımından daha yüksektir."
+        },
+        "conifers": {
+          "label": "Kozalaklı ağaçlar karışımı",
+          "description": "Kozalaklı ağaçlara yönelik karışım; genellikle hafif asidiktir ve iyi drenajlıdır."
+        },
+        "acid-loving": {
+          "label": "Asit seven ev bitkileri karışımı",
+          "description": "Yaban mersini, fundalar, orman gülleri, açelyalar vb. için asidik karışım."
+        },
+        "peat-free": {
+          "label": "Turba içermeyen karışım",
+          "description": "Daha sürdürülebilir seçenek; kompozisyon markaya göre değişir."
+        }
+      }
+    }
+  }
+}

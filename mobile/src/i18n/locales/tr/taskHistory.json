@@ -1,0 +1,56 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Görev geçmişi"
+    },
+    "fab": {
+      "sort": "Sırala",
+      "filter": "Filtrele",
+      "sendExport": "Dışa aktarma gönder",
+      "delete": "Sil",
+      "clearFilter": "Filtreyi temizle",
+      "showAllHistory": "Tüm geçmişi göster"
+    },
+    "common": {
+      "unnamedPlant": "İsimsiz ev bitkisi"
+    },
+    "toasts": {
+      "failedToLoad": "Görev geçmişi yüklenemedi",
+      "historyDeleted": "Geçmiş silindi",
+      "failedToDeleteHistory": "Geçmiş silinemedi",
+      "historyTaskDeleted": "Geçmiş görevi silindi",
+      "failedToDeleteHistoryTask": "Geçmiş görevi silinemedi",
+      "taskNotLinkedToPlant": "Bu görev bir bitkiye bağlı değil.",
+      "exportSent": "Görev geçmişini dışa aktarma isteği gönderildi",
+      "failedToSendExport": "Görev geçmişini dışa aktarma işlemi gönderilemedi",
+      "exportNotAvailableYet": "İhracat henüz kullanılamıyor."
+    },
+    "empty": {
+      "title": "Henüz tamamlanmış görev yok",
+      "descBeforeBold": "Bu ekran şunları gösterir:",
+      "bold": "kapalı hatırlatma görevleri",
+      "descAfterBold": "Ana sayfanızdan (bekleyen görevler gösterilmez).",
+      "filteredToPlantId": "Şu anda ev bitkisi kimliği {{plantId}}'ye göre filtrelendi.",
+      "openFromTaskHint": "Yalnızca o ev bitkisinin geçmişini görmek için belirli bir görevden açın."
+    },
+    "tile": {
+      "completedOn": "{{date}} tarihinde tamamlandı",
+      "completed": "Tamamlandı",
+      "noteLabel": "Not"
+    },
+    "menu": {
+      "expand": "Genişlet",
+      "collapse": "Daralt",
+      "editReminder": "Hatırlatıcıyı düzenle",
+      "goToPlant": "Bitkiye git",
+      "deleteTask": "Görevi sil"
+    },
+    "types": {
+      "watering": "sulama",
+      "fertilising": "gübreleme",
+      "moisture": "buğulanma",
+      "care": "bakım",
+      "repot": "saksıyı değiştirmek"
+    }
+  }
+}

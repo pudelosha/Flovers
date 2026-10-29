@@ -1,7 +1,8 @@
 # Contacts: backend and mobile integration
 
-Contacts are persistent and authenticated. Plant sharing remains the separate,
-clearly labelled UI preview; accepting an invitation does not grant plant access.
+Contacts are persistent and authenticated. Plant sharing is implemented separately
+in [sharing](../sharing/README.md); accepting an invitation alone does not grant
+plant access.
 
 ## API
 

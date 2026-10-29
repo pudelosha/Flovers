@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Bitkiler",
+    "sections": [
+      {
+        "heading": "Bu ekranın amacı",
+        "body": [
+          "Ev bitkileri ekranı, hesabınızda oluşturulan tüm ev bitkisi Örneklerini gösterir.",
+          "Her karo bir ev bitkisini (kendi örneğiniz) temsil eder. Kutucuktan ev bitkisi Ayrıntılarını açabilir veya ilgili görünümlere (örneğin, hatırlatıcılar, günlük, QR kodu) gitmek için üç noktalı menü kısayollarını kullanabilirsiniz."
+        ]
+      },
+      {
+        "heading": "Ev bitkisi fayansları (listede gördükleriniz)",
+        "body": [
+          "Her ev bitkisi kutucuğu, ev bitkisinin adını ve (varsa) bağlantılı ev bitkisi tanım adını (türlerini) ve atanan Konumu görüntüler.",
+          "Döşeme gövdesine (üç noktalı menüye değil) dokunduğunuzda ev bitkisi Ayrıntıları ekranına yönlendirilirsiniz."
+        ]
+      },
+      {
+        "heading": "Üç noktalı menü (ev bitkisi eylemleri)",
+        "body": [
+          "Her kutucukta, seçilen ev bitkisine yönelik eylemlerin yer aldığı üç noktalı bir menü bulunur:",
+          "Ev bitkisini düzenle: Ev bitkisi ayrıntılarını ve parametrelerini güncellemek için ev bitkisi düzenleyicisini açar.",
+          "Hatırlatıcıları göster: yalnızca seçilen ev bitkisine ilişkin hatırlatıcıları gösterecek bir filtrenin uygulandığı Hatırlatıcılar ekranına gider.",
+          "Houseplant Günlüğünü Göster: Kapalı görev geçmişini (kullanıcı notları dahil) gösteren bir model açar. Notlar görünürdür ve gizlenmez.",
+          "QR kodunu göster: ev bitkisinin QR kodunu, kısa bir açıklamayı ve kaydetme (indirme) veya e-postanıza gönderme seçeneklerini içeren bir model açar.",
+          "Ev bitkisini sil: Ev bitkisini ve görevler, hatırlatıcılar ve bağlı cihaz bağlantıları gibi ilgili verileri kalıcı olarak siler."
+        ]
+      },
+      {
+        "heading": "Kayan Eylem Düğmesi (FAB) menüsü",
+        "body": [
+          "Ev bitkileri ekranındaki FAB hızlı eylemler sağlar:",
+          "Ev bitkisi oluştur: Bir ev bitkisini tam olarak tanımlayabileceğiniz Ev Bitkisi Oluşturma Sihirbazı'nı (9 adımlı bir akış) başlatır.",
+          "Sırala: ev bitkisi döşemelerini ev bitkisi Adına veya Konuma göre sıralar.",
+          "Filtrele: listeyi Konuma göre filtreler.",
+          "Konumlar: gruplama ve filtreleme için kullanılan konumları ekleyebileceğiniz, düzenleyebileceğiniz ve yönetebileceğiniz Konumlar ekranına gider."
+        ]
+      },
+      {
+        "heading": "Ev bitkisini silin (önemli notlar)",
+        "body": [
+          "Ev bitkisini silmek kalıcı bir işlemdir ve geri alınamaz.",
+          "Bir ev bitkisinin silinmesi, ev bitkisi Örneğinin yanı sıra oluşturulan görevler, o ev bitkisine atanan hatırlatıcılar ve bu ev bitkisiyle ilişkili cihaz bağlantıları gibi ilgili verileri de kaldırır."
+        ]
+      },
+      {
+        "heading": "Herhangi bir ev bitkisi göremiyorsanız",
+        "body": [
+          "Liste boşsa, ilk ev bitkisi Örneğini eklemek için FAB eylemini Ev bitkisi oluştur seçeneğini kullanın.",
+          "Ev bitkileri mevcut olduğunda, bunları Konumlar'ı kullanarak gruplandırabilir ve Hatırlatıcılar aracılığıyla bakım rutinlerini yönetebilirsiniz."
+        ]
+      }
+    ]
+  }
+}

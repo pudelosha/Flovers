@@ -1,0 +1,45 @@
+{
+  "plants": {
+    "header": {
+      "title": "Tanaman"
+    },
+    "list": {
+      "unnamed": "Tanaman hias tanpa nama"
+    },
+    "empty": {
+      "title": "Belum ada tanaman hias",
+      "desc1": "Ketuk tombol “+” di pojok kanan bawah untuk menambahkan tanaman hias pertama Anda.",
+      "desc2": "Wizard Buat tanaman hias akan membantu Anda menyiapkan tanaman hias dan menentukan parameternya, serta pengingat jadwal."
+    },
+    "fab": {
+      "create": "Tambah tanaman",
+      "sort": "Urutkan",
+      "filter": "Filter",
+      "clearFilter": "Hapus filter",
+      "locations": "Lokasi"
+    },
+    "menu": {
+      "details": "Detail tanaman",
+      "edit": "Edit tanaman",
+      "reminders": "Tampilkan pengingat",
+      "journal": "Tunjukkan Jurnal tanaman hias",
+      "showQr": "Tampilkan kode QR",
+      "delete": "Hapus tanaman"
+    },
+    "toast": {
+      "loadFailed": "Gagal memuat tanaman hias",
+      "updated": "Tanaman diperbarui",
+      "deleted": "Tanaman dihapus",
+      "qrSaved": "Kode QR disimpan ke galeri Anda.",
+      "qrEmailed": "Email dengan kode QR ini akan dikirimkan ke alamat akun Anda."
+    },
+    "alert": {
+      "loadFailedTitle": "Gagal memuat",
+      "loadFailedMsg": "Tidak dapat memuat detail tanaman hias.",
+      "updateFailedTitle": "Pembaruan gagal",
+      "updateFailedMsg": "Tidak dapat memperbarui tanaman hias ini.",
+      "deleteFailedTitle": "Penghapusan gagal",
+      "deleteFailedMsg": "Tidak dapat menghapus tanaman hias ini."
+    }
+  }
+}

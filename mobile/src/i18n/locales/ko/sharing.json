@@ -23,7 +23,8 @@
       "canCompleteTasks": "작업 완료 가능",
       "noEndDate": "종료일 없음",
       "until": "{{date}}까지",
-      "you": "나"
+      "you": "나",
+      "expired": "만료됨"
     },
     "contacts": {
       "title": "연락처",
@@ -105,7 +106,9 @@
       "showAll": "모두 보기",
       "all": "모든 공유 식물",
       "emptyAllTitle": "아직 공유된 식물이 없어요",
-      "emptyAllBody": "연락처에 있는 사람에게 식물을 공유하거나 상대방에게 식물을 공유해 달라고 요청해 보세요."
+      "emptyAllBody": "연락처에 있는 사람에게 식물을 공유하거나 상대방에게 식물을 공유해 달라고 요청해 보세요.",
+      "displayTasks": "할 일 보기",
+      "actions": "{{name}} 작업"
     },
     "form": {
       "title": "식물 공유하기",
@@ -113,7 +116,7 @@
       "plant": "식물",
       "choosePlant": "식물 선택",
       "singlePlantHint": "공유할 식물과 공유받을 연락처를 선택해 주세요.",
-      "loadFailed": "식물을 불러오지 못했어요.",
+      "loadFailed": "식물과 공유 설정을 불러오지 못했어요.",
       "retry": "다시 시도",
       "noPlants": "공유할 식물이 없어요. 먼저 식물을 추가해 주세요.",
       "contacts": "이 식물들에 접근할 수 있는 사람",
@@ -136,7 +139,9 @@
       "shareSelected": "선택한 식물 공유",
       "mixedAccess": "선택한 식물 중 일부에만 접근할 수 있어요. 나머지 식물도 추가하려면 연락처를 선택해 주세요.",
       "mixedPermissions": "선택한 식물들의 권한 설정이 서로 달라요.",
-      "endDatesVary": "선택한 식물들의 종료일이 서로 달라요."
+      "endDatesVary": "선택한 식물들의 종료일이 서로 달라요.",
+      "reload": "공유 설정 다시 불러오기",
+      "conflictHint": "다른 곳에서 공유 설정이 변경되었어요. 저장 전에 다시 불러와 주세요. 현재 선택한 연락처는 새 설정으로 바뀌어요."
     },
     "toasts": {
       "invitationAdded": "미리보기: 초대를 추가했어요.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "미리보기: 초대를 취소했어요.",
       "contactUpdated": "미리보기: 연락처를 수정했어요.",
       "contactDeleted": "미리보기: 연락처를 삭제했어요.",
-      "sharingSaved": "미리보기: 공유 설정을 수정했어요.",
-      "accessRemoved": "미리보기: 접근 권한을 삭제했어요.",
-      "plantLeft": "미리보기에서 공유된 식물을 삭제했어요.",
+      "sharingSaved": "공유 설정을 저장했어요.",
+      "accessRemoved": "접근 권한을 삭제했어요.",
+      "plantLeft": "공유받은 식물을 목록에서 삭제했어요.",
       "idCopied": "ID를 복사했어요.",
       "copyFailed": "ID를 복사하지 못했어요.",
       "previewReset": "미리보기를 초기화했어요.",
@@ -166,6 +171,23 @@
       "alreadyPending": "이미 초대를 보냈으며 응답을 기다리고 있어요.",
       "throttled": "요청이 너무 많아요. 잠시 후 다시 시도해 주세요.",
       "unavailable": "연결하지 못했어요. 다시 시도해 주세요."
+    },
+    "access": {
+      "sharedBy": "{{name}}님이 공유함",
+      "sharedPlant": "공유받은 식물"
+    },
+    "live": {
+      "loadFailed": "공유 식물을 불러오지 못했어요."
+    },
+    "accessErrors": {
+      "invalid": "선택한 식물, 연락처, 종료일을 확인해 주세요.",
+      "notFound": "이 식물이나 공유 권한을 더 이상 이용할 수 없어요.",
+      "notContact": "초대를 수락한 연락처와만 식물을 공유할 수 있어요.",
+      "notOwner": "식물 소유자만 공유 설정을 변경할 수 있어요.",
+      "conflict": "다른 곳에서 공유 설정이 변경되었어요. 다시 불러온 후 시도해 주세요.",
+      "expired": "아직 지나지 않은 종료일을 선택해 주세요.",
+      "throttled": "요청이 너무 많아요. 잠시 후 다시 시도해 주세요.",
+      "unavailable": "공유 설정을 불러오거나 변경하지 못했어요. 다시 시도해 주세요."
     }
   }
 }

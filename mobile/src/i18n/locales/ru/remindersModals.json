@@ -1,0 +1,66 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Отмена",
+      "apply": "Применить",
+      "clear": "Очистить",
+      "delete": "Удалить",
+      "create": "Создать",
+      "update": "Обновить",
+      "reset": "Сброс",
+      "pause": "Пауза",
+      "resume": "Резюме"
+    },
+    "confirmDelete": {
+      "title": "Удалить напоминание",
+      "areYouSurePrefix": "Вы уверены, что хотите удалить",
+      "areYouSureSuffix": "? Это действие невозможно отменить."
+    },
+    "edit": {
+      "titleCreate": "Добавить напоминание",
+      "titleEdit": "Изменить напоминание",
+      "typeLabel": "Тип",
+      "plantLabel": "Растение",
+      "selectPlant": "Выберите комнатное растение",
+      "locationLabel": "Место",
+      "locationPlaceholder": "Место",
+      "dueDateLabel": "Срок сдачи",
+      "datePlaceholder": "ГГГГ-ММ-ДД",
+      "intervalLabel": "Интервал",
+      "intervalValuePlaceholder": "Значение"
+    },
+    "filter": {
+      "title": "Фильтровать напоминания",
+      "plantLabel": "Растение",
+      "selectPlant": "Выберите комнатное растение",
+      "anyPlant": "Любое комнатное растение",
+      "locationLabel": "Место",
+      "anyLocation": "Любое место",
+      "taskTypesLabel": "Типы задач",
+      "dueDateRangeLabel": "Диапазон сроков сдачи",
+      "fromLabel": "От",
+      "toLabel": "Чтобы",
+      "datePlaceholder": "ГГГГ-ММ-ДД"
+    },
+    "sort": {
+      "title": "Сортировать напоминания",
+      "sortByLabel": "Сортировать по",
+      "directionLabel": "Направление",
+      "keys": {
+        "dueDate": "Срок сдачи",
+        "plant": "Название комнатного растения",
+        "location": "Место"
+      },
+      "directions": {
+        "asc": "Восходящий",
+        "desc": "По убыванию"
+      }
+    },
+    "toggle": {
+      "pauseTitle": "Пауза напоминания",
+      "resumeTitle": "Возобновить напоминание",
+      "pauseBody": "Приостановить это напоминание для {{name}}? Его должное задание будет скрыто, пока вы не возобновите его.",
+      "resumeBody": "Возобновить это напоминание для {{name}}? Следующая задача появится снова."
+    }
+  }
+}

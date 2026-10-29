@@ -1,0 +1,56 @@
+{
+  "docs_auth": {
+    "title": "Giriş & Kayıt",
+    "sections": [
+      {
+        "heading": "Yeni bir hesap oluşturma (Kayıt)",
+        "body": [
+          "Flovers'yi kullanmak için kişisel bir kullanıcı hesabı oluşturmanız gerekir. Kayıt doğrudan mobil uygulamada gerçekleştirilir.",
+          "Kayıt sırasında yalnızca e-posta adresi ve şifre gereklidir. Bu aşamada herhangi bir ek kişisel bilgi talep edilmemektedir.",
+          "Temel güvenliği sağlamak için şifre en az 8 karakter uzunluğunda olmalı ve en az bir rakam ve bir özel karakter içermelidir.",
+          "Kaydı tamamlamadan önce Hizmet Koşullarını ve Gizlilik Politikasını kabul etmelisiniz."
+        ]
+      },
+      {
+        "heading": "E-posta ile hesap aktivasyonu",
+        "body": [
+          "Kayıt formunu gönderdikten sonra, belirtilen e-posta adresine bir aktivasyon e-postası gönderilir.",
+          "Hesabınızı aktif hale getirmek için e-postada yer alan onay bağlantısına tıklamanız gerekmektedir.",
+          "Hesap aktif edilene kadar uygulamaya giriş yapılamamaktadır."
+        ]
+      },
+      {
+        "heading": "Aktivasyon e-postasının tekrar gönderilmesi",
+        "body": [
+          "Aktivasyon e-postasını almadıysanız uygulama içinden tekrar gönderilmesini talep edebilirsiniz.",
+          "Bu seçenek giriş veya kayıt ekranında mevcuttur ve orijinal mesajın kaybolması, gecikmesi veya spam olarak filtrelenmesi durumunda kullanılabilir.",
+          "Başka bir aktivasyon mesajı istemeden önce mutlaka spam veya önemsiz posta klasörünüzü kontrol ettiğinizden emin olun."
+        ]
+      },
+      {
+        "heading": "Mevcut bir hesaba giriş yapma",
+        "body": [
+          "Giriş yapmak için yalnızca hesabınızla ilişkili e-posta adresine ve şifreye ihtiyacınız vardır.",
+          "Hesabınız henüz etkinleştirilmediyse uygulama öncelikle e-posta adresinizi onaylamanızı isteyecektir.",
+          "Oturum açma kimlik bilgileri arka uçta güvenli bir şekilde doğrulanır; şifreler hiçbir zaman düz metin olarak saklanmaz."
+        ]
+      },
+      {
+        "heading": "Unutulan bir şifreyi sıfırlama",
+        "body": [
+          "Şifrenizi unuttuğunuz için giriş yapamıyorsanız şifre sıfırlama e-postası talep edebilirsiniz.",
+          "Sıfırlama e-postası, talimatlar ve yeni bir şifre belirlemenize olanak tanıyan güvenli bir bağlantı içerir.",
+          "Yeni bir şifre belirledikten sonra güncellenen kimlik bilgilerini kullanarak hemen giriş yapabilirsiniz."
+        ]
+      },
+      {
+        "heading": "Güvenlik notları",
+        "body": [
+          "Her kullanıcı hesabı, kayıt sırasında seçilen benzersiz bir şifre ile korunur.",
+          "Güvenlik nedeniyle giriş bilgilerinizi başka kişilerle paylaşmamalısınız.",
+          "Hesabınıza yetkisiz erişimden şüpheleniyorsanız şifrenizi mümkün olan en kısa sürede değiştirin."
+        ]
+      }
+    ]
+  }
+}

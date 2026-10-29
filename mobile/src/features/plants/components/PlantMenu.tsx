@@ -16,6 +16,7 @@ type Props = {
   onShowQr: () => void;
   onShare?: () => void;
   sharingActive?: boolean;
+  canEdit?: boolean;
 };
 
 export default function PlantMenu({
@@ -27,6 +28,7 @@ export default function PlantMenu({
   onShowQr,
   onShare,
   sharingActive,
+  canEdit = true,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -49,17 +51,17 @@ export default function PlantMenu({
         onPress={onDetails}
       />
 
-      {onShare && <MenuItem
+      {canEdit && onShare && <MenuItem
         label={sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.form.share", "Share plants")}
         icon="share-variant-outline"
         onPress={onShare}
       />}
 
-      <MenuItem
+      {canEdit && <MenuItem
         label={tr("plants.menu.edit", "Edit plant")}
         icon="pencil-outline"
         onPress={onEdit}
-      />
+      />}
 
       <MenuItem
         label={tr("plants.menu.reminders", "Show reminders")}
@@ -74,18 +76,18 @@ export default function PlantMenu({
         onPress={onJournal}
       />
 
-      <MenuItem
+      {canEdit && <MenuItem
         label={tr("plants.menu.showQr", "Show QR code")}
         icon="qrcode"
         onPress={onShowQr}
-      />
+      />}
 
-      <MenuItem
+      {canEdit && <MenuItem
         label={tr("plants.menu.delete", "Delete plant")}
         icon="trash-can-outline"
         danger
         onPress={onDelete}
-      />
+      />}
     </View>
   );
 }

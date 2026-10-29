@@ -1,0 +1,202 @@
+{
+  "docs_readings": {
+    "title": "Sensör verileri",
+    "sections": [
+      {
+        "heading": "Bu ekranın amacı",
+        "body": [
+          "Sensör okumaları ekranı, ev bitkilerinize bağlı IoT cihazlarını görüntülemenize ve yönetmenize olanak tanır.",
+          "Her cihaz, hava sıcaklığı, hava nemi, ışık seviyesi ve toprak nemi gibi çevresel ölçümleri Flovers'ye gönderebilir.",
+          "Bu özellik, örneğin Arduino veya ESP tabanlı kartlar gibi kendi cihazlarını oluşturan veya kullanan ve evdeki bitki koşullarını zaman içinde izlemek isteyen kullanıcılar için tasarlanmıştır.",
+          "Cihazlar ayrıca manuel programlı sulama ve otomatik toprak nemi bazlı sulama için bir su pompasıyla da yapılandırılabilir."
+        ]
+      },
+      {
+        "heading": "Cihaz döşemeleri ve en son sensör okumaları",
+        "body": [
+          "Ekranda her kutucuğun bağlı bir cihazı temsil ettiği kutucukların listesi görüntülenir.",
+          "Her kutucukta cihazın veya ev bitkisinin adı, konumu ve cihazdan alınan en son sensör okumaları gösterilir.",
+          "Cihaz için etkinleştirilen sensörlere bağlı olarak karo, hava sıcaklığını, hava nemini, ışık seviyesini ve toprak nemini gösterebilir.",
+          "Henüz veri alınmadıysa değerler yerine yer tutucular gösterilir.",
+          "Cihaz bir su pompasıyla yapılandırılmışsa kutucukta ayrıca pompayla ilgili kontroller ve en son pompa çalışma süresi de dahil olmak üzere bilgiler gösterilir."
+        ]
+      },
+      {
+        "heading": "Cihaz döşemelerindeki su pompası bölümü",
+        "body": [
+          "Bir cihazın su pompası desteği etkinleştirildiğinde kutucuğu ek pompa kontrollerini görüntüler.",
+          "Kutucukta otomatik pompa sulamanın etkin olup olmadığı, otomatik sulama için kullanılan toprak nemi eşiği, son kaydedilen pompa çalışması ve manuel programlı sulama için bir düğme gösterilebilir.",
+          "Manuel sulama düğmesinin durumu, bekleyen bir sulama talebinin mevcut olup olmadığına bağlı olarak değişir.",
+          "Eğer herhangi bir manuel sulama talebi beklenmiyorsa, düğme Programlı sulama gösterir.",
+          "Eğer manuel sulama talebi zaten beklemedeyse, düğme Sulamayı Programsız olarak gösterir.",
+          "Bu, o cihaz için sulamanın zaten talep edilip edilmediğinin doğrudan döşemeden görünmesini sağlar."
+        ]
+      },
+      {
+        "heading": "Döşeme etkileşimleri",
+        "body": [
+          "Döşeme gövdesine dokunduğunuzda doğrudan söz konusu cihazın sensör okumaları Geçmiş ekranına yönlendirilirsiniz.",
+          "Sıcaklık, nem, ışık veya toprak nemi gibi belirli bir okuma simgesine dokunduğunuzda, söz konusu ölçümün önceden seçildiği sensör okumaları Geçmiş ekranı açılır.",
+          "Bu, belirli bir okuma türü için ayrıntılı grafiklere hızlı erişim sağlar."
+        ]
+      },
+      {
+        "heading": "Cihaz işlemleri",
+        "body": [
+          "Her cihaz kutucuğu, ek eylemlerin yer aldığı 3 noktalı bir menü içerir.",
+          "Mevcut seçenekler arasında sensör okuma geçmişi, ev bitkisi ayrıntıları, Cihaz ayrıntıları, Cihazı düzenle ve Cihazı sil yer alır.",
+          "Cihaz ayrıntıları eylemi, seçilen cihaz için oluşturulan tanımlayıcılar, etkin sensörler, pompa konfigürasyonu ve cihaz tarafından kullanılan hesap sırrı dahil olmak üzere kurulum bilgilerinin yer aldığı bir mod açar.",
+          "Bir cihazın silinmesi, cihazı ve ev bitkisiyle olan ilişkisini kalıcı olarak kaldırır."
+        ]
+      },
+      {
+        "heading": "Sensör okumaları Geçmişi",
+        "body": [
+          "Sensör okumaları Geçmişi ekranı, toplanan sensör verileri için ayrıntılı grafikler görüntüler.",
+          "Veriler günlük, haftalık ve aylık toplama kullanılarak görüntülenebilir.",
+          "Hava sıcaklığı, hava nemi, ışık seviyesi ve toprak nemi için grafikler mevcuttur.",
+          "Yalnızca cihaz tarafından sağlanan veriler görüntülenebilir.",
+          "Arka uç, sensör okumalarını saatlik gruplar halinde saklar. Cihaz aynı saat için birden fazla sensör okuması gönderirse mevcut saatlik kayıt kopyalanmak yerine güncellenir."
+        ]
+      },
+      {
+        "heading": "FAB eylemleri",
+        "body": [
+          "Kayan Eylem Düğmesi, cihaz yönetimi ve yapılandırmasıyla ilgili eylemler sağlar.",
+          "Kullanılabilir eylemler arasında, filtreler etkinken Cihazı bağla, Cihaz kurulumu, Sırala, Filtrele, Dışa aktarmayı gönder ve Filtreyi temizle yer alır.",
+          "Sıralama ev bitkisinin adına, konumuna veya son okunma zamanına göre uygulanabilir.",
+          "Filtreleme ev bitkisine, konuma ve etkin veya devre dışı gibi cihaz durumuna göre uygulanabilir.",
+          "Dışa aktarma gönder eylemi, sensör okumalarının elektronik tablo dışa aktarımını e-postayla gönderir. Dışa aktarma, okuma kayıtlarını ve sulama görevi kayıtlarını içerir. Filtreler uygulanırsa dışa aktarılan veriler bu filtreleri yansıtır."
+        ]
+      },
+      {
+        "heading": "Bir cihazı bağlama",
+        "body": [
+          "Bağlantı cihazı, yeni bir okuma cihazı kurmak ve onu bir ev bitkisiyle ilişkilendirmek için kullanılır.",
+          "Kurulum sırasında cihaz adını, bağlantılı ev bitkisini, etkin veya devre dışı durumunu, okuma aralığını, etkin sensörleri, düşük toprak nemi uyarılarını, düşük toprak nemi için e-posta ve anlık bildirimleri, su pompası desteğini, otomatik pompa başlatmayı, otomatik sulama toprağı nem eşiğini ve sulama tamamlandıktan sonra e-posta ve anlık bildirimleri yapılandırabilirsiniz.",
+          "Her cihaz, oluşturulan bir Cihaz Anahtarını alır. Kullanıcı hesabının ayrıca bir Kimlik Doğrulama Gizli Anahtarı vardır. Bu kimlik bilgileri birlikte, fiziksel cihazın arka uçla iletişim kurmasına olanak tanır."
+        ]
+      },
+      {
+        "heading": "Cihaz kimlik doğrulaması ve veri akışı",
+        "body": [
+          "Cihazlar, Kimlik Doğrulama Gizli Anahtarını, Cihaz Anahtarını ve isteğe bağlı Cihaz Kimliğini kullanarak kimlik doğrulaması yapar.",
+          "Cihaz besleme uç noktaları için kullanıcı oturum açma belirtecine gerek yoktur. Yetkilendirme, cihaz kimlik bilgileri aracılığıyla gerçekleştirilir.",
+          "Bu, kartın verileri doğrudan Flovers'ye gönderebildiği basit IoT entegrasyonlarına olanak tanır.",
+          "Oluşturulan Arduino veya ESP kodu, seçilen cihaz için gerekli uç noktaları ve kimlik bilgilerini içerir. Kodu yüklemeden önce kullanıcının kendi WiFi SSID'sini ve şifresini doldurması gerekir."
+        ]
+      },
+      {
+        "heading": "Cihaz kurulumu",
+        "body": [
+          "Cihaz kurulumu seçeneği, donanımın yapılandırılmasına ilişkin teknik bilgiler sağlar.",
+          "Sensör okumalarını göndermek için alım uç noktasını, en son sensör okumalarını almak için besleme uç noktasını, örnek yükleri, hesap Kimlik Doğrulama Gizli Anahtarını ve Kimlik Doğrulama Gizli Anahtarını döndürme seçeneğini içerir.",
+          "Kimlik Doğrulama Gizli Anahtarının döndürülmesi eski sırrı geçersiz kılar, dolayısıyla önceki sırrı kullanan mevcut cihaz kodlarının güncellenmesi gerekir."
+        ]
+      },
+      {
+        "heading": "Cihaz ayrıntıları",
+        "body": [
+          "Cihaz ayrıntıları modu, belirli bir cihaza ilişkin bilgileri gösterir.",
+          "Cihaz adını, Cihaz Anahtarını, Kimlik Doğrulama Gizli Anahtarını, bağlantılı ev bitkisini, etkin sensörleri ve bir su pompasının bağlı olup olmadığını içerir.",
+          "Modal ayrıca kullanıcının seçilen cihaz için oluşturulan Arduino kodunu e-postayla göndermesine de olanak tanır. E-posta, oluşturulan kodu e-posta gövdesinde ve bir .ino eki olarak içerir.",
+          "Oluşturulan kod, etkinleştirilmiş sensörler, pompa desteği, otomatik sulama ayarları, Cihaz Anahtarı, Cihaz Kimliği ve Kimlik Doğrulama Gizli Anahtarı dahil olmak üzere seçilen cihaz yapılandırmasını temel alır."
+        ]
+      },
+      {
+        "heading": "Manuel programlı sulama",
+        "body": [
+          "Bir cihazda su pompası desteği etkinse kullanıcı manuel sulama isteği planlayabilir.",
+          "Manuel sulama, pompayı mobil uygulamadan hemen çalıştırmaz. Bunun yerine arka uç, cihaz için bekleyen bir pompa görevi oluşturur.",
+          "Fiziksel kart, bekleyen manuel sulama görevleri için arka ucu kontrol eder. Bekleyen bir görev mevcutsa ve kartta pompa kontrol mantığı varsa, pompayı çalıştırabilir ve tamamlandığını arka uca bildirebilir.",
+          "Manuel programlı sulama, mevcut toprak nemi değerini, otomatik sulama eşiğini ve otomatik sulama soğuma süresini dikkate almaz.",
+          "Bu, manuel sulamanın açık bir kullanıcı isteği olarak ele alındığı anlamına gelir.",
+          "Planlanmış bir manuel sulama talebi, cihaz bunu almadan önce de geri çağrılabilir."
+        ]
+      },
+      {
+        "heading": "Manuel sulama görevi zamanlaması",
+        "body": [
+          "Oluşturulan cihaz kodu, sensör okumaları ve manuel sulama kontrolleri için ayrı zamanlama kullanır.",
+          "Varsayılan olarak sensör okumaları saatte bir gönderilir.",
+          "Otomatik sulama kontrolleri saatlik okuma döngüsünün bir parçası olarak gerçekleşir.",
+          "Bekleyen manuel sulama görevleri, varsayılan olarak dakikada bir kez olmak üzere daha sık kontrol edilir.",
+          "Bu, her dakika sensör okumaları gönderilmeden manuel sulama taleplerinin daha hızlı alınmasını sağlar.",
+          "Yürütme sırası aynı kalır: normal okuma döngüsü sırasında sensör okumalarını gönderin, bekleyen manuel sulamayı kontrol edin ve manuel sulama yapılmadıysa otomatik sulama koşullarını kontrol edin.",
+          "Bir dakikalık manuel sulama kontrolü saatlik okuma döngüsünün dışında çalıştığında yalnızca bekleyen manuel sulama görevlerini kontrol eder."
+        ]
+      },
+      {
+        "heading": "Otomatik sulama",
+        "body": [
+          "Su pompası desteği etkinse otomatik sulama da etkinleştirilebilir.",
+          "Otomatik sulama, toprak nemi sensörü okumalarını ve yapılandırılmış bir eşiği kullanır.",
+          "Kart, arka uçtan otomatik sulamanın etkinleştirilip etkinleştirilmediği ve hangi eşiğin kullanılması gerektiği de dahil olmak üzere mevcut pompa yapılandırmasını sorar.",
+          "Otomatik sulama etkinleştirilirse ve mevcut toprak nemi yapılandırılan eşiğin altındaysa kart, pompayı çalıştırabilir.",
+          "Otomatik sulama, su pompası desteğinin etkinleştirilmesine, toprak nemi sensörünün etkinleştirilmesine, otomatik pompa başlatmanın etkinleştirilmesine, geçerli bir toprak nemi eşiğine, cihazın etkin olmasına ve mevcut pompa ayarlarının arka uç onayına bağlıdır.",
+          "Otomatik sulamanın, pompanın çok sık etkinleştirilmesini önlemek için bir soğuma süresi vardır.",
+          "Aynı döngüde manuel sulamanın otomatik sulamaya göre önceliği vardır. Manuel sulama çalışıyorsa, o döngü için otomatik sulama atlanır."
+        ]
+      },
+      {
+        "heading": "Pompa tamamlanma raporlaması",
+        "body": [
+          "Bir pompa çalışmasının ardından cihaz, tamamlandığını arka uca bildirir.",
+          "Manuel programlı sulama veya toprak nemi tarafından tetiklenen otomatik sulama için pompanın tamamlandığı bildirilebilir.",
+          "Bir pompa çalıştırması başarıyla kaydedildiğinde arka uç, son pompa çalıştırma süresini, son pompa çalıştırma kaynağını ve uygun olduğu yerde ilgili pompa görevi durumunu günceller.",
+          "Sulamanın tamamlanma bildirimleri etkinleştirilirse arka uç, sulama tamamlandıktan sonra e-posta ve anlık bildirimler gönderebilir."
+        ]
+      },
+      {
+        "heading": "Sulama bildirimleri",
+        "body": [
+          "Cihazlar, sulama tamamlandıktan sonra bildirim gönderecek şekilde yapılandırılabilir.",
+          "Desteklenen bildirim türleri e-posta bildirimi ve anında bildirimdir.",
+          "Bunlar düşük toprak nemi uyarılarından farklıdır.",
+          "Sulama bildirimleri yalnızca cihazda su pompası desteği etkin olduğunda geçerlidir.",
+          "Cihazdan alınan pompa tamamlanma raporuna göre manuel veya otomatik sulama tamamlandıktan sonra sulama bildirimi gönderilebilir."
+        ]
+      },
+      {
+        "heading": "Düşük toprak nemi uyarıları",
+        "body": [
+          "Toprak nemi sensörüne sahip cihazlar, toprak nemi yapılandırılmış bir eşiğin altına düştüğünde uyarı gönderecek şekilde yapılandırılabilir.",
+          "Düşük toprak nemi uyarıları, e-posta bildirimlerini ve anlık bildirimleri destekler.",
+          "Arka uç uyarı durumunu izler, böylece ev bitkisi eşiğin altında kaldığı sürece kullanıcıya her okumada tekrar tekrar bilgi verilmez.",
+          "Nem değeri düşük nem durumuna geçtiğinde yeni bir uyarı gönderilir. Nem yeniden eşiğin üzerine çıktığında uyarı durumu sıfırlanır.",
+          "Düşük toprak nemi uyarıları, sulamanın tamamlanma bildirimlerinden bağımsızdır."
+        ]
+      },
+      {
+        "heading": "Veri aktarımı",
+        "body": [
+          "Sensör okumalarının dışa aktarımı, kullanıcıya e-postayla bir elektronik tablo gönderir.",
+          "Elektronik tablo, sensör okuma verilerini ve sulama görevi kayıtlarını içerir.",
+          "Sensör okumaları sekmesi sıcaklık, nem, ışık ve toprak nemi gibi sensör okumalarını içerir.",
+          "Sulama görevleri sekmesi, manuel veya otomatik kaynak, durum, talep edilen süre, teslim süresi, yürütülen süre, iptal edilen süre, talep üzerine nem, talep üzerine eşik ve hata mesajı gibi pompa görevi kayıtlarını içerir.",
+          "Sensör okumaları ekranında filtreler uygulanırsa dışa aktarma bu filtrelere uyar. Örneğin, dışa aktarma belirli bir ev bitkisi veya cihaz kapsamıyla sınırlıysa sulama görevi kayıtları da eşleşen cihazlarla sınırlıdır."
+        ]
+      },
+      {
+        "heading": "Oluşturulan Arduino veya ESP kodu",
+        "body": [
+          "Oluşturulan kod, ESP32 tarzı kartlar için düzenlemeye hazır bir başlangıç noktası olarak tasarlanmıştır.",
+          "Wi-Fi bağlantısı mantığını, zaman senkronizasyonunu, sensörü başlatmayı, etkin sensörleri okumayı, sensör okumalarını arka uca göndermeyi, manuel sulama görevlerini kontrol etmeyi, arka uç kontrollü otomatik sulama ayarlarını kontrol etmeyi, gerektiğinde bir pompayı çalıştırmayı ve pompanın tamamlandığını raporlamayı içerir.",
+          "Oluşturulan kod, okuma yükleme ve manuel sulama görevi kontrollerini ayrı tutar.",
+          "Varsayılan olarak sensör okumaları saatlik olarak gönderilirken manuel sulama görevleri dakikada bir kontrol edilir.",
+          "Kullanıcılar oluşturulan kodu kendi donanımlarına, pinlerine, kalibrasyon değerlerine, pompa röle kablolarına ve kart tipine göre incelemeli ve ayarlamalıdır."
+        ]
+      },
+      {
+        "heading": "Önemli notlar",
+        "body": [
+          "Cihazın stabilitesi, kalibrasyonu, fiziksel kablolaması ve kurulumu kullanıcının sorumluluğundadır.",
+          "Sensör sensörü okumaları bilgi amaçlıdır ve gerçek dünya gözlemleriyle birlikte yorumlanmalıdır.",
+          "Su pompası kontrolü ekstra dikkat gerektirir. Kullanıcılar rölenin, pompanın, güç kaynağının, boruların ve su kaynaklarının güvenli bir şekilde kurulduğundan emin olmalıdır.",
+          "Flovers cihaz verilerini kaydeder ve görüntüler, ancak üçüncü taraf veya kendi kendine oluşturulmuş sensörlerin doğruluğunu garanti etmez.",
+          "Flovers ayrıca fiziksel bir pompanın başarıyla çalışacağını garanti etmez. Pompanın yürütülmesi kullanıcının donanımına, oluşturulan koda, WiFi bağlantısına ve doğru cihaz yapılandırmasına bağlıdır."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "subject": "Penyiraman selesai",
+  "title": "Penyiraman selesai",
+  "line1": "Penyiraman untuk \"{device_name}\" telah selesai.",
+  "details": "Jenis: {source_label}. Tanaman: {plant_name}. Lokasi: {location}. Selesai pada: {completed_at}.",
+  "cta": "Buka data sensor",
+  "source_manual": "Manual",
+  "source_automatic": "Otomatis",
+  "push_title": "Penyiraman selesai",
+  "push_body": "{device_name}: Penyiraman {source_label} telah selesai."
+}

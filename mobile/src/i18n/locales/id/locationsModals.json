@@ -1,0 +1,72 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Batal",
+      "delete": "Hapus",
+      "create": "Buat",
+      "save": "Simpan",
+      "apply": "Terapkan",
+      "reset": "Setel ulang"
+    },
+    "confirmDelete": {
+      "title": "Hapus lokasi",
+      "messagePrefix": "Apakah Anda yakin ingin menghapus",
+      "messageSuffix": "? Tindakan ini tidak dapat dibatalkan.",
+      "blockedTitle": "Tidak dapat menghapus lokasi ini",
+      "blockedMessage": "Lokasi ini telah menetapkan {{countLabel}}. Hapus atau pindahkan tanaman hias tersebut terlebih dahulu, lalu coba lagi.",
+      "blockedToast": "Lokasi ini tidak dapat dihapus karena sudah ditetapkan tanaman hiasnya. Hapus atau pindahkan tanaman hias tersebut terlebih dahulu."
+    },
+    "edit": {
+      "titleCreate": "Tambahkan lokasi",
+      "titleEdit": "Sunting lokasi",
+      "nameLabel": "Nama lokasi",
+      "namePlaceholder": "misalnya Ruang tamu, Rak dapur",
+      "categoryLabel": "Kategori",
+      "categories": {
+        "indoor": "Dalam ruangan",
+        "outdoor": "Di luar ruangan",
+        "other": "Lainnya"
+      },
+      "quickSuggestions": "Saran cepat",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Ruang tamu",
+          "kitchen": "Dapur",
+          "diningRoom": "Ruang makan",
+          "bedroom": "Kamar tidur",
+          "bathroom": "Kamar mandi",
+          "hallway": "Lorong",
+          "office": "Kantor",
+          "kidsRoom": "Kamar anak-anak"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Teras",
+          "patio": "Teras",
+          "garden": "Taman",
+          "frontYard": "Halaman depan",
+          "backyard": "Halaman belakang",
+          "porch": "Teras",
+          "greenhouse": "Rumah kaca"
+        },
+        "other": {
+          "staircase": "Tangga",
+          "garage": "Garasi",
+          "basement": "Ruang bawah tanah",
+          "lobby": "Lobi",
+          "sunroom": "Ruang berjemur",
+          "workshop": "Bengkel",
+          "studio": "Studio",
+          "attic": "Loteng"
+        }
+      }
+    },
+    "sort": {
+      "title": "Urutkan lokasi",
+      "keyName": "Nama lokasi",
+      "keyCount": "Jumlah tanaman hias",
+      "dirAsc": "Naik",
+      "dirDesc": "Menurun"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "İptal",
+      "apply": "Uygula",
+      "reset": "Sıfırla"
+    },
+    "complete": {
+      "completionDateLabel": "Tamamlanma tarihi",
+      "completionDateHint": "Bu görevin tamamlandığı tarihi seçin. Gelecek tarihlere izin verilmez.",
+      "title": "Görevi tamamlandı olarak işaretle",
+      "overdueInfo": "Bu görev gecikmiştir. Bir sonraki vade tarihi {{intervalText}} tamamlanma tarihinden itibaren hesaplanacaktır.",
+      "noteLabel": "Not (isteğe bağlı)",
+      "noteHint": "Bu not kaydedilecek ve daha sonra ev bitkileri Dergisi'nde her ev bitkisi için görüntülenebilir.",
+      "notePlaceholder": "Ne yaptığınız, gözlemleriniz vb. hakkında kısa bir not ekleyebilirsiniz.",
+      "confirm": "Tamamlandı olarak işaretle"
+    },
+    "completeBulk": {
+      "completionDateHint": "Tamamlanan her görev için bu tarih kaydedilecektir. Gelecek tarihlere izin verilmez.",
+      "title": "{{count}} görevlerini tamamlandı olarak işaretle",
+      "overdueInfo": "Bazı görevler gecikti. Bir sonraki son tarih, seçilen tamamlanma tarihi {{intervalText}}'ye göre hesaplanacaktır.",
+      "noteHint": "Bu not, tamamlanan her göreve kaydedilir. Daha sonra her bitkinin günlüğünde görüntüleyebilirsiniz.",
+      "confirm": "Tamamlandı olarak işaretle"
+    },
+    "filter": {
+      "title": "Görevleri filtrele",
+      "plantLabel": "Bitki",
+      "locationLabel": "Konum",
+      "taskTypesLabel": "Görev türleri",
+      "dueDateRangeLabel": "Son tarih aralığı",
+      "fromLabel": "Gönderen",
+      "toLabel": "Kime",
+      "anyPlant": "Herhangi bir ev bitkisi",
+      "selectPlant": "Ev bitkisi seçin",
+      "anyLocation": "Herhangi bir konum",
+      "datePlaceholder": "YYYY-AA-GG",
+      "clear": "Temizle"
+    },
+    "sort": {
+      "title": "Görevleri sırala",
+      "sortByLabel": "Sırala",
+      "directionLabel": "Yön",
+      "keys": {
+        "dueDate": "Son tarih",
+        "plant": "Ev bitkisi adı",
+        "location": "Konum"
+      },
+      "directions": {
+        "asc": "Artan",
+        "desc": "Azalan"
+      }
+    }
+  }
+}

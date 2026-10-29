@@ -1,0 +1,77 @@
+{
+  "docs_home": {
+    "title": "Ana sayfa",
+    "sections": [
+      {
+        "heading": "Ana ekranın amacı",
+        "body": [
+          "Ana sayfa, başarılı bir giriş yaptıktan sonra göreceğiniz ana ekrandır.",
+          "Günlük çalışmanıza odaklanır: hatırlatıcılarınızdan oluşturulan görevlere, böylece bugün nelere dikkat edilmesi gerektiğini veya nelerin gecikmiş olduğunu hızlı bir şekilde görebilirsiniz.",
+          "Zamanı gelen görev yoksa, ekranda o anda hiçbir şeyin planlanmadığını açıklayan ve hatırlatıcı oluşturma gibi sonraki adımları öneren bir bilgi kutusu görüntülenir."
+        ]
+      },
+      {
+        "heading": "Görev listesi (hatırlatıcılardan oluşturulan kutucuklar)",
+        "body": [
+          "Her kutucuk, bir Hatırlatma tanımından oluşturulan tek bir Görevi temsil eder (örneğin: Sulama, Sisleme, Gübreleme, Saksı Değiştirme veya genel Bakım).",
+          "Görevler, Hatırlatıcıda tanımlanan yinelenme kurallarına göre vadeleri geldiğinde otomatik olarak görünür.",
+          "Her kutucukta genellikle görev türü, ev bitkisi adı, konum ve vade durumu (Bugün Vadesi Gelmiş veya Vadesi Gecikmiş gibi) gösterilir."
+        ]
+      },
+      {
+        "heading": "Görev kutucuğu menüsü (görev başına eylemler)",
+        "body": [
+          "Her görev kutucuğu, söz konusu görevle ilgili eylemlerin yer aldığı bir bağlam menüsü (üç noktalı menü) içerir.",
+          "Tamamlandı olarak işaretle: görevi kapatır ve isteğe bağlı olarak bir not eklemenize olanak tanıyarak ayrıntılı bir bakım geçmişi oluşturmanıza yardımcı olur.",
+          "Hatırlatıcıyı düzenle: görevle ilişkili Hatırlatıcıyı açar, böylece yinelenme ayarlarını değiştirebilirsiniz.",
+          "Ev bitkisine git: İlgili ev bitkisinin doğrudan ev bitkisi Ayrıntıları görünümüne gider.",
+          "Geçmişi göster: aynı ev bitkisi veya hatırlatıcı için önceden tamamlanmış görevleri gösteren görev geçmişini açar."
+        ]
+      },
+      {
+        "heading": "Kayan Eylem Düğmesi (FAB) kısayolları",
+        "body": [
+          "Ana ekranda, görevlerle çalışmak için hızlı eylemleri açan bir Kayan Eylem Düğmesi (FAB) bulunur.",
+          "Gecikenleri göster: yalnızca süresi geçmiş görevleri görüntüleyen bir kısayol filtresi uygular.",
+          "Son tarihi bugün göster: Son tarihi bugün olan görevleri görüntüleyen bir kısayol filtresi uygular.",
+          "Sırala: listedeki görevlerin sırasını değiştirir.",
+          "Filtrele: Seçilen kriterlere göre listeyi daraltır.",
+          "Geçmiş: ayrı olarak belgelenen Görev Geçmişi ekranına gider."
+        ]
+      },
+      {
+        "heading": "Sıralama seçenekleri",
+        "body": [
+          "Sıralama, görev listesini tercih ettiğiniz iş akışına uyacak şekilde ayarlamanıza olanak tanır.",
+          "Mevcut sıralama seçenekleri şunları içerir: Son tarih, ev bitkisi adı ve Konum."
+        ]
+      },
+      {
+        "heading": "Filtreleme seçenekleri",
+        "body": [
+          "Filtreler belirli bir görev alt kümesine odaklanmanıza yardımcı olur.",
+          "Görevleri ev bitkisi adı, Konum, Görev türü ve Son tarih aralığına göre filtreleyebilirsiniz.",
+          "Örneğin yalnızca belirli bir konumdaki ev bitkileri için Sulama görevlerini göstermek üzere birden fazla filtre birleştirilebilir."
+        ]
+      },
+      {
+        "heading": "Toplu tamamlama (birden fazla görevi kapatma)",
+        "body": [
+          "Toplu tamamlama, hızlı kısayol görünümleri kullanıldığında kullanılabilir: Gecikmiş olanı göster veya Son tarihi bugün göster.",
+          "Bu kısayol filtrelerinden biri etkin olduğunda, Kayan Eylem Düğmesi geçici olarak \"Görünür olarak tamamlandı olarak işaretle\" gibi ek bir eylemi görüntüler.",
+          "Bu eylem, tek tek görevlerin manuel olarak seçilmesini gerektirmeden, o anda görünür olan tüm görevleri bir kerede kapatır.",
+          "Toplu tamamlama, aynı bakım işlemini birden fazla ev bitkisi için tek oturumda gerçekleştirdiğiniz durumlar için tasarlanmıştır.",
+          "Seçtiğiniz akışa bağlı olarak toplu işlemden sonra tamamlanan görevlere notlar ekleyebilirsiniz."
+        ]
+      },
+      {
+        "heading": "Ana Sayfadan Navigasyon",
+        "body": [
+          "Ana ekran, görev eylemleri ve FAB kısayolları aracılığıyla uygulamanın diğer bölümlerine hızlı gezinme sağlar.",
+          "Bireysel bir görevden doğrudan ev bitkisi Ayrıntılarına veya görev geçmişine geçebilirsiniz.",
+          "FAB'dan Görev Geçmişini açabilir veya sıralama ve filtrelemeyi kullanarak görev listesini hassaslaştırabilirsiniz."
+        ]
+      }
+    ]
+  }
+}

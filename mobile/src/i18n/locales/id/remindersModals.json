@@ -1,0 +1,66 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Batal",
+      "apply": "Terapkan",
+      "clear": "Jelas",
+      "delete": "Hapus",
+      "create": "Buat",
+      "update": "Perbarui",
+      "reset": "Setel ulang",
+      "pause": "Jeda",
+      "resume": "Lanjutkan"
+    },
+    "confirmDelete": {
+      "title": "Hapus pengingat",
+      "areYouSurePrefix": "Apakah Anda yakin ingin menghapus",
+      "areYouSureSuffix": "? Tindakan ini tidak dapat dibatalkan."
+    },
+    "edit": {
+      "titleCreate": "Tambahkan pengingat",
+      "titleEdit": "Sunting pengingat",
+      "typeLabel": "Ketik",
+      "plantLabel": "Tanaman",
+      "selectPlant": "Pilih tanaman hias",
+      "locationLabel": "Lokasi",
+      "locationPlaceholder": "Lokasi",
+      "dueDateLabel": "Tanggal jatuh tempo",
+      "datePlaceholder": "YYYY-MM-DD",
+      "intervalLabel": "Selang waktu",
+      "intervalValuePlaceholder": "Nilai"
+    },
+    "filter": {
+      "title": "Filter pengingat",
+      "plantLabel": "Tanaman",
+      "selectPlant": "Pilih tanaman hias",
+      "anyPlant": "Tanaman hias apa pun",
+      "locationLabel": "Lokasi",
+      "anyLocation": "Lokasi mana pun",
+      "taskTypesLabel": "Jenis tugas",
+      "dueDateRangeLabel": "Rentang tanggal jatuh tempo",
+      "fromLabel": "Dari",
+      "toLabel": "Untuk",
+      "datePlaceholder": "YYYY-MM-DD"
+    },
+    "sort": {
+      "title": "Urutkan pengingat",
+      "sortByLabel": "Urutkan berdasarkan",
+      "directionLabel": "Arah",
+      "keys": {
+        "dueDate": "Tanggal jatuh tempo",
+        "plant": "Nama tanaman hias",
+        "location": "Lokasi"
+      },
+      "directions": {
+        "asc": "Naik",
+        "desc": "Menurun"
+      }
+    },
+    "toggle": {
+      "pauseTitle": "Jeda pengingat",
+      "resumeTitle": "Lanjutkan pengingat",
+      "pauseBody": "Jeda pengingat ini untuk {{name}}? Tugasnya yang seharusnya akan disembunyikan sampai Anda melanjutkannya.",
+      "resumeBody": "Lanjutkan pengingat ini untuk {{name}}? Tugas berikutnya yang harus diselesaikan akan muncul lagi."
+    }
+  }
+}

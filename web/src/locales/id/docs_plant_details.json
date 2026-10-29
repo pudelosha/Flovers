@@ -1,0 +1,71 @@
+{
+  "docs_plant_details": {
+    "title": "Detail tanaman",
+    "sections": [
+      {
+        "heading": "Tujuan dari layar ini",
+        "body": [
+          "Layar Detail tanaman hias adalah tempat sentral untuk melihat dan mengelola satu tanaman hias yang dibuat oleh pengguna.",
+          "Ini menggabungkan informasi khusus tanaman hias, pengingat, tindakan tugas, pembacaan sensor (jika tersedia), dan alat navigasi cepat yang terkait dengan tanaman hias tersebut."
+        ]
+      },
+      {
+        "heading": "Informasi tanaman hias",
+        "body": [
+          "Di bagian atas layar, pengguna dapat melihat gambar tanaman hias, nama tanaman hias, nama definisi tanaman hias opsional, dan lokasi yang ditetapkan.",
+          "Di bawah gambar, ditampilkan parameter detail yang disediakan selama pembuatan tanaman hias, seperti tanggal pembelian, catatan, kondisi cahaya, orientasi, jarak dari jendela, jenis pot bunga, dan jenis tanah.",
+          "Detail ini membantu mengkontekstualisasikan pengingat, pembacaan sensor, dan keputusan perawatan tanaman hias."
+        ]
+      },
+      {
+        "heading": "Tindakan tingkat tanaman hias (menu 3 titik)",
+        "body": [
+          "Menu 3 titik yang terkait dengan header tanaman hias memberikan tindakan tambahan terkait tanaman hias itu sendiri.",
+          "Tindakan yang tersedia termasuk melihat Definisi tanaman hias (jika tanaman hias tertaut ke salah satunya), mengedit detail tanaman hias, mengubah gambar tanaman hias, dan menavigasi ke Pengingat yang difilter untuk tanaman hias ini.",
+          "Mengubah gambar memungkinkan penggantian gambar yang telah ditentukan sebelumnya, menambahkan foto pengguna dari ponsel, atau menghapus gambar."
+        ]
+      },
+      {
+        "heading": "Definisi tanaman hias",
+        "body": [
+          "Jika tanaman hias ditautkan ke Definisi tanaman hias dari database Flovers, pengguna dapat membuka tampilan Definisi tanaman hias khusus.",
+          "Tampilan ini menampilkan informasi tingkat spesies seperti deskripsi tanaman hias, preferensi perawatan, sifat, tingkat kesulitan, kisaran suhu, kelembapan, toksisitas, dan karakteristik pertumbuhan.",
+          "Definisi tanaman hias memberikan panduan umum dan harus ditafsirkan dalam konteks lingkungan aktual pengguna."
+        ]
+      },
+      {
+        "heading": "Pengingat dan tugas",
+        "body": [
+          "Bagian Pengingat menampilkan semua pengingat aktif yang terkait dengan tanaman hias ini.",
+          "Setiap pengingat dapat diakses melalui menu 3 titiknya sendiri, memungkinkan pengguna menyelesaikan tugas, mengedit pengingat, atau melihat riwayat tugas.",
+          "Menyelesaikan tugas mungkin termasuk menambahkan catatan, yang menjadi bagian dari riwayat perawatan tanaman hias."
+        ]
+      },
+      {
+        "heading": "Pembacaan sensor terbaru",
+        "body": [
+          "Jika tanaman hias dihubungkan ke perangkat pembacaan, pembacaan sensor terbaru ditampilkan langsung di layar ini.",
+          "Pembacaan sensor yang didukung meliputi suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah.",
+          "Bagian ini menunjukkan nilai terbaru beserta stempel waktu pembacaan terakhir yang diterima.",
+          "Mengetuk ubin pembacaan sensor akan mengarahkan Anda ke layar Riwayat pembacaan sensor, tempat bagan dan ringkasan terperinci (harian/mingguan/bulanan) ditampilkan untuk suhu, kelembapan, cahaya, dan kelembapan tanah (selama perangkat terhubung ke tanaman hias)."
+        ]
+      },
+      {
+        "heading": "Kode QR dan akses cepat",
+        "body": [
+          "Setiap tanaman hias memiliki kode unik QR yang ditampilkan di bagian bawah layar.",
+          "Memindai kode ini menggunakan tampilan Pemindai akan mengarahkan pengguna langsung ke layar Detail tanaman hias ini.",
+          "Kode QR dapat disimpan ke perangkat atau dikirim melalui email, sehingga mudah untuk dicetak dan dilampirkan ke pot bunga tanaman hias untuk akses cepat."
+        ]
+      },
+      {
+        "heading": "Catatan penting",
+        "body": [
+          "Gambar tanaman hias yang ditambahkan pengguna hanya disimpan di perangkat pengguna dan tidak diunggah ke backend Flovers.",
+          "Gambar tanaman hias yang telah ditentukan sebelumnya berasal dari backend Flovers dan mungkin dihasilkan oleh AI.",
+          "Pembacaan sensor dan saran perawatan bersifat informatif dan harus dikombinasikan dengan penilaian pengguna sendiri."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "resendActivation": {
+    "title": "Etkinleştirmeyi Yeniden Gönder",
+    "subtitle": "E-postanızı girin, yeni bir aktivasyon bağlantısı göndereceğiz.",
+    "email": "E-posta",
+    "sendButton": "Etkinleştirme e-postası gönder",
+    "backToLogin": "Girişe Geri Dön",
+    "errors": {
+      "emailRequired": "Lütfen e-postanızı girin.",
+      "generic": "Bir şeyler ters gitti. Tekrar deneyin."
+    },
+    "success": {
+      "emailSent": "Hesabınızın etkinleştirilmesi gerekiyorsa bir e-posta yolda."
+    }
+  }
+}

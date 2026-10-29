@@ -1,0 +1,32 @@
+{
+  "locations": {
+    "headerTitle": "Lokasi",
+    "empty": {
+      "title": "Belum ada lokasi",
+      "description": "Lokasi muncul secara otomatis saat Anda menetapkannya ke tanaman hias Anda.\n\nEdit tanaman hias dan atur lokasinya untuk mulai mengelompokkan tanaman hias berdasarkan ruangan atau area."
+    },
+    "fab": {
+      "add": "Tambahkan lokasi",
+      "sort": "Urutkan"
+    },
+    "menu": {
+      "edit": "Sunting lokasi",
+      "delete": "Hapus lokasi"
+    },
+    "plantCount": {
+      "label": "Jumlah tanaman hias: {{count}}"
+    },
+    "toast": {
+      "loadFailed": "Gagal memuat lokasi",
+      "added": "Lokasi ditambahkan",
+      "deleted": "Lokasi dihapus",
+      "updated": "Lokasi diperbarui",
+      "updatedLocal": "Lokasi diperbarui (khusus lokal)",
+      "saveFailed": "Tidak dapat menyimpan lokasi",
+      "deleteFailed": "Tidak dapat menghapus lokasi ini."
+    },
+    "alert": {
+      "deleteFailedTitle": "Penghapusan gagal"
+    }
+  }
+}

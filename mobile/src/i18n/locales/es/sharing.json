@@ -23,7 +23,8 @@
       "canCompleteTasks": "Puede completar tareas",
       "noEndDate": "Sin fecha de finalización",
       "until": "Hasta el {{date}}",
-      "you": "Tú"
+      "you": "Tú",
+      "expired": "Caducado"
     },
     "contacts": {
       "title": "Contactos",
@@ -105,7 +106,9 @@
       "showAll": "Mostrar todas",
       "all": "Todas las plantas compartidas",
       "emptyAllTitle": "Aún no hay plantas compartidas",
-      "emptyAllBody": "Comparte plantas con un contacto o pídele a alguien que comparta las suyas contigo."
+      "emptyAllBody": "Comparte plantas con un contacto o pídele a alguien que comparta las suyas contigo.",
+      "displayTasks": "Mostrar tareas",
+      "actions": "Acciones de {{name}}"
     },
     "form": {
       "title": "Compartir plantas",
@@ -113,7 +116,7 @@
       "plant": "Plantas",
       "choosePlant": "Elegir plantas",
       "singlePlantHint": "Elige las plantas y los contactos con los que quieres compartirlas.",
-      "loadFailed": "No se han podido cargar tus plantas.",
+      "loadFailed": "No se pudieron cargar las plantas y los permisos.",
       "retry": "Intentar de nuevo",
       "noPlants": "No hay plantas disponibles. Añade una planta para empezar a compartirla.",
       "contacts": "¿Quién puede acceder a estas plantas?",
@@ -136,7 +139,9 @@
       "shareSelected": "Compartir las plantas seleccionadas",
       "mixedAccess": "Tiene acceso a algunas plantas seleccionadas. Selecciona el contacto para añadir las demás.",
       "mixedPermissions": "Los permisos son distintos entre las plantas seleccionadas.",
-      "endDatesVary": "Las fechas de finalización son distintas entre las plantas seleccionadas."
+      "endDatesVary": "Las fechas de finalización son distintas entre las plantas seleccionadas.",
+      "reload": "Volver a cargar",
+      "conflictHint": "La configuración se ha modificado mientras tanto. Vuelve a cargarla antes de guardar; se sustituirá la selección actual de contactos."
     },
     "toasts": {
       "invitationAdded": "Vista previa: invitación añadida.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "Vista previa: invitación cancelada.",
       "contactUpdated": "Vista previa: contacto actualizado.",
       "contactDeleted": "Vista previa: contacto eliminado.",
-      "sharingSaved": "Vista previa: acceso actualizado.",
-      "accessRemoved": "Vista previa: acceso retirado.",
-      "plantLeft": "Planta compartida eliminada de la vista previa.",
+      "sharingSaved": "Permisos actualizados.",
+      "accessRemoved": "Acceso eliminado.",
+      "plantLeft": "Planta compartida eliminada.",
       "idCopied": "ID copiado.",
       "copyFailed": "No se ha podido copiar el ID.",
       "previewReset": "Vista previa restablecida.",
@@ -166,6 +171,23 @@
       "alreadyPending": "Ya hay una invitación pendiente para esta persona.",
       "throttled": "Demasiadas solicitudes. Espera un poco y vuelve a intentarlo.",
       "unavailable": "No se ha podido conectar. Vuelve a intentarlo."
+    },
+    "access": {
+      "sharedBy": "Compartida por {{name}}",
+      "sharedPlant": "Planta compartida"
+    },
+    "live": {
+      "loadFailed": "No se pudieron cargar las plantas compartidas."
+    },
+    "accessErrors": {
+      "invalid": "Revisa las plantas, los contactos y las fechas de finalización seleccionados.",
+      "notFound": "Esta planta o su permiso de acceso ya no están disponibles.",
+      "notContact": "Solo puedes compartir plantas con contactos que hayan aceptado la invitación.",
+      "notOwner": "Solo el propietario de la planta puede gestionar con quién se comparte.",
+      "conflict": "La configuración se ha modificado mientras tanto. Vuelve a cargarla e inténtalo de nuevo.",
+      "expired": "Elige una fecha de finalización que no haya pasado.",
+      "throttled": "Demasiadas solicitudes. Espera un momento e inténtalo de nuevo.",
+      "unavailable": "No se pudo cargar o actualizar la configuración de uso compartido. Inténtalo de nuevo."
     }
   }
 }

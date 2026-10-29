@@ -7,9 +7,10 @@ import { fetchPlantInstances } from "../../../api/services/plant-instances.servi
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { controls, prompts as pr } from "../../profile/styles/profile.styles";
 import { useSharingPreview } from "../state/SharingPreviewProvider";
+import { SHARING_ERROR_MESSAGES } from "../types/sharing.types";
 import type { PlantShare, PlantSharingUpdate, ShareablePlant, SharingRecipient } from "../types/sharing.types";
 import ContactModalFrame from "./ContactModalFrame";
-import { PreviewNotice, SharingButton, sharingStyles as shared } from "./SharingUI";
+import { SharingButton, sharingStyles as shared } from "./SharingUI";
 
 type RecipientDrafts = Record<string, SharingRecipient[]>;
 
@@ -18,7 +19,7 @@ function localDate(value: Date) {
 }
 
 function initialRecipients(plantId: string, shares: PlantShare[], contactId?: string): SharingRecipient[] {
-  const recipients = shares.filter((share) => share.plant.id === plantId).map((share) => ({
+  const recipients = shares.filter((share) => share.plant.id === plantId && !share.isExpired).map((share) => ({
     contactId: share.contactId,
     canCompleteTasks: share.canCompleteTasks,
     endsOn: share.endsOn,
@@ -31,25 +32,48 @@ function initialRecipients(plantId: string, shares: PlantShare[], contactId?: st
 
 export default function SharePlantModal() {
   const { t } = useTranslation();
-  const { contacts, shares, shareDraft, closeSharePlant, savePlantsSharing } = useSharingPreview();
+  const { contacts, shares, shareDraft, closeSharePlant, savePlantsSharing, refresh, pending } = useSharingPreview();
   const [plants, setPlants] = useState<ShareablePlant[]>([]);
   const [selectedPlantIds, setSelectedPlantIds] = useState<string[]>([]);
   const [recipientDrafts, setRecipientDrafts] = useState<RecipientDrafts>({});
   const [loading, setLoading] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
+  const [sharingReady, setSharingReady] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
+  const [conflicted, setConflicted] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [dateChoice, setDateChoice] = useState<{ changed: boolean; value?: string }>({ changed: false });
   const requestId = useRef(0);
+  const initialized = useRef(false);
+  const draftVersions = useRef<Record<string, number>>({});
+  const selectedIdsRef = useRef(selectedPlantIds);
+  selectedIdsRef.current = selectedPlantIds;
   const outgoingShares = useMemo(() => shares.filter((share) => share.direction === "outgoing"), [shares]);
 
-  const loadPlants = useCallback(async () => {
+  const loadPlants = useCallback(async (reload = false) => {
     const current = ++requestId.current;
     setLoading(true);
     setLoadFailed(false);
     try {
-      const result = await fetchPlantInstances();
+      const [result, snapshot] = await Promise.all([fetchPlantInstances(), refresh()]);
       if (current !== requestId.current) return;
-      setPlants(result.map((item) => ({
+      if (!snapshot) throw new Error("Sharing snapshot unavailable.");
+      const owned = result.filter((item) => (item as typeof item & { access?: { is_owner?: boolean } }).access?.is_owner !== false);
+      if (reload || !initialized.current) {
+        const plantId = shareDraft?.plant?.id;
+        const contactId = snapshot.contacts.some((contact) => contact.id === shareDraft?.contactId) ? shareDraft?.contactId : undefined;
+        const outgoing = snapshot.shares.filter((share) => share.direction === "outgoing");
+        const available = new Set([...owned.map((item) => String(item.id)), ...outgoing.map((share) => share.plant.id)]);
+        const selected = (reload ? selectedIdsRef.current : plantId ? [plantId] : []).filter((id) => available.has(id));
+        setSelectedPlantIds(selected);
+        setRecipientDrafts(Object.fromEntries(selected.map((id) => [id, initialRecipients(id, outgoing, contactId)])));
+        draftVersions.current = { ...snapshot.versions };
+        initialized.current = true;
+      }
+      setSharingReady(true);
+      setConflicted(false);
+      setSaveError(null);
+      setPlants(owned.map((item) => ({
         id: String(item.id),
         name: item.display_name || item.plant_definition?.name || t("plantDetails.info.fallbackTitle", { defaultValue: "Plant #{{id}}", id: item.id }),
         location: item.location?.name,
@@ -62,7 +86,7 @@ export default function SharePlantModal() {
     } finally {
       if (current === requestId.current) setLoading(false);
     }
-  }, [t]);
+  }, [t, refresh, shareDraft]);
 
   useEffect(() => {
     if (!shareDraft) {
@@ -70,9 +94,13 @@ export default function SharePlantModal() {
       return;
     }
     const plantId = shareDraft.plant?.id;
-    const contactId = contacts.some((contact) => contact.id === shareDraft.contactId) ? shareDraft.contactId : undefined;
+    initialized.current = false;
+    draftVersions.current = {};
+    setSharingReady(false);
+    setSaveError(null);
+    setConflicted(false);
     setSelectedPlantIds(plantId ? [plantId] : []);
-    setRecipientDrafts(plantId ? { [plantId]: initialRecipients(plantId, outgoingShares, contactId) } : {});
+    setRecipientDrafts({});
     setDateChoice({ changed: false });
     setShowDatePicker(false);
     setPlants([]);
@@ -83,12 +111,13 @@ export default function SharePlantModal() {
   }, [shareDraft, loadPlants]);
 
   const choices = useMemo(() => {
+    if (!sharingReady) return [];
     const byId = new Map<string, ShareablePlant>();
     outgoingShares.forEach((share) => byId.set(share.plant.id, share.plant));
     plants.forEach((item) => byId.set(item.id, item));
-    if (shareDraft?.plant) byId.set(shareDraft.plant.id, shareDraft.plant);
+    if (shareDraft?.plant && (!sharingReady || byId.has(shareDraft.plant.id))) byId.set(shareDraft.plant.id, shareDraft.plant);
     return Array.from(byId.values());
-  }, [outgoingShares, plants, shareDraft]);
+  }, [outgoingShares, plants, shareDraft, sharingReady]);
   const selectedPlants = useMemo(() => {
     const byId = new Map(choices.map((plant) => [plant.id, plant]));
     return selectedPlantIds.map((id) => byId.get(id)).filter((plant): plant is ShareablePlant => !!plant);
@@ -100,7 +129,7 @@ export default function SharePlantModal() {
   const commonEndDate = endDates.size === 1 ? Array.from(endDates)[0] || undefined : undefined;
   const displayedEndDate = selectedRecipients.length > 0 ? commonEndDate : dateChoice.value;
   const newGrantEndDate = dateChoice.changed ? dateChoice.value : commonEndDate;
-  const canSave = selectedPlants.length > 0 && selectedPlants.length === selectedPlantIds.length && selectedPlants.every((plant) =>
+  const canSave = sharingReady && !loading && !loadFailed && !pending && !conflicted && selectedPlants.length > 0 && selectedPlants.length === selectedPlantIds.length && selectedPlants.every((plant) =>
     (recipientDrafts[plant.id]?.length ?? 0) > 0 || outgoingShares.some((share) => share.plant.id === plant.id));
 
   const togglePlant = (plant: ShareablePlant) => {
@@ -159,6 +188,20 @@ export default function SharePlantModal() {
     });
   };
 
+  const save = async () => {
+    if (!canSave) return;
+    const current = requestId.current;
+    setSaveError(null);
+    const updates: PlantSharingUpdate[] = selectedPlants.map((plant) => ({ plant, recipients: recipientDrafts[plant.id] ?? [], expectedRevision: draftVersions.current[plant.id] ?? 0 }));
+    const result = await savePlantsSharing(updates);
+    if (current !== requestId.current) return;
+    if (result.ok) closeSharePlant();
+    else if (result.reason !== "busy" && result.reason !== "staleSession") {
+      setConflicted(result.reason === "conflict" || result.reason === "notContact");
+      setSaveError(t(`sharing.accessErrors.${result.reason}`, { defaultValue: SHARING_ERROR_MESSAGES[result.reason] }));
+    }
+  };
+
   return (
     <ContactModalFrame
       visible={shareDraft !== null}
@@ -166,14 +209,13 @@ export default function SharePlantModal() {
       onClose={closeSharePlant}
     >
       <View style={styles.content}>
-        <PreviewNotice />
         <Text style={shared.hint}>{t("sharing.form.multiPlantHint", { defaultValue: "Choose the plants and contacts to share them with." })}</Text>
         <Text style={shared.title}>{t("sharing.form.choosePlants", { defaultValue: "Choose plants" })}</Text>
         <Text style={shared.hint}>{t("sharing.form.plantsSelected", { defaultValue: "Plants selected: {{count}}", count: selectedPlantIds.length })}</Text>
         {loading && <View style={styles.spinner}><CenteredSpinner size={32} color="#FFFFFF" /></View>}
         {loadFailed && <View style={styles.section}>
           <Text style={shared.error}>{t("sharing.form.loadFailed", { defaultValue: "Could not load your plants." })}</Text>
-          <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" onPress={() => void loadPlants()} />
+          <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" onPress={() => void loadPlants(conflicted)} />
         </View>}
         {!loading && !loadFailed && choices.length === 0 && <Text style={shared.hint}>{t("sharing.form.noPlants", { defaultValue: "No plants available. Add a plant to start sharing." })}</Text>}
         {choices.map((plant) => {
@@ -181,7 +223,7 @@ export default function SharePlantModal() {
           return (
             <Pressable key={plant.id} accessibilityRole="checkbox" accessibilityState={{ checked: selected }}
               accessibilityLabel={t("sharing.form.selectPlant", { defaultValue: "Select {{name}}", name: plant.name })}
-              style={[styles.choice, selected && styles.selected]} onPress={() => togglePlant(plant)}>
+              disabled={!sharingReady || !!pending} style={[styles.choice, selected && styles.selected]} onPress={() => togglePlant(plant)}>
               <MaterialCommunityIcons name={selected ? "checkbox-marked-outline" : "checkbox-blank-outline"} size={22} color="#FFFFFF" />
               <View style={styles.flex}><Text style={shared.text}>{plant.name}</Text>{!!plant.location && <Text style={shared.hint}>{plant.location}</Text>}</View>
             </Pressable>
@@ -201,7 +243,7 @@ export default function SharePlantModal() {
             <View key={contact.id} style={[styles.contact, grants.length > 0 && styles.selected]}>
               <Pressable accessibilityRole="checkbox" accessibilityState={{ checked: mixedAccess ? "mixed" : allSelected, disabled: selectedPlantIds.length === 0 }}
                 accessibilityLabel={t("sharing.form.selectContact", { defaultValue: "Select {{name}}", name: contact.name })}
-                style={[styles.contactHeader, selectedPlantIds.length === 0 && styles.disabled]} disabled={selectedPlantIds.length === 0}
+                style={[styles.contactHeader, selectedPlantIds.length === 0 && styles.disabled]} disabled={selectedPlantIds.length === 0 || !sharingReady || !!pending}
                 onPress={() => toggleContact(contact.id)}>
                 <MaterialCommunityIcons name={mixedAccess ? "minus-box-outline" : allSelected ? "checkbox-marked-outline" : "checkbox-blank-outline"} size={22} color="#FFFFFF" />
                 <View style={styles.flex}><Text style={shared.text}>{contact.name}</Text><Text style={shared.hint}>{contact.email || contact.floversId}</Text></View>
@@ -218,7 +260,7 @@ export default function SharePlantModal() {
                       : t("sharing.common.viewOnly", { defaultValue: "View only" });
                     return <Pressable key={String(allowed)} accessibilityRole="radio" accessibilityState={{ checked }}
                       accessibilityLabel={contact.name + ": " + label} style={[styles.permissionOption, checked && styles.permissionSelected]}
-                      onPress={() => setPermission(contact.id, allowed)}>
+                      disabled={!!pending} onPress={() => setPermission(contact.id, allowed)}>
                       <MaterialCommunityIcons name={checked ? "radiobox-marked" : "radiobox-blank"} size={18} color="#FFFFFF" />
                       <Text style={styles.permissionText}>{label}</Text>
                     </Pressable>;
@@ -232,7 +274,7 @@ export default function SharePlantModal() {
         <Text style={shared.title}>{t("sharing.form.endDate", { defaultValue: "End date" })}</Text>
         <Text style={shared.hint}>{t("sharing.form.endDateHint", { defaultValue: "An optional end date for the selected contacts and plants." })}</Text>
         {mixedEndDates && <Text style={shared.hint}>{t("sharing.form.endDatesVary", { defaultValue: "End dates differ between the selected plants." })}</Text>}
-        <Pressable style={[controls.actionBtnFull, styles.dateButton]} disabled={selectedPlantIds.length === 0}
+        <Pressable style={[controls.actionBtnFull, styles.dateButton]} disabled={selectedPlantIds.length === 0 || !sharingReady || !!pending}
           accessibilityRole="button" accessibilityState={{ disabled: selectedPlantIds.length === 0 }} onPress={() => setShowDatePicker(true)}>
           <MaterialCommunityIcons name="calendar-outline" size={18} color="#FFFFFF" />
           <Text style={[controls.actionBtnFullText, styles.dateText]}>{displayedEndDate
@@ -251,18 +293,18 @@ export default function SharePlantModal() {
           {Platform.OS === "ios" && <SharingButton label={t("sharing.form.done", { defaultValue: "Done" })} variant="secondary" onPress={() => setShowDatePicker(false)} />}
         </View>}
       </View>
+      {!!saveError && <Text accessibilityRole="alert" style={[shared.error, styles.content]}>{saveError}</Text>}
+      {conflicted && <View style={styles.content}>
+        <Text style={shared.hint}>{t("sharing.form.conflictHint", { defaultValue: "Reloading sharing replaces your current recipient selections with the latest saved permissions." })}</Text>
+        <SharingButton label={t("sharing.form.reload", { defaultValue: "Reload sharing" })} variant="secondary" disabled={loading || !!pending} onPress={() => { void loadPlants(true); }} />
+      </View>}
 
       <View style={pr.promptButtonsRow}>
         <Pressable style={[pr.promptBtn, styles.footerButton]} accessibilityRole="button" onPress={closeSharePlant}>
           <Text style={pr.promptBtnText}>{t("sharing.common.cancel", { defaultValue: "Cancel" })}</Text>
         </Pressable>
         <Pressable style={[pr.promptBtn, pr.promptPrimary, styles.footerButton, !canSave && styles.disabled]} disabled={!canSave}
-          accessibilityRole="button" accessibilityState={{ disabled: !canSave }} onPress={() => {
-            if (!canSave) return;
-            const updates: PlantSharingUpdate[] = selectedPlants.map((plant) => ({ plant, recipients: recipientDrafts[plant.id] ?? [] }));
-            savePlantsSharing(updates);
-            closeSharePlant();
-          }}>
+          accessibilityRole="button" accessibilityState={{ disabled: !canSave }} onPress={save}>
           <Text style={[pr.promptBtnText, pr.promptPrimaryText, styles.footerText]}>{managing
             ? t("sharing.form.save", { defaultValue: "Save sharing" })
             : t("sharing.form.shareSelected", { defaultValue: "Share selected plants" })}</Text>

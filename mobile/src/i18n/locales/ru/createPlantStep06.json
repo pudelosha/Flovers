@@ -1,0 +1,46 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Автоматические задачи",
+      "subtitle": "Мы можем автоматически создавать напоминания (полив, пересадка, опрыскивание, удобрение, уход) на основе вашего профиля комнатного растения.",
+      "createAutoTasks": "Создайте автоматические задачи для этого комнатного растения.",
+      "requiresPlantDefinition": "Для этого требуется определение комнатного растения.",
+      "labels": {
+        "generateWateringTask": "Создать задачу на полив",
+        "generateMistingTask": "Создать задачу туманообразования",
+        "generateFertilisingTask": "Создать задачу по внесению удобрений",
+        "generateCareTask": "Создать задачу по уходу",
+        "generateRepottingTask": "Создать задачу по пересадке"
+      },
+      "prompts": {
+        "lastWatered": "Когда его последний раз поливали?",
+        "selectIntervalDays": "Выберите интервал (дни)",
+        "recommendedInterval": "Рекомендуемый интервал",
+        "lastRepotted": "Когда его пересаживали в последний раз?"
+      },
+      "notSpecified": "Не указано",
+      "notSpecifiedDesc": "Пропустите, если вы не уверены.",
+      "units": {
+        "day": "день",
+        "days": "дни",
+        "month": "месяц",
+        "months": "месяцы"
+      },
+      "lastWatered": {
+        "today": "Сегодня",
+        "yesterday": "Вчера",
+        "three-four-days": "3–4 дня назад",
+        "one-week": "Неделю назад",
+        "two-weeks": "2 недели назад",
+        "unknown": "Я не помню"
+      },
+      "lastRepotted": {
+        "this-week": "На этой неделе",
+        "one-week-ago": "1 неделю назад",
+        "two-weeks-ago": "2 недели назад",
+        "one-month-ago": "1 месяц назад",
+        "unknown": "Я не помню"
+      }
+    }
+  }
+}

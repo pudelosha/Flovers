@@ -1,0 +1,94 @@
+{
+  "docs_create_plant_wizard": {
+    "title": "Ev bitkisi oluşturma Sihirbazı",
+    "sections": [
+      {
+        "heading": "Bu akışın amacı",
+        "body": [
+          "Ev bitkisi oluşturma Sihirbazı, hesabınıza yeni bir ev bitkisi örneği eklemek için kullanılan, kılavuzlu, 9 adımlı bir işlemdir.",
+          "(İsteğe bağlı olarak) ev bitkisini Flovers veritabanından bir ev bitkisi Tanımına bağlamanıza, konum ve pozlama gibi bağlamları yakalamanıza ve isteğe bağlı olarak ev bitkisinin tercihlerine göre hatırlatıcılar oluşturmanıza yardımcı olur.",
+          "Bu sihirbaz yalnızca yeni bir ev bitkisi oluşturmak için kullanılır. Mevcut bir ev bitkisinin düzenlenmesi ayrı bir akışta yapılır."
+        ]
+      },
+      {
+        "heading": "Adım 01 – Bir ev bitkisi tanımı seçin (isteğe bağlı)",
+        "body": [
+          "Arama alanını kullanarak ev bitkisi Tanımlarını (yerleşik tür profilleri) arayabilirsiniz.",
+          "Arama girişinin altında hızlı bir kısayol olarak popüler iç mekan bitkilerinin bir listesini bulacaksınız.",
+          "İsteğe bağlı olarak ev bitkisi Tanıma'yı kullanabilirsiniz: tarama düğmesine dokunun, bir fotoğraf çekin veya seçin; sistem en iyi 3 eşleşmeyi döndürecektir.",
+          "Bir tanıma önerisini kabul ederseniz seçilen ev bitkisi Tanımı, yeni ev bitkisi örneğine uygulanır."
+        ]
+      },
+      {
+        "heading": "Adım 02 – Tanım ayrıntılarını gözden geçirin",
+        "body": [
+          "Bir ev bitkisi Tanımı seçtiyseniz bu adım, görüntü ve temel özellikler/tercihler dahil olmak üzere tanım ayrıntılarını görüntüler.",
+          "Bu, devam etmeden önce seçilen tür profilini onaylayabilmeniz için bir inceleme adımıdır."
+        ]
+      },
+      {
+        "heading": "Adım 03 — Bir konum seçin (gerekli)",
+        "body": [
+          "Ev bitkisinin tutulduğu Konumu seçin (örn. Mutfak, Oturma odası, Balkon).",
+          "Ayrıca bu adımdan doğrudan yeni bir Konum da ekleyebilirsiniz.",
+          "Şu anda devam etmek için bir Konum seçmek zorunludur."
+        ]
+      },
+      {
+        "heading": "Adım 04 — Maruz kalma (isteğe bağlı ölçümler)",
+        "body": [
+          "Bu adım, ev bitkisinin maruz kalma bağlamını yakalamanıza yardımcı olur: yön, ışık seviyesi ve pencereye olan mesafe.",
+          "Pusula izinleri verilirse yön telefon pusulası kullanılarak ölçülebilir.",
+          "Gerekli izinlerin verilmesi ve cihazın ışık sensörünü desteklemesi durumunda ışık seviyesi ölçülebilir.",
+          "Tüm pozlama değerleri isteğe bağlıdır; bunları manuel olarak girebilir veya atlayabilirsiniz."
+        ]
+      },
+      {
+        "heading": "Adım 05 – Kap ve toprak (isteğe bağlı)",
+        "body": [
+          "Ev bitkisinin hangi kapta olduğunu (örneğin plastik, seramik) ve hangi toprağı/alt tabakayı kullandığınızı tanımlayın.",
+          "Bu alanlar isteğe bağlıdır ancak otomatik görevler etkinleştirildiğinde önerilen bakım aralıklarının doğruluğunu artırabilir."
+        ]
+      },
+      {
+        "heading": "Adım 06 — Otomatik görevler (ev bitkisi Tanımı kullanıldığında isteğe bağlı)",
+        "body": [
+          "Ev bitkiniz bir ev bitkisi Tanımına bağlıysa Flovers, tanımın bakım tercihlerine göre otomatik olarak hatırlatıcılar/görevler oluşturabilir.",
+          "Otomatik görev oluşturmaya izin vermek için ana onay kutusunu etkinleştirin, ardından hangi görev türlerinin oluşturulması gerektiğini seçin (örn. sulama, buğulama, gübreleme, saksı değişimi, bakım).",
+          "Önerilen aralıklar seçilen ev bitkisi Tanımına dayalıdır ve mevcut olduğunda Maruziyet ve Kap/Toprak değerleri kullanılarak ayarlanabilir.",
+          "Daha sonra manuel olarak hatırlatıcı oluşturmayı tercih ederseniz bu adımı tamamen atlayabilirsiniz."
+        ]
+      },
+      {
+        "heading": "Adım 07 — Kendi fotoğrafınızı ekleyin (isteğe bağlı)",
+        "body": [
+          "Telefonunuzdan ev bitkinizin özel bir fotoğrafını ekleyebilirsiniz.",
+          "Bu adım isteğe bağlıdır ve uygulama akışınıza bağlı olarak daha sonra ev bitkisi düzenleme araçlarıyla yapılabilir."
+        ]
+      },
+      {
+        "heading": "Adım 08 – Son ayrıntılar (gerekli ad)",
+        "body": [
+          "Ev bitkisinin görünen adını ayarlayın (zorunlu).",
+          "İsteğe bağlı olarak notlar ve satın alma tarihi ekleyin.",
+          "Bu ayrıntılar ev bitkisi ayrıntıları bölümünde gösterilir ve her ev bitkisi için anlamlı bir geçmiş tutmanıza yardımcı olur."
+        ]
+      },
+      {
+        "heading": "Adım 09 — Özet ve onay",
+        "body": [
+          "Başarılı bir oluşturmanın ardından sihirbaz bir onay/özet ekranı görüntüler.",
+          "Uygulamanızdaki gezinme akışına bağlı olarak buradan ev bitkisi listenize geçebilir veya yeni oluşturulan ev bitkisini açabilirsiniz."
+        ]
+      },
+      {
+        "heading": "Notlar ve izinler",
+        "body": [
+          "Houseplant Recognition, fotoğrafı nasıl sağladığınıza bağlı olarak kamera ve/veya medya kitaplığına erişim gerektirir.",
+          "Maruz kalma ölçümleri, cihaz sensörlerini (ör. pusula) kullanma izni gerektirebilir ve donanımın kullanılabilirliğine bağlıdır.",
+          "Bir ev bitkisine bağlanma Tanım isteğe bağlıdır; bunu atlarsanız yine de bir ev bitkisi oluşturabilir ve hatırlatıcıları manuel olarak tanımlayabilirsiniz."
+        ]
+      }
+    ]
+  }
+}

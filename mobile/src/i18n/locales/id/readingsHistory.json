@@ -1,0 +1,54 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Pembacaan sensor Sejarah",
+    "plantFallback": "Tanaman",
+    "noDevicesFound": "Tidak ada perangkat yang ditemukan.",
+    "unauthorized": "Tidak sah. Silakan masuk lagi.",
+    "failedLoadDevices": "Gagal memuat perangkat.",
+    "failedLoadHistory": "Gagal memuat riwayat.",
+    "segment": {
+      "day": "HARI",
+      "week": "MINGGU",
+      "month": "BULAN"
+    },
+    "metric": {
+      "temperatureShort": "Suhu",
+      "humidityShort": "Bersenandung",
+      "lightShort": "Cahaya",
+      "moistureShort": "Lembab"
+    },
+    "chartMenu": {
+      "showAverage": "Tampilkan rata-rata",
+      "showMax": "Tampilkan maks",
+      "showMin": "Tampilkan min",
+      "showLatestLabel": "Tampilkan label terbaru",
+      "showLabels": "Tampilkan semua label",
+      "hideLabels": "Sembunyikan semua label",
+      "deleteReadings": "Hapus pembacaan sensor"
+    },
+    "deleteModal": {
+      "title": "Hapus pembacaan sensor",
+      "description": "Pilih pembacaan sensor mana yang harus dihilangkan. Hal ini tidak dapat dibatalkan.",
+      "modeDay": "Hapus hari",
+      "modeWeek": "Hapus minggu",
+      "modeMonth": "Hapus bulan",
+      "modeTypes": "Hapus pembacaan sensor tipe",
+      "modeOlderThan": "Hapus pembacaan sensor yang lebih lama dari",
+      "selectDay": "Hari",
+      "selectWeek": "Minggu",
+      "selectMonth": "Bulan",
+      "selectTypes": "Tipe membaca",
+      "selectOlderThan": "Lebih tua dari",
+      "daysOption": "{{count}} hari",
+      "noTypes": "Tidak ada jenis bacaan yang ditemukan.",
+      "cancel": "Batal",
+      "delete": "Hapus",
+      "scopeLabel": "Hapus cakupan",
+      "close": "Tutup"
+    },
+    "deleteToast": {
+      "success": "Pembacaan sensor {{count}} dihapus",
+      "failed": "Gagal menghapus pembacaan sensor"
+    }
+  }
+}

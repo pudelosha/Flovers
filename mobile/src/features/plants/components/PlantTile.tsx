@@ -7,6 +7,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { s } from "../styles/plants.styles";
 import { Plant } from "../types/plants.types";
 import PlantMenu from "./PlantMenu";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 
 type Props = {
@@ -39,6 +41,7 @@ export default function PlantTile({
 }: Props) {
   const { openSharePlant, shares } = useSharingPreview();
   const imgUri = plant.imageUrl;
+  const access = plantAccess(plant.access);
 
   const handleTilePress = () => {
     onPressBody();
@@ -143,6 +146,7 @@ export default function PlantTile({
           ]}
         />
 
+        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
         <View style={s.cardRow}>
           <Pressable
             style={s.cardBodyPressable}
@@ -153,6 +157,7 @@ export default function PlantTile({
               <Text style={s.plantName} numberOfLines={1}>
                 {plant.name}
               </Text>
+              <SharedPlantBadge access={plant.access} />
 
               {!!plant.latin && (
                 <Text style={s.latin} numberOfLines={1}>
@@ -180,6 +185,7 @@ export default function PlantTile({
 
       {isMenuOpen && (
         <PlantMenu
+          canEdit={access.canEdit}
           onDetails={onDetails}
           onEdit={onEdit}
           onReminders={onReminders}

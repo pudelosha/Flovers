@@ -1,0 +1,125 @@
+{
+  "title": "Pertanyaan yang Sering Diajukan",
+  "items": [
+    {
+      "q": "Apa itu Flovers dan untuk apa saya menggunakannya?",
+      "a": "Flovers adalah aplikasi yang dirancang untuk mendukung perawatan tanaman hias dengan membantu Anda mengatur tugas terkait tanaman hias dan memantau kondisi tanaman hias menggunakan data sensor langsung. Ini memberikan pengingat, panduan, dan wawasan untuk membantu budidaya tanaman hias sehari-hari."
+    },
+    {
+      "q": "Apakah Flovers gratis untuk digunakan?",
+      "a": "Ya. Flovers saat ini tersedia gratis."
+    },
+    {
+      "q": "Platform apa yang didukung Flovers?",
+      "a": "Flovers saat ini tersedia di Android. Dukungan untuk iOS direncanakan untuk masa depan."
+    },
+    {
+      "q": "Apakah saya memerlukan akun untuk menggunakan Flovers?",
+      "a": "Ya. Pembuatan akun diperlukan untuk menggunakan Flovers dan mengakses fitur-fiturnya."
+    },
+    {
+      "q": "Apakah Flovers tersedia dalam berbagai bahasa?",
+      "a": "Flovers tersedia dalam bahasa Inggris, Polandia, Jerman, Italia, Prancis, Spanyol, Portugis, Arab, Hindi, Mandarin, Jepang, Korea, Indonesia, Rusia, dan Turki."
+    },
+    {
+      "q": "Bagaimana cara membuat akun?",
+      "a": "Anda dapat mendaftar langsung di aplikasi. Setelah pendaftaran, Anda perlu mengonfirmasi akun Anda melalui pesan email. Jika diperlukan, Anda dapat meminta email aktivasi untuk dikirim ulang."
+    },
+    {
+      "q": "Saya tidak menerima email aktivasi akun — apa yang harus saya lakukan?",
+      "a": "Anda dapat meminta email aktivasi baru langsung dari dalam aplikasi."
+    },
+    {
+      "q": "Bagaimana cara mereset kata sandi saya?",
+      "a": "Anda dapat meminta email pengaturan ulang kata sandi dari aplikasi. Jika Anda sudah login, Anda juga dapat mengubah kata sandi langsung di pengaturan aplikasi."
+    },
+    {
+      "q": "Bisakah saya mengubah alamat email yang tertaut ke akun saya?",
+      "a": "Ya. Anda dapat memperbarui alamat email Anda saat login, menggunakan layar Profil di aplikasi."
+    },
+    {
+      "q": "Bagaimana cara menghapus akun dan data saya?",
+      "a": "Anda dapat menghapus akun Anda secara permanen dari layar Profil saat masuk. Tindakan ini tidak dapat diubah dan menghapus semua data terkait."
+    },
+    {
+      "q": "Apa perbedaan antara definisi tanaman hias dan tanaman hias saya sendiri?",
+      "a": "Definisi tanaman hias adalah catatan bawaan dalam database Flovers yang berisi informasi umum tentang spesies tanaman hias, seperti preferensi, sifat, gambar, kebutuhan cahaya, jenis tanah, dan interval penyiraman atau gerimis yang direkomendasikan. Tanaman hias Anda sendiri mewakili contoh spesifik yang Anda kelola."
+    },
+    {
+      "q": "Seberapa akurat fitur pengenalan tanaman hias?",
+      "a": "Akurasi bergantung pada kualitas gambar dan posisi tanaman hias. Sistem pengenalan dilatih pada database yang berisi lebih dari 700 spesies tanaman hias."
+    },
+    {
+      "q": "Apakah foto yang saya unggah untuk pengenalan tanaman hias disimpan?",
+      "a": "Tidak. Foto diproses oleh backend semata-mata untuk tujuan pengenalan dan tidak disimpan secara permanen."
+    },
+    {
+      "q": "Bisakah saya melacak beberapa tanaman hias secara bersamaan?",
+      "a": "Ya. Saat ini, tidak ada batasan jumlah tanaman hias atau alat ukur yang dapat Anda tambahkan. Setiap tanaman hias dapat dihubungkan ke satu alat pengukur."
+    },
+    {
+      "q": "Bisakah saya menambahkan catatan atau buku harian untuk tanaman hias saya?",
+      "a": "Ya. Anda dapat menambahkan catatan ke tanaman hias Anda dan juga melampirkan catatan pada tugas yang telah diselesaikan sebagai bagian dari buku harian tanaman hias Anda."
+    },
+    {
+      "q": "Bagaimana cara kerja pengingat dan tugas?",
+      "a": "Anda membuat pengingat dengan interval berulang. Berdasarkan definisi ini, tugas dihasilkan secara otomatis. Saat Anda menyelesaikan tugas, tugas baru dijadwalkan sesuai dengan interval yang ditentukan. Anda mungkin menerima email atau pemberitahuan push untuk tugas yang harus diselesaikan hari ini atau terlambat satu hari, tergantung pada pengaturan Anda."
+    },
+    {
+      "q": "Jenis tugas perawatan tanaman hias apa yang didukung?",
+      "a": "Jenis tugas yang didukung meliputi penyiraman, gerimis, pemupukan, repotting, dan perawatan tanaman hias secara umum."
+    },
+    {
+      "q": "Apa yang terjadi jika saya lupa menyelesaikan tugas?",
+      "a": "Jika tugas belum selesai, aplikasi mungkin mengirimkan pengingat setelah 24 jam. Jika tidak, tugas akan tetap ditandai sebagai terlambat sampai Anda mengambil tindakan."
+    },
+    {
+      "q": "Bisakah saya menonaktifkan atau mengedit pengingat?",
+      "a": "Anda dapat mengedit, menjeda, melanjutkan, atau menghapus pengingat kapan saja."
+    },
+    {
+      "q": "Apakah pengingat menjamin tanaman hias saya akan tetap sehat?",
+      "a": "Tidak. Flovers memberikan pengingat dan panduan, namun keputusan dan hasil perawatan tanaman hias pada akhirnya bergantung pada pengguna."
+    },
+    {
+      "q": "Sensor dan perangkat apa yang dapat saya sambungkan ke Flovers?",
+      "a": "Flovers mendukung sensor yang mengukur suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah. Pengaturan perangkat yang direkomendasikan dapat ditemukan dalam dokumentasi aplikasi."
+    },
+    {
+      "q": "Seberapa sering data sensor diperbarui?",
+      "a": "Pembacaan sensor dapat dikirim sesering setiap 5 menit. Untuk tujuan penyimpanan, data saat ini disimpan dengan interval satu jam."
+    },
+    {
+      "q": "Apa yang terjadi jika perangkat sensor saya offline?",
+      "a": "Aplikasi ini tidak memberi tahu pengguna tentang pembacaan sensor yang hilang. Namun, pemberitahuan dapat dipicu jika tingkat kelembapan tanah berada di bawah ambang batas yang ditentukan."
+    },
+    {
+      "q": "Apakah data sensor disimpan di cloud?",
+      "a": "Ya. Data sensor disimpan di server cloud VPS."
+    },
+    {
+      "q": "Bisakah orang lain melihat pembacaan sensor saya?",
+      "a": "Saat ini, pembacaan sensor bersifat pribadi. Di masa depan, opsi berbagi mungkin diperkenalkan. Pengguna juga dapat menanyakan data sensor melalui API untuk diintegrasikan dengan perangkat lain, seperti sistem penyiraman otomatis."
+    },
+    {
+      "q": "Untuk apa kode QR digunakan di Flovers?",
+      "a": "Pengguna dapat membuat dan mencetak kode QR dan menempelkannya ke pot bunga tanaman hias. Setiap kode QR tertaut ke instance tanaman hias tertentu. Memindai kode di aplikasi seluler akan langsung membuka detail tanaman hias."
+    },
+    {
+      "q": "Apakah aman membagikan kode QR atau tautan tanaman hias?",
+      "a": "Umumnya ya. Hanya pengguna yang login dan memiliki tanaman hias yang dapat melihat detailnya."
+    },
+    {
+      "q": "Bisakah saya mempublikasikan tanaman hias saya atau membaginya dengan teman?",
+      "a": "Tidak saat ini. Fitur berbagi publik mungkin akan diperkenalkan di masa mendatang."
+    },
+    {
+      "q": "Mengapa saya tidak menerima notifikasi?",
+      "a": "Pastikan pemberitahuan push diaktifkan di perangkat Anda dan di pengaturan aplikasi, yang dapat ditemukan di layar Profil."
+    },
+    {
+      "q": "Bagaimana cara menghubungi dukungan atau melaporkan masalah?",
+      "a": "Anda dapat menggunakan formulir kontak di situs web Flovers atau formulir kontak yang tersedia di aplikasi di bawah layar Profil."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Batal",
+      "delete": "Hapus",
+      "clear": "Jelas",
+      "apply": "Terapkan",
+      "reset": "Setel ulang",
+      "close": "Tutup",
+      "done": "Selesai"
+    },
+    "confirmDelete": {
+      "title": "Hapus tanaman",
+      "messagePrefix": "Apakah Anda yakin ingin menghapus",
+      "messageSuffix": "? Semua data terkait juga akan dihapus: pengingat, pembacaan perangkat dan sensor, tugas, dan riwayat tugas. Tindakan ini tidak dapat dibatalkan."
+    },
+    "filter": {
+      "title": "Saring tanaman hias",
+      "anyLocation": "Lokasi mana pun",
+      "anyLatin": "Latin/tipe apa saja"
+    },
+    "sort": {
+      "title": "Sortir tanaman hias",
+      "keyPlant": "Nama tanaman hias",
+      "keyLocation": "Lokasi",
+      "dirAsc": "Naik",
+      "dirDesc": "Menurun"
+    },
+    "qr": {
+      "title": "Kode QR tanaman hias",
+      "p1": "Setiap tanaman hias memiliki kode QR yang unik. Memindainya di aplikasi akan membuka tanaman hias ini secara instan.",
+      "p2": "Anda dapat menyimpan atau mengirim kode QR, mencetaknya, dan menempelkannya ke pot bunga untuk akses cepat nanti.",
+      "save": "Simpan",
+      "email": "Kirim"
+    },
+    "edit": {
+      "title": "Edit tanaman",
+      "namePlaceholder": "Nama tanaman hias (wajib)",
+      "latinPlaceholder": "Nama latin (pencarian)…",
+      "locationOptional": "Pilih lokasi (opsional)",
+      "none": "— Tidak ada —",
+      "notesPlaceholder": "Catatan… (opsional)",
+      "purchaseDateLabel": "Tanggal pembelian",
+      "notSet": "Tidak disetel",
+      "fallbackDateTitle": "Tetapkan tanggal pembelian (YYYY-MM-DD)",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
+      "invalidDateTitle": "Tanggal tidak valid",
+      "invalidDateMsg": "Gunakan format YYYY-MM-DD",
+      "set": "Tetapkan",
+      "lightLevelLabel": "Tingkat cahaya",
+      "low": "Rendah",
+      "high": "Tinggi",
+      "windowDirectionLabel": "Arah jendela",
+      "orientations": {
+        "S": "Selatan",
+        "E": "Timur",
+        "W": "Barat",
+        "N": "Utara"
+      },
+      "measureBtn": "Ukur cahaya & arah",
+      "distanceLabel": "Jarak dari jendela",
+      "cm": "cm",
+      "containerMaterialLabel": "Bahan wadah",
+      "soilMixLabel": "Campuran tanah/pot",
+      "update": "Perbarui"
+    },
+    "journal": {
+      "title": "Jurnal tanaman hias",
+      "loading": "Memuat...",
+      "error": "Ada yang tidak beres.",
+      "empty": "Belum ada entri jurnal.",
+      "taskTypes": {
+        "watering": "PENYIRAMAN",
+        "moisture": "PENYEMPROTAN",
+        "fertilising": "PEMUPUKAN",
+        "care": "PERAWATAN",
+        "repot": "GANTI POT"
+      }
+    }
+  }
+}

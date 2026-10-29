@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "accounts",
     "profiles",
     "contacts",
+    "sharing",
     "plant_definitions",
     "plant_instances",
     "locations",
@@ -119,6 +120,7 @@ REST_FRAMEWORK = {
         "public_contact": "5/hour",
         "contact_invitation_hour": "20/hour",
         "contact_invitation_day": "100/day",
+        "plant_sharing_write": "20/min",
     },
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     # Middleware resolves a client address only from an explicitly trusted proxy.
@@ -148,6 +150,9 @@ USE_I18N = True
 USE_TZ = True
 
 LANGUAGES = [
+    ("id", "Bahasa Indonesia"),
+    ("ru", "Русский"),
+    ("tr", "Türkçe"),
     ("en", "English"),
     ("pl", "Polski"),
     ("de", "Deutsch"),
@@ -230,7 +235,7 @@ EMAIL_DEFAULT_LANG = env("EMAIL_DEFAULT_LANG", default="en").strip()
 I18N_LOCALES_DIR = BASE_DIR / "i18n" / "locales"
 
 # Optional safety: supported langs list (used by helpers)
-SUPPORTED_LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
+SUPPORTED_LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko", "id", "ru", "tr"]
 
 # Contact (Support/Report Bug) inbox
 SUPPORT_INBOX_EMAIL = env("SUPPORT_INBOX_EMAIL", default="support@flovers.app")

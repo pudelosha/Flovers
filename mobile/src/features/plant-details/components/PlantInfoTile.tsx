@@ -14,6 +14,8 @@ import PlantInfoMenu from "./PlantInfoMenu";
 import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
@@ -124,6 +126,7 @@ export default function PlantInfoTile({
   const { settings } = useSettings();
   const nav = useNavigation<any>();
   const { openSharePlant, shares } = useSharingPreview();
+  const access = plantAccess(plant?.access);
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -160,7 +163,7 @@ export default function PlantInfoTile({
     let cancelled = false;
 
     const run = async () => {
-      if (!plant?.id) {
+      if (!plant?.id || !access.isOwner) {
         setLocalPlantPhotoUri(null);
         return;
       }
@@ -176,16 +179,16 @@ export default function PlantInfoTile({
     return () => {
       cancelled = true;
     };
-  }, [plant?.id, photoReloadSignal]);
+  }, [plant?.id, access.isOwner, photoReloadSignal]);
 
   // prefer local user photo; fallback to plant definition images
   const imageUrl = useMemo(() => {
     if (!plant) return null;
-    if (localPlantPhotoUri) return localPlantPhotoUri;
+    if (access.isOwner && localPlantPhotoUri) return localPlantPhotoUri;
 
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
-  }, [localPlantPhotoUri, plant]);
+  }, [localPlantPhotoUri, plant, access.isOwner]);
 
   if (!plant) {
     return (
@@ -283,6 +286,7 @@ export default function PlantInfoTile({
                   <Text style={styles.h1} numberOfLines={1}>
                     {title}
                   </Text>
+                  <SharedPlantBadge access={plant.access} />
 
                   {!!latin && (
                     <Text style={styles.latin} numberOfLines={1}>
@@ -309,6 +313,7 @@ export default function PlantInfoTile({
               <View style={[styles.heroImage, styles.heroPlaceholder]}>
                 <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
                 <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
+                <SharedPlantBadge access={plant.access} />
               </View>
             )}
           </View>
@@ -320,6 +325,7 @@ export default function PlantInfoTile({
 
             <View style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]} pointerEvents="box-none">
               <PlantInfoMenu
+                canEdit={access.canEdit}
                 sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
                 onShare={() => {
                   closeMenu();

@@ -17,6 +17,8 @@ import type { TaskHistoryItem } from "../types/task-history.types";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../home/constants/home.constants";
 import type { TaskType } from "../../home/types/home.types";
 import { useSettings } from "../../../app/providers/SettingsProvider";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 
 // --- helpers (mirrors ReminderTile) ---
 function toDisplayType(t?: string) {
@@ -90,6 +92,7 @@ export default function TaskHistoryTile({
   const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
 
   const { settings } = useSettings();
+  const access = plantAccess(item.access);
   const dateFormat = settings.dateFormat || "DD.MM.YYYY";
 
   const type = item.type as TaskType;
@@ -225,6 +228,7 @@ export default function TaskHistoryTile({
 
         {/* Unified tint/border (same as other screens) */}
         <View pointerEvents="none" style={s.cardTint} />
+        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
@@ -251,6 +255,7 @@ export default function TaskHistoryTile({
             <Text style={s.plantName} numberOfLines={1}>
               {item.plant}
             </Text>
+            <SharedPlantBadge access={item.access} />
 
             {!!item.location && (
               <View style={s.locationRow}>
@@ -363,7 +368,7 @@ export default function TaskHistoryTile({
           )}
 
           {/* Edit reminder */}
-          <Pressable style={s.menuItem} onPress={handleEditReminder}>
+          {access.canEdit && <Pressable style={s.menuItem} onPress={handleEditReminder}>
             <MaterialCommunityIcons
               name="pencil-outline"
               size={18}
@@ -371,7 +376,7 @@ export default function TaskHistoryTile({
               style={{ marginRight: 8 }}
             />
             <Text style={s.menuItemText}>{t("taskHistory.menu.editReminder")}</Text>
-          </Pressable>
+          </Pressable>}
 
           {/* Go to plant */}
           <Pressable style={s.menuItem} onPress={handleGoToPlant}>
@@ -385,7 +390,7 @@ export default function TaskHistoryTile({
           </Pressable>
 
           {/* Delete – last & red */}
-          <Pressable style={s.menuItem} onPress={handleDelete}>
+          {access.canEdit && <Pressable style={s.menuItem} onPress={handleDelete}>
             <MaterialCommunityIcons
               name="delete-outline"
               size={18}
@@ -395,7 +400,7 @@ export default function TaskHistoryTile({
             <Text style={[s.menuItemText, { color: "#FF6B6B", fontWeight: "800" }]}>
               {t("taskHistory.menu.deleteTask")}
             </Text>
-          </Pressable>
+          </Pressable>}
         </View>
       )}
     </View>

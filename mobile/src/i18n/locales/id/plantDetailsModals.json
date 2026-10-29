@@ -1,0 +1,46 @@
+{
+  "plantDetailsModals": {
+    "common": {
+      "close": "Tutup",
+      "save": "Simpan",
+      "cancel": "Batal",
+      "remove": "Hapus"
+    },
+    "definition": {
+      "title": "Definisi tanaman hias",
+      "traits": "Sifat",
+      "noId": "Tidak ada id definisi tanaman hias yang ditemukan.",
+      "loadFailed": "Gagal memuat definisi tanaman hias.",
+      "error": "Ada yang tidak beres.",
+      "empty": "Tidak ada data definisi yang tersedia.",
+      "body": "Ini adalah modal pengganti. rincian definisi tanaman hias akan diimplementasikan nanti."
+    },
+    "changeImage": {
+      "title": "Ubah gambar",
+      "subtitle": "Foto ini disimpan secara lokal di perangkat Anda dan tidak diunggah.",
+      "noPlantId": "Tidak ada id tanaman hias yang ditemukan.",
+      "loadFailed": "Tidak dapat memuat gambar lokal.",
+      "error": "Ada yang tidak beres.",
+      "noPhoto": "Tidak ada foto yang dipilih",
+      "removedPreview": "Foto akan dihapus",
+      "unsaved": "Perubahan yang belum disimpan",
+      "takePhoto": "Ambil foto",
+      "chooseGallery": "Pilih dari galeri",
+      "remove": "Hapus foto",
+      "permissionTitle": "Izin diperlukan",
+      "permissionCamera": "Harap berikan izin kamera dan media untuk mengambil foto.",
+      "permissionGallery": "Harap berikan izin media untuk memilih foto.",
+      "cameraErrorTitle": "Kesalahan kamera",
+      "pickerErrorTitle": "Kesalahan pemilih",
+      "saveFailedTitle": "Gagal menyimpan",
+      "saveFailedMsg": "Tidak dapat menyimpan foto ini secara lokal.",
+      "confirmRemoveTitle": "Hapus foto?",
+      "confirmRemoveMsg": "Foto akan dihapus setelah Anda menekan Simpan.",
+      "confirmDiscardTitle": "Hapus perubahan?",
+      "confirmDiscardMsg": "Perubahan Anda tidak akan disimpan.",
+      "discard": "Buang",
+      "removeFailedTitle": "Penghapusan gagal",
+      "removeFailedMsg": "Tidak dapat menghapus foto lokal ini."
+    }
+  }
+}

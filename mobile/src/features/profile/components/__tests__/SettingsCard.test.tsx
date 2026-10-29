@@ -71,4 +71,13 @@ describe("SettingsCard", () => {
     expect(props.setLanguage).toHaveBeenCalledWith("pl");
     expect(props.setLangOpen).toHaveBeenCalledWith(false);
   });
+
+  it.each([
+    ["id", "Bahasa Indonesia"], ["ru", "Русский"], ["tr", "Türkçe"],
+  ])("selects %s in profile settings", (code, label) => {
+    const view = render(<SettingsCard {...props} langOpen />);
+    fireEvent.press(view.getByText(new RegExp(label)));
+    expect(props.setLanguage).toHaveBeenCalledWith(code);
+    expect(props.setLangOpen).toHaveBeenCalledWith(false);
+  });
 });

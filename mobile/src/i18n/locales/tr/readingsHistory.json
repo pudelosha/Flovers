@@ -1,0 +1,54 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Sensör okumaları Geçmişi",
+    "plantFallback": "Bitki",
+    "noDevicesFound": "Hiçbir cihaz bulunamadı.",
+    "unauthorized": "Yetkisiz. Lütfen tekrar giriş yapın.",
+    "failedLoadDevices": "Cihazlar yüklenemedi.",
+    "failedLoadHistory": "Geçmiş yüklenemedi.",
+    "segment": {
+      "day": "GÜN",
+      "week": "HAFTA",
+      "month": "AY"
+    },
+    "metric": {
+      "temperatureShort": "Sıcaklık",
+      "humidityShort": "Uğultu",
+      "lightShort": "Işık",
+      "moistureShort": "Nemli"
+    },
+    "chartMenu": {
+      "showAverage": "Ortalamayı göster",
+      "showMax": "Maksimum göster",
+      "showMin": "Dakikayı göster",
+      "showLatestLabel": "En son etiketi göster",
+      "showLabels": "Tüm etiketleri göster",
+      "hideLabels": "Tüm etiketleri gizle",
+      "deleteReadings": "Sensör okumalarını silin"
+    },
+    "deleteModal": {
+      "title": "Sensör okumalarını silin",
+      "description": "Hangi sensör okumalarının kaldırılması gerektiğini seçin. Bu geri alınamaz.",
+      "modeDay": "Günü sil",
+      "modeWeek": "Haftayı sil",
+      "modeMonth": "Ayı sil",
+      "modeTypes": "Türdeki sensör okumalarını silin",
+      "modeOlderThan": "Şu tarihten daha eski sensör okumalarını silin:",
+      "selectDay": "Gün",
+      "selectWeek": "Hafta",
+      "selectMonth": "Ay",
+      "selectTypes": "Okuma türü",
+      "selectOlderThan": "Şundan daha eski:",
+      "daysOption": "{{count}} gün",
+      "noTypes": "Hiçbir okuma türü bulunamadı.",
+      "cancel": "İptal",
+      "delete": "Sil",
+      "scopeLabel": "Kapsamı sil",
+      "close": "Kapat"
+    },
+    "deleteToast": {
+      "success": "Silinen {{count}} sensör okumaları",
+      "failed": "Sensör okumaları silinemedi"
+    }
+  }
+}

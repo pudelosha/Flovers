@@ -1,0 +1,202 @@
+{
+  "docs_readings": {
+    "title": "Data sensor",
+    "sections": [
+      {
+        "heading": "Tujuan dari layar ini",
+        "body": [
+          "Layar pembacaan sensor memungkinkan Anda melihat dan mengelola perangkat IoT yang terhubung ke tanaman hias Anda.",
+          "Setiap perangkat dapat mengirimkan pengukuran lingkungan seperti suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah ke Flovers.",
+          "Fitur ini dirancang untuk pengguna yang membuat atau menggunakan perangkat mereka sendiri, misalnya papan berbasis Arduino atau ESP, dan ingin memantau kondisi tanaman hias dari waktu ke waktu.",
+          "Perangkat juga dapat dikonfigurasi dengan pompa air untuk penyiraman terjadwal secara manual dan penyiraman otomatis berbasis kelembaban tanah."
+        ]
+      },
+      {
+        "heading": "Ubin perangkat dan pembacaan sensor terbaru",
+        "body": [
+          "Layar menampilkan daftar ubin, di mana setiap ubin mewakili satu perangkat yang terhubung.",
+          "Setiap ubin menunjukkan nama perangkat atau tanaman hias, lokasi, dan pembacaan sensor terbaru yang diterima dari perangkat.",
+          "Tergantung pada sensor yang diaktifkan untuk perangkat, ubin dapat menunjukkan suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah.",
+          "Jika belum ada data yang diterima, placeholder akan ditampilkan, bukan nilai.",
+          "Jika perangkat dikonfigurasikan dengan pompa air, ubin juga menampilkan kontrol dan informasi terkait pompa, termasuk waktu pengoperasian pompa terkini."
+        ]
+      },
+      {
+        "heading": "Bagian pompa air pada ubin perangkat",
+        "body": [
+          "Saat perangkat mengaktifkan dukungan pompa air, ubinnya menampilkan kontrol pompa tambahan.",
+          "Ubin dapat menunjukkan apakah penyiraman pompa otomatis diaktifkan, ambang batas kelembaban tanah yang digunakan untuk penyiraman otomatis, pencatatan pengoperasian pompa terakhir, dan tombol untuk penyiraman terjadwal secara manual.",
+          "Tombol penyiraman manual berubah status tergantung pada apakah permintaan penyiraman yang tertunda sudah ada.",
+          "Jika tidak ada permintaan penyiraman manual yang tertunda, tombol akan menampilkan Jadwalkan penyiraman.",
+          "Jika permintaan penyiraman manual sudah tertunda, tombol akan menampilkan Penyiraman yang tidak dijadwalkan.",
+          "Hal ini membuatnya terlihat langsung dari ubin apakah penyiraman telah diminta untuk perangkat tersebut."
+        ]
+      },
+      {
+        "heading": "Interaksi ubin",
+        "body": [
+          "Mengetuk badan ubin akan menavigasi langsung ke layar Riwayat pembacaan sensor untuk perangkat itu.",
+          "Mengetuk ikon pembacaan tertentu, misalnya suhu, kelembapan, cahaya, atau kelembapan tanah, akan membuka layar Riwayat pembacaan sensor dengan pengukuran yang telah dipilih sebelumnya.",
+          "Hal ini memungkinkan akses cepat ke bagan terperinci untuk jenis bacaan tertentu."
+        ]
+      },
+      {
+        "heading": "Tindakan perangkat",
+        "body": [
+          "Setiap ubin perangkat menyertakan menu 3 titik dengan tindakan tambahan.",
+          "Opsi yang tersedia mencakup riwayat pembacaan sensor, detail tanaman hias, detail perangkat, Edit perangkat, dan Hapus perangkat.",
+          "Tindakan Detail perangkat membuka modal dengan informasi pengaturan untuk perangkat yang dipilih, termasuk pengidentifikasi yang dihasilkan, sensor yang diaktifkan, konfigurasi pompa, dan rahasia akun yang digunakan oleh perangkat.",
+          "Menghapus perangkat secara permanen akan menghapus perangkat tersebut dan hubungannya dengan tanaman hias."
+        ]
+      },
+      {
+        "heading": "Pembacaan sensor Sejarah",
+        "body": [
+          "Layar Riwayat pembacaan sensor menampilkan grafik terperinci untuk data sensor yang dikumpulkan.",
+          "Data dapat dilihat menggunakan agregasi harian, mingguan, dan bulanan.",
+          "Grafik tersedia untuk suhu udara, kelembaban udara, tingkat cahaya, dan kelembaban tanah.",
+          "Hanya data yang disediakan oleh perangkat yang dapat ditampilkan.",
+          "Backend menyimpan pembacaan sensor dalam keranjang per jam. Jika perangkat mengirimkan beberapa pembacaan sensor untuk jam yang sama, catatan per jam yang ada akan diperbarui, bukan diduplikasi."
+        ]
+      },
+      {
+        "heading": "Tindakan yang luar biasa",
+        "body": [
+          "Tombol Tindakan Mengambang menyediakan tindakan yang terkait dengan manajemen dan konfigurasi perangkat.",
+          "Tindakan yang tersedia mencakup Tautkan perangkat, Penyiapan perangkat, Sortir, Filter, Kirim ekspor, dan Hapus filter saat filter aktif.",
+          "Penyortiran dapat diterapkan berdasarkan nama tanaman hias, lokasi, atau waktu baca terakhir.",
+          "Pemfilteran dapat diterapkan berdasarkan tanaman hias, lokasi, dan status perangkat, seperti diaktifkan atau dinonaktifkan.",
+          "Tindakan Kirim ekspor mengirimkan ekspor spreadsheet pembacaan sensor melalui email. Ekspor tersebut mencakup catatan membaca dan catatan tugas menyiram. Jika filter diterapkan, data yang diekspor mencerminkan filter tersebut."
+        ]
+      },
+      {
+        "heading": "Menghubungkan perangkat",
+        "body": [
+          "Perangkat tautan digunakan untuk menyiapkan perangkat membaca baru dan mengaitkannya dengan tanaman hias.",
+          "Selama pengaturan, Anda dapat mengonfigurasi nama perangkat, tanaman hias yang ditautkan, status diaktifkan atau dinonaktifkan, interval pembacaan, sensor yang diaktifkan, peringatan kelembaban tanah rendah, pemberitahuan email dan push untuk kelembaban tanah rendah, dukungan pompa air, peluncuran pompa otomatis, ambang batas kelembaban tanah penyiraman otomatis, dan pemberitahuan email dan push setelah penyiraman selesai.",
+          "Setiap perangkat menerima Kunci Perangkat yang dihasilkan. Akun pengguna juga memiliki Kunci Rahasia Auth. Bersama-sama, kredensial ini memungkinkan perangkat fisik berkomunikasi dengan backend."
+        ]
+      },
+      {
+        "heading": "Otentikasi perangkat dan aliran data",
+        "body": [
+          "Perangkat diautentikasi menggunakan Kunci Rahasia Auth, Kunci Perangkat, dan ID Perangkat opsional.",
+          "Token login pengguna tidak diperlukan untuk titik akhir penyerapan perangkat. Otorisasi ditangani melalui kredensial perangkat.",
+          "Hal ini memungkinkan integrasi IoT sederhana di mana board dapat mengirim data langsung ke Flovers.",
+          "Kode Arduino atau ESP yang dihasilkan berisi titik akhir dan kredensial yang diperlukan untuk perangkat yang dipilih. Sebelum mengunggah kode, pengguna harus mengisi SSID WiFi dan kata sandinya sendiri."
+        ]
+      },
+      {
+        "heading": "Penyiapan perangkat",
+        "body": [
+          "Opsi Pengaturan perangkat memberikan informasi teknis untuk mengonfigurasi perangkat keras.",
+          "Ini mencakup titik akhir penyerapan untuk mengirimkan pembacaan sensor, titik akhir umpan untuk mengambil pembacaan sensor terbaru, contoh muatan, Kunci Rahasia Auth akun, dan opsi untuk memutar Kunci Rahasia Auth.",
+          "Memutar Kunci Rahasia Auth akan membatalkan rahasia lama, sehingga kode perangkat apa pun yang ada yang menggunakan rahasia sebelumnya harus diperbarui."
+        ]
+      },
+      {
+        "heading": "Detail perangkat",
+        "body": [
+          "Modal Detail perangkat menampilkan informasi untuk perangkat tertentu.",
+          "Ini mencakup nama perangkat, Kunci Perangkat, Kunci Rahasia Auth, tanaman hias yang tertaut, sensor yang diaktifkan, dan apakah pompa air tertaut.",
+          "Modal ini juga memungkinkan pengguna mengirim kode Arduino yang dihasilkan melalui email untuk perangkat yang dipilih. Email tersebut menyertakan kode yang dihasilkan di badan email dan sebagai lampiran .ino.",
+          "Kode yang dihasilkan didasarkan pada konfigurasi perangkat yang dipilih, termasuk sensor yang diaktifkan, dukungan pompa, pengaturan penyiraman otomatis, Kunci Perangkat, ID Perangkat, dan Kunci Rahasia Auth."
+        ]
+      },
+      {
+        "heading": "Penyiraman terjadwal secara manual",
+        "body": [
+          "Jika perangkat mengaktifkan dukungan pompa air, pengguna dapat menjadwalkan permintaan penyiraman manual.",
+          "Penyiraman manual tidak langsung menjalankan pompa dari aplikasi seluler. Sebaliknya, backend membuat tugas pompa yang tertunda untuk perangkat.",
+          "Papan fisik memeriksa backend untuk tugas penyiraman manual yang tertunda. Jika ada tugas yang tertunda dan board memiliki logika kontrol pompa, maka board dapat menjalankan pompa dan kemudian melaporkan penyelesaiannya kembali ke backend.",
+          "Penyiraman terjadwal secara manual mengabaikan nilai kelembaban tanah saat ini, ambang batas penyiraman otomatis, dan cooldown penyiraman otomatis.",
+          "Ini berarti penyiraman manual diperlakukan sebagai permintaan pengguna yang eksplisit.",
+          "Permintaan penyiraman manual terjadwal juga dapat ditarik kembali sebelum perangkat mengambilnya."
+        ]
+      },
+      {
+        "heading": "Waktu tugas penyiraman manual",
+        "body": [
+          "Kode perangkat yang dihasilkan menggunakan waktu terpisah untuk pembacaan sensor dan pemeriksaan penyiraman manual.",
+          "Secara default, pembacaan sensor dikirim satu kali per jam.",
+          "Pemeriksaan penyiraman otomatis dilakukan sebagai bagian dari siklus pembacaan setiap jam.",
+          "Tugas penyiraman manual yang tertunda diperiksa lebih sering, secara default satu kali per menit.",
+          "Hal ini memungkinkan permintaan penyiraman manual diambil lebih cepat tanpa mengirimkan pembacaan sensor setiap menit.",
+          "Urutan pelaksanaannya tetap: kirim pembacaan sensor selama siklus pembacaan normal, periksa apakah ada penyiraman manual yang tertunda, dan jika tidak ada penyiraman manual yang dilakukan, periksa kondisi penyiraman otomatis.",
+          "Ketika pemeriksaan penyiraman manual satu menit dijalankan di luar siklus pembacaan per jam, pemeriksaan tersebut hanya memeriksa tugas penyiraman manual yang tertunda."
+        ]
+      },
+      {
+        "heading": "Penyiraman otomatis",
+        "body": [
+          "Jika dukungan pompa air diaktifkan, penyiraman otomatis juga dapat diaktifkan.",
+          "Penyiraman otomatis menggunakan pembacaan sensor kelembaban tanah dan ambang batas yang dikonfigurasi.",
+          "Dewan menanyakan backend tentang konfigurasi pompa saat ini, termasuk apakah penyiraman otomatis diaktifkan dan ambang batas berapa yang harus digunakan.",
+          "Jika penyiraman otomatis diaktifkan dan kelembaban tanah saat ini berada di bawah ambang batas yang dikonfigurasi, papan dapat menjalankan pompa.",
+          "Penyiraman otomatis bergantung pada dukungan pompa air yang diaktifkan, sensor kelembaban tanah yang diaktifkan, peluncuran pompa otomatis yang diaktifkan, ambang batas kelembaban tanah yang valid, perangkat yang aktif, dan konfirmasi backend dari pengaturan pompa saat ini.",
+          "Penyiraman otomatis memiliki cooldown untuk menghindari pengaktifan pompa berulang kali terlalu sering.",
+          "Penyiraman manual memiliki prioritas dibandingkan penyiraman otomatis dalam siklus yang sama. Jika penyiraman manual dilakukan, penyiraman otomatis dilewati untuk siklus tersebut."
+        ]
+      },
+      {
+        "heading": "Pelaporan penyelesaian pompa",
+        "body": [
+          "Setelah pompa berjalan, perangkat melaporkan penyelesaiannya kembali ke backend.",
+          "Penyelesaian pompa dapat dilaporkan untuk penyiraman terjadwal secara manual atau penyiraman otomatis yang dipicu oleh kelembaban tanah.",
+          "Ketika pengoperasian pompa berhasil dicatat, backend memperbarui waktu pengoperasian pompa terakhir, sumber pengoperasian pompa terakhir, dan status tugas pompa terkait jika berlaku.",
+          "Jika pemberitahuan penyelesaian penyiraman diaktifkan, backend dapat mengirim email dan pemberitahuan push setelah penyiraman selesai."
+        ]
+      },
+      {
+        "heading": "Pemberitahuan penyiraman",
+        "body": [
+          "Perangkat dapat dikonfigurasi untuk mengirim pemberitahuan setelah penyiraman selesai.",
+          "Jenis notifikasi yang didukung adalah notifikasi email dan notifikasi push.",
+          "Ini terpisah dari peringatan kelembaban tanah yang rendah.",
+          "Pemberitahuan penyiraman hanya relevan ketika perangkat mengaktifkan dukungan pompa air.",
+          "Pemberitahuan penyiraman dapat dikirim setelah penyiraman manual atau otomatis selesai, tergantung pada laporan penyelesaian pompa yang diterima dari perangkat."
+        ]
+      },
+      {
+        "heading": "Peringatan kelembaban tanah rendah",
+        "body": [
+          "Perangkat dengan sensor kelembaban tanah dapat dikonfigurasi untuk mengirimkan peringatan ketika kelembaban tanah turun di bawah ambang batas yang dikonfigurasi.",
+          "Peringatan kelembaban tanah rendah mendukung pemberitahuan email dan pemberitahuan push.",
+          "Backend melacak status peringatan sehingga pengguna tidak berulang kali diberitahu pada setiap pembacaan sementara tanaman hias tetap berada di bawah ambang batas.",
+          "Peringatan baru dikirimkan ketika nilai kelembapan melewati kondisi kelembapan rendah. Status peringatan diatur ulang setelah kelembapan naik kembali di atas ambang batas.",
+          "Peringatan kelembaban tanah rendah tidak bergantung pada pemberitahuan selesainya penyiraman."
+        ]
+      },
+      {
+        "heading": "Ekspor data",
+        "body": [
+          "Ekspor pembacaan sensor mengirimkan spreadsheet ke pengguna melalui email.",
+          "Spreadsheet mencakup data pembacaan sensor dan catatan tugas penyiraman.",
+          "Tab pembacaan sensor mencakup pembacaan sensor seperti suhu, kelembaban, cahaya, dan kelembaban tanah.",
+          "Tab tugas penyiraman mencakup catatan tugas pompa seperti sumber manual atau otomatis, status, waktu yang diminta, waktu pengiriman, waktu pelaksanaan, waktu dibatalkan, kelembapan sesuai permintaan, ambang batas sesuai permintaan, dan pesan kesalahan.",
+          "Jika filter diterapkan di layar pembacaan sensor, ekspor akan mengikuti filter tersebut. Misalnya, jika ekspor dibatasi pada tanaman hias atau cakupan perangkat tertentu, catatan tugas penyiraman juga terbatas pada perangkat yang cocok."
+        ]
+      },
+      {
+        "heading": "Menghasilkan kode Arduino atau ESP",
+        "body": [
+          "Kode yang dihasilkan dimaksudkan sebagai titik awal yang siap diedit untuk papan bergaya ESP32.",
+          "Ini mencakup logika untuk koneksi WiFi, sinkronisasi waktu, inisialisasi sensor, membaca sensor yang diaktifkan, mengirimkan pembacaan sensor ke backend, memeriksa tugas penyiraman manual, memeriksa pengaturan penyiraman otomatis yang dikontrol backend, menjalankan pompa bila diperlukan, dan melaporkan penyelesaian pompa.",
+          "Kode yang dihasilkan memisahkan unggahan bacaan dan pemeriksaan tugas penyiraman manual.",
+          "Secara default, pembacaan sensor dikirim setiap jam, sedangkan tugas penyiraman manual diperiksa satu kali per menit.",
+          "Pengguna harus meninjau dan menyesuaikan kode yang dihasilkan untuk perangkat keras, pin, nilai kalibrasi, kabel relai pompa, dan jenis papan mereka sendiri."
+        ]
+      },
+      {
+        "heading": "Catatan penting",
+        "body": [
+          "Stabilitas perangkat, kalibrasi, pengkabelan fisik, dan pemasangan adalah tanggung jawab pengguna.",
+          "Pembacaan sensor bersifat informatif dan harus ditafsirkan bersama dengan observasi dunia nyata.",
+          "Pengendalian pompa air memerlukan kehati-hatian ekstra. Pengguna harus memastikan relai, pompa, catu daya, pipa, dan sumber air terpasang dengan aman.",
+          "Flovers mencatat dan menampilkan data perangkat, tetapi tidak menjamin keakuratan sensor pihak ketiga atau yang dibuat sendiri.",
+          "Flovers juga tidak menjamin pompa fisik akan bekerja dengan sukses. Eksekusi pompa bergantung pada perangkat keras pengguna, kode yang dihasilkan, konektivitas WiFi, dan konfigurasi perangkat yang benar."
+        ]
+      }
+    ]
+  }
+}

@@ -1,19 +1,24 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { useIsFocused } from "@react-navigation/native";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { BackHandler, Pressable, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import FAB from "../../../shared/ui/FAB";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import type { FabAction } from "../../../shared/ui/FAB";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import GlassCard from "../../profile/components/GlassCard";
 import { prompts as pr } from "../../profile/styles/profile.styles";
 import ContactModalFrame from "../components/ContactModalFrame";
 import SharedPlantHero from "../components/SharedPlantHero";
+import SharedPlantsEmptyState from "../components/SharedPlantsEmptyState";
+import { s as menuStyles } from "../../plant-details/styles/plant-details.styles";
 import { useSharingPreview } from "../state/SharingPreviewProvider";
+import { SHARING_ERROR_MESSAGES } from "../types/sharing.types";
 import type { PlantShare } from "../types/sharing.types";
 import {
-  PreviewNotice, SharingButton, SharingPage, sharingStyles as shared,
+  SharingButton, SharingPage, sharingStyles as shared,
 } from "../components/SharingUI";
 
 type ShareFilter = "all" | "outgoing" | "incoming";
@@ -21,15 +26,61 @@ type ShareFilter = "all" | "outgoing" | "incoming";
 export default function SharedPlantsScreen() {
   const { t } = useTranslation();
   const isFocused = useIsFocused();
+  const nav = useNavigation<any>();
+  const insets = useSafeAreaInsets();
   const { settings } = useSettings();
-  const { contacts, shares, shareDraft, openSharePlant, removeShare } = useSharingPreview();
+  const { contacts, shares, shareDraft, openSharePlant, removeShare, loaded, loading, error, pending, refresh } = useSharingPreview();
   const [filter, setFilter] = useState<ShareFilter>("all");
   const [removing, setRemoving] = useState<PlantShare | null>(null);
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
+  const [removeError, setRemoveError] = useState<string | null>(null);
+  const [menuId, setMenuId] = useState<string | null>(null);
+  const [menuAnchor, setMenuAnchor] = useState<{ right: number; maxWidth: number; buttonTop: number; bottomLimit: number } | null>(null);
+  const [menuHeight, setMenuHeight] = useState(72);
+  const pageRef = useRef<View | null>(null);
+  const menuButtons = useRef<Record<string, View | null>>({});
+  const menuRequest = useRef(0);
+  const focusedRef = useRef(isFocused);
+  focusedRef.current = isFocused;
+  const closeMenu = useCallback(() => {
+    menuRequest.current += 1;
+    setMenuId(null);
+    setMenuAnchor(null);
+  }, []);
+  const toggleMenu = (id: string) => {
+    if (menuId === id) { closeMenu(); return; }
+    setFabCloseSignal((value) => value + 1);
+    const request = ++menuRequest.current;
+    menuButtons.current[id]?.measureInWindow((buttonX, buttonY, buttonWidth) => {
+      pageRef.current?.measureInWindow((pageX, pageY, pageWidth, pageHeight) => {
+        if (request !== menuRequest.current || !focusedRef.current || pageWidth <= 0 || pageHeight <= 0) return;
+        const right = Math.max(12, pageWidth - (buttonX - pageX + buttonWidth) + 6);
+        setMenuAnchor({ right, maxWidth: Math.max(0, pageWidth - right - 12), buttonTop: buttonY - pageY,
+          bottomLimit: pageHeight - 120 - insets.bottom });
+        setMenuId(id);
+      });
+    });
+  };
+  const removeTarget = useRef<string | null>(null);
+  removeTarget.current = isFocused ? removing?.id ?? null : null;
+  useEffect(() => {
+    if (!isFocused) return;
+    void refresh();
+    const timer = setInterval(() => { void refresh(); }, 30000);
+    return () => clearInterval(timer);
+  }, [isFocused, refresh]);
+  useEffect(() => setRemoveError(null), [removing?.id]);
   useEffect(() => {
     if (!isFocused) setRemoving(null);
     setFabCloseSignal((previous) => previous + 1);
-  }, [isFocused, !!removing, !!shareDraft]);
+    closeMenu();
+  }, [isFocused, !!removing, !!shareDraft, filter, closeMenu]);
+  useEffect(() => () => { menuRequest.current += 1; }, []);
+  useEffect(() => {
+    if (!isFocused || !menuId) return;
+    const listener = BackHandler.addEventListener("hardwareBackPress", () => { closeMenu(); return true; });
+    return () => listener.remove();
+  }, [isFocused, menuId, closeMenu]);
 
   const contactNames = useMemo(() => new Map(contacts.map((contact) => [contact.id, contact.name])), [contacts]);
   const groups = useMemo(() => {
@@ -40,6 +91,11 @@ export default function SharedPlantsScreen() {
     });
     return Array.from(result.values());
   }, [shares, filter]);
+  const menuGroup = groups.find((group) => `${group[0].direction}:${group[0].plant.id}` === menuId);
+  const menuPlant = menuGroup?.[0].plant;
+  useEffect(() => { if (menuId && !menuGroup) closeMenu(); }, [menuId, menuGroup, closeMenu]);
+  const menuTop = menuAnchor ? Math.max(12, menuAnchor.buttonTop - 6 + menuHeight <= menuAnchor.bottomLimit
+    ? menuAnchor.buttonTop - 6 : menuAnchor.buttonTop - menuHeight - 6) : 0;
   const contactName = (id: string) => contactNames.get(id) ?? t("sharing.plants.unknownContact", { defaultValue: "Contact" });
   const permission = (share: PlantShare) => share.canCompleteTasks
     ? t("sharing.common.canCompleteTasks", { defaultValue: "Can complete tasks" })
@@ -57,31 +113,45 @@ export default function SharedPlantsScreen() {
   ];
 
   return (
-    <View style={styles.page}>
+    <View ref={pageRef} collapsable={false} testID="shared-plants-screen" style={styles.page}>
       <SharingPage title={t("sharing.plants.title", { defaultValue: "Shared plants" })} showBack={false} extraBottomPadding={64}>
-        <PreviewNotice />
+        {!loaded ? <View style={styles.loading}>
+          {loading || !error ? <CenteredSpinner /> : <>
+            <Text accessibilityRole="alert" style={shared.error}>{t("sharing.live.loadFailed", { defaultValue: "Could not load shared plants." })}</Text>
+            <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} />
+          </>}
+        </View> : <>
+        {!!error && <GlassCard>
+          <Text accessibilityRole="alert" style={shared.error}>{t(`sharing.accessErrors.${error}`, { defaultValue: SHARING_ERROR_MESSAGES[error] })}</Text>
+          <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} disabled={loading} />
+        </GlassCard>}
         {filter !== "all" && <Text style={shared.chip}>{filter === "outgoing" ? outgoingLabel : incomingLabel}</Text>}
         {groups.length === 0 ? (
-          <GlassCard>
-            <MaterialCommunityIcons name="sprout-outline" color="#FFFFFF" size={30} />
-            <Text style={shared.title}>{filter === "all"
+          <SharedPlantsEmptyState title={filter === "all"
               ? t("sharing.plants.emptyAllTitle", { defaultValue: "No shared plants yet" })
               : filter === "outgoing"
                 ? t("sharing.plants.emptyOutgoingTitle", { defaultValue: "No plants shared yet" })
-                : t("sharing.plants.emptyIncomingTitle", { defaultValue: "No plants shared with you" })}</Text>
-            <Text style={shared.hint}>{filter === "all"
+                : t("sharing.plants.emptyIncomingTitle", { defaultValue: "No plants shared with you" })}
+            body={filter === "all"
               ? t("sharing.plants.emptyAllBody", { defaultValue: "Share plants with a contact or ask someone to share theirs with you." })
               : filter === "outgoing"
                 ? t("sharing.plants.emptyOutgoingBody", { defaultValue: "Choose plants and decide who can view them or complete their tasks." })
-                : t("sharing.plants.emptyIncomingBody", { defaultValue: "Plants shared by your contacts will appear here." })}</Text>
-          </GlassCard>
+                : t("sharing.plants.emptyIncomingBody", { defaultValue: "Plants shared by your contacts will appear here." })} />
         ) : groups.map((group) => {
           const first = group[0];
           const plant = first.plant;
           const outgoing = first.direction === "outgoing";
+          const groupId = `${first.direction}:${plant.id}`;
           return (
             <GlassCard key={first.direction + ":" + plant.id}>
-              <SharedPlantHero plant={plant} preferLocalPhoto={outgoing} />
+              <SharedPlantHero plant={plant} preferLocalPhoto={outgoing} action={
+                <Pressable ref={(node) => { menuButtons.current[groupId] = node; }} accessibilityRole="button"
+                  accessibilityLabel={t("sharing.plants.actions", { defaultValue: "Actions for {{name}}", name: plant.name })}
+                  accessibilityState={{ expanded: menuId === groupId }}
+                  style={styles.menuButton} hitSlop={8} onPress={() => toggleMenu(groupId)}>
+                  <MaterialCommunityIcons name="dots-horizontal" size={22} color="#FFFFFF" />
+                </Pressable>
+              } />
               {group.map((share) => (
                 <View key={share.id} style={styles.recipient}>
                   <View style={styles.flex}>
@@ -95,6 +165,7 @@ export default function SharedPlantsScreen() {
                     <Text style={shared.hint}>{share.endsOn
                       ? t("sharing.common.until", { defaultValue: "Until {{date}}", date: share.endsOn })
                       : t("sharing.common.noEndDate", { defaultValue: "No end date" })}</Text>
+                    {!!share.isExpired && <Text style={shared.error}>{t("sharing.common.expired", { defaultValue: "Expired" })}</Text>}
                   </View>
                   <Pressable accessibilityRole="button"
                     accessibilityLabel={outgoing
@@ -110,8 +181,28 @@ export default function SharedPlantsScreen() {
             </GlassCard>
           );
         })}
+        </>}
       </SharingPage>
-      {isFocused && !removing && !shareDraft && <FAB actions={actions} position={settings?.fabPosition === "left" ? "left" : "right"} closeSignal={fabCloseSignal} />}
+      {isFocused && loaded && !removing && !shareDraft && <FAB actions={actions} position={settings?.fabPosition === "left" ? "left" : "right"} closeSignal={fabCloseSignal} onInteraction={closeMenu} />}
+      {isFocused && menuPlant && menuAnchor && <View style={styles.menuOverlay} accessibilityViewIsModal>
+        <Pressable style={StyleSheet.absoluteFill} accessibilityRole="button"
+          accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })} onPress={closeMenu} />
+        <View testID="shared-plant-actions-menu" style={[menuStyles.menuSheet, { right: menuAnchor.right, top: menuTop, maxWidth: menuAnchor.maxWidth }]}
+          onLayout={(event) => { const height = event.nativeEvent.layout.height; if (height > 0 && height !== menuHeight) setMenuHeight(height); }}>
+          <Pressable accessibilityRole="button" style={menuStyles.menuItem} onPress={() => {
+            const id = menuPlant.id; closeMenu(); nav.navigate("PlantDetails", { id });
+          }}>
+            <MaterialCommunityIcons name="flower-tulip-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
+            <Text style={menuStyles.menuItemText}>{t("home.menu.goToPlant", { defaultValue: "Go to plant" })}</Text>
+          </Pressable>
+          <Pressable accessibilityRole="button" style={menuStyles.menuItem} onPress={() => {
+            const plantId = menuPlant.id; closeMenu(); nav.navigate("Home", { plantId, filterRequestId: `${Date.now()}-${menuRequest.current}` });
+          }}>
+            <MaterialCommunityIcons name="format-list-checks" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
+            <Text style={menuStyles.menuItemText}>{t("sharing.plants.displayTasks", { defaultValue: "Display tasks" })}</Text>
+          </Pressable>
+        </View>
+      </View>}
       <ContactModalFrame visible={isFocused && removing !== null}
         title={removing?.direction === "incoming"
           ? t("sharing.plants.leaveTitle", { defaultValue: "Leave shared plant?" })
@@ -124,13 +215,23 @@ export default function SharedPlantsScreen() {
           <Pressable style={[pr.promptBtn, styles.confirmButton]} accessibilityRole="button" onPress={() => setRemoving(null)}>
             <Text style={pr.promptBtnText}>{t("sharing.common.cancel", { defaultValue: "Cancel" })}</Text>
           </Pressable>
-          <Pressable style={[pr.promptBtn, pr.promptDanger, styles.confirmButton]} accessibilityRole="button"
-            onPress={() => { if (removing) removeShare(removing.id); setRemoving(null); }}>
+          <Pressable style={[pr.promptBtn, pr.promptDanger, styles.confirmButton, !!pending && { opacity: 0.5 }]} accessibilityRole="button" disabled={!!pending}
+            onPress={async () => {
+              if (!removing || pending) return;
+              const id = removing.id;
+              const result = await removeShare(id);
+              if (removeTarget.current !== id) return;
+              if (result.ok) setRemoving(null);
+              else if (result.reason !== "busy" && result.reason !== "staleSession") setRemoveError(
+                t(`sharing.accessErrors.${result.reason}`, { defaultValue: SHARING_ERROR_MESSAGES[result.reason] })
+              );
+            }}>
             <Text style={[pr.promptBtnText, pr.promptDangerText, styles.confirmText]}>{removing?.direction === "incoming"
               ? t("sharing.plants.leave", { defaultValue: "Leave shared plant" })
               : t("sharing.plants.stopSharing", { defaultValue: "Remove access" })}</Text>
           </Pressable>
         </View>
+        {!!removeError && <Text accessibilityRole="alert" style={shared.error}>{removeError}</Text>}
       </ContactModalFrame>
     </View>
   );
@@ -138,7 +239,10 @@ export default function SharedPlantsScreen() {
 
 const styles = StyleSheet.create({
   page: { flex: 1 },
+  loading: { height: 300, justifyContent: "center" },
   flex: { flex: 1 },
+  menuButton: { width: 36, height: 36, borderRadius: 18, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0,0,0,0.24)" },
+  menuOverlay: { ...StyleSheet.absoluteFillObject, zIndex: 4000, elevation: 4000 },
   recipient: { flexDirection: "row", alignItems: "center", paddingVertical: 12, gap: 10 },
   permission: { flexDirection: "row", alignItems: "center", gap: 6, marginVertical: 5 },
   removeButton: { minWidth: 44, minHeight: 44, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,107,107,0.10)" },

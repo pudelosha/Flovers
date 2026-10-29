@@ -1,0 +1,56 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Riwayat tugas"
+    },
+    "fab": {
+      "sort": "Urutkan",
+      "filter": "Filter",
+      "sendExport": "Kirim ekspor",
+      "delete": "Hapus",
+      "clearFilter": "Hapus filter",
+      "showAllHistory": "Tampilkan semua riwayat"
+    },
+    "common": {
+      "unnamedPlant": "Tanaman hias tanpa nama"
+    },
+    "toasts": {
+      "failedToLoad": "Gagal memuat riwayat tugas",
+      "historyDeleted": "Riwayat dihapus",
+      "failedToDeleteHistory": "Gagal menghapus riwayat",
+      "historyTaskDeleted": "Tugas riwayat dihapus",
+      "failedToDeleteHistoryTask": "Gagal menghapus tugas riwayat",
+      "taskNotLinkedToPlant": "Tugas ini tidak terhubung ke tanaman.",
+      "exportSent": "Permintaan ekspor riwayat tugas terkirim",
+      "failedToSendExport": "Gagal mengirim ekspor riwayat tugas",
+      "exportNotAvailableYet": "Ekspor belum tersedia."
+    },
+    "empty": {
+      "title": "Belum ada tugas yang selesai",
+      "descBeforeBold": "Layar ini menunjukkan",
+      "bold": "tugas pengingat tertutup",
+      "descAfterBold": "dari halaman Beranda Anda (tugas yang tertunda tidak ditampilkan).",
+      "filteredToPlantId": "Saat ini difilter ke id tanaman hias {{plantId}}.",
+      "openFromTaskHint": "Buka dari tugas tertentu untuk melihat sejarah hanya untuk tanaman hias itu."
+    },
+    "tile": {
+      "completedOn": "Selesai pada {{date}}",
+      "completed": "Selesai",
+      "noteLabel": "Catatan"
+    },
+    "menu": {
+      "expand": "Perluas",
+      "collapse": "Runtuh",
+      "editReminder": "Sunting pengingat",
+      "goToPlant": "Lihat tanaman",
+      "deleteTask": "Hapus tugas"
+    },
+    "types": {
+      "watering": "penyiraman",
+      "fertilising": "pemupukan",
+      "moisture": "gerimis",
+      "care": "peduli",
+      "repot": "merepoting"
+    }
+  }
+}

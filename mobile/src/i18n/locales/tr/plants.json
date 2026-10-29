@@ -1,0 +1,45 @@
+{
+  "plants": {
+    "header": {
+      "title": "Bitkiler"
+    },
+    "list": {
+      "unnamed": "İsimsiz ev bitkisi"
+    },
+    "empty": {
+      "title": "Henüz ev bitkisi yok",
+      "desc1": "İlk ev bitkinizi eklemek için sağ alt köşedeki “+” düğmesine dokunun.",
+      "desc2": "Ev bitkisi oluşturma Sihirbazı, ev bitkinizi ayarlamanıza, parametrelerini belirlemenize ve hatırlatmaları planlamanıza yardımcı olacaktır."
+    },
+    "fab": {
+      "create": "Bitki ekle",
+      "sort": "Sırala",
+      "filter": "Filtrele",
+      "clearFilter": "Filtreyi temizle",
+      "locations": "Konumlar"
+    },
+    "menu": {
+      "details": "Bitki ayrıntıları",
+      "edit": "Bitkiyi düzenle",
+      "reminders": "Hatırlatıcıları göster",
+      "journal": "Bitki günlüğünü göster",
+      "showQr": "QR kodunu göster",
+      "delete": "Bitkiyi sil"
+    },
+    "toast": {
+      "loadFailed": "Ev bitkileri yüklenemedi",
+      "updated": "Bitki güncellendi",
+      "deleted": "Bitki silindi",
+      "qrSaved": "QR kodu galerinize kaydedildi.",
+      "qrEmailed": "Hesap adresinize bu QR kodunu içeren bir e-posta gönderilecektir."
+    },
+    "alert": {
+      "loadFailedTitle": "Yükleme başarısız oldu",
+      "loadFailedMsg": "Ev bitkisi ayrıntıları yüklenemedi.",
+      "updateFailedTitle": "Güncelleme başarısız oldu",
+      "updateFailedMsg": "Bu ev bitkisi güncellenemedi.",
+      "deleteFailedTitle": "Silinemedi",
+      "deleteFailedMsg": "Bu ev bitkisi silinemedi."
+    }
+  }
+}

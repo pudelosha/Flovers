@@ -11,6 +11,8 @@ import type { PlantReminderSummary } from "../types/plant-details.types";
 
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../reminders/constants/reminders.constants";
 import PlantReminderMenu from "./PlantReminderMenu";
+import { plantAccess } from "../../../shared/utils/plantAccess";
+import type { ApiPlantAccess } from "../../../shared/utils/plantAccess";
 
 /* ----- helpers (mirrors Reminders tile) ----- */
 function toDisplayType(t?: string) {
@@ -84,6 +86,7 @@ function getDueDiffDays(d: string | Date | null | undefined): number | null {
 /* --------------------------------------------- */
 
 type Props = {
+  access?: ApiPlantAccess;
   reminders: PlantReminderSummary[];
   onMarkComplete: (reminderId: string) => void;
   onEditReminder: (reminderId: string) => void;
@@ -97,6 +100,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function PlantRemindersTile({
+  access,
   reminders,
   onMarkComplete,
   onEditReminder,
@@ -235,6 +239,8 @@ export default function PlantRemindersTile({
 
               {isOpen && (
                 <PlantReminderMenu
+                  canEdit={plantAccess(r.access === undefined ? access : r.access).canEdit}
+                  canComplete={plantAccess(r.access === undefined ? access : r.access).canCompleteTasks}
                   onMarkComplete={() => {
                     setMenuOpenId(null);
                     onMarkComplete(r.id);

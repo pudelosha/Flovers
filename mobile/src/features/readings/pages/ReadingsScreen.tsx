@@ -14,6 +14,7 @@ import LinearGradient from "react-native-linear-gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import FAB from "../../../shared/ui/FAB";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
@@ -1295,21 +1296,21 @@ export default function ReadingsScreen() {
                   setFilterModalVisible(true);
                 },
               },
-              {
+              ...(derivedItems.some((item) => plantAccess(item.access).canEdit) ? [{
                 key: "send-export",
                 icon: "email-send-outline",
-                label: tr("readings.fab.sendExport", "Send export"),
+                label: String(tr("readings.fab.sendExport", "Send export")),
                 onPress: () => {
                   closeFloatingMenus();
                   setExportModalVisible(true);
                 },
-              },
+              }] : []),
               ...(isFilterActive
                 ? [
                     {
                       key: "clear-filter",
                       icon: "filter-remove",
-                      label: tr("readings.fab.clearFilter", "Clear filter"),
+                      label: String(tr("readings.fab.clearFilter", "Clear filter")),
                       onPress: () => {
                         closeFloatingMenus();
                         setFilters({});
@@ -1432,7 +1433,7 @@ export default function ReadingsScreen() {
       <UpsertReadingDeviceModal
         visible={upsertVisible}
         mode={upsertMode}
-        plants={plantInstances.map((p) => ({
+        plants={plantInstances.filter((p) => plantAccess(p.access).canEdit).map((p) => ({
           id: String(p.id),
           name: (p as any).display_name ?? `Plant #${p.id}`,
           location:

@@ -7,6 +7,8 @@ import { s } from "../styles/home.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/home.constants";
 import type { Task } from "../types/home.types";
 import TaskMenu from "./TaskMenu";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import { useTranslation } from "react-i18next";
 
@@ -39,6 +41,7 @@ export default function TaskTile({
 }: Props) {
   const { t } = useTranslation();
   const { settings } = useSettings();
+  const access = plantAccess(task.access);
 
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
@@ -147,6 +150,7 @@ export default function TaskTile({
           />
         )}
         <View pointerEvents="none" style={s.cardTint} />
+        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
@@ -167,6 +171,7 @@ export default function TaskTile({
         <View style={s.centerCol}>
           <Text style={[s.taskTypeLabel, { color: accent }]}>{t(`home.taskTypes.${task.type}`)}</Text>
           <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
+          <SharedPlantBadge access={task.access} />
 
           {task.location ? (
             <View style={s.locationRow}>
@@ -199,6 +204,8 @@ export default function TaskTile({
       {/* Floating menu */}
       {isMenuOpen && (
         <TaskMenu
+          canComplete={access.canCompleteTasks}
+          canEdit={access.canEdit}
           onMarkComplete={onMarkComplete}
           onEdit={onEdit}
           onGoToPlant={onGoToPlant}

@@ -27,6 +27,8 @@ export type PlantShare = {
   direction: "incoming" | "outgoing";
   canCompleteTasks: boolean;
   endsOn?: string;
+  expiresAt?: string;
+  isExpired?: boolean;
 };
 
 export type SharingRecipient = {
@@ -43,6 +45,33 @@ export type SharePlantDraft = {
 export type PlantSharingUpdate = {
   plant: ShareablePlant;
   recipients: SharingRecipient[];
+  expectedRevision?: number;
+};
+
+export type SharingSnapshot = {
+  currentUser: SharingContact;
+  contacts: SharingContact[];
+  shares: PlantShare[];
+  versions: Record<string, number>;
+};
+
+export type SharingErrorCode =
+  | "invalid" | "notFound" | "notContact" | "notOwner" | "conflict"
+  | "expired" | "throttled" | "unavailable";
+
+export type SharingMutationResult =
+  | { ok: true }
+  | { ok: false; reason: SharingErrorCode | "busy" | "staleSession" };
+
+export const SHARING_ERROR_MESSAGES: Record<SharingErrorCode, string> = {
+  invalid: "Check the selected plants, contacts and end dates.",
+  notFound: "This plant or sharing permission is no longer available.",
+  notContact: "You can only share plants with accepted contacts.",
+  notOwner: "Only the plant owner can manage sharing.",
+  conflict: "Sharing changed elsewhere. Reload and try again.",
+  expired: "Choose an end date that has not passed.",
+  throttled: "Too many requests. Wait a little and try again.",
+  unavailable: "Could not load or update sharing. Please try again.",
 };
 
 export type InvitationResult =

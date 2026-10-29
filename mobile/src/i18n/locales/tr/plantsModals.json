@@ -1,0 +1,81 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "İptal",
+      "delete": "Sil",
+      "clear": "Temizle",
+      "apply": "Uygula",
+      "reset": "Sıfırla",
+      "close": "Kapat",
+      "done": "Bitti"
+    },
+    "confirmDelete": {
+      "title": "Bitkiyi sil",
+      "messagePrefix": "Silmek istediğinizden emin misiniz?",
+      "messageSuffix": "? İlgili tüm veriler de silinecektir: hatırlatıcılar, cihazlar ve sensör okumaları, görevler ve görev geçmişi. Bu eylem geri alınamaz."
+    },
+    "filter": {
+      "title": "Ev bitkilerini filtrele",
+      "anyLocation": "Herhangi bir konum",
+      "anyLatin": "Herhangi bir Latince/tür"
+    },
+    "sort": {
+      "title": "Ev bitkilerini sırala",
+      "keyPlant": "Ev bitkisi adı",
+      "keyLocation": "Konum",
+      "dirAsc": "Artan",
+      "dirDesc": "Azalan"
+    },
+    "qr": {
+      "title": "Ev bitkisi QR kodu",
+      "p1": "Her ev bitkisinin benzersiz bir QR kodu vardır. Uygulamada taramak bu ev bitkisini anında açar.",
+      "p2": "QR kodunu kaydedebilir veya gönderebilir, yazdırabilir ve daha sonra hızlı erişim için saksıya ekleyebilirsiniz.",
+      "save": "Kaydet",
+      "email": "Gönder"
+    },
+    "edit": {
+      "title": "Bitkiyi düzenle",
+      "namePlaceholder": "Ev bitkisi adı (gerekli)",
+      "latinPlaceholder": "Latince adı (arama)…",
+      "locationOptional": "Konum seçin (isteğe bağlı)",
+      "none": "— Yok —",
+      "notesPlaceholder": "Notlar… (isteğe bağlı)",
+      "purchaseDateLabel": "Satın alma tarihi",
+      "notSet": "Ayarlanmadı",
+      "fallbackDateTitle": "Satın alma tarihini ayarlayın (YYYY-AA-GG)",
+      "fallbackDatePlaceholder": "YYYY-AA-GG",
+      "invalidDateTitle": "Geçersiz tarih",
+      "invalidDateMsg": "YYYY-AA-GG biçimini kullan",
+      "set": "Ayarla",
+      "lightLevelLabel": "Işık seviyesi",
+      "low": "Düşük",
+      "high": "Yüksek",
+      "windowDirectionLabel": "Pencere yönü",
+      "orientations": {
+        "S": "Güney",
+        "E": "Doğu",
+        "W": "Batı",
+        "N": "Kuzey"
+      },
+      "measureBtn": "Işığı ve yönü ölçün",
+      "distanceLabel": "Pencereden uzaklık",
+      "cm": "santimetre",
+      "containerMaterialLabel": "Konteyner malzemesi",
+      "soilMixLabel": "Toprak / saksı karışımı",
+      "update": "Güncelle"
+    },
+    "journal": {
+      "title": "Ev bitkisi Dergisi",
+      "loading": "Yükleniyor...",
+      "error": "Bir şeyler ters gitti.",
+      "empty": "Henüz günlük girişi yok.",
+      "taskTypes": {
+        "watering": "SULAMA",
+        "moisture": "YAPRAK PÜSKÜRTME",
+        "fertilising": "GÜBRELEME",
+        "care": "BAKIM",
+        "repot": "SAKSI DEĞİŞİMİ"
+      }
+    }
+  }
+}

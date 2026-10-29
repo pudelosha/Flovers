@@ -32,6 +32,7 @@ export function formatDueLabel(dueISO: string): { label: string; date: Date } {
 
 /** What ReminderTile expects */
 export type UIReminder = {
+  access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
   id: string;
   reminderId: string;
   type: ReminderTypeUI;
@@ -75,6 +76,7 @@ export function buildUIReminders(
     return {
       id: `reminder-${r.id}`,
       reminderId: String(r.id),
+      access: r.access === undefined ? plant?.access : r.access,
       type: typeUI,
       plant: plant?.display_name || "Plant",
       plantId: r.plant != null ? String(r.plant) : undefined,

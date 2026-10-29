@@ -7,8 +7,8 @@ User = get_user_model()
 
 
 @pytest.mark.django_db
-@pytest.mark.parametrize("language", ["ja", "ko"])
-def test_profile_settings_preserves_supported_asian_languages(language):
+@pytest.mark.parametrize("language", ["ja", "ko", "id", "ru", "tr"])
+def test_profile_settings_preserves_supported_languages(language):
     user = User.objects.create_user(email="language@example.com", password="strong-password-123")
     client = APIClient()
     client.force_authenticate(user=user)

@@ -23,7 +23,8 @@
       "canCompleteTasks": "Can complete tasks",
       "noEndDate": "No end date",
       "until": "Until {{date}}",
-      "you": "You"
+      "you": "You",
+      "expired": "Expired"
     },
     "contacts": {
       "title": "Contacts",
@@ -105,7 +106,9 @@
       "showAll": "Show all",
       "all": "All shared plants",
       "emptyAllTitle": "No shared plants yet",
-      "emptyAllBody": "Share plants with a contact or ask someone to share theirs with you."
+      "emptyAllBody": "Share plants with a contact or ask someone to share theirs with you.",
+      "displayTasks": "Display tasks",
+      "actions": "Actions for {{name}}"
     },
     "form": {
       "title": "Share plants",
@@ -113,7 +116,7 @@
       "plant": "Plants",
       "choosePlant": "Choose plants",
       "singlePlantHint": "Choose the plants and contacts to share them with.",
-      "loadFailed": "Could not load your plants.",
+      "loadFailed": "Could not load plants and sharing.",
       "retry": "Try again",
       "noPlants": "No plants available. Add a plant to start sharing.",
       "contacts": "Who can access these plants?",
@@ -136,7 +139,9 @@
       "shareSelected": "Share selected plants",
       "mixedAccess": "Has access to some selected plants. Select to add the rest.",
       "mixedPermissions": "Permissions differ between the selected plants.",
-      "endDatesVary": "End dates differ between the selected plants."
+      "endDatesVary": "End dates differ between the selected plants.",
+      "reload": "Reload sharing",
+      "conflictHint": "Sharing changed elsewhere. Reload sharing before saving; this replaces the current recipient selections."
     },
     "toasts": {
       "invitationAdded": "Invitation added to the preview.",
@@ -145,9 +150,9 @@
       "invitationCancelled": "Invitation cancelled in this preview.",
       "contactUpdated": "Contact updated in this preview.",
       "contactDeleted": "Contact deleted in this preview.",
-      "sharingSaved": "Sharing updated in this preview.",
-      "accessRemoved": "Access removed in this preview.",
-      "plantLeft": "Shared plant removed from this preview.",
+      "sharingSaved": "Sharing updated.",
+      "accessRemoved": "Access removed.",
+      "plantLeft": "Shared plant removed.",
       "idCopied": "ID copied.",
       "copyFailed": "Could not copy the ID.",
       "previewReset": "Preview reset.",
@@ -166,6 +171,23 @@
       "alreadyPending": "An invitation for this person is already pending.",
       "throttled": "Too many requests. Wait a little and try again.",
       "unavailable": "Could not connect. Please try again."
+    },
+    "access": {
+      "sharedBy": "Shared by {{name}}",
+      "sharedPlant": "Shared plant"
+    },
+    "live": {
+      "loadFailed": "Could not load shared plants."
+    },
+    "accessErrors": {
+      "invalid": "Check the selected plants, contacts and end dates.",
+      "notFound": "This plant or sharing permission is no longer available.",
+      "notContact": "You can only share plants with accepted contacts.",
+      "notOwner": "Only the plant owner can manage sharing.",
+      "conflict": "Sharing changed elsewhere. Reload and try again.",
+      "expired": "Choose an end date that has not passed.",
+      "throttled": "Too many requests. Wait a little and try again.",
+      "unavailable": "Could not load or update sharing. Please try again."
     }
   }
 }

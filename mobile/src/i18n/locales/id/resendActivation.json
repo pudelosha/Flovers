@@ -1,0 +1,16 @@
+{
+  "resendActivation": {
+    "title": "Kirim Ulang Aktivasi",
+    "subtitle": "Masukkan email Anda dan kami akan mengirimkan link aktivasi baru.",
+    "email": "Email",
+    "sendButton": "Kirim email aktivasi",
+    "backToLogin": "Kembali ke Masuk",
+    "errors": {
+      "emailRequired": "Silakan masukkan email Anda.",
+      "generic": "Ada yang tidak beres. Coba lagi."
+    },
+    "success": {
+      "emailSent": "Jika akun Anda memerlukan aktivasi, email sedang dikirim."
+    }
+  }
+}

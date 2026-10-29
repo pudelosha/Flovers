@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import { useContacts } from "../state/ContactsProvider";
+import { useSharingPreview } from "../state/SharingPreviewProvider";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { CONTACT_ERROR_MESSAGES } from "../types/contacts.types";
-import type { SharingContact } from "../types/sharing.types";
-import { sharingStyles as s } from "./SharingUI";
+import type { PlantShare, SharingContact } from "../types/sharing.types";
+import { SharingButton, sharingStyles as s } from "./SharingUI";
 import ContactModalFrame from "./ContactModalFrame";
 import { prompts as pr } from "../../profile/styles/profile.styles";
 
@@ -13,6 +15,7 @@ type Props = { contact: SharingContact | null; onClose: () => void };
 export default function ContactDetailsModal({ contact, onClose }: Props) {
   const { t } = useTranslation();
   const { updateContactName, pending } = useContacts();
+  const { shares, loaded, loading, error: sharingError, refresh, openSharePlant } = useSharingPreview();
   const [name, setName] = useState("");
   const [nameInvalid, setNameInvalid] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -24,6 +27,24 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
     setNameInvalid(false);
     setError(null);
   }, [contact?.id]);
+  useEffect(() => { if (contact) void refresh(); }, [contact?.id, refresh]);
+
+  const renderShares = (direction: PlantShare["direction"]) => {
+    const items = shares.filter((share) => share.contactId === contact?.id && share.direction === direction);
+    if (!items.length) return <Text style={s.hint}>{direction === "outgoing"
+      ? t("sharing.contacts.noSharedByYou", { defaultValue: "You have not shared any plants with this contact." })
+      : t("sharing.contacts.noSharedWithYou", { defaultValue: "This contact has not shared any plants with you." })}</Text>;
+    return items.map((share) => <View key={share.id} style={local.plant}>
+      <Text style={s.text}>{share.plant.name}</Text>
+      {!!share.plant.location && <Text style={s.hint}>{share.plant.location}</Text>}
+      <Text style={s.hint}>{share.canCompleteTasks
+        ? t("sharing.common.canCompleteTasks", { defaultValue: "Can complete tasks" })
+        : t("sharing.common.viewOnly", { defaultValue: "View only" })}</Text>
+      <Text style={s.hint}>{share.endsOn ? t("sharing.common.until", { defaultValue: "Until {{date}}", date: share.endsOn })
+        : t("sharing.common.noEndDate", { defaultValue: "No end date" })}</Text>
+      {share.isExpired && <Text style={s.hint}>{t("sharing.common.expired", { defaultValue: "Expired" })}</Text>}
+    </View>);
+  };
 
   const save = async () => {
     if (!contact || pending) return;
@@ -67,7 +88,21 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
             {!!contact.email && <Text selectable style={s.hint}>{contact.email}</Text>}
             {!!contact.floversId && <Text selectable style={s.hint}>{contact.floversId}</Text>}
             <View style={s.divider} />
-            <Text style={s.hint}>{t("sharing.contacts.sharingUnavailable", { defaultValue: "Plant sharing is still a preview. Access for real contacts will be available in the next stage." })}</Text>
+            {!loaded && !sharingError && <View style={{ height: 56 }}><CenteredSpinner size={28} /></View>}
+            {!!sharingError && <>
+              <Text accessibilityRole="alert" style={s.error}>{t("sharing.accessErrors.unavailable", { defaultValue: "Could not load or update sharing. Please try again." })}</Text>
+              <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" disabled={loading} onPress={() => { void refresh(); }} />
+            </>}
+            {loaded && <>
+              <Text style={s.title}>{t("sharing.contacts.sharedByYou", { defaultValue: "Plants you share" })}</Text>
+              {renderShares("outgoing")}
+              <View style={s.space} />
+              <Text style={s.title}>{t("sharing.contacts.sharedWithYou", { defaultValue: "Plants shared with you" })}</Text>
+              {renderShares("incoming")}
+            </>}
+            <SharingButton label={t("sharing.contacts.sharePlant", { defaultValue: "Share plants" })}
+              icon="share-variant-outline" disabled={!loaded || !!sharingError || loading}
+              onPress={() => { onClose(); openSharePlant(undefined, contact.id); }} />
           </View>
           <View style={pr.promptButtonsRow}>
             <Pressable accessibilityRole="button" style={pr.promptBtn} onPress={onClose}>

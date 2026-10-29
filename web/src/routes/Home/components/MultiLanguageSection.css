@@ -4,10 +4,10 @@
   margin-bottom: 40px;
 }
 
-/* Layout for icons - 12 icons in one row (no parent frame) */
+/* Wrap language icons as the list grows. */
 .multi-language-icons {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
   gap: 16px;
   justify-items: center;
   max-width: 100%;

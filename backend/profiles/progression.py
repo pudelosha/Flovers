@@ -55,27 +55,29 @@ def get_progression(user):
 
 
 @transaction.atomic
-def award_task_completion(task, receipt_now):
+def award_task_completion(task, receipt_now, actor=None):
     """Decide once per newly completed occurrence, atomically with completion.
 
-    The caller already holds reminder/task locks. All award writers then lock
-    user, followed by progression. Locking the always-existing user also makes
-    first-completion balance creation safe across different reminders.
+    Completion holds the actor/owner user rows before plant/reminder/task locks.
+    Reacquiring the actor lock here also protects balance creation if this
+    helper is called internally. XP belongs to the completing actor; the task
+    and subsequent recurrence remain owned by the plant owner.
     """
     if task.status != "completed":
         raise ValueError("XP can only be decided for a completed care task.")
-    get_user_model().objects.select_for_update().get(pk=task.user_id)
+    actor_id = actor.pk if actor is not None else (task.completed_by_id or task.user_id)
+    get_user_model().objects.select_for_update().get(pk=actor_id)
     previous = TaskXPAward.objects.filter(source_task_id=task.pk).first()
     if previous is not None:
         return previous
 
-    progression, _ = AccountProgression.objects.get_or_create(user_id=task.user_id)
+    progression, _ = AccountProgression.objects.get_or_create(user_id=actor_id)
     progression = AccountProgression.objects.select_for_update().get(pk=progression.pk)
     earned_on = receipt_now.astimezone(datetime_timezone.utc).date()
     # Task dates use the server's configured care calendar. Request/profile
     # timezone changes and client-supplied completion dates cannot move it.
     due_today = timezone.localdate(receipt_now, timezone=timezone.get_default_timezone())
-    today_awards = TaskXPAward.objects.filter(user_id=task.user_id, earned_on=earned_on)
+    today_awards = TaskXPAward.objects.filter(user_id=actor_id, earned_on=earned_on)
     xp = 0
     if task.due_date > due_today:
         reason = TaskXPAward.REASON_EARLY
@@ -95,7 +97,7 @@ def award_task_completion(task, receipt_now):
         reason = TaskXPAward.REASON_AWARDED if xp > 0 else TaskXPAward.REASON_DAILY_CAP
 
     award = TaskXPAward.objects.create(
-        user_id=task.user_id, source_task_id=task.pk, plant_id=task.reminder.plant_id,
+        user_id=actor_id, source_task_id=task.pk, plant_id=task.reminder.plant_id,
         care_type=task.reminder.type, earned_on=earned_on, xp=xp, reason=reason,
         created_at=receipt_now,
     )

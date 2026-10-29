@@ -1,0 +1,67 @@
+{
+  "createPlant": {
+    "step03": {
+      "loading": "Yükleniyor...",
+      "title": "Bir konum seçin",
+      "subtitle": "İsteğe bağlı ancak faydalıdır: Konumlar, ev bitkilerini gruplandırmanıza ve daha sonra bunları sıralamanıza veya filtrelemenize olanak tanır.",
+      "errorLoadingLocations": "Konumlar yüklenemedi.",
+      "createLocation": "Yeni konum oluştur",
+      "yourLocations": "Konumlarınız",
+      "categories": {
+        "indoor": "Kapalı",
+        "outdoor": "Dış mekan",
+        "other": "Diğer"
+      },
+      "noLocations": {
+        "indoor": "Henüz kapalı konum yok.",
+        "outdoor": "Henüz açık hava lokasyonu yok.",
+        "other": "Henüz başka konum yok."
+      },
+      "locationExists": "Bu ada sahip konum zaten mevcut.",
+      "errorCreatingLocation": "Konum oluşturulamadı",
+      "quickSuggestions": "Hızlı öneriler"
+    },
+    "locationModal": {
+      "title": "Yeni Konum",
+      "locationName": "Konum adı",
+      "category": "Kategori",
+      "indoor": "Kapalı",
+      "outdoor": "Dış mekan",
+      "other": "Diğer",
+      "create": "Oluştur",
+      "cancel": "İptal",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Oturma odası",
+          "kitchen": "Mutfak",
+          "diningRoom": "Yemek odası",
+          "bedroom": "Yatak odası",
+          "bathroom": "Banyo",
+          "hallway": "Koridor",
+          "office": "Ofis",
+          "kidsRoom": "Çocuk odası"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Teras",
+          "patio": "Veranda",
+          "garden": "Bahçe",
+          "frontYard": "Ön bahçe",
+          "backyard": "Arka Bahçe",
+          "porch": "Sundurma",
+          "greenhouse": "Sera"
+        },
+        "other": {
+          "staircase": "Merdiven",
+          "garage": "Garaj",
+          "basement": "Bodrum",
+          "lobby": "Lobi",
+          "sunroom": "Güneşlenme odası",
+          "workshop": "Atölye",
+          "studio": "Stüdyo",
+          "attic": "Çatı katı"
+        }
+      }
+    }
+  }
+}

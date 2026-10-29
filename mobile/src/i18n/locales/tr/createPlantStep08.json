@@ -1,0 +1,22 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "İsim ve notlar",
+      "subtitle": "Ev bitkinize bir görünen ad verin, notlar ekleyin ve (isteğe bağlı olarak) satın alma tarihini ayarlayın, böylece onun yaşını tahmin edebiliriz.",
+      "displayNameLabel": "Görünen ad",
+      "placeholderName": "örneğin Oturma odası Monstera",
+      "notesLabel": "Notlar",
+      "notesPlaceholder": "Bakım ipuçları, sorunlar, satın aldığınız yer…",
+      "purchaseDateLabel": "Satın alma tarihi (isteğe bağlı)",
+      "notSet": "Ayarlanmadı",
+      "done": "Bitti",
+      "setPurchaseDateTitle": "Satın alma tarihini ayarla",
+      "datePlaceholder": "YYYY-AA-GG",
+      "cancel": "İptal",
+      "set": "Ayarla",
+      "invalidDateTitle": "Geçersiz tarih",
+      "invalidDateMessage": "Lütfen YYYY-AA-GG biçiminde geçerli bir tarih girin.",
+      "nameRequired": "Bir ev bitkisi oluşturmak için ev bitkisi adı gereklidir."
+    }
+  }
+}

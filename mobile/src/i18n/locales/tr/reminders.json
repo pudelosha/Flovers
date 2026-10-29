@@ -1,0 +1,114 @@
+{
+  "reminders": {
+    "headerTitle": "Hatırlatıcılar",
+    "common": {
+      "unnamedPlant": "İsimsiz ev bitkisi",
+      "everyN": "her {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "günler",
+      "months": "aylar"
+    },
+    "types": {
+      "watering": "Sulama",
+      "moisture": "Yaprakları püskürtme",
+      "fertilising": "Gübreleme",
+      "care": "Bakım",
+      "repot": "Saksı değişimi"
+    },
+    "fab": {
+      "add": "Hatırlatıcı ekle",
+      "calendar": "Takvim",
+      "list": "Liste",
+      "sort": "Sırala",
+      "filter": "Filtrele",
+      "clearFilter": "Filtreyi temizle"
+    },
+    "empty": {
+      "title": "Henüz hatırlatıcı yok",
+      "description": "Hatırlatıcılar belirli ev bitkileriyle ilişkilidir. Lütfen öncelikle en az bir ev bitkinizin oluşturulduğundan emin olun.\n\nBir hatırlatıcı eklemek için “+” düğmesine dokunun. Ev bitkisini seçmek, türünü seçmek (sulama, sisleme, gübreleme, bakım veya saksı değişimi), ilk teslim tarihini ayarlamak ve bunun ne sıklıkta tekrarlanması gerektiğini tanımlamak için basit bir yöntem kullanacaksınız."
+    },
+    "menu": {
+      "edit": "Hatırlatıcıyı düzenle",
+      "delete": "Hatırlatıcıyı sil",
+      "pause": "Hatırlatıcıyı duraklat",
+      "resume": "Hatırlatıcıyı devam ettir"
+    },
+    "tile": {
+      "repeatsEvery": "Her {{count}} {{unit}}'yi tekrarlar",
+      "dueToday": "Bugün vadesi doluyor",
+      "dueInOneDay": "1 gün içinde vadesi dolacak",
+      "dueInDays": "{{count}} gün içinde vadesi gelecek",
+      "dueLine": "{{date}} üzerinde {{prefix}}",
+      "paused": "Duraklatıldı"
+    },
+    "calendar": {
+      "scheduledOn": "{{date}} tarihinde planlandı",
+      "noItems": "Bu gün için hatırlatıcı yok.",
+      "today": "Bugün",
+      "weekdays": {
+        "monday": "Pazartesi",
+        "tuesday": "Salı",
+        "wednesday": "Çarşamba",
+        "thursday": "Perşembe",
+        "friday": "Cuma",
+        "saturday": "Cumartesi",
+        "sunday": "Pazar"
+      },
+      "weekdaysShort": {
+        "mon": "Pazartesi",
+        "tue": "Salı",
+        "wed": "Çar",
+        "thu": "Per",
+        "fri": "Cuma",
+        "sat": "Cumartesi",
+        "sun": "Güneş"
+      },
+      "months": {
+        "january": "Ocak",
+        "february": "Şubat",
+        "march": "Mart",
+        "april": "Nisan",
+        "may": "Mayıs",
+        "june": "Haziran",
+        "july": "Temmuz",
+        "august": "Ağustos",
+        "september": "Eylül",
+        "october": "Ekim",
+        "november": "Kasım",
+        "december": "Aralık"
+      },
+      "monthsShort": {
+        "january": "Ocak",
+        "february": "Şubat",
+        "march": "Mart",
+        "april": "Nisan",
+        "may": "Mayıs",
+        "june": "Haziran",
+        "july": "Temmuz",
+        "august": "Ağustos",
+        "september": "Eylül",
+        "october": "Ekim",
+        "november": "Kasım",
+        "december": "Aralık"
+      }
+    },
+    "toast": {
+      "loadFailed": "Hatırlatıcılar yüklenemedi",
+      "deleted": "Hatırlatıcı silindi",
+      "deleteFailed": "Silinemedi",
+      "deleteFailedWithReason": "Silme başarısız oldu: {{reason}}",
+      "duplicateType": "Bu ev bitkisinin zaten bu türden bir hatırlatıcısı var.",
+      "created": "Hatırlatıcı oluşturuldu",
+      "updated": "Hatırlatıcı güncellendi",
+      "createFailed": "Oluşturma başarısız oldu",
+      "createFailedWithReason": "Oluşturma başarısız oldu: {{reason}}",
+      "updateFailed": "Güncelleme başarısız oldu",
+      "updateFailedWithReason": "Güncelleme başarısız oldu: {{reason}}",
+      "paused": "Hatırlatıcı duraklatıldı",
+      "resumed": "Hatırlatıcı devam ettirildi",
+      "toggleFailed": "Güncelleme başarısız oldu",
+      "toggleFailedWithReason": "Güncelleme başarısız oldu: {{reason}}"
+    }
+  }
+}

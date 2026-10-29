@@ -1,0 +1,77 @@
+{
+  "home": {
+    "header": {
+      "title": "Ana sayfa"
+    },
+    "fab": {
+      "showOverdue": "Geciken görevleri göster",
+      "showDueToday": "Bugünkü görevleri göster",
+      "showAllTasks": "Tüm görevleri göster",
+      "markVisibleAsComplete": "Görünen görevleri tamamla",
+      "sort": "Sırala",
+      "filter": "Filtrele",
+      "clearFilter": "Filtreyi temizle",
+      "history": "Geçmiş"
+    },
+    "menu": {
+      "markAsComplete": "Tamamlandı olarak işaretle",
+      "editReminder": "Hatırlatıcıyı düzenle",
+      "goToPlant": "Bitkiye git",
+      "showHistory": "Geçmişi göster",
+      "delete": "Sil"
+    },
+    "taskTypes": {
+      "watering": "SULAMA",
+      "moisture": "YAPRAK PÜSKÜRTME",
+      "fertilising": "GÜBRELEME",
+      "care": "BAKIM",
+      "repot": "SAKSI DEĞİŞİMİ"
+    },
+    "due": {
+      "today": "Bugün",
+      "tomorrow": "Yarın",
+      "inDays": "{{count}} gün içinde",
+      "overdueByDays": "{{count}} gün gecikti",
+      "nextWeek": "Gelecek hafta"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Görevler yüklenemedi",
+      "taskCompleted": "Görev tamamlandı",
+      "tasksCompleted": "Görevler tamamlandı",
+      "completeFailed": "Görev tamamlanamadı",
+      "completeSomeFailed": "{{total}} görevin {{ok}} tanesi tamamlandı",
+      "taskNotLinkedToPlant": "Bu görev bir bitkiye bağlı değil."
+    },
+    "empty": {
+      "all": {
+        "title": "Henüz görev yok",
+        "introPrefix": "Bu sayfada yaklaşan",
+        "introBold": "bitki bakım hatırlatıcılarınızı",
+        "introSuffix": "görebilirsiniz: sulama, gübreleme, saksı değişimi ve daha fazlası.",
+        "toGetStarted": "Başlamak için:",
+        "bullets": {
+          "createPlantsBold": "Bitkilerinizi ekleyin",
+          "createPlantsSuffix": "içinde",
+          "plantsTabBold": "Bitkiler",
+          "addRemindersPrefix": "Ekle",
+          "remindersBold": "hatırlatıcılar",
+          "addRemindersSuffix": "ekleyerek her bitkinin görevlerini burada görebilirsiniz.",
+          "optionallyConnectPrefix": "İsterseniz",
+          "iotBold": "IoT cihazları (Arduino panoları)",
+          "optionallyConnectMiddle": "içinde",
+          "readingsTabBold": "Sensör verileri",
+          "optionallyConnectSuffix": "sekmesinden cihaz bağlayarak sıcaklık, hava nemi, ışık ve toprak nemini anlık takip edebilirsiniz."
+        },
+        "outro": "Kurulumdan sonra Ana sayfada her bitkinin bugün hangi bakıma ihtiyacı olduğunu görebilirsiniz."
+      },
+      "overdue": {
+        "title": "Gecikmiş görev yok",
+        "body": "Şu anda gecikmiş göreviniz yok.\n\n+ düğmesinden \"Tüm görevleri göster\" seçeneğini kullanın veya yaklaşan görevleri görmek için filtreleri değiştirin."
+      },
+      "today": {
+        "title": "Bugün teslim edilmesi gereken görev yok",
+        "body": "Bugün yapılacak göreviniz yok.\n\nYaklaşan görevleri görmek için + düğmesinden \"Tüm görevleri göster\" seçeneğini kullanın veya bitkilerinizin hatırlatma takvimini düzenleyin."
+      }
+    }
+  }
+}

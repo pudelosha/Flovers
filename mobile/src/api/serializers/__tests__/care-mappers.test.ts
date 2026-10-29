@@ -16,6 +16,22 @@ const task: ApiReminderTask = {
 const plants = [{ id: 4, display_name: "Monstera", location: { id: 2, name: "Living room" } }];
 
 describe("care API mappers", () => {
+  it("preserves shared permissions for Home, Reminders and task history", () => {
+    const access = { is_owner: false, is_shared: true, can_edit: false, can_complete_tasks: true,
+      owner: { id: "1", name: "Mom" }, expires_at: null };
+    const sharedReminder = { ...reminder, access };
+    expect(buildUITasks([task], [sharedReminder], plants)[0].access).toEqual(access);
+    expect(buildUIReminders([task], [sharedReminder], plants)[0].access).toEqual(access);
+    const completed = { ...task, access, status: "completed" as const, completed_at: "2026-10-14T10:00:00Z" };
+    expect(buildUIHistoryItems([completed], [sharedReminder], plants)[0].access).toEqual(access);
+  });
+
+  it("does not turn explicitly invalid access into a legacy-owner fallback", () => {
+    const invalidTask = { ...task, access: null } as any;
+    const invalidReminder = { ...reminder, access: null } as any;
+    expect(buildUITasks([invalidTask], [reminder], plants)[0].access).toBeNull();
+    expect(buildUIReminders([task], [invalidReminder], plants)[0].access).toBeNull();
+  });
   it("retains species guidance and singleton recommendations used by the wizard", () => {
     expect(serializePlantProfile({
       id: 4, latin: "Monstera deliciosa", display_name: "Monstera", image: null,

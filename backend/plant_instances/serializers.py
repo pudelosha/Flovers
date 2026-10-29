@@ -12,6 +12,7 @@ from locations.models import Location
 from plant_definitions.models import PlantDefinition
 from reminders.models import Reminder
 from plant_definitions.serializers import _abs_media_url
+from sharing.permissions import plant_access
 
 class PlantInstanceSerializer(serializers.ModelSerializer):
     creation_key = serializers.UUIDField(required=False, write_only=True)
@@ -199,6 +200,17 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
 class PlantInstanceListSerializer(serializers.ModelSerializer):
     location = serializers.SerializerMethodField()
     plant_definition = serializers.SerializerMethodField()
+    access = serializers.SerializerMethodField()
+
+    def get_access(self, obj):
+        return plant_access(getattr(self.context.get("request"), "user", None), obj)
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        caller = getattr(self.context.get("request"), "user", None)
+        if caller is not None and caller.pk != instance.user_id:
+            data["photo_uri"] = None
+        return data
 
     class Meta:
         model = PlantInstance
@@ -212,6 +224,7 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "qr_code",
             "created_at",
             "updated_at",
+            "access",
         ]
 
     def get_location(self, obj):
@@ -252,6 +265,10 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
     plant_definition = serializers.SerializerMethodField()
     plant_definition_id = serializers.IntegerField(source="plant_definition.id", read_only=True)
     location_id = serializers.IntegerField(source="location.id", read_only=True)
+    access = serializers.SerializerMethodField()
+
+    def get_access(self, obj):
+        return plant_access(getattr(self.context.get("request"), "user", None), obj)
 
     class Meta:
         model = PlantInstance
@@ -287,6 +304,7 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "qr_code",
             "created_at",
             "updated_at",
+            "access",
         ]
         read_only_fields = [
             "id",

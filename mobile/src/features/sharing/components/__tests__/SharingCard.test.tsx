@@ -10,7 +10,7 @@ beforeEach(() => { jest.clearAllMocks(); mockState = { snapshot: { counts: { con
 it("shows real contact counts and keeps both Profile destinations", () => {
   const view = render(<SharingCard />);
   expect(view.getByText("Contacts: 7")).toBeTruthy(); expect(view.getByText("Incoming requests: 2")).toBeTruthy();
-  expect(view.queryByText("UI preview")).toBeNull(); expect(view.getByText(/Plant sharing is still a preview/)).toBeTruthy();
+  expect(view.queryByText("UI preview")).toBeNull(); expect(view.queryByText(/Plant sharing is still a preview/)).toBeNull();
   fireEvent.press(view.getByRole("button", { name: /Contacts/ })); expect(mockNavigate).toHaveBeenLastCalledWith("Contacts");
   fireEvent.press(view.getByRole("button", { name: /Shared plants/ })); expect(mockNavigate).toHaveBeenLastCalledWith("SharedPlants");
   expect(mockRefresh).toHaveBeenCalledTimes(1);

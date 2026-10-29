@@ -8,7 +8,7 @@ import {
   StyleSheet,
   Text,
 } from "react-native";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useNavigation, useFocusEffect, useIsFocused, useRoute } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import LinearGradient from "react-native-linear-gradient";
@@ -16,6 +16,7 @@ import LinearGradient from "react-native-linear-gradient";
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
@@ -80,7 +81,13 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function HomeScreen() {
   const { t } = useTranslation();
 
-  const nav = useNavigation();
+  const nav = useNavigation<any>();
+  const isFocused = useIsFocused();
+  const route = useRoute();
+  const routeParams = route.params as { plantId?: string; filterRequestId?: string } | undefined;
+  const requestedPlantId = typeof routeParams?.plantId === "string" ? routeParams.plantId.trim() : undefined;
+  const filterRequestId = routeParams?.filterRequestId;
+  const handledFilterRequest = useRef<string | null>(null);
   const { settings } = useSettings();
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
@@ -144,6 +151,25 @@ export default function HomeScreen() {
     setMenuOpenId(null);
     setFabCloseSignal((value) => value + 1);
   }, []);
+
+  useEffect(() => {
+    if (!requestedPlantId) {
+      handledFilterRequest.current = null;
+      return;
+    }
+    if (!isFocused) return;
+    const request = `${requestedPlantId}:${filterRequestId ?? ""}`;
+    if (handledFilterRequest.current === request) return;
+    handledFilterRequest.current = request;
+    setFilters({ ...INITIAL_FILTERS, types: [], plantId: requestedPlantId });
+    setViewFilter("all");
+    setSortOpen(false);
+    setFilterOpen(false);
+    closeCompleteModal();
+    closeFloatingMenus();
+    nav.setParams({ plantId: undefined, filterRequestId: undefined });
+    requestAnimationFrame(() => listRef.current?.scrollToOffset?.({ offset: 0, animated: false }));
+  }, [requestedPlantId, filterRequestId, isFocused, nav, closeCompleteModal, closeFloatingMenus]);
 
   const load = useCallback(async () => {
     if (loadInFlightRef.current) {
@@ -464,6 +490,8 @@ export default function HomeScreen() {
 
   // open / close / confirm handlers for complete-with-note (single + bulk)
   const openCompleteModal = (selectedTasks: HomeTask[], mode: CompleteMode) => {
+    selectedTasks = selectedTasks.filter((task) => plantAccess(task.access).canCompleteTasks);
+    if (!selectedTasks.length) return;
     setCompleteMode(mode);
     setCompleteTaskIds(selectedTasks.map((x) => x.id));
     setCompleteNote("");
@@ -619,7 +647,7 @@ export default function HomeScreen() {
         ]
       : [
           // Put "Mark visible as complete" at the top when a view filter is active
-          ...(derivedTasks.length > 0
+          ...(derivedTasks.some((task) => plantAccess(task.access).canCompleteTasks)
             ? [
                 {
                   key: "completeVisible",

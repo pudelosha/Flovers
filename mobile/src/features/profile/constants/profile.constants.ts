@@ -4,6 +4,11 @@ export const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"
 export const HEADER_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
 export const LANG_OPTIONS: readonly LangOption[] = [
+  { code: "id", label: "Bahasa Indonesia", flag: "🇮🇩" },
+  { code: "ru", label: "Русский", flag: "🇷🇺" },
+  { code: "tr", label: "Türkçe", flag: "🇹🇷" },
+  { code: "ja", label: "日本語", flag: "🇯🇵" },
+  { code: "ko", label: "한국어", flag: "🇰🇷" },
   { code: "en", label: "English",  flag: "🇬🇧" },
   { code: "pl", label: "Polski",    flag: "🇵🇱" },
   { code: "de", label: "Deutsch",   flag: "🇩🇪" },

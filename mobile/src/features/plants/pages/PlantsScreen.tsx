@@ -56,6 +56,7 @@ import {
 
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import RNFS from "react-native-fs";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import { CameraRoll } from "@react-native-camera-roll/camera-roll";
 import { sendQrCodeByEmail } from "../../../api/services/qr-code.service";
 
@@ -85,6 +86,7 @@ function mapApiToPlant(
 
   return {
     id: String(item.id),
+    access: item.access,
     name,
     latin,
     location,
@@ -267,6 +269,7 @@ export default function PlantsScreen() {
   const attachLocalPhotos = useCallback(async (list: Plant[]) => {
     const results = await Promise.all(
       list.map(async (p) => {
+        if (!plantAccess(p.access).isOwner) return p;
         try {
           const local = await getPlantPhotoUri(p.id);
           if (local) {
@@ -341,6 +344,7 @@ export default function PlantsScreen() {
           auth: true,
         });
         if (request !== editRequestRef.current) return;
+        if (!plantAccess(detail.access).canEdit) return;
 
         if (detail.display_name !== undefined && detail.display_name !== null)
           setFName(detail.display_name || "");

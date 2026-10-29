@@ -1,0 +1,91 @@
+{
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "lastUpdated": "Terakhir diperbarui: {{date}}",
+    "section1": {
+      "title": "§ 1. Ketentuan umum",
+      "p1": "Pengontrol data pribadi yang diproses sehubungan dengan penggunaan situs web Flovers dan aplikasi seluler Flovers adalah Marcin Janowski Copy Paste IT Solutions, dengan alamat terdaftar di ul. hal. Francesco Nullo 30/115, 31-543 Kraków, Polandia, alamat email: info@flovers.app, selanjutnya disebut sebagai “Pengendali”.",
+      "p2": "Pengontrol memproses data pribadi sesuai dengan Peraturan (UE) 2016/679 Parlemen dan Dewan Eropa tanggal 27 April 2016 (GDPR).",
+      "p3": "Kebijakan Privasi ini berlaku untuk situs web Flovers, aplikasi seluler Flovers (Android dan, di masa depan, iOS), dan infrastruktur backend yang terkait dengan pengoperasiannya."
+    },
+    "section2": {
+      "title": "§ 2. Ruang lingkup dan tujuan pemrosesan data pribadi",
+      "intro": "Pengendali memproses data pribadi untuk tujuan berikut:",
+      "list": [
+        "pembuatan dan pengelolaan akun pengguna dalam aplikasi",
+        "otentikasi pengguna dan proses login",
+        "mengirim pesan sistem, termasuk email verifikasi akun dan pengaturan ulang kata sandi",
+        "menangani pesan yang dikirim melalui formulir kontak",
+        "memastikan pengoperasian aplikasi dan situs web dengan benar",
+        "memberikan pengingat, tugas, dan pemberitahuan terkait perawatan tanaman hias",
+        "memastikan keamanan sistem dan memelihara log teknis"
+      ],
+      "legalBasis": "Dasar hukum pemrosesan data adalah Pasal 6(1)(b) GDPR (pelaksanaan kontrak), Pasal 6(1)(c) GDPR (kewajiban hukum), dan Pasal 6(1)(f) GDPR (kepentingan sah Pengendali)."
+    },
+    "section3": {
+      "title": "§ 3. Jenis data pribadi yang diproses",
+      "intro": "Bergantung pada cara aplikasi atau situs web digunakan, Pengontrol dapat memproses data berikut:",
+      "list": [
+        "alamat email pengguna",
+        "kata sandi pengguna yang di-hash",
+        "informasi profil dan preferensi pengguna",
+        "data perangkat teknis (jenis perangkat, sistem operasi, versi aplikasi)",
+        "Alamat IP",
+        "data orientasi perangkat (misalnya untuk mengoptimalkan paparan cahaya tanaman hias)",
+        "data yang dimasukkan oleh pengguna terkait tanaman hias, pengukuran, dan pembacaan sensor IoT"
+      ],
+      "note": "Foto yang diambil oleh pengguna umumnya diproses secara lokal di perangkat pengguna kecuali pengguna memilih untuk menggunakan fitur yang memerlukan pemrosesan sisi server."
+    },
+    "section4": {
+      "title": "§ 4. Akun pengguna dan keamanan",
+      "p1": "Pengguna aplikasi Flovers membuat akun individu yang diamankan dengan kata sandi.",
+      "p2": "Kata sandi disimpan dalam bentuk terenkripsi (hash).",
+      "p3": "Akun pengguna memerlukan verifikasi alamat email yang diberikan.",
+      "p4": "Pengguna dapat mengubah kata sandinya kapan saja atau menggunakan prosedur pengaturan ulang kata sandi."
+    },
+    "section5": {
+      "title": "§ 5. Pemberitahuan dan komunikasi",
+      "p1": "Pengontrol hanya mengirimkan pesan transaksional, khususnya yang berkaitan dengan login, verifikasi akun, dan pengaturan ulang kata sandi.",
+      "p2": "Aplikasi mungkin menggunakan pemberitahuan push (misalnya melalui Firebase) untuk mengingatkan pengguna tentang tugas perawatan tanaman hias.",
+      "p3": "Pengendali berhak untuk memperkenalkan buletin di masa depan; komunikasi pemasaran akan dikirim hanya setelah memperoleh persetujuan terpisah dari pengguna."
+    },
+    "section6": {
+      "title": "§ 6. Cookie dan teknologi serupa",
+      "p1": "Situs web Flovers mungkin menggunakan cookie yang diperlukan agar situs web berfungsi dengan baik.",
+      "p2": "Cookies digunakan semata-mata untuk tujuan teknis dan fungsional.",
+      "p3": "Situs web ini tidak menggunakan analisis atau alat pemasaran pihak ketiga."
+    },
+    "section7": {
+      "title": "§ 7. Penerima data dan tempat pengolahannya",
+      "p1": "Data pribadi diproses di server yang berlokasi di Uni Eropa.",
+      "p2": "Infrastruktur server disediakan oleh Hetzner Online GmbH.",
+      "p3": "Pengontrol dapat menggunakan layanan Firebase untuk tujuan menangani notifikasi push.",
+      "p4": "Data pribadi tidak ditransfer ke negara ketiga di luar Uni Eropa."
+    },
+    "section8": {
+      "title": "§ 8. Periode penyimpanan data",
+      "p1": "Data pribadi disimpan selama akun pengguna.",
+      "p2": "Setelah penghapusan akun, data akan dihapus secara permanen atau dianonimkan, kecuali penyimpanan diwajibkan oleh hukum yang berlaku."
+    },
+    "section9": {
+      "title": "§ 9. Hak subjek data",
+      "intro": "Setiap subjek data berhak untuk:",
+      "list": [
+        "mengakses data pribadi mereka",
+        "memperbaiki data pribadi",
+        "menghapus data pribadi",
+        "membatasi pemrosesan",
+        "keberatan untuk diproses",
+        "menarik persetujuan kapan saja"
+      ],
+      "p2": "Untuk menggunakan hak di atas, silakan menghubungi Pengendali di: info@flovers.app.",
+      "p3": "Subjek data juga berhak mengajukan keluhan kepada Presiden Kantor Perlindungan Data Pribadi (UODO) Polandia atau otoritas pengawas lain yang kompeten."
+    },
+    "section10": {
+      "title": "§ 10. Ketentuan akhir",
+      "p1": "Pengendali menerapkan tindakan teknis dan organisasi yang sesuai untuk melindungi data pribadi.",
+      "p2": "Pengendali berhak memperbarui Kebijakan Privasi ini.",
+      "p3": "Versi Kebijakan Privasi saat ini selalu tersedia di situs web Flovers dan dalam aplikasi seluler."
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "terms": {
+    "title": "Hizmet Şartları",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "section1": {
+      "title": "§ 1. Genel hükümler",
+      "p1": "Bu Hizmet Şartları, Flovers web sitesini ve Flovers mobil uygulamasını (Android ve gelecekte iOS) kullanma kurallarının yanı sıra Sağlayıcı tarafından elektronik hizmetler sağlama koşullarını tanımlar.",
+      "p2": "Hizmet, kayıtlı adresi ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Polonya, e-posta: info@flovers.app, bundan sonra \"Sağlayıcı\" olarak anılacaktır.",
+      "p3": "Kullanıcı, bir Hesap oluşturmak, oturum açmak veya uygulamanın veya web sitesinin herhangi bir işlevini kullanmak da dahil olmak üzere Hizmeti kullanarak bu Koşulları kabul eder ve bunlara uymayı taahhüt eder.",
+      "p4": "Bu Koşullarda düzenlenmeyen konularda, Polonya yasalarının geçerli hükümleri, özellikle de Elektronik Araçlarla Hizmet Sağlama Yasası, Medeni Kanun, Tüketici Hakları Yasası ve Avrupa Birliği hukukunun ilgili hükümleri geçerli olacaktır."
+    },
+    "section2": {
+      "title": "§ 2. Tanımlar",
+      "items": [
+        "Hizmet – mobil uygulama, web sitesi ve arka uç altyapısı dahil olmak üzere Sağlayıcı tarafından Flovers markası altında sağlanan elektronik hizmetler",
+        "Uygulama – Android cihazları (ve gelecekte iOS) için kullanılabilen Flovers mobil uygulaması",
+        "Web sitesi – belgeler ve bilgi içeriğiyle birlikte Flovers web sitesi",
+        "Kullanıcı – Hizmeti kullanan kişi; Kayıt durumunda, Hesap oluşturan kişi",
+        "Hesap – Sağlayıcının sistemindeki bir parolayla korunan bireysel kullanıcı hesabı",
+        "Cihaz – Kullanıcı tarafından Hizmete erişmek için kullanılan bir cihaz (örn. telefon, tablet) ve uygulanabildiği yerde, sensör verilerini gönderen bir ölçüm cihazı (örn. Arduino)",
+        "Ev bitkisi Tanımı – Sağlayıcı tarafından oluşturulan ve otomatik olarak oluşturulan içeriği de içerebilecek genel özellikleri, tercihleri ve bakım önerilerini içeren bir ev bitkisi profili",
+        "Ev bitkisi Örneği – Kullanıcı tarafından Hesabında oluşturulan, kendi örneğini temsil eden, isteğe bağlı olarak bir ev bitkisine bağlanan bir ev bitkisi Tanım",
+        "Sensör Verileri – bir ev bitkisi örneğine atanan hava sıcaklığı, hava nemi, toprak nemi veya ışık seviyesi gibi sensörlerden gelen veriler",
+        "Hatırlatma – Görevler oluşturmak için kullanılan, yinelenen bir ev bitkisi bakımı faaliyetinin (örn. sulama, buğulama, gübreleme, saksı değiştirme) tanımı",
+        "Görev – Kullanıcı tarafından tamamlanmış olarak işaretlenebilen ve açıklama eklenebilen, bir Hatırlatıcıdan oluşturulan belirli bir eylem",
+        "Kullanıcı İçeriği – Kullanıcı tarafından Hizmet dahilinde oluşturulan, yüklenen veya bakımı yapılan tüm veriler ve içerik",
+        "Houseplant Tanıma – Kullanıcı tarafından sağlanan bir fotoğrafı analiz eden ve Sağlayıcının sistemi tarafından oluşturulan bir tanıma sonucunu döndüren bir özellik",
+        "Şartlar – bu Hizmet Şartları"
+      ]
+    },
+    "section3": {
+      "title": "§ 3. Hizmetin Kapsamı ve İşlevler",
+      "intro": "Hizmet özellikle şunları içerebilir:",
+      "list": [
+        "Hesap kaydı ve yönetimi (oturum açma, e-posta onayı, şifre sıfırlama, aktivasyon bağlantılarının yeniden gönderilmesi)",
+        "bakım rehberliği ile ev bitkileri tanımları kütüphanesine erişim",
+        "ev bitkisi örneklerinin oluşturulması ve ev bitkisi günlüklerinin ve geçmişinin bakımı",
+        "Ev bitkisi bakımıyla ilgili Hatırlatmalar ve Görevler (örn. sulama, sisleme, gübreleme, saksı değiştirme)",
+        "Kullanıcı tarafından sağlanan fotoğraflara dayalı houseplant Tanıma",
+        "ölçüm cihazlarıyla entegrasyon ve Sensör Verilerinin saklanması ve sunumu",
+        "Kullanıcı kaynaklarına (örn. ev bitkisi Örnekleri) bağlanan QR kodlarının oluşturulması ve taranması",
+        "belgelere ve SSS'ye erişim"
+      ],
+      "p1": "Hizmet şu anda ücretsiz beta sürümü olarak sunulmaktadır. Sağlayıcı gelecekte Kullanıcılara önceden bilgi verilecek ücretli planlar, ücretsiz sürüm için sınırlamalar, reklamlar veya abonelikler sunabilir.",
+      "p2": "Sağlayıcı, bu tür değişikliklerin zorunlu yasa hükümlerini ihlal etmemesi koşuluyla, Hizmetin seçilen işlevlerini değiştirebilir, genişletebilir, sınırlandırabilir veya sonlandırabilir."
+    },
+    "section4": {
+      "title": "§ 4. Teknik gereksinimler",
+      "items": [
+        "İnternet erişimi olan bir cihaz",
+        "Güncel bir web tarayıcısı (Web Sitesi için) veya uyumlu bir Android sistemi (Uygulama için)",
+        "Kayıt ve Hesap yönetimi için aktif bir e-posta adresi gereklidir",
+        "Web Sitesinin düzgün çalışması için gerekiyorsa web tarayıcısında etkinleştirilen JavaScript ve çerezler"
+      ]
+    },
+    "section5": {
+      "title": "§ 5. Hesap ve güvenlik",
+      "p1": "Çoğu Hizmet işlevinin kullanılması bir Hesap oluşturulmasını gerektirir.",
+      "p2": "Kullanıcı doğru bilgi vermek ve giriş bilgilerini gizli tutmakla yükümlüdür.",
+      "p3": "Bu tür eylemler Sağlayıcıya atfedilebilen durumlardan kaynaklanmadığı sürece, Kullanıcı, Hesabını kullanarak gerçekleştirilen tüm eylemlerden sorumludur.",
+      "p4": "Kötüye kullanım, güvenlik tehditleri veya bu Koşulların ihlalinin tespit edilmesi durumunda Sağlayıcı, bir Hesaba veya Hizmete erişimi geçici olarak engelleyebilir veya kısıtlayabilir."
+    },
+    "section6": {
+      "title": "§ 6. Kullanıcı İçeriği ve lisans",
+      "p1": "Kullanıcı, yürürlükteki yasalar kapsamında Kullanıcı İçeriğine ilişkin sahip olabileceği her türlü hakkı saklı tutar.",
+      "p2": "Kullanıcı, Kullanıcı İçeriğini sağlayarak, Sağlayıcıya, Hizmeti sağlamak, söz konusu içeriği yalnızca Hizmetin işletimi ve bakımı için depolamak, çoğaltmak, görüntülemek ve işlemek için gereken ölçüde devredilebilir, münhasır olmayan, ücretsiz, geri alınabilir bir lisans (Hesap veya içerik silinerek iptal edilir) verir.",
+      "p3": "Ev bitkisi Tanıma için kullanılan fotoğraflar, yalnızca tanıma amacıyla işlenir ve Kullanıcı, bunların saklanmasını gerektiren bir özelliği açıkça kullanmadığı sürece, gerekenden daha uzun süre saklanmaz.",
+      "p4": "Kullanıcı, sunduğu içeriklerin gerekli haklarına sahip olduğunu ve söz konusu içeriklerin üçüncü kişilerin haklarını ihlal etmediğini beyan eder."
+    },
+    "section7": {
+      "title": "§ 7. Kullanım kuralları ve yasaklanmış eylemler",
+      "intro": "Kullanıcı, Hizmeti yasalara, iyi uygulamalara uygun ve başkalarının haklarına saygılı bir şekilde kullanmayı taahhüt eder. Özellikle şunları yapmak yasaktır:",
+      "list": [
+        "Kimlik doğrulamayı, güvenlik önlemlerini veya teknik sınırlamaları atlamaya çalışmak",
+        "Ölçüm cihazlarıyla ilgili olanlar da dahil olmak üzere API'leri, uç noktaları veya entegrasyon mekanizmalarını kötüye kullanmak",
+        "yasa dışı, saldırgan, yanıltıcı veya hak ihlalinde bulunan içerik sağlamak",
+        "İletişim veya destek özellikleri aracılığıyla spam veya toplu tanıtım içeriği gönderin",
+        "diğer Kullanıcıların verilerine yetkisiz erişim sağlamaya çalışmak"
+      ],
+      "p1": "Sağlayıcı, yukarıdaki kuralların ihlal edilmesi durumunda Hizmete veya Hesaba erişimi kısıtlayabilir."
+    },
+    "section8": {
+      "title": "§ 8. QR kodları, bağlantılar ve erişim anahtarları",
+      "p1": "Hizmet, QR kodlarının veya bağlantılarının (örneğin ev bitkisi Örneklerine) oluşturulmasına izin verebilir. Kullanıcı bunların depolanmasından ve dağıtımından sorumludur.",
+      "p2": "Kullanıcının bağlantıları, tanımlayıcıları veya erişim anahtarlarını üçüncü kişilerle paylaşması durumunda, bu kişiler verilen erişim kapsamında belirtilen verilere erişim sağlayabilir. Kullanıcı bu tür paylaşımlarla ilgili riski üstlenir."
+    },
+    "section9": {
+      "title": "§ 9. Ödemeler ve planlar (gelecekteki bilgiler)",
+      "p1": "Bu Koşulların yayınlandığı tarih itibarıyla Hizmet, beta sürüm olarak ücretsiz olarak sağlanmaktadır.",
+      "p2": "Sağlayıcı ücretli planlar, yenilenebilir abonelikler, reklamlar veya kullanım limitleri (örn. ev bitkilerinin sayısı) sunabilir. Ücretli planlar Google Play veya Apple App Store aracılığıyla sunulabilir.",
+      "p3": "Aboneliklerin başlatılması durumunda otomatik olarak yenilenebilirler. Ödeme koşulları, faturalandırma ve geri ödemeler, ilgili uygulama mağazasının politikalarına ve satın alma sırasında sağlanan bilgilere tabi olabilir."
+    },
+    "section10": {
+      "title": "§ 10. Sorumluluk ve sorumluluk reddi beyanları",
+      "p1": "Hizmet, ev bitkisi bakımını desteklemeyi amaçlamaktadır ve bilgilendirici ve faydalı bir karaktere sahiptir. Sağlayıcı, ev bitkilerinin büyümesi, sağlığı veya bakım hatalarının önlenmesi gibi belirli sonuçları garanti etmez.",
+      "p2": "Hizmet \"olduğu gibi\" ve en iyi çaba esasına göre sağlanır. Bakım, geliştirme veya arızalar nedeniyle geçici kesinti veya sınırlı kullanılabilirlik meydana gelebilir.",
+      "p3": "Sağlayıcı, Hizmetin uygunsuz kullanımından, Kullanıcı tarafından sağlanan hatalı verilerden, arızalı Kullanıcı cihazlarından, İnternet bağlantı sorunlarından veya Sağlayıcının kontrolü dışındaki diğer durumlardan kaynaklanan zararlardan, yasaların izin verdiği ölçüde sorumlu değildir.",
+      "p4": "Bu bölümdeki hiçbir şey, zorunlu yasa hükümleri tarafından verilen tüketici haklarını sınırlamaz veya hariç tutmaz."
+    },
+    "section11": {
+      "title": "§ 11. Şikayetler ve iletişim",
+      "p1": "Kullanıcılar, Hizmetin işleyişine ilişkin şikayetlerini e-posta yoluyla şu adrese iletebilirler: info@flovers.app.",
+      "p2": "Şikayetler konuyu, tarihi ve koşulları açıklamalı ve mümkünse ek bilgiler içermelidir.",
+      "p3": "Sağlayıcı, mümkünse en geç 14 gün içinde, aşırı gecikme olmaksızın yanıt verecektir."
+    },
+    "section12": {
+      "title": "§ 12. Fesih ve hesabın silinmesi",
+      "p1": "Kullanıcı, Hesabını dilediği zaman Uygulama içinden silebilir, bu da Hesabın ve ilgili verilerin kalıcı olarak silinmesine neden olur.",
+      "p2": "Sağlayıcı, bu Şartların ihlali, yasa dışı eylemler veya Hizmet güvenliğine yönelik tehditler durumunda Hizmete erişimi askıya alabilir veya sonlandırabilir.",
+      "p3": "Sağlayıcı, mümkün olduğu durumlarda Kullanıcıları önceden bilgilendirerek Hizmeti veya hizmetin bir kısmını geçerli nedenlerle durdurabilir."
+    },
+    "section13": {
+      "title": "§ 13. Fikri mülkiyet",
+      "p1": "Sağlayıcı tarafından sağlanan yazılım, tasarım, logolar, Flovers adı, belgeler ve içerik yasalarca korunmaktadır ve Sağlayıcıya veya yetkili kuruluşlara aittir.",
+      "p2": "Yasaların izin verdiği durumlar dışında, Hizmet öğelerinin Sağlayıcının izni olmadan kopyalanması, değiştirilmesi, dağıtılması veya kullanılması yasaktır."
+    },
+    "section14": {
+      "title": "§ 14. Kullanıcı yaşı",
+      "p1": "Hizmet 16 yaş ve üzeri kişilere yöneliktir.",
+      "p2": "16 yaşın altındaki kullanıcılar Hesap oluşturmamalı veya Hizmeti kullanmamalıdır."
+    },
+    "section15": {
+      "title": "§ 15. İlgili belgeler",
+      "intro": "Aşağıdaki belgeler Hizmetle ilgilidir:",
+      "list": [
+        "Gizlilik Politikası",
+        "Çerez Politikası",
+        "Dokümantasyon ve SSS"
+      ]
+    },
+    "section16": {
+      "title": "§ 16. Geçerli yasa ve anlaşmazlıkların çözümü",
+      "p1": "Bu Şartlar, zorunlu tüketici koruma hükümlerine tabi olarak Polonya yasalarına tabidir.",
+      "p2": "Anlaşmazlıklar ilk etapta, özellikle de Sağlayıcıyla iletişime geçilerek dostane bir şekilde çözülmelidir.",
+      "p3": "Tüketiciler mahkeme dışı anlaşmazlık çözüm mekanizmalarını ve şu adreste bulunan AB ODR platformunu kullanabilir: https://ec.europa.eu/consumers/odr/.",
+      "p4": "Tüketici uyuşmazlıklarında mahkemelerin yargı yetkisi yürürlükteki hukuka göre belirlenir."
+    },
+    "section17": {
+      "title": "§ 17. Şartlarda Değişiklikler",
+      "p1": "Sağlayıcı, yasal değişiklikler, Hizmet geliştirme veya teknolojik değişiklikler gibi geçerli nedenlerle bu Koşulları değiştirebilir.",
+      "p2": "Değişiklikler hakkında Kullanıcılar İnternet Sitesi ve/veya Uygulama aracılığıyla bilgilendirilecektir. Hizmetin sürekli kullanımı, güncellenen Koşulların kabul edildiği anlamına gelir."
+    }
+  }
+}

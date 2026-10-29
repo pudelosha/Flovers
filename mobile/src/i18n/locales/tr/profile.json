@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "header": {
+      "title": "Profil"
+    },
+    "common": {
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "change": "Değiştir",
+      "delete": "Sil",
+      "send": "Gönder"
+    },
+    "account": {
+      "level": {
+        "currentRank": "Mevcut unvan",
+        "level": "Seviye",
+        "journey": "Küçük adımlar, gelişen ev bitkileri.",
+        "experience": "Deneyim",
+        "xpValue": "{{xp}} XP",
+        "xpProgress": "{{current}} / {{required}} XP",
+        "toLevel": "{{level}} seviyesine kadar",
+        "remaining": "Sonraki seviyeye {{xp}} XP kaldı",
+        "nextRank": "Sonraki unvan: {{level}}. seviye",
+        "maxLevel": "Maksimum seviyeye ulaşıldı",
+        "allRanks": "Tüm rütbelerin kilidi açıldı",
+        "pending": "XP izleme yakında geliyor",
+        "ranks": {
+          "seedling": "Fide",
+          "sproutKeeper": "Filiz Bekçisi",
+          "leafLover": "Yaprak Sever",
+          "buddingGardener": "Acemi Bahçıvan",
+          "plantNurturer": "Bitki Yetiştiricisi",
+          "greenThumb": "Becerikli Bahçıvan",
+          "gardenGuardian": "Bahçe Koruyucusu",
+          "botanicalExpert": "Botanik Uzmanı",
+          "masterGrower": "Usta Yetiştirici",
+          "plantLegend": "Bitki Efsanesi"
+        },
+        "loading": "XP yükleniyor…",
+        "unavailable": "Seviyeniz yüklenemedi. Yeniden denemek için Profili tekrar açın."
+      },
+      "title": "Hesap",
+      "emailLabel": "E-posta",
+      "createdLabel": "Oluşturuldu",
+      "changeEmail": "E-postayı değiştir",
+      "changePassword": "Şifreyi değiştir",
+      "deleteAccount": "Hesabı sil",
+      "logout": "Oturumu kapat"
+    },
+    "notifications": {
+      "title": "Bildirimler",
+      "emailSection": "E-posta",
+      "emailDailyLabel": "Bugünkü görevlerin günlük özeti",
+      "emailDailyHint": "Bugün teslim edilmesi gereken tüm görevleri özetleyen günde bir e-posta.",
+      "sendAt": "Gönderim saati",
+      "email24hLabel": "24 saat sonra hatırlatıcı gönder",
+      "email24hHint": "Bugün teslim edilmesi gereken görevler eksik kalırsa yarın bir takip e-postası gönderin.",
+      "mobileSection": "Mobil",
+      "pushDailyLabel": "Günlük telefon bildirimi",
+      "pushDailyHint": "Bugünün yapılması gereken görevleri özetleyen tek bir sistem bildirimi.",
+      "notifyAt": "Bildirim saati",
+      "push24hLabel": "24 saat takip bildirimi",
+      "push24hHint": "Görevler beklemede kalırsa ertesi gün bir bildirim gönderin."
+    },
+    "settings": {
+      "title": "Ayarlar",
+      "language": "Dil",
+      "dateTimeFormat": "Tarih / Saat formatı",
+      "temperatureUnits": "Sıcaklık birimleri",
+      "measurementUnits": "Ölçü birimleri",
+      "fabPosition": "+ düğmesinin konumu",
+      "background": "Arkaplan",
+      "tileMotive": "Çini motifi",
+      "tilesTransparency": "Fayans şeffaflığı",
+      "level": "Seviye",
+      "temperatureOptions": {
+        "C": "°C (Santigrat)",
+        "F": "°F (Fahrenhayt)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Metrik (cm / m)",
+        "imperial": "İngiliz (inç / fit)"
+      },
+      "fabPositionOptions": {
+        "right": "Sağ",
+        "left": "Sol"
+      },
+      "backgroundOptions": {
+        "bg1": "Arkaplan 1",
+        "bg2": "Arka plan 2",
+        "bg3": "Arkaplan 3",
+        "bg4": "Arka Plan 4",
+        "bg5": "Arka plan 5"
+      },
+      "tileMotiveOptions": {
+        "light": "Açık",
+        "dark": "Karanlık"
+      }
+    },
+    "support": {
+      "title": "Destek",
+      "contactUs": "Bize ulaşın",
+      "reportBug": "Hata bildir",
+      "aboutTitle": "Uygulama hakkında",
+      "versionLabel": "Sürüm",
+      "releaseDateLabel": "Çıkış tarihi",
+      "contactLabel": "Kişi"
+    },
+    "toasts": {
+      "unauthorized": "Yetkisiz",
+      "unauthorizedLoginAgain": "Yetkisiz. Lütfen tekrar giriş yapın.",
+      "failedToLoadPreferences": "Profil tercihleri yüklenemedi. Lütfen tekrar deneyin.",
+      "notificationsUpdated": "Bildirim tercihleri güncellendi.",
+      "couldNotSaveNotifications": "Bildirim tercihleri kaydedilemedi.",
+      "settingsUpdated": "Ayarlar güncellendi.",
+      "couldNotSaveSettings": "Ayarlar kaydedilemedi."
+    }
+  }
+}

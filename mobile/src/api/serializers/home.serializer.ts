@@ -2,6 +2,7 @@ import type { Task, TaskType } from "../../features/home/types/home.types";
 import type { ApiReminder, ApiReminderTask } from "../services/reminders.service";
 
 type ApiPlant = {
+  access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   display_name?: string | null;
   plant_definition?: { name?: string | null } | null;
@@ -45,6 +46,7 @@ export function buildUITasks(
     const dueInfo = getDueInfo(t.due_date);
 
     const ui: Task & { reminderId: string } = {
+      access: t.access === undefined ? (r?.access === undefined ? p?.access : r.access) : t.access,
       id: String(t.id),                  // task id (used for complete)
       type,
 

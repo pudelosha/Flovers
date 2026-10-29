@@ -7,6 +7,9 @@ import { s } from "../styles/reminders.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import type { Reminder } from "../types/reminders.types";
 import ReminderMenu from "./ReminderMenu";
+import { useNavigation } from "@react-navigation/native";
+import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -105,6 +108,8 @@ export default function ReminderTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const nav = useNavigation<any>();
+  const access = plantAccess(reminder.access);
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -199,6 +204,7 @@ export default function ReminderTile({
 
         {/* MATCH Plant/Auth tint + thinner border (prevents inner shade) */}
         <View pointerEvents="none" style={s.cardTint} />
+        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
         <View pointerEvents="none" style={s.cardBorder} />
 
         {/* Content */}
@@ -224,6 +230,7 @@ export default function ReminderTile({
               <Text style={s.plantName} numberOfLines={1}>
                 {reminder.plant}
               </Text>
+              <SharedPlantBadge access={reminder.access} />
 
               {/* Added location with icon */}
               {reminder.location && (
@@ -283,6 +290,8 @@ export default function ReminderTile({
       {/* NOT CLIPPED: menu must be outside cardGlass (overflow: hidden) */}
       {isMenuOpen && (
         <ReminderMenu
+          canEdit={access.canEdit}
+          onPlantDetails={() => nav.navigate("PlantDetails", { id: reminder.plantId })}
           isActive={reminder.isActive}
           onToggleActive={onToggleActive}
           onEdit={onEdit}

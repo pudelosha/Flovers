@@ -1,0 +1,246 @@
+{
+  "common": {
+    "copy": "Salin",
+    "copied": "Disalin",
+    "closePreview": "Tutup pratinjau gambar"
+  },
+  "title": "Perangkat API & kabel",
+  "retrySafety": "Setel support_task_retry ke true hanya jika firmware Anda menyimpan ID tugas dan hasil sebelum menjalankan pompa dan dapat melaporkan tugas berulang tanpa menyiram dua kali. Contoh yang dihasilkan mencakup perlindungan ini. Membuat ulang dan mem-reflash perangkat yang ada untuk memungkinkan percobaan ulang yang aman; firmware lama mempertahankan pengiriman tugas satu kali.",
+  "lead": [
+    "Halaman ini mendokumentasikan bagaimana perangkat IoT berintegrasi dengan Flovers.",
+    "Perangkat dapat mengirimkan pembacaan sensor lingkungan ke backend, memeriksa apakah pekerjaan penyiraman manual telah dijadwalkan dari aplikasi seluler, dan melaporkan pengoperasian pompa yang telah selesai kembali ke Flovers.",
+    "Firmware Arduino/ESP yang dihasilkan dapat mendukung pembacaan sensor dan kontrol penyiraman dalam satu sketsa. Jika perangkat tertaut dikonfigurasikan dengan pompa air, kode yang dihasilkan mencakup titik akhir pompa dan logika kontrol pompa. Jika perangkat dikonfigurasikan tanpa pompa, firmware yang dihasilkan dapat disederhanakan untuk mengirimkan pembacaan sensor saja."
+  ],
+  "firmwareIntro": {
+    "title": "Apa yang dilakukan firmware yang dihasilkan",
+    "lead": "Firmware yang dihasilkan dapat:",
+    "items": [
+      "sambungkan ke Wi-Fi",
+      "sinkronisasi waktu menggunakan NTP",
+      "membaca sensor yang diaktifkan",
+      "kirim pembacaan sensor ke Flovers",
+      "periksa pekerjaan penyiraman manual yang dijadwalkan",
+      "jalankan pompa saat pekerjaan penyiraman manual tertunda",
+      "periksa pengaturan penyiraman otomatis yang dikontrol backend",
+      "jalankan penyiraman otomatis ketika kelembaban tanah berada di bawah ambang batas yang dikonfigurasi",
+      "laporkan penyelesaian penyiraman kembali ke backend"
+    ],
+    "defaultTiming": "Secara default, pembacaan sensor dikirim satu kali per jam. Pekerjaan penyiraman manual diperiksa lebih sering, misalnya sekali per menit, sehingga permintaan penyiraman yang dibuat dari aplikasi seluler dapat diambil tanpa menunggu siklus pembacaan setiap jam berikutnya.",
+    "adjustmentNote": "Beberapa nilai harus disesuaikan dengan perangkat keras dan preferensi Anda, terutama kredensial Wi-Fi, nomor pin, kalibrasi kelembaban tanah, waktu kerja pompa, interval pembacaan, interval polling pekerjaan manual, dan cooldown penyiraman otomatis."
+  },
+  "endpoints": {
+    "title": "Titik akhir API",
+    "ingest": {
+      "title": "Bacaan sensor menelan",
+      "direction": "Perangkat → backend",
+      "desc": [
+        "Perangkat menggunakan titik akhir ini untuk mengirimkan pembacaan sensor.",
+        "Backend mengautentikasi permintaan menggunakan:",
+        "Backend menyimpan pembacaan sensor di bawah perangkat yang cocok. pembacaan sensor dapat mencakup suhu, kelembapan, cahaya, kelembapan tanah, atau subkumpulan metrik apa pun yang diaktifkan."
+      ],
+      "authItems": [
+        "rahasia",
+        "kunci_perangkat",
+        "opsional device_id"
+      ]
+    },
+    "pumpNextTask": {
+      "title": "Periksa tugas pompa berikutnya",
+      "direction": "Perangkat → backend",
+      "desc": [
+        "Perangkat dengan dukungan pompa menggunakan titik akhir ini untuk memeriksa apakah pekerjaan penyiraman manual sudah menunggu.",
+        "Responsnya juga mencakup konfigurasi pompa otomatis yang dikontrol backend saat ini, seperti apakah penyiraman otomatis diaktifkan dan ambang batas kelembapan tanah harus digunakan."
+      ]
+    },
+    "pumpComplete": {
+      "title": "Laporkan penyelesaian pompa",
+      "direction": "Perangkat → backend",
+      "desc": [
+        "Perangkat menggunakan titik akhir ini setelah pompa bekerja.",
+        "Ini dapat melaporkan:"
+      ],
+      "items": [
+        "tugas penyiraman manual terjadwal, menggunakan task_id",
+        "acara penyiraman otomatis, menggunakan sumber: \"otomatis\" dan task_id dikembalikan sebelum menjalankan pompa"
+      ]
+    },
+    "feed": {
+      "title": "Baca feed terbaru",
+      "direction": "Perangkat → backend",
+      "desc": [
+        "Titik akhir ini mengembalikan data pembacaan terbaru untuk suatu perangkat. Ini masih berguna untuk integrasi atau diagnostik sederhana, tetapi firmware berkemampuan pompa yang dihasilkan menggunakan tugas pompa berikutnya dan pompa lengkap untuk kontrol penyiraman."
+      ]
+    }
+  },
+  "ingest": {
+    "title": "Dokumentasi penyerapan POST",
+    "desc": "Kirim satu sampel bacaan sebagai JSON. Backend mengautentikasi perangkat dan menyimpan metrik yang disediakan.",
+    "payloadShape": "Payload shape",
+    "examplePayload": "Example payload",
+    "powershellExample": "PowerShell example"
+  },
+  "pumpNextTask": {
+    "title": "Dokumentasi tugas POST pompa berikutnya",
+    "desc": [
+      "Titik akhir ini digunakan oleh perangkat dengan dukungan pompa.",
+      "Perangkat menanyakan backend apakah ada pekerjaan penyiraman manual terjadwal. The backend returns:"
+    ],
+    "items": [
+      "apakah pompa harus bekerja sekarang",
+      "ID tugas jika ada tugas penyiraman manual",
+      "pengaturan pompa otomatis saat ini",
+      "apakah backend menganggap pompa dan sensor kelembapan diaktifkan"
+    ],
+    "payloadShape": "Payload shape",
+    "examplePayload": "Example payload",
+    "responseNoTask": "Contoh respons tanpa pekerjaan penyiraman manual",
+    "responseWithTask": "Contoh respon dengan pekerjaan penyiraman manual",
+    "powershellExample": "PowerShell example"
+  },
+  "pumpComplete": {
+    "title": "Dokumentasi lengkap pompa POST",
+    "desc": [
+      "Setelah pompa bekerja, perangkat melaporkan penyelesaiannya.",
+      "Untuk penyiraman manual, sertakan task_id yang dikembalikan oleh tugas pompa berikutnya.",
+      "Untuk penyiraman otomatis, sertakan task_id yang dikembalikan oleh klaim otomatis pompa dan gunakan sumber: \"otomatis\"."
+    ],
+    "manualPayload": "Muatan penyelesaian penyiraman manual",
+    "automaticPayload": "Muatan penyelesaian penyiraman otomatis",
+    "failedPayload": "Failed pump run payload",
+    "powershellExample": "PowerShell example"
+  },
+  "feed": {
+    "title": "GET feed documentation",
+    "desc": [
+      "Titik akhir umpan mengembalikan pembacaan terbaru untuk suatu perangkat.",
+      "Ini dapat digunakan untuk diagnostik atau integrasi sederhana yang hanya perlu membaca nilai terbaru yang disimpan."
+    ],
+    "exampleRequest": "Example request",
+    "exampleResponse": "Example response"
+  },
+  "generatedFirmware": {
+    "title": "Firmware Arduino / ESP32 dihasilkan",
+    "desc": [
+      "Aplikasi ini dapat menghasilkan firmware untuk perangkat yang dipilih.",
+      "The generated firmware includes the correct API endpoints, auth secret, device key, device ID, enabled sensors, and pump settings for that device.",
+      "Jika perangkat dikonfigurasi dengan pompa air, kode yang dihasilkan mencakup pembacaan sensor dan kontrol pompa air. Ia memeriksa pekerjaan penyiraman manual secara terpisah dari siklus pembacaan per jam, dan penyiraman otomatis menggunakan ambang batas dan sakelar yang dikontrol backend."
+    ],
+    "adjustIntro": "Sebelum mengunggah sketsa, sesuaikan nilai berikut untuk perangkat keras Anda:",
+    "adjustItems": [
+      "Wi-Fi SSID dan kata sandi",
+      "SDA_PIN dan SCL_PIN",
+      "TANAH_PIN",
+      "POMPA_PIN",
+      "SOIL_DRY_VALUE dan SOIL_WET_VALUE",
+      "PUMP_RUN_MS",
+      "SEND_INTERVAL_MS",
+      "MANUAL_PUMP_CHECK_INTERVAL_MS",
+      "AUTO_PUMP_MIN_INTERVAL_MS"
+    ],
+    "codeLabel": "Firmware Arduino yang dihasilkan: pembacaan sensor + kontrol pompa air"
+  },
+  "behavior": {
+    "title": "Ringkasan perilaku firmware",
+    "fullCycle": {
+      "title": "Siklus per jam penuh",
+      "desc": "Setiap SEND_INTERVAL_MS, board menjalankan satu siklus penuh:",
+      "items": [
+        "membaca sensor",
+        "mengirimkan pembacaan sensor ke titik akhir penyerapan",
+        "memeriksa penyiraman manual terjadwal",
+        "menjalankan penyiraman manual jika ada tugas yang tertunda",
+        "jika tidak, periksa kondisi penyiraman otomatis",
+        "menjalankan penyiraman otomatis jika pengaturan backend memungkinkan dan kelembaban tanah di bawah ambang batas"
+      ]
+    },
+    "manualCheck": {
+      "title": "Pemeriksaan penyiraman manual",
+      "desc": [
+        "Setiap MANUAL_PUMP_CHECK_INTERVAL_MS, dewan hanya memeriksa pekerjaan penyiraman manual yang dijadwalkan.",
+        "Pemeriksaan singkat ini:",
+        "Hal ini memungkinkan tindakan \"Jadwalkan penyiraman\" aplikasi diambil dengan cepat tanpa memaksa pembacaan sensor dikirim setiap menit."
+      ],
+      "items": [
+        "tidak mengirimkan pembacaan sensor",
+        "tidak menjalankan penyiraman otomatis",
+        "hanya menjalankan pekerjaan penyiraman manual yang tertunda jika ada"
+      ]
+    },
+    "automatic": {
+      "title": "Penyiraman otomatis",
+      "desc": [
+        "Penyiraman otomatis dikontrol oleh pengaturan backend yang dikonfigurasi di aplikasi seluler.",
+        "Papan hanya menjalankan penyiraman otomatis ketika:"
+      ],
+      "items": [
+        "dukungan pompa diaktifkan",
+        "peluncuran pompa otomatis diaktifkan",
+        "sensor kelembaban diaktifkan",
+        "kelembaban tanah yang diukur terakhir berada di bawah ambang batas backend",
+        "cooldown penyiraman otomatis telah berlalu"
+      ],
+      "cooldown": "Setelah penyiraman manual atau penyiraman otomatis berjalan, firmware memulai cooldown penyiraman otomatis. Hal ini membantu menghindari pekerjaan penyiraman manual dan penyiraman otomatis terjadi terlalu berdekatan."
+    },
+    "manual": {
+      "title": "Penyiraman secara manual",
+      "desc": [
+        "Penyiraman manual dijadwalkan dari aplikasi seluler.",
+        "Penyiraman manual sengaja mengabaikan:",
+        "Artinya, ketika pengguna menjadwalkan penyiraman secara manual, dewan akan memperlakukannya sebagai permintaan eksplisit untuk menjalankan pompa satu kali."
+      ],
+      "items": [
+        "kelembaban tanah saat ini",
+        "ambang batas penyiraman otomatis",
+        "cooldown penyiraman otomatis"
+      ]
+    }
+  },
+  "hardware": {
+    "title": "Catatan perangkat keras",
+    "desc": "Firmware yang dihasilkan mengasumsikan komponen umum yang kompatibel dengan ESP32:",
+    "items": [
+      "Sensor cahaya BH1750 / GY-302 melalui I2C",
+      "Sensor suhu dan kelembaban BME280 melalui I2C",
+      "capacitive soil moisture sensor on an analog pin",
+      "relay atau driver pompa terhubung ke pin output digital"
+    ],
+    "verify": "Verify all wiring before powering the pump.",
+    "relayNote": "Beberapa modul relai aktif LOW, sementara yang lain aktif HIGH. The generated example uses:",
+    "relayReverse": "Jika relai Anda bekerja secara terbalik, Anda mungkin perlu menukar nilai HIGH dan LOW.",
+    "relayCodeLabel": "Contoh keluaran pompa"
+  },
+  "calibration": {
+    "title": "Catatan kalibrasi",
+    "desc": [
+      "Sensor kelembaban tanah harus dikalibrasi untuk mendapatkan hasil yang andal.",
+      "Kode yang dihasilkan menggunakan:",
+      "These values are examples only.",
+      "Ukur nilai sensor Anda di tanah atau udara kering, lalu ukur lagi di tanah basah atau air, dan perbarui konstanta tersebut."
+    ],
+    "codeLabel": "Default calibration values"
+  },
+  "safety": {
+    "title": "Catatan keselamatan",
+    "desc": [
+      "The generated firmware is a starting point. Before leaving a pump unattended:",
+      "Flovers menyimpan pembacaan sensor dan kejadian penyiraman, namun pengkabelan perangkat, kalibrasi, perilaku pompa, dan pemasangan fisik tetap menjadi tanggung jawab pengguna."
+    ],
+    "items": [
+      "uji pompa secara manual",
+      "konfirmasikan logika relai",
+      "verify that the pump turns off correctly",
+      "gunakan waktu kerja pompa yang aman",
+      "confirm that soil moisture values are realistic",
+      "protect electronics from water",
+      "gunakan catu daya dan isolasi yang sesuai untuk pompa"
+    ]
+  },
+  "wiring": {
+    "title": "Diagram pengkabelan",
+    "desc": "Below is a sample device wiring schema. Click the image to open it in full screen.",
+    "ariaPrimary": "Sample device wiring schema",
+    "placeholderTitlePrimary": "Sample device wiring schema",
+    "placeholderSubPrimary": "Klik gambar untuk menampilkannya dalam layar penuh."
+  },
+  "claimSafety": "Sebelum penyiraman otomatis, mintalah izin dengan POST /pembacaan sensor/pompa-auto-klaim/, termasuk rahasia, kunci_perangkat, dan kelembapan dari pengukuran saat ini; device_id adalah opsional. Jalankan pompa hanya setelah dijalankan: benar, dan gunakan task_id yang dikembalikan saat melaporkan penyelesaian. Firmware yang dihasilkan menangani proses ini."
+}

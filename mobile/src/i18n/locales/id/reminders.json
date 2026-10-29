@@ -1,0 +1,114 @@
+{
+  "reminders": {
+    "headerTitle": "Pengingat",
+    "common": {
+      "unnamedPlant": "Tanaman hias tanpa nama",
+      "everyN": "setiap {{count}} {{unit}}"
+    },
+    "units": {
+      "days": "hari",
+      "months": "bulan"
+    },
+    "types": {
+      "watering": "Penyiraman",
+      "moisture": "Penyemprotan",
+      "fertilising": "Pemupukan",
+      "care": "Perawatan",
+      "repot": "Ganti pot"
+    },
+    "fab": {
+      "add": "Tambahkan pengingat",
+      "calendar": "Kalender",
+      "list": "Daftar",
+      "sort": "Urutkan",
+      "filter": "Filter",
+      "clearFilter": "Hapus filter"
+    },
+    "empty": {
+      "title": "Belum ada pengingat",
+      "description": "Pengingat dikaitkan dengan tanaman hias tertentu. Harap pastikan Anda memiliki setidaknya satu tanaman hias yang dibuat terlebih dahulu.\n\nKetuk tombol “+” untuk menambahkan pengingat. Anda akan menggunakan cara sederhana untuk memetik tanaman hias, memilih jenisnya (penyiraman, pengaburan, pemupukan, perawatan, atau merepoting), menetapkan tanggal jatuh tempo pertama, dan menentukan seberapa sering tanaman harus diulang."
+    },
+    "menu": {
+      "edit": "Sunting pengingat",
+      "delete": "Hapus pengingat",
+      "pause": "Jeda pengingat",
+      "resume": "Lanjutkan pengingat"
+    },
+    "tile": {
+      "repeatsEvery": "Ulangi setiap {{count}} {{unit}}",
+      "dueToday": "Jatuh tempo hari ini",
+      "dueInOneDay": "Jatuh tempo dalam 1 hari",
+      "dueInDays": "Jatuh tempo dalam {{count}} hari",
+      "dueLine": "{{prefix}} dan {{date}}",
+      "paused": "Dijeda"
+    },
+    "calendar": {
+      "scheduledOn": "Dijadwalkan pada {{date}}",
+      "noItems": "Tidak ada pengingat untuk hari ini.",
+      "today": "Hari ini",
+      "weekdays": {
+        "monday": "Senin",
+        "tuesday": "Selasa",
+        "wednesday": "Rabu",
+        "thursday": "Kamis",
+        "friday": "Jumat",
+        "saturday": "Sabtu",
+        "sunday": "Minggu"
+      },
+      "weekdaysShort": {
+        "mon": "Senin",
+        "tue": "Selasa",
+        "wed": "Rabu",
+        "thu": "Kam",
+        "fri": "Jumat",
+        "sat": "Sabtu",
+        "sun": "Matahari"
+      },
+      "months": {
+        "january": "Januari",
+        "february": "Februari",
+        "march": "Bulan Maret",
+        "april": "April",
+        "may": "Mei",
+        "june": "Juni",
+        "july": "Juli",
+        "august": "Agustus",
+        "september": "September",
+        "october": "Oktober",
+        "november": "November",
+        "december": "Desember"
+      },
+      "monthsShort": {
+        "january": "Januari",
+        "february": "Februari",
+        "march": "Maret",
+        "april": "April",
+        "may": "Mei",
+        "june": "Juni",
+        "july": "Juli",
+        "august": "Agustus",
+        "september": "September",
+        "october": "Oktober",
+        "november": "November",
+        "december": "Desember"
+      }
+    },
+    "toast": {
+      "loadFailed": "Gagal memuat pengingat",
+      "deleted": "Pengingat dihapus",
+      "deleteFailed": "Penghapusan gagal",
+      "deleteFailedWithReason": "Penghapusan gagal: {{reason}}",
+      "duplicateType": "Tanaman hias ini sudah memiliki pengingat seperti itu.",
+      "created": "Pengingat dibuat",
+      "updated": "Pengingat diperbarui",
+      "createFailed": "Pembuatan gagal",
+      "createFailedWithReason": "Gagal membuat: {{reason}}",
+      "updateFailed": "Pembaruan gagal",
+      "updateFailedWithReason": "Pembaruan gagal: {{reason}}",
+      "paused": "Pengingat dijeda",
+      "resumed": "Pengingat dilanjutkan",
+      "toggleFailed": "Pembaruan gagal",
+      "toggleFailedWithReason": "Pembaruan gagal: {{reason}}"
+    }
+  }
+}

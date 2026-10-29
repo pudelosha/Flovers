@@ -19,6 +19,7 @@ import LinearGradient from "react-native-linear-gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import FAB from "../../../shared/ui/FAB";
 
@@ -373,6 +374,7 @@ export default function TaskHistoryScreen() {
     !loading && !sortOpen && !filterOpen && !deleteOpen && !exportOpen;
 
   // FAB actions
+  const canManageVisibleHistory = derivedItems.some((item) => plantAccess(item.access).canEdit);
   const baseFabActions = [
     {
       key: "sort",
@@ -386,7 +388,7 @@ export default function TaskHistoryScreen() {
       icon: "filter-variant",
       onPress: () => setFilterOpen(true),
     },
-    {
+    ...(canManageVisibleHistory ? [{
       key: "sendExport",
       label: t("taskHistory.fab.sendExport"),
       icon: "email-send-outline",
@@ -400,7 +402,7 @@ export default function TaskHistoryScreen() {
       label: t("taskHistory.fab.delete"),
       icon: "delete-outline",
       onPress: () => setDeleteOpen(true),
-    },
+    }] : []),
     ...(isFilterActive
       ? [
           {
@@ -481,6 +483,7 @@ export default function TaskHistoryScreen() {
 
   // Tile menu actions
   const handleDeleteItem = async (item: TaskHistoryItem) => {
+    if (!plantAccess(item.access).canEdit) return;
     setOpenMenuId(null);
     try {
       setLoading(true);
@@ -743,8 +746,8 @@ export default function TaskHistoryScreen() {
       {/* Delete modal */}
       <DeleteHistoryTasksModal
         visible={deleteOpen}
-        plantOptions={plantOptions}
-        locationOptions={locationOptions}
+        plantOptions={plantOptions.filter((plant) => items.some((item) => item.plantId === plant.id && plantAccess(item.access).canEdit))}
+        locationOptions={locationOptions.filter((location) => items.some((item) => item.location === location && plantAccess(item.access).canEdit))}
         onCancel={() => setDeleteOpen(false)}
         onConfirm={handleConfirmDelete}
       />

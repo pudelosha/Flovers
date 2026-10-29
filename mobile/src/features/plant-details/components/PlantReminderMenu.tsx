@@ -10,9 +10,11 @@ type Props = {
   onMarkComplete: () => void;
   onEdit: () => void;
   onShowHistory: () => void;
+  canEdit?: boolean;
+  canComplete?: boolean;
 };
 
-export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistory }: Props) {
+export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistory, canEdit = true, canComplete = true }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -28,7 +30,7 @@ export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistor
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
-      <Pressable
+      {canComplete && <Pressable
         style={s.menuItem}
         onPress={onMarkComplete}
         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
@@ -42,14 +44,14 @@ export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistor
         <Text style={s.menuItemText}>
           {tr("plantDetails.reminders.menu.markComplete", "Mark as complete")}
         </Text>
-      </Pressable>
+      </Pressable>}
 
-      <Pressable style={s.menuItem} onPress={onEdit} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+      {canEdit && <Pressable style={s.menuItem} onPress={onEdit} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
         <MaterialCommunityIcons name="calendar-edit" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
         <Text style={s.menuItemText}>
           {tr("plantDetails.reminders.menu.editReminder", "Edit reminder")}
         </Text>
-      </Pressable>
+      </Pressable>}
 
       <Pressable
         style={s.menuItem}

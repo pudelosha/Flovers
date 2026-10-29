@@ -26,6 +26,7 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
@@ -56,7 +57,7 @@ import SortRemindersModal from "../components/modals/SortRemindersModal";
 import FilterRemindersModal from "../components/modals/FilterRemindersModal";
 
 type ViewMode = "list" | "calendar";
-type PlantOption = { id: string; name: string; location?: string };
+type PlantOption = { id: string; name: string; location?: string; canEdit?: boolean };
 
 type SortKey = "dueDate" | "plant" | "location";
 type SortDir = "asc" | "desc";
@@ -89,6 +90,7 @@ function mapPlantOptions(
 ): PlantOption[] {
   return (apiPlants || []).map((p) => ({
     id: String(p.id),
+    canEdit: plantAccess(p.access).canEdit,
     name:
       p.display_name?.trim() ||
       p.plant_definition?.name?.trim() ||
@@ -394,6 +396,7 @@ export default function RemindersScreen() {
 
   // --- DELETE FLOW ---
   const askDelete = (r: UIReminder) => {
+    if (!plantAccess(r.access).canEdit) return;
     closeFloatingMenus();
     setConfirmDeleteReminderId(r.reminderId);
     setConfirmDeleteName(r.plant);
@@ -430,6 +433,7 @@ export default function RemindersScreen() {
 
   // --- PAUSE / RESUME FLOW ---
   const askToggleReminder = (r: UIReminder) => {
+    if (!plantAccess(r.access).canEdit) return;
     closeFloatingMenus();
     setConfirmToggleReminder(r);
   };
@@ -470,6 +474,7 @@ export default function RemindersScreen() {
 
   // --- EDIT FLOW ---
   const openEditModal = (r: UIReminder) => {
+    if (!plantAccess(r.access).canEdit) return;
     setEditingId(r.reminderId);
     setFType(r.type);
     if (r.plantId) {
@@ -727,12 +732,12 @@ export default function RemindersScreen() {
 
   // ---------- FAB ACTIONS ----------
   const fabActions = [
-    {
+    ...(!filters.plantId || plantOptions.find((plant) => plant.id === filters.plantId)?.canEdit !== false ? [{
       key: "add",
       label: tr("reminders.fab.add", "Add reminder"),
       icon: "plus",
       onPress: openAddReminder,
-    },
+    }] : []),
     ...(viewMode === "list"
       ? [
           {
@@ -957,7 +962,7 @@ export default function RemindersScreen() {
       <EditReminderModal
         visible={editOpen}
         mode={editingId === null ? "create" : "edit"}
-        plants={plantOptions}
+        plants={plantOptions.filter((plant) => plant.canEdit !== false)}
         fType={fType}
         setFType={setFType}
         fPlantId={fPlantId}

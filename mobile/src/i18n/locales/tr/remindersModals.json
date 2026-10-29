@@ -1,0 +1,66 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "İptal",
+      "apply": "Uygula",
+      "clear": "Temizle",
+      "delete": "Sil",
+      "create": "Oluştur",
+      "update": "Güncelle",
+      "reset": "Sıfırla",
+      "pause": "Duraklat",
+      "resume": "Devam et"
+    },
+    "confirmDelete": {
+      "title": "Hatırlatıcıyı sil",
+      "areYouSurePrefix": "Silmek istediğinizden emin misiniz?",
+      "areYouSureSuffix": "? Bu eylem geri alınamaz."
+    },
+    "edit": {
+      "titleCreate": "Hatırlatıcı ekle",
+      "titleEdit": "Hatırlatıcıyı düzenle",
+      "typeLabel": "Tür",
+      "plantLabel": "Bitki",
+      "selectPlant": "Ev bitkisi seçin",
+      "locationLabel": "Konum",
+      "locationPlaceholder": "Konum",
+      "dueDateLabel": "Son tarih",
+      "datePlaceholder": "YYYY-AA-GG",
+      "intervalLabel": "Aralık",
+      "intervalValuePlaceholder": "Değer"
+    },
+    "filter": {
+      "title": "Hatırlatıcıları filtrele",
+      "plantLabel": "Bitki",
+      "selectPlant": "Ev bitkisi seçin",
+      "anyPlant": "Herhangi bir ev bitkisi",
+      "locationLabel": "Konum",
+      "anyLocation": "Herhangi bir konum",
+      "taskTypesLabel": "Görev türleri",
+      "dueDateRangeLabel": "Son tarih aralığı",
+      "fromLabel": "Gönderen",
+      "toLabel": "Kime",
+      "datePlaceholder": "YYYY-AA-GG"
+    },
+    "sort": {
+      "title": "Hatırlatıcıları sırala",
+      "sortByLabel": "Sırala",
+      "directionLabel": "Yön",
+      "keys": {
+        "dueDate": "Son tarih",
+        "plant": "Ev bitkisi adı",
+        "location": "Konum"
+      },
+      "directions": {
+        "asc": "Artan",
+        "desc": "Azalan"
+      }
+    },
+    "toggle": {
+      "pauseTitle": "Hatırlatıcıyı duraklat",
+      "resumeTitle": "Hatırlatıcıyı devam ettir",
+      "pauseBody": "{{name}} için bu hatırlatıcı duraklatılsın mı? Siz devam ettirene kadar gereken görevi gizlenecektir.",
+      "resumeBody": "{{name}} için bu hatırlatıcı devam ettirilsin mi? Bir sonraki görevi tekrar görünecektir."
+    }
+  }
+}

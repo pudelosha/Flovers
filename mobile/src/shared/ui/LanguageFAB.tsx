@@ -30,6 +30,9 @@ const LANG_META: Record<string, { label: string; flag: string }> = {
   hi: { label: "हिन्दी", flag: "🇮🇳" },
   zh: { label: "中文", flag: "🇨🇳" },
   ja: { label: "日本語", flag: "🇯🇵" },
+  id: { label: "Bahasa Indonesia", flag: "🇮🇩" },
+  ru: { label: "Русский", flag: "🇷🇺" },
+  tr: { label: "Türkçe", flag: "🇹🇷" },
   ko: { label: "한국어", flag: "🇰🇷" },
 };
 

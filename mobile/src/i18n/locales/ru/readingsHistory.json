@@ -1,0 +1,54 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Показания датчиков История",
+    "plantFallback": "Растение",
+    "noDevicesFound": "Устройства не найдены.",
+    "unauthorized": "Несанкционированный. Пожалуйста, войдите снова.",
+    "failedLoadDevices": "Не удалось загрузить устройства.",
+    "failedLoadHistory": "Не удалось загрузить историю.",
+    "segment": {
+      "day": "ДЕНЬ",
+      "week": "НЕДЕЛЯ",
+      "month": "МЕСЯЦ"
+    },
+    "metric": {
+      "temperatureShort": "Температура",
+      "humidityShort": "Хум",
+      "lightShort": "Освещение",
+      "moistureShort": "Влажный"
+    },
+    "chartMenu": {
+      "showAverage": "Показать среднее значение",
+      "showMax": "Показать максимум",
+      "showMin": "Показать мин.",
+      "showLatestLabel": "Показать последний ярлык",
+      "showLabels": "Показать все ярлыки",
+      "hideLabels": "Скрыть все ярлыки",
+      "deleteReadings": "Удаление показаний датчиков"
+    },
+    "deleteModal": {
+      "title": "Удаление показаний датчиков",
+      "description": "Выберите, показания каких датчиков следует удалить. Это невозможно отменить.",
+      "modeDay": "Удалить день",
+      "modeWeek": "Удалить неделю",
+      "modeMonth": "Удалить месяц",
+      "modeTypes": "Удаление показаний датчиков типа",
+      "modeOlderThan": "Удалить показания датчиков старше",
+      "selectDay": "День",
+      "selectWeek": "Неделя",
+      "selectMonth": "Месяц",
+      "selectTypes": "Тип чтения",
+      "selectOlderThan": "Старше чем",
+      "daysOption": "{{count}} дней",
+      "noTypes": "Типы чтения не найдены.",
+      "cancel": "Отмена",
+      "delete": "Удалить",
+      "scopeLabel": "Удалить область",
+      "close": "Закрыть"
+    },
+    "deleteToast": {
+      "success": "Удалены показания датчика {{count}}.",
+      "failed": "Не удалось удалить показания датчика."
+    }
+  }
+}

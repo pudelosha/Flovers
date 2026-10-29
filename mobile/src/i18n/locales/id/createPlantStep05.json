@@ -1,0 +1,160 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Wadah & tanah",
+      "subtitle": "Detail ini bersifat opsional. Pilih bahan pot bunga/wadah dan tanah atau campuran pot — atau biarkan sebagai “Tidak ditentukan” dan lanjutkan.",
+      "containerMaterial": "Bahan wadah",
+      "soilMix": "Campuran tanah/pot",
+      "notSpecified": "Tidak ditentukan",
+      "notSpecifiedDesc": "Lewati ini jika Anda tidak yakin.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plastik",
+          "description": "Ringan, mempertahankan kelembapan lebih lama; murah dan serbaguna."
+        },
+        "ceramic": {
+          "label": "Keramik (mengkilap)",
+          "description": "Lebih berat; mempertahankan kelembapan; lapisan kaca dekoratif."
+        },
+        "terracotta": {
+          "label": "Terakota",
+          "description": "Tanah liat berpori; menyerap kelembapan; cocok untuk sukulen/kaktus."
+        },
+        "clay": {
+          "label": "Tanah liat (tanpa glasir)",
+          "description": "Mirip dengan terakota; bernapas, pengeringan lebih cepat."
+        },
+        "cement": {
+          "label": "Semen",
+          "description": "Sangat berat; tampilan modern; mempertahankan kelembapan dengan cukup baik."
+        },
+        "concrete": {
+          "label": "Beton",
+          "description": "Tahan lama dan berat; stabil di luar ruangan; mempertahankan kelembapan."
+        },
+        "metal": {
+          "label": "Logam (generik)",
+          "description": "Dapat cepat panas di bawah sinar matahari; biasanya membutuhkan lapisan dalam/pot bunga."
+        },
+        "stainless": {
+          "label": "Baja tahan karat",
+          "description": "Tampilan modern; tahan korosi; mungkin memanas di bawah sinar matahari."
+        },
+        "aluminum": {
+          "label": "Aluminium",
+          "description": "Ringan, konduktif; hati-hati terhadap panas berlebih di bawah terik matahari."
+        },
+        "iron": {
+          "label": "Besi/baja",
+          "description": "Sangat tahan lama; bisa berkarat; mungkin memerlukan liner."
+        },
+        "copper": {
+          "label": "Tembaga/kuningan",
+          "description": "Dekoratif; mungkin bereaksi dengan tanah; biasanya sebagai cachepot."
+        },
+        "wood": {
+          "label": "Kayu",
+          "description": "Tampilan alami; mungkin memerlukan liner; bisa membusuk jika terus-menerus basah."
+        },
+        "bamboo": {
+          "label": "Bambu",
+          "description": "Ringan, berkelanjutan; biasanya berjajar; penggunaan di dalam ruangan lebih disukai."
+        },
+        "rattan": {
+          "label": "Rotan/anyaman",
+          "description": "Cachepot dekoratif; gunakan pot bunga pembibitan plastik di dalamnya."
+        },
+        "glass": {
+          "label": "Kaca",
+          "description": "Cocok untuk terarium; tidak ada drainase; perhatikan kelembapan."
+        },
+        "stone": {
+          "label": "Batu/marmer",
+          "description": "Sangat berat dan stabil; mempertahankan suhu dingin."
+        },
+        "resin": {
+          "label": "Damar",
+          "description": "Ringan, tahan lama; pilihan luar ruangan yang bagus; mengisolasi akar."
+        },
+        "fiberglass": {
+          "label": "Fiberglass",
+          "description": "Ringan, kuat; ramah di luar ruangan; isolasi yang baik."
+        },
+        "biodegradable": {
+          "label": "Dapat terurai secara hayati",
+          "description": "Sabut kelapa, gambut, dll; pot bunga pemula; terurai seiring berjalannya waktu."
+        },
+        "fabric": {
+          "label": "Penanam kain",
+          "description": "Akar plum udara; cepat kering; baik untuk sayuran."
+        },
+        "grow-bag": {
+          "label": "Tumbuhkan tas",
+          "description": "Tas kain; portabel; mengalir dengan cepat; perlu sering disiram."
+        },
+        "self-watering": {
+          "label": "Menyiram sendiri",
+          "description": "Reservoir dengan sumbu; meratakan jadwal penyiraman."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Campuran pot serba guna",
+          "description": "Default yang bagus untuk sebagian besar tanaman hias."
+        },
+        "green-plants": {
+          "label": "Campuran tanaman hias hijau/tanaman hias",
+          "description": "Campuran umum untuk tanaman hias berdaun (sering juga dipasarkan untuk palem)."
+        },
+        "balcony-flowers": {
+          "label": "Campuran balkon & tanaman hias berbunga",
+          "description": "Campuran yang lebih kaya untuk tanaman hias berbunga yang ditanam di pot bunga dan pekebun balkon."
+        },
+        "cactus-succulent": {
+          "label": "Campuran kaktus/sukulen",
+          "description": "Cepat kering; ideal untuk sukulen dan kaktus."
+        },
+        "orchid": {
+          "label": "Campuran anggrek",
+          "description": "Campuran berbahan dasar kulit kayu yang tebal untuk aliran udara di sekitar akar."
+        },
+        "aroid": {
+          "label": "Campuran aroid",
+          "description": "Campuran yang sangat lapang (kulit kayu/perlit) untuk aroid seperti Monstera/Philodendron."
+        },
+        "seed-starting": {
+          "label": "Campuran awal benih",
+          "description": "Tekstur halus; baik untuk perbanyakan dan pembibitan."
+        },
+        "bonsai": {
+          "label": "Campuran bonsai",
+          "description": "Campuran berpasir dan memiliki drainase baik yang tahan terhadap pemadatan."
+        },
+        "herbs-vegetables": {
+          "label": "Campuran bumbu & sayuran",
+          "description": "Campuran kaya nutrisi cocok untuk dimakan."
+        },
+        "citrus": {
+          "label": "Campuran jeruk",
+          "description": "Campuran yang memiliki drainase baik cocok untuk jeruk dan tanaman hias Mediterania lainnya."
+        },
+        "fern": {
+          "label": "Campuran pakis",
+          "description": "Campuran penahan kelembapan untuk pakis; biasanya lebih tinggi bahan organiknya."
+        },
+        "conifers": {
+          "label": "Campuran tumbuhan runjung",
+          "description": "Campuran ditujukan untuk tumbuhan runjung; seringkali sedikit asam dan memiliki drainase yang baik."
+        },
+        "acid-loving": {
+          "label": "Campuran tanaman hias yang menyukai asam",
+          "description": "Campuran asam untuk blueberry, heathers, rhododendron, azalea, dll."
+        },
+        "peat-free": {
+          "label": "Campuran bebas gambut",
+          "description": "Pilihan yang lebih berkelanjutan; komposisi bervariasi menurut merek."
+        }
+      }
+    }
+  }
+}

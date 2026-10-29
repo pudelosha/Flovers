@@ -1,0 +1,56 @@
+{
+  "docs_plants": {
+    "title": "Tanaman",
+    "sections": [
+      {
+        "heading": "Tujuan dari layar ini",
+        "body": [
+          "Layar tanaman hias menampilkan semua Instans tanaman hias yang dibuat di akun Anda.",
+          "Setiap ubin mewakili satu tanaman hias (spesimen Anda sendiri). Dari ubin Anda dapat membuka Detail tanaman hias, atau menggunakan pintasan menu tiga titik untuk menavigasi ke tampilan terkait (misalnya, pengingat, jurnal, kode QR)."
+        ]
+      },
+      {
+        "heading": "Ubin tanaman hias (apa yang Anda lihat di daftar)",
+        "body": [
+          "Setiap ubin tanaman hias menampilkan nama tanaman hias dan (jika tersedia) nama definisi tanaman hias (spesies) yang tertaut serta Lokasi yang ditetapkan.",
+          "Mengetuk badan ubin (bukan menu tiga titik) akan menavigasi ke layar Detail tanaman hias."
+        ]
+      },
+      {
+        "heading": "Menu tiga titik (tindakan tanaman hias)",
+        "body": [
+          "Setiap ubin memiliki menu tiga titik dengan tindakan untuk tanaman hias yang dipilih:",
+          "Edit tanaman hias: membuka editor tanaman hias untuk memperbarui detail dan parameter tanaman hias.",
+          "Tampilkan pengingat: menavigasi ke layar Pengingat dengan filter yang diterapkan untuk hanya menampilkan pengingat untuk tanaman hias yang dipilih.",
+          "Tampilkan Jurnal tanaman hias: membuka modal yang menampilkan riwayat tugas tertutup (termasuk catatan pengguna). Catatan terlihat dan tidak disembunyikan.",
+          "Tampilkan kode QR: membuka modal dengan kode QR tanaman hias, penjelasan singkat, dan opsi untuk menyimpan (mengunduh) atau mengirimkannya ke email Anda.",
+          "Hapus tanaman hias: menghapus secara permanen tanaman hias dan data terkait seperti tugas, pengingat, dan koneksi perangkat tertaut."
+        ]
+      },
+      {
+        "heading": "Menu Tombol Aksi Mengambang (FAB).",
+        "body": [
+          "FAB di layar tanaman hias menyediakan tindakan cepat:",
+          "Buat tanaman hias: memulai Wizard Buat tanaman hias (alur 9 langkah) di mana Anda dapat menentukan tanaman hias dengan tepat.",
+          "Sortir: urutkan ubin tanaman hias berdasarkan Nama tanaman hias atau berdasarkan Lokasi.",
+          "Filter: memfilter daftar berdasarkan Lokasi.",
+          "Lokasi: menavigasi ke layar Lokasi tempat Anda dapat menambahkan, mengedit, dan mengelola lokasi yang digunakan untuk pengelompokan dan pemfilteran."
+        ]
+      },
+      {
+        "heading": "Hapus tanaman hias (catatan penting)",
+        "body": [
+          "Penghapusan tanaman hias merupakan tindakan permanen dan tidak dapat dibatalkan.",
+          "Menghapus tanaman hias akan menghapus Mesin Virtual tanaman hias beserta data terkaitnya, seperti tugas yang dihasilkan, pengingat yang ditetapkan ke tanaman hias tersebut, dan tautan perangkat yang terkait dengan tanaman hias tersebut."
+        ]
+      },
+      {
+        "heading": "Jika Anda tidak melihat tanaman hias apa pun",
+        "body": [
+          "Jika daftarnya kosong, gunakan tindakan FAB Buat tanaman hias untuk menambahkan Instans tanaman hias pertama Anda.",
+          "Setelah tanaman hias ada, Anda dapat mengelompokkannya menggunakan Lokasi dan mengelola rutinitas perawatan melalui Pengingat."
+        ]
+      }
+    ]
+  }
+}

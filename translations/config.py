@@ -12,13 +12,16 @@ PROMPT_FILE = BASE_DIR / "prompt_translate.json"
 SOURCE_LANG = "en"
 
 # All supported languages
-LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
+LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko", "id", "ru", "tr"]
 
 # Translate to all except SOURCE_LANG
 TARGET_LANGS = [lang for lang in LANGS if lang != SOURCE_LANG]
 
 # Human-readable names used in prompt
 LANGUAGE_NAMES = {
+    "id": "Indonesian",
+    "ru": "Russian",
+    "tr": "Turkish",
     "en": "English",
     "pl": "Polish",
     "de": "German",

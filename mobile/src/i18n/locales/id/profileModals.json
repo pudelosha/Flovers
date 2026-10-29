@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "common": {
+      "sending": "Mengirim…"
+    },
+    "support": {
+      "copyToMe": "Kirimkan juga salinannya ke email saya"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Ganti email",
+        "newEmailPlaceholder": "Email baru",
+        "currentPasswordPlaceholder": "Kata sandi saat ini"
+      },
+      "changePassword": {
+        "title": "Ubah kata sandi",
+        "currentPasswordPlaceholder": "Kata sandi saat ini",
+        "newPasswordPlaceholder": "Kata sandi baru",
+        "confirmNewPasswordPlaceholder": "Konfirmasikan kata sandi baru",
+        "update": "Perbarui"
+      },
+      "deleteAccount": {
+        "title": "Hapus akun",
+        "warning": "Tindakan ini tidak dapat diubah. Jika Anda melanjutkan, akun dan data Anda akan dihapus secara permanen.",
+        "passwordPlaceholder": "Masukkan kata sandi untuk mengonfirmasi"
+      },
+      "reportBug": {
+        "title": "Laporkan bug",
+        "subjectPlaceholder": "Subyek",
+        "descriptionPlaceholder": "Jelaskan masalahnya…"
+      },
+      "contactUs": {
+        "title": "Hubungi kami",
+        "subjectPlaceholder": "Subyek",
+        "messagePlaceholder": "Apa yang bisa kami bantu?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Silakan masukkan email baru.",
+      "enterCurrentPassword": "Silakan masukkan kata sandi Anda saat ini.",
+      "emailUpdated": "Email berhasil diperbarui.",
+      "couldNotChangeEmail": "Tidak dapat mengubah email. Periksa kata sandi Anda dan coba lagi.",
+      "enterNewPassword": "Silakan masukkan kata sandi baru.",
+      "passwordsDoNotMatch": "Kata sandi baru tidak cocok.",
+      "passwordUpdated": "Kata sandi berhasil diperbarui.",
+      "couldNotChangePassword": "Tidak dapat mengubah kata sandi. Periksa kata sandi Anda saat ini dan coba lagi.",
+      "enterSubject": "Silakan masukkan subjek.",
+      "enterMessage": "Silakan masukkan pesan.",
+      "enterDescription": "Tolong jelaskan masalahnya.",
+      "contactSent": "Pesan terkirim. Kami akan segera menghubungi Anda kembali.",
+      "bugSent": "Laporan bug terkirim. Terima kasih.",
+      "couldNotSendContact": "Tidak dapat mengirimkan pesan Anda. Silakan coba lagi.",
+      "couldNotSendBug": "Tidak dapat mengirimkan laporan bug Anda. Silakan coba lagi.",
+      "deleteNotImplemented": "Hapus akun belum tersedia.",
+      "requestTimedOut": "Waktu permintaan habis. Silakan coba lagi."
+    }
+  }
+}

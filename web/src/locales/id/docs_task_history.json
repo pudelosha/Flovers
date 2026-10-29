@@ -1,0 +1,81 @@
+{
+  "docs_task_history": {
+    "title": "Riwayat Tugas",
+    "sections": [
+      {
+        "heading": "Tujuan layar Riwayat Tugas",
+        "body": [
+          "Task History digunakan untuk meninjau dan mengelola tugas yang telah selesai (tertutup).",
+          "Ini membantu Anda memahami tindakan apa yang dilakukan, kapan tindakan tersebut dilakukan, dan tanaman hias mana yang terpengaruh.",
+          "Layar mungkin terbuka dengan filter yang telah ditentukan sebelumnya diterapkan (misalnya, menampilkan riwayat tanaman hias tertentu), atau mungkin menampilkan semua tugas yang telah diselesaikan."
+        ]
+      },
+      {
+        "heading": "Ubin tugas selesai",
+        "body": [
+          "Setiap ubin mewakili satu tugas yang diselesaikan, termasuk jenis tugas (misalnya, Penyiraman, Gerimis, Pemupukan), nama tanaman hias, lokasi, dan tanggal penyelesaian.",
+          "Tugas yang diselesaikan mungkin menyertakan catatan opsional yang ditambahkan saat tugas ditutup.",
+          "Catatan hanya ditampilkan ketika ubin diperluas."
+        ]
+      },
+      {
+        "heading": "Melihat catatan: perluas dan ciutkan",
+        "body": [
+          "Untuk melihat catatan tugas yang sudah selesai, Anda dapat memperluas ubin dengan mengetuk ubin itu sendiri.",
+          "Anda juga dapat menggunakan menu tiga titik untuk Memperluas atau Ciutkan catatan untuk suatu tugas (tergantung pada keadaan saat ini).",
+          "Ini memungkinkan Anda menjaga daftar tetap ringkas sambil tetap memiliki akses ke riwayat terperinci bila diperlukan."
+        ]
+      },
+      {
+        "heading": "Menu ubin tugas (tiga titik)",
+        "body": [
+          "Setiap ubin tugas yang diselesaikan menyediakan menu konteks dengan tindakan yang terkait dengan entri riwayat spesifik tersebut.",
+          "Perluas/Perkecil: menampilkan atau menyembunyikan bagian catatan di dalam ubin.",
+          "Edit pengingat: menavigasi ke Pengingat yang terkait dengan tugas sehingga Anda dapat menyesuaikan pengulangan atau pengaturan.",
+          "Buka tanaman hias: menavigasi ke tanaman hias Detail tanaman hias yang terkait dengan tugas.",
+          "Hapus tugas: menghapus secara permanen tugas selesai yang dipilih dari akun Anda."
+        ]
+      },
+      {
+        "heading": "Tindakan Tombol Aksi Mengambang (FAB).",
+        "body": [
+          "Layar Riwayat Tugas menyertakan Tombol Tindakan Mengambang (FAB) dengan tindakan untuk bekerja dengan daftar riwayat.",
+          "Sortir: mengubah urutan tugas yang sudah selesai.",
+          "Filter: mempersempit daftar riwayat berdasarkan kriteria yang dipilih.",
+          "Hapus: mendukung penghapusan massal berdasarkan kriteria (misalnya, tugas untuk tanaman hias yang dipilih, tugas untuk lokasi yang dipilih, tugas dengan jenis tertentu, atau tugas yang lebih lama dari ambang batas yang dipilih)."
+        ]
+      },
+      {
+        "heading": "Opsi penyortiran",
+        "body": [
+          "Pengurutan membantu Anda meninjau riwayat dalam urutan yang paling sesuai dengan alur kerja Anda.",
+          "Opsi penyortiran yang tersedia meliputi: Tanggal penyelesaian, nama tanaman hias, dan Lokasi."
+        ]
+      },
+      {
+        "heading": "Opsi pemfilteran",
+        "body": [
+          "Filter membantu Anda fokus pada subkumpulan tugas tertentu yang telah diselesaikan.",
+          "Anda dapat memfilter berdasarkan nama tanaman hias, Lokasi, Jenis tugas, dan rentang tanggal selesai.",
+          "Filter dapat digabungkan untuk mempersempit daftar lebih lanjut, misalnya: Tugas pemupukan diselesaikan di lokasi yang dipilih selama bulan tertentu."
+        ]
+      },
+      {
+        "heading": "Penghapusan massal (tindakan Hapus)",
+        "body": [
+          "Penghapusan massal memungkinkan Anda menghapus secara permanen beberapa tugas yang diselesaikan sekaligus berdasarkan kriteria yang ditentukan.",
+          "Skenario umum termasuk menghapus riwayat untuk satu tanaman hias, menghapus tugas untuk suatu lokasi, menghapus hanya satu jenis tugas, atau menghapus tugas yang lebih lama dari tanggal yang dipilih.",
+          "Penghapusan massal bersifat permanen dan tidak dapat dibatalkan."
+        ]
+      },
+      {
+        "heading": "Perbedaan Riwayat Tugas dengan Beranda",
+        "body": [
+          "Beranda berfokus pada tugas yang sudah jatuh tempo atau lewat waktu dan membantu Anda menyelesaikan pekerjaan saat ini.",
+          "Riwayat Tugas berfokus pada tugas yang telah diselesaikan dan mendukung peninjauan, pengurutan, pemfilteran, dan penghapusan entri riwayat.",
+          "Bersama-sama, layar ini mencakup eksekusi sehari-hari (Beranda) dan pelacakan jangka panjang (Riwayat Tugas)."
+        ]
+      }
+    ]
+  }
+}

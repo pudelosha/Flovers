@@ -1,0 +1,91 @@
+{
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "section1": {
+      "title": "§ 1. Genel hükümler",
+      "p1": "Flovers web sitesinin ve Flovers mobil uygulamasının kullanımıyla bağlantılı olarak işlenen kişisel verilerin denetleyicisi, kayıtlı adresi ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Polonya, e-posta adresi: info@flovers.app, bundan sonra \"Denetleyici\" olarak anılacaktır.",
+      "p2": "Denetleyici, kişisel verileri Avrupa Parlamentosu ve Konseyi'nin 27 Nisan 2016 tarihli (AB) 2016/679 sayılı Yönetmeliği (GDPR) uyarınca işler.",
+      "p3": "Bu Gizlilik Politikası Flovers web sitesi, Flovers mobil uygulaması (Android ve gelecekte iOS) ve bunların işleyişiyle ilişkili arka uç altyapısı için geçerlidir."
+    },
+    "section2": {
+      "title": "§ 2. Kişisel veri işlemenin kapsamı ve amaçları",
+      "intro": "Kontrolör kişisel verileri aşağıdaki amaçlarla işler:",
+      "list": [
+        "Uygulama içerisinde kullanıcı hesabının oluşturulması ve yönetimi",
+        "Kullanıcı kimlik doğrulaması ve oturum açma işlemi",
+        "Hesap doğrulama ve şifre sıfırlama e-postaları da dahil olmak üzere sistem mesajlarının gönderilmesi",
+        "iletişim formu aracılığıyla gönderilen mesajların işlenmesi",
+        "Uygulamanın ve web sitesinin düzgün çalışmasını sağlamak",
+        "ev bitkisi bakımıyla ilgili hatırlatıcılar, görevler ve bildirimler sağlamak",
+        "Sistem güvenliğinin sağlanması ve teknik günlüklerin tutulması"
+      ],
+      "legalBasis": "Veri işlemenin yasal dayanağı, GDPR Madde 6(1)(b) (sözleşmenin ifası), Madde 6(1)(c) GDPR (yasal yükümlülük) ve GDPR Madde 6(1)(f)'dir (Denetleyicinin meşru menfaati)."
+    },
+    "section3": {
+      "title": "§ 3. İşlenen kişisel veri türleri",
+      "intro": "Uygulamanın veya web sitesinin nasıl kullanıldığına bağlı olarak Kontrolör aşağıdaki verileri işleyebilir:",
+      "list": [
+        "kullanıcı e-posta adresi",
+        "karma kullanıcı şifresi",
+        "profil bilgileri ve kullanıcı tercihleri",
+        "teknik cihaz verileri (cihaz türü, işletim sistemi, uygulama sürümü)",
+        "IP adresi",
+        "cihaz yönlendirme verileri (örn. ev bitkilerinin ışığa maruz kalmasını optimize etmek için)",
+        "ev bitkileri, ölçümler ve IoT sensör okumalarıyla ilgili olarak kullanıcı tarafından girilen veriler"
+      ],
+      "note": "Kullanıcı tarafından çekilen fotoğraflar, kullanıcı sunucu tarafında işlem gerektiren özellikleri kullanmayı seçmediği sürece genellikle kullanıcının cihazında yerel olarak işlenir."
+    },
+    "section4": {
+      "title": "§ 4. Kullanıcı hesapları ve güvenlik",
+      "p1": "Flovers uygulamasının kullanıcıları, şifreyle güvenliği sağlanan bireysel hesaplar oluşturur.",
+      "p2": "Parolalar şifrelenmiş (karma) biçimde saklanır.",
+      "p3": "Bir kullanıcı hesabı, sağlanan e-posta adresinin doğrulanmasını gerektirir.",
+      "p4": "Kullanıcı istediği zaman şifresini değiştirebilir veya şifre sıfırlama prosedürünü kullanabilir."
+    },
+    "section5": {
+      "title": "§ 5. Bildirimler ve iletişim",
+      "p1": "Denetleyici yalnızca işlem mesajlarını, özellikle de oturum açma, hesap doğrulama ve şifre sıfırlamayla ilgili mesajları gönderir.",
+      "p2": "Uygulama, kullanıcılara ev bitkisi bakımı görevlerini hatırlatmak için anlık bildirimler (ör. Firebase aracılığıyla) kullanabilir.",
+      "p3": "Kontrolör gelecekte bir haber bülteni sunma hakkını saklı tutar; pazarlama iletişimleri yalnızca kullanıcının ayrı onayı alındıktan sonra gönderilecektir."
+    },
+    "section6": {
+      "title": "§ 6. Çerezler ve benzeri teknolojiler",
+      "p1": "Flovers web sitesi, web sitesinin düzgün çalışması için gerekli çerezleri kullanabilir.",
+      "p2": "Çerezler yalnızca teknik ve işlevsel amaçlarla kullanılır.",
+      "p3": "Web sitesi üçüncü taraf analizlerini veya pazarlama araçlarını kullanmaz."
+    },
+    "section7": {
+      "title": "§ 7. Veri alıcıları ve işlenme yeri",
+      "p1": "Kişisel veriler Avrupa Birliği içerisinde yer alan sunucularda işlenmektedir.",
+      "p2": "Sunucu altyapısı Hetzner Online GmbH tarafından sağlanmaktadır.",
+      "p3": "Denetleyici, anlık bildirimleri işlemek amacıyla Firebase hizmetlerini kullanabilir.",
+      "p4": "Kişisel veriler Avrupa Birliği dışındaki üçüncü ülkelere aktarılmamaktadır."
+    },
+    "section8": {
+      "title": "§ 8. Veri saklama süresi",
+      "p1": "Kişisel veriler kullanıcı hesabının süresi boyunca saklanır.",
+      "p2": "Hesabın silinmesinden sonra, yürürlükteki kanunlarca saklanması gerekmediği sürece veriler kalıcı olarak silinir veya anonimleştirilir."
+    },
+    "section9": {
+      "title": "§ 9. Veri sahiplerinin hakları",
+      "intro": "Her veri sahibi aşağıdaki haklara sahiptir:",
+      "list": [
+        "kişisel verilerine erişme",
+        "kişisel verileri düzeltmek",
+        "kişisel verileri sil",
+        "işlemeyi kısıtla",
+        "işleme itiraz",
+        "onayı herhangi bir zamanda geri çekme"
+      ],
+      "p2": "Yukarıdaki hakları kullanmak için lütfen şu adresten Kontrolörle iletişime geçin: info@flovers.app.",
+      "p3": "Veri sahipleri ayrıca Polonya Kişisel Verileri Koruma Ofisi (UODO) Başkanına veya başka bir yetkili denetim makamına şikayette bulunma hakkına da sahiptir."
+    },
+    "section10": {
+      "title": "§ 10. Son hükümler",
+      "p1": "Kontrolör, kişisel verileri korumak için uygun teknik ve organizasyonel önlemleri uygular.",
+      "p2": "Denetleyici bu Gizlilik Politikasını güncelleme hakkını saklı tutar.",
+      "p3": "Gizlilik Politikasının güncel sürümü her zaman Flovers web sitesinde ve mobil uygulamada mevcuttur."
+    }
+  }
+}
