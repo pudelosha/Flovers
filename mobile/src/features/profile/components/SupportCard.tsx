@@ -14,7 +14,11 @@ function pad2(n: number) {
 function formatDateBySettings(value?: string | Date | null, settings?: any) {
   if (!value) return "—";
 
-  const d = value instanceof Date ? value : new Date(value);
+  // Commit dates are calendar dates; do not shift them through UTC parsing.
+  const calendar = typeof value === "string" ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
+  const d = value instanceof Date ? value : calendar
+    ? new Date(Number(calendar[1]), Number(calendar[2]) - 1, Number(calendar[3]))
+    : new Date(value);
   if (Number.isNaN(d.getTime())) return String(value);
 
   const dd = pad2(d.getDate());

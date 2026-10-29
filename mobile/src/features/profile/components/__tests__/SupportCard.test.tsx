@@ -2,6 +2,13 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react-native";
 import SupportCard from "../SupportCard";
 
+jest.mock("../../../../buildInfo", () => ({ BUILD_INFO: {
+  version: "1.0.0", releaseTag: "abc1234", releaseDate: "2026-10-29",
+} }));
+jest.mock("../../../../app/providers/SettingsProvider", () => ({
+  useSettings: () => ({ settings: { dateFormat: "YYYY-MM-DD" } }),
+}));
+
 describe("SupportCard", () => {
   it("opens support actions and shows build contact info", () => {
     const onContact = jest.fn();
@@ -17,5 +24,8 @@ describe("SupportCard", () => {
     expect(onContact).toHaveBeenCalledTimes(1);
     expect(onBug).toHaveBeenCalledTimes(1);
     expect(getByText("hello@flovers.app")).toBeTruthy();
+    expect(getByText("1.0.0")).toBeTruthy();
+    expect(getByText("abc1234")).toBeTruthy();
+    expect(getByText("2026-10-29")).toBeTruthy();
   });
 });

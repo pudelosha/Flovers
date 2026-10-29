@@ -18,6 +18,20 @@ react {
     autolinkLibrariesWithApp()
 }
 
+// Cover direct Gradle/Android Studio builds as well as npm commands.
+def buildInfoReactExtension = project.extensions.getByName("react")
+def generateBuildInfo = tasks.register("generateBuildInfo", Exec) {
+    workingDir rootProject.projectDir.parentFile
+    commandLine(buildInfoReactExtension.nodeExecutableAndArgs.get() + ["scripts/generate-build-info.js"])
+    outputs.file(new File(rootProject.projectDir.parentFile, "src/buildInfo.ts"))
+    outputs.upToDateWhen { false }
+}
+tasks.configureEach { task ->
+    if (task.name == "preBuild" || (task.name.startsWith("createBundle") && task.name.endsWith("JsAndAssets"))) {
+        task.dependsOn(generateBuildInfo)
+    }
+}
+
 /**
  * Set this to true to run Proguard on release builds to minify the Java bytecode.
  */

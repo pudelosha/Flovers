@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
+    "test:build-info": "node --test scripts/tests/*.cjs",
     "prestart": "node scripts/generate-build-info.js",
     "prebuild": "node scripts/generate-build-info.js",
     "android:release": "node scripts/generate-build-info.js && cd android && gradlew clean installRelease"
