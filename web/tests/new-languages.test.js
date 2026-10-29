@@ -15,7 +15,7 @@ for (const [language, home] of [["id", "Beranda"], ["ru", "Главная"], ["t
     const i18n = createInstance();
     await i18n.init({ lng: language, fallbackLng: false, resources: { [language]: resources }, ns: namespaces });
     assert.equal(i18n.t("nav.start", { ns: "common" }), home);
-    assert.equal(i18n.t("language.id", { ns: "common" }), "Bahasa Indonesia");
+    assert.equal(typeof i18n.t("language.id", { ns: "common" }), "string");
     const docs = i18n.t("docs_create_plant_wizard.sections", { ns: "docs_create_plant_wizard", returnObjects: true });
     assert.ok(Array.isArray(docs) && docs.length >= 9);
     assert.ok(docs.every(section => section.heading && section.body.length));
@@ -23,3 +23,26 @@ for (const [language, home] of [["id", "Beranda"], ["ru", "Главная"], ["t
     assert.ok(Array.isArray(faq) && faq.every(item => item.q && item.a));
   });
 }
+
+test("language choices follow the selected website language", async () => {
+  const expected = {
+    pl: ["Indonezyjski", "Rosyjski", "Turecki"],
+    en: ["Indonesian", "Russian", "Turkish"],
+    de: ["Indonesisch", "Russisch", "Türkisch"],
+    id: ["Bahasa Indonesia", "Bahasa Rusia", "Bahasa Turki"],
+    ru: ["Индонезийский", "Русский", "Турецкий"],
+    tr: ["Endonezce", "Rusça", "Türkçe"],
+  };
+  const resources = {};
+  for (const language of LANGS) {
+    resources[language] = { common: JSON.parse(await readFile(
+      new URL(`../src/locales/${language}/common.json`, import.meta.url), "utf8",
+    )) };
+  }
+  const i18n = createInstance();
+  await i18n.init({ lng: "pl", fallbackLng: false, resources, defaultNS: "common" });
+  for (const [language, labels] of Object.entries(expected)) {
+    await i18n.changeLanguage(language);
+    assert.deepEqual(["id", "ru", "tr"].map(code => i18n.t(`language.${code}`)), labels);
+  }
+});

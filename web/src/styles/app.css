@@ -445,10 +445,12 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   right: 0;
   top: calc(100% + 10px);
-  min-width: 210px;
+  min-width: 190px;
+  max-height: min(600px, calc(100dvh - 100px));
+  overflow-y: auto;
 
   display: none;
-  padding: 10px;
+  padding: 6px;
 
   border-radius: 18px;
   border: 0;
@@ -461,14 +463,17 @@ a { color: inherit; text-decoration: none; }
 
 .lang-panel.open {
   display: grid;
-  gap: 8px;
+  gap: 3px;
 }
 
 .lang-item {
   width: 100%;
   text-align: left;
-  padding: 10px 12px;
-  border-radius: 14px;
+  padding: 6px 10px;
+  min-height: 32px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 10px;
 
   border: 0;
   background: rgba(255,255,255,0.05);
