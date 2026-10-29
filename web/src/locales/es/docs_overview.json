@@ -53,7 +53,7 @@
           "Puedes crear un código QR con un enlace a una planta concreta de tu cuenta.",
           "Imprímelo y pégalo en la maceta. Al escanearlo, abrirás sus detalles y lecturas.",
           "Los códigos QR facilitan el acceso a tus datos. No los compartas públicamente si pueden revelar información sensible.",
-          "Actualmente, los detalles están pensados para que los vea solo la persona propietaria de la planta después de iniciar sesión."
+          "Un código QR no otorga acceso por sí solo. Debe iniciar sesión como propietario o tener acceso activo para compartir la planta. Los propietarios generan y exportan el código; Los destinatarios pueden escanear el mismo código para abrir la planta."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Configura recordatorios y completa las tareas para establecer una rutina y llevar un historial útil.",
           "Si tienes un dispositivo, vincúlalo en «Lecturas» y consulta el historial para ver los cambios.",
           "Las preguntas frecuentes ofrecen respuestas rápidas. Las condiciones de uso y la política de privacidad explican los aspectos legales y el tratamiento de datos."
+        ]
+      },
+      {
+        "heading": "Contactos, uso compartido y progreso de la cuenta",
+        "body": [
+          "Agregue usuarios confiables de Flovers a Contactos y luego comparta plantas seleccionadas con acceso de solo visualización o para completar tareas. Esto permite que alguien cuide sus plantas mientras usted está fuera sin cambiar la configuración de sus plantas.",
+          "La finalización de tareas elegibles genera XP y niveles de cuenta. El perfil muestra su clasificación y progreso actuales, mientras que los límites diarios mantienen el progreso equilibrado para cuentas con muchas plantas."
         ]
       }
     ]

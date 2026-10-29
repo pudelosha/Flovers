@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_readings": {
     "title": "Readings",
     "sections": [
@@ -195,6 +195,12 @@
           "Water pump control requires extra care. Users should ensure their relay, pump, power supply, tubing, and water source are installed safely.",
           "Flovers records and displays device data, but it does not guarantee the accuracy of third-party or self-built sensors.",
           "Flovers also does not guarantee that a physical pump will run successfully. Pump execution depends on the user’s hardware, generated code, WiFi connectivity, and correct device configuration."
+        ]
+      },
+      {
+        "heading": "Sensor readings for shared plants",
+        "body": [
+          "Recipients can view the latest readings and charts for a shared plant. A Shared label identifies received plants. Device credentials, setup code, device editing, pump controls, exports and deletion remain owner-only."
         ]
       }
     ]

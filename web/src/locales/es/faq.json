@@ -99,7 +99,7 @@
     },
     {
       "q": "¿Pueden otras personas ver mis lecturas?",
-      "a": "Actualmente son privadas. Más adelante podrían añadirse opciones para compartirlas. También puedes consultarlas mediante la API para usarlas con otros dispositivos, como un sistema de riego automático."
+      "a": "Sí, si compartes la planta con un contacto aceptado. Los destinatarios pueden ver lecturas y gráficos de sensores vinculados, pero no pueden acceder a los secretos del dispositivo, cambiar la configuración ni controlar la bomba."
     },
     {
       "q": "¿Para qué sirven los códigos QR?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "¿Es seguro compartir el QR o el enlace de una planta?",
-      "a": "En general, sí. Solo la persona propietaria de la planta puede ver sus detalles después de iniciar sesión."
+      "a": "Un código QR es un atajo, no una clave de acceso. El escáner abre la planta solo para su propietario que haya iniciado sesión o para un usuario con acceso activo para compartir. Darle a alguien el código QR por sí solo no comparte la planta."
     },
     {
       "q": "¿Puedo hacer públicas mis plantas o compartirlas con amigos?",
-      "a": "Por ahora no. Las funciones para compartir públicamente podrían añadirse más adelante."
+      "a": "Puede compartir plantas de forma privada con contactos Flovers aceptados. Elija acceso de solo lectura o permita la finalización de la tarea y, opcionalmente, establezca una fecha de finalización. Las plantas no se publican como perfiles públicos."
     },
     {
       "q": "¿Por qué no recibo notificaciones?",
@@ -120,6 +120,14 @@
     {
       "q": "¿Cómo pido ayuda o informo de un problema?",
       "a": "Usa el formulario de contacto de la web de Flovers o el que encontrarás en el perfil de la aplicación."
+    },
+    {
+      "q": "¿Cómo agrego a alguien a Contactos?",
+      "a": "Abra Perfil → Compartir → Contactos y use + para agregar un contacto por su dirección de correo electrónico registrada o ID Flovers. Compartir estará disponible una vez que se acepte la invitación."
+    },
+    {
+      "q": "¿Cómo funcionan los niveles de cuenta?",
+      "a": "Las tareas de cuidado que cumplen los requisitos dan XP para avanzar del nivel 1 al 100. Los niveles superiores requieren más XP. Hay límites diarios: una misma planta y tipo de cuidado solo dan XP una vez por día UTC. Repetir la finalización no da más puntos."
     }
   ]
 }

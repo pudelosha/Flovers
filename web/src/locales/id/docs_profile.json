@@ -5,7 +5,7 @@
       {
         "heading": "Tujuan dari layar ini",
         "body": [
-          "Layar Profil adalah tempat sentral untuk mengelola informasi akun, preferensi notifikasi, pengaturan aplikasi, dan opsi dukungan.",
+          "Profil menyatukan tingkat akun dan XP Anda, kontak dan berbagi tanaman, preferensi pemberitahuan, pengaturan tampilan dan dukungan.",
           "Hal ini memungkinkan pengguna untuk mengontrol data pribadi dan bagaimana aplikasi Flovers berperilaku setiap hari."
         ]
       },
@@ -15,6 +15,41 @@
           "Bagian Akun menampilkan informasi akun dasar seperti alamat email terdaftar dan tanggal pembuatan akun.",
           "Dari bagian ini, pengguna dapat mengubah alamat email (diperlukan konfirmasi dengan kata sandi saat ini), mengubah kata sandi saat ini, keluar, atau menghapus akun secara permanen.",
           "Menghapus akun mengakibatkan penghapusan permanen semua data pengguna, termasuk tanaman hias, pengingat, tugas, pembacaan sensor, dan perangkat."
+        ]
+      },
+      {
+        "heading": "Tingkat akun dan XP",
+        "body": [
+          "Ubin Akun menunjukkan level Anda saat ini, peringkat, dan kemajuan menuju level berikutnya. Level berkisar dari 1 hingga 100. Nama peringkat dan lencana tetap sama untuk setiap grup yang terdiri dari sepuluh level.",
+          "Menyelesaikan tugas perawatan yang memenuhi syarat akan menghasilkan XP. Level awal membutuhkan lebih sedikit XP, sedangkan level yang lebih tinggi membutuhkan lebih banyak XP secara bertahap. Profil menyegarkan saldo saat ini; tidak ada pop-up XP terpisah setelah setiap tugas."
+        ]
+      },
+      {
+        "heading": "Bagaimana XP diberikan",
+        "body": [
+          "Penyelesaian pertama yang memenuhi syarat setiap hari memberikan 100 XP, diikuti oleh 50, 30, dan 20 XP. Lima penyelesaian berikutnya yang memenuhi syarat masing-masing memberikan 10 XP, hingga 250 XP per hari UTC. Hanya tugas yang harus diselesaikan hari ini atau sudah lewat waktu yang memenuhi syarat.",
+          "Jenis tanaman dan perawatan yang sama hanya dapat memperoleh XP satu kali per hari UTC. Mengulangi penyelesaian tidak akan memberikan XP lagi, dan menyelesaikan tugas di masa depan lebih awal tidak akan menghasilkan apa pun. Ketika pengasuh menyelesaikan tugas bersama, pengasuh menerima XP yang memenuhi syarat, bukan pemiliknya."
+        ]
+      },
+      {
+        "heading": "Peringkat dari level 1 hingga 100",
+        "body": [
+          "1–10 · Bibit",
+          "11–20 · Penjaga Tunas",
+          "21–30 · Pencinta Daun",
+          "31–40 · Pekebun Pemula",
+          "41–50 · Perawat Tanaman",
+          "51–60 · Tangan Hijau",
+          "61–70 · Penjaga Kebun",
+          "71–80 · Ahli Botani",
+          "81–90 · Ahli Tanaman",
+          "91–100 · Legenda Tanaman"
+        ]
+      },
+      {
+        "heading": "Berbagi dari Profil",
+        "body": [
+          "Ubin Berbagi berada di bawah Akun. Ini menunjukkan kontak yang diterima dan permintaan masuk yang tertunda, dengan tombol untuk Kontak dan Tanaman bersama. Gunakan layar ini untuk mengelola undangan dan akses tanaman."
         ]
       },
       {

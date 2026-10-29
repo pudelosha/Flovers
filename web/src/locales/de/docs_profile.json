@@ -5,7 +5,7 @@
       {
         "heading": "Was du im Profil findest",
         "body": [
-          "Im Profil verwaltest du dein Konto, legst Benachrichtigungen fest, passt die App an und erreichst den Support.",
+          "Das Profil vereint Ihre Kontoebene und XP, das Teilen von Kontakten und Pflanzen, Benachrichtigungseinstellungen, Darstellungseinstellungen und Support.",
           "Hier kannst du deine persönlichen Daten ändern und Flovers so einstellen, wie es zu deinem Alltag passt."
         ]
       },
@@ -15,6 +15,41 @@
           "Unter Konto findest du deine E-Mail-Adresse und das Datum, an dem du dein Konto erstellt hast.",
           "Du kannst deine E-Mail-Adresse ändern und dies mit deinem aktuellen Passwort bestätigen, ein neues Passwort festlegen, dich abmelden oder dein Konto dauerhaft löschen.",
           "Wenn du dein Konto löschst, werden alle deine Daten unwiderruflich entfernt: Pflanzen, Erinnerungen, Aufgaben, Messwerte und Geräte."
+        ]
+      },
+      {
+        "heading": "Kontoebene und XP",
+        "body": [
+          "Die Kontokachel zeigt Ihr aktuelles Level, Ihren Rang und Ihren Fortschritt zum nächsten Level. Die Stufen reichen von 1 bis 100. Der Name und das Abzeichen eines Ranges bleiben für jede Gruppe von zehn Stufen gleich.",
+          "Für die Erledigung anspruchsberechtigter Pflegeaufgaben erhältst du XP. Frühe Level benötigen weniger XP, während höhere Level immer mehr erfordern. Das Profil aktualisiert den aktuellen Kontostand; Es gibt kein separates XP-Popup nach jeder Aufgabe."
+        ]
+      },
+      {
+        "heading": "So werden XP vergeben",
+        "body": [
+          "Der erste berechtigte Abschluss an jedem Tag bringt 100 XP, gefolgt von 50, 30 und 20 XP. Die nächsten fünf berechtigten Abschlüsse bringen jeweils 10 XP, bis zu 250 XP pro UTC-Tag. Es qualifizieren sich nur Aufgaben, die heute fällig oder bereits überfällig sind.",
+          "Die gleiche Pflanze und Pflegeart kann nur einmal pro UTC-Tag XP verdienen. Das Wiederholen eines Abschlusses bringt keine erneuten EP, und das vorzeitige Abschließen zukünftiger Aufgaben bringt keine XP. Wenn eine Pflegekraft eine gemeinsame Aufgabe erledigt, erhält die Pflegekraft die berechtigten XP, nicht der Eigentümer."
+        ]
+      },
+      {
+        "heading": "Ränge von Level 1 bis 100",
+        "body": [
+          "1–10 · Keimling",
+          "11–20 · Hüter der Keimlinge",
+          "21–30 · Blattliebhaber",
+          "31–40 · Angehender Gärtner",
+          "41–50 · Pflanzenpfleger",
+          "51–60 · Grüner Daumen",
+          "61–70 · Gartenwächter",
+          "71–80 · Botanikexperte",
+          "81–90 · Meistergärtner",
+          "91–100 · Pflanzenlegende"
+        ]
+      },
+      {
+        "heading": "Vom Profil aus teilen",
+        "body": [
+          "Die Freigabekachel befindet sich unter dem Konto. Es zeigt akzeptierte Kontakte und ausstehende eingehende Anfragen mit Schaltflächen für Kontakte und geteilte Pflanzen. Verwenden Sie diese Bildschirme, um Einladungen und den Zugang zu Pflanzen zu verwalten."
         ]
       },
       {

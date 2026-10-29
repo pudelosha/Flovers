@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Piante condivise",
+    "sections": [
+      {
+        "heading": "Condividi piante d'appartamento con un contatto",
+        "body": [
+          "Apri Profilo, quindi Condivisione e Piante d'appartamento condivise. Il menu + ti consente di condividere piante d'appartamento e filtrare le piante d'appartamento condivise da te o con te. Puoi anche iniziare dal menu a tre punti di una pianta d'appartamento di proprietà o dai dettagli di un contatto.",
+          "Quando aggiungi la condivisione, seleziona una o più piante d'appartamento e i contatti che dovrebbero avere accesso. Ogni contatto può avere accesso di sola visualizzazione o autorizzazione per completare le attività, con una data di fine facoltativa. Le autorizzazioni esistenti vengono visualizzate prima del salvataggio."
+        ]
+      },
+      {
+        "heading": "Gestisci la condivisione esistente",
+        "body": [
+          "Gestisci condivisione apre una pianta d'appartamento con la selezione bloccata. Modifica i contatti, le autorizzazioni di completamento delle attività o la data di fine, quindi salva. Per condividere altre piante d'appartamento, apri invece Condividi piante d'appartamento.",
+          "Ogni tessera di pianta d'appartamento condivisa mostra il nome, la specie e la posizione, seguita da righe separate per il contatto, le autorizzazioni e la data di fine. I proprietari possono rimuovere l'accesso dei singoli contatti; i destinatari possono lasciare una pianta d'appartamento condivisa."
+        ]
+      },
+      {
+        "heading": "Cosa può fare l'altra persona",
+        "body": [
+          "I destinatari possono visualizzare la pianta d'appartamento condivisa, la cronologia delle cure e le letture dei sensori collegati. Con l'autorizzazione al completamento delle attività, possono anche contrassegnare le attività completate sulla Home. Il proprietario e l'assistente vedono la stessa attività, quindi viene completata una sola volta.",
+          "Solo il proprietario può modificare i dettagli della pianta d'appartamento, le definizioni dei promemoria, i dispositivi, le impostazioni della pompa o le autorizzazioni di condivisione. Le definizioni di promemoria condivise non vengono visualizzate nella schermata Promemoria del destinatario. L'accesso di sola visualizzazione non consente mai il completamento delle attività.",
+          "Le piante d'appartamento condivise e i relativi compiti sono contrassegnati come Condivisi. Il menu a tre punti su Piante d'appartamento condivise apre Dettagli pianta d'appartamento o Casa filtrata in base a quella pianta d'appartamento. Il codice QR esistente della pianta d'appartamento funziona anche per un utente autenticato con accesso di condivisione attivo."
+        ]
+      },
+      {
+        "heading": "Al termine dell'accesso",
+        "body": [
+          "Una data di fine facoltativa include tale data nel fuso orario delle notifiche del proprietario. Senza una data di fine, l'accesso continua finché non viene rimosso. La scadenza, la rimozione dell'accesso o la rimozione del contatto terminano l'accesso del destinatario senza eliminare la pianta d'appartamento del proprietario."
+        ]
+      }
+    ]
+  }
+}

@@ -53,7 +53,7 @@
           "Tu peux créer un code QR contenant un lien vers une plante précise de ton compte.",
           "Imprime-le et colle-le sur le pot. En le scannant, tu retrouves directement les détails et les relevés de cette plante.",
           "Les codes QR facilitent l’accès à tes données. Ne les partage pas publiquement s’ils risquent de révéler des informations sensibles.",
-          "Actuellement, les détails sont destinés à être consultés uniquement par la personne connectée à qui appartient la plante."
+          "Un code QR n’accorde pas l’accès en lui-même. Vous devez être connecté en tant que propriétaire ou disposer d'un accès de partage actif à la plante. Les propriétaires génèrent et exportent le code ; les destinataires peuvent scanner le même code pour ouvrir la plante."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Crée ensuite tes rappels et coche les tâches terminées pour établir une routine et garder un historique utile.",
           "Si tu as un appareil, associe-le dans « Relevés », puis consulte l’historique pour repérer les évolutions.",
           "La FAQ apporte des réponses rapides. Les conditions d’utilisation et la politique de confidentialité précisent les aspects juridiques et le traitement des données."
+        ]
+      },
+      {
+        "heading": "Contacts, partage et progression du compte",
+        "body": [
+          "Ajoutez des utilisateurs Flovers de confiance aux contacts, puis partagez les plantes sélectionnées avec un accès en lecture seule ou en exécution de tâches. Cela permet à quelqu'un de s'occuper de vos plantes pendant votre absence sans modifier les paramètres de vos plantes.",
+          "L'achèvement de tâches éligibles génère de l'XP et des niveaux de compte. Le profil affiche votre classement et votre progression actuels, tandis que les limites quotidiennes maintiennent la progression équilibrée pour les comptes comportant de nombreuses plantes."
         ]
       }
     ]

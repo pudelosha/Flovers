@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_task_history": {
     "title": "Task History",
     "sections": [
@@ -74,6 +74,12 @@
           "Home focuses on tasks that are due or overdue and helps you complete current work.",
           "Task History focuses on tasks that are already completed and supports reviewing, sorting, filtering, and deleting historical entries.",
           "Together, these screens cover both day-to-day execution (Home) and long-term tracking (Task History)."
+        ]
+      },
+      {
+        "heading": "Shared care history",
+        "body": [
+          "Care history for actively shared plants is visible with a Shared label. When an authorized caregiver completes a task, that completion is recorded in the same care history. Recipients cannot delete or export the owner’s history."
         ]
       }
     ]

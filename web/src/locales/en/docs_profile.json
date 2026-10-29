@@ -1,11 +1,11 @@
-﻿{
+{
   "docs_profile": {
     "title": "Profile",
     "sections": [
       {
         "heading": "Purpose of this screen",
         "body": [
-          "The Profile screen is the central place to manage account information, notification preferences, application settings, and support options.",
+          "Profile brings together your account level and XP, contacts and plant sharing, notification preferences, appearance settings and support.",
           "It allows the user to control both personal data and how the Flovers app behaves on a daily basis."
         ]
       },
@@ -15,6 +15,41 @@
           "The Account section displays basic account information such as the registered email address and account creation date.",
           "From this section, the user can change the email address (confirmation with the current password is required), change the current password, log out, or permanently delete the account.",
           "Deleting the account results in irreversible removal of all user data, including plants, reminders, tasks, readings, and devices."
+        ]
+      },
+      {
+        "heading": "Account level and XP",
+        "body": [
+          "The Account tile shows your current level, rank and progress towards the next level. Levels run from 1 to 100. A rank’s name and badge stay the same for each group of ten levels.",
+          "Completing eligible care tasks earns XP. Early levels need less XP, while higher levels require progressively more. Profile refreshes the current balance; there is no separate XP pop-up after every task."
+        ]
+      },
+      {
+        "heading": "How XP is awarded",
+        "body": [
+          "The first eligible completion each day gives 100 XP, followed by 50, 30 and 20 XP. The next five eligible completions give 10 XP each, up to 250 XP per UTC day. Only tasks due today or already overdue qualify.",
+          "The same plant and care type can earn XP only once per UTC day. Repeating a completion does not grant XP again, and completing future tasks early earns none. When a caregiver completes a shared task, the caregiver receives the eligible XP, not the owner."
+        ]
+      },
+      {
+        "heading": "Ranks from level 1 to 100",
+        "body": [
+          "1–10 · Seedling",
+          "11–20 · Sprout Keeper",
+          "21–30 · Leaf Lover",
+          "31–40 · Budding Gardener",
+          "41–50 · Plant Nurturer",
+          "51–60 · Green Thumb",
+          "61–70 · Garden Guardian",
+          "71–80 · Botanical Expert",
+          "81–90 · Master Grower",
+          "91–100 · Plant Legend"
+        ]
+      },
+      {
+        "heading": "Sharing from Profile",
+        "body": [
+          "The Sharing tile sits below Account. It shows accepted contacts and pending incoming requests, with buttons for Contacts and Shared plants. Use these screens to manage invitations and plant access."
         ]
       },
       {

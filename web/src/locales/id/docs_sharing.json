@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Tanaman berbagi",
+    "sections": [
+      {
+        "heading": "Bagikan tanaman dengan kontak",
+        "body": [
+          "Buka Profil, lalu Berbagi dan Berbagi tanaman. Menu + memungkinkan Anda berbagi tanaman dan memfilter tanaman yang dibagikan oleh Anda atau dengan Anda. Anda juga dapat memulai dari menu tiga titik tanaman milik atau detail kontak.",
+          "Saat menambahkan berbagi, pilih satu atau lebih tanaman dan kontak yang memiliki akses. Setiap kontak dapat memiliki akses hanya lihat atau izin untuk menyelesaikan tugas, dengan tanggal akhir opsional. Izin yang ada ditampilkan sebelum Anda menyimpan."
+        ]
+      },
+      {
+        "heading": "Kelola berbagi yang ada",
+        "body": [
+          "Kelola berbagi membuka satu tanaman dengan pilihan terkunci. Ubah kontaknya, izin penyelesaian tugas, atau tanggal berakhirnya, lalu simpan. Untuk berbagi tanaman lainnya, buka Bagikan tanaman.",
+          "Setiap ubin tanaman bersama menunjukkan nama, spesies, dan lokasinya, diikuti oleh baris terpisah untuk kontak, izin, dan tanggal akhir. Pemilik dapat menghapus akses masing-masing kontak; penerima dapat meninggalkan tanaman bersama."
+        ]
+      },
+      {
+        "heading": "Apa yang bisa dilakukan orang lain",
+        "body": [
+          "Penerima dapat melihat tanaman bersama, riwayat perawatannya, dan pembacaan sensor terkait. Dengan izin penyelesaian tugas, mereka juga dapat menandai tugas selesai di Beranda. Pemilik dan pengasuh melihat tugas yang sama, sehingga hanya diselesaikan satu kali.",
+          "Hanya pemilik yang dapat mengubah detail tanaman, definisi pengingat, perangkat, pengaturan pompa, atau izin berbagi. Definisi pengingat bersama tidak muncul di layar Pengingat penerima. Akses hanya lihat tidak pernah mengizinkan penyelesaian tugas.",
+          "Tanaman bersama dan tugasnya ditandai Dibagikan. Menu tiga titik pada Tanaman bersama membuka Detail tanaman atau Rumah yang difilter ke tanaman tersebut. Kode QR yang ada pada tanaman juga berfungsi untuk pengguna terotentikasi dengan akses berbagi aktif."
+        ]
+      },
+      {
+        "heading": "Ketika akses berakhir",
+        "body": [
+          "Tanggal akhir opsional mencakup tanggal tersebut dalam zona waktu pemberitahuan pemilik. Tanpa tanggal akhir, akses berlanjut hingga dihapus. Kedaluwarsa, menghapus akses atau menghapus kontak mengakhiri akses penerima tanpa menghapus tanaman pemiliknya."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Shared plants",
+    "sections": [
+      {
+        "heading": "Share plants with a contact",
+        "body": [
+          "Open Profile, then Sharing and Shared plants. The + menu lets you share plants and filter plants shared by you or with you. You can also start from an owned plant’s three-dot menu or a contact’s details.",
+          "When adding sharing, select one or more plants and the contacts who should have access. Each contact can have view-only access or permission to complete tasks, with an optional end date. Existing permissions are shown before you save."
+        ]
+      },
+      {
+        "heading": "Manage existing sharing",
+        "body": [
+          "Manage sharing opens one plant with its selection locked. Change its contacts, task-completion permissions or end date, then save. To share other plants, open Share plants instead.",
+          "Each shared plant tile shows its name, species and location, followed by separate rows for the contact, permissions and end date. Owners can remove individual contacts’ access; recipients can leave a shared plant."
+        ]
+      },
+      {
+        "heading": "What the other person can do",
+        "body": [
+          "Recipients can view the shared plant, its care history and linked sensor readings. With task-completion permission, they can also mark its tasks complete on Home. The owner and caregiver see the same task, so it is completed only once.",
+          "Only the owner can change plant details, reminder definitions, devices, pump settings or sharing permissions. Shared reminder definitions do not appear on the recipient’s Reminders screen. View-only access never allows task completion.",
+          "Shared plants and their tasks are marked Shared. The three-dot menu on Shared plants opens Plant Details or Home filtered to that plant. The plant’s existing QR code also works for an authenticated user with active sharing access."
+        ]
+      },
+      {
+        "heading": "When access ends",
+        "body": [
+          "An optional end date includes that date in the owner’s notification timezone. Without an end date, access continues until it is removed. Expiry, removing access or removing the contact ends the recipient’s access without deleting the owner’s plant."
+        ]
+      }
+    ]
+  }
+}

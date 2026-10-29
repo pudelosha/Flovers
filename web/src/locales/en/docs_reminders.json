@@ -66,6 +66,12 @@
           "If you change your environment (season, light, substrate, pot size), consider updating reminders to match the new conditions.",
           "If you want to manage already completed tasks and notes, use the Task History screen (documented separately)."
         ]
+      },
+      {
+        "heading": "Reminder definitions stay with the owner",
+        "body": [
+          "Reminders displays only your own reminder definitions, including the calendar view. Sharing a plant does not share the reminder editor or its recurring rules. The generated tasks can still appear on the recipient’s Home screen, where permission determines whether they can be completed."
+        ]
       }
     ]
   }

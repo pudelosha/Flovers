@@ -5,8 +5,8 @@
       {
         "heading": "Deine Pflanzen im Überblick",
         "body": [
-          "Unter „Pflanzen“ findest du alle Pflanzen, die du zu deinem Konto hinzugefügt hast.",
-          "Jede Kachel steht für eine deiner Pflanzen. Du kannst ihre Details öffnen oder über das Drei-Punkte-Menü direkt zu Erinnerungen, Pflanzentagebuch oder QR-Code wechseln."
+          "Pflanzen zeigt Pflanzen, die Sie besitzen, und Pflanzen, die Kontakte mit Ihnen geteilt haben.",
+          "Jede Kachel öffnet Details zur Pflanze. Das Drei-Punkte-Menü zeigt die durch Ihren Zugriff erlaubten Aktionen an: Eigentümer verwalten ihre Pflanzen und teilen sie; Empfänger sehen sich die Pflanze und ihre Pflegegeschichte an."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Wähle im Schnellaktionsmenü „Pflanze hinzufügen“, um deine erste Pflanze anzulegen.",
           "Danach kannst du deine Pflanzen nach Standorten ordnen und über Erinnerungen ihre Pflege planen."
+        ]
+      },
+      {
+        "heading": "Eigene und geteilte Pflanzen",
+        "body": [
+          "Pflanzen umfasst Ihre eigenen Pflanzen und Pflanzen, die Sie mit uns teilen. Erhaltene Pflanzen tragen ein Shared-Label. Über die Menüs können Sie Details und den Pflegeverlauf anzeigen, während Bearbeitung, Erinnerungsverwaltung, QR-Export und Löschung nur dem Eigentümer vorbehalten bleiben.",
+          "Wählen Sie für eine eigene Pflanze im Menü „Pflanze teilen“ oder „Freigabe verwalten“ aus. Der Add-Modus ermöglicht mehrere Pflanzen; Durch die Verwaltung bestehender Freigaben bleibt die Pflanze gesperrt."
         ]
       }
     ]

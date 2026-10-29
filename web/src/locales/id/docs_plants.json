@@ -5,8 +5,8 @@
       {
         "heading": "Tujuan dari layar ini",
         "body": [
-          "Layar tanaman hias menampilkan semua Instans tanaman hias yang dibuat di akun Anda.",
-          "Setiap ubin mewakili satu tanaman hias (spesimen Anda sendiri). Dari ubin Anda dapat membuka Detail tanaman hias, atau menggunakan pintasan menu tiga titik untuk menavigasi ke tampilan terkait (misalnya, pengingat, jurnal, kode QR)."
+          "tanaman menunjukkan tanaman yang Anda miliki dan tanaman yang telah dibagikan oleh kontak kepada Anda.",
+          "Setiap ubin membuka Detail tanaman. Menu tiga titik menunjukkan tindakan yang diizinkan oleh akses Anda: pemilik mengelola tanamannya dan berbagi; penerima melihat tanaman dan riwayat perawatannya."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Jika daftarnya kosong, gunakan tindakan FAB Buat tanaman hias untuk menambahkan Instans tanaman hias pertama Anda.",
           "Setelah tanaman hias ada, Anda dapat mengelompokkannya menggunakan Lokasi dan mengelola rutinitas perawatan melalui Pengingat."
+        ]
+      },
+      {
+        "heading": "Tanaman yang dimiliki dan dibagikan",
+        "body": [
+          "tanaman termasuk tanaman Anda sendiri dan tanaman yang dibagikan kepada Anda. Tanaman yang diterima memiliki label Bersama. Menunya memungkinkan Anda melihat detail dan riwayat perawatan, sementara pengeditan, manajemen pengingat, ekspor dan penghapusan QR tetap menjadi milik pemilik.",
+          "Untuk tanaman milik, pilih Bagikan tanaman atau Kelola berbagi dari menunya. Mode Tambah memungkinkan banyak tanaman; mengelola pembagian yang ada membuat tanamannya tetap terkunci."
         ]
       }
     ]

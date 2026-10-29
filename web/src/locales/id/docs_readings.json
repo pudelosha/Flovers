@@ -196,6 +196,12 @@
           "Flovers mencatat dan menampilkan data perangkat, tetapi tidak menjamin keakuratan sensor pihak ketiga atau yang dibuat sendiri.",
           "Flovers juga tidak menjamin pompa fisik akan bekerja dengan sukses. Eksekusi pompa bergantung pada perangkat keras pengguna, kode yang dihasilkan, konektivitas WiFi, dan konfigurasi perangkat yang benar."
         ]
+      },
+      {
+        "heading": "Pembacaan sensor untuk tanaman bersama",
+        "body": [
+          "Penerima dapat melihat pembacaan sensor dan grafik terbaru untuk tanaman bersama. Label Bersama mengidentifikasi tanaman yang diterima. Kredensial perangkat, kode pengaturan, pengeditan perangkat, kontrol pompa, ekspor, dan penghapusan tetap menjadi milik pemilik."
+        ]
       }
     ]
   }

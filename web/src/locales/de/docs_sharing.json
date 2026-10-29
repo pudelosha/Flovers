@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Geteilte Pflanzen",
+    "sections": [
+      {
+        "heading": "Teilen Sie Pflanzen mit einem Kontakt",
+        "body": [
+          "Öffnen Sie „Profil“, dann „Teilen“ und „Geteilte Pflanzen“. Über das +-Menü können Sie Pflanzen teilen und Pflanzen filtern, die Sie oder mit Ihnen geteilt haben. Sie können auch mit dem Drei-Punkte-Menü einer eigenen Pflanze oder den Details eines Kontakts beginnen.",
+          "Wählen Sie beim Hinzufügen der Freigabe eine oder mehrere Pflanzen und die Kontakte aus, die Zugriff haben sollen. Jeder Kontakt kann nur Anzeigezugriff oder die Berechtigung zum Abschließen von Aufgaben haben, mit einem optionalen Enddatum. Vorhandene Berechtigungen werden vor dem Speichern angezeigt."
+        ]
+      },
+      {
+        "heading": "Bestehende Freigaben verwalten",
+        "body": [
+          "„Freigabe verwalten“ öffnet eine Pflanze mit gesperrter Auswahl. Ändern Sie die Kontakte, Aufgabenerledigungsberechtigungen oder das Enddatum und speichern Sie dann. Um andere Pflanzen zu teilen, öffnen Sie stattdessen Pflanzen teilen.",
+          "Jede geteilte Pflanzenkachel zeigt ihren Namen, ihre Art und ihren Standort, gefolgt von separaten Zeilen für den Kontakt, die Berechtigungen und das Enddatum. Besitzer können den Zugriff einzelner Kontakte entziehen; Empfänger können eine gemeinsame Pflanze hinterlassen."
+        ]
+      },
+      {
+        "heading": "Was die andere Person tun kann",
+        "body": [
+          "Empfänger können die geteilte Pflanze, ihren Pflegeverlauf und die verknüpften Sensormesswerte einsehen. Mit der Berechtigung zur Aufgabenerledigung können sie ihre Aufgaben auch auf der Startseite als erledigt markieren. Der Besitzer und der Betreuer sehen die gleiche Aufgabe, sodass sie nur einmal erledigt wird.",
+          "Nur der Eigentümer kann Pflanzendetails, Erinnerungsdefinitionen, Geräte, Pumpeneinstellungen oder Freigabeberechtigungen ändern. Geteilte Erinnerungsdefinitionen werden nicht auf dem Erinnerungsbildschirm des Empfängers angezeigt. Der Nur-Lese-Zugriff ermöglicht niemals den Abschluss einer Aufgabe.",
+          "Geteilte Pflanzen und ihre Aufgaben sind mit „Geteilt“ gekennzeichnet. Das Dreipunktmenü „Geteilte Pflanzen“ öffnet Pflanzendetails oder „Zuhause“, gefiltert nach dieser Pflanze. Der vorhandene QR-Code der Pflanze funktioniert auch für einen authentifizierten Benutzer mit aktivem Freigabezugriff."
+        ]
+      },
+      {
+        "heading": "Wenn der Zugriff endet",
+        "body": [
+          "Ein optionales Enddatum bezieht dieses Datum in die Benachrichtigungszeitzone des Eigentümers ein. Ohne Enddatum bleibt der Zugriff bestehen, bis er entfernt wird. Durch Ablaufen, Entfernen des Zugriffs oder Entfernen des Kontakts wird der Zugriff des Empfängers beendet, ohne dass die Pflanze des Eigentümers gelöscht wird."
+        ]
+      }
+    ]
+  }
+}

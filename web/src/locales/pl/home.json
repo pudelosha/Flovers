@@ -8,7 +8,6 @@
       "appStoreUrl": ""
     }
   },
-
   "homeNew": {
     "cta": {
       "title": "Łatwo zacząć. Łatwiej pamiętać o roślinach.",
@@ -39,7 +38,6 @@
       }
     }
   },
-
   "featureGrid": {
     "header": {
       "title": "Wszystko, co ułatwia codzienną pielęgnację",
@@ -65,6 +63,14 @@
       "iot": {
         "title": "Odczyty z czujników i wykresy zmian",
         "text": "Podłącz własne urządzenie z ESP lub Arduino, które mierzy temperaturę, wilgotność powietrza, natężenie światła i wilgotność gleby. Na wykresach dziennych, tygodniowych i miesięcznych zobaczysz, jak zmieniają się warunki, i łatwiej dopasujesz pielęgnację."
+      },
+      "sharing": {
+        "title": "Podziel się opieką nad roślinami",
+        "text": "Dodaj zaufane osoby do kontaktów i udostępnij im wybrane rośliny, odczyty i historię pielęgnacji. Możesz pozwolić tylko na podgląd albo także na oznaczanie zadań jako wykonane, gdy Cię nie ma. W razie potrzeby ustaw termin zakończenia dostępu."
+      },
+      "levels": {
+        "title": "Pielęgnuj rośliny i zdobywaj poziomy",
+        "text": "Wykonuj zadania, zdobywaj XP i obserwuj w Profilu postęp od 1 do 100 poziomu. Rosnące wymagania i dzienne limity premiują regularną pielęgnację."
       }
     },
     "images": {
@@ -72,7 +78,6 @@
       "readingsHistoryAlt": "Ekran historii odczytów"
     }
   },
-
   "core": {
     "title": "Dwie rzeczy, które Flovers robi najlepiej",
     "lead": "Baza gatunków i rozpoznawanie ze zdjęcia pomogą ustalić, jaką masz roślinę i czego potrzebuje. Wystarczy wybrać pasujący opis, by zacząć planować pielęgnację.",
@@ -97,7 +102,6 @@
       }
     }
   },
-
   "qr": {
     "title": "Kod na doniczce, szczegóły w aplikacji",
     "lead": "Wygeneruj kod QR rośliny, wydrukuj go i przyklej do doniczki. Po zeskanowaniu od razu zobaczysz jej szczegóły i zadania.",
@@ -119,7 +123,6 @@
       }
     }
   },
-
   "store": {
     "google": {
       "alt": "Pobierz z Google Play"

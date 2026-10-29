@@ -63,6 +63,14 @@
       "iot": {
         "title": "Des relevés de capteurs et des graphiques d’évolution",
         "text": "Connecte ton appareil ESP ou Arduino pour envoyer la température, l’humidité de l’air, la luminosité et l’humidité du sol. Les graphiques par jour, semaine et mois permettent de repérer les changements et d’adapter les soins."
+      },
+      "sharing": {
+        "title": "Confiez vos plantes à vos proches",
+        "text": "Ajoutez des contacts Flovers et partagez vos plantes, relevés et historique d’entretien. Autorisez la consultation seule ou aussi la validation des tâches pendant votre absence, avec une date de fin facultative."
+      },
+      "levels": {
+        "title": "Prenez soin de vos plantes et gagnez des niveaux",
+        "text": "Terminez des tâches d’entretien, gagnez de l’XP et suivez votre progression du niveau 1 à 100 dans le Profil. Les niveaux supérieurs demandent plus d’XP et les limites quotidiennes encouragent la régularité."
       }
     },
     "images": {

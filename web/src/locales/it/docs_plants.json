@@ -5,8 +5,8 @@
       {
         "heading": "Le tue piante",
         "body": [
-          "Nella schermata Piante trovi tutte le piante che hai aggiunto al tuo account.",
-          "Ogni riquadro corrisponde a una tua pianta. Toccalo per aprire i Dettagli della pianta oppure usa il menu con tre puntini per accedere a promemoria, diario e codice QR."
+          "piante d'appartamento mostra le piante d'appartamento che possiedi e le piante d'appartamento che i contatti hanno condiviso con te.",
+          "Ogni tessera apre i dettagli della pianta d'appartamento. Il menu a tre punti mostra le azioni consentite dal tuo accesso: i proprietari gestiscono le loro piante d'appartamento e la condivisione; i destinatari visualizzano la pianta d'appartamento e la sua cronologia delle cure."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Scegli Crea pianta dal menu delle azioni rapide per aggiungere la tua prima pianta.",
           "Dopo aver aggiunto le piante, puoi raggrupparle per posizione e pianificare le cure con i promemoria."
+        ]
+      },
+      {
+        "heading": "Piante d'appartamento possedute e condivise",
+        "body": [
+          "piante d'appartamento include le tue piante d'appartamento e quelle condivise con te. Le piante d'appartamento ricevute portano un'etichetta condivisa. I loro menu ti consentono di visualizzare i dettagli e la cronologia delle cure, mentre la modifica, la gestione dei promemoria, l'esportazione e l'eliminazione QR rimangono riservate al proprietario.",
+          "Per una pianta d'appartamento di proprietà, scegli Condividi pianta d'appartamento o Gestisci condivisione dal suo menu. La modalità Aggiungi consente più piante d'appartamento; la gestione della condivisione esistente mantiene chiusa la sua pianta d'appartamento."
         ]
       }
     ]

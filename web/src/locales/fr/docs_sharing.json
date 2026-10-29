@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Plantes partagées",
+    "sections": [
+      {
+        "heading": "Partager des plantes avec un contact",
+        "body": [
+          "Ouvrez le profil, puis Partage et Plantes d'intérieur partagées. Le menu + vous permet de partager des plantes et de filtrer les plantes partagées par vous ou avec vous. Vous pouvez également partir du menu à trois points d’une plante ou des coordonnées d’un contact.",
+          "Lors de l'ajout du partage, sélectionnez une ou plusieurs plantes et les contacts qui doivent y avoir accès. Chaque contact peut disposer d'un accès en lecture seule ou d'une autorisation pour effectuer des tâches, avec une date de fin facultative. Les autorisations existantes sont affichées avant l'enregistrement."
+        ]
+      },
+      {
+        "heading": "Gérer le partage existant",
+        "body": [
+          "Gérer le partage ouvre une plante avec sa sélection verrouillée. Modifiez ses contacts, ses autorisations d'exécution de tâches ou sa date de fin, puis enregistrez. Pour partager d’autres plantes, ouvrez plutôt Partager des plantes.",
+          "Chaque vignette de plante partagée indique son nom, son espèce et son emplacement, suivis de lignes distinctes pour le contact, les autorisations et la date de fin. Les propriétaires peuvent supprimer l’accès de contacts individuels ; les destinataires peuvent laisser une plante partagée."
+        ]
+      },
+      {
+        "heading": "Ce que l'autre personne peut faire",
+        "body": [
+          "Les destinataires peuvent consulter la plante partagée, son historique d'entretien et les lectures des capteurs associés. Avec l’autorisation d’achèvement des tâches, ils peuvent également marquer ses tâches comme terminées sur Accueil. Le propriétaire et le soignant voient la même tâche, elle n'est donc effectuée qu'une seule fois.",
+          "Seul le propriétaire peut modifier les détails des plantes, les définitions de rappel, les appareils, les paramètres de la pompe ou les autorisations de partage. Les définitions de rappels partagés n’apparaissent pas sur l’écran Rappels du destinataire. L'accès en visualisation seule ne permet jamais l'achèvement d'une tâche.",
+          "Les plantes partagées et leurs tâches sont marquées Partagées. Le menu à trois points sur Plantes d'intérieur partagées ouvre les détails de la plante ou la maison filtrée pour cette plante. Le code QR existant de l’usine d’intérieur fonctionne également pour un utilisateur authentifié avec un accès de partage actif."
+        ]
+      },
+      {
+        "heading": "Quand l'accès se termine",
+        "body": [
+          "Une date de fin facultative inclut cette date dans le fuseau horaire de notification du propriétaire. Sans date de fin, l'accès continue jusqu'à sa suppression. L’expiration, la suppression de l’accès ou la suppression du contact mettent fin à l’accès du destinataire sans supprimer la plante du propriétaire."
+        ]
+      }
+    ]
+  }
+}

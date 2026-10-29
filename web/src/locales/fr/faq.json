@@ -99,7 +99,7 @@
     },
     {
       "q": "D’autres personnes peuvent-elles voir mes relevés ?",
-      "a": "Les relevés sont actuellement privés. Des options de partage pourraient être ajoutées plus tard. Tu peux aussi les récupérer par l’API pour les utiliser avec d’autres appareils, comme un système d’arrosage automatique."
+      "a": "Oui, si vous partagez la plante avec un contact accepté. Les destinataires peuvent consulter les relevés et les graphiques des capteurs liés, mais ne peuvent pas accéder aux secrets de l'appareil, modifier les paramètres ou contrôler la pompe."
     },
     {
       "q": "À quoi servent les codes QR ?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "Puis-je partager un code QR ou un lien de plante sans risque ?",
-      "a": "En règle générale, oui. Seule la personne connectée à qui appartient la plante peut en consulter les détails."
+      "a": "Un code QR est un raccourci et non une clé d'accès. Le scanner ouvre la plante uniquement pour son propriétaire connecté ou un utilisateur disposant d'un accès de partage actif. Donner à quelqu'un le code QR à lui seul ne partage pas la plante."
     },
     {
       "q": "Puis-je rendre mes plantes publiques ou les partager avec des amis ?",
-      "a": "Pas pour le moment. Des fonctions de partage public pourraient être ajoutées plus tard."
+      "a": "Vous pouvez partager en privé des plantes avec des contacts Flovers acceptés. Choisissez l'accès en lecture seule ou autorisez l'achèvement des tâches, et définissez éventuellement une date de fin. les plantes ne sont pas publiées en tant que profils publics."
     },
     {
       "q": "Pourquoi est-ce que je ne reçois pas de notifications ?",
@@ -120,6 +120,14 @@
     {
       "q": "Comment contacter l’assistance ou signaler un problème ?",
       "a": "Utilise le formulaire de contact du site Flovers ou celui disponible dans le profil de l’application."
+    },
+    {
+      "q": "Comment ajouter quelqu'un aux contacts ?",
+      "a": "Ouvrez Profil → Partage → Contacts et utilisez + pour ajouter un contact par son adresse e-mail enregistrée ou son identifiant Flovers. Le partage devient disponible une fois l’invitation acceptée."
+    },
+    {
+      "q": "Comment fonctionnent les niveaux de compte ?",
+      "a": "Les tâches d’entretien éligibles rapportent de l’XP pour progresser du niveau 1 à 100. Les niveaux supérieurs demandent plus d’XP. Des limites quotidiennes s’appliquent : une même plante et un même type d’entretien ne rapportent de l’XP qu’une fois par jour UTC. Valider à nouveau une tâche n’ajoute aucun point."
     }
   ]
 }

@@ -21,7 +21,6 @@
       "q": "W jakich językach mogę korzystać z Flovers?",
       "a": "Możesz wybrać m.in. język polski, angielski, niemiecki, włoski, francuski, hiszpański, portugalski, arabski, hindi, chiński, japoński lub koreański."
     },
-
     {
       "q": "Jak założyć konto?",
       "a": "Zarejestruj się w aplikacji, a następnie potwierdź konto, korzystając z wiadomości e-mail. Jeśli wiadomość nie dotrze, możesz wysłać ją ponownie z aplikacji."
@@ -42,7 +41,6 @@
       "q": "Jak usunąć konto i dane?",
       "a": "Po zalogowaniu otwórz ekran Profil i wybierz usunięcie konta. Konto i wszystkie powiązane z nim dane zostaną trwale usunięte. Tej operacji nie można cofnąć."
     },
-
     {
       "q": "Czym różni się opis gatunku od mojej rośliny?",
       "a": "Opis gatunku w bazie Flovers zawiera zdjęcia, cechy rośliny i ogólne zalecenia: ile potrzebuje światła, jakie podłoże lubi oraz jak często ją podlewać lub zraszać. Twoja roślina to konkretny okaz, który dodajesz do aplikacji i dla którego prowadzisz własną historię pielęgnacji."
@@ -63,7 +61,6 @@
       "q": "Czy mogę robić notatki i prowadzić dziennik roślin?",
       "a": "Tak. Notatki możesz dodawać zarówno do roślin, jak i do wykonanych zadań. W ten sposób tworzysz dziennik pielęgnacji."
     },
-
     {
       "q": "Jak działają przypomnienia i zadania?",
       "a": "Ustawiasz przypomnienie i wybierasz, co ile dni ma się powtarzać. Flovers automatycznie tworzy zadanie, a gdy oznaczysz je jako wykonane, planuje następne. Zależnie od ustawień możesz dostawać powiadomienia na telefon lub e-mail o zadaniach na dziś oraz tych, których termin minął dzień wcześniej."
@@ -84,7 +81,6 @@
       "q": "Czy przypomnienia gwarantują, że moje rośliny będą zdrowe?",
       "a": "Nie. Flovers przypomina o pielęgnacji i podpowiada, jak dbać o rośliny, ale to ty decydujesz, co zrobić. Efekty zależą od podjętych działań."
     },
-
     {
       "q": "Jakie czujniki i urządzenia mogę podłączyć do Flovers?",
       "a": "Możesz podłączyć czujniki temperatury i wilgotności powietrza, natężenia światła oraz wilgotności gleby. Przykładowe zestawy urządzeń znajdziesz w dokumentacji."
@@ -103,22 +99,20 @@
     },
     {
       "q": "Czy inne osoby mogą zobaczyć moje odczyty z czujników?",
-      "a": "Obecnie odczyty są prywatne. Możliwość ich udostępniania może pojawić się w przyszłości. Możesz też pobierać dane przez API, żeby połączyć Flovers z innymi urządzeniami, np. systemem automatycznego podlewania."
+      "a": "Tak, jeśli udostępnisz roślinę osobie ze swoich kontaktów. Może ona oglądać odczyty i wykresy, ale nie zobaczy kluczy urządzenia ani nie zmieni ustawień i nie uruchomi pompy."
     },
-
     {
       "q": "Do czego służą kody QR we Flovers?",
       "a": "Możesz wygenerować kod QR dla rośliny, wydrukować go i przykleić do doniczki. Po zeskanowaniu kodu w aplikacji od razu otworzą się szczegóły tej rośliny."
     },
     {
       "q": "Czy udostępnianie kodu QR lub linku do rośliny jest bezpieczne?",
-      "a": "Zasadniczo tak. Sam kod lub link nie daje dostępu do szczegółów rośliny. Może je zobaczyć tylko jej właściciel po zalogowaniu."
+      "a": "Kod QR to skrót do rośliny, a nie klucz dostępu. Zadziała dla zalogowanego właściciela lub osoby, której udostępniono roślinę i która nadal ma do niej dostęp. Samo przekazanie kodu nie udostępnia rośliny."
     },
     {
       "q": "Czy mogę udostępnić swoje rośliny znajomym lub pokazać je publicznie?",
-      "a": "Na razie nie. Takie funkcje mogą pojawić się w przyszłości."
+      "a": "Możesz prywatnie udostępniać rośliny osobom ze swoich zaakceptowanych kontaktów Flovers. Wybierz tylko podgląd lub możliwość oznaczania zadań jako wykonane i opcjonalnie ustaw termin. Rośliny nie są publikowane jako profile publiczne."
     },
-
     {
       "q": "Dlaczego nie otrzymuję powiadomień?",
       "a": "Sprawdź, czy powiadomienia są włączone w ustawieniach telefonu oraz w ustawieniach aplikacji na ekranie Profil."
@@ -126,6 +120,14 @@
     {
       "q": "Jak zgłosić problem lub poprosić o pomoc?",
       "a": "Napisz przez formularz kontaktowy na stronie Flovers lub w aplikacji, na ekranie Profil."
+    },
+    {
+      "q": "Jak dodać kogoś do kontaktów?",
+      "a": "Otwórz Profil → Udostępnianie → Kontakty i naciśnij +. Podaj adres e-mail konta tej osoby lub jej identyfikator Flovers. Po przyjęciu zaproszenia możecie udostępniać sobie rośliny."
+    },
+    {
+      "q": "Jak działają poziomy konta?",
+      "a": "Wykonywanie zadań pielęgnacyjnych pozwala zdobywać XP i poziomy od 1 do 100. Pierwsze poziomy osiągniesz szybciej, a kolejne wymagają więcej punktów. Obowiązują dzienne limity i jedna nagroda za dany rodzaj pielęgnacji tej samej rośliny na dzień UTC. Ponowne wykonanie tego samego zadania nie daje kolejnych XP."
     }
   ]
 }

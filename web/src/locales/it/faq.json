@@ -99,7 +99,7 @@
     },
     {
       "q": "Altre persone possono vedere le mie letture dei sensori?",
-      "a": "Al momento le misurazioni sono private. In futuro potrebbero essere introdotte opzioni di condivisione. Puoi anche consultare i dati tramite API per integrarli con altri dispositivi, ad esempio sistemi di irrigazione automatica."
+      "a": "Sì, se condividi la pianta d'appartamento con un contatto accettato. I destinatari possono visualizzare le letture e i grafici del sensore collegato, ma non possono accedere ai segreti del dispositivo, modificare le impostazioni o controllare la pompa."
     },
     {
       "q": "A cosa servono i codici QR in Flovers?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "La condivisione di un codice QR o di un link a una pianta è sicura?",
-      "a": "In generale sì. Solo il proprietario della pianta può vederne i dettagli, dopo aver effettuato l'accesso al suo account."
+      "a": "Un codice QR è una scorciatoia, non una chiave di accesso. Lo scanner apre la pianta d'appartamento solo per il proprietario che ha effettuato l'accesso o per un utente con accesso di condivisione attivo. Fornire a qualcuno solo il codice QR non condivide la pianta d'appartamento."
     },
     {
       "q": "Posso rendere pubbliche le mie piante o condividerle con gli amici?",
-      "a": "Non al momento. Le funzionalità di condivisione pubblica potrebbero essere introdotte in futuro."
+      "a": "Puoi condividere privatamente le piante d'appartamento con i contatti Flovers accettati. Scegli l'accesso di sola visualizzazione o consenti il ​​completamento delle attività e, facoltativamente, imposta una data di fine. le piante d'appartamento non vengono pubblicate come profili pubblici."
     },
     {
       "q": "Perché non ricevo notifiche?",
@@ -120,6 +120,14 @@
     {
       "q": "Come posso contattare l'assistenza tecnica o segnalare un problema?",
       "a": "Usa il modulo di contatto sul sito di Flovers oppure quello nell'app, nella schermata Profilo."
+    },
+    {
+      "q": "Come faccio ad aggiungere qualcuno ai Contatti?",
+      "a": "Apri Profilo → Condivisione → Contatti e usa + per aggiungere un contatto tramite l'indirizzo email registrato o l'ID Flovers. La condivisione diventa disponibile una volta accettato l'invito."
+    },
+    {
+      "q": "Come funzionano i livelli di account?",
+      "a": "Le attività di cura idonee assegnano XP per i livelli da 1 a 100. I livelli più alti richiedono più XP. Si applicano limiti giornalieri: ogni pianta e tipo di cura può assegnare XP una sola volta al giorno UTC. Ripetere il completamento non dà altri punti."
     }
   ]
 }

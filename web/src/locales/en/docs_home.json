@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_home": {
     "title": "Home",
     "sections": [
@@ -70,6 +70,12 @@
           "The Home screen provides fast navigation to other parts of the app through task actions and FAB shortcuts.",
           "From an individual task you can jump directly to Plant Details or task history.",
           "From the FAB you can open Task History or refine the task list using sorting and filtering."
+        ]
+      },
+      {
+        "heading": "Tasks for shared plants",
+        "body": [
+          "Home also shows tasks for plants shared with you. A Shared label appears beneath the due date. You can complete these tasks only when the owner has enabled task completion for you. View-only recipients can inspect the task and open its plant."
         ]
       }
     ]

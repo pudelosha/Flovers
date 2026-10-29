@@ -5,7 +5,7 @@
       {
         "heading": "O que você encontra no Perfil",
         "body": [
-          "No Perfil, você gerencia sua conta, escolhe como receber notificações, ajusta o aplicativo e fala com o suporte.",
+          "O perfil reúne seu nível de conta e XP, compartilhamento de contatos e plantas de casa, preferências de notificação, configurações de aparência e suporte.",
           "Use essa tela para cuidar dos seus dados e deixar o Flovers do seu jeito."
         ]
       },
@@ -15,6 +15,41 @@
           "Em Conta, aparecem seu e-mail e a data de criação da conta.",
           "Você pode alterar o e-mail, confirmando com a senha, trocar a senha, sair ou excluir a conta permanentemente.",
           "Excluir a conta apaga todos os seus dados, incluindo plantas, lembretes, tarefas, leituras e dispositivos. A ação não pode ser desfeita."
+        ]
+      },
+      {
+        "heading": "Nível da conta e XP",
+        "body": [
+          "O bloco Conta mostra seu nível atual, classificação e progresso para o próximo nível. Os níveis vão de 1 a 100. O nome e o emblema de uma classificação permanecem os mesmos para cada grupo de dez níveis.",
+          "Concluir tarefas de atendimento qualificadas dá XP. Os níveis iniciais precisam de menos XP, enquanto os níveis mais altos exigem progressivamente mais. O perfil atualiza o saldo atual; não há pop-up XP separado após cada tarefa."
+        ]
+      },
+      {
+        "heading": "Como o XP é concedido",
+        "body": [
+          "A primeira conclusão elegível de cada dia dá 100 XP, seguida por 50, 30 e 20 XP. As próximas cinco conclusões elegíveis dão 10 XP cada, até 250 XP por dia UTC. Somente tarefas vencidas hoje ou já atrasadas se qualificam.",
+          "A mesma planta de casa e tipo de cuidado pode ganhar XP apenas uma vez por dia UTC. Repetir uma conclusão não concede XP novamente, e completar tarefas futuras antecipadamente não dá nenhum ganho. Quando um cuidador conclui uma tarefa compartilhada, o cuidador recebe o XP elegível, e não o proprietário."
+        ]
+      },
+      {
+        "heading": "Classificações do nível 1 ao 100",
+        "body": [
+          "1–10 · Muda",
+          "11–20 · Guardião dos brotos",
+          "21–30 · Amante das folhas",
+          "31–40 · Jardineiro iniciante",
+          "41–50 · Cuidador de plantas",
+          "51–60 · Dedo verde",
+          "61–70 · Guardião do jardim",
+          "71–80 · Especialista em botânica",
+          "81–90 · Mestre do cultivo",
+          "91–100 · Lenda das plantas"
+        ]
+      },
+      {
+        "heading": "Compartilhando do perfil",
+        "body": [
+          "O bloco Compartilhamento fica abaixo da Conta. Ele mostra os contatos aceitos e as solicitações recebidas pendentes, com botões para Contatos e Plantas de casa compartilhadas. Use essas telas para gerenciar convites e acesso a plantas de casa."
         ]
       },
       {

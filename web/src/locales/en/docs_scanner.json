@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_scanner": {
     "title": "QR Scanner",
     "sections": [
@@ -23,7 +23,7 @@
         "body": [
           "A Flovers QR code contains a reference to Flovers and the ID of a specific Plant Instance in your account.",
           "After the code is scanned and recognized correctly, the app performs a redirect to the corresponding plant.",
-          "The QR code is intended to work with your own plants stored in your account."
+          "A QR code does not grant access by itself. You must be logged in as the owner or have active sharing access to the plant. Owners generate and export the code; recipients can scan the same code to open the plant."
         ]
       },
       {

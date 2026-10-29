@@ -5,7 +5,7 @@
       {
         "heading": "Bu ekranın amacı",
         "body": [
-          "Profil ekranı hesap bilgilerini, bildirim tercihlerini, uygulama ayarlarını ve destek seçeneklerini yönetmek için merkezi yerdir.",
+          "Profil, hesap seviyenizi ve XP'nizi, kişileri ve bitkisi paylaşımını, bildirim tercihlerini, görünüm ayarlarını ve desteği bir araya getirir.",
           "Kullanıcının hem kişisel verileri hem de Flovers uygulamasının günlük olarak nasıl davrandığını kontrol etmesine olanak tanır."
         ]
       },
@@ -15,6 +15,41 @@
           "Hesap bölümü, kayıtlı e-posta adresi ve hesap oluşturma tarihi gibi temel hesap bilgilerini görüntüler.",
           "Bu bölümden kullanıcı e-posta adresini değiştirebilir (geçerli parolanın onaylanması gerekir), mevcut parolayı değiştirebilir, oturumu kapatabilir veya hesabı kalıcı olarak silebilir.",
           "Hesabın silinmesi, ev bitkileri, hatırlatıcılar, görevler, sensör okumaları ve cihazlar da dahil olmak üzere tüm kullanıcı verilerinin geri alınamayacak şekilde silinmesine neden olur."
+        ]
+      },
+      {
+        "heading": "Hesap düzeyi ve XP",
+        "body": [
+          "Hesap kutucuğu mevcut seviyenizi, sıralamanızı ve bir sonraki seviyeye doğru ilerlemenizi gösterir. Seviyeler 1'den 100'e kadar değişir. Bir rütbenin adı ve rozeti, on seviyeden oluşan her grup için aynı kalır.",
+          "Uygun bakım görevlerini tamamlamak XP kazandırır. Erken seviyeler daha az XP'ye ihtiyaç duyarken, daha yüksek seviyeler giderek daha fazla XP gerektirir. Profil mevcut bakiyeyi yeniler; her görevden sonra ayrı bir XP açılır penceresi yoktur."
+        ]
+      },
+      {
+        "heading": "XP nasıl verilir?",
+        "body": [
+          "Her gün uygun olan ilk tamamlama 100 XP verir, ardından 50, 30 ve 20 XP gelir. Sonraki beş uygun tamamlamanın her biri, UTC günü başına 250 XP'ye kadar 10 XP verir. Yalnızca bugün teslim edilmesi gereken veya zaten vadesi geçmiş olan görevler geçerlidir.",
+          "Aynı bitkisi ve bakım türü UTC günü başına yalnızca bir kez XP kazanabilir. Bir tamamlamanın tekrarlanması tekrar XP kazandırmaz ve gelecekteki görevlerin erken tamamlanması XP kazandırmaz. Bir bakıcı paylaşılan bir görevi tamamladığında, uygun XP'yi sahibi değil, bakıcı alır."
+        ]
+      },
+      {
+        "heading": "Seviye 1'den 100'e kadar sıralamalar",
+        "body": [
+          "1–10 · Fide",
+          "11–20 · Filiz Bekçisi",
+          "21–30 · Yaprak Sever",
+          "31–40 · Acemi Bahçıvan",
+          "41–50 · Bitki Yetiştiricisi",
+          "51–60 · Becerikli Bahçıvan",
+          "61–70 · Bahçe Koruyucusu",
+          "71–80 · Botanik Uzmanı",
+          "81–90 · Usta Yetiştirici",
+          "91–100 · Bitki Efsanesi"
+        ]
+      },
+      {
+        "heading": "Profilden Paylaşım",
+        "body": [
+          "Paylaşım kutucuğu Hesap'ın altında bulunur. Kişiler ve Paylaşılan bitkileri düğmeleriyle birlikte kabul edilen kişileri ve bekleyen gelen istekleri gösterir. Davetiyeleri ve bitkilerine erişimi yönetmek için bu ekranları kullanın."
         ]
       },
       {

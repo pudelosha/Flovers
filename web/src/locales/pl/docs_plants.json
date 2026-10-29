@@ -1,12 +1,12 @@
-﻿{
+{
   "docs_plants": {
     "title": "Rośliny",
     "sections": [
       {
         "heading": "Twoje rośliny w jednym miejscu",
         "body": [
-          "Na ekranie Rośliny znajdziesz wszystkie rośliny dodane do swojego konta.",
-          "Każda ma własny kafelek. Dotknij go, aby otworzyć Szczegóły rośliny, lub skorzystaj z menu trzech kropek, aby przejść do przypomnień, dziennika czy kodu QR."
+          "Na ekranie Rośliny zobaczysz swoje rośliny oraz te, które udostępnili Ci inni użytkownicy.",
+          "Dotknięcie kafelka otwiera szczegóły rośliny. Menu z trzema kropkami pokazuje dostępne działania: właściciel zarządza rośliną i udostępnianiem, a odbiorca przegląda dane i historię pielęgnacji."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Otwórz menu szybkich akcji i wybierz „Utwórz roślinę”, aby dodać pierwszą roślinę.",
           "Następnie przypisz rośliny do lokalizacji i ustaw w Przypomnieniach, jak często chcesz je pielęgnować."
+        ]
+      },
+      {
+        "heading": "Własne i udostępnione rośliny",
+        "body": [
+          "Na liście znajdziesz swoje rośliny oraz te, które udostępniono Tobie. Udostępnione rośliny mają osobne oznaczenie. Możesz przeglądać ich szczegóły i historię pielęgnacji, ale edycja, zarządzanie przypomnieniami, eksport kodu QR i usuwanie pozostają dostępne wyłącznie dla właściciela.",
+          "W menu własnej rośliny wybierz Udostępnij rośliny lub Zarządzaj udostępnianiem. Przy dodawaniu można zaznaczyć kilka roślin, a przy edycji wybór rośliny jest zablokowany."
         ]
       }
     ]

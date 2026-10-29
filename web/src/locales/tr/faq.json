@@ -99,7 +99,7 @@
     },
     {
       "q": "Başkaları sensör okumalarımı görebilir mi?",
-      "a": "Şu anda sensör okumaları gizlidir. Gelecekte paylaşım seçenekleri tanıtılabilir. Kullanıcılar ayrıca otomatik sulama sistemleri gibi diğer cihazlarla entegre olmak için API aracılığıyla sensör verilerini sorgulayabilir."
+      "a": "Evet, bitkisini kabul edilen bir kişiyle paylaşırsanız. Alıcılar bağlantılı sensör okumalarını ve grafiklerini görüntüleyebilir ancak cihaz sırlarına erişemez, ayarları değiştiremez veya pompayı kontrol edemez."
     },
     {
       "q": "Flovers'de kullanılan QR kodları nelerdir?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "QR kodunu veya ev bitkisi bağlantısını paylaşmak güvenli midir?",
-      "a": "Genel olarak evet. Yalnızca ev bitkisine sahip olan oturum açmış kullanıcılar ayrıntılarını görebilir."
+      "a": "QR kodu bir erişim anahtarı değil, bir kısayoldur. Tarayıcı, bitkisini yalnızca oturum açmış olan sahibi veya aktif paylaşım erişimine sahip bir kullanıcı için açar. Birine yalnızca QR kodunu vermek bitkisini paylaşmaz."
     },
     {
       "q": "Ev bitkilerimi herkese açık hale getirebilir miyim veya arkadaşlarımla paylaşabilir miyim?",
-      "a": "Şu anda değil. Gelecekte herkese açık paylaşım özellikleri sunulabilir."
+      "a": "Bitkilerini kabul edilen Flovers kişileriyle özel olarak paylaşabilirsiniz. Salt görüntüleme erişimini seçin veya görevin tamamlanmasına izin verin ve isteğe bağlı olarak bir bitiş tarihi belirleyin. bitkileri herkese açık profiller olarak yayınlanmaz."
     },
     {
       "q": "Neden bildirim almıyorum?",
@@ -120,6 +120,14 @@
     {
       "q": "Desteğe nasıl başvurabilirim veya bir sorunu nasıl bildirebilirim?",
       "a": "Flovers web sitesindeki iletişim formunu veya uygulamada Profil ekranının altında bulunan iletişim formunu kullanabilirsiniz."
+    },
+    {
+      "q": "Bir kişiyi Kişiler'e nasıl eklerim?",
+      "a": "Profil → Paylaşma → Kişiler'i açın ve kayıtlı e-posta adresine veya Flovers kimliğine göre bir kişi eklemek için + tuşunu kullanın. Davet kabul edildiğinde paylaşım mümkün hale gelir."
+    },
+    {
+      "q": "Hesap düzeyleri nasıl çalışır?",
+      "a": "Uygun bakım görevleri XP kazandırarak 1–100. seviyeler arasında ilerlemenizi sağlar. Üst seviyeler daha fazla XP gerektirir. Günlük sınırlar uygulanır: aynı bitkinin aynı bakım türü UTC gününde yalnızca bir kez XP kazandırır. Aynı görevi tekrar tamamlamak ek XP vermez."
     }
   ]
 }

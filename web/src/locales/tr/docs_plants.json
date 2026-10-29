@@ -5,8 +5,8 @@
       {
         "heading": "Bu ekranın amacı",
         "body": [
-          "Ev bitkileri ekranı, hesabınızda oluşturulan tüm ev bitkisi Örneklerini gösterir.",
-          "Her karo bir ev bitkisini (kendi örneğiniz) temsil eder. Kutucuktan ev bitkisi Ayrıntılarını açabilir veya ilgili görünümlere (örneğin, hatırlatıcılar, günlük, QR kodu) gitmek için üç noktalı menü kısayollarını kullanabilirsiniz."
+          "bitkileri, sahip olduğunuz bitkilerini ve kişilerin sizinle paylaştığı bitkilerini gösterir.",
+          "Her karo houseplant ayrıntılarını açar. Üç noktalı menü, erişiminizin izin verdiği eylemleri gösterir: Sahipler, bitkilerini ve paylaşımlarını yönetir; alıcılar bitkisini ve bakım geçmişini görebilir."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Liste boşsa, ilk ev bitkisi Örneğini eklemek için FAB eylemini Ev bitkisi oluştur seçeneğini kullanın.",
           "Ev bitkileri mevcut olduğunda, bunları Konumlar'ı kullanarak gruplandırabilir ve Hatırlatıcılar aracılığıyla bakım rutinlerini yönetebilirsiniz."
+        ]
+      },
+      {
+        "heading": "Sahip olunan ve paylaşılan bitkileri",
+        "body": [
+          "bitkileri, kendi bitkilerinizi ve sizinle paylaşılan bitkilerini içerir. Alınan bitkileri Paylaşılan bir etiket taşır. Menüleri ayrıntıları ve bakım geçmişini görüntülemenizi sağlarken düzenleme, hatırlatma yönetimi, QR dışa aktarma ve silme işlemleri yalnızca sahiplere ait kalır.",
+          "Sahip olunan bir bitkisi için menüsünden Bitkisini paylaş veya Paylaşımı yönet seçeneğini seçin. Ekleme modu birden fazla bitkisine izin verir; Mevcut paylaşımın yönetilmesi, bitkisinin kilitli kalmasını sağlar."
         ]
       }
     ]

@@ -99,7 +99,7 @@
     },
     {
       "q": "Bisakah orang lain melihat pembacaan sensor saya?",
-      "a": "Saat ini, pembacaan sensor bersifat pribadi. Di masa depan, opsi berbagi mungkin diperkenalkan. Pengguna juga dapat menanyakan data sensor melalui API untuk diintegrasikan dengan perangkat lain, seperti sistem penyiraman otomatis."
+      "a": "Ya, jika Anda berbagi tanaman dengan kontak yang diterima. Penerima dapat melihat pembacaan dan grafik sensor terkait, namun tidak dapat mengakses rahasia perangkat, mengubah pengaturan, atau mengontrol pompa."
     },
     {
       "q": "Untuk apa kode QR digunakan di Flovers?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "Apakah aman membagikan kode QR atau tautan tanaman hias?",
-      "a": "Umumnya ya. Hanya pengguna yang login dan memiliki tanaman hias yang dapat melihat detailnya."
+      "a": "Kode QR adalah pintasan, bukan kunci akses. Pemindai membuka tanaman hanya untuk pemiliknya yang masuk atau pengguna dengan akses berbagi aktif. Memberi seseorang kode QR saja tidak berarti berbagi tanaman."
     },
     {
       "q": "Bisakah saya mempublikasikan tanaman hias saya atau membaginya dengan teman?",
-      "a": "Tidak saat ini. Fitur berbagi publik mungkin akan diperkenalkan di masa mendatang."
+      "a": "Anda dapat berbagi tanaman secara pribadi dengan kontak Flovers yang diterima. Pilih akses hanya lihat atau izinkan penyelesaian tugas, dan secara opsional tetapkan tanggal akhir. tanaman tidak dipublikasikan sebagai profil publik."
     },
     {
       "q": "Mengapa saya tidak menerima notifikasi?",
@@ -120,6 +120,14 @@
     {
       "q": "Bagaimana cara menghubungi dukungan atau melaporkan masalah?",
       "a": "Anda dapat menggunakan formulir kontak di situs web Flovers atau formulir kontak yang tersedia di aplikasi di bawah layar Profil."
+    },
+    {
+      "q": "Bagaimana cara menambahkan seseorang ke Kontak?",
+      "a": "Buka Profil → Berbagi → Kontak dan gunakan + untuk menambahkan kontak dengan alamat email terdaftar atau ID Flovers. Berbagi menjadi tersedia setelah undangan diterima."
+    },
+    {
+      "q": "Bagaimana cara kerja tingkat akun?",
+      "a": "Tugas perawatan yang memenuhi syarat memberi XP untuk naik dari level 1 hingga 100. Level yang lebih tinggi membutuhkan lebih banyak XP. Batas harian berlaku: tanaman dan jenis perawatan yang sama hanya memberi XP sekali per hari UTC. Mengulangi penyelesaian tugas tidak memberi XP tambahan."
     }
   ]
 }

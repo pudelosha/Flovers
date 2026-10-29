@@ -6,18 +6,50 @@
     "body": "Wkrótce dodamy szczegółowy opis tego ekranu."
   },
   "screens": {
-    "overview": { "title": "O aplikacji" },
-    "auth": { "title": "Logowanie i rejestracja" },
-    "home": { "title": "Ekran główny" },
-    "taskHistory": { "title": "Historia zadań" },
-    "plants": { "title": "Rośliny" },
-    "plantDetails": { "title": "Szczegóły rośliny" },
-    "createPlantWizard": { "title": "Kreator dodawania rośliny" },
-    "locations": { "title": "Lokalizacje" },
-    "reminders": { "title": "Przypomnienia" },
-    "readings": { "title": "Odczyty" },
-    "readingsHistory": { "title": "Historia odczytów" },
-    "scanner": { "title": "Skaner kodów QR" },
-    "profile": { "title": "Profil i ustawienia" }
+    "overview": {
+      "title": "O aplikacji"
+    },
+    "auth": {
+      "title": "Logowanie i rejestracja"
+    },
+    "home": {
+      "title": "Ekran główny"
+    },
+    "taskHistory": {
+      "title": "Historia zadań"
+    },
+    "plants": {
+      "title": "Rośliny"
+    },
+    "plantDetails": {
+      "title": "Szczegóły rośliny"
+    },
+    "createPlantWizard": {
+      "title": "Kreator dodawania rośliny"
+    },
+    "locations": {
+      "title": "Lokalizacje"
+    },
+    "reminders": {
+      "title": "Przypomnienia"
+    },
+    "readings": {
+      "title": "Odczyty"
+    },
+    "readingsHistory": {
+      "title": "Historia odczytów"
+    },
+    "scanner": {
+      "title": "Skaner kodów QR"
+    },
+    "profile": {
+      "title": "Profil i ustawienia"
+    },
+    "contacts": {
+      "title": "Kontakty"
+    },
+    "sharing": {
+      "title": "Udostępnione rośliny"
+    }
   }
 }

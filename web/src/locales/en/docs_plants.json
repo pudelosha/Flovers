@@ -1,12 +1,12 @@
-﻿{
+{
   "docs_plants": {
     "title": "Plants",
     "sections": [
       {
         "heading": "Purpose of this screen",
         "body": [
-          "The Plants screen shows all Plant Instances created in your account.",
-          "Each tile represents one plant (your own specimen). From the tile you can open Plant Details, or use the three-dot menu shortcuts to navigate to related views (e.g., reminders, journal, QR code)."
+          "Plants shows plants you own and plants that contacts have shared with you.",
+          "Each tile opens Plant Details. The three-dot menu shows actions allowed by your access: owners manage their plants and sharing; recipients view the plant and its care history."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "If the list is empty, use the FAB action Create plant to add your first Plant Instance.",
           "Once plants exist, you can group them using Locations and manage care routines through Reminders."
+        ]
+      },
+      {
+        "heading": "Owned and shared plants",
+        "body": [
+          "Plants includes your own plants and plants shared with you. Received plants carry a Shared label. Their menus let you view details and care history, while editing, reminder management, QR export and deletion remain owner-only.",
+          "For an owned plant, choose Share plant or Manage sharing from its menu. Add mode allows multiple plants; managing existing sharing keeps its plant locked."
         ]
       }
     ]

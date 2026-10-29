@@ -5,8 +5,8 @@
       {
         "heading": "Toutes tes plantes au même endroit",
         "body": [
-          "L’écran « Plantes » présente toutes les plantes que tu as ajoutées à ton compte.",
-          "Chaque carte représente l’une de tes plantes. Tu peux ouvrir ses détails ou utiliser le menu à trois points pour accéder à ses rappels, son journal ou son code QR."
+          "plantes affiche les plantes que vous possédez et les plantes que vos contacts ont partagées avec vous.",
+          "Chaque tuile ouvre les détails de la plante. Le menu à trois points affiche les actions autorisées par votre accès : les propriétaires gèrent leurs plantes et leur partage ; les destinataires voient la plante et son historique d’entretien."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Choisis « Ajouter une plante » dans le menu d’actions rapides pour ajouter ta première plante.",
           "Tu pourras ensuite organiser tes plantes par emplacement et planifier leur entretien avec des rappels."
+        ]
+      },
+      {
+        "heading": "Plantes d'intérieur possédées et partagées",
+        "body": [
+          "Les plantes incluent vos propres plantes et les plantes partagées avec vous. Les plantes reçues portent une étiquette Partagée. Leurs menus vous permettent d'afficher les détails et l'historique des soins, tandis que l'édition, la gestion des rappels, l'exportation et la suppression de QR restent réservées au propriétaire.",
+          "Pour une plante possédée, choisissez Partager la plante ou Gérer le partage dans son menu. Le mode Ajouter permet plusieurs plantes ; la gestion du partage existant maintient sa plante verrouillée."
         ]
       }
     ]

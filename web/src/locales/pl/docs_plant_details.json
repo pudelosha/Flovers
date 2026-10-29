@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_plant_details": {
     "title": "Szczegóły rośliny",
     "sections": [
@@ -64,6 +64,12 @@
           "Własne zdjęcia roślin są zapisywane tylko na twoim urządzeniu. Nie trafiają na serwer Flovers.",
           "Domyślne zdjęcia roślin są pobierane z serwera Flovers i mogą być wygenerowane przez AI.",
           "Odczyty i wskazówki pomagają w pielęgnacji. Zanim podejmiesz decyzję, oceń też samodzielnie stan rośliny."
+        ]
+      },
+      {
+        "heading": "Szczegóły udostępnionej rośliny",
+        "body": [
+          "Roślina udostępniona Tobie ma odpowiednie oznaczenie. Możesz przeglądać jej dane, historię pielęgnacji i odczyty z czujników. Kafelek przypomnień i opcje edycji są dostępne tylko dla właściciela. Zadania, na które masz uprawnienia, oznaczysz jako wykonane na ekranie Start."
         ]
       }
     ]

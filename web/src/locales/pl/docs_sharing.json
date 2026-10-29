@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Udostępnione rośliny",
+    "sections": [
+      {
+        "heading": "Jak udostępnić rośliny",
+        "body": [
+          "W Profilu otwórz Udostępnianie → Udostępnione rośliny. Przycisk + pozwala dodać udostępnienie oraz wyświetlić rośliny udostępnione przez Ciebie lub Tobie. Możesz też zacząć od menu własnej rośliny albo szczegółów kontaktu.",
+          "Przy dodawaniu wybierz jedną lub kilka roślin oraz osoby, którym chcesz dać dostęp. Dla każdej osoby możesz ustawić tylko podgląd lub możliwość oznaczania zadań jako wykonane, a także opcjonalny termin zakończenia dostępu. Przed zapisem zobaczysz dotychczasowe uprawnienia."
+        ]
+      },
+      {
+        "heading": "Zarządzanie udostępnieniem",
+        "body": [
+          "Opcja Zarządzaj udostępnianiem otwiera formularz dla jednej rośliny. Jej wybór jest zablokowany — zmieniasz wyłącznie osoby, uprawnienia i termin. Aby udostępnić inne rośliny, wybierz Udostępnij rośliny.",
+          "Kafelek pokazuje nazwę, gatunek i lokalizację rośliny. Niżej, w osobnych wierszach, znajdują się kontakt, uprawnienia i termin. Właściciel może odebrać dostęp wybranej osobie, a odbiorca może zrezygnować z dostępu do rośliny."
+        ]
+      },
+      {
+        "heading": "Co może zrobić druga osoba",
+        "body": [
+          "Osoba z dostępem może przeglądać roślinę, historię pielęgnacji i odczyty z podłączonych czujników. Jeśli na to pozwolisz, może też oznaczać zadania jako wykonane na ekranie Start. Widzicie te same zadania, więc każde z nich można wykonać tylko raz.",
+          "Dane rośliny, przypomnienia, urządzenia, ustawienia pompy i zasady udostępniania zmienia wyłącznie właściciel. Twoje przypomnienia nie pojawiają się na ekranie Przypomnienia drugiej osoby. Przy dostępie tylko do podglądu nie można oznaczać zadań jako wykonane.",
+          "Udostępnione rośliny i zadania są odpowiednio oznaczone. Menu z trzema kropkami otwiera szczegóły rośliny albo ekran Start z jej zadaniami. Ten sam kod QR działa również dla zalogowanej osoby, której udostępniono roślinę i która nadal ma do niej dostęp."
+        ]
+      },
+      {
+        "heading": "Kiedy dostęp wygasa",
+        "body": [
+          "Jeśli ustawisz termin, dostęp działa do końca wskazanego dnia w strefie czasowej Twoich powiadomień. Bez terminu pozostaje aktywny do odwołania. Upływ terminu, odebranie dostępu lub usunięcie kontaktu kończy udostępnianie, ale nie usuwa rośliny właściciela."
+        ]
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@
       {
         "heading": "プロフィールでできること",
         "body": [
-          "アカウントの管理、通知や画面表示の設定、サポートへの問い合わせができます。",
+          "プロフィールには、アカウント レベルと XP、連絡先と観葉植物の共有、通知設定、外観設定、サポートがまとめられています。",
           "個人情報の変更や、毎日使いやすいようにアプリを調整するときは、ここを開いてください。"
         ]
       },
@@ -15,6 +15,41 @@
           "登録したメールアドレスとアカウントの作成日を確認できます。",
           "メールアドレスの変更には現在のパスワードが必要です。パスワードの変更、ログアウト、アカウントの削除もできます。",
           "アカウントを削除すると、植物、リマインダー、タスク、測定値、デバイスなど、すべてのデータが完全に削除されます。元には戻せません。"
+        ]
+      },
+      {
+        "heading": "アカウントレベルとXP",
+        "body": [
+          "アカウント タイルには、現在のレベル、ランク、次のレベルへの進行状況が表示されます。レベルは 1 から 100 まであります。ランクの名前とバッジは、10 レベルの各グループで同じままです。",
+          "対象となるケアタスクを完了すると、XP を獲得できます。初期のレベルでは必要な XP が少なくなりますが、レベルが上がると必要な XP が徐々に多くなります。プロファイルは現在の残高を更新します。各タスクの後に個別の XP ポップアップが表示されることはありません。"
+        ]
+      },
+      {
+        "heading": "XPの付与方法",
+        "body": [
+          "The first eligible completion each day gives 100 XP, followed by 50, 30 and 20 XP. The next five eligible completions give 10 XP each, up to 250 XP per UTC day.今日が期限であるタスク、またはすでに期限を過ぎているタスクのみが対象となります。",
+          "同じ観葉植物とケアの種類は、UTC 日に 1 回だけ XP を獲得できます。 Repeating a completion does not grant XP again, and completing future tasks early earns none. When a caregiver completes a shared task, the caregiver receives the eligible XP, not the owner."
+        ]
+      },
+      {
+        "heading": "レベル1から100までのランク",
+        "body": [
+          "1–10 · 苗",
+          "11–20 · 新芽の守り手",
+          "21–30 · 葉っぱ好き",
+          "31–40 · 駆け出しの園芸家",
+          "41–50 · 植物の世話役",
+          "51–60 · 緑の達人",
+          "61–70 · 庭の守護者",
+          "71–80 · 植物の専門家",
+          "81–90 · 栽培の名人",
+          "91–100 · 植物界のレジェンド"
+        ]
+      },
+      {
+        "heading": "Sharing from Profile",
+        "body": [
+          "共有タイルはアカウントの下にあります。 It shows accepted contacts and pending incoming requests, with buttons for Contacts and Shared houseplants. Use these screens to manage invitations and houseplant access."
         ]
       },
       {

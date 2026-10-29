@@ -196,6 +196,12 @@
           "Flovers zapisuje i pokazuje dane urządzenia, ale nie gwarantuje dokładności zewnętrznych ani samodzielnie zbudowanych czujników.",
           "Aplikacja nie gwarantuje też, że pompa faktycznie się uruchomi. Zależy to od sprzętu, kodu na płytce, połączenia Wi-Fi i poprawnych ustawień urządzenia."
         ]
+      },
+      {
+        "heading": "Odczyty udostępnionych roślin",
+        "body": [
+          "Osoba z dostępem do rośliny może oglądać jej aktualne odczyty i wykresy. Kafelek jest oznaczony jako udostępniony. Klucze urządzenia, kod do wgrania, edycja, sterowanie pompą, eksport i usuwanie pozostają dostępne tylko dla właściciela."
+        ]
       }
     ]
   }

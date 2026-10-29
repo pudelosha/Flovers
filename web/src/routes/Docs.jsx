@@ -15,6 +15,8 @@ const DOC_SCREENS = [
   { key: "readingsHistory", ns: "docs_readings_history" },
   { key: "scanner", ns: "docs_scanner" },
   { key: "profile", ns: "docs_profile" },
+  { key: "contacts", ns: "docs_contacts" },
+  { key: "sharing", ns: "docs_sharing" },
 ];
 
 function DocSection({ heading, body }) {

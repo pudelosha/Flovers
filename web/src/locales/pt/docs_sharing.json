@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Plantas compartilhadas",
+    "sections": [
+      {
+        "heading": "Compartilhe plantas de casa com um contato",
+        "body": [
+          "Abra Perfil, depois Compartilhamento e Plantas de casa compartilhadas. O menu + permite compartilhar plantas e filtrar plantas compartilhadas por você ou com você. Você também pode começar no menu de três pontos de uma planta de casa própria ou nos detalhes de um contato.",
+          "Ao adicionar compartilhamento, selecione uma ou mais plantas de casa e os contatos que deverão ter acesso. Cada contato pode ter acesso somente visualização ou permissão para concluir tarefas, com uma data de término opcional. As permissões existentes são mostradas antes de você salvar."
+        ]
+      },
+      {
+        "heading": "Gerenciar compartilhamento existente",
+        "body": [
+          "Gerenciar compartilhamento abre uma planta de casa com sua seleção bloqueada. Altere seus contatos, permissões de conclusão de tarefas ou data de término e salve. Para compartilhar outras plantas de casa, abra Compartilhar plantas de casa.",
+          "Cada bloco de planta de casa compartilhado mostra seu nome, espécie e localização, seguido por linhas separadas para contato, permissões e data de término. Os proprietários podem remover o acesso de contatos individuais; os destinatários podem deixar uma planta de casa compartilhada."
+        ]
+      },
+      {
+        "heading": "O que a outra pessoa pode fazer",
+        "body": [
+          "Os destinatários podem visualizar a planta de casa compartilhada, seu histórico de cuidados e leituras de sensores vinculados. Com permissão de conclusão de tarefas, eles também podem marcar suas tarefas como concluídas na página inicial. O proprietário e o cuidador veem a mesma tarefa, portanto ela é concluída apenas uma vez.",
+          "Somente o proprietário pode alterar detalhes da planta de casa, definições de lembretes, dispositivos, configurações da bomba ou permissões de compartilhamento. As definições de lembretes compartilhados não aparecem na tela Lembretes do destinatário. O acesso somente visualização nunca permite a conclusão de tarefas.",
+          "Plantas de casa compartilhadas e suas tarefas são marcadas como Compartilhadas. O menu de três pontos em Plantas de casa compartilhadas abre Detalhes da planta de casa ou Página inicial filtrada para essa planta de casa. O código QR existente da planta de casa também funciona para um usuário autenticado com acesso de compartilhamento ativo."
+        ]
+      },
+      {
+        "heading": "Quando o acesso terminar",
+        "body": [
+          "Uma data de término opcional inclui essa data no fuso horário de notificação do proprietário. Sem data de término, o acesso continua até ser removido. A expiração, a remoção do acesso ou a remoção do contato encerram o acesso do destinatário sem excluir a planta de casa do proprietário."
+        ]
+      }
+    ]
+  }
+}

@@ -53,7 +53,7 @@
           "Anda dapat membuat kode QR yang berisi tautan ke Mesin Virtual tanaman hias tertentu di akun Anda.",
           "Alur kerja yang umum adalah mencetak dan melampirkan kode QR ke pot bunga, lalu memindainya untuk langsung melihat detail tanaman hias dan pembacaan sensor.",
           "Kode QR dimaksudkan untuk kenyamanan; perlakukan mereka seperti penunjuk akses dan jangan membagikannya secara publik jika mereka mengekspos metadata sensitif.",
-          "Saat ini, detail tanaman hias hanya dapat dilihat oleh pemilik tanaman hias yang telah login."
+          "Kode QR tidak memberikan akses dengan sendirinya. Anda harus masuk sebagai pemilik atau memiliki akses aktif berbagi ke tanaman. Pemilik membuat dan mengekspor kode; penerima dapat memindai kode yang sama untuk membuka tanaman."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Selanjutnya, atur Pengingat dan selesaikan Tugas untuk membangun rutinitas yang konsisten dan riwayat tugas yang berguna.",
           "Jika Anda memiliki perangkat, buka pembacaan sensor untuk memasangkannya, lalu gunakan Riwayat pembacaan sensor untuk melihat tren.",
           "Gunakan FAQ untuk jawaban cepat dan Persyaratan/dokumen Privasi untuk detail hukum dan pemrosesan data."
+        ]
+      },
+      {
+        "heading": "Kontak, berbagi, dan kemajuan akun",
+        "body": [
+          "Tambahkan pengguna Flovers tepercaya ke Kontak, lalu bagikan tanaman pilihan dengan akses hanya lihat atau penyelesaian tugas. Hal ini memungkinkan seseorang merawat tanaman Anda saat Anda pergi tanpa mengubah pengaturan tanaman Anda.",
+          "Penyelesaian tugas yang memenuhi syarat membangun XP dan level akun. Profil menunjukkan peringkat dan kemajuan Anda saat ini, sementara batas harian menjaga keseimbangan kemajuan untuk akun dengan banyak tanaman."
         ]
       }
     ]

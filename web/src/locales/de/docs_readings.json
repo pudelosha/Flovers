@@ -196,6 +196,12 @@
           "Flovers speichert und zeigt die Gerätedaten, garantiert aber nicht die Genauigkeit fremder oder selbst gebauter Sensoren.",
           "Auch der tatsächliche Start der Pumpe ist nicht garantiert. Er hängt von deiner Hardware, dem Code auf der Platine, der WLAN-Verbindung und den richtigen Geräteeinstellungen ab."
         ]
+      },
+      {
+        "heading": "Sensorsensorwerte für gemeinsam genutzte Pflanzen",
+        "body": [
+          "Empfänger können die neuesten Sensorwerte und Diagramme für eine gemeinsam genutzte Pflanze anzeigen. Ein „Gemeinsam“-Label kennzeichnet empfangene Pflanzen. Geräteanmeldeinformationen, Setup-Code, Gerätebearbeitung, Pumpensteuerung, Exporte und Löschung bleiben nur dem Eigentümer vorbehalten."
+        ]
       }
     ]
   }

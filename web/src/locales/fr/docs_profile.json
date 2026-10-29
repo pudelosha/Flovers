@@ -5,7 +5,7 @@
       {
         "heading": "Gérer ton compte et tes préférences",
         "body": [
-          "Le profil rassemble les informations de ton compte, les notifications, les réglages de l’application et les moyens de contacter l’assistance.",
+          "Le profil rassemble votre niveau de compte et XP, vos contacts et le partage de plantes, vos préférences de notification, vos paramètres d'apparence et votre assistance.",
           "Tu peux y gérer tes données personnelles et adapter Flovers à ton quotidien."
         ]
       },
@@ -15,6 +15,41 @@
           "La section du compte affiche notamment ton adresse e-mail et la date de création du compte.",
           "Tu peux modifier ton adresse e-mail en confirmant avec ton mot de passe actuel, changer de mot de passe, te déconnecter ou supprimer définitivement ton compte.",
           "La suppression du compte efface toutes tes données sans possibilité de retour : plantes, rappels, tâches, relevés et appareils."
+        ]
+      },
+      {
+        "heading": "Niveau de compte et XP",
+        "body": [
+          "La vignette Compte affiche votre niveau actuel, votre classement et votre progression vers le niveau suivant. Les niveaux vont de 1 à 100. Le nom et le badge d’un rang restent les mêmes pour chaque groupe de dix niveaux.",
+          "Accomplir des tâches de soins éligibles rapporte de l'XP. Les premiers niveaux nécessitent moins d’XP, tandis que les niveaux plus élevés en nécessitent progressivement plus. Le profil actualise le solde actuel ; il n'y a pas de pop-up XP distinct après chaque tâche."
+        ]
+      },
+      {
+        "heading": "Comment l'XP est attribué",
+        "body": [
+          "Le premier achèvement éligible chaque jour donne 100 XP, suivis de 50, 30 et 20 XP. Les cinq prochaines réalisations éligibles donnent 10 XP chacune, jusqu'à 250 XP par jour UTC. Seules les tâches dues aujourd'hui ou déjà en retard sont admissibles.",
+          "La même plante et le même type de soins ne peuvent gagner de l'XP qu'une seule fois par jour UTC. Répéter une tâche ne donne pas à nouveau d'XP, et terminer les tâches futures plus tôt n'en rapporte aucune. Lorsqu'un soignant termine une tâche partagée, c'est lui qui reçoit l'XP éligible, et non le propriétaire."
+        ]
+      },
+      {
+        "heading": "Rangs du niveau 1 à 100",
+        "body": [
+          "1–10 · Jeune pousse",
+          "11–20 · Gardien des pousses",
+          "21–30 · Ami des feuilles",
+          "31–40 · Jardinier en herbe",
+          "41–50 · Ami des plantes",
+          "51–60 · Main verte",
+          "61–70 · Gardien du jardin",
+          "71–80 · Expert en botanique",
+          "81–90 · Maître jardinier",
+          "91–100 · Légende du jardin"
+        ]
+      },
+      {
+        "heading": "Partage depuis le profil",
+        "body": [
+          "La vignette Partage se trouve sous le compte. Il affiche les contacts acceptés et les demandes entrantes en attente, avec des boutons pour les contacts et les plantes partagées. Utilisez ces écrans pour gérer les invitations et l’accès aux plantes."
         ]
       },
       {

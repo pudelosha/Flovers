@@ -53,7 +53,7 @@
           "Dla każdej rośliny możesz wygenerować kod QR z linkiem do jej szczegółów na twoim koncie.",
           "Wydrukuj kod i przyklej go do doniczki. Po zeskanowaniu szybko otworzysz informacje o tej roślinie.",
           "Kod ułatwia dostęp do rośliny. Nie udostępniaj go publicznie, jeśli mógłby ujawnić informacje, które chcesz zachować dla siebie.",
-          "Obecnie szczegóły roślin są przeznaczone do przeglądania przez ich zalogowanego właściciela."
+          "Sam kod QR nie daje dostępu do rośliny. Musisz być zalogowanym właścicielem albo osobą, której udostępniono roślinę i która nadal ma do niej dostęp. Właściciel tworzy i eksportuje kod, a odbiorca może zeskanować ten sam kod, aby otworzyć roślinę."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Ustaw Przypomnienia i oznaczaj wykonane zadania, aby dbać o rośliny regularnie i prowadzić historię pielęgnacji.",
           "Jeśli masz urządzenie pomiarowe, skonfiguruj je w Odczytach. W Historii odczytów sprawdzisz, jak zmieniają się warunki.",
           "Odpowiedzi na częste pytania znajdziesz w FAQ, a informacje prawne i zasady przetwarzania danych — w Regulaminie i Polityce prywatności."
+        ]
+      },
+      {
+        "heading": "Kontakty, udostępnianie i poziom konta",
+        "body": [
+          "Dodaj zaufane osoby do Kontaktów, a następnie udostępnij im wybrane rośliny — tylko do podglądu lub z możliwością oznaczania zadań jako wykonane. Dzięki temu ktoś może zadbać o rośliny podczas Twojej nieobecności, bez zmieniania ich ustawień.",
+          "Wykonywanie zadań pozwala zdobywać XP i kolejne poziomy konta. W Profilu sprawdzisz rangę i postęp, a dzienne limity zapewniają rozsądne tempo także osobom z dużą liczbą roślin."
         ]
       }
     ]

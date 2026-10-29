@@ -53,7 +53,7 @@
           "Você pode criar um código QR com um link para uma planta da sua conta.",
           "Imprima e cole no vaso. Ao escanear, você abre os detalhes e as leituras da planta.",
           "Os códigos facilitam o acesso às informações. Evite compartilhá-los publicamente se puderem expor metadados sensíveis.",
-          "No momento, os detalhes se destinam apenas ao proprietário da planta depois de entrar na conta."
+          "Um código QR não concede acesso por si só. Você deve estar logado como proprietário ou ter acesso de compartilhamento ativo à planta de casa. Os proprietários geram e exportam o código; os destinatários podem escanear o mesmo código para abrir a planta de casa."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Configure os Lembretes e conclua as tarefas para manter os cuidados em dia e construir um histórico útil.",
           "Se tiver um dispositivo, abra Leituras para associá-lo. Depois, use o Histórico de leituras para acompanhar as mudanças.",
           "Consulte as Perguntas frequentes para respostas rápidas e os Termos e a Política de privacidade para as condições de uso e o tratamento dos dados."
+        ]
+      },
+      {
+        "heading": "Contatos, compartilhamento e progresso da conta",
+        "body": [
+          "Adicione usuários Flovers confiáveis aos Contatos e, em seguida, compartilhe plantas selecionadas com acesso somente visualização ou para conclusão de tarefas. Isso permite que alguém cuide de suas plantas enquanto você estiver fora, sem alterar as configurações das plantas.",
+          "Conclusões de tarefas qualificadas aumentam XP e níveis de conta. O perfil mostra sua classificação e progresso atuais, enquanto os limites diários mantêm o progresso equilibrado para contas com muitas plantas."
         ]
       }
     ]

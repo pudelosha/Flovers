@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Paylaşılan bitkiler",
+    "sections": [
+      {
+        "heading": "Bitkilerini bir kişiyle paylaşın",
+        "body": [
+          "Profil'i, ardından Paylaşılan ve Paylaşılan bitkilerini açın. + menüsü, sizin tarafınızdan veya sizinle paylaşılan bitkilerini paylaşmanıza ve filtrelemenize olanak tanır. Ayrıca sahip olduğunuz bir bitkisinin üç noktalı menüsünden veya bir kişinin ayrıntılarından da başlayabilirsiniz.",
+          "Paylaşımı eklerken bir veya daha fazla bitkisini ve erişimi olması gereken kişileri seçin. Her kişi, isteğe bağlı bir bitiş tarihiyle salt görüntüleme erişimine veya görevleri tamamlama iznine sahip olabilir. Kaydetmeden önce mevcut izinler gösterilir."
+        ]
+      },
+      {
+        "heading": "Mevcut paylaşımı yönet",
+        "body": [
+          "Paylaşımı yönet, seçimi kilitli olan bir bitkisini açar. Kişilerini, görev tamamlama izinlerini veya bitiş tarihini değiştirin ve ardından kaydedin. Diğer bitkilerini paylaşmak için bunun yerine Bitkilerini paylaş seçeneğini açın.",
+          "Paylaşılan her bitkisi kutucuğu, adını, türünü ve konumunu gösterir; ardından iletişim, izinler ve bitiş tarihi için ayrı satırlar gelir. Sahipler, bireysel kişilerin erişimini kaldırabilir; alıcılar ortak bir bitkisi bırakabilirler."
+        ]
+      },
+      {
+        "heading": "Diğer kişinin yapabilecekleri",
+        "body": [
+          "Alıcılar, paylaşılan bitkisini, bakım geçmişini ve bağlantılı sensör okumalarını görüntüleyebilir. Görev tamamlama izniyle, Ana Sayfa'da da görevleri tamamlandı olarak işaretleyebilirler. Sahibi ve bakıcı aynı görevi gördüğünden yalnızca bir kez tamamlanır.",
+          "Bitkisi ayrıntılarını, hatırlatma tanımlarını, cihazları, pompa ayarlarını veya paylaşım izinlerini yalnızca sahibi değiştirebilir. Paylaşılan hatırlatıcı tanımları alıcının Hatırlatıcılar ekranında görünmez. Salt görüntüleme erişimi hiçbir zaman görevin tamamlanmasına izin vermez.",
+          "Paylaşılan bitkileri ve görevleri Paylaşılan olarak işaretlenir. Paylaşılan bitkileri üzerindeki üç noktalı menü, bitkisi Ayrıntılarını veya o bitkisine göre filtrelenmiş Ev'i açar. Bitkisinin mevcut QR kodu, etkin paylaşım erişimine sahip kimliği doğrulanmış bir kullanıcı için de çalışır."
+        ]
+      },
+      {
+        "heading": "Erişim sona erdiğinde",
+        "body": [
+          "İsteğe bağlı bitiş tarihi, sahibinin bildirim saat dilimindeki tarihi içerir. Bitiş tarihi olmadan erişim, kaldırılana kadar devam eder. Sürenin sona ermesi, erişimin kaldırılması veya kişinin kaldırılması, sahibinin bitkisini silmeden alıcının erişimini sona erdirir."
+        ]
+      }
+    ]
+  }
+}

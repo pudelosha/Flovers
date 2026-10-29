@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_plant_details": {
     "title": "Plant details",
     "sections": [
@@ -64,6 +64,12 @@
           "User-added plant images are stored only on the user’s device and are not uploaded to the Flovers backend.",
           "Predefined plant images come from the Flovers backend and may be AI-generated.",
           "Sensor readings and care suggestions are informative and should be combined with the user’s own judgment."
+        ]
+      },
+      {
+        "heading": "Details of a shared plant",
+        "body": [
+          "A received plant is marked Shared. You can view its information, care history and linked sensor readings. The reminder-definition tile and editing controls remain owner-only. Complete permitted shared tasks on Home."
         ]
       }
     ]

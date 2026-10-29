@@ -53,7 +53,7 @@
           "Hesabınızdaki belirli bir ev bitkisi Örneğine bağlantı içeren QR kodları oluşturabilirsiniz.",
           "Tipik bir iş akışı, QR kodunu yazdırıp bir saksıya eklemek, ardından bunu tarayarak doğrudan ev bitkisi ayrıntılarına ve sensör okumalarına atlamak şeklindedir.",
           "QR kodları kolaylık sağlamak içindir; bunlara erişim işaretçileri gibi davranın ve hassas meta verileri açığa çıkarıyorlarsa bunları herkese açık olarak paylaşmayın.",
-          "Şu anda ev bitkisi ayrıntılarının yalnızca ev bitkisinin oturum açmış sahibi tarafından görülebilmesi amaçlanıyor."
+          "QR kodu tek başına erişim izni vermez. Bitkisinin sahibi olarak oturum açmanız veya etkin paylaşım erişiminizin olması gerekir. Sahipler kodu oluşturur ve dışa aktarır; alıcılar bitkisini açmak için aynı kodu tarayabilir."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Daha sonra, tutarlı bir rutin ve yararlı bir görev geçmişi oluşturmak için Hatırlatıcıları ayarlayın ve Görevleri tamamlayın.",
           "Bir cihazınız varsa eşleştirmek için sensör okumalarını açın ve ardından eğilimleri tespit etmek için sensör okumaları Geçmişini kullanın.",
           "Hızlı yanıtlar için SSS'yi, yasal ayrıntılar ve veri işlemeyle ilgili ayrıntılar için Şartlar/Gizlilik belgelerini kullanın."
+        ]
+      },
+      {
+        "heading": "Kişiler, paylaşım ve hesap ilerlemesi",
+        "body": [
+          "Güvenilir Flovers kullanıcılarını Kişilere ekleyin, ardından seçilen bitkilerini salt görüntüleme veya görev tamamlama erişimiyle paylaşın. Bu, siz uzaktayken bitkisi ayarlarınızı değiştirmeden birisinin bitkilerinizle ilgilenmesine olanak tanır.",
+          "Uygun görev tamamlamaları XP ve hesap seviyelerini oluşturur. Profil, mevcut rütbenizi ve ilerlemenizi gösterirken günlük limitler, çok sayıda bitkisi bulunan hesaplar için ilerlemeyi dengeli tutar."
         ]
       }
     ]

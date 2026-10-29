@@ -5,7 +5,7 @@
       {
         "heading": "Co znajdziesz w Profilu",
         "body": [
-          "W Profilu zarządzisz kontem, ustawisz powiadomienia i wygląd aplikacji oraz skontaktujesz się z zespołem Flovers.",
+          "W Profilu sprawdzisz poziom konta i XP, przejdziesz do kontaktów i udostępnionych roślin oraz zmienisz powiadomienia, wygląd aplikacji i ustawienia konta. Znajdziesz tam też pomoc.",
           "Tutaj zmienisz swoje dane i dostosujesz aplikację do codziennego korzystania."
         ]
       },
@@ -15,6 +15,41 @@
           "W sekcji Konto sprawdzisz swój adres e-mail i datę utworzenia konta.",
           "Możesz zmienić adres e-mail, potwierdzając zmianę aktualnym hasłem, ustawić nowe hasło, wylogować się lub trwale usunąć konto.",
           "Usunięcie konta bezpowrotnie usuwa wszystkie twoje dane: rośliny, przypomnienia, zadania, odczyty i urządzenia."
+        ]
+      },
+      {
+        "heading": "Poziom konta i XP",
+        "body": [
+          "W kafelku Konto zobaczysz aktualny poziom, rangę i postęp do następnego poziomu. Możesz zdobyć poziomy od 1 do 100. Nazwa rangi i odznaka zmieniają się co dziesięć poziomów.",
+          "XP zdobywasz za wykonywanie zadań pielęgnacyjnych spełniających poniższe warunki. Pierwsze poziomy osiągniesz szybciej, a kolejne wymagają coraz więcej XP. Aktualny postęp sprawdzisz w Profilu — po każdym zadaniu nie wyświetlamy osobnego komunikatu o zdobytych punktach."
+        ]
+      },
+      {
+        "heading": "Zasady zdobywania XP",
+        "body": [
+          "Za pierwsze zadanie objęte nagrodą w danym dniu otrzymasz 100 XP, za kolejne 50, 30 i 20 XP, a za następnych pięć — po 10 XP. Dzienny limit wynosi 250 XP i jest liczony według UTC. Punkty przysługują za zadania na dziś lub zaległe.",
+          "Za ten sam rodzaj pielęgnacji tej samej rośliny możesz dostać XP tylko raz dziennie według UTC. Ponowne oznaczenie zadania jako wykonane nie daje kolejnych punktów, podobnie jak wykonywanie zadań przed terminem. Przy udostępnionych roślinach XP otrzymuje osoba wykonująca zadanie, nie właściciel."
+        ]
+      },
+      {
+        "heading": "Rangi na poziomach 1–100",
+        "body": [
+          "1–10 · Siewka",
+          "11–20 · Opiekun kiełków",
+          "21–30 · Miłośnik liści",
+          "31–40 · Początkujący ogrodnik",
+          "41–50 · Opiekun roślin",
+          "51–60 · Urodzony ogrodnik",
+          "61–70 · Strażnik ogrodu",
+          "71–80 · Ekspert botaniki",
+          "81–90 · Mistrz uprawy",
+          "91–100 · Legenda ogrodnictwa"
+        ]
+      },
+      {
+        "heading": "Udostępnianie w Profilu",
+        "body": [
+          "Pod kafelkiem Konto znajdziesz Udostępnianie. Zobaczysz tam liczbę kontaktów i oczekujące zaproszenia oraz przyciski prowadzące do Kontaktów i Udostępnionych roślin. Tam zarządzisz zaproszeniami i dostępem do roślin."
         ]
       },
       {

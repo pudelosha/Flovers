@@ -5,8 +5,8 @@
       {
         "heading": "Veja suas plantas",
         "body": [
-          "A tela Plantas reúne todas as plantas que você adicionou à conta.",
-          "Cada cartão corresponde a uma planta sua. Toque nele para abrir os detalhes ou use os três pontos para acessar lembretes, diário e código QR."
+          "plantas de casa mostra as plantas de casa que você possui e as plantas de casa que os contatos compartilharam com você.",
+          "Cada bloco abre detalhes da planta de casa. O menu de três pontos mostra as ações permitidas pelo seu acesso: os proprietários gerenciam suas plantas e compartilhamentos; os destinatários visualizam a planta de casa e seu histórico de cuidados."
         ]
       },
       {
@@ -49,6 +49,13 @@
         "body": [
           "Escolha Criar planta no botão de ações rápidas para adicionar sua primeira planta.",
           "Depois, use as Localizações para organizar as plantas e os Lembretes para planejar os cuidados."
+        ]
+      },
+      {
+        "heading": "Plantas de casa próprias e compartilhadas",
+        "body": [
+          "plantas de casa incluem suas próprias plantas de casa e plantas de casa compartilhadas com você. As plantas de casa recebidas possuem um rótulo Compartilhado. Seus menus permitem visualizar detalhes e histórico de cuidados, enquanto a edição, gerenciamento de lembretes, exportação e exclusão do QR permanecem apenas para o proprietário.",
+          "Para uma planta de casa própria, escolha Compartilhar planta de casa ou Gerenciar compartilhamento no menu. O modo Adicionar permite várias plantas; gerenciar o compartilhamento existente mantém sua planta de casa bloqueada."
         ]
       }
     ]

@@ -99,7 +99,7 @@
     },
     {
       "q": "Können andere meine Sensormesswerte sehen?",
-      "a": "Aktuell sind deine Messwerte privat. Möglichkeiten zum Teilen könnten später hinzukommen. Du kannst Messwerte auch über die API abrufen, um sie zum Beispiel mit einer automatischen Bewässerungsanlage zu nutzen."
+      "a": "Ja, wenn Sie die Pflanze mit einem akzeptierten Kontakt teilen. Empfänger können die Messwerte und Diagramme der verknüpften Sensoren anzeigen, jedoch nicht auf Gerätegeheimnisse zugreifen, Einstellungen ändern oder die Pumpe steuern."
     },
     {
       "q": "Wozu dienen die QR-Codes?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "Kann ich einen QR-Code oder Pflanzenlink bedenkenlos teilen?",
-      "a": "Grundsätzlich ja. Die Details einer Pflanze kann nur die angemeldete Person sehen, der sie gehört."
+      "a": "Ein QR-Code ist eine Verknüpfung, kein Zugriffsschlüssel. Der Scanner öffnet die Pflanze nur für seinen eingeloggten Besitzer oder einen Benutzer mit aktivem Freigabezugriff. Allein die Weitergabe des QR-Codes an jemanden teilt die Pflanze nicht mit."
     },
     {
       "q": "Kann ich meine Pflanzen öffentlich zeigen oder mit Freunden teilen?",
-      "a": "Aktuell geht das nicht. Funktionen zum öffentlichen Teilen könnten später hinzukommen."
+      "a": "Sie können Pflanzen privat mit akzeptierten Flovers-Kontakten teilen. Wählen Sie nur Lesezugriff oder erlauben Sie den Abschluss der Aufgabe und legen Sie optional ein Enddatum fest. Pflanzen werden nicht als öffentliche Profile veröffentlicht."
     },
     {
       "q": "Warum erhalte ich keine Benachrichtigungen?",
@@ -120,6 +120,14 @@
     {
       "q": "Wie erreiche ich den Support oder melde ein Problem?",
       "a": "Nutze das Kontaktformular auf der Flovers-Website oder das Formular im Profil der App."
+    },
+    {
+      "q": "Wie füge ich jemanden zu den Kontakten hinzu?",
+      "a": "Öffnen Sie Profil → Teilen → Kontakte und verwenden Sie +, um einen Kontakt anhand seiner registrierten E-Mail-Adresse oder Flovers-ID hinzuzufügen. Die Freigabe ist möglich, sobald die Einladung angenommen wurde."
+    },
+    {
+      "q": "Wie funktionieren Kontoebenen?",
+      "a": "Für geeignete Pflegeaufgaben erhältst du XP für Level 1 bis 100. Höhere Level benötigen mehr XP. Es gelten Tageslimits: Pro Pflanze und Pflegeart gibt es nur einmal je UTC-Tag XP. Dieselbe Aufgabe erneut abzuschließen bringt keine weiteren Punkte."
     }
   ]
 }

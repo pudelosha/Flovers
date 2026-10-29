@@ -99,7 +99,7 @@
     },
     {
       "q": "Can other people see my sensor readings?",
-      "a": "Currently, sensor readings are private. In the future, sharing options may be introduced. Users may also query sensor data via the API to integrate with other devices, such as automatic watering systems."
+      "a": "Yes, if you share the plant with an accepted contact. Recipients can view linked sensor readings and charts, but cannot access device secrets, change settings or control the pump."
     },
     {
       "q": "What are QR codes used for in Flovers?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "Is it safe to share a QR code or plant link?",
-      "a": "Generally yes. Only logged-in users who own the plant can view its details."
+      "a": "A QR code is a shortcut, not an access key. The scanner opens the plant only for its logged-in owner or a user with active sharing access. Giving someone the QR code alone does not share the plant."
     },
     {
       "q": "Can I make my plants public or share them with friends?",
-      "a": "Not at the moment. Public sharing features may be introduced in the future."
+      "a": "You can privately share plants with accepted Flovers contacts. Choose view-only access or allow task completion, and optionally set an end date. Plants are not published as public profiles."
     },
     {
       "q": "Why am I not receiving notifications?",
@@ -120,6 +120,14 @@
     {
       "q": "How can I contact support or report a problem?",
       "a": "You can use the contact form on the Flovers website or the contact form available in the app under the Profile screen."
+    },
+    {
+      "q": "How do I add someone to Contacts?",
+      "a": "Open Profile → Sharing → Contacts and use + to add a contact by their registered email address or Flovers ID. Sharing becomes available once the invitation is accepted."
+    },
+    {
+      "q": "How do account levels work?",
+      "a": "Completing eligible care tasks earns XP towards levels 1–100. Higher levels need more XP. Daily limits apply, and the same plant and care type can earn XP only once per UTC day. Repeating a completion does not earn extra XP."
     }
   ]
 }

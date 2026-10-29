@@ -63,6 +63,14 @@
       "iot": {
         "title": "Lecturas de sensores y gráficos de evolución",
         "text": "Conecta tu dispositivo ESP o Arduino para enviar temperatura, humedad del aire, luz y humedad del suelo. Los gráficos diarios, semanales y mensuales te ayudan a ver los cambios y ajustar los cuidados."
+      },
+      "sharing": {
+        "title": "Comparte el cuidado de tus plantas",
+        "text": "Añade contactos Flovers y comparte plantas, lecturas e historial de cuidados. Permite solo la consulta o también completar tareas mientras estás fuera, con una fecha de fin opcional."
+      },
+      "levels": {
+        "title": "Cuida tus plantas y sube de nivel",
+        "text": "Completa tareas de cuidado, gana XP y sigue tu progreso del nivel 1 al 100 en Perfil. Los niveles superiores requieren más XP y los límites diarios premian la constancia."
       }
     },
     "images": {

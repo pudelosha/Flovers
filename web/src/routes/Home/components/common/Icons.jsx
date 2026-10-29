@@ -1,5 +1,14 @@
 import React from "react";
 
+export function IconUsers() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+      <circle cx="9" cy="8" r="3" />
+      <path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v2" />
+    </svg>
+  );
+}
+
 export function IconTasks() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">

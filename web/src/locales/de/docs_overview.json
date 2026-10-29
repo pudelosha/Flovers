@@ -53,7 +53,7 @@
           "Du kannst für jede Pflanze in deinem Konto einen QR-Code mit einem Link zu ihrem Eintrag erstellen.",
           "Drucke den Code aus und bringe ihn am Topf an. Wenn du ihn scannst, gelangst du direkt zu den Pflanzendetails und Messwerten.",
           "QR-Codes erleichtern den Zugriff auf deine Daten. Teile sie nicht öffentlich, wenn dadurch sensible Begleitinformationen sichtbar werden könnten.",
-          "Aktuell sind die Pflanzendetails nur für dich als angemeldete Besitzerin oder angemeldeten Besitzer vorgesehen."
+          "Ein QR-Code allein gewährt keinen Zugriff. Sie müssen als Eigentümer angemeldet sein oder über einen aktiven Freigabezugriff auf die Pflanze verfügen. Eigentümer generieren und exportieren den Code; Empfänger können denselben Code scannen, um die Pflanze zu öffnen."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Richte anschließend Erinnerungen ein und hake erledigte Aufgaben ab. So entsteht nach und nach ein hilfreicher Pflegeverlauf.",
           "Wenn du ein Sensorgerät hast, verbinde es unter „Messwerte“. Im Messwertverlauf kannst du anschließend Veränderungen erkennen.",
           "Schnelle Antworten findest du in den FAQ. Rechtliche Informationen und Angaben zur Datenverarbeitung stehen in den Nutzungsbedingungen und der Datenschutzerklärung."
+        ]
+      },
+      {
+        "heading": "Kontakte, Freigabe und Kontofortschritt",
+        "body": [
+          "Fügen Sie vertrauenswürdige Flovers-Benutzer zu Ihren Kontakten hinzu und geben Sie dann ausgewählte Pflanzen mit Lese- oder Aufgabenerledigungszugriff frei. Dadurch kann sich jemand während Ihrer Abwesenheit um Ihre Pflanzen kümmern, ohne dass Sie Ihre Pflanzeneinstellungen ändern müssen.",
+          "Berechtigte Aufgabenabschlüsse erstellen XP- und Kontostufen. Das Profil zeigt Ihren aktuellen Rang und Fortschritt an, während Tageslimits den Fortschritt für Konten mit vielen Pflanzen im Gleichgewicht halten."
         ]
       }
     ]

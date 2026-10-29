@@ -5,7 +5,7 @@
       {
         "heading": "Gestionar tu cuenta y preferencias",
         "body": [
-          "El perfil reúne los datos de tu cuenta, las notificaciones, los ajustes de la aplicación y las opciones de ayuda.",
+          "Perfil reúne su nivel de cuenta y XP, contactos y uso compartido de plantas, preferencias de notificación, configuración de apariencia y soporte.",
           "Aquí puedes gestionar tus datos personales y adaptar Flovers a tu día a día."
         ]
       },
@@ -15,6 +15,41 @@
           "La sección de cuenta muestra tu dirección de correo y la fecha en que la creaste.",
           "Puedes cambiar el correo confirmándolo con tu contraseña actual, cambiar la contraseña, cerrar sesión o eliminar la cuenta de forma permanente.",
           "Eliminar la cuenta borra todos tus datos sin posibilidad de recuperarlos: plantas, recordatorios, tareas, lecturas y dispositivos."
+        ]
+      },
+      {
+        "heading": "Nivel de cuenta y XP",
+        "body": [
+          "El mosaico de Cuenta muestra su nivel actual, rango y progreso hacia el siguiente nivel. Los niveles van del 1 al 100. El nombre y la insignia de un rango permanecen iguales para cada grupo de diez niveles.",
+          "Completar tareas de cuidado elegibles genera XP. Los primeros niveles necesitan menos XP, mientras que los niveles más altos requieren progresivamente más. El perfil actualiza el saldo actual; no aparece una ventana emergente de XP separada después de cada tarea."
+        ]
+      },
+      {
+        "heading": "Cómo se otorga XP",
+        "body": [
+          "La primera finalización elegible cada día otorga 100 XP, seguida de 50, 30 y 20 XP. Las siguientes cinco completaciones elegibles otorgan 10 XP cada una, hasta 250 XP por día UTC. Sólo califican las tareas que vencen hoy o que ya vencieron.",
+          "La misma planta y tipo de cuidado puede ganar XP solo una vez por día UTC. Repetir una finalización no otorga XP nuevamente y completar tareas futuras antes no otorga ninguna. Cuando un cuidador completa una tarea compartida, el cuidador recibe el XP elegible, no el propietario."
+        ]
+      },
+      {
+        "heading": "Rangos del nivel 1 al 100",
+        "body": [
+          "1–10 · Plántula",
+          "11–20 · Cuidador de brotes",
+          "21–30 · Amante de las hojas",
+          "31–40 · Jardinero en ciernes",
+          "41–50 · Cuidador de plantas",
+          "51–60 · Jardinero nato",
+          "61–70 · Guardián del jardín",
+          "71–80 · Experto en botánica",
+          "81–90 · Maestro cultivador",
+          "91–100 · Leyenda de las plantas"
+        ]
+      },
+      {
+        "heading": "Compartir desde perfil",
+        "body": [
+          "El mosaico Compartir se encuentra debajo de Cuenta. Muestra contactos aceptados y solicitudes entrantes pendientes, con botones para Contactos y Plantas de interior compartidas. Utilice estas pantallas para gestionar invitaciones y acceso a plantas."
         ]
       },
       {

@@ -53,7 +53,7 @@
           "You can generate QR codes that contain a link to a specific Plant Instance in your account.",
           "A typical workflow is to print and attach the QR code to a pot, then scan it to jump directly to plant details and readings.",
           "QR codes are meant for convenience; treat them like access pointers and don’t share them publicly if they expose sensitive metadata.",
-          "At the moment, plant details are intended to be visible only to the logged-in owner of the plant."
+          "A QR code does not grant access by itself. You must be logged in as the owner or have active sharing access to the plant. Owners generate and export the code; recipients can scan the same code to open the plant."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Next, set up Reminders and complete Tasks to build a consistent routine and a useful task history.",
           "If you have a device, open Readings to pair it and then use Readings History to spot trends.",
           "Use the FAQ for quick answers and the Terms/Privacy documents for legal and data-processing details."
+        ]
+      },
+      {
+        "heading": "Contacts, sharing and account progress",
+        "body": [
+          "Add trusted Flovers users to Contacts, then share selected plants with view-only or task-completion access. This lets someone care for your plants while you are away without changing your plant settings.",
+          "Eligible task completions build XP and account levels. Profile shows your current rank and progress, while daily limits keep progress balanced for accounts with many plants."
         ]
       }
     ]

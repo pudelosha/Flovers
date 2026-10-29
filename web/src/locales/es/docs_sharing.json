@@ -1,0 +1,35 @@
+{
+  "docs_sharing": {
+    "title": "Plantas compartidas",
+    "sections": [
+      {
+        "heading": "Compartir plantas con un contacto",
+        "body": [
+          "Abra Perfil, luego Compartir y Plantas de interior compartidas. El menú + le permite compartir plantas y filtrar plantas compartidas por usted o con usted. También puede comenzar desde el menú de tres puntos de una planta propia o desde los detalles de un contacto.",
+          "Al agregar compartir, seleccione una o más plantas y los contactos que deberían tener acceso. Cada contacto puede tener acceso de solo visualización o permiso para completar tareas, con una fecha de finalización opcional. Los permisos existentes se muestran antes de guardar."
+        ]
+      },
+      {
+        "heading": "Administrar el uso compartido existente",
+        "body": [
+          "Administrar compartir abre una planta con su selección bloqueada. Cambie sus contactos, permisos para completar tareas o fecha de finalización, luego guarde. Para compartir otras plantas, abra Compartir plantas.",
+          "Cada mosaico de planta compartido muestra su nombre, especie y ubicación, seguidos de filas separadas para el contacto, los permisos y la fecha de finalización. Los propietarios pueden eliminar el acceso de contactos individuales; Los destinatarios pueden dejar una planta compartida."
+        ]
+      },
+      {
+        "heading": "Lo que la otra persona puede hacer",
+        "body": [
+          "Los destinatarios pueden ver la planta compartida, su historial de cuidados y las lecturas de los sensores vinculados. Con el permiso para completar tareas, también pueden marcar sus tareas como completadas en Inicio. El propietario y el cuidador ven la misma tarea, por lo que se completa sólo una vez.",
+          "Solo el propietario puede cambiar los detalles de las plantas, las definiciones de recordatorios, los dispositivos, la configuración de la bomba o los permisos para compartir. Las definiciones de recordatorios compartidos no aparecen en la pantalla Recordatorios del destinatario. El acceso de solo lectura nunca permite completar la tarea.",
+          "Las plantas compartidas y sus tareas están marcadas como Compartidas. El menú de tres puntos en Plantas de interior compartidas abre Detalles de la planta o Inicio filtrado para esa planta. El código QR existente de la planta también funciona para un usuario autenticado con acceso activo para compartir."
+        ]
+      },
+      {
+        "heading": "Cuando finaliza el acceso",
+        "body": [
+          "Una fecha de finalización opcional incluye esa fecha en la zona horaria de notificación del propietario. Sin fecha de finalización, el acceso continúa hasta que se elimina. La caducidad, la eliminación del acceso o la eliminación del contacto finalizan el acceso del destinatario sin eliminar la planta del propietario."
+        ]
+      }
+    ]
+  }
+}

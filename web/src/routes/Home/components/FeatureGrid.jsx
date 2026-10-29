@@ -7,7 +7,9 @@ import {
   IconRepeat,
   IconClipboardCheck,
   IconTimer,
-  IconActivity
+  IconActivity,
+  IconUsers,
+  IconLeaf
 } from "./common/Icons";
 import createPlantImg from "../../../assets/create_plant.png";
 import readingsHistoryImg from "../../../assets/readings_history.png";
@@ -86,7 +88,17 @@ export default function FeatureGrid() {
         tone: "light"
       },
 
-      // 5) IoT
+      {
+        key: "sharing", icon: <IconUsers />,
+        title: t("featureGrid.tiles.sharing.title"),
+        text: t("featureGrid.tiles.sharing.text"), tone: "light"
+      },
+      {
+        key: "levels", icon: <IconLeaf />,
+        title: t("featureGrid.tiles.levels.title"),
+        text: t("featureGrid.tiles.levels.text"), tone: "glass"
+      },
+      // IoT stays last to anchor the existing screenshot animation.
       {
         key: "iot",
         icon: <IconActivity />,

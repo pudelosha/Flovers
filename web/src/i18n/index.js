@@ -344,6 +344,37 @@ import trDocsReadingsHistory from "../locales/tr/docs_readings_history.json";
 import trDocsScanner from "../locales/tr/docs_scanner.json";
 import trDocsProfile from "../locales/tr/docs_profile.json";
 
+import enDocsContacts from "../locales/en/docs_contacts.json";
+import enDocsSharing from "../locales/en/docs_sharing.json";
+import plDocsContacts from "../locales/pl/docs_contacts.json";
+import plDocsSharing from "../locales/pl/docs_sharing.json";
+import deDocsContacts from "../locales/de/docs_contacts.json";
+import deDocsSharing from "../locales/de/docs_sharing.json";
+import itDocsContacts from "../locales/it/docs_contacts.json";
+import itDocsSharing from "../locales/it/docs_sharing.json";
+import frDocsContacts from "../locales/fr/docs_contacts.json";
+import frDocsSharing from "../locales/fr/docs_sharing.json";
+import esDocsContacts from "../locales/es/docs_contacts.json";
+import esDocsSharing from "../locales/es/docs_sharing.json";
+import ptDocsContacts from "../locales/pt/docs_contacts.json";
+import ptDocsSharing from "../locales/pt/docs_sharing.json";
+import arDocsContacts from "../locales/ar/docs_contacts.json";
+import arDocsSharing from "../locales/ar/docs_sharing.json";
+import hiDocsContacts from "../locales/hi/docs_contacts.json";
+import hiDocsSharing from "../locales/hi/docs_sharing.json";
+import zhDocsContacts from "../locales/zh/docs_contacts.json";
+import zhDocsSharing from "../locales/zh/docs_sharing.json";
+import jaDocsContacts from "../locales/ja/docs_contacts.json";
+import jaDocsSharing from "../locales/ja/docs_sharing.json";
+import koDocsContacts from "../locales/ko/docs_contacts.json";
+import koDocsSharing from "../locales/ko/docs_sharing.json";
+import idDocsContacts from "../locales/id/docs_contacts.json";
+import idDocsSharing from "../locales/id/docs_sharing.json";
+import ruDocsContacts from "../locales/ru/docs_contacts.json";
+import ruDocsSharing from "../locales/ru/docs_sharing.json";
+import trDocsContacts from "../locales/tr/docs_contacts.json";
+import trDocsSharing from "../locales/tr/docs_sharing.json";
+
 const resources = {
   en: {
     common: enCommon,
@@ -366,7 +397,9 @@ const resources = {
     docs_readings: enDocsReadings,
     docs_readings_history: enDocsReadingsHistory,
     docs_scanner: enDocsScanner,
-    docs_profile: enDocsProfile
+    docs_profile: enDocsProfile,
+    docs_contacts: enDocsContacts,
+    docs_sharing: enDocsSharing
   },
   id: {
     common: idCommon,
@@ -389,7 +422,9 @@ const resources = {
     docs_readings: idDocsReadings,
     docs_readings_history: idDocsReadingsHistory,
     docs_scanner: idDocsScanner,
-    docs_profile: idDocsProfile
+    docs_profile: idDocsProfile,
+    docs_contacts: idDocsContacts,
+    docs_sharing: idDocsSharing
   },
   ru: {
     common: ruCommon,
@@ -412,7 +447,9 @@ const resources = {
     docs_readings: ruDocsReadings,
     docs_readings_history: ruDocsReadingsHistory,
     docs_scanner: ruDocsScanner,
-    docs_profile: ruDocsProfile
+    docs_profile: ruDocsProfile,
+    docs_contacts: ruDocsContacts,
+    docs_sharing: ruDocsSharing
   },
   tr: {
     common: trCommon,
@@ -435,7 +472,9 @@ const resources = {
     docs_readings: trDocsReadings,
     docs_readings_history: trDocsReadingsHistory,
     docs_scanner: trDocsScanner,
-    docs_profile: trDocsProfile
+    docs_profile: trDocsProfile,
+    docs_contacts: trDocsContacts,
+    docs_sharing: trDocsSharing
   },
   pl: {
     common: plCommon,
@@ -458,7 +497,9 @@ const resources = {
     docs_readings: plDocsReadings,
     docs_readings_history: plDocsReadingsHistory,
     docs_scanner: plDocsScanner,
-    docs_profile: plDocsProfile
+    docs_profile: plDocsProfile,
+    docs_contacts: plDocsContacts,
+    docs_sharing: plDocsSharing
   },
   de: {
     common: deCommon,
@@ -481,7 +522,9 @@ const resources = {
     docs_readings: deDocsReadings,
     docs_readings_history: deDocsReadingsHistory,
     docs_scanner: deDocsScanner,
-    docs_profile: deDocsProfile
+    docs_profile: deDocsProfile,
+    docs_contacts: deDocsContacts,
+    docs_sharing: deDocsSharing
   },
   it: {
     common: itCommon,
@@ -504,7 +547,9 @@ const resources = {
     docs_readings: itDocsReadings,
     docs_readings_history: itDocsReadingsHistory,
     docs_scanner: itDocsScanner,
-    docs_profile: itDocsProfile
+    docs_profile: itDocsProfile,
+    docs_contacts: itDocsContacts,
+    docs_sharing: itDocsSharing
   },
   fr: {
     common: frCommon,
@@ -527,7 +572,9 @@ const resources = {
     docs_readings: frDocsReadings,
     docs_readings_history: frDocsReadingsHistory,
     docs_scanner: frDocsScanner,
-    docs_profile: frDocsProfile
+    docs_profile: frDocsProfile,
+    docs_contacts: frDocsContacts,
+    docs_sharing: frDocsSharing
   },
   es: {
     common: esCommon,
@@ -550,7 +597,9 @@ const resources = {
     docs_readings: esDocsReadings,
     docs_readings_history: esDocsReadingsHistory,
     docs_scanner: esDocsScanner,
-    docs_profile: esDocsProfile
+    docs_profile: esDocsProfile,
+    docs_contacts: esDocsContacts,
+    docs_sharing: esDocsSharing
   },
   pt: {
     common: ptCommon,
@@ -573,7 +622,9 @@ const resources = {
     docs_readings: ptDocsReadings,
     docs_readings_history: ptDocsReadingsHistory,
     docs_scanner: ptDocsScanner,
-    docs_profile: ptDocsProfile
+    docs_profile: ptDocsProfile,
+    docs_contacts: ptDocsContacts,
+    docs_sharing: ptDocsSharing
   },
   ar: {
     common: arCommon,
@@ -596,7 +647,9 @@ const resources = {
     docs_readings: arDocsReadings,
     docs_readings_history: arDocsReadingsHistory,
     docs_scanner: arDocsScanner,
-    docs_profile: arDocsProfile
+    docs_profile: arDocsProfile,
+    docs_contacts: arDocsContacts,
+    docs_sharing: arDocsSharing
   },
   hi: {
     common: hiCommon,
@@ -619,7 +672,9 @@ const resources = {
     docs_readings: hiDocsReadings,
     docs_readings_history: hiDocsReadingsHistory,
     docs_scanner: hiDocsScanner,
-    docs_profile: hiDocsProfile
+    docs_profile: hiDocsProfile,
+    docs_contacts: hiDocsContacts,
+    docs_sharing: hiDocsSharing
   },
   zh: {
     common: zhCommon,
@@ -642,7 +697,9 @@ const resources = {
     docs_readings: zhDocsReadings,
     docs_readings_history: zhDocsReadingsHistory,
     docs_scanner: zhDocsScanner,
-    docs_profile: zhDocsProfile
+    docs_profile: zhDocsProfile,
+    docs_contacts: zhDocsContacts,
+    docs_sharing: zhDocsSharing
   },
   ja: {
     common: jaCommon,
@@ -665,7 +722,9 @@ const resources = {
     docs_readings: jaDocsReadings,
     docs_readings_history: jaDocsReadingsHistory,
     docs_scanner: jaDocsScanner,
-    docs_profile: jaDocsProfile
+    docs_profile: jaDocsProfile,
+    docs_contacts: jaDocsContacts,
+    docs_sharing: jaDocsSharing
   },
   ko: {
     common: koCommon,
@@ -688,7 +747,9 @@ const resources = {
     docs_readings: koDocsReadings,
     docs_readings_history: koDocsReadingsHistory,
     docs_scanner: koDocsScanner,
-    docs_profile: koDocsProfile
+    docs_profile: koDocsProfile,
+    docs_contacts: koDocsContacts,
+    docs_sharing: koDocsSharing
   }
 };
 
@@ -732,7 +793,9 @@ i18n.use(initReactI18next).init({
     "docs_readings",
     "docs_readings_history",
     "docs_scanner",
-    "docs_profile"
+    "docs_profile",
+    "docs_contacts",
+    "docs_sharing"
   ],
   defaultNS: "common",
 

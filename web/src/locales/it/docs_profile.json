@@ -5,7 +5,7 @@
       {
         "heading": "Cosa trovi nel Profilo",
         "body": [
-          "Nel Profilo gestisci il tuo account, scegli le notifiche, personalizzi l’app e contatti il team di Flovers.",
+          "Il profilo riunisce il livello del tuo account e i tuoi XP, la condivisione dei contatti e delle piante d'appartamento, le preferenze di notifica, le impostazioni dell'aspetto e il supporto.",
           "Qui puoi aggiornare i tuoi dati e adattare l’app al tuo uso quotidiano."
         ]
       },
@@ -15,6 +15,41 @@
           "Nella sezione Account trovi il tuo indirizzo e-mail e la data di creazione dell’account.",
           "Puoi cambiare l’indirizzo e-mail confermando con la password attuale, impostare una nuova password, uscire dall’account o eliminarlo definitivamente.",
           "Se elimini l’account, perdi in modo irreversibile tutti i tuoi dati: piante, promemoria, attività, misurazioni e dispositivi."
+        ]
+      },
+      {
+        "heading": "Livello dell'account e XP",
+        "body": [
+          "Il riquadro Account mostra il tuo livello attuale, la tua posizione e i progressi verso il livello successivo. I livelli vanno da 1 a 100. Il nome e il badge di un grado rimangono gli stessi per ogni gruppo di dieci livelli.",
+          "Il completamento delle attività di assistenza idonee fa guadagnare XP. I primi livelli richiedono meno XP, mentre i livelli più alti ne richiedono progressivamente di più. Il profilo aggiorna il saldo attuale; non è presente un popup XP separato dopo ogni attività."
+        ]
+      },
+      {
+        "heading": "Come vengono assegnati gli XP",
+        "body": [
+          "Il primo completamento idoneo ogni giorno dà 100 XP, seguito da 50, 30 e 20 XP. I successivi cinque completamenti idonei danno 10 XP ciascuno, fino a 250 XP per giorno UTC. Sono qualificate solo le attività in scadenza oggi o già scadute.",
+          "La stessa pianta d'appartamento e lo stesso tipo di cura possono guadagnare XP solo una volta per giorno UTC. La ripetizione di un completamento non garantisce nuovamente XP e il completamento anticipato delle attività future non ne guadagna alcuno. Quando un assistente completa un'attività condivisa, l'assistente riceve gli XP idonei, non il proprietario."
+        ]
+      },
+      {
+        "heading": "Ranghi dal livello 1 al 100",
+        "body": [
+          "1–10 · Piantina",
+          "11–20 · Custode dei germogli",
+          "21–30 · Amante delle foglie",
+          "31–40 · Giardiniere in erba",
+          "41–50 · Amico delle piante",
+          "51–60 · Pollice verde",
+          "61–70 · Custode del giardino",
+          "71–80 · Esperto di botanica",
+          "81–90 · Maestro coltivatore",
+          "91–100 · Leggenda del verde"
+        ]
+      },
+      {
+        "heading": "Condivisione dal profilo",
+        "body": [
+          "Il riquadro Condivisione si trova sotto Account. Mostra i contatti accettati e le richieste in arrivo in sospeso, con pulsanti per Contatti e Piante d'appartamento condivise. Utilizza queste schermate per gestire gli inviti e l'accesso alle piante d'appartamento."
         ]
       },
       {

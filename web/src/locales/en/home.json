@@ -8,7 +8,6 @@
       "appStoreUrl": ""
     }
   },
-
   "homeNew": {
     "cta": {
       "title": "Start simple. Keep the routine consistent.",
@@ -39,7 +38,6 @@
       }
     }
   },
-
   "featureGrid": {
     "header": {
       "title": "Features that keep care consistent",
@@ -65,6 +63,14 @@
       "iot": {
         "title": "Live IoT readings with trends",
         "text": "Connect your ESP/Arduino device and send readings like temperature, humidity, light, and soil moisture. The app shows daily/weekly/monthly charts so you can spot patterns and adjust routines."
+      },
+      "sharing": {
+        "title": "Share care with people you trust",
+        "text": "Add Flovers contacts and share selected plants, readings and care history. Choose view-only access or let a caregiver complete tasks while you are away, with an optional end date."
+      },
+      "levels": {
+        "title": "Watch your gardening level grow",
+        "text": "Earn XP by completing care tasks and follow your progress from level 1 to 100 in Profile. Increasing XP requirements and daily limits reward steady care."
       }
     },
     "images": {
@@ -72,7 +78,6 @@
       "readingsHistoryAlt": "Readings history screen"
     }
   },
-
   "core": {
     "title": "The two things Flovers does best",
     "lead": "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants.",
@@ -97,7 +102,6 @@
       }
     }
   },
-
   "qr": {
     "title": "QR scanning: the physical shortcut",
     "lead": "Generate a QR code for each plant, print it, attach it to the pot, then scan to jump straight into that plant’s details and tasks.",
@@ -119,7 +123,6 @@
       }
     }
   },
-
   "store": {
     "google": {
       "alt": "Get it on Google Play"

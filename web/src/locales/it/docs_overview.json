@@ -53,7 +53,7 @@
           "Puoi generare un codice QR con un link a una pianta del tuo account.",
           "Stampalo e attaccalo al vaso: ti basterà scansionarlo per aprire i dettagli della pianta e le misurazioni.",
           "I codici QR sono collegamenti per accedere rapidamente alle informazioni. Evita di condividerli pubblicamente se potrebbero rivelare metadati sensibili.",
-          "Al momento i dettagli sono destinati a essere visibili solo al proprietario della pianta dopo l'accesso al suo account."
+          "Un codice QR non garantisce l'accesso da solo. Devi aver effettuato l'accesso come proprietario o avere un accesso di condivisione attivo alla pianta d'appartamento. I proprietari generano ed esportano il codice; i destinatari possono scansionare lo stesso codice per aprire la pianta d'appartamento."
         ]
       },
       {
@@ -90,6 +90,13 @@
           "Imposta i promemoria e completa le attività per prenderti cura delle piante con regolarità e creare uno storico utile.",
           "Se hai un dispositivo, apri Misurazioni per collegarlo, poi consulta Cronologia misurazioni per osservare come cambiano i valori.",
           "Nelle FAQ trovi risposte rapide. Per le condizioni d'uso e il trattamento dei dati, consulta i Termini di servizio e l'Informativa sulla privacy."
+        ]
+      },
+      {
+        "heading": "Contatti, condivisione e avanzamento dell'account",
+        "body": [
+          "Aggiungi utenti Flovers fidati ai Contatti, quindi condividi le piante d'appartamento selezionate con accesso di sola visualizzazione o di completamento delle attività. Ciò consente a qualcuno di prendersi cura delle tue piante d'appartamento mentre sei lontano senza modificare le impostazioni delle piante d'appartamento.",
+          "Il completamento delle attività idonee aumenta i livelli di XP e di account. Il profilo mostra il tuo grado e i tuoi progressi attuali, mentre i limiti giornalieri mantengono i progressi bilanciati per gli account con molte piante d'appartamento."
         ]
       }
     ]

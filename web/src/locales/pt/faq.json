@@ -99,7 +99,7 @@
     },
     {
       "q": "Outras pessoas podem ver minhas leituras dos sensores?",
-      "a": "No momento, as leituras são privadas. Opções de compartilhamento podem surgir no futuro. Você também pode consultar os dados pela API para integrar outros aparelhos, como sistemas de irrigação automática."
+      "a": "Sim, se você compartilhar a planta de casa com um contato aceito. Os destinatários podem visualizar leituras e gráficos de sensores vinculados, mas não podem acessar segredos do dispositivo, alterar configurações ou controlar a bomba."
     },
     {
       "q": "Para que servem os códigos QR no Flovers?",
@@ -107,11 +107,11 @@
     },
     {
       "q": "Compartilhar um código QR ou link para a planta é seguro?",
-      "a": "Em geral, sim. Só o proprietário da planta pode ver os detalhes, depois de entrar na conta."
+      "a": "Um código QR é um atalho, não uma chave de acesso. O scanner abre a planta de casa apenas para o proprietário conectado ou para um usuário com acesso de compartilhamento ativo. Fornecer a alguém o código QR por si só não compartilha a planta da casa."
     },
     {
       "q": "Posso tornar minhas plantas públicas ou compartilhá-las com amigos?",
-      "a": "Não no momento. Funcionalidades de compartilhamento público podem ser adicionadas no futuro."
+      "a": "Você pode compartilhar plantas de maneira privada com contatos Flovers aceitos. Escolha o acesso somente visualização ou permita a conclusão da tarefa e, opcionalmente, defina uma data de término. plantas de casa não são publicadas como perfis públicos."
     },
     {
       "q": "Por que não estou recebendo notificações?",
@@ -120,6 +120,14 @@
     {
       "q": "Como posso entrar em contato com o suporte técnico ou relatar um problema?",
       "a": "Use o formulário no site do Flovers ou o formulário da tela Perfil no aplicativo."
+    },
+    {
+      "q": "Como adiciono alguém aos Contatos?",
+      "a": "Abra Perfil → Compartilhamento → Contatos e use + para adicionar um contato pelo endereço de e-mail registrado ou ID Flovers. O compartilhamento fica disponível assim que o convite é aceito."
+    },
+    {
+      "q": "Como funcionam os níveis de conta?",
+      "a": "As tarefas de cuidado elegíveis dão XP para avançar do nível 1 ao 100. Os níveis mais altos exigem mais XP. Existem limites diários: a mesma planta e tipo de cuidado só dão XP uma vez por dia UTC. Repetir a conclusão não dá mais pontos."
     }
   ]
 }

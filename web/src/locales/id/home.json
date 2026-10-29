@@ -63,6 +63,14 @@
       "iot": {
         "title": "Pembacaan sensor IoT langsung dengan tren",
         "text": "Hubungkan perangkat ESP/Arduino Anda dan kirimkan pembacaan sensor seperti suhu, kelembapan, cahaya, dan kelembapan tanah. Aplikasi ini menampilkan grafik harian/mingguan/bulanan sehingga Anda dapat melihat pola dan menyesuaikan rutinitas."
+      },
+      "sharing": {
+        "title": "Rawat tanaman bersama orang tepercaya",
+        "text": "Tambahkan kontak Flovers dan bagikan tanaman, data sensor, serta riwayat perawatannya. Izinkan hanya melihat atau juga menyelesaikan tugas saat Anda pergi. Tanggal akhir berbagi bersifat opsional."
+      },
+      "levels": {
+        "title": "Rawat tanaman dan naikkan level Anda",
+        "text": "Selesaikan tugas perawatan untuk mendapat XP dan pantau kemajuan dari level 1 hingga 100 di Profil. Level yang lebih tinggi membutuhkan lebih banyak XP, sementara batas harian mendorong perawatan rutin."
       }
     },
     "images": {
