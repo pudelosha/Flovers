@@ -7,21 +7,21 @@
         "body": [
           "Die Startseite ist die erste Ansicht nach der Anmeldung.",
           "Hier siehst du die Aufgaben, die aus deinen Erinnerungen entstehen. So erkennst du schnell, was heute ansteht und was bereits überfällig ist.",
-          "Wenn keine Aufgaben fällig sind, zeigt dir eine Infokachel, dass aktuell nichts geplant ist. Sie schlägt dir auch nächste Schritte vor, etwa Erinnerungen einzurichten."
+          "Die Startseite öffnet sich mit Alle und zeigt auch zukünftige offene Aufgaben. Eine leere Kachel bedeutet, dass keine Aufgabe zur aktuellen Ansicht und den Filtern passt."
         ]
       },
       {
         "heading": "Was die Aufgabenkacheln zeigen",
         "body": [
           "Jede Kachel steht für eine Aufgabe aus einer Erinnerung, zum Beispiel Gießen, Besprühen, Düngen, Umtopfen oder allgemeine Pflege.",
-          "Aufgaben erscheinen automatisch entsprechend dem Wiederholungsrhythmus der Erinnerung.",
+          "Beim Anlegen einer Erinnerung entsteht sofort eine offene Aufgabe, auch für einen späteren Termin. Nach dem Erledigen wird sofort die nächste Aufgabe geplant.",
           "Auf der Kachel siehst du in der Regel die Aufgabenart, den Pflanzennamen, den Standort und die Fälligkeit, etwa heute oder bereits überfällig."
         ]
       },
       {
         "heading": "Aktionen im Drei-Punkte-Menü",
         "body": [
-          "Über das Drei-Punkte-Menü einer Kachel erreichst du die Aktionen für diese Aufgabe.",
+          "Tippe auf den Hauptbereich einer Aufgabenkachel, um ihr Aktionsmenü zu öffnen.",
           "„Als erledigt markieren“: Schließt die Aufgabe ab. Auf Wunsch kannst du eine Notiz zum Pflegeverlauf hinzufügen.",
           "„Erinnerung bearbeiten“: Öffnet die zugehörige Erinnerung, damit du den Wiederholungsrhythmus ändern kannst.",
           "„Zur Pflanze gehen“: Öffnet direkt die Details der zugehörigen Pflanze.",
@@ -59,9 +59,9 @@
         "body": [
           "Wenn du „Überfällige anzeigen“ oder „Heute fällige anzeigen“ verwendest, kannst du mehrere Aufgaben gemeinsam abschließen.",
           "Solange einer dieser Filter aktiv ist, erscheint im Schnellaktionsmenü eine zusätzliche Aktion wie „Sichtbare als erledigt markieren“.",
-          "Damit schließt du alle gerade angezeigten Aufgaben auf einmal ab, ohne sie einzeln auswählen zu müssen.",
+          "Die Sammelaktion betrifft nur sichtbare Aufgaben, die du erledigen darfst. Geteilte Aufgaben mit reinem Lesezugriff werden ausgeschlossen.",
           "Das ist praktisch, wenn du zum Beispiel mehrere Pflanzen nacheinander gießt.",
-          "Je nach gewähltem Ablauf kannst du nach dem gemeinsamen Abschluss noch Notizen zu den erledigten Aufgaben hinzufügen."
+          "Wähle vor der Bestätigung ein gemeinsames Erledigungsdatum und optional eine Notiz für alle betroffenen Aufgaben. Gespeicherte Notizen lassen sich derzeit nicht nachträglich bearbeiten."
         ]
       },
       {

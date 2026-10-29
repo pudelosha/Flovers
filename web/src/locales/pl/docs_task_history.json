@@ -13,27 +13,25 @@
       {
         "heading": "Kafelki wykonanych zadań",
         "body": [
-          "Każdy kafelek to jedno wykonane zadanie. Zobaczysz na nim rodzaj zadania (np. Podlewanie, Zraszanie lub Nawożenie), nazwę rośliny, lokalizację i datę wykonania.",
-          "Do zadania może być dołączona notatka zapisana przy oznaczaniu zadania jako wykonanego.",
-          "Aby przeczytać notatkę, rozwiń kafelek."
+          "Każdy kafelek przedstawia wykonane zadanie: jego rodzaj, nazwę rośliny i lokalizację.",
+          "Prawa kolumna ma trzy wiersze: status wykonania, datę i osobę, która wykonała zadanie. Jeśli wykonawca nie został zapisany, pojawi się informacja o nieznanym użytkowniku.",
+          "Notatka dodana przy wykonaniu zadania jest widoczna pod jego szczegółami."
         ]
       },
       {
-        "heading": "Wyświetlanie notatek",
+        "heading": "Notatki do zadań",
         "body": [
-          "Dotknij kafelka wykonanego zadania, aby go rozwinąć i zobaczyć notatkę.",
-          "Możesz też otworzyć menu z trzema kropkami i wybrać Rozwiń lub Zwiń.",
-          "Dzięki zwijaniu notatek lista pozostaje czytelna, a szczegóły masz pod ręką."
+          "Notatki widać od razu po wczytaniu historii. Dłuższy tekst zajmuje tyle wierszy, ile potrzeba.",
+          "Notatkę dodajesz podczas oznaczania zadania jako wykonanego. Jeśli jej nie ma, kafelek nie pokazuje pustej sekcji."
         ]
       },
       {
-        "heading": "Menu kafelka (trzy kropki)",
+        "heading": "Menu zadania",
         "body": [
-          "Menu z trzema kropkami zawiera opcje dotyczące wybranego zadania.",
-          "Rozwiń/Zwiń: pokazuje lub ukrywa notatkę na kafelku.",
-          "Edytuj przypomnienie: otwiera przypomnienie, z którego powstało zadanie. Możesz tam zmienić częstotliwość i inne ustawienia.",
-          "Przejdź do rośliny: otwiera Szczegóły rośliny, której dotyczy zadanie.",
-          "Usuń zadanie: bezpowrotnie usuwa wybrane wykonane zadanie z twojego konta."
+          "Dotknij głównej części kafelka wykonanego zadania, aby otworzyć menu.",
+          "Edytuj przypomnienie otwiera powiązane przypomnienie, w którym można zmienić częstotliwość lub inne ustawienia. Ta opcja jest dostępna tylko dla właściciela rośliny.",
+          "Przejdź do rośliny otwiera szczegóły rośliny, której dotyczy zadanie.",
+          "Usuń zadanie trwale usuwa wybrany wpis z historii. Może to zrobić tylko właściciel rośliny."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "Przycisk szybkich akcji w Historii zadań otwiera menu do zarządzania całą listą.",
           "Sortuj: zmienia kolejność zadań na liście.",
           "Filtruj: pokazuje zadania pasujące do wybranych kryteriów.",
-          "Usuń: pozwala usunąć wiele zadań naraz, np. dla wybranej rośliny lub lokalizacji, zadania jednego rodzaju albo starsze niż wskazana data."
+          "Usuń: pozwala usunąć wiele zadań naraz, np. dla wybranej rośliny lub lokalizacji, zadania jednego rodzaju albo starsze niż wskazana data.",
+          "Opcja Wyślij eksport wysyła e-mailem arkusz zgodny z bieżącymi filtrami. Możesz dołączyć zadania oczekujące. Eksport historii jest dostępny tylko dla właściciela."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "Historia zadań a ekran główny",
         "body": [
-          "Na ekranie głównym znajdziesz zadania na dziś i zaległe, które czekają na wykonanie.",
+          "Strona główna pokazuje zadania oczekujące, również przyszłe w widoku Wszystkie. Widoki Na dziś i Zaległe zawężają listę. Historia zadań pokazuje zadania wykonane.",
           "W Historii zadań sprawdzisz to, co już zostało zrobione. Możesz przeglądać, sortować, filtrować i usuwać te wpisy.",
           "Ekran główny pomaga w codziennej pielęgnacji, a Historia zadań pozwala wrócić do wcześniejszych działań."
         ]

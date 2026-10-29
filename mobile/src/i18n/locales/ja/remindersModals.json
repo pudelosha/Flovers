@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "リマインダーを削除",
       "areYouSurePrefix": "本当に削除してもよろしいですか",
-      "areYouSureSuffix": "？この操作は取り消せません。"
+      "areYouSureSuffix": "？この操作は取り消せません。",
+      "historyWarning": "このリマインダーを削除すると、完了した作業の履歴やメモを含む、関連するすべての作業も完全に削除されます。"
     },
     "edit": {
       "titleCreate": "リマインダーを追加",

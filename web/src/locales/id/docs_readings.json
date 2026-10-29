@@ -74,7 +74,9 @@
         "body": [
           "Perangkat tautan digunakan untuk menyiapkan perangkat membaca baru dan mengaitkannya dengan tanaman hias.",
           "Selama pengaturan, Anda dapat mengonfigurasi nama perangkat, tanaman hias yang ditautkan, status diaktifkan atau dinonaktifkan, interval pembacaan, sensor yang diaktifkan, peringatan kelembaban tanah rendah, pemberitahuan email dan push untuk kelembaban tanah rendah, dukungan pompa air, peluncuran pompa otomatis, ambang batas kelembaban tanah penyiraman otomatis, dan pemberitahuan email dan push setelah penyiraman selesai.",
-          "Setiap perangkat menerima Kunci Perangkat yang dihasilkan. Akun pengguna juga memiliki Kunci Rahasia Auth. Bersama-sama, kredensial ini memungkinkan perangkat fisik berkomunikasi dengan backend."
+          "Setiap perangkat menerima Kunci Perangkat yang dihasilkan. Akun pengguna juga memiliki Kunci Rahasia Auth. Bersama-sama, kredensial ini memungkinkan perangkat fisik berkomunikasi dengan backend.",
+          "Atur interval pembacaan ke 1–24 jam penuh. Setelah mengubahnya, buat ulang sketch dan unggah ke papan; program yang sedang berjalan tidak menerima nilai ini secara otomatis.",
+          "Atur jeda penyiraman otomatis di formulir perangkat: 1–32767 menit, bawaan 60. Papan menerima nilainya pada pemeriksaan berikutnya, dan server juga menerapkannya. AUTO_PUMP_MIN_INTERVAL_MS hanya nilai cadangan lokal."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "Papan fisik memeriksa backend untuk tugas penyiraman manual yang tertunda. Jika ada tugas yang tertunda dan board memiliki logika kontrol pompa, maka board dapat menjalankan pompa dan kemudian melaporkan penyelesaiannya kembali ke backend.",
           "Penyiraman terjadwal secara manual mengabaikan nilai kelembaban tanah saat ini, ambang batas penyiraman otomatis, dan cooldown penyiraman otomatis.",
           "Ini berarti penyiraman manual diperlakukan sebagai permintaan pengguna yang eksplisit.",
-          "Permintaan penyiraman manual terjadwal juga dapat ditarik kembali sebelum perangkat mengambilnya."
+          "Permintaan penyiraman manual terjadwal juga dapat ditarik kembali sebelum perangkat mengambilnya.",
+          "Pilih durasi manual 1–300 detik dan gunakan firmware hasil generasi terbaru. Penyiraman otomatis tetap memakai PUMP_RUN_MS dalam sketch. Permintaan manual yang tidak diambil kedaluwarsa setelah dua jam."
         ]
       },
       {
         "heading": "Waktu tugas penyiraman manual",
         "body": [
           "Kode perangkat yang dihasilkan menggunakan waktu terpisah untuk pembacaan sensor dan pemeriksaan penyiraman manual.",
-          "Secara default, pembacaan sensor dikirim satu kali per jam.",
+          "Pembacaan dikirim setiap jam secara bawaan. Formulir perangkat mendukung interval 1–24 jam; unggah firmware baru setelah mengubahnya. Permintaan penyiraman manual diperiksa terpisah, secara bawaan setiap menit.",
           "Pemeriksaan penyiraman otomatis dilakukan sebagai bagian dari siklus pembacaan setiap jam.",
           "Tugas penyiraman manual yang tertunda diperiksa lebih sering, secara default satu kali per menit.",
           "Hal ini memungkinkan permintaan penyiraman manual diambil lebih cepat tanpa mengirimkan pembacaan sensor setiap menit.",
@@ -134,7 +137,7 @@
           "Dewan menanyakan backend tentang konfigurasi pompa saat ini, termasuk apakah penyiraman otomatis diaktifkan dan ambang batas berapa yang harus digunakan.",
           "Jika penyiraman otomatis diaktifkan dan kelembaban tanah saat ini berada di bawah ambang batas yang dikonfigurasi, papan dapat menjalankan pompa.",
           "Penyiraman otomatis bergantung pada dukungan pompa air yang diaktifkan, sensor kelembaban tanah yang diaktifkan, peluncuran pompa otomatis yang diaktifkan, ambang batas kelembaban tanah yang valid, perangkat yang aktif, dan konfirmasi backend dari pengaturan pompa saat ini.",
-          "Penyiraman otomatis memiliki cooldown untuk menghindari pengaktifan pompa berulang kali terlalu sering.",
+          "Atur jeda penyiraman otomatis di formulir perangkat: 1–32767 menit, bawaan 60. Papan menerima nilainya pada pemeriksaan berikutnya, dan server juga menerapkannya. AUTO_PUMP_MIN_INTERVAL_MS hanya nilai cadangan lokal.",
           "Penyiraman manual memiliki prioritas dibandingkan penyiraman otomatis dalam siklus yang sama. Jika penyiraman manual dilakukan, penyiraman otomatis dilewati untuk siklus tersebut."
         ]
       },
@@ -183,8 +186,8 @@
           "Kode yang dihasilkan dimaksudkan sebagai titik awal yang siap diedit untuk papan bergaya ESP32.",
           "Ini mencakup logika untuk koneksi WiFi, sinkronisasi waktu, inisialisasi sensor, membaca sensor yang diaktifkan, mengirimkan pembacaan sensor ke backend, memeriksa tugas penyiraman manual, memeriksa pengaturan penyiraman otomatis yang dikontrol backend, menjalankan pompa bila diperlukan, dan melaporkan penyelesaian pompa.",
           "Kode yang dihasilkan memisahkan unggahan bacaan dan pemeriksaan tugas penyiraman manual.",
-          "Secara default, pembacaan sensor dikirim setiap jam, sedangkan tugas penyiraman manual diperiksa satu kali per menit.",
-          "Pengguna harus meninjau dan menyesuaikan kode yang dihasilkan untuk perangkat keras, pin, nilai kalibrasi, kabel relai pompa, dan jenis papan mereka sendiri."
+          "Pembacaan dikirim setiap jam secara bawaan. Formulir perangkat mendukung interval 1–24 jam; unggah firmware baru setelah mengubahnya. Permintaan penyiraman manual diperiksa terpisah, secara bawaan setiap menit.",
+          "Sebelum mengunggah, periksa Wi-Fi, pin, kalibrasi kelembapan, PUMP_RUN_MS, dan interval pemeriksaan. Atur jeda otomatis daring di formulir perangkat."
         ]
       },
       {

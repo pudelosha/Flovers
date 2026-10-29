@@ -321,7 +321,8 @@ Invoke-RestMethod \`
   "device_key": "string",
   "device_id": "number optional",
   "supports_task_retry": "boolean optional, defaults false",
-  "supports_auto_claim": "boolean optional, defaults false"
+  "supports_auto_claim": "boolean optional, defaults false",
+  "supports_manual_duration": "boolean optional, defaults false"
 }`,
     []
   );
@@ -331,7 +332,9 @@ Invoke-RestMethod \`
   "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
   "device_id": 12,
-  "supports_auto_claim": true
+  "supports_task_retry": true,
+  "supports_auto_claim": true,
+  "supports_manual_duration": true
 }`,
     []
   );
@@ -345,7 +348,10 @@ Invoke-RestMethod \`
   "pump_included": true,
   "auto_pump_enabled": true,
   "auto_pump_threshold_pct": 30,
-  "moisture_sensor_enabled": true
+  "moisture_sensor_enabled": true,
+  "auto_pump_requires_claim": true,
+  "pump_cooldown_minutes": 60,
+  "pump_cooldown_until": null
 }`,
     []
   );
@@ -354,12 +360,16 @@ Invoke-RestMethod \`
     () => `{
   "run": true,
   "task_id": 123,
+  "duration_seconds": 20,
   "source": "manual",
   "reason": "manual_scheduled",
   "pump_included": true,
   "auto_pump_enabled": true,
   "auto_pump_threshold_pct": 30,
-  "moisture_sensor_enabled": true
+  "moisture_sensor_enabled": true,
+  "auto_pump_requires_claim": true,
+  "pump_cooldown_minutes": 60,
+  "pump_cooldown_until": null
 }`,
     []
   );
@@ -372,7 +382,9 @@ $body = @'
   "secret": "YOUR_SECRET",
   "device_key": "YOUR_DEVICE_KEY",
   "device_id": 12,
-  "supports_auto_claim": true
+  "supports_task_retry": true,
+  "supports_auto_claim": true,
+  "supports_manual_duration": true
 }
 '@
 

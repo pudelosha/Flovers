@@ -65,6 +65,7 @@ export function buildUITasks(
 
       // extra fields used by Task History
       completedAt: t.completed_at || "", // ISO string or "" if not completed
+      completedBy: t.completed_by ?? undefined,
       note: t.note ?? undefined,         // optional note saved on completion
     };
 

@@ -190,9 +190,12 @@ export default function LoginScreen({ navigation }: any) {
     } catch (e: any) {
       const isApi = e instanceof ApiError;
       const status = (isApi ? (e as any)?.status : undefined) ?? (e as any)?.response?.status;
+      const code = (isApi ? e.body : e?.response?.data)?.code;
 
       const msg =
-        status === 400
+        status === 400 && code === "account_not_activated"
+          ? getTranslation("login.errors.accountNotActivated")
+          : status === 400
           ? getTranslation("login.errors.invalidCredentials")
           : getTranslation("login.errors.generic");
 

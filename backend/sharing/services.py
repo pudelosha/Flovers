@@ -51,9 +51,9 @@ def sharing_snapshot(user, request=None):
             "expires_at": row.expires_at.isoformat() if row.expires_at else None,
             "is_expired": bool(row.expires_at and row.expires_at <= now),
         })
-    revisions = dict(PlantSharingVersion.objects.filter(plant__user=user).values_list("plant_id", "revision"))
+    versions = list(PlantSharingVersion.objects.filter(plant__user=user))
     return {"current_user": contact_identity(user), "contacts": contact_snapshot(user)["contacts"], "shares": shares,
-            "versions": {str(plant_id): revision for plant_id, revision in revisions.items()}}
+            "versions": {str(version.plant_id): version.revision for version in versions}}
 
 
 def _lock_users(ids, active_ids=()):

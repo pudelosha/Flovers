@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Gönderiliyor…"
+      "sending": "Gönderiliyor…",
+      "deleting": "Siliniyor…"
     },
     "support": {
       "copyToMe": "Ayrıca bana bir kopyasını e-postayla gönder"
@@ -51,8 +52,10 @@
       "bugSent": "Hata raporu gönderildi. Teşekkür ederim.",
       "couldNotSendContact": "Mesajınız gönderilemedi. Lütfen tekrar deneyin.",
       "couldNotSendBug": "Hata raporunuz gönderilemedi. Lütfen tekrar deneyin.",
-      "deleteNotImplemented": "Hesabı silme henüz kullanılamıyor.",
-      "requestTimedOut": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin."
+      "requestTimedOut": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
+      "incorrectPassword": "Mevcut şifre yanlış.",
+      "couldNotDeleteAccount": "Hesabın silinemedi. Lütfen tekrar dene.",
+      "deleteAccountBlocked": "Hesap silme işlemi tamamlanamadı. Destek ekibiyle iletişime geç."
     }
   }
 }

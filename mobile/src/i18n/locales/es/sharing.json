@@ -108,7 +108,10 @@
       "emptyAllTitle": "Aún no hay plantas compartidas",
       "emptyAllBody": "Comparte plantas con un contacto o pídele a alguien que comparta las suyas contigo.",
       "displayTasks": "Mostrar tareas",
-      "actions": "Acciones de {{name}}"
+      "actions": "Acciones de {{name}}",
+      "deleteSharing": "Dejar de compartir",
+      "deleteSharingTitle": "¿Dejar de compartir?",
+      "deleteSharingBody": "Todas las personas con las que has compartido {{plant}} perderán el acceso. Tu planta y sus datos se conservarán."
     },
     "form": {
       "title": "Compartir plantas",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "Invitación rechazada.",
       "contactsInvitationCancelled": "Invitación cancelada.",
       "contactsContactUpdated": "Nombre del contacto actualizado.",
-      "contactsContactDeleted": "Contacto eliminado."
+      "contactsContactDeleted": "Contacto eliminado.",
+      "sharingDeleted": "Se ha dejado de compartir con todos los contactos."
     },
     "errors": {
       "invalid": "Introduce una dirección de correo o un ID de Flovers válido.",

@@ -57,6 +57,32 @@ it("distinguishes owner revocation from a recipient leaving", async () => {
   render(tree()); await load(); await act(async () => { await context.removeShare("100"); }); expect(context.toast?.kind).toBe("accessRemoved");
   await load(); await act(async () => { await context.removeShare("101"); }); expect(context.toast?.kind).toBe("plantLeft"); expect(api.deletePlantShare).toHaveBeenLastCalledWith("101");
 });
+it("removes all outgoing grants for one plant in a single revision-checked update", async () => {
+  (api.fetchSharing as jest.Mock).mockResolvedValue(snapshot("1", [outgoing, { ...outgoing, id: "102", contactId: "3" }, incoming]));
+  render(tree()); await load();
+  (api.updatePlantSharing as jest.Mock).mockResolvedValue(snapshot("1", [incoming], 4));
+  await act(async () => { await context.removePlantSharing(plant, 3); });
+  expect(api.updatePlantSharing).toHaveBeenCalledTimes(1);
+  expect(api.updatePlantSharing).toHaveBeenCalledWith([{ plant, recipients: [], expectedRevision: 3 }], { "10": 3 });
+  expect(api.deletePlantShare).not.toHaveBeenCalled();
+  expect(context.shares).toEqual([incoming]);
+  expect(context.toast?.kind).toBe("sharingDeleted");
+});
+it("does not allow recipients to revoke everyone else's access", async () => {
+  render(tree()); await load(); let result: any;
+  await act(async () => { result = await context.removePlantSharing(incoming.plant, 0); });
+  expect(result).toEqual({ ok: false, reason: "notOwner" });
+  expect(api.updatePlantSharing).not.toHaveBeenCalled();
+  expect(context.shares).toHaveLength(2);
+});
+it("preserves sharing and emits no success toast when removing all grants fails", async () => {
+  render(tree()); await load(); let result: any;
+  (api.updatePlantSharing as jest.Mock).mockRejectedValue(new Error("offline"));
+  await act(async () => { result = await context.removePlantSharing(plant, 3); });
+  expect(result).toEqual({ ok: false, reason: "unavailable" });
+  expect(context.shares).toHaveLength(2);
+  expect(context.toast).toBeNull();
+});
 it("discards an old refresh after a login change and clears drafts/toasts", async () => {
   const old = deferred(); (api.fetchSharing as jest.Mock).mockReturnValueOnce(old.promise); const view = render(tree()); let work: any;
   act(() => { work = context.refresh(); context.openSharePlant(plant); context.notify("idCopied"); });

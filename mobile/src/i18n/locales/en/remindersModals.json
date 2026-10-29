@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Delete reminder",
       "areYouSurePrefix": "Are you sure you want to delete",
-      "areYouSureSuffix": "? This action cannot be undone."
+      "areYouSureSuffix": "? This action cannot be undone.",
+      "historyWarning": "Deleting this reminder also permanently deletes all its tasks, including completed history and notes."
     },
     "edit": {
       "titleCreate": "Add reminder",

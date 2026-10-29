@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Watering completion notifications are available only when this device has an included water pump. They can be sent after scheduled watering completes or after automatic watering is triggered and completed.",
       "sendEmailWateringNotifications": "Send email notification when watering is complete",
       "sendPushWateringNotifications": "Send push notification when watering is complete",
-      "samplingIntervalRemoved": "Sampling interval has been removed"
+      "intervalHours": "Reading interval (hours)",
+      "decreaseInterval": "Decrease reading interval",
+      "increaseInterval": "Increase reading interval",
+      "intervalFirmwareHint": "Choose 1–24 hours. After changing this interval, generate and upload the updated board code.",
+      "pumpCooldownMinutes": "Automatic watering cooldown (minutes)",
+      "pumpCooldownHint": "Choose 1–32767 minutes (default 60). The server applies this value when the board next checks for watering tasks. It does not change watering duration.",
+      "pumpCooldownInvalid": "Enter a whole number from 1 to 32767."
     }
   }
 }

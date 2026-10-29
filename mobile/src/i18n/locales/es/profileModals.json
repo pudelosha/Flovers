@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Enviando..."
+      "sending": "Enviando...",
+      "deleting": "Eliminando…"
     },
     "support": {
       "copyToMe": "Envíame también una copia al correo electrónico"
@@ -51,8 +52,10 @@
       "bugSent": "El reporte de error ha sido enviado. Gracias.",
       "couldNotSendContact": "No se pudo enviar el mensaje. Inténtalo de nuevo.",
       "couldNotSendBug": "No se pudo enviar el reporte de error. Inténtalo de nuevo.",
-      "deleteNotImplemented": "La eliminación de cuentas no está disponible aún.",
-      "requestTimedOut": "Tiempo de espera agotado. Inténtalo de nuevo."
+      "requestTimedOut": "Tiempo de espera agotado. Inténtalo de nuevo.",
+      "incorrectPassword": "La contraseña actual es incorrecta.",
+      "couldNotDeleteAccount": "No se ha podido eliminar tu cuenta. Inténtalo de nuevo.",
+      "deleteAccountBlocked": "No se ha podido completar la eliminación. Contacta con soporte."
     }
   }
 }

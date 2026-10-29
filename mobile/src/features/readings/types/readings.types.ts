@@ -102,6 +102,7 @@ export type ApiReadingDeviceCreatePayload = {
   notes?: string;
   is_active?: boolean;
   interval_hours?: number; // 1..24
+  pump_cooldown_minutes?: number;
   sensors: {
     temperature: boolean;
     humidity: boolean;
@@ -148,6 +149,7 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
   notes: string | null;
   is_active: boolean;
   interval_hours: number;
+  pump_cooldown_minutes: number;
   sensors: {
     temperature?: boolean;
     humidity?: boolean;

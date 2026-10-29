@@ -30,7 +30,7 @@
         "body": [
           "El menú de cada recordatorio permite editarlo, pausarlo, reanudarlo o eliminarlo.",
           "Puedes cambiar la frecuencia, el tipo de cuidado, la planta asociada y otros ajustes disponibles para ese recordatorio.",
-          "La eliminación es permanente. El recordatorio dejará de generar tareas nuevas.",
+          "Eliminar un recordatorio borra definitivamente todas sus tareas, incluido el historial completado y las notas. No se generarán más tareas. Ponlo en pausa si quieres conservar el historial.",
           "La pausa conserva el recordatorio, pero retira su tarea pendiente de Inicio y de las notificaciones diarias por correo o push. Al reanudarlo, Flovers programa la próxima tarea según su intervalo."
         ]
       },
@@ -56,7 +56,7 @@
         "body": [
           "Un recordatorio define un cuidado recurrente, por ejemplo regar cada 7 días.",
           "Flovers crea las tareas correspondientes y las muestra en Inicio para que las completes.",
-          "Cuando completas una, programa la siguiente según el intervalo del recordatorio. Así el seguimiento continúa automáticamente."
+          "La siguiente tarea se calcula desde la fecha de finalización elegida, según el intervalo del recordatorio. Si hace falta, se repite el intervalo hasta obtener una fecha posterior a hoy."
         ]
       },
       {
@@ -64,7 +64,8 @@
         "body": [
           "Los recordatorios ayudan a mantener una rutina, pero no garantizan la salud de las plantas. Las condiciones reales pueden exigir cambiar los intervalos.",
           "Si cambia la estación, la luz, el sustrato o el tamaño de la maceta, revisa tus recordatorios.",
-          "Para consultar las tareas completadas y sus notas, abre el historial de tareas, explicado en una página propia."
+          "Para consultar las tareas completadas y sus notas, abre el historial de tareas, explicado en una página propia.",
+          "Cada planta solo puede tener un recordatorio por tipo de cuidado. Edita el existente en lugar de añadir otro del mismo tipo."
         ]
       },
       {

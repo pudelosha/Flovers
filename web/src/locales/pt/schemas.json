@@ -82,7 +82,9 @@
     "title": "Consultar pedidos: POST pump-next-task",
     "desc": [
       "Esse endpoint atende aos dispositivos com bomba.",
-      "O dispositivo consulta se há um pedido manual feito no aplicativo. A resposta informa:"
+      "O dispositivo consulta se há um pedido manual feito no aplicativo. A resposta informa:",
+      "Define supports_manual_duration como true apenas se o firmware ler duration_seconds para a rega manual. O exemplo gerado suporta esta função. A rega automática mantém PUMP_RUN_MS do sketch.",
+      "Escolhe 1–300 segundos para a rega manual e usa o firmware gerado atualizado. A rega automática continua a usar PUMP_RUN_MS do sketch. Um pedido manual não recolhido expira após duas horas."
     ],
     "items": [
       "se a bomba deve ligar agora",
@@ -122,9 +124,10 @@
     "desc": [
       "Você pode gerar o código do dispositivo escolhido no aplicativo.",
       "Ele inclui os endpoints da API, as credenciais (secret e device_key), o ID do dispositivo e as configurações dos sensores e da bomba.",
-      "Com uma bomba configurada, o código gerado gerencia as leituras e a rega. Ele verifica os comandos manuais separadamente do envio horário das leituras. Para regar automaticamente, consulta as configurações do aplicativo e pede autorização ao servidor antes de ligar a bomba."
+      "Define supports_manual_duration como true apenas se o firmware ler duration_seconds para a rega manual. O exemplo gerado suporta esta função. A rega automática mantém PUMP_RUN_MS do sketch.",
+      "As leituras são enviadas de hora a hora por predefinição. O formulário permite intervalos de 1–24 horas; depois carrega o firmware regenerado. Os pedidos manuais são consultados à parte, a cada minuto por predefinição."
     ],
-    "adjustIntro": "Antes de enviar o código à placa, ajuste estes valores ao seu hardware:",
+    "adjustIntro": "Antes de carregar, revê Wi-Fi, pinos, calibração de humidade, PUMP_RUN_MS e intervalos de consulta. Define a pausa automática online no formulário do dispositivo.",
     "adjustItems": [
       "SSID e senha do Wi-Fi",
       "SDA_PIN e SCL_PIN",
@@ -134,14 +137,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — apenas recurso local; online aplica-se a pausa do formulário do dispositivo"
     ],
     "codeLabel": "Programa de exemplo: sensores e controle da bomba"
   },
   "behavior": {
     "title": "Leituras e rega, passo a passo",
     "fullCycle": {
-      "title": "Ciclo de leitura",
+      "title": "Ciclo completo de leitura",
       "desc": "A cada SEND_INTERVAL_MS, a placa:",
       "items": [
         "lê os sensores",
@@ -169,7 +172,8 @@
       "title": "Rega automática",
       "desc": [
         "Você ativa e configura a rega automática no aplicativo.",
-        "A placa só rega automaticamente se:"
+        "A placa só rega automaticamente se:",
+        "Define a pausa da rega automática no formulário do dispositivo: 1–32767 minutos, com 60 por predefinição. A placa recebe-a numa consulta posterior e o servidor também a aplica. AUTO_PUMP_MIN_INTERVAL_MS é apenas um valor local de recurso."
       ],
       "items": [
         "a opção de bomba estiver ativada",
@@ -185,7 +189,8 @@
       "desc": [
         "Você pede a rega manual pelo aplicativo.",
         "O pedido é executado sem verificar:",
-        "A placa trata o pedido como uma ordem explícita para ligar a bomba uma vez, sem avaliar as condições da rega automática."
+        "A placa trata o pedido como uma ordem explícita para ligar a bomba uma vez, sem avaliar as condições da rega automática.",
+        "Escolhe 1–300 segundos para a rega manual e usa o firmware gerado atualizado. A rega automática continua a usar PUMP_RUN_MS do sketch. Um pedido manual não recolhido expira após duas horas."
       ],
       "items": [
         "umidade atual do solo",

@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Invio…"
+      "sending": "Invio…",
+      "deleting": "Eliminazione…"
     },
     "support": {
       "copyToMe": "Inviami anche una copia via email"
@@ -51,8 +52,10 @@
       "bugSent": "La segnalazione del bug è stata inviata. Grazie.",
       "couldNotSendContact": "Impossibile inviare il messaggio. Riprova.",
       "couldNotSendBug": "Impossibile inviare la segnalazione del bug. Riprova.",
-      "deleteNotImplemented": "L'eliminazione dell'account non è ancora disponibile.",
-      "requestTimedOut": "Tempo scaduto. Riprova."
+      "requestTimedOut": "Tempo scaduto. Riprova.",
+      "incorrectPassword": "La password attuale non è corretta.",
+      "couldNotDeleteAccount": "Non è stato possibile eliminare il tuo account. Riprova.",
+      "deleteAccountBlocked": "Non è stato possibile eliminare l’account. Contatta l’assistenza."
     }
   }
 }

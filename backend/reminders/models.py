@@ -265,6 +265,8 @@ class ReminderTask(models.Model):
         current.save(update_fields=["status", "completed_at", "completed_by", "updated_at", "note", "completed_event"])
         from profiles.progression import award_task_completion
         award_task_completion(current, receipt_now, actor=actor)
+        from sharing.notifications import queue_shared_care_notification
+        queue_shared_care_notification(current, plant, actor)
         self.__dict__.update(current.__dict__)
 
         rem = reminder

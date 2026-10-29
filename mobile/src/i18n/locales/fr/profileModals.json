@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Envoi…"
+      "sending": "Envoi…",
+      "deleting": "Suppression…"
     },
     "support": {
       "copyToMe": "M’envoyer également une copie par e-mail"
@@ -51,8 +52,10 @@
       "bugSent": "Le signalement de bug a été envoyé. Merci.",
       "couldNotSendContact": "Impossible d’envoyer le message. Réessayez.",
       "couldNotSendBug": "Impossible d’envoyer le signalement de bug. Réessayez.",
-      "deleteNotImplemented": "La suppression de compte n’est pas encore disponible.",
-      "requestTimedOut": "Délai dépassé. Réessayez."
+      "requestTimedOut": "Délai dépassé. Réessayez.",
+      "incorrectPassword": "Le mot de passe actuel est incorrect.",
+      "couldNotDeleteAccount": "Impossible de supprimer ton compte. Réessaie.",
+      "deleteAccountBlocked": "La suppression du compte n’a pas pu aboutir. Contacte l’assistance."
     }
   }
 }

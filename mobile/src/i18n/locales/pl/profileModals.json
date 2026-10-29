@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Wysyłanie…"
+      "sending": "Wysyłanie…",
+      "deleting": "Usuwanie…"
     },
     "support": {
       "copyToMe": "Wyślij mi też kopię na email"
@@ -40,24 +41,21 @@
       "enterCurrentPassword": "Wpisz aktualne hasło.",
       "emailUpdated": "Email został zaktualizowany.",
       "couldNotChangeEmail": "Nie udało się zmienić emaila. Sprawdź hasło i spróbuj ponownie.",
-
       "enterNewPassword": "Wpisz nowe hasło.",
       "passwordsDoNotMatch": "Nowe hasła nie są zgodne.",
       "passwordUpdated": "Hasło zostało zaktualizowane.",
       "couldNotChangePassword": "Nie udało się zmienić hasła. Sprawdź aktualne hasło i spróbuj ponownie.",
-
       "enterSubject": "Wpisz temat.",
       "enterMessage": "Wpisz wiadomość.",
       "enterDescription": "Opisz problem.",
-
       "contactSent": "Wiadomość została wysłana. Odezwiemy się wkrótce.",
       "bugSent": "Zgłoszenie błędu zostało wysłane. Dziękujemy.",
       "couldNotSendContact": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
       "couldNotSendBug": "Nie udało się wysłać zgłoszenia błędu. Spróbuj ponownie.",
-
-      "deleteNotImplemented": "Usuwanie konta nie jest jeszcze dostępne.",
-
-      "requestTimedOut": "Przekroczono limit czasu. Spróbuj ponownie."
+      "requestTimedOut": "Przekroczono limit czasu. Spróbuj ponownie.",
+      "incorrectPassword": "Obecne hasło jest nieprawidłowe.",
+      "couldNotDeleteAccount": "Nie udało się usunąć konta. Spróbuj ponownie.",
+      "deleteAccountBlocked": "Nie można teraz usunąć konta. Skontaktuj się z pomocą."
     }
   }
 }

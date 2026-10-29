@@ -1,3 +1,4 @@
+import { getDisplayTemperature } from "../../../shared/utils/temperature";
 import React, { useCallback, useMemo } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
@@ -60,55 +61,6 @@ function formatDateBySettings(d: Date, settings?: any) {
   if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
 
   return `${dd}.${mm}.${yyyy}`;
-}
-
-function getTemperatureUnitFromSettings(settings?: any): "C" | "F" {
-  const raw =
-    settings?.temperatureUnit ??
-    settings?.tempUnit ??
-    settings?.units?.temperature ??
-    "C";
-
-  const normalized = String(raw).trim().toLowerCase();
-
-  if (
-    normalized === "f" ||
-    normalized === "°f" ||
-    normalized === "fahrenheit"
-  ) {
-    return "F";
-  }
-
-  return "C";
-}
-
-function celsiusToFahrenheit(celsius: number) {
-  return (celsius * 9) / 5 + 32;
-}
-
-function getDisplayTemperature(
-  value: number | null | undefined,
-  settings?: any
-): { value: number | null; unit: string; decimals: number } {
-  if (value === null || value === undefined) {
-    return { value: null, unit: "°C", decimals: 1 };
-  }
-
-  const unitPref = getTemperatureUnitFromSettings(settings);
-
-  if (unitPref === "F") {
-    return {
-      value: celsiusToFahrenheit(value),
-      unit: "°F",
-      decimals: 1,
-    };
-  }
-
-  return {
-    value,
-    unit: "°C",
-    decimals: 1,
-  };
 }
 
 function MetricColPressable({

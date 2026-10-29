@@ -74,7 +74,9 @@
         "body": [
           "«Vincular dispositivo» permite dar de alta un dispositivo de medición y asociarlo a una planta.",
           "Puedes configurar su nombre, la planta, la activación, el intervalo de lecturas, los sensores, las alertas de suelo seco por correo o push, la bomba, el riego automático, su umbral de humedad y los avisos al terminar el riego.",
-          "Cada dispositivo recibe una Device Key. La cuenta también tiene una Auth Secret Key. Juntas permiten al dispositivo comunicarse con los servidores."
+          "Cada dispositivo recibe una Device Key. La cuenta también tiene una Auth Secret Key. Juntas permiten al dispositivo comunicarse con los servidores.",
+          "Configura el intervalo entre 1 y 24 horas enteras. Después de cambiarlo, regenera el sketch y súbelo a la placa: el programa en ejecución no recibe ese valor automáticamente.",
+          "Configura la pausa del riego automático en el formulario del dispositivo: 1–32767 minutos, 60 por defecto. La placa la recibe en una consulta posterior y el servidor también la aplica. AUTO_PUMP_MIN_INTERVAL_MS es solo un valor local de respaldo."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "La placa consulta el servidor. Si encuentra una orden y su programa controla la bomba, puede ejecutarla y comunicar el resultado.",
           "El riego manual no tiene en cuenta la humedad actual, el umbral del riego automático ni la pausa entre riegos automáticos.",
           "Se considera una instrucción expresa por tu parte.",
-          "Puedes cancelar la solicitud antes de que el dispositivo la recoja."
+          "Puedes cancelar la solicitud antes de que el dispositivo la recoja.",
+          "Elige de 1 a 300 segundos para el riego manual y usa el firmware generado actualizado. El riego automático sigue usando PUMP_RUN_MS del sketch. Una solicitud manual no recogida caduca en dos horas."
         ]
       },
       {
         "heading": "Cuándo se ejecuta la solicitud",
         "body": [
           "El código generado separa el envío de lecturas de la búsqueda de solicitudes manuales.",
-          "Por defecto, envía las medidas una vez por hora.",
+          "Las lecturas se envían cada hora por defecto. El formulario permite intervalos de 1–24 horas; después debes subir el firmware regenerado. Los pedidos de riego manual se consultan aparte, cada minuto por defecto.",
           "Las condiciones del riego automático se comprueban en ese ciclo horario.",
           "Las solicitudes manuales se consultan más a menudo: una vez por minuto de forma predeterminada.",
           "Así pueden ejecutarse antes sin enviar todas las lecturas cada minuto.",
@@ -134,7 +137,7 @@
           "La placa pide al servidor los ajustes actuales, incluido si está activado el riego automático y qué umbral debe usar.",
           "Si está activado y la humedad está por debajo del umbral, puede arrancar la bomba con autorización del servidor.",
           "Requiere una bomba y un sensor de humedad habilitados, arranque automático activado, un umbral válido, un dispositivo activo y confirmación del servidor.",
-          "Una pausa entre riegos evita encender la bomba con demasiada frecuencia.",
+          "Configura la pausa del riego automático en el formulario del dispositivo: 1–32767 minutos, 60 por defecto. La placa la recibe en una consulta posterior y el servidor también la aplica. AUTO_PUMP_MIN_INTERVAL_MS es solo un valor local de respaldo.",
           "El riego manual tiene prioridad. Si se ejecuta, se omite el automático durante ese ciclo."
         ]
       },
@@ -183,8 +186,8 @@
           "El código es una base que puedes adaptar para placas de tipo ESP32.",
           "Gestiona Wi-Fi, sincronización horaria, inicialización y lectura de sensores, envío de medidas, solicitudes manuales, ajustes automáticos del servidor, control de la bomba y comunicación del resultado.",
           "El envío de lecturas y la búsqueda de solicitudes manuales se gestionan por separado.",
-          "Por defecto, las lecturas se envían cada hora y las solicitudes manuales se buscan cada minuto.",
-          "Revisa y adapta el código a tu placa, pines, calibración, relé de la bomba y cableado."
+          "Las lecturas se envían cada hora por defecto. El formulario permite intervalos de 1–24 horas; después debes subir el firmware regenerado. Los pedidos de riego manual se consultan aparte, cada minuto por defecto.",
+          "Antes de subir el programa revisa Wi-Fi, pines, calibración de humedad, PUMP_RUN_MS e intervalos de consulta. Configura la pausa automática en línea en el formulario del dispositivo."
         ]
       },
       {

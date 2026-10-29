@@ -10,7 +10,8 @@
     "signUp": "注册",
     "errors": {
       "invalidCredentials": "无效的电子邮件或密码。",
-      "generic": "出了点问题，请再试一次。"
+      "generic": "出了点问题，请再试一次。",
+      "accountNotActivated": "请先验证邮箱再登录。如果未收到邮件，请使用此页面的重新发送激活邮件选项。"
     },
     "success": {
       "welcome": "欢迎回来！"

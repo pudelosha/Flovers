@@ -71,7 +71,52 @@ rows are backfilled with their known pre-sharing owner. Completed history and
 idempotent completion responses remain scoped to the immutable event plant,
 even if a reminder is later moved to another plant.
 
+## Scheduled caregiver reminders
+
+Scheduled caregiver reminders are controlled separately in Profile → Notifications
+under Email and Phone. The `email_shared_due` and `push_shared_due` Profile fields
+default to false and include due-today tasks on plants shared with that user.
+They work independently of own-plant daily summaries and use the same channel
+delivery time and recipient timezone. A channel sends one combined due-today
+summary according to the own/shared scopes selected for that channel.
+
+Any active visible share, including view-only access, can contribute tasks. The
+scheduler and sender both check active sharing, canonical task ownership, pending
+status and active reminders. Revoked/expired access, removed contacts and disabled
+accounts stop shared tasks contributing to notifications. The next-day follow-up
+remains limited to tasks on plants owned by the recipient.
+
+## Caregiver completion notifications
+
+Owners independently enable email and push in Profile → Notifications → Shared.
+Both default to false. `GET/PATCH /profile/notifications/` exposes
+`shared_task_email` and `shared_task_push`. These account-wide preferences apply
+to every plant the owner shares, independently of daily summary settings.
+The sharing form/API do not store or change notification consent.
+Only a newly completed task by an authorized caregiver queues notifications;
+owner completions and repeated completion requests do not queue additional work.
+
+The completion transaction creates one durable outbox record per task/channel.
+After commit, Celery dispatches it; the minute-based beat sweep recovers broker
+outages and retries failed channels. Workers recheck preferences and owner status,
+use conditional claims, and skip records older than 24 hours. Push targets active
+Android and iOS devices; email and push open the affected plant's task history.
+SMTP/FCM acceptance cannot commit atomically with the database: a worker crash
+after provider acceptance may still cause a repeat when its lease is recovered.
+
+Task history exposes `completed_by: {id, name}`. Requesters see their own name/email,
+and accepted contacts see their private alias or the actor's name/email. Unrelated
+caregivers see only a public name/Flovers ID. The mobile history shows this actor
+in a third metadata row, and displays saved notes without expansion controls.
+
 ## Deployment and validation
+
+Apply `sharing.0002_sharedcarenotification` and
+`profiles.0017_profilenotifications_shared_task_email_and_more`, followed by
+`profiles.0018_profilenotifications_shared_due`, before
+starting the updated web/worker/beat containers. Existing notification preferences
+remain off until an owner opts in. Keep the Celery worker and beat running for
+delivery and recovery; no additional notification service is needed.
 
 Apply `sharing.0001_initial` and `reminders.0006_remindertask_completed_by` through
 the existing backend migration step before installing the connected mobile build.

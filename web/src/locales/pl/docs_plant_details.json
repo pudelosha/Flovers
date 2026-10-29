@@ -22,7 +22,7 @@
         "body": [
           "Dotknij trzech kropek przy nagłówku rośliny, aby otworzyć jej menu.",
           "Możesz tu otworzyć opis gatunku, jeśli jest przypisany, edytować dane rośliny, zmienić zdjęcie lub przejść do Przypomnień dotyczących tej rośliny.",
-          "Możesz zastąpić domyślne zdjęcie własnym zdjęciem z telefonu albo usunąć zdjęcie."
+          "Usunięcie własnego zdjęcia kasuje jego lokalną kopię. Jeśli definicja rośliny ma zdjęcie katalogowe, zostanie ono ponownie wyświetlone."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Jeśli do rośliny przypiszesz urządzenie pomiarowe, zobaczysz tutaj najnowsze odczyty z jego czujników.",
           "Aplikacja obsługuje temperaturę powietrza, wilgotność powietrza i gleby oraz natężenie światła.",
           "Przy ostatnich wartościach znajdziesz informację o czasie pomiaru.",
-          "Dotknij kafelka z odczytami, aby otworzyć Historię odczytów. Jeśli urządzenie jest przypisane do rośliny, zobaczysz wykresy temperatury, wilgotności powietrza i gleby oraz światła z podsumowaniami dziennymi, tygodniowymi i miesięcznymi."
+          "Dotknij wartości lub ikony konkretnego pomiaru, aby otworzyć jego historię. Dotknięcie tytułu albo tła tego kafelka nie otwiera wykresu."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Na dole ekranu znajdziesz indywidualny kod QR rośliny.",
           "Zeskanuj go w Skanerze, aby od razu otworzyć Szczegóły tej rośliny.",
-          "Kod możesz zapisać na urządzeniu lub wysłać e-mailem, a następnie wydrukować i przykleić do doniczki."
+          "Kod możesz zapisać na urządzeniu lub wysłać e-mailem, a następnie wydrukować i przykleić do doniczki.",
+          "Kod QR zawiera unikalne odwołanie do rośliny, a nie jej liczbowy identyfikator w bazie danych."
         ]
       },
       {

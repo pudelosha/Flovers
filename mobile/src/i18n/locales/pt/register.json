@@ -13,7 +13,7 @@
       "invalidEmail": "Digite um endereço de email válido.",
       "shortPassword": "A senha deve ter pelo menos 8 caracteres.",
       "passwordsMismatch": "As senhas não são idênticas.",
-      "termsRequired": "Você deve aceitar os termos de uso.",
+      "termsRequired": "Tens de aceitar os Termos e condições e a Política de privacidade.",
       "incompleteForm": "Por favor, preencha o formulário.",
       "emailTaken": "Este endereço de e-mail já está em uso.",
       "registrationFailed": "Falha no registro. Tente novamente.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Conta criada. Bem-vindo!"
-    }
+    },
+    "termsAnd": "e",
+    "privacyLink": "Política de privacidade"
   }
 }

@@ -74,7 +74,9 @@
         "body": [
           "Bağlantı cihazı, yeni bir okuma cihazı kurmak ve onu bir ev bitkisiyle ilişkilendirmek için kullanılır.",
           "Kurulum sırasında cihaz adını, bağlantılı ev bitkisini, etkin veya devre dışı durumunu, okuma aralığını, etkin sensörleri, düşük toprak nemi uyarılarını, düşük toprak nemi için e-posta ve anlık bildirimleri, su pompası desteğini, otomatik pompa başlatmayı, otomatik sulama toprağı nem eşiğini ve sulama tamamlandıktan sonra e-posta ve anlık bildirimleri yapılandırabilirsiniz.",
-          "Her cihaz, oluşturulan bir Cihaz Anahtarını alır. Kullanıcı hesabının ayrıca bir Kimlik Doğrulama Gizli Anahtarı vardır. Bu kimlik bilgileri birlikte, fiziksel cihazın arka uçla iletişim kurmasına olanak tanır."
+          "Her cihaz, oluşturulan bir Cihaz Anahtarını alır. Kullanıcı hesabının ayrıca bir Kimlik Doğrulama Gizli Anahtarı vardır. Bu kimlik bilgileri birlikte, fiziksel cihazın arka uçla iletişim kurmasına olanak tanır.",
+          "Ölçüm aralığını 1–24 tam saat olarak ayarlayın. Değişiklikten sonra sketch’i yeniden oluşturup karta yükleyin; çalışan program bu değeri otomatik almaz.",
+          "Otomatik sulama beklemesini cihaz formunda 1–32767 dakika olarak ayarlayın; varsayılan 60’tır. Kart bunu sonraki sorguda alır ve sunucu da uygular. AUTO_PUMP_MIN_INTERVAL_MS yalnızca yerel yedek değerdir."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "Fiziksel kart, bekleyen manuel sulama görevleri için arka ucu kontrol eder. Bekleyen bir görev mevcutsa ve kartta pompa kontrol mantığı varsa, pompayı çalıştırabilir ve tamamlandığını arka uca bildirebilir.",
           "Manuel programlı sulama, mevcut toprak nemi değerini, otomatik sulama eşiğini ve otomatik sulama soğuma süresini dikkate almaz.",
           "Bu, manuel sulamanın açık bir kullanıcı isteği olarak ele alındığı anlamına gelir.",
-          "Planlanmış bir manuel sulama talebi, cihaz bunu almadan önce de geri çağrılabilir."
+          "Planlanmış bir manuel sulama talebi, cihaz bunu almadan önce de geri çağrılabilir.",
+          "Elle sulama için 1–300 saniye seçin ve güncel oluşturulan firmware’i kullanın. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini kullanmayı sürdürür. Alınmayan elle sulama isteği iki saatte sona erer."
         ]
       },
       {
         "heading": "Manuel sulama görevi zamanlaması",
         "body": [
           "Oluşturulan cihaz kodu, sensör okumaları ve manuel sulama kontrolleri için ayrı zamanlama kullanır.",
-          "Varsayılan olarak sensör okumaları saatte bir gönderilir.",
+          "Ölçümler varsayılan olarak saatte bir gönderilir. Cihaz formunda 1–24 saat seçilir; değişiklikten sonra yeniden oluşturulan firmware’i yükleyin. Elle sulama istekleri ayrı olarak, varsayılan dakikada bir denetlenir.",
           "Otomatik sulama kontrolleri saatlik okuma döngüsünün bir parçası olarak gerçekleşir.",
           "Bekleyen manuel sulama görevleri, varsayılan olarak dakikada bir kez olmak üzere daha sık kontrol edilir.",
           "Bu, her dakika sensör okumaları gönderilmeden manuel sulama taleplerinin daha hızlı alınmasını sağlar.",
@@ -134,7 +137,7 @@
           "Kart, arka uçtan otomatik sulamanın etkinleştirilip etkinleştirilmediği ve hangi eşiğin kullanılması gerektiği de dahil olmak üzere mevcut pompa yapılandırmasını sorar.",
           "Otomatik sulama etkinleştirilirse ve mevcut toprak nemi yapılandırılan eşiğin altındaysa kart, pompayı çalıştırabilir.",
           "Otomatik sulama, su pompası desteğinin etkinleştirilmesine, toprak nemi sensörünün etkinleştirilmesine, otomatik pompa başlatmanın etkinleştirilmesine, geçerli bir toprak nemi eşiğine, cihazın etkin olmasına ve mevcut pompa ayarlarının arka uç onayına bağlıdır.",
-          "Otomatik sulamanın, pompanın çok sık etkinleştirilmesini önlemek için bir soğuma süresi vardır.",
+          "Otomatik sulama beklemesini cihaz formunda 1–32767 dakika olarak ayarlayın; varsayılan 60’tır. Kart bunu sonraki sorguda alır ve sunucu da uygular. AUTO_PUMP_MIN_INTERVAL_MS yalnızca yerel yedek değerdir.",
           "Aynı döngüde manuel sulamanın otomatik sulamaya göre önceliği vardır. Manuel sulama çalışıyorsa, o döngü için otomatik sulama atlanır."
         ]
       },
@@ -183,8 +186,8 @@
           "Oluşturulan kod, ESP32 tarzı kartlar için düzenlemeye hazır bir başlangıç noktası olarak tasarlanmıştır.",
           "Wi-Fi bağlantısı mantığını, zaman senkronizasyonunu, sensörü başlatmayı, etkin sensörleri okumayı, sensör okumalarını arka uca göndermeyi, manuel sulama görevlerini kontrol etmeyi, arka uç kontrollü otomatik sulama ayarlarını kontrol etmeyi, gerektiğinde bir pompayı çalıştırmayı ve pompanın tamamlandığını raporlamayı içerir.",
           "Oluşturulan kod, okuma yükleme ve manuel sulama görevi kontrollerini ayrı tutar.",
-          "Varsayılan olarak sensör okumaları saatlik olarak gönderilirken manuel sulama görevleri dakikada bir kontrol edilir.",
-          "Kullanıcılar oluşturulan kodu kendi donanımlarına, pinlerine, kalibrasyon değerlerine, pompa röle kablolarına ve kart tipine göre incelemeli ve ayarlamalıdır."
+          "Ölçümler varsayılan olarak saatte bir gönderilir. Cihaz formunda 1–24 saat seçilir; değişiklikten sonra yeniden oluşturulan firmware’i yükleyin. Elle sulama istekleri ayrı olarak, varsayılan dakikada bir denetlenir.",
+          "Yüklemeden önce Wi-Fi, pinler, nem kalibrasyonu, PUMP_RUN_MS ve sorgu aralıklarını kontrol edin. Çevrimiçi otomatik sulama beklemesini cihaz formundan ayarlayın."
         ]
       },
       {

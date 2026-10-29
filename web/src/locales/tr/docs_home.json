@@ -7,21 +7,21 @@
         "body": [
           "Ana sayfa, başarılı bir giriş yaptıktan sonra göreceğiniz ana ekrandır.",
           "Günlük çalışmanıza odaklanır: hatırlatıcılarınızdan oluşturulan görevlere, böylece bugün nelere dikkat edilmesi gerektiğini veya nelerin gecikmiş olduğunu hızlı bir şekilde görebilirsiniz.",
-          "Zamanı gelen görev yoksa, ekranda o anda hiçbir şeyin planlanmadığını açıklayan ve hatırlatıcı oluşturma gibi sonraki adımları öneren bir bilgi kutusu görüntülenir."
+          "Ana sayfa, gelecekteki görevleri de içeren Tümü görünümünde açılır. Boş kart, mevcut görünüm ve filtrelere uyan bekleyen görev olmadığını gösterir."
         ]
       },
       {
         "heading": "Görev listesi (hatırlatıcılardan oluşturulan kutucuklar)",
         "body": [
           "Her kutucuk, bir Hatırlatma tanımından oluşturulan tek bir Görevi temsil eder (örneğin: Sulama, Sisleme, Gübreleme, Saksı Değiştirme veya genel Bakım).",
-          "Görevler, Hatırlatıcıda tanımlanan yinelenme kurallarına göre vadeleri geldiğinde otomatik olarak görünür.",
+          "Hatırlatma oluşturulunca tarihi ileride olsa bile bekleyen görev hemen oluşur. Görev tamamlanınca sıradaki görev hemen planlanır.",
           "Her kutucukta genellikle görev türü, ev bitkisi adı, konum ve vade durumu (Bugün Vadesi Gelmiş veya Vadesi Gecikmiş gibi) gösterilir."
         ]
       },
       {
         "heading": "Görev kutucuğu menüsü (görev başına eylemler)",
         "body": [
-          "Her görev kutucuğu, söz konusu görevle ilgili eylemlerin yer aldığı bir bağlam menüsü (üç noktalı menü) içerir.",
+          "İşlem menüsünü açmak için görev kartının ana bölümüne dokunun.",
           "Tamamlandı olarak işaretle: görevi kapatır ve isteğe bağlı olarak bir not eklemenize olanak tanıyarak ayrıntılı bir bakım geçmişi oluşturmanıza yardımcı olur.",
           "Hatırlatıcıyı düzenle: görevle ilişkili Hatırlatıcıyı açar, böylece yinelenme ayarlarını değiştirebilirsiniz.",
           "Ev bitkisine git: İlgili ev bitkisinin doğrudan ev bitkisi Ayrıntıları görünümüne gider.",
@@ -59,9 +59,9 @@
         "body": [
           "Toplu tamamlama, hızlı kısayol görünümleri kullanıldığında kullanılabilir: Gecikmiş olanı göster veya Son tarihi bugün göster.",
           "Bu kısayol filtrelerinden biri etkin olduğunda, Kayan Eylem Düğmesi geçici olarak \"Görünür olarak tamamlandı olarak işaretle\" gibi ek bir eylemi görüntüler.",
-          "Bu eylem, tek tek görevlerin manuel olarak seçilmesini gerektirmeden, o anda görünür olan tüm görevleri bir kerede kapatır.",
+          "Toplu tamamlama yalnızca tamamlamaya yetkili olduğunuz görünür görevleri kapsar. Salt görüntüleme erişimiyle paylaşılan görevler hariç tutulur.",
           "Toplu tamamlama, aynı bakım işlemini birden fazla ev bitkisi için tek oturumda gerçekleştirdiğiniz durumlar için tasarlanmıştır.",
-          "Seçtiğiniz akışa bağlı olarak toplu işlemden sonra tamamlanan görevlere notlar ekleyebilirsiniz."
+          "Onaylamadan önce tüm görevler için ortak tamamlama tarihi ve isteğe bağlı not seçin. Kaydedilen tamamlama notları şu anda sonradan düzenlenemez."
         ]
       },
       {

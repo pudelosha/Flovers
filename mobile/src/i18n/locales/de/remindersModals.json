@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Erinnerung löschen",
       "areYouSurePrefix": "Sind Sie sicher, dass Sie löschen möchten",
-      "areYouSureSuffix": "? Dieser Vorgang kann nicht rückgängig gemacht werden."
+      "areYouSureSuffix": "? Dieser Vorgang kann nicht rückgängig gemacht werden.",
+      "historyWarning": "Wenn du diese Erinnerung löschst, werden auch alle zugehörigen Aufgaben dauerhaft gelöscht, einschließlich erledigter Aufgaben und Notizen."
     },
     "edit": {
       "titleCreate": "Erinnerung hinzufügen",
@@ -59,8 +60,8 @@
     "toggle": {
       "pauseTitle": "Erinnerung pausieren",
       "resumeTitle": "Erinnerung fortsetzen",
-      "pauseBody": "Diese Erinnerung f\u00fcr {{name}} pausieren? Die f\u00e4llige Aufgabe wird ausgeblendet, bis du sie fortsetzt.",
-      "resumeBody": "Diese Erinnerung f\u00fcr {{name}} fortsetzen? Die n\u00e4chste f\u00e4llige Aufgabe wird wieder angezeigt."
+      "pauseBody": "Diese Erinnerung für {{name}} pausieren? Die fällige Aufgabe wird ausgeblendet, bis du sie fortsetzt.",
+      "resumeBody": "Diese Erinnerung für {{name}} fortsetzen? Die nächste fällige Aufgabe wird wieder angezeigt."
     }
   }
 }

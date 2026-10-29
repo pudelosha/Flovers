@@ -74,7 +74,9 @@
         "body": [
           "Wybierz Połącz urządzenie, aby dodać nowe urządzenie pomiarowe i przypisać je do rośliny.",
           "Podczas konfiguracji nadajesz nazwę, wybierasz roślinę, włączasz lub wyłączasz urządzenie i ustalasz częstotliwość odczytów. Wybierasz też czujniki, alerty i powiadomienia e-mail lub push o niskiej wilgotności gleby. Jeśli korzystasz z pompy, włączasz jej obsługę, automatyczne podlewanie, próg wilgotności i powiadomienia o zakończeniu podlewania.",
-          "Każde urządzenie otrzymuje Klucz urządzenia, a twoje konto ma Tajny klucz uwierzytelniania. Te dwa klucze pozwalają płytce komunikować się z serwerem Flovers."
+          "Każde urządzenie otrzymuje Klucz urządzenia, a twoje konto ma Tajny klucz uwierzytelniania. Te dwa klucze pozwalają płytce komunikować się z serwerem Flovers.",
+          "Odstęp między odczytami ustawisz od 1 do 24 pełnych godzin. Po zmianie wygeneruj nowy szkic i wgraj go na płytkę — działający program nie pobiera tego ustawienia automatycznie.",
+          "Przerwę między automatycznymi podlewaniami ustawisz w formularzu urządzenia: od 1 do 32767 minut, domyślnie 60. Płytka pobiera ją przy kolejnym sprawdzeniu, a serwer również jej pilnuje. AUTO_PUMP_MIN_INTERVAL_MS to tylko wartość awaryjna w programie."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "Płytka sprawdza, czy czeka na nią polecenie podlewania. Jeśli takie znajdzie i ma wgrany kod do sterowania pompą, może uruchomić pompę, a po zakończeniu poinformować o tym serwer.",
           "Ręczne podlewanie nie zależy od bieżącej wilgotności gleby, progu automatycznego podlewania ani minimalnej przerwy ustawionej dla automatycznego podlewania.",
           "Jest wykonywane na twoje wyraźne polecenie.",
-          "Możesz anulować zaplanowane podlewanie, zanim urządzenie odbierze polecenie."
+          "Możesz anulować zaplanowane podlewanie, zanim urządzenie odbierze polecenie.",
+          "Dla ręcznego podlewania wybierz czas od 1 do 300 sekund. Płytka musi mieć aktualny wygenerowany program obsługujący ten parametr. Podlewanie automatyczne nadal korzysta z PUMP_RUN_MS w szkicu. Nieodebrane zlecenie ręczne wygasa po dwóch godzinach."
         ]
       },
       {
         "heading": "Kiedy urządzenie odbiera polecenie podlewania",
         "body": [
           "Wygenerowany kod osobno ustala, kiedy wysyłać odczyty, a kiedy sprawdzać polecenia ręcznego podlewania.",
-          "Domyślnie urządzenie wysyła odczyty raz na godzinę.",
+          "Odczyty domyślnie są wysyłane co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowo wygenerowany program. Zlecenia ręcznego podlewania są sprawdzane osobno, domyślnie co minutę.",
           "Przy okazji godzinowego pomiaru sprawdza też warunki automatycznego podlewania.",
           "Polecenia ręcznego podlewania sprawdza częściej: domyślnie raz na minutę.",
           "Dzięki temu szybciej reaguje na twoje polecenia bez konieczności wysyłania pomiarów co minutę.",
@@ -134,7 +137,7 @@
           "Płytka pobiera z serwera aktualne ustawienia pompy: czy automatyczne podlewanie jest włączone i jaki próg obowiązuje.",
           "Jeśli automatyczne podlewanie jest włączone, a wilgotność gleby spadnie poniżej progu, płytka może uruchomić pompę.",
           "Do działania potrzebne są: aktywne urządzenie, włączona obsługa pompy, włączony czujnik wilgotności gleby, włączone automatyczne podlewanie, poprawny próg wilgotności i potwierdzenie bieżących ustawień przez serwer.",
-          "Automatyczne podlewanie zachowuje minimalną przerwę między podlewaniami, aby pompa nie włączała się zbyt często.",
+          "Przerwę między automatycznymi podlewaniami ustawisz w formularzu urządzenia: od 1 do 32767 minut, domyślnie 60. Płytka pobiera ją przy kolejnym sprawdzeniu, a serwer również jej pilnuje. AUTO_PUMP_MIN_INTERVAL_MS to tylko wartość awaryjna w programie.",
           "Ręczne podlewanie ma pierwszeństwo. Jeśli urządzenie wykona je w danym cyklu, pominie w nim podlewanie automatyczne."
         ]
       },
@@ -183,8 +186,8 @@
           "Wygenerowany kod to punkt wyjścia do przygotowania programu na płytkę, np. ESP32.",
           "Obsługuje połączenie z Wi-Fi, synchronizację czasu, uruchamianie czujników, odczyt pomiarów i wysyłanie ich na serwer. Sprawdza też polecenia ręcznego podlewania i ustawienia podlewania automatycznego, steruje pompą i potwierdza zakończenie podlewania.",
           "Wysyłanie odczytów i sprawdzanie poleceń ręcznego podlewania odbywa się niezależnie.",
-          "Domyślnie kod wysyła odczyty co godzinę, a polecenia ręcznego podlewania sprawdza co minutę.",
-          "Przed wgraniem kodu sprawdź go i dostosuj do swojej płytki, czujników, pinów, kalibracji i połączeń przekaźnika pompy."
+          "Odczyty domyślnie są wysyłane co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowo wygenerowany program. Zlecenia ręcznego podlewania są sprawdzane osobno, domyślnie co minutę.",
+          "Przed wgraniem sprawdź dane Wi-Fi, piny, kalibrację wilgotności, PUMP_RUN_MS i odstępy sprawdzania. Przerwę między automatycznymi podlewaniami ustaw w formularzu urządzenia."
         ]
       },
       {

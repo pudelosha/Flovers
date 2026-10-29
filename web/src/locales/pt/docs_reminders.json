@@ -30,7 +30,7 @@
         "body": [
           "Você pode editar, pausar, retomar ou excluir cada lembrete.",
           "Ao editar, pode mudar o intervalo, o tipo de tarefa, a planta e outras opções disponíveis para aquele lembrete.",
-          "A exclusão é permanente e impede que novas tarefas sejam criadas a partir do lembrete.",
+          "Eliminar um lembrete apaga permanentemente todas as suas tarefas, incluindo o histórico concluído e as notas. Não serão geradas mais tarefas. Coloca-o em pausa para conservar o histórico.",
           "Pausar interrompe o lembrete sem excluí-lo. A tarefa pendente sai do Início e dos avisos diários por e-mail e push. Ao retomar, o Flovers agenda a próxima tarefa conforme o intervalo configurado."
         ]
       },
@@ -56,7 +56,7 @@
         "body": [
           "Um lembrete define algo a repetir, como regar a cada 7 dias.",
           "O Flovers cria as tarefas e as mostra no Início para você saber o que fazer.",
-          "Ao concluir uma tarefa, a próxima é agendada automaticamente conforme o intervalo do lembrete."
+          "A tarefa seguinte é calculada a partir da data de conclusão escolhida e do intervalo do lembrete. Se necessário, o intervalo é repetido até a data ficar depois de hoje."
         ]
       },
       {
@@ -64,7 +64,8 @@
         "body": [
           "Os lembretes ajudam a manter a regularidade, mas não garantem a saúde das plantas. Ajuste os intervalos às condições reais.",
           "Se a estação, a luz, o substrato ou o tamanho do vaso mudar, confira se os lembretes ainda fazem sentido.",
-          "Para consultar e gerenciar os cuidados já realizados e as anotações, abra o Histórico de tarefas."
+          "Para consultar e gerenciar os cuidados já realizados e as anotações, abra o Histórico de tarefas.",
+          "Cada planta só pode ter um lembrete por tipo de cuidado. Edita o existente em vez de criares outro do mesmo tipo."
         ]
       },
       {

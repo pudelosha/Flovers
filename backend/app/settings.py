@@ -197,6 +197,10 @@ CELERY_BEAT_SCHEDULE = {
         "task": "profiles.tasks.check_and_send_daily_task_notifications",
         "schedule": crontab(),  # every minute
     },
+    "deliver-shared-care-notifications-every-minute": {
+        "task": "sharing.tasks.deliver_shared_care_notifications",
+        "schedule": crontab(),
+    },
 }
 
 CELERY_TIMEZONE = "UTC"

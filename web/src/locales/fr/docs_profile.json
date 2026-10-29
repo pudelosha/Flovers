@@ -14,7 +14,7 @@
         "body": [
           "La section du compte affiche notamment ton adresse e-mail et la date de création du compte.",
           "Tu peux modifier ton adresse e-mail en confirmant avec ton mot de passe actuel, changer de mot de passe, te déconnecter ou supprimer définitivement ton compte.",
-          "La suppression du compte efface toutes tes données sans possibilité de retour : plantes, rappels, tâches, relevés et appareils."
+          "Confirmez la suppression avec votre mot de passe actuel. Le compte, ses plantes, rappels, tâches, mesures et appareils seront définitivement supprimés."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Tes notifications",
         "body": [
-          "Cette section te permet de gérer tes autorisations et préférences de notifications par e-mail et push.",
-          "Pour chaque canal, tu peux activer un résumé quotidien des tâches du jour et un second rappel si des tâches restent à faire 24 heures après la première notification.",
-          "Pour chaque type de notification, choisis une heure d’envoi à l’heure pleine, par exemple 14:00."
+          "Les notifications comportent les sections E-mail, Téléphone et Partage. Les récapitulatifs quotidiens de vos propres plantes peuvent être activés séparément par e-mail et notification push, avec une heure d’envoi par canal dans le fuseau horaire des notifications de votre compte.",
+          "E-mail et Téléphone proposent aussi une case pour les tâches prévues aujourd’hui sur les plantes partagées avec vous. Ces options sont désactivées au départ, indépendantes des récapitulatifs de vos plantes et utilisent la même heure d’envoi que le canal concerné. Si les deux options sont activées, les tâches de vos plantes et des plantes partagées avec vous sont réunies dans un seul message quotidien par canal.",
+          "Ces rappels concernent les partages actifs, en lecture seule comme avec autorisation de terminer des tâches. L’accès est revérifié avant l’envoi. L’expiration du partage, le retrait de l’accès ou la suppression du contact mettent fin aux rappels.",
+          "Le rappel du lendemain concerne uniquement les tâches de vos propres plantes encore inachevées depuis hier. Il suit l’heure du canal concerné, sans attendre exactement 24 heures après la première notification.",
+          "La section Partage concerne un autre événement : quelqu’un termine une tâche pour une plante qui vous appartient. Ses cases e-mail et push sont désactivées au départ et s’appliquent à toutes les plantes que vous partagez. Ces notifications suivent la réalisation de la tâche, sans attendre le récapitulatif quotidien. Il s’agit d’un réglage du compte, pas d’une option propre à chaque partage."
         ]
       },
       {

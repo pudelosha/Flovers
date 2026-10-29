@@ -95,7 +95,10 @@ class LoginSerializer(serializers.Serializer):
             raise serializers.ValidationError({"message": _("Invalid credentials.")})
 
         if not user.is_active:
-            raise serializers.ValidationError({"message": _("Account is not activated.")})
+            raise serializers.ValidationError({
+                "message": _("Account is not activated."),
+                "code": "account_not_activated",
+            })
 
         attrs["user"] = user
         return attrs
@@ -103,6 +106,10 @@ class LoginSerializer(serializers.Serializer):
 
 class EmailOnlySerializer(serializers.Serializer):
     email = serializers.EmailField()
+
+
+class DeleteAccountSerializer(serializers.Serializer):
+    current_password = serializers.CharField(write_only=True, max_length=128, trim_whitespace=False)
 
 
 class ForgotPasswordSerializer(serializers.Serializer):

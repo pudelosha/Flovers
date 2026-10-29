@@ -1,0 +1,15 @@
+{
+  "subject": "Aufgabe für eine geteilte Pflanze erledigt",
+  "title": "Aufgabe für eine geteilte Pflanze erledigt",
+  "line1": "{actor} hat eine Aufgabe für {plant} erledigt.",
+  "details": "Aufgabe: {task}. Erledigt am {date} um {time}.",
+  "cta": "Aufgabenverlauf ansehen",
+  "push_title": "Aufgabe für eine geteilte Pflanze erledigt",
+  "types": {
+    "water": "Gießen",
+    "fertilize": "Düngen",
+    "moisture": "Besprühen",
+    "care": "Pflege",
+    "repot": "Umtopfen"
+  }
+}

@@ -108,7 +108,10 @@
       "emptyAllTitle": "Belum ada tanaman hias yang dibagikan",
       "emptyAllBody": "Bagikan tanaman hias dengan kontak atau minta seseorang untuk membagikan tanamannya kepada Anda.",
       "displayTasks": "Lihat tugas",
-      "actions": "Tindakan untuk {{name}}"
+      "actions": "Tindakan untuk {{name}}",
+      "deleteSharing": "Hentikan berbagi",
+      "deleteSharingTitle": "Hentikan berbagi?",
+      "deleteSharingBody": "Semua orang yang Anda beri akses ke {{plant}} akan kehilangan aksesnya. Tanaman dan datanya tetap tersimpan."
     },
     "form": {
       "title": "Bagikan tanaman",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "Undangan ditolak.",
       "contactsInvitationCancelled": "Undangan dibatalkan.",
       "contactsContactUpdated": "Nama kontak diperbarui.",
-      "contactsContactDeleted": "Kontak dihapus."
+      "contactsContactDeleted": "Kontak dihapus.",
+      "sharingDeleted": "Berbagi dengan semua kontak telah dihentikan."
     },
     "errors": {
       "invalid": "Masukkan alamat email yang valid atau ID Flovers.",

@@ -7,21 +7,21 @@
         "body": [
           "Beranda adalah layar utama yang Anda lihat setelah login berhasil.",
           "Ini berfokus pada pekerjaan sehari-hari Anda: tugas-tugas yang dihasilkan dari pengingat Anda, sehingga Anda dapat dengan cepat melihat apa yang perlu diperhatikan hari ini atau apa yang sudah lewat waktu.",
-          "Jika tidak ada tugas yang harus diselesaikan, layar akan menampilkan ubin informasi yang menjelaskan bahwa saat ini tidak ada tugas yang dijadwalkan dan menyarankan langkah selanjutnya, seperti membuat pengingat."
+          "Beranda dibuka pada Semua, termasuk tugas mendatang. Kartu kosong berarti tidak ada tugas tertunda yang sesuai dengan tampilan dan filter saat ini."
         ]
       },
       {
         "heading": "Daftar tugas (ubin yang dihasilkan dari pengingat)",
         "body": [
           "Setiap ubin mewakili satu Tugas yang dihasilkan dari definisi Pengingat (misalnya: Penyiraman, Gerimis, Pemupukan, Repotting, atau Perawatan umum).",
-          "Tugas muncul secara otomatis ketika sudah jatuh tempo berdasarkan aturan pengulangan yang ditentukan dalam Pengingat.",
+          "Membuat pengingat langsung menghasilkan tugas tertunda, meski tenggatnya masih lama. Saat tugas diselesaikan, tugas berikutnya langsung dijadwalkan.",
           "Setiap ubin biasanya menunjukkan jenis tugas, nama tanaman hias, lokasi, dan status jatuh tempo (seperti Jatuh Tempo hari ini atau Terlambat)."
         ]
       },
       {
         "heading": "Menu ubin tugas (tindakan per tugas)",
         "body": [
-          "Setiap ubin tugas menyertakan menu konteks (menu tiga titik) dengan tindakan yang terkait dengan tugas spesifik tersebut.",
+          "Ketuk bagian utama kartu tugas untuk membuka menu tindakannya.",
           "Tandai sebagai selesai: menutup tugas dan memungkinkan Anda menambahkan catatan secara opsional, membantu Anda membuat riwayat perawatan terperinci.",
           "Edit pengingat: membuka Pengingat yang terkait dengan tugas sehingga Anda dapat mengubah pengaturan pengulangannya.",
           "Buka tanaman hias: menavigasi langsung ke tampilan Detail tanaman hias untuk tanaman hias terkait.",
@@ -59,9 +59,9 @@
         "body": [
           "Penyelesaian massal tersedia saat menggunakan tampilan pintasan cepat: Tampilkan lewat waktu atau Tampilkan jatuh tempo hari ini.",
           "Saat salah satu filter pintasan ini aktif, Tombol Tindakan Mengambang untuk sementara menampilkan tindakan tambahan seperti “Tandai terlihat sebagai selesai”.",
-          "Tindakan ini menutup semua tugas yang terlihat saat ini sekaligus, tanpa memerlukan pemilihan tugas individual secara manual.",
+          "Penyelesaian massal hanya mencakup tugas terlihat yang boleh Anda selesaikan. Tugas yang dibagikan untuk dilihat saja tidak disertakan.",
           "Penyelesaian massal dirancang untuk situasi di mana Anda melakukan tindakan perawatan yang sama untuk beberapa tanaman hias dalam satu sesi.",
-          "Bergantung pada alur yang Anda pilih, Anda mungkin masih dapat menambahkan catatan ke tugas yang telah diselesaikan setelah tindakan massal."
+          "Sebelum konfirmasi, pilih satu tanggal penyelesaian dan catatan opsional untuk semua tugas yang disertakan. Catatan tersimpan belum bisa diedit setelahnya."
         ]
       },
       {

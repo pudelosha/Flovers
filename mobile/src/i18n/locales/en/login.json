@@ -10,7 +10,8 @@
     "signUp": "Sign Up",
     "errors": {
       "invalidCredentials": "Invalid email or password.",
-      "generic": "Something went wrong. Please try again."
+      "generic": "Something went wrong. Please try again.",
+      "accountNotActivated": "Confirm your email before signing in. If the message did not arrive, use the resend activation option on this screen."
     },
     "success": {
       "welcome": "Welcome back!"

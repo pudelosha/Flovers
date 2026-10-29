@@ -13,27 +13,25 @@
       {
         "heading": "Tamamlanan görev kutucukları",
         "body": [
-          "Her kutucuk, görev türü (örn. Sulama, Sisleme, Gübreleme), ev bitkisinin adı, konumu ve tamamlanma tarihi dahil olmak üzere tamamlanmış tek bir görevi temsil eder.",
-          "Tamamlanan görevler, görev kapatıldığında eklenen isteğe bağlı bir not içerebilir.",
-          "Notlar yalnızca kutucuk genişletildiğinde görüntülenir."
+          "Her kart tamamlanmış bir görevin bakım türünü, bitki adını ve konumunu gösterir.",
+          "Sağ sütunda üç satır bulunur: tamamlanma durumu, tarih ve görevi tamamlayan kişi. Kişi kaydedilmemişse bilinmeyen kullanıcı etiketi gösterilir.",
+          "Görev tamamlanırken kaydedilen not, görev bilgilerinin altında görünür."
         ]
       },
       {
-        "heading": "Notları görüntüleme: genişletme ve daraltma",
+        "heading": "Notları görüntüleme",
         "body": [
-          "Tamamlanan bir göreve ilişkin notu görüntülemek için kutucuğun kendisine dokunarak kutucuğu genişletebilirsiniz.",
-          "Bir göreve ilişkin notları Genişletmek veya Daraltmak için de üç nokta menüsünü kullanabilirsiniz (geçerli duruma bağlı olarak).",
-          "Bu, gerektiğinde ayrıntılı geçmişe erişmeye devam ederken listeyi kompakt tutmanıza olanak tanır."
+          "Geçmiş yüklendiğinde notlar doğrudan görünür. Uzun notlar gerektiği kadar satıra yayılır.",
+          "Görevi tamamlandı olarak işaretlerken not ekleyebilirsiniz. Notu olmayan görevlerde boş bir not alanı gösterilmez."
         ]
       },
       {
-        "heading": "Görev kutucuğu menüsü (üç nokta)",
+        "heading": "Görev kartı menüsü",
         "body": [
-          "Tamamlanan her görev kutucuğu, söz konusu geçmiş girişiyle ilgili eylemlerin yer aldığı bir bağlam menüsü sağlar.",
-          "Genişlet/Daralt: kutucuk içindeki not bölümünü gösterir veya gizler.",
-          "Hatırlatıcıyı düzenle: yinelemeyi veya ayarları ayarlayabilmeniz için görevle ilişkili Hatırlatıcıya gider.",
-          "Ev bitkisine git: Görevle bağlantılı ev bitkisinin ayrıntılarına gider.",
-          "Görevi sil: seçilen tamamlanmış görevi hesabınızdan kalıcı olarak siler."
+          "İşlem menüsünü açmak için tamamlanmış görev kartının ana bölümüne dokunun.",
+          "Hatırlatıcıyı düzenle, tekrar sıklığını veya ayarlarını değiştirmek için ilgili hatırlatıcıyı açar. Bu işlem yalnızca bitki sahibine açıktır.",
+          "Bitkiye git, görevle ilişkili bitkinin ayrıntılarını açar.",
+          "Görevi sil, seçili tamamlanmış geçmiş kaydını kalıcı olarak kaldırır. Bunu yalnızca bitki sahibi yapabilir."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "Görev Geçmişi ekranı, geçmiş listesiyle çalışmaya yönelik eylemlerin bulunduğu bir Kayan Eylem Düğmesi (FAB) içerir.",
           "Sırala: tamamlanan görevlerin sırasını değiştirir.",
           "Filtre: geçmiş listesini seçilen kriterlere göre daraltır.",
-          "Sil: Kriterlere (örneğin, seçilen bir ev bitkisine yönelik görevler, seçilen bir konuma ilişkin görevler, belirli türdeki görevler veya seçilen eşikten daha eski görevler) dayalı olarak toplu silmeyi destekler."
+          "Sil: Kriterlere (örneğin, seçilen bir ev bitkisine yönelik görevler, seçilen bir konuma ilişkin görevler, belirli türdeki görevler veya seçilen eşikten daha eski görevler) dayalı olarak toplu silmeyi destekler.",
+          "Dışa aktarımı gönder, mevcut filtrelerle e-posta üzerinden tablo gönderir; bekleyen görevler de eklenebilir. Yalnızca sahip kendi geçmişini dışa aktarabilir."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "Görev Geçmişinin Ana Sayfa'dan farkı nedir?",
         "body": [
-          "Ev, süresi dolmuş veya gecikmiş görevlere odaklanır ve mevcut işlerinizi tamamlamanıza yardımcı olur.",
+          "Ana sayfa bekleyen görevleri, Tümü görünümünde gelecektekileri de gösterir. Bugün ve Gecikenler listeyi daraltır. Geçmişte tamamlanmış görevler bulunur.",
           "Görev Geçmişi, halihazırda tamamlanmış görevlere odaklanır ve geçmiş girdilerin incelenmesini, sıralanmasını, filtrelenmesini ve silinmesini destekler.",
           "Bu ekranlar birlikte hem günlük yürütmeyi (Ana Sayfa) hem de uzun vadeli izlemeyi (Görev Geçmişi) kapsar."
         ]

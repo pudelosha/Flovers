@@ -1,0 +1,15 @@
+{
+  "subject": "Tugas tanaman yang dibagikan telah selesai",
+  "title": "Tugas tanaman yang dibagikan telah selesai",
+  "line1": "{actor} telah menyelesaikan tugas untuk {plant}.",
+  "details": "Tugas: {task}. Selesai pada {date} pukul {time}.",
+  "cta": "Lihat riwayat tugas",
+  "push_title": "Tugas tanaman yang dibagikan telah selesai",
+  "types": {
+    "water": "penyiraman",
+    "fertilize": "pemupukan",
+    "moisture": "gerimis",
+    "care": "peduli",
+    "repot": "merepoting"
+  }
+}

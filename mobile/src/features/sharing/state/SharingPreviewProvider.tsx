@@ -21,6 +21,7 @@ type SharingContextValue = SharingState & {
   savePlantSharing: (plant: ShareablePlant, recipients: SharingRecipient[]) => Promise<SharingMutationResult>;
   savePlantsSharing: (updates: PlantSharingUpdate[]) => Promise<SharingMutationResult>;
   removeShare: (id: string) => Promise<SharingMutationResult>;
+  removePlantSharing: (plant: ShareablePlant, expectedRevision: number) => Promise<SharingMutationResult>;
   /** Compatibility for an unused preview notice; this only refreshes server data. */
   resetPreview: () => void;
   toast: SharingToast | null;
@@ -118,6 +119,15 @@ function SharingSession({ identity, session, children }: { identity: string | nu
       const share = stateRef.current.snapshot?.shares.find((item) => item.id === id);
       return share ? mutate(`remove:${id}`, () => deletePlantShare(id), share.direction === "incoming" ? "plantLeft" : "accessRemoved")
         : Promise.resolve({ ok: false, reason: "notFound" });
+    },
+    removePlantSharing: (plant, expectedRevision) => {
+      const snapshot = stateRef.current.snapshot;
+      if (!snapshot?.shares.some((share) => share.plant.id === plant.id && share.direction === "outgoing")) {
+        return Promise.resolve({ ok: false, reason: "notOwner" });
+      }
+      return mutate(`remove-plant:${plant.id}`, () => updatePlantSharing([
+        { plant, recipients: [], expectedRevision },
+      ], snapshot.versions), "sharingDeleted");
     },
     resetPreview: () => { void refresh(); },
     toast, notify, dismissToast: (id) => setToast((current) => current?.id === id ? null : current),

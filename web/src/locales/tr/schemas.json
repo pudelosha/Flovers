@@ -83,7 +83,9 @@
     "title": "POST pompa-sonraki görev belgeleri",
     "desc": [
       "Bu uç nokta, pompa desteğine sahip cihazlar tarafından kullanılır.",
-      "Cihaz, arka uca planlanmış bir manuel sulama işinin mevcut olup olmadığını sorar. Arka uç şunu döndürür:"
+      "Cihaz, arka uca planlanmış bir manuel sulama işinin mevcut olup olmadığını sorar. Arka uç şunu döndürür:",
+      "supports_manual_duration değerini yalnızca firmware elle sulama için duration_seconds okuyorsa true yapın. Oluşturulan örnek bunu destekler. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini korur.",
+      "Elle sulama için 1–300 saniye seçin ve güncel oluşturulan firmware’i kullanın. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini kullanmayı sürdürür. Alınmayan elle sulama isteği iki saatte sona erer."
     ],
     "items": [
       "pompanın şimdi çalıştırılıp çalıştırılmayacağı",
@@ -123,9 +125,10 @@
     "desc": [
       "Uygulama, seçilen cihaz için ürün yazılımı oluşturabilir.",
       "Oluşturulan ürün yazılımı, söz konusu cihaz için doğru API uç noktalarını, kimlik doğrulama sırrını, cihaz anahtarını, cihaz kimliğini, etkin sensörleri ve pompa ayarlarını içerir.",
-      "Cihaz bir su pompasıyla yapılandırılmışsa oluşturulan kod, hem sensör okumalarını hem de su pompası kontrolünü içerir. Manuel sulama işlerini saatlik okuma döngüsünden ayrı olarak kontrol eder ve otomatik sulama, arka uç tarafından kontrol edilen eşik ve geçiş özelliğini kullanır."
+      "supports_manual_duration değerini yalnızca firmware elle sulama için duration_seconds okuyorsa true yapın. Oluşturulan örnek bunu destekler. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini korur.",
+      "Ölçümler varsayılan olarak saatte bir gönderilir. Cihaz formunda 1–24 saat seçilir; değişiklikten sonra yeniden oluşturulan firmware’i yükleyin. Elle sulama istekleri ayrı olarak, varsayılan dakikada bir denetlenir."
     ],
-    "adjustIntro": "Çizimi yüklemeden önce donanımınız için aşağıdaki değerleri ayarlayın:",
+    "adjustIntro": "Yüklemeden önce Wi-Fi, pinler, nem kalibrasyonu, PUMP_RUN_MS ve sorgu aralıklarını kontrol edin. Çevrimiçi otomatik sulama beklemesini cihaz formundan ayarlayın.",
     "adjustItems": [
       "Wi-Fi SSID ve şifre",
       "SDA_PIN ve SCL_PIN",
@@ -135,14 +138,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — yalnızca yerel yedek; çevrimiçiyken cihaz formundaki bekleme kullanılır"
     ],
     "codeLabel": "Oluşturulan Arduino ürün yazılımı: sensör okumaları + su pompası kontrolü"
   },
   "behavior": {
     "title": "Ürün yazılımı davranışı özeti",
     "fullCycle": {
-      "title": "Tam saatlik döngü",
+      "title": "Tam ölçüm döngüsü",
       "desc": "Her SEND_INTERVAL_MS'de, kart tam bir döngü çalıştırır:",
       "items": [
         "sensörleri okur",
@@ -170,7 +173,8 @@
       "title": "Otomatik sulama",
       "desc": [
         "Otomatik sulama, mobil uygulamada yapılandırılan arka uç ayarlarıyla kontrol edilir.",
-        "Kart, otomatik sulamayı yalnızca şu durumlarda çalıştırır:"
+        "Kart, otomatik sulamayı yalnızca şu durumlarda çalıştırır:",
+        "Otomatik sulama beklemesini cihaz formunda 1–32767 dakika olarak ayarlayın; varsayılan 60’tır. Kart bunu sonraki sorguda alır ve sunucu da uygular. AUTO_PUMP_MIN_INTERVAL_MS yalnızca yerel yedek değerdir."
       ],
       "items": [
         "pompa desteği etkin",
@@ -186,7 +190,8 @@
       "desc": [
         "Manuel sulama mobil uygulamadan planlanır.",
         "Manuel sulama kasıtlı olarak şunları göz ardı eder:",
-        "Bu, kullanıcı sulamayı manuel olarak planladığında, kartın bunu pompanın bir kez çalıştırılması yönünde açık bir talep olarak değerlendirdiği anlamına gelir."
+        "Bu, kullanıcı sulamayı manuel olarak planladığında, kartın bunu pompanın bir kez çalıştırılması yönünde açık bir talep olarak değerlendirdiği anlamına gelir.",
+        "Elle sulama için 1–300 saniye seçin ve güncel oluşturulan firmware’i kullanın. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini kullanmayı sürdürür. Alınmayan elle sulama isteği iki saatte sona erer."
       ],
       "items": [
         "mevcut toprak nemi",

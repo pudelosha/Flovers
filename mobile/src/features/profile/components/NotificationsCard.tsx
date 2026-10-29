@@ -9,6 +9,8 @@ import { HourStepper } from "./../components/Stepper";
 export default function NotificationsCard({
   emailDaily, setEmailDaily, emailHour, setEmailHour, email24h, setEmail24h,
   pushDaily, setPushDaily, pushHour, setPushHour, push24h, setPush24h,
+  emailSharedDue, setEmailSharedDue, pushSharedDue, setPushSharedDue,
+  sharedTaskEmail, setSharedTaskEmail, sharedTaskPush, setSharedTaskPush,
   formatHour, incHour, decHour,
   onSave,
 }: {
@@ -18,6 +20,10 @@ export default function NotificationsCard({
   pushDaily: boolean; setPushDaily: (v: boolean | ((v: boolean) => boolean)) => void;
   pushHour: number; setPushHour: (v: number | ((v: number) => number)) => void;
   push24h: boolean; setPush24h: (v: boolean | ((v: boolean) => boolean)) => void;
+  emailSharedDue: boolean; setEmailSharedDue: (v: boolean | ((v: boolean) => boolean)) => void;
+  pushSharedDue: boolean; setPushSharedDue: (v: boolean | ((v: boolean) => boolean)) => void;
+  sharedTaskEmail: boolean; setSharedTaskEmail: (v: boolean | ((v: boolean) => boolean)) => void;
+  sharedTaskPush: boolean; setSharedTaskPush: (v: boolean | ((v: boolean) => boolean)) => void;
   formatHour: (h: number) => string;
   incHour: (h: number) => number;
   decHour: (h: number) => number;
@@ -52,7 +58,17 @@ export default function NotificationsCard({
         </View>
       </Pressable>
 
-      {emailDaily && (
+      <Pressable style={controls.toggleRow} onPress={() => setEmailSharedDue((value: boolean) => !value)}
+        accessibilityRole="checkbox" accessibilityState={{ checked: emailSharedDue }}
+        accessibilityLabel={t("profile.notifications.emailSharedDueLabel", { defaultValue: "Email me about due tasks for plants shared with me" })}>
+        <MaterialCommunityIcons name={emailSharedDue ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+          size={20} color="#FFFFFF" style={controls.toggleIcon} />
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.emailSharedDueLabel", {
+          defaultValue: "Email me about due tasks for plants shared with me",
+        })}</Text>
+      </Pressable>
+
+      {(emailDaily || emailSharedDue || email24h) && (
         <HourStepper
           label={t("profile.notifications.sendAt")}
           value={formatHour(emailHour)}
@@ -102,7 +118,17 @@ export default function NotificationsCard({
         </View>
       </Pressable>
 
-      {pushDaily && (
+      <Pressable style={controls.toggleRow} onPress={() => setPushSharedDue((value: boolean) => !value)}
+        accessibilityRole="checkbox" accessibilityState={{ checked: pushSharedDue }}
+        accessibilityLabel={t("profile.notifications.pushSharedDueLabel", { defaultValue: "Notify me about due tasks for plants shared with me" })}>
+        <MaterialCommunityIcons name={pushSharedDue ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+          size={20} color="#FFFFFF" style={controls.toggleIcon} />
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.pushSharedDueLabel", {
+          defaultValue: "Notify me about due tasks for plants shared with me",
+        })}</Text>
+      </Pressable>
+
+      {(pushDaily || pushSharedDue || push24h) && (
         <HourStepper
           label={t("profile.notifications.notifyAt")}
           value={formatHour(pushHour)}
@@ -128,6 +154,20 @@ export default function NotificationsCard({
           <Text style={controls.toggleHint}>{t("profile.notifications.push24hHint")}</Text>
         </View>
       </Pressable>
+
+      <View style={controls.sectionDivider} />
+      <Text style={controls.sectionTitle}>{t("profile.notifications.sharedSection")}</Text>
+      <Text style={controls.toggleHint}>{t("profile.notifications.sharedHint")}</Text>
+      {[
+        { key: "sharedEmailLabel", value: sharedTaskEmail, setValue: setSharedTaskEmail },
+        { key: "sharedPushLabel", value: sharedTaskPush, setValue: setSharedTaskPush },
+      ].map(({ key, value, setValue }) => <Pressable key={key} style={controls.toggleRow}
+        accessibilityRole="checkbox" accessibilityLabel={t(`profile.notifications.${key}`)}
+        accessibilityState={{ checked: value }} onPress={() => setValue((previous: boolean) => !previous)}>
+        <MaterialCommunityIcons name={value ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+          size={20} color="#FFFFFF" style={controls.toggleIcon} />
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t(`profile.notifications.${key}`)}</Text>
+      </Pressable>)}
 
       <Pressable style={controls.saveBtn} onPress={onSave}>
         <MaterialCommunityIcons name="content-save" size={18} color="#FFFFFF" />

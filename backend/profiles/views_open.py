@@ -15,8 +15,13 @@ def _mobile_home_link() -> str:
     return f"{base}/home"
 
 
-def open_home(request):
+def open_home(request, destination="home"):
     deep_link = _mobile_home_link()
+    if destination == "task-history":
+        from .utils import build_mobile_deeplink
+        plant_id = request.GET.get("plantId", "")
+        params = {"plantId": plant_id} if plant_id.isascii() and plant_id.isdecimal() else {}
+        deep_link = build_mobile_deeplink("task-history", params)
     web_fallback = getattr(settings, "PUBLIC_WEB_BASE", settings.SITE_URL).rstrip("/") or "https://flovers.app"
 
     html = f"""<!doctype html>

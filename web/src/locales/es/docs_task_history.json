@@ -13,27 +13,25 @@
       {
         "heading": "Las tarjetas de tareas completadas",
         "body": [
-          "Cada tarjeta muestra un cuidado realizado, como riego, pulverización o fertilización, con la planta, su ubicación y la fecha.",
-          "También puede incluir una nota añadida al completar la tarea.",
-          "Las notas aparecen al expandir la tarjeta."
+          "Cada tarjeta muestra una tarea completada con su tipo de cuidado, el nombre de la planta y la ubicación.",
+          "La columna derecha tiene tres filas: el estado completado, la fecha y la persona que realizó la tarea. Si no se registró a nadie, aparece un usuario desconocido.",
+          "La nota guardada al completar la tarea aparece debajo de sus detalles."
         ]
       },
       {
-        "heading": "Mostrar u ocultar una nota",
+        "heading": "Consultar las notas",
         "body": [
-          "Toca una tarjeta para expandirla y leer su nota.",
-          "También puedes elegir «Expandir» o «Colapsar» en el menú de tres puntos, según el estado de la tarjeta.",
-          "Así la lista ocupa poco espacio y puedes ver los detalles cuando los necesitas."
+          "Las notas se ven en cuanto se carga el historial. Los textos largos ocupan tantas líneas como necesiten.",
+          "Puedes añadir una nota al marcar una tarea como completada. Si no hay nota, no aparece una sección vacía."
         ]
       },
       {
-        "heading": "Acciones del menú de tres puntos",
+        "heading": "Menú de la tarjeta de tarea",
         "body": [
-          "Cada tarjeta tiene un menú con acciones para esa tarea del historial.",
-          "«Expandir» o «Colapsar»: muestra u oculta la nota.",
-          "«Editar recordatorio»: abre el recordatorio asociado para cambiar su frecuencia o sus ajustes.",
-          "«Ir a la planta»: abre los detalles de la planta correspondiente.",
-          "«Eliminar tarea»: borra definitivamente esa tarea de tu cuenta."
+          "Toca la parte principal de una tarjeta completada para abrir su menú de acciones.",
+          "Editar recordatorio abre el recordatorio asociado para cambiar su frecuencia o sus ajustes. Esta acción solo está disponible para el propietario de la planta.",
+          "Ir a la planta abre los detalles de la planta relacionada con la tarea.",
+          "Eliminar tarea borra permanentemente la entrada seleccionada del historial. Solo puede hacerlo el propietario de la planta."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "El botón de acciones rápidas abre las opciones para gestionar el historial.",
           "«Ordenar»: cambia el orden de las tareas completadas.",
           "«Filtrar»: limita la lista según los criterios que elijas.",
-          "«Eliminar»: borra varias tareas según criterios como planta, ubicación, tipo de cuidado o antigüedad."
+          "«Eliminar»: borra varias tareas según criterios como planta, ubicación, tipo de cuidado o antigüedad.",
+          "Enviar exportación manda por correo una hoja con los filtros actuales y la opción de incluir tareas pendientes. Solo el propietario puede exportar su historial."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "El historial y la pantalla de Inicio",
         "body": [
-          "Inicio reúne las tareas previstas o atrasadas para ayudarte con los cuidados diarios.",
+          "Inicio muestra tareas pendientes, también futuras en Todas. Hoy y Vencidas limitan la lista. El historial muestra tareas completadas.",
           "El historial recoge las tareas ya completadas y permite consultarlas, ordenarlas, filtrarlas o eliminarlas.",
           "Juntas, las dos pantallas cubren los cuidados del día y el seguimiento a largo plazo."
         ]

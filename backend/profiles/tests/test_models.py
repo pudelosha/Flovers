@@ -38,7 +38,7 @@ def test_profile_settings_defaults_and_string_representation():
     assert settings.language == "en"
     assert settings.temperature_unit == "C"
     assert settings.measure_unit == "metric"
-    assert settings.background == "bg1"
+    assert settings.background == "bg5"
     assert settings.fab_position == "right"
     assert str(settings) == f"ProfileSettings<{user}>"
 

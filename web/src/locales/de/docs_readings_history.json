@@ -28,7 +28,7 @@
         "heading": "Frühere Messwerte ansehen",
         "body": [
           "Mit den Pfeilen neben dem gewählten Zeitraum wechselst du zu früheren Tagen, Wochen oder Monaten.",
-          "Du kannst nur Zeiträume mit vorhandenen Daten aufrufen. Zukünftige Zeiträume werden nicht angezeigt."
+          "Du kannst auch frühere Tage, Wochen und Monate ohne Messwerte auswählen. Zukünftige Zeiträume sind gesperrt."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Fehlende Daten und Messgenauigkeit",
         "body": [
           "Hat dein Gerät für den gewählten Zeitraum keine Werte gesendet, bleibt das Diagramm leer oder zeigt Lücken.",
-          "Nutze die Messwerte als Orientierung und vergleiche sie mit dem Zustand deiner Pflanze. Kalibrierung, Sensorplatzierung und Umgebung können die Genauigkeit beeinflussen."
+          "Nutze die Messwerte als Orientierung und vergleiche sie mit dem Zustand deiner Pflanze. Kalibrierung, Sensorplatzierung und Umgebung können die Genauigkeit beeinflussen.",
+          "Fehlende Messungen bleiben Lücken und werden nicht als Nullwerte behandelt. Echte Nullwerte bleiben erhalten. Temperaturen nutzen die Profileinstellung Celsius, Fahrenheit oder Kelvin."
         ]
       }
     ]

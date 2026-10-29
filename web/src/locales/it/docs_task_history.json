@@ -13,27 +13,25 @@
       {
         "heading": "Riquadri delle attività completate",
         "body": [
-          "Ogni riquadro corrisponde a un’attività completata. Mostra il tipo di attività (per esempio Annaffiatura, Nebulizzazione o Concimazione), il nome della pianta, la posizione e la data di completamento.",
-          "L’attività può includere una nota aggiunta quando l’hai segnata come completata.",
-          "Per leggere la nota, espandi il riquadro."
+          "Ogni scheda mostra un’attività completata con tipo di cura, nome della pianta e posizione.",
+          "La colonna a destra ha tre righe: stato di completamento, data e persona che ha svolto l’attività. Se non è stata registrata una persona, viene mostrato un utente sconosciuto.",
+          "L’eventuale nota salvata al completamento compare sotto i dettagli dell’attività."
         ]
       },
       {
-        "heading": "Consultare le note",
+        "heading": "Visualizzare le note",
         "body": [
-          "Tocca il riquadro di un’attività completata per espanderlo e leggere la nota.",
-          "Puoi anche aprire il menu con i tre puntini e scegliere Espandi o Comprimi, a seconda che la nota sia già visibile.",
-          "In questo modo l’elenco resta compatto e puoi aprire i dettagli quando ti servono."
+          "Le note sono visibili appena si carica lo storico. I testi lunghi vanno a capo su tutte le righe necessarie.",
+          "Puoi aggiungere una nota quando segni l’attività come completata. Le attività senza nota non mostrano una sezione vuota."
         ]
       },
       {
-        "heading": "Menu del riquadro con i tre puntini",
+        "heading": "Menu della scheda attività",
         "body": [
-          "Il menu con i tre puntini contiene le azioni per la singola voce dello storico.",
-          "Espandi/Comprimi: mostra o nasconde la nota nel riquadro.",
-          "Modifica promemoria: apre il promemoria da cui è nata l’attività. Qui puoi cambiare la frequenza e le altre impostazioni.",
-          "Vai alla pianta: apre i Dettagli della pianta associata all’attività.",
-          "Elimina attività: rimuove definitivamente dal tuo account l’attività completata selezionata."
+          "Tocca la parte principale di una scheda completata per aprire il menu delle azioni.",
+          "Modifica promemoria apre il promemoria associato per cambiarne la frequenza o le impostazioni. L’azione è disponibile solo al proprietario della pianta.",
+          "Vai alla pianta apre i dettagli della pianta collegata all’attività.",
+          "Elimina attività rimuove definitivamente la voce selezionata dallo storico. Può farlo solo il proprietario della pianta."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "Il pulsante delle azioni rapide nello Storico attività apre un menu per gestire l’intero elenco.",
           "Ordina: cambia l’ordine delle attività completate.",
           "Filtra: mostra solo le attività che corrispondono ai criteri scelti.",
-          "Elimina: rimuove più attività insieme, per esempio quelle di una pianta o di una posizione, quelle di un certo tipo oppure quelle più vecchie del periodo indicato."
+          "Elimina: rimuove più attività insieme, per esempio quelle di una pianta o di una posizione, quelle di un certo tipo oppure quelle più vecchie del periodo indicato.",
+          "Invia esportazione manda via email un foglio con i filtri attuali, con l’opzione di includere le attività in sospeso. Solo il proprietario può esportare il proprio storico."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "Storico attività e schermata iniziale",
         "body": [
-          "Nella schermata iniziale trovi le attività previste per oggi e quelle in ritardo ancora da completare.",
+          "Home mostra le attività da completare, anche future nella vista Tutte. Oggi e Scadute restringono l’elenco. Lo storico mostra quelle completate.",
           "Nello Storico attività vedi ciò che è già stato fatto. Puoi consultare, ordinare, filtrare ed eliminare le voci.",
           "La schermata iniziale ti aiuta nella cura quotidiana, mentre lo Storico attività ti permette di ripercorrere gli interventi passati."
         ]

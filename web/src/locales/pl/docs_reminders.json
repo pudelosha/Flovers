@@ -30,7 +30,7 @@
         "body": [
           "Każde przypomnienie możesz edytować, wstrzymać, wznowić lub usunąć.",
           "Wybierz Edytuj, aby zmienić częstotliwość, rodzaj zadania, przypisaną roślinę lub inne dostępne ustawienia.",
-          "Usuniętego przypomnienia nie można przywrócić. Flovers przestanie na jego podstawie tworzyć kolejne zadania.",
+          "Usunięcie przypomnienia trwale usuwa wszystkie jego zadania, także historię wykonania i zapisane notatki. Kolejne zadania nie będą już powstawać. Jeśli chcesz zachować historię, wstrzymaj przypomnienie.",
           "Możesz też wstrzymać przypomnienie bez usuwania go. Jego zadanie zniknie wtedy z ekranu głównego i nie pojawi się w codziennych powiadomieniach e-mail ani push. Po wznowieniu Flovers zaplanuje kolejne zadanie zgodnie z częstotliwością przypomnienia."
         ]
       },
@@ -56,7 +56,7 @@
         "body": [
           "Przypomnienie określa, co i jak często chcesz robić, np. podlewać roślinę co 7 dni.",
           "Flovers tworzy na tej podstawie zadania, które znajdziesz na ekranie głównym.",
-          "Gdy oznaczysz zadanie jako wykonane, aplikacja zaplanuje następne zgodnie z ustawioną częstotliwością."
+          "Termin kolejnego zadania jest liczony od wybranej daty wykonania, zgodnie z odstępem przypomnienia. W razie potrzeby aplikacja dodaje ten odstęp wielokrotnie, aż termin wypadnie po dzisiejszym dniu."
         ]
       },
       {
@@ -64,7 +64,8 @@
         "body": [
           "Przypomnienia pomagają pamiętać o pielęgnacji, ale warto obserwować rośliny i dostosowywać częstotliwość do ich potrzeb.",
           "Gdy zmienia się pora roku, ilość światła, podłoże lub wielkość doniczki, sprawdź, czy przypomnienia nadal pasują do warunków.",
-          "Wykonane zadania i dodane do nich notatki znajdziesz w Historii zadań, opisanej w osobnej części dokumentacji."
+          "Wykonane zadania i dodane do nich notatki znajdziesz w Historii zadań, opisanej w osobnej części dokumentacji.",
+          "Dla jednej rośliny możesz mieć tylko jedno przypomnienie danego rodzaju. Zamiast dodawać drugie, edytuj istniejące."
         ]
       },
       {

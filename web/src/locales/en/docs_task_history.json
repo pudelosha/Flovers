@@ -13,27 +13,25 @@
       {
         "heading": "Completed task tiles",
         "body": [
-          "Each tile represents a single completed task, including the task type (e.g., Watering, Misting, Fertilising), plant name, location, and completion date.",
-          "Completed tasks may include an optional note added when the task was closed.",
-          "Notes are displayed only when the tile is expanded."
+          "Each tile shows a completed task’s type, plant name and location.",
+          "The right-hand column has three rows: Completed, the completion date, and the person who completed the task. If no person was recorded, an unknown-user label is shown.",
+          "A note saved with the completion is displayed beneath the task details."
         ]
       },
       {
-        "heading": "Viewing notes: expand and collapse",
+        "heading": "Viewing notes",
         "body": [
-          "To view a note for a completed task, you can expand the tile by tapping the tile itself.",
-          "You can also use the three-dots menu to Expand or Collapse notes for a task (depending on the current state).",
-          "This lets you keep the list compact while still having access to detailed history when needed."
+          "Notes are visible as soon as the history loads. Longer notes wrap onto as many lines as needed.",
+          "Add a note when marking a task complete. Tasks without a note do not show an empty notes section."
         ]
       },
       {
-        "heading": "Task tile menu (three-dots)",
+        "heading": "Task tile menu",
         "body": [
-          "Each completed task tile provides a context menu with actions related to that specific history entry.",
-          "Expand/Collapse: shows or hides the note section inside the tile.",
-          "Edit reminder: navigates to the Reminder associated with the task so you can adjust recurrence or settings.",
-          "Go to plant: navigates to Plant Details for the plant linked to the task.",
-          "Delete task: permanently deletes the selected completed task from your account."
+          "Tap the main part of a completed task tile to open its action menu.",
+          "Edit reminder opens the associated reminder so its recurrence or settings can be changed. This action is available only to the plant owner.",
+          "Go to plant opens Plant Details for the related plant.",
+          "Delete task permanently removes the selected completed history entry. Only the plant owner can delete it."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "The Task History screen includes a Floating Action Button (FAB) with actions for working with the history list.",
           "Sort: changes the ordering of completed tasks.",
           "Filter: narrows down the history list by selected criteria.",
-          "Delete: supports bulk deletion based on criteria (for example, tasks for a selected plant, tasks for a selected location, tasks of a specific type, or tasks older than a chosen threshold)."
+          "Delete: supports bulk deletion based on criteria (for example, tasks for a selected plant, tasks for a selected location, tasks of a specific type, or tasks older than a chosen threshold).",
+          "Send export emails a spreadsheet using the current filters, with an option to include pending tasks. Only the owner can export their history."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "How Task History differs from Home",
         "body": [
-          "Home focuses on tasks that are due or overdue and helps you complete current work.",
+          "Home lists pending tasks, including future tasks in All; Today and Overdue narrow the list. Task History lists completed tasks.",
           "Task History focuses on tasks that are already completed and supports reviewing, sorting, filtering, and deleting historical entries.",
           "Together, these screens cover both day-to-day execution (Home) and long-term tracking (Task History)."
         ]

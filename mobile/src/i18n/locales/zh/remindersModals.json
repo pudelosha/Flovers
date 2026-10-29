@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "删除提醒",
       "areYouSurePrefix": "你确定要删除",
-      "areYouSureSuffix": "? 该操作无法撤销。"
+      "areYouSureSuffix": "? 该操作无法撤销。",
+      "historyWarning": "删除此提醒也会永久删除其所有关联任务，包括已完成的任务历史和备注。"
     },
     "edit": {
       "titleCreate": "添加提醒",

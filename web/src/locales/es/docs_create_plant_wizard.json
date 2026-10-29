@@ -39,8 +39,8 @@
         "body": [
           "Puedes anotar la orientación, la intensidad de luz y la distancia a la ventana.",
           "La orientación se puede medir con la brújula del teléfono si has concedido el permiso necesario.",
-          "La luz se puede medir si el dispositivo dispone de un sensor adecuado y has concedido los permisos necesarios.",
-          "Todos estos datos son opcionales. Puedes introducirlos a mano o saltarte este paso."
+          "La medición automática de luz solo funciona en dispositivos Android compatibles. En iOS, elige el nivel manualmente. La dirección también depende de sensores compatibles.",
+          "Omitir este paso conserva luz brillante indirecta, este y 20 cm. Mantener estos valores predeterminados no reajusta por sí solo los intervalos de cuidado."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Paso 09 — Resumen y confirmación",
+        "heading": "Paso 09 — Crear la planta",
         "body": [
-          "Cuando la planta se haya añadido, el asistente mostrará una confirmación y un resumen.",
-          "Desde ahí puedes ir a la lista de plantas o abrir la que acabas de añadir, según la navegación de tu aplicación."
+          "El último paso crea la planta automáticamente. Tras unos 2,5 segundos vuelve a Plantas, sin un resumen independiente ni un botón para abrir la nueva planta."
         ]
       },
       {

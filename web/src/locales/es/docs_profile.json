@@ -14,7 +14,7 @@
         "body": [
           "La sección de cuenta muestra tu dirección de correo y la fecha en que la creaste.",
           "Puedes cambiar el correo confirmándolo con tu contraseña actual, cambiar la contraseña, cerrar sesión o eliminar la cuenta de forma permanente.",
-          "Eliminar la cuenta borra todos tus datos sin posibilidad de recuperarlos: plantas, recordatorios, tareas, lecturas y dispositivos."
+          "Confirma la eliminación con tu contraseña actual. Se borrarán permanentemente la cuenta y sus plantas, recordatorios, tareas, lecturas y dispositivos."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Tus notificaciones",
         "body": [
-          "Esta sección te permite gestionar tus permisos y preferencias de notificaciones por correo y push.",
-          "Para ambos canales puedes activar un resumen diario de las tareas de hoy y un segundo aviso si siguen pendientes 24 horas después de la primera notificación.",
-          "Elige una hora de envío para cada tipo de notificación, siempre a una hora en punto, por ejemplo las 14:00."
+          "Las notificaciones se dividen en Correo electrónico, Teléfono y Plantas compartidas. Puedes activar por separado los resúmenes diarios de tus propias plantas por correo y mediante notificaciones push, con una hora por canal en la zona horaria de notificaciones de tu cuenta.",
+          "Correo electrónico y Teléfono incluyen además una casilla para las tareas previstas para hoy en plantas compartidas contigo. Estas opciones están desactivadas inicialmente, funcionan independientemente de los resúmenes de tus plantas y usan la misma hora del canal correspondiente. Si activas ambas opciones, las tareas de tus plantas y de las compartidas contigo se reúnen en un único mensaje diario por canal.",
+          "Los avisos incluyen los accesos activos de solo lectura y los que permiten completar tareas. El acceso se comprueba de nuevo antes del envío. Si el acceso caduca, se revoca o se elimina el contacto, dejan de enviarse estos avisos.",
+          "El recordatorio del día siguiente solo incluye tareas de tus propias plantas que siguen pendientes desde ayer. Se envía a la hora del canal correspondiente, no exactamente 24 horas después de la primera notificación.",
+          "La sección Plantas compartidas cubre otro caso: alguien completa una tarea de una planta que te pertenece. Sus casillas de correo y push están desactivadas inicialmente y se aplican a todas las plantas que compartes. El aviso se envía después de completar la tarea, sin esperar al resumen diario. Es una preferencia de la cuenta, no de cada planta compartida."
         ]
       },
       {

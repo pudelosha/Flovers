@@ -1,0 +1,15 @@
+{
+  "subject": "Attività completata per una pianta condivisa",
+  "title": "Attività completata per una pianta condivisa",
+  "line1": "{actor} ha completato un’attività per {plant}.",
+  "details": "Attività: {task}. Completata il {date} alle {time}.",
+  "cta": "Vedi lo storico delle attività",
+  "push_title": "Attività completata per una pianta condivisa",
+  "types": {
+    "water": "irrigazione",
+    "fertilize": "fertilizzazione",
+    "moisture": "nebulizzazione",
+    "care": "cura",
+    "repot": "rinvaso"
+  }
+}

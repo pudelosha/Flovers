@@ -82,7 +82,9 @@
     "title": "Aufträge abrufen: POST pump-next-task",
     "desc": [
       "Diese Adresse wird von Geräten mit Pumpe verwendet.",
-      "Das Gerät fragt nach, ob du in der App einen manuellen Gießauftrag erteilt hast. Die Antwort enthält:"
+      "Das Gerät fragt nach, ob du in der App einen manuellen Gießauftrag erteilt hast. Die Antwort enthält:",
+      "Setze supports_manual_duration nur auf true, wenn die Firmware duration_seconds für manuelles Gießen auswertet. Das generierte Beispiel unterstützt dies. Automatisches Gießen nutzt weiterhin PUMP_RUN_MS aus dem Sketch.",
+      "Wähle für manuelles Gießen 1–300 Sekunden und nutze aktuelle generierte Firmware. Automatisches Gießen verwendet weiterhin PUMP_RUN_MS aus dem Sketch. Ein nicht abgeholter manueller Auftrag verfällt nach zwei Stunden."
     ],
     "items": [
       "die Angabe, ob die Pumpe jetzt starten soll",
@@ -122,9 +124,10 @@
     "desc": [
       "In der App kannst du Code für das ausgewählte Gerät erzeugen.",
       "Er enthält die API-Adressen, Zugangsdaten (secret und device_key), Gerätekennung sowie die Einstellungen für Sensoren und Pumpe.",
-      "Wenn das Gerät eine Pumpe hat, übernimmt das Programm sowohl die Messungen als auch das Gießen. Manuelle Aufträge fragt es unabhängig vom Senden der Messwerte ab. Beim automatischen Gießen verwendet es die Einstellungen aus der App und holt vor dem Pumpenstart die Freigabe des Servers ein."
+      "Setze supports_manual_duration nur auf true, wenn die Firmware duration_seconds für manuelles Gießen auswertet. Das generierte Beispiel unterstützt dies. Automatisches Gießen nutzt weiterhin PUMP_RUN_MS aus dem Sketch.",
+      "Messwerte werden standardmäßig stündlich gesendet. Im Geräteformular sind 1–24 Stunden einstellbar; lade danach neu erzeugte Firmware hoch. Manuelle Gießaufträge werden unabhängig davon standardmäßig jede Minute abgefragt."
     ],
-    "adjustIntro": "Prüfe vor dem Aufspielen des Codes diese Werte und passe sie an deine Hardware an:",
+    "adjustIntro": "Prüfe vor dem Hochladen WLAN-Zugang, Pins, Feuchtekalibrierung, PUMP_RUN_MS und Abfrageintervalle. Die Online-Gießpause wird im Geräteformular eingestellt.",
     "adjustItems": [
       "WLAN-Name (SSID) und Passwort",
       "SDA_PIN und SCL_PIN",
@@ -134,14 +137,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — nur lokaler Ersatzwert; online gilt die Gießpause aus dem Geräteformular"
     ],
     "codeLabel": "Beispielprogramm: Sensorwerte und Pumpensteuerung"
   },
   "behavior": {
     "title": "Messen und Gießen Schritt für Schritt",
     "fullCycle": {
-      "title": "Messzyklus",
+      "title": "Vollständiger Messzyklus",
       "desc": "In Abständen von SEND_INTERVAL_MS führt das Board diese Schritte aus:",
       "items": [
         "Sensoren auslesen",
@@ -169,7 +172,8 @@
       "title": "Automatisch gießen",
       "desc": [
         "Automatisches Gießen aktivierst und konfigurierst du in der App.",
-        "Das Board startet die Pumpe nur, wenn:"
+        "Das Board startet die Pumpe nur, wenn:",
+        "Stelle die automatische Gießpause im Geräteformular auf 1–32767 Minuten ein; Standard sind 60. Das Board übernimmt sie bei einer späteren Abfrage, und auch der Server prüft sie. AUTO_PUMP_MIN_INTERVAL_MS dient nur als lokaler Ersatzwert."
       ],
       "items": [
         "die Pumpe in den Geräteeinstellungen aktiviert ist",
@@ -185,7 +189,8 @@
       "desc": [
         "Einen manuellen Gießauftrag erteilst du in der App.",
         "Dieser Auftrag wird unabhängig von folgenden Werten ausgeführt:",
-        "Das Board behandelt ihn als ausdrücklichen Auftrag, die Pumpe einmal einzuschalten. Es prüft dabei nicht die Bedingungen für automatisches Gießen."
+        "Das Board behandelt ihn als ausdrücklichen Auftrag, die Pumpe einmal einzuschalten. Es prüft dabei nicht die Bedingungen für automatisches Gießen.",
+        "Wähle für manuelles Gießen 1–300 Sekunden und nutze aktuelle generierte Firmware. Automatisches Gießen verwendet weiterhin PUMP_RUN_MS aus dem Sketch. Ein nicht abgeholter manueller Auftrag verfällt nach zwei Stunden."
       ],
       "items": [
         "der aktuellen Bodenfeuchte",

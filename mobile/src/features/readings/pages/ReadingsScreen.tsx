@@ -820,6 +820,7 @@ export default function ReadingsScreen() {
         moistureAlertPct?: number;
       };
       intervalHours: number;
+      pumpCooldownMinutes: number;
       sendEmailNotifications?: boolean;
       sendPushNotifications?: boolean;
       pumpIncluded?: boolean;
@@ -849,6 +850,7 @@ export default function ReadingsScreen() {
             device_name: payload.name,
             notes: payload.notes,
             interval_hours: payload.intervalHours,
+            pump_cooldown_minutes: payload.pumpCooldownMinutes,
             sensors: {
               temperature: payload.sensors.temperature,
               humidity: payload.sensors.humidity,
@@ -885,6 +887,7 @@ export default function ReadingsScreen() {
             is_active:
               typeof payload.enabled === "boolean" ? payload.enabled : undefined,
             interval_hours: payload.intervalHours,
+            pump_cooldown_minutes: payload.pumpCooldownMinutes,
             sensors: {
               temperature: payload.sensors.temperature,
               humidity: payload.sensors.humidity,
@@ -1474,6 +1477,8 @@ export default function ReadingsScreen() {
               })()
             : true
         }
+        initialPumpCooldownMinutes={upsertMode === "edit"
+          ? devicesRaw.find((device) => String(device.id) === upsertReadingId)?.pump_cooldown_minutes ?? 60 : 60}
         initialIntervalHours={
           upsertMode === "edit"
             ? (() => {

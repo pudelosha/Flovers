@@ -12,6 +12,7 @@ export const SHARING_TOAST_MESSAGES: Record<SharingToastKind, string> = {
   contactUpdated: "Contact updated in this preview.",
   contactDeleted: "Contact deleted in this preview.",
   sharingSaved: "Sharing updated.",
+  sharingDeleted: "Sharing removed for all contacts.",
   accessRemoved: "Access removed.",
   plantLeft: "Shared plant removed.",
   idCopied: "ID copied.",

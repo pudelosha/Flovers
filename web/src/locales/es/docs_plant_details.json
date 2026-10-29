@@ -22,7 +22,7 @@
         "body": [
           "El menú junto al título ofrece más acciones para esa planta.",
           "Puedes consultar la ficha de especie asociada, editar los datos, cambiar la imagen o abrir sus recordatorios.",
-          "Al cambiar la imagen puedes sustituir una predeterminada, añadir una foto del teléfono o retirar la imagen."
+          "Al quitar tu foto se elimina la copia local. Si la definición vinculada tiene una imagen de catálogo, esta vuelve a aparecer."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Si la planta tiene un dispositivo de medición asociado, sus últimas lecturas aparecen aquí.",
           "Se admiten temperatura del aire, humedad del aire, intensidad de luz y humedad del suelo.",
           "La sección muestra los últimos valores y la fecha y hora de la última lectura recibida.",
-          "Toca la tarjeta de lecturas para abrir el historial. Mientras haya un dispositivo asociado, podrás ver gráficos y resúmenes diarios, semanales o mensuales de cada medida."
+          "Toca el valor o el icono de una medición para abrir su historial. Tocar el título o el fondo de esta tarjeta no abre los gráficos."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Cada planta tiene un código QR único que aparece al final de esta pantalla.",
           "Si lo escaneas con el escáner de la aplicación, se abren directamente los detalles de esa planta.",
-          "Puedes guardar el código en el teléfono o enviártelo por correo para imprimirlo y pegarlo en la maceta."
+          "Puedes guardar el código en el teléfono o enviártelo por correo para imprimirlo y pegarlo en la maceta.",
+          "Un QR de Flovers contiene una referencia única y opaca a la planta, no su identificador numérico en la base de datos."
         ]
       },
       {

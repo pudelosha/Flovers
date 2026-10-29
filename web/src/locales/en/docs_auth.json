@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_auth": {
     "title": "Login & Register",
     "sections": [
@@ -7,7 +7,7 @@
         "body": [
           "To use Flovers, you need to create a personal user account. Registration is performed directly in the mobile application.",
           "During registration, only an e-mail address and a password are required. No additional personal details are requested at this stage.",
-          "The password must be at least 8 characters long and include at least one number and one special character to ensure basic security.",
+          "Use a password of 8–128 characters. A number or special character is not required.",
           "Before completing registration, you must accept the Terms of Service and the Privacy Policy."
         ]
       },
@@ -23,7 +23,7 @@
         "heading": "Resending the activation e-mail",
         "body": [
           "If you did not receive the activation e-mail, you can request it to be resent from within the application.",
-          "This option is available on the login or registration screen and can be used if the original message was lost, delayed, or filtered as spam.",
+          "On Login, choose the resend-activation link. After registration, first return to Login to use this option.",
           "Always make sure to check your spam or junk mail folder before requesting another activation message."
         ]
       },

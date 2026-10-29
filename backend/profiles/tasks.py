@@ -56,6 +56,29 @@ def _count_due_on_date(user_id: int, due_date) -> int:
     ).count()
 
 
+def _count_shared_due_on_date(user_id: int, due_date, *, now=None) -> int:
+    from sharing.permissions import active_shares
+
+    plant_ids = active_shares(now).filter(recipient_id=user_id).values("plant_id")
+    return ReminderTask.objects.filter(
+        status="pending", due_date=due_date, reminder__is_active=True,
+        reminder__plant_id__in=plant_ids,
+        reminder__user_id=models.F("user_id"),
+        reminder__plant__user_id=models.F("user_id"),
+    ).exclude(user_id=user_id).count()
+
+
+def _count_notification_tasks(preferences, channel, kind, due_date, *, now=None) -> int:
+    prefix = "email" if channel == NotificationDeliveryLog.CHANNEL_EMAIL else "push"
+    if kind != NotificationDeliveryLog.KIND_DUE_TODAY:
+        # Next-day follow-ups retain their existing owner-only scope.
+        return _count_due_on_date(preferences.user_id, due_date)
+    count = _count_due_on_date(preferences.user_id, due_date) if getattr(preferences, f"{prefix}_daily") else 0
+    if getattr(preferences, f"{prefix}_shared_due"):
+        count += _count_shared_due_on_date(preferences.user_id, due_date, now=now)
+    return count
+
+
 def _get_user_lang(user) -> str:
     default = getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en"
     try:
@@ -212,14 +235,16 @@ RETRY_MAX_SECONDS = 3600
 
 def _notification_enabled(preferences, channel, kind):
     prefix = "email" if channel == NotificationDeliveryLog.CHANNEL_EMAIL else "push"
-    suffix = "daily" if kind == NotificationDeliveryLog.KIND_DUE_TODAY else "24h"
-    return bool(getattr(preferences, f"{prefix}_{suffix}"))
+    if kind == NotificationDeliveryLog.KIND_DUE_TODAY:
+        return bool(getattr(preferences, f"{prefix}_daily") or getattr(preferences, f"{prefix}_shared_due"))
+    return bool(getattr(preferences, f"{prefix}_24h"))
 
 
 def _enqueue_due_notifications(now_utc):
     preferences = ProfileNotifications.objects.select_related("user").filter(user__is_active=True).filter(
         models.Q(email_daily=True) | models.Q(email_24h=True) |
-        models.Q(push_daily=True) | models.Q(push_24h=True)
+        models.Q(push_daily=True) | models.Q(push_24h=True) |
+        models.Q(email_shared_due=True) | models.Q(push_shared_due=True)
     )
     for pn in preferences.iterator():
         # One invalid recipient must not prevent other recipients being queued.
@@ -241,9 +266,10 @@ def _enqueue_due_notifications(now_utc):
                     if (channel, kind) in existing or not _notification_enabled(pn, channel, kind):
                         continue
                     due_date = local.date() - timedelta(days=kind == NotificationDeliveryLog.KIND_OVERDUE_1D)
-                    if kind not in due_counts:
-                        due_counts[kind] = _count_due_on_date(pn.user_id, due_date)
-                    if due_counts[kind] == 0:
+                    key = (channel, kind)
+                    if key not in due_counts:
+                        due_counts[key] = _count_notification_tasks(pn, channel, kind, due_date, now=now_utc)
+                    if due_counts[key] == 0:
                         continue
                     NotificationDeliveryLog.objects.get_or_create(
                         user_id=pn.user_id, channel=channel, kind=kind, local_date=local.date(),
@@ -300,7 +326,7 @@ def _deliver_claimed(delivery, now_utc):
         _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SKIPPED, now_utc=now_utc, error="Local delivery day expired.")
         return
     due_date = delivery.local_date - timedelta(days=delivery.kind == NotificationDeliveryLog.KIND_OVERDUE_1D)
-    count = _count_due_on_date(user.pk, due_date)
+    count = _count_notification_tasks(pn, delivery.channel, delivery.kind, due_date, now=now_utc)
     if count == 0:
         _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SKIPPED, now_utc=now_utc)
         return
@@ -308,7 +334,8 @@ def _deliver_claimed(delivery, now_utc):
         send = _send_email_due_today if delivery.kind == NotificationDeliveryLog.KIND_DUE_TODAY else _send_email_overdue_1d
         sent = send(user, count)
     else:
-        tokens = _get_android_tokens(user.pk)
+        tokens = list(PushDevice.objects.filter(user_id=user.pk, is_active=True).values_list("token", flat=True)) \
+            if delivery.kind == NotificationDeliveryLog.KIND_DUE_TODAY and pn.push_shared_due else _get_android_tokens(user.pk)
         get_text = _get_push_due_today_text if delivery.kind == NotificationDeliveryLog.KIND_DUE_TODAY else _get_push_overdue_1d_text
         title, body = get_text(user, count)
         sent = _send_push_and_deactivate_bad_tokens(tokens, title, body, {

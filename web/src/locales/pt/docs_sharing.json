@@ -6,14 +6,16 @@
         "heading": "Compartilhe plantas de casa com um contato",
         "body": [
           "Abra Perfil, depois Compartilhamento e Plantas de casa compartilhadas. O menu + permite compartilhar plantas e filtrar plantas compartilhadas por você ou com você. Você também pode começar no menu de três pontos de uma planta de casa própria ou nos detalhes de um contato.",
-          "Ao adicionar compartilhamento, selecione uma ou mais plantas de casa e os contatos que deverão ter acesso. Cada contato pode ter acesso somente visualização ou permissão para concluir tarefas, com uma data de término opcional. As permissões existentes são mostradas antes de você salvar."
+          "Ao adicionar compartilhamento, selecione uma ou mais plantas de casa e os contatos que deverão ter acesso. Cada contato pode ter acesso somente visualização ou permissão para concluir tarefas, com uma data de término opcional. As permissões existentes são mostradas antes de você salvar.",
+          "Alterar ou limpar a data final aplica-a a todos os contactos assinalados de todas as plantas escolhidas. As datas diferentes são preservadas enquanto não as alterares. Desmarcar um contacto existente retira-lhe o acesso ao guardar."
         ]
       },
       {
         "heading": "Gerenciar compartilhamento existente",
         "body": [
           "Gerenciar compartilhamento abre uma planta de casa com sua seleção bloqueada. Altere seus contatos, permissões de conclusão de tarefas ou data de término e salve. Para compartilhar outras plantas de casa, abra Compartilhar plantas de casa.",
-          "Cada bloco de planta de casa compartilhado mostra seu nome, espécie e localização, seguido por linhas separadas para contato, permissões e data de término. Os proprietários podem remover o acesso de contatos individuais; os destinatários podem deixar uma planta de casa compartilhada."
+          "Cada bloco de planta de casa compartilhado mostra seu nome, espécie e localização, seguido por linhas separadas para contato, permissões e data de término. Os proprietários podem remover o acesso de contatos individuais; os destinatários podem deixar uma planta de casa compartilhada.",
+          "Alterar ou limpar a data final aplica-a a todos os contactos assinalados de todas as plantas escolhidas. As datas diferentes são preservadas enquanto não as alterares. Desmarcar um contacto existente retira-lhe o acesso ao guardar."
         ]
       },
       {
@@ -28,6 +30,14 @@
         "heading": "Quando o acesso terminar",
         "body": [
           "Uma data de término opcional inclui essa data no fuso horário de notificação do proprietário. Sem data de término, o acesso continua até ser removido. A expiração, a remoção do acesso ou a remoção do contato encerram o acesso do destinatário sem excluir a planta de casa do proprietário."
+        ]
+      },
+      {
+        "heading": "Notificações de cuidados partilhados",
+        "body": [
+          "Email e Telefone têm também uma caixa para as tarefas previstas para hoje nas plantas partilhadas contigo. Estas opções estão inicialmente desativadas, funcionam independentemente dos resumos das tuas plantas e usam a mesma hora do respetivo canal. Se ativares ambas as opções, as tarefas das tuas plantas e das partilhadas contigo são reunidas numa única mensagem diária por canal.",
+          "Os lembretes incluem partilhas ativas só de leitura e com permissão para concluir tarefas. O acesso é verificado novamente antes do envio. Se a partilha expirar, o acesso for retirado ou o contacto for removido, os lembretes deixam de ser enviados.",
+          "A secção Partilha diz respeito a outro evento: alguém conclui uma tarefa de uma planta que te pertence. As opções de email e push estão inicialmente desativadas e aplicam-se a todas as plantas que partilhas. Estas notificações são enviadas após a conclusão, sem esperar pelo resumo diário. É uma preferência da conta, não uma definição de cada partilha."
         ]
       }
     ]

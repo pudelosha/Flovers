@@ -22,7 +22,7 @@
         "body": [
           "Abra os três pontos ao lado do nome para ver as ações da planta.",
           "Você pode consultar a ficha da espécie, se houver uma associada, editar os dados, mudar a imagem e abrir os lembretes filtrados para essa planta.",
-          "É possível substituir a imagem padrão, escolher uma foto do celular ou remover a imagem."
+          "Remover a tua fotografia apaga a cópia local. Se a definição associada tiver uma imagem de catálogo, essa imagem volta a aparecer."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Se a planta está ligada a um dispositivo, as últimas leituras aparecem nesta tela.",
           "Os sensores podem medir temperatura do ar, umidade do ar, luz e umidade do solo.",
           "Os valores aparecem com a data e a hora da última leitura recebida.",
-          "Toque no cartão para abrir o Histórico de leituras. Com um dispositivo associado, você vê gráficos e resumos diários, semanais e mensais de temperatura, umidade do ar, luz e umidade do solo."
+          "Toca no valor ou ícone de uma medição para abrir o respetivo histórico. O título e o fundo deste cartão não abrem os gráficos."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Cada planta tem um código QR próprio, exibido no fim da tela.",
           "Escaneie esse código pelo Scanner do aplicativo para abrir diretamente os Detalhes da planta.",
-          "Salve o código no celular ou envie por e-mail para imprimir e colar no vaso."
+          "Salve o código no celular ou envie por e-mail para imprimir e colar no vaso.",
+          "Um QR do Flovers contém uma referência única e opaca à planta, em vez do seu identificador numérico na base de dados."
         ]
       },
       {

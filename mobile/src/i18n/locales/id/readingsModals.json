@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Pemberitahuan selesainya penyiraman hanya tersedia jika perangkat ini dilengkapi pompa air. Mereka dapat dikirim setelah penyiraman terjadwal selesai atau setelah penyiraman otomatis dipicu dan selesai.",
       "sendEmailWateringNotifications": "Kirim email pemberitahuan saat penyiraman selesai",
       "sendPushWateringNotifications": "Kirim pemberitahuan push saat penyiraman selesai",
-      "samplingIntervalRemoved": "Interval pengambilan sampel telah dihapus"
+      "intervalHours": "Interval pembacaan (jam)",
+      "decreaseInterval": "Kurangi interval pembacaan",
+      "increaseInterval": "Tambah interval pembacaan",
+      "intervalFirmwareHint": "Pilih 1–24 jam. Setelah mengubahnya, buat kode baru dan unggah ke papan.",
+      "pumpCooldownMinutes": "Jeda antarpenyiraman otomatis (menit)",
+      "pumpCooldownHint": "Pilih 1–32767 menit (bawaan 60). Papan mengambil pengaturan dari server saat pemeriksaan tugas berikutnya. Durasi pompa tidak berubah.",
+      "pumpCooldownInvalid": "Masukkan bilangan bulat dari 1 hingga 32767."
     }
   }
 }

@@ -60,18 +60,20 @@ describe("SharedPlantsScreen", () => {
     mockSharing = {
       loaded: true, loading: false, error: null, pending: null, refresh: jest.fn(async () => ({})),
       contacts: [{ id: "anna", name: "Anna" }, { id: "bruno", name: "Bruno" }],
+      versions: { "1": 3 },
       shareDraft: null,
       shares: [
         { id: "s1", direction: "outgoing", plant: bird, contactId: "anna", canCompleteTasks: true },
         { id: "s2", direction: "outgoing", plant: bird, contactId: "bruno", canCompleteTasks: false },
         { id: "s3", direction: "incoming", plant: incomingPlant, contactId: "anna", canCompleteTasks: false },
       ],
-      openSharePlant: jest.fn(), removeShare: jest.fn(async () => ({ ok: true })), resetPreview: jest.fn(),
+      openSharePlant: jest.fn(), removeShare: jest.fn(async () => ({ ok: true })),
+      removePlantSharing: jest.fn(async () => ({ ok: true })), resetPreview: jest.fn(),
     };
   });
   afterEach(() => jest.restoreAllMocks());
 
-  it("opens a floating two-action menu and navigates to the selected plant", async () => {
+  it("opens a floating plant menu and navigates to the selected plant", async () => {
     const view = await renderScreen();
     const tile = view.UNSAFE_getAllByType(GlassCard)[0];
     expect(view.queryByText("Plant details")).toBeNull();
@@ -208,6 +210,68 @@ describe("SharedPlantsScreen", () => {
     fireEvent.press(view.getByText("Remove access"));
     expect(mockSharing.removeShare).toHaveBeenCalledWith("s2");
     await view.findByText("plus");
+  });
+
+  it("confirms removal of every recipient for one plant without deleting the plant", async () => {
+    const view = await renderScreen();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    fireEvent.press(view.getByRole("button", { name: "Delete sharing" }));
+    expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
+    expect(view.getByText("Delete sharing?")).toBeTruthy();
+    expect(view.getByText("Everyone you shared Bird with will lose access. Your plant and its data will be kept.")).toBeTruthy();
+    expect(mockSharing.removePlantSharing).not.toHaveBeenCalled();
+    expect(view.queryByText("plus")).toBeNull();
+    // A background refresh must not silently change the revision being confirmed.
+    mockSharing.versions = { "1": 4 };
+    view.rerender(<SharedPlantsScreen />);
+    await act(async () => { fireEvent.press(view.getByRole("button", { name: "Delete sharing" })); });
+    expect(mockSharing.removePlantSharing).toHaveBeenCalledWith(bird, 3);
+    expect(mockSharing.removeShare).not.toHaveBeenCalled();
+    expect(view.queryByText("Delete sharing?")).toBeNull();
+    expect(view.getByText("Bird")).toBeTruthy();
+  });
+
+  it("cancels deleting all sharing and keeps the current recipient list", async () => {
+    const view = await renderScreen();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    fireEvent.press(view.getByRole("button", { name: "Delete sharing" }));
+    fireEvent.press(view.getByRole("button", { name: "Cancel" }));
+    expect(mockSharing.removePlantSharing).not.toHaveBeenCalled();
+    expect(view.queryByText("Delete sharing?")).toBeNull();
+    expect(view.getByText("Bruno")).toBeTruthy();
+  });
+
+  it("does not offer deleting all sharing to a recipient", async () => {
+    const view = await renderScreen();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Peace lily" }));
+    expect(view.getByRole("button", { name: "Go to plant" })).toBeTruthy();
+    expect(view.queryByRole("button", { name: "Delete sharing" })).toBeNull();
+  });
+
+  it("keeps the all-recipient confirmation open on conflict and disables it while pending", async () => {
+    mockSharing.removePlantSharing.mockResolvedValue({ ok: false, reason: "conflict" });
+    const view = await renderScreen();
+    fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
+    fireEvent.press(view.getByRole("button", { name: "Delete sharing" }));
+    mockSharing.pending = "remove-plant:1";
+    view.rerender(<SharedPlantsScreen />);
+    expect(view.getByRole("button", { name: "Delete sharing" }).props.accessibilityState.disabled).toBe(true);
+    fireEvent.press(view.getByRole("button", { name: "Delete sharing" }));
+    expect(mockSharing.removePlantSharing).not.toHaveBeenCalled();
+    mockSharing.pending = null;
+    view.rerender(<SharedPlantsScreen />);
+    await act(async () => { fireEvent.press(view.getByRole("button", { name: "Delete sharing" })); });
+    expect(view.getByText("Delete sharing?")).toBeTruthy();
+    expect(view.getByText("Sharing changed elsewhere. Reload and try again.")).toBeTruthy();
+    expect(view.getByText("Bruno", { includeHiddenElements: true })).toBeTruthy();
+    expect(view.getByRole("button", { name: "Delete sharing" }).props.accessibilityState.disabled).toBe(true);
+    mockSharing.refresh.mockResolvedValueOnce({ shares: mockSharing.shares, versions: { "1": 4 } });
+    await act(async () => { fireEvent.press(view.getByRole("button", { name: "Reload sharing" })); });
+    expect(view.queryByText("Sharing changed elsewhere. Reload and try again.")).toBeNull();
+    mockSharing.removePlantSharing.mockResolvedValue({ ok: true });
+    await act(async () => { fireEvent.press(view.getByRole("button", { name: "Delete sharing" })); });
+    expect(mockSharing.removePlantSharing).toHaveBeenLastCalledWith(bird, 4);
+    expect(view.queryByText("Delete sharing?")).toBeNull();
   });
 
   it("leaves an incoming share without exposing owner management under its filter", async () => {

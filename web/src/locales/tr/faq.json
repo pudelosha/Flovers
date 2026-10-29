@@ -19,7 +19,7 @@
     },
     {
       "q": "Flovers birden fazla dilde mevcut mu?",
-      "a": "Flovers İngilizce, Lehçe, Almanca, İtalyanca, Fransızca, İspanyolca, Portekizce, Arapça, Hintçe, Çince, Japonca, Korece, Endonezce, Rusça ve Türkçe dillerinde kullanılabilir."
+      "a": "Flovers 15 dili destekler: İngilizce, Lehçe, Almanca, İtalyan, Fransızca, İspanyolca, Portekizce, Arapça, Hintçe, Çince, Japonca, Korece, Endonezce, Rusça, Türkçe."
     },
     {
       "q": "Nasıl hesap oluşturabilirim?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "Hesap etkinleştirme e-postasını almadım; ne yapmalıyım?",
-      "a": "Doğrudan uygulama içinden yeni bir aktivasyon e-postası talep edebilirsiniz."
+      "a": "Giriş ekranındaki etkinleştirme e-postasını yeniden gönderme bağlantısını kullanın. Kayıttan sonra önce giriş ekranına dönün."
     },
     {
       "q": "Şifremi nasıl sıfırlayabilirim?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "Hesabımı ve verilerimi nasıl silebilirim?",
-      "a": "Oturum açmış durumdayken Profil ekranından hesabınızı kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz ve ilişkili tüm verileri kaldırır."
+      "a": "Hesap silmeyi mevcut parolanızla onaylayın. Hesap ve ona ait bitkiler, hatırlatmalar, görevler, ölçümler ve cihazlar kalıcı olarak silinir."
     },
     {
       "q": "Bir ev bitkisi tanımı ile kendi ev bitkim arasındaki fark nedir?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Bir görevi tamamlamayı unutursam ne olur?",
-      "a": "Bir görev tamamlanmazsa uygulama 24 saat sonra bir hatırlatma gönderebilir. Aksi takdirde, siz harekete geçene kadar görev gecikmiş olarak işaretlenmiş olarak kalır."
+      "a": "Açıksa ertesi gün hatırlatması, kendi bitkilerinizin dün tamamlanmamış görevlerini ayarlanan saatte bildirir. Diğer görevler tamamlanana kadar gecikmiş kalır."
     },
     {
       "q": "Hatırlatıcıları devre dışı bırakabilir veya düzenleyebilir miyim?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "Sensör verileri ne sıklıkla güncellenir?",
-      "a": "Sensör sensörü okumaları her 5 dakikada bir sıklıkta gönderilebilir. Depolama amacıyla veriler şu anda bir saatlik aralıklarla kaydedilmektedir."
+      "a": "Oluşturulan firmware varsayılan olarak saatte bir ölçüm gönderir. Formda 1–24 saat seçilebilir; değişiklik yeni kodun yüklenmesini gerektirir. Özel firmware daha sık gönderebilir, ancak kayıtlar saatlik gruplarda tutulur."
     },
     {
       "q": "Sensör cihazım çevrimdışı olursa ne olur?",

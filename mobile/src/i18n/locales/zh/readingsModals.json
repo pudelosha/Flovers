@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "只有当此设备包含水泵时，浇水完成通知才可用。它们可以在计划浇水完成后，或在自动浇水被触发并完成后发送。",
       "sendEmailWateringNotifications": "浇水完成时发送电子邮件通知",
       "sendPushWateringNotifications": "浇水完成时发送推送通知",
-      "samplingIntervalRemoved": "采样间隔已移除"
+      "intervalHours": "读数间隔（小时）",
+      "decreaseInterval": "缩短读数间隔",
+      "increaseInterval": "延长读数间隔",
+      "intervalFirmwareHint": "请选择1–24小时。更改后，请重新生成代码并上传到开发板。",
+      "pumpCooldownMinutes": "自动浇水间隔（分钟）",
+      "pumpCooldownHint": "请选择1–32767分钟（默认60）。开发板下次检查任务时会从服务器获取该设置。此设置不会改变水泵运行时长。",
+      "pumpCooldownInvalid": "请输入1到32767之间的整数。"
     }
   }
 }

@@ -83,7 +83,9 @@
     "title": "Dokumentasi tugas POST pompa berikutnya",
     "desc": [
       "Titik akhir ini digunakan oleh perangkat dengan dukungan pompa.",
-      "Perangkat menanyakan backend apakah ada pekerjaan penyiraman manual terjadwal. The backend returns:"
+      "Perangkat menanyakan backend apakah ada pekerjaan penyiraman manual terjadwal. The backend returns:",
+      "Setel supports_manual_duration ke true hanya jika firmware membaca duration_seconds untuk penyiraman manual. Contoh hasil generasi mendukungnya. Penyiraman otomatis tetap menggunakan PUMP_RUN_MS dari sketch.",
+      "Pilih durasi manual 1–300 detik dan gunakan firmware hasil generasi terbaru. Penyiraman otomatis tetap memakai PUMP_RUN_MS dalam sketch. Permintaan manual yang tidak diambil kedaluwarsa setelah dua jam."
     ],
     "items": [
       "apakah pompa harus bekerja sekarang",
@@ -123,9 +125,10 @@
     "desc": [
       "Aplikasi ini dapat menghasilkan firmware untuk perangkat yang dipilih.",
       "The generated firmware includes the correct API endpoints, auth secret, device key, device ID, enabled sensors, and pump settings for that device.",
-      "Jika perangkat dikonfigurasi dengan pompa air, kode yang dihasilkan mencakup pembacaan sensor dan kontrol pompa air. Ia memeriksa pekerjaan penyiraman manual secara terpisah dari siklus pembacaan per jam, dan penyiraman otomatis menggunakan ambang batas dan sakelar yang dikontrol backend."
+      "Setel supports_manual_duration ke true hanya jika firmware membaca duration_seconds untuk penyiraman manual. Contoh hasil generasi mendukungnya. Penyiraman otomatis tetap menggunakan PUMP_RUN_MS dari sketch.",
+      "Pembacaan dikirim setiap jam secara bawaan. Formulir perangkat mendukung interval 1–24 jam; unggah firmware baru setelah mengubahnya. Permintaan penyiraman manual diperiksa terpisah, secara bawaan setiap menit."
     ],
-    "adjustIntro": "Sebelum mengunggah sketsa, sesuaikan nilai berikut untuk perangkat keras Anda:",
+    "adjustIntro": "Sebelum mengunggah, periksa Wi-Fi, pin, kalibrasi kelembapan, PUMP_RUN_MS, dan interval pemeriksaan. Atur jeda otomatis daring di formulir perangkat.",
     "adjustItems": [
       "Wi-Fi SSID dan kata sandi",
       "SDA_PIN dan SCL_PIN",
@@ -135,14 +138,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — hanya cadangan lokal; saat daring, jeda mengikuti formulir perangkat"
     ],
     "codeLabel": "Firmware Arduino yang dihasilkan: pembacaan sensor + kontrol pompa air"
   },
   "behavior": {
     "title": "Ringkasan perilaku firmware",
     "fullCycle": {
-      "title": "Siklus per jam penuh",
+      "title": "Siklus pembacaan lengkap",
       "desc": "Setiap SEND_INTERVAL_MS, board menjalankan satu siklus penuh:",
       "items": [
         "membaca sensor",
@@ -170,7 +173,8 @@
       "title": "Penyiraman otomatis",
       "desc": [
         "Penyiraman otomatis dikontrol oleh pengaturan backend yang dikonfigurasi di aplikasi seluler.",
-        "Papan hanya menjalankan penyiraman otomatis ketika:"
+        "Papan hanya menjalankan penyiraman otomatis ketika:",
+        "Atur jeda penyiraman otomatis di formulir perangkat: 1–32767 menit, bawaan 60. Papan menerima nilainya pada pemeriksaan berikutnya, dan server juga menerapkannya. AUTO_PUMP_MIN_INTERVAL_MS hanya nilai cadangan lokal."
       ],
       "items": [
         "dukungan pompa diaktifkan",
@@ -186,7 +190,8 @@
       "desc": [
         "Penyiraman manual dijadwalkan dari aplikasi seluler.",
         "Penyiraman manual sengaja mengabaikan:",
-        "Artinya, ketika pengguna menjadwalkan penyiraman secara manual, dewan akan memperlakukannya sebagai permintaan eksplisit untuk menjalankan pompa satu kali."
+        "Artinya, ketika pengguna menjadwalkan penyiraman secara manual, dewan akan memperlakukannya sebagai permintaan eksplisit untuk menjalankan pompa satu kali.",
+        "Pilih durasi manual 1–300 detik dan gunakan firmware hasil generasi terbaru. Penyiraman otomatis tetap memakai PUMP_RUN_MS dalam sketch. Permintaan manual yang tidak diambil kedaluwarsa setelah dua jam."
       ],
       "items": [
         "kelembaban tanah saat ini",

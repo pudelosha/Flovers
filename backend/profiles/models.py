@@ -54,7 +54,7 @@ class ProfileSettings(TimeStampedModel):
         help_text="Tile gloom style: light or dark.",
     )
 
-    background = models.CharField(max_length=3, choices=BACKGROUND_CHOICES, default="bg1")
+    background = models.CharField(max_length=3, choices=BACKGROUND_CHOICES, default="bg5")
     fab_position = models.CharField(max_length=5, choices=FAB_CHOICES, default="right")
 
     def __str__(self) -> str:
@@ -70,11 +70,16 @@ class ProfileNotifications(TimeStampedModel):
     email_hour = models.IntegerField(default=12, validators=[MinValueValidator(0), MaxValueValidator(23)])
     email_minute = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(59)])
     email_24h = models.BooleanField(default=False)
+    email_shared_due = models.BooleanField(default=False)
 
     push_daily = models.BooleanField(default=True)
     push_hour = models.IntegerField(default=12, validators=[MinValueValidator(0), MaxValueValidator(23)])
     push_minute = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(59)])
     push_24h = models.BooleanField(default=False)
+    push_shared_due = models.BooleanField(default=False)
+
+    shared_task_email = models.BooleanField(default=False)
+    shared_task_push = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"ProfileNotifications<{self.user}>"

@@ -23,11 +23,14 @@ def _task_plant(serializer, task):
     return plant
 
 
-def _completed_by(task):
-    actor = task.completed_by
-    if actor is None:
-        return None
-    return {"id": str(actor.pk), "name": actor.get_full_name().strip() or f"FL-{actor.flovers_id.hex.upper()}"}
+def _completed_by(serializer, task):
+    from sharing.identity import accepted_contact_aliases, care_actor_identity
+    request = serializer.context.get("request")
+    viewer = request.user if request is not None else None
+    if task.completed_by is not None and viewer is not None and viewer.is_authenticated and viewer.pk != task.completed_by_id:
+        if "care_actor_aliases" not in serializer.context:
+            serializer.context["care_actor_aliases"] = accepted_contact_aliases(viewer)
+    return care_actor_identity(task.completed_by, viewer, contact_aliases=serializer.context.get("care_actor_aliases"))
 
 
 class ReminderSerializer(serializers.ModelSerializer):
@@ -79,7 +82,7 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
         return _access(self, _task_plant(self, obj))
 
     def get_completed_by(self, obj):
-        return _completed_by(obj)
+        return _completed_by(self, obj)
 
     class Meta:
         model = ReminderTask
@@ -100,7 +103,7 @@ class ReminderTaskJournalSerializer(serializers.ModelSerializer):
         return _access(self, _task_plant(self, obj))
 
     def get_completed_by(self, obj):
-        return _completed_by(obj)
+        return _completed_by(self, obj)
 
     def get_type(self, obj):
         return obj.event["type"]

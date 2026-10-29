@@ -82,7 +82,9 @@
     "title": "Controllare i comandi: POST pump-next-task",
     "desc": [
       "Questo indirizzo è destinato ai dispositivi dotati di pompa.",
-      "Il dispositivo chiede al server se hai richiesto un'annaffiatura manuale nell'app. La risposta indica:"
+      "Il dispositivo chiede al server se hai richiesto un'annaffiatura manuale nell'app. La risposta indica:",
+      "Imposta supports_manual_duration su true solo se il firmware legge duration_seconds e lo usa per l’irrigazione manuale. L’esempio generato lo supporta. L’irrigazione automatica mantiene la durata PUMP_RUN_MS dello sketch.",
+      "Per l’irrigazione manuale scegli da 1 a 300 secondi e usa il firmware generato aggiornato. L’irrigazione automatica continua a usare PUMP_RUN_MS nello sketch. Una richiesta manuale non ritirata scade dopo due ore."
     ],
     "items": [
       "se la pompa deve avviarsi adesso",
@@ -122,9 +124,10 @@
     "desc": [
       "Nell'app puoi generare il codice per il dispositivo selezionato.",
       "Il codice include gli indirizzi delle API, i dati di accesso (secret e device_key), l'identificativo del dispositivo e le impostazioni dei sensori e della pompa.",
-      "Se il dispositivo ha una pompa, il programma gestisce sia le misurazioni sia l'annaffiatura. Controlla i comandi manuali indipendentemente dall'invio delle misurazioni. Per l'annaffiatura automatica usa le impostazioni dell'app e richiede l'autorizzazione del server prima di avviare la pompa."
+      "Imposta supports_manual_duration su true solo se il firmware legge duration_seconds e lo usa per l’irrigazione manuale. L’esempio generato lo supporta. L’irrigazione automatica mantiene la durata PUMP_RUN_MS dello sketch.",
+      "Le letture vengono inviate ogni ora per impostazione predefinita. Il modulo permette intervalli di 1–24 ore; dopo la modifica carica il firmware rigenerato. Le richieste manuali vengono controllate separatamente, di norma ogni minuto."
     ],
-    "adjustIntro": "Prima di caricare il codice, controlla questi valori e adattali al tuo hardware:",
+    "adjustIntro": "Prima del caricamento controlla Wi-Fi, pin, calibrazione dell’umidità, PUMP_RUN_MS e intervalli di controllo. Configura la pausa automatica online nel modulo del dispositivo.",
     "adjustItems": [
       "nome della rete (SSID) e password Wi-Fi",
       "SDA_PIN e SCL_PIN",
@@ -134,14 +137,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — solo ripiego locale; online vale la pausa impostata nel modulo del dispositivo"
     ],
     "codeLabel": "Programma di esempio: misurazioni dei sensori e controllo della pompa"
   },
   "behavior": {
     "title": "Misurazioni e annaffiatura, passo dopo passo",
     "fullCycle": {
-      "title": "Ciclo di misurazione",
+      "title": "Ciclo completo di lettura",
       "desc": "Ogni SEND_INTERVAL_MS, la scheda:",
       "items": [
         "legge i sensori",
@@ -169,7 +172,8 @@
       "title": "Annaffiatura automatica",
       "desc": [
         "Puoi attivare e configurare l'annaffiatura automatica nell'app.",
-        "La scheda avvia la pompa solo se:"
+        "La scheda avvia la pompa solo se:",
+        "Imposta la pausa tra irrigazioni automatiche nel modulo del dispositivo: 1–32767 minuti, con 60 come valore predefinito. La scheda la riceve a una successiva richiesta e anche il server la controlla. AUTO_PUMP_MIN_INTERVAL_MS è solo un valore locale di ripiego."
       ],
       "items": [
         "la pompa è attivata nelle impostazioni del dispositivo",
@@ -185,7 +189,8 @@
       "desc": [
         "Puoi richiedere un'annaffiatura manuale dall'app.",
         "Il comando viene eseguito indipendentemente da:",
-        "La scheda lo considera una richiesta esplicita di avviare la pompa una volta, senza verificare le condizioni dell'annaffiatura automatica."
+        "La scheda lo considera una richiesta esplicita di avviare la pompa una volta, senza verificare le condizioni dell'annaffiatura automatica.",
+        "Per l’irrigazione manuale scegli da 1 a 300 secondi e usa il firmware generato aggiornato. L’irrigazione automatica continua a usare PUMP_RUN_MS nello sketch. Una richiesta manuale non ritirata scade dopo due ore."
       ],
       "items": [
         "umidità attuale del terreno",

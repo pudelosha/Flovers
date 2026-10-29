@@ -108,7 +108,10 @@
       "emptyAllTitle": "还没有共享植物",
       "emptyAllBody": "与联系人共享植物，或请对方向你共享他们的植物。",
       "displayTasks": "查看任务",
-      "actions": "{{name}} 的操作"
+      "actions": "{{name}} 的操作",
+      "deleteSharing": "取消共享",
+      "deleteSharingTitle": "取消共享？",
+      "deleteSharingBody": "所有获得 {{plant}} 共享权限的人都将失去访问权限。你的植物及其数据会保留。"
     },
     "form": {
       "title": "共享植物",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "已拒绝邀请。",
       "contactsInvitationCancelled": "已取消邀请。",
       "contactsContactUpdated": "已更新联系人名称。",
-      "contactsContactDeleted": "已删除联系人。"
+      "contactsContactDeleted": "已删除联系人。",
+      "sharingDeleted": "已取消与所有联系人的共享。"
     },
     "errors": {
       "invalid": "请输入有效的邮箱地址或 Flovers ID。",

@@ -82,7 +82,9 @@
     "title": "Consultar solicitudes: POST pump-next-task",
     "desc": [
       "Esta dirección se utiliza en dispositivos con bomba.",
-      "El dispositivo consulta si has solicitado un riego manual. La respuesta indica:"
+      "El dispositivo consulta si has solicitado un riego manual. La respuesta indica:",
+      "Indica supports_manual_duration: true solo si el firmware lee duration_seconds para el riego manual. El ejemplo generado lo admite. El riego automático mantiene PUMP_RUN_MS del sketch.",
+      "Elige de 1 a 300 segundos para el riego manual y usa el firmware generado actualizado. El riego automático sigue usando PUMP_RUN_MS del sketch. Una solicitud manual no recogida caduca en dos horas."
     ],
     "items": [
       "si la bomba debe arrancar ahora",
@@ -122,9 +124,10 @@
     "desc": [
       "La aplicación puede generar el programa del dispositivo seleccionado.",
       "Incluye las direcciones de la API, las credenciales (secret y device_key), el identificador del dispositivo y los ajustes de sensores y bomba.",
-      "Si hay una bomba configurada, el programa gestiona las mediciones y el riego. Busca solicitudes manuales por separado del envío de lecturas. Para el riego automático, consulta los ajustes de la aplicación y pide autorización al servidor antes de arrancar."
+      "Indica supports_manual_duration: true solo si el firmware lee duration_seconds para el riego manual. El ejemplo generado lo admite. El riego automático mantiene PUMP_RUN_MS del sketch.",
+      "Las lecturas se envían cada hora por defecto. El formulario permite intervalos de 1–24 horas; después debes subir el firmware regenerado. Los pedidos de riego manual se consultan aparte, cada minuto por defecto."
     ],
-    "adjustIntro": "Antes de instalar el código, revisa estos valores y adáptalos a tu hardware:",
+    "adjustIntro": "Antes de subir el programa revisa Wi-Fi, pines, calibración de humedad, PUMP_RUN_MS e intervalos de consulta. Configura la pausa automática en línea en el formulario del dispositivo.",
     "adjustItems": [
       "SSID y contraseña de Wi-Fi",
       "SDA_PIN y SCL_PIN",
@@ -134,14 +137,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — solo respaldo local; en línea se usa la pausa del formulario del dispositivo"
     ],
     "codeLabel": "Programa de ejemplo: sensores y control de la bomba"
   },
   "behavior": {
     "title": "Medir y regar paso a paso",
     "fullCycle": {
-      "title": "Ciclo de medición",
+      "title": "Ciclo completo de lectura",
       "desc": "En cada intervalo SEND_INTERVAL_MS, la placa:",
       "items": [
         "lee los sensores",
@@ -169,7 +172,8 @@
       "title": "Riego automático",
       "desc": [
         "Activas y configuras el riego automático desde la aplicación.",
-        "La placa solo enciende la bomba si:"
+        "La placa solo enciende la bomba si:",
+        "Configura la pausa del riego automático en el formulario del dispositivo: 1–32767 minutos, 60 por defecto. La placa la recibe en una consulta posterior y el servidor también la aplica. AUTO_PUMP_MIN_INTERVAL_MS es solo un valor local de respaldo."
       ],
       "items": [
         "la bomba está activada en los ajustes del dispositivo",
@@ -185,7 +189,8 @@
       "desc": [
         "Solicitas el riego manual desde la aplicación.",
         "Esta solicitud no tiene en cuenta:",
-        "La placa la trata como una orden expresa de encender la bomba una vez, sin comprobar las condiciones del riego automático."
+        "La placa la trata como una orden expresa de encender la bomba una vez, sin comprobar las condiciones del riego automático.",
+        "Elige de 1 a 300 segundos para el riego manual y usa el firmware generado actualizado. El riego automático sigue usando PUMP_RUN_MS del sketch. Una solicitud manual no recogida caduca en dos horas."
       ],
       "items": [
         "la humedad actual del suelo",

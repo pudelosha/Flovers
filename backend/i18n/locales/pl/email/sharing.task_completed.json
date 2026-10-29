@@ -1,0 +1,15 @@
+{
+  "subject": "Zadanie przy Twojej roślinie wykonane",
+  "title": "Zadanie przy Twojej roślinie wykonane",
+  "line1": "{actor} — zadanie przy roślinie {plant} wykonane.",
+  "details": "Zadanie: {task}. Data wykonania: {date}, {time}.",
+  "cta": "Zobacz historię zadań",
+  "push_title": "Zadanie przy Twojej roślinie wykonane",
+  "types": {
+    "water": "podlewanie",
+    "fertilize": "nawożenie",
+    "moisture": "zraszanie",
+    "care": "pielęgnacja",
+    "repot": "przesadzanie"
+  }
+}

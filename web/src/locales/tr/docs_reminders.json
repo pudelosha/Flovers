@@ -30,7 +30,7 @@
         "body": [
           "Her hatırlatıcıyı düzenleyebilir, duraklatabilir, devam ettirebilir veya silebilirsiniz.",
           "Düzenle, aralık, görev türü, ilişkili ev bitkisi ve diğer anımsatıcı ayarları (hatırlatıcı türüne bağlı olarak) gibi anımsatıcı parametrelerini değiştirmenizi sağlar.",
-          "Sil, hatırlatıcıyı kalıcı olarak kaldırır. Pratikte bu aynı zamanda görevlerin bundan sonra bu hatırlatıcıdan oluşturulmayacağı anlamına da gelir.",
+          "Bir hatırlatmayı silmek tamamlanan geçmiş ve notlar dahil tüm görevlerini kalıcı siler. Yeni görev oluşturulmaz. Geçmişi korumak için hatırlatmayı duraklatın.",
           "Duraklat, bir hatırlatıcıyı silmeden geçici olarak devre dışı bırakır. Duraklatıldığında, yapılması gereken görev Ana Sayfa'dan kaldırılır ve günlük e-posta veya anlık bildirimler onu içermez. Hatırlatıcıyı devam ettirdiğinizde Flovers, hatırlatıcı aralığına göre bir sonraki bekleyen görevi zamanlar."
         ]
       },
@@ -56,7 +56,7 @@
         "body": [
           "Hatırlatma yinelenen bir kuraldır (örneğin: 7 günde bir sulayın).",
           "Flovers, hatırlatıcılardan görevler oluşturur ve bunları Ana ekranda işlem yapılabilir öğeler olarak sunar.",
-          "Bir görev tamamlandığında, bir sonraki görev hatırlatma aralığına göre planlanır (böylece rutin otomatik olarak devam eder)."
+          "Sonraki görev, seçtiğiniz tamamlama tarihine hatırlatma aralığı eklenerek hesaplanır. Gerekirse tarih bugünden sonra olana kadar aralık tekrarlanır."
         ]
       },
       {
@@ -64,7 +64,8 @@
         "body": [
           "Hatırlatıcılar tutarlı kalmanıza yardımcı olur ancak ev bitkilerinin sağlığını garanti etmez; gerçek koşullar, aralıkların ayarlanmasını gerektirebilir.",
           "Ortamınızı değiştirirseniz (mevsim, ışık, alt tabaka, saksı boyutu), hatırlatıcıları yeni koşullara uyacak şekilde güncellemeyi düşünün.",
-          "Zaten tamamlanmış görevleri ve notları yönetmek istiyorsanız Görev Geçmişi ekranını (ayrıca belgelenmiştir) kullanın."
+          "Zaten tamamlanmış görevleri ve notları yönetmek istiyorsanız Görev Geçmişi ekranını (ayrıca belgelenmiştir) kullanın.",
+          "Her bitki için her bakım türünden yalnızca bir hatırlatma olabilir. Aynı türden ikinci bir hatırlatma yerine mevcut olanı düzenleyin."
         ]
       },
       {

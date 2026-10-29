@@ -14,7 +14,7 @@
         "body": [
           "Hesap bölümü, kayıtlı e-posta adresi ve hesap oluşturma tarihi gibi temel hesap bilgilerini görüntüler.",
           "Bu bölümden kullanıcı e-posta adresini değiştirebilir (geçerli parolanın onaylanması gerekir), mevcut parolayı değiştirebilir, oturumu kapatabilir veya hesabı kalıcı olarak silebilir.",
-          "Hesabın silinmesi, ev bitkileri, hatırlatıcılar, görevler, sensör okumaları ve cihazlar da dahil olmak üzere tüm kullanıcı verilerinin geri alınamayacak şekilde silinmesine neden olur."
+          "Hesap silmeyi mevcut parolanızla onaylayın. Hesap ve ona ait bitkiler, hatırlatmalar, görevler, ölçümler ve cihazlar kalıcı olarak silinir."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Bildirimler",
         "body": [
-          "Bildirimler bölümü, kullanıcının e-posta ve anlık bildirimlere ilişkin onay ve tercihleri yönetmesine olanak tanır.",
-          "Kullanıcı, hem e-posta hem de anlık bildirimler için iki bildirim türünü etkinleştirebilir veya devre dışı bırakabilir: bugün teslim edilmesi gereken görevler olup olmadığını bildiren günlük bir özet ve ilk bildirimden 24 saat sonra görevler beklemede kalırsa gönderilen bir hatırlatma bildirimi.",
-          "Her bildirim türü için kullanıcı teslimat saatini seçer (tam saat formatı, örneğin 14:00)."
+          "Bildirimler E-posta, Mobil ve Paylaşım bölümlerinden oluşur. Kendi bitkilerinize ait günlük özetleri e-posta ve anlık bildirim için ayrı ayrı açabilir, hesabın bildirim saat diliminde her kanal için bir gönderim saati seçebilirsiniz.",
+          "E-posta ve Mobil bölümlerinde, sizinle paylaşılan bitkilerin bugün yapılması gereken görevleri için ek bir onay kutusu bulunur. Bu seçenekler başlangıçta kapalıdır, kendi bitkilerinizin özetlerinden bağımsız çalışır ve ilgili kanalın gönderim saatini kullanır. İki seçenek de açıksa kendi bitkilerinizin ve sizinle paylaşılan bitkilerin görevleri her kanal için tek günlük mesajda birleştirilir.",
+          "Hatırlatmalar hem yalnızca görüntüleme hem de görev tamamlama izni bulunan etkin paylaşımları kapsar. Gönderimden önce erişim yeniden kontrol edilir. Paylaşımın süresi dolduğunda, erişim kaldırıldığında veya kişi silindiğinde hatırlatmalar durur.",
+          "Ertesi gün hatırlatması yalnızca kendi bitkilerinizin dünden kalan tamamlanmamış görevlerini kapsar. İlk bildirimden tam 24 saat sonra değil, kanal için ayarladığınız saatte gönderilir.",
+          "Paylaşım bölümü farklı bir olayı kapsar: başka biri size ait bir bitkinin görevini tamamlar. Buradaki e-posta ve anlık bildirim seçenekleri başlangıçta kapalıdır ve paylaştığınız tüm bitkiler için geçerlidir. Bildirimler günlük özeti beklemeden görev tamamlandıktan sonra gönderilir. Bu, her bitki paylaşımına özel değil, hesabın genel ayarıdır."
         ]
       },
       {

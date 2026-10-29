@@ -74,7 +74,9 @@
         "body": [
           "Escolha Vincular dispositivo para configurar um novo aparelho e associá-lo a uma planta.",
           "Defina nome, planta, estado ativo ou inativo, intervalo de leitura e sensores. Você também pode configurar alertas de baixa umidade do solo, os canais de aviso, a bomba, a rega automática, seu limite de umidade e os avisos de conclusão da rega.",
-          "Cada aparelho recebe uma Chave do Dispositivo. A conta também tem uma Chave Secreta de Autenticação. Juntas, elas permitem que o aparelho se comunique com o servidor."
+          "Cada aparelho recebe uma Chave do Dispositivo. A conta também tem uma Chave Secreta de Autenticação. Juntas, elas permitem que o aparelho se comunique com o servidor.",
+          "Define o intervalo entre 1 e 24 horas inteiras. Depois de o alterar, gera novamente o sketch e carrega-o na placa: o programa em execução não recebe este valor automaticamente.",
+          "Define a pausa da rega automática no formulário do dispositivo: 1–32767 minutos, com 60 por predefinição. A placa recebe-a numa consulta posterior e o servidor também a aplica. AUTO_PUMP_MIN_INTERVAL_MS é apenas um valor local de recurso."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "A placa consulta os pedidos pendentes. Se encontrar um e tiver o código de controle da bomba, executa a rega e informa o resultado ao servidor.",
           "A rega manual não verifica a umidade atual do solo, o limite ou o intervalo mínimo da rega automática.",
           "Ela é tratada como um pedido explícito seu para regar.",
-          "Você pode cancelar o pedido antes que o dispositivo o receba."
+          "Você pode cancelar o pedido antes que o dispositivo o receba.",
+          "Escolhe 1–300 segundos para a rega manual e usa o firmware gerado atualizado. A rega automática continua a usar PUMP_RUN_MS do sketch. Um pedido manual não recolhido expira após duas horas."
         ]
       },
       {
         "heading": "Quando os pedidos são verificados",
         "body": [
           "O código gerado usa intervalos diferentes para enviar leituras e procurar pedidos manuais.",
-          "Por padrão, as leituras são enviadas uma vez por hora.",
+          "As leituras são enviadas de hora a hora por predefinição. O formulário permite intervalos de 1–24 horas; depois carrega o firmware regenerado. Os pedidos manuais são consultados à parte, a cada minuto por predefinição.",
           "As condições da rega automática são verificadas nesse ciclo de leitura.",
           "Os pedidos manuais são verificados com mais frequência: por padrão, a cada minuto.",
           "Isso permite atender ao pedido rapidamente sem enviar todas as leituras a cada minuto.",
@@ -134,7 +137,7 @@
           "A placa consulta no servidor se a rega automática está ativa e qual limite deve usar.",
           "Se estiver ativa e a umidade estiver abaixo do limite, a placa pede autorização ao servidor antes de ligar a bomba.",
           "Para funcionar, a bomba, o sensor de umidade e a rega automática precisam estar ativados. Também são necessários um limite válido, um dispositivo ativo e a confirmação das configurações pelo servidor.",
-          "Há um intervalo de espera para evitar regas automáticas próximas demais.",
+          "Define a pausa da rega automática no formulário do dispositivo: 1–32767 minutos, com 60 por predefinição. A placa recebe-a numa consulta posterior e o servidor também a aplica. AUTO_PUMP_MIN_INTERVAL_MS é apenas um valor local de recurso.",
           "A rega manual tem prioridade. Se ela acontecer, a placa não faz uma rega automática no mesmo ciclo."
         ]
       },
@@ -183,8 +186,8 @@
           "O código é um ponto de partida para placas como a ESP32. Revise e adapte antes de usar.",
           "Ele se conecta ao Wi-Fi, sincroniza a hora, inicializa e lê os sensores, envia as leituras e verifica os pedidos manuais. Também consulta as configurações da rega automática, pede autorização ao servidor, aciona a bomba quando necessário e informa o resultado.",
           "O envio das leituras e a busca de pedidos manuais são feitos separadamente.",
-          "Por padrão, as leituras saem a cada hora e os pedidos manuais são verificados a cada minuto.",
-          "Ajuste o código ao seu hardware: pinos, calibração, ligação do relé e tipo de placa."
+          "As leituras são enviadas de hora a hora por predefinição. O formulário permite intervalos de 1–24 horas; depois carrega o firmware regenerado. Os pedidos manuais são consultados à parte, a cada minuto por predefinição.",
+          "Antes de carregar, revê Wi-Fi, pinos, calibração de humidade, PUMP_RUN_MS e intervalos de consulta. Define a pausa automática online no formulário do dispositivo."
         ]
       },
       {

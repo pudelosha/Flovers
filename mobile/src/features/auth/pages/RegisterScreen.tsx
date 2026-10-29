@@ -38,6 +38,10 @@ function buildTermsUrl(lang: any) {
   return `${WEB_BASE}/${safeLang}/terms`;
 }
 
+function buildPrivacyUrl(lang: any) {
+  return `${WEB_BASE}/${normalizeLang(lang)}/privacy-policy`;
+}
+
 /** Reusable animated floating label input (same UX as other screens) */
 const AnimatedFloatingLabel = ({
   label,
@@ -263,6 +267,14 @@ export default function RegisterScreen({ navigation }: any) {
     }
   }, [currentLanguage, getTranslation]);
 
+  const openPrivacy = useCallback(async () => {
+    try {
+      await Linking.openURL(buildPrivacyUrl(currentLanguage));
+    } catch {
+      setToast({ visible: true, msg: getTranslation("register.errors.cannotOpenLink") });
+    }
+  }, [currentLanguage, getTranslation]);
+
   React.useEffect(() => {
     console.log("RegisterScreen rendering with language:", currentLanguage);
   }, [currentLanguage]);
@@ -374,7 +386,8 @@ export default function RegisterScreen({ navigation }: any) {
 
         <TouchableRipple
           onPress={() => setAgree((v) => !v)}
-          accessibilityRole="button"
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked: agree }}
           style={s.agreeRipple}
           borderless={false}
           rippleColor="rgba(255,255,255,0.15)"
@@ -389,8 +402,14 @@ export default function RegisterScreen({ navigation }: any) {
             />
             <Text style={s.agreeText}>
               {getTranslation("register.termsAgreement")}{" "}
-              <Text style={[s.agreeText, s.linkBold, s.linkUnderline]} onPress={openTerms}>
+              <Text style={[s.agreeText, s.linkBold, s.linkUnderline]} accessibilityRole="link"
+                onPress={(event) => { event.stopPropagation(); void openTerms(); }}>
                 {getTranslation("register.termsLink")}
+              </Text>
+              {" "}{getTranslation("register.termsAnd")}{" "}
+              <Text style={[s.agreeText, s.linkBold, s.linkUnderline]} accessibilityRole="link"
+                onPress={(event) => { event.stopPropagation(); void openPrivacy(); }}>
+                {getTranslation("register.privacyLink")}
               </Text>
             </Text>
           </View>

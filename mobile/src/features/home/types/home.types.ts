@@ -18,5 +18,6 @@ export type Task = {
 
   // fields used by Task History (filled when task is completed)
   completedAt?: string; // ISO string from backend
+  completedBy?: { id: string; name: string }; // actual task-completion actor
   note?: string;        // note added on completion
 };

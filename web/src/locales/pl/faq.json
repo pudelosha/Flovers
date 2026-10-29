@@ -19,7 +19,7 @@
     },
     {
       "q": "W jakich językach mogę korzystać z Flovers?",
-      "a": "Możesz wybrać m.in. język polski, angielski, niemiecki, włoski, francuski, hiszpański, portugalski, arabski, hindi, chiński, japoński lub koreański."
+      "a": "Flovers obsługuje 15 języków: Angielski, Polski, Niemiecki, Włoski, Francuski, Hiszpański, Portugalski, Arabski, Hindi, Chiński, Japoński, Koreański, Indonezyjski, Rosyjski, Turecki."
     },
     {
       "q": "Jak założyć konto?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "E-mail aktywacyjny nie dotarł. Co zrobić?",
-      "a": "W aplikacji możesz ponownie wysłać wiadomość z linkiem aktywacyjnym."
+      "a": "Na ekranie logowania wybierz ponowne wysłanie e-maila aktywacyjnego. Po rejestracji najpierw wróć do logowania."
     },
     {
       "q": "Jak odzyskać dostęp do konta, gdy nie pamiętam hasła?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "Jak usunąć konto i dane?",
-      "a": "Po zalogowaniu otwórz ekran Profil i wybierz usunięcie konta. Konto i wszystkie powiązane z nim dane zostaną trwale usunięte. Tej operacji nie można cofnąć."
+      "a": "Aby usunąć konto, potwierdź operację aktualnym hasłem. Konto oraz należące do niego rośliny, przypomnienia, zadania, odczyty i urządzenia zostaną trwale usunięte."
     },
     {
       "q": "Czym różni się opis gatunku od mojej rośliny?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Co się stanie, jeśli zapomnę wykonać zadanie?",
-      "a": "Aplikacja może przypomnieć o nim po 24 godzinach. Do czasu wykonania zadanie będzie widoczne jako zaległe."
+      "a": "Jeśli włączysz ponowne przypomnienie, dostaniesz je następnego dnia o ustawionej godzinie dla niewykonanych wczorajszych zadań przy własnych roślinach. Pozostałe zadania czekają jako zaległe do ich wykonania."
     },
     {
       "q": "Czy mogę zmieniać lub wyłączać przypomnienia?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "Jak często odświeżają się odczyty z czujników?",
-      "a": "Urządzenie może wysyłać odczyty nawet co 5 minut. W historii dane są obecnie zapisywane co godzinę."
+      "a": "Wygenerowany program domyślnie wysyła odczyty co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowy program. Własny program może wysyłać pomiary częściej, ale dane nadal są zapisywane w przedziałach godzinowych."
     },
     {
       "q": "Czy dowiem się, że urządzenie przestało wysyłać odczyty?",

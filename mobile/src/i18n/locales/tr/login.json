@@ -10,7 +10,8 @@
     "signUp": "Kaydol",
     "errors": {
       "invalidCredentials": "Geçersiz e-posta veya şifre.",
-      "generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+      "generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "accountNotActivated": "Giriş yapmadan önce e-posta adresini doğrula. Mesaj gelmediyse bu ekrandan etkinleştirme e-postasını yeniden isteyebilirsin."
     },
     "success": {
       "welcome": "Tekrar hoş geldiniz!"

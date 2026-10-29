@@ -1,0 +1,15 @@
+{
+  "subject": "공유한 식물의 관리 작업이 완료되었어요",
+  "title": "공유한 식물의 관리 작업이 완료되었어요",
+  "line1": "{actor}님이 {plant}의 관리 작업을 완료했어요.",
+  "details": "작업: {task}. 완료 시간: {date} {time}.",
+  "cta": "관리 이력 보기",
+  "push_title": "공유한 식물의 관리 작업이 완료되었어요",
+  "types": {
+    "water": "물 주기",
+    "fertilize": "비료 주기",
+    "moisture": "분무",
+    "care": "관리",
+    "repot": "분갈이"
+  }
+}

@@ -1,13 +1,10 @@
-import React, { useState, useMemo, useRef } from "react";
+import React, { useMemo } from "react";
 import {
   View,
   Text,
   Pressable,
   StyleSheet,
-  Animated,
-  Easing,
 } from "react-native";
-import type { GestureResponderEvent } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -87,10 +84,6 @@ export default function TaskHistoryTile({
 }: Props) {
   const { t } = useTranslation();
 
-  const [expanded, setExpanded] = useState(false);
-  const [noteHeight, setNoteHeight] = useState(0);
-  const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
-
   const { settings } = useSettings();
   const access = plantAccess(item.access);
   const dateFormat = settings.dateFormat || "DD.MM.YYYY";
@@ -106,67 +99,16 @@ export default function TaskHistoryTile({
   );
 
   const hasNote = !!item.note && item.note.trim().length > 0;
-
-  const animateTo = (value: 0 | 1) => {
-    Animated.timing(anim, {
-      toValue: value,
-      duration: 140,
-      easing: Easing.out(Easing.cubic),
-      useNativeDriver: false, // animating height/margin
-    }).start();
-  };
-
-  const expand = () => {
-    if (!hasNote || expanded) return;
-    setExpanded(true);
-    animateTo(1);
-  };
-
-  const collapse = () => {
-    if (!hasNote || !expanded) return;
-    setExpanded(false);
-    animateTo(0);
-  };
+  const completedBy = item.completedBy?.name.trim() || t("taskHistory.tile.unknownUser", { defaultValue: "Unknown user" });
 
   const onToggleBody = () => {
     onPressBody?.();
     onToggleMenu();
   };
 
-  const animatedHeight =
-    noteHeight > 0
-      ? anim.interpolate({
-          inputRange: [0, 1],
-          outputRange: [0, noteHeight],
-        })
-      : 0;
-
-  const animatedOpacity = anim;
-  const animatedMarginTop = anim.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 6],
-  });
-
   const handleDelete = () => {
     onToggleMenu();
     if (onDelete) onDelete(item);
-  };
-
-  const handleExpandFromMenu = () => {
-    onToggleMenu();
-    expand();
-  };
-
-  const handleCollapseFromMenu = () => {
-    onToggleMenu();
-    collapse();
-  };
-
-  const handleToggleNoteFromIcon = (event: GestureResponderEvent) => {
-    event.stopPropagation();
-    onPressBody?.();
-    if (expanded) collapse();
-    else expand();
   };
 
   const handleEditReminder = () => {
@@ -232,22 +174,22 @@ export default function TaskHistoryTile({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <View style={[s.cardRow, expanded && styles.expandedRow]}>
+      <View style={s.cardRow}>
         {/* BODY (pressable): opens the inline menu */}
         <Pressable
           accessible={false}
-          style={[s.cardBodyPressable, expanded && styles.expandedBody]}
+          style={s.cardBodyPressable}
           onPress={onToggleBody}
           android_ripple={{ color: "rgba(255,255,255,0.10)" }}
         >
           {/* Left: icon only */}
-          <View style={[s.leftCol, expanded && styles.expandedLeftCol]}>
+          <View style={s.leftCol}>
             <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000000", 0.15) }]}>
               <MaterialCommunityIcons name={icon} size={24} color={accent} />
             </View>
           </View>
 
-          {/* Center: type + plant + location + animated note */}
+          {/* Center: type + plant + location */}
           <View style={s.centerCol}>
             <Text style={[s.taskTypeLabel, { color: accent }]} numberOfLines={1}>
               {typeLabel}
@@ -271,102 +213,32 @@ export default function TaskHistoryTile({
               </View>
             )}
 
-            {hasNote && (
-              <>
-                {/* Invisible measurement copy */}
-                <View
-                  style={styles.noteMeasureWrapper}
-                  pointerEvents="none"
-                  onLayout={(e) => {
-                    const h = e.nativeEvent.layout.height;
-                    if (h > 0 && h !== noteHeight) setNoteHeight(h);
-                  }}
-                >
-                  <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
-                    <Text style={s.noteText}>{item.note}</Text>
-                  </View>
-                </View>
-
-                {/* Animated visible note */}
-                <Animated.View
-                  style={[
-                    s.noteContainer,
-                    {
-                      height: animatedHeight,
-                      opacity: animatedOpacity,
-                      marginTop: animatedMarginTop,
-                    },
-                  ]}
-                >
-                  <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
-                    <Text style={s.noteText}>{item.note}</Text>
-                  </View>
-                </Animated.View>
-              </>
-            )}
           </View>
 
           <View style={s.separator} />
 
           <View style={s.rightCol}>
-            {!!completedLabel && (
-              <>
-                <Text style={s.completedLabel} numberOfLines={2}>
-                  {t("taskHistory.tile.completed", { defaultValue: "Completed" })}
-                </Text>
-                <Text style={s.completedDateText} numberOfLines={1}>
-                  {completedLabel}
-                </Text>
-              </>
-            )}
-            {hasNote && (
-              <Pressable
-                style={s.noteIndicatorButton}
-                onPress={handleToggleNoteFromIcon}
-                android_ripple={{ color: "rgba(255,255,255,0.14)", borderless: true }}
-                hitSlop={8}
-              >
-                <MaterialCommunityIcons
-                  name="note-edit-outline"
-                  size={18}
-                  color="rgba(255,255,255,0.92)"
-                />
-              </Pressable>
-            )}
+            <Text style={s.completedLabel} numberOfLines={1}>
+              {t("taskHistory.tile.completed", { defaultValue: "Completed" })}
+            </Text>
+            <Text style={s.completedDateText} numberOfLines={1}>
+              {completedLabel || "—"}
+            </Text>
+            <Text style={s.completedByText} numberOfLines={1} ellipsizeMode="tail">
+              {completedBy}
+            </Text>
           </View>
         </Pressable>
       </View>
 
+      {hasNote && <View style={[s.noteBox, styles.noteSection]}>
+        <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
+        <Text style={s.noteText}>{item.note}</Text>
+      </View>}
+
       {/* Inline menu */}
       {isMenuOpen && (
         <View style={s.menuSheet}>
-          {/* Expand / Collapse (first, only if there is a note) */}
-          {hasNote && !expanded && (
-            <Pressable style={s.menuItem} onPress={handleExpandFromMenu}>
-              <MaterialCommunityIcons
-                name="unfold-more-horizontal"
-                size={18}
-                color="#FFFFFF"
-                style={{ marginRight: 8 }}
-              />
-              <Text style={s.menuItemText}>{t("taskHistory.menu.expand")}</Text>
-            </Pressable>
-          )}
-
-          {hasNote && expanded && (
-            <Pressable style={s.menuItem} onPress={handleCollapseFromMenu}>
-              <MaterialCommunityIcons
-                name="unfold-less-horizontal"
-                size={18}
-                color="#FFFFFF"
-                style={{ marginRight: 8 }}
-              />
-              <Text style={s.menuItemText}>{t("taskHistory.menu.collapse")}</Text>
-            </Pressable>
-          )}
-
           {/* Edit reminder */}
           {access.canEdit && <Pressable style={s.menuItem} onPress={handleEditReminder}>
             <MaterialCommunityIcons
@@ -408,20 +280,9 @@ export default function TaskHistoryTile({
 }
 
 const styles = StyleSheet.create({
-  expandedRow: {
-    alignItems: "flex-start",
-    paddingVertical: 8,
-  },
-  expandedBody: {
-    alignItems: "flex-start",
-  },
-  expandedLeftCol: {
-    marginTop: 17,
-  },
-  noteMeasureWrapper: {
-    position: "absolute",
-    opacity: 0,
-    left: 0,
-    right: 0,
+  noteSection: {
+    marginHorizontal: 20,
+    paddingTop: 0,
+    paddingBottom: 16,
   },
 });

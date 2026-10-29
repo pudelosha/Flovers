@@ -152,13 +152,13 @@ export const s = StyleSheet.create({
     marginTop: 4,
     textAlign: "right",
   },
-  noteIndicatorButton: {
-    marginTop: 8,
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    alignItems: "center",
-    justifyContent: "center",
+  completedByText: {
+    width: "100%",
+    color: "rgba(255,255,255,0.85)",
+    fontWeight: "600",
+    fontSize: 11,
+    marginTop: 4,
+    textAlign: "right",
   },
   menuBtn: {
     width: 36,
@@ -197,12 +197,6 @@ export const s = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 0.2,
     fontSize: 12,
-  },
-
-  // Note animation container (outer)
-  noteContainer: {
-    overflow: "hidden", // ensures animated height clips contents cleanly
-    marginTop: 6, // fixed margin so expansion doesn't shift other controls
   },
 
   // Note area (inner content)

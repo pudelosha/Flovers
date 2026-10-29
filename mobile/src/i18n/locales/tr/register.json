@@ -13,7 +13,7 @@
       "invalidEmail": "Geçerli bir e-posta girin.",
       "shortPassword": "Şifre en az 8 karakter olmalıdır.",
       "passwordsMismatch": "Şifreler eşleşmiyor.",
-      "termsRequired": "Şartlar ve Koşulları kabul etmelisiniz.",
+      "termsRequired": "Kullanım Şartları ve Gizlilik Politikası’nı kabul etmelisin.",
       "incompleteForm": "Lütfen formu doldurun.",
       "emailTaken": "Bu e-posta zaten alınmış.",
       "registrationFailed": "Kayıt başarısız oldu. Lütfen tekrar deneyin.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Hesap oluşturuldu. Hoş geldin!"
-    }
+    },
+    "termsAnd": "ve",
+    "privacyLink": "Gizlilik Politikası"
   }
 }

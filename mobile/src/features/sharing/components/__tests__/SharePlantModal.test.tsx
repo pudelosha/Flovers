@@ -42,6 +42,11 @@ function savedUpdates() {
   const calls = mockSharing.savePlantsSharing.mock.calls;
   return calls[calls.length - 1]?.[0].map(({ expectedRevision, ...update }: any) => update);
 }
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  const promise = new Promise<T>((done) => { resolve = done; });
+  return { promise, resolve };
+}
 
 describe("SharePlantModal", () => {
   it("locks an existing sharing to its opening plant while allowing recipient edits", async () => {
@@ -68,6 +73,79 @@ describe("SharePlantModal", () => {
       closeSharePlant: jest.fn(), savePlantsSharing: jest.fn().mockResolvedValue({ ok: true }), pending: null,
       refresh: jest.fn(async () => ({ contacts: mockSharing.contacts, shares: mockSharing.shares, versions: mockSharing.versions })),
     };
+  });
+
+  it.each(["plants", "sharing"])("shows only a spinner until both requests finish when %s loads first", async (first) => {
+    mockSharing.shareDraft = { plant: bird };
+    mockSharing.shares = [existing(bird, "anna", true)];
+    const plants = deferred<typeof apiPlants>();
+    const sharing = deferred<any>();
+    fetchPlants.mockReturnValueOnce(plants.promise);
+    mockSharing.refresh.mockReturnValueOnce(sharing.promise);
+    const snapshot = { contacts, shares: mockSharing.shares, versions: {} };
+    const view = render(<SharePlantModal />);
+    const expectLoading = () => {
+      expect(view.getByTestId("sharing-form-loading")).toBeTruthy();
+      expect(view.queryByText("Share plants")).toBeNull();
+      expect(view.queryByText("Manage sharing")).toBeNull();
+      expect(view.queryByLabelText("Select Bird")).toBeNull();
+      expect(view.queryByLabelText("Select Anna")).toBeNull();
+      expect(view.queryByText("Who can access these plants?")).toBeNull();
+      expect(view.queryByText("End date")).toBeNull();
+      expect(view.queryByLabelText("Email")).toBeNull();
+      expect(view.queryByLabelText("Push notification")).toBeNull();
+      expect(view.queryByText("Save sharing")).toBeNull();
+      expect(view.queryByText("Share selected plants")).toBeNull();
+    };
+    expectLoading();
+    await act(async () => { if (first === "plants") plants.resolve(apiPlants); else sharing.resolve(snapshot); });
+    expectLoading();
+    await act(async () => { if (first === "plants") sharing.resolve(snapshot); else plants.resolve(apiPlants); });
+    await loaded(view);
+    expect(view.queryByTestId("sharing-form-loading")).toBeNull();
+    expect(view.getByText("Manage sharing")).toBeTruthy();
+    expect(view.getByLabelText("Select Bird").props.accessibilityState).toMatchObject({ checked: true, disabled: true });
+    expect(view.getByLabelText("Select Anna").props.accessibilityState.checked).toBe(true);
+    expect(view.getByLabelText("Anna: Can complete tasks").props.accessibilityState.checked).toBe(true);
+    expect(view.getByText("Save sharing")).toBeTruthy();
+  });
+
+  it("keeps notification consent out of both add and edit sharing forms", async () => {
+    const view = render(<SharePlantModal />);
+    await loaded(view);
+    expect(view.queryByRole("checkbox", { name: "Email" })).toBeNull();
+    expect(view.queryByRole("checkbox", { name: "Push notification" })).toBeNull();
+    mockSharing.shareDraft = { plant: bird };
+    mockSharing.shares = [existing(bird, "anna", true)];
+    view.rerender(<SharePlantModal />);
+    await view.findByText("Save sharing");
+    expect(view.queryByRole("checkbox", { name: "Email" })).toBeNull();
+    expect(view.queryByRole("checkbox", { name: "Push notification" })).toBeNull();
+    fireEvent.press(view.getByText("Save sharing"));
+    expect(savedUpdates()[0]).not.toHaveProperty("notifyEmailOnCompletion");
+    expect(savedUpdates()[0]).not.toHaveProperty("notifyPushOnCompletion");
+  });
+
+  it("does not display the preceding draft while a newly opened draft loads", async () => {
+    mockSharing.shareDraft = { plant: bird };
+    mockSharing.shares = [existing(bird, "anna", false)];
+    const view = render(<SharePlantModal />);
+    await loaded(view);
+    expect(view.getByText("Save sharing")).toBeTruthy();
+    mockSharing.shareDraft = null;
+    view.rerender(<SharePlantModal />);
+    const plants = deferred<typeof apiPlants>();
+    fetchPlants.mockReturnValueOnce(plants.promise);
+    mockSharing.shareDraft = { plant: pilea };
+    view.rerender(<SharePlantModal />);
+    expect(view.getByTestId("sharing-form-loading")).toBeTruthy();
+    expect(view.queryByLabelText("Select Bird")).toBeNull();
+    expect(view.queryByLabelText("Select Anna")).toBeNull();
+    expect(view.queryByText("Save sharing")).toBeNull();
+    await act(async () => { plants.resolve(apiPlants); });
+    await loaded(view);
+    expect(view.getByLabelText("Select Pilea").props.accessibilityState.checked).toBe(true);
+    expect(view.getByLabelText("Select Anna").props.accessibilityState.checked).toBe(false);
   });
 
   it("keeps catalogue photos and Latin names when plants are shared", async () => {
@@ -104,10 +182,12 @@ describe("SharePlantModal", () => {
   it("uses the Profile modal frame and requires plants and accepted recipients", async () => {
     const view = render(<SharePlantModal />);
     expect(view.UNSAFE_getByType(ContactModalFrame)).toBeTruthy();
+    expect(view.queryByText("Share plants")).toBeNull();
+    expect(view.queryByText("Share selected plants")).toBeNull();
+    await loaded(view);
     expect(view.getByText("Share plants")).toBeTruthy();
     fireEvent.press(view.getByText("Share selected plants"));
     expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
-    await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird"));
     fireEvent.press(view.getByLabelText("Select Anna"));
     expect(view.getByLabelText("Anna: View only").props.accessibilityState.checked).toBe(true);
@@ -390,7 +470,10 @@ describe("SharePlantModal", () => {
     const view = render(<SharePlantModal />);
     await view.findByText("Could not load your plants.");
     expect(view.queryByLabelText("Select Bird")).toBeNull();
-    fireEvent.press(view.getByText("Share selected plants")); expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
+    expect(view.queryByLabelText("Select Anna")).toBeNull();
+    expect(view.queryByText("Share selected plants")).toBeNull();
+    expect(view.queryByText("End date")).toBeNull();
+    expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
   });
 
   it("ignores plant responses from a draft that has already closed", async () => {

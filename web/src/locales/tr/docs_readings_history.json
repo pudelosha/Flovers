@@ -28,7 +28,7 @@
         "heading": "Geçmiş dönemlerde gezinme",
         "body": [
           "Seçilen dönemin yanındaki oklar önceki günler, haftalar veya aylar arasında geçiş yapmanızı sağlar.",
-          "Gezinme, verilerin mevcut olduğu dönemlerle sınırlıdır; gelecek dönemler görüntülenmez."
+          "Ölçüm içermeyen geçmiş gün, hafta ve ayları da seçebilirsiniz. Gelecekteki dönemlere gidilemez."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Veri kullanılabilirliği ve yorumlanması",
         "body": [
           "Cihaz seçilen süre boyunca sensör okumaları sağlamadıysa grafik boş görünecek veya eksik değerleri gösterecektir.",
-          "Sensör verileri bilgilendiricidir ve gerçek dünya gözlemleriyle birlikte yorumlanmalıdır (kalibrasyon, yerleştirme ve ortam doğruluğu etkileyebilir)."
+          "Sensör verileri bilgilendiricidir ve gerçek dünya gözlemleriyle birlikte yorumlanmalıdır (kalibrasyon, yerleştirme ve ortam doğruluğu etkileyebilir).",
+          "Eksik örnekler sıfır yerine boşluk olarak kalır. Gerçek sıfır değerleri korunur. Sıcaklıklar Profil’de seçilen Celsius, Fahrenheit veya Kelvin birimini kullanır."
         ]
       }
     ]

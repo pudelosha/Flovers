@@ -6,14 +6,16 @@
         "heading": "Bagikan tanaman dengan kontak",
         "body": [
           "Buka Profil, lalu Berbagi dan Berbagi tanaman. Menu + memungkinkan Anda berbagi tanaman dan memfilter tanaman yang dibagikan oleh Anda atau dengan Anda. Anda juga dapat memulai dari menu tiga titik tanaman milik atau detail kontak.",
-          "Saat menambahkan berbagi, pilih satu atau lebih tanaman dan kontak yang memiliki akses. Setiap kontak dapat memiliki akses hanya lihat atau izin untuk menyelesaikan tugas, dengan tanggal akhir opsional. Izin yang ada ditampilkan sebelum Anda menyimpan."
+          "Saat menambahkan berbagi, pilih satu atau lebih tanaman dan kontak yang memiliki akses. Setiap kontak dapat memiliki akses hanya lihat atau izin untuk menyelesaikan tugas, dengan tanggal akhir opsional. Izin yang ada ditampilkan sebelum Anda menyimpan.",
+          "Mengubah atau menghapus tanggal akhir berlaku untuk semua kontak yang dicentang pada semua tanaman pilihan. Tanggal yang berbeda tetap tersimpan jika tidak diubah. Menghapus centang kontak lama mencabut aksesnya saat disimpan."
         ]
       },
       {
         "heading": "Kelola berbagi yang ada",
         "body": [
           "Kelola berbagi membuka satu tanaman dengan pilihan terkunci. Ubah kontaknya, izin penyelesaian tugas, atau tanggal berakhirnya, lalu simpan. Untuk berbagi tanaman lainnya, buka Bagikan tanaman.",
-          "Setiap ubin tanaman bersama menunjukkan nama, spesies, dan lokasinya, diikuti oleh baris terpisah untuk kontak, izin, dan tanggal akhir. Pemilik dapat menghapus akses masing-masing kontak; penerima dapat meninggalkan tanaman bersama."
+          "Setiap ubin tanaman bersama menunjukkan nama, spesies, dan lokasinya, diikuti oleh baris terpisah untuk kontak, izin, dan tanggal akhir. Pemilik dapat menghapus akses masing-masing kontak; penerima dapat meninggalkan tanaman bersama.",
+          "Mengubah atau menghapus tanggal akhir berlaku untuk semua kontak yang dicentang pada semua tanaman pilihan. Tanggal yang berbeda tetap tersimpan jika tidak diubah. Menghapus centang kontak lama mencabut aksesnya saat disimpan."
         ]
       },
       {
@@ -28,6 +30,14 @@
         "heading": "Ketika akses berakhir",
         "body": [
           "Tanggal akhir opsional mencakup tanggal tersebut dalam zona waktu pemberitahuan pemilik. Tanpa tanggal akhir, akses berlanjut hingga dihapus. Kedaluwarsa, menghapus akses atau menghapus kontak mengakhiri akses penerima tanpa menghapus tanaman pemiliknya."
+        ]
+      },
+      {
+        "heading": "Notifikasi perawatan bersama",
+        "body": [
+          "Email dan Seluler juga memiliki kotak centang untuk tugas hari ini pada tanaman yang dibagikan kepada Anda. Opsi ini awalnya nonaktif, terpisah dari ringkasan tanaman sendiri, dan memakai waktu pengiriman yang sama dengan saluran terkait. Jika keduanya diaktifkan, tugas tanaman sendiri dan tanaman yang dibagikan kepada Anda digabungkan dalam satu pesan harian per saluran.",
+          "Pengingat mencakup akses berbagi yang aktif, baik hanya lihat maupun dengan izin menyelesaikan tugas. Akses diperiksa lagi sebelum pengiriman. Pengingat berhenti jika akses kedaluwarsa, dicabut, atau kontak dihapus.",
+          "Bagian Berbagi menangani kejadian lain: seseorang menyelesaikan tugas untuk tanaman milik Anda. Kotak email dan push awalnya nonaktif dan berlaku untuk semua tanaman yang Anda bagikan. Notifikasi dikirim setelah tugas selesai, tanpa menunggu ringkasan harian. Ini adalah preferensi akun, bukan pengaturan untuk setiap tanaman yang dibagikan."
         ]
       }
     ]

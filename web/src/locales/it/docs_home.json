@@ -7,21 +7,21 @@
         "body": [
           "La schermata iniziale è la prima che vedi dopo l'accesso.",
           "Qui trovi le attività quotidiane create dai promemoria e puoi controllare subito cosa c'è da fare oggi e cosa è in ritardo.",
-          "Se non ci sono attività, vedrai un messaggio che lo indica e alcuni suggerimenti per iniziare, come creare un promemoria."
+          "Home si apre su Tutte, includendo anche le attività future. Il riquadro vuoto indica che nessuna attività da completare corrisponde alla vista e ai filtri scelti."
         ]
       },
       {
         "heading": "Elenco delle attività",
         "body": [
           "Ogni riquadro mostra un'attività creata da un promemoria, ad esempio annaffiatura, nebulizzazione, concimazione, rinvaso o cura generale.",
-          "Le attività compaiono automaticamente in base alla frequenza impostata nel promemoria.",
+          "Quando crei un promemoria viene generata subito un’attività, anche se prevista più avanti. Al completamento viene pianificata subito quella successiva.",
           "Il riquadro mostra di solito il tipo di attività, il nome della pianta, la posizione e la scadenza, ad esempio Oggi o In ritardo."
         ]
       },
       {
         "heading": "Menu di un'attività",
         "body": [
-          "Ogni attività ha un menu con tre puntini, da cui puoi scegliere cosa fare.",
+          "Tocca la parte principale del riquadro di un’attività per aprire il menu delle azioni.",
           "Segna come completata: completa l'attività e ti permette di aggiungere una nota, che resterà nello storico delle cure.",
           "Modifica promemoria: apre il promemoria collegato all'attività, dove puoi cambiarne la frequenza.",
           "Vai alla pianta: apre i Dettagli della pianta a cui si riferisce l'attività.",
@@ -59,9 +59,9 @@
         "body": [
           "Puoi completare più attività insieme quando usi Mostra in ritardo o Mostra oggi.",
           "Con uno di questi filtri attivo, nel menu delle azioni rapide compare un'opzione aggiuntiva, come \"Segna visibili come completate\".",
-          "Questa opzione completa tutte le attività visibili in una volta, senza doverle selezionare una per una.",
+          "Il completamento multiplo include solo le attività visibili che puoi completare. Esclude quelle condivise con accesso di sola lettura.",
           "È utile quando esegui lo stesso intervento su più piante nello stesso momento.",
-          "A seconda della procedura usata, potresti poter aggiungere note alle attività anche dopo averle completate insieme."
+          "Prima di confermare scegli una data e un’eventuale nota comuni a tutte le attività incluse. Le note salvate non possono attualmente essere modificate in seguito."
         ]
       },
       {

@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Supprimer le rappel",
       "areYouSurePrefix": "Êtes-vous sûr de vouloir supprimer",
-      "areYouSureSuffix": "? Cette opération est irréversible."
+      "areYouSureSuffix": "? Cette opération est irréversible.",
+      "historyWarning": "Supprimer ce rappel efface aussi définitivement toutes les tâches associées, y compris les tâches terminées et leurs notes."
     },
     "edit": {
       "titleCreate": "Ajouter un rappel",
@@ -59,8 +60,8 @@
     "toggle": {
       "pauseTitle": "Mettre le rappel en pause",
       "resumeTitle": "Reprendre le rappel",
-      "pauseBody": "Mettre ce rappel pour {{name}} en pause ? Sa t\u00e2che \u00e0 faire sera masqu\u00e9e jusqu\u2019\u00e0 sa reprise.",
-      "resumeBody": "Reprendre ce rappel pour {{name}} ? Sa prochaine t\u00e2che \u00e0 faire r\u00e9appara\u00eetra."
+      "pauseBody": "Mettre ce rappel pour {{name}} en pause ? Sa tâche à faire sera masquée jusqu’à sa reprise.",
+      "resumeBody": "Reprendre ce rappel pour {{name}} ? Sa prochaine tâche à faire réapparaîtra."
     }
   }
 }

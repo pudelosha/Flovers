@@ -1349,7 +1349,7 @@ def history(request):
         "metric": "...",
         "unit": "°C" | "%" | "lx",
         "span": { "from": "...", "to": "..." },
-        "points": [{ "at": string, "value": number }, ...]
+        "points": [{ "at": string, "value": number | null, "sample_count": number }, ...]
       }
 
     `at` is the ISO datetime representing the start of the bucket.
@@ -1434,7 +1434,7 @@ def history(request):
     effective_stat = "avg" if range_str == "day" else requested_stat
     for b in bins:
         if not b["cnt"]:
-            values.append(0.0)
+            values.append(None)
         elif effective_stat == "max":
             values.append(round(b["max"], 2))
         elif effective_stat == "min":
@@ -1448,7 +1448,7 @@ def history(request):
         bucket_starts = [span_from + timedelta(days=i) for i in range(bin_count)]
 
     points = [
-        {"at": bucket_starts[i].isoformat(), "value": values[i]}
+        {"at": bucket_starts[i].isoformat(), "value": values[i], "sample_count": bins[i]["cnt"]}
         for i in range(bin_count)
     ]
 

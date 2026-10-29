@@ -1,0 +1,15 @@
+{
+  "subject": "共有した植物のお手入れが完了しました",
+  "title": "共有した植物のお手入れが完了しました",
+  "line1": "{actor}さんが{plant}のお手入れを完了しました。",
+  "details": "作業：{task}。完了日時：{date} {time}。",
+  "cta": "お手入れ履歴を見る",
+  "push_title": "共有した植物のお手入れが完了しました",
+  "types": {
+    "water": "水やり",
+    "fertilize": "施肥",
+    "moisture": "霧吹き",
+    "care": "ケア",
+    "repot": "植え替え"
+  }
+}

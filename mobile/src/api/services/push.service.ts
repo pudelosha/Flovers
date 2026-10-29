@@ -40,8 +40,13 @@ function notificationUrl(data: Record<string, string>) {
   if (data.url) return data.url;
   const paths: Record<string, string> = {
     Home: "home", Readings: "readings", Plants: "plants", Reminders: "reminders", Profile: "profile",
+    TaskHistory: "task-history",
   };
-  return paths[data.route] ? `flovers://${paths[data.route]}` : undefined;
+  const path = paths[data.route];
+  if (!path) return undefined;
+  const query = data.route === "TaskHistory" && data.plantId
+    ? `?plantId=${encodeURIComponent(data.plantId)}` : "";
+  return `flovers://${path}${query}`;
 }
 
 notifee.onBackgroundEvent(async ({ type, detail }) => {

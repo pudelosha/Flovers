@@ -16,7 +16,7 @@ import SharedPlantsEmptyState from "../components/SharedPlantsEmptyState";
 import { s as menuStyles } from "../../plant-details/styles/plant-details.styles";
 import { useSharingPreview } from "../state/SharingPreviewProvider";
 import { SHARING_ERROR_MESSAGES } from "../types/sharing.types";
-import type { PlantShare } from "../types/sharing.types";
+import type { PlantShare, ShareablePlant } from "../types/sharing.types";
 import {
   SharingButton, SharingPage, sharingStyles as shared,
 } from "../components/SharingUI";
@@ -29,11 +29,13 @@ export default function SharedPlantsScreen() {
   const nav = useNavigation<any>();
   const insets = useSafeAreaInsets();
   const { settings } = useSettings();
-  const { contacts, shares, shareDraft, openSharePlant, removeShare, loaded, loading, error, pending, refresh } = useSharingPreview();
+  const { contacts, shares, versions, shareDraft, openSharePlant, removeShare, removePlantSharing, loaded, loading, error, pending, refresh } = useSharingPreview();
   const [filter, setFilter] = useState<ShareFilter>("all");
   const [removing, setRemoving] = useState<PlantShare | null>(null);
+  const [deleting, setDeleting] = useState<{ plant: ShareablePlant; expectedRevision: number } | null>(null);
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
   const [removeError, setRemoveError] = useState<string | null>(null);
+  const [removeConflict, setRemoveConflict] = useState(false);
   const [menuId, setMenuId] = useState<string | null>(null);
   const [menuAnchor, setMenuAnchor] = useState<{ right: number; maxWidth: number; buttonTop: number; bottomLimit: number } | null>(null);
   const [menuHeight, setMenuHeight] = useState(72);
@@ -62,19 +64,20 @@ export default function SharedPlantsScreen() {
     });
   };
   const removeTarget = useRef<string | null>(null);
-  removeTarget.current = isFocused ? removing?.id ?? null : null;
+  removeTarget.current = isFocused ? deleting ? `plant:${deleting.plant.id}` : removing?.id ?? null : null;
+  const closeConfirmation = () => { setRemoving(null); setDeleting(null); };
   useEffect(() => {
     if (!isFocused) return;
     void refresh();
     const timer = setInterval(() => { void refresh(); }, 30000);
     return () => clearInterval(timer);
   }, [isFocused, refresh]);
-  useEffect(() => setRemoveError(null), [removing?.id]);
+  useEffect(() => { setRemoveError(null); setRemoveConflict(false); }, [removing?.id, deleting?.plant.id]);
   useEffect(() => {
-    if (!isFocused) setRemoving(null);
+    if (!isFocused) { setRemoving(null); setDeleting(null); }
     setFabCloseSignal((previous) => previous + 1);
     closeMenu();
-  }, [isFocused, !!removing, !!shareDraft, filter, closeMenu]);
+  }, [isFocused, !!removing, !!deleting, !!shareDraft, filter, closeMenu]);
   useEffect(() => () => { menuRequest.current += 1; }, []);
   useEffect(() => {
     if (!isFocused || !menuId) return;
@@ -187,7 +190,7 @@ export default function SharedPlantsScreen() {
         })}
         </>}
       </SharingPage>
-      {isFocused && loaded && !removing && !shareDraft && <FAB actions={actions} position={settings?.fabPosition === "left" ? "left" : "right"} closeSignal={fabCloseSignal} onInteraction={closeMenu} />}
+      {isFocused && loaded && !removing && !deleting && !shareDraft && <FAB actions={actions} position={settings?.fabPosition === "left" ? "left" : "right"} closeSignal={fabCloseSignal} onInteraction={closeMenu} />}
       {isFocused && menuPlant && menuAnchor && <View style={styles.menuOverlay} accessibilityViewIsModal>
         <Pressable style={StyleSheet.absoluteFill} accessibilityRole="button"
           accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })} onPress={closeMenu} />
@@ -205,37 +208,71 @@ export default function SharedPlantsScreen() {
             <MaterialCommunityIcons name="format-list-checks" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
             <Text style={menuStyles.menuItemText}>{t("sharing.plants.displayTasks", { defaultValue: "Display tasks" })}</Text>
           </Pressable>
+          {menuGroup?.[0].direction === "outgoing" && <Pressable accessibilityRole="button" style={menuStyles.menuItem} onPress={() => {
+            const plant = menuPlant;
+            const expectedRevision = versions[plant.id] ?? 0;
+            closeMenu();
+            setDeleting({ plant, expectedRevision });
+          }}>
+            <MaterialCommunityIcons name="delete-outline" size={18} color="#FF9090" style={{ marginRight: 8 }} />
+            <Text style={[menuStyles.menuItemText, pr.promptDangerText]}>{t("sharing.plants.deleteSharing", { defaultValue: "Delete sharing" })}</Text>
+          </Pressable>}
         </View>
       </View>}
-      <ContactModalFrame visible={isFocused && removing !== null}
-        title={removing?.direction === "incoming"
+      <ContactModalFrame visible={isFocused && (removing !== null || deleting !== null)}
+        title={deleting ? t("sharing.plants.deleteSharingTitle", { defaultValue: "Delete sharing?" }) : removing?.direction === "incoming"
           ? t("sharing.plants.leaveTitle", { defaultValue: "Leave shared plant?" })
           : t("sharing.plants.removeTitle", { defaultValue: "Remove access?" })}
-        onClose={() => setRemoving(null)}>
-        <Text style={pr.warningText}>{removing?.direction === "incoming"
+        onClose={closeConfirmation}>
+        <Text style={pr.warningText}>{deleting
+          ? t("sharing.plants.deleteSharingBody", { defaultValue: "Everyone you shared {{plant}} with will lose access. Your plant and its data will be kept.", plant: deleting.plant.name })
+          : removing?.direction === "incoming"
           ? t("sharing.plants.leaveBody", { defaultValue: "{{plant}} will be removed from your shared plants.", plant: removing?.plant.name ?? "" })
           : t("sharing.plants.removeBody", { defaultValue: "{{name}} will no longer have access to {{plant}}.", name: removing ? contactName(removing.contactId) : "", plant: removing?.plant.name ?? "" })}</Text>
         <View style={pr.promptButtonsRow}>
-          <Pressable style={[pr.promptBtn, styles.confirmButton]} accessibilityRole="button" onPress={() => setRemoving(null)}>
+          <Pressable style={[pr.promptBtn, styles.confirmButton]} accessibilityRole="button" onPress={closeConfirmation}>
             <Text style={pr.promptBtnText}>{t("sharing.common.cancel", { defaultValue: "Cancel" })}</Text>
           </Pressable>
-          <Pressable style={[pr.promptBtn, pr.promptDanger, styles.confirmButton, !!pending && { opacity: 0.5 }]} accessibilityRole="button" disabled={!!pending}
+          <Pressable style={[pr.promptBtn, pr.promptDanger, styles.confirmButton, (!!pending || removeConflict) && { opacity: 0.5 }]} accessibilityRole="button" disabled={!!pending || removeConflict}
             onPress={async () => {
-              if (!removing || pending) return;
-              const id = removing.id;
-              const result = await removeShare(id);
+              if ((!removing && !deleting) || pending || removeConflict) return;
+              const id = deleting ? `plant:${deleting.plant.id}` : removing!.id;
+              const result = deleting
+                ? await removePlantSharing(deleting.plant, deleting.expectedRevision)
+                : await removeShare(removing!.id);
               if (removeTarget.current !== id) return;
-              if (result.ok) setRemoving(null);
-              else if (result.reason !== "busy" && result.reason !== "staleSession") setRemoveError(
-                t(`sharing.accessErrors.${result.reason}`, { defaultValue: SHARING_ERROR_MESSAGES[result.reason] })
-              );
+              if (result.ok) closeConfirmation();
+              else if (result.reason !== "busy" && result.reason !== "staleSession") {
+                setRemoveConflict(!!deleting && result.reason === "conflict");
+                setRemoveError(t(`sharing.accessErrors.${result.reason}`, { defaultValue: SHARING_ERROR_MESSAGES[result.reason] }));
+              }
             }}>
-            <Text style={[pr.promptBtnText, pr.promptDangerText, styles.confirmText]}>{removing?.direction === "incoming"
+            <Text style={[pr.promptBtnText, pr.promptDangerText, styles.confirmText]}>{deleting
+              ? t("sharing.plants.deleteSharing", { defaultValue: "Delete sharing" })
+              : removing?.direction === "incoming"
               ? t("sharing.plants.leave", { defaultValue: "Leave shared plant" })
               : t("sharing.plants.stopSharing", { defaultValue: "Remove access" })}</Text>
           </Pressable>
         </View>
         {!!removeError && <Text accessibilityRole="alert" style={shared.error}>{removeError}</Text>}
+        {deleting && removeConflict && <SharingButton
+          label={t("sharing.form.reload", { defaultValue: "Reload sharing" })} variant="secondary" disabled={loading || !!pending}
+          onPress={async () => {
+            const target = deleting;
+            const snapshot = await refresh();
+            if (removeTarget.current !== `plant:${target.plant.id}`) return;
+            if (!snapshot) {
+              setRemoveError(t("sharing.accessErrors.unavailable", { defaultValue: SHARING_ERROR_MESSAGES.unavailable }));
+              return;
+            }
+            if (!snapshot.shares.some((share) => share.plant.id === target.plant.id && share.direction === "outgoing")) {
+              closeConfirmation();
+              return;
+            }
+            setDeleting({ plant: target.plant, expectedRevision: snapshot.versions[target.plant.id] ?? 0 });
+            setRemoveError(null);
+            setRemoveConflict(false);
+          }} />}
       </ContactModalFrame>
     </View>
   );

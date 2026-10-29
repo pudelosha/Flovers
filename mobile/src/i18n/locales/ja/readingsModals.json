@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "水やり完了通知は、このデバイスにウォーターポンプが含まれている場合にのみ利用できます。スケジュールされた水やりが完了した後、または自動水やりがトリガーされ完了した後に送信できます。",
       "sendEmailWateringNotifications": "水やり完了時にメール通知を送信",
       "sendPushWateringNotifications": "水やり完了時にプッシュ通知を送信",
-      "samplingIntervalRemoved": "サンプリング間隔が削除されました"
+      "intervalHours": "測定間隔（時間）",
+      "decreaseInterval": "測定間隔を短くする",
+      "increaseInterval": "測定間隔を長くする",
+      "intervalFirmwareHint": "1～24時間を選択します。変更後はコードを再生成してボードにアップロードしてください。",
+      "pumpCooldownMinutes": "自動水やりの待機時間（分）",
+      "pumpCooldownHint": "1～32767分を選択します（初期値60）。次回のタスク確認時にボードがサーバーから設定を取得します。ポンプの作動時間は変わりません。",
+      "pumpCooldownInvalid": "1から32767までの整数を入力してください。"
     }
   }
 }

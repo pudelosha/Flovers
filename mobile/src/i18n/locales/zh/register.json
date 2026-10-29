@@ -13,7 +13,7 @@
       "invalidEmail": "请输入有效的电子邮件地址。",
       "shortPassword": "密码必须至少包含8个字符。",
       "passwordsMismatch": "密码不匹配。",
-      "termsRequired": "您必须接受条款。",
+      "termsRequired": "你需要同意服务条款和隐私政策。",
       "incompleteForm": "请填写完整表单。",
       "emailTaken": "该电子邮件地址已被注册。",
       "registrationFailed": "注册失败。请再试一次。",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "账户创建成功。欢迎！"
-    }
+    },
+    "termsAnd": "和",
+    "privacyLink": "隐私政策"
   }
 }

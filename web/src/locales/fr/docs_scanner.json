@@ -21,7 +21,7 @@
       {
         "heading": "Ce que contient un code QR Flovers",
         "body": [
-          "Le code contient une référence à Flovers et l’identifiant d’une plante précise de ton compte.",
+          "Un QR code Flovers contient une référence unique et opaque à la plante, plutôt que son identifiant numérique dans la base.",
           "Une fois le code lu et reconnu, l’application ouvre la plante correspondante.",
           "Un code QR n’accorde pas l’accès en lui-même. Vous devez être connecté en tant que propriétaire ou disposer d'un accès de partage actif à la plante. Les propriétaires génèrent et exportent le code ; les destinataires peuvent scanner le même code pour ouvrir la plante."
         ]

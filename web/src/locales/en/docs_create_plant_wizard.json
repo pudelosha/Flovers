@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_create_plant_wizard": {
     "title": "Create Plant Wizard",
     "sections": [
@@ -39,8 +39,8 @@
         "body": [
           "This step helps you capture the plant’s exposure context: direction, light level, and distance from the window.",
           "Direction can be measured using the phone compass if compass permissions are granted.",
-          "Light level can be measured if the required permissions are granted and the device supports a light sensor.",
-          "All exposure values are optional—you can enter them manually or skip them."
+          "Automatic light measurement is available only on supported Android devices. On iOS, select the light level manually. Compass readings also depend on compatible hardware.",
+          "Skipping this step keeps the defaults: bright indirect light, East and 20 cm. Leaving these defaults untouched does not by itself retune care intervals."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Step 09 — Summary and confirmation",
+        "heading": "Step 09 — Create the plant",
         "body": [
-          "After successful creation, the wizard shows a confirmation/summary screen.",
-          "From here you can proceed to your plant list or open the newly created plant, depending on the navigation flow in your app."
+          "The final step creates the plant automatically. After success, the wizard returns to Plants after about 2.5 seconds; it does not show a separate review screen or an Open plant button."
         ]
       },
       {

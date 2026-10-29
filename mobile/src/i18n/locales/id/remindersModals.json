@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Hapus pengingat",
       "areYouSurePrefix": "Apakah Anda yakin ingin menghapus",
-      "areYouSureSuffix": "? Tindakan ini tidak dapat dibatalkan."
+      "areYouSureSuffix": "? Tindakan ini tidak dapat dibatalkan.",
+      "historyWarning": "Menghapus pengingat ini juga akan menghapus semua tugas terkait secara permanen, termasuk riwayat tugas yang selesai dan catatannya."
     },
     "edit": {
       "titleCreate": "Tambahkan pengingat",

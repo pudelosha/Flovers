@@ -22,7 +22,7 @@
         "body": [
           "The 3-dot menu associated with the plant header provides additional actions related to the plant itself.",
           "Available actions include viewing the Plant Definition (if the plant is linked to one), editing plant details, changing the plant image, and navigating to Reminders filtered for this plant.",
-          "Changing the image allows replacing a predefined image, adding a user photo from the phone, or removing the image."
+          "Removing your custom photo deletes the local copy. The catalogue image appears again if the plant has a definition with an image."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "If the plant is linked to a reading device, the latest sensor readings are displayed directly on this screen.",
           "Supported readings include air temperature, air humidity, light level, and soil moisture.",
           "This section shows the most recent values along with the timestamp of the last received reading.",
-          "Tapping the readings tile redirects you to the Readings History screen, where detailed charts and summaries (daily/weekly/monthly) are shown for temperature, humidity, light, and soil moisture (as long as a device is linked to the plant)."
+          "Tap an individual measurement value or icon to open its history with that metric selected. Tapping the title or background of this tile does not open history."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Each plant has a unique QR code displayed at the bottom of the screen.",
           "Scanning this code using the Scanner view redirects the user directly to this Plant Details screen.",
-          "The QR code can be saved to the device or emailed, making it easy to print and attach to a plant pot for quick access."
+          "The QR code can be saved to the device or emailed, making it easy to print and attach to a plant pot for quick access.",
+          "A Flovers QR code contains a unique, opaque reference to a plant, rather than its numeric database ID."
         ]
       },
       {

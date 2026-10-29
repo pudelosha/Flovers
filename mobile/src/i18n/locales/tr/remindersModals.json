@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Hatırlatıcıyı sil",
       "areYouSurePrefix": "Silmek istediğinizden emin misiniz?",
-      "areYouSureSuffix": "? Bu eylem geri alınamaz."
+      "areYouSureSuffix": "? Bu eylem geri alınamaz.",
+      "historyWarning": "Bu hatırlatıcı silindiğinde tamamlanmış görev geçmişi ve notlar dahil tüm ilişkili görevler de kalıcı olarak silinir."
     },
     "edit": {
       "titleCreate": "Hatırlatıcı ekle",

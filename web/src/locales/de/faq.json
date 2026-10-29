@@ -19,7 +19,7 @@
     },
     {
       "q": "Welche Sprachen unterstützt Flovers?",
-      "a": "Flovers ist auf Deutsch, Englisch, Polnisch, Italienisch, Französisch, Spanisch, Portugiesisch, Arabisch, Hindi, Chinesisch, Japanisch und Koreanisch verfügbar."
+      "a": "Flovers unterstützt 15 Sprachen: Englisch, Polnisch, Deutsch, Italienisch, Französisch, Spanisch, Portugiesisch, Arabisch, Hindi, Chinesisch, Japanisch, Koreanisch, Indonesisch, Russisch, Türkisch."
     },
     {
       "q": "Wie erstelle ich ein Konto?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "Was mache ich, wenn die Aktivierungs-E-Mail nicht ankommt?",
-      "a": "Du kannst direkt in der App eine neue Aktivierungs-E-Mail anfordern."
+      "a": "Wähle auf der Anmeldeseite den Link zum erneuten Senden der Aktivierungsmail. Kehre nach der Registrierung zuerst zur Anmeldung zurück."
     },
     {
       "q": "Wie setze ich mein Passwort zurück?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "Wie lösche ich mein Konto und meine Daten?",
-      "a": "Du kannst dein Konto nach der Anmeldung im Profil dauerhaft löschen. Das lässt sich nicht rückgängig machen. Alle zugehörigen Daten werden dabei entfernt."
+      "a": "Bestätige die Kontolöschung mit deinem aktuellen Passwort. Dein Konto samt Pflanzen, Erinnerungen, Aufgaben, Messwerten und Geräten wird dauerhaft gelöscht."
     },
     {
       "q": "Was ist der Unterschied zwischen einem Pflanzenprofil und meiner Pflanze?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Was passiert, wenn ich eine Aufgabe vergesse?",
-      "a": "Wenn du eine Aufgabe nicht erledigst, kann die App nach 24 Stunden erneut daran erinnern. Die Aufgabe bleibt als überfällig markiert, bis du sie erledigst."
+      "a": "Falls aktiviert, erinnert die Nachricht am Folgetag zur eingestellten Kanalzeit an unerledigte Aufgaben von gestern für eigene Pflanzen. Andere Aufgaben bleiben bis zur Erledigung überfällig."
     },
     {
       "q": "Kann ich Erinnerungen ausschalten oder bearbeiten?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "Wie oft werden Sensordaten aktualisiert?",
-      "a": "Messwerte können alle 5 Minuten gesendet werden. Gespeichert werden die Daten derzeit in Abständen von einer Stunde."
+      "a": "Generierte Firmware sendet standardmäßig stündlich. Im Geräteformular sind 1–24 Stunden möglich; danach muss neu generierter Code hochgeladen werden. Eigene Firmware kann häufiger senden, gespeichert wird weiterhin in Stundenintervallen."
     },
     {
       "q": "Was passiert, wenn mein Sensorgerät ausfällt?",

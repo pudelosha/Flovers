@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "물 주기 완료 알림은 이 기기에 물 펌프가 포함된 경우에만 사용할 수 있습니다. 예약된 물 주기가 완료된 후 또는 자동 물 주기가 트리거되어 완료된 후 보낼 수 있습니다.",
       "sendEmailWateringNotifications": "물 주기가 완료되면 이메일 알림 보내기",
       "sendPushWateringNotifications": "물 주기가 완료되면 푸시 알림 보내기",
-      "samplingIntervalRemoved": "샘플링 간격이 제거되었습니다"
+      "intervalHours": "측정 간격 (시간)",
+      "decreaseInterval": "측정 간격 줄이기",
+      "increaseInterval": "측정 간격 늘리기",
+      "intervalFirmwareHint": "1~24시간을 선택하세요. 변경한 뒤 코드를 새로 생성해 보드에 업로드하세요.",
+      "pumpCooldownMinutes": "자동 물주기 대기 시간 (분)",
+      "pumpCooldownHint": "1~32767분을 선택하세요 (기본값 60). 보드가 다음에 작업을 확인할 때 서버에서 설정을 받습니다. 펌프 작동 시간은 바뀌지 않습니다.",
+      "pumpCooldownInvalid": "1부터 32767 사이의 정수를 입력하세요."
     }
   }
 }

@@ -28,7 +28,7 @@
         "heading": "Consultare i periodi precedenti",
         "body": [
           "Usa le frecce accanto al periodo selezionato per passare a giorni, settimane o mesi precedenti.",
-          "Puoi consultare solo i periodi per cui esistono dati. I periodi futuri non vengono mostrati."
+          "Puoi consultare giorni, settimane e mesi passati anche senza letture. Non puoi passare a periodi futuri."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Dati mancanti e precisione",
         "body": [
           "Se il dispositivo non ha inviato dati per il periodo scelto, il grafico resta vuoto o presenta delle interruzioni.",
-          "Usa le misurazioni come indicazione e confrontale con lo stato della pianta. La calibrazione, la posizione dei sensori e l’ambiente possono influire sulla precisione."
+          "Usa le misurazioni come indicazione e confrontale con lo stato della pianta. La calibrazione, la posizione dei sensori e l’ambiente possono influire sulla precisione.",
+          "Le misurazioni mancanti restano vuoti, non valori zero. Gli zeri reali vengono mantenuti. La temperatura usa Celsius, Fahrenheit o Kelvin secondo la preferenza nel Profilo."
         ]
       }
     ]

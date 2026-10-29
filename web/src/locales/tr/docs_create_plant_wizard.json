@@ -39,8 +39,8 @@
         "body": [
           "Bu adım, ev bitkisinin maruz kalma bağlamını yakalamanıza yardımcı olur: yön, ışık seviyesi ve pencereye olan mesafe.",
           "Pusula izinleri verilirse yön telefon pusulası kullanılarak ölçülebilir.",
-          "Gerekli izinlerin verilmesi ve cihazın ışık sensörünü desteklemesi durumunda ışık seviyesi ölçülebilir.",
-          "Tüm pozlama değerleri isteğe bağlıdır; bunları manuel olarak girebilir veya atlayabilirsiniz."
+          "Otomatik ışık ölçümü yalnızca desteklenen Android cihazlarda çalışır. iOS’ta ışık düzeyini elle seçin. Yön ölçümü de uyumlu sensör gerektirir.",
+          "Bu adımı atlamak parlak dolaylı ışık, doğu ve 20 cm varsayılanlarını korur. Bu değerleri değiştirmemek tek başına bakım aralıklarını yeniden ayarlamaz."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Adım 09 — Özet ve onay",
+        "heading": "Adım 09 — Bitkiyi oluşturma",
         "body": [
-          "Başarılı bir oluşturmanın ardından sihirbaz bir onay/özet ekranı görüntüler.",
-          "Uygulamanızdaki gezinme akışına bağlı olarak buradan ev bitkisi listenize geçebilir veya yeni oluşturulan ev bitkisini açabilirsiniz."
+          "Son adım bitkiyi otomatik oluşturur. Başarılı olunca yaklaşık 2,5 saniyede Bitkiler’e dönülür; ayrı bir özet ekranı veya yeni bitkiyi açma düğmesi yoktur."
         ]
       },
       {

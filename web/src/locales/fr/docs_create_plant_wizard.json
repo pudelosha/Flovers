@@ -39,8 +39,8 @@
         "body": [
           "Tu peux renseigner l’orientation, la luminosité et la distance entre la plante et la fenêtre.",
           "L’orientation peut être mesurée avec la boussole du téléphone si tu accordes l’autorisation nécessaire.",
-          "La luminosité peut être mesurée si ton appareil possède un capteur adapté et si les autorisations nécessaires sont accordées.",
-          "Ces renseignements sont facultatifs. Tu peux les saisir à la main ou passer cette étape."
+          "La mesure automatique de lumière fonctionne uniquement sur les appareils Android compatibles. Sous iOS, choisissez le niveau manuellement. La mesure de direction dépend aussi des capteurs disponibles.",
+          "Passer cette étape conserve les valeurs par défaut : lumière vive indirecte, est et 20 cm. Ces valeurs inchangées ne modifient pas à elles seules les intervalles d’entretien."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Étape 09 — Résumé et confirmation",
+        "heading": "Étape 09 — Création de la plante",
         "body": [
-          "Une fois la plante ajoutée, l’assistant affiche une confirmation et un récapitulatif.",
-          "Selon la navigation de ton application, tu peux alors ouvrir la liste des plantes ou les détails de celle que tu viens d’ajouter."
+          "La dernière étape crée automatiquement la plante. Après environ 2,5 secondes, l’assistant revient à la liste Plantes, sans récapitulatif séparé ni bouton pour ouvrir la nouvelle plante."
         ]
       },
       {

@@ -19,7 +19,7 @@
     },
     {
       "q": "¿Qué idiomas están disponibles?",
-      "a": "Flovers está disponible en español, inglés, polaco, alemán, italiano, francés, portugués, árabe, hindi, chino, japonés y coreano."
+      "a": "Flovers admite 15 idiomas: Inglés, Polaco, Alemán, Italiano, Francés, Español, Portugués, Árabe, Hindi, Chino, Japonés, Coreano, Indonesio, Ruso, Turco."
     },
     {
       "q": "¿Cómo creo una cuenta?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "¿Qué hago si no llega el correo de activación?",
-      "a": "Puedes solicitar un nuevo correo de activación directamente desde la aplicación."
+      "a": "En la pantalla de acceso, usa el enlace para reenviar el correo de activación. Tras registrarte, vuelve primero a esa pantalla."
     },
     {
       "q": "¿Cómo restablezco mi contraseña?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "¿Cómo elimino mi cuenta y mis datos?",
-      "a": "Puedes eliminar tu cuenta de forma permanente desde el perfil después de iniciar sesión. Es una acción irreversible que borra todos los datos asociados."
+      "a": "Confirma la eliminación con tu contraseña actual. Se borrarán permanentemente la cuenta y sus plantas, recordatorios, tareas, lecturas y dispositivos."
     },
     {
       "q": "¿Qué diferencia hay entre una ficha de especie y mi planta?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "¿Qué pasa si olvido completar una tarea?",
-      "a": "La aplicación puede volver a avisarte después de 24 horas. La tarea seguirá marcada como atrasada hasta que la completes."
+      "a": "Si lo activas, el aviso del día siguiente cubre las tareas de ayer sin completar para tus propias plantas, a la hora configurada. Las demás siguen vencidas hasta completarlas."
     },
     {
       "q": "¿Puedo desactivar o editar los recordatorios?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "¿Cada cuánto se actualizan los datos?",
-      "a": "Las lecturas se pueden enviar cada 5 minutos. Actualmente se guardan en intervalos de una hora."
+      "a": "El firmware generado envía lecturas cada hora por defecto. El formulario permite 1–24 horas; los cambios requieren subir el código regenerado. Un firmware personalizado puede enviar más a menudo, pero el almacenamiento sigue agrupado por horas."
     },
     {
       "q": "¿Qué pasa si mi dispositivo deja de enviar datos?",

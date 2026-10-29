@@ -2,6 +2,7 @@ import { request } from "../../client";
 import {
   changeMyEmail,
   changeMyPassword,
+  deleteMyAccount,
   fetchProfileNotifications,
   fetchProfileProgression,
   fetchProfileSettings,
@@ -20,6 +21,19 @@ const mockedRequest = request as jest.Mock;
 describe("profile.service", () => {
   beforeEach(() => {
     mockedRequest.mockReset();
+  });
+
+  it("confirms account deletion with the current password before returning owned photo IDs", async () => {
+    mockedRequest.mockResolvedValue({ status: "success", data: { deleted_plant_ids: [12, 15] } });
+    await expect(deleteMyAccount("current-password")).resolves.toEqual([12, 15]);
+    expect(mockedRequest).toHaveBeenCalledWith("/auth/account/", "DELETE", { current_password: "current-password" }, { auth: true, timeoutMs: 30000 });
+  });
+
+  it("does not accept malformed deletion acknowledgements as successful", async () => {
+    mockedRequest.mockResolvedValue({ status: "error", data: { deleted_plant_ids: [12] } });
+    await expect(deleteMyAccount("current-password")).rejects.toThrow("Invalid account deletion response");
+    mockedRequest.mockResolvedValue({ status: "success", data: { deleted_plant_ids: ["another-account"] } });
+    await expect(deleteMyAccount("current-password")).rejects.toThrow("Invalid account deletion response");
   });
 
   it("reads account progression without submitting client XP", async () => {

@@ -1,0 +1,15 @@
+{
+  "subject": "Paylaşılan bitkinin görevi tamamlandı",
+  "title": "Paylaşılan bitkinin görevi tamamlandı",
+  "line1": "{actor}, {plant} için bir görevi tamamladı.",
+  "details": "Görev: {task}. Tamamlanma zamanı: {date}, {time}.",
+  "cta": "Görev geçmişini görüntüle",
+  "push_title": "Paylaşılan bitkinin görevi tamamlandı",
+  "types": {
+    "water": "sulama",
+    "fertilize": "gübreleme",
+    "moisture": "buğulanma",
+    "care": "bakım",
+    "repot": "saksıyı değiştirmek"
+  }
+}

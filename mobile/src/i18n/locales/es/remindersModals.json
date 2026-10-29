@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Eliminar recordatorio",
       "areYouSurePrefix": "¿Estás seguro de que deseas eliminar",
-      "areYouSureSuffix": "? Esta acción no se puede deshacer."
+      "areYouSureSuffix": "? Esta acción no se puede deshacer.",
+      "historyWarning": "Al eliminar este recordatorio también se borrarán permanentemente todas sus tareas, incluidas las completadas y sus notas."
     },
     "edit": {
       "titleCreate": "Agregar recordatorio",
@@ -59,8 +60,8 @@
     "toggle": {
       "pauseTitle": "Pausar recordatorio",
       "resumeTitle": "Reanudar recordatorio",
-      "pauseBody": "\u00bfPausar este recordatorio para {{name}}? Su tarea pendiente se ocultar\u00e1 hasta que lo reanudes.",
-      "resumeBody": "\u00bfReanudar este recordatorio para {{name}}? Su pr\u00f3xima tarea pendiente volver\u00e1 a aparecer."
+      "pauseBody": "¿Pausar este recordatorio para {{name}}? Su tarea pendiente se ocultará hasta que lo reanudes.",
+      "resumeBody": "¿Reanudar este recordatorio para {{name}}? Su próxima tarea pendiente volverá a aparecer."
     }
   }
 }

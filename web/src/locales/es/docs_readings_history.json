@@ -28,7 +28,7 @@
         "heading": "Consultar periodos anteriores",
         "body": [
           "Usa las flechas junto al periodo seleccionado para cambiar de día, semana o mes.",
-          "Solo puedes navegar por periodos con datos. No se muestran periodos futuros."
+          "Puedes consultar días, semanas y meses pasados aunque no tengan lecturas. No puedes avanzar a periodos futuros."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Interpretar los datos",
         "body": [
           "Si el dispositivo no envió datos para el periodo elegido, el gráfico estará vacío o mostrará valores ausentes.",
-          "Las lecturas sirven de orientación y deben compararse con la observación directa. La calibración, la instalación y el entorno pueden influir en su precisión."
+          "Las lecturas sirven de orientación y deben compararse con la observación directa. La calibración, la instalación y el entorno pueden influir en su precisión.",
+          "Las muestras ausentes se mantienen como huecos, no como ceros. Los ceros reales se conservan. La temperatura usa Celsius, Fahrenheit o Kelvin según el Perfil."
         ]
       }
     ]

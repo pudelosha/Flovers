@@ -22,6 +22,7 @@ export type ApiReminderTask = {
   due_date: string;             // YYYY-MM-DD
   status: "pending" | "completed" | "skipped";
   completed_at: string | null;
+  completed_by?: { id: string; name: string } | null;
   created_at: string;
   updated_at: string;
   note?: string | null;

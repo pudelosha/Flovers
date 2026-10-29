@@ -13,7 +13,7 @@
       "invalidEmail": "Masukkan email yang valid.",
       "shortPassword": "Kata sandi minimal harus 8 karakter.",
       "passwordsMismatch": "Kata sandi tidak cocok.",
-      "termsRequired": "Anda harus menyetujui Syarat & Ketentuan.",
+      "termsRequired": "Anda harus menyetujui Syarat dan Ketentuan serta Kebijakan Privasi.",
       "incompleteForm": "Silakan lengkapi formulirnya.",
       "emailTaken": "Email ini sudah dipakai.",
       "registrationFailed": "Pendaftaran gagal. Silakan coba lagi.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Akun dibuat. Selamat datang!"
-    }
+    },
+    "termsAnd": "dan",
+    "privacyLink": "Kebijakan Privasi"
   }
 }

@@ -39,8 +39,8 @@
         "body": [
           "Langkah ini membantu Anda menangkap konteks paparan tanaman hias: arah, tingkat cahaya, dan jarak dari jendela.",
           "Arah dapat diukur menggunakan kompas telepon jika izin kompas diberikan.",
-          "Tingkat cahaya dapat diukur jika izin yang diperlukan diberikan dan perangkat mendukung sensor cahaya.",
-          "Semua nilai eksposur bersifat opsional—Anda dapat memasukkannya secara manual atau melewatinya."
+          "Pengukuran cahaya otomatis hanya tersedia pada perangkat Android yang mendukungnya. Di iOS, pilih tingkat cahaya secara manual. Pengukuran arah juga memerlukan sensor yang sesuai.",
+          "Melewati langkah ini mempertahankan cahaya terang tidak langsung, timur, dan 20 cm. Membiarkan nilai bawaan ini tidak otomatis mengubah interval perawatan."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Langkah 09 — Ringkasan dan konfirmasi",
+        "heading": "Langkah 09 — Membuat tanaman",
         "body": [
-          "Setelah pembuatan berhasil, wizard menampilkan layar konfirmasi/ringkasan.",
-          "Dari sini Anda dapat melanjutkan ke daftar tanaman hias atau membuka tanaman hias yang baru dibuat, bergantung pada alur navigasi di aplikasi Anda."
+          "Langkah terakhir langsung membuat tanaman. Setelah berhasil, panduan kembali ke Tanaman dalam sekitar 2,5 detik, tanpa ringkasan terpisah atau tombol membuka tanaman baru."
         ]
       },
       {

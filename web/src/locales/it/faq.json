@@ -19,7 +19,7 @@
     },
     {
       "q": "Flovers è disponibile in più lingue?",
-      "a": "Sì. Flovers è disponibile in inglese, polacco, tedesco, italiano, francese, spagnolo, portoghese, arabo, hindi, cinese, giapponese e coreano."
+      "a": "Flovers supporta 15 lingue: Inglese, Polacco, Tedesco, Italiano, Francese, Spagnolo, Portoghese, Arabo, Hindi, Cinese, Giapponese, Coreano, Indonesiano, Russo, Turco."
     },
     {
       "q": "Come posso creare un account?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "Non ho ricevuto l'e-mail di attivazione. Cosa faccio?",
-      "a": "Puoi richiedere una nuova e-mail di attivazione direttamente nell'app."
+      "a": "Nella schermata di accesso scegli il link per inviare di nuovo l’email di attivazione. Dopo la registrazione, torna prima alla schermata di accesso."
     },
     {
       "q": "Come posso reimpostare la password?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "Come posso eliminare l'account e i dati?",
-      "a": "Dopo l'accesso, puoi eliminare definitivamente l'account dalla schermata Profilo. L'operazione cancella tutti i dati associati e non può essere annullata."
+      "a": "Conferma l’eliminazione con la password attuale. L’account e le sue piante, i promemoria, le attività, le letture e i dispositivi verranno eliminati definitivamente."
     },
     {
       "q": "Qual è la differenza tra la scheda della specie e la mia pianta?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Cosa succede se dimentico di completare un'attività?",
-      "a": "L'app può inviarti un altro promemoria dopo 24 ore. L'attività resta comunque segnata come in ritardo finché non intervieni."
+      "a": "Se attivo, il promemoria del giorno successivo riguarda le attività di ieri ancora aperte per le tue piante, all’orario configurato. Le altre attività restano scadute finché non vengono completate."
     },
     {
       "q": "Posso modificare o mettere in pausa i promemoria?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "Con quale frequenza vengono aggiornati i dati dei sensori?",
-      "a": "I dispositivi possono inviare le misurazioni anche ogni 5 minuti. Al momento, i dati vengono archiviati a intervalli di un'ora."
+      "a": "Il firmware generato invia letture ogni ora per impostazione predefinita. Il modulo supporta intervalli di 1–24 ore; dopo la modifica carica il codice rigenerato. Un firmware personalizzato può inviare più spesso, ma i dati restano raggruppati per ora."
     },
     {
       "q": "Cosa succede se il dispositivo di misurazione non è più connesso?",

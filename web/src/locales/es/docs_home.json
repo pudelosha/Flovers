@@ -7,21 +7,21 @@
         "body": [
           "Inicio es la primera pantalla que aparece después de iniciar sesión.",
           "Muestra las tareas que se crean a partir de tus recordatorios para que veas qué toca hoy y qué está atrasado.",
-          "Si no hay tareas pendientes, una tarjeta te lo indica y propone cómo empezar, por ejemplo creando recordatorios."
+          "Inicio se abre en Todas e incluye tareas futuras. La tarjeta vacía indica que ninguna tarea pendiente coincide con la vista y los filtros actuales."
         ]
       },
       {
         "heading": "Qué muestran las tarjetas de tareas",
         "body": [
           "Cada tarjeta representa una tarea de un recordatorio: riego, pulverización, fertilización, trasplante o cuidado general.",
-          "Las tareas aparecen automáticamente según la frecuencia del recordatorio.",
+          "Crear un recordatorio genera de inmediato una tarea pendiente, aunque sea para más adelante. Al completarla, se programa la siguiente.",
           "La tarjeta suele mostrar el tipo de cuidado, el nombre de la planta, la ubicación y si toca hoy o está atrasada."
         ]
       },
       {
         "heading": "Acciones del menú de tres puntos",
         "body": [
-          "Cada tarjeta tiene un menú de tres puntos con acciones para esa tarea.",
+          "Toca la parte principal de una tarjeta de tarea para abrir su menú de acciones.",
           "«Marcar como completada»: termina la tarea y te permite añadir una nota al historial de cuidados.",
           "«Editar recordatorio»: abre el recordatorio asociado para cambiar su frecuencia.",
           "«Ir a la planta»: abre los detalles de la planta correspondiente.",
@@ -59,9 +59,9 @@
         "body": [
           "Esta opción está disponible en las vistas «Mostrar atrasadas» y «Mostrar para hoy».",
           "Cuando uno de estos filtros está activo, el menú de acciones rápidas añade una opción como «Marcar visibles como completadas».",
-          "La acción completa todas las tareas que se están mostrando sin tener que seleccionarlas una por una.",
+          "El cierre en grupo incluye solo las tareas visibles que puedes completar. Excluye las compartidas contigo con acceso de solo lectura.",
           "Es útil si haces el mismo cuidado a varias plantas seguidas.",
-          "Según el recorrido elegido, podrás añadir notas a las tareas después de completarlas juntas."
+          "Antes de confirmar, elige una fecha y una nota opcional comunes a todas las tareas incluidas. Actualmente no puedes editar después las notas guardadas."
         ]
       },
       {

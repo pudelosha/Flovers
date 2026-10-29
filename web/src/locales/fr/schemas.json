@@ -82,7 +82,9 @@
     "title": "Récupérer les demandes : POST pump-next-task",
     "desc": [
       "Cette adresse est destinée aux appareils équipés d’une pompe.",
-      "L’appareil demande si un arrosage manuel a été programmé. La réponse indique :"
+      "L’appareil demande si un arrosage manuel a été programmé. La réponse indique :",
+      "Déclarez supports_manual_duration à true uniquement si le firmware lit duration_seconds pour l’arrosage manuel. L’exemple généré le prend en charge. L’arrosage automatique conserve PUMP_RUN_MS du sketch.",
+      "Choisissez une durée manuelle de 1–300 secondes et utilisez le firmware généré à jour. L’arrosage automatique garde PUMP_RUN_MS du sketch. Une demande manuelle non récupérée expire au bout de deux heures."
     ],
     "items": [
       "si la pompe doit démarrer maintenant",
@@ -122,9 +124,10 @@
     "desc": [
       "L’application peut générer le programme de l’appareil sélectionné.",
       "Il contient les adresses de l’API, les identifiants (secret et device_key), l’identifiant de l’appareil et les réglages de ses capteurs et de sa pompe.",
-      "Si une pompe est configurée, le programme gère les mesures et l’arrosage. Il recherche les demandes manuelles séparément de l’envoi des relevés. Pour l’arrosage automatique, il récupère les réglages de l’application et demande l’accord du serveur avant de démarrer."
+      "Déclarez supports_manual_duration à true uniquement si le firmware lit duration_seconds pour l’arrosage manuel. L’exemple généré le prend en charge. L’arrosage automatique conserve PUMP_RUN_MS du sketch.",
+      "Les mesures sont envoyées chaque heure par défaut. Le formulaire permet 1–24 heures ; téléversez le firmware régénéré après modification. Les demandes manuelles sont vérifiées séparément, chaque minute par défaut."
     ],
-    "adjustIntro": "Avant d’installer le code, vérifie ces valeurs et adapte-les à ton matériel :",
+    "adjustIntro": "Avant le téléversement, vérifiez le Wi-Fi, les broches, l’étalonnage d’humidité, PUMP_RUN_MS et les intervalles de requête. Réglez la pause automatique en ligne dans le formulaire de l’appareil.",
     "adjustItems": [
       "SSID et mot de passe Wi-Fi",
       "SDA_PIN et SCL_PIN",
@@ -134,14 +137,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — secours local uniquement ; en ligne, la pause du formulaire de l’appareil s’applique"
     ],
     "codeLabel": "Exemple de programme : capteurs et commande de pompe"
   },
   "behavior": {
     "title": "Les étapes de mesure et d’arrosage",
     "fullCycle": {
-      "title": "Le cycle de mesure",
+      "title": "Cycle complet de mesure",
       "desc": "À chaque intervalle SEND_INTERVAL_MS, la carte :",
       "items": [
         "lit les capteurs",
@@ -169,7 +172,8 @@
       "title": "L’arrosage automatique",
       "desc": [
         "Tu actives et règles l’arrosage automatique dans l’application.",
-        "La carte ne démarre la pompe que si :"
+        "La carte ne démarre la pompe que si :",
+        "Réglez la pause d’arrosage automatique dans le formulaire de l’appareil : 1–32767 minutes, 60 par défaut. La carte la récupère lors d’une prochaine requête et le serveur la contrôle aussi. AUTO_PUMP_MIN_INTERVAL_MS est uniquement une valeur locale de secours."
       ],
       "items": [
         "la pompe est activée dans les réglages de l’appareil",
@@ -185,7 +189,8 @@
       "desc": [
         "Tu demandes un arrosage manuel dans l’application.",
         "Cette demande ne tient pas compte de :",
-        "La carte la traite comme un ordre explicite de faire fonctionner la pompe une fois, sans vérifier les conditions d’arrosage automatique."
+        "La carte la traite comme un ordre explicite de faire fonctionner la pompe une fois, sans vérifier les conditions d’arrosage automatique.",
+        "Choisissez une durée manuelle de 1–300 secondes et utilisez le firmware généré à jour. L’arrosage automatique garde PUMP_RUN_MS du sketch. Une demande manuelle non récupérée expire au bout de deux heures."
       ],
       "items": [
         "l’humidité actuelle du sol",

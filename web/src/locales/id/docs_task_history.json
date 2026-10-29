@@ -13,27 +13,25 @@
       {
         "heading": "Ubin tugas selesai",
         "body": [
-          "Setiap ubin mewakili satu tugas yang diselesaikan, termasuk jenis tugas (misalnya, Penyiraman, Gerimis, Pemupukan), nama tanaman hias, lokasi, dan tanggal penyelesaian.",
-          "Tugas yang diselesaikan mungkin menyertakan catatan opsional yang ditambahkan saat tugas ditutup.",
-          "Catatan hanya ditampilkan ketika ubin diperluas."
+          "Setiap kartu menampilkan tugas yang sudah selesai beserta jenis perawatan, nama tanaman, dan lokasinya.",
+          "Kolom kanan memiliki tiga baris: status selesai, tanggal penyelesaian, dan orang yang menyelesaikannya. Jika orangnya tidak tercatat, label pengguna tidak dikenal ditampilkan.",
+          "Catatan yang disimpan saat tugas diselesaikan tampil di bawah detail tugas."
         ]
       },
       {
-        "heading": "Melihat catatan: perluas dan ciutkan",
+        "heading": "Melihat catatan",
         "body": [
-          "Untuk melihat catatan tugas yang sudah selesai, Anda dapat memperluas ubin dengan mengetuk ubin itu sendiri.",
-          "Anda juga dapat menggunakan menu tiga titik untuk Memperluas atau Ciutkan catatan untuk suatu tugas (tergantung pada keadaan saat ini).",
-          "Ini memungkinkan Anda menjaga daftar tetap ringkas sambil tetap memiliki akses ke riwayat terperinci bila diperlukan."
+          "Catatan langsung terlihat setelah riwayat dimuat. Catatan panjang ditampilkan dalam sebanyak mungkin baris yang diperlukan.",
+          "Tambahkan catatan saat menandai tugas selesai. Tugas tanpa catatan tidak menampilkan bagian catatan kosong."
         ]
       },
       {
-        "heading": "Menu ubin tugas (tiga titik)",
+        "heading": "Menu kartu tugas",
         "body": [
-          "Setiap ubin tugas yang diselesaikan menyediakan menu konteks dengan tindakan yang terkait dengan entri riwayat spesifik tersebut.",
-          "Perluas/Perkecil: menampilkan atau menyembunyikan bagian catatan di dalam ubin.",
-          "Edit pengingat: menavigasi ke Pengingat yang terkait dengan tugas sehingga Anda dapat menyesuaikan pengulangan atau pengaturan.",
-          "Buka tanaman hias: menavigasi ke tanaman hias Detail tanaman hias yang terkait dengan tugas.",
-          "Hapus tugas: menghapus secara permanen tugas selesai yang dipilih dari akun Anda."
+          "Ketuk bagian utama kartu tugas yang selesai untuk membuka menu tindakannya.",
+          "Edit pengingat membuka pengingat terkait untuk mengubah pengulangan atau pengaturannya. Tindakan ini hanya tersedia bagi pemilik tanaman.",
+          "Buka tanaman menampilkan detail tanaman yang terkait dengan tugas.",
+          "Hapus tugas menghapus entri riwayat yang dipilih secara permanen. Hanya pemilik tanaman yang dapat melakukannya."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "Layar Riwayat Tugas menyertakan Tombol Tindakan Mengambang (FAB) dengan tindakan untuk bekerja dengan daftar riwayat.",
           "Sortir: mengubah urutan tugas yang sudah selesai.",
           "Filter: mempersempit daftar riwayat berdasarkan kriteria yang dipilih.",
-          "Hapus: mendukung penghapusan massal berdasarkan kriteria (misalnya, tugas untuk tanaman hias yang dipilih, tugas untuk lokasi yang dipilih, tugas dengan jenis tertentu, atau tugas yang lebih lama dari ambang batas yang dipilih)."
+          "Hapus: mendukung penghapusan massal berdasarkan kriteria (misalnya, tugas untuk tanaman hias yang dipilih, tugas untuk lokasi yang dipilih, tugas dengan jenis tertentu, atau tugas yang lebih lama dari ambang batas yang dipilih).",
+          "Kirim ekspor mengirim spreadsheet melalui email sesuai filter saat ini, dengan opsi menyertakan tugas tertunda. Hanya pemilik yang dapat mengekspor riwayatnya."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "Perbedaan Riwayat Tugas dengan Beranda",
         "body": [
-          "Beranda berfokus pada tugas yang sudah jatuh tempo atau lewat waktu dan membantu Anda menyelesaikan pekerjaan saat ini.",
+          "Beranda menampilkan tugas tertunda, termasuk tugas mendatang pada Semua. Hari ini dan Terlambat membatasi daftar. Riwayat menampilkan tugas selesai.",
           "Riwayat Tugas berfokus pada tugas yang telah diselesaikan dan mendukung peninjauan, pengurutan, pemfilteran, dan penghapusan entri riwayat.",
           "Bersama-sama, layar ini mencakup eksekusi sehari-hari (Beranda) dan pelacakan jangka panjang (Riwayat Tugas)."
         ]

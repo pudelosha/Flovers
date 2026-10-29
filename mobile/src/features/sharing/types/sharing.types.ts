@@ -86,7 +86,7 @@ export type SharingPreviewState = {
 
 export type SharingToastKind =
   | "invitationAdded" | "invitationAccepted" | "invitationDeclined" | "invitationCancelled"
-  | "contactUpdated" | "contactDeleted" | "sharingSaved" | "accessRemoved"
+  | "contactUpdated" | "contactDeleted" | "sharingSaved" | "sharingDeleted" | "accessRemoved"
   | "plantLeft" | "idCopied" | "copyFailed" | "previewReset"
   | "contactsInvitationAdded" | "contactsInvitationAccepted" | "contactsInvitationDeclined"
   | "contactsInvitationCancelled" | "contactsContactUpdated" | "contactsContactDeleted";

@@ -7,21 +7,21 @@
         "body": [
           "Po zalogowaniu trafisz na ekran główny.",
           "Zobaczysz tu zadania utworzone na podstawie przypomnień: co trzeba zrobić dziś i co już czeka na wykonanie.",
-          "Jeśli nie masz zadań do wykonania, zobaczysz odpowiedni komunikat i podpowiedzi, co możesz zrobić dalej, na przykład ustawić przypomnienia."
+          "Domyślny widok Wszystkie pokazuje także zadania na przyszłe dni. Pusty kafelek oznacza, że żadne oczekujące zadanie nie pasuje do wybranego widoku i filtrów."
         ]
       },
       {
         "heading": "Lista zadań",
         "body": [
           "Każdy kafelek to jedno zadanie wynikające z przypomnienia, na przykład podlewanie, zraszanie, nawożenie, przesadzanie lub inny zabieg pielęgnacyjny.",
-          "Zadania pojawiają się automatycznie zgodnie z częstotliwością ustawioną w przypomnieniu.",
+          "Po dodaniu przypomnienia od razu powstaje oczekujące zadanie, nawet z późniejszym terminem. Po jego wykonaniu od razu planowane jest kolejne.",
           "Na kafelku zobaczysz rodzaj zadania, nazwę rośliny, lokalizację i informację o terminie, na przykład „Na dziś” lub „Zaległe”."
         ]
       },
       {
         "heading": "Menu zadania",
         "body": [
-          "Dotknij trzech kropek na kafelku, aby otworzyć menu danego zadania.",
+          "Dotknij głównej części kafelka zadania, aby otworzyć menu działań.",
           "Oznacz jako wykonane: kończy zadanie i pozwala dodać notatkę do historii pielęgnacji.",
           "Edytuj przypomnienie: otwiera powiązane przypomnienie, w którym możesz zmienić częstotliwość zadania.",
           "Przejdź do rośliny: otwiera Szczegóły rośliny, której dotyczy zadanie.",
@@ -59,9 +59,9 @@
         "body": [
           "Po wybraniu „Pokaż zaległe” lub „Pokaż na dziś” możesz oznaczyć wiele zadań jako wykonane jednocześnie.",
           "Gdy jeden z tych filtrów jest włączony, w menu szybkich akcji pojawia się dodatkowa opcja, na przykład „Oznacz widoczne jako wykonane”.",
-          "Obejmuje ona wszystkie zadania widoczne na liście. Nie musisz zaznaczać każdego z osobna.",
+          "Zbiorcze oznaczanie obejmuje tylko widoczne zadania, które możesz wykonać. Pomija zadania udostępnione Ci wyłącznie do podglądu.",
           "To wygodne, gdy na przykład podlejesz kilka roślin za jednym razem.",
-          "Możliwość dodania notatek po oznaczeniu całej grupy zależy od wybranej opcji."
+          "Przed potwierdzeniem wybierz wspólną datę wykonania i ewentualną notatkę dla wszystkich objętych operacją zadań. Zapisanych notatek nie można obecnie później edytować."
         ]
       },
       {

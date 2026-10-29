@@ -108,7 +108,10 @@
       "emptyAllTitle": "Nie ma jeszcze udostępnionych roślin",
       "emptyAllBody": "Udostępnij rośliny wybranej osobie lub poproś ją, by udostępniła Ci swoje.",
       "displayTasks": "Pokaż zadania",
-      "actions": "Opcje rośliny {{name}}"
+      "actions": "Opcje rośliny {{name}}",
+      "deleteSharing": "Usuń udostępnianie",
+      "deleteSharingTitle": "Usunąć udostępnianie?",
+      "deleteSharingBody": "Wszystkie osoby, którym udostępniasz roślinę {{plant}}, stracą do niej dostęp. Roślina i jej dane pozostaną na Twoim koncie."
     },
     "form": {
       "title": "Udostępnij rośliny",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "Odrzucono zaproszenie.",
       "contactsInvitationCancelled": "Anulowano zaproszenie.",
       "contactsContactUpdated": "Zapisano nazwę kontaktu.",
-      "contactsContactDeleted": "Usunięto kontakt."
+      "contactsContactDeleted": "Usunięto kontakt.",
+      "sharingDeleted": "Udostępnianie usunięte dla wszystkich kontaktów."
     },
     "errors": {
       "invalid": "Wpisz poprawny adres e-mail lub identyfikator Flovers.",

@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Mengirim…"
+      "sending": "Mengirim…",
+      "deleting": "Menghapus…"
     },
     "support": {
       "copyToMe": "Kirimkan juga salinannya ke email saya"
@@ -51,8 +52,10 @@
       "bugSent": "Laporan bug terkirim. Terima kasih.",
       "couldNotSendContact": "Tidak dapat mengirimkan pesan Anda. Silakan coba lagi.",
       "couldNotSendBug": "Tidak dapat mengirimkan laporan bug Anda. Silakan coba lagi.",
-      "deleteNotImplemented": "Hapus akun belum tersedia.",
-      "requestTimedOut": "Waktu permintaan habis. Silakan coba lagi."
+      "requestTimedOut": "Waktu permintaan habis. Silakan coba lagi.",
+      "incorrectPassword": "Kata sandi saat ini salah.",
+      "couldNotDeleteAccount": "Akun Anda tidak dapat dihapus. Silakan coba lagi.",
+      "deleteAccountBlocked": "Penghapusan akun tidak dapat diselesaikan. Hubungi dukungan."
     }
   }
 }

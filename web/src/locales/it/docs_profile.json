@@ -14,7 +14,7 @@
         "body": [
           "Nella sezione Account trovi il tuo indirizzo e-mail e la data di creazione dell’account.",
           "Puoi cambiare l’indirizzo e-mail confermando con la password attuale, impostare una nuova password, uscire dall’account o eliminarlo definitivamente.",
-          "Se elimini l’account, perdi in modo irreversibile tutti i tuoi dati: piante, promemoria, attività, misurazioni e dispositivi."
+          "Conferma l’eliminazione con la password attuale. L’account e le sue piante, i promemoria, le attività, le letture e i dispositivi verranno eliminati definitivamente."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Notifiche",
         "body": [
-          "Nella sezione Notifiche scegli quali e-mail e notifiche push vuoi ricevere.",
-          "Per e-mail e push puoi attivare separatamente due tipi di notifica: il riepilogo delle attività previste per oggi e un promemoria per quelle ancora da completare 24 ore dopo la prima notifica.",
-          "Per ogni tipo di notifica scegli l’orario di invio. Sono disponibili le ore intere, per esempio 14:00."
+          "Le notifiche sono divise in Email, Telefono e Condivisione. Puoi attivare separatamente i riepiloghi giornalieri delle tue piante via email e push, scegliendo un orario per ciascun canale nel fuso orario delle notifiche del tuo account.",
+          "Email e Telefono hanno anche una casella dedicata alle attività previste per oggi sulle piante condivise con te. Queste opzioni sono disattivate inizialmente, funzionano indipendentemente dai riepiloghi delle tue piante e usano lo stesso orario del rispettivo canale. Se entrambe le opzioni sono attive, le attività delle tue piante e di quelle condivise con te vengono riunite in un unico messaggio giornaliero per canale.",
+          "I promemoria includono le condivisioni attive sia in sola lettura sia con il permesso di completare attività. L’accesso viene ricontrollato prima dell’invio. I promemoria terminano se la condivisione scade, l’accesso viene revocato o il contatto viene rimosso.",
+          "Il promemoria del giorno successivo riguarda solo le attività delle tue piante rimaste incomplete da ieri. Viene inviato all’orario impostato per il canale, non esattamente 24 ore dopo la prima notifica.",
+          "La sezione Condivisione riguarda un evento diverso: un’altra persona completa un’attività per una pianta di tua proprietà. Email e push sono inizialmente disattivate e, se abilitate, valgono per tutte le piante che condividi. L’avviso parte dopo il completamento, senza attendere il riepilogo giornaliero. È una preferenza dell’account, non una scelta da fare per ogni condivisione."
         ]
       },
       {

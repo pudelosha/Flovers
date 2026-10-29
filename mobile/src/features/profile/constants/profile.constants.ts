@@ -4,21 +4,21 @@ export const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"
 export const HEADER_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
 export const LANG_OPTIONS: readonly LangOption[] = [
-  { code: "id", label: "Bahasa Indonesia", flag: "🇮🇩" },
-  { code: "ru", label: "Русский", flag: "🇷🇺" },
-  { code: "tr", label: "Türkçe", flag: "🇹🇷" },
-  { code: "ja", label: "日本語", flag: "🇯🇵" },
-  { code: "ko", label: "한국어", flag: "🇰🇷" },
   { code: "en", label: "English",  flag: "🇬🇧" },
   { code: "pl", label: "Polski",    flag: "🇵🇱" },
   { code: "de", label: "Deutsch",   flag: "🇩🇪" },
+  { code: "it", label: "Italiano",  flag: "🇮🇹" },
   { code: "fr", label: "Français",  flag: "🇫🇷" },
   { code: "es", label: "Español",   flag: "🇪🇸" },
-  { code: "it", label: "Italiano",  flag: "🇮🇹" },
   { code: "pt", label: "Português", flag: "🇵🇹" },
-  { code: "zh", label: "中文",       flag: "🇨🇳" },
-  { code: "hi", label: "हिन्दी",     flag: "🇮🇳" },
   { code: "ar", label: "العربية",    flag: "🇸🇦" },
+  { code: "hi", label: "हिन्दी",     flag: "🇮🇳" },
+  { code: "zh", label: "中文",       flag: "🇨🇳" },
+  { code: "ja", label: "日本語", flag: "🇯🇵" },
+  { code: "ko", label: "한국어", flag: "🇰🇷" },
+  { code: "id", label: "Bahasa Indonesia", flag: "🇮🇩" },
+  { code: "ru", label: "Русский", flag: "🇷🇺" },
+  { code: "tr", label: "Türkçe", flag: "🇹🇷" },
 ];
 
 export const DATE_OPTIONS = [
@@ -29,7 +29,7 @@ export const DATE_OPTIONS = [
   "ddd, DD MMM YYYY",
 ] as const;
 
-/** Background dropdown options (Background 1 default) */
+/** Background dropdown options (Background 5 is the default for new accounts) */
 export const BACKGROUND_OPTIONS: readonly { key: BackgroundKey; label: string }[] = [
   { key: "bg1", label: "Background 1" },
   { key: "bg2", label: "Background 2" },

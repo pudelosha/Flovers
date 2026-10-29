@@ -161,3 +161,18 @@ def test_history_rejects_invalid_stat():
 
     assert response.status_code == 400
     assert "stat must be one of" in response.json()["detail"]
+
+
+@pytest.mark.django_db
+def test_history_distinguishes_missing_buckets_from_measured_zero():
+    user = User.objects.create_user(email="zero-history@example.test", is_active=True)
+    device = _device(user)
+    Reading.objects.create(device=device, timestamp=timezone.datetime(2026, 5, 5, 10, tzinfo=dt_timezone.utc), temperature=0)
+    client = APIClient()
+    client.force_authenticate(user)
+    response = client.get(reverse("history"), {"device_id": device.pk, "anchor": "2026-05-05T12:00:00Z"})
+    assert response.status_code == 200
+    present = [point for point in response.data["points"] if point["sample_count"] > 0]
+    missing = [point for point in response.data["points"] if point["sample_count"] == 0]
+    assert len(present) == 1 and present[0]["value"] == 0
+    assert len(missing) == 23 and all(point["value"] is None for point in missing)

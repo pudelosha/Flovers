@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Benachrichtigungen über abgeschlossene Bewässerung sind nur verfügbar, wenn dieses Gerät über eine integrierte Wasserpumpe verfügt. Sie können gesendet werden, nachdem eine geplante Bewässerung abgeschlossen wurde oder nachdem eine automatische Bewässerung ausgelöst und abgeschlossen wurde.",
       "sendEmailWateringNotifications": "E-Mail-Benachrichtigung senden, wenn die Bewässerung abgeschlossen ist",
       "sendPushWateringNotifications": "Push-Benachrichtigung senden, wenn die Bewässerung abgeschlossen ist",
-      "samplingIntervalRemoved": "Das Abtastintervall wurde entfernt"
+      "intervalHours": "Messintervall (Stunden)",
+      "decreaseInterval": "Messintervall verkürzen",
+      "increaseInterval": "Messintervall verlängern",
+      "intervalFirmwareHint": "Wähle 1–24 Stunden. Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board.",
+      "pumpCooldownMinutes": "Pause zwischen automatischen Bewässerungen (Minuten)",
+      "pumpCooldownHint": "Wähle 1–32767 Minuten (Standard 60). Das Board übernimmt den Serverwert beim nächsten Abruf. Die Laufzeit der Pumpe ändert sich dadurch nicht.",
+      "pumpCooldownInvalid": "Gib eine ganze Zahl von 1 bis 32767 ein."
     }
   }
 }

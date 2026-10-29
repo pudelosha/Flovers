@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Excluir lembrete",
       "areYouSurePrefix": "Tem certeza de que deseja excluir",
-      "areYouSureSuffix": "? Esta ação não pode ser desfeita."
+      "areYouSureSuffix": "? Esta ação não pode ser desfeita.",
+      "historyWarning": "Ao eliminar este lembrete, todas as tarefas associadas também serão eliminadas definitivamente, incluindo as concluídas e as respetivas notas."
     },
     "edit": {
       "titleCreate": "Adicionar lembrete",
@@ -59,8 +60,8 @@
     "toggle": {
       "pauseTitle": "Pausar lembrete",
       "resumeTitle": "Retomar lembrete",
-      "pauseBody": "Pausar este lembrete para {{name}}? A tarefa pendente ficar\u00e1 oculta at\u00e9 voc\u00ea retom\u00e1-lo.",
-      "resumeBody": "Retomar este lembrete para {{name}}? A pr\u00f3xima tarefa pendente aparecer\u00e1 novamente."
+      "pauseBody": "Pausar este lembrete para {{name}}? A tarefa pendente ficará oculta até você retomá-lo.",
+      "resumeBody": "Retomar este lembrete para {{name}}? A próxima tarefa pendente aparecerá novamente."
     }
   }
 }

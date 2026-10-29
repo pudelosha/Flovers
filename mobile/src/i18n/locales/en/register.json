@@ -13,7 +13,7 @@
       "invalidEmail": "Enter a valid email.",
       "shortPassword": "Password should be at least 8 characters.",
       "passwordsMismatch": "Passwords do not match.",
-      "termsRequired": "You must agree to the Terms & Conditions.",
+      "termsRequired": "You must agree to the Terms & Conditions and Privacy Policy.",
       "incompleteForm": "Please complete the form.",
       "emailTaken": "This email is already taken.",
       "registrationFailed": "Registration failed. Please try again.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Account created. Welcome!"
-    }
+    },
+    "termsAnd": "and",
+    "privacyLink": "Privacy Policy"
   }
 }

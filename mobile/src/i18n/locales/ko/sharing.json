@@ -108,7 +108,10 @@
       "emptyAllTitle": "아직 공유된 식물이 없어요",
       "emptyAllBody": "연락처에 있는 사람에게 식물을 공유하거나 상대방에게 식물을 공유해 달라고 요청해 보세요.",
       "displayTasks": "할 일 보기",
-      "actions": "{{name}} 작업"
+      "actions": "{{name}} 작업",
+      "deleteSharing": "공유 해제",
+      "deleteSharingTitle": "공유를 해제할까요?",
+      "deleteSharingBody": "{{plant}} 식물을 공유받은 모든 사용자의 접근 권한이 해제됩니다. 식물과 해당 데이터는 그대로 유지됩니다."
     },
     "form": {
       "title": "식물 공유하기",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "초대를 거절했어요.",
       "contactsInvitationCancelled": "초대를 취소했어요.",
       "contactsContactUpdated": "연락처 이름을 수정했어요.",
-      "contactsContactDeleted": "연락처를 삭제했어요."
+      "contactsContactDeleted": "연락처를 삭제했어요.",
+      "sharingDeleted": "모든 연락처와의 공유가 해제되었습니다."
     },
     "errors": {
       "invalid": "올바른 이메일 주소 또는 Flovers ID를 입력해 주세요.",

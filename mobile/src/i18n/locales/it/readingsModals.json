@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Le notifiche di completamento dell’irrigazione sono disponibili solo quando questo dispositivo include una pompa dell’acqua. Possono essere inviate dopo il completamento dell’irrigazione programmata o dopo l’attivazione e il completamento dell’irrigazione automatica.",
       "sendEmailWateringNotifications": "Invia notifica email quando l’irrigazione è completata",
       "sendPushWateringNotifications": "Invia notifica push quando l’irrigazione è completata",
-      "samplingIntervalRemoved": "L’intervallo di campionamento è stato rimosso"
+      "intervalHours": "Intervallo letture (ore)",
+      "decreaseInterval": "Riduci intervallo letture",
+      "increaseInterval": "Aumenta intervallo letture",
+      "intervalFirmwareHint": "Scegli da 1 a 24 ore. Dopo la modifica, genera il nuovo codice e caricalo sulla scheda.",
+      "pumpCooldownMinutes": "Pausa tra annaffiature automatiche (minuti)",
+      "pumpCooldownHint": "Scegli da 1 a 32767 minuti (predefinito 60). La scheda riceve il valore dal server al prossimo controllo. La durata della pompa non cambia.",
+      "pumpCooldownInvalid": "Inserisci un numero intero da 1 a 32767."
     }
   }
 }

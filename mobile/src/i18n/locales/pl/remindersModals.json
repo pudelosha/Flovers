@@ -9,12 +9,13 @@
       "update": "Zapisz",
       "reset": "Reset",
       "pause": "Wstrzymaj",
-      "resume": "Wzn\u00f3w"
+      "resume": "Wznów"
     },
     "confirmDelete": {
       "title": "Usuń przypomnienie",
       "areYouSurePrefix": "Czy na pewno chcesz usunąć",
-      "areYouSureSuffix": "? Tej operacji nie można cofnąć."
+      "areYouSureSuffix": "? Tej operacji nie można cofnąć.",
+      "historyWarning": "Usunięcie przypomnienia trwale usunie też wszystkie powiązane zadania, w tym historię wykonanych zadań i notatki."
     },
     "edit": {
       "titleCreate": "Dodaj przypomnienie",
@@ -58,9 +59,9 @@
     },
     "toggle": {
       "pauseTitle": "Wstrzymaj przypomnienie",
-      "resumeTitle": "Wzn\u00f3w przypomnienie",
-      "pauseBody": "Wstrzyma\u0107 przypomnienie dla {{name}}? Zadanie z terminem b\u0119dzie ukryte, dop\u00f3ki go nie wznowisz.",
-      "resumeBody": "Wznowi\u0107 przypomnienie dla {{name}}? Nast\u0119pne zadanie z terminem zn\u00f3w si\u0119 pojawi."
+      "resumeTitle": "Wznów przypomnienie",
+      "pauseBody": "Wstrzymać przypomnienie dla {{name}}? Zadanie z terminem będzie ukryte, dopóki go nie wznowisz.",
+      "resumeBody": "Wznowić przypomnienie dla {{name}}? Następne zadanie z terminem znów się pojawi."
     }
   }
 }

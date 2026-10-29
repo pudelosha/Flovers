@@ -22,7 +22,7 @@
         "body": [
           "Ev bitkisi başlığıyla ilişkili 3 noktalı menü, ev bitkisinin kendisiyle ilgili ek eylemler sağlar.",
           "Mevcut eylemler arasında ev bitkisi Tanımını görüntüleme (ev bitkisi bir bitkiye bağlıysa), ev bitkisi ayrıntılarını düzenleme, ev bitkisi görüntüsünü değiştirme ve bu ev bitkisi için filtrelenen Hatırlatıcılara gitme yer alır.",
-          "Resmin değiştirilmesi, önceden tanımlanmış bir resmin değiştirilmesine, telefondan kullanıcı fotoğrafı eklenmesine veya resmin kaldırılmasına olanak sağlar."
+          "Kendi fotoğrafınızı kaldırmak yerel kopyayı siler. Bağlı bitki tanımında katalog resmi varsa yeniden gösterilir."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Ev bitkisi bir okuma cihazına bağlıysa, en son sensör okumaları doğrudan bu ekranda görüntülenir.",
           "Desteklenen sensör okumaları arasında hava sıcaklığı, hava nemi, ışık seviyesi ve toprak nemi bulunur.",
           "Bu bölüm, en son alınan okumanın zaman damgasıyla birlikte en son değerleri gösterir.",
-          "Sensör okumaları kutucuğuna dokunduğunuzda, sıcaklık, nem, ışık ve toprak nemi (bir cihaz ev bitkisine bağlı olduğu sürece) için ayrıntılı tabloların ve özetlerin (günlük/haftalık/aylık) gösterildiği sensör okumaları Geçmiş ekranına yönlendirilirsiniz."
+          "Geçmişini açmak için tek bir ölçümün değerine veya simgesine dokunun. Bu kartın başlığına veya arka planına dokunmak grafikleri açmaz."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Her ev bitkisinin ekranın alt kısmında görüntülenen benzersiz bir QR kodu vardır.",
           "Bu kodun Tarayıcı görünümünü kullanarak taranması, kullanıcıyı doğrudan bu ev bitkisinin Ayrıntılar ekranına yönlendirir.",
-          "QR kodu cihaza kaydedilebilir veya e-postayla gönderilebilir; bu sayede yazdırılması ve ev bitkisi saksısına hızlı erişim için eklenmesi kolaydır."
+          "QR kodu cihaza kaydedilebilir veya e-postayla gönderilebilir; bu sayede yazdırılması ve ev bitkisi saksısına hızlı erişim için eklenmesi kolaydır.",
+          "Flovers QR kodu sayısal veritabanı kimliği yerine bitkiye ait benzersiz, kapalı bir referans içerir."
         ]
       },
       {

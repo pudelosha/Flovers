@@ -28,7 +28,7 @@
         "heading": "Navigating through past periods",
         "body": [
           "The arrows next to the selected period allow you to move between previous days, weeks, or months.",
-          "Navigation is limited to periods where data exists — future periods are not displayed."
+          "You can browse earlier days, weeks and months even if they contain no readings. Navigation into future periods is blocked."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Data availability and interpretation",
         "body": [
           "If the device has not provided readings for a selected period, the chart will appear empty or show missing values.",
-          "Sensor data is informative and should be interpreted together with real-world observation (calibration, placement, and environment can affect accuracy)."
+          "Sensor data is informative and should be interpreted together with real-world observation (calibration, placement, and environment can affect accuracy).",
+          "Missing samples remain gaps rather than zero readings. A genuine zero remains a valid value. Temperatures use the Celsius, Fahrenheit or Kelvin preference from Profile."
         ]
       }
     ]

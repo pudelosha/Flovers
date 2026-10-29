@@ -22,7 +22,7 @@
         "body": [
           "Menu 3 titik yang terkait dengan header tanaman hias memberikan tindakan tambahan terkait tanaman hias itu sendiri.",
           "Tindakan yang tersedia termasuk melihat Definisi tanaman hias (jika tanaman hias tertaut ke salah satunya), mengedit detail tanaman hias, mengubah gambar tanaman hias, dan menavigasi ke Pengingat yang difilter untuk tanaman hias ini.",
-          "Mengubah gambar memungkinkan penggantian gambar yang telah ditentukan sebelumnya, menambahkan foto pengguna dari ponsel, atau menghapus gambar."
+          "Menghapus foto pribadi menghapus salinan lokalnya. Gambar katalog muncul kembali jika definisi tanaman yang ditautkan memilikinya."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Jika tanaman hias dihubungkan ke perangkat pembacaan, pembacaan sensor terbaru ditampilkan langsung di layar ini.",
           "Pembacaan sensor yang didukung meliputi suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah.",
           "Bagian ini menunjukkan nilai terbaru beserta stempel waktu pembacaan terakhir yang diterima.",
-          "Mengetuk ubin pembacaan sensor akan mengarahkan Anda ke layar Riwayat pembacaan sensor, tempat bagan dan ringkasan terperinci (harian/mingguan/bulanan) ditampilkan untuk suhu, kelembapan, cahaya, dan kelembapan tanah (selama perangkat terhubung ke tanaman hias)."
+          "Ketuk nilai atau ikon satu pengukuran untuk membuka riwayatnya. Mengetuk judul atau latar kartu ini tidak membuka grafik."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Setiap tanaman hias memiliki kode unik QR yang ditampilkan di bagian bawah layar.",
           "Memindai kode ini menggunakan tampilan Pemindai akan mengarahkan pengguna langsung ke layar Detail tanaman hias ini.",
-          "Kode QR dapat disimpan ke perangkat atau dikirim melalui email, sehingga mudah untuk dicetak dan dilampirkan ke pot bunga tanaman hias untuk akses cepat."
+          "Kode QR dapat disimpan ke perangkat atau dikirim melalui email, sehingga mudah untuk dicetak dan dilampirkan ke pot bunga tanaman hias untuk akses cepat.",
+          "QR Flovers berisi referensi unik dan tidak transparan ke tanaman, bukan ID angka dalam database."
         ]
       },
       {

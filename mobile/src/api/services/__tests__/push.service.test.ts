@@ -127,6 +127,24 @@ describe("push.service", () => {
     } finally { open.mockRestore(); }
   });
 
+  it("opens shared-care notifications in history filtered to the affected plant", async () => {
+    const open = jest.spyOn(Linking, "openURL").mockResolvedValue(undefined);
+    try {
+      await backgroundOpen({ type: 1, detail: { notification: { data: { route: "TaskHistory", plantId: "12" } } } });
+      expect(open).toHaveBeenCalledWith("flovers://task-history?plantId=12");
+    } finally { open.mockRestore(); }
+  });
+
+  it("displays a foreground shared-care push with its original history destination", async () => {
+    await startPushNotifications();
+    const receive = native.onMessage.mock.calls[0][0];
+    const data = { kind: "shared_task_completed", route: "TaskHistory", plantId: "12", url: "flovers://task-history?plantId=12" };
+    await receive({ notification: { title: "Task completed", body: "Anna watered Blueberry." }, data });
+    expect(notifee.displayNotification).toHaveBeenCalledWith(expect.objectContaining({
+      title: "Task completed", body: "Anna watered Blueberry.", data,
+    }));
+  });
+
   afterEach(() => {
     stopPushNotifications();
   });

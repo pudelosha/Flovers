@@ -5,6 +5,7 @@ import logging
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import IntegrityError, transaction
+from django.db.models.deletion import ProtectedError, RestrictedError
 from django.utils.encoding import force_str
 from django.utils.http import urlsafe_base64_decode
 
@@ -12,6 +13,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.throttling import UserRateThrottle
 from rest_framework.exceptions import ValidationError
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -23,6 +25,7 @@ from .serializers import (
     ResetPasswordSerializer,
     ChangePasswordSerializer,
     ChangeEmailSerializer,
+    DeleteAccountSerializer,
 )
 from .tasks import send_activation_email_task, send_password_reset_email_task
 from .tokens import activation_token, reset_password_token
@@ -94,7 +97,10 @@ class LoginView(APIView):
         ser = LoginSerializer(data=request.data, context={"request": request})
         if not ser.is_valid():
             msg = ser.errors.get("message", ["Login failed."])[0]
-            return fail(msg, errors=ser.errors)
+            response = fail(msg, errors=ser.errors)
+            if str(ser.errors.get("code", [""])[0]) == "account_not_activated":
+                response.data["code"] = "account_not_activated"
+            return response
 
         user = ser.validated_data["user"]
         refresh = RefreshToken.for_user(user)
@@ -257,3 +263,44 @@ class ChangeEmailView(APIView):
                 return fail("This email is already in use.", {"new_email": ["This email is already in use."]})
             raise
         return ok("Email updated successfully.", {"email": user.email})
+
+
+class AccountDeletionThrottle(UserRateThrottle):
+    scope = "account_deletion"
+    rate = "5/hour"
+
+
+class DeleteAccountView(APIView):
+    permission_classes = [IsAuthenticated]
+    throttle_classes = [AccountDeletionThrottle]
+
+    def delete(self, request):
+        serializer = DeleteAccountSerializer(data=request.data)
+        if not serializer.is_valid():
+            return fail("Enter your current password.", serializer.errors)
+        try:
+            with transaction.atomic():
+                # Match the user-first lock order used by shared care and plant writes.
+                user = User.objects.select_for_update().get(pk=request.user.pk)
+                if not user.is_active:
+                    return fail("Account is inactive.", code=status.HTTP_403_FORBIDDEN)
+                if not user.check_password(serializer.validated_data["current_password"]):
+                    response = fail("Current password is incorrect.")
+                    response.data["code"] = "incorrect_password"
+                    return response
+
+                # A plant's protected location would block a plain user cascade.
+                # Delete only owned plants first; the enclosing transaction keeps
+                # failures atomic, including unexpected legacy cross-owner links.
+                plants = user.plant_instances.all()
+                plant_ids = list(plants.order_by("pk").values_list("pk", flat=True))
+                plants.delete()
+                user.delete()
+        except (ProtectedError, RestrictedError):
+            response = fail("Account deletion could not be completed. Please contact support.", code=status.HTTP_409_CONFLICT)
+            response.data["code"] = "deletion_blocked"
+            return response
+        except User.DoesNotExist:
+            return fail("Account is no longer available.", code=status.HTTP_401_UNAUTHORIZED)
+
+        return ok("Account deleted.", {"deleted_plant_ids": plant_ids})

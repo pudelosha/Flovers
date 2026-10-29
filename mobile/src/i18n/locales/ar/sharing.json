@@ -108,7 +108,10 @@
       "emptyAllTitle": "لا توجد نباتات مشتركة بعد",
       "emptyAllBody": "شارك نباتاتك مع جهة اتصال أو اطلب من شخص مشاركة نباتاته معك.",
       "displayTasks": "عرض المهام",
-      "actions": "إجراءات {{name}}"
+      "actions": "إجراءات {{name}}",
+      "deleteSharing": "إلغاء المشاركة",
+      "deleteSharingTitle": "إلغاء المشاركة؟",
+      "deleteSharingBody": "سيفقد جميع من شاركت {{plant}} معهم إمكانية الوصول إليها. ستبقى النبتة وبياناتها محفوظة في حسابك."
     },
     "form": {
       "title": "مشاركة نباتات",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "تم رفض الدعوة.",
       "contactsInvitationCancelled": "تم إلغاء الدعوة.",
       "contactsContactUpdated": "تم تحديث اسم جهة الاتصال.",
-      "contactsContactDeleted": "تم حذف جهة الاتصال."
+      "contactsContactDeleted": "تم حذف جهة الاتصال.",
+      "sharingDeleted": "تم إلغاء المشاركة مع جميع جهات الاتصال."
     },
     "errors": {
       "invalid": "أدخل بريدًا إلكترونيًا أو معرّف Flovers صالحًا.",

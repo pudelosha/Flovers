@@ -14,7 +14,7 @@
         "body": [
           "The Account section displays basic account information such as the registered email address and account creation date.",
           "From this section, the user can change the email address (confirmation with the current password is required), change the current password, log out, or permanently delete the account.",
-          "Deleting the account results in irreversible removal of all user data, including plants, reminders, tasks, readings, and devices."
+          "Confirm account deletion with your current password. This permanently removes your account and its plants, reminders, tasks, readings and devices."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Notifications",
         "body": [
-          "The Notifications section allows the user to manage consent and preferences for email and push notifications.",
-          "For both email and push notifications, the user can enable or disable two notification types: a daily summary informing whether there are tasks due today, and a reminder notification sent if tasks remain outstanding 24 hours after the first notification.",
-          "For each notification type, the user selects the time of delivery (full-hour format, e.g. 14:00)."
+          "Notifications has Email, Phone and Shared sections. Daily summaries for your own plants can be enabled separately for email and push, with one delivery time per channel in your account’s notification timezone.",
+          "Email and Phone each have an additional checkbox for tasks due today on plants shared with you. These options start off, work independently of summaries for your own plants, and use the same delivery time as the corresponding channel. When both are enabled, your own and shared due tasks are combined into one daily message per channel.",
+          "Shared-task reminders include active view-only shares as well as shares that allow task completion. Access is checked again before delivery. Expiry, removal of access or removal of the contact stops these reminders.",
+          "The next-day follow-up option covers only your own plants’ unfinished tasks from yesterday. It uses the channel’s configured time; it is not a timer set for exactly 24 hours after the first notification.",
+          "The Shared section controls a different event: someone else completing a task for a plant you own. Its email and push checkboxes start off and apply to all plants you share. These notifications are sent after completion rather than at the daily summary time; they are account preferences, not settings in the plant-sharing form."
         ]
       },
       {

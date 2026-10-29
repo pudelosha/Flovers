@@ -1,4 +1,4 @@
-﻿{
+{
   "docs_create_plant_wizard": {
     "title": "Kreator dodawania rośliny",
     "sections": [
@@ -39,8 +39,8 @@
         "body": [
           "Podaj stronę świata, natężenie światła i odległość rośliny od okna.",
           "Stronę świata możesz sprawdzić za pomocą kompasu w telefonie, jeśli aplikacja ma dostęp do odpowiednich czujników.",
-          "Możesz też zmierzyć natężenie światła, jeśli telefon ma taki czujnik i przyznasz aplikacji wymagane uprawnienia.",
-          "Te dane nie są wymagane. Możesz wpisać je ręcznie lub pominąć."
+          "Automatyczny pomiar światła działa tylko na obsługiwanych urządzeniach z Androidem. W iOS wybierz poziom światła ręcznie. Pomiar kierunku również wymaga odpowiednich czujników.",
+          "Pominięcie tego kroku zachowuje ustawienia domyślne: jasne, rozproszone światło, wschód i 20 cm. Samo pozostawienie tych wartości nie zmienia proponowanych odstępów pielęgnacji."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Krok 9 — Zobacz podsumowanie",
+        "heading": "Krok 09 — Utworzenie rośliny",
         "body": [
-          "Po dodaniu rośliny zobaczysz potwierdzenie i podsumowanie.",
-          "Stąd możesz przejść do listy roślin lub otworzyć szczegóły nowej rośliny, korzystając z dostępnych opcji."
+          "Ostatni krok automatycznie tworzy roślinę. Po powodzeniu kreator po około 2,5 sekundy wraca do listy roślin. Nie ma osobnego podsumowania ani przycisku otwierania nowej rośliny."
         ]
       },
       {

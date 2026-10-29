@@ -108,7 +108,10 @@
       "emptyAllTitle": "Henüz paylaşılan ev bitkisi yok",
       "emptyAllBody": "Ev bitkilerini bir kişiyle paylaşın veya birinden kendi bitkilerini sizinle paylaşmasını isteyin.",
       "displayTasks": "Görevleri göster",
-      "actions": "{{name}} için eylemler"
+      "actions": "{{name}} için eylemler",
+      "deleteSharing": "Paylaşımı kaldır",
+      "deleteSharingTitle": "Paylaşım kaldırılsın mı?",
+      "deleteSharingBody": "{{plant}} bitkisini paylaştığınız herkes erişimini kaybedecek. Bitkiniz ve verileri korunacak."
     },
     "form": {
       "title": "Bitkileri paylaş",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "Davet reddedildi.",
       "contactsInvitationCancelled": "Davet iptal edildi.",
       "contactsContactUpdated": "Kişi adı güncellendi.",
-      "contactsContactDeleted": "Kişi silindi."
+      "contactsContactDeleted": "Kişi silindi.",
+      "sharingDeleted": "Tüm kişiler için paylaşım kaldırıldı."
     },
     "errors": {
       "invalid": "Geçerli bir e-posta adresi veya Flovers kimliği girin.",

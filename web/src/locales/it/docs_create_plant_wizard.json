@@ -39,8 +39,8 @@
         "body": [
           "Indica l'esposizione della pianta: orientamento, intensità della luce e distanza dalla finestra.",
           "Puoi rilevare l'orientamento con la bussola del telefono, se hai concesso all'app l'autorizzazione necessaria.",
-          "Puoi misurare l'intensità della luce se il telefono dispone di un sensore di luminosità e hai concesso le autorizzazioni richieste.",
-          "Tutti i valori di esposizione sono facoltativi: puoi inserirli a mano oppure saltare questo passaggio."
+          "La misurazione automatica della luce è disponibile solo sui dispositivi Android supportati. Su iOS scegli il livello di luce manualmente. Anche la direzione richiede sensori compatibili.",
+          "Saltando questo passaggio restano i valori predefiniti: luce intensa indiretta, est e 20 cm. Lasciarli invariati non modifica da solo gli intervalli di cura."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Passaggio 09 — Riepilogo e conferma",
+        "heading": "Passaggio 09 — Creazione della pianta",
         "body": [
-          "Una volta aggiunta la pianta, vedrai una schermata di conferma con il riepilogo.",
-          "Da qui puoi passare all'elenco delle piante o aprire i dettagli della pianta appena aggiunta, secondo le opzioni di navigazione disponibili nell'app."
+          "L’ultimo passaggio crea automaticamente la pianta. Dopo circa 2,5 secondi torna all’elenco Piante, senza una schermata di riepilogo separata o un pulsante per aprire la nuova pianta."
         ]
       },
       {

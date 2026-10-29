@@ -13,13 +13,14 @@ jest.mock("../../../../shared/ui/TopSnackbar", () => {
 });
 function Actions() {
   const { notify } = useSharingPreview();
-  return <>{(["sharingSaved", "accessRemoved", "plantLeft", "contactsInvitationAdded", "copyFailed"] as const).map((kind) =>
+  return <>{(["sharingSaved", "sharingDeleted", "accessRemoved", "plantLeft", "contactsInvitationAdded", "copyFailed"] as const).map((kind) =>
     <Pressable key={kind} onPress={() => notify(kind, kind === "copyFailed" ? "error" : "success")}><Text>{kind}</Text></Pressable>)}</>;
 }
 const setup = () => render(<SharingPreviewProvider><Actions /><SharingToastHost /></SharingPreviewProvider>);
 beforeEach(() => { mockDismissCallbacks = []; });
 it("uses live sharing and contact success messages", () => {
   const view = setup(); fireEvent.press(view.getByText("sharingSaved")); expect(view.getByTestId("toast-message").props.children).toBe("Sharing updated.");
+  fireEvent.press(view.getByText("sharingDeleted")); expect(view.getByTestId("toast-message").props.children).toBe("Sharing removed for all contacts.");
   fireEvent.press(view.getByText("accessRemoved")); expect(view.getByTestId("toast-message").props.children).toBe("Access removed.");
   fireEvent.press(view.getByText("plantLeft")); expect(view.getByTestId("toast-message").props.children).toBe("Shared plant removed.");
   fireEvent.press(view.getByText("contactsInvitationAdded")); expect(view.getByTestId("toast-message").props.children).toBe("Invitation sent.");

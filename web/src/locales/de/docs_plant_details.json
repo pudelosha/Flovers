@@ -22,7 +22,7 @@
         "body": [
           "Das Drei-Punkte-Menü neben der Pflanzenüberschrift bietet weitere Aktionen für deine Pflanze.",
           "Du kannst das zugeordnete Pflanzenprofil ansehen, Pflanzenangaben bearbeiten, das Bild ändern oder die Erinnerungen für diese Pflanze öffnen.",
-          "Beim Ändern des Bildes kannst du ein vorgegebenes Bild ersetzen, ein eigenes Foto vom Telefon hinzufügen oder das Bild entfernen."
+          "Beim Entfernen deines Fotos wird die lokale Kopie gelöscht. Falls das verknüpfte Pflanzenprofil ein Katalogbild enthält, erscheint dieses wieder."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Wenn deiner Pflanze ein Messgerät zugeordnet ist, werden die neuesten Sensormesswerte direkt hier angezeigt.",
           "Unterstützt werden Lufttemperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchte.",
           "Du siehst die zuletzt empfangenen Werte und den Zeitpunkt der letzten Messung.",
-          "Tippe auf die Messwertkachel, um den Messwertverlauf zu öffnen. Solange der Pflanze ein Gerät zugeordnet ist, findest du dort Diagramme und Tages-, Wochen- oder Monatsübersichten zu Temperatur, Luftfeuchtigkeit, Licht und Bodenfeuchte."
+          "Tippe auf einen einzelnen Messwert oder sein Symbol, um dessen Verlauf zu öffnen. Titel und Hintergrund der Kachel öffnen keinen Verlauf."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Jede Pflanze hat einen eigenen QR-Code, der unten in den Pflanzendetails angezeigt wird.",
           "Wenn du ihn mit dem Scanner in der App einliest, öffnen sich direkt die Details dieser Pflanze.",
-          "Du kannst den Code auf deinem Gerät speichern oder per E-Mail versenden, anschließend ausdrucken und am Topf anbringen."
+          "Du kannst den Code auf deinem Gerät speichern oder per E-Mail versenden, anschließend ausdrucken und am Topf anbringen.",
+          "Ein Flovers-QR-Code enthält einen eindeutigen, nicht lesbaren Pflanzenverweis statt der numerischen Datenbank-ID."
         ]
       },
       {

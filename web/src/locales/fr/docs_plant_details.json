@@ -22,7 +22,7 @@
         "body": [
           "Le menu à trois points près du titre propose d’autres actions pour cette plante.",
           "Tu peux consulter sa fiche d’espèce si elle en a une, modifier ses informations, changer sa photo ou ouvrir les rappels filtrés pour cette plante.",
-          "Tu peux remplacer une image proposée, ajouter une photo depuis ton téléphone ou retirer l’image."
+          "Retirer votre photo supprime sa copie locale. Si la fiche botanique liée dispose d’une image de catalogue, celle-ci réapparaît."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Si un appareil de mesure est associé à la plante, ses derniers relevés s’affichent ici.",
           "Les mesures prises en charge sont la température de l’air, l’humidité de l’air, la luminosité et l’humidité du sol.",
           "La section montre les valeurs les plus récentes et l’heure du dernier relevé reçu.",
-          "Touche la carte des relevés pour ouvrir leur historique. Tant qu’un appareil est associé, tu peux consulter les graphiques et les résumés par jour, semaine ou mois pour chaque mesure."
+          "Touchez la valeur ou l’icône d’une mesure pour ouvrir son historique. Le titre et le fond de cette tuile n’ouvrent pas les graphiques."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Chaque plante possède un code QR unique, affiché en bas de cet écran.",
           "En le scannant avec le scanner de l’application, tu ouvres directement les détails de cette plante.",
-          "Tu peux enregistrer le code sur ton téléphone ou l’envoyer par e-mail, puis l’imprimer et le coller sur le pot."
+          "Tu peux enregistrer le code sur ton téléphone ou l’envoyer par e-mail, puis l’imprimer et le coller sur le pot.",
+          "Un QR code Flovers contient une référence unique et opaque à la plante, plutôt que son identifiant numérique dans la base."
         ]
       },
       {

@@ -19,7 +19,7 @@
     },
     {
       "q": "Is Flovers available in multiple languages?",
-      "a": "Flovers supports English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Chinese, Japanese, Korean, Indonesian, Russian, and Turkish."
+      "a": "Flovers supports 15 languages: English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Chinese, Japanese, Korean, Indonesian, Russian, Turkish."
     },
     {
       "q": "How do I create an account?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "I didn’t receive the account activation e-mail — what should I do?",
-      "a": "You can request a new activation e-mail directly from within the application."
+      "a": "On Login, choose the resend-activation link. After registration, first return to Login to use this option."
     },
     {
       "q": "How can I reset my password?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "How can I delete my account and data?",
-      "a": "You can permanently delete your account from the Profile screen while logged in. This action is irreversible and removes all associated data."
+      "a": "Confirm account deletion with your current password. This permanently removes your account and its plants, reminders, tasks, readings and devices."
     },
     {
       "q": "What is the difference between a plant definition and my own plant?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "What happens if I forget to complete a task?",
-      "a": "If a task is not completed, the app may send a reminder after 24 hours. Otherwise, the task remains marked as overdue until you take action."
+      "a": "If enabled, the next-day follow-up covers yesterday’s unfinished tasks for your own plants at the configured channel time. Tasks otherwise remain overdue until completed."
     },
     {
       "q": "Can I disable or edit reminders?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "How often is sensor data updated?",
-      "a": "Sensor readings can be sent as frequently as every 5 minutes. For storage purposes, data is currently saved at one-hour intervals."
+      "a": "Generated firmware sends readings hourly by default; the device form supports intervals of 1–24 hours and changes require uploading regenerated code. Custom firmware can send more frequently, but storage still uses hourly buckets."
     },
     {
       "q": "What happens if my sensor device goes offline?",

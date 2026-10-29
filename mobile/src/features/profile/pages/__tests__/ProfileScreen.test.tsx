@@ -1,8 +1,8 @@
 import React from "react";
-import { act, render, waitFor } from "@testing-library/react-native";
+import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
 import ProfileScreen from "../ProfileScreen";
 import { DEFAULT_SETTINGS } from "../../../../app/settings/settings.defaults";
-import { fetchProfileNotifications } from "../../../../api/services/profile.service";
+import { fetchProfileNotifications, updateProfileNotifications } from "../../../../api/services/profile.service";
 
 const mockT = (key: string) => key;
 let mockSettings = { settings: DEFAULT_SETTINGS, loading: false, applyServerSettings: jest.fn() };
@@ -37,8 +37,17 @@ jest.mock("../../../../shared/ui/GlassHeader", () => (props: any) =>
   require("react").createElement(require("react-native").Text, null, props.title));
 jest.mock("../../components/AccountCard", () => (props: any) =>
   require("react").createElement(require("react-native").Text, null, "Account level " + (props.levelProgress?.level ?? "unavailable")));
-jest.mock("../../components/NotificationsCard", () => (props: any) =>
-  require("react").createElement(require("react-native").Text, null, "Notifications " + props.emailDaily));
+jest.mock("../../components/NotificationsCard", () => (props: any) => {
+  const React = require("react"), { View, Text, Pressable } = require("react-native");
+  return <View><Text>{"Notifications " + props.emailDaily}</Text>
+    <Text testID="shared-consent">{`${props.sharedTaskEmail}:${props.sharedTaskPush}`}</Text>
+    <Text testID="shared-due-consent">{`${props.emailSharedDue}:${props.pushSharedDue}`}</Text>
+    <Pressable onPress={() => props.setSharedTaskEmail((value: boolean) => !value)}><Text>toggle-shared-email</Text></Pressable>
+    <Pressable onPress={() => props.setSharedTaskPush((value: boolean) => !value)}><Text>toggle-shared-push</Text></Pressable>
+    <Pressable onPress={() => props.setEmailSharedDue((value: boolean) => !value)}><Text>toggle-shared-due-email</Text></Pressable>
+    <Pressable onPress={() => props.setPushSharedDue((value: boolean) => !value)}><Text>toggle-shared-due-push</Text></Pressable>
+    <Pressable onPress={props.onSave}><Text>save-notifications</Text></Pressable></View>;
+});
 jest.mock("../../components/SettingsCard", () => (props: any) =>
   require("react").createElement(require("react-native").Text, null, "Settings " + props.dateFormat));
 jest.mock("../../components/SupportCard", () => () =>
@@ -73,6 +82,41 @@ describe("Profile loading screen", () => {
     mockNotifications.mockReset();
     mockSettings = { settings: DEFAULT_SETTINGS, loading: false, applyServerSettings: jest.fn() };
     mockAccountLevel = { progress: null, loading: true };
+  });
+
+  it("loads and saves account-wide shared-care consent through Profile notifications", async () => {
+    readyLevel();
+    mockNotifications.mockResolvedValue({ ...notifications, shared_task_email: true, shared_task_push: false });
+    const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId("shared-consent").props.children).toBe("true:false"));
+    fireEvent.press(view.getByText("toggle-shared-email"));
+    fireEvent.press(view.getByText("toggle-shared-push"));
+    await act(async () => { fireEvent.press(view.getByText("save-notifications")); });
+    expect(updateProfileNotifications).toHaveBeenCalledWith(expect.objectContaining({
+      shared_task_email: false, shared_task_push: true, email_daily: false, email_hour: 9,
+    }), { auth: true });
+  });
+
+  it("loads and saves caregiver due reminders while preserving owned and completion choices", async () => {
+    readyLevel();
+    mockNotifications.mockResolvedValue({ ...notifications, email_shared_due: true, push_shared_due: false,
+      shared_task_email: true, shared_task_push: false });
+    const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId("shared-due-consent").props.children).toBe("true:false"));
+    fireEvent.press(view.getByText("toggle-shared-due-email"));
+    fireEvent.press(view.getByText("toggle-shared-due-push"));
+    await act(async () => { fireEvent.press(view.getByText("save-notifications")); });
+    expect(updateProfileNotifications).toHaveBeenCalledWith(expect.objectContaining({
+      email_shared_due: false, push_shared_due: true, email_daily: false, push_daily: false,
+      email_hour: 9, push_hour: 9, shared_task_email: true, shared_task_push: false,
+    }), { auth: true });
+  });
+
+  it("defaults missing caregiver preferences to off for an older response", async () => {
+    readyLevel();
+    mockNotifications.mockResolvedValue(notifications);
+    const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId("shared-due-consent").props.children).toBe("false:false"));
   });
 
   it("keeps every tile hidden until the account XP request has settled", async () => {

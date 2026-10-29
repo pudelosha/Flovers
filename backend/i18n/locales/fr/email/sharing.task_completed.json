@@ -1,0 +1,15 @@
+{
+  "subject": "Tâche terminée pour une plante partagée",
+  "title": "Tâche terminée pour une plante partagée",
+  "line1": "{actor} a terminé une tâche pour {plant}.",
+  "details": "Tâche : {task}. Terminée le {date} à {time}.",
+  "cta": "Voir l’historique des tâches",
+  "push_title": "Tâche terminée pour une plante partagée",
+  "types": {
+    "water": "arrosage",
+    "fertilize": "fertilisation",
+    "moisture": "brumisation",
+    "care": "entretien",
+    "repot": "rempotage"
+  }
+}

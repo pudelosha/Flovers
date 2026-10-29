@@ -290,8 +290,8 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
         return {key: boolean.run_validation(flag) for key, flag in value.items()}
 
     def validate_pump_cooldown_minutes(self, value):
-        if value < 1:
-            raise serializers.ValidationError("Cooldown must be at least one minute.")
+        if not 1 <= value <= 32767:
+            raise serializers.ValidationError("Cooldown must be between 1 and 32767 minutes.")
         return value
 
     def validate_pump_threshold_pct(self, value):

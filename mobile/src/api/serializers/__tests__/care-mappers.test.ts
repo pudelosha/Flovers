@@ -42,6 +42,16 @@ describe("care API mappers", () => {
     expect(buildUITasks([invalidTask], [reminder], plants)[0].access).toBeNull();
     expect(buildUIReminders([task], [invalidReminder], plants)[0].access).toBeNull();
   });
+  it("preserves the real completion actor in history, independently of plant ownership", () => {
+    const completedBy = { id: "7", name: "Anna" };
+    const completed = { ...task, status: "completed" as const, completed_at: "2026-10-29T10:30:00Z", completed_by: completedBy };
+    expect(buildUITasks([completed], [reminder], plants)[0].completedBy).toEqual(completedBy);
+    expect(buildUIHistoryItems([completed], [reminder], plants)[0].completedBy).toEqual(completedBy);
+  });
+  it("does not invent an actor for legacy history with no completion identity", () => {
+    const completed = { ...task, status: "completed" as const, completed_at: "2026-10-29T10:30:00Z", completed_by: null };
+    expect(buildUIHistoryItems([completed], [reminder], plants)[0].completedBy).toBeUndefined();
+  });
   it("retains species guidance and singleton recommendations used by the wizard", () => {
     expect(serializePlantProfile({
       id: 4, latin: "Monstera deliciosa", display_name: "Monstera", image: null,

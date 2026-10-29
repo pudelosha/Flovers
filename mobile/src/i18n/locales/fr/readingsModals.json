@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Les notifications de fin d’arrosage sont disponibles uniquement lorsque cet appareil dispose d’une pompe à eau incluse. Elles peuvent être envoyées après la fin d’un arrosage programmé ou après le déclenchement et la fin d’un arrosage automatique.",
       "sendEmailWateringNotifications": "Envoyer une notification par e-mail lorsque l’arrosage est terminé",
       "sendPushWateringNotifications": "Envoyer une notification push lorsque l’arrosage est terminé",
-      "samplingIntervalRemoved": "L’intervalle d’échantillonnage a été supprimé"
+      "intervalHours": "Intervalle des mesures (heures)",
+      "decreaseInterval": "Réduire l’intervalle des mesures",
+      "increaseInterval": "Augmenter l’intervalle des mesures",
+      "intervalFirmwareHint": "Choisissez de 1 à 24 heures. Après une modification, générez le nouveau code et téléversez-le sur la carte.",
+      "pumpCooldownMinutes": "Pause entre les arrosages automatiques (minutes)",
+      "pumpCooldownHint": "Choisissez de 1 à 32767 minutes (60 par défaut). La carte récupère ce réglage au prochain contrôle du serveur. La durée de fonctionnement de la pompe ne change pas.",
+      "pumpCooldownInvalid": "Saisissez un nombre entier de 1 à 32767."
     }
   }
 }

@@ -14,7 +14,7 @@
         "body": [
           "Unter Konto findest du deine E-Mail-Adresse und das Datum, an dem du dein Konto erstellt hast.",
           "Du kannst deine E-Mail-Adresse ändern und dies mit deinem aktuellen Passwort bestätigen, ein neues Passwort festlegen, dich abmelden oder dein Konto dauerhaft löschen.",
-          "Wenn du dein Konto löschst, werden alle deine Daten unwiderruflich entfernt: Pflanzen, Erinnerungen, Aufgaben, Messwerte und Geräte."
+          "Bestätige die Kontolöschung mit deinem aktuellen Passwort. Dein Konto samt Pflanzen, Erinnerungen, Aufgaben, Messwerten und Geräten wird dauerhaft gelöscht."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Benachrichtigungen",
         "body": [
-          "Unter Benachrichtigungen wählst du, welche E-Mails und Push-Benachrichtigungen du erhalten möchtest.",
-          "Für E-Mail und Push kannst du jeweils zwei Benachrichtigungen ein- oder ausschalten: die tägliche Übersicht der heute fälligen Aufgaben und eine Erinnerung an Aufgaben, die 24 Stunden nach der ersten Benachrichtigung noch offen sind.",
-          "Für jede Benachrichtigungsart wählst du eine Versandzeit zur vollen Stunde, zum Beispiel 14:00."
+          "Die Benachrichtigungen sind in E-Mail, Telefon und Geteilte Pflanzen unterteilt. Tagesübersichten für eigene Pflanzen lassen sich für E-Mail und Push getrennt einschalten. Für jeden Kanal gibt es eine Versandzeit in der Benachrichtigungszeitzone deines Kontos.",
+          "Unter E-Mail und Telefon gibt es jeweils ein zusätzliches Kontrollkästchen für heute fällige Aufgaben an Pflanzen, die mit dir geteilt wurden. Diese Optionen sind zunächst ausgeschaltet, funktionieren unabhängig von den Übersichten für eigene Pflanzen und nutzen dieselbe Versandzeit des jeweiligen Kanals. Sind beide Optionen aktiv, werden eigene und geteilte Aufgaben in einer Tagesnachricht pro Kanal zusammengefasst.",
+          "Die Erinnerungen berücksichtigen aktive Freigaben mit Lesezugriff und mit Berechtigung zum Erledigen von Aufgaben. Vor dem Versand wird der Zugriff erneut geprüft. Läuft eine Freigabe ab oder wird der Zugriff beziehungsweise der Kontakt entfernt, enden diese Erinnerungen.",
+          "Die Erinnerung am Folgetag betrifft nur gestern fällige, noch offene Aufgaben für eigene Pflanzen. Sie wird zur eingestellten Zeit des Kanals versendet und nicht genau 24 Stunden nach der ersten Nachricht.",
+          "Geteilte Pflanzen betrifft einen anderen Fall: Jemand erledigt eine Aufgabe für eine Pflanze, die dir gehört. E-Mail und Push sind hier zunächst ausgeschaltet und gelten nach dem Einschalten für alle Pflanzen, die du teilst. Die Nachricht folgt auf die Erledigung, unabhängig von der Tagesübersicht. Diese Einstellung gehört zum Konto, nicht zur einzelnen Pflanzenfreigabe."
         ]
       },
       {

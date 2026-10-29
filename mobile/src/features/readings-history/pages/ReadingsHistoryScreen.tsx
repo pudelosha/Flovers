@@ -1,3 +1,6 @@
+import { useSettings } from "../../../app/providers/SettingsProvider";
+import { getDisplayTemperature } from "../../../shared/utils/temperature";
+import { historyValue } from "../utils/historyValue";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,
@@ -156,6 +159,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsHistoryScreen() {
   const { t, i18n } = useTranslation();
+  const { settings } = useSettings();
 
   const nav = useNavigation();
   const route = useRoute<any>();
@@ -290,7 +294,7 @@ export default function ReadingsHistoryScreen() {
   const [loadingDevice, setLoadingDevice] = useState(true);
   const [loadingHistory, setLoadingHistory] = useState(false);
   const [labels, setLabels] = useState<string[]>([]);
-  const [values, setValues] = useState<number[]>([]);
+  const [values, setValues] = useState<(number | null)[]>([]);
 
   // Toast like other screens
   const [toastVisible, setToastVisible] = useState(false);
@@ -434,7 +438,7 @@ export default function ReadingsHistoryScreen() {
             formatHistoryPointLabel(p.at, range, i18n.language, monthBinCount)
           )
         );
-        setValues(resp.points.map((p) => p.value));
+        setValues(resp.points.map(historyValue));
       } catch (e: any) {
         if (!mounted) return;
         setLabels([]);
@@ -520,6 +524,11 @@ export default function ReadingsHistoryScreen() {
   // --------- Derived helpers for labels & navigation limits ---------
   const today = new Date();
 
+  const displayValues = useMemo(() => metric === "temperature"
+    ? values.map((value) => getDisplayTemperature(value, settings).value) : values,
+  [values, metric, settings.temperatureUnit]);
+  const displayUnit = metric === "temperature" ? getDisplayTemperature(null, settings).unit : metric === "light" ? "lx" : "%";
+
   // Is currently selected span the "current" day/week/month (contains today)?
   const isCurrentSpan = span.from <= today && span.to >= today;
 
@@ -529,7 +538,7 @@ export default function ReadingsHistoryScreen() {
   if (range === "day") {
     for (let i = values.length - 1; i >= 0; i--) {
       const v = values[i];
-      if (typeof v === "number" && Number.isFinite(v) && v > 0) {
+      if (typeof v === "number" && Number.isFinite(v)) {
         latestLabelIndex = i;
         break;
       }
@@ -876,7 +885,8 @@ export default function ReadingsHistoryScreen() {
 
               <HistoryChart
                 labels={labels}
-                values={values}
+                values={displayValues}
+                unit={displayUnit}
                 color={METRIC_COLORS[metric]}
                 yTicks={4}
                 height={chartHeight}

@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "送信中..."
+      "sending": "送信中...",
+      "deleting": "削除中…"
     },
     "support": {
       "copyToMe": "メールで自分にもコピーを送信"
@@ -51,8 +52,10 @@
       "bugSent": "バグの報告が送信されました。ありがとうございます。",
       "couldNotSendContact": "メッセージの送信に失敗しました。再試行してください。",
       "couldNotSendBug": "バグ報告の送信に失敗しました。再試行してください。",
-      "deleteNotImplemented": "アカウント削除機能はまだ利用できません。",
-      "requestTimedOut": "タイムアウトしました。再試行してください。"
+      "requestTimedOut": "タイムアウトしました。再試行してください。",
+      "incorrectPassword": "現在のパスワードが正しくありません。",
+      "couldNotDeleteAccount": "アカウントを削除できませんでした。もう一度お試しください。",
+      "deleteAccountBlocked": "アカウントの削除を完了できませんでした。サポートにお問い合わせください。"
     }
   }
 }

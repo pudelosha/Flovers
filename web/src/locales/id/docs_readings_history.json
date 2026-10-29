@@ -28,7 +28,7 @@
         "heading": "Menavigasi melalui periode masa lalu",
         "body": [
           "Panah di sebelah periode yang dipilih memungkinkan Anda berpindah antara hari, minggu, atau bulan sebelumnya.",
-          "Navigasi terbatas pada periode di mana data ada — periode mendatang tidak ditampilkan."
+          "Anda dapat membuka hari, minggu, dan bulan terdahulu tanpa pembacaan. Periode mendatang tidak dapat dipilih."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Ketersediaan dan interpretasi data",
         "body": [
           "Jika perangkat tidak memberikan pembacaan sensor untuk periode yang dipilih, grafik akan tampak kosong atau menunjukkan nilai yang hilang.",
-          "Data sensor bersifat informatif dan harus diinterpretasikan bersama dengan pengamatan di dunia nyata (kalibrasi, penempatan, dan lingkungan dapat memengaruhi akurasi)."
+          "Data sensor bersifat informatif dan harus diinterpretasikan bersama dengan pengamatan di dunia nyata (kalibrasi, penempatan, dan lingkungan dapat memengaruhi akurasi).",
+          "Sampel yang hilang tetap berupa celah, bukan nilai nol. Nilai nol yang sebenarnya dipertahankan. Suhu memakai Celsius, Fahrenheit, atau Kelvin sesuai Profil."
         ]
       }
     ]

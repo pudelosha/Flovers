@@ -7,21 +7,21 @@
         "body": [
           "Home is the main screen you see after a successful login.",
           "It focuses on your daily work: tasks generated from your reminders, so you can quickly see what needs attention today or what is already overdue.",
-          "If there are no due tasks, the screen displays an informational tile explaining that nothing is currently scheduled and suggesting next steps, such as creating reminders."
+          "Home opens in All, which also includes future pending tasks. An empty tile means that no pending tasks match the current view and filters."
         ]
       },
       {
         "heading": "Task list (tiles generated from reminders)",
         "body": [
           "Each tile represents a single Task generated from a Reminder definition (for example: Watering, Misting, Fertilising, Repotting, or general Care).",
-          "Tasks appear automatically when they become due based on the recurrence rules defined in the Reminder.",
+          "Creating a reminder immediately creates its pending task, even if it is due later. Completing it immediately schedules the next pending occurrence.",
           "Each tile typically shows the task type, plant name, location, and due status (such as Due today or Overdue)."
         ]
       },
       {
         "heading": "Task tile menu (per-task actions)",
         "body": [
-          "Each task tile includes a context menu (three-dots menu) with actions related to that specific task.",
+          "Tap the main part of a task tile to open its action menu.",
           "Mark as complete: closes the task and allows you to optionally add a note, helping you build a detailed care history.",
           "Edit reminder: opens the Reminder associated with the task so you can change its recurrence settings.",
           "Go to plant: navigates directly to the Plant Details view for the related plant.",
@@ -59,9 +59,9 @@
         "body": [
           "Bulk completion is available when using the quick shortcut views: Show overdue or Show due today.",
           "When one of these shortcut filters is active, the Floating Action Button temporarily displays an additional action such as “Mark visible as complete”.",
-          "This action closes all currently visible tasks at once, without requiring manual selection of individual tasks.",
+          "Bulk completion applies only to visible tasks you are allowed to complete. View-only shared tasks are excluded.",
           "Bulk completion is designed for situations where you perform the same care action for multiple plants in one session.",
-          "Depending on the flow you choose, you may still be able to add notes to completed tasks after the bulk action."
+          "Before confirming, choose one completion date and an optional note for all included tasks. Saved completion notes cannot currently be edited later."
         ]
       },
       {

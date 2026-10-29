@@ -19,7 +19,7 @@
     },
     {
       "q": "Apakah Flovers tersedia dalam berbagai bahasa?",
-      "a": "Flovers tersedia dalam bahasa Inggris, Polandia, Jerman, Italia, Prancis, Spanyol, Portugis, Arab, Hindi, Mandarin, Jepang, Korea, Indonesia, Rusia, dan Turki."
+      "a": "Flovers mendukung 15 bahasa: Bahasa Inggris, Polandia, Jerman, Italia, Perancis, Spanyol, Portugis, Arab, Bahasa Hindi, Cina, Jepang, Korea, Bahasa Indonesia, Bahasa Rusia, Bahasa Turki."
     },
     {
       "q": "Bagaimana cara membuat akun?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "Saya tidak menerima email aktivasi akun — apa yang harus saya lakukan?",
-      "a": "Anda dapat meminta email aktivasi baru langsung dari dalam aplikasi."
+      "a": "Di layar masuk, pilih tautan untuk mengirim ulang email aktivasi. Setelah mendaftar, kembali dulu ke layar masuk."
     },
     {
       "q": "Bagaimana cara mereset kata sandi saya?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "Bagaimana cara menghapus akun dan data saya?",
-      "a": "Anda dapat menghapus akun Anda secara permanen dari layar Profil saat masuk. Tindakan ini tidak dapat diubah dan menghapus semua data terkait."
+      "a": "Konfirmasikan penghapusan dengan kata sandi saat ini. Akun beserta tanaman, pengingat, tugas, pembacaan, dan perangkatnya akan dihapus permanen."
     },
     {
       "q": "Apa perbedaan antara definisi tanaman hias dan tanaman hias saya sendiri?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Apa yang terjadi jika saya lupa menyelesaikan tugas?",
-      "a": "Jika tugas belum selesai, aplikasi mungkin mengirimkan pengingat setelah 24 jam. Jika tidak, tugas akan tetap ditandai sebagai terlambat sampai Anda mengambil tindakan."
+      "a": "Jika diaktifkan, pengingat hari berikutnya mencakup tugas kemarin yang belum selesai untuk tanaman Anda sendiri pada waktu yang diatur. Tugas lain tetap terlambat hingga diselesaikan."
     },
     {
       "q": "Bisakah saya menonaktifkan atau mengedit pengingat?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "Seberapa sering data sensor diperbarui?",
-      "a": "Pembacaan sensor dapat dikirim sesering setiap 5 menit. Untuk tujuan penyimpanan, data saat ini disimpan dengan interval satu jam."
+      "a": "Firmware yang dihasilkan mengirim pembacaan setiap jam secara bawaan. Formulir mendukung 1–24 jam; perubahan memerlukan pengunggahan ulang kode. Firmware khusus dapat mengirim lebih sering, tetapi penyimpanan tetap dalam kelompok per jam."
     },
     {
       "q": "Apa yang terjadi jika perangkat sensor saya offline?",

@@ -13,7 +13,7 @@
       "invalidEmail": "Wprowadź poprawny adres email.",
       "shortPassword": "Hasło powinno mieć co najmniej 8 znaków.",
       "passwordsMismatch": "Hasła nie są identyczne.",
-      "termsRequired": "Musisz zaakceptować regulamin.",
+      "termsRequired": "Zaakceptuj regulamin i politykę prywatności.",
       "incompleteForm": "Proszę uzupełnić formularz.",
       "emailTaken": "Ten adres e-mail jest już zajęty.",
       "registrationFailed": "Rejestracja nie powiodła się. Spróbuj ponownie.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Konto utworzone. Witamy!"
-    }
+    },
+    "termsAnd": "i",
+    "privacyLink": "politykę prywatności"
   }
 }

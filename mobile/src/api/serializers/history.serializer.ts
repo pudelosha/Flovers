@@ -33,6 +33,7 @@ export function buildUIHistoryItems(
         plantId: t.plantId,
         reminderId: trimmedReminderId || undefined,
         completedAt: t.completedAt ?? "",
+        completedBy: t.completedBy,
         note: t.note,
       };
     }

@@ -1,0 +1,15 @@
+{
+  "subject": "Shared plant task completed",
+  "title": "Shared plant task completed",
+  "line1": "{actor} completed a task for {plant}.",
+  "details": "Task: {task}. Completed: {date} at {time}.",
+  "cta": "View task history",
+  "push_title": "Shared plant task completed",
+  "types": {
+    "water": "watering",
+    "fertilize": "fertilising",
+    "moisture": "misting",
+    "care": "care",
+    "repot": "repot"
+  }
+}

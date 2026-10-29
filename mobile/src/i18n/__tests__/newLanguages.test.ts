@@ -16,6 +16,10 @@ describe.each([
       "createPlant.step01.title",
       "createPlant.step04.modal.headingLive",
       "profile.settings.language",
+      "profile.notifications.sharedSection",
+      "profile.notifications.sharedHint",
+      "profile.notifications.emailSharedDueLabel",
+      "profile.notifications.pushSharedDueLabel",
       "sharing.form.manageTitle",
       "sharing.plants.displayTasks",
     ]) {

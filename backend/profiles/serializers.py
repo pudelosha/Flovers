@@ -94,10 +94,14 @@ class ProfileNotificationsSerializer(serializers.ModelSerializer):
             "email_hour",
             "email_minute",
             "email_24h",
+            "email_shared_due",
             "push_daily",
             "push_hour",
             "push_minute",
             "push_24h",
+            "push_shared_due",
+            "shared_task_email",
+            "shared_task_push",
         ]
 
     def validate_timezone(self, v: str):

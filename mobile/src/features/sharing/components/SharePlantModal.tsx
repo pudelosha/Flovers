@@ -41,6 +41,7 @@ export default function SharePlantModal() {
   const [loading, setLoading] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
   const [sharingReady, setSharingReady] = useState(false);
+  const [settledDraft, setSettledDraft] = useState<typeof shareDraft>(null);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [conflicted, setConflicted] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -92,7 +93,10 @@ export default function SharePlantModal() {
     } catch {
       if (current === requestId.current) setLoadFailed(true);
     } finally {
-      if (current === requestId.current) setLoading(false);
+      if (current === requestId.current) {
+        setSettledDraft(shareDraft);
+        setLoading(false);
+      }
     }
   }, [t, refresh, shareDraft]);
 
@@ -133,6 +137,7 @@ export default function SharePlantModal() {
     return selectedPlantIds.map((id) => byId.get(id)).filter((plant): plant is ShareablePlant => !!plant);
   }, [choices, selectedPlantIds]);
   const managing = editPlantId !== null;
+  const awaitingData = shareDraft !== null && (loading || settledDraft !== shareDraft || (!sharingReady && !loadFailed));
   const selectedRecipients = selectedPlantIds.flatMap((id) => recipientDrafts[id] ?? []);
   const endDates = new Set(selectedRecipients.map((recipient) => recipient.endsOn ?? ""));
   const mixedEndDates = endDates.size > 1;
@@ -198,7 +203,6 @@ export default function SharePlantModal() {
       return next;
     });
   };
-
   const save = async () => {
     if (!canSave) return;
     const current = requestId.current;
@@ -217,9 +221,14 @@ export default function SharePlantModal() {
     <ContactModalFrame
       sharingLayout
       visible={shareDraft !== null}
-      title={managing ? t("sharing.form.manageTitle", { defaultValue: "Manage sharing" }) : t("sharing.form.title", { defaultValue: "Share plants" })}
+      title={awaitingData ? "" : managing ? t("sharing.form.manageTitle", { defaultValue: "Manage sharing" }) : t("sharing.form.title", { defaultValue: "Share plants" })}
       onClose={closeSharePlant}
     >
+      {awaitingData ? <View testID="sharing-form-loading" style={styles.spinner}><CenteredSpinner /></View>
+        : loadFailed ? <View style={[styles.content, styles.section]}>
+          <Text style={shared.error}>{t("sharing.form.loadFailed", { defaultValue: "Could not load your plants." })}</Text>
+          <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" onPress={() => void loadPlants(conflicted)} />
+        </View> : <>
       <View style={styles.content}>
         <Text style={shared.hint}>{managing
           ? t("sharing.form.editHint", { defaultValue: "Manage contacts, permissions and the end date for this plant. To share other plants, use Share plants." })
@@ -228,12 +237,7 @@ export default function SharePlantModal() {
           ? t("sharing.form.lockedPlant", { defaultValue: "Plant (locked)" })
           : t("sharing.form.choosePlants", { defaultValue: "Choose plants" })}</Text>
         {!managing && <Text style={shared.hint}>{t("sharing.form.plantsSelected", { defaultValue: "Plants selected: {{count}}", count: selectedPlantIds.length })}</Text>}
-        {loading && <View style={styles.spinner}><CenteredSpinner size={32} color="#FFFFFF" /></View>}
-        {loadFailed && <View style={styles.section}>
-          <Text style={shared.error}>{t("sharing.form.loadFailed", { defaultValue: "Could not load your plants." })}</Text>
-          <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" onPress={() => void loadPlants(conflicted)} />
-        </View>}
-        {!loading && !loadFailed && choices.length === 0 && <Text style={shared.hint}>{t("sharing.form.noPlants", { defaultValue: "No plants available. Add a plant to start sharing." })}</Text>}
+        {choices.length === 0 && <Text style={shared.hint}>{t("sharing.form.noPlants", { defaultValue: "No plants available. Add a plant to start sharing." })}</Text>}
         {(managing ? choices.filter((plant) => plant.id === editPlantId) : choices).map((plant) => {
           const selected = selectedPlantIds.includes(plant.id);
           return (
@@ -326,6 +330,7 @@ export default function SharePlantModal() {
             : t("sharing.form.shareSelected", { defaultValue: "Share selected plants" })}</Text>
         </Pressable>
       </View>
+      </>}
     </ContactModalFrame>
   );
 }
@@ -334,7 +339,7 @@ const styles = StyleSheet.create({
   content: { marginHorizontal: 16, gap: 12, marginBottom: 14 },
   flex: { flex: 1 },
   section: { gap: 8 },
-  spinner: { height: 56 },
+  spinner: { height: 280 },
   choice: { flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderRadius: 16, backgroundColor: "rgba(255,255,255,0.12)" },
   selected: { backgroundColor: "rgba(11,114,133,0.32)" },
   contact: { borderRadius: 16, backgroundColor: "rgba(255,255,255,0.12)", overflow: "hidden" },

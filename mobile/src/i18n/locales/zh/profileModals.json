@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "发送中…"
+      "sending": "发送中…",
+      "deleting": "正在删除…"
     },
     "support": {
       "copyToMe": "也发送一份到我的邮箱"
@@ -51,8 +52,10 @@
       "bugSent": "错误报告已发送。谢谢。",
       "couldNotSendContact": "无法发送消息。请重试。",
       "couldNotSendBug": "无法发送错误报告。请重试。",
-      "deleteNotImplemented": "账户删除功能尚未实现。",
-      "requestTimedOut": "请求超时。请重试。"
+      "requestTimedOut": "请求超时。请重试。",
+      "incorrectPassword": "当前密码不正确。",
+      "couldNotDeleteAccount": "无法删除你的账户，请重试。",
+      "deleteAccountBlocked": "未能完成账户删除，请联系支持团队。"
     }
   }
 }

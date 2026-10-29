@@ -14,7 +14,7 @@
         "body": [
           "Em Conta, aparecem seu e-mail e a data de criação da conta.",
           "Você pode alterar o e-mail, confirmando com a senha, trocar a senha, sair ou excluir a conta permanentemente.",
-          "Excluir a conta apaga todos os seus dados, incluindo plantas, lembretes, tarefas, leituras e dispositivos. A ação não pode ser desfeita."
+          "Confirma a eliminação com a palavra-passe atual. A conta e as suas plantas, lembretes, tarefas, leituras e dispositivos serão eliminados permanentemente."
         ]
       },
       {
@@ -55,9 +55,11 @@
       {
         "heading": "Notificações",
         "body": [
-          "Em Notificações, você gerencia as permissões e preferências de avisos por e-mail e push.",
-          "Para cada canal, pode ativar ou desativar o resumo diário das tarefas de hoje e o lembrete enviado 24 horas depois se elas ainda não tiverem sido concluídas.",
-          "Para cada tipo de aviso, escolha uma hora cheia para o envio, como 14:00."
+          "As notificações têm as secções Email, Telefone e Partilha. Podes ativar separadamente os resumos diários das tuas plantas por email e por notificações push, com uma hora de envio por canal no fuso horário de notificações da tua conta.",
+          "Email e Telefone têm também uma caixa para as tarefas previstas para hoje nas plantas partilhadas contigo. Estas opções estão inicialmente desativadas, funcionam independentemente dos resumos das tuas plantas e usam a mesma hora do respetivo canal. Se ativares ambas as opções, as tarefas das tuas plantas e das partilhadas contigo são reunidas numa única mensagem diária por canal.",
+          "Os lembretes incluem partilhas ativas só de leitura e com permissão para concluir tarefas. O acesso é verificado novamente antes do envio. Se a partilha expirar, o acesso for retirado ou o contacto for removido, os lembretes deixam de ser enviados.",
+          "O lembrete do dia seguinte abrange apenas tarefas das tuas próprias plantas que continuam por concluir desde ontem. É enviado à hora configurada para o canal, não exatamente 24 horas depois da primeira notificação.",
+          "A secção Partilha diz respeito a outro evento: alguém conclui uma tarefa de uma planta que te pertence. As opções de email e push estão inicialmente desativadas e aplicam-se a todas as plantas que partilhas. Estas notificações são enviadas após a conclusão, sem esperar pelo resumo diário. É uma preferência da conta, não uma definição de cada partilha."
         ]
       },
       {

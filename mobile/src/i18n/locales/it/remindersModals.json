@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "Elimina promemoria",
       "areYouSurePrefix": "Sei sicuro di voler eliminare",
-      "areYouSureSuffix": "? Questa operazione non può essere annullata."
+      "areYouSureSuffix": "? Questa operazione non può essere annullata.",
+      "historyWarning": "Eliminando questo promemoria eliminerai definitivamente anche tutte le attività collegate, comprese quelle completate e le relative note."
     },
     "edit": {
       "titleCreate": "Aggiungi promemoria",
@@ -59,8 +60,8 @@
     "toggle": {
       "pauseTitle": "Metti in pausa promemoria",
       "resumeTitle": "Riprendi promemoria",
-      "pauseBody": "Mettere in pausa questo promemoria per {{name}}? L\u2019attivit\u00e0 in scadenza sar\u00e0 nascosta finch\u00e9 non lo riprendi.",
-      "resumeBody": "Riprendere questo promemoria per {{name}}? La prossima attivit\u00e0 in scadenza riapparir\u00e0."
+      "pauseBody": "Mettere in pausa questo promemoria per {{name}}? L’attività in scadenza sarà nascosta finché non lo riprendi.",
+      "resumeBody": "Riprendere questo promemoria per {{name}}? La prossima attività in scadenza riapparirà."
     }
   }
 }

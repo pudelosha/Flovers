@@ -1,0 +1,15 @@
+{
+  "subject": "Tarefa concluída numa planta partilhada",
+  "title": "Tarefa concluída numa planta partilhada",
+  "line1": "{actor} concluiu uma tarefa para {plant}.",
+  "details": "Tarefa: {task}. Concluída em {date} às {time}.",
+  "cta": "Ver histórico de tarefas",
+  "push_title": "Tarefa concluída numa planta partilhada",
+  "types": {
+    "water": "rega",
+    "fertilize": "fertilização",
+    "moisture": "pulverização",
+    "care": "cuidados",
+    "repot": "replantio"
+  }
+}

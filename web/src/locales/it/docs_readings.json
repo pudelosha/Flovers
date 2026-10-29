@@ -74,7 +74,9 @@
         "body": [
           "Scegli Collega dispositivo per aggiungere un nuovo dispositivo di misurazione e associarlo a una pianta.",
           "Durante la configurazione scegli nome, pianta, stato attivo o disattivato, frequenza delle misurazioni e sensori. Puoi impostare gli avvisi di bassa umidità del terreno e le relative notifiche e-mail e push. Se usi una pompa, puoi attivarne il supporto, l’avvio automatico, la soglia di umidità e le notifiche al termine dell’annaffiatura.",
-          "Ogni dispositivo riceve una Device Key. Il tuo account ha anche una Auth Secret Key. Queste credenziali permettono alla scheda di comunicare con il server di Flovers."
+          "Ogni dispositivo riceve una Device Key. Il tuo account ha anche una Auth Secret Key. Queste credenziali permettono alla scheda di comunicare con il server di Flovers.",
+          "Imposta l’intervallo tra 1 e 24 ore intere. Dopo una modifica rigenera lo sketch e caricalo sulla scheda: il programma già in esecuzione non riceve automaticamente questo valore.",
+          "Imposta la pausa tra irrigazioni automatiche nel modulo del dispositivo: 1–32767 minuti, con 60 come valore predefinito. La scheda la riceve a una successiva richiesta e anche il server la controlla. AUTO_PUMP_MIN_INTERVAL_MS è solo un valore locale di ripiego."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "La scheda controlla se sul server ci sono richieste manuali in attesa. Se ne trova una e il suo codice include il controllo della pompa, può avviarla e poi comunicare al server che l’annaffiatura è terminata.",
           "L’annaffiatura manuale non dipende dall’umidità attuale del terreno, dalla soglia automatica o dalla pausa minima prevista per l’annaffiatura automatica.",
           "Viene eseguita su tua richiesta esplicita.",
-          "Puoi annullare la richiesta prima che il dispositivo la riceva."
+          "Puoi annullare la richiesta prima che il dispositivo la riceva.",
+          "Per l’irrigazione manuale scegli da 1 a 300 secondi e usa il firmware generato aggiornato. L’irrigazione automatica continua a usare PUMP_RUN_MS nello sketch. Una richiesta manuale non ritirata scade dopo due ore."
         ]
       },
       {
         "heading": "Quando il dispositivo controlla le richieste",
         "body": [
           "Il codice generato gestisce separatamente l’invio delle misurazioni e il controllo delle richieste di annaffiatura manuale.",
-          "Per impostazione predefinita, il dispositivo invia i valori dei sensori una volta all’ora.",
+          "Le letture vengono inviate ogni ora per impostazione predefinita. Il modulo permette intervalli di 1–24 ore; dopo la modifica carica il firmware rigenerato. Le richieste manuali vengono controllate separatamente, di norma ogni minuto.",
           "Durante il ciclo di misurazione orario controlla anche le condizioni per l’annaffiatura automatica.",
           "Controlla più spesso le richieste manuali in attesa: di norma una volta al minuto.",
           "Così può rispondere più rapidamente alle tue richieste senza inviare misurazioni ogni minuto.",
@@ -134,7 +137,7 @@
           "La scheda recupera dal server le impostazioni attuali della pompa: se l’annaffiatura automatica è attiva e quale soglia usare.",
           "Se l’annaffiatura automatica è attiva e l’umidità è inferiore alla soglia, la scheda può avviare la pompa dopo che il server ha autorizzato la richiesta automatica.",
           "Per funzionare servono un dispositivo attivo, il supporto per la pompa, il sensore di umidità del terreno e l’avvio automatico attivati, una soglia valida e la conferma del server sulle impostazioni attuali della pompa.",
-          "L’annaffiatura automatica rispetta una pausa minima tra gli avvii per evitare che la pompa si attivi troppo spesso.",
+          "Imposta la pausa tra irrigazioni automatiche nel modulo del dispositivo: 1–32767 minuti, con 60 come valore predefinito. La scheda la riceve a una successiva richiesta e anche il server la controlla. AUTO_PUMP_MIN_INTERVAL_MS è solo un valore locale di ripiego.",
           "L’annaffiatura manuale ha la precedenza. Se viene eseguita durante un ciclo, quella automatica viene saltata per quel ciclo."
         ]
       },
@@ -183,8 +186,8 @@
           "Il codice generato è un punto di partenza da adattare alla tua scheda, per esempio ESP32.",
           "Gestisce il collegamento Wi-Fi, la sincronizzazione dell’ora, l’avvio dei sensori, la lettura dei valori e l’invio al server. Controlla anche le richieste manuali e le impostazioni automatiche gestite dal server, aziona la pompa e conferma il completamento.",
           "L’invio delle misurazioni e il controllo delle richieste manuali avvengono separatamente.",
-          "Di norma il codice invia i valori ogni ora e controlla le richieste manuali ogni minuto.",
-          "Prima di caricarlo, controlla il codice e adattalo al tuo hardware, ai pin, ai valori di calibrazione, ai collegamenti del relè della pompa e al tipo di scheda. Se modifichi il codice del dispositivo, devi caricarlo nuovamente sulla scheda a mano."
+          "Le letture vengono inviate ogni ora per impostazione predefinita. Il modulo permette intervalli di 1–24 ore; dopo la modifica carica il firmware rigenerato. Le richieste manuali vengono controllate separatamente, di norma ogni minuto.",
+          "Prima del caricamento controlla Wi-Fi, pin, calibrazione dell’umidità, PUMP_RUN_MS e intervalli di controllo. Configura la pausa automatica online nel modulo del dispositivo."
         ]
       },
       {

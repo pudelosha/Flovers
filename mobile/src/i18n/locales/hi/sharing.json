@@ -108,7 +108,10 @@
       "emptyAllTitle": "अभी कोई पौधा शेयर नहीं हुआ है",
       "emptyAllBody": "किसी संपर्क के साथ अपने पौधे शेयर करें या किसी से उनके पौधे आपके साथ शेयर करने के लिए कहें।",
       "displayTasks": "कार्य दिखाएँ",
-      "actions": "{{name}} के विकल्प"
+      "actions": "{{name}} के विकल्प",
+      "deleteSharing": "साझा करना बंद करें",
+      "deleteSharingTitle": "साझा करना बंद करें?",
+      "deleteSharingBody": "जिन लोगों के साथ आपने {{plant}} साझा किया है, वे अब इसे नहीं देख सकेंगे। आपका पौधा और उसका डेटा सुरक्षित रहेगा।"
     },
     "form": {
       "title": "पौधे शेयर करें",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "निमंत्रण अस्वीकार कर दिया गया।",
       "contactsInvitationCancelled": "निमंत्रण रद्द कर दिया गया।",
       "contactsContactUpdated": "संपर्क का नाम अपडेट हो गया।",
-      "contactsContactDeleted": "संपर्क हटा दिया गया।"
+      "contactsContactDeleted": "संपर्क हटा दिया गया।",
+      "sharingDeleted": "सभी संपर्कों के साथ साझा करना बंद कर दिया गया।"
     },
     "errors": {
       "invalid": "सही ईमेल पता या Flovers ID डालें।",

@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Sulamanın tamamlanma bildirimleri yalnızca bu cihazda bir su pompası bulunduğunda kullanılabilir. Programlı sulama tamamlandıktan sonra veya otomatik sulama tetiklenip tamamlandıktan sonra gönderilebilirler.",
       "sendEmailWateringNotifications": "Sulama tamamlandığında e-posta bildirimi gönder",
       "sendPushWateringNotifications": "Sulama tamamlandığında anında bildirim gönder",
-      "samplingIntervalRemoved": "Örnekleme aralığı kaldırıldı"
+      "intervalHours": "Okuma aralığı (saat)",
+      "decreaseInterval": "Okuma aralığını azalt",
+      "increaseInterval": "Okuma aralığını artır",
+      "intervalFirmwareHint": "1–24 saat seçin. Değişiklikten sonra yeni kodu oluşturup karta yükleyin.",
+      "pumpCooldownMinutes": "Otomatik sulamalar arasındaki bekleme (dakika)",
+      "pumpCooldownHint": "1–32767 dakika seçin (varsayılan 60). Kart, sonraki görev kontrolünde ayarı sunucudan alır. Pompanın çalışma süresi değişmez.",
+      "pumpCooldownInvalid": "1 ile 32767 arasında bir tam sayı girin."
     }
   }
 }

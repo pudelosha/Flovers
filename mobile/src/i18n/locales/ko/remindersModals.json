@@ -14,7 +14,8 @@
     "confirmDelete": {
       "title": "알림 삭제",
       "areYouSurePrefix": "정말로 삭제하시겠습니까",
-      "areYouSureSuffix": "? 이 작업은 취소할 수 없습니다."
+      "areYouSureSuffix": "? 이 작업은 취소할 수 없습니다.",
+      "historyWarning": "이 알림을 삭제하면 완료된 작업 이력과 메모를 포함한 모든 관련 작업도 영구적으로 삭제됩니다."
     },
     "edit": {
       "titleCreate": "알림 추가",

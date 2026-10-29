@@ -6,14 +6,16 @@
         "heading": "Bitkilerini bir kişiyle paylaşın",
         "body": [
           "Profil'i, ardından Paylaşılan ve Paylaşılan bitkilerini açın. + menüsü, sizin tarafınızdan veya sizinle paylaşılan bitkilerini paylaşmanıza ve filtrelemenize olanak tanır. Ayrıca sahip olduğunuz bir bitkisinin üç noktalı menüsünden veya bir kişinin ayrıntılarından da başlayabilirsiniz.",
-          "Paylaşımı eklerken bir veya daha fazla bitkisini ve erişimi olması gereken kişileri seçin. Her kişi, isteğe bağlı bir bitiş tarihiyle salt görüntüleme erişimine veya görevleri tamamlama iznine sahip olabilir. Kaydetmeden önce mevcut izinler gösterilir."
+          "Paylaşımı eklerken bir veya daha fazla bitkisini ve erişimi olması gereken kişileri seçin. Her kişi, isteğe bağlı bir bitiş tarihiyle salt görüntüleme erişimine veya görevleri tamamlama iznine sahip olabilir. Kaydetmeden önce mevcut izinler gösterilir.",
+          "Bitiş tarihini değiştirmek veya temizlemek seçili tüm bitkilerde işaretli tüm kişilere uygulanır. Değiştirilmezse farklı tarihler korunur. Mevcut kişinin işaretini kaldırmak kaydettiğinizde erişimini iptal eder."
         ]
       },
       {
         "heading": "Mevcut paylaşımı yönet",
         "body": [
           "Paylaşımı yönet, seçimi kilitli olan bir bitkisini açar. Kişilerini, görev tamamlama izinlerini veya bitiş tarihini değiştirin ve ardından kaydedin. Diğer bitkilerini paylaşmak için bunun yerine Bitkilerini paylaş seçeneğini açın.",
-          "Paylaşılan her bitkisi kutucuğu, adını, türünü ve konumunu gösterir; ardından iletişim, izinler ve bitiş tarihi için ayrı satırlar gelir. Sahipler, bireysel kişilerin erişimini kaldırabilir; alıcılar ortak bir bitkisi bırakabilirler."
+          "Paylaşılan her bitkisi kutucuğu, adını, türünü ve konumunu gösterir; ardından iletişim, izinler ve bitiş tarihi için ayrı satırlar gelir. Sahipler, bireysel kişilerin erişimini kaldırabilir; alıcılar ortak bir bitkisi bırakabilirler.",
+          "Bitiş tarihini değiştirmek veya temizlemek seçili tüm bitkilerde işaretli tüm kişilere uygulanır. Değiştirilmezse farklı tarihler korunur. Mevcut kişinin işaretini kaldırmak kaydettiğinizde erişimini iptal eder."
         ]
       },
       {
@@ -28,6 +30,14 @@
         "heading": "Erişim sona erdiğinde",
         "body": [
           "İsteğe bağlı bitiş tarihi, sahibinin bildirim saat dilimindeki tarihi içerir. Bitiş tarihi olmadan erişim, kaldırılana kadar devam eder. Sürenin sona ermesi, erişimin kaldırılması veya kişinin kaldırılması, sahibinin bitkisini silmeden alıcının erişimini sona erdirir."
+        ]
+      },
+      {
+        "heading": "Ortak bakım bildirimleri",
+        "body": [
+          "E-posta ve Mobil bölümlerinde, sizinle paylaşılan bitkilerin bugün yapılması gereken görevleri için ek bir onay kutusu bulunur. Bu seçenekler başlangıçta kapalıdır, kendi bitkilerinizin özetlerinden bağımsız çalışır ve ilgili kanalın gönderim saatini kullanır. İki seçenek de açıksa kendi bitkilerinizin ve sizinle paylaşılan bitkilerin görevleri her kanal için tek günlük mesajda birleştirilir.",
+          "Hatırlatmalar hem yalnızca görüntüleme hem de görev tamamlama izni bulunan etkin paylaşımları kapsar. Gönderimden önce erişim yeniden kontrol edilir. Paylaşımın süresi dolduğunda, erişim kaldırıldığında veya kişi silindiğinde hatırlatmalar durur.",
+          "Paylaşım bölümü farklı bir olayı kapsar: başka biri size ait bir bitkinin görevini tamamlar. Buradaki e-posta ve anlık bildirim seçenekleri başlangıçta kapalıdır ve paylaştığınız tüm bitkiler için geçerlidir. Bildirimler günlük özeti beklemeden görev tamamlandıktan sonra gönderilir. Bu, her bitki paylaşımına özel değil, hesabın genel ayarıdır."
         ]
       }
     ]

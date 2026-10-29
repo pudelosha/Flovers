@@ -39,8 +39,8 @@
         "body": [
           "Informe a orientação, a intensidade da luz e a distância da janela.",
           "Você pode medir a orientação com a bússola do celular, se conceder a permissão necessária.",
-          "A intensidade da luz pode ser medida se o aparelho tiver um sensor de luminosidade e as permissões necessárias estiverem concedidas.",
-          "Todos os valores são opcionais: você pode digitá-los ou pular esta etapa."
+          "A medição automática de luz só funciona em dispositivos Android compatíveis. No iOS, escolhe o nível manualmente. A direção também depende de sensores compatíveis.",
+          "Saltar este passo mantém luz forte indireta, este e 20 cm. Deixar estes valores predefinidos não ajusta, por si só, os intervalos de cuidado."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Etapa 09 — Resumo e confirmação",
+        "heading": "Passo 09 — Criar a planta",
         "body": [
-          "Depois de adicionar a planta, você verá uma tela de confirmação com o resumo.",
-          "A partir daí, você pode acessar a lista de plantas ou abrir os detalhes da planta recém-adicionada, conforme as opções de navegação do aplicativo."
+          "O último passo cria a planta automaticamente. Após cerca de 2,5 segundos regressa a Plantas, sem um resumo separado nem um botão para abrir a nova planta."
         ]
       },
       {

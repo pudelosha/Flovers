@@ -281,7 +281,8 @@ export async function fetchReadingsFeed(
 
 export type ApiHistoryPoint = {
   at: string;   // ISO datetime of bucket start; UI formats localized label
-  value: number;
+  value: number | null;
+  sample_count?: number; // Older servers used zero for both missing and measured zero.
 };
 
 export type ApiHistoryResponse = {

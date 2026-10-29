@@ -28,7 +28,7 @@
         "heading": "Parcourir les périodes passées",
         "body": [
           "Les flèches à côté de la période te permettent de passer d’un jour, d’une semaine ou d’un mois à l’autre.",
-          "La navigation reste limitée aux périodes pour lesquelles il existe des données. Les périodes futures ne sont pas affichées."
+          "Vous pouvez consulter des jours, semaines et mois passés sans mesures. Les périodes futures ne sont pas accessibles."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Comprendre les données affichées",
         "body": [
           "Si aucun relevé n’a été reçu pour la période choisie, le graphique est vide ou présente des valeurs manquantes.",
-          "Les mesures sont des indications à comparer à tes observations. L’étalonnage, l’installation et les conditions ambiantes peuvent influencer leur précision."
+          "Les mesures sont des indications à comparer à tes observations. L’étalonnage, l’installation et les conditions ambiantes peuvent influencer leur précision.",
+          "Les mesures absentes restent des lacunes, pas des zéros. Un zéro réellement mesuré est conservé. Les températures utilisent Celsius, Fahrenheit ou Kelvin selon le Profil."
         ]
       }
     ]

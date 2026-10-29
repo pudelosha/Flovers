@@ -108,7 +108,10 @@
       "emptyAllTitle": "共有中の植物はまだありません",
       "emptyAllBody": "連絡先と植物を共有するか、相手の植物を共有してもらいましょう。",
       "displayTasks": "お世話タスクを表示",
-      "actions": "{{name}}の操作"
+      "actions": "{{name}}の操作",
+      "deleteSharing": "共有を解除",
+      "deleteSharingTitle": "共有を解除しますか？",
+      "deleteSharingBody": "{{plant}} を共有しているすべてのユーザーがアクセスできなくなります。植物とそのデータは保持されます。"
     },
     "form": {
       "title": "植物を共有",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "招待を辞退しました。",
       "contactsInvitationCancelled": "招待を取り消しました。",
       "contactsContactUpdated": "連絡先の名前を更新しました。",
-      "contactsContactDeleted": "連絡先を削除しました。"
+      "contactsContactDeleted": "連絡先を削除しました。",
+      "sharingDeleted": "すべての連絡先との共有を解除しました。"
     },
     "errors": {
       "invalid": "有効なメールアドレスまたは Flovers ID を入力してください。",

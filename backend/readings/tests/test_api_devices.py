@@ -58,6 +58,47 @@ def test_create_reading_device_with_canonical_payload():
 
 
 @pytest.mark.django_db
+@pytest.mark.parametrize("minutes", [1, 32767])
+def test_device_cooldown_accepts_portable_smallint_boundaries(minutes):
+    user = User.objects.create_user(email="cooldown@example.test")
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(
+        reverse("reading-device-list"),
+        {"plant": _plant(user).pk, "device_name": "Pump", "pump_included": True,
+         "pump_cooldown_minutes": minutes},
+        format="json",
+    )
+
+    assert response.status_code == 201
+    assert response.data["pump_cooldown_minutes"] == minutes
+    assert ReadingDevice.objects.get(pk=response.data["id"]).pump_cooldown_minutes == minutes
+
+
+@pytest.mark.django_db
+@pytest.mark.parametrize("minutes", [0, -1, 32768, 1.5])
+def test_device_cooldown_rejects_invalid_values_without_changing_saved_setting(minutes):
+    user = User.objects.create_user(email="cooldown@example.test")
+    device = ReadingDevice.objects.create(
+        user=user, plant=_plant(user), device_name="Pump", pump_included=True,
+        pump_cooldown_minutes=60,
+    )
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.patch(
+        reverse("reading-device-detail", args=[device.pk]),
+        {"pump_cooldown_minutes": minutes}, format="json",
+    )
+
+    assert response.status_code == 400
+    assert "pump_cooldown_minutes" in response.data
+    device.refresh_from_db()
+    assert device.pump_cooldown_minutes == 60
+
+
+@pytest.mark.django_db
 def test_list_reading_devices_returns_only_current_users_devices():
     user = User.objects.create_user(email="test@example.com", password="strong-password-123")
     other_user = User.objects.create_user(email="other@example.com", password="strong-password-123")

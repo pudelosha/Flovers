@@ -13,7 +13,7 @@
       "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
       "shortPassword": "Le mot de passe doit comporter au moins 8 caractères.",
       "passwordsMismatch": "Les mots de passe ne correspondent pas.",
-      "termsRequired": "Vous devez accepter les conditions générales.",
+      "termsRequired": "Tu dois accepter les conditions d’utilisation et la politique de confidentialité.",
       "incompleteForm": "Veuillez compléter le formulaire.",
       "emailTaken": "Cette adresse e-mail est déjà utilisée.",
       "registrationFailed": "L'inscription a échoué. Veuillez réessayer.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Compte créé. Bienvenue !"
-    }
+    },
+    "termsAnd": "et",
+    "privacyLink": "Politique de confidentialité"
   }
 }

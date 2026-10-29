@@ -16,4 +16,5 @@ urlpatterns = [
 
     # App open / deep-link fallbacks
     path("open/home/", open_home, name="open-home"),
+    path("open/task-history/", open_home, {"destination": "task-history"}, name="open-task-history"),
 ]

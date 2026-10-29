@@ -22,7 +22,7 @@
         "body": [
           "Il menu con tre puntini accanto al nome raccoglie le azioni relative alla pianta.",
           "Puoi aprire la scheda della specie, se collegata, modificare i dati o l'immagine e aprire Promemoria con un filtro per questa pianta.",
-          "Puoi sostituire l'immagine predefinita, aggiungere una foto dal telefono oppure rimuovere l'immagine."
+          "La rimozione della foto personale elimina la copia locale. Se la definizione collegata ha un’immagine di catalogo, questa torna visibile."
         ]
       },
       {
@@ -47,7 +47,7 @@
           "Se la pianta è collegata a un dispositivo di misurazione, qui trovi gli ultimi dati dei sensori.",
           "Sono supportate le misurazioni di temperatura dell'aria, umidità dell'aria, intensità della luce e umidità del terreno.",
           "Accanto agli ultimi valori vedi la data e l'ora dell'ultima misurazione ricevuta.",
-          "Tocca il riquadro per aprire Cronologia misurazioni. Se il dispositivo è collegato alla pianta, troverai grafici dettagliati e riepiloghi giornalieri, settimanali e mensili per temperatura, umidità dell'aria, luce e umidità del terreno."
+          "Tocca il valore o l’icona di una singola misurazione per aprirne lo storico. Il titolo e lo sfondo del riquadro non aprono i grafici."
         ]
       },
       {
@@ -55,7 +55,8 @@
         "body": [
           "Ogni pianta ha un codice QR univoco, visibile in fondo alla schermata.",
           "Scansionalo con lo Scanner dell'app per aprire direttamente i Dettagli della pianta.",
-          "Puoi salvare il codice sul telefono o inviarlo via e-mail per stamparlo e attaccarlo al vaso."
+          "Puoi salvare il codice sul telefono o inviarlo via e-mail per stamparlo e attaccarlo al vaso.",
+          "Un codice QR di Flovers contiene un riferimento univoco alla pianta, non il suo identificativo numerico nel database."
         ]
       },
       {

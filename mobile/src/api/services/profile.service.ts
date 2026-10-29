@@ -49,6 +49,10 @@ export type ApiProfileNotifications = {
   push_daily: boolean;
   push_hour: number;    // 0..23
   push_24h: boolean;
+  email_shared_due: boolean;
+  push_shared_due: boolean;
+  shared_task_email: boolean;
+  shared_task_push: boolean;
 };
 
 export type ApiProfileNotificationsUpdatePayload = Partial<ApiProfileNotifications>;
@@ -150,6 +154,19 @@ export async function changeMyEmail(
     payload,
     { auth: opts.auth ?? true }
   );
+}
+
+/** Confirm server deletion before clearing authentication or local plant photos. */
+export async function deleteMyAccount(currentPassword: string): Promise<number[]> {
+  const response = await request<ApiEnvelope<{ deleted_plant_ids: number[] }>>(
+    "/auth/account/", "DELETE", { current_password: currentPassword }, { auth: true, timeoutMs: 30000 }
+  );
+  const ids = response?.data?.deleted_plant_ids;
+  if (response?.status !== "success" || !Array.isArray(ids) ||
+      ids.some((id) => !Number.isSafeInteger(id) || id < 1)) {
+    throw new Error("Invalid account deletion response.");
+  }
+  return ids;
 }
 
 /** ---- Support: Contact + Bug report ----

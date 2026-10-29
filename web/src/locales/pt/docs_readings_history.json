@@ -28,7 +28,7 @@
         "heading": "Consulte períodos anteriores",
         "body": [
           "Use as setas ao lado do período para consultar outros dias, semanas ou meses.",
-          "Você só pode abrir períodos que tenham dados. Datas futuras não aparecem."
+          "Podes consultar dias, semanas e meses passados sem leituras. Não podes avançar para períodos futuros."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Quando faltam dados",
         "body": [
           "Se o dispositivo não enviou leituras no período escolhido, o gráfico pode ficar vazio ou apresentar lacunas.",
-          "As leituras servem de apoio. Observe também a planta e considere a calibração, a posição dos sensores e as condições do ambiente."
+          "As leituras servem de apoio. Observe também a planta e considere a calibração, a posição dos sensores e as condições do ambiente.",
+          "As amostras em falta ficam como lacunas, não como zeros. Os zeros reais são preservados. A temperatura usa Celsius, Fahrenheit ou Kelvin conforme o Perfil."
         ]
       }
     ]

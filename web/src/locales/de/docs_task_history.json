@@ -13,27 +13,25 @@
       {
         "heading": "Kacheln erledigter Aufgaben",
         "body": [
-          "Jede Kachel steht für eine erledigte Aufgabe. Sie zeigt die Aufgabenart (zum Beispiel Gießen, Besprühen oder Düngen), den Pflanzennamen, den Standort und das Erledigungsdatum.",
-          "Eine Aufgabe kann eine Notiz enthalten, die du beim Erledigen hinzugefügt hast.",
-          "Um die Notiz zu lesen, klappst du die Kachel auf."
+          "Jede Kachel zeigt eine erledigte Aufgabe mit Aufgabenart, Pflanzenname und Standort.",
+          "Rechts stehen drei Zeilen: der Erledigungsstatus, das Datum und die Person, die die Aufgabe erledigt hat. Ist keine Person erfasst, wird ein unbekannter Nutzer angezeigt.",
+          "Eine beim Erledigen gespeicherte Notiz steht unter den Aufgabendetails."
         ]
       },
       {
         "heading": "Notizen ansehen",
         "body": [
-          "Tippe auf die Kachel einer erledigten Aufgabe, um sie aufzuklappen und die Notiz zu lesen.",
-          "Du kannst auch im Drei-Punkte-Menü Aufklappen oder Zuklappen wählen, je nachdem, ob die Notiz gerade sichtbar ist.",
-          "So bleibt die Liste übersichtlich und du kannst Details bei Bedarf öffnen."
+          "Notizen sind nach dem Laden des Verlaufs sofort sichtbar. Längere Texte werden über die benötigten Zeilen umgebrochen.",
+          "Eine Notiz wird beim Markieren einer Aufgabe als erledigt hinzugefügt. Ohne Notiz erscheint kein leerer Notizbereich."
         ]
       },
       {
-        "heading": "Kachelmenü mit drei Punkten",
+        "heading": "Menü der Aufgabenkachel",
         "body": [
-          "Das Drei-Punkte-Menü enthält Aktionen für den jeweiligen Eintrag im Pflegeverlauf.",
-          "Aufklappen/Zuklappen: zeigt die Notiz in der Kachel an oder blendet sie aus.",
-          "Erinnerung bearbeiten: öffnet die Erinnerung, aus der die Aufgabe entstanden ist. Dort kannst du den Wiederholungsabstand und andere Einstellungen ändern.",
-          "Zur Pflanze gehen: öffnet die Pflanzendetails der zugehörigen Pflanze.",
-          "Aufgabe löschen: entfernt die ausgewählte erledigte Aufgabe unwiderruflich aus deinem Konto."
+          "Tippe auf den Hauptbereich einer erledigten Aufgabenkachel, um ihr Aktionsmenü zu öffnen.",
+          "Erinnerung bearbeiten öffnet die zugehörige Erinnerung, um Wiederholung oder Einstellungen zu ändern. Diese Aktion ist nur für den Pflanzeneigentümer verfügbar.",
+          "Zur Pflanze öffnet die Pflanzendetails der zugehörigen Pflanze.",
+          "Aufgabe löschen entfernt den ausgewählten abgeschlossenen Verlaufseintrag dauerhaft. Das kann nur der Pflanzeneigentümer tun."
         ]
       },
       {
@@ -42,7 +40,8 @@
           "Die Schaltfläche für Schnellaktionen im Pflegeverlauf öffnet ein Menü für die gesamte Liste.",
           "Sortieren: ändert die Reihenfolge der erledigten Aufgaben.",
           "Filtern: zeigt nur Aufgaben, die zu deinen gewählten Kriterien passen.",
-          "Löschen: entfernt mehrere Aufgaben auf einmal, zum Beispiel für eine bestimmte Pflanze oder einen Standort, eine bestimmte Aufgabenart oder Aufgaben ab einem gewählten Alter."
+          "Löschen: entfernt mehrere Aufgaben auf einmal, zum Beispiel für eine bestimmte Pflanze oder einen Standort, eine bestimmte Aufgabenart oder Aufgaben ab einem gewählten Alter.",
+          "Export senden mailt eine Tabelle mit den aktuellen Filtern; offene Aufgaben können einbezogen werden. Nur der Eigentümer kann seinen Verlauf exportieren."
         ]
       },
       {
@@ -71,7 +70,7 @@
       {
         "heading": "Pflegeverlauf und Startseite",
         "body": [
-          "Auf der Startseite findest du heute fällige und überfällige Aufgaben, die noch zu erledigen sind.",
+          "Die Startseite zeigt offene Aufgaben, unter Alle auch zukünftige. Heute und Überfällig grenzen die Liste ein. Im Aufgabenverlauf stehen erledigte Aufgaben.",
           "Im Pflegeverlauf siehst du, was bereits erledigt wurde. Du kannst die Einträge ansehen, sortieren, filtern und löschen.",
           "Die Startseite hilft dir bei der täglichen Pflege, im Pflegeverlauf kannst du frühere Arbeiten nachschlagen."
         ]

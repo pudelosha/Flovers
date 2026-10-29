@@ -28,7 +28,7 @@
         "heading": "Przeglądanie wcześniejszych pomiarów",
         "body": [
           "Strzałkami przy wybranym okresie przejdziesz do wcześniejszych dni, tygodni lub miesięcy.",
-          "Możesz przeglądać tylko okresy, dla których są dostępne dane. Przyszłe daty nie są wyświetlane."
+          "Możesz przeglądać wcześniejsze dni, tygodnie i miesiące, także te bez odczytów. Nie można przejść do przyszłego okresu."
         ]
       },
       {
@@ -43,7 +43,8 @@
         "heading": "Brakujące dane i dokładność pomiarów",
         "body": [
           "Jeśli urządzenie nie przesłało danych z wybranego okresu, wykres będzie pusty lub pojawią się na nim przerwy.",
-          "Traktuj odczyty jako wskazówkę i porównuj je ze stanem rośliny. Na dokładność pomiarów wpływają kalibracja, umiejscowienie czujników i warunki otoczenia."
+          "Traktuj odczyty jako wskazówkę i porównuj je ze stanem rośliny. Na dokładność pomiarów wpływają kalibracja, umiejscowienie czujników i warunki otoczenia.",
+          "Brak pomiaru pozostaje luką na wykresie, a nie zerem. Rzeczywista wartość zero jest zachowywana. Temperatury są pokazywane w jednostce wybranej w Profilu: °C, °F lub K."
         ]
       }
     ]

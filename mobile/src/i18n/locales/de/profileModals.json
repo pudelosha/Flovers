@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "Senden…"
+      "sending": "Senden…",
+      "deleting": "Wird gelöscht…"
     },
     "support": {
       "copyToMe": "Senden Sie mir ebenfalls eine Kopie per E-Mail"
@@ -51,8 +52,10 @@
       "bugSent": "Die Fehlermeldung wurde gesendet. Vielen Dank.",
       "couldNotSendContact": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es erneut.",
       "couldNotSendBug": "Die Fehlermeldung konnte nicht gesendet werden. Versuchen Sie es erneut.",
-      "deleteNotImplemented": "Das Löschen des Kontos ist noch nicht verfügbar.",
-      "requestTimedOut": "Zeitüberschreitung. Versuchen Sie es erneut."
+      "requestTimedOut": "Zeitüberschreitung. Versuchen Sie es erneut.",
+      "incorrectPassword": "Das aktuelle Passwort ist falsch.",
+      "couldNotDeleteAccount": "Dein Konto konnte nicht gelöscht werden. Versuche es erneut.",
+      "deleteAccountBlocked": "Das Konto konnte nicht gelöscht werden. Bitte wende dich an den Support."
     }
   }
 }

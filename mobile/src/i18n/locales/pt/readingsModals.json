@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Notificações de conclusão da rega estão disponíveis apenas quando este dispositivo tem uma bomba de água incluída. Elas podem ser enviadas após a conclusão da rega agendada ou após a rega automática ser acionada e concluída.",
       "sendEmailWateringNotifications": "Enviar notificação por e-mail quando a rega for concluída",
       "sendPushWateringNotifications": "Enviar notificação push quando a rega for concluída",
-      "samplingIntervalRemoved": "O intervalo de amostragem foi removido"
+      "intervalHours": "Intervalo de leituras (horas)",
+      "decreaseInterval": "Reduzir intervalo de leituras",
+      "increaseInterval": "Aumentar intervalo de leituras",
+      "intervalFirmwareHint": "Escolhe entre 1 e 24 horas. Depois de alterar, gera o novo código e carrega-o na placa.",
+      "pumpCooldownMinutes": "Pausa entre regas automáticas (minutos)",
+      "pumpCooldownHint": "Escolhe entre 1 e 32767 minutos (60 por predefinição). A placa recebe o valor do servidor na consulta seguinte. A duração da bomba não muda.",
+      "pumpCooldownInvalid": "Introduz um número inteiro entre 1 e 32767."
     }
   }
 }

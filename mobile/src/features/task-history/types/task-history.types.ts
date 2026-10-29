@@ -9,5 +9,6 @@ export type TaskHistoryItem = {
   location: string;
   type: TaskType;
   completedAt: string;
+  completedBy?: { id: string; name: string };
   note?: string;
 };

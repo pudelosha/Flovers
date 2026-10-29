@@ -97,6 +97,13 @@ export default function ConfirmDeleteReminderModal({
               )}
             </Text>
 
+            <Text style={[s.confirmText, { color: "#FFB4B4", marginTop: 12 }]}>
+              {String(tr(
+                "remindersModals.confirmDelete.historyWarning",
+                "Deleting this reminder also permanently deletes all its tasks, including completed history and notes."
+              ))}
+            </Text>
+
             <View style={s.promptButtonsRow}>
               <Pressable style={s.promptBtn} onPress={onCancel}>
                 <Text style={s.promptBtnText}>

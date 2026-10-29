@@ -74,7 +74,9 @@
         "body": [
           "Wähle Gerät verknüpfen, um ein neues Messgerät einzurichten und einer Pflanze zuzuordnen.",
           "Bei der Einrichtung legst du Namen, Pflanze, Aktivierungsstatus, Messintervall und Sensoren fest. Du kannst Warnungen bei niedriger Bodenfeuchte sowie E-Mail- und Push-Benachrichtigungen dafür einstellen. Für eine Pumpe kannst du die Pumpenfunktion, den automatischen Start, den Grenzwert für automatisches Gießen und Benachrichtigungen nach dem Gießen festlegen.",
-          "Jedes Gerät erhält einen Device Key. Dein Konto hat außerdem einen Auth Secret Key. Mit diesen Zugangsdaten kann die Platine mit dem Flovers-Server kommunizieren."
+          "Jedes Gerät erhält einen Device Key. Dein Konto hat außerdem einen Auth Secret Key. Mit diesen Zugangsdaten kann die Platine mit dem Flovers-Server kommunizieren.",
+          "Das Messintervall beträgt 1–24 volle Stunden. Erzeuge nach einer Änderung den Sketch neu und lade ihn auf das Board; der laufende Sketch übernimmt diesen Wert nicht automatisch.",
+          "Stelle die automatische Gießpause im Geräteformular auf 1–32767 Minuten ein; Standard sind 60. Das Board übernimmt sie bei einer späteren Abfrage, und auch der Server prüft sie. AUTO_PUMP_MIN_INTERVAL_MS dient nur als lokaler Ersatzwert."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "Die Platine prüft den Server auf offene manuelle Gießaufträge. Findet sie einen Auftrag und enthält ihr Code eine Pumpensteuerung, kann sie die Pumpe starten und danach den Abschluss an den Server melden.",
           "Manuelles Gießen ist unabhängig von der aktuellen Bodenfeuchte, dem Grenzwert für automatisches Gießen und der dafür festgelegten Mindestpause.",
           "Es wird auf deinen ausdrücklichen Wunsch ausgeführt.",
-          "Du kannst den Gießauftrag zurücknehmen, solange das Gerät ihn noch nicht abgeholt hat."
+          "Du kannst den Gießauftrag zurücknehmen, solange das Gerät ihn noch nicht abgeholt hat.",
+          "Wähle für manuelles Gießen 1–300 Sekunden und nutze aktuelle generierte Firmware. Automatisches Gießen verwendet weiterhin PUMP_RUN_MS aus dem Sketch. Ein nicht abgeholter manueller Auftrag verfällt nach zwei Stunden."
         ]
       },
       {
         "heading": "Wann das Gerät Gießaufträge abholt",
         "body": [
           "Der erzeugte Gerätecode regelt getrennt, wann Messwerte gesendet und manuelle Gießaufträge geprüft werden.",
-          "Standardmäßig sendet das Gerät einmal pro Stunde Sensormesswerte.",
+          "Messwerte werden standardmäßig stündlich gesendet. Im Geräteformular sind 1–24 Stunden einstellbar; lade danach neu erzeugte Firmware hoch. Manuelle Gießaufträge werden unabhängig davon standardmäßig jede Minute abgefragt.",
           "Im stündlichen Messzyklus prüft es auch die Bedingungen für automatisches Gießen.",
           "Auf offene manuelle Gießaufträge prüft es häufiger: standardmäßig einmal pro Minute.",
           "So reagiert es schneller auf deine Aufträge, ohne jede Minute Messwerte senden zu müssen.",
@@ -134,7 +137,7 @@
           "Die Platine holt die aktuellen Pumpeneinstellungen vom Server: ob automatisches Gießen eingeschaltet ist und welcher Grenzwert gilt.",
           "Ist automatisches Gießen eingeschaltet und die Bodenfeuchte niedriger als der Grenzwert, kann die Platine die Pumpe starten, nachdem der Server den automatischen Gießauftrag freigegeben hat.",
           "Dafür müssen das Gerät aktiv, die Pumpenfunktion und der Bodenfeuchtesensor eingeschaltet sowie der automatische Pumpenstart aktiviert sein. Außerdem braucht es einen gültigen Grenzwert und die Bestätigung der aktuellen Pumpeneinstellungen durch den Server.",
-          "Beim automatischen Gießen gilt eine Mindestpause zwischen den Pumpenläufen, damit die Pumpe nicht zu oft startet.",
+          "Stelle die automatische Gießpause im Geräteformular auf 1–32767 Minuten ein; Standard sind 60. Das Board übernimmt sie bei einer späteren Abfrage, und auch der Server prüft sie. AUTO_PUMP_MIN_INTERVAL_MS dient nur als lokaler Ersatzwert.",
           "Manuelles Gießen hat Vorrang. Führt das Gerät in einem Zyklus einen manuellen Gießauftrag aus, überspringt es das automatische Gießen in diesem Zyklus."
         ]
       },
@@ -183,8 +186,8 @@
           "Der erzeugte Code dient als Ausgangspunkt für deine eigene Anpassung, etwa für eine ESP32-Platine.",
           "Er verbindet das Gerät mit dem WLAN, synchronisiert die Zeit, startet die Sensoren, liest sie aus und sendet die Messwerte an den Server. Außerdem prüft er manuelle Gießaufträge und die vom Server vorgegebenen Einstellungen für automatisches Gießen, steuert die Pumpe und meldet den Abschluss.",
           "Das Senden von Messwerten und das Prüfen manueller Gießaufträge erfolgen getrennt.",
-          "Standardmäßig sendet der Code stündlich Messwerte und prüft jede Minute auf manuelle Gießaufträge.",
-          "Prüfe den Code und passe ihn an deine Hardware, Pins, Kalibrierungswerte, die Verkabelung des Pumpenrelais und den Platinentyp an. Änderungen am Gerätecode musst du selbst erneut auf die Platine übertragen."
+          "Messwerte werden standardmäßig stündlich gesendet. Im Geräteformular sind 1–24 Stunden einstellbar; lade danach neu erzeugte Firmware hoch. Manuelle Gießaufträge werden unabhängig davon standardmäßig jede Minute abgefragt.",
+          "Prüfe vor dem Hochladen WLAN-Zugang, Pins, Feuchtekalibrierung, PUMP_RUN_MS und Abfrageintervalle. Die Online-Gießpause wird im Geräteformular eingestellt."
         ]
       },
       {

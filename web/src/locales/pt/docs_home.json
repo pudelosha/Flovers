@@ -7,21 +7,21 @@
         "body": [
           "O Início é a primeira tela que aparece depois do login.",
           "Aqui ficam as tarefas criadas pelos lembretes. Você vê o que precisa fazer hoje e o que já está atrasado.",
-          "Quando não há tarefas previstas, um cartão informa isso e sugere como começar, por exemplo, criando um lembrete."
+          "O Início abre em Todas, incluindo tarefas futuras. Um cartão vazio indica que nenhuma tarefa pendente corresponde à vista e aos filtros atuais."
         ]
       },
       {
         "heading": "Lista de tarefas",
         "body": [
           "Cada cartão corresponde a uma tarefa criada por um lembrete: regar, pulverizar, fertilizar, replantar ou realizar outros cuidados.",
-          "As tarefas aparecem automaticamente quando chega a data prevista pelo lembrete.",
+          "Criar um lembrete gera logo uma tarefa pendente, mesmo para uma data futura. Ao concluí-la, a seguinte é imediatamente agendada.",
           "O cartão costuma mostrar o tipo de tarefa, o nome da planta, a localização e a situação do prazo, como Para hoje ou Em atraso."
         ]
       },
       {
         "heading": "Menu de uma tarefa",
         "body": [
-          "Abra os três pontos do cartão para ver as ações daquela tarefa.",
+          "Toca na parte principal do cartão de uma tarefa para abrir o menu de ações.",
           "Marcar como concluída: conclui a tarefa e permite adicionar uma anotação ao histórico de cuidados.",
           "Editar lembrete: abre o lembrete da tarefa para você mudar a frequência.",
           "Ir para a planta: abre os Detalhes da planta correspondente.",
@@ -59,9 +59,9 @@
         "body": [
           "Essa opção fica disponível ao usar Mostrar em atraso ou Mostrar para hoje.",
           "Com um desses filtros ativo, o botão de ações rápidas oferece uma opção extra, como “Marcar visíveis como concluídas”.",
-          "Ela conclui todas as tarefas visíveis de uma vez, sem precisar selecionar cada cartão.",
+          "A conclusão em grupo abrange apenas as tarefas visíveis que podes concluir. As tarefas partilhadas só para consulta ficam excluídas.",
           "É útil quando você realiza o mesmo cuidado em várias plantas na mesma ocasião.",
-          "Dependendo das etapas escolhidas, você ainda poderá adicionar anotações depois de concluir as tarefas em conjunto."
+          "Antes de confirmar, escolhe uma data de conclusão e uma nota opcional comuns às tarefas incluídas. As notas guardadas não podem atualmente ser editadas mais tarde."
         ]
       },
       {

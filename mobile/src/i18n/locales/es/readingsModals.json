@@ -163,7 +163,13 @@
       "wateringNotificationsInfo": "Las notificaciones de finalización del riego solo están disponibles cuando este dispositivo tiene una bomba de agua incluida. Se pueden enviar después de que se complete el riego programado o después de que se active y complete el riego automático.",
       "sendEmailWateringNotifications": "Enviar notificación por correo electrónico cuando se complete el riego",
       "sendPushWateringNotifications": "Enviar notificación push cuando se complete el riego",
-      "samplingIntervalRemoved": "Se ha eliminado el intervalo de muestreo"
+      "intervalHours": "Intervalo de lecturas (horas)",
+      "decreaseInterval": "Reducir el intervalo de lecturas",
+      "increaseInterval": "Aumentar el intervalo de lecturas",
+      "intervalFirmwareHint": "Elige entre 1 y 24 horas. Tras cambiarlo, genera el nuevo código y cárgalo en la placa.",
+      "pumpCooldownMinutes": "Pausa entre riegos automáticos (minutos)",
+      "pumpCooldownHint": "Elige entre 1 y 32767 minutos (60 por defecto). La placa recibe el ajuste del servidor en la siguiente consulta. No cambia la duración de la bomba.",
+      "pumpCooldownInvalid": "Introduce un número entero entre 1 y 32767."
     }
   }
 }

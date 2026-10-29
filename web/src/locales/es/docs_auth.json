@@ -7,7 +7,7 @@
         "body": [
           "Para usar Flovers necesitas una cuenta personal. Puedes crearla directamente en la aplicación móvil.",
           "Solo necesitas una dirección de correo electrónico y una contraseña. En este paso no se piden otros datos personales.",
-          "La contraseña debe tener al menos 8 caracteres e incluir un número y un carácter especial.",
+          "La contraseña debe tener entre 8 y 128 caracteres. No es obligatorio incluir números ni caracteres especiales.",
           "Antes de completar el registro, debes aceptar las condiciones de uso y la política de privacidad."
         ]
       },
@@ -23,7 +23,7 @@
         "heading": "Solicitar otro correo de activación",
         "body": [
           "Si el mensaje no ha llegado, puedes solicitar otro desde la aplicación.",
-          "Encontrarás esta opción en las pantallas de inicio de sesión o registro. Te servirá si el mensaje se retrasa, se pierde o acaba en el correo no deseado.",
+          "En la pantalla de acceso, usa el enlace para reenviar el correo de activación. Tras registrarte, vuelve primero a esa pantalla.",
           "Revisa primero la carpeta de correo no deseado y otras carpetas con filtros antes de solicitar otro envío."
         ]
       },

@@ -30,7 +30,7 @@
         "body": [
           "You can edit, pause, resume or delete each reminder.",
           "Edit lets you change reminder parameters such as interval, task type, associated plant, and other reminder settings (depending on the reminder type).",
-          "Delete removes the reminder permanently. In practice, this also means tasks will no longer be generated from that reminder going forward.",
+          "Deleting a reminder permanently deletes all its tasks, including completed history and saved notes. No further tasks are generated. Pause instead if you want to keep the history.",
           "Pause temporarily disables a reminder without deleting it. While paused, its due task is removed from Home and daily email or push notifications will not include it. When you resume the reminder, Flovers schedules the next pending task according to the reminder interval."
         ]
       },
@@ -56,7 +56,7 @@
         "body": [
           "A reminder is a recurring rule (for example: Water every 7 days).",
           "Flovers generates tasks from reminders and presents them on the Home screen as actionable items.",
-          "When a task is completed, the next one is scheduled according to the reminder interval (so the routine continues automatically)."
+          "The next task is calculated from the completion date you choose, using the reminder interval. If necessary, intervals are repeated until the next date is strictly after today."
         ]
       },
       {
@@ -64,7 +64,8 @@
         "body": [
           "Reminders help you stay consistent, but they do not guarantee plant health—real conditions may require adjusting intervals.",
           "If you change your environment (season, light, substrate, pot size), consider updating reminders to match the new conditions.",
-          "If you want to manage already completed tasks and notes, use the Task History screen (documented separately)."
+          "If you want to manage already completed tasks and notes, use the Task History screen (documented separately).",
+          "Each plant can have only one reminder per care type. Edit the existing reminder instead of adding another of the same type."
         ]
       },
       {

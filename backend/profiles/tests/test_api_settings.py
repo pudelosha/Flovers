@@ -43,7 +43,7 @@ def test_profile_settings_get_returns_defaults():
     assert data["data"]["language"] == "en"
     assert data["data"]["temperature_unit"] == "C"
     assert data["data"]["measure_unit"] == "metric"
-    assert data["data"]["background"] == "bg1"
+    assert data["data"]["background"] == "bg5"
     assert data["data"]["fab_position"] == "right"
 
 

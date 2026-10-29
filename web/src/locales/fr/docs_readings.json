@@ -74,7 +74,9 @@
         "body": [
           "L’option « Associer un appareil » permet de créer un appareil de mesure et de le relier à une plante.",
           "Tu peux régler son nom, la plante associée, son activation, la fréquence des relevés, les capteurs, les alertes de sol sec par e-mail ou push, la pompe, son démarrage automatique, le seuil d’arrosage et les notifications de fin d’arrosage.",
-          "Chaque appareil reçoit une Device Key. Le compte possède aussi une Auth Secret Key. Ces deux clés permettent à l’appareil de communiquer avec les serveurs."
+          "Chaque appareil reçoit une Device Key. Le compte possède aussi une Auth Secret Key. Ces deux clés permettent à l’appareil de communiquer avec les serveurs.",
+          "Réglez l’intervalle sur 1–24 heures entières. Après une modification, régénérez le sketch et téléversez-le sur la carte : le programme en cours ne reçoit pas cette valeur automatiquement.",
+          "Réglez la pause d’arrosage automatique dans le formulaire de l’appareil : 1–32767 minutes, 60 par défaut. La carte la récupère lors d’une prochaine requête et le serveur la contrôle aussi. AUTO_PUMP_MIN_INTERVAL_MS est uniquement une valeur locale de secours."
         ]
       },
       {
@@ -111,14 +113,15 @@
           "La carte interroge le serveur. Si un ordre est disponible et que son programme sait piloter la pompe, elle peut l’exécuter puis signaler le résultat.",
           "Une demande manuelle ne tient pas compte de l’humidité actuelle du sol, du seuil automatique ni de la pause entre les arrosages automatiques.",
           "Elle est traitée comme une instruction explicite de ta part.",
-          "Tu peux annuler cette demande avant que l’appareil ne la récupère."
+          "Tu peux annuler cette demande avant que l’appareil ne la récupère.",
+          "Choisissez une durée manuelle de 1–300 secondes et utilisez le firmware généré à jour. L’arrosage automatique garde PUMP_RUN_MS du sketch. Une demande manuelle non récupérée expire au bout de deux heures."
         ]
       },
       {
         "heading": "À quel moment la demande est-elle exécutée ?",
         "body": [
           "Le code généré sépare l’envoi des relevés de la recherche des demandes d’arrosage.",
-          "Par défaut, les relevés sont envoyés une fois par heure.",
+          "Les mesures sont envoyées chaque heure par défaut. Le formulaire permet 1–24 heures ; téléversez le firmware régénéré après modification. Les demandes manuelles sont vérifiées séparément, chaque minute par défaut.",
           "Les conditions d’arrosage automatique sont vérifiées pendant ce cycle horaire.",
           "Les demandes manuelles sont recherchées plus souvent : une fois par minute par défaut.",
           "Elles peuvent ainsi être exécutées rapidement sans envoyer tous les relevés chaque minute.",
@@ -134,7 +137,7 @@
           "La carte demande au serveur les réglages actuels de la pompe, notamment l’activation de l’arrosage automatique et son seuil.",
           "Si l’humidité est sous le seuil et que l’arrosage automatique est activé, la carte peut démarrer la pompe après accord du serveur.",
           "Cela demande une pompe et un capteur d’humidité activés, le démarrage automatique autorisé, un seuil valide, un appareil actif et la confirmation du serveur.",
-          "Une pause entre les arrosages évite de démarrer la pompe trop souvent.",
+          "Réglez la pause d’arrosage automatique dans le formulaire de l’appareil : 1–32767 minutes, 60 par défaut. La carte la récupère lors d’une prochaine requête et le serveur la contrôle aussi. AUTO_PUMP_MIN_INTERVAL_MS est uniquement une valeur locale de secours.",
           "Une demande manuelle est prioritaire. Si elle est exécutée, l’arrosage automatique n’est pas effectué pendant ce même cycle."
         ]
       },
@@ -183,8 +186,8 @@
           "Le code proposé est un point de départ à adapter aux cartes de type ESP32.",
           "Il gère le Wi-Fi, la mise à l’heure, l’initialisation et la lecture des capteurs, l’envoi des relevés, les demandes manuelles, les réglages automatiques fournis par le serveur, la pompe et le compte rendu d’arrosage.",
           "L’envoi des mesures et la recherche des demandes manuelles sont gérés séparément.",
-          "Par défaut, les relevés partent chaque heure et les demandes manuelles sont recherchées chaque minute.",
-          "Vérifie et adapte le code à ta carte, tes broches, ton étalonnage, ton relais et ton montage."
+          "Les mesures sont envoyées chaque heure par défaut. Le formulaire permet 1–24 heures ; téléversez le firmware régénéré après modification. Les demandes manuelles sont vérifiées séparément, chaque minute par défaut.",
+          "Avant le téléversement, vérifiez le Wi-Fi, les broches, l’étalonnage d’humidité, PUMP_RUN_MS et les intervalles de requête. Réglez la pause automatique en ligne dans le formulaire de l’appareil."
         ]
       },
       {

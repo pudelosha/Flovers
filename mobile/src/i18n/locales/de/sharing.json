@@ -108,7 +108,10 @@
       "emptyAllTitle": "Noch keine geteilten Pflanzen",
       "emptyAllBody": "Teile Pflanzen mit einem Kontakt oder bitte jemanden, seine Pflanzen mit dir zu teilen.",
       "displayTasks": "Aufgaben anzeigen",
-      "actions": "Aktionen für {{name}}"
+      "actions": "Aktionen für {{name}}",
+      "deleteSharing": "Freigabe löschen",
+      "deleteSharingTitle": "Freigabe löschen?",
+      "deleteSharingBody": "Alle Personen, mit denen du {{plant}} geteilt hast, verlieren den Zugriff. Deine Pflanze und ihre Daten bleiben erhalten."
     },
     "form": {
       "title": "Pflanzen teilen",
@@ -163,7 +166,8 @@
       "contactsInvitationDeclined": "Einladung abgelehnt.",
       "contactsInvitationCancelled": "Einladung zurückgezogen.",
       "contactsContactUpdated": "Kontaktname aktualisiert.",
-      "contactsContactDeleted": "Kontakt gelöscht."
+      "contactsContactDeleted": "Kontakt gelöscht.",
+      "sharingDeleted": "Freigabe für alle Kontakte aufgehoben."
     },
     "errors": {
       "invalid": "Gib eine gültige E-Mail-Adresse oder Flovers-ID ein.",

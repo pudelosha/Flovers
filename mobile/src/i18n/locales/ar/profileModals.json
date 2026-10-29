@@ -1,7 +1,8 @@
 {
   "profileModals": {
     "common": {
-      "sending": "إرسال..."
+      "sending": "إرسال...",
+      "deleting": "جارٍ الحذف…"
     },
     "support": {
       "copyToMe": "أرسل لي نسخة على البريد الإلكتروني أيضًا"
@@ -51,8 +52,10 @@
       "bugSent": "تم إرسال تقرير الخطأ. شكرًا.",
       "couldNotSendContact": "لم يتمكن من إرسال الرسالة. حاول مرة أخرى.",
       "couldNotSendBug": "لم يتمكن من إرسال تقرير الخطأ. حاول مرة أخرى.",
-      "deleteNotImplemented": "إزالة الحساب غير متاحة حاليًا.",
-      "requestTimedOut": "تم تجاوز المهلة الزمنية. حاول مرة أخرى."
+      "requestTimedOut": "تم تجاوز المهلة الزمنية. حاول مرة أخرى.",
+      "incorrectPassword": "كلمة المرور الحالية غير صحيحة.",
+      "couldNotDeleteAccount": "تعذّر حذف حسابك. حاول مرة أخرى.",
+      "deleteAccountBlocked": "تعذّر إتمام حذف الحساب. تواصل مع الدعم."
     }
   }
 }

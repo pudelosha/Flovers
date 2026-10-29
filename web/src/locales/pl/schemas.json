@@ -82,7 +82,9 @@
     "title": "Sprawdzanie poleceń: POST pump-next-task",
     "desc": [
       "Z tego adresu korzystają urządzenia wyposażone w pompę.",
-      "Urządzenie sprawdza, czy w aplikacji zlecono ręczne podlewanie. W odpowiedzi otrzymuje:"
+      "Urządzenie sprawdza, czy w aplikacji zlecono ręczne podlewanie. W odpowiedzi otrzymuje:",
+      "Ustaw supports_manual_duration na true tylko wtedy, gdy program odczytuje duration_seconds i stosuje ten czas do ręcznego podlewania. Wygenerowany przykład to obsługuje. Automatyczne podlewanie nadal używa PUMP_RUN_MS ze szkicu.",
+      "Dla ręcznego podlewania wybierz czas od 1 do 300 sekund. Płytka musi mieć aktualny wygenerowany program obsługujący ten parametr. Podlewanie automatyczne nadal korzysta z PUMP_RUN_MS w szkicu. Nieodebrane zlecenie ręczne wygasa po dwóch godzinach."
     ],
     "items": [
       "informację, czy ma teraz uruchomić pompę",
@@ -122,9 +124,10 @@
     "desc": [
       "W aplikacji możesz wygenerować kod dla wybranego urządzenia.",
       "Znajdziesz w nim adresy API, dane dostępu (secret i device_key), identyfikator urządzenia oraz ustawienia czujników i pompy.",
-      "Jeśli urządzenie ma pompę, program obsługuje zarówno pomiary, jak i podlewanie. Polecenia ręczne sprawdza niezależnie od wysyłania odczytów. Przy automatycznym podlewaniu korzysta z ustawień z aplikacji i przed uruchomieniem pompy uzyskuje zgodę serwera."
+      "Ustaw supports_manual_duration na true tylko wtedy, gdy program odczytuje duration_seconds i stosuje ten czas do ręcznego podlewania. Wygenerowany przykład to obsługuje. Automatyczne podlewanie nadal używa PUMP_RUN_MS ze szkicu.",
+      "Odczyty domyślnie są wysyłane co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowo wygenerowany program. Zlecenia ręcznego podlewania są sprawdzane osobno, domyślnie co minutę."
     ],
-    "adjustIntro": "Przed wgraniem kodu sprawdź ustawienia i dopasuj je do swojego sprzętu:",
+    "adjustIntro": "Przed wgraniem sprawdź dane Wi-Fi, piny, kalibrację wilgotności, PUMP_RUN_MS i odstępy sprawdzania. Przerwę między automatycznymi podlewaniami ustaw w formularzu urządzenia.",
     "adjustItems": [
       "nazwa sieci (SSID) i hasło Wi-Fi",
       "SDA_PIN i SCL_PIN",
@@ -134,14 +137,14 @@
       "PUMP_RUN_MS",
       "SEND_INTERVAL_MS",
       "MANUAL_PUMP_CHECK_INTERVAL_MS",
-      "AUTO_PUMP_MIN_INTERVAL_MS"
+      "AUTO_PUMP_MIN_INTERVAL_MS — tylko wartość awaryjna; podczas pracy online obowiązuje przerwa z formularza urządzenia"
     ],
     "codeLabel": "Przykładowy program: odczyty z czujników i sterowanie pompą"
   },
   "behavior": {
     "title": "Pomiary i podlewanie krok po kroku",
     "fullCycle": {
-      "title": "Cykl pomiarowy",
+      "title": "Pełny cykl odczytu",
       "desc": "Co SEND_INTERVAL_MS płytka:",
       "items": [
         "odczytuje dane z czujników",
@@ -169,7 +172,8 @@
       "title": "Automatyczne podlewanie",
       "desc": [
         "Automatyczne podlewanie włączasz i ustawiasz w aplikacji mobilnej.",
-        "Płytka uruchomi pompę tylko wtedy, gdy:"
+        "Płytka uruchomi pompę tylko wtedy, gdy:",
+        "Przerwę między automatycznymi podlewaniami ustawisz w formularzu urządzenia: od 1 do 32767 minut, domyślnie 60. Płytka pobiera ją przy kolejnym sprawdzeniu, a serwer również jej pilnuje. AUTO_PUMP_MIN_INTERVAL_MS to tylko wartość awaryjna w programie."
       ],
       "items": [
         "w ustawieniach urządzenia włączono obsługę pompy",
@@ -185,7 +189,8 @@
       "desc": [
         "Ręczne podlewanie zlecasz w aplikacji mobilnej.",
         "Takie polecenie jest wykonywane niezależnie od:",
-        "Płytka traktuje je jako polecenie jednorazowego uruchomienia pompy, bez sprawdzania warunków automatycznego podlewania."
+        "Płytka traktuje je jako polecenie jednorazowego uruchomienia pompy, bez sprawdzania warunków automatycznego podlewania.",
+        "Dla ręcznego podlewania wybierz czas od 1 do 300 sekund. Płytka musi mieć aktualny wygenerowany program obsługujący ten parametr. Podlewanie automatyczne nadal korzysta z PUMP_RUN_MS w szkicu. Nieodebrane zlecenie ręczne wygasa po dwóch godzinach."
       ],
       "items": [
         "aktualnej wilgotności gleby",

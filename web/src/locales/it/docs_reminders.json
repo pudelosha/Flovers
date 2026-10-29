@@ -30,7 +30,7 @@
         "body": [
           "Puoi modificare, mettere in pausa, riprendere o eliminare ogni promemoria.",
           "Scegli Modifica per cambiare la frequenza, il tipo di attività, la pianta associata e le altre impostazioni disponibili.",
-          "Un promemoria eliminato non può essere recuperato. Flovers smette di usarlo per creare nuove attività.",
+          "Eliminare un promemoria cancella definitivamente tutte le sue attività, compresi lo storico e le note. Non verranno generate nuove attività. Per conservare lo storico, metti invece in pausa il promemoria.",
           "Con Pausa sospendi un promemoria senza eliminarlo. La sua attività in scadenza scompare dalla schermata iniziale e non viene inclusa nelle e-mail e nelle notifiche push giornaliere. Con Riprendi, Flovers programma la prossima attività da svolgere in base alla frequenza del promemoria."
         ]
       },
@@ -56,7 +56,7 @@
         "body": [
           "Un promemoria stabilisce cosa vuoi fare e con quale frequenza, per esempio annaffiare una pianta ogni 7 giorni.",
           "Flovers crea le attività corrispondenti e le mostra nella schermata iniziale.",
-          "Quando segni un’attività come completata, l’app programma la successiva in base alla frequenza impostata."
+          "La prossima attività viene calcolata dalla data di completamento scelta, usando l’intervallo del promemoria. Se necessario, l’intervallo viene ripetuto finché la nuova data cade dopo oggi."
         ]
       },
       {
@@ -64,7 +64,8 @@
         "body": [
           "I promemoria ti aiutano a ricordare la cura delle piante, ma è sempre utile osservarle e adattare la frequenza alle loro esigenze.",
           "Se cambiano la stagione, la luce, il terriccio o le dimensioni del vaso, controlla che i promemoria siano ancora adatti alle nuove condizioni.",
-          "Trovi le attività completate e le relative note nello Storico attività, descritto in una sezione dedicata della documentazione."
+          "Trovi le attività completate e le relative note nello Storico attività, descritto in una sezione dedicata della documentazione.",
+          "Ogni pianta può avere un solo promemoria per tipo di cura. Modifica quello esistente invece di crearne un altro dello stesso tipo."
         ]
       },
       {

@@ -137,6 +137,10 @@ export default function ProfileScreen() {
   const [pushDaily, setPushDaily] = useState(true);
   const [pushHour, setPushHour] = useState(12);
   const [push24h, setPush24h] = useState(false);
+  const [emailSharedDue, setEmailSharedDue] = useState(false);
+  const [pushSharedDue, setPushSharedDue] = useState(false);
+  const [sharedTaskEmail, setSharedTaskEmail] = useState(false);
+  const [sharedTaskPush, setSharedTaskPush] = useState(false);
 
   const formatHour = (h: number) => `${String(h).padStart(2, "0")}:00`;
   const incHour = (h: number) => (h + 1) % 24;
@@ -217,6 +221,10 @@ export default function ProfileScreen() {
         setPushDaily(!!notif.push_daily);
         setPushHour(typeof notif.push_hour === "number" ? notif.push_hour : 12);
         setPush24h(!!notif.push_24h);
+        setEmailSharedDue(!!notif.email_shared_due);
+        setPushSharedDue(!!notif.push_shared_due);
+        setSharedTaskEmail(!!notif.shared_task_email);
+        setSharedTaskPush(!!notif.shared_task_push);
       } catch (e: any) {
         console.warn("Failed to load profile notifications", e);
         if (isUnauthorizedError(e)) showToast(t("profile.toasts.unauthorized"), "error");
@@ -258,6 +266,10 @@ export default function ProfileScreen() {
           push_daily: pushDaily,
           push_hour: pushHour,
           push_24h: push24h,
+          email_shared_due: emailSharedDue,
+          push_shared_due: pushSharedDue,
+          shared_task_email: sharedTaskEmail,
+          shared_task_push: sharedTaskPush,
         },
         { auth: true }
       );
@@ -396,6 +408,14 @@ export default function ProfileScreen() {
             setPushHour={setPushHour}
             push24h={push24h}
             setPush24h={setPush24h}
+            emailSharedDue={emailSharedDue}
+            setEmailSharedDue={setEmailSharedDue}
+            pushSharedDue={pushSharedDue}
+            setPushSharedDue={setPushSharedDue}
+            sharedTaskEmail={sharedTaskEmail}
+            setSharedTaskEmail={setSharedTaskEmail}
+            sharedTaskPush={sharedTaskPush}
+            setSharedTaskPush={setSharedTaskPush}
             formatHour={formatHour}
             incHour={incHour}
             decHour={decHour}

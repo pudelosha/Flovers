@@ -13,7 +13,7 @@
       "invalidEmail": "Inserisci un indirizzo email valido.",
       "shortPassword": "La password deve contenere almeno 8 caratteri.",
       "passwordsMismatch": "Le password non coincidono.",
-      "termsRequired": "Devi accettare il regolamento.",
+      "termsRequired": "Devi accettare i Termini e condizioni e l’Informativa sulla privacy.",
       "incompleteForm": "Per favore, completa il modulo.",
       "emailTaken": "Questo indirizzo email è già in uso.",
       "registrationFailed": "Registrazione non riuscita. Riprova.",
@@ -22,6 +22,8 @@
     },
     "success": {
       "accountCreated": "Account creato. Benvenuto!"
-    }
+    },
+    "termsAnd": "e",
+    "privacyLink": "Informativa sulla privacy"
   }
 }

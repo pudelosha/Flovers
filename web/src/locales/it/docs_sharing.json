@@ -6,14 +6,16 @@
         "heading": "Condividi piante d'appartamento con un contatto",
         "body": [
           "Apri Profilo, quindi Condivisione e Piante d'appartamento condivise. Il menu + ti consente di condividere piante d'appartamento e filtrare le piante d'appartamento condivise da te o con te. Puoi anche iniziare dal menu a tre punti di una pianta d'appartamento di proprietà o dai dettagli di un contatto.",
-          "Quando aggiungi la condivisione, seleziona una o più piante d'appartamento e i contatti che dovrebbero avere accesso. Ogni contatto può avere accesso di sola visualizzazione o autorizzazione per completare le attività, con una data di fine facoltativa. Le autorizzazioni esistenti vengono visualizzate prima del salvataggio."
+          "Quando aggiungi la condivisione, seleziona una o più piante d'appartamento e i contatti che dovrebbero avere accesso. Ogni contatto può avere accesso di sola visualizzazione o autorizzazione per completare le attività, con una data di fine facoltativa. Le autorizzazioni esistenti vengono visualizzate prima del salvataggio.",
+          "Cambiare o cancellare la data finale la applica a tutti i contatti selezionati per tutte le piante scelte. Le date diverse restano invariate se non le tocchi. Deselezionare un contatto esistente ne revoca l’accesso al salvataggio."
         ]
       },
       {
         "heading": "Gestisci la condivisione esistente",
         "body": [
           "Gestisci condivisione apre una pianta d'appartamento con la selezione bloccata. Modifica i contatti, le autorizzazioni di completamento delle attività o la data di fine, quindi salva. Per condividere altre piante d'appartamento, apri invece Condividi piante d'appartamento.",
-          "Ogni tessera di pianta d'appartamento condivisa mostra il nome, la specie e la posizione, seguita da righe separate per il contatto, le autorizzazioni e la data di fine. I proprietari possono rimuovere l'accesso dei singoli contatti; i destinatari possono lasciare una pianta d'appartamento condivisa."
+          "Ogni tessera di pianta d'appartamento condivisa mostra il nome, la specie e la posizione, seguita da righe separate per il contatto, le autorizzazioni e la data di fine. I proprietari possono rimuovere l'accesso dei singoli contatti; i destinatari possono lasciare una pianta d'appartamento condivisa.",
+          "Cambiare o cancellare la data finale la applica a tutti i contatti selezionati per tutte le piante scelte. Le date diverse restano invariate se non le tocchi. Deselezionare un contatto esistente ne revoca l’accesso al salvataggio."
         ]
       },
       {
@@ -28,6 +30,14 @@
         "heading": "Al termine dell'accesso",
         "body": [
           "Una data di fine facoltativa include tale data nel fuso orario delle notifiche del proprietario. Senza una data di fine, l'accesso continua finché non viene rimosso. La scadenza, la rimozione dell'accesso o la rimozione del contatto terminano l'accesso del destinatario senza eliminare la pianta d'appartamento del proprietario."
+        ]
+      },
+      {
+        "heading": "Notifiche per la cura condivisa",
+        "body": [
+          "Email e Telefono hanno anche una casella dedicata alle attività previste per oggi sulle piante condivise con te. Queste opzioni sono disattivate inizialmente, funzionano indipendentemente dai riepiloghi delle tue piante e usano lo stesso orario del rispettivo canale. Se entrambe le opzioni sono attive, le attività delle tue piante e di quelle condivise con te vengono riunite in un unico messaggio giornaliero per canale.",
+          "I promemoria includono le condivisioni attive sia in sola lettura sia con il permesso di completare attività. L’accesso viene ricontrollato prima dell’invio. I promemoria terminano se la condivisione scade, l’accesso viene revocato o il contatto viene rimosso.",
+          "La sezione Condivisione riguarda un evento diverso: un’altra persona completa un’attività per una pianta di tua proprietà. Email e push sono inizialmente disattivate e, se abilitate, valgono per tutte le piante che condividi. L’avviso parte dopo il completamento, senza attendere il riepilogo giornaliero. È una preferenza dell’account, non una scelta da fare per ogni condivisione."
         ]
       }
     ]

@@ -7,21 +7,21 @@
         "body": [
           "L’accueil est le premier écran affiché après ta connexion.",
           "Il présente les tâches issues de tes rappels pour voir rapidement ce qui est prévu aujourd’hui et ce qui est déjà en retard.",
-          "Si aucune tâche n’est à faire, une carte l’indique et te propose des pistes pour commencer, comme créer des rappels."
+          "L’accueil s’ouvre sur Toutes et inclut les tâches à venir. Une tuile vide indique qu’aucune tâche en attente ne correspond à la vue et aux filtres choisis."
         ]
       },
       {
         "heading": "Ce que montrent les cartes de tâches",
         "body": [
           "Chaque carte correspond à une tâche créée à partir d’un rappel : arrosage, brumisation, fertilisation, rempotage ou entretien général.",
-          "Les tâches apparaissent automatiquement selon le rythme défini dans le rappel.",
+          "Créer un rappel génère immédiatement une tâche, même pour une date future. La suivante est planifiée dès que vous terminez celle-ci.",
           "La carte indique généralement le type de soin, le nom de la plante, son emplacement et l’échéance, par exemple aujourd’hui ou en retard."
         ]
       },
       {
         "heading": "Les actions du menu à trois points",
         "body": [
-          "Chaque carte possède un menu à trois points pour agir sur la tâche correspondante.",
+          "Touchez la partie principale d’une tuile de tâche pour ouvrir son menu d’actions.",
           "« Marquer comme terminé » : termine la tâche et te permet d’ajouter une note pour enrichir le suivi des soins.",
           "« Modifier le rappel » : ouvre le rappel associé pour en changer la fréquence.",
           "« Aller à la plante » : ouvre directement les détails de la plante concernée.",
@@ -59,9 +59,9 @@
         "body": [
           "Cette possibilité est disponible avec les vues « Afficher les en retard » et « Afficher ceux d’aujourd’hui ».",
           "Lorsqu’un de ces filtres est actif, le menu d’actions rapides propose une action supplémentaire, comme « Marquer les visibles comme terminées ».",
-          "Elle termine toutes les tâches actuellement affichées, sans devoir les sélectionner une par une.",
+          "La validation groupée concerne uniquement les tâches visibles que vous avez le droit de terminer. Les tâches partagées en lecture seule sont exclues.",
           "C’est pratique lorsque tu effectues le même soin sur plusieurs plantes à la suite.",
-          "Selon le parcours choisi, tu peux encore ajouter des notes aux tâches après les avoir terminées ensemble."
+          "Avant de confirmer, choisissez une date de réalisation et une note facultative communes aux tâches concernées. Les notes enregistrées ne peuvent pas être modifiées ensuite actuellement."
         ]
       },
       {

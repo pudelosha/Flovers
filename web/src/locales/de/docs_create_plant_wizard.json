@@ -39,8 +39,8 @@
         "body": [
           "Hier kannst du die Himmelsrichtung, die Lichtstärke und den Abstand zum Fenster festhalten.",
           "Die Himmelsrichtung lässt sich mit dem Kompass deines Telefons messen, wenn du die nötige Berechtigung erteilt hast.",
-          "Die Lichtstärke kannst du messen, wenn dein Gerät einen Lichtsensor hat und die nötigen Berechtigungen erteilt sind.",
-          "Alle Angaben zu den Lichtverhältnissen sind freiwillig. Du kannst sie auch von Hand eintragen oder überspringen."
+          "Die automatische Lichtmessung funktioniert nur auf unterstützten Android-Geräten. Wähle unter iOS die Lichtstufe manuell. Auch die Richtungsbestimmung benötigt passende Sensoren.",
+          "Beim Überspringen bleiben helles indirektes Licht, Osten und 20 cm eingestellt. Diese unveränderten Standardwerte passen die Pflegeintervalle nicht automatisch an."
         ]
       },
       {
@@ -75,10 +75,9 @@
         ]
       },
       {
-        "heading": "Schritt 09 — Zusammenfassung und Bestätigung",
+        "heading": "Schritt 09 — Pflanze anlegen",
         "body": [
-          "Wenn die Pflanze erfolgreich hinzugefügt wurde, zeigt der Assistent eine Bestätigung und Zusammenfassung an.",
-          "Von dort kannst du je nach Navigation in deiner App zur Pflanzenliste wechseln oder die neue Pflanze öffnen."
+          "Der letzte Schritt legt die Pflanze automatisch an. Nach etwa 2,5 Sekunden kehrst du zur Pflanzenliste zurück. Es gibt keine separate Zusammenfassung oder Schaltfläche zum Öffnen der neuen Pflanze."
         ]
       },
       {

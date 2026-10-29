@@ -131,8 +131,8 @@ export default function RootNavigator() {
   const { settings, loading: settingsLoading } = useSettings();
 
   const bgSource = useMemo(
-    () => resolveBackground(settings?.background),
-    [settings?.background]
+    () => resolveBackground(token ? settings?.background : "bg1"),
+    [token, settings?.background]
   );
 
   useEffect(() => {

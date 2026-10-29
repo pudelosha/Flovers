@@ -19,7 +19,7 @@
     },
     {
       "q": "Quelles langues sont disponibles ?",
-      "a": "Flovers est disponible en français, anglais, polonais, allemand, italien, espagnol, portugais, arabe, hindi, chinois, japonais et coréen."
+      "a": "Flovers prend en charge 15 langues : Anglais, Polonais, Allemand, Italien, Français, Espagnol, Portugais, Arabe, Hindi, Chinois, Japonais, Coréen, Indonésien, Russe, Turc."
     },
     {
       "q": "Comment créer un compte ?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "Que faire si l’e-mail d’activation n’arrive pas ?",
-      "a": "Tu peux demander un nouvel e-mail d’activation directement dans l’application."
+      "a": "Sur l’écran de connexion, utilisez le lien de renvoi de l’e-mail d’activation. Après l’inscription, revenez d’abord à la connexion."
     },
     {
       "q": "Comment réinitialiser mon mot de passe ?",
@@ -39,7 +39,7 @@
     },
     {
       "q": "Comment supprimer mon compte et mes données ?",
-      "a": "Tu peux supprimer définitivement ton compte depuis le profil, après connexion. Cette action est irréversible et supprime toutes les données associées."
+      "a": "Confirmez la suppression avec votre mot de passe actuel. Le compte, ses plantes, rappels, tâches, mesures et appareils seront définitivement supprimés."
     },
     {
       "q": "Quelle différence entre une fiche d’espèce et ma plante ?",
@@ -71,7 +71,7 @@
     },
     {
       "q": "Que se passe-t-il si j’oublie une tâche ?",
-      "a": "L’application peut te relancer après 24 heures. La tâche reste marquée en retard tant que tu ne l’as pas terminée."
+      "a": "Si activé, le rappel du lendemain concerne les tâches d’hier encore ouvertes pour vos propres plantes, à l’heure configurée. Les autres tâches restent en retard jusqu’à leur réalisation."
     },
     {
       "q": "Puis-je désactiver ou modifier un rappel ?",
@@ -87,7 +87,7 @@
     },
     {
       "q": "À quelle fréquence les données sont-elles actualisées ?",
-      "a": "Les mesures peuvent être envoyées toutes les 5 minutes. Elles sont actuellement enregistrées à raison d’un relevé par heure."
+      "a": "Le firmware généré envoie les mesures toutes les heures par défaut. Le formulaire propose 1–24 heures ; une modification nécessite de téléverser le code régénéré. Un firmware personnalisé peut envoyer plus souvent, mais le stockage reste horaire."
     },
     {
       "q": "Que se passe-t-il si mon appareil cesse d’envoyer des données ?",

@@ -1,0 +1,15 @@
+{
+  "subject": "共享植物的养护任务已完成",
+  "title": "共享植物的养护任务已完成",
+  "line1": "{actor}已完成{plant}的一项养护任务。",
+  "details": "任务：{task}。完成时间：{date} {time}。",
+  "cta": "查看任务历史",
+  "push_title": "共享植物的养护任务已完成",
+  "types": {
+    "water": "浇水",
+    "fertilize": "施肥",
+    "moisture": "喷雾",
+    "care": "养护",
+    "repot": "换盆"
+  }
+}
