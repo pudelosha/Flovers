@@ -87,11 +87,11 @@
     },
     {
       "q": "Seberapa sering data sensor diperbarui?",
-      "a": "Firmware yang dihasilkan mengirim pembacaan setiap jam secara bawaan. Formulir mendukung 1–24 jam; perubahan memerlukan pengunggahan ulang kode. Firmware khusus dapat mengirim lebih sering, tetapi penyimpanan tetap dalam kelompok per jam."
+      "a": "Kode yang dibuat memakai interval perangkat, dengan bawaan 60 menit; formulir menerima 1–1440 menit penuh. Unggah kode baru setelah mengubahnya. Kode khusus dapat mengirim lebih sering, tetapi data tetap disimpan dalam kelompok per jam."
     },
     {
       "q": "Apa yang terjadi jika perangkat sensor saya offline?",
-      "a": "Aplikasi ini tidak memberi tahu pengguna tentang pembacaan sensor yang hilang. Namun, pemberitahuan dapat dipicu jika tingkat kelembapan tanah berada di bawah ambang batas yang ditentukan."
+      "a": "Kartu perangkat aktif berdenyut merah setelah satu interval terlewati sejak pembacaan terakhir. Jika perangkat belum pernah mengirim pembacaan, waktunya dihitung sejak perangkat dibuat. Perangkat yang dinonaktifkan tidak memicu peringatan ini. Di Tambah/Edit perangkat → Notifikasi, pemilik dapat mengaktifkan email dan push untuk pembacaan yang tidak masuk secara terpisah. Keduanya nonaktif secara bawaan dan terpisah dari ringkasan harian serta peringatan kelembapan atau penyiraman. Server memeriksa setiap menit dan mengirim satu peringatan per saluran untuk setiap gangguan. Setelah pembacaan baru masuk, gangguan berikutnya dapat memicu peringatan lagi."
     },
     {
       "q": "Apakah data sensor disimpan di cloud?",

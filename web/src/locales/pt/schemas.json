@@ -125,7 +125,7 @@
       "Você pode gerar o código do dispositivo escolhido no aplicativo.",
       "Ele inclui os endpoints da API, as credenciais (secret e device_key), o ID do dispositivo e as configurações dos sensores e da bomba.",
       "Define supports_manual_duration como true apenas se o firmware ler duration_seconds para a rega manual. O exemplo gerado suporta esta função. A rega automática mantém PUMP_RUN_MS do sketch.",
-      "As leituras são enviadas de hora a hora por predefinição. O formulário permite intervalos de 1–24 horas; depois carrega o firmware regenerado. Os pedidos manuais são consultados à parte, a cada minuto por predefinição."
+      "O código gerado envia leituras a cada 60 minutos por predefinição. O formulário do dispositivo permite escolher de 1 a 1440 minutos inteiros; depois, gere e carregue o código atualizado. Os pedidos de rega manual são verificados separadamente, uma vez por minuto por predefinição."
     ],
     "adjustIntro": "Antes de carregar, revê Wi-Fi, pinos, calibração de humidade, PUMP_RUN_MS e intervalos de consulta. Define a pausa automática online no formulário do dispositivo.",
     "adjustItems": [

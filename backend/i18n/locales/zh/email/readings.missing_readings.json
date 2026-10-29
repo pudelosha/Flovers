@@ -1,0 +1,9 @@
+{
+  "subject": "未收到设备的新读数",
+  "title": "未收到设备的新读数",
+  "line1": "在设置的 {interval_minutes} 分钟间隔内，未收到“{device_name}”的新读数。上次读数：{last_read}。",
+  "cta": "查看读数",
+  "push_title": "未收到设备的新读数",
+  "push_body": "{device_name}：{interval_minutes} 分钟内未收到新读数。上次读数：{last_read}。",
+  "last_read_never": "尚未收到任何读数"
+}

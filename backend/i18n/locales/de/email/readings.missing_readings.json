@@ -1,0 +1,9 @@
+{
+  "subject": "Messwerte des Geräts bleiben aus",
+  "title": "Messwerte des Geräts bleiben aus",
+  "line1": "Von „{device_name}“ sind innerhalb des eingestellten Intervalls von {interval_minutes} Minuten keine neuen Messwerte eingegangen. Letzte Messung: {last_read}.",
+  "cta": "Messwerte öffnen",
+  "push_title": "Messwerte des Geräts bleiben aus",
+  "push_body": "{device_name}: seit {interval_minutes} Minuten keine neuen Messwerte. Letzte Messung: {last_read}.",
+  "last_read_never": "Noch keine Messwerte empfangen"
+}

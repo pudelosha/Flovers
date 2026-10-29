@@ -75,7 +75,7 @@
           "Wybierz Połącz urządzenie, aby dodać nowe urządzenie pomiarowe i przypisać je do rośliny.",
           "Podczas konfiguracji nadajesz nazwę, wybierasz roślinę, włączasz lub wyłączasz urządzenie i ustalasz częstotliwość odczytów. Wybierasz też czujniki, alerty i powiadomienia e-mail lub push o niskiej wilgotności gleby. Jeśli korzystasz z pompy, włączasz jej obsługę, automatyczne podlewanie, próg wilgotności i powiadomienia o zakończeniu podlewania.",
           "Każde urządzenie otrzymuje Klucz urządzenia, a twoje konto ma Tajny klucz uwierzytelniania. Te dwa klucze pozwalają płytce komunikować się z serwerem Flovers.",
-          "Odstęp między odczytami ustawisz od 1 do 24 pełnych godzin. Po zmianie wygeneruj nowy szkic i wgraj go na płytkę — działający program nie pobiera tego ustawienia automatycznie.",
+          "Wybierz od 1 do 1440 minut (domyślnie 60). Po zmianie wygeneruj nowy kod i wgraj go na płytkę.",
           "Przerwę między automatycznymi podlewaniami ustawisz w formularzu urządzenia: od 1 do 32767 minut, domyślnie 60. Płytka pobiera ją przy kolejnym sprawdzeniu, a serwer również jej pilnuje. AUTO_PUMP_MIN_INTERVAL_MS to tylko wartość awaryjna w programie."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Kiedy urządzenie odbiera polecenie podlewania",
         "body": [
           "Wygenerowany kod osobno ustala, kiedy wysyłać odczyty, a kiedy sprawdzać polecenia ręcznego podlewania.",
-          "Odczyty domyślnie są wysyłane co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowo wygenerowany program. Zlecenia ręcznego podlewania są sprawdzane osobno, domyślnie co minutę.",
-          "Przy okazji godzinowego pomiaru sprawdza też warunki automatycznego podlewania.",
+          "Wygenerowany program domyślnie przesyła odczyty co 60 minut. W formularzu urządzenia ustaw od 1 do 1440 pełnych minut, a następnie wygeneruj i wgraj nowy kod. Zaplanowane ręczne podlewanie jest sprawdzane osobno, domyślnie co minutę.",
+          "Warunki automatycznego podlewania są sprawdzane w każdym cyklu odczytów, zgodnie z ustawionym odstępem.",
           "Polecenia ręcznego podlewania sprawdza częściej: domyślnie raz na minutę.",
           "Dzięki temu szybciej reaguje na twoje polecenia bez konieczności wysyłania pomiarów co minutę.",
           "W cyklu pomiarowym urządzenie najpierw wysyła odczyty, potem sprawdza ręczne podlewanie. Jeśli go nie wykonało, sprawdza warunki podlewania automatycznego.",
-          "Między cyklami pomiarowymi sprawdza raz na minutę wyłącznie polecenia ręcznego podlewania."
+          "Poza pełnym cyklem odczytów osobne sprawdzenie ręcznego podlewania szuka tylko oczekujących zleceń ręcznych."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "Wygenerowany kod to punkt wyjścia do przygotowania programu na płytkę, np. ESP32.",
           "Obsługuje połączenie z Wi-Fi, synchronizację czasu, uruchamianie czujników, odczyt pomiarów i wysyłanie ich na serwer. Sprawdza też polecenia ręcznego podlewania i ustawienia podlewania automatycznego, steruje pompą i potwierdza zakończenie podlewania.",
           "Wysyłanie odczytów i sprawdzanie poleceń ręcznego podlewania odbywa się niezależnie.",
-          "Odczyty domyślnie są wysyłane co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowo wygenerowany program. Zlecenia ręcznego podlewania są sprawdzane osobno, domyślnie co minutę.",
+          "Wygenerowany program domyślnie przesyła odczyty co 60 minut. W formularzu urządzenia ustaw od 1 do 1440 pełnych minut, a następnie wygeneruj i wgraj nowy kod. Zaplanowane ręczne podlewanie jest sprawdzane osobno, domyślnie co minutę.",
           "Przed wgraniem sprawdź dane Wi-Fi, piny, kalibrację wilgotności, PUMP_RUN_MS i odstępy sprawdzania. Przerwę między automatycznymi podlewaniami ustaw w formularzu urządzenia."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Odczyty udostępnionych roślin",
         "body": [
           "Osoba z dostępem do rośliny może oglądać jej aktualne odczyty i wykresy. Kafelek jest oznaczony jako udostępniony. Klucze urządzenia, kod do wgrania, edycja, sterowanie pompą, eksport i usuwanie pozostają dostępne tylko dla właściciela."
+        ]
+      },
+      {
+        "heading": "Brak odczytów",
+        "body": [
+          "Kafelek aktywnego urządzenia pulsuje na czerwono, gdy od ostatniego odczytu minie ustawiony odstęp. Jeśli urządzenie nie przesłało jeszcze żadnego odczytu, czas liczymy od jego dodania. Wyłączone urządzenia nie wywołują tego ostrzeżenia.",
+          "W formularzu dodawania lub edycji urządzenia, w sekcji Powiadomienia, właściciel może osobno włączyć e-mail i push o braku odczytów. Obie opcje są domyślnie wyłączone i niezależne od podsumowań dnia oraz alertów wilgotności i podlewania. Serwer sprawdza urządzenia co minutę i wysyła po jednym alercie na kanał podczas danej przerwy. Po otrzymaniu nowego odczytu kolejna przerwa może wywołać nowy alert."
         ]
       }
     ]

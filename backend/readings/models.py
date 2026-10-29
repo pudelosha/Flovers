@@ -46,6 +46,10 @@ class ReadingDevice(models.Model):
     notes = models.TextField(null=True, blank=True)
 
     interval_hours = models.PositiveSmallIntegerField(default=1)  # 1..24
+    # Null retains the behavior of older clients/direct model callers that set hours.
+    interval_minutes = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MinValueValidator(1), MaxValueValidator(1440)],
+    )
     sensors = models.JSONField(default=dict)  # {temperature, humidity, light, moisture, ...}
 
     moisture_alert_enabled = models.BooleanField(default=False)
@@ -57,6 +61,8 @@ class ReadingDevice(models.Model):
 
     send_email_watering_notifications = models.BooleanField(default=False)
     send_push_watering_notifications = models.BooleanField(default=False)
+    send_email_missing_readings = models.BooleanField(default=False)
+    send_push_missing_readings = models.BooleanField(default=False)
 
     pump_included = models.BooleanField(default=False)
     automatic_pump_launch = models.BooleanField(default=False)
@@ -84,6 +90,10 @@ class ReadingDevice(models.Model):
     def __str__(self):
         return f"{self.device_name} [{self.id}]"
 
+    @property
+    def effective_interval_minutes(self):
+        return self.interval_minutes if self.interval_minutes is not None else self.interval_hours * 60
+
     def _cache_plant_display(self):
         try:
             p = self.plant
@@ -104,6 +114,29 @@ class ReadingDevice(models.Model):
             self.device_key = _generate_device_key(8)
         self._cache_plant_display()
         super().save(*args, **kwargs)
+
+
+class MissingReadingNotification(models.Model):
+    """One owner notification per channel and uninterrupted missing-reading period."""
+
+    device = models.ForeignKey(ReadingDevice, on_delete=models.CASCADE, related_name="missing_reading_notifications")
+    baseline_at = models.DateTimeField()
+    channel = models.CharField(max_length=8, choices=[("email", "Email"), ("push", "Push")])
+    status = models.CharField(max_length=12, default="pending",
+                              choices=[("pending", "Pending"), ("sending", "Sending"),
+                                       ("sent", "Sent"), ("skipped", "Skipped")])
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    next_attempt_at = models.DateTimeField(default=timezone.now)
+    attempts = models.PositiveIntegerField(default=0)
+    lease_expires_at = models.DateTimeField(null=True, blank=True)
+    claim_token = models.CharField(max_length=32, blank=True, default="")
+    sent_at = models.DateTimeField(null=True, blank=True)
+    last_error = models.CharField(max_length=1000, blank=True, default="")
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["device", "baseline_at", "channel"],
+                                               name="readings_missing_period_channel")]
+        indexes = [models.Index(fields=["status", "next_attempt_at"], name="readings_missing_retry_idx")]
 
 
 class PumpTask(models.Model):

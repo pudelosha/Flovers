@@ -87,11 +87,11 @@
     },
     {
       "q": "Jak często odświeżają się odczyty z czujników?",
-      "a": "Wygenerowany program domyślnie wysyła odczyty co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowy program. Własny program może wysyłać pomiary częściej, ale dane nadal są zapisywane w przedziałach godzinowych."
+      "a": "Wygenerowany program korzysta z odstępu ustawionego dla urządzenia, domyślnie 60 minut. Formularz przyjmuje od 1 do 1440 pełnych minut. Po zmianie trzeba wgrać nowy kod. Własny program może przesyłać odczyty częściej, ale dane nadal są zapisywane w przedziałach godzinnych."
     },
     {
       "q": "Czy dowiem się, że urządzenie przestało wysyłać odczyty?",
-      "a": "Aplikacja nie powiadamia o braku odczytów. Może natomiast wysłać powiadomienie, gdy wilgotność gleby spadnie poniżej ustawionego progu."
+      "a": "Kafelek aktywnego urządzenia pulsuje na czerwono, gdy od ostatniego odczytu minie ustawiony odstęp. Jeśli urządzenie nie przesłało jeszcze żadnego odczytu, czas liczymy od jego dodania. Wyłączone urządzenia nie wywołują tego ostrzeżenia. W formularzu dodawania lub edycji urządzenia, w sekcji Powiadomienia, właściciel może osobno włączyć e-mail i push o braku odczytów. Obie opcje są domyślnie wyłączone i niezależne od podsumowań dnia oraz alertów wilgotności i podlewania. Serwer sprawdza urządzenia co minutę i wysyła po jednym alercie na kanał podczas danej przerwy. Po otrzymaniu nowego odczytu kolejna przerwa może wywołać nowy alert."
     },
     {
       "q": "Czy dane z czujników są przechowywane w chmurze?",

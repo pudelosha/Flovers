@@ -201,6 +201,10 @@ CELERY_BEAT_SCHEDULE = {
         "task": "sharing.tasks.deliver_shared_care_notifications",
         "schedule": crontab(),
     },
+    "check-missing-device-readings-every-minute": {
+        "task": "readings.tasks.check_missing_readings",
+        "schedule": crontab(),
+    },
 }
 
 CELERY_TIMEZONE = "UTC"

@@ -20,6 +20,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/readings.styles";
 import ReadingTile from "../components/ReadingTile";
+import { useReadingDevicesRefresh } from "../hooks/useReadingDevicesRefresh";
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
@@ -246,6 +247,12 @@ export default function ReadingsScreen() {
       };
     }, [load])
   );
+
+  const applyReadingRefresh = useCallback((devices: ApiReadingDevice[]) => {
+    setDevicesRaw(devices);
+    setItems(devices.map(toReadingTile));
+  }, []);
+  useReadingDevicesRefresh(applyReadingRefresh, upsertVisible);
 
   // On focus: reset page state
   useFocusEffect(
@@ -819,10 +826,12 @@ export default function ReadingsScreen() {
         moistureAlertEnabled?: boolean;
         moistureAlertPct?: number;
       };
-      intervalHours: number;
+      intervalMinutes: number;
       pumpCooldownMinutes: number;
       sendEmailNotifications?: boolean;
       sendPushNotifications?: boolean;
+      sendEmailMissingReadings?: boolean;
+      sendPushMissingReadings?: boolean;
       pumpIncluded?: boolean;
       automaticPumpLaunch?: boolean;
       pumpThresholdPct?: number;
@@ -849,7 +858,9 @@ export default function ReadingsScreen() {
             plant: Number(payload.plantId),
             device_name: payload.name,
             notes: payload.notes,
-            interval_hours: payload.intervalHours,
+            interval_minutes: payload.intervalMinutes,
+            send_email_missing_readings: !!payload.sendEmailMissingReadings,
+            send_push_missing_readings: !!payload.sendPushMissingReadings,
             pump_cooldown_minutes: payload.pumpCooldownMinutes,
             sensors: {
               temperature: payload.sensors.temperature,
@@ -886,7 +897,9 @@ export default function ReadingsScreen() {
             notes: payload.notes ?? null,
             is_active:
               typeof payload.enabled === "boolean" ? payload.enabled : undefined,
-            interval_hours: payload.intervalHours,
+            interval_minutes: payload.intervalMinutes,
+            send_email_missing_readings: !!payload.sendEmailMissingReadings,
+            send_push_missing_readings: !!payload.sendPushMissingReadings,
             pump_cooldown_minutes: payload.pumpCooldownMinutes,
             sensors: {
               temperature: payload.sensors.temperature,
@@ -1479,16 +1492,20 @@ export default function ReadingsScreen() {
         }
         initialPumpCooldownMinutes={upsertMode === "edit"
           ? devicesRaw.find((device) => String(device.id) === upsertReadingId)?.pump_cooldown_minutes ?? 60 : 60}
-        initialIntervalHours={
+        initialIntervalMinutes={
           upsertMode === "edit"
             ? (() => {
                 const dev = devicesRaw.find(
                   (d) => String(d.id) === upsertReadingId
                 );
-                return dev?.interval_hours ?? 1;
+                return dev?.interval_minutes ?? (dev?.interval_hours ?? 1) * 60;
               })()
-            : 1
+            : 60
         }
+        initialSendEmailMissingReadings={upsertMode === "edit"
+          ? !!devicesRaw.find((device) => String(device.id) === upsertReadingId)?.send_email_missing_readings : false}
+        initialSendPushMissingReadings={upsertMode === "edit"
+          ? !!devicesRaw.find((device) => String(device.id) === upsertReadingId)?.send_push_missing_readings : false}
         initialNotes={
           upsertMode === "edit"
             ? (() => {

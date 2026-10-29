@@ -19,6 +19,28 @@ def test_firmware_rejects_invalid_sampling_interval(interval_hours):
         )
 
 
+@pytest.mark.parametrize("minutes", [1, 15, 60, 90, 1440])
+@pytest.mark.parametrize("pump", [False, True])
+def test_firmware_embeds_minute_interval_for_both_variants(minutes, pump):
+    code = generate_arduino_code(base_url="https://api.example.com", secret="test-secret",
+                                device_id=1, device_key="DEVICE", interval_minutes=minutes, pump_included=pump)
+    assert f"SEND_INTERVAL_MS = {minutes}UL * 60UL * 1000UL;" in code
+    assert "const unsigned long PUMP_RUN_MS = 30000UL;" in code if pump else "PUMP_RUN_MS" not in code
+
+
+@pytest.mark.parametrize("minutes", [0, -1, 1441, 1.5, True])
+def test_firmware_rejects_invalid_minute_intervals(minutes):
+    with pytest.raises(ValueError):
+        generate_arduino_code(base_url="https://api.example.com", secret="test-secret",
+                              device_id=1, device_key="DEVICE", interval_minutes=minutes)
+
+
+def test_firmware_legacy_hour_interval_is_preserved():
+    code = generate_arduino_code(base_url="https://api.example.com", secret="test-secret",
+                                device_id=1, device_key="DEVICE", interval_hours=3)
+    assert "SEND_INTERVAL_MS = 180UL * 60UL * 1000UL;" in code
+
+
 def test_generated_pump_retries_do_not_repeat_physical_execution(tmp_path):
     compiler = shlex.split(os.environ.get("FLOVERS_TEST_CPP", ""))
     if not compiler:

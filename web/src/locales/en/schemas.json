@@ -126,7 +126,7 @@
       "The app can generate firmware for the selected device.",
       "The generated firmware includes the correct API endpoints, auth secret, device key, device ID, enabled sensors, and pump settings for that device.",
       "Set supports_manual_duration to true only if the firmware reads duration_seconds and uses it for manual watering. The generated example supports this. Automatic watering keeps the sketch’s PUMP_RUN_MS duration.",
-      "Readings are sent hourly by default. The device form allows 1–24-hour intervals; upload regenerated firmware after a change. Manual watering checks run separately, once per minute by default."
+      "Generated firmware sends readings every 60 minutes by default. Set an interval of 1–1440 whole minutes in the device form, then generate and upload the updated code. Manual watering checks run separately, once per minute by default."
     ],
     "adjustIntro": "Review Wi-Fi credentials, pins, soil calibration, PUMP_RUN_MS and polling intervals before upload. Configure the online automatic-watering cooldown in the device form.",
     "adjustItems": [

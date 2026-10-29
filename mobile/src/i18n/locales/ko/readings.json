@@ -13,7 +13,8 @@
       "automaticPumpThreshold": "토양 수분 < {{value}}%일 때",
       "opening": "여는 중...",
       "scheduleWatering": "물 주기 예약",
-      "unscheduleWatering": "물 주기 예약 취소"
+      "unscheduleWatering": "물 주기 예약 취소",
+      "missingReadings": "측정값 수신 지연"
     },
     "menu": {
       "history": "측정 기록",

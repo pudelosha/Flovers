@@ -51,13 +51,16 @@ type Props = {
   // legacy back-compat (ignored if the above provided)
   initialHumidityAlertPct?: number;
 
-  // sampling interval 1..24h
+  // Minute interval; the hour value remains a fallback for older callers.
+  initialIntervalMinutes?: number;
   initialIntervalHours?: number;
   initialPumpCooldownMinutes?: number;
 
   // notifications / pump initial values
   initialSendEmailNotifications?: boolean;
   initialSendPushNotifications?: boolean;
+  initialSendEmailMissingReadings?: boolean;
+  initialSendPushMissingReadings?: boolean;
   initialPumpIncluded?: boolean;
   initialAutomaticPumpLaunch?: boolean;
   initialPumpThresholdPct?: number;
@@ -86,10 +89,12 @@ type Props = {
       moistureAlertEnabled?: boolean;
       moistureAlertPct?: number;
     };
-    intervalHours: number;
+    intervalMinutes: number;
     pumpCooldownMinutes: number;
     sendEmailNotifications?: boolean;
     sendPushNotifications?: boolean;
+    sendEmailMissingReadings?: boolean;
+    sendPushMissingReadings?: boolean;
     pumpIncluded?: boolean;
     automaticPumpLaunch?: boolean;
     pumpThresholdPct?: number;
@@ -120,9 +125,12 @@ export default function UpsertReadingDeviceModal({
   initialMoistureAlertPct,
   initialHumidityAlertPct, // legacy
   initialIntervalHours = 1,
+  initialIntervalMinutes,
   initialPumpCooldownMinutes = 60,
   initialSendEmailNotifications = false,
   initialSendPushNotifications = false,
+  initialSendEmailMissingReadings = false,
+  initialSendPushMissingReadings = false,
   initialPumpIncluded = false,
   initialAutomaticPumpLaunch = false,
   initialPumpThresholdPct = 30,
@@ -175,8 +183,8 @@ export default function UpsertReadingDeviceModal({
     Math.max(0, Math.min(100, defaultMoistPct))
   );
 
-  const [intervalHours, setIntervalHours] = React.useState<number>(
-    Math.max(1, Math.min(24, initialIntervalHours))
+  const [intervalMinutes, setIntervalMinutes] = React.useState<string>(
+    String(initialIntervalMinutes ?? initialIntervalHours * 60)
   );
 
   const [pumpCooldownMinutes, setPumpCooldownMinutes] = React.useState(String(initialPumpCooldownMinutes));
@@ -186,6 +194,10 @@ export default function UpsertReadingDeviceModal({
     React.useState<boolean>(initialSendEmailNotifications);
   const [sendPushNotifications, setSendPushNotifications] =
     React.useState<boolean>(initialSendPushNotifications);
+  const [sendEmailMissingReadings, setSendEmailMissingReadings] =
+    React.useState<boolean>(initialSendEmailMissingReadings);
+  const [sendPushMissingReadings, setSendPushMissingReadings] =
+    React.useState<boolean>(initialSendPushMissingReadings);
   const [pumpIncluded, setPumpIncluded] =
     React.useState<boolean>(initialPumpIncluded);
   const [automaticPumpLaunch, setAutomaticPumpLaunch] =
@@ -236,11 +248,13 @@ export default function UpsertReadingDeviceModal({
     setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
     setMoistAlertPct(Math.max(0, Math.min(100, nextDefaultMoistPct)));
 
-    setIntervalHours(Math.max(1, Math.min(24, initialIntervalHours)));
+    setIntervalMinutes(String(initialIntervalMinutes ?? initialIntervalHours * 60));
     setPumpCooldownMinutes(String(initialPumpCooldownMinutes));
 
     setSendEmailNotifications(Boolean(initialSendEmailNotifications));
     setSendPushNotifications(Boolean(initialSendPushNotifications));
+    setSendEmailMissingReadings(Boolean(initialSendEmailMissingReadings));
+    setSendPushMissingReadings(Boolean(initialSendPushMissingReadings));
     setPumpIncluded(Boolean(initialPumpIncluded));
     setAutomaticPumpLaunch(Boolean(initialAutomaticPumpLaunch));
     setPumpThresholdPct(Math.max(0, Math.min(100, initialPumpThresholdPct)));
@@ -265,9 +279,12 @@ export default function UpsertReadingDeviceModal({
     initialMoistureAlertPct,
     initialHumidityAlertPct,
     initialIntervalHours,
+    initialIntervalMinutes,
     initialPumpCooldownMinutes,
     initialSendEmailNotifications,
     initialSendPushNotifications,
+    initialSendEmailMissingReadings,
+    initialSendPushMissingReadings,
     initialPumpIncluded,
     initialAutomaticPumpLaunch,
     initialPumpThresholdPct,
@@ -293,9 +310,12 @@ export default function UpsertReadingDeviceModal({
 
   // Required: both plantId and non-empty device name
   const cooldown = Number(pumpCooldownMinutes);
+  const interval = Number(intervalMinutes);
+  const validInterval = /^\d+$/.test(intervalMinutes) && Number.isInteger(interval)
+    && interval >= 1 && interval <= 1440;
   const validCooldown = /^\d+$/.test(pumpCooldownMinutes) && Number.isInteger(cooldown) && cooldown >= 1 && cooldown <= 32767;
-  const canSave = Boolean(plantId) && Boolean((name || "").trim()) && Number.isInteger(intervalHours)
-    && intervalHours >= 1 && intervalHours <= 24 && (!pumpIncluded || validCooldown);
+  const canSave = Boolean(plantId) && Boolean((name || "").trim()) && validInterval
+    && (!pumpIncluded || validCooldown);
 
   const handleSave = () => {
     if (!canSave) return;
@@ -323,13 +343,15 @@ export default function UpsertReadingDeviceModal({
         moistureAlertPct:
           sensorMoist && shouldEnableMoistureAlert ? moistAlertPct : undefined,
       },
-      intervalHours,
+      intervalMinutes: interval,
       pumpCooldownMinutes: validCooldown ? cooldown : initialPumpCooldownMinutes,
 
       // Soil moisture notifications are only applied when Soil Moisture sensor is enabled.
       // Their checkbox state is preserved locally even while locked.
       sendEmailNotifications: sensorMoist ? sendEmailNotifications : false,
       sendPushNotifications: sensorMoist ? sendPushNotifications : false,
+      sendEmailMissingReadings,
+      sendPushMissingReadings,
 
       pumpIncluded,
 
@@ -486,19 +508,12 @@ export default function UpsertReadingDeviceModal({
             />
 
             <View style={{ marginHorizontal: 16, gap: 8 }}>
-              <Text style={styles.sectionHeader}>{t("readingsModals.upsert.intervalHours", { defaultValue: "Reading interval (hours)" })}</Text>
-              <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                <Pressable accessibilityRole="button" accessibilityLabel={t("readingsModals.upsert.decreaseInterval", { defaultValue: "Decrease reading interval" })}
-                  disabled={intervalHours <= 1} onPress={() => setIntervalHours((value) => Math.max(1, value - 1))} style={{ padding: 12 }}>
-                  <MaterialCommunityIcons name="minus" size={22} color="#FFFFFF" />
-                </Pressable>
-                <Text testID="reading-interval-hours" style={sp.dropdownItemText}>{intervalHours}</Text>
-                <Pressable accessibilityRole="button" accessibilityLabel={t("readingsModals.upsert.increaseInterval", { defaultValue: "Increase reading interval" })}
-                  disabled={intervalHours >= 24} onPress={() => setIntervalHours((value) => Math.min(24, value + 1))} style={{ padding: 12 }}>
-                  <MaterialCommunityIcons name="plus" size={22} color="#FFFFFF" />
-                </Pressable>
-              </View>
-              <Text style={styles.sectionInfoTextNoMargin}>{t("readingsModals.upsert.intervalFirmwareHint", { defaultValue: "Choose 1–24 hours. After changing this interval, generate and upload the updated board code." })}</Text>
+              <Text style={styles.sectionHeader}>{t("readingsModals.upsert.intervalMinutes", { defaultValue: "Reading interval (minutes)" })}</Text>
+              <TextInput testID="reading-interval-minutes" style={pr.input}
+                accessibilityLabel={t("readingsModals.upsert.intervalMinutes", { defaultValue: "Reading interval (minutes)" })}
+                keyboardType="number-pad" value={intervalMinutes} onChangeText={setIntervalMinutes} />
+              {!validInterval && <Text accessibilityRole="alert" style={{ color: "#FF9090" }}>{t("readingsModals.upsert.intervalMinutesValidation", { defaultValue: "Enter a whole number from 1 to 1440." })}</Text>}
+              <Text style={styles.sectionInfoTextNoMargin}>{t("readingsModals.upsert.intervalFirmwareHint", { defaultValue: "Choose 1–1440 minutes. After changing this interval, generate and upload the updated board code." })}</Text>
             </View>
 
             {/* Sensors Section */}
@@ -615,6 +630,22 @@ export default function UpsertReadingDeviceModal({
             <Text style={styles.sectionHeader}>
               {t("readingsModals.upsert.notifications")}
             </Text>
+
+            <Text style={styles.sectionInfoText}>
+              {t("readingsModals.upsert.missingReadingsInfo", { defaultValue: "Notify me once when an active device misses its reading interval. A new reading resets the alert." })}
+            </Text>
+            <View style={{ marginHorizontal: 16, marginVertical: 10 }}>
+              <CheckRow
+                label={t("readingsModals.upsert.sendEmailMissingReadings", { defaultValue: "Email me when readings are missing" })}
+                checked={sendEmailMissingReadings}
+                onToggle={() => setSendEmailMissingReadings((value) => !value)}
+              />
+              <CheckRow
+                label={t("readingsModals.upsert.sendPushMissingReadings", { defaultValue: "Send a push notification when readings are missing" })}
+                checked={sendPushMissingReadings}
+                onToggle={() => setSendPushMissingReadings((value) => !value)}
+              />
+            </View>
 
             <Text style={styles.sectionInfoText}>
               {t(
@@ -795,6 +826,9 @@ function CheckRow({
 }) {
   return (
     <Pressable
+      accessibilityRole="checkbox"
+      accessibilityLabel={label}
+      accessibilityState={{ checked, disabled }}
       onPress={disabled ? undefined : onToggle}
       disabled={disabled}
       style={{

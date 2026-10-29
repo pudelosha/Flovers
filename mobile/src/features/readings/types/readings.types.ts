@@ -37,6 +37,8 @@ export type ReadingTileModel = {
   id: string;
   name: string;                 // plant display name
   lastReadISO?: string | null;  // ISO string or null if missing
+  createdAtISO?: string;
+  intervalMinutes?: number;
   metrics: {
     temperature: number | null;
     humidity: number | null;
@@ -65,6 +67,7 @@ export type ApiReadingDevice = {
   device_key: string;
   notes?: string | null;
   interval_hours: number;
+  interval_minutes?: number;
   sensors: {
     temperature: boolean;
     humidity: boolean;
@@ -79,6 +82,8 @@ export type ApiReadingDevice = {
 
   send_email_notifications?: boolean;
   send_push_notifications?: boolean;
+  send_email_missing_readings?: boolean;
+  send_push_missing_readings?: boolean;
 
   pump_included: boolean;
   automatic_pump_launch: boolean;
@@ -102,6 +107,7 @@ export type ApiReadingDeviceCreatePayload = {
   notes?: string;
   is_active?: boolean;
   interval_hours?: number; // 1..24
+  interval_minutes?: number; // 1..1440; canonical, default 60
   pump_cooldown_minutes?: number;
   sensors: {
     temperature: boolean;
@@ -116,6 +122,8 @@ export type ApiReadingDeviceCreatePayload = {
 
   send_email_notifications?: boolean;
   send_push_notifications?: boolean;
+  send_email_missing_readings?: boolean;
+  send_push_missing_readings?: boolean;
 
   pump_included?: boolean;
   automatic_pump_launch?: boolean;
@@ -130,6 +138,7 @@ export type ApiReadingDeviceCreatePayload = {
   name?: string;
   enabled?: boolean;
   intervalHours?: number;
+  intervalMinutes?: number;
 
   sendEmailNotifications?: boolean;
   sendPushNotifications?: boolean;
@@ -149,6 +158,7 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
   notes: string | null;
   is_active: boolean;
   interval_hours: number;
+  interval_minutes: number;
   pump_cooldown_minutes: number;
   sensors: {
     temperature?: boolean;
@@ -163,6 +173,8 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
 
   send_email_notifications: boolean;
   send_push_notifications: boolean;
+  send_email_missing_readings: boolean;
+  send_push_missing_readings: boolean;
 
   pump_included: boolean;
   automatic_pump_launch: boolean;
@@ -177,6 +189,7 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
   name: string;
   enabled: boolean;
   intervalHours: number;
+  intervalMinutes: number;
 
   sendEmailNotifications: boolean;
   sendPushNotifications: boolean;

@@ -13,7 +13,8 @@
       "automaticPumpThreshold": "Quando a umidade do solo < {{value}}%",
       "opening": "Abrindo...",
       "scheduleWatering": "Agendar rega",
-      "unscheduleWatering": "Cancelar rega agendada"
+      "unscheduleWatering": "Cancelar rega agendada",
+      "missingReadings": "Leituras em atraso"
     },
     "menu": {
       "history": "Histórico de leituras",

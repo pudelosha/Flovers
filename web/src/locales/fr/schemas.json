@@ -125,7 +125,7 @@
       "L’application peut générer le programme de l’appareil sélectionné.",
       "Il contient les adresses de l’API, les identifiants (secret et device_key), l’identifiant de l’appareil et les réglages de ses capteurs et de sa pompe.",
       "Déclarez supports_manual_duration à true uniquement si le firmware lit duration_seconds pour l’arrosage manuel. L’exemple généré le prend en charge. L’arrosage automatique conserve PUMP_RUN_MS du sketch.",
-      "Les mesures sont envoyées chaque heure par défaut. Le formulaire permet 1–24 heures ; téléversez le firmware régénéré après modification. Les demandes manuelles sont vérifiées séparément, chaque minute par défaut."
+      "Le programme généré envoie les relevés toutes les 60 minutes par défaut. Le formulaire de l’appareil permet de choisir de 1 à 1440 minutes entières. Générez puis téléversez le nouveau code après toute modification. Les demandes d’arrosage manuel sont vérifiées séparément, chaque minute par défaut."
     ],
     "adjustIntro": "Avant le téléversement, vérifiez le Wi-Fi, les broches, l’étalonnage d’humidité, PUMP_RUN_MS et les intervalles de requête. Réglez la pause automatique en ligne dans le formulaire de l’appareil.",
     "adjustItems": [

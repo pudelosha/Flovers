@@ -189,9 +189,9 @@ def test_device_setup_generates_configured_sampling_interval(pump_included, inte
 
     code = client.post(reverse("reading-device-code-text", args=[device.pk]), format="json")
     assert code.status_code == 200
-    assert f"SEND_INTERVAL_MS = {interval_hours}UL * 60UL * 60UL * 1000UL;" in code.content.decode()
+    assert f"SEND_INTERVAL_MS = {interval_hours * 60}UL * 60UL * 1000UL;" in code.content.decode()
 
     with patch("readings.views.send_device_code_email") as send_email:
         emailed = client.post(reverse("reading-device-send-code-email", args=[device.pk]), format="json")
         assert emailed.status_code == 200
-        assert f"SEND_INTERVAL_MS = {interval_hours}UL * 60UL * 60UL * 1000UL;" in send_email.call_args.kwargs["code_text"]
+        assert f"SEND_INTERVAL_MS = {interval_hours * 60}UL * 60UL * 1000UL;" in send_email.call_args.kwargs["code_text"]

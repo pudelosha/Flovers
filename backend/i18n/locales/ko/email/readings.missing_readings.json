@@ -1,0 +1,9 @@
+{
+  "subject": "기기에서 측정값이 수신되지 않음",
+  "title": "기기에서 측정값이 수신되지 않음",
+  "line1": "설정한 {interval_minutes}분 동안 “{device_name}”에서 새 측정값을 받지 못했습니다. 마지막 수신: {last_read}.",
+  "cta": "측정값 보기",
+  "push_title": "기기에서 측정값이 수신되지 않음",
+  "push_body": "{device_name}: {interval_minutes}분 동안 새 측정값이 없습니다. 마지막 수신: {last_read}.",
+  "last_read_never": "아직 수신한 측정값이 없습니다"
+}

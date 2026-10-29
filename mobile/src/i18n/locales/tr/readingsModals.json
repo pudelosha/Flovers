@@ -166,10 +166,15 @@
       "intervalHours": "Okuma aralığı (saat)",
       "decreaseInterval": "Okuma aralığını azalt",
       "increaseInterval": "Okuma aralığını artır",
-      "intervalFirmwareHint": "1–24 saat seçin. Değişiklikten sonra yeni kodu oluşturup karta yükleyin.",
+      "intervalFirmwareHint": "1–1440 dakika seçin (varsayılan 60). Aralığı değiştirdikten sonra güncel kodu oluşturup karta yükleyin.",
       "pumpCooldownMinutes": "Otomatik sulamalar arasındaki bekleme (dakika)",
       "pumpCooldownHint": "1–32767 dakika seçin (varsayılan 60). Kart, sonraki görev kontrolünde ayarı sunucudan alır. Pompanın çalışma süresi değişmez.",
-      "pumpCooldownInvalid": "1 ile 32767 arasında bir tam sayı girin."
+      "pumpCooldownInvalid": "1 ile 32767 arasında bir tam sayı girin.",
+      "intervalMinutes": "Okuma aralığı (dakika)",
+      "intervalMinutesValidation": "1 ile 1440 arasında bir tam sayı girin.",
+      "sendEmailMissingReadings": "Okuma alınmadığında e-posta gönder",
+      "sendPushMissingReadings": "Okuma alınmadığında anlık bildirim gönder",
+      "missingReadingsInfo": "Etkin cihazlarda okuma geciktiğinde bir kez uyarı gönderilir. Yeni bir okuma uyarıyı sıfırlar. Bu seçenekler toprak nemi ve sulama bildirimlerinden bağımsızdır."
     }
   }
 }

@@ -166,10 +166,15 @@
       "intervalHours": "读数间隔（小时）",
       "decreaseInterval": "缩短读数间隔",
       "increaseInterval": "延长读数间隔",
-      "intervalFirmwareHint": "请选择1–24小时。更改后，请重新生成代码并上传到开发板。",
+      "intervalFirmwareHint": "请输入 1–1440 分钟（默认 60）。修改后，请重新生成代码并上传到开发板。",
       "pumpCooldownMinutes": "自动浇水间隔（分钟）",
       "pumpCooldownHint": "请选择1–32767分钟（默认60）。开发板下次检查任务时会从服务器获取该设置。此设置不会改变水泵运行时长。",
-      "pumpCooldownInvalid": "请输入1到32767之间的整数。"
+      "pumpCooldownInvalid": "请输入1到32767之间的整数。",
+      "intervalMinutes": "读数间隔（分钟）",
+      "intervalMinutesValidation": "请输入 1 到 1440 之间的整数。",
+      "sendEmailMissingReadings": "未收到读数时发送邮件",
+      "sendPushMissingReadings": "未收到读数时发送推送通知",
+      "missingReadingsInfo": "对于已启用的设备，读数逾期时仅提醒一次。收到新读数后会重置提醒。这些选项独立于土壤湿度和浇水通知。"
     }
   }
 }

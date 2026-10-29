@@ -166,10 +166,15 @@
       "intervalHours": "Interval pembacaan (jam)",
       "decreaseInterval": "Kurangi interval pembacaan",
       "increaseInterval": "Tambah interval pembacaan",
-      "intervalFirmwareHint": "Pilih 1–24 jam. Setelah mengubahnya, buat kode baru dan unggah ke papan.",
+      "intervalFirmwareHint": "Pilih 1–1440 menit (bawaan 60). Setelah mengubah interval, buat kode terbaru dan unggah ke papan.",
       "pumpCooldownMinutes": "Jeda antarpenyiraman otomatis (menit)",
       "pumpCooldownHint": "Pilih 1–32767 menit (bawaan 60). Papan mengambil pengaturan dari server saat pemeriksaan tugas berikutnya. Durasi pompa tidak berubah.",
-      "pumpCooldownInvalid": "Masukkan bilangan bulat dari 1 hingga 32767."
+      "pumpCooldownInvalid": "Masukkan bilangan bulat dari 1 hingga 32767.",
+      "intervalMinutes": "Interval pembacaan (menit)",
+      "intervalMinutesValidation": "Masukkan bilangan bulat dari 1 hingga 1440.",
+      "sendEmailMissingReadings": "Kirim email jika pembacaan tidak diterima",
+      "sendPushMissingReadings": "Kirim notifikasi push jika pembacaan tidak diterima",
+      "missingReadingsInfo": "Untuk perangkat aktif, peringatan dikirim sekali saat pembacaan terlambat. Pembacaan baru mengatur ulang peringatan. Opsi ini terpisah dari notifikasi kelembapan tanah dan penyiraman."
     }
   }
 }

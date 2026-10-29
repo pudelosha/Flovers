@@ -1,0 +1,9 @@
+{
+  "subject": "لم تصل قراءات الجهاز",
+  "title": "لم تصل قراءات الجهاز",
+  "line1": "لم تصل قراءات جديدة من «{device_name}» خلال الفاصل المحدد البالغ {interval_minutes} دقيقة. آخر قراءة: {last_read}.",
+  "cta": "فتح القراءات",
+  "push_title": "لم تصل قراءات الجهاز",
+  "push_body": "{device_name}: لم تصل قراءات جديدة خلال {interval_minutes} دقيقة. آخر قراءة: {last_read}.",
+  "last_read_never": "لم تصل أي قراءات بعد"
+}

@@ -87,11 +87,11 @@
     },
     {
       "q": "Com que frequência os dados dos sensores são atualizados?",
-      "a": "O firmware gerado envia leituras de hora a hora por predefinição. O formulário permite 1–24 horas; depois de alterar, carrega o código regenerado. Firmware personalizado pode enviar mais vezes, mas o armazenamento continua agrupado por hora."
+      "a": "O código gerado usa o intervalo do dispositivo, 60 minutos por predefinição; o formulário aceita de 1 a 1440 minutos inteiros. Após uma alteração, é necessário carregar o novo código. Código personalizado pode enviar mais vezes, mas os dados continuam agrupados por hora."
     },
     {
       "q": "E se meu dispositivo ficar desconectado?",
-      "a": "O aplicativo não avisa quando faltam leituras. Ele pode avisar quando a umidade do solo cair abaixo do limite escolhido."
+      "a": "O cartão de um dispositivo ativo pulsa a vermelho quando passa o intervalo definido desde a última leitura. Se nunca tiver enviado leituras, o prazo começa na criação do dispositivo. Os dispositivos desativados não geram este aviso. Em Adicionar/Editar dispositivo → Notificações, o proprietário pode ativar separadamente email e push para leituras em falta. Ambas as opções começam desativadas e são independentes dos resumos diários e dos alertas de humidade ou rega. O servidor verifica a cada minuto e envia um alerta por canal em cada interrupção. Uma nova leitura permite alertar para outra interrupção posterior."
     },
     {
       "q": "Os dados dos sensores são armazenados na nuvem?",

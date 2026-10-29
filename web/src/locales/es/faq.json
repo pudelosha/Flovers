@@ -87,11 +87,11 @@
     },
     {
       "q": "¿Cada cuánto se actualizan los datos?",
-      "a": "El firmware generado envía lecturas cada hora por defecto. El formulario permite 1–24 horas; los cambios requieren subir el código regenerado. Un firmware personalizado puede enviar más a menudo, pero el almacenamiento sigue agrupado por horas."
+      "a": "El código generado usa el intervalo del dispositivo, 60 minutos por defecto; el formulario admite de 1 a 1440 minutos enteros. Tras cambiarlo, debes subir el nuevo código. Un programa propio puede enviar datos con más frecuencia, pero siguen almacenándose por horas."
     },
     {
       "q": "¿Qué pasa si mi dispositivo deja de enviar datos?",
-      "a": "La aplicación no avisa cuando faltan lecturas. Sí puede enviar una alerta si la humedad del suelo baja del umbral configurado."
+      "a": "La tarjeta de un dispositivo activo pulsa en rojo cuando ha transcurrido el intervalo configurado desde su última lectura. Si nunca ha enviado ninguna, el plazo empieza al crear el dispositivo. Los dispositivos desactivados no generan este aviso. En Añadir/Editar dispositivo → Notificaciones, el propietario puede activar por separado correo y push cuando faltan lecturas. Ambas opciones están desactivadas por defecto y son independientes de los resúmenes diarios y los avisos de humedad o riego. El servidor comprueba cada minuto y envía un aviso por canal para cada interrupción. Una nueva lectura permite avisar de otra interrupción posterior."
     },
     {
       "q": "¿Se guardan las lecturas en la nube?",

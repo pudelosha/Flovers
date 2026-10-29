@@ -1,6 +1,6 @@
 import { getDisplayTemperature } from "../../../shared/utils/temperature";
-import React, { useMemo } from "react";
-import { View, Pressable, Text, StyleSheet, Switch } from "react-native";
+import React, { useEffect, useMemo, useRef } from "react";
+import { View, Pressable, Text, StyleSheet, Switch, Animated, Easing } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -14,6 +14,7 @@ import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAcces
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
+import { useReadingOverdue } from "../hooks/useReadingOverdue";
 
 type MetricKey = "temperature" | "humidity" | "light" | "moisture";
 
@@ -107,6 +108,7 @@ function MetricColPressable({
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 const PUMP_BLUE = "rgba(11,114,133,0.92)";
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
 
 export default function ReadingTile({
   data,
@@ -131,6 +133,23 @@ export default function ReadingTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const isOverdue = useReadingOverdue(data);
+  const pulse = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (!isOverdue) {
+      pulse.setValue(0);
+      return;
+    }
+    const loop = Animated.loop(Animated.sequence([
+      Animated.timing(pulse, { toValue: 1, duration: 1400,
+        easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
+      Animated.timing(pulse, { toValue: 0, duration: 1400,
+        easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
+    ]));
+    loop.start();
+    return () => loop.stop();
+  }, [isOverdue, pulse]);
 
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -228,6 +247,14 @@ export default function ReadingTile({
           style={StyleSheet.absoluteFill}
         />
 
+        {isOverdue && <AnimatedLinearGradient
+          testID="missing-readings-pulse"
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }} end={{ x: 1, y: 0.5 }}
+          colors={["rgba(255, 59, 48, 0.55)", "rgba(255, 59, 48, 0.18)", "rgba(255, 59, 48, 0.00)"]}
+          locations={[0, 0.28, 0.7]}
+          style={[StyleSheet.absoluteFill, { opacity: pulse }]}
+        />}
         <View pointerEvents="none" style={s.cardTint} />
         {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
         <View pointerEvents="none" style={s.cardBorder} />
@@ -340,6 +367,13 @@ export default function ReadingTile({
         />
         <Text style={s.lastText}>{lastText}</Text>
       </View>
+
+      {isOverdue && <View style={[localStyles.lastReadRow, { gap: 8 }]} accessibilityLiveRegion="polite">
+        <MaterialCommunityIcons name="alert-circle-outline" size={14} color="#FF9088" />
+        <Text style={[s.lastText, { color: "#FF9088" }]}>
+          {String(tr("readings.tile.missingReadings", "Readings overdue"))}
+        </Text>
+      </View>}
 
       {effectivePumpIncluded && (
         <>

@@ -125,7 +125,7 @@
       "La aplicación puede generar el programa del dispositivo seleccionado.",
       "Incluye las direcciones de la API, las credenciales (secret y device_key), el identificador del dispositivo y los ajustes de sensores y bomba.",
       "Indica supports_manual_duration: true solo si el firmware lee duration_seconds para el riego manual. El ejemplo generado lo admite. El riego automático mantiene PUMP_RUN_MS del sketch.",
-      "Las lecturas se envían cada hora por defecto. El formulario permite intervalos de 1–24 horas; después debes subir el firmware regenerado. Los pedidos de riego manual se consultan aparte, cada minuto por defecto."
+      "El código generado envía lecturas cada 60 minutos por defecto. En el formulario del dispositivo puedes elegir de 1 a 1440 minutos enteros y luego generar y subir el código actualizado. Las solicitudes de riego manual se comprueban por separado, una vez por minuto por defecto."
     ],
     "adjustIntro": "Antes de subir el programa revisa Wi-Fi, pines, calibración de humedad, PUMP_RUN_MS e intervalos de consulta. Configura la pausa automática en línea en el formulario del dispositivo.",
     "adjustItems": [

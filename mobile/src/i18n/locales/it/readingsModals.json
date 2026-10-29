@@ -166,10 +166,15 @@
       "intervalHours": "Intervallo letture (ore)",
       "decreaseInterval": "Riduci intervallo letture",
       "increaseInterval": "Aumenta intervallo letture",
-      "intervalFirmwareHint": "Scegli da 1 a 24 ore. Dopo la modifica, genera il nuovo codice e caricalo sulla scheda.",
+      "intervalFirmwareHint": "Scegli da 1 a 1440 minuti (valore predefinito: 60). Dopo una modifica, genera il codice aggiornato e caricalo sulla scheda.",
       "pumpCooldownMinutes": "Pausa tra annaffiature automatiche (minuti)",
       "pumpCooldownHint": "Scegli da 1 a 32767 minuti (predefinito 60). La scheda riceve il valore dal server al prossimo controllo. La durata della pompa non cambia.",
-      "pumpCooldownInvalid": "Inserisci un numero intero da 1 a 32767."
+      "pumpCooldownInvalid": "Inserisci un numero intero da 1 a 32767.",
+      "intervalMinutes": "Intervallo tra le letture (minuti)",
+      "intervalMinutesValidation": "Inserisci un numero intero da 1 a 1440.",
+      "sendEmailMissingReadings": "Invia un’email quando non arrivano letture",
+      "sendPushMissingReadings": "Invia una notifica push quando non arrivano letture",
+      "missingReadingsInfo": "Per i dispositivi attivi viene inviato un solo avviso quando una lettura è in ritardo. Una nuova lettura reimposta l’avviso. Queste opzioni sono indipendenti dalle notifiche di umidità del terreno e irrigazione."
     }
   }
 }

@@ -166,10 +166,15 @@
       "intervalHours": "Odstęp między odczytami (godziny)",
       "decreaseInterval": "Skróć odstęp między odczytami",
       "increaseInterval": "Wydłuż odstęp między odczytami",
-      "intervalFirmwareHint": "Wybierz od 1 do 24 godzin. Po zmianie wygeneruj nowy kod i wgraj go na płytkę.",
+      "intervalFirmwareHint": "Wybierz od 1 do 1440 minut (domyślnie 60). Po zmianie wygeneruj nowy kod i wgraj go na płytkę.",
       "pumpCooldownMinutes": "Przerwa między automatycznymi podlewaniami (minuty)",
       "pumpCooldownHint": "Wybierz od 1 do 32767 minut (domyślnie 60). Płytka pobierze to ustawienie przy następnym sprawdzeniu zadań. Nie zmienia ono czasu pracy pompy.",
-      "pumpCooldownInvalid": "Wpisz liczbę całkowitą od 1 do 32767."
+      "pumpCooldownInvalid": "Wpisz liczbę całkowitą od 1 do 32767.",
+      "intervalMinutes": "Odstęp między odczytami (minuty)",
+      "intervalMinutesValidation": "Wpisz liczbę całkowitą od 1 do 1440.",
+      "sendEmailMissingReadings": "Wyślij e-mail, gdy urządzenie nie przesyła odczytów",
+      "sendPushMissingReadings": "Wyślij powiadomienie push, gdy urządzenie nie przesyła odczytów",
+      "missingReadingsInfo": "Dla aktywnego urządzenia wyślemy jeden alert, gdy odczyt się spóźni. Nowy odczyt resetuje alert. Te ustawienia są niezależne od powiadomień o wilgotności gleby i podlewaniu."
     }
   }
 }

@@ -75,7 +75,7 @@
           "Scegli Collega dispositivo per aggiungere un nuovo dispositivo di misurazione e associarlo a una pianta.",
           "Durante la configurazione scegli nome, pianta, stato attivo o disattivato, frequenza delle misurazioni e sensori. Puoi impostare gli avvisi di bassa umidità del terreno e le relative notifiche e-mail e push. Se usi una pompa, puoi attivarne il supporto, l’avvio automatico, la soglia di umidità e le notifiche al termine dell’annaffiatura.",
           "Ogni dispositivo riceve una Device Key. Il tuo account ha anche una Auth Secret Key. Queste credenziali permettono alla scheda di comunicare con il server di Flovers.",
-          "Imposta l’intervallo tra 1 e 24 ore intere. Dopo una modifica rigenera lo sketch e caricalo sulla scheda: il programma già in esecuzione non riceve automaticamente questo valore.",
+          "Scegli da 1 a 1440 minuti (valore predefinito: 60). Dopo una modifica, genera il codice aggiornato e caricalo sulla scheda.",
           "Imposta la pausa tra irrigazioni automatiche nel modulo del dispositivo: 1–32767 minuti, con 60 come valore predefinito. La scheda la riceve a una successiva richiesta e anche il server la controlla. AUTO_PUMP_MIN_INTERVAL_MS è solo un valore locale di ripiego."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Quando il dispositivo controlla le richieste",
         "body": [
           "Il codice generato gestisce separatamente l’invio delle misurazioni e il controllo delle richieste di annaffiatura manuale.",
-          "Le letture vengono inviate ogni ora per impostazione predefinita. Il modulo permette intervalli di 1–24 ore; dopo la modifica carica il firmware rigenerato. Le richieste manuali vengono controllate separatamente, di norma ogni minuto.",
-          "Durante il ciclo di misurazione orario controlla anche le condizioni per l’annaffiatura automatica.",
+          "Il firmware generato invia letture ogni 60 minuti per impostazione predefinita. Nel modulo del dispositivo puoi scegliere da 1 a 1440 minuti interi, poi generare e caricare il codice aggiornato. Le richieste di irrigazione manuale vengono controllate separatamente, di norma ogni minuto.",
+          "Le condizioni per l’irrigazione automatica vengono controllate durante il ciclo di lettura configurato.",
           "Controlla più spesso le richieste manuali in attesa: di norma una volta al minuto.",
           "Così può rispondere più rapidamente alle tue richieste senza inviare misurazioni ogni minuto.",
           "Durante il ciclo di misurazione, il dispositivo prima invia i valori, poi controlla le richieste manuali. Se non ha eseguito un’annaffiatura manuale, verifica le condizioni per quella automatica.",
-          "Tra un ciclo di misurazione e l’altro, il controllo al minuto cerca solo le richieste manuali in attesa."
+          "Al di fuori del ciclo completo di lettura, il controllo separato dell’irrigazione manuale cerca soltanto richieste manuali in attesa."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "Il codice generato è un punto di partenza da adattare alla tua scheda, per esempio ESP32.",
           "Gestisce il collegamento Wi-Fi, la sincronizzazione dell’ora, l’avvio dei sensori, la lettura dei valori e l’invio al server. Controlla anche le richieste manuali e le impostazioni automatiche gestite dal server, aziona la pompa e conferma il completamento.",
           "L’invio delle misurazioni e il controllo delle richieste manuali avvengono separatamente.",
-          "Le letture vengono inviate ogni ora per impostazione predefinita. Il modulo permette intervalli di 1–24 ore; dopo la modifica carica il firmware rigenerato. Le richieste manuali vengono controllate separatamente, di norma ogni minuto.",
+          "Il firmware generato invia letture ogni 60 minuti per impostazione predefinita. Nel modulo del dispositivo puoi scegliere da 1 a 1440 minuti interi, poi generare e caricare il codice aggiornato. Le richieste di irrigazione manuale vengono controllate separatamente, di norma ogni minuto.",
           "Prima del caricamento controlla Wi-Fi, pin, calibrazione dell’umidità, PUMP_RUN_MS e intervalli di controllo. Configura la pausa automatica online nel modulo del dispositivo."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Letture del sensore del sensore per piante d'appartamento condivise",
         "body": [
           "I destinatari possono visualizzare le letture e i grafici più recenti dei sensori per una pianta d'appartamento condivisa. Un'etichetta condivisa identifica le piante d'appartamento ricevute. Le credenziali del dispositivo, il codice di configurazione, la modifica del dispositivo, i controlli della pompa, le esportazioni e l'eliminazione rimangono riservati al proprietario."
+        ]
+      },
+      {
+        "heading": "Letture mancanti",
+        "body": [
+          "Il riquadro di un dispositivo attivo pulsa in rosso quando dall’ultima lettura è trascorso l’intervallo impostato. Se non è mai arrivata una lettura, il tempo parte dalla creazione del dispositivo. I dispositivi disattivati non generano questo avviso.",
+          "In Aggiungi/Modifica dispositivo → Notifiche, il proprietario può attivare separatamente email e push per le letture mancanti. Entrambe le opzioni sono inizialmente disattivate e indipendenti dai riepiloghi giornalieri e dagli avvisi di umidità o irrigazione. Il server controlla ogni minuto e invia un avviso per canale per ogni interruzione. Dopo una nuova lettura, un’ulteriore interruzione può generare un altro avviso."
         ]
       }
     ]

@@ -166,10 +166,15 @@
       "intervalHours": "Messintervall (Stunden)",
       "decreaseInterval": "Messintervall verkürzen",
       "increaseInterval": "Messintervall verlängern",
-      "intervalFirmwareHint": "Wähle 1–24 Stunden. Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board.",
+      "intervalFirmwareHint": "Wähle 1–1440 Minuten (Standard: 60). Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board.",
       "pumpCooldownMinutes": "Pause zwischen automatischen Bewässerungen (Minuten)",
       "pumpCooldownHint": "Wähle 1–32767 Minuten (Standard 60). Das Board übernimmt den Serverwert beim nächsten Abruf. Die Laufzeit der Pumpe ändert sich dadurch nicht.",
-      "pumpCooldownInvalid": "Gib eine ganze Zahl von 1 bis 32767 ein."
+      "pumpCooldownInvalid": "Gib eine ganze Zahl von 1 bis 32767 ein.",
+      "intervalMinutes": "Messintervall (Minuten)",
+      "intervalMinutesValidation": "Gib eine ganze Zahl von 1 bis 1440 ein.",
+      "sendEmailMissingReadings": "E-Mail senden, wenn Messwerte ausbleiben",
+      "sendPushMissingReadings": "Push-Mitteilung senden, wenn Messwerte ausbleiben",
+      "missingReadingsInfo": "Bei aktiven Geräten erfolgt eine einmalige Warnung, wenn ein Messwert überfällig ist. Ein neuer Messwert setzt die Warnung zurück. Diese Optionen sind unabhängig von Bodenfeuchte- und Bewässerungsmitteilungen."
     }
   }
 }

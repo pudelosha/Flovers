@@ -1,0 +1,9 @@
+{
+  "subject": "Cihazdan okuma alınamıyor",
+  "title": "Cihazdan okuma alınamıyor",
+  "line1": "“{device_name}” cihazından belirlenen {interval_minutes} dakikalık aralıkta yeni okuma alınmadı. Son okuma: {last_read}.",
+  "cta": "Okumaları aç",
+  "push_title": "Cihazdan okuma alınamıyor",
+  "push_body": "{device_name}: {interval_minutes} dakika içinde yeni okuma alınmadı. Son okuma: {last_read}.",
+  "last_read_never": "Henüz okuma alınmadı"
+}

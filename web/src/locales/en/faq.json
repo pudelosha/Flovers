@@ -87,11 +87,11 @@
     },
     {
       "q": "How often is sensor data updated?",
-      "a": "Generated firmware sends readings hourly by default; the device form supports intervals of 1–24 hours and changes require uploading regenerated code. Custom firmware can send more frequently, but storage still uses hourly buckets."
+      "a": "Generated firmware uses the device interval, 60 minutes by default; the form accepts 1–1440 whole minutes. Upload regenerated code after a change. Custom firmware may send more often, but readings are still stored in hourly buckets."
     },
     {
       "q": "What happens if my sensor device goes offline?",
-      "a": "The app does not notify users about missing readings. However, notifications may be triggered if soil moisture levels fall below a defined threshold."
+      "a": "An active device tile pulses red once one configured reading interval has elapsed since its last reading. For a device that has never sent a reading, the interval starts when the device is created. Disabled devices do not trigger this warning. In Add/Edit device → Notifications, the owner can enable missing-reading email and push alerts separately. Both start off and are independent of daily summaries, soil moisture and watering alerts. The server checks once per minute and sends one alert per channel for an outage; a new reading allows a later outage to trigger another alert."
     },
     {
       "q": "Is sensor data stored in the cloud?",

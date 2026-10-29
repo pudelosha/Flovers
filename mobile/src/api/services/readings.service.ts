@@ -95,6 +95,8 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
     id: String(api.id),
     name: api.plant_name || api.device_name,
     lastReadISO: api.last_read_at ?? null,
+    createdAtISO: api.created_at,
+    intervalMinutes: api.interval_minutes ?? (api.interval_hours || 1) * 60,
     metrics: api.latest ?? {
       temperature: null,
       humidity: null,

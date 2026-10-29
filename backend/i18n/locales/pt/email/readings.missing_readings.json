@@ -1,0 +1,9 @@
+{
+  "subject": "O dispositivo deixou de enviar leituras",
+  "title": "O dispositivo deixou de enviar leituras",
+  "line1": "Não foram recebidas novas leituras de «{device_name}» dentro do intervalo definido de {interval_minutes} minutos. Última leitura: {last_read}.",
+  "cta": "Abrir leituras",
+  "push_title": "O dispositivo deixou de enviar leituras",
+  "push_body": "{device_name}: sem novas leituras em {interval_minutes} minutos. Última leitura: {last_read}.",
+  "last_read_never": "Ainda não foram recebidas leituras"
+}

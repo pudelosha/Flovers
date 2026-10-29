@@ -125,7 +125,7 @@
       "W aplikacji możesz wygenerować kod dla wybranego urządzenia.",
       "Znajdziesz w nim adresy API, dane dostępu (secret i device_key), identyfikator urządzenia oraz ustawienia czujników i pompy.",
       "Ustaw supports_manual_duration na true tylko wtedy, gdy program odczytuje duration_seconds i stosuje ten czas do ręcznego podlewania. Wygenerowany przykład to obsługuje. Automatyczne podlewanie nadal używa PUMP_RUN_MS ze szkicu.",
-      "Odczyty domyślnie są wysyłane co godzinę. W formularzu urządzenia ustawisz odstęp od 1 do 24 godzin; po zmianie wgraj nowo wygenerowany program. Zlecenia ręcznego podlewania są sprawdzane osobno, domyślnie co minutę."
+      "Wygenerowany program domyślnie przesyła odczyty co 60 minut. W formularzu urządzenia ustaw od 1 do 1440 pełnych minut, a następnie wygeneruj i wgraj nowy kod. Zaplanowane ręczne podlewanie jest sprawdzane osobno, domyślnie co minutę."
     ],
     "adjustIntro": "Przed wgraniem sprawdź dane Wi-Fi, piny, kalibrację wilgotności, PUMP_RUN_MS i odstępy sprawdzania. Przerwę między automatycznymi podlewaniami ustaw w formularzu urządzenia.",
     "adjustItems": [

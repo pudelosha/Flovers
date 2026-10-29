@@ -83,8 +83,17 @@ describe("readings.service", () => {
         pumpThresholdPct: 30,
         sendEmailWateringNotifications: true,
         pendingPumpTask: device.pending_pump_task,
+        intervalMinutes: 120,
+        createdAtISO: device.created_at,
       })
     );
+  });
+
+  it("prefers exact minutes over the legacy hours value", () => {
+    const tile = toReadingTile({ id: 3, device_name: "Node", plant_name: "Fern",
+      interval_minutes: 45, interval_hours: 1, is_active: true, created_at: "2026-10-29T10:00:00Z",
+    } as ApiReadingDevice);
+    expect(tile.intervalMinutes).toBe(45);
   });
 
   it("sends pump configuration when creating a reading device", async () => {

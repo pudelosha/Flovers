@@ -75,7 +75,7 @@
           "Bağlantı cihazı, yeni bir okuma cihazı kurmak ve onu bir ev bitkisiyle ilişkilendirmek için kullanılır.",
           "Kurulum sırasında cihaz adını, bağlantılı ev bitkisini, etkin veya devre dışı durumunu, okuma aralığını, etkin sensörleri, düşük toprak nemi uyarılarını, düşük toprak nemi için e-posta ve anlık bildirimleri, su pompası desteğini, otomatik pompa başlatmayı, otomatik sulama toprağı nem eşiğini ve sulama tamamlandıktan sonra e-posta ve anlık bildirimleri yapılandırabilirsiniz.",
           "Her cihaz, oluşturulan bir Cihaz Anahtarını alır. Kullanıcı hesabının ayrıca bir Kimlik Doğrulama Gizli Anahtarı vardır. Bu kimlik bilgileri birlikte, fiziksel cihazın arka uçla iletişim kurmasına olanak tanır.",
-          "Ölçüm aralığını 1–24 tam saat olarak ayarlayın. Değişiklikten sonra sketch’i yeniden oluşturup karta yükleyin; çalışan program bu değeri otomatik almaz.",
+          "1–1440 dakika seçin (varsayılan 60). Aralığı değiştirdikten sonra güncel kodu oluşturup karta yükleyin.",
           "Otomatik sulama beklemesini cihaz formunda 1–32767 dakika olarak ayarlayın; varsayılan 60’tır. Kart bunu sonraki sorguda alır ve sunucu da uygular. AUTO_PUMP_MIN_INTERVAL_MS yalnızca yerel yedek değerdir."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Manuel sulama görevi zamanlaması",
         "body": [
           "Oluşturulan cihaz kodu, sensör okumaları ve manuel sulama kontrolleri için ayrı zamanlama kullanır.",
-          "Ölçümler varsayılan olarak saatte bir gönderilir. Cihaz formunda 1–24 saat seçilir; değişiklikten sonra yeniden oluşturulan firmware’i yükleyin. Elle sulama istekleri ayrı olarak, varsayılan dakikada bir denetlenir.",
-          "Otomatik sulama kontrolleri saatlik okuma döngüsünün bir parçası olarak gerçekleşir.",
+          "Oluşturulan kod varsayılan olarak 60 dakikada bir okuma gönderir. Cihaz formunda 1–1440 tam dakika seçin, ardından güncel kodu oluşturup yükleyin. Elle sulama istekleri ayrı olarak, varsayılan olarak dakikada bir kontrol edilir.",
+          "Otomatik sulama koşulları, ayarlanan okuma döngüsü sırasında kontrol edilir.",
           "Bekleyen manuel sulama görevleri, varsayılan olarak dakikada bir kez olmak üzere daha sık kontrol edilir.",
           "Bu, her dakika sensör okumaları gönderilmeden manuel sulama taleplerinin daha hızlı alınmasını sağlar.",
           "Yürütme sırası aynı kalır: normal okuma döngüsü sırasında sensör okumalarını gönderin, bekleyen manuel sulamayı kontrol edin ve manuel sulama yapılmadıysa otomatik sulama koşullarını kontrol edin.",
-          "Bir dakikalık manuel sulama kontrolü saatlik okuma döngüsünün dışında çalıştığında yalnızca bekleyen manuel sulama görevlerini kontrol eder."
+          "Tam okuma döngüsü dışında ayrı elle sulama kontrolü yalnızca bekleyen elle sulama isteklerini arar."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "Oluşturulan kod, ESP32 tarzı kartlar için düzenlemeye hazır bir başlangıç noktası olarak tasarlanmıştır.",
           "Wi-Fi bağlantısı mantığını, zaman senkronizasyonunu, sensörü başlatmayı, etkin sensörleri okumayı, sensör okumalarını arka uca göndermeyi, manuel sulama görevlerini kontrol etmeyi, arka uç kontrollü otomatik sulama ayarlarını kontrol etmeyi, gerektiğinde bir pompayı çalıştırmayı ve pompanın tamamlandığını raporlamayı içerir.",
           "Oluşturulan kod, okuma yükleme ve manuel sulama görevi kontrollerini ayrı tutar.",
-          "Ölçümler varsayılan olarak saatte bir gönderilir. Cihaz formunda 1–24 saat seçilir; değişiklikten sonra yeniden oluşturulan firmware’i yükleyin. Elle sulama istekleri ayrı olarak, varsayılan dakikada bir denetlenir.",
+          "Oluşturulan kod varsayılan olarak 60 dakikada bir okuma gönderir. Cihaz formunda 1–1440 tam dakika seçin, ardından güncel kodu oluşturup yükleyin. Elle sulama istekleri ayrı olarak, varsayılan olarak dakikada bir kontrol edilir.",
           "Yüklemeden önce Wi-Fi, pinler, nem kalibrasyonu, PUMP_RUN_MS ve sorgu aralıklarını kontrol edin. Çevrimiçi otomatik sulama beklemesini cihaz formundan ayarlayın."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Paylaşılan bitkileri için sensör okumaları",
         "body": [
           "Alıcılar, paylaşılan bir bitkisi için en son sensör okumalarını ve grafiklerini görüntüleyebilir. Paylaşılan etiket, alınan bitkilerini tanımlar. Cihaz kimlik bilgileri, kurulum kodu, cihaz düzenleme, pompa kontrolleri, dışa aktarma ve silme işlemleri yalnızca cihaz sahibine ait kalır."
+        ]
+      },
+      {
+        "heading": "Alınamayan okumalar",
+        "body": [
+          "Etkin bir cihazın son okumasından itibaren belirlenen aralık geçtiğinde kart kırmızı renkte yanıp söner. Hiç okuma göndermemiş cihazlarda süre, cihaz oluşturulduğunda başlar. Devre dışı cihazlar bu uyarıyı tetiklemez.",
+          "Cihaz ekle/düzenle → Bildirimler bölümünde cihaz sahibi, eksik okumalar için e-posta ve anlık bildirimleri ayrı ayrı açabilir. İkisi de başlangıçta kapalıdır; günlük özetlerden, nem ve sulama uyarılarından bağımsızdır. Sunucu dakikada bir kontrol eder ve her kesintide kanal başına bir uyarı gönderir. Yeni bir okuma geldikten sonra sonraki kesinti yeniden uyarı oluşturabilir."
         ]
       }
     ]

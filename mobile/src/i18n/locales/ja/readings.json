@@ -13,7 +13,8 @@
       "automaticPumpThreshold": "土壌水分 < {{value}}% の場合",
       "opening": "開いています...",
       "scheduleWatering": "水やりをスケジュール",
-      "unscheduleWatering": "水やりのスケジュールを解除"
+      "unscheduleWatering": "水やりのスケジュールを解除",
+      "missingReadings": "測定値の受信が遅れています"
     },
     "menu": {
       "history": "測定履歴",

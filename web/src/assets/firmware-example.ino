@@ -118,7 +118,7 @@ Adafruit_BME280 bme;
 // - does not send readings
 // - does not run automatic watering
 
-const unsigned long SEND_INTERVAL_MS = 1UL * 60UL * 60UL * 1000UL;
+const unsigned long SEND_INTERVAL_MS = 60UL * 60UL * 1000UL;
 const unsigned long MANUAL_PUMP_CHECK_INTERVAL_MS = 60UL * 1000UL;
 
 unsigned long lastSendMs = 0;

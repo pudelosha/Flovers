@@ -126,7 +126,7 @@
       "Uygulama, seçilen cihaz için ürün yazılımı oluşturabilir.",
       "Oluşturulan ürün yazılımı, söz konusu cihaz için doğru API uç noktalarını, kimlik doğrulama sırrını, cihaz anahtarını, cihaz kimliğini, etkin sensörleri ve pompa ayarlarını içerir.",
       "supports_manual_duration değerini yalnızca firmware elle sulama için duration_seconds okuyorsa true yapın. Oluşturulan örnek bunu destekler. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini korur.",
-      "Ölçümler varsayılan olarak saatte bir gönderilir. Cihaz formunda 1–24 saat seçilir; değişiklikten sonra yeniden oluşturulan firmware’i yükleyin. Elle sulama istekleri ayrı olarak, varsayılan dakikada bir denetlenir."
+      "Oluşturulan kod varsayılan olarak 60 dakikada bir okuma gönderir. Cihaz formunda 1–1440 tam dakika seçin, ardından güncel kodu oluşturup yükleyin. Elle sulama istekleri ayrı olarak, varsayılan olarak dakikada bir kontrol edilir."
     ],
     "adjustIntro": "Yüklemeden önce Wi-Fi, pinler, nem kalibrasyonu, PUMP_RUN_MS ve sorgu aralıklarını kontrol edin. Çevrimiçi otomatik sulama beklemesini cihaz formundan ayarlayın.",
     "adjustItems": [

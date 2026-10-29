@@ -1,0 +1,9 @@
+{
+  "subject": "Les relevés de l’appareil ne sont plus reçus",
+  "title": "Les relevés de l’appareil ne sont plus reçus",
+  "line1": "Aucun nouveau relevé de « {device_name} » n’a été reçu dans l’intervalle prévu de {interval_minutes} minutes. Dernier relevé : {last_read}.",
+  "cta": "Ouvrir les relevés",
+  "push_title": "Les relevés de l’appareil ne sont plus reçus",
+  "push_body": "{device_name} : aucun nouveau relevé dans les {interval_minutes} minutes prévues. Dernier relevé : {last_read}.",
+  "last_read_never": "Aucun relevé reçu pour le moment"
+}

@@ -13,7 +13,8 @@
       "automaticPumpThreshold": "当土壤湿度 < {{value}}%",
       "opening": "正在打开...",
       "scheduleWatering": "安排浇水",
-      "unscheduleWatering": "取消安排浇水"
+      "unscheduleWatering": "取消安排浇水",
+      "missingReadings": "读数已逾期"
     },
     "menu": {
       "history": "读数历史",

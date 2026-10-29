@@ -166,10 +166,15 @@
       "intervalHours": "Reading interval (hours)",
       "decreaseInterval": "Decrease reading interval",
       "increaseInterval": "Increase reading interval",
-      "intervalFirmwareHint": "Choose 1–24 hours. After changing this interval, generate and upload the updated board code.",
+      "intervalFirmwareHint": "Choose 1–1440 minutes (default 60). After changing the interval, generate and upload the updated board code.",
       "pumpCooldownMinutes": "Automatic watering cooldown (minutes)",
       "pumpCooldownHint": "Choose 1–32767 minutes (default 60). The server applies this value when the board next checks for watering tasks. It does not change watering duration.",
-      "pumpCooldownInvalid": "Enter a whole number from 1 to 32767."
+      "pumpCooldownInvalid": "Enter a whole number from 1 to 32767.",
+      "intervalMinutes": "Reading interval (minutes)",
+      "intervalMinutesValidation": "Enter a whole number from 1 to 1440.",
+      "sendEmailMissingReadings": "Send email when readings are not received",
+      "sendPushMissingReadings": "Send push notification when readings are not received",
+      "missingReadingsInfo": "For active devices, notify once when a reading is overdue. A new reading resets the alert. These options work independently of soil moisture and watering notifications."
     }
   }
 }

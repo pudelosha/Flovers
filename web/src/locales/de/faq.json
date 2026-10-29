@@ -87,11 +87,11 @@
     },
     {
       "q": "Wie oft werden Sensordaten aktualisiert?",
-      "a": "Generierte Firmware sendet standardmäßig stündlich. Im Geräteformular sind 1–24 Stunden möglich; danach muss neu generierter Code hochgeladen werden. Eigene Firmware kann häufiger senden, gespeichert wird weiterhin in Stundenintervallen."
+      "a": "Die erzeugte Firmware nutzt das Geräteintervall, standardmäßig 60 Minuten. Das Formular erlaubt 1–1440 ganze Minuten. Änderungen erfordern das Hochladen neu erzeugten Codes. Eigene Firmware kann häufiger senden; gespeichert wird weiterhin in Stundenintervallen."
     },
     {
       "q": "Was passiert, wenn mein Sensorgerät ausfällt?",
-      "a": "Die App meldet nicht, wenn Messwerte ausbleiben. Sie kann dich aber benachrichtigen, wenn die Bodenfeuchte unter einen festgelegten Grenzwert fällt."
+      "a": "Die Kachel eines aktiven Geräts pulsiert rot, sobald seit der letzten Messung ein eingestelltes Intervall vergangen ist. Hat das Gerät noch nie gesendet, zählt die Zeit ab dem Anlegen. Deaktivierte Geräte lösen diese Warnung nicht aus. Unter Gerät hinzufügen/bearbeiten → Mitteilungen kann der Eigentümer E-Mail und Push bei ausbleibenden Messwerten getrennt aktivieren. Beide Optionen sind anfangs aus und unabhängig von Tagesübersichten, Bodenfeuchte- und Bewässerungswarnungen. Der Server prüft jede Minute und sendet pro Ausfall eine Warnung je Kanal. Nach einem neuen Messwert kann ein weiterer Ausfall erneut eine Warnung auslösen."
     },
     {
       "q": "Werden Sensordaten in der Cloud gespeichert?",

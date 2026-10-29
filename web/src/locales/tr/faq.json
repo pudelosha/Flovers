@@ -87,11 +87,11 @@
     },
     {
       "q": "Sensör verileri ne sıklıkla güncellenir?",
-      "a": "Oluşturulan firmware varsayılan olarak saatte bir ölçüm gönderir. Formda 1–24 saat seçilebilir; değişiklik yeni kodun yüklenmesini gerektirir. Özel firmware daha sık gönderebilir, ancak kayıtlar saatlik gruplarda tutulur."
+      "a": "Oluşturulan kod cihazın okuma aralığını kullanır; varsayılan 60 dakikadır. Form 1–1440 tam dakika kabul eder. Değişiklikten sonra yeni kod yüklenmelidir. Özel yazılım daha sık veri gönderebilir ancak veriler yine saatlik aralıklarda saklanır."
     },
     {
       "q": "Sensör cihazım çevrimdışı olursa ne olur?",
-      "a": "Uygulama, eksik sensör okumaları konusunda kullanıcıları bilgilendirmez. Ancak toprak nem seviyelerinin belirli bir eşiğin altına düşmesi durumunda bildirimler tetiklenebilir."
+      "a": "Etkin bir cihazın son okumasından itibaren belirlenen aralık geçtiğinde kart kırmızı renkte yanıp söner. Hiç okuma göndermemiş cihazlarda süre, cihaz oluşturulduğunda başlar. Devre dışı cihazlar bu uyarıyı tetiklemez. Cihaz ekle/düzenle → Bildirimler bölümünde cihaz sahibi, eksik okumalar için e-posta ve anlık bildirimleri ayrı ayrı açabilir. İkisi de başlangıçta kapalıdır; günlük özetlerden, nem ve sulama uyarılarından bağımsızdır. Sunucu dakikada bir kontrol eder ve her kesintide kanal başına bir uyarı gönderir. Yeni bir okuma geldikten sonra sonraki kesinti yeniden uyarı oluşturabilir."
     },
     {
       "q": "Sensör verileri bulutta mı saklanıyor?",

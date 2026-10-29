@@ -1,0 +1,9 @@
+{
+  "subject": "No se reciben lecturas del dispositivo",
+  "title": "No se reciben lecturas del dispositivo",
+  "line1": "No se han recibido nuevas lecturas de «{device_name}» dentro del intervalo configurado de {interval_minutes} minutos. Última lectura: {last_read}.",
+  "cta": "Abrir lecturas",
+  "push_title": "No se reciben lecturas del dispositivo",
+  "push_body": "{device_name}: sin nuevas lecturas en {interval_minutes} minutos. Última lectura: {last_read}.",
+  "last_read_never": "Todavía no se ha recibido ninguna lectura"
+}

@@ -13,7 +13,8 @@
       "automaticPumpThreshold": "Cuando la humedad del suelo < {{value}}%",
       "opening": "Abriendo...",
       "scheduleWatering": "Programar riego",
-      "unscheduleWatering": "Cancelar riego programado"
+      "unscheduleWatering": "Cancelar riego programado",
+      "missingReadings": "Lecturas atrasadas"
     },
     "menu": {
       "history": "Historial de lecturas",

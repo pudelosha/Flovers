@@ -1,0 +1,9 @@
+{
+  "subject": "Urządzenie nie przesyła odczytów",
+  "title": "Urządzenie nie przesyła odczytów",
+  "line1": "Urządzenie „{device_name}” nie przesłało nowego odczytu w ustawionym czasie: {interval_minutes} min. Ostatni odczyt: {last_read}.",
+  "cta": "Otwórz odczyty",
+  "push_title": "Urządzenie nie przesyła odczytów",
+  "push_body": "{device_name}: brak nowego odczytu w ciągu {interval_minutes} min. Ostatni odczyt: {last_read}.",
+  "last_read_never": "Nie otrzymaliśmy jeszcze żadnego odczytu"
+}

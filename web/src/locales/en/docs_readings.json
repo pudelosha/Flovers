@@ -75,7 +75,7 @@
           "Link device is used to set up a new reading device and associate it with a plant.",
           "During setup, you can configure the device name, linked plant, enabled or disabled state, reading interval, enabled sensors, low soil moisture alerts, email and push notifications for low soil moisture, water pump support, automatic pump launch, automatic watering soil moisture threshold, and email and push notifications after watering completes.",
           "Each device receives a generated Device Key. The user account also has an Auth Secret Key. Together, these credentials allow the physical device to communicate with the backend.",
-          "Set the reading interval to 1–24 whole hours. After changing it, regenerate the device sketch and upload it to the board; the running sketch does not receive this interval automatically.",
+          "Choose 1–1440 minutes (default 60). After changing the interval, generate and upload the updated board code.",
           "Set the automatic watering cooldown in the device form: 1–32767 minutes, with a default of 60. The board receives it on a later poll and the backend also enforces it. AUTO_PUMP_MIN_INTERVAL_MS is only a local fallback."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Manual watering task timing",
         "body": [
           "The generated device code uses separate timing for readings and manual watering checks.",
-          "Readings are sent hourly by default. The device form allows 1–24-hour intervals; upload regenerated firmware after a change. Manual watering checks run separately, once per minute by default.",
-          "Automatic watering checks happen as part of the hourly reading cycle.",
+          "Generated firmware sends readings every 60 minutes by default. Set an interval of 1–1440 whole minutes in the device form, then generate and upload the updated code. Manual watering checks run separately, once per minute by default.",
+          "Automatic watering checks run as part of the configured reading cycle.",
           "Pending manual watering tasks are checked more frequently, by default once per minute.",
           "This allows manual watering requests to be picked up faster without sending sensor readings every minute.",
           "The execution order remains: send readings during the normal reading cycle, check for pending manual watering, and if no manual watering ran, check automatic watering conditions.",
-          "When the one-minute manual watering check runs outside the hourly reading cycle, it checks only for pending manual watering tasks."
+          "Outside the full reading cycle, the separate manual watering check only looks for pending manual requests."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "The generated code is intended as a ready-to-edit starting point for ESP32-style boards.",
           "It includes logic for WiFi connection, time synchronization, sensor initialization, reading enabled sensors, sending readings to the backend, checking for manual watering tasks, checking backend-controlled automatic watering settings, running a pump when required, and reporting pump completion.",
           "The generated code keeps reading upload and manual watering task checks separate.",
-          "Readings are sent hourly by default. The device form allows 1–24-hour intervals; upload regenerated firmware after a change. Manual watering checks run separately, once per minute by default.",
+          "Generated firmware sends readings every 60 minutes by default. Set an interval of 1–1440 whole minutes in the device form, then generate and upload the updated code. Manual watering checks run separately, once per minute by default.",
           "Review Wi-Fi credentials, pins, soil calibration, PUMP_RUN_MS and polling intervals before upload. Configure the online automatic-watering cooldown in the device form."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Sensor readings for shared plants",
         "body": [
           "Recipients can view the latest readings and charts for a shared plant. A Shared label identifies received plants. Device credentials, setup code, device editing, pump controls, exports and deletion remain owner-only."
+        ]
+      },
+      {
+        "heading": "Missing readings",
+        "body": [
+          "An active device tile pulses red once one configured reading interval has elapsed since its last reading. For a device that has never sent a reading, the interval starts when the device is created. Disabled devices do not trigger this warning.",
+          "In Add/Edit device → Notifications, the owner can enable missing-reading email and push alerts separately. Both start off and are independent of daily summaries, soil moisture and watering alerts. The server checks once per minute and sends one alert per channel for an outage; a new reading allows a later outage to trigger another alert."
         ]
       }
     ]

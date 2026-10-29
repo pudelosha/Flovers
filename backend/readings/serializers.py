@@ -88,10 +88,11 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         data = super().to_representation(instance)
+        data["interval_minutes"] = instance.effective_interval_minutes
         caller = getattr(self.context.get("request"), "user", None)
         if caller is not None and caller.pk != instance.user_id:
             safe_fields = {"id", "plant", "plant_name", "plant_location", "device_name", "is_active", "interval_hours",
-                           "sensors", "last_read_at", "latest", "created_at", "updated_at", "access"}
+                           "interval_minutes", "sensors", "last_read_at", "latest", "created_at", "updated_at", "access"}
             data = {key: value for key, value in data.items() if key in safe_fields}
         return data
     latest = serializers.SerializerMethodField()
@@ -102,9 +103,13 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
     name = serializers.CharField(write_only=True, required=False)
     enabled = serializers.BooleanField(write_only=True, required=False)
     intervalHours = serializers.IntegerField(write_only=True, required=False)
+    interval_minutes = serializers.IntegerField(required=False, min_value=1, max_value=1440)
+    intervalMinutes = serializers.IntegerField(write_only=True, required=False)
 
     sendEmailNotifications = serializers.BooleanField(write_only=True, required=False)
     sendPushNotifications = serializers.BooleanField(write_only=True, required=False)
+    sendEmailMissingReadings = serializers.BooleanField(write_only=True, required=False)
+    sendPushMissingReadings = serializers.BooleanField(write_only=True, required=False)
 
     pumpIncluded = serializers.BooleanField(write_only=True, required=False)
     automaticPumpLaunch = serializers.BooleanField(write_only=True, required=False)
@@ -126,6 +131,7 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "access",
             "notes",
             "interval_hours",
+            "interval_minutes",
             "sensors",
 
             "moisture_alert_enabled",
@@ -134,6 +140,8 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
             "send_email_notifications",
             "send_push_notifications",
+            "send_email_missing_readings",
+            "send_push_missing_readings",
 
             "pump_included",
             "automatic_pump_launch",
@@ -157,9 +165,12 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "name",
             "enabled",
             "intervalHours",
+            "intervalMinutes",
 
             "sendEmailNotifications",
             "sendPushNotifications",
+            "sendEmailMissingReadings",
+            "sendPushMissingReadings",
 
             "pumpIncluded",
             "automaticPumpLaunch",
@@ -218,6 +229,12 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
         if "intervalHours" in data and "interval_hours" not in data:
             data["interval_hours"] = data.get("intervalHours")
 
+        for alias, canonical in (("intervalMinutes", "interval_minutes"),
+                                 ("sendEmailMissingReadings", "send_email_missing_readings"),
+                                 ("sendPushMissingReadings", "send_push_missing_readings")):
+            if alias in data and canonical not in data:
+                data[canonical] = data[alias]
+
         if "sendEmailNotifications" in data and "send_email_notifications" not in data:
             data["send_email_notifications"] = data.get("sendEmailNotifications")
 
@@ -264,6 +281,7 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
         for alias in (
             "mode", "plantId", "name", "enabled", "intervalHours",
+            "intervalMinutes", "sendEmailMissingReadings", "sendPushMissingReadings",
             "sendEmailNotifications", "sendPushNotifications", "pumpIncluded",
             "automaticPumpLaunch", "pumpThresholdPct", "sendEmailWateringNotifications",
             "sendPushWateringNotifications",
@@ -303,6 +321,15 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         instance = getattr(self, "instance", None)
+
+        if "interval_minutes" in attrs:
+            minutes = attrs["interval_minutes"]
+            if "interval_hours" in attrs and attrs["interval_hours"] != math.ceil(minutes / 60):
+                raise serializers.ValidationError({"interval_minutes": "Conflicting reading intervals."})
+            # The whole-hour field is kept only for older clients.
+            attrs["interval_hours"] = math.ceil(minutes / 60)
+        elif "interval_hours" in attrs:
+            attrs["interval_minutes"] = attrs["interval_hours"] * 60
 
         sensors = attrs.get("sensors", getattr(instance, "sensors", {}) or {})
         moisture_sensor_enabled = bool(sensors.get("moisture", True))

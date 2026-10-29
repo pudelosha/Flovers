@@ -166,10 +166,15 @@
       "intervalHours": "Intervalo de leituras (horas)",
       "decreaseInterval": "Reduzir intervalo de leituras",
       "increaseInterval": "Aumentar intervalo de leituras",
-      "intervalFirmwareHint": "Escolhe entre 1 e 24 horas. Depois de alterar, gera o novo código e carrega-o na placa.",
+      "intervalFirmwareHint": "Escolha de 1 a 1440 minutos (60 por predefinição). Depois de alterar, gere o código atualizado e carregue-o na placa.",
       "pumpCooldownMinutes": "Pausa entre regas automáticas (minutos)",
       "pumpCooldownHint": "Escolhe entre 1 e 32767 minutos (60 por predefinição). A placa recebe o valor do servidor na consulta seguinte. A duração da bomba não muda.",
-      "pumpCooldownInvalid": "Introduz um número inteiro entre 1 e 32767."
+      "pumpCooldownInvalid": "Introduz um número inteiro entre 1 e 32767.",
+      "intervalMinutes": "Intervalo entre leituras (minutos)",
+      "intervalMinutesValidation": "Introduza um número inteiro de 1 a 1440.",
+      "sendEmailMissingReadings": "Enviar email quando não forem recebidas leituras",
+      "sendPushMissingReadings": "Enviar notificação push quando não forem recebidas leituras",
+      "missingReadingsInfo": "Nos dispositivos ativos, é enviado um único alerta quando uma leitura se atrasa. Uma nova leitura reinicia o alerta. Estas opções são independentes das notificações de humidade do solo e rega."
     }
   }
 }

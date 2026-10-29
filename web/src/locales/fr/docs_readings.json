@@ -75,7 +75,7 @@
           "L’option « Associer un appareil » permet de créer un appareil de mesure et de le relier à une plante.",
           "Tu peux régler son nom, la plante associée, son activation, la fréquence des relevés, les capteurs, les alertes de sol sec par e-mail ou push, la pompe, son démarrage automatique, le seuil d’arrosage et les notifications de fin d’arrosage.",
           "Chaque appareil reçoit une Device Key. Le compte possède aussi une Auth Secret Key. Ces deux clés permettent à l’appareil de communiquer avec les serveurs.",
-          "Réglez l’intervalle sur 1–24 heures entières. Après une modification, régénérez le sketch et téléversez-le sur la carte : le programme en cours ne reçoit pas cette valeur automatiquement.",
+          "Choisissez de 1 à 1440 minutes (60 par défaut). Après une modification, générez le code à jour et téléversez-le sur la carte.",
           "Réglez la pause d’arrosage automatique dans le formulaire de l’appareil : 1–32767 minutes, 60 par défaut. La carte la récupère lors d’une prochaine requête et le serveur la contrôle aussi. AUTO_PUMP_MIN_INTERVAL_MS est uniquement une valeur locale de secours."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "À quel moment la demande est-elle exécutée ?",
         "body": [
           "Le code généré sépare l’envoi des relevés de la recherche des demandes d’arrosage.",
-          "Les mesures sont envoyées chaque heure par défaut. Le formulaire permet 1–24 heures ; téléversez le firmware régénéré après modification. Les demandes manuelles sont vérifiées séparément, chaque minute par défaut.",
-          "Les conditions d’arrosage automatique sont vérifiées pendant ce cycle horaire.",
+          "Le programme généré envoie les relevés toutes les 60 minutes par défaut. Le formulaire de l’appareil permet de choisir de 1 à 1440 minutes entières. Générez puis téléversez le nouveau code après toute modification. Les demandes d’arrosage manuel sont vérifiées séparément, chaque minute par défaut.",
+          "Les conditions d’arrosage automatique sont vérifiées pendant le cycle de relevé configuré.",
           "Les demandes manuelles sont recherchées plus souvent : une fois par minute par défaut.",
           "Elles peuvent ainsi être exécutées rapidement sans envoyer tous les relevés chaque minute.",
           "Pendant le cycle normal, la carte envoie les relevés, recherche une demande manuelle puis, si aucun arrosage manuel n’a eu lieu, vérifie les conditions automatiques.",
-          "Les vérifications entre deux cycles horaires recherchent uniquement les demandes manuelles."
+          "En dehors du cycle complet de relevé, la vérification séparée de l’arrosage manuel recherche uniquement les demandes manuelles en attente."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "Le code proposé est un point de départ à adapter aux cartes de type ESP32.",
           "Il gère le Wi-Fi, la mise à l’heure, l’initialisation et la lecture des capteurs, l’envoi des relevés, les demandes manuelles, les réglages automatiques fournis par le serveur, la pompe et le compte rendu d’arrosage.",
           "L’envoi des mesures et la recherche des demandes manuelles sont gérés séparément.",
-          "Les mesures sont envoyées chaque heure par défaut. Le formulaire permet 1–24 heures ; téléversez le firmware régénéré après modification. Les demandes manuelles sont vérifiées séparément, chaque minute par défaut.",
+          "Le programme généré envoie les relevés toutes les 60 minutes par défaut. Le formulaire de l’appareil permet de choisir de 1 à 1440 minutes entières. Générez puis téléversez le nouveau code après toute modification. Les demandes d’arrosage manuel sont vérifiées séparément, chaque minute par défaut.",
           "Avant le téléversement, vérifiez le Wi-Fi, les broches, l’étalonnage d’humidité, PUMP_RUN_MS et les intervalles de requête. Réglez la pause automatique en ligne dans le formulaire de l’appareil."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Lectures de capteurs pour les plantes partagées",
         "body": [
           "Les destinataires peuvent consulter les dernières lectures et graphiques des capteurs pour une plante partagée. Une étiquette Partagée identifie les plantes reçues. Les informations d'identification de l'appareil, le code de configuration, la modification de l'appareil, les commandes de pompe, les exportations et la suppression restent réservés au propriétaire."
+        ]
+      },
+      {
+        "heading": "Relevés manquants",
+        "body": [
+          "La tuile d’un appareil actif pulse en rouge dès qu’un intervalle complet s’est écoulé depuis son dernier relevé. Si l’appareil n’a encore rien envoyé, le délai commence à sa création. Les appareils désactivés ne déclenchent pas cet avertissement.",
+          "Dans Ajouter/Modifier un appareil → Notifications, le propriétaire peut activer séparément les alertes par e-mail et push en cas de relevés manquants. Désactivées par défaut, elles sont indépendantes des récapitulatifs quotidiens et des alertes d’humidité ou d’arrosage. Le serveur vérifie chaque minute et envoie une alerte par canal pour chaque interruption. Un nouveau relevé permet de signaler une interruption ultérieure."
         ]
       }
     ]

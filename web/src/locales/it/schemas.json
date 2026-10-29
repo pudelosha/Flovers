@@ -125,7 +125,7 @@
       "Nell'app puoi generare il codice per il dispositivo selezionato.",
       "Il codice include gli indirizzi delle API, i dati di accesso (secret e device_key), l'identificativo del dispositivo e le impostazioni dei sensori e della pompa.",
       "Imposta supports_manual_duration su true solo se il firmware legge duration_seconds e lo usa per l’irrigazione manuale. L’esempio generato lo supporta. L’irrigazione automatica mantiene la durata PUMP_RUN_MS dello sketch.",
-      "Le letture vengono inviate ogni ora per impostazione predefinita. Il modulo permette intervalli di 1–24 ore; dopo la modifica carica il firmware rigenerato. Le richieste manuali vengono controllate separatamente, di norma ogni minuto."
+      "Il firmware generato invia letture ogni 60 minuti per impostazione predefinita. Nel modulo del dispositivo puoi scegliere da 1 a 1440 minuti interi, poi generare e caricare il codice aggiornato. Le richieste di irrigazione manuale vengono controllate separatamente, di norma ogni minuto."
     ],
     "adjustIntro": "Prima del caricamento controlla Wi-Fi, pin, calibrazione dell’umidità, PUMP_RUN_MS e intervalli di controllo. Configura la pausa automatica online nel modulo del dispositivo.",
     "adjustItems": [

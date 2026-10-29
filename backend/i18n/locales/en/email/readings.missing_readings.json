@@ -1,0 +1,9 @@
+{
+  "subject": "Device readings are overdue",
+  "title": "Device readings are overdue",
+  "line1": "No new readings have been received from \"{device_name}\" within the configured interval of {interval_minutes} minutes. Last reading: {last_read}.",
+  "cta": "Open readings",
+  "push_title": "Device readings are overdue",
+  "push_body": "{device_name}: no new readings within {interval_minutes} minutes. Last reading: {last_read}.",
+  "last_read_never": "No readings received yet"
+}

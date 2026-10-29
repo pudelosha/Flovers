@@ -166,10 +166,15 @@
       "intervalHours": "測定間隔（時間）",
       "decreaseInterval": "測定間隔を短くする",
       "increaseInterval": "測定間隔を長くする",
-      "intervalFirmwareHint": "1～24時間を選択します。変更後はコードを再生成してボードにアップロードしてください。",
+      "intervalFirmwareHint": "1～1440分を指定してください（初期値60分）。変更後はコードを再生成し、ボードに書き込んでください。",
       "pumpCooldownMinutes": "自動水やりの待機時間（分）",
       "pumpCooldownHint": "1～32767分を選択します（初期値60）。次回のタスク確認時にボードがサーバーから設定を取得します。ポンプの作動時間は変わりません。",
-      "pumpCooldownInvalid": "1から32767までの整数を入力してください。"
+      "pumpCooldownInvalid": "1から32767までの整数を入力してください。",
+      "intervalMinutes": "測定間隔（分）",
+      "intervalMinutesValidation": "1～1440の整数を入力してください。",
+      "sendEmailMissingReadings": "測定値が届かないときにメールを送る",
+      "sendPushMissingReadings": "測定値が届かないときにプッシュ通知を送る",
+      "missingReadingsInfo": "有効なデバイスで測定値が届く予定時刻を過ぎると、一度だけ通知します。新しい測定値が届くと通知状態はリセットされます。土壌水分や水やりの通知とは別の設定です。"
     }
   }
 }

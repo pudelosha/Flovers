@@ -87,11 +87,11 @@
     },
     {
       "q": "Con quale frequenza vengono aggiornati i dati dei sensori?",
-      "a": "Il firmware generato invia letture ogni ora per impostazione predefinita. Il modulo supporta intervalli di 1–24 ore; dopo la modifica carica il codice rigenerato. Un firmware personalizzato può inviare più spesso, ma i dati restano raggruppati per ora."
+      "a": "Il firmware generato usa l’intervallo del dispositivo, di norma 60 minuti; il modulo accetta da 1 a 1440 minuti interi. Dopo una modifica va caricato il nuovo codice. Un firmware personalizzato può inviare dati più spesso, ma l’archiviazione rimane su base oraria."
     },
     {
       "q": "Cosa succede se il dispositivo di misurazione non è più connesso?",
-      "a": "L'app non ti avvisa quando mancano le misurazioni. Può però inviare una notifica se l'umidità del terreno scende sotto una soglia impostata."
+      "a": "Il riquadro di un dispositivo attivo pulsa in rosso quando dall’ultima lettura è trascorso l’intervallo impostato. Se non è mai arrivata una lettura, il tempo parte dalla creazione del dispositivo. I dispositivi disattivati non generano questo avviso. In Aggiungi/Modifica dispositivo → Notifiche, il proprietario può attivare separatamente email e push per le letture mancanti. Entrambe le opzioni sono inizialmente disattivate e indipendenti dai riepiloghi giornalieri e dagli avvisi di umidità o irrigazione. Il server controlla ogni minuto e invia un avviso per canale per ogni interruzione. Dopo una nuova lettura, un’ulteriore interruzione può generare un altro avviso."
     },
     {
       "q": "I dati dei sensori sono archiviati nel cloud?",

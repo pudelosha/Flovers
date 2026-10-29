@@ -13,7 +13,8 @@
       "automaticPumpThreshold": "При влажности почвы < {{value}}%",
       "opening": "Открытие…",
       "scheduleWatering": "График полива",
-      "unscheduleWatering": "Отменить запланированный полив"
+      "unscheduleWatering": "Отменить запланированный полив",
+      "missingReadings": "Показания не поступают"
     },
     "menu": {
       "history": "История показаний датчиков",

@@ -166,10 +166,15 @@
       "intervalHours": "Intervalle des mesures (heures)",
       "decreaseInterval": "Réduire l’intervalle des mesures",
       "increaseInterval": "Augmenter l’intervalle des mesures",
-      "intervalFirmwareHint": "Choisissez de 1 à 24 heures. Après une modification, générez le nouveau code et téléversez-le sur la carte.",
+      "intervalFirmwareHint": "Choisissez de 1 à 1440 minutes (60 par défaut). Après une modification, générez le code à jour et téléversez-le sur la carte.",
       "pumpCooldownMinutes": "Pause entre les arrosages automatiques (minutes)",
       "pumpCooldownHint": "Choisissez de 1 à 32767 minutes (60 par défaut). La carte récupère ce réglage au prochain contrôle du serveur. La durée de fonctionnement de la pompe ne change pas.",
-      "pumpCooldownInvalid": "Saisissez un nombre entier de 1 à 32767."
+      "pumpCooldownInvalid": "Saisissez un nombre entier de 1 à 32767.",
+      "intervalMinutes": "Intervalle entre les relevés (minutes)",
+      "intervalMinutesValidation": "Saisissez un nombre entier de 1 à 1440.",
+      "sendEmailMissingReadings": "Envoyer un e-mail si aucun relevé n’est reçu",
+      "sendPushMissingReadings": "Envoyer une notification push si aucun relevé n’est reçu",
+      "missingReadingsInfo": "Pour les appareils actifs, une seule alerte est envoyée lorsqu’un relevé est en retard. Un nouveau relevé réinitialise l’alerte. Ces options sont indépendantes des notifications d’humidité du sol et d’arrosage."
     }
   }
 }

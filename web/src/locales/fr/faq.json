@@ -87,11 +87,11 @@
     },
     {
       "q": "À quelle fréquence les données sont-elles actualisées ?",
-      "a": "Le firmware généré envoie les mesures toutes les heures par défaut. Le formulaire propose 1–24 heures ; une modification nécessite de téléverser le code régénéré. Un firmware personnalisé peut envoyer plus souvent, mais le stockage reste horaire."
+      "a": "Le programme généré utilise l’intervalle de l’appareil, soit 60 minutes par défaut ; le formulaire accepte de 1 à 1440 minutes entières. Toute modification nécessite de téléverser le nouveau code. Un programme personnalisé peut envoyer plus souvent, mais les données restent regroupées par heure."
     },
     {
       "q": "Que se passe-t-il si mon appareil cesse d’envoyer des données ?",
-      "a": "L’application ne signale pas l’absence de relevés. Elle peut toutefois envoyer une alerte lorsque l’humidité du sol passe sous le seuil défini."
+      "a": "La tuile d’un appareil actif pulse en rouge dès qu’un intervalle complet s’est écoulé depuis son dernier relevé. Si l’appareil n’a encore rien envoyé, le délai commence à sa création. Les appareils désactivés ne déclenchent pas cet avertissement. Dans Ajouter/Modifier un appareil → Notifications, le propriétaire peut activer séparément les alertes par e-mail et push en cas de relevés manquants. Désactivées par défaut, elles sont indépendantes des récapitulatifs quotidiens et des alertes d’humidité ou d’arrosage. Le serveur vérifie chaque minute et envoie une alerte par canal pour chaque interruption. Un nouveau relevé permet de signaler une interruption ultérieure."
     },
     {
       "q": "Les relevés sont-ils conservés dans le cloud ?",

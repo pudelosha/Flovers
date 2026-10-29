@@ -75,7 +75,7 @@
           "Perangkat tautan digunakan untuk menyiapkan perangkat membaca baru dan mengaitkannya dengan tanaman hias.",
           "Selama pengaturan, Anda dapat mengonfigurasi nama perangkat, tanaman hias yang ditautkan, status diaktifkan atau dinonaktifkan, interval pembacaan, sensor yang diaktifkan, peringatan kelembaban tanah rendah, pemberitahuan email dan push untuk kelembaban tanah rendah, dukungan pompa air, peluncuran pompa otomatis, ambang batas kelembaban tanah penyiraman otomatis, dan pemberitahuan email dan push setelah penyiraman selesai.",
           "Setiap perangkat menerima Kunci Perangkat yang dihasilkan. Akun pengguna juga memiliki Kunci Rahasia Auth. Bersama-sama, kredensial ini memungkinkan perangkat fisik berkomunikasi dengan backend.",
-          "Atur interval pembacaan ke 1–24 jam penuh. Setelah mengubahnya, buat ulang sketch dan unggah ke papan; program yang sedang berjalan tidak menerima nilai ini secara otomatis.",
+          "Pilih 1–1440 menit (bawaan 60). Setelah mengubah interval, buat kode terbaru dan unggah ke papan.",
           "Atur jeda penyiraman otomatis di formulir perangkat: 1–32767 menit, bawaan 60. Papan menerima nilainya pada pemeriksaan berikutnya, dan server juga menerapkannya. AUTO_PUMP_MIN_INTERVAL_MS hanya nilai cadangan lokal."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Waktu tugas penyiraman manual",
         "body": [
           "Kode perangkat yang dihasilkan menggunakan waktu terpisah untuk pembacaan sensor dan pemeriksaan penyiraman manual.",
-          "Pembacaan dikirim setiap jam secara bawaan. Formulir perangkat mendukung interval 1–24 jam; unggah firmware baru setelah mengubahnya. Permintaan penyiraman manual diperiksa terpisah, secara bawaan setiap menit.",
-          "Pemeriksaan penyiraman otomatis dilakukan sebagai bagian dari siklus pembacaan setiap jam.",
+          "Kode yang dibuat mengirim pembacaan setiap 60 menit secara bawaan. Atur 1–1440 menit penuh di formulir perangkat, lalu buat dan unggah kode terbaru. Permintaan penyiraman manual diperiksa secara terpisah, setiap satu menit secara bawaan.",
+          "Kondisi penyiraman otomatis diperiksa dalam siklus pembacaan yang telah diatur.",
           "Tugas penyiraman manual yang tertunda diperiksa lebih sering, secara default satu kali per menit.",
           "Hal ini memungkinkan permintaan penyiraman manual diambil lebih cepat tanpa mengirimkan pembacaan sensor setiap menit.",
           "Urutan pelaksanaannya tetap: kirim pembacaan sensor selama siklus pembacaan normal, periksa apakah ada penyiraman manual yang tertunda, dan jika tidak ada penyiraman manual yang dilakukan, periksa kondisi penyiraman otomatis.",
-          "Ketika pemeriksaan penyiraman manual satu menit dijalankan di luar siklus pembacaan per jam, pemeriksaan tersebut hanya memeriksa tugas penyiraman manual yang tertunda."
+          "Di luar siklus pembacaan lengkap, pemeriksaan penyiraman manual hanya mencari permintaan manual yang tertunda."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "Kode yang dihasilkan dimaksudkan sebagai titik awal yang siap diedit untuk papan bergaya ESP32.",
           "Ini mencakup logika untuk koneksi WiFi, sinkronisasi waktu, inisialisasi sensor, membaca sensor yang diaktifkan, mengirimkan pembacaan sensor ke backend, memeriksa tugas penyiraman manual, memeriksa pengaturan penyiraman otomatis yang dikontrol backend, menjalankan pompa bila diperlukan, dan melaporkan penyelesaian pompa.",
           "Kode yang dihasilkan memisahkan unggahan bacaan dan pemeriksaan tugas penyiraman manual.",
-          "Pembacaan dikirim setiap jam secara bawaan. Formulir perangkat mendukung interval 1–24 jam; unggah firmware baru setelah mengubahnya. Permintaan penyiraman manual diperiksa terpisah, secara bawaan setiap menit.",
+          "Kode yang dibuat mengirim pembacaan setiap 60 menit secara bawaan. Atur 1–1440 menit penuh di formulir perangkat, lalu buat dan unggah kode terbaru. Permintaan penyiraman manual diperiksa secara terpisah, setiap satu menit secara bawaan.",
           "Sebelum mengunggah, periksa Wi-Fi, pin, kalibrasi kelembapan, PUMP_RUN_MS, dan interval pemeriksaan. Atur jeda otomatis daring di formulir perangkat."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Pembacaan sensor untuk tanaman bersama",
         "body": [
           "Penerima dapat melihat pembacaan sensor dan grafik terbaru untuk tanaman bersama. Label Bersama mengidentifikasi tanaman yang diterima. Kredensial perangkat, kode pengaturan, pengeditan perangkat, kontrol pompa, ekspor, dan penghapusan tetap menjadi milik pemilik."
+        ]
+      },
+      {
+        "heading": "Pembacaan tidak masuk",
+        "body": [
+          "Kartu perangkat aktif berdenyut merah setelah satu interval terlewati sejak pembacaan terakhir. Jika perangkat belum pernah mengirim pembacaan, waktunya dihitung sejak perangkat dibuat. Perangkat yang dinonaktifkan tidak memicu peringatan ini.",
+          "Di Tambah/Edit perangkat → Notifikasi, pemilik dapat mengaktifkan email dan push untuk pembacaan yang tidak masuk secara terpisah. Keduanya nonaktif secara bawaan dan terpisah dari ringkasan harian serta peringatan kelembapan atau penyiraman. Server memeriksa setiap menit dan mengirim satu peringatan per saluran untuk setiap gangguan. Setelah pembacaan baru masuk, gangguan berikutnya dapat memicu peringatan lagi."
         ]
       }
     ]

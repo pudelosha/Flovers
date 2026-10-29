@@ -1,0 +1,9 @@
+{
+  "subject": "デバイスから測定値が届いていません",
+  "title": "デバイスから測定値が届いていません",
+  "line1": "設定された{interval_minutes}分の間隔内に「{device_name}」から新しい測定値が届きませんでした。最後の受信：{last_read}。",
+  "cta": "測定値を開く",
+  "push_title": "デバイスから測定値が届いていません",
+  "push_body": "{device_name}：{interval_minutes}分以内に新しい測定値が届いていません。最後の受信：{last_read}。",
+  "last_read_never": "測定値はまだ届いていません"
+}

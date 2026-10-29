@@ -75,7 +75,7 @@
           "«Vincular dispositivo» permite dar de alta un dispositivo de medición y asociarlo a una planta.",
           "Puedes configurar su nombre, la planta, la activación, el intervalo de lecturas, los sensores, las alertas de suelo seco por correo o push, la bomba, el riego automático, su umbral de humedad y los avisos al terminar el riego.",
           "Cada dispositivo recibe una Device Key. La cuenta también tiene una Auth Secret Key. Juntas permiten al dispositivo comunicarse con los servidores.",
-          "Configura el intervalo entre 1 y 24 horas enteras. Después de cambiarlo, regenera el sketch y súbelo a la placa: el programa en ejecución no recibe ese valor automáticamente.",
+          "Elige de 1 a 1440 minutos (60 por defecto). Después de cambiarlo, genera el código actualizado y súbelo a la placa.",
           "Configura la pausa del riego automático en el formulario del dispositivo: 1–32767 minutos, 60 por defecto. La placa la recibe en una consulta posterior y el servidor también la aplica. AUTO_PUMP_MIN_INTERVAL_MS es solo un valor local de respaldo."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Cuándo se ejecuta la solicitud",
         "body": [
           "El código generado separa el envío de lecturas de la búsqueda de solicitudes manuales.",
-          "Las lecturas se envían cada hora por defecto. El formulario permite intervalos de 1–24 horas; después debes subir el firmware regenerado. Los pedidos de riego manual se consultan aparte, cada minuto por defecto.",
-          "Las condiciones del riego automático se comprueban en ese ciclo horario.",
+          "El código generado envía lecturas cada 60 minutos por defecto. En el formulario del dispositivo puedes elegir de 1 a 1440 minutos enteros y luego generar y subir el código actualizado. Las solicitudes de riego manual se comprueban por separado, una vez por minuto por defecto.",
+          "Las condiciones de riego automático se comprueban en el ciclo de lectura configurado.",
           "Las solicitudes manuales se consultan más a menudo: una vez por minuto de forma predeterminada.",
           "Así pueden ejecutarse antes sin enviar todas las lecturas cada minuto.",
           "En el ciclo normal, la placa envía las lecturas, busca solicitudes manuales y, si no ha ejecutado un riego manual, comprueba las condiciones automáticas.",
-          "Las comprobaciones entre los ciclos horarios solo buscan solicitudes manuales."
+          "Fuera del ciclo completo de lectura, la comprobación independiente de riego manual solo busca solicitudes manuales pendientes."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "El código es una base que puedes adaptar para placas de tipo ESP32.",
           "Gestiona Wi-Fi, sincronización horaria, inicialización y lectura de sensores, envío de medidas, solicitudes manuales, ajustes automáticos del servidor, control de la bomba y comunicación del resultado.",
           "El envío de lecturas y la búsqueda de solicitudes manuales se gestionan por separado.",
-          "Las lecturas se envían cada hora por defecto. El formulario permite intervalos de 1–24 horas; después debes subir el firmware regenerado. Los pedidos de riego manual se consultan aparte, cada minuto por defecto.",
+          "El código generado envía lecturas cada 60 minutos por defecto. En el formulario del dispositivo puedes elegir de 1 a 1440 minutos enteros y luego generar y subir el código actualizado. Las solicitudes de riego manual se comprueban por separado, una vez por minuto por defecto.",
           "Antes de subir el programa revisa Wi-Fi, pines, calibración de humedad, PUMP_RUN_MS e intervalos de consulta. Configura la pausa automática en línea en el formulario del dispositivo."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Lecturas del sensor del sensor para plantas compartidas.",
         "body": [
           "Los destinatarios pueden ver las últimas lecturas y gráficos de sensores de una planta compartida. Una etiqueta Compartida identifica las plantas recibidas. Las credenciales del dispositivo, el código de configuración, la edición del dispositivo, los controles de la bomba, las exportaciones y la eliminación siguen siendo propiedad exclusiva del propietario."
+        ]
+      },
+      {
+        "heading": "Lecturas no recibidas",
+        "body": [
+          "La tarjeta de un dispositivo activo pulsa en rojo cuando ha transcurrido el intervalo configurado desde su última lectura. Si nunca ha enviado ninguna, el plazo empieza al crear el dispositivo. Los dispositivos desactivados no generan este aviso.",
+          "En Añadir/Editar dispositivo → Notificaciones, el propietario puede activar por separado correo y push cuando faltan lecturas. Ambas opciones están desactivadas por defecto y son independientes de los resúmenes diarios y los avisos de humedad o riego. El servidor comprueba cada minuto y envía un aviso por canal para cada interrupción. Una nueva lectura permite avisar de otra interrupción posterior."
         ]
       }
     ]

@@ -75,7 +75,7 @@
           "Escolha Vincular dispositivo para configurar um novo aparelho e associá-lo a uma planta.",
           "Defina nome, planta, estado ativo ou inativo, intervalo de leitura e sensores. Você também pode configurar alertas de baixa umidade do solo, os canais de aviso, a bomba, a rega automática, seu limite de umidade e os avisos de conclusão da rega.",
           "Cada aparelho recebe uma Chave do Dispositivo. A conta também tem uma Chave Secreta de Autenticação. Juntas, elas permitem que o aparelho se comunique com o servidor.",
-          "Define o intervalo entre 1 e 24 horas inteiras. Depois de o alterar, gera novamente o sketch e carrega-o na placa: o programa em execução não recebe este valor automaticamente.",
+          "Escolha de 1 a 1440 minutos (60 por predefinição). Depois de alterar, gere o código atualizado e carregue-o na placa.",
           "Define a pausa da rega automática no formulário do dispositivo: 1–32767 minutos, com 60 por predefinição. A placa recebe-a numa consulta posterior e o servidor também a aplica. AUTO_PUMP_MIN_INTERVAL_MS é apenas um valor local de recurso."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Quando os pedidos são verificados",
         "body": [
           "O código gerado usa intervalos diferentes para enviar leituras e procurar pedidos manuais.",
-          "As leituras são enviadas de hora a hora por predefinição. O formulário permite intervalos de 1–24 horas; depois carrega o firmware regenerado. Os pedidos manuais são consultados à parte, a cada minuto por predefinição.",
-          "As condições da rega automática são verificadas nesse ciclo de leitura.",
+          "O código gerado envia leituras a cada 60 minutos por predefinição. O formulário do dispositivo permite escolher de 1 a 1440 minutos inteiros; depois, gere e carregue o código atualizado. Os pedidos de rega manual são verificados separadamente, uma vez por minuto por predefinição.",
+          "As condições de rega automática são verificadas no ciclo de leitura configurado.",
           "Os pedidos manuais são verificados com mais frequência: por padrão, a cada minuto.",
           "Isso permite atender ao pedido rapidamente sem enviar todas as leituras a cada minuto.",
           "No ciclo normal, a placa envia as leituras, verifica pedidos manuais e, se não executar uma rega manual, avalia a rega automática.",
-          "Fora do ciclo de leitura, a verificação a cada minuto procura apenas pedidos manuais."
+          "Fora do ciclo completo de leitura, a verificação separada da rega manual procura apenas pedidos manuais pendentes."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "O código é um ponto de partida para placas como a ESP32. Revise e adapte antes de usar.",
           "Ele se conecta ao Wi-Fi, sincroniza a hora, inicializa e lê os sensores, envia as leituras e verifica os pedidos manuais. Também consulta as configurações da rega automática, pede autorização ao servidor, aciona a bomba quando necessário e informa o resultado.",
           "O envio das leituras e a busca de pedidos manuais são feitos separadamente.",
-          "As leituras são enviadas de hora a hora por predefinição. O formulário permite intervalos de 1–24 horas; depois carrega o firmware regenerado. Os pedidos manuais são consultados à parte, a cada minuto por predefinição.",
+          "O código gerado envia leituras a cada 60 minutos por predefinição. O formulário do dispositivo permite escolher de 1 a 1440 minutos inteiros; depois, gere e carregue o código atualizado. Os pedidos de rega manual são verificados separadamente, uma vez por minuto por predefinição.",
           "Antes de carregar, revê Wi-Fi, pinos, calibração de humidade, PUMP_RUN_MS e intervalos de consulta. Define a pausa automática online no formulário do dispositivo."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Leituras de sensores para plantas compartilhadas",
         "body": [
           "Os destinatários podem visualizar as leituras e gráficos mais recentes dos sensores de uma planta de casa compartilhada. Um rótulo Compartilhado identifica as plantas recebidas. As credenciais do dispositivo, o código de configuração, a edição do dispositivo, os controles da bomba, as exportações e a exclusão permanecem apenas para o proprietário."
+        ]
+      },
+      {
+        "heading": "Leituras em falta",
+        "body": [
+          "O cartão de um dispositivo ativo pulsa a vermelho quando passa o intervalo definido desde a última leitura. Se nunca tiver enviado leituras, o prazo começa na criação do dispositivo. Os dispositivos desativados não geram este aviso.",
+          "Em Adicionar/Editar dispositivo → Notificações, o proprietário pode ativar separadamente email e push para leituras em falta. Ambas as opções começam desativadas e são independentes dos resumos diários e dos alertas de humidade ou rega. O servidor verifica a cada minuto e envia um alerta por canal em cada interrupção. Uma nova leitura permite alertar para outra interrupção posterior."
         ]
       }
     ]

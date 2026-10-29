@@ -125,7 +125,7 @@
       "In der App kannst du Code für das ausgewählte Gerät erzeugen.",
       "Er enthält die API-Adressen, Zugangsdaten (secret und device_key), Gerätekennung sowie die Einstellungen für Sensoren und Pumpe.",
       "Setze supports_manual_duration nur auf true, wenn die Firmware duration_seconds für manuelles Gießen auswertet. Das generierte Beispiel unterstützt dies. Automatisches Gießen nutzt weiterhin PUMP_RUN_MS aus dem Sketch.",
-      "Messwerte werden standardmäßig stündlich gesendet. Im Geräteformular sind 1–24 Stunden einstellbar; lade danach neu erzeugte Firmware hoch. Manuelle Gießaufträge werden unabhängig davon standardmäßig jede Minute abgefragt."
+      "Die erzeugte Firmware sendet standardmäßig alle 60 Minuten. Im Geräteformular sind 1–1440 ganze Minuten möglich. Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board. Manuelle Bewässerungsaufträge werden unabhängig davon standardmäßig jede Minute geprüft."
     ],
     "adjustIntro": "Prüfe vor dem Hochladen WLAN-Zugang, Pins, Feuchtekalibrierung, PUMP_RUN_MS und Abfrageintervalle. Die Online-Gießpause wird im Geräteformular eingestellt.",
     "adjustItems": [

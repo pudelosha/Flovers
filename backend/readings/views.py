@@ -670,7 +670,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             pump_included=device.pump_included,
             automatic_pump_launch=device.automatic_pump_launch,
             pump_threshold_pct=device.pump_threshold_pct,
-            interval_hours=device.interval_hours,
+            interval_minutes=device.effective_interval_minutes,
             tls_ca_cert=getattr(settings, "IOT_TLS_CA_CERT", "") or None,
         )
         return HttpResponse(code, content_type="text/plain; charset=utf-8")
@@ -690,7 +690,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             pump_included=device.pump_included,
             automatic_pump_launch=device.automatic_pump_launch,
             pump_threshold_pct=device.pump_threshold_pct,
-            interval_hours=device.interval_hours,
+            interval_minutes=device.effective_interval_minutes,
             tls_ca_cert=getattr(settings, "IOT_TLS_CA_CERT", "") or None,
         )
 
@@ -1322,6 +1322,7 @@ def feed(request):
             "device_name": device.device_name,
             "plant_name": device.plant_name,
             "interval_hours": device.interval_hours,
+            "interval_minutes": device.effective_interval_minutes,
         },
         "readings": readings_data,
     })
@@ -1458,6 +1459,7 @@ def history(request):
             "device_name": device.device_name,
             "plant_name": device.plant_name,
             "interval_hours": device.interval_hours,
+            "interval_minutes": device.effective_interval_minutes,
             "access": plant_access(request.user, device.plant),
         },
         "range": range_str,

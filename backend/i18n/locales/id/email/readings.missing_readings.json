@@ -1,0 +1,9 @@
+{
+  "subject": "Pembacaan perangkat belum diterima",
+  "title": "Pembacaan perangkat belum diterima",
+  "line1": "Tidak ada pembacaan baru dari “{device_name}” dalam interval yang ditetapkan, yaitu {interval_minutes} menit. Pembacaan terakhir: {last_read}.",
+  "cta": "Buka pembacaan",
+  "push_title": "Pembacaan perangkat belum diterima",
+  "push_body": "{device_name}: tidak ada pembacaan baru dalam {interval_minutes} menit. Pembacaan terakhir: {last_read}.",
+  "last_read_never": "Belum ada pembacaan yang diterima"
+}

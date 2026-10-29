@@ -75,7 +75,7 @@
           "Wähle Gerät verknüpfen, um ein neues Messgerät einzurichten und einer Pflanze zuzuordnen.",
           "Bei der Einrichtung legst du Namen, Pflanze, Aktivierungsstatus, Messintervall und Sensoren fest. Du kannst Warnungen bei niedriger Bodenfeuchte sowie E-Mail- und Push-Benachrichtigungen dafür einstellen. Für eine Pumpe kannst du die Pumpenfunktion, den automatischen Start, den Grenzwert für automatisches Gießen und Benachrichtigungen nach dem Gießen festlegen.",
           "Jedes Gerät erhält einen Device Key. Dein Konto hat außerdem einen Auth Secret Key. Mit diesen Zugangsdaten kann die Platine mit dem Flovers-Server kommunizieren.",
-          "Das Messintervall beträgt 1–24 volle Stunden. Erzeuge nach einer Änderung den Sketch neu und lade ihn auf das Board; der laufende Sketch übernimmt diesen Wert nicht automatisch.",
+          "Wähle 1–1440 Minuten (Standard: 60). Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board.",
           "Stelle die automatische Gießpause im Geräteformular auf 1–32767 Minuten ein; Standard sind 60. Das Board übernimmt sie bei einer späteren Abfrage, und auch der Server prüft sie. AUTO_PUMP_MIN_INTERVAL_MS dient nur als lokaler Ersatzwert."
         ]
       },
@@ -121,12 +121,12 @@
         "heading": "Wann das Gerät Gießaufträge abholt",
         "body": [
           "Der erzeugte Gerätecode regelt getrennt, wann Messwerte gesendet und manuelle Gießaufträge geprüft werden.",
-          "Messwerte werden standardmäßig stündlich gesendet. Im Geräteformular sind 1–24 Stunden einstellbar; lade danach neu erzeugte Firmware hoch. Manuelle Gießaufträge werden unabhängig davon standardmäßig jede Minute abgefragt.",
-          "Im stündlichen Messzyklus prüft es auch die Bedingungen für automatisches Gießen.",
+          "Die erzeugte Firmware sendet standardmäßig alle 60 Minuten. Im Geräteformular sind 1–1440 ganze Minuten möglich. Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board. Manuelle Bewässerungsaufträge werden unabhängig davon standardmäßig jede Minute geprüft.",
+          "Die automatische Bewässerung wird im jeweils eingestellten Messzyklus geprüft.",
           "Auf offene manuelle Gießaufträge prüft es häufiger: standardmäßig einmal pro Minute.",
           "So reagiert es schneller auf deine Aufträge, ohne jede Minute Messwerte senden zu müssen.",
           "Im Messzyklus sendet das Gerät zuerst die Werte und prüft dann manuelle Gießaufträge. Hat es keinen davon ausgeführt, prüft es die Bedingungen für automatisches Gießen.",
-          "Die minütliche Prüfung zwischen den Messzyklen sucht ausschließlich nach offenen manuellen Gießaufträgen."
+          "Außerhalb des vollständigen Messzyklus prüft die separate manuelle Abfrage nur offene manuelle Bewässerungsaufträge."
         ]
       },
       {
@@ -186,7 +186,7 @@
           "Der erzeugte Code dient als Ausgangspunkt für deine eigene Anpassung, etwa für eine ESP32-Platine.",
           "Er verbindet das Gerät mit dem WLAN, synchronisiert die Zeit, startet die Sensoren, liest sie aus und sendet die Messwerte an den Server. Außerdem prüft er manuelle Gießaufträge und die vom Server vorgegebenen Einstellungen für automatisches Gießen, steuert die Pumpe und meldet den Abschluss.",
           "Das Senden von Messwerten und das Prüfen manueller Gießaufträge erfolgen getrennt.",
-          "Messwerte werden standardmäßig stündlich gesendet. Im Geräteformular sind 1–24 Stunden einstellbar; lade danach neu erzeugte Firmware hoch. Manuelle Gießaufträge werden unabhängig davon standardmäßig jede Minute abgefragt.",
+          "Die erzeugte Firmware sendet standardmäßig alle 60 Minuten. Im Geräteformular sind 1–1440 ganze Minuten möglich. Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board. Manuelle Bewässerungsaufträge werden unabhängig davon standardmäßig jede Minute geprüft.",
           "Prüfe vor dem Hochladen WLAN-Zugang, Pins, Feuchtekalibrierung, PUMP_RUN_MS und Abfrageintervalle. Die Online-Gießpause wird im Geräteformular eingestellt."
         ]
       },
@@ -204,6 +204,13 @@
         "heading": "Sensorsensorwerte für gemeinsam genutzte Pflanzen",
         "body": [
           "Empfänger können die neuesten Sensorwerte und Diagramme für eine gemeinsam genutzte Pflanze anzeigen. Ein „Gemeinsam“-Label kennzeichnet empfangene Pflanzen. Geräteanmeldeinformationen, Setup-Code, Gerätebearbeitung, Pumpensteuerung, Exporte und Löschung bleiben nur dem Eigentümer vorbehalten."
+        ]
+      },
+      {
+        "heading": "Ausbleibende Messwerte",
+        "body": [
+          "Die Kachel eines aktiven Geräts pulsiert rot, sobald seit der letzten Messung ein eingestelltes Intervall vergangen ist. Hat das Gerät noch nie gesendet, zählt die Zeit ab dem Anlegen. Deaktivierte Geräte lösen diese Warnung nicht aus.",
+          "Unter Gerät hinzufügen/bearbeiten → Mitteilungen kann der Eigentümer E-Mail und Push bei ausbleibenden Messwerten getrennt aktivieren. Beide Optionen sind anfangs aus und unabhängig von Tagesübersichten, Bodenfeuchte- und Bewässerungswarnungen. Der Server prüft jede Minute und sendet pro Ausfall eine Warnung je Kanal. Nach einem neuen Messwert kann ein weiterer Ausfall erneut eine Warnung auslösen."
         ]
       }
     ]

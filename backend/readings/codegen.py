@@ -159,7 +159,7 @@ def _section_sensors(
     )
 
 
-def _section_timing(*, pump_enabled: bool, interval_hours: int) -> str:
+def _section_timing(*, pump_enabled: bool, interval_minutes: int) -> str:
     if not pump_enabled:
         return _clean_section(
             f"""
@@ -167,7 +167,7 @@ def _section_timing(*, pump_enabled: bool, interval_hours: int) -> str:
             // Backend stores and displays readings hourly.
             // Sampling interval selected in Flovers when generating this sketch.
 
-            const unsigned long SEND_INTERVAL_MS = {interval_hours}UL * 60UL * 60UL * 1000UL;
+            const unsigned long SEND_INTERVAL_MS = {interval_minutes}UL * 60UL * 1000UL;
             unsigned long lastSendMs = 0;
             """
         )
@@ -188,7 +188,7 @@ def _section_timing(*, pump_enabled: bool, interval_hours: int) -> str:
         // - does not send readings
         // - does not run automatic watering
 
-        const unsigned long SEND_INTERVAL_MS = {interval_hours}UL * 60UL * 60UL * 1000UL;
+        const unsigned long SEND_INTERVAL_MS = {interval_minutes}UL * 60UL * 1000UL;
         const unsigned long MANUAL_PUMP_CHECK_INTERVAL_MS = 60UL * 1000UL;
 
         unsigned long lastSendMs = 0;
@@ -1414,11 +1414,18 @@ def generate_arduino_code(
     automatic_pump_launch: bool = False,
     pump_threshold_pct: float | int | None = None,
     interval_hours: int = 1,
+    interval_minutes: int | None = None,
     tls_ca_cert: str | None = None,
 ) -> str:
-    interval_hours = int(interval_hours)
-    if not 1 <= interval_hours <= 24:
-        raise ValueError("interval_hours must be between 1 and 24")
+    if interval_minutes is None:
+        interval_hours = int(interval_hours)
+        if not 1 <= interval_hours <= 24:
+            raise ValueError("interval_hours must be between 1 and 24")
+        interval_minutes = interval_hours * 60
+    if (isinstance(interval_minutes, bool) or int(interval_minutes) != interval_minutes
+            or not 1 <= interval_minutes <= 1440):
+        raise ValueError("interval_minutes must be a whole number between 1 and 1440")
+    interval_minutes = int(interval_minutes)
     sensors = sensors or {}
 
     use_temperature = _bool_flag(sensors.get("temperature", True))
@@ -1463,7 +1470,7 @@ def generate_arduino_code(
             use_light=use_light,
             use_moisture=use_moisture,
         ),
-        _section_timing(pump_enabled=pump_enabled, interval_hours=interval_hours),
+        _section_timing(pump_enabled=pump_enabled, interval_minutes=interval_minutes),
     ]
 
     if pump_enabled:

@@ -126,7 +126,7 @@
       "Aplikasi ini dapat menghasilkan firmware untuk perangkat yang dipilih.",
       "The generated firmware includes the correct API endpoints, auth secret, device key, device ID, enabled sensors, and pump settings for that device.",
       "Setel supports_manual_duration ke true hanya jika firmware membaca duration_seconds untuk penyiraman manual. Contoh hasil generasi mendukungnya. Penyiraman otomatis tetap menggunakan PUMP_RUN_MS dari sketch.",
-      "Pembacaan dikirim setiap jam secara bawaan. Formulir perangkat mendukung interval 1–24 jam; unggah firmware baru setelah mengubahnya. Permintaan penyiraman manual diperiksa terpisah, secara bawaan setiap menit."
+      "Kode yang dibuat mengirim pembacaan setiap 60 menit secara bawaan. Atur 1–1440 menit penuh di formulir perangkat, lalu buat dan unggah kode terbaru. Permintaan penyiraman manual diperiksa secara terpisah, setiap satu menit secara bawaan."
     ],
     "adjustIntro": "Sebelum mengunggah, periksa Wi-Fi, pin, kalibrasi kelembapan, PUMP_RUN_MS, dan interval pemeriksaan. Atur jeda otomatis daring di formulir perangkat.",
     "adjustItems": [

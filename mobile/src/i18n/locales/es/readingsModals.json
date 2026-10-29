@@ -166,10 +166,15 @@
       "intervalHours": "Intervalo de lecturas (horas)",
       "decreaseInterval": "Reducir el intervalo de lecturas",
       "increaseInterval": "Aumentar el intervalo de lecturas",
-      "intervalFirmwareHint": "Elige entre 1 y 24 horas. Tras cambiarlo, genera el nuevo código y cárgalo en la placa.",
+      "intervalFirmwareHint": "Elige de 1 a 1440 minutos (60 por defecto). Después de cambiarlo, genera el código actualizado y súbelo a la placa.",
       "pumpCooldownMinutes": "Pausa entre riegos automáticos (minutos)",
       "pumpCooldownHint": "Elige entre 1 y 32767 minutos (60 por defecto). La placa recibe el ajuste del servidor en la siguiente consulta. No cambia la duración de la bomba.",
-      "pumpCooldownInvalid": "Introduce un número entero entre 1 y 32767."
+      "pumpCooldownInvalid": "Introduce un número entero entre 1 y 32767.",
+      "intervalMinutes": "Intervalo entre lecturas (minutos)",
+      "intervalMinutesValidation": "Introduce un número entero de 1 a 1440.",
+      "sendEmailMissingReadings": "Enviar un correo si no se reciben lecturas",
+      "sendPushMissingReadings": "Enviar una notificación push si no se reciben lecturas",
+      "missingReadingsInfo": "En los dispositivos activos se envía un solo aviso cuando una lectura se retrasa. Una nueva lectura restablece el aviso. Estas opciones son independientes de las notificaciones de humedad del suelo y riego."
     }
   }
 }
