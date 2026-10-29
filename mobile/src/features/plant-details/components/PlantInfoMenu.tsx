@@ -53,10 +53,10 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.changeImage", "Change image")}</Text>
       </Pressable>}
 
-      <Pressable style={s.menuItem} onPress={onShowReminders} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+      {canEdit && <Pressable style={s.menuItem} onPress={onShowReminders} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
         <MaterialCommunityIcons name="calendar" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.showReminders", "Show reminders")}</Text>
-      </Pressable>
+      </Pressable>}
     </View>
   );
 }

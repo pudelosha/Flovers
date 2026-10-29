@@ -141,7 +141,9 @@
       "mixedPermissions": "Die Aufgabenberechtigungen sind bei den ausgewählten Pflanzen unterschiedlich.",
       "endDatesVary": "Die Enddaten sind bei den ausgewählten Pflanzen unterschiedlich.",
       "reload": "Freigabe neu laden",
-      "conflictHint": "Die Freigabe wurde zwischenzeitlich geändert. Lade sie vor dem Speichern neu. Dabei wird die aktuelle Kontaktauswahl ersetzt."
+      "conflictHint": "Die Freigabe wurde zwischenzeitlich geändert. Lade sie vor dem Speichern neu. Dabei wird die aktuelle Kontaktauswahl ersetzt.",
+      "lockedPlant": "Pflanze (festgelegt)",
+      "editHint": "Ändere Kontakte, Berechtigungen und das Enddatum für diese Pflanze. Für weitere Pflanzen wähle „Pflanzen teilen“."
     },
     "toasts": {
       "invitationAdded": "Vorschau: Einladung hinzugefügt.",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "Geteilt von {{name}}",
-      "sharedPlant": "Geteilte Pflanze"
+      "sharedPlant": "Geteilte Pflanze",
+      "shared": "Geteilt"
     },
     "live": {
       "loadFailed": "Geteilte Pflanzen konnten nicht geladen werden."

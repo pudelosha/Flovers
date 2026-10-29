@@ -255,7 +255,7 @@ export default function TaskHistoryTile({
             <Text style={s.plantName} numberOfLines={1}>
               {item.plant}
             </Text>
-            <SharedPlantBadge access={item.access} />
+            <SharedPlantBadge access={item.access} compact />
 
             {!!item.location && (
               <View style={s.locationRow}>

@@ -46,16 +46,21 @@ def complete(client, task):
     return client.post(reverse("reminder-task-complete", args=[task.pk]), {"note": "Actual care"}, format="json")
 
 
-def test_active_recipient_reads_shared_reminders_and_tasks(scene):
+def test_recipient_reads_tasks_but_reminder_definitions_remain_owner_only(scene):
     reminders = scene.b.get(reverse("reminders-list-create"))
     tasks = scene.b.get(reverse("reminder-tasks-list"), {"status": "pending"})
     assert reminders.status_code == tasks.status_code == 200
-    assert [item["id"] for item in reminders.data] == [scene.reminder.pk]
+    assert reminders.data == []
+    assert scene.b.get(reverse("reminder-detail", args=[scene.reminder.pk])).status_code == 404
+    assert [item["id"] for item in scene.a.get(reverse("reminders-list-create")).data] == [scene.reminder.pk]
+    assert scene.a.get(reverse("reminder-detail", args=[scene.reminder.pk])).status_code == 200
     assert [item["id"] for item in tasks.data] == [scene.task.pk]
     assert tasks.data[0]["access"]["is_shared"] is True
     assert tasks.data[0]["access"]["can_edit"] is False
     assert tasks.data[0]["access"]["can_complete_tasks"] is True
     assert tasks.data[0]["access"]["owner"]["id"] == str(scene.owner.pk)
+    assert tasks.data[0]["plant"] == scene.plant.pk
+    assert tasks.data[0]["type"] == "water"
     assert scene.c.get(reverse("reminder-tasks-list")).data == []
 
 

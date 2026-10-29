@@ -141,7 +141,9 @@
       "mixedPermissions": "Permissions differ between the selected plants.",
       "endDatesVary": "End dates differ between the selected plants.",
       "reload": "Reload sharing",
-      "conflictHint": "Sharing changed elsewhere. Reload sharing before saving; this replaces the current recipient selections."
+      "conflictHint": "Sharing changed elsewhere. Reload sharing before saving; this replaces the current recipient selections.",
+      "lockedPlant": "Plant (locked)",
+      "editHint": "Manage contacts, permissions and the end date for this plant. To share other plants, use Share plants."
     },
     "toasts": {
       "invitationAdded": "Invitation added to the preview.",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "Shared by {{name}}",
-      "sharedPlant": "Shared plant"
+      "sharedPlant": "Shared plant",
+      "shared": "Shared"
     },
     "live": {
       "loadFailed": "Could not load shared plants."

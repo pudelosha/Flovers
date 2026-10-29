@@ -35,6 +35,8 @@ export default function SharePlantModal() {
   const { contacts, shares, shareDraft, closeSharePlant, savePlantsSharing, refresh, pending } = useSharingPreview();
   const [plants, setPlants] = useState<ShareablePlant[]>([]);
   const [selectedPlantIds, setSelectedPlantIds] = useState<string[]>([]);
+  const [editPlantId, setEditPlantId] = useState<string | null>(null);
+  const lockedPlant = useRef<string | null>(null);
   const [recipientDrafts, setRecipientDrafts] = useState<RecipientDrafts>({});
   const [loading, setLoading] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -63,8 +65,14 @@ export default function SharePlantModal() {
         const plantId = shareDraft?.plant?.id;
         const contactId = snapshot.contacts.some((contact) => contact.id === shareDraft?.contactId) ? shareDraft?.contactId : undefined;
         const outgoing = snapshot.shares.filter((share) => share.direction === "outgoing");
+        // Determine the mode once from the opening plant and fresh server state.
+        // Selecting an already shared plant in Add must not switch modes.
+        if (!initialized.current) {
+          lockedPlant.current = plantId && outgoing.some((share) => share.plant.id === plantId) ? plantId : null;
+          setEditPlantId(lockedPlant.current);
+        }
         const available = new Set([...owned.map((item) => String(item.id)), ...outgoing.map((share) => share.plant.id)]);
-        const selected = (reload ? selectedIdsRef.current : plantId ? [plantId] : []).filter((id) => available.has(id));
+        const selected = (lockedPlant.current ? [lockedPlant.current] : reload ? selectedIdsRef.current : plantId ? [plantId] : []).filter((id) => available.has(id));
         setSelectedPlantIds(selected);
         setRecipientDrafts(Object.fromEntries(selected.map((id) => [id, initialRecipients(id, outgoing, contactId)])));
         draftVersions.current = { ...snapshot.versions };
@@ -95,6 +103,8 @@ export default function SharePlantModal() {
     }
     const plantId = shareDraft.plant?.id;
     initialized.current = false;
+    lockedPlant.current = null;
+    setEditPlantId(null);
     draftVersions.current = {};
     setSharingReady(false);
     setSaveError(null);
@@ -122,17 +132,18 @@ export default function SharePlantModal() {
     const byId = new Map(choices.map((plant) => [plant.id, plant]));
     return selectedPlantIds.map((id) => byId.get(id)).filter((plant): plant is ShareablePlant => !!plant);
   }, [choices, selectedPlantIds]);
-  const managing = selectedPlants.some((plant) => outgoingShares.some((share) => share.plant.id === plant.id));
+  const managing = editPlantId !== null;
   const selectedRecipients = selectedPlantIds.flatMap((id) => recipientDrafts[id] ?? []);
   const endDates = new Set(selectedRecipients.map((recipient) => recipient.endsOn ?? ""));
   const mixedEndDates = endDates.size > 1;
   const commonEndDate = endDates.size === 1 ? Array.from(endDates)[0] || undefined : undefined;
   const displayedEndDate = selectedRecipients.length > 0 ? commonEndDate : dateChoice.value;
   const newGrantEndDate = dateChoice.changed ? dateChoice.value : commonEndDate;
-  const canSave = sharingReady && !loading && !loadFailed && !pending && !conflicted && selectedPlants.length > 0 && selectedPlants.length === selectedPlantIds.length && selectedPlants.every((plant) =>
+  const canSave = sharingReady && !loading && !loadFailed && !pending && !conflicted && (!managing || (selectedPlantIds.length === 1 && selectedPlantIds[0] === editPlantId)) && selectedPlants.length > 0 && selectedPlants.length === selectedPlantIds.length && selectedPlants.every((plant) =>
     (recipientDrafts[plant.id]?.length ?? 0) > 0 || outgoingShares.some((share) => share.plant.id === plant.id));
 
   const togglePlant = (plant: ShareablePlant) => {
+    if (lockedPlant.current) return;
     if (selectedPlantIds.includes(plant.id)) {
       setSelectedPlantIds((previous) => previous.filter((id) => id !== plant.id));
       return;
@@ -204,27 +215,32 @@ export default function SharePlantModal() {
 
   return (
     <ContactModalFrame
+      sharingLayout
       visible={shareDraft !== null}
       title={managing ? t("sharing.form.manageTitle", { defaultValue: "Manage sharing" }) : t("sharing.form.title", { defaultValue: "Share plants" })}
       onClose={closeSharePlant}
     >
       <View style={styles.content}>
-        <Text style={shared.hint}>{t("sharing.form.multiPlantHint", { defaultValue: "Choose the plants and contacts to share them with." })}</Text>
-        <Text style={shared.title}>{t("sharing.form.choosePlants", { defaultValue: "Choose plants" })}</Text>
-        <Text style={shared.hint}>{t("sharing.form.plantsSelected", { defaultValue: "Plants selected: {{count}}", count: selectedPlantIds.length })}</Text>
+        <Text style={shared.hint}>{managing
+          ? t("sharing.form.editHint", { defaultValue: "Manage contacts, permissions and the end date for this plant. To share other plants, use Share plants." })
+          : t("sharing.form.multiPlantHint", { defaultValue: "Choose the plants and contacts to share them with." })}</Text>
+        <Text style={shared.title}>{managing
+          ? t("sharing.form.lockedPlant", { defaultValue: "Plant (locked)" })
+          : t("sharing.form.choosePlants", { defaultValue: "Choose plants" })}</Text>
+        {!managing && <Text style={shared.hint}>{t("sharing.form.plantsSelected", { defaultValue: "Plants selected: {{count}}", count: selectedPlantIds.length })}</Text>}
         {loading && <View style={styles.spinner}><CenteredSpinner size={32} color="#FFFFFF" /></View>}
         {loadFailed && <View style={styles.section}>
           <Text style={shared.error}>{t("sharing.form.loadFailed", { defaultValue: "Could not load your plants." })}</Text>
           <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" onPress={() => void loadPlants(conflicted)} />
         </View>}
         {!loading && !loadFailed && choices.length === 0 && <Text style={shared.hint}>{t("sharing.form.noPlants", { defaultValue: "No plants available. Add a plant to start sharing." })}</Text>}
-        {choices.map((plant) => {
+        {(managing ? choices.filter((plant) => plant.id === editPlantId) : choices).map((plant) => {
           const selected = selectedPlantIds.includes(plant.id);
           return (
-            <Pressable key={plant.id} accessibilityRole="checkbox" accessibilityState={{ checked: selected }}
+            <Pressable key={plant.id} accessibilityRole="checkbox" accessibilityState={{ checked: selected, disabled: managing || !sharingReady || !!pending }}
               accessibilityLabel={t("sharing.form.selectPlant", { defaultValue: "Select {{name}}", name: plant.name })}
-              disabled={!sharingReady || !!pending} style={[styles.choice, selected && styles.selected]} onPress={() => togglePlant(plant)}>
-              <MaterialCommunityIcons name={selected ? "checkbox-marked-outline" : "checkbox-blank-outline"} size={22} color="#FFFFFF" />
+              disabled={managing || !sharingReady || !!pending} style={[styles.choice, selected && styles.selected]} onPress={() => togglePlant(plant)}>
+              <MaterialCommunityIcons name={managing ? "lock-outline" : selected ? "checkbox-marked-outline" : "checkbox-blank-outline"} size={22} color="#FFFFFF" />
               <View style={styles.flex}><Text style={shared.text}>{plant.name}</Text>{!!plant.location && <Text style={shared.hint}>{plant.location}</Text>}</View>
             </Pressable>
           );

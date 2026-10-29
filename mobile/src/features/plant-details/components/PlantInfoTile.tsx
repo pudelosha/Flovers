@@ -286,7 +286,7 @@ export default function PlantInfoTile({
                   <Text style={styles.h1} numberOfLines={1}>
                     {title}
                   </Text>
-                  <SharedPlantBadge access={plant.access} />
+                  <SharedPlantBadge access={plant.access} compact />
 
                   {!!latin && (
                     <Text style={styles.latin} numberOfLines={1}>
@@ -313,7 +313,7 @@ export default function PlantInfoTile({
               <View style={[styles.heroImage, styles.heroPlaceholder]}>
                 <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
                 <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
-                <SharedPlantBadge access={plant.access} />
+                <SharedPlantBadge access={plant.access} compact />
               </View>
             )}
           </View>

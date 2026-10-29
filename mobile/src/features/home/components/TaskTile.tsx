@@ -171,7 +171,6 @@ export default function TaskTile({
         <View style={s.centerCol}>
           <Text style={[s.taskTypeLabel, { color: accent }]}>{t(`home.taskTypes.${task.type}`)}</Text>
           <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
-          <SharedPlantBadge access={task.access} />
 
           {task.location ? (
             <View style={s.locationRow}>
@@ -191,13 +190,14 @@ export default function TaskTile({
         <View style={s.separator} />
 
         {/* Right: due text and date */}
-        <View style={s.rightCol}>
+        <View style={s.rightCol} testID="task-due">
           <Text style={[s.dueWhen, isOverdue && s.dueOverdue]} numberOfLines={2}>
             {dueText}
           </Text>
           <Text style={[s.dueDateText, isOverdue && s.dueOverdue]} numberOfLines={1}>
             {formattedDate}
           </Text>
+          <SharedPlantBadge access={task.access} compact alignRight />
         </View>
       </Pressable>
 

@@ -38,11 +38,12 @@ export function buildUITasks(
   return tasks.flatMap((t) => {
     const r = remById.get(t.reminder);
     const event = t.status === "completed" ? t.completed_event : null;
-    if (!event && (!r || (!r.is_active && !options.includeInactive))) return [];
+    // Shared tasks carry their own plant/type; reminder definitions are owner-only.
+    if (!event && ((!r && (!t.plant || !t.type)) || (r && !r.is_active && !options.includeInactive))) return [];
 
-    const p = r ? plantById.get(r.plant) : undefined;
+    const p = plantById.get(t.plant ?? r?.plant ?? 0);
 
-    const type: TaskType = toTaskType(event?.type ?? r?.type ?? "care");
+    const type: TaskType = toTaskType(event?.type ?? t.type ?? r?.type ?? "care");
     const dueInfo = getDueInfo(t.due_date);
 
     const ui: Task & { reminderId: string } = {
@@ -51,7 +52,7 @@ export function buildUITasks(
       type,
 
       // underlying plant instance id for navigation from Home → PlantDetails
-      plantId: event ? String(event.plant_id) : p ? String(p.id) : undefined,
+      plantId: event ? String(event.plant_id) : t.plant ? String(t.plant) : p ? String(p.id) : undefined,
 
       plant: event ? event.plant_name || "Unnamed plant" : plantName(p),
       location: event ? event.location_name : p?.location?.name || "",

@@ -64,6 +64,16 @@ class ReminderSerializer(serializers.ModelSerializer):
 class ReminderTaskSerializer(serializers.ModelSerializer):
     access = serializers.SerializerMethodField()
     completed_by = serializers.SerializerMethodField()
+    plant = serializers.SerializerMethodField()
+    type = serializers.SerializerMethodField()
+
+    def get_plant(self, obj):
+        event = obj.completed_event if obj.status == "completed" else None
+        return (event or {}).get("plant_id", obj.reminder.plant_id)
+
+    def get_type(self, obj):
+        event = obj.completed_event if obj.status == "completed" else None
+        return (event or {}).get("type", obj.reminder.type)
 
     def get_access(self, obj):
         return _access(self, _task_plant(self, obj))
@@ -76,7 +86,7 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
         fields = [
             "id", "reminder", "due_date", "status", "completed_at", "note",
             "created_at", "updated_at",
-            "completed_event", "completed_by", "access",
+            "completed_event", "completed_by", "access", "plant", "type",
         ]
         read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at", "completed_event", "completed_by"]
 

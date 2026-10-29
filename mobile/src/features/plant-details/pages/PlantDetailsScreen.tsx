@@ -828,7 +828,7 @@ export default function PlantDetailsScreen() {
               )}
             </GlassFrame>
 
-            {reminders.length > 0 && (
+            {plantAccess(details.plant.access).isOwner && reminders.length > 0 && (
               <PlantRemindersTile
                 access={details.plant.access}
                 key={refreshCounter}

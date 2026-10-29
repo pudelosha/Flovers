@@ -48,7 +48,7 @@ Sharing writes also have a per-user limit of 20/minute, alongside global limits.
 
 ## Shared reads and completion
 
-Plant lists/details, authenticated QR lookup, reminder/task lists, journals, and
+Plant lists/details, authenticated QR lookup, task lists, journals, and
 reading-device/chart reads use the same active-access rule. Responses include:
 
 ```json
@@ -56,7 +56,9 @@ reading-device/chart reads use the same active-access rule. Responses include:
 ```
 
 Device credentials, setup code, device notes, account secrets, pump actions,
-configuration, exports, and deletion remain owner-only. Shared device responses
+configuration, exports, deletion, and reminder definitions remain owner-only.
+Shared task responses include their plant ID and task type so Home does not need
+access to the owner's reminder definitions. Shared device responses
 are explicitly restricted to reading-related fields, independent of a concurrent
 access-metadata lookup. Local photos stay on their owner's phone; recipients use
 the existing catalogue images when available.

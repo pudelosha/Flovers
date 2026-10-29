@@ -22,6 +22,7 @@ describe("SharedPlantHero", () => {
     expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: plant.imageUrl });
   });
 
+
   it("prefers a numeric owned plant's local photo", async () => {
     photo.mockResolvedValue("file:///owned-bird.jpg");
     const view = render(<SharedPlantHero plant={plant} preferLocalPhoto />);

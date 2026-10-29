@@ -141,7 +141,9 @@
       "mixedPermissions": "İzinler seçilen ev bitkileri arasında farklılık gösterir.",
       "endDatesVary": "Bitiş tarihleri seçilen ev bitkileri arasında farklılık gösteriyor.",
       "reload": "Paylaşımı yeniden yükle",
-      "conflictHint": "Paylaşım başka yerde değişti. Kaydetmeden önce paylaşımı yeniden yükleyin; bu, mevcut alıcı seçimlerinin yerini alır."
+      "conflictHint": "Paylaşım başka yerde değişti. Kaydetmeden önce paylaşımı yeniden yükleyin; bu, mevcut alıcı seçimlerinin yerini alır.",
+      "lockedPlant": "Bitki (kilitli)",
+      "editHint": "Bu bitkinin kişilerini, izinlerini ve paylaşım bitiş tarihini düzenleyin. Başka bitkiler paylaşmak için “Bitkileri paylaş” seçeneğini kullanın."
     },
     "toasts": {
       "invitationAdded": "Davetiye önizlemeye eklendi.",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "{{name}} tarafından paylaşıldı",
-      "sharedPlant": "Paylaşılan bitki"
+      "sharedPlant": "Paylaşılan bitki",
+      "shared": "Paylaşılan"
     },
     "live": {
       "loadFailed": "Paylaşılan ev bitkileri yüklenemedi."

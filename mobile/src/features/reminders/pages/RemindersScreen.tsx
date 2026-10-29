@@ -229,11 +229,12 @@ export default function RemindersScreen() {
         listReminders({ auth: true }),
         fetchPlantInstances({ auth: true }),
       ]);
-      const ui = buildUIReminders(tasks, reminders, plants);
+      const ownPlants = plants.filter((plant) => plantAccess(plant.access).isOwner);
+      const ui = buildUIReminders(tasks, reminders.filter((reminder) => plantAccess(reminder.access).isOwner), ownPlants);
       setUiReminders(ui);
       setPlantOptions(
         mapPlantOptions(
-          plants,
+          ownPlants,
           tr("reminders.common.unnamedPlant", "Unnamed plant")
         )
       );

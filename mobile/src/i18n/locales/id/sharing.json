@@ -141,7 +141,9 @@
       "mixedPermissions": "Izin berbeda antara tanaman hias yang dipilih.",
       "endDatesVary": "Tanggal akhir berbeda antara tanaman hias yang dipilih.",
       "reload": "Muat ulang berbagi",
-      "conflictHint": "Berbagi berubah di tempat lain. Muat ulang berbagi sebelum menyimpan; ini menggantikan pilihan penerima saat ini."
+      "conflictHint": "Berbagi berubah di tempat lain. Muat ulang berbagi sebelum menyimpan; ini menggantikan pilihan penerima saat ini.",
+      "lockedPlant": "Tanaman (dikunci)",
+      "editHint": "Ubah kontak, izin, dan tanggal akhir berbagi untuk tanaman ini. Untuk membagikan tanaman lain, pilih “Bagikan tanaman”."
     },
     "toasts": {
       "invitationAdded": "Undangan ditambahkan ke pratinjau.",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "Dibagikan oleh {{name}}",
-      "sharedPlant": "Tanaman berbagi"
+      "sharedPlant": "Tanaman berbagi",
+      "shared": "Dibagikan"
     },
     "live": {
       "loadFailed": "Tidak dapat memuat tanaman hias bersama."

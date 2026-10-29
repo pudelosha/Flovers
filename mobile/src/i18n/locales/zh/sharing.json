@@ -141,7 +141,9 @@
       "mixedPermissions": "所选植物的权限设置不同。",
       "endDatesVary": "所选植物的结束日期不同。",
       "reload": "重新加载共享设置",
-      "conflictHint": "共享设置已在其他地方更改。保存前请重新加载，这会替换当前选择的联系人。"
+      "conflictHint": "共享设置已在其他地方更改。保存前请重新加载，这会替换当前选择的联系人。",
+      "lockedPlant": "植物（已锁定）",
+      "editHint": "管理这株植物的联系人、权限和共享结束日期。如需共享其他植物，请选择“共享植物”。"
     },
     "toasts": {
       "invitationAdded": "预览：已添加邀请。",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "由 {{name}} 共享",
-      "sharedPlant": "共享植物"
+      "sharedPlant": "共享植物",
+      "shared": "已共享"
     },
     "live": {
       "loadFailed": "无法加载共享植物。"

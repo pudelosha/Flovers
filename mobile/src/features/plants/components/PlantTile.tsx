@@ -157,7 +157,7 @@ export default function PlantTile({
               <Text style={s.plantName} numberOfLines={1}>
                 {plant.name}
               </Text>
-              <SharedPlantBadge access={plant.access} />
+              <SharedPlantBadge access={plant.access} compact />
 
               {!!plant.latin && (
                 <Text style={s.latin} numberOfLines={1}>

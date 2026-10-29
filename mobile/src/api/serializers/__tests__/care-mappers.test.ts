@@ -16,6 +16,16 @@ const task: ApiReminderTask = {
 const plants = [{ id: 4, display_name: "Monstera", location: { id: 2, name: "Living room" } }];
 
 describe("care API mappers", () => {
+  it("keeps shared pending tasks on Home without exposing reminder definitions", () => {
+    const access = { is_owner: false, is_shared: true, can_edit: false, can_complete_tasks: true,
+      owner: { id: "1", name: "Mom" }, expires_at: null };
+    const sharedTask = { ...task, plant: 4, type: "water" as const, access };
+    expect(buildUITasks([sharedTask], [], plants)).toEqual([
+      expect.objectContaining({ id: "21", plantId: "4", plant: "Monstera", location: "Living room",
+        type: "watering", reminderId: "8", access }),
+    ]);
+    expect(buildUIReminders([sharedTask], [], plants)).toEqual([]);
+  });
   it("preserves shared permissions for Home, Reminders and task history", () => {
     const access = { is_owner: false, is_shared: true, can_edit: false, can_complete_tasks: true,
       owner: { id: "1", name: "Mom" }, expires_at: null };

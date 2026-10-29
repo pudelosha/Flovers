@@ -207,8 +207,7 @@ class ReminderListCreateView(generics.ListCreateAPIView):
     serializer_class = ReminderSerializer
 
     def get_queryset(self):
-        from sharing.permissions import visible_plant_ids
-        return Reminder.objects.filter(user_id=F("plant__user_id"), plant_id__in=visible_plant_ids(self.request.user)).select_related("plant", "plant__user")
+        return Reminder.objects.filter(user=self.request.user, plant__user=self.request.user).select_related("plant", "plant__user")
 
     @transaction.atomic
     def perform_create(self, serializer):
@@ -228,9 +227,6 @@ class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ReminderSerializer
 
     def get_queryset(self):
-        if getattr(self.request, "method", None) in {"GET", "HEAD", "OPTIONS"}:
-            from sharing.permissions import visible_plant_ids
-            return Reminder.objects.filter(user_id=F("plant__user_id"), plant_id__in=visible_plant_ids(self.request.user)).select_related("plant", "plant__user")
         return Reminder.objects.filter(user=self.request.user, plant__user=self.request.user).select_related("plant")
 
     def perform_update(self, serializer):

@@ -141,7 +141,9 @@
       "mixedPermissions": "As permissões são diferentes entre as plantas selecionadas.",
       "endDatesVary": "As datas de término são diferentes entre as plantas selecionadas.",
       "reload": "Recarregar partilha",
-      "conflictHint": "A partilha foi alterada entretanto. Recarrega antes de guardar; a seleção atual de contactos será substituída."
+      "conflictHint": "A partilha foi alterada entretanto. Recarrega antes de guardar; a seleção atual de contactos será substituída.",
+      "lockedPlant": "Planta (bloqueada)",
+      "editHint": "Altere os contactos, as permissões e a data de fim desta planta. Para partilhar outras plantas, escolha «Partilhar plantas»."
     },
     "toasts": {
       "invitationAdded": "Prévia: convite adicionado.",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "Partilhada por {{name}}",
-      "sharedPlant": "Planta partilhada"
+      "sharedPlant": "Planta partilhada",
+      "shared": "Partilhada"
     },
     "live": {
       "loadFailed": "Não foi possível carregar as plantas partilhadas."

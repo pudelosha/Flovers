@@ -10,7 +10,6 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 import ReminderMiniTileMenu from "./ReminderMiniTileMenu";
 import { useNavigation } from "@react-navigation/native";
 import { plantAccess } from "../../../shared/utils/plantAccess";
-import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 
 type Props = {
   reminder: UIReminder;
@@ -132,7 +131,6 @@ export default function ReminderMiniTile({
           <Text style={s.miniTitle} numberOfLines={1}>
             {reminder.plant}
           </Text>
-          <SharedPlantBadge access={reminder.access} />
 
           {!!reminder.location && (
             <View style={styles.locationRow}>

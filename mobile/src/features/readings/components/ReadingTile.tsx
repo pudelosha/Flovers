@@ -291,7 +291,7 @@ export default function ReadingTile({
           <Text style={s.name} numberOfLines={1}>
             {deviceName ?? data.name}
           </Text>
-          <SharedPlantBadge access={data.access} />
+          <SharedPlantBadge access={data.access} compact />
 
           {!!effectiveLocation && (
             <View style={localStyles.locationRow}>

@@ -170,17 +170,19 @@ export default function PlantJournalModal({
           style={[
             s.promptInner,
             {
+              height: "86%",
               maxHeight: "86%",
               position: "relative",
             },
           ]}
         >
           <ScrollView
+            style={{ flex: 1 }}
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{
               paddingTop: 44,
-              paddingBottom: 120,
+              paddingBottom: 20,
             }}
           >
             <Text style={s.promptTitle}>

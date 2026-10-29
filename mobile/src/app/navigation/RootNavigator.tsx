@@ -15,6 +15,7 @@ import {
 
 // logged-in shell
 import AppTabs from "./AppTabs";
+import LogoutToast from "./LogoutToast";
 
 // auth screens
 import LoginScreen from "../../features/auth/pages/LoginScreen";
@@ -176,6 +177,7 @@ export default function RootNavigator() {
     <NavigationContainer linking={linking} ref={navigationRef} onReady={flushPendingNavigation}>
       <ImageBackground source={bgSource} style={{ flex: 1 }} resizeMode="cover">
         {token ? <AppNavigator /> : <AuthNavigator />}
+        <LogoutToast />
 
         {settingsLoading ? (
           <View pointerEvents="auto" style={StyleSheet.absoluteFillObject} />

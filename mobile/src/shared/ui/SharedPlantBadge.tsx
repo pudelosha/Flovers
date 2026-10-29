@@ -5,13 +5,19 @@ import { useTranslation } from "react-i18next";
 import { plantAccess } from "../utils/plantAccess";
 import type { ApiPlantAccess } from "../utils/plantAccess";
 
-export default function SharedPlantBadge({ access }: { access?: ApiPlantAccess | null }) {
+export default function SharedPlantBadge({ access, compact = false, alignRight = false }: {
+  access?: ApiPlantAccess | null;
+  compact?: boolean;
+  alignRight?: boolean;
+}) {
   const { t } = useTranslation();
   const permissions = plantAccess(access);
   if (!permissions.isShared) return null;
-  return <View style={s.row}>
-    <MaterialCommunityIcons name="account-multiple-outline" size={13} color="#BDE4F6" />
-    <Text style={s.label} numberOfLines={1}>{permissions.ownerName
+  return <View style={[s.row, alignRight && { alignSelf: "flex-end" }]}>
+    <MaterialCommunityIcons name="account-multiple-outline" size={compact ? 12 : 13} color="#BDE4F6" />
+    <Text style={[s.label, compact && { fontSize: 10 }]} numberOfLines={1}>{compact
+      ? t("sharing.access.shared", { defaultValue: "Shared" })
+      : permissions.ownerName
       ? t("sharing.access.sharedBy", { defaultValue: "Shared by {{name}}", name: permissions.ownerName })
       : t("sharing.access.sharedPlant", { defaultValue: "Shared plant" })}</Text>
   </View>;

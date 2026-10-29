@@ -128,9 +128,10 @@ describe("SharedPlantsScreen", () => {
     expect(view.queryByText("Back")).toBeNull();
     expect(view.queryByText("Share plants")).toBeNull();
     expect(view.queryAllByRole("tab")).toHaveLength(0);
-    expect(view.getByText("Shared with Anna")).toBeTruthy();
-    expect(view.getByText("Shared with Bruno")).toBeTruthy();
-    expect(view.getByText("Shared by Anna")).toBeTruthy();
+    expect(view.queryByText("Shared with Anna, Bruno")).toBeNull();
+    expect(view.getAllByText("Anna")).toHaveLength(2);
+    expect(view.getByText("Bruno")).toBeTruthy();
+    expect(view.queryByText("Shared by Anna")).toBeNull();
     expect(view.getAllByText("Manage sharing")).toHaveLength(1);
     fireEvent.press(view.getByText("Manage sharing"));
     expect(mockSharing.openSharePlant).toHaveBeenCalledWith(bird);
@@ -212,7 +213,7 @@ describe("SharedPlantsScreen", () => {
   it("leaves an incoming share without exposing owner management under its filter", async () => {
     const view = await renderScreen();
     selectFabAction(view, "Shared with me");
-    expect(view.getByText("Shared by Anna")).toBeTruthy();
+    expect(view.getByText("Anna")).toBeTruthy();
     expect(view.queryByText("Manage sharing")).toBeNull();
     fireEvent.press(view.getByLabelText("Leave shared plant: Peace lily"));
     expect(view.UNSAFE_getByType(ContactModalFrame).props.visible).toBe(true);

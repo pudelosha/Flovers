@@ -155,16 +155,20 @@ export default function SharedPlantsScreen() {
               {group.map((share) => (
                 <View key={share.id} style={styles.recipient}>
                   <View style={styles.flex}>
-                    <Text style={shared.text}>{outgoing
-                      ? t("sharing.plants.with", { defaultValue: "Shared with {{name}}", name: contactName(share.contactId) })
-                      : t("sharing.plants.from", { defaultValue: "Shared by {{name}}", name: contactName(share.contactId) })}</Text>
+                    <View style={styles.contactRow}>
+                      <MaterialCommunityIcons name={outgoing ? "account-arrow-right-outline" : "account-arrow-left-outline"} size={15} color="#BDE4F6" />
+                      <Text style={styles.recipientName}>{contactName(share.contactId)}</Text>
+                    </View>
                     <View style={styles.permission}>
                       <MaterialCommunityIcons name={share.canCompleteTasks ? "checkbox-marked-circle-outline" : "eye-outline"} color="#FFFFFF" size={15} />
-                      <Text style={shared.hint}>{permission(share)}</Text>
+                      <Text style={styles.metadata}>{permission(share)}</Text>
                     </View>
-                    <Text style={shared.hint}>{share.endsOn
-                      ? t("sharing.common.until", { defaultValue: "Until {{date}}", date: share.endsOn })
-                      : t("sharing.common.noEndDate", { defaultValue: "No end date" })}</Text>
+                    <View style={styles.permission}>
+                      <MaterialCommunityIcons name="calendar-outline" color="#FFFFFF" size={15} />
+                      <Text style={styles.metadata}>{share.endsOn
+                        ? t("sharing.common.until", { defaultValue: "Until {{date}}", date: share.endsOn })
+                        : t("sharing.common.noEndDate", { defaultValue: "No end date" })}</Text>
+                    </View>
                     {!!share.isExpired && <Text style={shared.error}>{t("sharing.common.expired", { defaultValue: "Expired" })}</Text>}
                   </View>
                   <Pressable accessibilityRole="button"
@@ -177,7 +181,7 @@ export default function SharedPlantsScreen() {
                 </View>
               ))}
               {outgoing && <SharingButton label={t("sharing.plants.manage", { defaultValue: "Manage sharing" })}
-                variant="secondary" icon="account-multiple-outline" onPress={() => openSharePlant(plant)} />}
+                style={styles.manageButton} variant="secondary" icon="account-multiple-outline" onPress={() => openSharePlant(plant)} />}
             </GlassCard>
           );
         })}
@@ -239,12 +243,16 @@ export default function SharedPlantsScreen() {
 
 const styles = StyleSheet.create({
   page: { flex: 1 },
+  manageButton: { marginTop: 12 },
   loading: { height: 300, justifyContent: "center" },
   flex: { flex: 1 },
   menuButton: { width: 36, height: 36, borderRadius: 18, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0,0,0,0.24)" },
   menuOverlay: { ...StyleSheet.absoluteFillObject, zIndex: 4000, elevation: 4000 },
-  recipient: { flexDirection: "row", alignItems: "center", paddingVertical: 12, gap: 10 },
-  permission: { flexDirection: "row", alignItems: "center", gap: 6, marginVertical: 5 },
+  recipient: { flexDirection: "row", alignItems: "center", paddingVertical: 3, gap: 10 },
+  recipientName: { color: "#FFFFFF", fontSize: 12, fontWeight: "700" },
+  contactRow: { flexDirection: "row", alignItems: "center", gap: 5 },
+  metadata: { color: "rgba(255,255,255,0.8)", fontSize: 11, flexShrink: 1 },
+  permission: { flexDirection: "row", alignItems: "flex-start", gap: 5, marginTop: 2 },
   removeButton: { minWidth: 44, minHeight: 44, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,107,107,0.10)" },
   confirmButton: { flex: 1, minHeight: 44, alignItems: "center", justifyContent: "center" },
   confirmText: { textAlign: "center", flexShrink: 1 },

@@ -141,7 +141,9 @@
       "mixedPermissions": "Dla wybranych roślin ustawiono różne uprawnienia do zadań.",
       "endDatesVary": "Wybrane rośliny mają różne daty końcowe.",
       "reload": "Wczytaj ponownie",
-      "conflictHint": "Udostępnianie zmieniło się w międzyczasie. Wczytaj aktualne ustawienia przed zapisem. Zastąpią obecny wybór kontaktów."
+      "conflictHint": "Udostępnianie zmieniło się w międzyczasie. Wczytaj aktualne ustawienia przed zapisem. Zastąpią obecny wybór kontaktów.",
+      "lockedPlant": "Roślina (zablokowana)",
+      "editHint": "Zmień kontakty, uprawnienia i termin udostępnienia tej rośliny. Aby udostępnić inne rośliny, wybierz „Udostępnij rośliny”."
     },
     "toasts": {
       "invitationAdded": "Podgląd: dodano zaproszenie.",
@@ -174,7 +176,8 @@
     },
     "access": {
       "sharedBy": "Udostępnia: {{name}}",
-      "sharedPlant": "Udostępniona roślina"
+      "sharedPlant": "Udostępniona roślina",
+      "shared": "Udostępniono"
     },
     "live": {
       "loadFailed": "Nie udało się wczytać udostępnionych roślin."

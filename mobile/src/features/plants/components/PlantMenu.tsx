@@ -63,11 +63,11 @@ export default function PlantMenu({
         onPress={onEdit}
       />}
 
-      <MenuItem
+      {canEdit && <MenuItem
         label={tr("plants.menu.reminders", "Show reminders")}
         icon="bell-outline"
         onPress={onReminders}
-      />
+      />}
 
       {/* NEW: Journal */}
       <MenuItem

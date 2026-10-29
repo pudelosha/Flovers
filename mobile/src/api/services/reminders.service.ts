@@ -14,6 +14,8 @@ export type ApiReminder = {
 };
 
 export type ApiReminderTask = {
+  plant?: number;
+  type?: ApiReminder["type"];
   access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   reminder: number;
