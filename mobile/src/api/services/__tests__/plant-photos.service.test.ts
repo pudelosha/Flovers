@@ -1,5 +1,5 @@
 import { configureTokenRefresh, setAuthToken } from "../../client";
-import { clearPlantPhotoCache, deletePlantPhoto, loadPlantPhoto, parsePlantPhoto, uploadPlantPhoto } from "../plant-photos.service";
+import { clearPlantPhotoCache, deletePlantPhoto, loadPlantPhoto, parsePlantPhoto, uploadPlantPhoto, updatePlantPhotoFraming } from "../plant-photos.service";
 import type { PlantPhoto } from "../plant-photos.service";
 
 const photo = (n = 1): PlantPhoto => {
@@ -142,4 +142,61 @@ it("bounds decoded image memory even before the entry-count limit is reached", a
 it("rejects an unexpected response content type instead of rendering it", async () => {
   (fetch as jest.Mock).mockResolvedValueOnce(response(200, photo(), "SCRIPT", "text/html"));
   await expect(loadPlantPhoto(photo())).rejects.toMatchObject({ body: { code: "invalid_photo_response" } });
+});
+
+it("retains valid saved framing and rejects malformed or non-finite coordinates", () => {
+  const framed = { ...photo(), framing: { focal_x: 0.3, focal_y: 0.7, zoom: 2 }, framing_revision: 0 };
+  expect(parsePlantPhoto(framed)).toEqual(framed);
+  expect(parsePlantPhoto({ ...framed, framing: { ...framed.framing, focal_x: NaN } })).toBeNull();
+  expect(parsePlantPhoto({ ...framed, framing: { ...framed.framing, zoom: 0.5 } })).toBeNull();
+  expect(parsePlantPhoto({ ...framed, framing_revision: -1 })).toBeNull();
+  expect(parsePlantPhoto(photo())).toEqual(photo());
+});
+
+it("checks server support before uploading a framed image and sends its coordinates with the file", async () => {
+  const framing = { focal_x: 0.35, focal_y: 0.6, zoom: 2 };
+  const framed = { ...photo(), framing, framing_revision: 0 };
+  (fetch as jest.Mock).mockResolvedValueOnce(response(200, { framing_supported: true })).mockResolvedValueOnce(response(200, framed));
+  const append = jest.spyOn(FormData.prototype, "append");
+  await expect(uploadPlantPhoto(12, "file:///photo.jpg", { uploadKey: key, framing, expectedPhotoId: photo().id,
+    expectedFramingRevision: 0 })).resolves.toEqual(framed);
+  expect((fetch as jest.Mock).mock.calls.map(([, request]) => request.method)).toEqual(["GET", "PUT"]);
+  expect(append).toHaveBeenCalledWith("framing", JSON.stringify(framing));
+  expect(append).toHaveBeenCalledWith("expected_framing_revision", "0");
+});
+
+it.each([405, 200])("does not replace a photo on a backend that cannot save framing (status %s)", async status => {
+  (fetch as jest.Mock).mockResolvedValueOnce(response(status, {}));
+  await expect(uploadPlantPhoto(12, "file:///photo.jpg", { framing: { focal_x: 0.5, focal_y: 0.5, zoom: 1 } }))
+    .rejects.toMatchObject({ body: { code: "photo_framing_unavailable" } });
+  expect(fetch).toHaveBeenCalledTimes(1);
+  expect((fetch as jest.Mock).mock.calls[0][1].method).toBe("GET");
+});
+
+it("repositions the existing photo with a versioned PATCH instead of uploading another file", async () => {
+  const framing = { focal_x: 0.4, focal_y: 0.6, zoom: 2 };
+  const framed = { ...photo(), framing, framing_revision: 1 };
+  (fetch as jest.Mock).mockResolvedValueOnce(response(200, framed));
+  await expect(updatePlantPhotoFraming(12, framing, { expectedPhotoId: photo().id, expectedFramingRevision: 0 })).resolves.toEqual(framed);
+  expect(fetch).toHaveBeenCalledTimes(1);
+  const call = (fetch as jest.Mock).mock.calls[0];
+  expect(call[1].method).toBe("PATCH");
+  expect(JSON.parse(call[1].body)).toEqual({ framing, expected_photo_id: photo().id, expected_framing_revision: 0 });
+  expect(call[1].headers.Authorization).toBe("Bearer account-a");
+});
+
+it("keeps a stale framing edit as a conflict instead of overwriting with another upload", async () => {
+  (fetch as jest.Mock).mockResolvedValueOnce(response(409, { code: "photo_conflict" }));
+  await expect(updatePlantPhotoFraming(12, { focal_x: 0.5, focal_y: 0.5, zoom: 2 },
+    { expectedPhotoId: photo().id, expectedFramingRevision: 0 })).rejects.toMatchObject({ status: 409 });
+  expect(fetch).toHaveBeenCalledTimes(1);
+  expect((fetch as jest.Mock).mock.calls[0][1].method).toBe("PATCH");
+});
+
+it("includes the framing version when deleting and refuses invalid framing before networking", async () => {
+  await deletePlantPhoto(12, { expectedPhotoId: photo().id, expectedFramingRevision: 2 });
+  expect(JSON.parse((fetch as jest.Mock).mock.calls[0][1].body)).toEqual({ expected_photo_id: photo().id, expected_framing_revision: 2 });
+  await expect(uploadPlantPhoto(12, "file:///photo.jpg", { framing: { focal_x: 0.5, focal_y: 0.5, zoom: Infinity } }))
+    .rejects.toMatchObject({ status: 400 });
+  expect(fetch).toHaveBeenCalledTimes(1);
 });

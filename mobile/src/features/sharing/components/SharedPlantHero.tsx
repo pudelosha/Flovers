@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import type { ShareablePlant } from "../types/sharing.types";
 import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
+import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
+import { normalizePhotoFraming } from "../../../shared/utils/photoFraming";
 
 const previewImages = {
   pothos: require("../assets/pothos.jpg"),
@@ -24,7 +26,8 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
   const { t } = useTranslation();
   const [localPhoto, setLocalPhoto] = useState<{ plantId: string; uri: string } | null>(null);
   const [failedSource, setFailedSource] = useState<string | null>(null);
-  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: "thumbnail", expiresAt });
+  const photoVariant = normalizePhotoFraming(plant.photo?.framing).zoom > 1 ? "display" : "thumbnail";
+  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: photoVariant, expiresAt });
   useEffect(() => {
     let active = true;
     if (!preferLocalPhoto || plant.photo || !/^[1-9]\d*$/.test(plant.id)) {
@@ -56,8 +59,11 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
               <LinearGradient colors={["rgba(0,0,0,1)", "rgba(0,0,0,0.92)", "rgba(0,0,0,0.68)", "rgba(0,0,0,0.28)", "rgba(0,0,0,0)"]}
                 locations={[0, 0.25, 0.55, 0.8, 1]} style={StyleSheet.absoluteFill} />
             }>
-              <ImageBackground testID="shared-plant-image" source={source} resizeMode="cover" style={StyleSheet.absoluteFill}
-                onError={() => setFailedSource(sourceKey)} />
+              {syncedPhotoUri && plant.photo ? (
+                <FramedPlantImage testID="shared-plant-image" uri={syncedPhotoUri} photo={plant.photo}
+                  style={StyleSheet.absoluteFill} onError={() => setFailedSource(sourceKey)} />
+              ) : <ImageBackground testID="shared-plant-image" source={source} resizeMode="cover" style={StyleSheet.absoluteFill}
+                onError={() => setFailedSource(sourceKey)} />}
             </MaskedView>
             <LinearGradient pointerEvents="none" colors={["rgba(0,0,0,0.18)", "rgba(0,0,0,0)"]}
               style={styles.topScrim} />

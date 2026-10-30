@@ -50,7 +50,17 @@
       "legacyInfo": "这张旧照片只保存在当前手机上。请选择“上传这张照片”来同步。",
       "cameraPermission": "请在手机设置中允许访问相机，以便拍照。",
       "cameraFailed": "无法打开相机，请重试。",
-      "pickerFailed": "无法打开照片选择器，请重试。"
+      "pickerFailed": "无法打开照片选择器，请重试。",
+      "framingHint": "拖动照片可调整位置，双指缩放或使用缩放按钮可调整大小。",
+      "detailsGuide": "植物详情",
+      "tilesGuide": "植物卡片",
+      "zoomOut": "缩小",
+      "zoomIn": "放大",
+      "resetFraming": "重置取景",
+      "zoomLabel": "缩放",
+      "photoLoading": "正在加载照片…",
+      "photoLoadFailed": "无法加载此照片，请重新选择。",
+      "framingUnsupported": "服务器尚不支持调整照片位置，请更新服务器后重试。"
     }
   }
 }

@@ -50,7 +50,17 @@
       "legacyInfo": "이전에 추가한 이 사진은 현재 휴대폰에만 저장되어 있어요. 동기화하려면 «이 사진 업로드»를 선택해 주세요.",
       "cameraPermission": "사진을 찍으려면 휴대폰 설정에서 카메라 접근을 허용해 주세요.",
       "cameraFailed": "카메라를 열 수 없어요. 다시 시도해 주세요.",
-      "pickerFailed": "사진 선택 화면을 열 수 없어요. 다시 시도해 주세요."
+      "pickerFailed": "사진 선택 화면을 열 수 없어요. 다시 시도해 주세요.",
+      "framingHint": "사진을 드래그해 위치를 옮기세요. 두 손가락이나 확대·축소 버튼으로 크기를 조절할 수 있어요.",
+      "detailsGuide": "식물 상세 정보",
+      "tilesGuide": "식물 카드",
+      "zoomOut": "축소",
+      "zoomIn": "확대",
+      "resetFraming": "구도 초기화",
+      "zoomLabel": "확대·축소",
+      "photoLoading": "사진을 불러오는 중…",
+      "photoLoadFailed": "이 사진을 불러올 수 없어요. 다시 선택해 주세요.",
+      "framingUnsupported": "서버에서 아직 사진 위치 조정을 지원하지 않아요. 서버를 업데이트한 후 다시 시도해 주세요."
     }
   }
 }

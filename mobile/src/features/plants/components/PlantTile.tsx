@@ -8,9 +8,11 @@ import { s } from "../styles/plants.styles";
 import { Plant } from "../types/plants.types";
 import PlantMenu from "./PlantMenu";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
 import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
+import { normalizePhotoFraming } from "../../../shared/utils/photoFraming";
 
 type Props = {
   plant: Plant;
@@ -41,7 +43,8 @@ export default function PlantTile({
   onShowQr,
 }: Props) {
   const { openSharePlant, shares } = useSharingPreview();
-  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: "thumbnail", expiresAt: plant.access?.expires_at });
+  const photoVariant = normalizePhotoFraming(plant.photo?.framing).zoom > 1 ? "display" : "thumbnail";
+  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: photoVariant, expiresAt: plant.access?.expires_at });
   const imgUri = syncedPhotoUri || plant.imageUrl;
   const access = plantAccess(plant.access);
 
@@ -96,7 +99,10 @@ export default function PlantTile({
               />
             }
           >
-            {imgUri ? (
+            {syncedPhotoUri && plant.photo ? (
+              <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
+                style={StyleSheet.absoluteFillObject} testID="plant-tile-photo" />
+            ) : imgUri ? (
               <ImageBackground
                 source={{ uri: imgUri }}
                 resizeMode="cover"

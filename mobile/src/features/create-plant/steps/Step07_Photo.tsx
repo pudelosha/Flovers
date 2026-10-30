@@ -2,7 +2,6 @@
 import {
   View,
   Text,
-  Image,
   Pressable,
   Alert,
   PermissionsAndroid,
@@ -21,6 +20,8 @@ import {
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import LinearGradient from "react-native-linear-gradient";
+import PlantPhotoFramingEditor from "../../../shared/ui/PlantPhotoFramingEditor";
+import { DEFAULT_PHOTO_FRAMING } from "../../../shared/utils/photoFraming";
 
 // local storage helpers (adjust relative path to where you placed it)
 import {
@@ -41,7 +42,7 @@ async function ensureAndroidCameraPermission(): Promise<boolean> {
   return results[permission] === PermissionsAndroid.RESULTS.GRANTED;
 }
 
-export default function Step07_Photo() {
+export default function Step07_Photo({ onInteractionChange }: { onInteractionChange?: (active: boolean) => void }) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -207,8 +208,14 @@ export default function Step07_Photo() {
           )}
         </Text>
 
-        {/* Preview frame */}
-        <View
+        {state.photoUri ? (
+          <PlantPhotoFramingEditor
+            uri={state.photoUri}
+            value={state.photoFraming ?? DEFAULT_PHOTO_FRAMING}
+            onChange={actions.setPhotoFraming}
+            onInteractionChange={onInteractionChange}
+          />
+        ) : <View
           style={[
             wiz.hero,
             {
@@ -223,13 +230,6 @@ export default function Step07_Photo() {
             },
           ]}
         >
-          {state.photoUri ? (
-            <Image
-              source={{ uri: state.photoUri }}
-              style={{ width: "100%", height: "100%" }}
-              resizeMode="cover"
-            />
-          ) : (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
               <Text
@@ -242,8 +242,7 @@ export default function Step07_Photo() {
                 {getTranslation("createPlant.step07.noPhotoSelected", "No photo selected")}
               </Text>
             </View>
-          )}
-        </View>
+        </View>}
 
         {/* Actions */}
         <View style={{ gap: 10 }}>

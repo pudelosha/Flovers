@@ -24,7 +24,8 @@ import type {
 } from "../types/create-plant.types";
 import { createPlantInstance } from "../../../api/services/plant-instances.service";
 import { deleteLocalPhoto } from "../../../shared/utils/photoStorage";
-import { uploadPlantPhoto } from "../../../api/services/plant-photos.service";
+import { uploadPlantPhoto, updatePlantPhotoFraming, type PlantPhoto } from "../../../api/services/plant-photos.service";
+import { DEFAULT_PHOTO_FRAMING, normalizePhotoFraming, type PhotoFraming } from "../../../shared/utils/photoFraming";
 
 type Action =
   | { type: "SET_QUERY"; query: string }
@@ -58,6 +59,7 @@ type Action =
   | { type: "SET_WATER_INTERVAL_DAYS"; val: number }
   // Step 7
   | { type: "SET_PHOTO_URI"; uri?: string }
+  | { type: "SET_PHOTO_FRAMING"; framing: PhotoFraming }
   | { type: "CLEAR_PHOTO" }
   // Step 8
   | { type: "SET_DISPLAY_NAME"; val: string }
@@ -91,6 +93,7 @@ const initial: WizardState = {
   careIntervalDays: 30,
   repotIntervalMonths: 12,
   photoUri: undefined,
+  photoFraming: DEFAULT_PHOTO_FRAMING,
   displayName: "",
   notes: "",
   purchaseDateISO: undefined,
@@ -197,9 +200,11 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, waterIntervalDays: Math.max(1, Math.min(90, action.val)) };
 
     case "SET_PHOTO_URI":
-      return { ...state, photoUri: action.uri };
+      return { ...state, photoUri: action.uri, photoFraming: DEFAULT_PHOTO_FRAMING };
+    case "SET_PHOTO_FRAMING":
+      return { ...state, photoFraming: normalizePhotoFraming(action.framing) };
     case "CLEAR_PHOTO":
-      return { ...state, photoUri: undefined };
+      return { ...state, photoUri: undefined, photoFraming: DEFAULT_PHOTO_FRAMING };
 
     case "SET_DISPLAY_NAME":
       return { ...state, displayName: action.val };
@@ -252,6 +257,7 @@ const Ctx = createContext<{
     setWaterIntervalDays: (d: number) => void;
 
     setPhotoUri: (uri?: string) => void;
+    setPhotoFraming: (framing: PhotoFraming) => void;
     clearPhoto: () => void;
 
     setDisplayName: (v: string) => void;
@@ -280,6 +286,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
   const stateRef = useRef(state);
   const createdPlantIdRef = useRef<string | undefined>(undefined);
   const savedPhotoUriRef = useRef<string | undefined>(undefined);
+  const uploadedPhotoRef = useRef<PlantPhoto | null>(null);
   const creationInFlightRef = useRef<Promise<string> | null>(null);
   const creationKeyRef = useRef<string | null>(null);
   const photoUploadKeyRef = useRef<{ uri: string; key: string } | null>(null);
@@ -319,15 +326,36 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
         if (photoUploadKeyRef.current?.uri !== s.photoUri) {
           photoUploadKeyRef.current = { uri: s.photoUri, key: newCreationKey() };
         }
-        await uploadPlantPhoto(newId, s.photoUri, {
+        const framing = normalizePhotoFraming(s.photoFraming);
+        let photo = await uploadPlantPhoto(newId, s.photoUri, {
           uploadKey: photoUploadKeyRef.current.key,
           expectedPhotoId: null,
+          framing,
         });
         assertCurrentDraft();
+        if (JSON.stringify(normalizePhotoFraming(photo?.framing)) !== JSON.stringify(framing)) {
+          photo = await updatePlantPhotoFraming(newId, framing, {
+            expectedPhotoId: photo.id,
+            // Never turn a recovered upload into permission to overwrite a
+            // newer framing saved by another device.
+            expectedFramingRevision: 0,
+          });
+          assertCurrentDraft();
+        }
         // Only a confirmed server upload completes this step. A failed upload
         // retains the source and plant ID so Retry never creates another plant.
         savedPhotoUriRef.current = s.photoUri;
+        uploadedPhotoRef.current = photo;
         await deleteLocalPhoto(s.photoUri).catch(() => {});
+      } else if (s.photoUri && uploadedPhotoRef.current
+          && JSON.stringify(normalizePhotoFraming(uploadedPhotoRef.current.framing)) !== JSON.stringify(normalizePhotoFraming(s.photoFraming))) {
+        const photo = uploadedPhotoRef.current;
+        const updated = await updatePlantPhotoFraming(newId, normalizePhotoFraming(s.photoFraming), {
+          expectedPhotoId: photo.id,
+          expectedFramingRevision: photo.framing_revision ?? 0,
+        });
+        assertCurrentDraft();
+        uploadedPhotoRef.current = updated;
       }
 
       return newId;
@@ -363,6 +391,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
         creationKeyRef.current = newCreationKey();
         createdPlantIdRef.current = undefined;
         savedPhotoUriRef.current = undefined;
+        uploadedPhotoRef.current = null;
         photoUploadKeyRef.current = null;
         stateRef.current = { ...initial };
         dispatch({ type: "RESET" });
@@ -395,6 +424,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setWaterIntervalDays: (d: number) => dispatch({ type: "SET_WATER_INTERVAL_DAYS", val: d }),
 
       setPhotoUri: (uri?: string) => dispatch({ type: "SET_PHOTO_URI", uri }),
+      setPhotoFraming: (framing: PhotoFraming) => dispatch({ type: "SET_PHOTO_FRAMING", framing }),
       clearPhoto: () => dispatch({ type: "CLEAR_PHOTO" }),
 
       setDisplayName: (v: string) => dispatch({ type: "SET_DISPLAY_NAME", val: v }),

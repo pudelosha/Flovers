@@ -16,6 +16,7 @@ import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
+import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 
 type Props = {
@@ -278,7 +279,10 @@ export default function PlantInfoTile({
                     />
                   }
                 >
-                  <ImageMasked uri={imageUrl} />
+                  {syncedPhotoUri && plant.photo ? (
+                    <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
+                      style={StyleSheet.absoluteFillObject} testID="plant-detail-photo" />
+                  ) : <ImageMasked uri={imageUrl} />}
                 </MaskedView>
 
                 <LinearGradient

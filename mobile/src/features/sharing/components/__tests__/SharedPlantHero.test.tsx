@@ -4,6 +4,7 @@ import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
 import SharedPlantHero from "../SharedPlantHero";
 import { getPlantPhotoUri } from "../../../../shared/utils/photoStorage";
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
+import FramedPlantImage from "../../../../shared/ui/FramedPlantImage";
 
 jest.mock("../../../../shared/utils/photoStorage", () => ({ getPlantPhotoUri: jest.fn() }));
 jest.mock("../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: jest.fn() }));
@@ -18,16 +19,40 @@ describe("SharedPlantHero", () => {
     (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: null });
   });
 
-  it("shows a synced custom thumbnail for owners and recipients without consulting legacy files", () => {
-    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000 };
+  it("shows a sharp zoomed custom photo for owners and recipients without consulting legacy files", () => {
+    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000,
+      framing: { focal_x: 0.38, focal_y: 0.61, zoom: 1.7 } };
     (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
     const view = render(<SharedPlantHero plant={{ ...plant, photo: metadata }} preferLocalPhoto />);
     expect(photo).not.toHaveBeenCalled();
-    expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "data:image/jpeg;base64,SYNCED" });
+    expect(view.UNSAFE_getByType(FramedPlantImage).props).toMatchObject({ uri: "data:image/jpeg;base64,SYNCED", photo: metadata });
     view.rerender(<SharedPlantHero plant={{ ...plant, photo: metadata }} expiresAt="2030-01-01T00:00:00Z" />);
     expect(photo).not.toHaveBeenCalled();
-    expect(usePlantPhoto).toHaveBeenLastCalledWith(metadata, { variant: "thumbnail", expiresAt: "2030-01-01T00:00:00Z" });
-    expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "data:image/jpeg;base64,SYNCED" });
+    expect(usePlantPhoto).toHaveBeenLastCalledWith(metadata, { variant: "display", expiresAt: "2030-01-01T00:00:00Z" });
+    expect(view.UNSAFE_getByType(FramedPlantImage).props).toMatchObject({ uri: "data:image/jpeg;base64,SYNCED", photo: metadata });
+  });
+
+  it.each([
+    { name: "unframed photos", framing: undefined },
+    { name: "default framing", framing: { focal_x: 0.5, focal_y: 0.5, zoom: 1 } },
+  ])("keeps lightweight thumbnails for $name", ({ framing }) => {
+    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000, framing };
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
+    const view = render(<SharedPlantHero plant={{ ...plant, photo: metadata }} />);
+    expect(view.UNSAFE_getByType(FramedPlantImage).props.photo).toEqual(metadata);
+    expect(usePlantPhoto).toHaveBeenLastCalledWith(metadata, { variant: "thumbnail", expiresAt: undefined });
+  });
+
+  it("updates framing for an existing private photo without falling back to catalogue or local files", () => {
+    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000,
+      framing: { focal_x: 0.5, focal_y: 0.5, zoom: 1 } };
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
+    const view = render(<SharedPlantHero plant={{ ...plant, photo: metadata }} />);
+    const updated = { ...metadata, framing: { focal_x: 0.6, focal_y: 0.7, zoom: 2 } };
+    view.rerender(<SharedPlantHero plant={{ ...plant, photo: updated }} />);
+    expect(view.UNSAFE_getByType(FramedPlantImage).props).toMatchObject({ uri: "data:image/jpeg;base64,SYNCED", photo: updated });
+    expect(usePlantPhoto).toHaveBeenLastCalledWith(updated, { variant: "display", expiresAt: undefined });
+    expect(photo).not.toHaveBeenCalled();
   });
 
   it("shows the custom name, italic Latin name and a pinned location", () => {

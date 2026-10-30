@@ -8,6 +8,19 @@ The backend keeps one current cover image per plant. A replacement commits its f
 
 Older photos saved only on an owner's phone are not uploaded automatically. The image editor offers an explicit upload choice. If an older full-resolution file exceeds the upload or pixel limit, choosing the image again from the gallery lets the picker resize it before upload. A failed wizard upload retains the source and retries against the already-created plant rather than creating a second plant.
 
+## Photo framing API
+
+Photo metadata includes `framing: {focal_x, focal_y, zoom}` and `framing_revision`. The focal coordinates are finite numbers between 0 and 1 in the stored, orientation-normalized image; `(0.5, 0.5)` is its center. Zoom ranges from 1 to 4. The mobile views use one common framing canvas, with the wide plant tile showing its middle band. The server retains both complete resized variants so the owner can adjust the framing later without uploading the image again.
+
+All following operations require the plant owner and use `/plant-instances/<plant_id>/photo/`:
+
+- `GET` returns `{"framing_supported": true}`, including before the first photo upload. This read-only capability check does not consume the photo-write throttle. New clients check it before uploading a framed image; an older backend returning 405 must not receive that replacement upload.
+- `PUT` accepts optional multipart `framing` containing a JSON object alongside `photo`, `upload_key` and `expected_photo_id`. An omitted framing uses centered coordinates and zoom 1, preserving compatibility with older clients.
+- `PATCH` accepts JSON containing `framing`, the current UUID in `expected_photo_id`, and `expected_framing_revision`. It returns updated photo metadata. Reframing keeps the photo UUID, URLs and stored bytes unchanged; only coordinates, the framing revision and the plant update timestamp change.
+- `PUT` and `DELETE` also accept optional `expected_framing_revision` to guard against changes since the editor opened. Stale edits return `photo_conflict` (409); invalid coordinates return `invalid_photo` (400). An exact PATCH retry acknowledges an already-saved framing without incrementing the revision again.
+
+Deploy migration `plant_instances.0007_plantimage_framing` before enabling framing saves in a new mobile build. Existing photo rows receive centered defaults and revision 0 without modifying their files. Framing is returned with owner and shared-plant metadata; recipients cannot change it. The existing deployment pipeline runs migrations before starting the new backend services.
+
 ## Deployment and persistent storage
 
 The deployment script automatically creates `/opt/app/docker-compose.private-media.json`. This non-secret Compose overlay mounts the project-scoped `<project>_private_media` Docker volume at `/app/private-media` in the backend application services. It remains on the VPS after the temporary image-pinning overlay is removed, so subsequent deployments reuse the same files. It is not mounted into Caddy or Traefik and must never be exposed through a public `/media/` file-server mapping.

@@ -1,5 +1,6 @@
 import { API_BASE_NORM } from "../../config";
 import { ApiError, getAuthSessionId, hasAuthToken, onAuthSessionChanged, request, requestBlob } from "../client";
+import type { PhotoFraming } from "../../shared/utils/photoFraming";
 
 export type PlantPhoto = {
   id: string;
@@ -9,10 +10,12 @@ export type PlantPhoto = {
   height: number;
   byte_size: number;
   created_at?: string;
+  framing?: PhotoFraming;
+  framing_revision?: number;
 };
 export type PlantPhotoVariant = "display" | "thumbnail";
-export type PhotoMutationOptions = { expectedPhotoId?: string | null };
-export type PhotoUploadOptions = PhotoMutationOptions & { uploadKey?: string };
+export type PhotoMutationOptions = { expectedPhotoId?: string | null; expectedFramingRevision?: number };
+export type PhotoUploadOptions = PhotoMutationOptions & { uploadKey?: string; framing?: PhotoFraming };
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const MAX_IMAGE_BYTES = 350_000;
@@ -74,9 +77,32 @@ export function parsePlantPhoto(value: unknown): PlantPhoto | null {
       || !Number.isInteger(photo.byte_size) || photo.byte_size < 1 || photo.byte_size > 1_000_000) return null;
   try { photoPath(photo, "display"); photoPath(photo, "thumbnail"); }
   catch { return null; }
+  if (photo.framing !== undefined && !validFraming(photo.framing)) return null;
+  if (photo.framing_revision !== undefined && !validRevision(photo.framing_revision)) return null;
   return { id: photo.id, url: photo.url, thumbnail_url: photo.thumbnail_url,
     width: photo.width, height: photo.height, byte_size: photo.byte_size,
-    ...(typeof photo.created_at === "string" ? { created_at: photo.created_at } : {}) };
+    ...(typeof photo.created_at === "string" ? { created_at: photo.created_at } : {}),
+    ...(photo.framing !== undefined ? { framing: { ...photo.framing } } : {}),
+    ...(photo.framing_revision !== undefined ? { framing_revision: photo.framing_revision } : {}) };
+}
+
+function validFraming(value: unknown): value is PhotoFraming {
+  if (!value || typeof value !== "object") return false;
+  const frame = value as PhotoFraming;
+  return typeof frame.focal_x === "number" && Number.isFinite(frame.focal_x) && frame.focal_x >= 0 && frame.focal_x <= 1
+    && typeof frame.focal_y === "number" && Number.isFinite(frame.focal_y) && frame.focal_y >= 0 && frame.focal_y <= 1
+    && typeof frame.zoom === "number" && Number.isFinite(frame.zoom) && frame.zoom >= 1 && frame.zoom <= 4;
+}
+
+function validRevision(value: unknown): value is number {
+  return typeof value === "number" && Number.isSafeInteger(value) && value >= 0;
+}
+
+function requireFraming(photo: PlantPhoto): PlantPhoto {
+  if (!photo.framing || photo.framing_revision === undefined) {
+    throw new ApiError(503, { code: "photo_framing_unavailable" }, "The server does not support photo framing yet");
+  }
+  return photo;
 }
 
 function plantPath(plantId: string | number) {
@@ -107,21 +133,67 @@ export async function uploadPlantPhoto(
   }
   const uploadKey = options.uploadKey ?? newUploadKey();
   if (!UUID.test(uploadKey)) throw new ApiError(400, { code: "invalid_photo" }, "Invalid photo upload key");
+  if (options.framing !== undefined && !validFraming(options.framing)) {
+    throw new ApiError(400, { code: "invalid_photo" }, "Invalid photo framing");
+  }
+  if (options.expectedFramingRevision !== undefined && !validRevision(options.expectedFramingRevision)) {
+    throw new ApiError(400, { code: "invalid_photo" }, "Invalid photo revision");
+  }
+  if (options.framing !== undefined) {
+    // An older backend ignores unknown multipart fields. Check support before
+    // replacing any photo, rather than reporting success for an unsaved crop.
+    let capability: { framing_supported?: boolean };
+    try {
+      capability = await request<{ framing_supported?: boolean }>(plantPath(plantId), "GET", undefined, { auth: true });
+    } catch (error) {
+      if (!(error instanceof ApiError) || error.status !== 405) throw error;
+      throw new ApiError(503, { code: "photo_framing_unavailable" }, "The server does not support photo framing yet");
+    }
+    if (capability?.framing_supported !== true) {
+      throw new ApiError(503, { code: "photo_framing_unavailable" }, "The server does not support photo framing yet");
+    }
+  }
   const form = new FormData();
   const isPng = /\.png(?:[?#]|$)/i.test(uri);
   form.append("photo", { uri, name: isPng ? "plant.png" : "plant.jpg", type: isPng ? "image/png" : "image/jpeg" } as any);
   form.append("upload_key", uploadKey);
   if (options.expectedPhotoId !== undefined) form.append("expected_photo_id", expectedId(options.expectedPhotoId));
+  if (options.framing !== undefined) form.append("framing", JSON.stringify(options.framing));
+  if (options.expectedFramingRevision !== undefined) form.append("expected_framing_revision", String(options.expectedFramingRevision));
   const result = await request<unknown>(path, "PUT", form, { auth: true, timeoutMs: 60_000 });
   const photo = parsePlantPhoto(result);
   if (!photo) throw new ApiError(502, { code: "invalid_photo_response" }, "Invalid photo response");
+  clearPlantPhotoCache();
+  return options.framing === undefined ? photo : requireFraming(photo);
+}
+
+export async function updatePlantPhotoFraming(plantId: string | number, framing: PhotoFraming,
+  options: { expectedPhotoId: string; expectedFramingRevision: number }): Promise<PlantPhoto> {
+  if (!validFraming(framing) || !validRevision(options.expectedFramingRevision)
+      || !UUID.test(options.expectedPhotoId)) {
+    throw new ApiError(400, { code: "invalid_photo" }, "Invalid photo framing or revision");
+  }
+  const result = await request<unknown>(plantPath(plantId), "PATCH", {
+    framing, expected_photo_id: options.expectedPhotoId, expected_framing_revision: options.expectedFramingRevision,
+  }, { auth: true });
+  const photo = parsePlantPhoto(result);
+  if (!photo || photo.id.toLowerCase() !== options.expectedPhotoId.toLowerCase()) {
+    throw new ApiError(502, { code: "invalid_photo_response" }, "Invalid photo response");
+  }
+  requireFraming(photo);
   clearPlantPhotoCache();
   return photo;
 }
 
 export async function deletePlantPhoto(plantId: string | number, options: PhotoMutationOptions = {}): Promise<void> {
+  if (options.expectedFramingRevision !== undefined && !validRevision(options.expectedFramingRevision)) {
+    throw new ApiError(400, { code: "invalid_photo" }, "Invalid photo revision");
+  }
   await request<void>(plantPath(plantId), "DELETE",
-    options.expectedPhotoId === undefined ? undefined : { expected_photo_id: expectedId(options.expectedPhotoId) },
+    options.expectedPhotoId === undefined && options.expectedFramingRevision === undefined ? undefined : {
+      ...(options.expectedPhotoId === undefined ? {} : { expected_photo_id: expectedId(options.expectedPhotoId) }),
+      ...(options.expectedFramingRevision === undefined ? {} : { expected_framing_revision: options.expectedFramingRevision }),
+    },
     { auth: true });
   clearPlantPhotoCache();
 }

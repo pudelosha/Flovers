@@ -50,7 +50,17 @@
       "legacyInfo": "Cette ancienne photo est enregistrée uniquement sur ce téléphone. Choisissez « Envoyer cette photo » pour la synchroniser.",
       "cameraPermission": "Autorisez l’accès à l’appareil photo dans les réglages de votre téléphone pour prendre une photo.",
       "cameraFailed": "Impossible d’ouvrir l’appareil photo. Réessayez.",
-      "pickerFailed": "Impossible d’ouvrir le sélecteur de photos. Réessayez."
+      "pickerFailed": "Impossible d’ouvrir le sélecteur de photos. Réessayez.",
+      "framingHint": "Faites glisser la photo pour la déplacer. Pincez avec deux doigts ou utilisez les boutons de zoom pour l’ajuster.",
+      "detailsGuide": "Détails de la plante",
+      "tilesGuide": "Cartes des plantes",
+      "zoomOut": "Zoom arrière",
+      "zoomIn": "Zoom avant",
+      "resetFraming": "Réinitialiser le cadrage",
+      "zoomLabel": "Zoom",
+      "photoLoading": "Chargement de la photo…",
+      "photoLoadFailed": "Impossible de charger cette photo. Sélectionnez-la à nouveau.",
+      "framingUnsupported": "Le positionnement des photos n’est pas encore disponible sur le serveur. Mettez le serveur à jour et réessayez."
     }
   }
 }

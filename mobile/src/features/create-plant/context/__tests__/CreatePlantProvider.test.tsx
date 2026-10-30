@@ -3,15 +3,16 @@ import { act, render } from "@testing-library/react-native";
 import { CreatePlantProvider, useCreatePlantWizard } from "../CreatePlantProvider";
 import { createPlantInstance } from "../../../../api/services/plant-instances.service";
 import { deleteLocalPhoto } from "../../../../shared/utils/photoStorage";
-import { uploadPlantPhoto } from "../../../../api/services/plant-photos.service";
-import { setAuthToken } from "../../../../api/client";
+import { uploadPlantPhoto, updatePlantPhotoFraming } from "../../../../api/services/plant-photos.service";
+import { ApiError, setAuthToken } from "../../../../api/client";
 
 jest.mock("../../../../api/services/plant-instances.service", () => ({ createPlantInstance: jest.fn() }));
 jest.mock("../../../../shared/utils/photoStorage", () => ({ deleteLocalPhoto: jest.fn() }));
-jest.mock("../../../../api/services/plant-photos.service", () => ({ uploadPlantPhoto: jest.fn() }));
+jest.mock("../../../../api/services/plant-photos.service", () => ({ uploadPlantPhoto: jest.fn(), updatePlantPhotoFraming: jest.fn() }));
 
 const mockCreate = createPlantInstance as jest.Mock;
 const mockUpload = uploadPlantPhoto as jest.Mock;
+const mockUpdateFraming = updatePlantPhotoFraming as jest.Mock;
 const mockDeleteLocal = deleteLocalPhoto as jest.Mock;
 let wizard: ReturnType<typeof useCreatePlantWizard>;
 
@@ -94,7 +95,7 @@ describe("wizard creation recovery", () => {
     expect(mockCreate).toHaveBeenCalledTimes(1);
     expect(mockUpload).toHaveBeenCalledTimes(2);
     expect(mockUpload.mock.calls[0]).toEqual(["99", "file:///documents/Flovers/tmp/photo.jpg", {
-      expectedPhotoId: null, uploadKey: expect.any(String),
+      expectedPhotoId: null, uploadKey: expect.any(String), framing: { focal_x: 0.5, focal_y: 0.5, zoom: 1 },
     }]);
     expect(mockUpload.mock.calls[1][2].uploadKey).toBe(mockUpload.mock.calls[0][2].uploadKey);
     expect(mockDeleteLocal).toHaveBeenCalledWith("file:///documents/Flovers/tmp/photo.jpg");
@@ -140,5 +141,47 @@ describe("wizard creation recovery", () => {
       finish({ id: 99 });
       await expect(Promise.all([first, second])).resolves.toEqual(["99", "99"]);
     });
+  });
+
+  it("uploads the selected framing and resets it when a different image is selected", async () => {
+    const framing = { focal_x: 0.3, focal_y: 0.65, zoom: 2 };
+    await act(async () => {
+      wizard.actions.setPhotoUri("file:///tmp/new.jpg");
+      wizard.actions.setPhotoFraming(framing);
+    });
+    mockUpload.mockResolvedValueOnce({ id: "image-id", framing, framing_revision: 0 });
+    await act(async () => { await wizard.actions.createPlant(); });
+    expect(mockUpload).toHaveBeenCalledWith("99", "file:///tmp/new.jpg", expect.objectContaining({ framing }));
+    expect(mockUpdateFraming).not.toHaveBeenCalled();
+    await act(async () => { wizard.actions.setPhotoUri("file:///tmp/another.jpg"); });
+    expect(wizard.state.photoFraming).toEqual({ focal_x: 0.5, focal_y: 0.5, zoom: 1 });
+  });
+
+  it("applies a changed framing after an upload response was lost without creating a second plant", async () => {
+    await act(async () => { wizard.actions.setPhotoUri("file:///tmp/new.jpg"); });
+    mockUpload.mockRejectedValueOnce(new Error("Response lost"));
+    await act(async () => { await expect(wizard.actions.createPlant()).rejects.toThrow("Response lost"); });
+    const framing = { focal_x: 0.35, focal_y: 0.6, zoom: 2.5 };
+    await act(async () => { wizard.actions.setPhotoFraming(framing); });
+    mockUpload.mockResolvedValueOnce({ id: "committed-image", framing_revision: 0 });
+    mockUpdateFraming.mockResolvedValueOnce({ id: "committed-image", framing, framing_revision: 1 });
+    await act(async () => { await expect(wizard.actions.createPlant()).resolves.toBe("99"); });
+    expect(mockCreate).toHaveBeenCalledTimes(1);
+    expect(mockUpload.mock.calls[1][2].uploadKey).toBe(mockUpload.mock.calls[0][2].uploadKey);
+    expect(mockUpdateFraming).toHaveBeenCalledWith("99", framing, { expectedPhotoId: "committed-image", expectedFramingRevision: 0 });
+  });
+
+  it("preserves another device's framing when a recovered upload has already been edited", async () => {
+    await act(async () => { wizard.actions.setPhotoUri("file:///tmp/new.jpg"); });
+    mockUpload.mockRejectedValueOnce(new Error("Response lost"));
+    await act(async () => { await expect(wizard.actions.createPlant()).rejects.toThrow("Response lost"); });
+    const framing = { focal_x: 0.35, focal_y: 0.6, zoom: 2.5 };
+    await act(async () => { wizard.actions.setPhotoFraming(framing); });
+    mockUpload.mockResolvedValueOnce({ id: "committed-image", framing: { focal_x: 0.6, focal_y: 0.4, zoom: 3 }, framing_revision: 2 });
+    mockUpdateFraming.mockRejectedValueOnce(new ApiError(409, { code: "photo_conflict" }));
+    await act(async () => { await expect(wizard.actions.createPlant()).rejects.toMatchObject({ status: 409 }); });
+    expect(mockUpdateFraming).toHaveBeenCalledWith("99", framing, { expectedPhotoId: "committed-image", expectedFramingRevision: 0 });
+    expect(mockCreate).toHaveBeenCalledTimes(1);
+    expect(mockDeleteLocal).not.toHaveBeenCalled();
   });
 });

@@ -5,6 +5,7 @@ import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import Step07_Photo from "../Step07_Photo";
 import { useCreatePlantWizard } from "../../hooks/useCreatePlantWizard";
 import { persistTempPlantPhoto } from "../../../../shared/utils/photoStorage";
+import PlantPhotoFramingEditor from "../../../../shared/ui/PlantPhotoFramingEditor";
 
 jest.mock("react-native-image-picker", () => ({ launchCamera: jest.fn(), launchImageLibrary: jest.fn() }));
 jest.mock("../../hooks/useCreatePlantWizard", () => ({ useCreatePlantWizard: jest.fn() }));
@@ -41,5 +42,21 @@ describe("wizard photo permission boundaries", () => {
     expect(requestPermission).toHaveBeenCalledWith([permission]);
     expect(launchCamera).toHaveBeenCalledWith(expect.objectContaining({ saveToPhotos: false }));
     expect(setPhotoUri).toHaveBeenCalledWith("file:///wizard/persisted.jpg");
+  });
+
+  it("keeps the editor's framing in the wizard and forwards drag interaction to its scroll view", async () => {
+    const framing = { focal_x: 0.4, focal_y: 0.6, zoom: 2 };
+    const setPhotoFraming = jest.fn(), onInteractionChange = jest.fn();
+    (useCreatePlantWizard as jest.Mock).mockReturnValue({
+      state: { photoUri: "file:///wizard.jpg", photoFraming: framing },
+      actions: { setPhotoUri, setPhotoFraming },
+    });
+    const screen = render(<Step07_Photo onInteractionChange={onInteractionChange} />);
+    const editor = screen.UNSAFE_getByType(PlantPhotoFramingEditor);
+    expect(editor.props.value).toEqual(framing);
+    const changed = { ...framing, zoom: 2.5 };
+    await act(async () => { editor.props.onChange(changed); editor.props.onInteractionChange(true); });
+    expect(setPhotoFraming).toHaveBeenCalledWith(changed);
+    expect(onInteractionChange).toHaveBeenCalledWith(true);
   });
 });

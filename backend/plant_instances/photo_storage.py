@@ -3,6 +3,7 @@ import base64
 from datetime import timedelta
 import json
 import logging
+import math
 import os
 from pathlib import Path
 import re
@@ -62,7 +63,37 @@ def photo_metadata(plant, request=None):
     url = f"/plant-instances/{plant.pk}/photo/{image.pk}/"
     return {"id": str(image.pk), "url": url, "thumbnail_url": url + "?variant=thumbnail",
             "width": image.width, "height": image.height, "byte_size": image.byte_size,
+            "framing": image_framing(image), "framing_revision": image.framing_revision,
             "created_at": image.created_at.isoformat()}
+
+
+def image_framing(image):
+    return {"focal_x": image.focal_x, "focal_y": image.focal_y, "zoom": image.zoom}
+
+
+def normalize_framing(value):
+    """Validate coordinates rather than silently clamping a corrupt crop."""
+    if isinstance(value, str):
+        try:
+            if len(value) > 1024:
+                raise ValueError("Framing is too large.")
+            value = json.loads(value)
+        except (ValueError, TypeError):
+            raise PhotoError("invalid_photo", "Invalid photo framing.")
+    limits = {"focal_x": (0, 1), "focal_y": (0, 1), "zoom": (1, 4)}
+    if not isinstance(value, dict) or set(value) != set(limits):
+        raise PhotoError("invalid_photo", "Photo framing requires focal_x, focal_y and zoom.")
+    result = {}
+    for name, (minimum, maximum) in limits.items():
+        number = value[name]
+        try:
+            valid = type(number) in (int, float) and math.isfinite(number) and minimum <= number <= maximum
+        except (OverflowError, TypeError):
+            valid = False
+        if not valid:
+            raise PhotoError("invalid_photo", "Photo framing is outside its allowed range.")
+        result[name] = float(number)
+    return result
 
 
 def _normalize_upload(upload):
@@ -100,6 +131,11 @@ def _expected_matches(current, expected):
         raise PhotoError("photo_conflict", "The plant photo changed. Reload before saving.", 409)
 
 
+def _expected_framing_matches(current, expected):
+    if expected is not None and (current is None or current.framing_revision != expected):
+        raise PhotoError("photo_conflict", "The photo framing changed. Reload before saving.", 409)
+
+
 def _lock_owner_plant(user, plant_id):
     # Global quota, then user, then plant is one consistent lock order.
     PhotoStorageLock.objects.get_or_create(pk=1)
@@ -125,12 +161,14 @@ def _check_capacity(plant, current, size):
         raise PhotoError("photo_storage_unavailable", "Photo storage is temporarily unavailable.", 503)
 
 
-def replace_photo(*, user, plant_id, upload, upload_key, expected=None):
+def replace_photo(*, user, plant_id, upload, upload_key, expected=None, framing=None, expected_framing_revision=None):
+    framing = normalize_framing(framing if framing is not None else {"focal_x": 0.5, "focal_y": 0.5, "zoom": 1})
     # A committed retry does not decode or write a second copy.
     existing = PlantImage.objects.filter(plant_id=plant_id, plant__user=user, purpose="cover").first()
     if existing and existing.upload_key == upload_key:
         return existing
     _expected_matches(existing, expected)
+    _expected_framing_matches(existing, expected_framing_revision)
     image = _normalize_upload(upload)
     image_id = uuid.uuid4()
     directory = f"plants/{plant_id}/{image_id.hex}"
@@ -142,6 +180,7 @@ def replace_photo(*, user, plant_id, upload, upload_key, expected=None):
             if current and current.upload_key == upload_key:
                 return current
             _expected_matches(current, expected)
+            _expected_framing_matches(current, expected_framing_revision)
             size = len(image["display"]) + len(image["thumbnail"])
             _check_capacity(plant, current, size)
             written = directory_path(directory)
@@ -154,7 +193,7 @@ def replace_photo(*, user, plant_id, upload, upload_key, expected=None):
             if current:
                 current.delete()
             stored = PlantImage.objects.create(id=image_id, plant=plant, upload_key=upload_key,
-                directory=directory, width=image["width"], height=image["height"], byte_size=size)
+                directory=directory, width=image["width"], height=image["height"], byte_size=size, **framing)
             plant.save(update_fields=["updated_at"])
         return stored
     except Exception:
@@ -167,11 +206,32 @@ def replace_photo(*, user, plant_id, upload, upload_key, expected=None):
         raise
 
 
-def remove_photo(*, user, plant_id, expected=None):
+def update_photo_framing(*, user, plant_id, framing, expected, expected_framing_revision):
+    framing = normalize_framing(framing)
     with transaction.atomic():
         plant = _lock_owner_plant(user, plant_id)
         current = PlantImage.objects.filter(plant=plant, purpose="cover").first()
         _expected_matches(current, expected)
+        if current is None:
+            raise Http404
+        # A retry after a lost response can acknowledge the exact saved framing,
+        # but may never replace a newer, different framing with stale coordinates.
+        if image_framing(current) == framing:
+            return current
+        _expected_framing_matches(current, expected_framing_revision)
+        current.focal_x, current.focal_y, current.zoom = (framing[name] for name in ("focal_x", "focal_y", "zoom"))
+        current.framing_revision += 1
+        current.save(update_fields=["focal_x", "focal_y", "zoom", "framing_revision"])
+        plant.save(update_fields=["updated_at"])
+        return current
+
+
+def remove_photo(*, user, plant_id, expected=None, expected_framing_revision=None):
+    with transaction.atomic():
+        plant = _lock_owner_plant(user, plant_id)
+        current = PlantImage.objects.filter(plant=plant, purpose="cover").first()
+        _expected_matches(current, expected)
+        _expected_framing_matches(current, expected_framing_revision)
         if current:
             current.delete()
             plant.save(update_fields=["updated_at"])

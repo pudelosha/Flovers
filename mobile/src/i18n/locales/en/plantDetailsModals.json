@@ -50,7 +50,17 @@
       "legacyInfo": "This older photo is stored only on this phone. Choose Upload this photo to sync it.",
       "cameraPermission": "Allow camera access in your phone settings to take a photo.",
       "cameraFailed": "Could not open the camera. Please try again.",
-      "pickerFailed": "Could not open the photo picker. Please try again."
+      "pickerFailed": "Could not open the photo picker. Please try again.",
+      "framingHint": "Drag to move the photo. Pinch or use the zoom controls to adjust it.",
+      "detailsGuide": "Plant details",
+      "tilesGuide": "Plants tiles",
+      "zoomOut": "Zoom out",
+      "zoomIn": "Zoom in",
+      "resetFraming": "Reset framing",
+      "zoomLabel": "Zoom",
+      "photoLoading": "Loading photo…",
+      "photoLoadFailed": "Could not load this photo. Choose it again.",
+      "framingUnsupported": "Photo positioning is not available on the server yet. Please update the server and try again."
     }
   }
 }

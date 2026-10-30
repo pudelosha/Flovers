@@ -22,7 +22,9 @@
         "body": [
           "The 3-dot menu associated with the plant header provides additional actions related to the plant itself.",
           "Available actions include viewing the Plant Definition (if the plant is linked to one), editing plant details, changing the plant image, and navigating to Reminders filtered for this plant.",
-          "Replacing a photo removes the previous server copy after the new photo is saved. Removing the custom photo restores the catalogue image when one is available."
+          "Replacing a photo removes the previous server copy after the new photo is saved. Removing the custom photo restores the catalogue image when one is available.",
+          "Drag the photo to reposition it and pinch or use the zoom buttons to change its scale. The fixed red frame approximates Plant Details, and the blue frame approximates Plants list tiles. Your framing is saved with the photo and is also used for shared plants.",
+          "The same framing controls are available in Change image. Press Save to adjust an existing photo without uploading another copy."
         ]
       },
       {

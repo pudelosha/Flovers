@@ -1,4 +1,6 @@
-﻿export type WizardStep =
+import type { PhotoFraming } from "../../../shared/utils/photoFraming";
+
+export type WizardStep =
   | "selectPlant"
   | "traits"
   | "location"
@@ -134,8 +136,9 @@ export type WizardState = {
   careIntervalDays?: number;      // 1..90
   repotIntervalMonths?: number;   // 1..12
 
-  // Step 7 – Photo (local-only)
+  // Step 7 – Local selection, uploaded with its framing on creation.
   photoUri?: string;
+  photoFraming?: PhotoFraming;
 
   // Step 8 – Name & Notes
   displayName?: string;
@@ -260,3 +263,4 @@ export type ApiPlantInstance = {
   created_at: string;
   updated_at: string;
 };
+

@@ -9,7 +9,6 @@ import {
   Keyboard,
   PermissionsAndroid,
   Platform,
-  Image,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -26,7 +25,9 @@ import {
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import { ApiError } from "../../../../api/client";
 import { fetchPlantInstanceDetail } from "../../../../api/services/plant-instances.service";
-import { uploadPlantPhoto, deletePlantPhoto, type PlantPhoto } from "../../../../api/services/plant-photos.service";
+import { uploadPlantPhoto, deletePlantPhoto, updatePlantPhotoFraming, type PlantPhoto } from "../../../../api/services/plant-photos.service";
+import PlantPhotoFramingEditor from "../../../../shared/ui/PlantPhotoFramingEditor";
+import { DEFAULT_PHOTO_FRAMING, normalizePhotoFraming, type PhotoFraming } from "../../../../shared/utils/photoFraming";
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
 import {
   getPlantPhotoUri,
@@ -70,6 +71,12 @@ type PendingAction =
   | { kind: "set"; uri: string; uploadKey: string }
   | { kind: "remove" };
 
+function sameFraming(left: PhotoFraming, right: PhotoFraming) {
+  return Math.abs(left.focal_x - right.focal_x) < 0.000001
+    && Math.abs(left.focal_y - right.focal_y) < 0.000001
+    && Math.abs(left.zoom - right.zoom) < 0.000001;
+}
+
 export default function ChangePlantImageModal({ visible, onClose, plantId, onChanged }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -98,6 +105,10 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
 
   // preview state (may differ from persisted)
   const [previewUri, setPreviewUri] = useState<string | null>(null);
+  const [framing, setFraming] = useState<PhotoFraming>(DEFAULT_PHOTO_FRAMING);
+  const initialFramingRef = useRef<PhotoFraming>(DEFAULT_PHOTO_FRAMING);
+  const [photoInteracting, setPhotoInteracting] = useState(false);
+  const framingChanged = !!previewUri && !sameFraming(framing, initialFramingRef.current);
 
   // pending action (applied only on Save)
   const [pending, setPending] = useState<PendingAction>({ kind: "none" });
@@ -116,14 +127,14 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     if (savingRef.current) return;
     Keyboard.dismiss();
 
-    const hasUnsaved = pending.kind !== "none";
+    const hasUnsaved = pending.kind !== "none" || framingChanged;
     if (hasUnsaved) {
       setConfirmDiscardVisible(true);
       return;
     }
 
     onClose();
-  }, [onClose, pending.kind]);
+  }, [onClose, pending.kind, framingChanged]);
 
   // Load the current server version before permitting mutations. Older local
   // photos remain an explicit upload choice instead of being silently shared.
@@ -143,6 +154,9 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       setLoading(true);
       setCurrentPhoto(null);
       setLegacySourceUri(null);
+      setPhotoInteracting(false);
+      setFraming(DEFAULT_PHOTO_FRAMING);
+      initialFramingRef.current = DEFAULT_PHOTO_FRAMING;
 
       try {
         if (!plantId) {
@@ -158,6 +172,9 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
         if (cancelled) return;
         const photo = plant.photo ?? null;
         setCurrentPhoto(photo);
+        const savedFraming = normalizePhotoFraming(photo?.framing);
+        setFraming(savedFraming);
+        initialFramingRef.current = savedFraming;
         const existing = photo ? null : await getPlantPhotoUri(String(plantId));
         const busted = withCacheBuster(existing || null);
 
@@ -206,9 +223,20 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const setPendingSet = useCallback((uri: string) => {
     const busted = withCacheBuster(uri);
     setPreviewUri(busted);
+    setFraming(DEFAULT_PHOTO_FRAMING);
     setPending({ kind: "set", uri, uploadKey: genUploadKey() });
     setError(null);
   }, []);
+
+  const changeFraming = useCallback((value: PhotoFraming) => {
+    setFraming(normalizePhotoFraming(value));
+    // Moving an older local photo and then pressing Save is also an explicit
+    // choice to sync it; merely opening the editor never uploads anything.
+    if (!currentPhoto && legacySourceUri && pending.kind === "none") {
+      setPending({ kind: "set", uri: legacySourceUri, uploadKey: genUploadKey() });
+    }
+    setError(null);
+  }, [currentPhoto, legacySourceUri, pending.kind]);
 
   const setPendingRemove = useCallback(() => {
     setPreviewUri(null);
@@ -276,7 +304,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const applyChanges = useCallback(async () => {
     if (!plantId || savingRef.current) return;
 
-    if (pending.kind === "none") {
+    if (pending.kind === "none" && !framingChanged) {
       onClose();
       return;
     }
@@ -287,11 +315,15 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     const isCurrent = () => contextRef.current.visible && contextRef.current.generation === generation
       && String(contextRef.current.plantId) === targetPlantId;
     setLoading(true);
+    setPhotoInteracting(false);
     setError(null);
 
     try {
       if (pending.kind === "remove") {
-        await deletePlantPhoto(plantId, { expectedPhotoId: currentPhoto?.id ?? null });
+        await deletePlantPhoto(plantId, {
+          expectedPhotoId: currentPhoto?.id ?? null,
+          ...(currentPhoto ? { expectedFramingRevision: currentPhoto.framing_revision ?? 0 } : {}),
+        });
         await deletePlantPhotoById(plantId).catch(() => {});
         if (!isCurrent()) return;
         setCurrentPhoto(null);
@@ -306,10 +338,31 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
         return;
       }
 
-      const photo = await uploadPlantPhoto(plantId, pending.uri, {
-        uploadKey: pending.uploadKey,
-        expectedPhotoId: currentPhoto?.id ?? null,
-      });
+      let photo: PlantPhoto;
+      if (pending.kind === "none") {
+        if (!currentPhoto) return;
+        photo = await updatePlantPhotoFraming(plantId, framing, {
+          expectedPhotoId: currentPhoto.id,
+          expectedFramingRevision: currentPhoto.framing_revision ?? 0,
+        });
+      } else {
+        photo = await uploadPlantPhoto(plantId, pending.uri, {
+          uploadKey: pending.uploadKey,
+          expectedPhotoId: currentPhoto?.id ?? null,
+          ...(currentPhoto ? { expectedFramingRevision: currentPhoto.framing_revision ?? 0 } : {}),
+          framing,
+        });
+        // A retry after a lost upload response may return its earlier framing.
+        // Update only the coordinates, retaining the committed file and key.
+        if (!sameFraming(normalizePhotoFraming(photo.framing), framing)) {
+          photo = await updatePlantPhotoFraming(plantId, framing, {
+            expectedPhotoId: photo.id,
+            // A freshly uploaded photo starts at revision 0. A later revision
+            // belongs to another edit and must not be overwritten by a retry.
+            expectedFramingRevision: 0,
+          });
+        }
+      }
       // Once the server has committed the replacement, obsolete legacy photos
       // must not override it or reappear after a later server-side removal.
       await deletePlantPhotoById(plantId).catch(() => {});
@@ -326,14 +379,20 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
         : code === "upload_too_large" ? "uploadTooLarge"
         : code === "photo_quota_exceeded" ? "photoQuota"
         : code === "photo_storage_unavailable" ? "photoStorage"
-        : code === "photo_conflict" ? "photoConflict" : "saveFailedMsg";
+        : code === "photo_conflict" ? "photoConflict"
+        : code === "photo_framing_unavailable" ? "framingUnsupported" : "saveFailedMsg";
       if (code === "photo_conflict") setConflicted(true);
-      setError(tr(`plantDetailsModals.changeImage.${key}`, "Could not update the photo. Your previous photo is unchanged. Please try again."));
+      const fallback = code === "photo_conflict"
+        ? "The photo changed on another device. Close this window and reopen it before saving."
+        : code === "photo_framing_unavailable"
+          ? "Photo positioning is not available on the server yet. Please update the server and try again."
+          : "Could not update the photo. Your previous photo is unchanged. Please try again.";
+      setError(tr(`plantDetailsModals.changeImage.${key}`, fallback));
     } finally {
       savingRef.current = false;
       if (isCurrent()) setLoading(false);
     }
-  }, [plantId, pending, currentPhoto, onChanged, onClose, tr]);
+  }, [plantId, pending, currentPhoto, framing, framingChanged, onChanged, onClose, tr]);
 
   const discardChanges = useCallback(() => {
     if (savingRef.current) return;
@@ -341,6 +400,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     setPersistedUri(orig);
     setPreviewUri(orig);
     setPending({ kind: "none" });
+    setFraming(initialFramingRef.current);
     setConfirmDiscardVisible(false);
     onClose();
   }, [onClose]);
@@ -352,8 +412,8 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     return !!previewUri || !!persistedUri;
   }, [previewUri, persistedUri, loading, pending.kind]);
 
-  const canSave = useMemo(() => pending.kind !== "none" && !loading && !loadFailed && !conflicted,
-    [pending.kind, loading, loadFailed, conflicted]);
+  const canSave = useMemo(() => (pending.kind !== "none" || framingChanged) && !loading && !loadFailed && !conflicted,
+    [pending.kind, framingChanged, loading, loadFailed, conflicted]);
 
   if (!visible) return null;
 
@@ -382,6 +442,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
           ) : error && loadFailed ? (
             <ScrollView
               style={styles.scroll}
+              scrollEnabled={!photoInteracting}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
               contentContainerStyle={styles.scrollContent}
@@ -400,6 +461,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
           ) : (
             <ScrollView
               style={styles.scroll}
+              scrollEnabled={!photoInteracting}
               keyboardShouldPersistTaps="handled"
               showsVerticalScrollIndicator={false}
               contentContainerStyle={styles.scrollContent}
@@ -418,10 +480,18 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
                 {tr("plantDetailsModals.changeImage.legacyInfo", "This older photo is stored only on this phone. Choose Upload this photo to sync it.")}
               </Text>}
 
-              <View style={styles.previewFrame}>
-                {previewUri ? (
-                  <Image source={{ uri: previewUri }} style={{ width: "100%", height: "100%" }} resizeMode="cover" />
-                ) : (
+              {previewUri ? (
+                <PlantPhotoFramingEditor
+                  uri={previewUri}
+                  width={pending.kind === "none" ? currentPhoto?.width : undefined}
+                  height={pending.kind === "none" ? currentPhoto?.height : undefined}
+                  value={framing}
+                  onChange={changeFraming}
+                  disabled={loading || loadFailed || conflicted}
+                  onInteractionChange={setPhotoInteracting}
+                />
+              ) : (
+                <View style={styles.previewFrame}>
                   <View style={styles.previewEmpty}>
                     <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
                     <Text style={styles.previewEmptyText}>
@@ -430,10 +500,10 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
                         : tr("plantDetailsModals.changeImage.noPhoto", "No photo selected")}
                     </Text>
                   </View>
-                )}
-              </View>
+                </View>
+              )}
 
-              {pending.kind !== "none" && (
+              {(pending.kind !== "none" || framingChanged) && (
                 <View style={styles.unsavedPill}>
                   <MaterialCommunityIcons name="alert-circle-outline" size={16} color="#FFFFFF" />
                   <Text style={styles.unsavedText}>{tr("plantDetailsModals.changeImage.unsaved", "Unsaved changes")}</Text>

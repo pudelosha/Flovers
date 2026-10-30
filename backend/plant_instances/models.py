@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-from django.core.validators import MinValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
 import secrets
 import uuid
@@ -116,10 +116,18 @@ class PlantImage(models.Model):
     width = models.PositiveSmallIntegerField()
     height = models.PositiveSmallIntegerField()
     byte_size = models.PositiveIntegerField()
+    focal_x = models.FloatField(default=0.5, validators=[MinValueValidator(0), MaxValueValidator(1)])
+    focal_y = models.FloatField(default=0.5, validators=[MinValueValidator(0), MaxValueValidator(1)])
+    zoom = models.FloatField(default=1, validators=[MinValueValidator(1), MaxValueValidator(4)])
+    framing_revision = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now, editable=False)
 
     class Meta:
-        constraints = [models.UniqueConstraint(fields=["plant"], condition=models.Q(purpose="cover"), name="plant_one_current_cover")]
+        constraints = [
+            models.UniqueConstraint(fields=["plant"], condition=models.Q(purpose="cover"), name="plant_one_current_cover"),
+            models.CheckConstraint(condition=models.Q(focal_x__gte=0, focal_x__lte=1,
+                focal_y__gte=0, focal_y__lte=1, zoom__gte=1, zoom__lte=4), name="plant_photo_framing_bounds"),
+        ]
 
 
 class PhotoStorageLock(models.Model):

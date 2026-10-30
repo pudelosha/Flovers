@@ -52,6 +52,7 @@ function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
   const { state, actions } = useCreatePlantWizard();
+  const [photoInteracting, setPhotoInteracting] = useState(false);
 
   useFocusEffect(
     React.useCallback(() => {
@@ -113,6 +114,7 @@ function WizardBody() {
   );
 
   useEffect(() => {
+    if (state.step !== "photo") setPhotoInteracting(false);
     if (state.step !== "location") setLocationModalOpen(false);
     if (state.step !== "exposure") setMeasureModalOpen(false);
     if (state.step !== "selectPlant") setScannerModalOpen(false);
@@ -154,6 +156,7 @@ function WizardBody() {
     <>
       <ScrollView
         ref={scrollRef}
+        scrollEnabled={!photoInteracting}
         contentContainerStyle={[wiz.pageContent, { paddingBottom: extraBottomSpace }]}
         keyboardShouldPersistTaps="handled"
       >
@@ -181,7 +184,7 @@ function WizardBody() {
           )}
           {state.step === "potType" && <Step05_ContainerAndSoil />}
           {state.step === "autoTasks" && <Step06_AutoTasks />}
-          {state.step === "photo" && <Step07_Photo />}
+          {state.step === "photo" && <Step07_Photo onInteractionChange={setPhotoInteracting} />}
           {state.step === "name" && <Step08_NameAndNotes />}
           {state.step === "creating" && <Step09_Creating />}
 

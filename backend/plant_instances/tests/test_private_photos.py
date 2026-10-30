@@ -4,6 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 import os
+import json
 import subprocess
 import uuid
 
@@ -351,3 +352,185 @@ def test_animated_png_is_not_accepted():
         append_images=[Image.new("RGB", (10, 10), "blue")], duration=100)
     with pytest.raises(ValueError):
         normalize(output.getvalue())
+
+
+def reframe(scene, photo, framing, revision=None, **extra):
+    return scene.client.patch(scene.endpoint, {
+        "framing": framing,
+        "expected_photo_id": photo["id"],
+        "expected_framing_revision": photo["framing_revision"] if revision is None else revision,
+        **extra,
+    }, format="json")
+
+
+def test_existing_upload_clients_receive_centered_framing_defaults(scene):
+    result = scene.upload()
+    assert result.status_code == 200
+    assert result.data["framing"] == {"focal_x": 0.5, "focal_y": 0.5, "zoom": 1}
+    assert result.data["framing_revision"] == 0
+
+
+def test_owner_can_check_framing_support_before_uploading_any_photo(scene):
+    response = scene.client.get(scene.endpoint)
+    assert response.status_code == 200
+    assert response.data == {"framing_supported": True}
+    assert not PlantImage.objects.exists() and not scene.root.exists()
+
+
+def test_photo_capability_check_is_read_only_and_does_not_use_write_throttle(scene):
+    photo = scene.upload().data
+    stored = PlantImage.objects.get()
+    folder = directory_path(stored.directory)
+    original_files = {path.name: path.read_bytes() for path in folder.iterdir()}
+    for _ in range(35):
+        response = scene.client.get(scene.endpoint)
+        assert response.status_code == 200 and response.data == {"framing_supported": True}
+    assert photo_metadata(scene.plant) == photo
+    assert {path.name: path.read_bytes() for path in folder.iterdir()} == original_files
+    result = reframe(scene, photo, {"focal_x": 0.25, "focal_y": 0.75, "zoom": 2})
+    assert result.status_code == 200
+
+
+@pytest.mark.parametrize("actor", ["anonymous", "stranger", "recipient", "caregiver", "missing"])
+def test_photo_capability_checks_are_owner_only(scene, actor):
+    if actor == "caregiver":
+        scene.share.can_complete_tasks = True
+        scene.share.save(update_fields=["can_complete_tasks"])
+    if actor != "missing":
+        scene.client.force_authenticate(None if actor == "anonymous" else scene.stranger if actor == "stranger" else scene.recipient)
+    endpoint = scene.endpoint if actor != "missing" else reverse("plant-photo", kwargs={"plant_id": scene.plant.pk + 1000})
+    result = scene.client.get(endpoint)
+    assert result.status_code == (401 if actor == "anonymous" else 404)
+    assert not PlantImage.objects.exists()
+
+
+def test_upload_and_all_plant_metadata_paths_keep_normalized_framing(scene):
+    framing = {"focal_x": 0.2, "focal_y": 0.8, "zoom": 2.5}
+    result = scene.upload(framing=json.dumps(framing))
+    assert result.status_code == 200, result.data
+    photo = result.data
+    assert photo["framing"] == framing and photo["framing_revision"] == 0
+    detail = scene.client.get(reverse("plant-instance-detail", kwargs={"pk": scene.plant.pk})).data
+    listing = scene.client.get(reverse("plant-instance-list-create")).data
+    from sharing.services import sharing_snapshot
+    received = sharing_snapshot(scene.recipient)["shares"][0]["plant"]
+    for data in (detail, listing[0], received):
+        assert data["photo"]["framing"] == framing
+        assert data["photo"]["framing_revision"] == 0
+
+
+def test_reframing_preserves_original_bytes_and_file_identity_without_image_processing(scene):
+    photo = scene.upload().data
+    stored = PlantImage.objects.get()
+    folder = directory_path(stored.directory)
+    files = {path.name: (path.read_bytes(), path.stat().st_mtime_ns) for path in folder.iterdir()}
+    framing = {"focal_x": 0.35, "focal_y": 0.6, "zoom": 1.75}
+    with patch("plant_instances.photo_storage._normalize_upload") as process, \
+            patch("plant_instances.photo_storage.directory_path") as storage, \
+            patch("plant_instances.photo_storage.shutil.disk_usage") as capacity:
+        result = reframe(scene, photo, framing)
+    assert result.status_code == 200, result.data
+    assert result.data["id"] == photo["id"] and result.data["url"] == photo["url"]
+    assert result.data["byte_size"] == photo["byte_size"]
+    assert result.data["framing"] == framing and result.data["framing_revision"] == 1
+    for helper in (process, storage, capacity):
+        helper.assert_not_called()
+    assert {path.name: (path.read_bytes(), path.stat().st_mtime_ns) for path in folder.iterdir()} == files
+    assert PlantImage.objects.count() == 1 and not PhotoFileDeletion.objects.exists()
+    for url in (photo["url"], photo["thumbnail_url"]):
+        assert scene.client.get(url).status_code == 200
+
+
+def test_reframing_retries_are_idempotent_and_stale_different_edits_are_rejected(scene):
+    photo = scene.upload().data
+    desired = {"focal_x": 0.2, "focal_y": 0.3, "zoom": 2}
+    first = reframe(scene, photo, desired)
+    retry = reframe(scene, photo, desired)
+    assert first.status_code == retry.status_code == 200
+    assert first.data == retry.data
+    stale = reframe(scene, photo, {**desired, "zoom": 3})
+    assert stale.status_code == 409 and stale.data["code"] == "photo_conflict"
+    changed = reframe(scene, first.data, {**desired, "zoom": 3})
+    assert changed.status_code == 200 and changed.data["framing_revision"] == 2
+    assert reframe(scene, photo, desired).status_code == 409
+
+
+def test_original_upload_retry_never_undoes_a_later_framing_edit(scene):
+    key = uuid.uuid4()
+    photo = scene.upload(key=key).data
+    desired = {"focal_x": 0.3, "focal_y": 0.7, "zoom": 2}
+    edited = reframe(scene, photo, desired)
+    with patch("plant_instances.photo_storage._normalize_upload") as process:
+        retry = scene.upload(data=b"retry-must-not-be-decoded", key=key,
+            framing=json.dumps({"focal_x": 0.5, "focal_y": 0.5, "zoom": 1}))
+    assert retry.status_code == 200 and retry.data == edited.data
+    process.assert_not_called()
+
+
+@pytest.mark.parametrize("actor", ["anonymous", "stranger", "recipient", "caregiver"])
+def test_only_plant_owner_may_change_framing(scene, actor):
+    photo = scene.upload().data
+    if actor == "caregiver":
+        scene.share.can_complete_tasks = True
+        scene.share.save(update_fields=["can_complete_tasks"])
+    scene.client.force_authenticate(None if actor == "anonymous" else scene.stranger if actor == "stranger" else scene.recipient)
+    result = reframe(scene, photo, {"focal_x": 0.1, "focal_y": 0.2, "zoom": 3})
+    assert result.status_code == (401 if actor == "anonymous" else 404)
+    assert PlantImage.objects.get().framing_revision == 0
+
+
+@pytest.mark.parametrize("framing", [
+    None, [], {}, {"focal_x": 0.5, "focal_y": 0.5},
+    {"focal_x": 0.5, "focal_y": 0.5, "zoom": 1, "extra": 1},
+    {"focal_x": -0.01, "focal_y": 0.5, "zoom": 1},
+    {"focal_x": 0.5, "focal_y": 1.01, "zoom": 1},
+    {"focal_x": 0.5, "focal_y": 0.5, "zoom": 0.5},
+    {"focal_x": 0.5, "focal_y": 0.5, "zoom": 4.01},
+    {"focal_x": True, "focal_y": 0.5, "zoom": 1},
+    {"focal_x": "0.5", "focal_y": 0.5, "zoom": 1},
+    {"focal_x": float("nan"), "focal_y": 0.5, "zoom": 1},
+    {"focal_x": 0.5, "focal_y": float("inf"), "zoom": 1},
+    {"focal_x": 0.5, "focal_y": 0.5, "zoom": 10 ** 1000},
+])
+def test_invalid_framing_is_rejected_before_upload_decoding(scene, framing):
+    with patch("plant_instances.photo_storage._normalize_upload") as process:
+        result = scene.upload(framing=json.dumps(framing))
+    assert result.status_code == 400 and result.data["code"] == "invalid_photo"
+    process.assert_not_called()
+    assert not PlantImage.objects.exists()
+
+
+@pytest.mark.parametrize("overrides", [
+    {"expected_photo_id": None}, {"expected_photo_id": "none"},
+    {"expected_framing_revision": None}, {"expected_framing_revision": -1},
+    {"expected_framing_revision": True}, {"expected_framing_revision": 0.5},
+    {"expected_framing_revision": "NaN"}, {"expected_framing_revision": 2147483648},
+])
+def test_reframing_requires_valid_optimistic_versions(scene, overrides):
+    photo = scene.upload().data
+    result = reframe(scene, photo, {"focal_x": 0.3, "focal_y": 0.7, "zoom": 2}, **overrides)
+    assert result.status_code == 400 and result.data["code"] == "invalid_photo"
+    assert PlantImage.objects.get().framing_revision == 0
+
+
+def test_reframing_an_already_replaced_photo_cannot_change_its_replacement(scene):
+    original = scene.upload().data
+    replacement = scene.upload(expected=original["id"]).data
+    result = reframe(scene, original, {"focal_x": 0.3, "focal_y": 0.7, "zoom": 2})
+    assert result.status_code == 409 and result.data["code"] == "photo_conflict"
+    assert str(PlantImage.objects.get().pk) == replacement["id"]
+    assert PlantImage.objects.get().framing_revision == 0
+
+
+@pytest.mark.parametrize("action", ["replace", "remove"])
+def test_new_clients_can_guard_replacement_and_removal_against_changed_framing(scene, action):
+    photo = scene.upload().data
+    reframe(scene, photo, {"focal_x": 0.25, "focal_y": 0.75, "zoom": 2})
+    if action == "replace":
+        result = scene.upload(expected=photo["id"], expected_framing_revision=0)
+    else:
+        result = scene.client.delete(scene.endpoint, {
+            "expected_photo_id": photo["id"], "expected_framing_revision": 0,
+        }, format="json")
+    assert result.status_code == 409 and result.data["code"] == "photo_conflict"
+    assert str(PlantImage.objects.get().pk) == photo["id"]
