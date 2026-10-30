@@ -9,6 +9,7 @@ import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import type { LocationCategory } from "../types/create-plant.types";
 import { fetchUserLocations, createLocation } from "../../../api/services/locations.service";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 
 // EXACT SAME green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -41,10 +42,12 @@ export default function Step03_SelectLocation({
   onScrollTop,
   onOpenAddLocation,
   onRegisterCreateHandler,
+  onReadyChange,
 }: {
   onScrollTop?: () => void;
   onOpenAddLocation: () => void;
   onRegisterCreateHandler: (fn: (name: string, category: LocationCategory) => void) => void;
+  onReadyChange?: (ready: boolean) => void;
 }) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -53,7 +56,8 @@ export default function Step03_SelectLocation({
   const locations = (state as any)?.locations ?? EMPTY_LOCATIONS;
 
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => { onReadyChange?.(!loading); }, [onReadyChange, loading]);
 
   const locationsRef = useRef(locations);
   useEffect(() => {
@@ -87,6 +91,7 @@ export default function Step03_SelectLocation({
         setErrorMsg(null);
 
         const remote = await fetchUserLocations({ auth: true });
+        if (!mounted) return;
 
         const existing = new Map(locations.map((l: any) => [l.name.trim().toLowerCase(), l]));
 
@@ -102,6 +107,7 @@ export default function Step03_SelectLocation({
 
         actions.selectLocation("");
       } catch (e: any) {
+        if (!mounted) return;
         setErrorMsg(
           e?.message ??
             getTranslation("createPlant.step03.errorLoadingLocations", "Failed to load locations")
@@ -177,6 +183,8 @@ export default function Step03_SelectLocation({
     actions.selectLocation(String(id));
     onScrollTop?.();
   };
+
+  if (loading) return <CenteredSpinner />;
 
   return (
     <View style={wiz.cardWrap}>

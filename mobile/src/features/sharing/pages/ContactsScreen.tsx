@@ -140,7 +140,7 @@ export default function ContactsScreen() {
 
   return (
     <View ref={pageRef} testID="contacts-screen" collapsable={false} style={local.page}>
-      <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false} extraBottomPadding={64}>
+      <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false} extraBottomPadding={64} contentReady={!!snapshot}>
         {!snapshot ? (
           loading ? <View testID="contacts-loading" style={local.loading}><CenteredSpinner /></View> :
             <GlassCard>

@@ -8,9 +8,8 @@ import {
   Platform,
   StyleSheet,
   Animated,
-  Easing,
 } from "react-native";
-import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
+import { useNavigation, useRoute, useFocusEffect, useIsFocused } from "@react-navigation/native";
 import LinearGradient from "react-native-linear-gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -50,6 +49,7 @@ import { CameraRoll } from "@react-native-camera-roll/camera-roll";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
+import { useScreenEntryAnimation } from "../../../shared/hooks/useScreenEntryAnimation";
 
 import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
 import ChangePlantImageModal from "../components/modals/ChangePlantImageModal";
@@ -103,6 +103,7 @@ export default function PlantDetailsScreen() {
 
   const nav = useNavigation<any>();
   const route = useRoute<any>();
+  const isFocused = useIsFocused();
 
   const qrFromNav: string | undefined = route.params?.qrCode;
   const idFromNav: number | undefined = route.params?.plantId ?? route.params?.id;
@@ -578,17 +579,6 @@ export default function PlantDetailsScreen() {
     setWateringScheduleLastPumpRunAt(null);
   }, []);
 
-  const entry = useRef(new Animated.Value(0)).current;
-  const contentOpacity = entry;
-  const contentTranslateY = entry.interpolate({
-    inputRange: [0, 1],
-    outputRange: [10, 0],
-  });
-  const contentScale = entry.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0.98, 1],
-  });
-
   useFocusEffect(
     useCallback(() => {
       let isActive = true;
@@ -617,24 +607,10 @@ export default function PlantDetailsScreen() {
         }
       };
 
-      Animated.timing(entry, {
-        toValue: 1,
-        duration: 220,
-        easing: Easing.out(Easing.cubic),
-        useNativeDriver: true,
-      }).start();
-
       run();
 
       return () => {
         isActive = false;
-
-        Animated.timing(entry, {
-          toValue: 0,
-          duration: 160,
-          easing: Easing.in(Easing.cubic),
-          useNativeDriver: true,
-        }).start();
 
         setDismissMenusTick((t) => t + 1);
 
@@ -654,7 +630,6 @@ export default function PlantDetailsScreen() {
         plantQrRef.current = null;
       };
     }, [
-      entry,
       loadDetails,
       tr,
       closeDefinition,
@@ -758,6 +733,7 @@ export default function PlantDetailsScreen() {
   }], [details?.plant.photo, details?.plant.access?.expires_at]);
   const photoPreload = usePlantPhotoPreload(photoTargets, !loading && !error, photoReloadSignal);
   const isInitialLoading = !error && (loading || photoPreload.loading);
+  const entryStyle = useScreenEntryAnimation(!isInitialLoading, isFocused);
 
   return (
     <View style={{ flex: 1 }}>
@@ -770,13 +746,7 @@ export default function PlantDetailsScreen() {
         showSeparator={false}
       />
 
-      <Animated.View
-        style={{
-          flex: 1,
-          opacity: contentOpacity,
-          transform: [{ translateY: contentTranslateY }, { scale: contentScale }],
-        }}
-      >
+      <Animated.View style={[{ flex: 1 }, !isInitialLoading && entryStyle]}>
         {isInitialLoading ? (
           <CenteredSpinner />
         ) : error ? (

@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { ActivityIndicator, Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -23,6 +23,8 @@ import {
 } from "../../../api/serializers/plant-definitions.serializer";
 
 import type { PlantProfile, Suggestion } from "../types/create-plant.types";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { useWizardImagePreload } from "../hooks/useWizardImagePreload";
 
 const ENDPOINTS = {
   searchIndex: "/plant-definitions/search-index/",
@@ -200,7 +202,7 @@ function ImageMasked({ uri }: { uri: string }) {
   );
 }
 
-export default function Step02_PlantTraits() {
+export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: (ready: boolean) => void } = {}) {
   const { t, i18n } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
@@ -231,6 +233,8 @@ export default function Step02_PlantTraits() {
   const [profile, setProfile] = useState<PlantProfile | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [settledProfileKey, setSettledProfileKey] = useState("");
+  const profileKey = JSON.stringify([selectedId, selectedName, selected?.latin, preferredLang]);
 
   const getTranslation = useCallback(
     (key: string, fallback?: string, values?: any): string => {
@@ -289,6 +293,7 @@ export default function Step02_PlantTraits() {
     async function load() {
       setLoading(true);
       setError(null);
+      setProfile(null);
 
       try {
         if (selectedId) {
@@ -327,7 +332,10 @@ export default function Step02_PlantTraits() {
         if (!alive) return;
         setError(e?.message ?? getTranslation("createPlant.step02.errorProfile", "Failed to load plant profile"));
       } finally {
-        if (alive) setLoading(false);
+        if (alive) {
+          setSettledProfileKey(profileKey);
+          setLoading(false);
+        }
       }
     }
 
@@ -344,6 +352,7 @@ export default function Step02_PlantTraits() {
     fetchProfileWithLang,
     fetchSearchIndexWithLang,
     persistProfile,
+    profileKey,
   ]);
 
   const getLabelForKey = useCallback((key: string) => {
@@ -483,11 +492,17 @@ export default function Step02_PlantTraits() {
     const p: any = profile;
     return p?.image || p?.image_thumb || null;
   }, [profile]);
+  const profileReady = !loading && settledProfileKey === profileKey;
+  const heroPreload = useWizardImagePreload([heroImageUrl], profileReady);
+  const ready = profileReady && !heroPreload.loading;
+  useEffect(() => { onReadyChange?.(ready); }, [onReadyChange, ready]);
 
   const heroTitle =
     selectedName ||
     (profile as any)?.name ||
     getTranslation("createPlant.step02.title", "Plant Traits");
+
+  if (!ready) return <CenteredSpinner size={56} color="#FFFFFF" />;
 
   return (
     <View style={wiz.cardWrap}>
@@ -570,13 +585,9 @@ export default function Step02_PlantTraits() {
           </Text>
         )}
 
-        {loading && !profile ? (
-          <View style={{ paddingVertical: 16 }}>
-            <ActivityIndicator />
-          </View>
-        ) : error ? (
+        {!!error && (
           <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>{error}</Text>
-        ) : null}
+        )}
 
         {!!(profile as any)?.description && (
           <Text style={wiz.desc}>{(profile as any).description}</Text>

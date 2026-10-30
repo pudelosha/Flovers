@@ -2,7 +2,6 @@
 import {
   View,
   Pressable,
-  ActivityIndicator,
   Text,
   Animated,
   Easing,
@@ -20,6 +19,8 @@ import PlantSearchBox from "../components/PlantSearchBox";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 import SafeImage from "../../../shared/ui/SafeImage";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { useWizardImagePreload } from "../hooks/useWizardImagePreload";
 
 import {
   SUN_ICON_BY_LEVEL,
@@ -41,6 +42,7 @@ type Props = {
   onScrollToTop: () => void;
   onOpenScanner: () => void;
   onRegisterScanResultHandler: (fn: (plant: Suggestion) => void) => void;
+  onReadyChange?: (ready: boolean) => void;
 };
 
 function pickName(item: any): string {
@@ -80,6 +82,7 @@ export default function Step01_SelectPlant({
   onScrollToTop,
   onOpenScanner,
   onRegisterScanResultHandler,
+  onReadyChange,
 }: Props) {
   const { t, i18n } = useTranslation();
   const { currentLanguage, changeLanguage } = useLanguage();
@@ -109,6 +112,12 @@ export default function Step01_SelectPlant({
   const [searchIndex, setSearchIndex] = useState<Suggestion[]>([]);
   const [loadingSearch, setLoadingSearch] = useState(true);
   const [errorSearch, setErrorSearch] = useState<string | null>(null);
+  const [loadedLanguage, setLoadedLanguage] = useState<string | null>(null);
+  const dataLoading = loadingPopular || loadingSearch || loadedLanguage !== (currentLanguage || "");
+  const imageUris = useMemo(() => errorPopular ? [] : popular.map(item => (item as any).image as string | undefined), [popular, errorPopular]);
+  const images = useWizardImagePreload(imageUris, !dataLoading);
+  const ready = !dataLoading && !images.loading;
+  useEffect(() => { onReadyChange?.(ready); }, [onReadyChange, ready]);
 
   // Pulse animation for ML scanner button
   const scanPulse = useRef(new Animated.Value(0)).current;
@@ -196,6 +205,7 @@ export default function Step01_SelectPlant({
         if (mounted) {
           setLoadingPopular(false);
           setLoadingSearch(false);
+          setLoadedLanguage(currentLanguage || "");
         }
       }
     })();
@@ -252,6 +262,8 @@ export default function Step01_SelectPlant({
   useEffect(() => {
     onRegisterScanResultHandler(onScanPlantDetected);
   }, [onRegisterScanResultHandler, onScanPlantDetected]);
+
+  if (!ready) return <CenteredSpinner />;
 
   return (
     <View style={wiz.cardWrap}>
@@ -372,11 +384,7 @@ export default function Step01_SelectPlant({
 
         <TranslatedText tKey="createPlant.step01.popularPlants" style={wiz.sectionTitle} />
 
-        {loadingPopular ? (
-          <View style={{ paddingVertical: 8 }}>
-            <ActivityIndicator />
-          </View>
-        ) : errorPopular ? (
+        {errorPopular ? (
           <Text style={[wiz.subtitle, { color: "#ffdddd" }]}>{errorPopular}</Text>
         ) : popular.length > 0 ? (
           <View style={{ paddingTop: 6, paddingBottom: 6 }}>

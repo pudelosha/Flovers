@@ -26,12 +26,13 @@
         ]
       },
       {
-        "heading": "Reminder tile actions (Edit / Pause / Resume / Delete)",
+        "heading": "Reminder tile actions (Edit / Pause / Resume / Plant details / Delete)",
         "body": [
           "You can edit, pause, resume or delete each reminder.",
           "Edit lets you change reminder parameters such as interval, task type, associated plant, and other reminder settings (depending on the reminder type).",
-          "Deleting a reminder permanently deletes all its tasks, including completed history and saved notes. No further tasks are generated. Pause instead if you want to keep the history.",
-          "Pause temporarily disables a reminder without deleting it. While paused, its due task is removed from Home and daily email or push notifications will not include it. When you resume the reminder, Flovers schedules the next pending task according to the reminder interval."
+          "Pause temporarily disables a reminder without deleting it. While paused, its due task is removed from Home and daily email or push notifications will not include it. When you resume the reminder, Flovers schedules the next pending task according to the reminder interval.",
+          "Plant details: navigates directly to the Plant Details view for the related plant.",
+          "Deleting a reminder permanently deletes all its tasks, including completed history and saved notes. No further tasks are generated. Pause instead if you want to keep the history."
         ]
       },
       {

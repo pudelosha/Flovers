@@ -289,7 +289,10 @@ export default function ReminderTile({
       {isMenuOpen && (
         <ReminderMenu
           canEdit={access.canEdit}
-          onPlantDetails={() => nav.navigate("PlantDetails", { id: reminder.plantId })}
+          onPlantDetails={() => {
+            onToggleMenu();
+            nav.navigate("PlantDetails", { id: reminder.plantId });
+          }}
           isActive={reminder.isActive}
           onToggleActive={onToggleActive}
           onEdit={onEdit}

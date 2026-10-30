@@ -15,6 +15,7 @@ jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
 jest.mock("@react-navigation/native", () => ({
   useNavigation: () => mockNavigation,
   useRoute: () => mockRoute,
+  useIsFocused: () => true,
   useFocusEffect: (callback: any) => require("react").useEffect(() => callback(), [callback]),
 }));
 jest.mock("react-native-safe-area-context", () => ({ useSafeAreaInsets: () => ({ top: 0, bottom: 0, left: 0, right: 0 }) }));

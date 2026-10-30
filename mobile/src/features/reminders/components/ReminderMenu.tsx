@@ -30,7 +30,6 @@ export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelet
 
   return (
     <View style={s.menuSheet} pointerEvents="auto">
-      {!canEdit && onPlantDetails && <MenuItem label={tr("plants.menu.details", "Plant details")} icon="sprout-outline" onPress={onPlantDetails} />}
       {canEdit && <>
       <MenuItem
         label={tr("reminders.menu.edit", "Edit reminder")}
@@ -46,15 +45,20 @@ export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelet
         icon={isActive ? "pause-circle-outline" : "play-circle-outline"}
         onPress={onToggleActive}
       />
-      <MenuItem
+      </>}
+      {onPlantDetails && <MenuItem
+        label={tr("plants.menu.details", "Plant details")}
+        icon="sprout-outline"
+        onPress={onPlantDetails}
+      />}
+      {canEdit && <MenuItem
         label={tr("reminders.menu.delete", "Delete reminder")}
         icon="trash-can-outline"
         danger
         onPress={() => {
           onDelete();
         }}
-      />
-      </>}
+      />}
     </View>
   );
 }

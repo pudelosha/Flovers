@@ -8,6 +8,7 @@ import { ContactsProvider } from "../../state/ContactsProvider";
 import * as api from "../../../../api/services/contacts.service";
 import GlassCard from "../../../profile/components/GlassCard";
 import FAB from "../../../../shared/ui/FAB";
+import { SharingPage } from "../../components/SharingUI";
 
 let mockFocused = true;
 let mockFabPosition = "right";
@@ -44,7 +45,9 @@ describe("real Contacts screen", () => {
   it("waits for real data behind the shared spinner without displaying demo contacts", async () => {
     let resolve: any; (api.fetchContacts as jest.Mock).mockReturnValue(new Promise((done) => { resolve = done; }));
     const view = render(tree()); expect(view.getByTestId("contacts-loading")).toBeTruthy(); expect(view.queryByText("Your Flovers ID")).toBeNull();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(false);
     await act(async () => { resolve(snapshot()); }); expect(view.getByText("Bob")).toBeTruthy(); expect(view.queryByText("Anna Kowalska")).toBeNull(); expect(view.queryByText("UI preview")).toBeNull(); expect(view.queryByText("Back")).toBeNull();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(true);
   });
   it("retries an unavailable API without showing fake contacts or a fake ID", async () => {
     (api.fetchContacts as jest.Mock).mockRejectedValueOnce(new Error("offline")); const view = render(tree());

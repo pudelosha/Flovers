@@ -6,15 +6,19 @@ import Step07_Photo from "../Step07_Photo";
 import { useCreatePlantWizard } from "../../hooks/useCreatePlantWizard";
 import { persistTempPlantPhoto } from "../../../../shared/utils/photoStorage";
 import PlantPhotoFramingEditor from "../../../../shared/ui/PlantPhotoFramingEditor";
+import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
+import { useWizardImagePreload } from "../../hooks/useWizardImagePreload";
 
 jest.mock("react-native-image-picker", () => ({ launchCamera: jest.fn(), launchImageLibrary: jest.fn() }));
 jest.mock("../../hooks/useCreatePlantWizard", () => ({ useCreatePlantWizard: jest.fn() }));
 jest.mock("../../../../shared/utils/photoStorage", () => ({ persistTempPlantPhoto: jest.fn(), deleteLocalPhoto: jest.fn() }));
+jest.mock("../../hooks/useWizardImagePreload", () => ({ useWizardImagePreload: jest.fn() }));
 
 describe("wizard photo permission boundaries", () => {
   const setPhotoUri = jest.fn();
   beforeEach(() => {
     jest.clearAllMocks();
+    (useWizardImagePreload as jest.Mock).mockReturnValue({ loading: false });
     jest.replaceProperty(Platform, "OS", "android");
     (useCreatePlantWizard as jest.Mock).mockReturnValue({ state: {}, actions: { setPhotoUri } });
     (persistTempPlantPhoto as jest.Mock).mockResolvedValue("file:///wizard/persisted.jpg");
@@ -58,5 +62,20 @@ describe("wizard photo permission boundaries", () => {
     await act(async () => { editor.props.onChange(changed); editor.props.onInteractionChange(true); });
     expect(setPhotoFraming).toHaveBeenCalledWith(changed);
     expect(onInteractionChange).toHaveBeenCalledWith(true);
+  });
+
+  it("waits for the selected photo before displaying the photo card and editor", () => {
+    const ready = jest.fn();
+    (useWizardImagePreload as jest.Mock).mockReturnValue({ loading: true });
+    (useCreatePlantWizard as jest.Mock).mockReturnValue({ state: { photoUri: "file:///photo.jpg" }, actions: {} });
+    const screen = render(<Step07_Photo onReadyChange={ready} />);
+    expect(screen.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
+    expect(screen.queryByText("Add a photo")).toBeNull();
+    expect(ready).toHaveBeenLastCalledWith(false);
+    (useWizardImagePreload as jest.Mock).mockReturnValue({ loading: false });
+    screen.rerender(<Step07_Photo onReadyChange={ready} />);
+    expect(screen.getByText("Add a photo")).toBeTruthy();
+    expect(screen.UNSAFE_getByType(PlantPhotoFramingEditor)).toBeTruthy();
+    expect(ready).toHaveBeenLastCalledWith(true);
   });
 });

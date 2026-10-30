@@ -6,6 +6,8 @@ import PlantInfoMenu from "../../../features/plant-details/components/PlantInfoM
 import PlantReminderMenu from "../../../features/plant-details/components/PlantReminderMenu";
 import ReadingMenu from "../../../features/readings/components/ReadingMenu";
 import ReminderMenu from "../../../features/reminders/components/ReminderMenu";
+import ReminderMiniTileMenu from "../../../features/reminders/components/ReminderMiniTileMenu";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 jest.mock("../../../app/providers/LanguageProvider", () => ({ useLanguage: () => ({ currentLanguage: "en" }) }));
 const noop = () => {};
@@ -38,4 +40,23 @@ it("does not expose device credentials or mutations for shared readings", () => 
 it("offers shared reminder navigation instead of schedule mutations", () => {
   const details = jest.fn(); const view = render(<ReminderMenu canEdit={false} isActive onEdit={noop} onToggleActive={noop} onDelete={noop} onPlantDetails={details} />);
   expect(view.queryByText("Edit reminder")).toBeNull(); expect(view.queryByText("Pause reminder")).toBeNull(); expect(view.queryByText("Delete reminder")).toBeNull(); fireEvent.press(view.getByText("Plant details")); expect(details).toHaveBeenCalledTimes(1);
+});
+
+it.each([
+  { name: "list", Menu: ReminderMenu },
+  { name: "calendar", Menu: ReminderMiniTileMenu },
+])("offers Plant details third in the $name reminder menu with the same icon", ({ Menu }) => {
+  const details = jest.fn();
+  const view = render(<Menu isActive onEdit={noop} onToggleActive={noop} onDelete={noop} onPlantDetails={details} />);
+  expect(view.getAllByText(/^(Edit reminder|Pause reminder|Plant details|Delete reminder)$/)
+    .map(item => item.props.children)).toEqual(["Edit reminder", "Pause reminder", "Plant details", "Delete reminder"]);
+  expect(view.UNSAFE_getAllByType(MaterialCommunityIcons)[2].props.name).toBe("sprout-outline");
+  fireEvent.press(view.getByText("Plant details"));
+  expect(details).toHaveBeenCalledTimes(1);
+});
+
+it("keeps Plant details third when a reminder is paused", () => {
+  const view = render(<ReminderMenu isActive={false} onEdit={noop} onToggleActive={noop} onDelete={noop} onPlantDetails={noop} />);
+  expect(view.getAllByText(/^(Edit reminder|Resume reminder|Plant details|Delete reminder)$/)
+    .map(item => item.props.children)).toEqual(["Edit reminder", "Resume reminder", "Plant details", "Delete reminder"]);
 });

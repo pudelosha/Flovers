@@ -8,6 +8,7 @@ import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 
 // Lottie (optional)
 let LottieView: any = null;
@@ -25,7 +26,7 @@ const PLANTS_ROUTE_NAME = "Plants"; // <-- Tab route name
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
-export default function Step09_Creating() {
+export default function Step09_Creating({ onReadyChange }: { onReadyChange?: (ready: boolean) => void } = {}) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -79,6 +80,10 @@ export default function Step09_Creating() {
     };
   }, [actions, navigation, attempt]);
 
+  useEffect(() => { onReadyChange?.(status !== "creating"); }, [onReadyChange, status]);
+
+  if (status === "creating") return <CenteredSpinner size={56} color="#FFFFFF" />;
+
   // Fixed card height (tweak to taste)
   const CARD_HEIGHT = 360;
 
@@ -127,7 +132,7 @@ export default function Step09_Creating() {
                 ref={lottieRef}
                 source={ANIM}
                 autoPlay
-                loop={status === "creating"}
+                loop={false}
                 style={{ width: "100%", height: "100%" }}
               />
             ) : (
@@ -137,11 +142,7 @@ export default function Step09_Creating() {
 
           {/* Status text */}
           <Text style={[wiz.title, { marginTop: 8, textAlign: "center" }]}>
-            {status === "creating"
-              ? state.photoUri
-                ? getTranslation("createPlant.step09.uploadingPhoto", "Creating your plant and uploading its photo…")
-                : getTranslation("createPlant.step09.creating", "creating new plant")
-              : status === "success"
+            {status === "success"
                 ? getTranslation("createPlant.step09.success", "plant created successfully")
                 : state.createdPlantId
                   ? getTranslation("createPlant.step09.photoFailed", "Your plant was created, but its photo could not be uploaded. Try again to upload it without creating another plant.")
@@ -170,7 +171,10 @@ export default function Step09_Creating() {
               </Pressable>
               <Pressable
                 accessibilityRole="button"
-                onPress={() => setAttempt((value) => value + 1)}
+                onPress={() => {
+                  setStatus("creating");
+                  setAttempt((value) => value + 1);
+                }}
                 style={[wiz.nextBtnWide, { flex: 1, justifyContent: "center", backgroundColor: "#0B7285" }]}
               >
                 <Text style={wiz.nextBtnText}>

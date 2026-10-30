@@ -250,7 +250,7 @@ export default function TaskHistoryTile({
             <Text style={s.menuItemText}>{t("taskHistory.menu.editReminder")}</Text>
           </Pressable>}
 
-          {/* Go to plant */}
+          {/* Plant details */}
           <Pressable style={s.menuItem} onPress={handleGoToPlant}>
             <MaterialCommunityIcons
               name="flower-tulip-outline"

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { BackHandler, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Animated, BackHandler, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import type { StyleProp, ViewStyle } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -9,13 +9,16 @@ import GlassHeader from "../../../shared/ui/GlassHeader";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../../plants/constants/plants.constants";
 import { controls } from "../../profile/styles/profile.styles";
 import { useSharingPreview } from "../state/SharingPreviewProvider";
+import { useScreenEntryAnimation } from "../../../shared/hooks/useScreenEntryAnimation";
 
-export function SharingPage({ title, children, showBack = true, extraBottomPadding = 0 }: {
-  title: string; children: React.ReactNode; showBack?: boolean; extraBottomPadding?: number;
+export function SharingPage({ title, children, showBack = true, extraBottomPadding = 0, contentReady = true }: {
+  title: string; children: React.ReactNode; showBack?: boolean; extraBottomPadding?: number; contentReady?: boolean;
 }) {
   const nav = useNavigation<any>();
+  const focused = useIsFocused();
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
+  const entryStyle = useScreenEntryAnimation(contentReady, focused);
   return (
     <View style={s.page}>
       <GlassHeader title={title} gradientColors={HEADER_GRADIENT_TINT} solidFallback={HEADER_SOLID_FALLBACK}
@@ -26,10 +29,12 @@ export function SharingPage({ title, children, showBack = true, extraBottomPaddi
           <Text style={sharingStyles.text}>{t("sharing.common.back", { defaultValue: "Back" })}</Text>
         </Pressable>}
       </GlassHeader>
-      <ScrollView keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
-        contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 120 + extraBottomPadding }]}>
-        {children}
-      </ScrollView>
+      <Animated.View testID="sharing-page-content" style={[s.body, contentReady && entryStyle]}>
+        <ScrollView keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
+          contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 120 + extraBottomPadding }]}>
+          {children}
+        </ScrollView>
+      </Animated.View>
     </View>
   );
 }
@@ -113,6 +118,7 @@ export const sharingStyles = StyleSheet.create({
 
 const s = StyleSheet.create({
   page: { flex: 1 },
+  body: { flex: 1 },
   content: { paddingHorizontal: 16, paddingTop: 21, gap: 16 },
   back: { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", paddingVertical: 6, paddingRight: 12 },
   button: { marginBottom: 0, justifyContent: "center" },

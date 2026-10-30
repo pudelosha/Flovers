@@ -127,7 +127,7 @@ export default function SharedPlantsScreen() {
 
   return (
     <View ref={pageRef} collapsable={false} testID="shared-plants-screen" style={styles.page}>
-      <SharingPage title={t("sharing.plants.title", { defaultValue: "Shared plants" })} showBack={false} extraBottomPadding={64}>
+      <SharingPage title={t("sharing.plants.title", { defaultValue: "Shared plants" })} showBack={false} extraBottomPadding={64} contentReady={!contentLoading}>
         {contentLoading ? <View style={styles.loading}>
           {photoPreload.loading || loading || !error ? <CenteredSpinner /> : <>
             <Text accessibilityRole="alert" style={shared.error}>{t("sharing.live.loadFailed", { defaultValue: "Could not load shared plants." })}</Text>
@@ -210,7 +210,7 @@ export default function SharedPlantsScreen() {
             const id = menuPlant.id; closeMenu(); nav.navigate("PlantDetails", { id });
           }}>
             <MaterialCommunityIcons name="flower-tulip-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-            <Text style={menuStyles.menuItemText}>{t("home.menu.goToPlant", { defaultValue: "Go to plant" })}</Text>
+            <Text style={menuStyles.menuItemText}>{t("home.menu.goToPlant", { defaultValue: "Plant details" })}</Text>
           </Pressable>
           <Pressable accessibilityRole="button" style={menuStyles.menuItem} onPress={() => {
             const plantId = menuPlant.id; closeMenu(); nav.navigate("Home", { plantId, filterRequestId: `${Date.now()}-${menuRequest.current}` });

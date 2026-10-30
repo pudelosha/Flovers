@@ -1,5 +1,5 @@
 ﻿// screens/CreatePlantWizardScreen.tsx
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import { View, ScrollView, Text, Animated, Easing } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
@@ -8,6 +8,7 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/create-plant.constants";
 import { wiz } from "../styles/wizard.styles";
 
@@ -44,6 +45,7 @@ const STEPS_ORDER = [
 ] as const;
 
 type StepKey = typeof STEPS_ORDER[number];
+const ASYNC_STEPS: readonly string[] = ["selectPlant", "traits", "location", "photo", "creating"];
 
 function WizardBody() {
   const { t } = useTranslation();
@@ -53,6 +55,21 @@ function WizardBody() {
   const scrollRef = useRef<ScrollView>(null);
   const { state, actions } = useCreatePlantWizard();
   const [photoInteracting, setPhotoInteracting] = useState(false);
+  const stepKey = state.step as StepKey;
+  const selectedPlant = state.selectedPlant;
+  const stepContext = `${stepKey}:${currentLanguage}:${stepKey === "traits" ? selectedPlant?.id ?? selectedPlant?.name ?? "" : stepKey === "photo" ? state.photoUri ?? "" : ""}`;
+  const contextRef = useRef({ key: stepContext, generation: 0 });
+  if (contextRef.current.key !== stepContext) {
+    contextRef.current = { key: stepContext, generation: contextRef.current.generation + 1 };
+  }
+  const generation = contextRef.current.generation;
+  const [readiness, setReadiness] = useState({ generation: -1, ready: false });
+  const onStepReady = useCallback((ready: boolean) => {
+    if (contextRef.current.generation !== generation) return;
+    setReadiness(previous => previous.generation === generation && previous.ready === ready
+      ? previous : { generation, ready });
+  }, [generation]);
+  const stepReady = !ASYNC_STEPS.includes(stepKey) || (readiness.generation === generation && readiness.ready);
 
   useFocusEffect(
     React.useCallback(() => {
@@ -120,26 +137,29 @@ function WizardBody() {
     if (state.step !== "selectPlant") setScannerModalOpen(false);
   }, [state.step]);
 
-  const entry = useRef(new Animated.Value(1)).current;
+  const entry = useRef(new Animated.Value(0)).current;
   const prevStepRef = useRef<StepKey>("selectPlant");
   const dirRef = useRef<1 | -1>(1);
 
-  const stepKey = state.step as StepKey;
   useEffect(() => {
-    const prevIdx = STEPS_ORDER.indexOf(prevStepRef.current);
-    const nextIdx = STEPS_ORDER.indexOf(stepKey);
-    dirRef.current = nextIdx > prevIdx ? 1 : -1;
-
+    if (prevStepRef.current !== stepKey) {
+      const prevIdx = STEPS_ORDER.indexOf(prevStepRef.current);
+      const nextIdx = STEPS_ORDER.indexOf(stepKey);
+      dirRef.current = nextIdx > prevIdx ? 1 : -1;
+      prevStepRef.current = stepKey;
+    }
+    entry.stopAnimation();
     entry.setValue(0);
-    Animated.timing(entry, {
+    if (!stepReady) return;
+    const animation = Animated.timing(entry, {
       toValue: 1,
       duration: 260,
       easing: Easing.out(Easing.cubic),
       useNativeDriver: true,
-    }).start();
-
-    prevStepRef.current = stepKey;
-  }, [stepKey, entry]);
+    });
+    animation.start();
+    return () => animation.stop();
+  }, [stepKey, stepReady, entry]);
 
   const translateX = entry.interpolate({
     inputRange: [0, 1],
@@ -154,8 +174,12 @@ function WizardBody() {
 
   return (
     <>
+      {!stepReady && <CenteredSpinner size={56} color="#FFFFFF" />}
       <ScrollView
         ref={scrollRef}
+        style={!stepReady ? { display: "none" } : undefined}
+        accessibilityElementsHidden={!stepReady}
+        importantForAccessibility={!stepReady ? "no-hide-descendants" : "auto"}
         scrollEnabled={!photoInteracting}
         contentContainerStyle={[wiz.pageContent, { paddingBottom: extraBottomSpace }]}
         keyboardShouldPersistTaps="handled"
@@ -166,14 +190,16 @@ function WizardBody() {
               onScrollToTop={scrollTop}
               onOpenScanner={() => setScannerModalOpen(true)}
               onRegisterScanResultHandler={registerScannerResultHandler}
+              onReadyChange={onStepReady}
             />
           )}
-          {state.step === "traits" && <Step02_PlantTraits />}
+          {state.step === "traits" && <Step02_PlantTraits onReadyChange={onStepReady} />}
           {state.step === "location" && (
             <Step03_SelectLocation
               onScrollTop={scrollTop}
               onOpenAddLocation={() => setLocationModalOpen(true)}
               onRegisterCreateHandler={registerLocationCreateHandler}
+              onReadyChange={onStepReady}
             />
           )}
           {state.step === "exposure" && (
@@ -184,9 +210,9 @@ function WizardBody() {
           )}
           {state.step === "potType" && <Step05_ContainerAndSoil />}
           {state.step === "autoTasks" && <Step06_AutoTasks />}
-          {state.step === "photo" && <Step07_Photo onInteractionChange={setPhotoInteracting} />}
+          {state.step === "photo" && <Step07_Photo onInteractionChange={setPhotoInteracting} onReadyChange={onStepReady} />}
           {state.step === "name" && <Step08_NameAndNotes />}
-          {state.step === "creating" && <Step09_Creating />}
+          {state.step === "creating" && <Step09_Creating onReadyChange={onStepReady} />}
 
           {!STEPS_ORDER.includes(state.step as any) && (
             <View style={wiz.cardWrap}>
@@ -207,6 +233,7 @@ function WizardBody() {
       <PreviousNextBar
         bottomOffset={floatingBottomOffset}
         hidden={
+          !stepReady ||
           (locationModalOpen && state.step === "location") ||
           (measureModalOpen && state.step === "exposure") ||
           (scannerModalOpen && state.step === "selectPlant")

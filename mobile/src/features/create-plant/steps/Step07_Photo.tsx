@@ -22,6 +22,8 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 import LinearGradient from "react-native-linear-gradient";
 import PlantPhotoFramingEditor from "../../../shared/ui/PlantPhotoFramingEditor";
 import { DEFAULT_PHOTO_FRAMING } from "../../../shared/utils/photoFraming";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { useWizardImagePreload } from "../hooks/useWizardImagePreload";
 
 // local storage helpers (adjust relative path to where you placed it)
 import {
@@ -42,11 +44,15 @@ async function ensureAndroidCameraPermission(): Promise<boolean> {
   return results[permission] === PermissionsAndroid.RESULTS.GRANTED;
 }
 
-export default function Step07_Photo({ onInteractionChange }: { onInteractionChange?: (active: boolean) => void }) {
+export default function Step07_Photo({ onInteractionChange, onReadyChange }: {
+  onInteractionChange?: (active: boolean) => void; onReadyChange?: (ready: boolean) => void;
+}) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
   const { state, actions } = useCreatePlantWizard();
+  const photoPreload = useWizardImagePreload([state.photoUri]);
+  React.useEffect(() => { onReadyChange?.(!photoPreload.loading); }, [onReadyChange, photoPreload.loading]);
 
   // stable temp key for this wizard session (used for tmp filename)
   const tempKeyRef = useRef(
@@ -165,6 +171,8 @@ export default function Step07_Photo({ onInteractionChange }: { onInteractionCha
     }
     actions.clearPhoto();
   }, [actions, state.photoUri]);
+
+  if (photoPreload.loading) return <CenteredSpinner size={56} color="#FFFFFF" />;
 
   return (
     <View style={wiz.cardWrap}>

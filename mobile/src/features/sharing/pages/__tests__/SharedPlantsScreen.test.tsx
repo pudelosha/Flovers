@@ -7,6 +7,7 @@ import ContactModalFrame from "../../components/ContactModalFrame";
 import GlassCard from "../../../profile/components/GlassCard";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import { usePlantPhotoPreload } from "../../../../shared/hooks/usePlantPhotoPreload";
+import { SharingPage } from "../../components/SharingUI";
 
 const mockT = (_key: string, values: any = {}) => String(values.defaultValue ?? _key).replace(/{{(\w+)}}/g, (_, key) => String(values[key] ?? ""));
 let mockSharing: any;
@@ -89,6 +90,7 @@ describe("SharedPlantsScreen", () => {
     expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
     expect(view.queryByText("Bird")).toBeNull();
     expect(view.UNSAFE_queryByType(FAB)).toBeNull();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(false);
     expect(usePlantPhotoPreload).toHaveBeenLastCalledWith(expect.arrayContaining([
       expect.objectContaining({ photo, variant: "display", expiresAt: undefined }),
     ]), true);
@@ -97,6 +99,7 @@ describe("SharedPlantsScreen", () => {
     expect(view.getByText("Bird")).toBeTruthy();
     expect(view.UNSAFE_getByType(FAB)).toBeTruthy();
     expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(true);
   });
 
   it("keeps ready tiles visible during an ordinary background metadata refresh", async () => {
@@ -105,6 +108,7 @@ describe("SharedPlantsScreen", () => {
     view.rerender(<SharedPlantsScreen />);
     expect(view.getByText("Bird")).toBeTruthy();
     expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(true);
   });
 
   it("opens a floating plant menu and navigates to the selected plant", async () => {
@@ -113,13 +117,13 @@ describe("SharedPlantsScreen", () => {
     expect(view.queryByText("Plant details")).toBeNull();
     fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
     expect(mockNavigate).not.toHaveBeenCalled();
-    expect(view.getByRole("button", { name: "Go to plant" })).toBeTruthy();
+    expect(view.getByRole("button", { name: "Plant details" })).toBeTruthy();
     expect(view.getByRole("button", { name: "Display tasks" })).toBeTruthy();
-    expect(within(tile).queryByText("Go to plant", { includeHiddenElements: true })).toBeNull();
+    expect(within(tile).queryByText("Plant details", { includeHiddenElements: true })).toBeNull();
     expect(StyleSheet.flatten(view.getByTestId("shared-plant-actions-menu").props.style)).toMatchObject({
       position: "absolute", backgroundColor: "#000000", right: 30, shadowOpacity: 0,
     });
-    fireEvent.press(view.getByRole("button", { name: "Go to plant" }));
+    fireEvent.press(view.getByRole("button", { name: "Plant details" }));
     expect(mockNavigate).toHaveBeenCalledWith("PlantDetails", { id: "1" });
     expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
   });
@@ -278,7 +282,7 @@ describe("SharedPlantsScreen", () => {
   it("does not offer deleting all sharing to a recipient", async () => {
     const view = await renderScreen();
     fireEvent.press(view.getByRole("button", { name: "Actions for Peace lily" }));
-    expect(view.getByRole("button", { name: "Go to plant" })).toBeTruthy();
+    expect(view.getByRole("button", { name: "Plant details" })).toBeTruthy();
     expect(view.queryByRole("button", { name: "Delete sharing" })).toBeNull();
   });
 

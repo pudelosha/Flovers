@@ -481,15 +481,17 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
               </Text>}
 
               {previewUri ? (
-                <PlantPhotoFramingEditor
-                  uri={previewUri}
-                  width={pending.kind === "none" ? currentPhoto?.width : undefined}
-                  height={pending.kind === "none" ? currentPhoto?.height : undefined}
-                  value={framing}
-                  onChange={changeFraming}
-                  disabled={loading || loadFailed || conflicted}
-                  onInteractionChange={setPhotoInteracting}
-                />
+                <View style={styles.framingEditor}>
+                  <PlantPhotoFramingEditor
+                    uri={previewUri}
+                    width={pending.kind === "none" ? currentPhoto?.width : undefined}
+                    height={pending.kind === "none" ? currentPhoto?.height : undefined}
+                    value={framing}
+                    onChange={changeFraming}
+                    disabled={loading || loadFailed || conflicted}
+                    onInteractionChange={setPhotoInteracting}
+                  />
+                </View>
               ) : (
                 <View style={styles.previewFrame}>
                   <View style={styles.previewEmpty}>
@@ -703,6 +705,7 @@ const styles = StyleSheet.create({
   },
   stateText: { color: "rgba(255,255,255,0.92)", fontWeight: "600", lineHeight: 18, textAlign: "center" },
 
+  framingEditor: { marginHorizontal: 16 },
   previewFrame: {
     marginHorizontal: 16,
     height: 190,
