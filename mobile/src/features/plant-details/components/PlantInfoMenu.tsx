@@ -38,14 +38,14 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.plantDefinition", "Plant definition")}</Text>
       </Pressable>
 
-      {canEdit && onShare && <Pressable style={s.menuItem} onPress={onShare} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="share-variant-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.form.share", "Share plants")}</Text>
-      </Pressable>}
-
       {canEdit && <Pressable style={s.menuItem} onPress={onEditPlant} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
         <MaterialCommunityIcons name="pencil-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.editPlant", "Edit plant")}</Text>
+      </Pressable>}
+
+      {canEdit && onShare && <Pressable style={s.menuItem} onPress={onShare} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+        <MaterialCommunityIcons name="share-variant-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
+        <Text style={s.menuItemText}>{sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.plants.shareSinglePlant", "Share plant")}</Text>
       </Pressable>}
 
       {canEdit && <Pressable style={s.menuItem} onPress={onChangeImage} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>

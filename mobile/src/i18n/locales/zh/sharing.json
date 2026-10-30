@@ -111,7 +111,8 @@
       "actions": "{{name}} 的操作",
       "deleteSharing": "取消共享",
       "deleteSharingTitle": "取消共享？",
-      "deleteSharingBody": "所有获得 {{plant}} 共享权限的人都将失去访问权限。你的植物及其数据会保留。"
+      "deleteSharingBody": "所有获得 {{plant}} 共享权限的人都将失去访问权限。你的植物及其数据会保留。",
+      "shareSinglePlant": "分享植物"
     },
     "form": {
       "title": "共享植物",
@@ -145,7 +146,7 @@
       "endDatesVary": "所选植物的结束日期不同。",
       "reload": "重新加载共享设置",
       "conflictHint": "共享设置已在其他地方更改。保存前请重新加载，这会替换当前选择的联系人。",
-      "lockedPlant": "植物（已锁定）",
+      "lockedPlant": "植物",
       "editHint": "管理这株植物的联系人、权限和共享结束日期。如需共享其他植物，请选择“共享植物”。"
     },
     "toasts": {

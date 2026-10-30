@@ -111,7 +111,8 @@
       "actions": "Aktionen für {{name}}",
       "deleteSharing": "Freigabe löschen",
       "deleteSharingTitle": "Freigabe löschen?",
-      "deleteSharingBody": "Alle Personen, mit denen du {{plant}} geteilt hast, verlieren den Zugriff. Deine Pflanze und ihre Daten bleiben erhalten."
+      "deleteSharingBody": "Alle Personen, mit denen du {{plant}} geteilt hast, verlieren den Zugriff. Deine Pflanze und ihre Daten bleiben erhalten.",
+      "shareSinglePlant": "Pflanze teilen"
     },
     "form": {
       "title": "Pflanzen teilen",
@@ -145,7 +146,7 @@
       "endDatesVary": "Die Enddaten sind bei den ausgewählten Pflanzen unterschiedlich.",
       "reload": "Freigabe neu laden",
       "conflictHint": "Die Freigabe wurde zwischenzeitlich geändert. Lade sie vor dem Speichern neu. Dabei wird die aktuelle Kontaktauswahl ersetzt.",
-      "lockedPlant": "Pflanze (festgelegt)",
+      "lockedPlant": "Pflanze",
       "editHint": "Ändere Kontakte, Berechtigungen und das Enddatum für diese Pflanze. Für weitere Pflanzen wähle „Pflanzen teilen“."
     },
     "toasts": {

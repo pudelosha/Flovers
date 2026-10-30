@@ -111,7 +111,8 @@
       "actions": "Acciones de {{name}}",
       "deleteSharing": "Dejar de compartir",
       "deleteSharingTitle": "¿Dejar de compartir?",
-      "deleteSharingBody": "Todas las personas con las que has compartido {{plant}} perderán el acceso. Tu planta y sus datos se conservarán."
+      "deleteSharingBody": "Todas las personas con las que has compartido {{plant}} perderán el acceso. Tu planta y sus datos se conservarán.",
+      "shareSinglePlant": "Compartir planta"
     },
     "form": {
       "title": "Compartir plantas",
@@ -145,7 +146,7 @@
       "endDatesVary": "Las fechas de finalización son distintas entre las plantas seleccionadas.",
       "reload": "Volver a cargar",
       "conflictHint": "La configuración se ha modificado mientras tanto. Vuelve a cargarla antes de guardar; se sustituirá la selección actual de contactos.",
-      "lockedPlant": "Planta (bloqueada)",
+      "lockedPlant": "Planta",
       "editHint": "Cambia los contactos, los permisos y la fecha de finalización de esta planta. Para compartir otras plantas, elige «Compartir plantas»."
     },
     "toasts": {

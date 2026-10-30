@@ -111,7 +111,8 @@
       "actions": "Opcje rośliny {{name}}",
       "deleteSharing": "Usuń udostępnianie",
       "deleteSharingTitle": "Usunąć udostępnianie?",
-      "deleteSharingBody": "Wszystkie osoby, którym udostępniasz roślinę {{plant}}, stracą do niej dostęp. Roślina i jej dane pozostaną na Twoim koncie."
+      "deleteSharingBody": "Wszystkie osoby, którym udostępniasz roślinę {{plant}}, stracą do niej dostęp. Roślina i jej dane pozostaną na Twoim koncie.",
+      "shareSinglePlant": "Udostępnij roślinę"
     },
     "form": {
       "title": "Udostępnij rośliny",
@@ -145,7 +146,7 @@
       "endDatesVary": "Wybrane rośliny mają różne daty końcowe.",
       "reload": "Wczytaj ponownie",
       "conflictHint": "Udostępnianie zmieniło się w międzyczasie. Wczytaj aktualne ustawienia przed zapisem. Zastąpią obecny wybór kontaktów.",
-      "lockedPlant": "Roślina (zablokowana)",
+      "lockedPlant": "Roślina",
       "editHint": "Zmień kontakty, uprawnienia i termin udostępnienia tej rośliny. Aby udostępnić inne rośliny, wybierz „Udostępnij rośliny”."
     },
     "toasts": {

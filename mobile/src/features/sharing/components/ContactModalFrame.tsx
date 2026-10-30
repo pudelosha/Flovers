@@ -26,14 +26,14 @@ export default function ContactModalFrame({ visible, title, onClose, children, s
     <View style={s.overlay} accessibilityViewIsModal>
       <Pressable style={pr.backdrop} onPress={close} accessibilityRole="button"
         accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })} />
-      <KeyboardAvoidingView pointerEvents="box-none" style={pr.promptWrap}
+      <KeyboardAvoidingView pointerEvents="box-none" style={[pr.promptWrap, sharingLayout && s.sharingWrap]}
         behavior={Platform.OS === "ios" ? "padding" : undefined}>
         <View pointerEvents="none" style={[pr.promptGlass, sharingLayout && s.squareBottom]}>
           <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)" />
           <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.35)" }]} />
         </View>
-        <View style={[pr.promptInner, s.inner, sharingLayout && s.squareBottom]}>
+        <View style={[pr.promptInner, s.inner, sharingLayout && s.sharingInner, sharingLayout && s.squareBottom]}>
           <ScrollView style={{ flex: 1 }} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
             contentContainerStyle={[s.content, sharingLayout && s.sharingContent]}>
             <Text style={pr.promptTitle}>{title}</Text>
@@ -50,6 +50,9 @@ export default function ContactModalFrame({ visible, title, onClose, children, s
 const s = StyleSheet.create({
   overlay: { ...StyleSheet.absoluteFillObject, zIndex: 6000, elevation: 6000 },
   inner: { height: "86%", maxHeight: "86%", position: "relative" },
+  sharingWrap: { justifyContent: "flex-end" },
+  // Retain the centered frame's 7% top gap, extending its bottom to the tab bar.
+  sharingInner: { height: "93%", maxHeight: "93%" },
   content: { flexGrow: 1, justifyContent: "center", paddingTop: 44, paddingBottom: 120 },
   squareBottom: { borderBottomLeftRadius: 0, borderBottomRightRadius: 0 },
   sharingContent: { justifyContent: "flex-start", paddingBottom: 20 },

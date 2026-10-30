@@ -51,16 +51,16 @@ export default function PlantMenu({
         onPress={onDetails}
       />
 
-      {canEdit && onShare && <MenuItem
-        label={sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.form.share", "Share plants")}
-        icon="share-variant-outline"
-        onPress={onShare}
-      />}
-
       {canEdit && <MenuItem
         label={tr("plants.menu.edit", "Edit plant")}
         icon="pencil-outline"
         onPress={onEdit}
+      />}
+
+      {canEdit && onShare && <MenuItem
+        label={sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.plants.shareSinglePlant", "Share plant")}
+        icon="share-variant-outline"
+        onPress={onShare}
       />}
 
       {canEdit && <MenuItem

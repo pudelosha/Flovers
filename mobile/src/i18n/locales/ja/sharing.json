@@ -111,7 +111,8 @@
       "actions": "{{name}}の操作",
       "deleteSharing": "共有を解除",
       "deleteSharingTitle": "共有を解除しますか？",
-      "deleteSharingBody": "{{plant}} を共有しているすべてのユーザーがアクセスできなくなります。植物とそのデータは保持されます。"
+      "deleteSharingBody": "{{plant}} を共有しているすべてのユーザーがアクセスできなくなります。植物とそのデータは保持されます。",
+      "shareSinglePlant": "植物を共有"
     },
     "form": {
       "title": "植物を共有",
@@ -145,7 +146,7 @@
       "endDatesVary": "選択した植物の終了日が異なります。",
       "reload": "共有設定を再読み込み",
       "conflictHint": "共有設定が別の場所で変更されました。保存する前に再読み込みしてください。現在選択している連絡先は新しい設定に置き換わります。",
-      "lockedPlant": "植物（固定）",
+      "lockedPlant": "植物",
       "editHint": "この植物の共有相手、権限、終了日を変更できます。他の植物を共有するには「植物を共有」を選んでください。"
     },
     "toasts": {

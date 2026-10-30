@@ -19,6 +19,7 @@ import {
 } from "react-native";
 import { PUBLIC_BASE_URL_NORM } from "../../../config";
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import LinearGradient from "react-native-linear-gradient";
@@ -107,6 +108,9 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function PlantsScreen() {
   const nav = useNavigation<any>();
   const route = useRoute<any>();
+  const insets = useSafeAreaInsets();
+  // Allow the last tile's full menu to clear the FAB and bottom tab bar.
+  const listFooterHeight = 360 + insets.bottom;
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -735,7 +739,7 @@ export default function PlantsScreen() {
           );
         }}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
-        ListFooterComponent={() => <View style={{ height: 200 }} />}
+        ListFooterComponent={<View style={{ height: listFooterHeight }} />}
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}

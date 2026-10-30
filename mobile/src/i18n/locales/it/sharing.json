@@ -111,7 +111,8 @@
       "actions": "Azioni per {{name}}",
       "deleteSharing": "Rimuovi condivisione",
       "deleteSharingTitle": "Rimuovere la condivisione?",
-      "deleteSharingBody": "Tutte le persone con cui hai condiviso {{plant}} perderanno l’accesso. La pianta e i suoi dati verranno conservati."
+      "deleteSharingBody": "Tutte le persone con cui hai condiviso {{plant}} perderanno l’accesso. La pianta e i suoi dati verranno conservati.",
+      "shareSinglePlant": "Condividi pianta"
     },
     "form": {
       "title": "Condividi piante",
@@ -145,7 +146,7 @@
       "endDatesVary": "Le date di fine sono diverse per le piante selezionate.",
       "reload": "Ricarica condivisione",
       "conflictHint": "La condivisione è stata modificata nel frattempo. Ricaricala prima di salvare: la selezione attuale dei contatti verrà sostituita.",
-      "lockedPlant": "Pianta (bloccata)",
+      "lockedPlant": "Pianta",
       "editHint": "Modifica contatti, permessi e data di fine per questa pianta. Per condividere altre piante, scegli “Condividi piante”."
     },
     "toasts": {

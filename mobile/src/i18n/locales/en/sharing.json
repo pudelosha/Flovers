@@ -111,7 +111,8 @@
       "actions": "Actions for {{name}}",
       "deleteSharing": "Delete sharing",
       "deleteSharingTitle": "Delete sharing?",
-      "deleteSharingBody": "Everyone you shared {{plant}} with will lose access. Your plant and its data will be kept."
+      "deleteSharingBody": "Everyone you shared {{plant}} with will lose access. Your plant and its data will be kept.",
+      "shareSinglePlant": "Share plant"
     },
     "form": {
       "title": "Share plants",
@@ -145,7 +146,7 @@
       "endDatesVary": "End dates differ between the selected plants.",
       "reload": "Reload sharing",
       "conflictHint": "Sharing changed elsewhere. Reload sharing before saving; this replaces the current recipient selections.",
-      "lockedPlant": "Plant (locked)",
+      "lockedPlant": "Plant",
       "editHint": "Manage contacts, permissions and the end date for this plant. To share other plants, use Share plants."
     },
     "toasts": {

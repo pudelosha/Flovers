@@ -111,7 +111,8 @@
       "actions": "{{name}} için eylemler",
       "deleteSharing": "Paylaşımı kaldır",
       "deleteSharingTitle": "Paylaşım kaldırılsın mı?",
-      "deleteSharingBody": "{{plant}} bitkisini paylaştığınız herkes erişimini kaybedecek. Bitkiniz ve verileri korunacak."
+      "deleteSharingBody": "{{plant}} bitkisini paylaştığınız herkes erişimini kaybedecek. Bitkiniz ve verileri korunacak.",
+      "shareSinglePlant": "Bitkiyi paylaş"
     },
     "form": {
       "title": "Bitkileri paylaş",
@@ -145,7 +146,7 @@
       "endDatesVary": "Bitiş tarihleri seçilen ev bitkileri arasında farklılık gösteriyor.",
       "reload": "Paylaşımı yeniden yükle",
       "conflictHint": "Paylaşım başka yerde değişti. Kaydetmeden önce paylaşımı yeniden yükleyin; bu, mevcut alıcı seçimlerinin yerini alır.",
-      "lockedPlant": "Bitki (kilitli)",
+      "lockedPlant": "Bitki",
       "editHint": "Bu bitkinin kişilerini, izinlerini ve paylaşım bitiş tarihini düzenleyin. Başka bitkiler paylaşmak için “Bitkileri paylaş” seçeneğini kullanın."
     },
     "toasts": {

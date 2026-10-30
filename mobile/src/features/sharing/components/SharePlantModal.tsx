@@ -235,7 +235,7 @@ export default function SharePlantModal() {
           ? t("sharing.form.editHint", { defaultValue: "Manage contacts, permissions and the end date for this plant. To share other plants, use Share plants." })
           : t("sharing.form.multiPlantHint", { defaultValue: "Choose the plants and contacts to share them with." })}</Text>
         <Text style={shared.title}>{managing
-          ? t("sharing.form.lockedPlant", { defaultValue: "Plant (locked)" })
+          ? t("sharing.form.lockedPlant", { defaultValue: "Plant" })
           : t("sharing.form.choosePlants", { defaultValue: "Choose plants" })}</Text>
         {!managing && <Text style={shared.hint}>{t("sharing.form.plantsSelected", { defaultValue: "Plants selected: {{count}}", count: selectedPlantIds.length })}</Text>}
         {choices.length === 0 && <Text style={shared.hint}>{t("sharing.form.noPlants", { defaultValue: "No plants available. Add a plant to start sharing." })}</Text>}

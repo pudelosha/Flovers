@@ -11,7 +11,7 @@ jest.mock("../../../app/providers/LanguageProvider", () => ({ useLanguage: () =>
 const noop = () => {};
 it("keeps shared plants navigable while hiding owner actions", () => {
   const details = jest.fn(); const view = render(<PlantMenu canEdit={false} onDetails={details} onEdit={noop} onReminders={noop} onJournal={noop} onDelete={noop} onShowQr={noop} onShare={noop} />);
-  expect(view.queryByText("Edit plant")).toBeNull(); expect(view.queryByText("Delete plant")).toBeNull(); expect(view.queryByText("Show QR code")).toBeNull(); expect(view.queryByText("Share plants")).toBeNull();
+  expect(view.queryByText("Edit plant")).toBeNull(); expect(view.queryByText("Delete plant")).toBeNull(); expect(view.queryByText("Show QR code")).toBeNull(); expect(view.queryByText("Share plant")).toBeNull();
   expect(view.queryByText("Show reminders")).toBeNull();
   fireEvent.press(view.getByText("Plant details")); expect(details).toHaveBeenCalledTimes(1);
 });
@@ -25,7 +25,7 @@ it("permits caregiver task completion without exposing reminder editing", () => 
 });
 it("hides image, edit, and sharing controls in shared plant details", () => {
   const view = render(<PlantInfoMenu canEdit={false} onPlantDefinition={noop} onEditPlant={noop} onChangeImage={noop} onShowReminders={noop} onShare={noop} />);
-  expect(view.queryByText("Edit plant")).toBeNull(); expect(view.queryByText("Change image")).toBeNull(); expect(view.queryByText("Share plants")).toBeNull(); expect(view.queryByText("Show reminders")).toBeNull();
+  expect(view.queryByText("Edit plant")).toBeNull(); expect(view.queryByText("Change image")).toBeNull(); expect(view.queryByText("Share plant")).toBeNull(); expect(view.queryByText("Show reminders")).toBeNull();
 });
 it("keeps shared reminder history available without completion or edits", () => {
   const view = render(<PlantReminderMenu canEdit={false} canComplete={false} onMarkComplete={noop} onEdit={noop} onShowHistory={noop} />);
