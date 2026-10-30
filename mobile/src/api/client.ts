@@ -9,10 +9,17 @@
 
 import { API_BASE_NORM } from "../config";
 
-type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+type HttpMethod = "GET" | "HEAD" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 let inMemoryToken: string | null = null;
 let authSessionId = 0;
+const authSessionListeners = new Set<(sessionId: number) => void>();
+
+/** Private in-memory resources must be cleared at every login/logout boundary. */
+export function onAuthSessionChanged(listener: (sessionId: number) => void) {
+  authSessionListeners.add(listener);
+  return () => { authSessionListeners.delete(listener); };
+}
 
 export function setAuthToken(token: string | null) {
   // A login/logout boundary invalidates requests and refreshes from the old session.
@@ -20,10 +27,18 @@ export function setAuthToken(token: string | null) {
   inMemoryToken = token;
   refreshInFlight?.cancel();
   refreshInFlight = null;
+  authSessionListeners.forEach(listener => {
+    try { listener(authSessionId); } catch {}
+  });
 }
 
 export function getAuthSessionId() {
   return authSessionId;
+}
+
+/** Exposes authentication state without exposing the bearer credential. */
+export function hasAuthToken() {
+  return !!inMemoryToken;
 }
 
 type TokenRefreshConfig = {
@@ -74,6 +89,8 @@ type RequestOpts = {
   notifyUnauthorized?: boolean;
   // Explicit credentials are reserved for bounded teardown after local logout.
   accessToken?: string;
+  responseType?: "blob";
+  maxResponseBytes?: number;
 };
 
 function isAbortError(e: any) {
@@ -281,7 +298,7 @@ async function requestInternal<T>(
     if (timeoutId) clearTimeout(timeoutId);
   }
 
-  const raw = await res.text().catch(() => "");
+  const raw = !res.ok || opts.responseType !== "blob" ? await res.text().catch(() => "") : "";
   assertCurrentSession();
 
   if (!res.ok) {
@@ -326,6 +343,34 @@ async function requestInternal<T>(
     throw new ApiError(res.status, bodyParsed, `Request failed with status ${res.status}`);
   }
 
+  if (opts.responseType === "blob") {
+    const maxBytes = opts.maxResponseBytes ?? 512_000;
+    const advertisedSize = Number(res.headers.get("content-length"));
+    if (Number.isFinite(advertisedSize) && advertisedSize > maxBytes) {
+      try { controller?.abort(); } catch {}
+      throw new ApiError(413, { code: "photo_response_too_large" }, "Photo response is too large");
+    }
+    let bodyTimer: ReturnType<typeof setTimeout> | undefined;
+    try {
+      const blob = await Promise.race([
+        res.blob(),
+        new Promise<Blob>((_, reject) => {
+          bodyTimer = setTimeout(() => {
+            try { controller?.abort(); } catch {}
+            reject(new ApiError(408, { message: "Request timed out" }, "Request timed out"));
+          }, timeoutMs);
+        }),
+      ]);
+      assertCurrentSession();
+      if (blob.size > maxBytes) {
+        throw new ApiError(413, { code: "photo_response_too_large" }, "Photo response is too large");
+      }
+      return blob as T;
+    } finally {
+      if (bodyTimer) clearTimeout(bodyTimer);
+    }
+  }
+
   if (!raw) {
     return undefined as unknown as T;
   }
@@ -351,6 +396,11 @@ export async function request<T>(
   opts: RequestOpts = { auth: false, timeoutMs: 15000 }
 ): Promise<T> {
   return requestInternal<T>(path, method, body, opts, false);
+}
+
+/** Authenticated binary responses use the same refresh and session guards as JSON. */
+export function requestBlob(path: string, opts: RequestOpts = { auth: true }): Promise<Blob> {
+  return requestInternal<Blob>(path, "GET", undefined, { ...opts, responseType: "blob" });
 }
 
 /** Use the logged-out session's snapshot; never refresh or consult a later login. */

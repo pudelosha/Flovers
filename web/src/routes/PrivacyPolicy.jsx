@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
     <article className="card prose">
       <h1 className="h1 h1-auth">{t("privacy.title")}</h1>
       <p className="muted muted-center">
-        {t("privacy.lastUpdated", { date: "2026-01-28" })}
+        {t("privacy.lastUpdated", { date: "2026-10-30" })}
       </p>
 
       <Section title={t("privacy.section1.title")}>
@@ -96,6 +96,10 @@ export default function PrivacyPolicy() {
         <Para>{t("privacy.section10.p1")}</Para>
         <Para>{t("privacy.section10.p2")}</Para>
         <Para>{t("privacy.section10.p3")}</Para>
+      </Section>
+
+      <Section title={t("privacy.section11.title")}>
+        <Bullets items={t("privacy.section11.items", { returnObjects: true })} />
       </Section>
     </article>
   );

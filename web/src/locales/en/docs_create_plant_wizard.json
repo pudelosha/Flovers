@@ -62,7 +62,7 @@
       {
         "heading": "Step 07 — Add your own photo (optional)",
         "body": [
-          "You can add a custom photo of your plant from your phone.",
+          "When you save, your photo is resized and uploaded to private server storage. Only you and people with active sharing access to this plant can view it.",
           "This step is optional and can be done later via plant editing tools, depending on your app flow."
         ]
       },
@@ -77,7 +77,8 @@
       {
         "heading": "Step 09 — Create the plant",
         "body": [
-          "The final step creates the plant automatically. After success, the wizard returns to Plants after about 2.5 seconds; it does not show a separate review screen or an Open plant button."
+          "The final step creates the plant automatically. After success, the wizard returns to Plants after about 2.5 seconds; it does not show a separate review screen or an Open plant button.",
+          "If the photo upload fails after plant creation, the wizard keeps the created plant and lets you retry the upload without creating a duplicate."
         ]
       },
       {

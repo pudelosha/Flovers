@@ -62,7 +62,7 @@
       {
         "heading": "Etapa 07 — Adicione sua foto (opcional)",
         "body": [
-          "Adicione uma foto da sua planta pelo celular, se quiser.",
+          "Ao guardar, a fotografia é reduzida e enviada para um espaço privado no servidor. Só tu e as pessoas com acesso partilhado ativo a esta planta a podem ver.",
           "Esta etapa é opcional. Dependendo das opções disponíveis no aplicativo, você também pode adicionar a foto depois, ao editar a planta."
         ]
       },
@@ -77,7 +77,8 @@
       {
         "heading": "Passo 09 — Criar a planta",
         "body": [
-          "O último passo cria a planta automaticamente. Após cerca de 2,5 segundos regressa a Plantas, sem um resumo separado nem um botão para abrir a nova planta."
+          "O último passo cria a planta automaticamente. Após cerca de 2,5 segundos regressa a Plantas, sem um resumo separado nem um botão para abrir a nova planta.",
+          "Se o envio da fotografia falhar depois de criar a planta, a planta é mantida. Podes repetir o envio sem criar um duplicado."
         ]
       },
       {

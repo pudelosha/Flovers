@@ -167,6 +167,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
+# Private user photographs must never be mapped by the public media server.
+PRIVATE_MEDIA_ROOT = Path(env("PRIVATE_MEDIA_ROOT", default=str(BASE_DIR / "private-media")))
+PRIVATE_MEDIA_REQUIRE_MOUNT = env.bool("PRIVATE_MEDIA_REQUIRE_MOUNT", default=not _development)
+PLANT_PHOTO_MAX_UPLOAD_BYTES = env.int("PLANT_PHOTO_MAX_UPLOAD_BYTES", default=5 * 1024 * 1024)
+PLANT_PHOTO_ACCOUNT_QUOTA_BYTES = env.int("PLANT_PHOTO_ACCOUNT_QUOTA_BYTES", default=100 * 1024 * 1024)
+PLANT_PHOTO_GLOBAL_QUOTA_BYTES = env.int("PLANT_PHOTO_GLOBAL_QUOTA_BYTES", default=2 * 1024 * 1024 * 1024)
+PLANT_PHOTO_MIN_FREE_BYTES = env.int("PLANT_PHOTO_MIN_FREE_BYTES", default=1024 * 1024 * 1024)
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # --- CORS (dev: open) ---
@@ -193,6 +201,10 @@ IOT_TLS_CA_CERT = env("IOT_TLS_CA_CERT", default="")
 
 # --- Celery ---
 CELERY_BEAT_SCHEDULE = {
+    "cleanup-private-plant-photos-every-hour": {
+        "task": "plant_instances.tasks.cleanup_private_plant_photos",
+        "schedule": crontab(minute=17),
+    },
     "check-and-send-daily-task-notifications-every-minute": {
         "task": "profiles.tasks.check_and_send_daily_task_notifications",
         "schedule": crontab(),  # every minute

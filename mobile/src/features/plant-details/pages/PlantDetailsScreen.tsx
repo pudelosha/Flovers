@@ -933,7 +933,9 @@ export default function PlantDetailsScreen() {
         visible={changeImgVisible}
         onClose={closeChangeImage}
         plantId={changeImgPlantId}
-        onChanged={() => {
+        onChanged={(photo) => {
+          setDetails((current) => current && String(current.plant.id) === String(changeImgPlantId)
+            ? { ...current, plant: { ...current.plant, photo } } : current);
           setPhotoReloadSignal((v) => v + 1);
         }}
       />

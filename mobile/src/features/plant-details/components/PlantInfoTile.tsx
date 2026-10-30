@@ -14,6 +14,7 @@ import PlantInfoMenu from "./PlantInfoMenu";
 import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
+import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 
@@ -144,7 +145,10 @@ export default function PlantInfoTile({
   const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] = useState(false);
 
   // local photo uri for THIS plant id
-  const [localPlantPhotoUri, setLocalPlantPhotoUri] = useState<string | null>(null);
+  const [localPlantPhoto, setLocalPlantPhoto] = useState<{ plantId: string; uri: string } | null>(null);
+  const { uri: syncedPhotoUri } = usePlantPhoto(plant?.photo, {
+    variant: "display", reloadSignal: photoReloadSignal, expiresAt: plant?.access?.expires_at,
+  });
 
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
@@ -163,15 +167,15 @@ export default function PlantInfoTile({
     let cancelled = false;
 
     const run = async () => {
-      if (!plant?.id || !access.isOwner) {
-        setLocalPlantPhotoUri(null);
+      if (!plant?.id || !access.isOwner || plant.photo) {
+        setLocalPlantPhoto(null);
         return;
       }
       try {
         const uri = await getPlantPhotoUri(String(plant.id));
-        if (!cancelled) setLocalPlantPhotoUri(withCacheBuster(uri || null));
+        if (!cancelled) setLocalPlantPhoto(uri ? { plantId: String(plant.id), uri: withCacheBuster(uri)! } : null);
       } catch {
-        if (!cancelled) setLocalPlantPhotoUri(null);
+        if (!cancelled) setLocalPlantPhoto(null);
       }
     };
 
@@ -179,16 +183,18 @@ export default function PlantInfoTile({
     return () => {
       cancelled = true;
     };
-  }, [plant?.id, access.isOwner, photoReloadSignal]);
+  }, [plant?.id, plant?.photo?.id, access.isOwner, photoReloadSignal]);
 
-  // prefer local user photo; fallback to plant definition images
+  // Synced photos take precedence. An older local image belongs only to its
+  // original owned plant and must never flash on another plant's details.
   const imageUrl = useMemo(() => {
     if (!plant) return null;
-    if (access.isOwner && localPlantPhotoUri) return localPlantPhotoUri;
+    if (syncedPhotoUri) return syncedPhotoUri;
+    if (!plant.photo && access.isOwner && localPlantPhoto?.plantId === String(plant.id)) return localPlantPhoto.uri;
 
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
-  }, [localPlantPhotoUri, plant, access.isOwner]);
+  }, [localPlantPhoto, syncedPhotoUri, plant, access.isOwner]);
 
   if (!plant) {
     return (
@@ -329,7 +335,7 @@ export default function PlantInfoTile({
                 sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
                 onShare={() => {
                   closeMenu();
-                  openSharePlant({ id: String(plant.id), name: title, location: locationName, latin, imageUrl: imageUrl ?? undefined });
+                  openSharePlant({ id: String(plant.id), name: title, location: locationName, latin, imageUrl: plant.plant_definition?.image || undefined, photo: plant.photo });
                 }}
                 onPlantDefinition={() => {
                   closeMenu();

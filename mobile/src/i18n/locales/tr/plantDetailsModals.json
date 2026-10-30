@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Resmi değiştir",
-      "subtitle": "Bu fotoğraf cihazınızda yerel olarak depolanır ve yüklenmez.",
+      "subtitle": "Kaydettiğinizde fotoğrafınız küçültülerek sunucudaki özel depolama alanına yüklenir. Fotoğrafı yalnızca siz ve bu bitkiye hâlen paylaşım erişimi olan kişiler görebilir.",
       "noPlantId": "Hiçbir ev bitkisi kimliği bulunamadı.",
-      "loadFailed": "Yerel resim yüklenemedi.",
+      "loadFailed": "Fotoğraf yüklenemedi. Tekrar deneyin.",
       "error": "Bir şeyler ters gitti.",
       "noPhoto": "Fotoğraf seçilmedi",
       "removedPreview": "Fotoğraf kaldırılacak",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Kamera hatası",
       "pickerErrorTitle": "Seçici hatası",
       "saveFailedTitle": "Kaydetme başarısız oldu",
-      "saveFailedMsg": "Bu fotoğraf yerel olarak kaydedilemedi.",
+      "saveFailedMsg": "Fotoğraf sunucuya yüklenemedi. Önceki fotoğrafınız korundu.",
       "confirmRemoveTitle": "Fotoğraf kaldırılsın mı?",
       "confirmRemoveMsg": "Kaydet'e bastığınızda fotoğraf kaldırılacaktır.",
       "confirmDiscardTitle": "Değişiklikler silinsin mi?",
       "confirmDiscardMsg": "Değişiklikleriniz kaydedilmeyecek.",
       "discard": "At",
       "removeFailedTitle": "Kaldırma başarısız oldu",
-      "removeFailedMsg": "Bu yerel fotoğraf kaldırılamadı."
+      "removeFailedMsg": "Fotoğraf silinemedi. Tekrar deneyin.",
+      "invalidPhoto": "En fazla 5 MB boyutunda geçerli bir JPEG veya PNG fotoğrafı seçin.",
+      "uploadTooLarge": "Bu fotoğraf çok büyük. En fazla 5 MB boyutunda bir fotoğraf seçin.",
+      "photoQuota": "Fotoğraf depolama sınırına ulaşıldı. Kullanmadığınız fotoğrafları silin veya destek ekibiyle iletişime geçin.",
+      "photoStorage": "Fotoğraf depolama alanı geçici olarak kullanılamıyor. Daha sonra tekrar deneyin.",
+      "photoConflict": "Fotoğraf başka bir cihazda değiştirildi. Kaydetmeden önce bu pencereyi kapatıp yeniden açın.",
+      "uploadExisting": "Bu fotoğrafı sunucuya yükle",
+      "legacyInfo": "Bu eski fotoğraf yalnızca bu telefonda kayıtlı. Eşitlemek için «Bu fotoğrafı sunucuya yükle» seçeneğini kullanın."
     }
   }
 }

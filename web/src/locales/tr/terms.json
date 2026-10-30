@@ -64,7 +64,7 @@
       "title": "§ 6. Kullanıcı İçeriği ve lisans",
       "p1": "Kullanıcı, yürürlükteki yasalar kapsamında Kullanıcı İçeriğine ilişkin sahip olabileceği her türlü hakkı saklı tutar.",
       "p2": "Kullanıcı, Kullanıcı İçeriğini sağlayarak, Sağlayıcıya, Hizmeti sağlamak, söz konusu içeriği yalnızca Hizmetin işletimi ve bakımı için depolamak, çoğaltmak, görüntülemek ve işlemek için gereken ölçüde devredilebilir, münhasır olmayan, ücretsiz, geri alınabilir bir lisans (Hesap veya içerik silinerek iptal edilir) verir.",
-      "p3": "Ev bitkisi Tanıma için kullanılan fotoğraflar, yalnızca tanıma amacıyla işlenir ve Kullanıcı, bunların saklanmasını gerektiren bir özelliği açıkça kullanmadığı sürece, gerekenden daha uzun süre saklanmaz.",
+      "p3": "Yalnızca Bitki Tanıma için gönderilen fotoğraflar bitkiyi belirlemek amacıyla işlenir ve otomatik olarak bitki fotoğrafı olarak saklanmaz. Bir bitki fotoğrafının kaydedilmesi, fotoğrafın otomatik olarak tanıma işlemine gönderilmesine veya tanıma modellerinin eğitiminde kullanılmasına yol açmaz.",
       "p4": "Kullanıcı, sunduğu içeriklerin gerekli haklarına sahip olduğunu ve söz konusu içeriklerin üçüncü kişilerin haklarını ihlal etmediğini beyan eder."
     },
     "section7": {
@@ -82,7 +82,7 @@
     "section8": {
       "title": "§ 8. QR kodları, bağlantılar ve erişim anahtarları",
       "p1": "Hizmet, QR kodlarının veya bağlantılarının (örneğin ev bitkisi Örneklerine) oluşturulmasına izin verebilir. Kullanıcı bunların depolanmasından ve dağıtımından sorumludur.",
-      "p2": "Kullanıcının bağlantıları, tanımlayıcıları veya erişim anahtarlarını üçüncü kişilerle paylaşması durumunda, bu kişiler verilen erişim kapsamında belirtilen verilere erişim sağlayabilir. Kullanıcı bu tür paylaşımlarla ilgili riski üstlenir."
+      "p2": "Bir bitkinin QR kodu, bitki kimliği veya fotoğraf adresi bir erişim kimlik bilgisi değildir: alıcı oturum açmalı ve kendisine bitki paylaşımı yoluyla erişim verilmiş olmalıdır. Cihazların gizli kimlik doğrulama anahtarları ve Hesap kimlik bilgileri gizli tutulmalıdır."
     },
     "section9": {
       "title": "§ 9. Ödemeler ve planlar (gelecekteki bilgiler)",
@@ -132,13 +132,24 @@
       "title": "§ 16. Geçerli yasa ve anlaşmazlıkların çözümü",
       "p1": "Bu Şartlar, zorunlu tüketici koruma hükümlerine tabi olarak Polonya yasalarına tabidir.",
       "p2": "Anlaşmazlıklar ilk etapta, özellikle de Sağlayıcıyla iletişime geçilerek dostane bir şekilde çözülmelidir.",
-      "p3": "Tüketiciler mahkeme dışı anlaşmazlık çözüm mekanizmalarını ve şu adreste bulunan AB ODR platformunu kullanabilir: https://ec.europa.eu/consumers/odr/.",
+      "p3": "Tüketiciler, geçerli mahkeme dışı tüketici uyuşmazlığı çözüm yollarını kullanabilir. Avrupa Komisyonu, tüketici haklarının korunmasına yönelik başvuru yolları hakkında bilgileri ve uyuşmazlık çözüm kuruluşlarının listelerini https://consumer-redress.ec.europa.eu/ adresinde yayımlar.",
       "p4": "Tüketici uyuşmazlıklarında mahkemelerin yargı yetkisi yürürlükteki hukuka göre belirlenir."
     },
     "section17": {
       "title": "§ 17. Şartlarda Değişiklikler",
       "p1": "Sağlayıcı, yasal değişiklikler, Hizmet geliştirme veya teknolojik değişiklikler gibi geçerli nedenlerle bu Koşulları değiştirebilir.",
       "p2": "Değişiklikler hakkında Kullanıcılar İnternet Sitesi ve/veya Uygulama aracılığıyla bilgilendirilecektir. Hizmetin sürekli kullanımı, güncellenen Koşulların kabul edildiği anlamına gelir."
+    },
+    "section18": {
+      "title": "§ 18. Bitki fotoğrafları",
+      "items": [
+        "Bitki oluşturma sihirbazında seçilen fotoğraf, bitki oluşturulduktan sonra Hizmete yüklenir. Bitki fotoğrafı düzenleyicisindeki yüklemeler, Kullanıcı değişikliği kaydettiğinde gönderilir. Yalnızca telefonda saklanan eski fotoğraflar, Kullanıcı bunları yüklemeyi açıkça seçmediği sürece o cihazda kalır.",
+        "Kullanıcılar fotoğrafları üzerindeki haklarını korur. Fotoğrafları yüklemek ve paylaşmak için gerekli hak ve izinlere sahip olmalı ve başkalarının gizliliğine saygı göstermelidirler. § 6 kapsamındaki lisans, yalnızca Hizmeti sunmak ve bakımını yapmak için gerekli işlemleri kapsar.",
+        "Hizmet bitki fotoğraflarını yeniden boyutlandırıp sıkıştırır, görüntüleme sürümleri ve küçük resimler oluşturur, yönlerini düzeltir ve gömülü EXIF/GPS meta verilerini kaldırır. Yüklenen orijinaller kalıcı bir arşiv olarak saklanmaz. Tam çözünürlüğe ihtiyaç duyan Kullanıcılar kendi orijinallerini saklamalıdır.",
+        "Bitki fotoğrafları herkese açık değildir. Uygulamada fotoğrafları yalnızca bitki sahibi ve oturum açmış, ilgili bitki için etkin paylaşım erişimi bulunan Kullanıcılar görebilir; yalnızca bitki sahibi bunları değiştirebilir veya kaldırabilir. Yetkili teknik personel ve hizmet sağlayıcılar, fotoğrafları yalnızca Hizmeti işletmek, güvenliğini sağlamak veya bakımını yapmak için gerekli olduğu ölçüde işleyebilir.",
+        "Bir fotoğrafın değiştirilmesi veya kaldırılması ya da ilişkili bitkinin veya Hesabın silinmesi, eski fotoğrafa Hizmet üzerinden erişimi sonlandırır ve fotoğrafın aktif depolamadan silinmesini planlar. Başarısız dosya temizleme işlemleri yeniden denenir. Ayrı olarak tutulan kurtarma yedekleri varsa, kopyalar ilgili yedek döngüsüne göre değiştirilene kadar bu yedeklerde kalabilir.",
+        "Fotoğraf yüklemek isteğe bağlıdır. Biçim, dosya boyutu, depolama ve yükleme sıklığı sınırları geçerlidir; reddedilen yüklemeler mevcut fotoğrafın yerini almaz."
+      ]
     }
   }
 }

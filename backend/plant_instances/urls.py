@@ -1,8 +1,11 @@
 from django.urls import path
 from .views import PlantInstanceListCreateView, PlantInstanceDetailView, PlantInstanceByQRView, PlantInstanceSendQREmailView
 from reminders.views import PlantJournalView
+from .photo_views import PlantPhotoView, PlantPhotoFileView
 
 urlpatterns = [
+    path("<int:plant_id>/photo/", PlantPhotoView.as_view(), name="plant-photo"),
+    path("<int:plant_id>/photo/<uuid:photo_id>/", PlantPhotoFileView.as_view(), name="plant-photo-file"),
     path("", PlantInstanceListCreateView.as_view(), name="plant-instance-list-create"),
     path("<int:pk>/", PlantInstanceDetailView.as_view(), name="plant-instance-detail"),
     path("by-qr/", PlantInstanceByQRView.as_view(), name="plant-instance-by-qr"),

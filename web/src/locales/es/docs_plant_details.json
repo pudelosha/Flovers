@@ -22,7 +22,7 @@
         "body": [
           "El menú junto al título ofrece más acciones para esa planta.",
           "Puedes consultar la ficha de especie asociada, editar los datos, cambiar la imagen o abrir sus recordatorios.",
-          "Al quitar tu foto se elimina la copia local. Si la definición vinculada tiene una imagen de catálogo, esta vuelve a aparecer."
+          "Al guardar la nueva foto, se elimina del servidor la copia anterior. Al quitar tu foto, vuelve a mostrarse la imagen del catálogo, si la hay."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Aspectos importantes",
         "body": [
-          "Las fotos de plantas que añades se guardan solo en tu dispositivo y no se suben a los servidores de Flovers.",
+          "Al guardar, la foto se reduce y se sube a un espacio privado del servidor. Solo podéis verla tú y las personas que tengan acceso compartido activo a esta planta.",
           "Las imágenes predeterminadas proceden de los servidores de Flovers y pueden haberse generado con IA.",
           "Las lecturas y las recomendaciones sirven de orientación. Complétalas con tu propia observación."
         ]

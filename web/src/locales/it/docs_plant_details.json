@@ -22,7 +22,7 @@
         "body": [
           "Il menu con tre puntini accanto al nome raccoglie le azioni relative alla pianta.",
           "Puoi aprire la scheda della specie, se collegata, modificare i dati o l'immagine e aprire Promemoria con un filtro per questa pianta.",
-          "La rimozione della foto personale elimina la copia locale. Se la definizione collegata ha un’immagine di catalogo, questa torna visibile."
+          "Dopo il salvataggio della nuova foto, la copia precedente viene rimossa dal server. Rimuovendo la foto personale, riappare l’immagine del catalogo, se disponibile."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Informazioni importanti",
         "body": [
-          "Le foto che aggiungi alle tue piante restano solo sul tuo dispositivo e non vengono caricate sul server di Flovers.",
+          "Quando salvi, la foto viene ridimensionata e caricata in uno spazio privato sul server. Puoi vederla solo tu e le persone con cui la pianta è attualmente condivisa.",
           "Le immagini predefinite provengono dal server di Flovers e possono essere generate con l'IA.",
           "Le misurazioni dei sensori e i suggerimenti di cura sono informazioni di supporto: valuta sempre di persona le condizioni della pianta."
         ]

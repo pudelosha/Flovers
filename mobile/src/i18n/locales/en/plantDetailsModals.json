@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Change image",
-      "subtitle": "This photo is stored locally on your device and is not uploaded.",
+      "subtitle": "When you save, your photo is resized and uploaded to private server storage. Only you and people with active sharing access to this plant can view it.",
       "noPlantId": "No plant id found.",
-      "loadFailed": "Could not load local image.",
+      "loadFailed": "Could not load the photo. Try again.",
       "error": "Something went wrong.",
       "noPhoto": "No photo selected",
       "removedPreview": "Photo will be removed",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Camera error",
       "pickerErrorTitle": "Picker error",
       "saveFailedTitle": "Save failed",
-      "saveFailedMsg": "Could not save this photo locally.",
+      "saveFailedMsg": "Could not upload this photo. Your previous photo has been kept.",
       "confirmRemoveTitle": "Remove photo?",
       "confirmRemoveMsg": "The photo will be removed after you press Save.",
       "confirmDiscardTitle": "Discard changes?",
       "confirmDiscardMsg": "Your changes will not be saved.",
       "discard": "Discard",
       "removeFailedTitle": "Remove failed",
-      "removeFailedMsg": "Could not remove this local photo."
+      "removeFailedMsg": "Could not remove the photo. Try again.",
+      "invalidPhoto": "Choose a valid JPEG or PNG photo up to 5 MB.",
+      "uploadTooLarge": "This photo is too large. Choose a photo up to 5 MB.",
+      "photoQuota": "The photo storage limit has been reached. Remove unused photos or contact support.",
+      "photoStorage": "Photo storage is temporarily unavailable. Try again later.",
+      "photoConflict": "The photo changed on another device. Close this window and reopen it before saving.",
+      "uploadExisting": "Upload this photo",
+      "legacyInfo": "This older photo is stored only on this phone. Choose Upload this photo to sync it."
     }
   }
 }

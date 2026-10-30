@@ -13,6 +13,7 @@ from contacts.models import Connection
 from contacts.services import contact_identity, contact_snapshot
 from plant_definitions.serializers import _abs_media_url
 from plant_instances.models import PlantInstance
+from plant_instances.photo_storage import photo_metadata
 from profiles.models import ProfileNotifications
 from .models import PlantShare, PlantSharingVersion
 from .permissions import active_shares
@@ -30,7 +31,7 @@ def sharing_snapshot(user, request=None):
     incoming = active_shares(now).filter(recipient=user)
     rows = PlantShare.objects.filter(Q(pk__in=outgoing.values("pk")) | Q(pk__in=incoming.values("pk"))).select_related(
         "plant__location", "plant__plant_definition", "plant__user", "recipient",
-    ).order_by("plant_id", "pk")
+    ).prefetch_related("plant__images").order_by("plant_id", "pk")
     shares = []
     for row in rows:
         plant = row.plant
@@ -44,7 +45,7 @@ def sharing_snapshot(user, request=None):
             "id": str(row.pk),
             "plant": {"id": str(plant.pk), "name": plant.display_name or (definition.name if definition else ""),
                       "latin": definition.latin if definition else "", "location": plant.location.name if plant.location_id else "",
-                      "image_url": image},
+                      "image_url": image, "photo": photo_metadata(plant, request)},
             "contact_id": str(row.recipient_id if own else plant.user_id),
             "direction": "outgoing" if own else "incoming", "can_complete_tasks": row.can_complete_tasks,
             "ends_on": row.ends_on.isoformat() if row.ends_on else None,

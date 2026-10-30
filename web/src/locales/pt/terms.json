@@ -64,7 +64,7 @@
       "title": "§ 6. Conteúdos do Usuário e licença",
       "p1": "O Usuário mantém os direitos sobre os seus Conteúdos do Usuário na medida em que lhe sejam atribuídos por lei.",
       "p2": "O Usuário concede ao Prestador de Serviços uma licença não exclusiva, gratuita, revogável (através da eliminação da Conta ou dos Conteúdos), transferível na medida necessária para a prestação do Serviço, para armazenar, fixar, reproduzir, exibir e processar os Conteúdos do Usuário exclusivamente para a execução e manutenção do Serviço.",
-      "p3": "No âmbito do Reconhecimento de plantas, o Usuário pode enviar uma fotografia para o sistema do Prestador de Serviços. O Prestador de Serviços declara que as fotografias utilizadas para reconhecimento não são armazenadas por mais tempo do que o necessário para a realização do processo de reconhecimento, salvo se o Usuário utilizar expressamente uma funcionalidade que exija o seu armazenamento.",
+      "p3": "As fotografias enviadas exclusivamente para o Reconhecimento de plantas são tratadas para identificar a planta e não são automaticamente guardadas como fotografias das plantas. Guardar uma fotografia de uma planta não implica o seu envio automático para reconhecimento nem a sua utilização no treino de modelos de reconhecimento.",
       "p4": "O Usuário declara que detém os direitos sobre os conteúdos que fornece ao Serviço e que estes não violam direitos de terceiros."
     },
     "section7": {
@@ -82,7 +82,7 @@
     "section8": {
       "title": "§ 8. Códigos QR, links e \"chaves secretas\"",
       "p1": "O Serviço pode permitir a geração de códigos QR ou links (por exemplo, para uma Instância de planta). O Usuário é responsável pela sua guarda e compartilhamento.",
-      "p2": "Se o Usuário compartilhar com terceiros links, identificadores ou chaves de acesso (por exemplo, para leitura de dados de medição), essas pessoas podem obter acesso às informações indicadas de acordo com as permissões concedidas. O Usuário assume o risco associado a tal compartilhamento."
+      "p2": "O código QR de uma planta, o seu identificador ou o endereço de uma fotografia não constituem credenciais de acesso: o destinatário tem de iniciar sessão e ter acesso concedido através da partilha da planta. Os segredos de autenticação dos dispositivos e as credenciais da Conta devem manter-se confidenciais."
     },
     "section9": {
       "title": "§ 9. Pagamentos e planos (informação futura)",
@@ -132,13 +132,24 @@
       "title": "§ 16. Lei aplicável e resolução de litígios",
       "p1": "O Regulamento é regido pela lei polonesa, sem prejuízo das disposições legais imperativas de proteção do consumidor.",
       "p2": "Em primeiro lugar, os litígios devem ser resolvidos de forma amigável (por exemplo, através de contato por e-mail e tentativa de acordo).",
-      "p3": "O consumidor pode recorrer a meios extrajudiciais de resolução de litígios e à plataforma ODR (Online Dispute Resolution) disponível no endereço: https://ec.europa.eu/consumers/odr/.",
+      "p3": "Os consumidores podem recorrer aos procedimentos extrajudiciais aplicáveis à resolução de litígios de consumo. A Comissão Europeia publica informações sobre as vias de recurso dos consumidores e listas de entidades de resolução de litígios em https://consumer-redress.ec.europa.eu/.",
       "p4": "A competência do tribunal em litígios com consumidores é determinada de acordo com as disposições legais aplicáveis."
     },
     "section17": {
       "title": "§ 17. Alterações ao Regulamento",
       "p1": "O Prestador de Serviços pode alterar o Regulamento por motivos relevantes (por exemplo, alterações legais, desenvolvimento do Serviço, alterações tecnológicas).",
       "p2": "O Prestador de Serviços informará sobre as alterações ao Regulamento no Serviço Online e/ou no Aplicativo. A continuação da utilização do Serviço após a entrada em vigor das alterações significa a aceitação do Regulamento atualizado."
+    },
+    "section18": {
+      "title": "§ 18. Fotografias das plantas",
+      "items": [
+        "Uma fotografia selecionada no assistente de criação de uma planta é enviada para o Serviço depois de a planta ser criada. No editor de fotografias da planta, o envio ocorre quando o Usuário guarda a alteração. As fotografias antigas guardadas apenas num telefone permanecem nesse dispositivo, salvo se o Usuário escolher expressamente enviá-las.",
+        "Os Usuários mantêm os direitos sobre as suas fotografias. Devem dispor dos direitos e autorizações necessários para as enviar e partilhar e devem respeitar a privacidade de outras pessoas. A licença prevista no § 6 abrange apenas o tratamento necessário à prestação e manutenção do Serviço.",
+        "O Serviço reduz e comprime as fotografias das plantas, cria imagens para apresentação e miniaturas, corrige a orientação e remove os metadados EXIF/GPS incorporados. Os originais enviados não são conservados como arquivo permanente. Os Usuários devem guardar os seus próprios originais se precisarem da resolução completa.",
+        "As fotografias das plantas não são públicas. Na Aplicação, apenas o proprietário e os Usuários com sessão iniciada e acesso partilhado ativo à planta podem vê-las; só o proprietário as pode alterar ou remover. O pessoal técnico autorizado e os prestadores de serviços apenas as podem tratar na medida necessária ao funcionamento, à segurança ou à manutenção do Serviço.",
+        "A substituição ou remoção de uma fotografia, bem como a eliminação da planta associada ou da Conta, termina o acesso à fotografia anterior através do Serviço e agenda a sua eliminação do armazenamento ativo. As tentativas de eliminação que falhem são repetidas. Eventuais cópias de segurança para recuperação, mantidas separadamente, podem conservar cópias até à respetiva rotação prevista.",
+        "O envio de fotografias é opcional. Aplicam-se limites de formato, tamanho dos ficheiros, armazenamento e frequência de envio; um envio rejeitado não substitui a fotografia atual."
+      ]
     }
   }
 }

@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Cambia immagine",
-      "subtitle": "Questa immagine è salvata localmente sul tuo dispositivo e non viene inviata.",
+      "subtitle": "Quando salvi, la foto viene ridimensionata e caricata in uno spazio privato sul server. Puoi vederla solo tu e le persone con cui la pianta è attualmente condivisa.",
       "noPlantId": "Identificatore della pianta non trovato.",
-      "loadFailed": "Impossibile caricare l'immagine locale.",
+      "loadFailed": "Impossibile caricare la foto. Riprova.",
       "error": "Qualcosa è andato storto.",
       "noPhoto": "Nessuna immagine selezionata",
       "removedPreview": "L'immagine verrà rimossa",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Errore della fotocamera",
       "pickerErrorTitle": "Errore nella selezione dell'immagine",
       "saveFailedTitle": "Impossibile salvare",
-      "saveFailedMsg": "Impossibile salvare questa immagine localmente.",
+      "saveFailedMsg": "Impossibile inviare la foto. La foto precedente è stata conservata.",
       "confirmRemoveTitle": "Rimuovere l'immagine?",
       "confirmRemoveMsg": "L'immagine verrà rimossa dopo aver premuto \"Salva\".",
       "confirmDiscardTitle": "Scartare le modifiche?",
       "confirmDiscardMsg": "Le modifiche non verranno salvate.",
       "discard": "Scarta",
       "removeFailedTitle": "Impossibile rimuovere",
-      "removeFailedMsg": "Impossibile rimuovere l'immagine locale."
+      "removeFailedMsg": "Impossibile rimuovere la foto. Riprova.",
+      "invalidPhoto": "Scegli una foto JPEG o PNG valida, fino a 5 MB.",
+      "uploadTooLarge": "Questa foto è troppo grande. Scegli una foto fino a 5 MB.",
+      "photoQuota": "Hai raggiunto il limite di spazio per le foto. Rimuovi quelle che non servono o contatta l’assistenza.",
+      "photoStorage": "Lo spazio per le foto è temporaneamente non disponibile. Riprova più tardi.",
+      "photoConflict": "La foto è stata modificata su un altro dispositivo. Chiudi questa finestra e riaprila prima di salvare.",
+      "uploadExisting": "Invia questa foto",
+      "legacyInfo": "Questa vecchia foto è salvata solo su questo telefono. Scegli «Invia questa foto» per sincronizzarla."
     }
   }
 }

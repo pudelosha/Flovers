@@ -3,7 +3,12 @@
     "step09": {
       "creating": "创建新植物",
       "success": "植物已创建",
-      "idPrefix": "ID"
+      "idPrefix": "ID",
+      "uploadingPhoto": "正在添加植物并上传照片…",
+      "photoFailed": "植物已添加，但照片上传失败。请重试以完成上传，不会重复添加植物。",
+      "retry": "重试",
+      "openPlants": "查看植物",
+      "failed": "无法创建植物，请重试。"
     }
   }
 }

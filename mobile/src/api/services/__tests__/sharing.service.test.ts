@@ -1,7 +1,7 @@
 import { ApiError, request } from "../../client";
 import { deletePlantShare, fetchSharing, parseSharingSnapshot, sharingErrorCode, updatePlantSharing } from "../sharing.service";
 
-jest.mock("../../client", () => ({ request: jest.fn(), ApiError: jest.requireActual("../../client").ApiError }));
+jest.mock("../../client", () => ({ ...jest.requireActual("../../client"), request: jest.fn() }));
 const person = (id: string) => ({ id, name: `Person ${id}`, email: `${id}@example.test`, flovers_id: `FL-${id.padStart(32, "0")}` });
 const envelope = () => ({ status: "success", data: {
   current_user: person("1"), contacts: [person("2")], versions: { "10": 3 },
@@ -15,6 +15,14 @@ it("maps the authenticated snapshot, dates, metadata and revisions", async () =>
   expect(result.currentUser.floversId).toBe(person("1").flovers_id); expect(result.versions).toEqual({ "10": 3 });
   expect(result.shares[0]).toMatchObject({ id: "100", contactId: "2", direction: "outgoing", canCompleteTasks: true, endsOn: "2030-05-01", isExpired: false,
     plant: { id: "10", name: "Bird", imageUrl: "https://example.test/bird.jpg", latin: "Strelitzia alba", location: "Room" } });
+});
+it.each(["incoming", "outgoing"])("keeps private photo metadata on %s shared plants", (direction) => {
+  const response: any = envelope();
+  const photo = { id: "11111111-1111-4111-8111-111111111111", url: "/plant-instances/10/photo/11111111-1111-4111-8111-111111111111/",
+    thumbnail_url: "/plant-instances/10/photo/11111111-1111-4111-8111-111111111111/?variant=thumbnail", width: 1200, height: 800, byte_size: 150000 };
+  response.data.shares[0].direction = direction;
+  response.data.shares[0].plant.photo = photo;
+  expect(parseSharingSnapshot(response).shares[0].plant.photo).toEqual(photo);
 });
 it("sends only selected plant recipient matrices with optimistic revisions", async () => {
   await updatePlantSharing([

@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Ubah gambar",
-      "subtitle": "Foto ini disimpan secara lokal di perangkat Anda dan tidak diunggah.",
+      "subtitle": "Saat disimpan, foto diperkecil dan diunggah ke penyimpanan pribadi di server. Hanya kamu dan orang yang masih memiliki akses berbagi ke tanaman ini yang dapat melihatnya.",
       "noPlantId": "Tidak ada id tanaman hias yang ditemukan.",
-      "loadFailed": "Tidak dapat memuat gambar lokal.",
+      "loadFailed": "Foto tidak dapat dimuat. Coba lagi.",
       "error": "Ada yang tidak beres.",
       "noPhoto": "Tidak ada foto yang dipilih",
       "removedPreview": "Foto akan dihapus",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Kesalahan kamera",
       "pickerErrorTitle": "Kesalahan pemilih",
       "saveFailedTitle": "Gagal menyimpan",
-      "saveFailedMsg": "Tidak dapat menyimpan foto ini secara lokal.",
+      "saveFailedMsg": "Foto ini tidak dapat diunggah. Foto sebelumnya tetap tersimpan.",
       "confirmRemoveTitle": "Hapus foto?",
       "confirmRemoveMsg": "Foto akan dihapus setelah Anda menekan Simpan.",
       "confirmDiscardTitle": "Hapus perubahan?",
       "confirmDiscardMsg": "Perubahan Anda tidak akan disimpan.",
       "discard": "Buang",
       "removeFailedTitle": "Penghapusan gagal",
-      "removeFailedMsg": "Tidak dapat menghapus foto lokal ini."
+      "removeFailedMsg": "Foto tidak dapat dihapus. Coba lagi.",
+      "invalidPhoto": "Pilih foto JPEG atau PNG yang valid dengan ukuran maksimal 5 MB.",
+      "uploadTooLarge": "Foto ini terlalu besar. Pilih foto dengan ukuran maksimal 5 MB.",
+      "photoQuota": "Batas penyimpanan foto sudah tercapai. Hapus foto yang tidak diperlukan atau hubungi dukungan.",
+      "photoStorage": "Penyimpanan foto sedang tidak tersedia. Coba lagi nanti.",
+      "photoConflict": "Foto telah diubah di perangkat lain. Tutup jendela ini dan buka kembali sebelum menyimpan.",
+      "uploadExisting": "Unggah foto ini",
+      "legacyInfo": "Foto lama ini hanya tersimpan di ponsel ini. Pilih «Unggah foto ini» untuk menyinkronkannya."
     }
   }
 }

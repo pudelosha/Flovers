@@ -12,6 +12,7 @@ export type ContactInvitation = {
 };
 
 export type ShareablePlant = {
+  photo?: import("../../../api/services/plant-photos.service").PlantPhoto | null;
   id: string;
   name: string;
   location?: string;

@@ -13,8 +13,13 @@ from plant_definitions.models import PlantDefinition
 from reminders.models import Reminder
 from plant_definitions.serializers import _abs_media_url
 from sharing.permissions import plant_access
+from .photo_storage import photo_metadata
 
 class PlantInstanceSerializer(serializers.ModelSerializer):
+    photo = serializers.SerializerMethodField()
+
+    def get_photo(self, obj):
+        return photo_metadata(obj, self.context.get("request"))
     creation_key = serializers.UUIDField(required=False, write_only=True)
     plant_definition_id = serializers.IntegerField(required=False, allow_null=True)
     location_id = serializers.IntegerField(required=True)
@@ -29,6 +34,7 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "purchase_date",
+            "photo",
             # IMPORTANT: do not accept/store photo from the client
             # "photo_uri",
             "light_level",
@@ -198,6 +204,10 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
         return obj
 
 class PlantInstanceListSerializer(serializers.ModelSerializer):
+    photo = serializers.SerializerMethodField()
+
+    def get_photo(self, obj):
+        return photo_metadata(obj, self.context.get("request"))
     location = serializers.SerializerMethodField()
     plant_definition = serializers.SerializerMethodField()
     access = serializers.SerializerMethodField()
@@ -219,6 +229,7 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "photo_uri",
+            "photo",
             "location",
             "plant_definition",
             "qr_code",
@@ -261,6 +272,10 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
 # detail serializer for GET /plant-instances/<id>/
 # returns the full editable payload + nested read bits
 class PlantInstanceDetailSerializer(serializers.ModelSerializer):
+    photo = serializers.SerializerMethodField()
+
+    def get_photo(self, obj):
+        return photo_metadata(obj, self.context.get("request"))
     location = serializers.SerializerMethodField()
     plant_definition = serializers.SerializerMethodField()
     plant_definition_id = serializers.IntegerField(source="plant_definition.id", read_only=True)
@@ -281,6 +296,7 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "purchase_date",
+            "photo",
             # do not return backend photo_uri (local-only on device)
             # "photo_uri",
             "light_level",

@@ -92,6 +92,7 @@ function mapApiToPlant(
     location,
     notes: item.notes || "",
     imageUrl,
+    photo: item.photo,
     qrCode: item.qr_code ?? undefined,
   };
 }
@@ -269,7 +270,7 @@ export default function PlantsScreen() {
   const attachLocalPhotos = useCallback(async (list: Plant[]) => {
     const results = await Promise.all(
       list.map(async (p) => {
-        if (!plantAccess(p.access).isOwner) return p;
+        if (!plantAccess(p.access).isOwner || p.photo) return p;
         try {
           const local = await getPlantPhotoUri(p.id);
           if (local) {

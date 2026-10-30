@@ -23,7 +23,8 @@
         "body": [
           "Recipients can view the shared plant, its care history and linked sensor readings. With task-completion permission, they can also mark its tasks complete on Home. The owner and caregiver see the same task, so it is completed only once.",
           "Only the owner can change plant details, reminder definitions, devices, pump settings or sharing permissions. Shared reminder definitions do not appear on the recipient’s Reminders screen. View-only access never allows task completion.",
-          "Shared plants and their tasks are marked Shared. The three-dot menu on Shared plants opens Plant Details or Home filtered to that plant. The plant’s existing QR code also works for an authenticated user with active sharing access."
+          "Shared plants and their tasks are marked Shared. The three-dot menu on Shared plants opens Plant Details or Home filtered to that plant. The plant’s existing QR code also works for an authenticated user with active sharing access.",
+          "When you save, your photo is resized and uploaded to private server storage. Only you and people with active sharing access to this plant can view it."
         ]
       },
       {

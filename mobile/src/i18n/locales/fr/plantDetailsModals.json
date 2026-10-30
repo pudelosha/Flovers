@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Changer la photo",
-      "subtitle": "Cette photo est enregistrée localement sur votre appareil et n’est pas envoyée.",
+      "subtitle": "À l’enregistrement, votre photo est redimensionnée puis envoyée vers un espace privé du serveur. Seuls vous et les personnes ayant un partage actif de cette plante pouvez la voir.",
       "noPlantId": "Identifiant de la plante introuvable.",
-      "loadFailed": "Impossible de charger la photo locale.",
+      "loadFailed": "Impossible de charger la photo. Réessayez.",
       "error": "Une erreur s’est produite.",
       "noPhoto": "Aucune photo sélectionnée",
       "removedPreview": "La photo sera supprimée",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Erreur de l’appareil photo",
       "pickerErrorTitle": "Erreur de sélection de la photo",
       "saveFailedTitle": "Échec de l’enregistrement",
-      "saveFailedMsg": "Impossible d’enregistrer cette photo localement.",
+      "saveFailedMsg": "Impossible d’envoyer cette photo. Votre photo précédente a été conservée.",
       "confirmRemoveTitle": "Supprimer la photo ?",
       "confirmRemoveMsg": "La photo sera supprimée après avoir appuyé sur « Enregistrer ».",
       "confirmDiscardTitle": "Ignorer les modifications ?",
       "confirmDiscardMsg": "Les modifications ne seront pas enregistrées.",
       "discard": "Ignorer",
       "removeFailedTitle": "Échec de la suppression",
-      "removeFailedMsg": "Impossible de supprimer la photo locale."
+      "removeFailedMsg": "Impossible de supprimer la photo. Réessayez.",
+      "invalidPhoto": "Choisissez une photo JPEG ou PNG valide de 5 Mo maximum.",
+      "uploadTooLarge": "Cette photo est trop volumineuse. Choisissez une photo de 5 Mo maximum.",
+      "photoQuota": "La limite de stockage des photos est atteinte. Supprimez les photos inutiles ou contactez l’assistance.",
+      "photoStorage": "Le stockage des photos est temporairement indisponible. Réessayez plus tard.",
+      "photoConflict": "La photo a été modifiée sur un autre appareil. Fermez cette fenêtre et rouvrez-la avant d’enregistrer.",
+      "uploadExisting": "Envoyer cette photo",
+      "legacyInfo": "Cette ancienne photo est enregistrée uniquement sur ce téléphone. Choisissez « Envoyer cette photo » pour la synchroniser."
     }
   }
 }

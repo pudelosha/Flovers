@@ -47,7 +47,7 @@ describe("creating step recovery controls", () => {
     mockWizard.mockReturnValue({ state: { createdPlantId: "99" }, actions: { createPlant: mockCreate, goTo: mockGoTo, reset: mockReset } });
     mockCreate.mockRejectedValueOnce(new Error("Storage full"));
     const view = render(<Step09_Creating />);
-    await waitFor(() => expect(view.getByText("Your plant was created, but its photo could not be saved.")).toBeTruthy());
+    await waitFor(() => expect(view.getByText("Your plant was created, but its photo could not be uploaded. Try again to upload it without creating another plant.")).toBeTruthy());
     fireEvent.press(view.getByRole("button", { name: "Go to plants" }));
     expect(mockNavigation.navigate).toHaveBeenCalledWith("Plants");
     expect(mockGoTo).not.toHaveBeenCalled();

@@ -2,9 +2,6 @@
   "createPlant": {
     "step07": {
       "title": "添加照片",
-      "subtitlePrefix": "拍摄植物的照片，以便更容易找到它。照片会保存在设备上（应用内存）并且 ",
-      "notUploaded": "不会上传",
-      "subtitleSuffix": " 到我们的服务器。",
       "noPhotoSelected": "未选择照片",
       "takePhoto": "拍摄照片",
       "chooseFromGallery": "从图库选择",
@@ -13,7 +10,8 @@
       "permissionCameraAndMedia": "授予相机和媒体权限以拍摄照片。",
       "permissionMedia": "授予媒体权限以选择照片。",
       "cameraErrorTitle": "相机错误",
-      "pickerErrorTitle": "选择照片错误"
+      "pickerErrorTitle": "选择照片错误",
+      "subtitle": "保存时，照片会缩小并上传到服务器的私密存储空间。只有你和目前拥有这株植物共享权限的人可以查看。"
     }
   }
 }

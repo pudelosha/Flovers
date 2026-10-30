@@ -3,7 +3,12 @@
     "step09": {
       "creating": "Erstellung einer neuen Pflanze",
       "success": "Pflanze wurde erstellt",
-      "idPrefix": "ID"
+      "idPrefix": "ID",
+      "uploadingPhoto": "Deine Pflanze wird angelegt und das Foto hochgeladen…",
+      "photoFailed": "Deine Pflanze wurde angelegt, aber das Foto konnte nicht hochgeladen werden. Versuch den Upload erneut; es wird keine zweite Pflanze angelegt.",
+      "retry": "Erneut versuchen",
+      "openPlants": "Zu den Pflanzen",
+      "failed": "Deine Pflanze konnte nicht angelegt werden. Versuch es erneut."
     }
   }
 }

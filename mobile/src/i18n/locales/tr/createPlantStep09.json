@@ -3,7 +3,12 @@
     "step09": {
       "creating": "yeni ev bitkisi yaratmak",
       "success": "ev bitkisi başarıyla oluşturuldu",
-      "idPrefix": "Kimlik"
+      "idPrefix": "Kimlik",
+      "uploadingPhoto": "Bitkiniz ekleniyor ve fotoğrafı sunucuya yükleniyor…",
+      "photoFailed": "Bitkiniz eklendi ancak fotoğrafı sunucuya yüklenemedi. Yüklemeyi tamamlamak için tekrar deneyin; ikinci bir bitki oluşturulmaz.",
+      "retry": "Tekrar dene",
+      "openPlants": "Bitkilere git",
+      "failed": "Bitki oluşturulamadı. Lütfen tekrar dene."
     }
   }
 }

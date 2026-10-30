@@ -18,7 +18,8 @@
         "traitement des demandes reçues par le formulaire de contact",
         "bon fonctionnement de l’application et du service",
         "gestion des rappels, tâches et notifications d’entretien des plantes",
-        "sécurité du système et tenue des journaux techniques"
+        "sécurité du système et tenue des journaux techniques",
+        "stockage, synchronisation et affichage des photos des plantes pour l’Utilisateur et pour les personnes auxquelles il accorde un accès par le partage des plantes"
       ],
       "legalBasis": "Le traitement repose sur l’article 6, paragraphe 1, point b du RGPD (exécution du contrat), le point c (obligation légale) et le point f (intérêt légitime du Responsable)."
     },
@@ -32,9 +33,10 @@
         "données techniques de l'appareil (type d'appareil, système d'exploitation, version de l'application)",
         "adresse IP",
         "données relatives à l'orientation de l'appareil (par exemple, pour optimiser l'exposition des plantes à la lumière)",
-        "données saisies par l'utilisateur concernant les plantes, les mesures et les capteurs IoT"
+        "données saisies par l'utilisateur concernant les plantes, les mesures et les capteurs IoT",
+        "photos des plantes envoyées par l’Utilisateur, leurs liens avec les plantes et les Comptes, et informations techniques associées aux images"
       ],
-      "note": "Les photos prises par l'utilisateur sont traitées localement sur l'appareil, sauf si l'utilisateur choisit de les utiliser dans des fonctions nécessitant un traitement côté serveur."
+      "note": "Pour synchroniser et afficher les photos, le Service traite le contenu des images, leur association au Compte et à la plante de l’Utilisateur, ainsi que des informations techniques telles que les dimensions de l’image, la taille du fichier et la date et l’heure de l’envoi. Une photo peut elle-même révéler des informations personnelles, par exemple des visages ou des détails d’un logement."
     },
     "section4": {
       "title": "§ 4. Comptes utilisateurs et sécurité",
@@ -57,10 +59,10 @@
     },
     "section7": {
       "title": "§ 7. Destinataires des données et lieu de traitement",
-      "p1": "Les données personnelles sont traitées sur des serveurs situés dans l'Union européenne.",
+      "p1": "Les données des Comptes et les photos des plantes enregistrées sont hébergées sur les serveurs du Responsable dans l’Union européenne.",
       "p2": "L’infrastructure serveur est fournie par Hetzner Online GmbH.",
       "p3": "Le Responsable peut utiliser les services de Firebase pour la gestion des notifications push.",
-      "p4": "Le Responsable ne transmet pas les données personnelles à des pays tiers en dehors de l'UE."
+      "p4": "Firebase Cloud Messaging utilise une infrastructure mondiale et peut traiter des données liées aux notifications en dehors de l’Espace économique européen. Cela ne modifie pas le lieu de stockage des fichiers des photos des plantes. Des informations sur les dispositions applicables avec le prestataire peuvent être demandées au Responsable."
     },
     "section8": {
       "title": "§ 8. Durée de conservation des données",
@@ -86,6 +88,18 @@
       "p1": "Le Responsable prend les mesures techniques et organisationnelles appropriées pour protéger les données personnelles.",
       "p2": "Le Responsable se réserve le droit de mettre à jour cette Politique de confidentialité.",
       "p3": "La version actuelle de la Politique de confidentialité est toujours disponible sur le site web Flovers et dans l'application mobile."
+    },
+    "section11": {
+      "title": "§ 11. Photos des plantes et traitement des images",
+      "items": [
+        "Pour synchroniser et afficher les photos, le Service traite le contenu des images, leur association au Compte et à la plante de l’Utilisateur, ainsi que des informations techniques telles que les dimensions de l’image, la taille du fichier et la date et l’heure de l’envoi. Une photo peut elle-même révéler des informations personnelles, par exemple des visages ou des détails d’un logement.",
+        "Une photo sélectionnée dans l’assistant de création d’une plante est envoyée au Service après la création de la plante. Dans l’éditeur de photo de la plante, l’envoi a lieu lorsque l’Utilisateur enregistre la modification. Les anciennes photos enregistrées uniquement sur un téléphone restent locales, sauf si l’Utilisateur choisit expressément de les envoyer.",
+        "Le Service redimensionne et compresse les photos des plantes, crée des images d’affichage et des miniatures, corrige leur orientation et supprime les métadonnées EXIF/GPS intégrées. Les originaux envoyés ne sont pas conservés dans une archive permanente. Les Utilisateurs devraient garder leurs propres originaux s’ils souhaitent conserver la pleine résolution.",
+        "Les photos des plantes ne sont pas publiques. Dans l’Application, seuls le propriétaire et les Utilisateurs connectés disposant d’un partage actif de la plante peuvent les consulter ; seul le propriétaire peut les modifier ou les supprimer. Le personnel technique autorisé et les prestataires peuvent les traiter uniquement dans la mesure nécessaire au fonctionnement, à la sécurité ou à la maintenance du Service.",
+        "Le remplacement ou la suppression d’une photo, ainsi que la suppression de la plante associée ou du Compte, met fin à l’accès à l’ancienne photo par le Service et programme sa suppression du stockage actif. Les tentatives de suppression qui échouent sont renouvelées. Les éventuelles sauvegardes de restauration gérées séparément peuvent conserver des copies jusqu’à leur rotation prévue.",
+        "L’Application conserve temporairement les photos des plantes téléchargées dans un cache lié à la session, qu’elle efface à la déconnexion. L’expiration ou la révocation du partage empêche tout nouveau téléchargement autorisé, mais ne peut pas effacer les captures d’écran, copies enregistrées ou photos originales déjà présentes sur un autre appareil.",
+        "Les photos envoyées uniquement pour la Reconnaissance des plantes sont traitées pour identifier la plante et ne sont pas automatiquement enregistrées comme photos des plantes. L’enregistrement d’une photo de plante ne déclenche pas automatiquement son envoi pour reconnaissance ni son utilisation pour entraîner des modèles de reconnaissance."
+      ]
     }
   }
 }

@@ -51,7 +51,7 @@
     },
     {
       "q": "Are photos I upload for plant recognition stored?",
-      "a": "No. Photos are processed by the backend solely for recognition purposes and are not stored permanently."
+      "a": "No. Photos are processed by the backend solely for recognition purposes and are not stored permanently. When you save, your photo is resized and uploaded to private server storage. Only you and people with active sharing access to this plant can view it."
     },
     {
       "q": "Can I track multiple plants at the same time?",

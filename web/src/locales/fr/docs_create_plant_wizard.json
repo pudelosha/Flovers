@@ -62,7 +62,7 @@
       {
         "heading": "Étape 07 — Ajouter ta photo (facultatif)",
         "body": [
-          "Tu peux ajouter une photo de ta plante depuis ton téléphone.",
+          "À l’enregistrement, votre photo est redimensionnée puis envoyée vers un espace privé du serveur. Seuls vous et les personnes ayant un partage actif de cette plante pouvez la voir.",
           "Cette étape est facultative. Selon le parcours proposé dans ton application, tu pourras aussi ajouter une photo plus tard en modifiant la plante."
         ]
       },
@@ -77,7 +77,8 @@
       {
         "heading": "Étape 09 — Création de la plante",
         "body": [
-          "La dernière étape crée automatiquement la plante. Après environ 2,5 secondes, l’assistant revient à la liste Plantes, sans récapitulatif séparé ni bouton pour ouvrir la nouvelle plante."
+          "La dernière étape crée automatiquement la plante. Après environ 2,5 secondes, l’assistant revient à la liste Plantes, sans récapitulatif séparé ni bouton pour ouvrir la nouvelle plante.",
+          "Si l’envoi de la photo échoue après la création de la plante, celle-ci est conservée. Vous pouvez réessayer l’envoi sans créer de doublon."
         ]
       },
       {

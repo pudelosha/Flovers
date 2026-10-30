@@ -22,7 +22,7 @@
         "body": [
           "Das Drei-Punkte-Menü neben der Pflanzenüberschrift bietet weitere Aktionen für deine Pflanze.",
           "Du kannst das zugeordnete Pflanzenprofil ansehen, Pflanzenangaben bearbeiten, das Bild ändern oder die Erinnerungen für diese Pflanze öffnen.",
-          "Beim Entfernen deines Fotos wird die lokale Kopie gelöscht. Falls das verknüpfte Pflanzenprofil ein Katalogbild enthält, erscheint dieses wieder."
+          "Nach dem Speichern eines neuen Fotos wird die bisherige Serverkopie gelöscht. Wenn du dein eigenes Foto entfernst, erscheint wieder das Katalogbild, sofern eines vorhanden ist."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Wichtige Hinweise",
         "body": [
-          "Eigene Pflanzenfotos bleiben auf deinem Gerät und werden nicht auf die Flovers-Server hochgeladen.",
+          "Beim Speichern wird dein Foto verkleinert und im privaten Serverspeicher abgelegt. Nur du und Personen mit einer aktiven Freigabe für diese Pflanze können es sehen.",
           "Vorgegebene Pflanzenbilder werden von den Flovers-Servern geladen und können mit KI erstellt worden sein.",
           "Sensormesswerte und Pflegevorschläge dienen der Orientierung. Beziehe immer auch deine eigene Einschätzung ein."
         ]

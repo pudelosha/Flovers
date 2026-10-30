@@ -4,6 +4,9 @@ from urllib.parse import quote
 
 import qrcode
 from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.db import transaction
+from django.http import Http404
 
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -53,6 +56,7 @@ class PlantInstanceListCreateView(ListCreateAPIView):
             PlantInstance.objects
             .filter(pk__in=visible_plant_ids(self.request.user))
             .select_related("location", "plant_definition", "user")
+            .prefetch_related("images")
         )
 
     def list(self, request, *args, **kwargs):
@@ -84,6 +88,7 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
             PlantInstance.objects
             .filter(pk__in=ids)
             .select_related("location", "plant_definition", "user")
+            .prefetch_related("images")
         )
 
     def retrieve(self, request, *args, **kwargs):
@@ -91,6 +96,23 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
         instance = self.get_object()
         serializer = PlantInstanceDetailSerializer(instance, context={"request": request})
         return Response(serializer.data)
+
+    def perform_destroy(self, instance):
+        # Photo replacement locks owner then plant before modifying child rows.
+        # Acquire those locks before Django's deletion collector enumerates
+        # images, so a concurrent replacement cannot insert a missed child.
+        with transaction.atomic():
+            owner = get_user_model().objects.select_for_update().filter(
+                pk=self.request.user.pk, is_active=True,
+            ).first()
+            if owner is None:
+                raise Http404
+            current = PlantInstance.objects.select_for_update().filter(
+                pk=instance.pk, user=owner,
+            ).first()
+            if current is None:
+                raise Http404
+            current.delete()
 
     def partial_update(self, request, *args, **kwargs):
         kwargs["partial"] = True

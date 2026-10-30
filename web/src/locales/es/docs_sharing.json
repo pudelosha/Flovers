@@ -23,7 +23,8 @@
         "body": [
           "Los destinatarios pueden ver la planta compartida, su historial de cuidados y las lecturas de los sensores vinculados. Con el permiso para completar tareas, también pueden marcar sus tareas como completadas en Inicio. El propietario y el cuidador ven la misma tarea, por lo que se completa sólo una vez.",
           "Solo el propietario puede cambiar los detalles de las plantas, las definiciones de recordatorios, los dispositivos, la configuración de la bomba o los permisos para compartir. Las definiciones de recordatorios compartidos no aparecen en la pantalla Recordatorios del destinatario. El acceso de solo lectura nunca permite completar la tarea.",
-          "Las plantas compartidas y sus tareas están marcadas como Compartidas. El menú de tres puntos en Plantas de interior compartidas abre Detalles de la planta o Inicio filtrado para esa planta. El código QR existente de la planta también funciona para un usuario autenticado con acceso activo para compartir."
+          "Las plantas compartidas y sus tareas están marcadas como Compartidas. El menú de tres puntos en Plantas de interior compartidas abre Detalles de la planta o Inicio filtrado para esa planta. El código QR existente de la planta también funciona para un usuario autenticado con acceso activo para compartir.",
+          "Al guardar, la foto se reduce y se sube a un espacio privado del servidor. Solo podéis verla tú y las personas que tengan acceso compartido activo a esta planta."
         ]
       },
       {

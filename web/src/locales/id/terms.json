@@ -64,7 +64,7 @@
       "title": "§ 6. Konten Pengguna dan lisensi",
       "p1": "Pengguna tetap memiliki hak apa pun yang mungkin mereka miliki atas Konten Pengguna mereka berdasarkan hukum yang berlaku.",
       "p2": "Dengan menyediakan Konten Pengguna, Pengguna memberikan kepada Penyedia lisensi non-eksklusif, bebas biaya, dapat dibatalkan (dicabut dengan menghapus Akun atau konten), dapat dialihkan sejauh diperlukan untuk menyediakan Layanan, untuk menyimpan, mereproduksi, menampilkan, dan memproses konten tersebut semata-mata untuk pengoperasian dan pemeliharaan Layanan.",
-      "p3": "Foto yang digunakan untuk Pengenalan tanaman hias diproses hanya untuk tujuan pengenalan dan tidak disimpan lebih lama dari yang diperlukan, kecuali Pengguna secara eksplisit menggunakan fitur yang memerlukan penyimpanannya.",
+      "p3": "Foto yang dikirim khusus untuk Pengenalan Tanaman diproses untuk mengidentifikasi tanaman dan tidak otomatis disimpan sebagai foto tanaman. Menyimpan foto tanaman tidak secara otomatis mengirimkannya untuk pengenalan atau menggunakannya untuk melatih model pengenalan.",
       "p4": "Pengguna menyatakan bahwa mereka memegang hak yang diperlukan atas konten yang mereka sediakan dan bahwa konten tersebut tidak melanggar hak pihak ketiga."
     },
     "section7": {
@@ -82,7 +82,7 @@
     "section8": {
       "title": "§ 8. Kode QR, tautan, dan kunci akses",
       "p1": "Layanan dapat mengizinkan pembuatan kode atau tautan QR (misalnya ke Instans tanaman hias). Pengguna bertanggung jawab atas penyimpanan dan distribusinya.",
-      "p2": "Jika Pengguna membagikan tautan, pengidentifikasi, atau kunci akses dengan pihak ketiga, pihak-pihak tersebut dapat memperoleh akses ke data yang ditunjukkan dalam lingkup akses yang diberikan. Pengguna menanggung risiko yang terkait dengan pembagian tersebut."
+      "p2": "Kode QR tanaman, pengenal tanaman, atau alamat foto bukanlah kredensial akses: penerima harus masuk dan memperoleh akses melalui berbagi tanaman. Kunci rahasia autentikasi perangkat dan kredensial Akun harus dijaga kerahasiaannya."
     },
     "section9": {
       "title": "§ 9. Pembayaran dan rencana (informasi masa depan)",
@@ -132,13 +132,24 @@
       "title": "§ 16. Hukum yang berlaku dan penyelesaian sengketa",
       "p1": "Ketentuan ini diatur oleh hukum Polandia dan tunduk pada ketentuan perlindungan konsumen wajib.",
       "p2": "Perselisihan harus diselesaikan terlebih dahulu secara damai, khususnya dengan menghubungi Penyedia.",
-      "p3": "Konsumen dapat menggunakan mekanisme penyelesaian sengketa di luar pengadilan dan platform ODR UE yang tersedia di: https://ec.europa.eu/consumers/odr/.",
+      "p3": "Konsumen dapat menggunakan prosedur penyelesaian sengketa konsumen di luar pengadilan yang berlaku. Komisi Eropa menerbitkan informasi tentang pemulihan hak konsumen dan daftar badan penyelesaian sengketa di https://consumer-redress.ec.europa.eu/.",
       "p4": "Yurisdiksi pengadilan dalam sengketa konsumen ditentukan sesuai dengan hukum yang berlaku."
     },
     "section17": {
       "title": "§ 17. Amandemen Ketentuan",
       "p1": "Penyedia dapat mengubah Ketentuan ini karena alasan yang sah seperti perubahan hukum, pengembangan Layanan, atau perubahan teknologi.",
       "p2": "Pengguna akan diberitahu mengenai perubahan tersebut melalui Website dan/atau Aplikasi. Penggunaan Layanan yang berkelanjutan merupakan penerimaan terhadap Ketentuan yang diperbarui."
+    },
+    "section18": {
+      "title": "§ 18. Foto tanaman",
+      "items": [
+        "Foto yang dipilih dalam panduan pembuatan tanaman diunggah ke Layanan setelah tanaman dibuat. Unggahan melalui editor foto tanaman dikirim saat Pengguna menyimpan perubahan. Foto lama yang hanya tersimpan di ponsel tetap berada di perangkat tersebut, kecuali Pengguna secara tegas memilih untuk mengunggahnya.",
+        "Pengguna tetap memiliki hak atas foto mereka. Pengguna wajib memiliki hak dan izin yang diperlukan untuk mengunggah dan membagikannya serta menghormati privasi orang lain. Lisensi dalam § 6 hanya mencakup pemrosesan yang diperlukan untuk menyediakan dan memelihara Layanan.",
+        "Layanan mengubah ukuran dan mengompres foto tanaman, membuat gambar tampilan dan gambar mini, memperbaiki orientasi, serta menghapus metadata EXIF/GPS yang tertanam. Foto asli yang diunggah tidak disimpan sebagai arsip permanen. Pengguna sebaiknya menyimpan foto asli sendiri jika memerlukan resolusi penuh.",
+        "Foto tanaman tidak bersifat publik. Di dalam Aplikasi, hanya pemilik dan Pengguna yang sudah masuk serta memiliki akses berbagi aktif ke tanaman tersebut yang dapat melihatnya; hanya pemilik yang dapat mengubah atau menghapusnya. Staf teknis dan penyedia layanan yang berwenang hanya dapat memprosesnya sejauh diperlukan untuk menjalankan, mengamankan, atau memelihara Layanan.",
+        "Mengganti atau menghapus foto, maupun menghapus tanaman atau Akun yang terkait, mengakhiri akses ke foto lama melalui Layanan dan menjadwalkan penghapusannya dari penyimpanan aktif. Pembersihan yang gagal akan dicoba kembali. Salinan mungkin tetap ada dalam cadangan pemulihan yang dikelola secara terpisah, jika ada, sampai cadangan tersebut diganti sesuai siklus rotasinya.",
+        "Mengunggah foto bersifat opsional. Batas format, ukuran file, penyimpanan, dan frekuensi unggahan berlaku; unggahan yang ditolak tidak menggantikan foto yang sedang digunakan."
+      ]
     }
   }
 }

@@ -86,6 +86,7 @@ export default function SharePlantModal() {
         id: String(item.id),
         name: item.display_name || item.plant_definition?.name || t("plantDetails.info.fallbackTitle", { defaultValue: "Plant #{{id}}", id: item.id }),
         location: item.location?.name,
+        photo: item.photo,
         ...(item.plant_definition?.latin ? { latin: item.plant_definition.latin } : {}),
         ...((item.plant_definition?.image_thumb || item.plant_definition?.image)
           ? { imageUrl: item.plant_definition?.image_thumb || item.plant_definition?.image || undefined } : {}),

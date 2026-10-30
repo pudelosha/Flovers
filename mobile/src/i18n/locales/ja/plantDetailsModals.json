@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "写真を変更",
-      "subtitle": "この写真はあなたのデバイスにローカルで保存されており、送信されません。",
+      "subtitle": "保存すると、写真のサイズを縮小してサーバーの非公開ストレージにアップロードします。写真を見られるのは、あなたと、この植物の共有権限が現在有効な人だけです。",
       "noPlantId": "植物のIDが見つかりません。",
-      "loadFailed": "ローカル写真の読み込みに失敗しました。",
+      "loadFailed": "写真を読み込めませんでした。もう一度お試しください。",
       "error": "何かがうまくいきませんでした。",
       "noPhoto": "写真が選択されていません",
       "removedPreview": "写真は削除されます",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "カメラエラー",
       "pickerErrorTitle": "写真選択エラー",
       "saveFailedTitle": "保存に失敗しました",
-      "saveFailedMsg": "この写真をローカルに保存できませんでした。",
+      "saveFailedMsg": "写真をアップロードできませんでした。以前の写真はそのまま残っています。",
       "confirmRemoveTitle": "写真を削除しますか？",
       "confirmRemoveMsg": "「保存」をクリックすると写真が削除されます。",
       "confirmDiscardTitle": "変更を破棄しますか？",
       "confirmDiscardMsg": "変更は保存されません。",
       "discard": "破棄",
       "removeFailedTitle": "削除に失敗しました",
-      "removeFailedMsg": "ローカル写真を削除できませんでした。"
+      "removeFailedMsg": "写真を削除できませんでした。もう一度お試しください。",
+      "invalidPhoto": "5 MB 以下の有効な JPEG または PNG の写真を選んでください。",
+      "uploadTooLarge": "写真のサイズが大きすぎます。5 MB 以下の写真を選んでください。",
+      "photoQuota": "写真の保存容量が上限に達しました。不要な写真を削除するか、サポートにお問い合わせください。",
+      "photoStorage": "写真の保存先を一時的に利用できません。時間をおいてお試しください。",
+      "photoConflict": "別の端末で写真が変更されました。この画面を閉じて開き直してから保存してください。",
+      "uploadExisting": "この写真をアップロード",
+      "legacyInfo": "この以前の写真は、このスマートフォンにだけ保存されています。「この写真をアップロード」を選ぶと同期できます。"
     }
   }
 }

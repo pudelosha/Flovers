@@ -2,14 +2,12 @@
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: {{date}}",
-
     "section1": {
       "title": "§ 1. General provisions",
       "p1": "The controller of personal data processed in connection with the use of the Flovers website and the Flovers mobile application is Marcin Janowski Copy Paste IT Solutions, with its registered address at ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Poland, e-mail address: info@flovers.app, hereinafter referred to as the “Controller”.",
       "p2": "The Controller processes personal data in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR).",
       "p3": "This Privacy Policy applies to the Flovers website, the Flovers mobile application (Android and, in the future, iOS), and the backend infrastructure associated with their operation."
     },
-
     "section2": {
       "title": "§ 2. Scope and purposes of personal data processing",
       "intro": "The Controller processes personal data for the following purposes:",
@@ -20,11 +18,11 @@
         "handling messages sent via the contact form",
         "ensuring proper operation of the application and the website",
         "providing reminders, tasks, and notifications related to plant care",
-        "ensuring system security and maintaining technical logs"
+        "ensuring system security and maintaining technical logs",
+        "storing, synchronising and displaying plant photos to the User and people to whom the User grants plant-sharing access"
       ],
       "legalBasis": "The legal basis for data processing is Article 6(1)(b) GDPR (performance of a contract), Article 6(1)(c) GDPR (legal obligation), and Article 6(1)(f) GDPR (legitimate interest of the Controller)."
     },
-
     "section3": {
       "title": "§ 3. Types of personal data processed",
       "intro": "Depending on how the application or website is used, the Controller may process the following data:",
@@ -35,11 +33,11 @@
         "technical device data (device type, operating system, application version)",
         "IP address",
         "device orientation data (e.g. to optimise plant light exposure)",
-        "data entered by the user relating to plants, measurements, and IoT sensor readings"
+        "data entered by the user relating to plants, measurements, and IoT sensor readings",
+        "plant photos uploaded by the User, their links to plants and Accounts, and related technical image information"
       ],
-      "note": "Photos taken by the user are generally processed locally on the user’s device unless the user chooses to use features that require server-side processing."
+      "note": "For photo synchronisation and display, the Service processes the photo content, its association with the User’s Account and plant, and technical information such as image dimensions, file size and upload time. A photo may itself reveal personal information, for example faces or details of a home."
     },
-
     "section4": {
       "title": "§ 4. User accounts and security",
       "p1": "Users of the Flovers application create individual accounts secured with a password.",
@@ -47,35 +45,30 @@
       "p3": "A user account requires verification of the provided e-mail address.",
       "p4": "The user may change their password at any time or use the password reset procedure."
     },
-
     "section5": {
       "title": "§ 5. Notifications and communication",
       "p1": "The Controller sends only transactional messages, in particular those related to login, account verification, and password reset.",
       "p2": "The application may use push notifications (e.g. via Firebase) to remind users about plant care tasks.",
       "p3": "The Controller reserves the right to introduce a newsletter in the future; marketing communications will be sent only after obtaining the user’s separate consent."
     },
-
     "section6": {
       "title": "§ 6. Cookies and similar technologies",
       "p1": "The Flovers website may use cookies necessary for the proper functioning of the website.",
       "p2": "Cookies are used solely for technical and functional purposes.",
       "p3": "The website does not use third-party analytics or marketing tools."
     },
-
     "section7": {
       "title": "§ 7. Data recipients and place of processing",
-      "p1": "Personal data are processed on servers located within the European Union.",
+      "p1": "Account data and stored plant photos are hosted on the Controller’s servers in the European Union.",
       "p2": "The server infrastructure is provided by Hetzner Online GmbH.",
       "p3": "The Controller may use Firebase services for the purpose of handling push notifications.",
-      "p4": "Personal data are not transferred to third countries outside the European Union."
+      "p4": "Firebase Cloud Messaging operates on global infrastructure and may process notification-related data outside the European Economic Area. This does not change where plant-photo files are stored. Information about the applicable provider arrangements can be requested from the Controller."
     },
-
     "section8": {
       "title": "§ 8. Data retention period",
       "p1": "Personal data are stored for the duration of the user account.",
       "p2": "After account deletion, data are permanently deleted or anonymised, unless retention is required by applicable law."
     },
-
     "section9": {
       "title": "§ 9. Rights of data subjects",
       "intro": "Each data subject has the right to:",
@@ -90,12 +83,23 @@
       "p2": "To exercise the above rights, please contact the Controller at: info@flovers.app.",
       "p3": "Data subjects also have the right to lodge a complaint with the President of the Polish Personal Data Protection Office (UODO) or another competent supervisory authority."
     },
-
     "section10": {
       "title": "§ 10. Final provisions",
       "p1": "The Controller applies appropriate technical and organisational measures to protect personal data.",
       "p2": "The Controller reserves the right to update this Privacy Policy.",
       "p3": "The current version of the Privacy Policy is always available on the Flovers website and within the mobile application."
+    },
+    "section11": {
+      "title": "§ 11. Plant photos and image handling",
+      "items": [
+        "For photo synchronisation and display, the Service processes the photo content, its association with the User’s Account and plant, and technical information such as image dimensions, file size and upload time. A photo may itself reveal personal information, for example faces or details of a home.",
+        "A photo selected in the plant-creation wizard is uploaded to the Service after the plant is created. Uploads in the plant photo editor are sent when the User saves the change. Older photos stored only on a phone remain local unless the User expressly chooses to upload them.",
+        "The Service resizes and compresses plant photos, creates display images and thumbnails, normalises orientation and removes embedded EXIF/GPS metadata. Uploaded originals are not kept as a permanent archive. Users should keep their own originals if they need full resolution.",
+        "Plant photos are not public. Within the Application, viewing is limited to the owner and signed-in Users with active sharing access to that plant; only the owner may change or remove them. Authorised technical personnel and service providers may process them only as necessary to operate, secure or maintain the Service.",
+        "Replacing or removing a photo, or deleting the associated plant or Account, ends access to the old photo through the Service and schedules deletion from active storage. Failed cleanup is retried. Any separately maintained recovery backups may retain copies until their applicable backup rotation.",
+        "The Application keeps a temporary, session-scoped cache of downloaded plant photos and clears that cache on sign-out. Sharing expiry or revocation prevents further authorised downloads, but cannot erase screenshots, saved copies or original photos already held on another device.",
+        "Photos sent solely for Plant Recognition are processed to identify the plant and are not automatically stored as plant photos. Saving a plant photo does not automatically submit it for recognition or use it to train recognition models."
+      ]
     }
   }
 }

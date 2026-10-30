@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Cambiar foto",
-      "subtitle": "Esta foto está guardada localmente en tu dispositivo y no se envía.",
+      "subtitle": "Al guardar, la foto se reduce y se sube a un espacio privado del servidor. Solo podéis verla tú y las personas que tengan acceso compartido activo a esta planta.",
       "noPlantId": "No se encontró el identificador de la planta.",
-      "loadFailed": "No se pudo cargar la foto local.",
+      "loadFailed": "No se ha podido cargar la foto. Inténtalo de nuevo.",
       "error": "Algo salió mal.",
       "noPhoto": "No se ha seleccionado una foto",
       "removedPreview": "La foto será eliminada",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Error de cámara",
       "pickerErrorTitle": "Error al elegir foto",
       "saveFailedTitle": "No se pudo guardar",
-      "saveFailedMsg": "No se pudo guardar esta foto localmente.",
+      "saveFailedMsg": "No se ha podido subir esta foto. La foto anterior se ha conservado.",
       "confirmRemoveTitle": "¿Eliminar foto?",
       "confirmRemoveMsg": "La foto será eliminada al presionar 'Guardar'.",
       "confirmDiscardTitle": "¿Descartar cambios?",
       "confirmDiscardMsg": "Los cambios no serán guardados.",
       "discard": "Descartar",
       "removeFailedTitle": "No se pudo eliminar",
-      "removeFailedMsg": "No se pudo eliminar la foto local."
+      "removeFailedMsg": "No se ha podido eliminar la foto. Inténtalo de nuevo.",
+      "invalidPhoto": "Elige una foto JPEG o PNG válida de hasta 5 MB.",
+      "uploadTooLarge": "Esta foto es demasiado grande. Elige una de hasta 5 MB.",
+      "photoQuota": "Se ha alcanzado el límite de almacenamiento de fotos. Elimina las que no necesites o contacta con soporte.",
+      "photoStorage": "El almacenamiento de fotos no está disponible temporalmente. Inténtalo más tarde.",
+      "photoConflict": "La foto se ha cambiado en otro dispositivo. Cierra esta ventana y vuelve a abrirla antes de guardar.",
+      "uploadExisting": "Subir esta foto",
+      "legacyInfo": "Esta foto antigua solo está guardada en este teléfono. Elige «Subir esta foto» para sincronizarla."
     }
   }
 }

@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Bild ändern",
-      "subtitle": "Dieses Bild wird lokal auf deinem Gerät gespeichert und nicht übertragen.",
+      "subtitle": "Beim Speichern wird dein Foto verkleinert und im privaten Serverspeicher abgelegt. Nur du und Personen mit einer aktiven Freigabe für diese Pflanze können es sehen.",
       "noPlantId": "Die Pflanzenkennung wurde nicht gefunden.",
-      "loadFailed": "Das lokale Bild konnte nicht geladen werden.",
+      "loadFailed": "Das Foto konnte nicht geladen werden. Versuch es erneut.",
       "error": "Etwas ist schiefgelaufen.",
       "noPhoto": "Kein Foto ausgewählt",
       "removedPreview": "Das Bild wird entfernt",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Kamerafehler",
       "pickerErrorTitle": "Fehler bei der Bildauswahl",
       "saveFailedTitle": "Speichern fehlgeschlagen",
-      "saveFailedMsg": "Dieses Bild konnte lokal nicht gespeichert werden.",
+      "saveFailedMsg": "Das Foto konnte nicht hochgeladen werden. Dein bisheriges Foto bleibt erhalten.",
       "confirmRemoveTitle": "Bild entfernen?",
       "confirmRemoveMsg": "Das Bild wird nach dem Drücken von „Speichern“ entfernt.",
       "confirmDiscardTitle": "Änderungen verwerfen?",
       "confirmDiscardMsg": "Die Änderungen werden nicht gespeichert.",
       "discard": "Verwerfen",
       "removeFailedTitle": "Entfernen fehlgeschlagen",
-      "removeFailedMsg": "Das lokale Bild konnte nicht entfernt werden."
+      "removeFailedMsg": "Das Foto konnte nicht entfernt werden. Versuch es erneut.",
+      "invalidPhoto": "Wähle ein gültiges JPEG- oder PNG-Foto mit höchstens 5 MB.",
+      "uploadTooLarge": "Dieses Foto ist zu groß. Wähle ein Foto mit höchstens 5 MB.",
+      "photoQuota": "Der Speicherplatz für Fotos ist ausgeschöpft. Entferne nicht mehr benötigte Fotos oder kontaktiere den Support.",
+      "photoStorage": "Der Fotospeicher ist vorübergehend nicht verfügbar. Versuch es später erneut.",
+      "photoConflict": "Das Foto wurde auf einem anderen Gerät geändert. Schließe dieses Fenster und öffne es vor dem Speichern erneut.",
+      "uploadExisting": "Dieses Foto hochladen",
+      "legacyInfo": "Dieses ältere Foto ist nur auf diesem Handy gespeichert. Wähle „Dieses Foto hochladen“, um es zu synchronisieren."
     }
   }
 }

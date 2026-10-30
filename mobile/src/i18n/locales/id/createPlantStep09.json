@@ -3,7 +3,12 @@
     "step09": {
       "creating": "membuat tanaman hias baru",
       "success": "tanaman hias berhasil dibuat",
-      "idPrefix": "Tanda pengenal"
+      "idPrefix": "Tanda pengenal",
+      "uploadingPhoto": "Menambahkan tanaman dan mengunggah fotonya…",
+      "photoFailed": "Tanaman sudah ditambahkan, tetapi fotonya gagal diunggah. Coba lagi untuk menyelesaikan unggahan; tanaman tidak akan ditambahkan dua kali.",
+      "retry": "Coba lagi",
+      "openPlants": "Lihat tanaman",
+      "failed": "Tanaman tidak dapat dibuat. Coba lagi."
     }
   }
 }

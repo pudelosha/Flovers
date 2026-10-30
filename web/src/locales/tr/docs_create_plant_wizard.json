@@ -62,7 +62,7 @@
       {
         "heading": "Adım 07 — Kendi fotoğrafınızı ekleyin (isteğe bağlı)",
         "body": [
-          "Telefonunuzdan ev bitkinizin özel bir fotoğrafını ekleyebilirsiniz.",
+          "Kaydettiğinizde fotoğrafınız küçültülerek sunucudaki özel depolama alanına yüklenir. Fotoğrafı yalnızca siz ve bu bitkiye hâlen paylaşım erişimi olan kişiler görebilir.",
           "Bu adım isteğe bağlıdır ve uygulama akışınıza bağlı olarak daha sonra ev bitkisi düzenleme araçlarıyla yapılabilir."
         ]
       },
@@ -77,7 +77,8 @@
       {
         "heading": "Adım 09 — Bitkiyi oluşturma",
         "body": [
-          "Son adım bitkiyi otomatik oluşturur. Başarılı olunca yaklaşık 2,5 saniyede Bitkiler’e dönülür; ayrı bir özet ekranı veya yeni bitkiyi açma düğmesi yoktur."
+          "Son adım bitkiyi otomatik oluşturur. Başarılı olunca yaklaşık 2,5 saniyede Bitkiler’e dönülür; ayrı bir özet ekranı veya yeni bitkiyi açma düğmesi yoktur.",
+          "Bitki eklendikten sonra fotoğraf yüklemesi başarısız olursa sihirbaz, oluşturulan bitkiyi korur. Aynı bitkiyi tekrar oluşturmadan fotoğraf yüklemesini yeniden deneyebilirsiniz."
         ]
       },
       {

@@ -18,7 +18,8 @@
         "gestionar las solicitudes enviadas a través del formulario de contacto",
         "garantizar el funcionamiento adecuado de la aplicación y el servicio",
         "gestionar recordatorios, tareas y notificaciones de cuidado de las plantas",
-        "garantizar la seguridad del sistema y mantener los registros técnicos"
+        "garantizar la seguridad del sistema y mantener los registros técnicos",
+        "almacenamiento, sincronización y visualización de las fotos de las plantas para el Usuario y las personas a las que concede acceso mediante el uso compartido de plantas"
       ],
       "legalBasis": "El tratamiento se basa en el artículo 6, apartado 1, letra b del RGPD (ejecución de un contrato), la letra c (obligación legal) y la letra f (interés legítimo del Responsable)."
     },
@@ -32,9 +33,10 @@
         "datos técnicos del dispositivo (tipo de dispositivo, sistema operativo, versión de la aplicación)",
         "dirección IP",
         "datos sobre la orientación del dispositivo (por ejemplo, para optimizar la exposición de las plantas a la luz)",
-        "datos introducidos por el usuario sobre plantas, mediciones y sensores IoT"
+        "datos introducidos por el usuario sobre plantas, mediciones y sensores IoT",
+        "fotos de plantas subidas por el Usuario, sus vínculos con plantas y Cuentas e información técnica relacionada con las imágenes"
       ],
-      "note": "Las fotos del usuario se procesan normalmente en su dispositivo, salvo que utilice funciones que requieran procesarlas en el servidor."
+      "note": "Para sincronizar y mostrar las fotos, el Servicio trata el contenido de las imágenes, su asociación con la Cuenta y la planta del Usuario e información técnica, como las dimensiones de la imagen, el tamaño del archivo y el momento de la subida. Una foto puede revelar por sí misma información personal, por ejemplo rostros o detalles de una vivienda."
     },
     "section4": {
       "title": "§ 4. Cuentas de usuario y seguridad",
@@ -57,10 +59,10 @@
     },
     "section7": {
       "title": "§ 7. Destinatarios de los datos y lugar del tratamiento",
-      "p1": "Los datos personales se procesan en servidores ubicados en la Unión Europea.",
+      "p1": "Los datos de las Cuentas y las fotos de las plantas guardadas se alojan en los servidores del Responsable en la Unión Europea.",
       "p2": "La infraestructura del servidor está gestionada por Hetzner Online GmbH.",
       "p3": "El Responsable puede utilizar los servicios de Firebase para gestionar las notificaciones push.",
-      "p4": "El Responsable no transfiere datos personales a países fuera de la UE."
+      "p4": "Firebase Cloud Messaging utiliza una infraestructura global y puede tratar datos relacionados con las notificaciones fuera del Espacio Económico Europeo. Esto no cambia el lugar donde se almacenan los archivos de las fotos de las plantas. Se puede solicitar al Responsable información sobre los acuerdos aplicables con el proveedor."
     },
     "section8": {
       "title": "§ 8. Periodo de conservación de los datos",
@@ -86,6 +88,18 @@
       "p1": "El Responsable aplica las medidas técnicas y organizativas adecuadas para proteger los datos personales.",
       "p2": "El Responsable se reserva el derecho a actualizar esta política de privacidad.",
       "p3": "La versión actual de la Política de Privacidad está siempre disponible en el sitio web de Flovers y en la aplicación móvil."
+    },
+    "section11": {
+      "title": "§ 11. Fotos de las plantas y tratamiento de imágenes",
+      "items": [
+        "Para sincronizar y mostrar las fotos, el Servicio trata el contenido de las imágenes, su asociación con la Cuenta y la planta del Usuario e información técnica, como las dimensiones de la imagen, el tamaño del archivo y el momento de la subida. Una foto puede revelar por sí misma información personal, por ejemplo rostros o detalles de una vivienda.",
+        "Una foto seleccionada en el asistente de creación de una planta se sube al Servicio después de crear la planta. En el editor de fotos de la planta, la subida se realiza cuando el Usuario guarda el cambio. Las fotos antiguas guardadas solo en un teléfono permanecen en ese dispositivo, salvo que el Usuario elija expresamente subirlas.",
+        "El Servicio reduce y comprime las fotos de las plantas, crea imágenes para su visualización y miniaturas, corrige la orientación y elimina los metadatos EXIF/GPS incorporados. Los originales subidos no se conservan como archivo permanente. Los Usuarios deberían guardar sus propios originales si necesitan la resolución completa.",
+        "Las fotos de las plantas no son públicas. En la Aplicación solo pueden verlas el propietario y los Usuarios que hayan iniciado sesión y tengan acceso compartido activo a esa planta; solo el propietario puede cambiarlas o eliminarlas. El personal técnico autorizado y los proveedores de servicios solo pueden tratarlas en la medida necesaria para el funcionamiento, la seguridad o el mantenimiento del Servicio.",
+        "Sustituir o eliminar una foto, así como eliminar la planta asociada o la Cuenta, pone fin al acceso a la foto anterior a través del Servicio y programa su eliminación del almacenamiento activo. Los intentos de eliminación fallidos se repiten. Las posibles copias de seguridad de recuperación gestionadas por separado pueden conservar copias hasta la rotación que les corresponda.",
+        "La Aplicación mantiene una caché temporal, vinculada a la sesión, de las fotos de plantas descargadas y la vacía al cerrar sesión. La caducidad o revocación del acceso compartido impide nuevas descargas autorizadas, pero no puede borrar capturas de pantalla, copias guardadas ni fotos originales que ya estén en otro dispositivo.",
+        "Las fotos enviadas únicamente para el Reconocimiento de plantas se tratan para identificar la planta y no se guardan automáticamente como fotos de las plantas. Guardar una foto de una planta no implica que se envíe automáticamente para su reconocimiento ni que se utilice para entrenar modelos de reconocimiento."
+      ]
     }
   }
 }

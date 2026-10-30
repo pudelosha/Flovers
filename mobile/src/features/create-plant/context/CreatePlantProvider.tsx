@@ -23,7 +23,8 @@ import type {
   PlantProfile,
 } from "../types/create-plant.types";
 import { createPlantInstance } from "../../../api/services/plant-instances.service";
-import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage";
+import { deleteLocalPhoto } from "../../../shared/utils/photoStorage";
+import { uploadPlantPhoto } from "../../../api/services/plant-photos.service";
 
 type Action =
   | { type: "SET_QUERY"; query: string }
@@ -281,6 +282,8 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
   const savedPhotoUriRef = useRef<string | undefined>(undefined);
   const creationInFlightRef = useRef<Promise<string> | null>(null);
   const creationKeyRef = useRef<string | null>(null);
+  const photoUploadKeyRef = useRef<{ uri: string; key: string } | null>(null);
+  const creationGenerationRef = useRef(0);
   if (!creationKeyRef.current) creationKeyRef.current = newCreationKey();
   useEffect(() => {
     stateRef.current = state;
@@ -289,6 +292,10 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
   const createPlant = useCallback(async (): Promise<string> => {
     if (creationInFlightRef.current) return creationInFlightRef.current;
 
+    const generation = creationGenerationRef.current;
+    const assertCurrentDraft = () => {
+      if (generation !== creationGenerationRef.current) throw new Error("Creation draft changed.");
+    };
     const attempt = (async () => {
       const s = stateRef.current;
       let newId = createdPlantIdRef.current ?? s.createdPlantId;
@@ -301,6 +308,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
           auth: true,
           creationKey: creationKeyRef.current!,
         });
+        assertCurrentDraft();
         newId = String(created.id);
         createdPlantIdRef.current = newId;
         stateRef.current = { ...stateRef.current, createdPlantId: newId };
@@ -308,16 +316,18 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       }
 
       if (s.photoUri && s.photoUri !== savedPhotoUriRef.current) {
-        const finalUri = await promoteTempPhotoToPlant({
-          tempPhotoUri: s.photoUri,
-          plantId: newId,
+        if (photoUploadKeyRef.current?.uri !== s.photoUri) {
+          photoUploadKeyRef.current = { uri: s.photoUri, key: newCreationKey() };
+        }
+        await uploadPlantPhoto(newId, s.photoUri, {
+          uploadKey: photoUploadKeyRef.current.key,
+          expectedPhotoId: null,
         });
-        stateRef.current = { ...stateRef.current, createdPlantId: newId, photoUri: finalUri };
-        savedPhotoUriRef.current = finalUri;
-        dispatch({
-          type: "PATCH",
-          patch: { createdPlantId: newId, photoUri: finalUri },
-        });
+        assertCurrentDraft();
+        // Only a confirmed server upload completes this step. A failed upload
+        // retains the source and plant ID so Retry never creates another plant.
+        savedPhotoUriRef.current = s.photoUri;
+        await deleteLocalPhoto(s.photoUri).catch(() => {});
       }
 
       return newId;
@@ -326,7 +336,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
     try {
       return await attempt;
     } finally {
-      creationInFlightRef.current = null;
+      if (creationInFlightRef.current === attempt) creationInFlightRef.current = null;
     }
   }, []);
 
@@ -348,9 +358,12 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),
       reset: () => {
+        creationGenerationRef.current += 1;
+        creationInFlightRef.current = null;
         creationKeyRef.current = newCreationKey();
         createdPlantIdRef.current = undefined;
         savedPhotoUriRef.current = undefined;
+        photoUploadKeyRef.current = null;
         stateRef.current = { ...initial };
         dispatch({ type: "RESET" });
       },

@@ -2,9 +2,6 @@
   "createPlant": {
     "step07": {
       "title": "Adicionar foto",
-      "subtitlePrefix": "Tire uma foto da planta para encontrá-la mais facilmente. A foto é salva localmente no dispositivo (memória do aplicativo) e ",
-      "notUploaded": "não é enviada",
-      "subtitleSuffix": " para nossos servidores.",
       "noPhotoSelected": "Nenhuma foto selecionada",
       "takePhoto": "Tirar foto",
       "chooseFromGallery": "Escolher da galeria",
@@ -13,7 +10,8 @@
       "permissionCameraAndMedia": "Conceda permissões para câmera e mídia para tirar uma foto.",
       "permissionMedia": "Conceda permissões de mídia para escolher uma foto.",
       "cameraErrorTitle": "Erro na câmera",
-      "pickerErrorTitle": "Erro na seleção da foto"
+      "pickerErrorTitle": "Erro na seleção da foto",
+      "subtitle": "Ao guardar, a fotografia é reduzida e enviada para um espaço privado no servidor. Só tu e as pessoas com acesso partilhado ativo a esta planta a podem ver."
     }
   }
 }

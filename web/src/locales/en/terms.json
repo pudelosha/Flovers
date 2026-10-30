@@ -2,7 +2,6 @@
   "terms": {
     "title": "Terms of Service",
     "lastUpdated": "Last updated: {{date}}",
-
     "section1": {
       "title": "§ 1. General provisions",
       "p1": "These Terms of Service define the rules for using the Flovers website and the Flovers mobile application (Android and, in the future, iOS), as well as the conditions for providing electronic services by the Provider.",
@@ -10,7 +9,6 @@
       "p3": "By using the Service, including by creating an Account, logging in, or using any functionality of the application or website, the User accepts these Terms and undertakes to comply with them.",
       "p4": "In matters not regulated by these Terms, the applicable provisions of Polish law shall apply, in particular the Act on Providing Services by Electronic Means, the Civil Code, the Act on Consumer Rights, and relevant provisions of European Union law."
     },
-
     "section2": {
       "title": "§ 2. Definitions",
       "items": [
@@ -30,7 +28,6 @@
         "Terms – these Terms of Service"
       ]
     },
-
     "section3": {
       "title": "§ 3. Scope of the Service and functionalities",
       "intro": "The Service may include, in particular:",
@@ -47,7 +44,6 @@
       "p1": "The Service is currently provided as a free beta version. The Provider may introduce paid plans, limitations for the free version, advertisements, or subscriptions in the future, of which Users will be informed in advance.",
       "p2": "The Provider may modify, expand, limit, or discontinue selected functionalities of the Service, provided that such changes do not violate mandatory provisions of law."
     },
-
     "section4": {
       "title": "§ 4. Technical requirements",
       "items": [
@@ -57,7 +53,6 @@
         "Enabled JavaScript and cookies in the web browser, if required for proper operation of the Website"
       ]
     },
-
     "section5": {
       "title": "§ 5. Account and security",
       "p1": "Use of most Service functionalities requires creating an Account.",
@@ -65,15 +60,13 @@
       "p3": "The User is responsible for all actions performed using their Account, unless such actions result from circumstances attributable to the Provider.",
       "p4": "The Provider may temporarily block or restrict access to an Account or the Service in the event of detected abuse, security threats, or violations of these Terms."
     },
-
     "section6": {
       "title": "§ 6. User Content and licence",
       "p1": "The User retains any rights they may have to their User Content under applicable law.",
       "p2": "By providing User Content, the User grants the Provider a non-exclusive, free-of-charge, revocable licence (revoked by deleting the Account or content), transferable to the extent necessary to provide the Service, to store, reproduce, display, and process such content solely for the operation and maintenance of the Service.",
-      "p3": "Photos used for Plant Recognition are processed only for recognition purposes and are not stored longer than necessary, unless the User explicitly uses a feature requiring their storage.",
+      "p3": "Photos sent solely for Plant Recognition are processed to identify the plant and are not automatically stored as plant photos. Saving a plant photo does not automatically submit it for recognition or use it to train recognition models.",
       "p4": "The User declares that they hold the necessary rights to the content they provide and that such content does not infringe the rights of third parties."
     },
-
     "section7": {
       "title": "§ 7. Rules of use and prohibited actions",
       "intro": "The User undertakes to use the Service in accordance with the law, good practices, and respect for the rights of others. In particular, it is prohibited to:",
@@ -86,20 +79,17 @@
       ],
       "p1": "The Provider may restrict access to the Service or an Account in the event of violations of the above rules."
     },
-
     "section8": {
       "title": "§ 8. QR codes, links, and access keys",
       "p1": "The Service may allow generating QR codes or links (e.g. to Plant Instances). The User is responsible for their storage and distribution.",
-      "p2": "If the User shares links, identifiers, or access keys with third parties, those parties may gain access to the indicated data within the scope of the granted access. The User bears the risk associated with such sharing."
+      "p2": "A plant QR code, plant identifier or photo address is not an access credential: the recipient must sign in and have access granted through plant sharing. Device authentication secrets and Account credentials must be kept confidential."
     },
-
     "section9": {
       "title": "§ 9. Payments and plans (future information)",
       "p1": "As of the publication date of these Terms, the Service is provided free of charge as a beta version.",
       "p2": "The Provider may introduce paid plans, renewable subscriptions, advertisements, or usage limits (e.g. number of plants). Paid plans may be offered via Google Play or Apple App Store.",
       "p3": "If subscriptions are introduced, they may be automatically renewed. Payment terms, billing, and refunds may be governed by the policies of the relevant application store and information provided at the time of purchase."
     },
-
     "section10": {
       "title": "§ 10. Liability and disclaimers",
       "p1": "The Service is intended to support plant care and has an informational and utility character. The Provider does not guarantee specific outcomes such as plant growth, health, or prevention of care errors.",
@@ -107,33 +97,28 @@
       "p3": "The Provider is not liable for damages resulting from improper use of the Service, incorrect User-provided data, malfunctioning User devices, Internet connectivity issues, or other circumstances beyond the Provider’s control, to the extent permitted by law.",
       "p4": "Nothing in this section limits or excludes consumer rights granted by mandatory provisions of law."
     },
-
     "section11": {
       "title": "§ 11. Complaints and contact",
       "p1": "Users may submit complaints regarding the operation of the Service by e-mail to: info@flovers.app.",
       "p2": "Complaints should describe the issue, date, and circumstances, and include additional information if possible.",
       "p3": "The Provider will respond without undue delay, where possible no later than within 14 days."
     },
-
     "section12": {
       "title": "§ 12. Termination and account deletion",
       "p1": "The User may delete their Account at any time from within the Application, resulting in permanent deletion of the Account and associated data.",
       "p2": "The Provider may suspend or terminate access to the Service in the event of violations of these Terms, unlawful actions, or threats to Service security.",
       "p3": "The Provider may discontinue the Service or parts thereof for valid reasons, informing Users in advance where possible."
     },
-
     "section13": {
       "title": "§ 13. Intellectual property",
       "p1": "Software, design, logos, the Flovers name, documentation, and content provided by the Provider are protected by law and belong to the Provider or authorised entities.",
       "p2": "Copying, modifying, distributing, or using elements of the Service without the Provider’s consent is prohibited, except where permitted by law."
     },
-
     "section14": {
       "title": "§ 14. User age",
       "p1": "The Service is intended for persons aged 16 years or older.",
       "p2": "Users under the age of 16 must not create an Account or use the Service."
     },
-
     "section15": {
       "title": "§ 15. Related documents",
       "intro": "The following documents are related to the Service:",
@@ -143,19 +128,28 @@
         "Documentation and FAQ"
       ]
     },
-
     "section16": {
       "title": "§ 16. Applicable law and dispute resolution",
       "p1": "These Terms are governed by Polish law, subject to mandatory consumer protection provisions.",
       "p2": "Disputes should be resolved amicably in the first instance, in particular by contacting the Provider.",
-      "p3": "Consumers may use out-of-court dispute resolution mechanisms and the EU ODR platform available at: https://ec.europa.eu/consumers/odr/.",
+      "p3": "Consumers may use applicable out-of-court consumer dispute-resolution procedures. The European Commission publishes information about consumer redress and lists of dispute-resolution bodies at https://consumer-redress.ec.europa.eu/.",
       "p4": "Court jurisdiction in consumer disputes is determined in accordance with applicable law."
     },
-
     "section17": {
       "title": "§ 17. Amendments to the Terms",
       "p1": "The Provider may amend these Terms for valid reasons such as legal changes, Service development, or technological changes.",
       "p2": "Users will be informed of amendments via the Website and/or Application. Continued use of the Service constitutes acceptance of the updated Terms."
+    },
+    "section18": {
+      "title": "§ 18. Plant photos",
+      "items": [
+        "A photo selected in the plant-creation wizard is uploaded to the Service after the plant is created. Uploads in the plant photo editor are sent when the User saves the change. Older photos stored only on a phone remain local unless the User expressly chooses to upload them.",
+        "Users retain their rights to their photos. They must have the rights and permissions necessary to upload and share them and must respect other people’s privacy. The licence in § 6 covers only processing needed to provide and maintain the Service.",
+        "The Service resizes and compresses plant photos, creates display images and thumbnails, normalises orientation and removes embedded EXIF/GPS metadata. Uploaded originals are not kept as a permanent archive. Users should keep their own originals if they need full resolution.",
+        "Plant photos are not public. Within the Application, viewing is limited to the owner and signed-in Users with active sharing access to that plant; only the owner may change or remove them. Authorised technical personnel and service providers may process them only as necessary to operate, secure or maintain the Service.",
+        "Replacing or removing a photo, or deleting the associated plant or Account, ends access to the old photo through the Service and schedules deletion from active storage. Failed cleanup is retried. Any separately maintained recovery backups may retain copies until their applicable backup rotation.",
+        "Photo uploads are optional. Format, file-size, storage and rate limits apply; rejected uploads do not replace the current photo."
+      ]
     }
   }
 }

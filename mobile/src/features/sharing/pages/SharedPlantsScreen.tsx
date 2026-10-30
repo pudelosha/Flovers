@@ -147,7 +147,7 @@ export default function SharedPlantsScreen() {
           const groupId = `${first.direction}:${plant.id}`;
           return (
             <GlassCard key={first.direction + ":" + plant.id}>
-              <SharedPlantHero plant={plant} preferLocalPhoto={outgoing} action={
+              <SharedPlantHero plant={plant} preferLocalPhoto={outgoing} expiresAt={outgoing ? undefined : first.expiresAt} action={
                 <Pressable ref={(node) => { menuButtons.current[groupId] = node; }} accessibilityRole="button"
                   accessibilityLabel={t("sharing.plants.actions", { defaultValue: "Actions for {{name}}", name: plant.name })}
                   accessibilityState={{ expanded: menuId === groupId }}

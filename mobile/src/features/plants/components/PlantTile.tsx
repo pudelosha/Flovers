@@ -10,6 +10,7 @@ import PlantMenu from "./PlantMenu";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
+import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
 
 type Props = {
   plant: Plant;
@@ -40,7 +41,8 @@ export default function PlantTile({
   onShowQr,
 }: Props) {
   const { openSharePlant, shares } = useSharingPreview();
-  const imgUri = plant.imageUrl;
+  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: "thumbnail", expiresAt: plant.access?.expires_at });
+  const imgUri = syncedPhotoUri || plant.imageUrl;
   const access = plantAccess(plant.access);
 
   const handleTilePress = () => {
@@ -195,7 +197,7 @@ export default function PlantTile({
           sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
           onShare={() => {
             onPressMenu();
-            openSharePlant({ id: String(plant.id), name: plant.name, location: plant.location, latin: plant.latin, imageUrl: plant.imageUrl });
+            openSharePlant({ id: String(plant.id), name: plant.name, location: plant.location, latin: plant.latin, imageUrl: plant.imageUrl, photo: plant.photo });
           }}
         />
       )}

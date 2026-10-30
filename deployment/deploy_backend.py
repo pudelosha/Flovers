@@ -9,6 +9,26 @@ import tempfile
 
 
 IMAGE_REPOSITORY = "ghcr.io/pudelosha/flovers"
+PRIVATE_MEDIA_PATH = "/app/private-media"
+PRIVATE_MEDIA_OVERRIDE = "docker-compose.private-media.json"
+
+
+def private_media_configuration(configuration, apps, app_dir):
+    """Persist uploads separately from images and public catalogue media."""
+    project = configuration.get("name") or Path(app_dir).name
+    if not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", project):
+        raise ValueError("Cannot derive a safe private-media volume name from the Compose project.")
+    return {
+        "services": {
+            name: {
+                "environment": {"PRIVATE_MEDIA_ROOT": PRIVATE_MEDIA_PATH, "PRIVATE_MEDIA_REQUIRE_MOUNT": "True"},
+                "volumes": [{"type": "volume", "source": "flovers_private_media", "target": PRIVATE_MEDIA_PATH,
+                             "volume": {"nocopy": True}}],
+            }
+            for name in apps
+        },
+        "volumes": {"flovers_private_media": {"name": f"{project}_private_media"}},
+    }
 
 
 def image_repository(image):
@@ -102,6 +122,7 @@ def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None):
     configuration = json.loads(execute([*base, "config", "--format", "json"], capture=True).stdout)
     running = set(execute([*base, "ps", "--status", "running", "--services"], capture=True).stdout.split())
     backend, apps = application_services(configuration["services"], running, requested_backend)
+    private_media = private_media_configuration(configuration, apps, app_dir)
     help_text = execute(["docker", "compose", "up", "--help"], capture=True).stdout
     if "--wait-timeout" not in help_text:
         raise ValueError("Docker Compose must support up --wait and --wait-timeout; update Compose before deploying.")
@@ -114,12 +135,22 @@ def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None):
     pinned_image = next((digest for digest in (digests or []) if digest.startswith(f"{IMAGE_REPOSITORY}@sha256:")), None)
     if pinned_image is None:
         raise ValueError("The pulled backend image has no registry digest; refusing an unpinned deployment.")
+    # Keep this non-secret overlay for manual restarts/recovery as well as future
+    # deployments. Never copy resolved Compose configuration or secrets into it.
+    private_path = app_dir / PRIVATE_MEDIA_OVERRIDE
+    private_descriptor, private_temporary = tempfile.mkstemp(prefix=".flovers-media-", suffix=".json", dir=app_dir)
+    try:
+        with os.fdopen(private_descriptor, "w", encoding="utf-8") as output:
+            json.dump(private_media, output)
+        os.replace(private_temporary, private_path)
+    finally:
+        Path(private_temporary).unlink(missing_ok=True)
     descriptor, override_name = tempfile.mkstemp(prefix=".flovers-deploy-", suffix=".json", dir=app_dir)
     override_path = Path(override_name)
     try:
         with os.fdopen(descriptor, "w", encoding="utf-8") as output:
             json.dump({"services": {name: {"image": pinned_image} for name in apps}}, output)
-        compose = [*base, "-f", str(override_path)]
+        compose = [*base, "-f", str(private_path), "-f", str(override_path)]
         one_off = [
             *compose, "run", "--rm", "--no-deps", "--pull", "never", "-T",
             "--label", "traefik.enable=false", "--entrypoint", "python", backend, "manage.py",

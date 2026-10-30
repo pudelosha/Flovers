@@ -7,6 +7,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTranslation } from "react-i18next";
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import type { ShareablePlant } from "../types/sharing.types";
+import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
 
 const previewImages = {
   pothos: require("../assets/pothos.jpg"),
@@ -14,17 +15,19 @@ const previewImages = {
   peaceLily: require("../assets/peace-lily.jpg"),
 };
 
-export default function SharedPlantHero({ plant, preferLocalPhoto = false, action }: {
+export default function SharedPlantHero({ plant, preferLocalPhoto = false, action, expiresAt }: {
   plant: ShareablePlant;
   preferLocalPhoto?: boolean;
   action?: React.ReactNode;
+  expiresAt?: string;
 }) {
   const { t } = useTranslation();
   const [localPhoto, setLocalPhoto] = useState<{ plantId: string; uri: string } | null>(null);
   const [failedSource, setFailedSource] = useState<string | null>(null);
+  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: "thumbnail", expiresAt });
   useEffect(() => {
     let active = true;
-    if (!preferLocalPhoto || !/^[1-9]\d*$/.test(plant.id)) {
+    if (!preferLocalPhoto || plant.photo || !/^[1-9]\d*$/.test(plant.id)) {
       setLocalPhoto(null);
       return;
     }
@@ -34,10 +37,10 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
       if (active) setLocalPhoto(null);
     });
     return () => { active = false; };
-  }, [plant.id, preferLocalPhoto]);
+  }, [plant.id, plant.photo?.id, preferLocalPhoto]);
 
-  const localUri = preferLocalPhoto && localPhoto?.plantId === plant.id ? localPhoto.uri : undefined;
-  const imageUri = localUri || plant.imageUrl?.trim();
+  const localUri = !plant.photo && preferLocalPhoto && localPhoto?.plantId === plant.id ? localPhoto.uri : undefined;
+  const imageUri = syncedPhotoUri || localUri || plant.imageUrl?.trim();
   const sourceKey = imageUri || plant.previewImage || "none";
   let source: ImageSourcePropType | undefined = imageUri
     ? { uri: imageUri }

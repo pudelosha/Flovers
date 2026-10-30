@@ -22,7 +22,7 @@
         "body": [
           "Dotknij trzech kropek przy nagłówku rośliny, aby otworzyć jej menu.",
           "Możesz tu otworzyć opis gatunku, jeśli jest przypisany, edytować dane rośliny, zmienić zdjęcie lub przejść do Przypomnień dotyczących tej rośliny.",
-          "Usunięcie własnego zdjęcia kasuje jego lokalną kopię. Jeśli definicja rośliny ma zdjęcie katalogowe, zostanie ono ponownie wyświetlone."
+          "Po zapisaniu nowego zdjęcia poprzednia kopia jest usuwana z serwera. Usunięcie własnego zdjęcia przywraca zdjęcie z katalogu, jeśli roślina je ma."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Ważne informacje",
         "body": [
-          "Własne zdjęcia roślin są zapisywane tylko na twoim urządzeniu. Nie trafiają na serwer Flovers.",
+          "Po zapisaniu zdjęcie zostanie pomniejszone i przesłane do prywatnego miejsca na serwerze. Zobaczysz je Ty oraz osoby, którym aktualnie udostępniasz tę roślinę.",
           "Domyślne zdjęcia roślin są pobierane z serwera Flovers i mogą być wygenerowane przez AI.",
           "Odczyty i wskazówki pomagają w pielęgnacji. Zanim podejmiesz decyzję, oceń też samodzielnie stan rośliny."
         ]

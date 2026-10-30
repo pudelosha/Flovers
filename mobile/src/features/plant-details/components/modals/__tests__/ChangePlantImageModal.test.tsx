@@ -1,58 +1,114 @@
 import React from "react";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
+import { Image } from "react-native";
 import { launchImageLibrary } from "react-native-image-picker";
 import ChangePlantImageModal from "../ChangePlantImageModal";
-import { getPlantPhotoUri, persistTempPlantPhoto, promoteTempPhotoToPlant } from "../../../../../shared/utils/photoStorage";
+import { getPlantPhotoUri, deletePlantPhotoById } from "../../../../../shared/utils/photoStorage";
+import { fetchPlantInstanceDetail } from "../../../../../api/services/plant-instances.service";
+import { uploadPlantPhoto, deletePlantPhoto } from "../../../../../api/services/plant-photos.service";
+import { ApiError } from "../../../../../api/client";
 
 jest.mock("react-native-image-picker", () => ({ launchCamera: jest.fn(), launchImageLibrary: jest.fn() }));
-jest.mock("react-i18next", () => {
-  const t = (key: string) => key;
-  return { useTranslation: () => ({ t }) };
-});
-jest.mock("../../../../../shared/utils/photoStorage", () => ({
-  getPlantPhotoUri: jest.fn(), persistTempPlantPhoto: jest.fn(),
-  promoteTempPhotoToPlant: jest.fn(), deletePlantPhotoById: jest.fn(),
-}));
+jest.mock("react-i18next", () => { const t = (key: string) => key; return { useTranslation: () => ({ t }) }; });
+jest.mock("../../../../../shared/utils/photoStorage", () => ({ getPlantPhotoUri: jest.fn(), deletePlantPhotoById: jest.fn() }));
+jest.mock("../../../../../api/services/plant-instances.service", () => ({ fetchPlantInstanceDetail: jest.fn() }));
+jest.mock("../../../../../api/services/plant-photos.service", () => ({ uploadPlantPhoto: jest.fn(), deletePlantPhoto: jest.fn() }));
+jest.mock("../../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: (photo: any) => ({ uri: photo ? `data:image/jpeg;base64,${photo.id}` : null, loading: false, error: null }) }));
 
-describe("photo save lifecycle", () => {
+const oldPhoto = { id: "11111111-1111-4111-8111-111111111111", url: "/old/", thumbnail_url: "/old/thumb/", width: 800, height: 600, byte_size: 90000 };
+const newPhoto = { ...oldPhoto, id: "22222222-2222-4222-8222-222222222222" };
+const fetchDetail = fetchPlantInstanceDetail as jest.Mock;
+const upload = uploadPlantPhoto as jest.Mock;
+const remove = deletePlantPhoto as jest.Mock;
+const deleteLocal = deletePlantPhotoById as jest.Mock;
+
+describe("private photo save lifecycle", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    fetchDetail.mockResolvedValue({ id: 7, photo: oldPhoto });
     (getPlantPhotoUri as jest.Mock).mockResolvedValue("file:///old.jpg");
     (launchImageLibrary as jest.Mock).mockResolvedValue({ assets: [{ uri: "file:///picked.jpg" }] });
-    (persistTempPlantPhoto as jest.Mock).mockResolvedValue("file:///temp.jpg");
+    upload.mockResolvedValue(newPhoto); remove.mockResolvedValue(undefined); deleteLocal.mockResolvedValue(undefined);
   });
-
-  it("does not offer discard or close while a saved photo is still committing", async () => {
-    let finish!: (uri: string) => void;
-    (promoteTempPhotoToPlant as jest.Mock).mockReturnValueOnce(new Promise<string>(resolve => { finish = resolve; }));
-    const onClose = jest.fn();
-    const onChanged = jest.fn();
+  async function open() {
+    const onClose = jest.fn(), onChanged = jest.fn();
     const screen = render(<ChangePlantImageModal visible plantId="7" onClose={onClose} onChanged={onChanged} />);
     await waitFor(() => expect(screen.getByText("Choose from gallery")).toBeTruthy());
+    return { screen, onClose, onChanged };
+  }
+  async function pick(screen: ReturnType<typeof render>) {
     await act(async () => { fireEvent.press(screen.getByText("Choose from gallery")); });
-    fireEvent.press(screen.getByText("Save"));
-    await waitFor(() => expect(promoteTempPhotoToPlant).toHaveBeenCalledTimes(1));
-    fireEvent.press(screen.getByRole("button", { name: "Close" }));
-    expect(screen.queryByText("Discard changes?")).toBeNull();
-    expect(onClose).not.toHaveBeenCalled();
-    expect(onChanged).not.toHaveBeenCalled();
-    await act(async () => { finish("file:///saved.jpg"); });
-    expect(onChanged).toHaveBeenCalledWith(expect.stringContaining("file:///saved.jpg"));
-    expect(onClose).toHaveBeenCalledTimes(1);
-  });
-
-  it("unlocks close and discard after a failed save without claiming that a photo was changed", async () => {
-    (promoteTempPhotoToPlant as jest.Mock).mockRejectedValueOnce(new Error("Storage full"));
-    const onClose = jest.fn();
-    const onChanged = jest.fn();
-    const screen = render(<ChangePlantImageModal visible plantId="7" onClose={onClose} onChanged={onChanged} />);
-    await waitFor(() => expect(screen.getByText("Choose from gallery")).toBeTruthy());
-    await act(async () => { fireEvent.press(screen.getByText("Choose from gallery")); });
+  }
+  async function save(screen: ReturnType<typeof render>) {
     await act(async () => { fireEvent.press(screen.getByText("Save")); });
-    await waitFor(() => expect(screen.getByText("Storage full")).toBeTruthy());
+  }
+  function chooseRemove(screen: ReturnType<typeof render>) {
+    fireEvent.press(screen.getByText("Remove photo")); fireEvent.press(screen.getByText("Remove"));
+  }
+
+  it("loads the server photo and uploads a resized selection only on Save", async () => {
+    const { screen, onChanged, onClose } = await open();
+    expect(getPlantPhotoUri).not.toHaveBeenCalled();
+    expect(screen.UNSAFE_getByType(Image).props.source.uri).toContain(oldPhoto.id);
+    await pick(screen);
+    expect(launchImageLibrary).toHaveBeenCalledWith(expect.objectContaining({ maxWidth: 1280, maxHeight: 1280, quality: 0.8, assetRepresentationMode: "compatible" }));
+    expect(upload).not.toHaveBeenCalled();
+    await save(screen);
+    expect(upload).toHaveBeenCalledWith("7", "file:///picked.jpg", { expectedPhotoId: oldPhoto.id, uploadKey: expect.stringMatching(/^[a-f0-9-]{36}$/) });
+    expect(deleteLocal).toHaveBeenCalledWith("7"); expect(onChanged).toHaveBeenCalledWith(newPhoto); expect(onClose).toHaveBeenCalledTimes(1);
+  });
+  it("does not allow close or discard while the server is committing", async () => {
+    let finish!: (value: typeof newPhoto) => void;
+    upload.mockReturnValueOnce(new Promise(resolve => { finish = resolve; }));
+    const { screen, onClose, onChanged } = await open(); await pick(screen);
+    fireEvent.press(screen.getByText("Save"));
+    await waitFor(() => expect(upload).toHaveBeenCalledTimes(1));
     fireEvent.press(screen.getByRole("button", { name: "Close" }));
-    fireEvent.press(screen.getByText("Discard"));
-    expect(onChanged).not.toHaveBeenCalled();
-    expect(onClose).toHaveBeenCalledTimes(1);
+    expect(screen.queryByText("Discard changes?")).toBeNull(); expect(onClose).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled();
+    await act(async () => { finish(newPhoto); });
+    expect(onChanged).toHaveBeenCalledWith(newPhoto); expect(onClose).toHaveBeenCalledTimes(1);
+  });
+  it("keeps the previous photo and stable retry key after a failed upload", async () => {
+    upload.mockRejectedValueOnce(new Error("Offline"));
+    const { screen, onChanged, onClose } = await open(); await pick(screen); await save(screen);
+    expect(deleteLocal).not.toHaveBeenCalled(); expect(remove).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled(); expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByText("Could not update the photo. Your previous photo is unchanged. Please try again.")).toBeTruthy();
+    await save(screen); expect(upload).toHaveBeenCalledTimes(2); expect(upload.mock.calls[1][2]).toEqual(upload.mock.calls[0][2]); expect(onChanged).toHaveBeenCalledWith(newPhoto);
+  });
+  it("blocks a blind overwrite after a server conflict", async () => {
+    upload.mockRejectedValueOnce(new ApiError(409, { code: "photo_conflict" }));
+    const { screen, onChanged } = await open(); await pick(screen); await save(screen);
+    expect(deleteLocal).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled();
+    fireEvent.press(screen.getByText("Save")); expect(upload).toHaveBeenCalledTimes(1);
+    fireEvent.press(screen.getByRole("button", { name: "Close" })); expect(screen.getByText("Discard changes?")).toBeTruthy();
+  });
+  it("removes a server image only after confirmation and Save", async () => {
+    const { screen, onChanged } = await open(); chooseRemove(screen); expect(remove).not.toHaveBeenCalled(); await save(screen);
+    expect(remove).toHaveBeenCalledWith("7", { expectedPhotoId: oldPhoto.id }); expect(deleteLocal).toHaveBeenCalledWith("7"); expect(onChanged).toHaveBeenCalledWith(null);
+  });
+  it("does not remove local data or report success when server removal fails", async () => {
+    remove.mockRejectedValueOnce(new Error("Offline"));
+    const { screen, onChanged, onClose } = await open(); chooseRemove(screen); await save(screen);
+    expect(deleteLocal).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled(); expect(onClose).not.toHaveBeenCalled();
+  });
+  it("requires an explicit choice and Save to sync an older local photo", async () => {
+    fetchDetail.mockResolvedValue({ id: 7, photo: null }); const { screen } = await open();
+    expect(getPlantPhotoUri).toHaveBeenCalledWith("7"); expect(upload).not.toHaveBeenCalled();
+    fireEvent.press(screen.getByText("Upload this photo")); expect(upload).not.toHaveBeenCalled(); await save(screen);
+    expect(upload).toHaveBeenCalledWith("7", "file:///old.jpg", expect.objectContaining({ expectedPhotoId: null }));
+  });
+  it("does not offer mutations when its existing version cannot be loaded", async () => {
+    fetchDetail.mockRejectedValueOnce(new Error("Offline"));
+    const screen = render(<ChangePlantImageModal visible plantId="7" onClose={jest.fn()} />);
+    await waitFor(() => expect(screen.getByText("Could not load this plant's photo. Please try again.")).toBeTruthy());
+    expect(screen.queryByText("Choose from gallery")).toBeNull(); expect(upload).not.toHaveBeenCalled();
+  });
+  it("ignores an old plant's upload result after the modal target changes", async () => {
+    let finish!: (value: typeof newPhoto) => void;
+    upload.mockReturnValueOnce(new Promise(resolve => { finish = resolve; }));
+    const { screen, onClose, onChanged } = await open(); await pick(screen); fireEvent.press(screen.getByText("Save"));
+    await waitFor(() => expect(upload).toHaveBeenCalledTimes(1));
+    screen.rerender(<ChangePlantImageModal visible plantId="8" onClose={onClose} onChanged={onChanged} />);
+    await act(async () => { finish(newPhoto); }); expect(onChanged).not.toHaveBeenCalled(); expect(onClose).not.toHaveBeenCalled();
   });
 });

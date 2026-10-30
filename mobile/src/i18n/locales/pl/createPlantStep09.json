@@ -3,7 +3,12 @@
     "step09": {
       "creating": "tworzenie nowej rośliny",
       "success": "roślina została utworzona",
-      "idPrefix": "ID"
+      "idPrefix": "ID",
+      "uploadingPhoto": "Dodajemy roślinę i przesyłamy jej zdjęcie…",
+      "photoFailed": "Roślina została dodana, ale nie udało się przesłać zdjęcia. Spróbuj ponownie — wyślemy samo zdjęcie, bez dodawania drugiej rośliny.",
+      "retry": "Spróbuj ponownie",
+      "openPlants": "Przejdź do roślin",
+      "failed": "Nie udało się dodać rośliny. Spróbuj ponownie."
     }
   }
 }

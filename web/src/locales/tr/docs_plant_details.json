@@ -22,7 +22,7 @@
         "body": [
           "Ev bitkisi başlığıyla ilişkili 3 noktalı menü, ev bitkisinin kendisiyle ilgili ek eylemler sağlar.",
           "Mevcut eylemler arasında ev bitkisi Tanımını görüntüleme (ev bitkisi bir bitkiye bağlıysa), ev bitkisi ayrıntılarını düzenleme, ev bitkisi görüntüsünü değiştirme ve bu ev bitkisi için filtrelenen Hatırlatıcılara gitme yer alır.",
-          "Kendi fotoğrafınızı kaldırmak yerel kopyayı siler. Bağlı bitki tanımında katalog resmi varsa yeniden gösterilir."
+          "Yeni fotoğraf kaydedildikten sonra sunucudaki önceki kopya silinir. Kendi fotoğrafınızı kaldırdığınızda, varsa katalog görseli yeniden gösterilir."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Önemli notlar",
         "body": [
-          "Kullanıcı tarafından eklenen ev bitkisi görüntüleri yalnızca kullanıcının cihazında saklanır ve Flovers arka ucuna yüklenmez.",
+          "Kaydettiğinizde fotoğrafınız küçültülerek sunucudaki özel depolama alanına yüklenir. Fotoğrafı yalnızca siz ve bu bitkiye hâlen paylaşım erişimi olan kişiler görebilir.",
           "Önceden tanımlanmış ev bitkisi görüntüleri Flovers arka ucundan gelir ve yapay zeka tarafından oluşturulmuş olabilir.",
           "Sensör sensörü okumaları ve bakım önerileri bilgilendiricidir ve kullanıcının kendi kararıyla birleştirilmelidir."
         ]

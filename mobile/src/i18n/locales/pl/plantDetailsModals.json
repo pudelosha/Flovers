@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Zmień zdjęcie",
-      "subtitle": "To zdjęcie jest zapisane lokalnie na Twoim urządzeniu i nie jest wysyłane.",
+      "subtitle": "Po zapisaniu zdjęcie zostanie pomniejszone i przesłane do prywatnego miejsca na serwerze. Zobaczysz je Ty oraz osoby, którym aktualnie udostępniasz tę roślinę.",
       "noPlantId": "Nie znaleziono identyfikatora rośliny.",
-      "loadFailed": "Nie udało się wczytać lokalnego zdjęcia.",
+      "loadFailed": "Nie udało się wczytać zdjęcia. Spróbuj ponownie.",
       "error": "Coś poszło nie tak.",
       "noPhoto": "Nie wybrano zdjęcia",
       "removedPreview": "Zdjęcie zostanie usunięte",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Błąd aparatu",
       "pickerErrorTitle": "Błąd wyboru zdjęcia",
       "saveFailedTitle": "Nie udało się zapisać",
-      "saveFailedMsg": "Nie udało się zapisać tego zdjęcia lokalnie.",
+      "saveFailedMsg": "Nie udało się przesłać zdjęcia. Poprzednie zdjęcie pozostaje bez zmian.",
       "confirmRemoveTitle": "Usunąć zdjęcie?",
       "confirmRemoveMsg": "Zdjęcie zostanie usunięte po naciśnięciu „Zapisz”.",
       "confirmDiscardTitle": "Odrzucić zmiany?",
       "confirmDiscardMsg": "Zmiany nie zostaną zapisane.",
       "discard": "Odrzuć",
       "removeFailedTitle": "Nie udało się usunąć",
-      "removeFailedMsg": "Nie udało się usunąć lokalnego zdjęcia."
+      "removeFailedMsg": "Nie udało się usunąć zdjęcia. Spróbuj ponownie.",
+      "invalidPhoto": "Wybierz poprawne zdjęcie JPEG lub PNG o rozmiarze do 5 MB.",
+      "uploadTooLarge": "To zdjęcie jest za duże. Wybierz zdjęcie o rozmiarze do 5 MB.",
+      "photoQuota": "Osiągnięto limit miejsca na zdjęcia. Usuń niepotrzebne zdjęcia lub skontaktuj się z pomocą.",
+      "photoStorage": "Zapisywanie zdjęć jest chwilowo niedostępne. Spróbuj później.",
+      "photoConflict": "Zdjęcie zostało zmienione na innym urządzeniu. Zamknij to okno i otwórz je ponownie przed zapisem.",
+      "uploadExisting": "Prześlij to zdjęcie",
+      "legacyInfo": "To starsze zdjęcie jest zapisane tylko w tym telefonie. Wybierz „Prześlij to zdjęcie”, aby było dostępne także na innych urządzeniach."
     }
   }
 }

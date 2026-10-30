@@ -2,7 +2,6 @@
   "terms": {
     "title": "Regulamin",
     "lastUpdated": "Ostatnia aktualizacja: {{date}}",
-
     "section1": {
       "title": "§ 1. Postanowienia ogólne",
       "p1": "Regulamin określa zasady korzystania ze strony internetowej i aplikacji mobilnej Flovers (na Androida, a w przyszłości także na iOS) oraz warunki świadczenia usług drogą elektroniczną.",
@@ -10,7 +9,6 @@
       "p3": "Korzystając z Usługi — np. zakładając Konto, logując się lub używając funkcji Aplikacji bądź Serwisu — Użytkownik akceptuje Regulamin i zobowiązuje się go przestrzegać.",
       "p4": "W sprawach, których nie reguluje Regulamin, obowiązują odpowiednie przepisy prawa polskiego i prawa UE, w szczególności ustawa o świadczeniu usług drogą elektroniczną, Kodeks cywilny i ustawa o prawach konsumenta."
     },
-
     "section2": {
       "title": "§ 2. Definicje",
       "items": [
@@ -30,7 +28,6 @@
         "„Regulamin” – niniejsze warunki korzystania z Flovers."
       ]
     },
-
     "section3": {
       "title": "§ 3. Zakres i funkcje Usługi",
       "intro": "Usługa może obejmować w szczególności:",
@@ -47,7 +44,6 @@
       "p1": "Usługa jest obecnie dostępna bezpłatnie w wersji beta. W przyszłości Usługodawca może wprowadzić płatne plany, ograniczenia planu bezpłatnego, reklamy lub subskrypcje. Poinformuje o tym Użytkowników w Usłudze lub w Serwisie.",
       "p2": "Usługodawca może zmieniać funkcje, interfejs i sposób działania Usługi, w tym dodawać lub usuwać funkcje, z zachowaniem bezwzględnie obowiązujących przepisów prawa."
     },
-
     "section4": {
       "title": "§ 4. Wymagania techniczne",
       "items": [
@@ -57,7 +53,6 @@
         "Włączona obsługa JavaScript i plików cookies w przeglądarce, jeśli wymaga tego prawidłowe działanie Serwisu."
       ]
     },
-
     "section5": {
       "title": "§ 5. Konto i bezpieczeństwo",
       "p1": "Większość funkcji Usługi wymaga założenia Konta.",
@@ -65,15 +60,13 @@
       "p3": "Użytkownik odpowiada za działania wykonane przy użyciu jego Konta, chyba że ich przyczyna leży po stronie Usługodawcy.",
       "p4": "Usługodawca może tymczasowo zablokować dostęp do Konta lub Usługi, jeśli wykryje nadużycia, naruszenie bezpieczeństwa lub Regulaminu."
     },
-
     "section6": {
       "title": "§ 6. Treści Użytkownika i licencja",
       "p1": "Użytkownik zachowuje przysługujące mu prawa do Treści Użytkownika.",
       "p2": "Użytkownik udziela Usługodawcy niewyłącznej i nieodpłatnej licencji na przechowywanie, utrwalanie, zwielokrotnianie, wyświetlanie i przetwarzanie Treści Użytkownika. Licencja służy wyłącznie świadczeniu i utrzymaniu Usługi. Można ją odwołać przez usunięcie Konta lub Treści Użytkownika. Można ją przenieść tylko w zakresie niezbędnym do świadczenia Usługi.",
-      "p3": "Aby skorzystać z Rozpoznawania roślin, Użytkownik może przesłać zdjęcie do systemu Usługodawcy. Zdjęcia nie są przechowywane dłużej, niż wymaga tego rozpoznanie, chyba że Użytkownik wyraźnie wybierze funkcję wymagającą ich zapisania.",
+      "p3": "Zdjęcia przesłane wyłącznie do Rozpoznawania roślin są przetwarzane w celu identyfikacji rośliny i nie są automatycznie zapisywane jako jej zdjęcia. Zapisanie zdjęcia rośliny nie powoduje automatycznego przesłania go do rozpoznawania ani wykorzystania do trenowania modeli rozpoznawania.",
       "p4": "Użytkownik oświadcza, że ma prawa do treści przekazywanych do Usługi i że treści te nie naruszają praw innych osób."
     },
-
     "section7": {
       "title": "§ 7. Zasady korzystania z Usługi",
       "intro": "Użytkownik zobowiązuje się korzystać z Usługi zgodnie z prawem, dobrymi obyczajami i z poszanowaniem praw innych osób. Zabronione są w szczególności następujące działania:",
@@ -86,20 +79,17 @@
       ],
       "p1": "W razie naruszenia tych zasad Usługodawca może ograniczyć dostęp do Usługi lub Konta."
     },
-
     "section8": {
       "title": "§ 8. Kody QR, linki i klucze dostępu",
       "p1": "Usługa może umożliwiać tworzenie kodów QR lub linków, np. do Instancji rośliny. Użytkownik odpowiada za ich przechowywanie i udostępnianie.",
-      "p2": "Po udostępnieniu innym osobom linków, identyfikatorów lub kluczy dostępu, np. do odczytu danych pomiarowych, osoby te mogą uzyskać dostęp do wskazanych informacji w zakresie przyznanych uprawnień. Użytkownik ponosi ryzyko związane z takim udostępnieniem."
+      "p2": "Kod QR rośliny, jej identyfikator ani adres zdjęcia nie są danymi uwierzytelniającymi: odbiorca musi się zalogować i mieć dostęp nadany przez udostępnienie rośliny. Sekrety uwierzytelniające urządzeń oraz dane dostępowe do Konta należy zachować w poufności."
     },
-
     "section9": {
       "title": "§ 9. Płatności i plany w przyszłości",
       "p1": "W dniu publikacji Regulaminu Usługa jest dostępna bezpłatnie w wersji beta.",
       "p2": "W przyszłości Usługodawca może wprowadzić płatne plany, odnawialne subskrypcje, reklamy lub limity, np. liczby roślin. Płatne plany mogą być dostępne m.in. w Google Play lub Apple App Store.",
       "p3": "Jeśli pojawią się subskrypcje, mogą odnawiać się automatycznie. Warunki płatności, rozliczeń i ewentualnych zwrotów mogą wynikać z zasad sklepu Google lub Apple oraz informacji podanych w Usłudze przy zakupie."
     },
-
     "section10": {
       "title": "§ 10. Odpowiedzialność i zastrzeżenia",
       "p1": "Usługa dostarcza informacji i narzędzi pomocnych w pielęgnacji roślin. Usługodawca nie gwarantuje konkretnych efektów, np. wzrostu roślin, uniknięcia chorób czy błędów pielęgnacyjnych. Użytkownik podejmuje decyzje dotyczące pielęgnacji na własną odpowiedzialność.",
@@ -107,33 +97,28 @@
       "p3": "W zakresie dozwolonym przez prawo Usługodawca nie odpowiada za szkody spowodowane nieprawidłowym korzystaniem z Usługi, błędnymi danymi Użytkownika, wadliwym działaniem jego urządzeń pomiarowych, przerwami w dostępie do internetu ani innymi okolicznościami niezależnymi od Usługodawcy.",
       "p4": "Postanowienia tego paragrafu nie wyłączają ani nie ograniczają praw konsumenta wynikających z bezwzględnie obowiązujących przepisów prawa."
     },
-
     "section11": {
       "title": "§ 11. Reklamacje i kontakt",
       "p1": "Reklamację dotyczącą działania Usługi można wysłać e-mailem na adres info@flovers.app.",
       "p2": "W reklamacji należy opisać problem oraz podać, kiedy i w jakich okolicznościach wystąpił. Warto dołączyć informacje pomocne w wyjaśnieniu sprawy, np. zrzuty ekranu, jeśli jest to możliwe.",
       "p3": "Usługodawca odpowie bez zbędnej zwłoki, w miarę możliwości w ciągu 14 dni."
     },
-
     "section12": {
       "title": "§ 12. Rozwiązanie umowy i usunięcie Konta",
       "p1": "Użytkownik może w każdej chwili usunąć Konto w Aplikacji. Konto i powiązane z nim dane zostaną wtedy trwale usunięte z systemu Usługodawcy, a nie tylko ukryte.",
       "p2": "Usługodawca może zawiesić lub zakończyć świadczenie Usługi dla Użytkownika, który narusza Regulamin, działa niezgodnie z prawem lub zagraża bezpieczeństwu Usługi.",
       "p3": "Usługodawca może zakończyć świadczenie całości lub części Usługi z ważnych przyczyn, np. technicznych lub prawnych. Jeśli będzie to możliwe, poinformuje o tym Użytkowników z odpowiednim wyprzedzeniem."
     },
-
     "section13": {
       "title": "§ 13. Własność intelektualna",
       "p1": "Oprogramowanie, wygląd, logotypy, nazwa Flovers, dokumentacja i treści udostępniane w Usłudze są chronione prawem, w tym prawem autorskim. Należą do Usługodawcy lub innych uprawnionych podmiotów.",
       "p2": "Bez zgody Usługodawcy nie wolno kopiować, modyfikować, rozpowszechniać ani wykorzystywać elementów Usługi, z wyjątkiem dozwolonego użytku wynikającego z przepisów prawa."
     },
-
     "section14": {
       "title": "§ 14. Wymagany wiek",
       "p1": "Usługa jest przeznaczona dla osób, które ukończyły 16 lat.",
       "p2": "Osoby poniżej 16. roku życia nie powinny zakładać Konta ani korzystać z Usługi."
     },
-
     "section15": {
       "title": "§ 15. Dokumenty powiązane",
       "intro": "Zasady i informacje dotyczące Usługi znajdziesz także w następujących materiałach:",
@@ -143,19 +128,28 @@
         "Dokumentacja i FAQ"
       ]
     },
-
     "section16": {
       "title": "§ 16. Prawo właściwe i rozstrzyganie sporów",
       "p1": "Do Regulaminu stosuje się prawo polskie, z uwzględnieniem bezwzględnie obowiązujących przepisów chroniących konsumentów.",
       "p2": "Spory należy w pierwszej kolejności próbować rozwiązać polubownie, np. przez kontakt e-mail i uzgodnienie stanowisk.",
-      "p3": "Konsument może skorzystać z pozasądowych sposobów rozstrzygania sporów oraz platformy ODR (Online Dispute Resolution): https://ec.europa.eu/consumers/odr/.",
+      "p3": "Konsumenci mogą korzystać z właściwych pozasądowych sposobów rozwiązywania sporów konsumenckich. Komisja Europejska publikuje informacje o dochodzeniu roszczeń konsumenckich i wykazy podmiotów rozstrzygających spory pod adresem https://consumer-redress.ec.europa.eu/.",
       "p4": "Sąd właściwy w sporach z konsumentami ustala się zgodnie z obowiązującymi przepisami prawa."
     },
-
     "section17": {
       "title": "§ 17. Zmiany Regulaminu",
       "p1": "Usługodawca może zmienić Regulamin z ważnych przyczyn, np. w związku ze zmianami prawa, rozwojem Usługi lub zmianami technologicznymi.",
       "p2": "Usługodawca poinformuje o zmianach Regulaminu w Serwisie lub w Aplikacji. Dalsze korzystanie z Usługi po wejściu zmian w życie oznacza akceptację zaktualizowanego Regulaminu."
+    },
+    "section18": {
+      "title": "§ 18. Zdjęcia roślin",
+      "items": [
+        "Zdjęcie wybrane w kreatorze dodawania rośliny jest przesyłane do Serwisu po utworzeniu rośliny. W edytorze zdjęcia przesłanie następuje po zapisaniu zmiany przez Użytkownika. Starsze zdjęcia zapisane wyłącznie w telefonie pozostają na tym urządzeniu, dopóki Użytkownik wyraźnie nie wybierze ich przesłania.",
+        "Użytkownik zachowuje prawa do swoich zdjęć. Musi posiadać prawa i zgody niezbędne do ich przesyłania i udostępniania oraz szanować prywatność innych osób. Licencja określona w § 6 obejmuje wyłącznie przetwarzanie niezbędne do świadczenia i utrzymania Serwisu.",
+        "Serwis zmniejsza rozdzielczość i kompresuje zdjęcia roślin, tworzy wersje do wyświetlania i miniatury, koryguje orientację oraz usuwa osadzone metadane EXIF/GPS. Przesłane oryginały nie są przechowywane jako stałe archiwum. Użytkownik powinien zachować własne oryginały, jeżeli potrzebuje pełnej rozdzielczości.",
+        "Zdjęcia roślin nie są publiczne. W Aplikacji może je oglądać właściciel oraz zalogowani Użytkownicy z aktywnym dostępem do udostępnionej rośliny; tylko właściciel może zmieniać lub usuwać zdjęcia. Upoważniony personel techniczny i dostawcy usług mogą je przetwarzać wyłącznie w zakresie niezbędnym do działania, zabezpieczenia lub utrzymania Serwisu.",
+        "Po zastąpieniu lub usunięciu zdjęcia albo po usunięciu powiązanej rośliny lub Konta poprzednie zdjęcie przestaje być dostępne w Serwisie. Serwis usuwa plik w ramach porządkowania bieżących danych i ponawia tę czynność, jeśli wystąpi błąd. Ewentualne, odrębnie utrzymywane kopie zapasowe mogą zachować zdjęcie do czasu ich wymiany zgodnie z przyjętą rotacją.",
+        "Przesyłanie zdjęć jest opcjonalne. Obowiązują ograniczenia dotyczące formatu, rozmiaru plików, miejsca na zdjęcia i częstotliwości przesyłania; odrzucone przesłanie nie zastępuje bieżącego zdjęcia."
+      ]
     }
   }
 }

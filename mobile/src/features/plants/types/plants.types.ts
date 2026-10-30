@@ -1,4 +1,5 @@
 // --- API DTOs (server contracts) ---
+import type { PlantPhoto } from "../../../api/services/plant-photos.service";
 
 import type {
   LightLevel,
@@ -45,6 +46,7 @@ export type ApiPlantInstanceUpdatePayload = Partial<ApiPlantInstanceCreatePayloa
 
 /** CREATE response */
 export type ApiPlantInstance = {
+  photo?: PlantPhoto | null;
   id: number;
   plant_definition_id: number | null;
   location_id: number;
@@ -65,6 +67,7 @@ export type ApiPlantDefinitionMini = {
 };
 
 export type ApiPlantInstanceListItem = {
+  photo?: PlantPhoto | null;
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   display_name?: string;
@@ -78,6 +81,7 @@ export type ApiPlantInstanceListItem = {
 
 /** DETAIL (full) for editing */
 export type ApiPlantInstanceDetailFull = {
+  photo?: PlantPhoto | null;
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
 
@@ -167,6 +171,7 @@ export type PlantEditForm = {
 };
 
 export type Plant = {
+  photo?: PlantPhoto | null;
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: string;
   name: string;

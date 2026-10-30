@@ -18,7 +18,8 @@
         "iletişim formu aracılığıyla gönderilen mesajların işlenmesi",
         "Uygulamanın ve web sitesinin düzgün çalışmasını sağlamak",
         "ev bitkisi bakımıyla ilgili hatırlatıcılar, görevler ve bildirimler sağlamak",
-        "Sistem güvenliğinin sağlanması ve teknik günlüklerin tutulması"
+        "Sistem güvenliğinin sağlanması ve teknik günlüklerin tutulması",
+        "bitki fotoğraflarını saklamak, eşitlemek ve Kullanıcıya ve Kullanıcının bitki paylaşımı yoluyla erişim verdiği kişilere göstermek"
       ],
       "legalBasis": "Veri işlemenin yasal dayanağı, GDPR Madde 6(1)(b) (sözleşmenin ifası), Madde 6(1)(c) GDPR (yasal yükümlülük) ve GDPR Madde 6(1)(f)'dir (Denetleyicinin meşru menfaati)."
     },
@@ -32,9 +33,10 @@
         "teknik cihaz verileri (cihaz türü, işletim sistemi, uygulama sürümü)",
         "IP adresi",
         "cihaz yönlendirme verileri (örn. ev bitkilerinin ışığa maruz kalmasını optimize etmek için)",
-        "ev bitkileri, ölçümler ve IoT sensör okumalarıyla ilgili olarak kullanıcı tarafından girilen veriler"
+        "ev bitkileri, ölçümler ve IoT sensör okumalarıyla ilgili olarak kullanıcı tarafından girilen veriler",
+        "Kullanıcının yüklediği bitki fotoğrafları, bunların bitkiler ve Hesaplarla ilişkileri ve görsellerle ilgili teknik bilgiler"
       ],
-      "note": "Kullanıcı tarafından çekilen fotoğraflar, kullanıcı sunucu tarafında işlem gerektiren özellikleri kullanmayı seçmediği sürece genellikle kullanıcının cihazında yerel olarak işlenir."
+      "note": "Fotoğrafları eşitlemek ve görüntülemek için Hizmet, fotoğrafın içeriğini, Kullanıcının Hesabı ve bitkisiyle ilişkisini, ayrıca görsel boyutları, dosya boyutu ve yükleme zamanı gibi teknik bilgileri işler. Fotoğrafın kendisi de yüzler veya evin ayrıntıları gibi kişisel bilgileri ortaya çıkarabilir."
     },
     "section4": {
       "title": "§ 4. Kullanıcı hesapları ve güvenlik",
@@ -57,10 +59,10 @@
     },
     "section7": {
       "title": "§ 7. Veri alıcıları ve işlenme yeri",
-      "p1": "Kişisel veriler Avrupa Birliği içerisinde yer alan sunucularda işlenmektedir.",
+      "p1": "Hesap verileri ve kaydedilen bitki fotoğrafları, Denetleyicinin Avrupa Birliği içinde bulunan sunucularında barındırılır.",
       "p2": "Sunucu altyapısı Hetzner Online GmbH tarafından sağlanmaktadır.",
       "p3": "Denetleyici, anlık bildirimleri işlemek amacıyla Firebase hizmetlerini kullanabilir.",
-      "p4": "Kişisel veriler Avrupa Birliği dışındaki üçüncü ülkelere aktarılmamaktadır."
+      "p4": "Firebase Cloud Messaging küresel bir altyapı üzerinden çalışır ve bildirimlerle ilgili verileri Avrupa Ekonomik Alanı dışında işleyebilir. Bu durum bitki fotoğrafı dosyalarının saklandığı yeri değiştirmez. Hizmet sağlayıcıyla geçerli olan düzenlemeler hakkında Denetleyiciden bilgi istenebilir."
     },
     "section8": {
       "title": "§ 8. Veri saklama süresi",
@@ -86,6 +88,18 @@
       "p1": "Kontrolör, kişisel verileri korumak için uygun teknik ve organizasyonel önlemleri uygular.",
       "p2": "Denetleyici bu Gizlilik Politikasını güncelleme hakkını saklı tutar.",
       "p3": "Gizlilik Politikasının güncel sürümü her zaman Flovers web sitesinde ve mobil uygulamada mevcuttur."
+    },
+    "section11": {
+      "title": "§ 11. Bitki fotoğrafları ve görsellerin işlenmesi",
+      "items": [
+        "Fotoğrafları eşitlemek ve görüntülemek için Hizmet, fotoğrafın içeriğini, Kullanıcının Hesabı ve bitkisiyle ilişkisini, ayrıca görsel boyutları, dosya boyutu ve yükleme zamanı gibi teknik bilgileri işler. Fotoğrafın kendisi de yüzler veya evin ayrıntıları gibi kişisel bilgileri ortaya çıkarabilir.",
+        "Bitki oluşturma sihirbazında seçilen fotoğraf, bitki oluşturulduktan sonra Hizmete yüklenir. Bitki fotoğrafı düzenleyicisindeki yüklemeler, Kullanıcı değişikliği kaydettiğinde gönderilir. Yalnızca telefonda saklanan eski fotoğraflar, Kullanıcı bunları yüklemeyi açıkça seçmediği sürece o cihazda kalır.",
+        "Hizmet bitki fotoğraflarını yeniden boyutlandırıp sıkıştırır, görüntüleme sürümleri ve küçük resimler oluşturur, yönlerini düzeltir ve gömülü EXIF/GPS meta verilerini kaldırır. Yüklenen orijinaller kalıcı bir arşiv olarak saklanmaz. Tam çözünürlüğe ihtiyaç duyan Kullanıcılar kendi orijinallerini saklamalıdır.",
+        "Bitki fotoğrafları herkese açık değildir. Uygulamada fotoğrafları yalnızca bitki sahibi ve oturum açmış, ilgili bitki için etkin paylaşım erişimi bulunan Kullanıcılar görebilir; yalnızca bitki sahibi bunları değiştirebilir veya kaldırabilir. Yetkili teknik personel ve hizmet sağlayıcılar, fotoğrafları yalnızca Hizmeti işletmek, güvenliğini sağlamak veya bakımını yapmak için gerekli olduğu ölçüde işleyebilir.",
+        "Bir fotoğrafın değiştirilmesi veya kaldırılması ya da ilişkili bitkinin veya Hesabın silinmesi, eski fotoğrafa Hizmet üzerinden erişimi sonlandırır ve fotoğrafın aktif depolamadan silinmesini planlar. Başarısız dosya temizleme işlemleri yeniden denenir. Ayrı olarak tutulan kurtarma yedekleri varsa, kopyalar ilgili yedek döngüsüne göre değiştirilene kadar bu yedeklerde kalabilir.",
+        "Uygulama, indirilen bitki fotoğraflarını oturuma bağlı geçici bir önbellekte tutar ve oturum kapatıldığında bu önbelleği temizler. Paylaşımın süresinin dolması veya iptal edilmesi, sonraki yetkili indirmeleri engeller; ancak başka bir cihazda zaten bulunan ekran görüntülerini, kaydedilmiş kopyaları veya orijinal fotoğrafları silemez.",
+        "Yalnızca Bitki Tanıma için gönderilen fotoğraflar bitkiyi belirlemek amacıyla işlenir ve otomatik olarak bitki fotoğrafı olarak saklanmaz. Bir bitki fotoğrafının kaydedilmesi, fotoğrafın otomatik olarak tanıma işlemine gönderilmesine veya tanıma modellerinin eğitiminde kullanılmasına yol açmaz."
+      ]
     }
   }
 }

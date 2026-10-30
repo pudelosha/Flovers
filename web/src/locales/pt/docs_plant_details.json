@@ -22,7 +22,7 @@
         "body": [
           "Abra os três pontos ao lado do nome para ver as ações da planta.",
           "Você pode consultar a ficha da espécie, se houver uma associada, editar os dados, mudar a imagem e abrir os lembretes filtrados para essa planta.",
-          "Remover a tua fotografia apaga a cópia local. Se a definição associada tiver uma imagem de catálogo, essa imagem volta a aparecer."
+          "Depois de guardar a nova fotografia, a cópia anterior é removida do servidor. Ao remover a tua fotografia, volta a aparecer a imagem do catálogo, se existir."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Informações importantes",
         "body": [
-          "As fotos que você adiciona às plantas ficam apenas no seu dispositivo e não são enviadas ao servidor do Flovers.",
+          "Ao guardar, a fotografia é reduzida e enviada para um espaço privado no servidor. Só tu e as pessoas com acesso partilhado ativo a esta planta a podem ver.",
           "As imagens padrão vêm do servidor e podem ter sido geradas com IA.",
           "As leituras e os cuidados sugeridos servem de apoio. Observe a planta e use também sua própria avaliação."
         ]

@@ -66,10 +66,11 @@ class DeploymentTests(unittest.TestCase):
         else:
             self.fail(f"Unexpected Docker command: {command}")
         self.calls.append((action, command, kwargs))
-        if command.count("-f") == 2:
+        if command.count("-f") >= 2:
             last_file_flag = len(command) - 1 - command[::-1].index("-f")
             override = Path(command[last_file_flag + 1])
-            self.overrides.append(json.loads(override.read_text(encoding="utf-8")))
+            if override.name.startswith(".flovers-deploy-"):
+                self.overrides.append(json.loads(override.read_text(encoding="utf-8")))
         if self.fail_at == action:
             raise subprocess.CalledProcessError(1, command)
         return subprocess.CompletedProcess(command, 0, stdout=stdout)
@@ -121,6 +122,33 @@ class DeploymentTests(unittest.TestCase):
         self.assertTrue(config_call[2]["capture_output"])
         self.assertNotIn("private-test-marker", self.stdout.getvalue())
         self.assertTrue(all(call[2]["check"] and call[2]["cwd"] == self.app_dir for call in self.calls))
+
+    def test_private_uploads_persist_across_redeploys_without_public_or_secret_mounts(self):
+        self.deploy()
+        path = self.app_dir / deploy_backend.PRIVATE_MEDIA_OVERRIDE
+        first = json.loads(path.read_text(encoding="utf-8"))
+        volume = first["volumes"]["flovers_private_media"]["name"]
+        self.assertEqual(volume, self.app_dir.name + "_private_media")
+        self.assertNotIn("private-test-marker", path.read_text(encoding="utf-8"))
+        self.assertEqual(set(first["services"]), {"web", "worker", "beat"})
+        for spec in first["services"].values():
+            self.assertEqual(spec["environment"]["PRIVATE_MEDIA_ROOT"], "/app/private-media")
+            self.assertEqual(spec["environment"]["PRIVATE_MEDIA_REQUIRE_MOUNT"], "True")
+            self.assertEqual(spec["volumes"][0]["target"], "/app/private-media")
+            self.assertTrue(spec["volumes"][0]["volume"]["nocopy"])
+        for action in ("check", "migrate", "up"):
+            self.assertIn(str(path), self.command(action))
+        self.calls.clear()
+        self.deploy()
+        self.assertEqual(json.loads(path.read_text(encoding="utf-8")), first)
+
+    def test_private_volume_is_scoped_to_the_resolved_compose_project(self):
+        override = deploy_backend.private_media_configuration({"name": "flovers-staging"}, ["web"], self.app_dir)
+        self.assertEqual(override["volumes"]["flovers_private_media"]["name"], "flovers-staging_private_media")
+
+    def test_invalid_private_volume_project_fails_before_pull_or_downtime(self):
+        with self.assertRaises(ValueError):
+            deploy_backend.private_media_configuration({"name": "../other"}, ["web"], self.app_dir)
 
     def test_single_application_service_does_not_require_workers(self):
         self.services = {"web": SERVICES["web"], "db": SERVICES["db"]}

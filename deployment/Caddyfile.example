@@ -1,6 +1,10 @@
 # Site fragment for Caddy installed on the VPS host. Preserve any existing
 # certificate/logging configuration. Backend port must be host-loopback only.
 api.flovers.app {
+    @plant_photo_upload path_regexp photo_upload ^/(api/)?plant-instances/[0-9]+/photo/$
+    request_body @plant_photo_upload {
+        max_size 6MB
+    }
     reverse_proxy 127.0.0.1:8000 {
         header_up X-Forwarded-For {remote_host}
         header_up X-Forwarded-Proto {scheme}

@@ -18,7 +18,8 @@
         "Bearbeitung von Nachrichten über das Kontaktformular",
         "Sicherstellung des ordnungsgemäßen Betriebs der App und der Website",
         "Bereitstellung von Erinnerungen, Aufgaben und Benachrichtigungen zur Pflanzenpflege",
-        "Gewährleistung der Systemsicherheit und Führung technischer Protokolle"
+        "Gewährleistung der Systemsicherheit und Führung technischer Protokolle",
+        "Speicherung, Synchronisierung und Anzeige von Pflanzenfotos für den Benutzer und für Personen, denen er über die Pflanzenfreigabe Zugang gewährt"
       ],
       "legalBasis": "Rechtsgrundlagen der Verarbeitung sind Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), Art. 6 Abs. 1 lit. c DSGVO (gesetzliche Verpflichtung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse des Verantwortlichen)."
     },
@@ -32,9 +33,10 @@
         "technische Gerätedaten (Gerätetyp, Betriebssystem, App-Version)",
         "IP-Adresse",
         "Daten zur Ausrichtung des Geräts, etwa zur Beurteilung der Lichtverhältnisse für Pflanzen",
-        "vom Benutzer eingegebene Daten zu Pflanzen, Messungen und IoT-Sensoren"
+        "vom Benutzer eingegebene Daten zu Pflanzen, Messungen und IoT-Sensoren",
+        "vom Benutzer hochgeladene Pflanzenfotos, ihre Zuordnung zu Pflanzen und Konten sowie zugehörige technische Bildinformationen"
       ],
-      "note": "Vom Benutzer aufgenommene Fotos werden grundsätzlich lokal auf seinem Gerät verarbeitet. Eine Ausnahme gilt, wenn er Funktionen nutzt, für die eine Verarbeitung auf dem Server nötig ist."
+      "note": "Zur Synchronisierung und Anzeige von Fotos verarbeitet der Dienst den Bildinhalt, die Zuordnung zum Konto und zur Pflanze des Benutzers sowie technische Informationen wie Bildabmessungen, Dateigröße und Upload-Zeitpunkt. Ein Foto kann selbst personenbezogene Informationen offenlegen, etwa Gesichter oder Einzelheiten einer Wohnung."
     },
     "section4": {
       "title": "§ 4. Benutzerkonten und Sicherheit",
@@ -57,10 +59,10 @@
     },
     "section7": {
       "title": "§ 7. Datenempfänger und Verarbeitungsort",
-      "p1": "Personenbezogene Daten werden auf Servern innerhalb der Europäischen Union verarbeitet.",
+      "p1": "Kontodaten und gespeicherte Pflanzenfotos werden auf den Servern des Verantwortlichen in der Europäischen Union gehostet.",
       "p2": "Die Serverinfrastruktur wird von Hetzner Online GmbH bereitgestellt.",
       "p3": "Der Verantwortliche kann Firebase-Dienste für Push-Benachrichtigungen nutzen.",
-      "p4": "Der Verantwortliche übermittelt keine personenbezogenen Daten in Drittländer außerhalb der EU."
+      "p4": "Firebase Cloud Messaging nutzt eine weltweite Infrastruktur und kann benachrichtigungsbezogene Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. Dies ändert nichts am Speicherort der Pflanzenfotos. Informationen zu den geltenden Vereinbarungen mit dem Anbieter können beim Verantwortlichen angefordert werden."
     },
     "section8": {
       "title": "§ 8. Speicherdauer",
@@ -86,6 +88,18 @@
       "p1": "Der Verantwortliche trifft geeignete technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten.",
       "p2": "Der Verantwortliche behält sich das Recht vor, diese Datenschutzerklärung zu aktualisieren.",
       "p3": "Die aktuelle Fassung der Datenschutzerklärung ist jederzeit auf der Flovers-Website und in der mobilen App verfügbar."
+    },
+    "section11": {
+      "title": "§ 11. Pflanzenfotos und Bildverarbeitung",
+      "items": [
+        "Zur Synchronisierung und Anzeige von Fotos verarbeitet der Dienst den Bildinhalt, die Zuordnung zum Konto und zur Pflanze des Benutzers sowie technische Informationen wie Bildabmessungen, Dateigröße und Upload-Zeitpunkt. Ein Foto kann selbst personenbezogene Informationen offenlegen, etwa Gesichter oder Einzelheiten einer Wohnung.",
+        "Ein im Assistenten zum Anlegen einer Pflanze ausgewähltes Foto wird nach dem Anlegen der Pflanze in den Dienst hochgeladen. Im Fotoeditor der Pflanze erfolgt der Upload, wenn der Benutzer die Änderung speichert. Ältere Fotos, die nur auf einem Telefon gespeichert sind, bleiben lokal, solange der Benutzer nicht ausdrücklich ihren Upload auswählt.",
+        "Der Dienst verkleinert und komprimiert Pflanzenfotos, erstellt Anzeigebilder und Vorschaubilder, korrigiert die Ausrichtung und entfernt eingebettete EXIF/GPS-Metadaten. Die hochgeladenen Originale werden nicht als dauerhaftes Archiv aufbewahrt. Benutzer sollten ihre eigenen Originale behalten, wenn sie die volle Auflösung benötigen.",
+        "Pflanzenfotos sind nicht öffentlich. In der Anwendung können nur der Eigentümer und angemeldete Benutzer mit einer aktiven Freigabe für die jeweilige Pflanze die Fotos sehen; nur der Eigentümer darf sie ändern oder entfernen. Autorisiertes technisches Personal und Dienstleister dürfen sie nur verarbeiten, soweit dies für den Betrieb, die Sicherheit oder die Wartung des Dienstes erforderlich ist.",
+        "Das Ersetzen oder Entfernen eines Fotos sowie das Löschen der zugehörigen Pflanze oder des Kontos beendet den Zugriff auf das bisherige Foto über den Dienst und veranlasst dessen Löschung aus dem aktiven Speicher. Fehlgeschlagene Löschversuche werden wiederholt. In gegebenenfalls gesondert geführten Sicherungen zur Wiederherstellung können Kopien bis zum jeweiligen turnusmäßigen Austausch der Sicherungen erhalten bleiben.",
+        "Die Anwendung speichert heruntergeladene Pflanzenfotos vorübergehend in einem sitzungsbezogenen Cache und leert diesen beim Abmelden. Wenn eine Freigabe abläuft oder widerrufen wird, sind keine weiteren autorisierten Downloads möglich. Screenshots, gespeicherte Kopien oder Originalfotos, die sich bereits auf einem anderen Gerät befinden, können dadurch jedoch nicht gelöscht werden.",
+        "Fotos, die ausschließlich zur Pflanzenbestimmung gesendet werden, werden zur Identifizierung der Pflanze verarbeitet und nicht automatisch als Pflanzenfotos gespeichert. Das Speichern eines Pflanzenfotos führt weder automatisch zu einer Pflanzenbestimmung noch zu einer Verwendung für das Training von Erkennungsmodellen."
+      ]
     }
   }
 }

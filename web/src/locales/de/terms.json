@@ -64,7 +64,7 @@
       "title": "§ 6. Benutzerdaten und Lizenz",
       "p1": "Der Benutzer behält die Rechte an seinen Benutzerdaten, soweit sie ihm gesetzlich zustehen.",
       "p2": "Der Benutzer gewährt dem Anbieter eine nicht ausschließliche, unentgeltliche Lizenz zur Speicherung, Vervielfältigung, Anzeige und Verarbeitung der Benutzerdaten. Sie dient ausschließlich der Bereitstellung und Aufrechterhaltung des Dienstes. Die Lizenz kann durch Löschen des Kontos oder der Daten widerrufen werden. Sie ist nur in dem Umfang übertragbar, der für die Erbringung des Dienstes erforderlich ist.",
-      "p3": "Für die Pflanzenbestimmung kann der Benutzer ein Bild an das System des Anbieters senden. Der Anbieter erklärt, diese Bilder nicht länger als für die Bestimmung nötig zu speichern, sofern der Benutzer nicht ausdrücklich eine Funktion auswählt, die eine Speicherung erfordert.",
+      "p3": "Fotos, die ausschließlich zur Pflanzenbestimmung gesendet werden, werden zur Identifizierung der Pflanze verarbeitet und nicht automatisch als Pflanzenfotos gespeichert. Das Speichern eines Pflanzenfotos führt weder automatisch zu einer Pflanzenbestimmung noch zu einer Verwendung für das Training von Erkennungsmodellen.",
       "p4": "Der Benutzer erklärt, dass er die erforderlichen Rechte an den bereitgestellten Inhalten besitzt und dass diese keine Rechte Dritter verletzen."
     },
     "section7": {
@@ -82,7 +82,7 @@
     "section8": {
       "title": "§ 8. QR-Codes, Links und Zugangsschlüssel",
       "p1": "Der Dienst kann die Erstellung von QR-Codes oder Links ermöglichen, etwa zu einer Eigenen Pflanze. Der Benutzer ist für deren Aufbewahrung und Weitergabe verantwortlich.",
-      "p2": "Gibt der Benutzer Links, Kennungen oder Zugangsschlüssel, etwa zum Abrufen von Messdaten, an Dritte weiter, können diese im Umfang der erteilten Berechtigungen auf die angegebenen Informationen zugreifen. Der Benutzer trägt das Risiko dieser Weitergabe."
+      "p2": "Ein Pflanzen-QR-Code, eine Pflanzenkennung oder eine Fotoadresse ist kein Zugangsnachweis: Der Empfänger muss sich anmelden und über eine Pflanzenfreigabe Zugang erhalten haben. Authentifizierungsgeheimnisse für Geräte und Zugangsdaten zum Konto müssen vertraulich bleiben."
     },
     "section9": {
       "title": "§ 9. Mögliche künftige Zahlungen und Tarife",
@@ -132,13 +132,24 @@
       "title": "§ 16. Anwendbares Recht und Streitbeilegung",
       "p1": "Diese Nutzungsbedingungen unterliegen polnischem Recht. Zwingende Vorschriften zum Schutz von Verbrauchern bleiben unberührt.",
       "p2": "Streitigkeiten sollten zunächst einvernehmlich geklärt werden, etwa durch Kontakt per E-Mail und den Versuch, eine Einigung zu finden.",
-      "p3": "Verbraucher können außergerichtliche Streitbeilegungsverfahren sowie die ODR-Plattform (Online Dispute Resolution) unter https://ec.europa.eu/consumers/odr/ nutzen.",
+      "p3": "Verbraucher können die jeweils anwendbaren außergerichtlichen Verfahren zur Beilegung von Verbraucherstreitigkeiten nutzen. Die Europäische Kommission veröffentlicht Informationen zur Durchsetzung von Verbraucherrechten und Verzeichnisse von Streitbeilegungsstellen unter https://consumer-redress.ec.europa.eu/.",
       "p4": "Die Zuständigkeit der Gerichte bei Streitigkeiten mit Verbrauchern richtet sich nach den geltenden gesetzlichen Vorschriften."
     },
     "section17": {
       "title": "§ 17. Änderungen der Nutzungsbedingungen",
       "p1": "Der Anbieter kann diese Nutzungsbedingungen aus wichtigen Gründen ändern, etwa bei Gesetzesänderungen, der Weiterentwicklung des Dienstes oder technologischen Änderungen.",
       "p2": "Der Anbieter informiert die Benutzer auf der Website und/oder in der Anwendung über Änderungen der Nutzungsbedingungen. Wer den Dienst nach Inkrafttreten der Änderungen weiter nutzt, stimmt der aktualisierten Fassung zu."
+    },
+    "section18": {
+      "title": "§ 18. Pflanzenfotos",
+      "items": [
+        "Ein im Assistenten zum Anlegen einer Pflanze ausgewähltes Foto wird nach dem Anlegen der Pflanze in den Dienst hochgeladen. Im Fotoeditor der Pflanze erfolgt der Upload, wenn der Benutzer die Änderung speichert. Ältere Fotos, die nur auf einem Telefon gespeichert sind, bleiben lokal, solange der Benutzer nicht ausdrücklich ihren Upload auswählt.",
+        "Benutzer behalten ihre Rechte an ihren Fotos. Sie müssen über die zum Hochladen und Teilen erforderlichen Rechte und Einwilligungen verfügen und die Privatsphäre anderer Personen achten. Die Lizenz nach § 6 umfasst ausschließlich die Verarbeitung, die zur Bereitstellung und Wartung des Dienstes erforderlich ist.",
+        "Der Dienst verkleinert und komprimiert Pflanzenfotos, erstellt Anzeigebilder und Vorschaubilder, korrigiert die Ausrichtung und entfernt eingebettete EXIF/GPS-Metadaten. Die hochgeladenen Originale werden nicht als dauerhaftes Archiv aufbewahrt. Benutzer sollten ihre eigenen Originale behalten, wenn sie die volle Auflösung benötigen.",
+        "Pflanzenfotos sind nicht öffentlich. In der Anwendung können nur der Eigentümer und angemeldete Benutzer mit einer aktiven Freigabe für die jeweilige Pflanze die Fotos sehen; nur der Eigentümer darf sie ändern oder entfernen. Autorisiertes technisches Personal und Dienstleister dürfen sie nur verarbeiten, soweit dies für den Betrieb, die Sicherheit oder die Wartung des Dienstes erforderlich ist.",
+        "Das Ersetzen oder Entfernen eines Fotos sowie das Löschen der zugehörigen Pflanze oder des Kontos beendet den Zugriff auf das bisherige Foto über den Dienst und veranlasst dessen Löschung aus dem aktiven Speicher. Fehlgeschlagene Löschversuche werden wiederholt. In gegebenenfalls gesondert geführten Sicherungen zur Wiederherstellung können Kopien bis zum jeweiligen turnusmäßigen Austausch der Sicherungen erhalten bleiben.",
+        "Das Hochladen von Fotos ist freiwillig. Es gelten Beschränkungen für Format, Dateigröße, Speicherplatz und Upload-Häufigkeit; ein abgelehnter Upload ersetzt das aktuelle Foto nicht."
+      ]
     }
   }
 }

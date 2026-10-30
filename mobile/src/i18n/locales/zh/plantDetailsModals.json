@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "更改照片",
-      "subtitle": "此照片保存在您的设备本地，并未上传。",
+      "subtitle": "保存时，照片会缩小并上传到服务器的私密存储空间。只有你和目前拥有这株植物共享权限的人可以查看。",
       "noPlantId": "未找到植物标识符。",
-      "loadFailed": "无法加载本地照片。",
+      "loadFailed": "无法加载照片，请重试。",
       "error": "出了点问题。",
       "noPhoto": "未选择照片",
       "removedPreview": "照片将被删除",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "相机错误",
       "pickerErrorTitle": "选择照片错误",
       "saveFailedTitle": "保存失败",
-      "saveFailedMsg": "无法将此照片保存到本地。",
+      "saveFailedMsg": "照片上传失败，原来的照片已保留。",
       "confirmRemoveTitle": "删除照片？",
       "confirmRemoveMsg": "点击“保存”后，照片将被删除。",
       "confirmDiscardTitle": "放弃更改？",
       "confirmDiscardMsg": "更改将不会保存。",
       "discard": "放弃",
       "removeFailedTitle": "删除失败",
-      "removeFailedMsg": "无法删除本地照片。"
+      "removeFailedMsg": "无法删除照片，请重试。",
+      "invalidPhoto": "请选择不超过 5 MB 的有效 JPEG 或 PNG 照片。",
+      "uploadTooLarge": "这张照片太大，请选择不超过 5 MB 的照片。",
+      "photoQuota": "照片存储空间已达上限。请删除不需要的照片，或联系支持人员。",
+      "photoStorage": "照片存储服务暂时不可用，请稍后重试。",
+      "photoConflict": "照片已在另一台设备上更改。请关闭此窗口并重新打开后再保存。",
+      "uploadExisting": "上传这张照片",
+      "legacyInfo": "这张旧照片只保存在当前手机上。请选择“上传这张照片”来同步。"
     }
   }
 }

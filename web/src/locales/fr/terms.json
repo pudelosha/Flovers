@@ -64,7 +64,7 @@
       "title": "§ 6. Contenus de l'Utilisateur et licence",
       "p1": "L’Utilisateur conserve les droits que la loi lui reconnaît sur ses Contenus.",
       "p2": "L’Utilisateur accorde au Fournisseur de services une licence non exclusive et gratuite pour stocker, conserver, reproduire, afficher et traiter ses Contenus, uniquement afin de fournir et de maintenir le Service. La licence peut être révoquée par la suppression du Compte ou des Contenus. Elle est transférable uniquement dans la mesure nécessaire à la fourniture du Service.",
-      "p3": "Pour la Reconnaissance des plantes, l’Utilisateur peut envoyer une photo au système du Fournisseur de services. Celui-ci déclare ne pas la conserver plus longtemps que nécessaire à l’identification, sauf si l’Utilisateur choisit expressément une fonction demandant sa conservation.",
+      "p3": "Les photos envoyées uniquement pour la Reconnaissance des plantes sont traitées pour identifier la plante et ne sont pas automatiquement enregistrées comme photos des plantes. L’enregistrement d’une photo de plante ne déclenche pas automatiquement son envoi pour reconnaissance ni son utilisation pour entraîner des modèles de reconnaissance.",
       "p4": "L'Utilisateur déclare qu'il détient les droits sur les contenus qu'il soumet au Service et que ces contenus ne portent pas atteinte aux droits de tiers."
     },
     "section7": {
@@ -82,7 +82,7 @@
     "section8": {
       "title": "§ 8. Codes QR, liens et clés d’accès",
       "p1": "Le Service peut permettre de créer des codes QR ou des liens, par exemple vers une Plante personnelle. L’Utilisateur est responsable de leur conservation et de leur partage.",
-      "p2": "Si l’Utilisateur transmet à des tiers des liens, identifiants ou clés d’accès, notamment aux données de mesure, ces tiers peuvent accéder aux informations correspondantes dans la limite des autorisations accordées. L’Utilisateur assume le risque de ce partage."
+      "p2": "Le code QR d’une plante, son identifiant ou l’adresse d’une photo ne constituent pas des identifiants d’authentification : le destinataire doit se connecter et disposer d’un accès accordé par le partage de la plante. Les secrets d’authentification des appareils et les identifiants du Compte doivent rester confidentiels."
     },
     "section9": {
       "title": "§ 9. Paiements et offres éventuels à l’avenir",
@@ -132,13 +132,24 @@
       "title": "§ 16. Droit applicable et résolution des litiges",
       "p1": "Les Conditions sont soumises au droit polonais, sous réserve des dispositions impératives de protection des consommateurs.",
       "p2": "Les litiges doivent être résolus à l'amiable en priorité (par exemple, par e-mail et tentative de conciliation).",
-      "p3": "Le consommateur peut recourir à des méthodes extrajudiciaires de résolution des litiges et à la plateforme ODR (Online Dispute Resolution) disponible à l'adresse : https://ec.europa.eu/consumers/odr/.",
+      "p3": "Les consommateurs peuvent recourir aux procédures extrajudiciaires applicables pour régler les litiges de consommation. La Commission européenne publie des informations sur les recours des consommateurs et des listes d’organismes de règlement des litiges à l’adresse https://consumer-redress.ec.europa.eu/.",
       "p4": "La juridiction compétente pour les litiges avec des consommateurs est déterminée par le droit applicable."
     },
     "section17": {
       "title": "§ 17. Modifications des Conditions",
       "p1": "Le Fournisseur de services peut modifier les Conditions pour des raisons valables (par exemple, modifications légales, évolution du Service, changements technologiques).",
       "p2": "Le Fournisseur de services informera les Utilisateurs des modifications des Conditions sur le Site et/ou dans l’Application. L’utilisation du Service après l’entrée en vigueur des modifications vaut acceptation des Conditions mises à jour."
+    },
+    "section18": {
+      "title": "§ 18. Photos des plantes",
+      "items": [
+        "Une photo sélectionnée dans l’assistant de création d’une plante est envoyée au Service après la création de la plante. Dans l’éditeur de photo de la plante, l’envoi a lieu lorsque l’Utilisateur enregistre la modification. Les anciennes photos enregistrées uniquement sur un téléphone restent locales, sauf si l’Utilisateur choisit expressément de les envoyer.",
+        "Les Utilisateurs conservent leurs droits sur leurs photos. Ils doivent disposer des droits et autorisations nécessaires pour les envoyer et les partager, et respecter la vie privée des autres personnes. La licence prévue au § 6 couvre uniquement les traitements nécessaires à la fourniture et à la maintenance du Service.",
+        "Le Service redimensionne et compresse les photos des plantes, crée des images d’affichage et des miniatures, corrige leur orientation et supprime les métadonnées EXIF/GPS intégrées. Les originaux envoyés ne sont pas conservés dans une archive permanente. Les Utilisateurs devraient garder leurs propres originaux s’ils souhaitent conserver la pleine résolution.",
+        "Les photos des plantes ne sont pas publiques. Dans l’Application, seuls le propriétaire et les Utilisateurs connectés disposant d’un partage actif de la plante peuvent les consulter ; seul le propriétaire peut les modifier ou les supprimer. Le personnel technique autorisé et les prestataires peuvent les traiter uniquement dans la mesure nécessaire au fonctionnement, à la sécurité ou à la maintenance du Service.",
+        "Le remplacement ou la suppression d’une photo, ainsi que la suppression de la plante associée ou du Compte, met fin à l’accès à l’ancienne photo par le Service et programme sa suppression du stockage actif. Les tentatives de suppression qui échouent sont renouvelées. Les éventuelles sauvegardes de restauration gérées séparément peuvent conserver des copies jusqu’à leur rotation prévue.",
+        "L’envoi de photos est facultatif. Des limites de format, de taille des fichiers, de stockage et de fréquence d’envoi s’appliquent ; un envoi refusé ne remplace pas la photo actuelle."
+      ]
     }
   }
 }

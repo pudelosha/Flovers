@@ -11,6 +11,7 @@ services:
       - ./backend:/app
       - static_volume:/app/staticfiles
       - ./backend/media:/app/media
+      - private_media_volume:/app/private-media
       - ./backend/secrets/firebase.json:/run/secrets/firebase.json:ro
     ports:
       - "${BACKEND_BIND_ADDRESS:-127.0.0.1}:8000:8000"
@@ -29,6 +30,7 @@ services:
     working_dir: /app
     volumes:
       - ./backend:/app
+      - private_media_volume:/app/private-media
       - ./backend/secrets/firebase.json:/run/secrets/firebase.json:ro
     depends_on:
       - redis
@@ -44,6 +46,7 @@ services:
     working_dir: /app
     volumes:
       - ./backend:/app
+      - private_media_volume:/app/private-media
       - ./backend/secrets/firebase.json:/run/secrets/firebase.json:ro
     depends_on:
       - redis
@@ -75,3 +78,4 @@ volumes:
   pgdata:
   static_volume:
   media_volume:
+  private_media_volume:

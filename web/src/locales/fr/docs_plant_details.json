@@ -22,7 +22,7 @@
         "body": [
           "Le menu à trois points près du titre propose d’autres actions pour cette plante.",
           "Tu peux consulter sa fiche d’espèce si elle en a une, modifier ses informations, changer sa photo ou ouvrir les rappels filtrés pour cette plante.",
-          "Retirer votre photo supprime sa copie locale. Si la fiche botanique liée dispose d’une image de catalogue, celle-ci réapparaît."
+          "Une fois la nouvelle photo enregistrée, l’ancienne copie est supprimée du serveur. Supprimer votre photo rétablit l’image du catalogue, lorsqu’elle existe."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "À retenir",
         "body": [
-          "Les photos de plantes que tu ajoutes restent sur ton appareil et ne sont pas envoyées aux serveurs Flovers.",
+          "À l’enregistrement, votre photo est redimensionnée puis envoyée vers un espace privé du serveur. Seuls vous et les personnes ayant un partage actif de cette plante pouvez la voir.",
           "Les images proposées sont fournies par les serveurs Flovers et peuvent avoir été générées par IA.",
           "Les relevés et les conseils sont des indications. Complète-les toujours par ta propre observation."
         ]

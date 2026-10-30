@@ -24,10 +24,12 @@ import {
 } from "react-native-image-picker";
 
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
+import { ApiError } from "../../../../api/client";
+import { fetchPlantInstanceDetail } from "../../../../api/services/plant-instances.service";
+import { uploadPlantPhoto, deletePlantPhoto, type PlantPhoto } from "../../../../api/services/plant-photos.service";
+import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
 import {
   getPlantPhotoUri,
-  persistTempPlantPhoto,
-  promoteTempPhotoToPlant,
   deletePlantPhotoById,
 } from "../../../../shared/utils/photoStorage";
 
@@ -37,7 +39,7 @@ type Props = {
   plantId: string | number | null;
 
   /** Called ONLY after user presses Save. */
-  onChanged?: (newLocalUri: string | null) => void;
+  onChanged?: (photo: PlantPhoto | null) => void;
 };
 
 async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
@@ -54,8 +56,11 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   return perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
 }
 
-function genTempKey() {
-  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+function genUploadKey() {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (character) => {
+    const random = Math.floor(Math.random() * 16);
+    return (character === "x" ? random : (random & 3) | 8).toString(16);
+  });
 }
 
 /** RN Image cache-buster for local file URIs */
@@ -67,19 +72,19 @@ function withCacheBuster(uri: string | null | undefined): string | null {
 
 type PendingAction =
   | { kind: "none" }
-  | { kind: "set"; uri: string } // set/replace with this local uri
-  | { kind: "remove" }; // remove local photo
+  | { kind: "set"; uri: string; uploadKey: string }
+  | { kind: "remove" };
 
 export default function ChangePlantImageModal({ visible, onClose, plantId, onChanged }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: any): string => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      if (typeof txt === "string" && txt && txt !== key) return txt;
+      return fallback || key.split(".").pop() || key;
     },
     [t, currentLanguage]
   );
@@ -87,6 +92,11 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const [loading, setLoading] = useState(false);
   const savingRef = useRef(false);
   const [error, setError] = useState<string | null>(null);
+  const [loadFailed, setLoadFailed] = useState(false);
+  const [conflicted, setConflicted] = useState(false);
+  const [currentPhoto, setCurrentPhoto] = useState<PlantPhoto | null>(null);
+  const [legacySourceUri, setLegacySourceUri] = useState<string | null>(null);
+  const privatePhoto = usePlantPhoto(visible ? currentPhoto : null, { variant: "display" });
 
   // currently stored on disk
   const [persistedUri, setPersistedUri] = useState<string | null>(null);
@@ -102,6 +112,10 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const [confirmDiscardVisible, setConfirmDiscardVisible] = useState(false);
 
   const initialPersistedUriRef = useRef<string | null>(null);
+  const contextRef = useRef({ visible, plantId, generation: 0 });
+  if (contextRef.current.visible !== visible || contextRef.current.plantId !== plantId) {
+    contextRef.current = { visible, plantId, generation: contextRef.current.generation + 1 };
+  }
 
   const close = useCallback(() => {
     if (savingRef.current) return;
@@ -116,7 +130,8 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     onClose();
   }, [onClose, pending.kind]);
 
-  // load existing local photo when opened
+  // Load the current server version before permitting mutations. Older local
+  // photos remain an explicit upload choice instead of being silently shared.
   useEffect(() => {
     let cancelled = false;
 
@@ -128,7 +143,11 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       setConfirmDiscardVisible(false);
 
       setError(null);
+      setLoadFailed(false);
+      setConflicted(false);
       setLoading(true);
+      setCurrentPhoto(null);
+      setLegacySourceUri(null);
 
       try {
         if (!plantId) {
@@ -140,22 +159,29 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
           return;
         }
 
-        const existing = await getPlantPhotoUri(String(plantId));
+        const plant = await fetchPlantInstanceDetail(Number(plantId), { auth: true });
+        if (cancelled) return;
+        const photo = plant.photo ?? null;
+        setCurrentPhoto(photo);
+        const existing = photo ? null : await getPlantPhotoUri(String(plantId));
         const busted = withCacheBuster(existing || null);
 
         if (!cancelled) {
           setPersistedUri(busted);
+          setLegacySourceUri(existing || null);
           setPreviewUri(busted);
           initialPersistedUriRef.current = busted;
           setPending({ kind: "none" });
+          setLoadFailed(false);
         }
       } catch (e: any) {
         if (!cancelled) {
+          setLoadFailed(true);
           setPersistedUri(null);
           setPreviewUri(null);
           initialPersistedUriRef.current = null;
           setPending({ kind: "none" });
-          setError(e?.message || tr("plantDetailsModals.changeImage.loadFailed", "Could not load local image."));
+          setError(tr("plantDetailsModals.changeImage.loadFailed", "Could not load this plant's photo. Please try again."));
         }
       } finally {
         if (!cancelled) setLoading(false);
@@ -168,12 +194,25 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     };
   }, [visible, plantId, tr]);
 
-  const showOnlySpinner = loading && !error;
+  useEffect(() => {
+    if (!visible || !currentPhoto || savingRef.current) return;
+    if (privatePhoto.uri) {
+      setPersistedUri(privatePhoto.uri);
+      initialPersistedUriRef.current = privatePhoto.uri;
+      if (pending.kind === "none") setPreviewUri(privatePhoto.uri);
+    } else if (privatePhoto.error) {
+      setLoadFailed(true);
+      setError(tr("plantDetailsModals.changeImage.loadFailed", "Could not load this plant's photo. Please try again."));
+    }
+  }, [visible, currentPhoto, privatePhoto.uri, privatePhoto.error, pending.kind, tr]);
+
+  const showOnlySpinner = !error && (loading || (currentPhoto && !privatePhoto.uri && !privatePhoto.error));
 
   const setPendingSet = useCallback((uri: string) => {
     const busted = withCacheBuster(uri);
     setPreviewUri(busted);
-    setPending({ kind: "set", uri });
+    setPending({ kind: "set", uri, uploadKey: genUploadKey() });
+    setError(null);
   }, []);
 
   const setPendingRemove = useCallback(() => {
@@ -191,7 +230,10 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       mediaType: "photo",
       saveToPhotos: false,
       includeBase64: false,
-      quality: 0.92,
+      quality: 0.8,
+      maxWidth: 1280,
+      maxHeight: 1280,
+      assetRepresentationMode: "compatible",
     };
 
     const res = await launchCamera(opts);
@@ -215,7 +257,10 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       mediaType: "photo",
       selectionLimit: 1,
       includeBase64: false,
-      quality: 0.92,
+      quality: 0.8,
+      maxWidth: 1280,
+      maxHeight: 1280,
+      assetRepresentationMode: "compatible",
     };
 
     const res = await launchImageLibrary(opts);
@@ -243,12 +288,20 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     }
 
     savingRef.current = true;
+    const targetPlantId = String(plantId);
+    const generation = contextRef.current.generation;
+    const isCurrent = () => contextRef.current.visible && contextRef.current.generation === generation
+      && String(contextRef.current.plantId) === targetPlantId;
     setLoading(true);
     setError(null);
 
     try {
       if (pending.kind === "remove") {
-        await deletePlantPhotoById(plantId);
+        await deletePlantPhoto(plantId, { expectedPhotoId: currentPhoto?.id ?? null });
+        await deletePlantPhotoById(plantId).catch(() => {});
+        if (!isCurrent()) return;
+        setCurrentPhoto(null);
+        setLegacySourceUri(null);
         setPersistedUri(null);
         setPreviewUri(null);
         setPending({ kind: "none" });
@@ -259,34 +312,34 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
         return;
       }
 
-      // set
-      const tmp = await persistTempPlantPhoto({
-        sourceUri: pending.uri,
-        fileNameHint: undefined,
-        tempKey: genTempKey(),
+      const photo = await uploadPlantPhoto(plantId, pending.uri, {
+        uploadKey: pending.uploadKey,
+        expectedPhotoId: currentPhoto?.id ?? null,
       });
-
-      const finalUri = await promoteTempPhotoToPlant({
-        tempPhotoUri: tmp,
-        plantId: String(plantId),
-      });
-
-      const bustedFinal = withCacheBuster(finalUri);
-
-      setPersistedUri(bustedFinal);
-      setPreviewUri(bustedFinal);
+      // Once the server has committed the replacement, obsolete legacy photos
+      // must not override it or reappear after a later server-side removal.
+      await deletePlantPhotoById(plantId).catch(() => {});
+      if (!isCurrent()) return;
+      setCurrentPhoto(photo);
+      setLegacySourceUri(null);
       setPending({ kind: "none" });
-      initialPersistedUriRef.current = bustedFinal;
-
-      onChanged?.(bustedFinal);
+      onChanged?.(photo);
       onClose();
     } catch (e: any) {
-      setError(e?.message || tr("plantDetailsModals.changeImage.saveFailedMsg", "Could not save this photo locally."));
+      if (!isCurrent()) return;
+      const code = e instanceof ApiError ? e.body?.code : undefined;
+      const key = code === "invalid_photo" ? "invalidPhoto"
+        : code === "upload_too_large" ? "uploadTooLarge"
+        : code === "photo_quota_exceeded" ? "photoQuota"
+        : code === "photo_storage_unavailable" ? "photoStorage"
+        : code === "photo_conflict" ? "photoConflict" : "saveFailedMsg";
+      if (code === "photo_conflict") setConflicted(true);
+      setError(tr(`plantDetailsModals.changeImage.${key}`, "Could not update the photo. Your previous photo is unchanged. Please try again."));
     } finally {
       savingRef.current = false;
-      setLoading(false);
+      if (isCurrent()) setLoading(false);
     }
-  }, [plantId, pending, onChanged, onClose, tr]);
+  }, [plantId, pending, currentPhoto, onChanged, onClose, tr]);
 
   const discardChanges = useCallback(() => {
     if (savingRef.current) return;
@@ -305,7 +358,8 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     return !!previewUri || !!persistedUri;
   }, [previewUri, persistedUri, loading, pending.kind]);
 
-  const canSave = useMemo(() => pending.kind !== "none" && !loading, [pending.kind, loading]);
+  const canSave = useMemo(() => pending.kind !== "none" && !loading && !loadFailed && !conflicted,
+    [pending.kind, loading, loadFailed, conflicted]);
 
   if (!visible) return null;
 
@@ -331,7 +385,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
             <View style={styles.spinnerBox}>
               <CenteredSpinner size={42} />
             </View>
-          ) : error ? (
+          ) : error && loadFailed ? (
             <ScrollView
               style={styles.scroll}
               keyboardShouldPersistTaps="handled"
@@ -363,8 +417,12 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
               </View>
 
               <Text style={styles.desc}>
-                {tr("plantDetailsModals.changeImage.subtitle", "This photo is stored locally on your device and is not uploaded.")}
+                {tr("plantDetailsModals.changeImage.subtitle", "Your photo is synced privately and is visible only to you and people with access to this plant.")}
               </Text>
+
+              {!!legacySourceUri && !currentPhoto && <Text style={styles.desc}>
+                {tr("plantDetailsModals.changeImage.legacyInfo", "This older photo is stored only on this phone. Choose Upload this photo to sync it.")}
+              </Text>}
 
               <View style={styles.previewFrame}>
                 {previewUri ? (
@@ -387,8 +445,14 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
                   <Text style={styles.unsavedText}>{tr("plantDetailsModals.changeImage.unsaved", "Unsaved changes")}</Text>
                 </View>
               )}
+              {!!error && <Text accessibilityRole="alert" style={[styles.desc, { color: "#FFB4B4" }]}>{error}</Text>}
 
               <View style={styles.actions}>
+                {!!legacySourceUri && !currentPhoto && <Pressable style={styles.actionFull}
+                  onPress={() => setPendingSet(legacySourceUri)} disabled={loading || conflicted}>
+                  <MaterialCommunityIcons name="cloud-upload-outline" size={18} color="#FFFFFF" />
+                  <Text style={styles.actionText}>{tr("plantDetailsModals.changeImage.uploadExisting", "Upload this photo")}</Text>
+                </Pressable>}
                 <Pressable
                   style={[styles.actionFull, styles.actionPrimary]}
                   onPress={doPickFromCamera}

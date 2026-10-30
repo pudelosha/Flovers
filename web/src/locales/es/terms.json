@@ -64,7 +64,7 @@
       "title": "§ 6. Contenido del Usuario y licencia",
       "p1": "El Usuario conserva los derechos que la ley le reconozca sobre su Contenido.",
       "p2": "El Usuario concede al Proveedor de Servicios una licencia no exclusiva y gratuita para almacenar, conservar, reproducir, mostrar y tratar su Contenido únicamente para prestar y mantener el Servicio. La licencia puede revocarse al eliminar la Cuenta o el Contenido. Solo es transferible en la medida necesaria para prestar el Servicio.",
-      "p3": "Para el Reconocimiento de plantas, el Usuario puede enviar una foto al sistema del Proveedor de Servicios. Este declara no conservarla más tiempo del necesario para identificar la planta, salvo que el Usuario utilice una función que requiera guardarla.",
+      "p3": "Las fotos enviadas únicamente para el Reconocimiento de plantas se tratan para identificar la planta y no se guardan automáticamente como fotos de las plantas. Guardar una foto de una planta no implica que se envíe automáticamente para su reconocimiento ni que se utilice para entrenar modelos de reconocimiento.",
       "p4": "El Usuario declara que tiene derechos sobre el contenido que proporciona al Servicio y que no infringe los derechos de terceros."
     },
     "section7": {
@@ -82,7 +82,7 @@
     "section8": {
       "title": "§ 8. Códigos QR, enlaces y claves de acceso",
       "p1": "El Servicio puede permitir generar códigos QR o enlaces (por ejemplo, a una Planta propia). El Usuario es responsable de almacenarlos y compartirlos.",
-      "p2": "Si el Usuario comparte con terceros enlaces, identificadores o claves de acceso, por ejemplo para consultar mediciones, esas personas podrán acceder a la información dentro de los permisos concedidos. El Usuario asume el riesgo de compartirlos."
+      "p2": "El código QR de una planta, su identificador o la dirección de una foto no son credenciales de acceso: el destinatario debe iniciar sesión y tener acceso concedido mediante el uso compartido de la planta. Los secretos de autenticación de los dispositivos y las credenciales de la Cuenta deben mantenerse confidenciales."
     },
     "section9": {
       "title": "§ 9. Posibles pagos y planes futuros",
@@ -132,13 +132,24 @@
       "title": "§ 16. Ley aplicable y resolución de disputas",
       "p1": "Estas Condiciones se rigen por la legislación polaca, sin perjuicio de las normas imperativas de protección de los consumidores.",
       "p2": "Las partes deben intentar resolver los conflictos de forma amistosa en primer lugar, por ejemplo mediante contacto por correo y buscando un acuerdo.",
-      "p3": "El consumidor puede utilizar métodos extrajudiciales de resolución de disputas y la plataforma ODR (Resolución de Disputas en Línea) disponible en: https://ec.europa.eu/consumers/odr/.",
+      "p3": "Los consumidores pueden recurrir a los procedimientos extrajudiciales aplicables para resolver litigios de consumo. La Comisión Europea publica información sobre las vías de reclamación de los consumidores y listas de organismos de resolución de litigios en https://consumer-redress.ec.europa.eu/.",
       "p4": "La jurisdicción en disputas con consumidores se determina de acuerdo con las disposiciones de la legislación aplicable."
     },
     "section17": {
       "title": "§ 17. Cambios en las Condiciones",
       "p1": "El Proveedor de Servicios puede modificar las Condiciones por motivos importantes, como cambios legales, la evolución del Servicio o cambios tecnológicos.",
       "p2": "El Proveedor de Servicios informará de los cambios en el Sitio Web y/o en la Aplicación. Continuar usando el Servicio después de la entrada en vigor de los cambios implica aceptar las Condiciones actualizadas."
+    },
+    "section18": {
+      "title": "§ 18. Fotos de las plantas",
+      "items": [
+        "Una foto seleccionada en el asistente de creación de una planta se sube al Servicio después de crear la planta. En el editor de fotos de la planta, la subida se realiza cuando el Usuario guarda el cambio. Las fotos antiguas guardadas solo en un teléfono permanecen en ese dispositivo, salvo que el Usuario elija expresamente subirlas.",
+        "Los Usuarios conservan sus derechos sobre sus fotos. Deben disponer de los derechos y permisos necesarios para subirlas y compartirlas y deben respetar la privacidad de otras personas. La licencia prevista en el § 6 cubre únicamente el tratamiento necesario para prestar y mantener el Servicio.",
+        "El Servicio reduce y comprime las fotos de las plantas, crea imágenes para su visualización y miniaturas, corrige la orientación y elimina los metadatos EXIF/GPS incorporados. Los originales subidos no se conservan como archivo permanente. Los Usuarios deberían guardar sus propios originales si necesitan la resolución completa.",
+        "Las fotos de las plantas no son públicas. En la Aplicación solo pueden verlas el propietario y los Usuarios que hayan iniciado sesión y tengan acceso compartido activo a esa planta; solo el propietario puede cambiarlas o eliminarlas. El personal técnico autorizado y los proveedores de servicios solo pueden tratarlas en la medida necesaria para el funcionamiento, la seguridad o el mantenimiento del Servicio.",
+        "Sustituir o eliminar una foto, así como eliminar la planta asociada o la Cuenta, pone fin al acceso a la foto anterior a través del Servicio y programa su eliminación del almacenamiento activo. Los intentos de eliminación fallidos se repiten. Las posibles copias de seguridad de recuperación gestionadas por separado pueden conservar copias hasta la rotación que les corresponda.",
+        "Subir fotos es opcional. Se aplican límites de formato, tamaño de archivo, almacenamiento y frecuencia de subida; una subida rechazada no sustituye la foto actual."
+      ]
     }
   }
 }

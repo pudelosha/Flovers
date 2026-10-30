@@ -3,6 +3,7 @@ from django.db import models
 from django.core.validators import MinValueValidator
 from django.utils import timezone
 import secrets
+import uuid
 
 # Reuse the enums already used on mobile (keep keys identical)
 LIGHT_LEVEL_CHOICES = [
@@ -102,3 +103,36 @@ class PlantCreationRequest(models.Model):
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=["user", "creation_key"], name="plant_creation_user_key_unique")]
+
+
+class PlantImage(models.Model):
+    """Private image metadata; bytes never live in PostgreSQL or public media."""
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    plant = models.ForeignKey(PlantInstance, on_delete=models.CASCADE, related_name="images")
+    purpose = models.CharField(max_length=12, default="cover", editable=False)
+    upload_key = models.UUIDField()
+    directory = models.CharField(max_length=160, unique=True, editable=False)
+    width = models.PositiveSmallIntegerField()
+    height = models.PositiveSmallIntegerField()
+    byte_size = models.PositiveIntegerField()
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["plant"], condition=models.Q(purpose="cover"), name="plant_one_current_cover")]
+
+
+class PhotoStorageLock(models.Model):
+    """A stable database admission lock serializes global quota checks."""
+
+    id = models.PositiveSmallIntegerField(primary_key=True, default=1, editable=False)
+
+
+class PhotoFileDeletion(models.Model):
+    """Durable filesystem cleanup survives rollbacks, worker and broker failures."""
+
+    directory = models.CharField(max_length=160, unique=True)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    next_attempt_at = models.DateTimeField(default=timezone.now)
+    attempts = models.PositiveIntegerField(default=0)
+    last_error = models.CharField(max_length=500, blank=True, default="")

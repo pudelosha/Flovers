@@ -22,7 +22,7 @@
         "body": [
           "The 3-dot menu associated with the plant header provides additional actions related to the plant itself.",
           "Available actions include viewing the Plant Definition (if the plant is linked to one), editing plant details, changing the plant image, and navigating to Reminders filtered for this plant.",
-          "Removing your custom photo deletes the local copy. The catalogue image appears again if the plant has a definition with an image."
+          "Replacing a photo removes the previous server copy after the new photo is saved. Removing the custom photo restores the catalogue image when one is available."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "heading": "Important notes",
         "body": [
-          "User-added plant images are stored only on the user’s device and are not uploaded to the Flovers backend.",
+          "When you save, your photo is resized and uploaded to private server storage. Only you and people with active sharing access to this plant can view it.",
           "Predefined plant images come from the Flovers backend and may be AI-generated.",
           "Sensor readings and care suggestions are informative and should be combined with the user’s own judgment."
         ]

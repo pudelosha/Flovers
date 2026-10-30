@@ -1,4 +1,5 @@
 import { ApiError, request } from "../client";
+import { parsePlantPhoto } from "./plant-photos.service";
 import type {
   PlantShare, PlantSharingUpdate, SharingContact, SharingErrorCode, SharingSnapshot,
 } from "../../features/sharing/types/sharing.types";
@@ -65,7 +66,8 @@ export function parseSharingSnapshot(response: unknown): SharingSnapshot {
       canCompleteTasks: item.can_complete_tasks, endsOn: date(item.ends_on),
       isExpired: item.is_expired, expiresAt: optionalString(item.expires_at),
       plant: { id: id(plant.id), name: plant.name, latin: optionalString(plant.latin),
-        location: optionalString(plant.location), imageUrl: optionalString(plant.image_url) },
+        location: optionalString(plant.location), imageUrl: optionalString(plant.image_url),
+        photo: parsePlantPhoto(plant.photo) },
     };
   });
   const rawVersions = record(data.versions), versions: Record<string, number> = {};

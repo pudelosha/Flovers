@@ -18,7 +18,8 @@
         "menangani pesan yang dikirim melalui formulir kontak",
         "memastikan pengoperasian aplikasi dan situs web dengan benar",
         "memberikan pengingat, tugas, dan pemberitahuan terkait perawatan tanaman hias",
-        "memastikan keamanan sistem dan memelihara log teknis"
+        "memastikan keamanan sistem dan memelihara log teknis",
+        "menyimpan, menyinkronkan, dan menampilkan foto tanaman kepada Pengguna dan orang yang diberi akses oleh Pengguna melalui berbagi tanaman"
       ],
       "legalBasis": "Dasar hukum pemrosesan data adalah Pasal 6(1)(b) GDPR (pelaksanaan kontrak), Pasal 6(1)(c) GDPR (kewajiban hukum), dan Pasal 6(1)(f) GDPR (kepentingan sah Pengendali)."
     },
@@ -32,9 +33,10 @@
         "data perangkat teknis (jenis perangkat, sistem operasi, versi aplikasi)",
         "Alamat IP",
         "data orientasi perangkat (misalnya untuk mengoptimalkan paparan cahaya tanaman hias)",
-        "data yang dimasukkan oleh pengguna terkait tanaman hias, pengukuran, dan pembacaan sensor IoT"
+        "data yang dimasukkan oleh pengguna terkait tanaman hias, pengukuran, dan pembacaan sensor IoT",
+        "foto tanaman yang diunggah Pengguna, kaitannya dengan tanaman dan Akun, serta informasi teknis gambar yang terkait"
       ],
-      "note": "Foto yang diambil oleh pengguna umumnya diproses secara lokal di perangkat pengguna kecuali pengguna memilih untuk menggunakan fitur yang memerlukan pemrosesan sisi server."
+      "note": "Untuk menyinkronkan dan menampilkan foto, Layanan memproses isi foto, kaitannya dengan Akun dan tanaman milik Pengguna, serta informasi teknis seperti dimensi gambar, ukuran file, dan waktu unggahan. Foto itu sendiri dapat mengungkap informasi pribadi, misalnya wajah atau detail rumah."
     },
     "section4": {
       "title": "§ 4. Akun pengguna dan keamanan",
@@ -57,10 +59,10 @@
     },
     "section7": {
       "title": "§ 7. Penerima data dan tempat pengolahannya",
-      "p1": "Data pribadi diproses di server yang berlokasi di Uni Eropa.",
+      "p1": "Data Akun dan foto tanaman yang disimpan dihosting di server Pengendali yang berlokasi di Uni Eropa.",
       "p2": "Infrastruktur server disediakan oleh Hetzner Online GmbH.",
       "p3": "Pengontrol dapat menggunakan layanan Firebase untuk tujuan menangani notifikasi push.",
-      "p4": "Data pribadi tidak ditransfer ke negara ketiga di luar Uni Eropa."
+      "p4": "Firebase Cloud Messaging beroperasi melalui infrastruktur global dan dapat memproses data terkait notifikasi di luar Wilayah Ekonomi Eropa. Hal ini tidak mengubah lokasi penyimpanan file foto tanaman. Informasi mengenai pengaturan yang berlaku dengan penyedia layanan dapat diminta kepada Pengendali."
     },
     "section8": {
       "title": "§ 8. Periode penyimpanan data",
@@ -86,6 +88,18 @@
       "p1": "Pengendali menerapkan tindakan teknis dan organisasi yang sesuai untuk melindungi data pribadi.",
       "p2": "Pengendali berhak memperbarui Kebijakan Privasi ini.",
       "p3": "Versi Kebijakan Privasi saat ini selalu tersedia di situs web Flovers dan dalam aplikasi seluler."
+    },
+    "section11": {
+      "title": "§ 11. Foto tanaman dan penanganan gambar",
+      "items": [
+        "Untuk menyinkronkan dan menampilkan foto, Layanan memproses isi foto, kaitannya dengan Akun dan tanaman milik Pengguna, serta informasi teknis seperti dimensi gambar, ukuran file, dan waktu unggahan. Foto itu sendiri dapat mengungkap informasi pribadi, misalnya wajah atau detail rumah.",
+        "Foto yang dipilih dalam panduan pembuatan tanaman diunggah ke Layanan setelah tanaman dibuat. Unggahan melalui editor foto tanaman dikirim saat Pengguna menyimpan perubahan. Foto lama yang hanya tersimpan di ponsel tetap berada di perangkat tersebut, kecuali Pengguna secara tegas memilih untuk mengunggahnya.",
+        "Layanan mengubah ukuran dan mengompres foto tanaman, membuat gambar tampilan dan gambar mini, memperbaiki orientasi, serta menghapus metadata EXIF/GPS yang tertanam. Foto asli yang diunggah tidak disimpan sebagai arsip permanen. Pengguna sebaiknya menyimpan foto asli sendiri jika memerlukan resolusi penuh.",
+        "Foto tanaman tidak bersifat publik. Di dalam Aplikasi, hanya pemilik dan Pengguna yang sudah masuk serta memiliki akses berbagi aktif ke tanaman tersebut yang dapat melihatnya; hanya pemilik yang dapat mengubah atau menghapusnya. Staf teknis dan penyedia layanan yang berwenang hanya dapat memprosesnya sejauh diperlukan untuk menjalankan, mengamankan, atau memelihara Layanan.",
+        "Mengganti atau menghapus foto, maupun menghapus tanaman atau Akun yang terkait, mengakhiri akses ke foto lama melalui Layanan dan menjadwalkan penghapusannya dari penyimpanan aktif. Pembersihan yang gagal akan dicoba kembali. Salinan mungkin tetap ada dalam cadangan pemulihan yang dikelola secara terpisah, jika ada, sampai cadangan tersebut diganti sesuai siklus rotasinya.",
+        "Aplikasi menyimpan foto tanaman yang diunduh dalam cache sementara yang terkait dengan sesi dan membersihkan cache tersebut saat keluar. Berakhirnya atau dicabutnya akses berbagi mencegah pengunduhan berikutnya yang memerlukan izin, tetapi tidak dapat menghapus tangkapan layar, salinan tersimpan, atau foto asli yang sudah ada di perangkat lain.",
+        "Foto yang dikirim khusus untuk Pengenalan Tanaman diproses untuk mengidentifikasi tanaman dan tidak otomatis disimpan sebagai foto tanaman. Menyimpan foto tanaman tidak secara otomatis mengirimkannya untuk pengenalan atau menggunakannya untuk melatih model pengenalan."
+      ]
     }
   }
 }

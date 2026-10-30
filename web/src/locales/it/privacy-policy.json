@@ -18,7 +18,8 @@
         "gestire le richieste inviate tramite il modulo di contatto",
         "assicurare il corretto funzionamento dell’app e del sito",
         "gestire promemoria, attività e notifiche per la cura delle piante",
-        "proteggere il sistema e gestire i log tecnici"
+        "proteggere il sistema e gestire i log tecnici",
+        "archiviazione, sincronizzazione e visualizzazione delle foto delle piante per l’Utente e per le persone a cui l’Utente concede l’accesso tramite la condivisione delle piante"
       ],
       "legalBasis": "Le basi giuridiche del trattamento sono l’art. 6, par. 1, lett. b del GDPR (esecuzione del contratto), l’art. 6, par. 1, lett. c del GDPR (obbligo legale) e l’art. 6, par. 1, lett. f del GDPR (legittimo interesse del Titolare)."
     },
@@ -32,9 +33,10 @@
         "dati tecnici del dispositivo, come tipo di dispositivo, sistema operativo e versione dell’app",
         "indirizzo IP",
         "dati sull’orientamento del dispositivo, ad esempio per valutare l’esposizione delle piante alla luce",
-        "dati inseriti dall’utente su piante, misurazioni e sensori IoT"
+        "dati inseriti dall’utente su piante, misurazioni e sensori IoT",
+        "foto delle piante caricate dall’Utente, loro associazioni a piante e Account e relative informazioni tecniche sulle immagini"
       ],
-      "note": "Di norma, le foto scattate dall’utente vengono elaborate sul dispositivo. L’elaborazione avviene sul server solo quando l’utente sceglie una funzione che lo richiede."
+      "note": "Per sincronizzare e visualizzare le foto, il Servizio tratta il contenuto delle immagini, la loro associazione all’Account e alla pianta dell’Utente e informazioni tecniche quali dimensioni dell’immagine, dimensione del file e momento del caricamento. Una foto può di per sé rivelare informazioni personali, ad esempio volti o dettagli di un’abitazione."
     },
     "section4": {
       "title": "§ 4. Account utente e sicurezza",
@@ -57,10 +59,10 @@
     },
     "section7": {
       "title": "§ 7. Destinatari dei dati e luogo del trattamento",
-      "p1": "I dati personali vengono trattati su server situati nell’Unione europea.",
+      "p1": "I dati degli Account e le foto delle piante salvate sono ospitati sui server del Titolare nell’Unione europea.",
       "p2": "L’infrastruttura server è gestita da Hetzner Online GmbH.",
       "p3": "Il Titolare può utilizzare i servizi Firebase per inviare le notifiche push.",
-      "p4": "Il Titolare non trasferisce dati personali a paesi terzi al di fuori dell’UE."
+      "p4": "Firebase Cloud Messaging utilizza un’infrastruttura globale e può trattare dati relativi alle notifiche al di fuori dello Spazio economico europeo. Ciò non modifica il luogo in cui sono conservati i file delle foto delle piante. È possibile richiedere al Titolare informazioni sugli accordi applicabili con il fornitore."
     },
     "section8": {
       "title": "§ 8. Periodo di conservazione dei dati",
@@ -86,6 +88,18 @@
       "p1": "Il Titolare adotta misure tecniche e organizzative adeguate per proteggere i dati personali.",
       "p2": "Il Titolare si riserva il diritto di aggiornare questa informativa.",
       "p3": "La versione aggiornata è sempre disponibile sul sito web e nell’app Flovers."
+    },
+    "section11": {
+      "title": "§ 11. Foto delle piante e trattamento delle immagini",
+      "items": [
+        "Per sincronizzare e visualizzare le foto, il Servizio tratta il contenuto delle immagini, la loro associazione all’Account e alla pianta dell’Utente e informazioni tecniche quali dimensioni dell’immagine, dimensione del file e momento del caricamento. Una foto può di per sé rivelare informazioni personali, ad esempio volti o dettagli di un’abitazione.",
+        "Una foto selezionata nella procedura guidata di creazione di una pianta viene caricata sul Servizio dopo la creazione della pianta. Nell’editor della foto della pianta, il caricamento avviene quando l’Utente salva la modifica. Le foto precedenti salvate solo sul telefono rimangono locali, a meno che l’Utente non scelga espressamente di caricarle.",
+        "Il Servizio ridimensiona e comprime le foto delle piante, crea immagini per la visualizzazione e miniature, corregge l’orientamento e rimuove i metadati EXIF/GPS incorporati. Gli originali caricati non vengono conservati come archivio permanente. Gli Utenti dovrebbero conservare i propri originali se desiderano mantenere la piena risoluzione.",
+        "Le foto delle piante non sono pubbliche. Nell’Applicazione possono visualizzarle solo il proprietario e gli Utenti che hanno effettuato l’accesso e dispongono di una condivisione attiva della pianta; solo il proprietario può modificarle o rimuoverle. Il personale tecnico autorizzato e i fornitori di servizi possono trattarle esclusivamente nella misura necessaria al funzionamento, alla sicurezza o alla manutenzione del Servizio.",
+        "La sostituzione o la rimozione di una foto, così come l’eliminazione della pianta associata o dell’Account, interrompe l’accesso alla foto precedente tramite il Servizio e ne programma l’eliminazione dallo spazio di archiviazione attivo. I tentativi di eliminazione non riusciti vengono ripetuti. Eventuali backup di ripristino gestiti separatamente possono conservare copie fino alla rispettiva rotazione prevista.",
+        "L’Applicazione mantiene una cache temporanea, legata alla sessione, delle foto delle piante scaricate e la svuota alla disconnessione. La scadenza o la revoca della condivisione impedisce ulteriori download autorizzati, ma non può cancellare screenshot, copie salvate o foto originali già presenti su un altro dispositivo.",
+        "Le foto inviate esclusivamente per il Riconoscimento delle piante vengono trattate per identificare la pianta e non vengono salvate automaticamente come foto delle piante. Il salvataggio di una foto della pianta non ne comporta automaticamente l’invio al riconoscimento né l’utilizzo per addestrare modelli di riconoscimento."
+      ]
     }
   }
 }

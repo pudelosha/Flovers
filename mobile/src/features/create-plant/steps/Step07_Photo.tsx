@@ -119,7 +119,10 @@ export default function Step07_Photo() {
       mediaType: "photo",
       saveToPhotos: false,
       includeBase64: false,
-      quality: 0.92,
+      quality: 0.8,
+      maxWidth: 1280,
+      maxHeight: 1280,
+      assetRepresentationMode: "compatible",
     };
     const res = await launchCamera(opts);
     if (res.didCancel) return;
@@ -151,7 +154,10 @@ export default function Step07_Photo() {
       mediaType: "photo",
       selectionLimit: 1,
       includeBase64: false,
-      quality: 0.92,
+      quality: 0.8,
+      maxWidth: 1280,
+      maxHeight: 1280,
+      assetRepresentationMode: "compatible",
     };
     const res = await launchImageLibrary(opts);
     if (res.didCancel) return;
@@ -215,13 +221,9 @@ export default function Step07_Photo() {
 
         <Text style={wiz.subtitle}>
           {getTranslation(
-            "createPlant.step07.subtitlePrefix",
-            "Photograph your plant so you can spot it faster. The picture is saved locally on your device (app storage) and is "
+            "createPlant.step07.subtitle",
+            "Add a photo to recognise your plant easily. When you create the plant, the photo is uploaded privately and can be viewed by you and people with access to this plant."
           )}
-          <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
-            {getTranslation("createPlant.step07.notUploaded", "not uploaded")}
-          </Text>{" "}
-          {getTranslation("createPlant.step07.subtitleSuffix", "to our servers.")}
         </Text>
 
         {/* Preview frame */}

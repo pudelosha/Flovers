@@ -33,7 +33,7 @@ export default function Terms() {
     <article className="card prose">
       <h1 className="h1 h1-auth">{t("terms.title")}</h1>
       <p className="muted muted-center">
-        {t("terms.lastUpdated", { date: "2026-01-28" })}
+        {t("terms.lastUpdated", { date: "2026-10-30" })}
       </p>
 
       <Section title={t("terms.section1.title")}>
@@ -133,6 +133,10 @@ export default function Terms() {
       <Section title={t("terms.section17.title")}>
         <Para>{t("terms.section17.p1")}</Para>
         <Para>{t("terms.section17.p2")}</Para>
+      </Section>
+
+      <Section title={t("terms.section18.title")}>
+        <Bullets items={t("terms.section18.items", { returnObjects: true })} />
       </Section>
     </article>
   );

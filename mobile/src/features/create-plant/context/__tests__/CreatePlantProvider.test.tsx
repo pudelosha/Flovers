@@ -2,14 +2,17 @@ import React from "react";
 import { act, render } from "@testing-library/react-native";
 import { CreatePlantProvider, useCreatePlantWizard } from "../CreatePlantProvider";
 import { createPlantInstance } from "../../../../api/services/plant-instances.service";
-import { promoteTempPhotoToPlant } from "../../../../shared/utils/photoStorage";
+import { deleteLocalPhoto } from "../../../../shared/utils/photoStorage";
+import { uploadPlantPhoto } from "../../../../api/services/plant-photos.service";
 import { setAuthToken } from "../../../../api/client";
 
 jest.mock("../../../../api/services/plant-instances.service", () => ({ createPlantInstance: jest.fn() }));
-jest.mock("../../../../shared/utils/photoStorage", () => ({ promoteTempPhotoToPlant: jest.fn() }));
+jest.mock("../../../../shared/utils/photoStorage", () => ({ deleteLocalPhoto: jest.fn() }));
+jest.mock("../../../../api/services/plant-photos.service", () => ({ uploadPlantPhoto: jest.fn() }));
 
 const mockCreate = createPlantInstance as jest.Mock;
-const mockPromote = promoteTempPhotoToPlant as jest.Mock;
+const mockUpload = uploadPlantPhoto as jest.Mock;
+const mockDeleteLocal = deleteLocalPhoto as jest.Mock;
 let wizard: ReturnType<typeof useCreatePlantWizard>;
 
 function StateProbe() {
@@ -21,7 +24,8 @@ describe("wizard creation recovery", () => {
   beforeEach(async () => {
     jest.resetAllMocks();
     mockCreate.mockResolvedValue({ id: 99 });
-    mockPromote.mockResolvedValue("file:///documents/Flovers/plants/99.saved.jpg");
+    mockUpload.mockResolvedValue({ id: "photo-id" });
+    mockDeleteLocal.mockResolvedValue(undefined);
     render(<CreatePlantProvider><StateProbe /></CreatePlantProvider>);
     await act(async () => {
       wizard.actions.patch({ selectedLocationId: "4", displayName: "My fern", notes: "Keep these notes" });
@@ -79,18 +83,51 @@ describe("wizard creation recovery", () => {
     }
   });
 
-  it("retries only photo persistence after the backend has created the plant", async () => {
+  it("retries only the photo upload after creation, retaining the source until confirmed", async () => {
     await act(async () => { wizard.actions.setPhotoUri("file:///documents/Flovers/tmp/photo.jpg"); });
-    mockPromote.mockRejectedValueOnce(new Error("Storage full"));
-    await act(async () => { await expect(wizard.actions.createPlant()).rejects.toThrow("Storage full"); });
+    mockUpload.mockRejectedValueOnce(new Error("Offline"));
+    await act(async () => { await expect(wizard.actions.createPlant()).rejects.toThrow("Offline"); });
     expect(wizard.state.createdPlantId).toBe("99");
+    expect(wizard.state.photoUri).toBe("file:///documents/Flovers/tmp/photo.jpg");
+    expect(mockDeleteLocal).not.toHaveBeenCalled();
     await act(async () => { await expect(wizard.actions.createPlant()).resolves.toBe("99"); });
     expect(mockCreate).toHaveBeenCalledTimes(1);
-    expect(mockPromote).toHaveBeenCalledTimes(2);
-    expect(wizard.state.photoUri).toBe("file:///documents/Flovers/plants/99.saved.jpg");
+    expect(mockUpload).toHaveBeenCalledTimes(2);
+    expect(mockUpload.mock.calls[0]).toEqual(["99", "file:///documents/Flovers/tmp/photo.jpg", {
+      expectedPhotoId: null, uploadKey: expect.any(String),
+    }]);
+    expect(mockUpload.mock.calls[1][2].uploadKey).toBe(mockUpload.mock.calls[0][2].uploadKey);
+    expect(mockDeleteLocal).toHaveBeenCalledWith("file:///documents/Flovers/tmp/photo.jpg");
     await act(async () => { await wizard.actions.createPlant(); });
     expect(mockCreate).toHaveBeenCalledTimes(1);
-    expect(mockPromote).toHaveBeenCalledTimes(2);
+    expect(mockUpload).toHaveBeenCalledTimes(2);
+  });
+
+  it("waits for upload success before resolving creation and survives local cleanup failure", async () => {
+    await act(async () => { wizard.actions.setPhotoUri("file:///tmp/new.jpg"); });
+    let finish!: () => void;
+    mockUpload.mockReturnValueOnce(new Promise<void>((resolve) => { finish = resolve; }));
+    mockDeleteLocal.mockRejectedValueOnce(new Error("Cleanup unavailable"));
+    const created = wizard.actions.createPlant();
+    await act(async () => { await Promise.resolve(); });
+    expect(mockUpload).toHaveBeenCalledTimes(1);
+    expect(mockDeleteLocal).not.toHaveBeenCalled();
+    await act(async () => { finish(); await expect(created).resolves.toBe("99"); });
+    await act(async () => { await wizard.actions.createPlant(); });
+    expect(mockUpload).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not attach a late creation response to a newly reset draft", async () => {
+    let finish!: (value: { id: number }) => void;
+    mockCreate.mockReturnValueOnce(new Promise((resolve) => { finish = resolve; }));
+    const previous = wizard.actions.createPlant();
+    const rejection = expect(previous).rejects.toThrow("Creation draft changed.");
+    await act(async () => { wizard.actions.reset(); wizard.actions.patch({ selectedLocationId: "4", displayName: "New draft" }); });
+    await act(async () => { finish({ id: 77 }); await rejection; });
+    expect(wizard.state.createdPlantId).toBeUndefined();
+    await act(async () => { await expect(wizard.actions.createPlant()).resolves.toBe("99"); });
+    expect(mockCreate).toHaveBeenCalledTimes(2);
+    expect(mockCreate.mock.calls[0][1].creationKey).not.toBe(mockCreate.mock.calls[1][1].creationKey);
   });
 
   it("shares an in-flight creation request instead of posting twice", async () => {

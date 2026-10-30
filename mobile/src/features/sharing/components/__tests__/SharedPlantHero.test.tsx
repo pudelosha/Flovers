@@ -3,15 +3,32 @@ import { ImageBackground, StyleSheet } from "react-native";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
 import SharedPlantHero from "../SharedPlantHero";
 import { getPlantPhotoUri } from "../../../../shared/utils/photoStorage";
+import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
 
 jest.mock("../../../../shared/utils/photoStorage", () => ({ getPlantPhotoUri: jest.fn() }));
+jest.mock("../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: jest.fn() }));
 jest.mock("@react-native-masked-view/masked-view", () => (props: any) =>
   require("react").createElement(require("react-native").View, props, props.children));
 
 const photo = getPlantPhotoUri as jest.Mock;
 const plant = { id: "12", name: "Bird", latin: "Strelitzia alba", location: "Living room", imageUrl: "https://example.test/bird.jpg" };
 describe("SharedPlantHero", () => {
-  beforeEach(() => { jest.clearAllMocks(); photo.mockResolvedValue(null); });
+  beforeEach(() => {
+    jest.clearAllMocks(); photo.mockResolvedValue(null);
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: null });
+  });
+
+  it("shows a synced custom thumbnail for owners and recipients without consulting legacy files", () => {
+    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000 };
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
+    const view = render(<SharedPlantHero plant={{ ...plant, photo: metadata }} preferLocalPhoto />);
+    expect(photo).not.toHaveBeenCalled();
+    expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "data:image/jpeg;base64,SYNCED" });
+    view.rerender(<SharedPlantHero plant={{ ...plant, photo: metadata }} expiresAt="2030-01-01T00:00:00Z" />);
+    expect(photo).not.toHaveBeenCalled();
+    expect(usePlantPhoto).toHaveBeenLastCalledWith(metadata, { variant: "thumbnail", expiresAt: "2030-01-01T00:00:00Z" });
+    expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "data:image/jpeg;base64,SYNCED" });
+  });
 
   it("shows the custom name, italic Latin name and a pinned location", () => {
     const view = render(<SharedPlantHero plant={plant} />);

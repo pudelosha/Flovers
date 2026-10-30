@@ -17,9 +17,9 @@
     },
     "changeImage": {
       "title": "Mudar foto",
-      "subtitle": "Esta foto está salva localmente no seu dispositivo e não está sendo enviada.",
+      "subtitle": "Ao guardar, a fotografia é reduzida e enviada para um espaço privado no servidor. Só tu e as pessoas com acesso partilhado ativo a esta planta a podem ver.",
       "noPlantId": "Não foi encontrado o identificador da planta.",
-      "loadFailed": "Não foi possível carregar a foto local.",
+      "loadFailed": "Não foi possível carregar a fotografia. Tenta novamente.",
       "error": "Algo deu errado.",
       "noPhoto": "Nenhuma foto selecionada",
       "removedPreview": "A foto será removida",
@@ -33,14 +33,21 @@
       "cameraErrorTitle": "Erro na câmera",
       "pickerErrorTitle": "Erro na seleção de foto",
       "saveFailedTitle": "Falha ao salvar",
-      "saveFailedMsg": "Não foi possível salvar esta foto localmente.",
+      "saveFailedMsg": "Não foi possível enviar esta fotografia. A fotografia anterior foi mantida.",
       "confirmRemoveTitle": "Remover foto?",
       "confirmRemoveMsg": "A foto será removida após pressionar 'Salvar'.",
       "confirmDiscardTitle": "Descartar alterações?",
       "confirmDiscardMsg": "As alterações não serão salvas.",
       "discard": "Descartar",
       "removeFailedTitle": "Falha ao remover",
-      "removeFailedMsg": "Não foi possível remover a foto local."
+      "removeFailedMsg": "Não foi possível remover a fotografia. Tenta novamente.",
+      "invalidPhoto": "Escolhe uma fotografia JPEG ou PNG válida com até 5 MB.",
+      "uploadTooLarge": "Esta fotografia é demasiado grande. Escolhe uma com até 5 MB.",
+      "photoQuota": "O limite de armazenamento de fotografias foi atingido. Remove as que já não precisas ou contacta o apoio.",
+      "photoStorage": "O armazenamento de fotografias está temporariamente indisponível. Tenta mais tarde.",
+      "photoConflict": "A fotografia foi alterada noutro dispositivo. Fecha esta janela e volta a abri-la antes de guardar.",
+      "uploadExisting": "Enviar esta fotografia",
+      "legacyInfo": "Esta fotografia antiga está guardada apenas neste telemóvel. Escolhe «Enviar esta fotografia» para a sincronizar."
     }
   }
 }

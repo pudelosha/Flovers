@@ -138,11 +138,13 @@ export default function Step09_Creating() {
           {/* Status text */}
           <Text style={[wiz.title, { marginTop: 8, textAlign: "center" }]}>
             {status === "creating"
-              ? getTranslation("createPlant.step09.creating", "creating new plant")
+              ? state.photoUri
+                ? getTranslation("createPlant.step09.uploadingPhoto", "Creating your plant and uploading its photo…")
+                : getTranslation("createPlant.step09.creating", "creating new plant")
               : status === "success"
                 ? getTranslation("createPlant.step09.success", "plant created successfully")
                 : state.createdPlantId
-                  ? getTranslation("createPlant.step09.photoFailed", "Your plant was created, but its photo could not be saved.")
+                  ? getTranslation("createPlant.step09.photoFailed", "Your plant was created, but its photo could not be uploaded. Try again to upload it without creating another plant.")
                   : getTranslation("createPlant.step09.failed", "Could not create your plant. Please try again.")}
           </Text>
 

@@ -62,7 +62,7 @@
       {
         "heading": "Paso 07 — Añadir tu propia foto (opcional)",
         "body": [
-          "Puedes añadir una foto de tu planta desde el teléfono.",
+          "Al guardar, la foto se reduce y se sube a un espacio privado del servidor. Solo podéis verla tú y las personas que tengan acceso compartido activo a esta planta.",
           "Este paso es opcional. Según el recorrido disponible en tu aplicación, también podrás añadir la foto más tarde al editar la planta."
         ]
       },
@@ -77,7 +77,8 @@
       {
         "heading": "Paso 09 — Crear la planta",
         "body": [
-          "El último paso crea la planta automáticamente. Tras unos 2,5 segundos vuelve a Plantas, sin un resumen independiente ni un botón para abrir la nueva planta."
+          "El último paso crea la planta automáticamente. Tras unos 2,5 segundos vuelve a Plantas, sin un resumen independiente ni un botón para abrir la nueva planta.",
+          "Si la subida de la foto falla después de crear la planta, la planta se conserva. Puedes reintentar la subida sin crear un duplicado."
         ]
       },
       {

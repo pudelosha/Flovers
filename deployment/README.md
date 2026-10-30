@@ -1,5 +1,7 @@
 # Backend rollout configuration
 
+Private plant-photo storage, its automatically generated Compose overlay, upload limits and backup requirements are described in [PRIVATE_PHOTOS.md](PRIVATE_PHOTOS.md).
+
 The checked-in `docker-compose.yml` is a development stack. The deployment workflow uses `/opt/app/docker-compose.prod.yml` on the VPS; that file and the live proxy configuration are not in this checkout. A [read-only VPS inspection on 2026-10-15](VPS_CHECK_2026-10-15.md) confirmed host Caddy with a loopback backend and identified the remaining production configuration changes. No production deployment or configuration changes were performed during that inspection.
 
 ## Runtime configuration

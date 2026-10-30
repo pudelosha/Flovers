@@ -2,14 +2,12 @@
   "privacy": {
     "title": "Polityka prywatności",
     "lastUpdated": "Ostatnia aktualizacja: {{date}}",
-
     "section1": {
       "title": "§ 1. Postanowienia ogólne",
       "p1": "Administratorem danych osobowych związanych z korzystaniem ze strony i aplikacji mobilnej Flovers jest Marcin Janowski Copy Paste IT Solutions, z siedzibą przy ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Polska. Kontakt e-mail: info@flovers.app. W dalszej części tego dokumentu używamy określenia „Administrator”.",
       "p2": "Administrator przetwarza dane osobowe zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z 27 kwietnia 2016 r. (RODO).",
       "p3": "Polityka prywatności dotyczy strony internetowej Flovers, aplikacji mobilnej Flovers na Androida (a w przyszłości także na iOS) oraz serwerów obsługujących ich działanie."
     },
-
     "section2": {
       "title": "§ 2. Cele i podstawy przetwarzania danych",
       "intro": "Administrator przetwarza dane osobowe, aby:",
@@ -20,11 +18,11 @@
         "odpowiadać na zgłoszenia z formularza kontaktowego",
         "zapewnić prawidłowe działanie aplikacji i strony",
         "obsługiwać przypomnienia, zadania i powiadomienia związane z pielęgnacją roślin",
-        "dbać o bezpieczeństwo systemu i prowadzić logi techniczne"
+        "dbać o bezpieczeństwo systemu i prowadzić logi techniczne",
+        "przechowywanie, synchronizacja i wyświetlanie zdjęć roślin Użytkownikowi oraz osobom, którym udzielił dostępu przez udostępnienie rośliny"
       ],
       "legalBasis": "Podstawą prawną przetwarzania danych jest art. 6 ust. 1 lit. b RODO (wykonanie umowy), art. 6 ust. 1 lit. c RODO (obowiązek prawny) oraz art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes Administratora)."
     },
-
     "section3": {
       "title": "§ 3. Jakie dane są przetwarzane",
       "intro": "Zależnie od tego, jak korzystasz z aplikacji lub strony, Administrator może przetwarzać:",
@@ -35,11 +33,11 @@
         "dane techniczne urządzenia (typ urządzenia, system operacyjny, wersja aplikacji)",
         "adres IP",
         "dane o orientacji urządzenia (np. by pomóc dobrać lepsze oświetlenie dla roślin)",
-        "wprowadzane przez użytkownika dane o roślinach, pomiarach i odczytach z czujników IoT"
+        "wprowadzane przez użytkownika dane o roślinach, pomiarach i odczytach z czujników IoT",
+        "zdjęcia roślin przesłane przez Użytkownika, ich powiązanie z roślinami i Kontami oraz związane z nimi informacje techniczne o obrazach"
       ],
-      "note": "Zdjęcia są zwykle przetwarzane na twoim urządzeniu. Wyjątkiem są funkcje, które wymagają przesłania zdjęcia na serwer i z których zdecydujesz się skorzystać."
+      "note": "W celu synchronizacji i wyświetlania zdjęć Serwis przetwarza ich zawartość, powiązanie z Kontem Użytkownika i rośliną oraz informacje techniczne, takie jak wymiary obrazu, rozmiar pliku i czas przesłania. Samo zdjęcie może ujawniać dane osobowe, na przykład twarze lub szczegóły mieszkania."
     },
-
     "section4": {
       "title": "§ 4. Konta użytkowników i bezpieczeństwo",
       "p1": "Każdy użytkownik aplikacji Flovers ma własne konto chronione hasłem.",
@@ -47,35 +45,30 @@
       "p3": "Założenie konta wymaga potwierdzenia adresu e-mail.",
       "p4": "Hasło możesz zmienić w każdej chwili lub skorzystać z opcji jego resetowania."
     },
-
     "section5": {
       "title": "§ 5. Powiadomienia i komunikacja",
       "p1": "Administrator wysyła wyłącznie wiadomości związane z korzystaniem z Flovers (wiadomości transakcyjne), w szczególności dotyczące logowania, weryfikacji konta i resetowania hasła.",
       "p2": "Aplikacja może przypominać o zadaniach pielęgnacyjnych za pomocą powiadomień push, np. obsługiwanych przez Firebase.",
       "p3": "W przyszłości może pojawić się newsletter. Wiadomości marketingowe będą wysyłane tylko po uzyskaniu twojej odrębnej zgody."
     },
-
     "section6": {
       "title": "§ 6. Pliki cookies i podobne technologie",
       "p1": "Strona Flovers może używać plików cookies niezbędnych do jej prawidłowego działania.",
       "p2": "Pliki cookies służą wyłącznie celom technicznym i obsłudze funkcji strony.",
       "p3": "Strona nie korzysta z zewnętrznych narzędzi analitycznych ani marketingowych."
     },
-
     "section7": {
       "title": "§ 7. Odbiorcy danych i miejsce przetwarzania",
-      "p1": "Dane osobowe są przetwarzane na serwerach w Unii Europejskiej.",
+      "p1": "Dane Konta i zapisane zdjęcia roślin są przechowywane na serwerach Administratora w Unii Europejskiej.",
       "p2": "Dostawcą serwerów jest Hetzner Online GmbH.",
       "p3": "Do obsługi powiadomień push Administrator może korzystać z usług Firebase.",
-      "p4": "Administrator nie przekazuje danych osobowych do państw poza Unią Europejską."
+      "p4": "Firebase Cloud Messaging korzysta z infrastruktury globalnej i może przetwarzać dane związane z powiadomieniami poza Europejskim Obszarem Gospodarczym. Nie zmienia to miejsca przechowywania plików zdjęć roślin. Informacje o właściwych ustaleniach z dostawcą można uzyskać od Administratora."
     },
-
     "section8": {
       "title": "§ 8. Okres przechowywania danych",
       "p1": "Dane osobowe są przechowywane tak długo, jak istnieje konto użytkownika.",
       "p2": "Po usunięciu konta dane są trwale usuwane lub anonimizowane, chyba że przepisy prawa wymagają ich dalszego przechowywania."
     },
-
     "section9": {
       "title": "§ 9. Prawa osób, których dane dotyczą",
       "intro": "Masz prawo do:",
@@ -90,12 +83,23 @@
       "p2": "Aby skorzystać z tych praw, napisz do Administratora na adres info@flovers.app.",
       "p3": "Masz też prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych."
     },
-
     "section10": {
       "title": "§ 10. Postanowienia końcowe",
       "p1": "Administrator chroni dane osobowe za pomocą odpowiednich środków technicznych i organizacyjnych.",
       "p2": "Administrator może aktualizować tę Politykę prywatności.",
       "p3": "Aktualną wersję Polityki prywatności znajdziesz zawsze na stronie Flovers i w aplikacji mobilnej."
+    },
+    "section11": {
+      "title": "§ 11. Zdjęcia roślin i ich przetwarzanie",
+      "items": [
+        "W celu synchronizacji i wyświetlania zdjęć Serwis przetwarza ich zawartość, powiązanie z Kontem Użytkownika i rośliną oraz informacje techniczne, takie jak wymiary obrazu, rozmiar pliku i czas przesłania. Samo zdjęcie może ujawniać dane osobowe, na przykład twarze lub szczegóły mieszkania.",
+        "Zdjęcie wybrane w kreatorze dodawania rośliny jest przesyłane do Serwisu po utworzeniu rośliny. W edytorze zdjęcia przesłanie następuje po zapisaniu zmiany przez Użytkownika. Starsze zdjęcia zapisane wyłącznie w telefonie pozostają na tym urządzeniu, dopóki Użytkownik wyraźnie nie wybierze ich przesłania.",
+        "Serwis zmniejsza rozdzielczość i kompresuje zdjęcia roślin, tworzy wersje do wyświetlania i miniatury, koryguje orientację oraz usuwa osadzone metadane EXIF/GPS. Przesłane oryginały nie są przechowywane jako stałe archiwum. Użytkownik powinien zachować własne oryginały, jeżeli potrzebuje pełnej rozdzielczości.",
+        "Zdjęcia roślin nie są publiczne. W Aplikacji może je oglądać właściciel oraz zalogowani Użytkownicy z aktywnym dostępem do udostępnionej rośliny; tylko właściciel może zmieniać lub usuwać zdjęcia. Upoważniony personel techniczny i dostawcy usług mogą je przetwarzać wyłącznie w zakresie niezbędnym do działania, zabezpieczenia lub utrzymania Serwisu.",
+        "Po zastąpieniu lub usunięciu zdjęcia albo po usunięciu powiązanej rośliny lub Konta poprzednie zdjęcie przestaje być dostępne w Serwisie. Serwis usuwa plik w ramach porządkowania bieżących danych i ponawia tę czynność, jeśli wystąpi błąd. Ewentualne, odrębnie utrzymywane kopie zapasowe mogą zachować zdjęcie do czasu ich wymiany zgodnie z przyjętą rotacją.",
+        "Aplikacja tymczasowo przechowuje pobrane zdjęcia roślin w pamięci podręcznej powiązanej z sesją i czyści ją przy wylogowaniu. Wygaśnięcie lub cofnięcie udostępnienia blokuje dalsze uprawnione pobieranie zdjęć, ale nie usuwa zrzutów ekranu, zapisanych kopii ani oryginałów znajdujących się już na innym urządzeniu.",
+        "Zdjęcia przesłane wyłącznie do Rozpoznawania roślin są przetwarzane w celu identyfikacji rośliny i nie są automatycznie zapisywane jako jej zdjęcia. Zapisanie zdjęcia rośliny nie powoduje automatycznego przesłania go do rozpoznawania ani wykorzystania do trenowania modeli rozpoznawania."
+      ]
     }
   }
 }

@@ -3,7 +3,12 @@
     "step09": {
       "creating": "creación de una nueva planta",
       "success": "la planta ha sido creada",
-      "idPrefix": "ID"
+      "idPrefix": "ID",
+      "uploadingPhoto": "Creando tu planta y subiendo su foto…",
+      "photoFailed": "Tu planta se ha creado, pero no se ha podido subir su foto. Reintenta la subida; no se creará otra planta.",
+      "retry": "Reintentar",
+      "openPlants": "Ir a plantas",
+      "failed": "No se ha podido crear tu planta. Inténtalo de nuevo."
     }
   }
 }
