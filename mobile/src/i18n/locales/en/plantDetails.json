@@ -31,13 +31,14 @@
       "qrEmailed": "QR code email sent.",
       "qrEmailFailed": "Failed to send QR code email.",
       "qrEmailPlaceholder": "An email with this QR code will be sent to your account address.",
-
       "missingDeviceId": "Missing device ID",
       "pumpStatusLoadFailed": "Failed to load watering schedule",
       "wateringScheduled": "Watering scheduled",
       "wateringScheduleFailed": "Failed to schedule watering",
       "wateringRecalled": "Scheduled watering recalled",
-      "wateringRecallFailed": "Failed to recall watering"
+      "wateringRecallFailed": "Failed to recall watering",
+      "photoUpdated": "Photo saved.",
+      "photoRemoved": "Photo removed."
     },
     "permissions": {
       "storage": {
@@ -93,7 +94,6 @@
       "opening": "Opening...",
       "scheduleWatering": "Schedule watering",
       "unscheduleWatering": "Unschedule watering",
-
       "lastRead": {
         "empty": "Last read: —",
         "value": "Last read: {{date}} {{time}}"

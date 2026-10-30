@@ -28,7 +28,7 @@
       "chooseGallery": "Wybierz z galerii",
       "remove": "Usuń zdjęcie",
       "permissionTitle": "Wymagane uprawnienia",
-      "permissionCamera": "Nadaj uprawnienia do aparatu i multimediów, aby zrobić zdjęcie.",
+      "permissionCamera": "Zezwól aplikacji na dostęp do aparatu, aby zrobić zdjęcie.",
       "permissionGallery": "Nadaj uprawnienia do multimediów, aby wybrać zdjęcie.",
       "cameraErrorTitle": "Błąd aparatu",
       "pickerErrorTitle": "Błąd wyboru zdjęcia",
@@ -47,7 +47,10 @@
       "photoStorage": "Zapisywanie zdjęć jest chwilowo niedostępne. Spróbuj później.",
       "photoConflict": "Zdjęcie zostało zmienione na innym urządzeniu. Zamknij to okno i otwórz je ponownie przed zapisem.",
       "uploadExisting": "Prześlij to zdjęcie",
-      "legacyInfo": "To starsze zdjęcie jest zapisane tylko w tym telefonie. Wybierz „Prześlij to zdjęcie”, aby było dostępne także na innych urządzeniach."
+      "legacyInfo": "To starsze zdjęcie jest zapisane tylko w tym telefonie. Wybierz „Prześlij to zdjęcie”, aby było dostępne także na innych urządzeniach.",
+      "cameraPermission": "Zezwól aplikacji na dostęp do aparatu w ustawieniach telefonu, aby zrobić zdjęcie.",
+      "cameraFailed": "Nie udało się otworzyć aparatu. Spróbuj ponownie.",
+      "pickerFailed": "Nie udało się otworzyć wyboru zdjęć. Spróbuj ponownie."
     }
   }
 }

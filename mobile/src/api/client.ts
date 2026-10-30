@@ -365,6 +365,13 @@ async function requestInternal<T>(
       if (blob.size > maxBytes) {
         throw new ApiError(413, { code: "photo_response_too_large" }, "Photo response is too large");
       }
+      // Android's native XHR Blob contains the bytes but omits its MIME type.
+      // Keep the server's Content-Type so FileReader produces an image data URI.
+      // slice creates a view of the same native bytes rather than copying them.
+      const contentType = (res.headers.get("content-type") ?? "").split(";", 1)[0].trim().toLowerCase();
+      if (!blob.type && /^[a-z0-9!#$&^_.+-]+\/[a-z0-9!#$&^_.+-]+$/.test(contentType)) {
+        return blob.slice(0, blob.size, contentType) as T;
+      }
       return blob as T;
     } finally {
       if (bodyTimer) clearTimeout(bodyTimer);

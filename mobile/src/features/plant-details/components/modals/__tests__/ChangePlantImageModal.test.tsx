@@ -1,19 +1,20 @@
 import React from "react";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
-import { Image } from "react-native";
-import { launchImageLibrary } from "react-native-image-picker";
+import { Image, PermissionsAndroid, Platform } from "react-native";
+import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import ChangePlantImageModal from "../ChangePlantImageModal";
 import { getPlantPhotoUri, deletePlantPhotoById } from "../../../../../shared/utils/photoStorage";
 import { fetchPlantInstanceDetail } from "../../../../../api/services/plant-instances.service";
 import { uploadPlantPhoto, deletePlantPhoto } from "../../../../../api/services/plant-photos.service";
 import { ApiError } from "../../../../../api/client";
+import { usePlantPhoto } from "../../../../../shared/hooks/usePlantPhoto";
 
 jest.mock("react-native-image-picker", () => ({ launchCamera: jest.fn(), launchImageLibrary: jest.fn() }));
 jest.mock("react-i18next", () => { const t = (key: string) => key; return { useTranslation: () => ({ t }) }; });
 jest.mock("../../../../../shared/utils/photoStorage", () => ({ getPlantPhotoUri: jest.fn(), deletePlantPhotoById: jest.fn() }));
 jest.mock("../../../../../api/services/plant-instances.service", () => ({ fetchPlantInstanceDetail: jest.fn() }));
 jest.mock("../../../../../api/services/plant-photos.service", () => ({ uploadPlantPhoto: jest.fn(), deletePlantPhoto: jest.fn() }));
-jest.mock("../../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: (photo: any) => ({ uri: photo ? `data:image/jpeg;base64,${photo.id}` : null, loading: false, error: null }) }));
+jest.mock("../../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: jest.fn() }));
 
 const oldPhoto = { id: "11111111-1111-4111-8111-111111111111", url: "/old/", thumbnail_url: "/old/thumb/", width: 800, height: 600, byte_size: 90000 };
 const newPhoto = { ...oldPhoto, id: "22222222-2222-4222-8222-222222222222" };
@@ -28,8 +29,11 @@ describe("private photo save lifecycle", () => {
     fetchDetail.mockResolvedValue({ id: 7, photo: oldPhoto });
     (getPlantPhotoUri as jest.Mock).mockResolvedValue("file:///old.jpg");
     (launchImageLibrary as jest.Mock).mockResolvedValue({ assets: [{ uri: "file:///picked.jpg" }] });
+    (launchCamera as jest.Mock).mockResolvedValue({ assets: [{ uri: "file:///camera.jpg" }] });
+    (usePlantPhoto as jest.Mock).mockImplementation((photo: any) => ({ uri: photo ? `data:image/jpeg;base64,${photo.id}` : null, loading: false, error: null }));
     upload.mockResolvedValue(newPhoto); remove.mockResolvedValue(undefined); deleteLocal.mockResolvedValue(undefined);
   });
+  afterEach(() => { jest.restoreAllMocks(); });
   async function open() {
     const onClose = jest.fn(), onChanged = jest.fn();
     const screen = render(<ChangePlantImageModal visible plantId="7" onClose={onClose} onChanged={onChanged} />);
@@ -102,6 +106,38 @@ describe("private photo save lifecycle", () => {
     const screen = render(<ChangePlantImageModal visible plantId="7" onClose={jest.fn()} />);
     await waitFor(() => expect(screen.getByText("Could not load this plant's photo. Please try again.")).toBeTruthy());
     expect(screen.queryByText("Choose from gallery")).toBeNull(); expect(upload).not.toHaveBeenCalled();
+  });
+  it("does not hide a failed protected-photo read behind the catalogue fallback", async () => {
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: new Error("Read failed") });
+    const screen = render(<ChangePlantImageModal visible plantId="7" onClose={jest.fn()} />);
+    await waitFor(() => expect(screen.getByText("Could not load this plant's photo. Please try again.")).toBeTruthy());
+    expect(screen.queryByText("Choose from gallery")).toBeNull(); expect(upload).not.toHaveBeenCalled();
+  });
+  it("opens the Android system picker without camera or broad media permission", async () => {
+    jest.replaceProperty(Platform, "OS", "android");
+    const requestPermission = jest.spyOn(PermissionsAndroid, "requestMultiple");
+    const { screen } = await open(); await pick(screen);
+    expect(requestPermission).not.toHaveBeenCalled();
+    expect(screen.UNSAFE_getByType(Image).props.source.uri).toContain("picked.jpg");
+  });
+  it("requests only camera permission and explains denial without reporting success", async () => {
+    jest.replaceProperty(Platform, "OS", "android");
+    const permission = PermissionsAndroid.PERMISSIONS.CAMERA;
+    const requestPermission = jest.spyOn(PermissionsAndroid, "requestMultiple").mockResolvedValue({
+      [permission]: PermissionsAndroid.RESULTS.DENIED,
+    } as Awaited<ReturnType<typeof PermissionsAndroid.requestMultiple>>);
+    const { screen, onChanged, onClose } = await open();
+    await act(async () => { fireEvent.press(screen.getByText("Take a photo")); });
+    expect(requestPermission).toHaveBeenCalledWith([permission]);
+    expect(screen.getByText("Allow camera access in your phone settings to take a photo.")).toBeTruthy();
+    expect(launchCamera).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled(); expect(onClose).not.toHaveBeenCalled();
+  });
+  it("shows native picker errors while preserving the existing photo", async () => {
+    (launchImageLibrary as jest.Mock).mockResolvedValueOnce({ errorCode: "others" });
+    const { screen, onChanged, onClose } = await open(); await pick(screen);
+    expect(screen.getByText("Could not open the photo picker. Please try again.")).toBeTruthy();
+    expect(screen.UNSAFE_getByType(Image).props.source.uri).toContain(oldPhoto.id);
+    expect(upload).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled(); expect(onClose).not.toHaveBeenCalled();
   });
   it("ignores an old plant's upload result after the modal target changes", async () => {
     let finish!: (value: typeof newPhoto) => void;

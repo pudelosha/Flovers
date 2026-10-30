@@ -28,7 +28,7 @@
       "chooseGallery": "Elegir de la galería",
       "remove": "Eliminar foto",
       "permissionTitle": "Permisos requeridos",
-      "permissionCamera": "Otorga permisos para cámara y multimedia para tomar una foto.",
+      "permissionCamera": "Permite el acceso a la cámara para hacer una foto.",
       "permissionGallery": "Otorga permisos para multimedia para seleccionar una foto.",
       "cameraErrorTitle": "Error de cámara",
       "pickerErrorTitle": "Error al elegir foto",
@@ -47,7 +47,10 @@
       "photoStorage": "El almacenamiento de fotos no está disponible temporalmente. Inténtalo más tarde.",
       "photoConflict": "La foto se ha cambiado en otro dispositivo. Cierra esta ventana y vuelve a abrirla antes de guardar.",
       "uploadExisting": "Subir esta foto",
-      "legacyInfo": "Esta foto antigua solo está guardada en este teléfono. Elige «Subir esta foto» para sincronizarla."
+      "legacyInfo": "Esta foto antigua solo está guardada en este teléfono. Elige «Subir esta foto» para sincronizarla.",
+      "cameraPermission": "Permite el acceso a la cámara en los ajustes del teléfono para hacer una foto.",
+      "cameraFailed": "No se ha podido abrir la cámara. Inténtalo de nuevo.",
+      "pickerFailed": "No se ha podido abrir el selector de fotos. Inténtalo de nuevo."
     }
   }
 }

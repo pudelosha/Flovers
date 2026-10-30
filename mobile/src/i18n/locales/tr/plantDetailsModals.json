@@ -28,7 +28,7 @@
       "chooseGallery": "Galeriden seç",
       "remove": "Fotoğrafı kaldır",
       "permissionTitle": "İzin gerekli",
-      "permissionCamera": "Fotoğraf çekmek için lütfen kamera ve medya izinlerini verin.",
+      "permissionCamera": "Fotoğraf çekmek için kamera erişimine izin verin.",
       "permissionGallery": "Lütfen medyaya fotoğraf seçme izni verin.",
       "cameraErrorTitle": "Kamera hatası",
       "pickerErrorTitle": "Seçici hatası",
@@ -47,7 +47,10 @@
       "photoStorage": "Fotoğraf depolama alanı geçici olarak kullanılamıyor. Daha sonra tekrar deneyin.",
       "photoConflict": "Fotoğraf başka bir cihazda değiştirildi. Kaydetmeden önce bu pencereyi kapatıp yeniden açın.",
       "uploadExisting": "Bu fotoğrafı sunucuya yükle",
-      "legacyInfo": "Bu eski fotoğraf yalnızca bu telefonda kayıtlı. Eşitlemek için «Bu fotoğrafı sunucuya yükle» seçeneğini kullanın."
+      "legacyInfo": "Bu eski fotoğraf yalnızca bu telefonda kayıtlı. Eşitlemek için «Bu fotoğrafı sunucuya yükle» seçeneğini kullanın.",
+      "cameraPermission": "Fotoğraf çekmek için telefon ayarlarından kamera erişimine izin verin.",
+      "cameraFailed": "Kamera açılamadı. Lütfen tekrar deneyin.",
+      "pickerFailed": "Fotoğraf seçici açılamadı. Lütfen tekrar deneyin."
     }
   }
 }

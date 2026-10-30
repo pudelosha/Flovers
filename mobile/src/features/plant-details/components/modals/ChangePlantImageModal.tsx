@@ -42,18 +42,13 @@ type Props = {
   onChanged?: (photo: PlantPhoto | null) => void;
 };
 
-async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
+async function ensureAndroidCameraPermission(): Promise<boolean> {
   if (Platform.OS !== "android") return true;
-
-  const perms: string[] = [
-    PermissionsAndroid.PERMISSIONS.CAMERA,
-    (Number(Platform.Version) >= 33
-      ? (PermissionsAndroid.PERMISSIONS as any).READ_MEDIA_IMAGES
-      : PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE),
-  ].filter(Boolean) as string[];
-
-  const results = await PermissionsAndroid.requestMultiple(perms);
-  return perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
+  // The native photo picker grants access to its selected image. Camera
+  // capture only needs CAMERA because we do not save to the public gallery.
+  const permission = PermissionsAndroid.PERMISSIONS.CAMERA;
+  const results = await PermissionsAndroid.requestMultiple([permission]);
+  return results[permission] === PermissionsAndroid.RESULTS.GRANTED;
 }
 
 function genUploadKey() {
@@ -223,9 +218,6 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const doPickFromCamera = useCallback(async () => {
     if (!plantId) return;
 
-    const ok = await ensureAndroidPermissionCameraAndRead();
-    if (!ok) return;
-
     const opts: CameraOptions = {
       mediaType: "photo",
       saveToPhotos: false,
@@ -236,22 +228,24 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       assetRepresentationMode: "compatible",
     };
 
-    const res = await launchCamera(opts);
-    if (res.didCancel) return;
-    if (res.errorCode) return;
-
-    const asset = res.assets?.[0];
-    const uri = asset?.uri;
-    if (!uri) return;
-
-    setPendingSet(uri);
-  }, [plantId, setPendingSet]);
+    try {
+      const ok = await ensureAndroidCameraPermission();
+      if (!ok) {
+        setError(tr("plantDetailsModals.changeImage.cameraPermission", "Allow camera access in your phone settings to take a photo."));
+        return;
+      }
+      const res = await launchCamera(opts);
+      if (res.didCancel) return;
+      const uri = res.assets?.[0]?.uri;
+      if (res.errorCode || !uri) throw new Error("Camera did not return a photo.");
+      setPendingSet(uri);
+    } catch {
+      setError(tr("plantDetailsModals.changeImage.cameraFailed", "Could not open the camera. Please try again."));
+    }
+  }, [plantId, setPendingSet, tr]);
 
   const doPickFromGallery = useCallback(async () => {
     if (!plantId) return;
-
-    const ok = await ensureAndroidPermissionCameraAndRead();
-    if (!ok) return;
 
     const opts: ImageLibraryOptions = {
       mediaType: "photo",
@@ -263,16 +257,16 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       assetRepresentationMode: "compatible",
     };
 
-    const res = await launchImageLibrary(opts);
-    if (res.didCancel) return;
-    if (res.errorCode) return;
-
-    const asset = res.assets?.[0];
-    const uri = asset?.uri;
-    if (!uri) return;
-
-    setPendingSet(uri);
-  }, [plantId, setPendingSet]);
+    try {
+      const res = await launchImageLibrary(opts);
+      if (res.didCancel) return;
+      const uri = res.assets?.[0]?.uri;
+      if (res.errorCode || !uri) throw new Error("Picker did not return a photo.");
+      setPendingSet(uri);
+    } catch {
+      setError(tr("plantDetailsModals.changeImage.pickerFailed", "Could not open the photo picker. Please try again."));
+    }
+  }, [plantId, setPendingSet, tr]);
 
   const requestRemove = useCallback(() => {
     if (!plantId) return;

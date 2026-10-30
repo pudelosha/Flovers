@@ -28,7 +28,7 @@
       "chooseGallery": "Aus der Galerie auswählen",
       "remove": "Bild entfernen",
       "permissionTitle": "Berechtigungen erforderlich",
-      "permissionCamera": "Erteile Berechtigungen für Kamera und Medien, um ein Foto aufzunehmen.",
+      "permissionCamera": "Erlaube den Kamerazugriff, um ein Foto aufzunehmen.",
       "permissionGallery": "Erteile Berechtigungen für Medien, um ein Foto auszuwählen.",
       "cameraErrorTitle": "Kamerafehler",
       "pickerErrorTitle": "Fehler bei der Bildauswahl",
@@ -47,7 +47,10 @@
       "photoStorage": "Der Fotospeicher ist vorübergehend nicht verfügbar. Versuch es später erneut.",
       "photoConflict": "Das Foto wurde auf einem anderen Gerät geändert. Schließe dieses Fenster und öffne es vor dem Speichern erneut.",
       "uploadExisting": "Dieses Foto hochladen",
-      "legacyInfo": "Dieses ältere Foto ist nur auf diesem Handy gespeichert. Wähle „Dieses Foto hochladen“, um es zu synchronisieren."
+      "legacyInfo": "Dieses ältere Foto ist nur auf diesem Handy gespeichert. Wähle „Dieses Foto hochladen“, um es zu synchronisieren.",
+      "cameraPermission": "Erlaube den Kamerazugriff in den Einstellungen deines Smartphones, um ein Foto aufzunehmen.",
+      "cameraFailed": "Die Kamera konnte nicht geöffnet werden. Versuche es erneut.",
+      "pickerFailed": "Die Fotoauswahl konnte nicht geöffnet werden. Versuche es erneut."
     }
   }
 }

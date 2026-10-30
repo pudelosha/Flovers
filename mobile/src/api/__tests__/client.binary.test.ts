@@ -27,6 +27,24 @@ it("refreshes a photo request and retries with the new bearer token without pars
   expect(jpeg.text).not.toHaveBeenCalled();
 });
 
+it("preserves the HTTP MIME type when Android returns an untyped native Blob", async () => {
+  // RN Android BlobModule returns only the blob ID, offset and size to XHR.
+  // Use RN's actual Blob implementation: browser/Node blobs hide this behavior.
+  const BlobManager = require("react-native/Libraries/Blob/BlobManager").default;
+  const nativeBlob = BlobManager.createFromOptions({ blobId: "android-jpeg", offset: 0, size: 300 });
+  expect(nativeBlob.type).toBe("");
+  const jpeg = response(200, undefined, nativeBlob);
+  (fetch as jest.Mock).mockResolvedValueOnce(jpeg);
+
+  const result = await requestBlob("/private-photo/");
+
+  expect(result.type).toBe("image/jpeg");
+  expect(result.size).toBe(300);
+  // Restoring the MIME type must retain the native bytes rather than copying them.
+  expect((result as any).data).toMatchObject({ blobId: "android-jpeg", offset: 0, size: 300 });
+  expect(jpeg.text).not.toHaveBeenCalled();
+});
+
 it("rejects a JPEG body which completes after another account logs in", async () => {
   const body = deferred<Blob>();
   const jpeg = response(200);

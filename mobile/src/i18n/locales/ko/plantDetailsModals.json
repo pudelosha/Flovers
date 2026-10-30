@@ -28,7 +28,7 @@
       "chooseGallery": "갤러리에서 선택",
       "remove": "사진 삭제",
       "permissionTitle": "필요한 권한",
-      "permissionCamera": "사진을 찍으려면 카메라와 미디어 권한을 부여하세요.",
+      "permissionCamera": "사진을 찍으려면 카메라 접근을 허용해 주세요.",
       "permissionGallery": "사진을 선택하려면 미디어 권한을 부여하세요.",
       "cameraErrorTitle": "카메라 오류",
       "pickerErrorTitle": "사진 선택 오류",
@@ -47,7 +47,10 @@
       "photoStorage": "지금은 사진 저장 공간을 이용할 수 없어요. 잠시 후 다시 시도해 주세요.",
       "photoConflict": "다른 기기에서 사진이 변경됐어요. 이 창을 닫았다가 다시 연 뒤 저장해 주세요.",
       "uploadExisting": "이 사진 업로드",
-      "legacyInfo": "이전에 추가한 이 사진은 현재 휴대폰에만 저장되어 있어요. 동기화하려면 «이 사진 업로드»를 선택해 주세요."
+      "legacyInfo": "이전에 추가한 이 사진은 현재 휴대폰에만 저장되어 있어요. 동기화하려면 «이 사진 업로드»를 선택해 주세요.",
+      "cameraPermission": "사진을 찍으려면 휴대폰 설정에서 카메라 접근을 허용해 주세요.",
+      "cameraFailed": "카메라를 열 수 없어요. 다시 시도해 주세요.",
+      "pickerFailed": "사진 선택 화면을 열 수 없어요. 다시 시도해 주세요."
     }
   }
 }

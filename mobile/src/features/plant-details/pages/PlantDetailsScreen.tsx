@@ -937,6 +937,12 @@ export default function PlantDetailsScreen() {
           setDetails((current) => current && String(current.plant.id) === String(changeImgPlantId)
             ? { ...current, plant: { ...current.plant, photo } } : current);
           setPhotoReloadSignal((v) => v + 1);
+          showToast(
+            photo
+              ? t("plantDetails.toasts.photoUpdated", { defaultValue: "Plant photo updated." })
+              : t("plantDetails.toasts.photoRemoved", { defaultValue: "Plant photo removed." }),
+            "success"
+          );
         }}
       />
 

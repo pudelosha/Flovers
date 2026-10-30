@@ -28,7 +28,7 @@
       "chooseGallery": "Choisir dans la galerie",
       "remove": "Supprimer la photo",
       "permissionTitle": "Autorisations requises",
-      "permissionCamera": "Accordez les autorisations de l’appareil photo et des médias pour prendre une photo.",
+      "permissionCamera": "Autorisez l’accès à l’appareil photo pour prendre une photo.",
       "permissionGallery": "Accordez les autorisations des médias pour choisir une photo.",
       "cameraErrorTitle": "Erreur de l’appareil photo",
       "pickerErrorTitle": "Erreur de sélection de la photo",
@@ -47,7 +47,10 @@
       "photoStorage": "Le stockage des photos est temporairement indisponible. Réessayez plus tard.",
       "photoConflict": "La photo a été modifiée sur un autre appareil. Fermez cette fenêtre et rouvrez-la avant d’enregistrer.",
       "uploadExisting": "Envoyer cette photo",
-      "legacyInfo": "Cette ancienne photo est enregistrée uniquement sur ce téléphone. Choisissez « Envoyer cette photo » pour la synchroniser."
+      "legacyInfo": "Cette ancienne photo est enregistrée uniquement sur ce téléphone. Choisissez « Envoyer cette photo » pour la synchroniser.",
+      "cameraPermission": "Autorisez l’accès à l’appareil photo dans les réglages de votre téléphone pour prendre une photo.",
+      "cameraFailed": "Impossible d’ouvrir l’appareil photo. Réessayez.",
+      "pickerFailed": "Impossible d’ouvrir le sélecteur de photos. Réessayez."
     }
   }
 }

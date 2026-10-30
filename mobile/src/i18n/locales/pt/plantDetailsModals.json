@@ -28,7 +28,7 @@
       "chooseGallery": "Escolher da galeria",
       "remove": "Remover foto",
       "permissionTitle": "Permissões necessárias",
-      "permissionCamera": "Conceda permissões para câmera e mídia para tirar uma foto.",
+      "permissionCamera": "Permite o acesso à câmara para tirar uma fotografia.",
       "permissionGallery": "Conceda permissões para mídia para selecionar uma foto.",
       "cameraErrorTitle": "Erro na câmera",
       "pickerErrorTitle": "Erro na seleção de foto",
@@ -47,7 +47,10 @@
       "photoStorage": "O armazenamento de fotografias está temporariamente indisponível. Tenta mais tarde.",
       "photoConflict": "A fotografia foi alterada noutro dispositivo. Fecha esta janela e volta a abri-la antes de guardar.",
       "uploadExisting": "Enviar esta fotografia",
-      "legacyInfo": "Esta fotografia antiga está guardada apenas neste telemóvel. Escolhe «Enviar esta fotografia» para a sincronizar."
+      "legacyInfo": "Esta fotografia antiga está guardada apenas neste telemóvel. Escolhe «Enviar esta fotografia» para a sincronizar.",
+      "cameraPermission": "Permite o acesso à câmara nas definições do telemóvel para tirar uma fotografia.",
+      "cameraFailed": "Não foi possível abrir a câmara. Tenta novamente.",
+      "pickerFailed": "Não foi possível abrir o seletor de fotografias. Tenta novamente."
     }
   }
 }

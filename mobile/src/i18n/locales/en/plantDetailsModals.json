@@ -28,7 +28,7 @@
       "chooseGallery": "Choose from gallery",
       "remove": "Remove photo",
       "permissionTitle": "Permission required",
-      "permissionCamera": "Please grant camera and media permissions to take a photo.",
+      "permissionCamera": "Please allow camera access to take a photo.",
       "permissionGallery": "Please grant media permission to pick a photo.",
       "cameraErrorTitle": "Camera error",
       "pickerErrorTitle": "Picker error",
@@ -47,7 +47,10 @@
       "photoStorage": "Photo storage is temporarily unavailable. Try again later.",
       "photoConflict": "The photo changed on another device. Close this window and reopen it before saving.",
       "uploadExisting": "Upload this photo",
-      "legacyInfo": "This older photo is stored only on this phone. Choose Upload this photo to sync it."
+      "legacyInfo": "This older photo is stored only on this phone. Choose Upload this photo to sync it.",
+      "cameraPermission": "Allow camera access in your phone settings to take a photo.",
+      "cameraFailed": "Could not open the camera. Please try again.",
+      "pickerFailed": "Could not open the photo picker. Please try again."
     }
   }
 }

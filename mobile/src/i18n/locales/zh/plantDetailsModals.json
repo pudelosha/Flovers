@@ -28,7 +28,7 @@
       "chooseGallery": "从图库选择",
       "remove": "删除照片",
       "permissionTitle": "所需权限",
-      "permissionCamera": "请授予相机和媒体权限以拍摄照片。",
+      "permissionCamera": "请允许访问相机，以便拍照。",
       "permissionGallery": "请授予媒体权限以选择照片。",
       "cameraErrorTitle": "相机错误",
       "pickerErrorTitle": "选择照片错误",
@@ -47,7 +47,10 @@
       "photoStorage": "照片存储服务暂时不可用，请稍后重试。",
       "photoConflict": "照片已在另一台设备上更改。请关闭此窗口并重新打开后再保存。",
       "uploadExisting": "上传这张照片",
-      "legacyInfo": "这张旧照片只保存在当前手机上。请选择“上传这张照片”来同步。"
+      "legacyInfo": "这张旧照片只保存在当前手机上。请选择“上传这张照片”来同步。",
+      "cameraPermission": "请在手机设置中允许访问相机，以便拍照。",
+      "cameraFailed": "无法打开相机，请重试。",
+      "pickerFailed": "无法打开照片选择器，请重试。"
     }
   }
 }

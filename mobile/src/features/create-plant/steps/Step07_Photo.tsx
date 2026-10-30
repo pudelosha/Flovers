@@ -32,20 +32,13 @@ import {
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
-async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
+async function ensureAndroidCameraPermission(): Promise<boolean> {
   if (Platform.OS !== "android") return true;
-
-  // Android 13+ needs READ_MEDIA_IMAGES; <=12 needs READ_EXTERNAL_STORAGE
-  const perms: string[] = [
-    PermissionsAndroid.PERMISSIONS.CAMERA,
-    (Number(Platform.Version) >= 33
-      ? (PermissionsAndroid.PERMISSIONS as any).READ_MEDIA_IMAGES
-      : PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE),
-  ].filter(Boolean) as string[];
-
-  const results = await PermissionsAndroid.requestMultiple(perms);
-  const allGranted = perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
-  return allGranted;
+  // The native picker grants access to the chosen file; taking a private
+  // camera photo does not require broad access to the user's photo library.
+  const permission = PermissionsAndroid.PERMISSIONS.CAMERA;
+  const results = await PermissionsAndroid.requestMultiple([permission]);
+  return results[permission] === PermissionsAndroid.RESULTS.GRANTED;
 }
 
 export default function Step07_Photo() {
@@ -103,13 +96,13 @@ export default function Step07_Photo() {
   );
 
   const doLaunchCamera = useCallback(async () => {
-    const ok = await ensureAndroidPermissionCameraAndRead();
+    const ok = await ensureAndroidCameraPermission();
     if (!ok) {
       Alert.alert(
         getTranslation("createPlant.step07.permissionRequiredTitle", "Permission required"),
         getTranslation(
           "createPlant.step07.permissionCameraAndMedia",
-          "Please grant camera and media permissions to take a photo."
+          "Please allow camera access to take a photo."
         )
       );
       return;
@@ -138,18 +131,6 @@ export default function Step07_Photo() {
   }, [getTranslation, onPickedAsset]);
 
   const doLaunchLibrary = useCallback(async () => {
-    const ok = await ensureAndroidPermissionCameraAndRead();
-    if (!ok) {
-      Alert.alert(
-        getTranslation("createPlant.step07.permissionRequiredTitle", "Permission required"),
-        getTranslation(
-          "createPlant.step07.permissionMedia",
-          "Please grant media permission to pick a photo."
-        )
-      );
-      return;
-    }
-
     const opts: ImageLibraryOptions = {
       mediaType: "photo",
       selectionLimit: 1,

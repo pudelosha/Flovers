@@ -28,7 +28,7 @@
       "chooseGallery": "Pilih dari galeri",
       "remove": "Hapus foto",
       "permissionTitle": "Izin diperlukan",
-      "permissionCamera": "Harap berikan izin kamera dan media untuk mengambil foto.",
+      "permissionCamera": "Izinkan akses kamera untuk mengambil foto.",
       "permissionGallery": "Harap berikan izin media untuk memilih foto.",
       "cameraErrorTitle": "Kesalahan kamera",
       "pickerErrorTitle": "Kesalahan pemilih",
@@ -47,7 +47,10 @@
       "photoStorage": "Penyimpanan foto sedang tidak tersedia. Coba lagi nanti.",
       "photoConflict": "Foto telah diubah di perangkat lain. Tutup jendela ini dan buka kembali sebelum menyimpan.",
       "uploadExisting": "Unggah foto ini",
-      "legacyInfo": "Foto lama ini hanya tersimpan di ponsel ini. Pilih «Unggah foto ini» untuk menyinkronkannya."
+      "legacyInfo": "Foto lama ini hanya tersimpan di ponsel ini. Pilih «Unggah foto ini» untuk menyinkronkannya.",
+      "cameraPermission": "Izinkan akses kamera di pengaturan ponsel untuk mengambil foto.",
+      "cameraFailed": "Kamera tidak dapat dibuka. Coba lagi.",
+      "pickerFailed": "Pemilih foto tidak dapat dibuka. Coba lagi."
     }
   }
 }
