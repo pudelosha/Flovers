@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { AppState } from "react-native";
 import { getAuthSessionId, hasAuthToken, onAuthSessionChanged } from "../../api/client";
-import { loadPlantPhoto, onPlantPhotoCacheInvalidated } from "../../api/services/plant-photos.service";
+import { getCachedPlantPhotoUri, loadPlantPhoto, onPlantPhotoCacheInvalidated } from "../../api/services/plant-photos.service";
 import type { PlantPhoto, PlantPhotoVariant } from "../../api/services/plant-photos.service";
 
 type Options = { variant?: PlantPhotoVariant; reloadSignal?: number; expiresAt?: string | null };
@@ -11,9 +11,11 @@ export function usePlantPhoto(photo: PlantPhoto | null | undefined, options: Opt
   const variant = options.variant ?? "display";
   const [sessionId, setSessionId] = useState(getAuthSessionId);
   const [refreshSignal, setRefreshSignal] = useState(0);
-  const [state, setState] = useState<{ key: string; uri: string | null; loading: boolean; error: unknown }>(
-    { key: "", uri: null, loading: false, error: null });
   const key = photo ? `${sessionId}:${photo.id}:${variant}:${photo.url}:${photo.thumbnail_url}` : "";
+  const expired = !!options.expiresAt && Date.parse(options.expiresAt) <= Date.now();
+  const cachedUri = photo && !expired ? getCachedPlantPhotoUri(photo, variant) : null;
+  const [state, setState] = useState<{ key: string; uri: string | null; loading: boolean; error: unknown }>(() =>
+    ({ key, uri: cachedUri, loading: !!photo && !cachedUri, error: null }));
   const refresh = useCallback(() => { setRefreshSignal(value => value + 1); }, []);
 
   useEffect(() => onAuthSessionChanged(next => {
@@ -31,7 +33,7 @@ export function usePlantPhoto(photo: PlantPhoto | null | undefined, options: Opt
         setState({ key, uri: null, loading: false, error: null });
         return;
       }
-      setState(previous => ({ key, uri: conceal || previous.key !== key ? null : previous.uri,
+      setState(previous => ({ key, uri: conceal ? null : previous.key === key ? previous.uri : getCachedPlantPhotoUri(photo, variant),
         loading: true, error: null }));
       try {
         const uri = await loadPlantPhoto(photo, variant, true);
@@ -40,7 +42,9 @@ export function usePlantPhoto(photo: PlantPhoto | null | undefined, options: Opt
         if (active && current === attempt) setState({ key, uri: null, loading: false, error });
       }
     };
-    void update(true);
+    // A screen may have just preloaded and authorized these bytes. Keep them
+    // visible while rechecking rather than blanking the first rendered frame.
+    void update(!photo || !getCachedPlantPhotoUri(photo, variant));
     if (!photo || !hasAuthToken()) return () => { active = false; attempt += 1; };
     const timer = setInterval(() => {
       if (AppState.currentState === "active") void update();
@@ -74,6 +78,7 @@ export function usePlantPhoto(photo: PlantPhoto | null | undefined, options: Opt
     };
   }, [key, variant, options.reloadSignal, options.expiresAt, refreshSignal, sessionId]);
 
-  return { uri: state.key === key ? state.uri : null, loading: !!photo && (state.key !== key || state.loading),
+  return { uri: expired ? null : state.key === key ? state.uri : cachedUri,
+    loading: !!photo && (state.key !== key ? !cachedUri : state.loading),
     error: state.key === key ? state.error : null, refresh };
 }

@@ -9,6 +9,7 @@ import { Plant } from "../types/plants.types";
 import PlantMenu from "./PlantMenu";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
 import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
 import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
@@ -44,8 +45,9 @@ export default function PlantTile({
 }: Props) {
   const { openSharePlant, shares } = useSharingPreview();
   const photoVariant = normalizePhotoFraming(plant.photo?.framing).zoom > 1 ? "display" : "thumbnail";
-  const { uri: syncedPhotoUri } = usePlantPhoto(plant.photo, { variant: photoVariant, expiresAt: plant.access?.expires_at });
-  const imgUri = syncedPhotoUri || plant.imageUrl;
+  const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(plant.photo, { variant: photoVariant, expiresAt: plant.access?.expires_at });
+  // The presence of a custom photo is authoritative even before its bytes load.
+  const imgUri = plant.photo ? syncedPhotoUri : plant.imageUrl;
   const access = plantAccess(plant.access);
 
   const handleTilePress = () => {
@@ -102,6 +104,10 @@ export default function PlantTile({
             {syncedPhotoUri && plant.photo ? (
               <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
                 style={StyleSheet.absoluteFillObject} testID="plant-tile-photo" />
+            ) : plant.photo && photoLoading ? (
+              <View style={s.plantImagePlaceholder} testID="plant-tile-photo-loading">
+                <CenteredSpinner size={24} />
+              </View>
             ) : imgUri ? (
               <ImageBackground
                 source={{ uri: imgUri }}

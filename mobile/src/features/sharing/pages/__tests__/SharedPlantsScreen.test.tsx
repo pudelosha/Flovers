@@ -5,12 +5,15 @@ import SharedPlantsScreen from "../SharedPlantsScreen";
 import FAB from "../../../../shared/ui/FAB";
 import ContactModalFrame from "../../components/ContactModalFrame";
 import GlassCard from "../../../profile/components/GlassCard";
+import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
+import { usePlantPhotoPreload } from "../../../../shared/hooks/usePlantPhotoPreload";
 
 const mockT = (_key: string, values: any = {}) => String(values.defaultValue ?? _key).replace(/{{(\w+)}}/g, (_, key) => String(values[key] ?? ""));
 let mockSharing: any;
 let mockFocused = true;
 let mockFabPosition = "right";
 let mockBottomInset = 0;
+let mockPhotoLoading = false;
 const mockNavigate = jest.fn();
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
 jest.mock("@react-navigation/native", () => ({
@@ -24,6 +27,9 @@ jest.mock("../../../../app/providers/SettingsProvider", () => ({
   useSettings: () => ({ settings: { fabPosition: mockFabPosition } }),
 }));
 jest.mock("../../state/SharingPreviewProvider", () => ({ useSharingPreview: () => mockSharing }));
+jest.mock("../../../../shared/hooks/usePlantPhotoPreload", () => ({
+  usePlantPhotoPreload: jest.fn(() => ({ loading: mockPhotoLoading, ready: !mockPhotoLoading })),
+}));
 jest.mock("../../../../shared/utils/photoStorage", () => ({ getPlantPhotoUri: jest.fn(async () => null) }));
 jest.mock("@react-native-masked-view/masked-view", () => (props: any) =>
   require("react").createElement(require("react-native").View, props, props.children));
@@ -57,6 +63,7 @@ describe("SharedPlantsScreen", () => {
     mockFocused = true;
     mockFabPosition = "right";
     mockBottomInset = 0;
+    mockPhotoLoading = false;
     mockSharing = {
       loaded: true, loading: false, error: null, pending: null, refresh: jest.fn(async () => ({})),
       contacts: [{ id: "anna", name: "Anna" }, { id: "bruno", name: "Bruno" }],
@@ -72,6 +79,33 @@ describe("SharedPlantsScreen", () => {
     };
   });
   afterEach(() => jest.restoreAllMocks());
+
+  it("keeps tiles and the FAB hidden until their private images have loaded", async () => {
+    mockPhotoLoading = true;
+    const photo = { id: "photo-1", framing: { focal_x: 0.5, focal_y: 0.5, zoom: 2 } };
+    mockSharing.shares[0].plant = { ...bird, photo };
+    mockSharing.shares[1].plant = { ...bird, photo };
+    const view = await renderScreen();
+    expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
+    expect(view.queryByText("Bird")).toBeNull();
+    expect(view.UNSAFE_queryByType(FAB)).toBeNull();
+    expect(usePlantPhotoPreload).toHaveBeenLastCalledWith(expect.arrayContaining([
+      expect.objectContaining({ photo, variant: "display", expiresAt: undefined }),
+    ]), true);
+    mockPhotoLoading = false;
+    view.rerender(<SharedPlantsScreen />);
+    expect(view.getByText("Bird")).toBeTruthy();
+    expect(view.UNSAFE_getByType(FAB)).toBeTruthy();
+    expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+  });
+
+  it("keeps ready tiles visible during an ordinary background metadata refresh", async () => {
+    const view = await renderScreen();
+    mockSharing.loading = true;
+    view.rerender(<SharedPlantsScreen />);
+    expect(view.getByText("Bird")).toBeTruthy();
+    expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+  });
 
   it("opens a floating plant menu and navigates to the selected plant", async () => {
     const view = await renderScreen();

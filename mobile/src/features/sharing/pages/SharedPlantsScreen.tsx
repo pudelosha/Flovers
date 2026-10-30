@@ -6,6 +6,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTranslation } from "react-i18next";
 import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
 import type { FabAction } from "../../../shared/ui/FAB";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import GlassCard from "../../profile/components/GlassCard";
@@ -94,6 +95,15 @@ export default function SharedPlantsScreen() {
     });
     return Array.from(result.values());
   }, [shares, filter]);
+  const photoTargets = useMemo(() => groups.map((group) => ({
+    photo: group[0].plant.photo,
+    variant: (group[0].plant.photo?.framing?.zoom ?? 1) > 1 ? "display" as const : "thumbnail" as const,
+    expiresAt: group[0].direction === "outgoing" ? undefined : group[0].expiresAt,
+  })), [groups]);
+  // Background sharing refreshes keep the current view; a changed photo waits
+  // for its own bytes before the replacement tiles are rendered.
+  const photoPreload = usePlantPhotoPreload(photoTargets, loaded && isFocused);
+  const contentLoading = !loaded || photoPreload.loading;
   const menuGroup = groups.find((group) => `${group[0].direction}:${group[0].plant.id}` === menuId);
   const menuPlant = menuGroup?.[0].plant;
   useEffect(() => { if (menuId && !menuGroup) closeMenu(); }, [menuId, menuGroup, closeMenu]);
@@ -118,8 +128,8 @@ export default function SharedPlantsScreen() {
   return (
     <View ref={pageRef} collapsable={false} testID="shared-plants-screen" style={styles.page}>
       <SharingPage title={t("sharing.plants.title", { defaultValue: "Shared plants" })} showBack={false} extraBottomPadding={64}>
-        {!loaded ? <View style={styles.loading}>
-          {loading || !error ? <CenteredSpinner /> : <>
+        {contentLoading ? <View style={styles.loading}>
+          {photoPreload.loading || loading || !error ? <CenteredSpinner /> : <>
             <Text accessibilityRole="alert" style={shared.error}>{t("sharing.live.loadFailed", { defaultValue: "Could not load shared plants." })}</Text>
             <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} />
           </>}
@@ -190,8 +200,8 @@ export default function SharedPlantsScreen() {
         })}
         </>}
       </SharingPage>
-      {isFocused && loaded && !removing && !deleting && !shareDraft && <FAB actions={actions} position={settings?.fabPosition === "left" ? "left" : "right"} closeSignal={fabCloseSignal} onInteraction={closeMenu} />}
-      {isFocused && menuPlant && menuAnchor && <View style={styles.menuOverlay} accessibilityViewIsModal>
+      {isFocused && !contentLoading && !removing && !deleting && !shareDraft && <FAB actions={actions} position={settings?.fabPosition === "left" ? "left" : "right"} closeSignal={fabCloseSignal} onInteraction={closeMenu} />}
+      {isFocused && !contentLoading && menuPlant && menuAnchor && <View style={styles.menuOverlay} accessibilityViewIsModal>
         <Pressable style={StyleSheet.absoluteFill} accessibilityRole="button"
           accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })} onPress={closeMenu} />
         <View testID="shared-plant-actions-menu" style={[menuStyles.menuSheet, { right: menuAnchor.right, top: menuTop, maxWidth: menuAnchor.maxWidth }]}

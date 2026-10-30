@@ -17,6 +17,7 @@ import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 
 type Props = {
@@ -146,8 +147,10 @@ export default function PlantInfoTile({
   const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] = useState(false);
 
   // local photo uri for THIS plant id
-  const [localPlantPhoto, setLocalPlantPhoto] = useState<{ plantId: string; uri: string } | null>(null);
-  const { uri: syncedPhotoUri } = usePlantPhoto(plant?.photo, {
+  const [localPlantPhoto, setLocalPlantPhoto] = useState<{ key: string; uri: string | null } | null>(null);
+  const localLookupKey = plant?.id && access.isOwner && !plant.photo ? `${plant.id}:${photoReloadSignal ?? 0}` : null;
+  const localPhotoLoading = !!localLookupKey && localPlantPhoto?.key !== localLookupKey;
+  const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(plant?.photo, {
     variant: "display", reloadSignal: photoReloadSignal, expiresAt: plant?.access?.expires_at,
   });
 
@@ -168,15 +171,15 @@ export default function PlantInfoTile({
     let cancelled = false;
 
     const run = async () => {
-      if (!plant?.id || !access.isOwner || plant.photo) {
+      if (!plant?.id || !localLookupKey) {
         setLocalPlantPhoto(null);
         return;
       }
       try {
         const uri = await getPlantPhotoUri(String(plant.id));
-        if (!cancelled) setLocalPlantPhoto(uri ? { plantId: String(plant.id), uri: withCacheBuster(uri)! } : null);
+        if (!cancelled) setLocalPlantPhoto({ key: localLookupKey, uri: withCacheBuster(uri) });
       } catch {
-        if (!cancelled) setLocalPlantPhoto(null);
+        if (!cancelled) setLocalPlantPhoto({ key: localLookupKey, uri: null });
       }
     };
 
@@ -184,18 +187,19 @@ export default function PlantInfoTile({
     return () => {
       cancelled = true;
     };
-  }, [plant?.id, plant?.photo?.id, access.isOwner, photoReloadSignal]);
+  }, [plant?.id, localLookupKey]);
 
   // Synced photos take precedence. An older local image belongs only to its
   // original owned plant and must never flash on another plant's details.
   const imageUrl = useMemo(() => {
     if (!plant) return null;
-    if (syncedPhotoUri) return syncedPhotoUri;
-    if (!plant.photo && access.isOwner && localPlantPhoto?.plantId === String(plant.id)) return localPlantPhoto.uri;
+    if (plant.photo) return syncedPhotoUri;
+    if (localPhotoLoading) return null;
+    if (localLookupKey && localPlantPhoto?.key === localLookupKey && localPlantPhoto.uri) return localPlantPhoto.uri;
 
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
-  }, [localPlantPhoto, syncedPhotoUri, plant, access.isOwner]);
+  }, [localPlantPhoto, syncedPhotoUri, plant, localLookupKey, localPhotoLoading]);
 
   if (!plant) {
     return (
@@ -260,9 +264,9 @@ export default function PlantInfoTile({
       <View style={styles.heroOuter}>
         <Pressable onPressIn={handleTileTouch} accessible={false}>
           <View style={styles.heroClip}>
-            {imageUrl ? (
+            {imageUrl || (plant.photo && photoLoading) || localPhotoLoading ? (
               <View style={styles.heroImage}>
-                <MaskedView
+                {imageUrl ? <MaskedView
                   style={StyleSheet.absoluteFill}
                   maskElement={
                     <LinearGradient
@@ -283,7 +287,9 @@ export default function PlantInfoTile({
                     <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
                       style={StyleSheet.absoluteFillObject} testID="plant-detail-photo" />
                   ) : <ImageMasked uri={imageUrl} />}
-                </MaskedView>
+                </MaskedView> : <View style={StyleSheet.absoluteFill} testID="plant-detail-photo-loading">
+                  <CenteredSpinner size={32} />
+                </View>}
 
                 <LinearGradient
                   pointerEvents="none"

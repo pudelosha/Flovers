@@ -225,6 +225,15 @@ function pruneCache() {
   }
 }
 
+/** Only freshly authorized bytes from this login can be shown synchronously. */
+export function getCachedPlantPhotoUri(photo: PlantPhoto, variant: PlantPhotoVariant = "display"): string | null {
+  if (!hasAuthToken()) return null;
+  let path: string;
+  try { path = photoPath(photo, variant); } catch { return null; }
+  const entry = cache.get(`${getAuthSessionId()}:${photo.id}:${variant}:${path}`);
+  return entry && Date.now() - entry.verifiedAt < VERIFY_INTERVAL ? entry.uri : null;
+}
+
 /** Cached bytes are reauthorized on reuse; periodic HEAD checks avoid redownloading JPEGs. */
 export function loadPlantPhoto(photo: PlantPhoto, variant: PlantPhotoVariant = "display", revalidate = false): Promise<string> {
   let path: string;

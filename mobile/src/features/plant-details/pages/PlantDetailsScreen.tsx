@@ -49,6 +49,7 @@ import { CameraRoll } from "@react-native-camera-roll/camera-roll";
 
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
 
 import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
 import ChangePlantImageModal from "../components/modals/ChangePlantImageModal";
@@ -750,7 +751,13 @@ export default function PlantDetailsScreen() {
     }
   };
 
-  const isInitialLoading = loading && !details && !error;
+  const photoTargets = useMemo(() => [{
+    photo: details?.plant.photo,
+    variant: "display" as const,
+    expiresAt: details?.plant.access?.expires_at,
+  }], [details?.plant.photo, details?.plant.access?.expires_at]);
+  const photoPreload = usePlantPhotoPreload(photoTargets, !loading && !error, photoReloadSignal);
+  const isInitialLoading = !error && (loading || photoPreload.loading);
 
   return (
     <View style={{ flex: 1 }}>
@@ -907,10 +914,6 @@ export default function PlantDetailsScreen() {
           </ScrollView>
         )}
       </Animated.View>
-
-      {loading && details && !error && (
-        <CenteredSpinner overlay size={36} color="#FFFFFF" />
-      )}
 
       {(editLoading || saving) && (
         <View

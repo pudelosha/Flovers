@@ -83,7 +83,35 @@ it("does not carry an owned local image into a different plant while its lookup 
   const view = render(<PlantInfoTile plant={plant as any} />);
   await waitFor(() => expect(view.UNSAFE_getByType(ImageBackground).props.source.uri).toContain("file:///plant7.jpg"));
   view.rerender(<PlantInfoTile plant={{ ...plant, id: 8 } as any} />);
-  expect(view.UNSAFE_getByType(ImageBackground).props.source.uri).toBe("https://example.test/catalogue.jpg");
+  expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
+  expect(view.getByTestId("plant-detail-photo-loading")).toBeTruthy();
   await act(async () => { finish("file:///plant8.jpg"); });
   expect(view.UNSAFE_getByType(ImageBackground).props.source.uri).toContain("file:///plant8.jpg");
+});
+
+it.each(["details", "list"])("never flashes the definition image while a custom photo loads in %s", screen => {
+  (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: true, error: null });
+  const element = () => screen === "details"
+    ? <PlantInfoTile plant={{ ...plant, photo: metadata, access } as any} />
+    : <PlantTile plant={{ id: "7", name: "Fern", notes: "", imageUrl: "https://example.test/catalogue.jpg", photo: metadata, access }} isMenuOpen={false} {...callbacks} />;
+  const view = render(element());
+  expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
+  expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
+  expect(view.getByTestId(screen === "details" ? "plant-detail-photo-loading" : "plant-tile-photo-loading")).toBeTruthy();
+  expect(getPlantPhotoUri).not.toHaveBeenCalled();
+  (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
+  view.rerender(element());
+  expect(view.UNSAFE_getByType(FramedPlantImage).props.uri).toBe("data:image/jpeg;base64,SYNCED");
+  expect(view.queryByTestId(screen === "details" ? "plant-detail-photo-loading" : "plant-tile-photo-loading")).toBeNull();
+});
+
+it.each(["details", "list"])("does not substitute the definition photo or spin forever when private loading fails in %s", screen => {
+  (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: new Error("Photo unavailable") });
+  const view = render(screen === "details"
+    ? <PlantInfoTile plant={{ ...plant, photo: metadata, access } as any} />
+    : <PlantTile plant={{ id: "7", name: "Fern", notes: "", imageUrl: "https://example.test/catalogue.jpg", photo: metadata, access }} isMenuOpen={false} {...callbacks} />);
+  expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
+  expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
+  expect(view.queryByTestId(screen === "details" ? "plant-detail-photo-loading" : "plant-tile-photo-loading")).toBeNull();
+  expect(getPlantPhotoUri).not.toHaveBeenCalled();
 });

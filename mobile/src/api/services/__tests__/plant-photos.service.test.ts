@@ -1,5 +1,5 @@
 import { configureTokenRefresh, setAuthToken } from "../../client";
-import { clearPlantPhotoCache, deletePlantPhoto, loadPlantPhoto, parsePlantPhoto, uploadPlantPhoto, updatePlantPhotoFraming } from "../plant-photos.service";
+import { clearPlantPhotoCache, deletePlantPhoto, getCachedPlantPhotoUri, loadPlantPhoto, parsePlantPhoto, uploadPlantPhoto, updatePlantPhotoFraming } from "../plant-photos.service";
 import type { PlantPhoto } from "../plant-photos.service";
 
 const photo = (n = 1): PlantPhoto => {
@@ -137,6 +137,24 @@ it("bounds decoded image memory even before the entry-count limit is reached", a
   await loadPlantPhoto(photo(1));
   expect(fetch).toHaveBeenCalledTimes(13);
   expect((fetch as jest.Mock).mock.calls[12][1].method).toBe("GET");
+});
+
+it("reveals only fresh same-session preloaded bytes and clears them on invalidation or logout", async () => {
+  expect(getCachedPlantPhotoUri(photo())).toBeNull();
+  await loadPlantPhoto(photo());
+  expect(getCachedPlantPhotoUri(photo())).toBe("data:image/jpeg;base64,PRIVATE-A");
+  expect(getCachedPlantPhotoUri(photo(), "thumbnail")).toBeNull();
+  jest.setSystemTime(new Date("2026-10-30T10:01:01Z"));
+  expect(getCachedPlantPhotoUri(photo())).toBeNull();
+  await loadPlantPhoto(photo(), "display", true);
+  expect(getCachedPlantPhotoUri(photo())).not.toBeNull();
+  clearPlantPhotoCache();
+  expect(getCachedPlantPhotoUri(photo())).toBeNull();
+  await loadPlantPhoto(photo());
+  setAuthToken("account-b");
+  expect(getCachedPlantPhotoUri(photo())).toBeNull();
+  setAuthToken(null);
+  expect(getCachedPlantPhotoUri(photo())).toBeNull();
 });
 
 it("rejects an unexpected response content type instead of rendering it", async () => {

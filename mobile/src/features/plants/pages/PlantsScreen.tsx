@@ -30,6 +30,7 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/plants.styles";
 import PlantTile from "../components/PlantTile";
@@ -580,6 +581,14 @@ export default function PlantsScreen() {
     return sorted;
   }, [plants, activeFilters, sortKey, sortDir]);
 
+  const photoTargets = useMemo(() => derivedPlants.map((plant) => ({
+    photo: plant.photo,
+    variant: (plant.photo?.framing?.zoom ?? 1) > 1 ? "display" as const : "thumbnail" as const,
+    expiresAt: plant.access?.expires_at,
+  })), [derivedPlants]);
+  const photoPreload = usePlantPhotoPreload(photoTargets, !loading);
+  const contentLoading = loading || photoPreload.loading;
+
   const isFilterActive = useMemo(
     () => Boolean(activeFilters.location || activeFilters.latin),
     [activeFilters.location, activeFilters.latin]
@@ -622,16 +631,16 @@ export default function PlantsScreen() {
   }, []);
 
   useEffect(() => {
-    if (loading) return;
+    if (contentLoading) return;
     const ids = derivedPlants.map((p) => p.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
-  }, [loading, derivedPlants.length, primeAnimations, runStaggerIn, derivedPlants]);
+  }, [contentLoading, derivedPlants.length, primeAnimations, runStaggerIn, derivedPlants]);
 
   const emptyAnim = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    if (loading) {
+    if (contentLoading) {
       emptyAnim.setValue(0);
       return;
     }
@@ -646,7 +655,7 @@ export default function PlantsScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, derivedPlants.length, emptyAnim]);
+  }, [contentLoading, derivedPlants.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],
@@ -658,7 +667,7 @@ export default function PlantsScreen() {
   });
   const emptyOpacity = emptyAnim;
 
-  if (loading) {
+  if (contentLoading) {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader

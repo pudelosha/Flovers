@@ -68,6 +68,8 @@ describe("SharedPlantHero", () => {
   it("prefers a numeric owned plant's local photo", async () => {
     photo.mockResolvedValue("file:///owned-bird.jpg");
     const view = render(<SharedPlantHero plant={plant} preferLocalPhoto />);
+    expect(view.getByTestId("shared-plant-photo-loading")).toBeTruthy();
+    expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
     await waitFor(() => expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "file:///owned-bird.jpg" }));
     expect(photo).toHaveBeenCalledWith("12");
   });
@@ -93,7 +95,8 @@ describe("SharedPlantHero", () => {
     const view = render(<SharedPlantHero plant={plant} preferLocalPhoto />);
     await waitFor(() => expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "file:///plant12.jpg" }));
     view.rerender(<SharedPlantHero plant={{ ...plant, id: "13", imageUrl: "https://example.test/plant13.jpg" }} preferLocalPhoto />);
-    expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "https://example.test/plant13.jpg" });
+    expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
+    expect(view.getByTestId("shared-plant-photo-loading")).toBeTruthy();
     view.rerender(<SharedPlantHero plant={{ ...plant, id: "14", imageUrl: "https://example.test/incoming.jpg" }} preferLocalPhoto={false} />);
     await act(async () => finish("file:///plant13.jpg"));
     expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "https://example.test/incoming.jpg" });
@@ -107,5 +110,30 @@ describe("SharedPlantHero", () => {
     fireEvent(view.UNSAFE_getByType(ImageBackground), "error", {});
     expect(view.getByText("No image")).toBeTruthy();
     expect(view.queryByTestId("shared-plant-image")).toBeNull();
+  });
+
+  it("waits for the private photo instead of briefly displaying a catalogue or bundled preview", () => {
+    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000 };
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: true, error: null });
+    const withPhoto = { ...plant, photo: metadata, previewImage: "pothos" as const };
+    const view = render(<SharedPlantHero plant={withPhoto} preferLocalPhoto />);
+    expect(view.getByTestId("shared-plant-photo-loading")).toBeTruthy();
+    expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
+    expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
+    expect(photo).not.toHaveBeenCalled();
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
+    view.rerender(<SharedPlantHero plant={withPhoto} preferLocalPhoto />);
+    expect(view.UNSAFE_getByType(FramedPlantImage).props.uri).toBe("data:image/jpeg;base64,SYNCED");
+    expect(view.queryByTestId("shared-plant-photo-loading")).toBeNull();
+  });
+
+  it("ends with the no-image placeholder instead of catalogue fallback when private loading fails", () => {
+    const metadata = { id: "11111111-1111-4111-8111-111111111111", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000 };
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: new Error("Photo unavailable") });
+    const view = render(<SharedPlantHero plant={{ ...plant, photo: metadata }} />);
+    expect(view.getByText("No image")).toBeTruthy();
+    expect(view.queryByTestId("shared-plant-photo-loading")).toBeNull();
+    expect(view.UNSAFE_queryByType(ImageBackground)).toBeNull();
+    expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
   });
 });
