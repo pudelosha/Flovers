@@ -12,11 +12,12 @@
         "moisture": "霧吹き",
         "fertilising": "施肥",
         "care": "ケア",
-        "repot": "植え替え"
+        "repot": "植え替え",
+        "photo": "写真"
       }
     },
     "delete": {
-      "title": "履歴を削除",
+      "title": "完了タスクを削除",
       "scopeLabel": "範囲",
       "modes": {
         "plant": "選択した植物の履歴を削除",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} 日"
     },
     "filter": {
-      "title": "履歴をフィルター",
+      "title": "日誌を絞り込む",
       "plantLabel": "植物",
       "locationLabel": "場所",
-      "taskTypesLabel": "タスクの種類",
-      "completedDateRangeLabel": "完了日範囲",
+      "taskTypesLabel": "記録の種類",
+      "completedDateRangeLabel": "記録日の範囲",
       "fromLabel": "開始",
       "toLabel": "終了",
       "anyPlant": "すべての植物",
@@ -41,11 +42,11 @@
       "clear": "クリア"
     },
     "sort": {
-      "title": "履歴を並び替え",
+      "title": "日誌を並べ替える",
       "sortByLabel": "並び替え基準",
       "directionLabel": "方向",
       "keys": {
-        "completedAt": "完了日",
+        "completedAt": "記録日",
         "plant": "植物名",
         "location": "場所"
       },
@@ -56,10 +57,10 @@
       "reset": "リセット"
     },
     "export": {
-      "title": "履歴エクスポートを送信",
+      "title": "タスクをエクスポート",
       "noticeTitle": "Excelエクスポートは現在適用されている条件を使用します。",
-      "noticeFiltered": "以下に表示されているフィルターに一致するタスク履歴のみが含まれます。異なるデータが必要な場合は、先にフィルターを変更してから再度送信してください。",
-      "noticeAllData": "現在フィルターは適用されていないため、この画面の利用可能なすべてのタスク履歴データがエクスポートに含まれます。",
+      "noticeFiltered": "現在の条件に一致するタスクのみが対象です。写真は含まれません。別のタスクが必要な場合は、先に絞り込み条件を変更してください。",
+      "noticeAllData": "自分の植物の利用可能な完了タスクをすべて出力します。写真は含まれません。",
       "criteriaTitle": "適用条件",
       "plantLabel": "植物",
       "locationLabel": "場所",

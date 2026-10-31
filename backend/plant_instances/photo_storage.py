@@ -60,7 +60,12 @@ def photo_metadata(plant, request=None):
     image = next((image for image in plant.images.all() if image.purpose == "cover"), None)
     if image is None:
         return None
-    url = f"/plant-instances/{plant.pk}/photo/{image.pk}/"
+    return image_metadata(image)
+
+
+def image_metadata(image):
+    """The same authenticated photo contract for covers and journal entries."""
+    url = f"/plant-instances/{image.plant_id}/photo/{image.pk}/"
     return {"id": str(image.pk), "url": url, "thumbnail_url": url + "?variant=thumbnail",
             "width": image.width, "height": image.height, "byte_size": image.byte_size,
             "framing": image_framing(image), "framing_revision": image.framing_revision,

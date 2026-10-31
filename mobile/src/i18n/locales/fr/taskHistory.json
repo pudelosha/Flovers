@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Historique des tâches"
+      "title": "Journal des tâches"
     },
     "fab": {
       "sort": "Trier",
       "filter": "Filtrer",
-      "sendExport": "Envoyer l’export",
-      "delete": "Supprimer",
+      "sendExport": "Exporter les tâches",
+      "delete": "Supprimer des tâches",
       "clearFilter": "Effacer le filtre",
-      "showAllHistory": "Afficher tout l’historique"
+      "showAllHistory": "Afficher tout le journal"
     },
     "common": {
       "unnamedPlant": "Plante sans nom"
     },
     "toasts": {
-      "failedToLoad": "Échec du chargement de l’historique des tâches",
-      "historyDeleted": "Historique supprimé",
-      "failedToDeleteHistory": "Échec de la suppression de l’historique",
-      "historyTaskDeleted": "Tâche d’historique supprimée",
-      "failedToDeleteHistoryTask": "Échec de la suppression de la tâche d’historique",
+      "failedToLoad": "Impossible de charger le journal.",
+      "historyDeleted": "Tâches terminées supprimées.",
+      "failedToDeleteHistory": "Impossible de supprimer les tâches terminées.",
+      "historyTaskDeleted": "Tâche terminée supprimée.",
+      "failedToDeleteHistoryTask": "Impossible de supprimer la tâche terminée.",
       "taskNotLinkedToPlant": "Cette tâche n’est pas liée à une plante.",
-      "exportSent": "Demande d’export de l’historique des tâches envoyée",
-      "failedToSendExport": "Échec de l’envoi de l’export de l’historique des tâches",
+      "exportSent": "Export des tâches demandé.",
+      "failedToSendExport": "Impossible d’envoyer l’export des tâches.",
       "exportNotAvailableYet": "L’export n’est pas encore disponible."
     },
     "empty": {
-      "title": "Aucune tâche terminée pour le moment",
-      "descBeforeBold": "Cet écran affiche",
-      "bold": "les tâches de rappel clôturées",
-      "descAfterBold": "de votre page d’accueil (les tâches en attente ne sont pas affichées).",
+      "title": "Ton journal est vide",
+      "descBeforeBold": "Ce journal regroupe",
+      "bold": "les tâches terminées et les photos des plantes.",
+      "descAfterBold": "Ajoute une photo depuis le menu + ou termine une tâche pour commencer ton journal.",
       "filteredToPlantId": "Actuellement filtré sur l’identifiant de plante {{plantId}}.",
-      "openFromTaskHint": "Ouvrez-le depuis une tâche spécifique pour voir l’historique uniquement pour cette plante."
+      "openFromTaskHint": "Ouvre le journal depuis une plante ou une tâche pour ne voir que les entrées de cette plante."
     },
     "tile": {
       "completedOn": "Terminé le {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "brumisation",
       "care": "entretien",
       "repot": "rempotage"
+    },
+    "photo": {
+      "add": "Ajouter une photo",
+      "edit": "Modifier la photo",
+      "filterType": "Photo",
+      "saved": "Photo enregistrée dans le journal.",
+      "deleted": "Photo supprimée du journal.",
+      "deleteFailed": "Impossible de supprimer la photo. Réessaie.",
+      "deleteTitle": "Supprimer la photo ?",
+      "deleteConfirm": "Cette photo et ses notes seront définitivement supprimées du journal.",
+      "delete": "Supprimer la photo",
+      "titleAdd": "Ajouter une photo au journal",
+      "titleEdit": "Modifier une photo du journal",
+      "description": "Suis la croissance de ta plante. Tu peux ajouter une photo par plante tous les sept jours.",
+      "plant": "Plante",
+      "choosePlant": "Choisir une plante",
+      "photo": "Photo",
+      "takePhoto": "Prendre une photo",
+      "chooseGallery": "Choisir dans la galerie",
+      "photoDate": "Date de la photo (facultatif)",
+      "chooseDate": "Choisir une date",
+      "clearDate": "Effacer la date",
+      "notes": "Notes (facultatif)",
+      "notesPlaceholder": "Ajoute une note sur ta plante…",
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "added": "Ajoutée le",
+      "photoTaken": "Date de la photo",
+      "journalGuide": "Photo du journal",
+      "noPhoto": "Choisis ou prends une photo pour continuer.",
+      "noPlant": "Choisis une plante pour continuer.",
+      "cooldown": "Tu pourras ajouter une autre photo de cette plante le {{date}}.",
+      "loadFailed": "Impossible de charger les détails de la photo. Réessaie.",
+      "saveFailed": "Impossible d’enregistrer la photo. Réessaie.",
+      "conflict": "Cette photo a été modifiée. Ferme le formulaire, puis ouvre-le à nouveau.",
+      "permission": "Seul le propriétaire de la plante peut gérer les photos du journal.",
+      "tooLarge": "Cette photo est trop volumineuse. Choisis une image plus petite.",
+      "invalidPhoto": "Impossible de lire cette photo. Choisis une autre image.",
+      "storageFull": "L’espace de stockage des photos est plein. Supprime une photo inutile et réessaie.",
+      "cameraDenied": "Pour prendre une photo, autorise l’accès à l’appareil photo dans les réglages du téléphone.",
+      "futureDate": "La date de la photo ne peut pas être dans le futur.",
+      "retry": "Réessayer",
+      "cancel": "Annuler",
+      "noPlants": "Ajoute une plante avant d’ajouter des photos au journal.",
+      "retryPending": "La connexion a été interrompue. Réessaie d’enregistrer les mêmes informations, ou ferme puis rouvre le journal pour vérifier ce qui a été enregistré."
     }
   }
 }

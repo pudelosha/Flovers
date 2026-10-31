@@ -11,7 +11,7 @@
       "title": "Marcar tarefa como concluída",
       "overdueInfo": "Esta tarefa está em atraso. A próxima data será calculada a partir da data de conclusão {{intervalText}}.",
       "noteLabel": "Nota (opcional)",
-      "noteHint": "Esta nota será salva e ficará visível mais tarde para a planta no Diário da Planta.",
+      "noteHint": "Esta anotação será salva com a tarefa concluída no Diário de tarefas.",
       "notePlaceholder": "Você pode adicionar uma nota curta sobre o que fez, observações, etc.",
       "confirm": "Marcar como concluída"
     },
@@ -19,7 +19,7 @@
       "completionDateHint": "Esta data será salva para cada tarefa concluída. Datas futuras não são permitidas.",
       "title": "Marcar {{count}} tarefas como concluídas",
       "overdueInfo": "Algumas tarefas estão em atraso. A próxima data será calculada a partir da data de conclusão selecionada {{intervalText}}.",
-      "noteHint": "Esta nota será salva para cada tarefa concluída e ficará visível mais tarde para a planta no Diário da Planta.",
+      "noteHint": "Esta anotação será salva com cada tarefa concluída no Diário de tarefas.",
       "confirm": "Marcar como concluída"
     },
     "filter": {

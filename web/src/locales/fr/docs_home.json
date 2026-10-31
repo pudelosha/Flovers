@@ -25,7 +25,7 @@
           "« Marquer comme terminé » : termine la tâche et te permet d’ajouter une note pour enrichir le suivi des soins.",
           "« Modifier le rappel » : ouvre le rappel associé pour en changer la fréquence.",
           "Détails de la plante : ouvre directement les détails de la plante concernée.",
-          "« Afficher l’historique » : affiche les tâches déjà terminées pour cette plante ou ce rappel."
+          "Journal des tâches ouvre les entrées de cette plante : tâches terminées, notes et photos de croissance."
         ]
       },
       {
@@ -36,7 +36,7 @@
           "« Afficher ceux d’aujourd’hui » : affiche uniquement les tâches prévues aujourd’hui.",
           "« Trier » : change l’ordre des tâches.",
           "« Filtrer » : limite la liste selon les critères choisis.",
-          "« Historique » : ouvre l’historique des tâches, présenté dans une autre page de la documentation."
+          "Journal des tâches ouvre le journal des tâches terminées et des photos des plantes, présenté dans une page dédiée."
         ]
       },
       {
@@ -68,8 +68,8 @@
         "heading": "Accéder aux autres écrans",
         "body": [
           "Les menus des tâches et les actions rapides donnent accès aux autres parties de l’application.",
-          "Depuis une tâche, tu peux ouvrir les détails de sa plante ou l’historique des tâches.",
-          "Le menu d’actions rapides permet d’ouvrir l’historique et d’affiner la liste avec le tri et les filtres."
+          "Depuis une tâche, tu peux ouvrir les Détails de la plante ou son Journal des tâches.",
+          "Le menu + permet d’ouvrir le Journal des tâches ou de trier et filtrer les tâches à faire."
         ]
       },
       {

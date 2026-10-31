@@ -25,7 +25,7 @@
           "Segna come completata: completa l'attività e ti permette di aggiungere una nota, che resterà nello storico delle cure.",
           "Modifica promemoria: apre il promemoria collegato all'attività, dove puoi cambiarne la frequenza.",
           "Dettagli pianta: apre i Dettagli della pianta a cui si riferisce l'attività.",
-          "Mostra cronologia: apre lo Storico attività con le attività già completate per la stessa pianta o lo stesso promemoria."
+          "Diario delle attività apre le voci di questa pianta: attività completate, note e foto della crescita."
         ]
       },
       {
@@ -36,7 +36,7 @@
           "Mostra oggi: mostra solo le attività previste per oggi.",
           "Ordina: cambia l'ordine delle attività nell'elenco.",
           "Filtra: mostra solo le attività che corrispondono ai criteri scelti.",
-          "Cronologia: apre lo Storico attività, descritto in una pagina dedicata."
+          "Diario delle attività apre il diario delle attività completate e delle foto delle piante, descritto in una pagina dedicata."
         ]
       },
       {
@@ -68,8 +68,8 @@
         "heading": "Passa ad altre schermate",
         "body": [
           "Dalla schermata iniziale puoi aprire altre sezioni dell'app usando i menu delle attività e il pulsante delle azioni rapide.",
-          "Dal menu di un'attività puoi passare direttamente ai Dettagli della pianta o allo Storico attività.",
-          "Dal pulsante delle azioni rapide puoi aprire lo Storico attività oppure ordinare e filtrare l'elenco."
+          "Dal menu di un’attività puoi aprire i Dettagli della pianta o il suo Diario delle attività.",
+          "Il menu + permette di aprire il Diario delle attività oppure ordinare e filtrare le attività in sospeso."
         ]
       },
       {

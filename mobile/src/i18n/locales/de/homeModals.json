@@ -11,7 +11,7 @@
       "title": "Aufgabe als erledigt markieren",
       "overdueInfo": "Diese Aufgabe ist überfällig. Das nächste Datum wird ab dem Abschlussdatum {{intervalText}} berechnet.",
       "noteLabel": "Notiz (optional)",
-      "noteHint": "Diese Notiz wird gespeichert und ist später für die jeweilige Pflanze im Pflanzentagebuch sichtbar.",
+      "noteHint": "Diese Notiz wird mit der erledigten Aufgabe im Pflegetagebuch gespeichert.",
       "notePlaceholder": "Du kannst eine kurze Notiz darüber hinzufügen, was du getan hast, Beobachtungen usw.",
       "confirm": "Als erledigt markieren"
     },
@@ -19,7 +19,7 @@
       "completionDateHint": "Dieses Datum wird für jede erledigte Aufgabe gespeichert. Zukünftige Daten sind nicht erlaubt.",
       "title": "Markiere {{count}} Aufgaben als erledigt",
       "overdueInfo": "Einige Aufgaben sind überfällig. Das nächste Datum wird ab dem ausgewählten Abschlussdatum {{intervalText}} berechnet.",
-      "noteHint": "Diese Notiz wird für jede abgeschlossene Aufgabe gespeichert und ist später für die jeweilige Pflanze im Pflanzentagebuch sichtbar.",
+      "noteHint": "Diese Notiz wird mit jeder erledigten Aufgabe im Pflegetagebuch gespeichert.",
       "confirm": "Als erledigt markieren"
     },
     "filter": {

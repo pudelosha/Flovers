@@ -66,6 +66,8 @@ class PlantInstance(models.Model):
 
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
+    # Admission time survives deleting/backdating a journal entry.
+    last_journal_photo_at = models.DateTimeField(null=True, blank=True, editable=False)
 
     # Opaque token used in QR codes (URL-safe, unique, not editable)
     qr_code = models.CharField(
@@ -105,11 +107,43 @@ class PlantCreationRequest(models.Model):
         constraints = [models.UniqueConstraint(fields=["user", "creation_key"], name="plant_creation_user_key_unique")]
 
 
+class JournalPhotoEntry(models.Model):
+    """One private growth photograph in a plant's task journal."""
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    plant = models.ForeignKey(PlantInstance, on_delete=models.CASCADE, related_name="journal_photos")
+    taken_on = models.DateField(null=True, blank=True)
+    notes = models.TextField(blank=True, default="", max_length=4000)
+    revision = models.PositiveIntegerField(default=0)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_at", "-id"]
+
+
+class JournalPhotoUpload(models.Model):
+    """Durable upload receipt, including a tombstone after entry deletion."""
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    upload_key = models.UUIDField()
+    entry = models.ForeignKey(JournalPhotoEntry, null=True, on_delete=models.SET_NULL)
+    # Keep the original plant identity even when that plant has been deleted.
+    plant_id_snapshot = models.PositiveBigIntegerField()
+    operation = models.CharField(max_length=8, choices=[("create", "Create"), ("replace", "Replace")])
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "upload_key"], name="journal_upload_user_key_unique")]
+
+
 class PlantImage(models.Model):
     """Private image metadata; bytes never live in PostgreSQL or public media."""
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     plant = models.ForeignKey(PlantInstance, on_delete=models.CASCADE, related_name="images")
+    journal_entry = models.OneToOneField(JournalPhotoEntry, null=True, blank=True,
+        on_delete=models.CASCADE, related_name="image")
     purpose = models.CharField(max_length=12, default="cover", editable=False)
     upload_key = models.UUIDField()
     directory = models.CharField(max_length=160, unique=True, editable=False)
@@ -125,6 +159,8 @@ class PlantImage(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(fields=["plant"], condition=models.Q(purpose="cover"), name="plant_one_current_cover"),
+            models.CheckConstraint(condition=(models.Q(purpose="cover", journal_entry__isnull=True) |
+                models.Q(purpose="journal", journal_entry__isnull=False)), name="plant_photo_purpose_entry"),
             models.CheckConstraint(condition=models.Q(focal_x__gte=0, focal_x__lte=1,
                 focal_y__gte=0, focal_y__lte=1, zoom__gte=1, zoom__lte=4), name="plant_photo_framing_bounds"),
         ]

@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Histórico de tarefas"
+      "title": "Diário de tarefas"
     },
     "fab": {
       "sort": "Ordenar",
       "filter": "Filtrar",
-      "sendExport": "Enviar exportação",
-      "delete": "Excluir",
+      "sendExport": "Exportar tarefas",
+      "delete": "Excluir tarefas",
       "clearFilter": "Limpar filtro",
-      "showAllHistory": "Mostrar todo o histórico"
+      "showAllHistory": "Mostrar todo o diário"
     },
     "common": {
       "unnamedPlant": "Planta sem nome"
     },
     "toasts": {
-      "failedToLoad": "Falha ao carregar o histórico de tarefas",
-      "historyDeleted": "Histórico excluído",
-      "failedToDeleteHistory": "Falha ao excluir o histórico",
-      "historyTaskDeleted": "Tarefa do histórico excluída",
-      "failedToDeleteHistoryTask": "Falha ao excluir a tarefa do histórico",
+      "failedToLoad": "Não foi possível carregar o diário.",
+      "historyDeleted": "Tarefas concluídas excluídas.",
+      "failedToDeleteHistory": "Não foi possível excluir as tarefas concluídas.",
+      "historyTaskDeleted": "Tarefa concluída excluída.",
+      "failedToDeleteHistoryTask": "Não foi possível excluir a tarefa concluída.",
       "taskNotLinkedToPlant": "Esta tarefa não está vinculada a uma planta.",
-      "exportSent": "Solicitação de exportação do histórico de tarefas enviada",
-      "failedToSendExport": "Falha ao enviar a exportação do histórico de tarefas",
+      "exportSent": "Exportação das tarefas solicitada.",
+      "failedToSendExport": "Não foi possível enviar a exportação das tarefas.",
       "exportNotAvailableYet": "A exportação ainda não está disponível."
     },
     "empty": {
-      "title": "Nenhuma tarefa concluída ainda",
-      "descBeforeBold": "Esta tela mostra",
-      "bold": "tarefas de lembrete encerradas",
-      "descAfterBold": "da sua página inicial (tarefas pendentes não são mostradas).",
+      "title": "Seu diário está vazio",
+      "descBeforeBold": "Este diário reúne",
+      "bold": "as tarefas concluídas e as fotos das plantas.",
+      "descAfterBold": "Adicione uma foto pelo menu + ou conclua uma tarefa para começar seu diário.",
       "filteredToPlantId": "Atualmente filtrado para o id da planta {{plantId}}.",
-      "openFromTaskHint": "Abra a partir de uma tarefa específica para ver o histórico apenas dessa planta."
+      "openFromTaskHint": "Abra o diário a partir de uma planta ou tarefa para ver apenas os registros daquela planta."
     },
     "tile": {
       "completedOn": "Concluído em {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "pulverização",
       "care": "cuidados",
       "repot": "replantio"
+    },
+    "photo": {
+      "add": "Adicionar foto",
+      "edit": "Editar foto",
+      "filterType": "Foto",
+      "saved": "Foto salva no diário.",
+      "deleted": "Foto excluída do diário.",
+      "deleteFailed": "Não foi possível excluir a foto. Tente novamente.",
+      "deleteTitle": "Excluir foto?",
+      "deleteConfirm": "Esta foto e suas anotações serão excluídas permanentemente do diário.",
+      "delete": "Excluir foto",
+      "titleAdd": "Adicionar foto ao diário",
+      "titleEdit": "Editar foto do diário",
+      "description": "Registre o crescimento da sua planta. Você pode adicionar uma foto por planta a cada sete dias.",
+      "plant": "Planta",
+      "choosePlant": "Escolha uma planta",
+      "photo": "Foto",
+      "takePhoto": "Tirar foto",
+      "chooseGallery": "Escolher da galeria",
+      "photoDate": "Data da foto (opcional)",
+      "chooseDate": "Escolher data",
+      "clearDate": "Remover data",
+      "notes": "Anotações (opcional)",
+      "notesPlaceholder": "Adicione uma anotação sobre sua planta…",
+      "save": "Salvar",
+      "saving": "Salvando…",
+      "added": "Adicionada",
+      "photoTaken": "Data da foto",
+      "journalGuide": "Foto do diário",
+      "noPhoto": "Escolha ou tire uma foto para continuar.",
+      "noPlant": "Escolha uma planta para continuar.",
+      "cooldown": "Você poderá adicionar outra foto desta planta em {{date}}.",
+      "loadFailed": "Não foi possível carregar os detalhes da foto. Tente novamente.",
+      "saveFailed": "Não foi possível salvar a foto. Tente novamente.",
+      "conflict": "Esta foto foi alterada. Feche o formulário e abra-o novamente.",
+      "permission": "Somente o proprietário da planta pode gerenciar as fotos do diário.",
+      "tooLarge": "Esta foto é muito grande. Escolha uma imagem menor.",
+      "invalidPhoto": "Não foi possível ler esta foto. Escolha outra imagem.",
+      "storageFull": "O espaço para fotos está cheio. Exclua uma foto desnecessária e tente novamente.",
+      "cameraDenied": "Para tirar uma foto, permita o acesso à câmera nas configurações do celular.",
+      "futureDate": "A data da foto não pode estar no futuro.",
+      "retry": "Tentar novamente",
+      "cancel": "Cancelar",
+      "noPlants": "Adicione uma planta antes de incluir fotos no diário.",
+      "retryPending": "A conexão foi interrompida. Tente salvar os mesmos dados novamente ou feche e reabra o diário para conferir o que foi salvo."
     }
   }
 }

@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Historial de tareas",
+    "title": "Diario de tareas",
     "sections": [
       {
-        "heading": "Consultar los cuidados realizados",
+        "heading": "Cuidados y crecimiento en un mismo diario",
         "body": [
-          "El historial permite revisar y gestionar las tareas que ya has completado.",
-          "Muestra qué cuidados hiciste, cuándo y para qué plantas.",
-          "Puede abrirse con todas las tareas o con un filtro aplicado, por ejemplo para una planta concreta."
+          "El Diario de tareas reúne tareas completadas y fotos del crecimiento. Ábrelo desde Inicio o desde el menú de una planta para ver solo sus entradas. Sustituye la antigua ventana del diario de la planta. Las tareas pendientes siguen en Inicio."
         ]
       },
       {
-        "heading": "Las tarjetas de tareas completadas",
+        "heading": "Tareas completadas",
         "body": [
-          "Cada tarjeta muestra una tarea completada con su tipo de cuidado, el nombre de la planta y la ubicación.",
-          "La columna derecha tiene tres filas: el estado completado, la fecha y la persona que realizó la tarea. Si no se registró a nadie, aparece un usuario desconocido.",
-          "La nota guardada al completar la tarea aparece debajo de sus detalles."
+          "Las tarjetas mantienen el tipo de tarea, la planta y la ubicación. A la derecha aparecen tres filas: Completada, la fecha y la persona que la realizó. Las notas siempre son visibles cuando existen. El propietario puede editar el recordatorio vinculado o eliminar la entrada. Detalles de la planta abre su ficha."
         ]
       },
       {
-        "heading": "Consultar las notas",
+        "heading": "Añadir una foto",
         "body": [
-          "Las notas se ven en cuanto se carga el historial. Los textos largos ocupan tantas líneas como necesiten.",
-          "Puedes añadir una nota al marcar una tarea como completada. Si no hay nota, no aparece una sección vacía."
+          "Añadir foto es la primera opción del menú +. Elige una planta que te pertenezca, haz una foto o selecciónala de la galería. La fecha de la foto y las notas son opcionales. Ajusta el encuadre y guarda. Las fotos del diario son entradas independientes y no sustituyen la foto principal de la planta."
         ]
       },
       {
-        "heading": "Menú de la tarjeta de tarea",
+        "heading": "Una foto cada siete días",
         "body": [
-          "Toca la parte principal de una tarjeta completada para abrir su menú de acciones.",
-          "Editar recordatorio abre el recordatorio asociado para cambiar su frecuencia o sus ajustes. Esta acción solo está disponible para el propietario de la planta.",
-          "Detalles de la planta: abre los detalles de la planta correspondiente.",
-          "Eliminar tarea borra permanentemente la entrada seleccionada del historial. Solo puede hacerlo el propietario de la planta."
+          "Puedes crear una entrada con foto por planta cada siete días (168 horas), contados desde la subida al servidor. Cambiar la fecha de la foto, editar o eliminar la entrada no reduce ese intervalo. El formulario indica cuándo podrás añadir la siguiente foto."
         ]
       },
       {
-        "heading": "Acciones rápidas",
+        "heading": "Tarjetas de fotos y edición",
         "body": [
-          "El botón de acciones rápidas abre las opciones para gestionar el historial.",
-          "«Ordenar»: cambia el orden de las tareas completadas.",
-          "«Filtrar»: limita la lista según los criterios que elijas.",
-          "«Eliminar»: borra varias tareas según criterios como planta, ubicación, tipo de cuidado o antigüedad.",
-          "Enviar exportación manda por correo una hoja con los filtros actuales y la opción de incluir tareas pendientes. Solo el propietario puede exportar su historial."
+          "Las fotos aparecen entre las tareas completadas, con una imagen difuminada, Añadida y su fecha y hora arriba a la derecha, y las notas abajo. No tienen una etiqueta de tipo de tarea. Toca la tarjeta para Editar foto, Detalles de la planta o Eliminar foto. El propietario puede sustituir la imagen, cambiar la fecha o las notas y eliminarla tras confirmar."
         ]
       },
       {
-        "heading": "Ordenar el historial",
+        "heading": "Ordenar y filtrar",
         "body": [
-          "Puedes ordenar los cuidados como te resulte más cómodo revisarlos.",
-          "Puedes elegir entre fecha de realización, nombre de planta y ubicación."
+          "Ordena por fecha de entrada, nombre de planta o ubicación. Filtra por planta, ubicación, tipo o intervalo de fechas; elige Foto para ver solo fotos. La fecha de entrada corresponde al momento de añadir la foto; la fecha opcional de la foto se indica aparte."
         ]
       },
       {
-        "heading": "Filtrar el historial",
+        "heading": "Exportar y eliminar tareas",
         "body": [
-          "Los filtros ayudan a encontrar ciertos cuidados completados.",
-          "Puedes filtrar por planta, ubicación, tipo de cuidado e intervalo de fechas de realización.",
-          "Combina filtros para precisar la búsqueda, por ejemplo las fertilizaciones de una ubicación durante un mes concreto."
+          "Exportar tareas envía por correo una hoja de cálculo de tus tareas con los filtros actuales. Puedes incluir las pendientes. Eliminar tareas borra las tareas completadas que cumplan los criterios elegidos. Ambas acciones son exclusivas del propietario y siempre excluyen las fotos. Las fotos se eliminan una a una desde el menú de su tarjeta."
         ]
       },
       {
-        "heading": "Eliminar varias tareas",
+        "heading": "Fotos privadas y plantas compartidas",
         "body": [
-          "La eliminación en grupo borra permanentemente varias tareas completadas según los criterios elegidos.",
-          "Puedes vaciar el historial de una planta, eliminar tareas de una ubicación o de un tipo, o borrar las anteriores a una fecha.",
-          "Esta eliminación es definitiva y no se puede deshacer."
-        ]
-      },
-      {
-        "heading": "El historial y la pantalla de Inicio",
-        "body": [
-          "Inicio muestra tareas pendientes, también futuras en Todas. Hoy y Vencidas limitan la lista. El historial muestra tareas completadas.",
-          "El historial recoge las tareas ya completadas y permite consultarlas, ordenarlas, filtrarlas o eliminarlas.",
-          "Juntas, las dos pantallas cubren los cuidados del día y el seguimiento a largo plazo."
-        ]
-      },
-      {
-        "heading": "Historia de atención compartida",
-        "body": [
-          "El historial de cuidados de las plantas compartidas activamente se puede ver con la etiqueta Compartido. Cuando un cuidador autorizado completa una tarea, esa finalización se registra en el mismo historial de atención. Los destinatarios no pueden eliminar ni exportar el historial del propietario."
+          "Las fotos se reducen y se almacenan de forma privada en el servidor. Solo pueden verlas el propietario y quienes tengan acceso compartido activo a esa planta. Los destinatarios pueden consultar el diario, pero no añadir, editar ni eliminar sus fotos. Las imágenes sustituidas o eliminadas se limpian del servidor. Eliminar una planta también elimina sus fotos del diario."
         ]
       }
     ]

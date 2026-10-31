@@ -11,7 +11,7 @@
       "title": "Görevi tamamlandı olarak işaretle",
       "overdueInfo": "Bu görev gecikmiştir. Bir sonraki vade tarihi {{intervalText}} tamamlanma tarihinden itibaren hesaplanacaktır.",
       "noteLabel": "Not (isteğe bağlı)",
-      "noteHint": "Bu not kaydedilecek ve daha sonra ev bitkileri Dergisi'nde her ev bitkisi için görüntülenebilir.",
+      "noteHint": "Bu not, tamamlanan görevle birlikte Görev günlüğüne kaydedilir.",
       "notePlaceholder": "Ne yaptığınız, gözlemleriniz vb. hakkında kısa bir not ekleyebilirsiniz.",
       "confirm": "Tamamlandı olarak işaretle"
     },
@@ -19,7 +19,7 @@
       "completionDateHint": "Tamamlanan her görev için bu tarih kaydedilecektir. Gelecek tarihlere izin verilmez.",
       "title": "{{count}} görevlerini tamamlandı olarak işaretle",
       "overdueInfo": "Bazı görevler gecikti. Bir sonraki son tarih, seçilen tamamlanma tarihi {{intervalText}}'ye göre hesaplanacaktır.",
-      "noteHint": "Bu not, tamamlanan her göreve kaydedilir. Daha sonra her bitkinin günlüğünde görüntüleyebilirsiniz.",
+      "noteHint": "Bu not, tamamlanan her görevle birlikte Görev günlüğüne kaydedilir.",
       "confirm": "Tamamlandı olarak işaretle"
     },
     "filter": {

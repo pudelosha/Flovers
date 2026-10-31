@@ -25,7 +25,7 @@
           "Tamamlandı olarak işaretle: görevi kapatır ve isteğe bağlı olarak bir not eklemenize olanak tanıyarak ayrıntılı bir bakım geçmişi oluşturmanıza yardımcı olur.",
           "Hatırlatıcıyı düzenle: görevle ilişkili Hatırlatıcıyı açar, böylece yinelenme ayarlarını değiştirebilirsiniz.",
           "Bitki ayrıntıları: İlgili ev bitkisinin doğrudan ev bitkisi Ayrıntıları görünümüne gider.",
-          "Geçmişi göster: aynı ev bitkisi veya hatırlatıcı için önceden tamamlanmış görevleri gösteren görev geçmişini açar."
+          "Görev günlüğü bu bitkinin tamamlanan görevlerini, notlarını ve gelişim fotoğraflarını açar."
         ]
       },
       {
@@ -36,7 +36,7 @@
           "Son tarihi bugün göster: Son tarihi bugün olan görevleri görüntüleyen bir kısayol filtresi uygular.",
           "Sırala: listedeki görevlerin sırasını değiştirir.",
           "Filtrele: Seçilen kriterlere göre listeyi daraltır.",
-          "Geçmiş: ayrı olarak belgelenen Görev Geçmişi ekranına gider."
+          "Görev günlüğü, tamamlanan görevleri ve bitki fotoğraflarını gösterir. Ayrıntılı bilgi ayrı bir belgede yer alır."
         ]
       },
       {
@@ -68,8 +68,8 @@
         "heading": "Ana Sayfadan Navigasyon",
         "body": [
           "Ana ekran, görev eylemleri ve FAB kısayolları aracılığıyla uygulamanın diğer bölümlerine hızlı gezinme sağlar.",
-          "Bireysel bir görevden doğrudan ev bitkisi Ayrıntılarına veya görev geçmişine geçebilirsiniz.",
-          "FAB'dan Görev Geçmişini açabilir veya sıralama ve filtrelemeyi kullanarak görev listesini hassaslaştırabilirsiniz."
+          "Bir görevin menüsünden Bitki ayrıntılarını veya o bitkinin Görev günlüğünü açabilirsiniz.",
+          "+ menüsünden Görev günlüğünü açabilir, bekleyen görevleri sıralayabilir ve filtreleyebilirsiniz."
         ]
       },
       {

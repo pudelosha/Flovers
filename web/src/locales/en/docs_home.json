@@ -25,7 +25,7 @@
           "Mark as complete: closes the task and allows you to optionally add a note, helping you build a detailed care history.",
           "Edit reminder: opens the Reminder associated with the task so you can change its recurrence settings.",
           "Plant details: navigates directly to the Plant Details view for the related plant.",
-          "Show history: opens the task history showing previously completed tasks for the same plant or reminder."
+          "Task Journal opens the journal filtered to this plant, with completed tasks, notes and progress photos."
         ]
       },
       {
@@ -36,7 +36,7 @@
           "Show due today: applies a shortcut filter that displays tasks due today.",
           "Sort: changes the ordering of tasks in the list.",
           "Filter: narrows down the list based on selected criteria.",
-          "History: navigates to the Task History screen, which is documented separately."
+          "Task Journal opens the journal of completed tasks and plant photos, documented on its own page."
         ]
       },
       {
@@ -68,8 +68,8 @@
         "heading": "Navigation from Home",
         "body": [
           "The Home screen provides fast navigation to other parts of the app through task actions and FAB shortcuts.",
-          "From an individual task you can jump directly to Plant Details or task history.",
-          "From the FAB you can open Task History or refine the task list using sorting and filtering."
+          "From a task you can open Plant details or this plant’s Task Journal.",
+          "The + menu lets you open Task Journal or sort and filter the pending tasks."
         ]
       },
       {

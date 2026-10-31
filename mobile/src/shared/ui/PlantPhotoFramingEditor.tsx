@@ -12,6 +12,7 @@ import type { PhotoFraming, PhotoSize } from "../utils/photoFraming";
 type Props = {
   uri: string; width?: number; height?: number; value: PhotoFraming; onChange: (value: PhotoFraming) => void;
   disabled?: boolean; onInteractionChange?: (active: boolean) => void;
+  journalLabel?: string;
 };
 type Touch = { count: number; pageX: number; pageY: number; x: number; y: number; distance: number };
 function touch(event: GestureResponderEvent): Touch | null {
@@ -23,7 +24,7 @@ function touch(event: GestureResponderEvent): Touch | null {
     distance: Math.hypot(a.pageX - b.pageX, a.pageY - b.pageY) };
 }
 
-export default function PlantPhotoFramingEditor({ uri, width, height, value, onChange, disabled = false, onInteractionChange }: Props) {
+export default function PlantPhotoFramingEditor({ uri, width, height, value, onChange, disabled = false, onInteractionChange, journalLabel }: Props) {
   const { t } = useTranslation();
   const window = useWindowDimensions();
   const [viewport, setViewport] = useState<PhotoSize>({ width: 0, height: 0 });
@@ -113,7 +114,7 @@ export default function PlantPhotoFramingEditor({ uri, width, height, value, onC
           }} onError={() => setFailedUri(uri)} />
         {ready && <>
           <View testID="photo-details-guide" style={[StyleSheet.absoluteFill, styles.detailsGuide]} />
-          <View testID="photo-tiles-guide" style={[styles.tilesGuide, { top: (viewport.height - bandHeight) / 2, height: bandHeight }]} />
+          {!journalLabel && <View testID="photo-tiles-guide" style={[styles.tilesGuide, { top: (viewport.height - bandHeight) / 2, height: bandHeight }]} />}
         </>}
         {readyUri !== uri && failedUri !== uri && <View style={styles.state}><CenteredSpinner size={30} /></View>}
         {failedUri === uri && <View style={styles.state}>
@@ -123,9 +124,9 @@ export default function PlantPhotoFramingEditor({ uri, width, height, value, onC
     </View>
     <View style={styles.legend}>
       <View style={styles.legendItem}><View style={[styles.swatch, { borderColor: RED }]} /><Text style={styles.label}>
-        {t("plantDetailsModals.changeImage.detailsGuide", { defaultValue: "Plant details" })}</Text></View>
-      <View style={styles.legendItem}><View style={[styles.swatch, { borderColor: BLUE }]} /><Text style={styles.label}>
-        {t("plantDetailsModals.changeImage.tilesGuide", { defaultValue: "Plants tiles" })}</Text></View>
+        {journalLabel || t("plantDetailsModals.changeImage.detailsGuide", { defaultValue: "Plant details" })}</Text></View>
+      {!journalLabel && <View style={styles.legendItem}><View style={[styles.swatch, { borderColor: BLUE }]} /><Text style={styles.label}>
+        {t("plantDetailsModals.changeImage.tilesGuide", { defaultValue: "Plants tiles" })}</Text></View>}
     </View>
     <Text style={styles.hint}>{t("plantDetailsModals.changeImage.framingHint", {
       defaultValue: "Drag to move the photo. Pinch or use the zoom controls to adjust it.",

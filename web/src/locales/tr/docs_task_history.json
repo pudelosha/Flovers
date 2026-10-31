@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Görev Geçmişi",
+    "title": "Görev günlüğü",
     "sections": [
       {
-        "heading": "Görev Geçmişi ekranının amacı",
+        "heading": "Bakım ve gelişim aynı günlükte",
         "body": [
-          "Görev Geçmişi, tamamlanmış (kapatılmış) görevleri gözden geçirmek ve yönetmek için kullanılır.",
-          "Hangi eylemlerin ne zaman yapıldığını ve hangi ev bitkilerinin etkilendiğini anlamanıza yardımcı olur.",
-          "Ekran, önceden tanımlanmış bir filtrenin uygulanmasıyla açılabilir (örneğin, belirli bir ev bitkisinin geçmişini göstererek) veya tamamlanan tüm görevleri görüntüleyebilir."
+          "Görev günlüğü, tamamlanan görevlerle bitkinin gelişim fotoğraflarını bir araya getirir. Ana sayfadan açın veya yalnızca bir bitkinin kayıtlarını görmek için bitki menüsünden Görev günlüğünü seçin. Bu ekran eski bitki günlüğü penceresinin yerini alır. Bekleyen görevler Ana sayfada kalır."
         ]
       },
       {
-        "heading": "Tamamlanan görev kutucukları",
+        "heading": "Tamamlanan görevler",
         "body": [
-          "Her kart tamamlanmış bir görevin bakım türünü, bitki adını ve konumunu gösterir.",
-          "Sağ sütunda üç satır bulunur: tamamlanma durumu, tarih ve görevi tamamlayan kişi. Kişi kaydedilmemişse bilinmeyen kullanıcı etiketi gösterilir.",
-          "Görev tamamlanırken kaydedilen not, görev bilgilerinin altında görünür."
+          "Görev kartları görev türünü, bitkiyi ve konumu göstermeye devam eder. Sağ sütunda üç satır vardır: Tamamlandı, tarih ve görevi tamamlayan kişi. Eklenen notlar her zaman görünür. Sahibi, bağlı hatırlatıcıyı düzenleyebilir veya görev kaydını silebilir. Bitki ayrıntıları bitkiyi açar."
         ]
       },
       {
-        "heading": "Notları görüntüleme",
+        "heading": "Fotoğraf ekleme",
         "body": [
-          "Geçmiş yüklendiğinde notlar doğrudan görünür. Uzun notlar gerektiği kadar satıra yayılır.",
-          "Görevi tamamlandı olarak işaretlerken not ekleyebilirsiniz. Notu olmayan görevlerde boş bir not alanı gösterilmez."
+          "Fotoğraf ekle, + menüsünün ilk seçeneğidir. Size ait bir bitki seçin, fotoğraf çekin veya galeriden seçin. Fotoğraf tarihi ve notlar isteğe bağlıdır. Kadrajı ayarlayıp kaydedin. Günlük fotoğrafları ayrı kayıtlardır ve bitkinin ana fotoğrafını değiştirmez."
         ]
       },
       {
-        "heading": "Görev kartı menüsü",
+        "heading": "Yedi günde bir fotoğraf",
         "body": [
-          "İşlem menüsünü açmak için tamamlanmış görev kartının ana bölümüne dokunun.",
-          "Hatırlatıcıyı düzenle, tekrar sıklığını veya ayarlarını değiştirmek için ilgili hatırlatıcıyı açar. Bu işlem yalnızca bitki sahibine açıktır.",
-          "Bitki ayrıntıları: İlgili ev bitkisinin doğrudan ev bitkisi Ayrıntıları görünümüne gider.",
-          "Görevi sil, seçili tamamlanmış geçmiş kaydını kalıcı olarak kaldırır. Bunu yalnızca bitki sahibi yapabilir."
+          "Her bitki için sunucuya yükleme anından itibaren yedi günde (168 saat) bir fotoğraf kaydı oluşturabilirsiniz. Fotoğraf tarihini değiştirmek, kaydı düzenlemek veya silmek bu süreyi kısaltmaz. Form, sonraki fotoğrafın ne zaman eklenebileceğini gösterir."
         ]
       },
       {
-        "heading": "Kayan Eylem Düğmesi (FAB) eylemleri",
+        "heading": "Fotoğraf kartları ve düzenleme",
         "body": [
-          "Görev Geçmişi ekranı, geçmiş listesiyle çalışmaya yönelik eylemlerin bulunduğu bir Kayan Eylem Düğmesi (FAB) içerir.",
-          "Sırala: tamamlanan görevlerin sırasını değiştirir.",
-          "Filtre: geçmiş listesini seçilen kriterlere göre daraltır.",
-          "Sil: Kriterlere (örneğin, seçilen bir ev bitkisine yönelik görevler, seçilen bir konuma ilişkin görevler, belirli türdeki görevler veya seçilen eşikten daha eski görevler) dayalı olarak toplu silmeyi destekler.",
-          "Dışa aktarımı gönder, mevcut filtrelerle e-posta üzerinden tablo gönderir; bekleyen görevler de eklenebilir. Yalnızca sahip kendi geçmişini dışa aktarabilir."
+          "Fotoğraflar tamamlanan görevlerin arasında görünür. Kartta arka plana doğru solan görsel, sağ üstte eklenme zamanı ve altta notlar bulunur; görev türü etiketi yoktur. Fotoğrafı düzenle, Bitki ayrıntıları veya Fotoğrafı sil seçenekleri için karta dokunun. Sahibi görseli değiştirebilir, tarih ve notları düzenleyebilir ve onayladıktan sonra kaydı silebilir."
         ]
       },
       {
-        "heading": "Sıralama seçenekleri",
+        "heading": "Sıralama ve filtreler",
         "body": [
-          "Sıralama, geçmişi iş akışınıza en uygun sırayla incelemenize yardımcı olur.",
-          "Mevcut sıralama seçenekleri şunları içerir: Tamamlanma tarihi, ev bitkisinin adı ve Konum."
+          "Kayıt tarihi, bitki adı veya konuma göre sıralayın. Bitki, konum, tür veya tarih aralığına göre filtreleyin; yalnızca fotoğrafları görmek için Fotoğrafı seçin. Fotoğrafın kayıt tarihi eklenme zamanıdır; isteğe bağlı fotoğraf tarihi ayrıca gösterilir."
         ]
       },
       {
-        "heading": "Filtreleme seçenekleri",
+        "heading": "Görevleri dışa aktarma ve toplu silme",
         "body": [
-          "Filtreler, tamamlanan görevlerin belirli bir alt kümesine odaklanmanıza yardımcı olur.",
-          "Ev bitkisi adı, Konum, Görev türü ve Tamamlanma tarih aralığına göre filtreleme yapabilirsiniz.",
-          "Listeyi daha da daraltmak için filtreler birleştirilebilir, örneğin: Belirli bir ay içinde seçilen bir konumda tamamlanan gübreleme görevleri."
+          "Görevleri dışa aktar, geçerli görev filtrelerine göre görevlerinizi e-posta ile tablo olarak gönderir. Bekleyen görevler de dahil edilebilir. Görevleri sil, seçilen koşullara uyan tamamlanmış görevleri kaldırır. Her iki işlem de yalnızca sahibine açıktır ve fotoğrafları hiçbir zaman kapsamaz. Fotoğrafları kart menüsünden tek tek silin."
         ]
       },
       {
-        "heading": "Toplu silme (Silme eylemi)",
+        "heading": "Özel fotoğraflar ve paylaşılan bitkiler",
         "body": [
-          "Toplu silme, belirtilen kriterlere göre birden fazla tamamlanan görevi aynı anda kalıcı olarak silmenize olanak tanır.",
-          "Tipik senaryolar arasında bir ev bitkisinin geçmişinin temizlenmesi, bir konuma ilişkin görevlerin kaldırılması, yalnızca bir görev türünün silinmesi veya seçilen tarihten daha eski görevlerin silinmesi yer alır.",
-          "Toplu silme işlemi kalıcıdır ve geri alınamaz."
-        ]
-      },
-      {
-        "heading": "Görev Geçmişinin Ana Sayfa'dan farkı nedir?",
-        "body": [
-          "Ana sayfa bekleyen görevleri, Tümü görünümünde gelecektekileri de gösterir. Bugün ve Gecikenler listeyi daraltır. Geçmişte tamamlanmış görevler bulunur.",
-          "Görev Geçmişi, halihazırda tamamlanmış görevlere odaklanır ve geçmiş girdilerin incelenmesini, sıralanmasını, filtrelenmesini ve silinmesini destekler.",
-          "Bu ekranlar birlikte hem günlük yürütmeyi (Ana Sayfa) hem de uzun vadeli izlemeyi (Görev Geçmişi) kapsar."
-        ]
-      },
-      {
-        "heading": "Paylaşılan bakım geçmişi",
-        "body": [
-          "Aktif olarak paylaşılan bitkilerinin bakım geçmişi, Paylaşılan etiketiyle görünür. Yetkili bir bakıcı bir görevi tamamladığında bu tamamlama aynı bakım geçmişine kaydedilir. Alıcılar, sahibinin geçmişini silemez veya dışa aktaramaz."
+          "Fotoğraflar küçültülür ve sunucuda özel olarak saklanır. Yalnızca bitkinin sahibi ve o bitkiye etkin paylaşım erişimi olan kişiler görebilir. Alıcılar günlüğü görüntüleyebilir ancak fotoğraf ekleyemez, düzenleyemez veya silemez. Değiştirilen ve silinen fotoğraflar temizlenir. Bir bitki silindiğinde günlük fotoğrafları da silinir."
         ]
       }
     ]

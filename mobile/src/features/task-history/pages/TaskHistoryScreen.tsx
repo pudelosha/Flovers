@@ -22,11 +22,18 @@ import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import FAB from "../../../shared/ui/FAB";
+import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
 
 import { s } from "../styles/task-history.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/task-history.constants";
 import TaskHistoryTile from "../components/TaskHistoryTile";
-import type { TaskHistoryItem } from "../types/task-history.types";
+import JournalPhotoTile from "../components/JournalPhotoTile";
+import JournalPhotoModal from "../components/modals/JournalPhotoModal";
+import ConfirmDeleteJournalPhotoModal from "../components/modals/ConfirmDeleteJournalPhotoModal";
+import { isJournalPhoto, journalEntryKey, type JournalEntry, type JournalPhotoItem, type TaskHistoryItem } from "../types/task-history.types";
+import type { TaskType } from "../../home/types/home.types";
+import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
+import { deleteJournalPhoto, type JournalPlantOption } from "../../../api/services/journal-photos.service";
 
 // completed tasks via dedicated history service
 import {
@@ -72,7 +79,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function TaskHistoryScreen() {
   const { t, i18n } = useTranslation();
 
-  const nav = useNavigation();
+  const nav = useNavigation<any>();
   const route = useRoute<any>();
   const params = (route?.params || {}) as RouteParams;
   const plantIdFilter = params.plantId;
@@ -80,8 +87,9 @@ export default function TaskHistoryScreen() {
   const { settings } = useSettings();
   const fabPosition = settings.fabPosition || "right";
 
-  const [items, setItems] = useState<TaskHistoryItem[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [items, setItems] = useState<JournalEntry[]>([]);
+  const [ownedPlants, setOwnedPlants] = useState<JournalPlantOption[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [refreshing, setRefreshing] = useState<boolean>(false);
 
   const [toastVisible, setToastVisible] = useState(false);
@@ -89,7 +97,8 @@ export default function TaskHistoryScreen() {
   const [toastVariant, setToastVariant] =
     useState<"default" | "success" | "error">("default");
 
-  const listRef = useRef<Animated.FlatList<TaskHistoryItem>>(null);
+  const listRef = useRef<Animated.FlatList<JournalEntry>>(null);
+  const loadRequestRef = useRef(0);
 
   const showToast = (
     message: string,
@@ -109,6 +118,10 @@ export default function TaskHistoryScreen() {
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [photoOpen, setPhotoOpen] = useState(false);
+  const [editingPhoto, setEditingPhoto] = useState<JournalPhotoItem | null>(null);
+  const [deletingPhoto, setDeletingPhoto] = useState<JournalPhotoItem | null>(null);
+  const [photoDeleting, setPhotoDeleting] = useState(false);
 
   const isFilterActive = useMemo(
     () =>
@@ -140,53 +153,60 @@ export default function TaskHistoryScreen() {
     setOpenMenuId((curr) => (curr === id ? null : id));
   }, []);
 
-  // --- DATA LOAD (completed tasks) ---
+  // --- DATA LOAD (completed tasks and journal photos) ---
   const load = useCallback(async () => {
+    const requestId = ++loadRequestRef.current;
     setLoading(true);
     try {
-      const data = await fetchHistoryItems();
-      const allItems = data as TaskHistoryItem[];
+      const [allItems, plants] = await Promise.all([
+        fetchHistoryItems(),
+        fetchPlantInstances({ auth: true }),
+      ]);
+      if (requestId !== loadRequestRef.current) return;
 
       const filteredByPlant = plantIdFilter
-        ? allItems.filter((x) => (x as any).plantId === plantIdFilter)
+        ? allItems.filter((x) => String(x.plantId || "") === String(plantIdFilter))
         : allItems;
 
       setItems(filteredByPlant);
+      setOwnedPlants(plants.filter((plant) => plantAccess(plant.access).canEdit).map((plant) => ({
+        id: String(plant.id),
+        name: plant.display_name || plant.plant_definition?.name || t("taskHistory.common.unnamedPlant"),
+        latin: plant.plant_definition?.latin || undefined,
+        location: plant.location?.name || undefined,
+        access: plant.access,
+      })));
     } catch (e: any) {
+      if (requestId !== loadRequestRef.current) return;
       showToast(e?.message || t("taskHistory.toasts.failedToLoad"), "error");
       setItems([]);
+      setOwnedPlants([]);
     } finally {
-      setLoading(false);
+      if (requestId === loadRequestRef.current) setLoading(false);
     }
   }, [plantIdFilter, t]);
 
   // Refresh on focus (clear stale list first) + reset UI state
   useFocusEffect(
     useCallback(() => {
-      let mounted = true;
-
       // reset modal & sort/filter/menu state on every focus
       setSortOpen(false);
       setFilterOpen(false);
       setDeleteOpen(false);
       setExportOpen(false);
+      setPhotoOpen(false);
+      setEditingPhoto(null);
+      setDeletingPhoto(null);
       closeFloatingMenus();
       setFilters(INITIAL_FILTERS);
       setSortKey("completedAt");
       setSortDir("desc");
 
-      (async () => {
-        setLoading(true);
-        setItems([]);
-        try {
-          await load();
-        } finally {
-          if (!mounted) return;
-        }
-      })();
+      setItems([]);
+      void load();
 
       return () => {
-        mounted = false;
+        loadRequestRef.current += 1;
       };
     }, [closeFloatingMenus, load])
   );
@@ -204,6 +224,7 @@ export default function TaskHistoryScreen() {
   // Options for plant & location dropdowns (derived from items)
   const plantOptions = useMemo(() => {
     const map = new Map<string, string>();
+    ownedPlants.forEach((plant) => map.set(plant.id, plant.name));
     items.forEach((item) => {
       const pid = (item as any).plantId as string | undefined;
       if (pid && !map.has(pid)) {
@@ -211,7 +232,7 @@ export default function TaskHistoryScreen() {
       }
     });
     return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
-  }, [items, t]);
+  }, [items, ownedPlants, t]);
 
   const locationOptions = useMemo(() => {
     const set = new Set<string>();
@@ -225,8 +246,9 @@ export default function TaskHistoryScreen() {
     return {
       plantId: plantIdFilter || filters.plantId || undefined,
       location: filters.location || undefined,
-      types:
-        filters.types && filters.types.length > 0 ? filters.types : undefined,
+      types: filters.types?.filter((type): type is TaskType => type !== "photo").length
+        ? filters.types.filter((type): type is TaskType => type !== "photo")
+        : undefined,
       completedFrom: filters.completedFrom || undefined,
       completedTo: filters.completedTo || undefined,
       sortKey,
@@ -315,6 +337,14 @@ export default function TaskHistoryScreen() {
     return sorted;
   }, [items, filters, sortKey, sortDir]);
 
+  const photoTargets = useMemo(() => derivedItems.filter(isJournalPhoto).map((item) => ({
+    photo: item.photo,
+    variant: "display" as const,
+    expiresAt: item.access?.expires_at,
+  })), [derivedItems]);
+  const photoPreload = usePlantPhotoPreload(photoTargets, !loading);
+  const contentLoading = loading || photoPreload.loading;
+
   // ---------- ENTRANCE ANIMATION (tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
@@ -324,8 +354,8 @@ export default function TaskHistoryScreen() {
   };
 
   useEffect(() => {
-    if (loading) return;
-    const ids = derivedItems.map((x) => x.id);
+    if (contentLoading) return;
+    const ids = derivedItems.map(journalEntryKey);
     ids.forEach((id) => getAnimForId(id).setValue(0));
 
     const seq = ids.map((id, i) =>
@@ -337,13 +367,13 @@ export default function TaskHistoryScreen() {
       })
     );
     Animated.stagger(50, seq).start();
-  }, [loading, derivedItems]);
+  }, [contentLoading, derivedItems]);
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (loading) {
+    if (contentLoading) {
       emptyAnim.setValue(0);
       return;
     }
@@ -358,7 +388,7 @@ export default function TaskHistoryScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, derivedItems.length, emptyAnim]);
+  }, [contentLoading, derivedItems.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],
@@ -371,11 +401,23 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen && !deleteOpen && !exportOpen;
+    !contentLoading && !sortOpen && !filterOpen && !deleteOpen && !exportOpen && !photoOpen && !deletingPhoto;
 
   // FAB actions
-  const canManageVisibleHistory = derivedItems.some((item) => plantAccess(item.access).canEdit);
+  const canManageVisibleHistory = derivedItems.some((item) => !isJournalPhoto(item) && plantAccess(item.access).canEdit);
+  const activePlantId = plantIdFilter || filters.plantId;
+  const canAddPhoto = ownedPlants.length > 0 && (!activePlantId || ownedPlants.some((plant) => plant.id === String(activePlantId)));
   const baseFabActions = [
+    ...(canAddPhoto ? [{
+      key: "addPhoto",
+      label: t("taskHistory.photo.add", { defaultValue: "Add photo" }),
+      icon: "camera-plus-outline",
+      onPress: () => {
+        closeFloatingMenus();
+        setEditingPhoto(null);
+        setPhotoOpen(true);
+      },
+    }] : []),
     {
       key: "sort",
       label: t("taskHistory.fab.sort"),
@@ -454,6 +496,7 @@ export default function TaskHistoryScreen() {
   };
 
   const handleSendExport = async (includePending: boolean) => {
+    if (!canManageVisibleHistory) return;
     setOpenMenuId(null);
 
     try {
@@ -514,7 +557,7 @@ export default function TaskHistoryScreen() {
     }
   };
 
-  const handleGoToPlant = (item: TaskHistoryItem) => {
+  const handleGoToPlant = (item: JournalEntry) => {
     setOpenMenuId(null);
 
     const plantId = item.plantId;
@@ -526,8 +569,31 @@ export default function TaskHistoryScreen() {
     nav.navigate("PlantDetails" as never, { id: String(plantId) } as never);
   };
 
+  const handleEditPhoto = (item: JournalPhotoItem) => {
+    if (!plantAccess(item.access).canEdit) return;
+    closeFloatingMenus();
+    setEditingPhoto(item);
+    setPhotoOpen(true);
+  };
+
+  const handleConfirmDeletePhoto = async () => {
+    const target = deletingPhoto;
+    if (!target || photoDeleting || !plantAccess(target.access).canEdit) return;
+    setPhotoDeleting(true);
+    try {
+      await deleteJournalPhoto(target);
+      setDeletingPhoto(null);
+      await load();
+      showToast(t("taskHistory.photo.deleted", { defaultValue: "Photo deleted." }), "success");
+    } catch (error: any) {
+      showToast(error?.message || t("taskHistory.photo.deleteFailed", { defaultValue: "Could not delete the photo. Try again." }), "error");
+    } finally {
+      setPhotoDeleting(false);
+    }
+  };
+
   // Early return while loading (match other screens)
-  if (loading) {
+  if (contentLoading) {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
@@ -570,9 +636,10 @@ export default function TaskHistoryScreen() {
         ref={listRef}
         style={{ flex: 1 }}
         data={derivedItems}
-        keyExtractor={(x) => x.id}
+        keyExtractor={journalEntryKey}
         renderItem={({ item }) => {
-          const v = getAnimForId(item.id);
+          const entryKey = journalEntryKey(item);
+          const v = getAnimForId(entryKey);
           const translateY = v.interpolate({
             inputRange: [0, 1],
             outputRange: [14, 0],
@@ -583,7 +650,7 @@ export default function TaskHistoryScreen() {
           });
           const opacity = v;
 
-          const isOpen = openMenuId === item.id;
+          const isOpen = openMenuId === entryKey;
 
           return (
             <Animated.View
@@ -592,15 +659,25 @@ export default function TaskHistoryScreen() {
                 isOpen && { zIndex: 50, elevation: 50 },
               ]}
             >
-              <TaskHistoryTile
+              {isJournalPhoto(item) ? <JournalPhotoTile
                 item={item}
                 isMenuOpen={isOpen}
-                onToggleMenu={() => onToggleMenu(item.id)}
+                onToggleMenu={() => onToggleMenu(entryKey)}
+                onEdit={() => handleEditPhoto(item)}
+                onPlantDetails={() => handleGoToPlant(item)}
+                onDelete={() => {
+                  closeFloatingMenus();
+                  if (plantAccess(item.access).canEdit) setDeletingPhoto(item);
+                }}
+              /> : <TaskHistoryTile
+                item={item}
+                isMenuOpen={isOpen}
+                onToggleMenu={() => onToggleMenu(entryKey)}
                 onPressBody={closeFabMenu}
                 onDelete={handleDeleteItem}
                 onEditReminder={handleEditHistoryReminder}
                 onGoToPlant={handleGoToPlant}
-              />
+              />}
             </Animated.View>
           );
         }}
@@ -746,10 +823,34 @@ export default function TaskHistoryScreen() {
       {/* Delete modal */}
       <DeleteHistoryTasksModal
         visible={deleteOpen}
-        plantOptions={plantOptions.filter((plant) => items.some((item) => item.plantId === plant.id && plantAccess(item.access).canEdit))}
-        locationOptions={locationOptions.filter((location) => items.some((item) => item.location === location && plantAccess(item.access).canEdit))}
+        plantOptions={plantOptions.filter((plant) => items.some((item) => !isJournalPhoto(item) && item.plantId === plant.id && plantAccess(item.access).canEdit))}
+        locationOptions={locationOptions.filter((location) => items.some((item) => !isJournalPhoto(item) && item.location === location && plantAccess(item.access).canEdit))}
         onCancel={() => setDeleteOpen(false)}
         onConfirm={handleConfirmDelete}
+      />
+
+      <JournalPhotoModal
+        visible={photoOpen}
+        entry={editingPhoto}
+        plantOptions={ownedPlants}
+        preferredPlantId={plantIdFilter || filters.plantId}
+        onClose={(refresh?: boolean) => {
+          setPhotoOpen(false);
+          setEditingPhoto(null);
+          if (refresh) void load();
+        }}
+        onSaved={() => {
+          setPhotoOpen(false);
+          setEditingPhoto(null);
+          void load().then(() => showToast(t("taskHistory.photo.saved", { defaultValue: "Photo saved to the journal." }), "success"));
+        }}
+      />
+
+      <ConfirmDeleteJournalPhotoModal
+        visible={!!deletingPhoto}
+        busy={photoDeleting}
+        onClose={() => { if (!photoDeleting) setDeletingPhoto(null); }}
+        onConfirm={handleConfirmDeletePhoto}
       />
 
       <TopSnackbar

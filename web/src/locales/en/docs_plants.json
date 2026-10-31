@@ -22,7 +22,7 @@
           "Each tile has a three-dot menu with actions for the selected plant:",
           "Edit plant: opens the plant editor to update plant details and parameters.",
           "Show reminders: navigates to the Reminders screen with a filter applied to show only reminders for the selected plant.",
-          "Show Plant Journal: opens a modal that shows closed task history (including user notes). Notes are visible and not hidden.",
+          "Task Journal opens the Task Journal screen filtered to this plant. It replaces the old Plant Journal modal.",
           "Show QR code: opens a modal with the plant’s QR code, a short explanation, and options to save (download) or send it to your email.",
           "Delete plant: permanently deletes the plant and associated data such as tasks, reminders, and linked device connections."
         ]

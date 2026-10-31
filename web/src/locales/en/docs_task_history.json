@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Task History",
+    "title": "Task Journal",
     "sections": [
       {
-        "heading": "Purpose of the Task History screen",
+        "heading": "One journal for care and growth",
         "body": [
-          "Task History is used to review and manage tasks that have been completed (closed).",
-          "It helps you understand what actions were performed, when they were done, and which plants were affected.",
-          "The screen may open with a predefined filter applied (for example, showing history for a specific plant), or it may display all completed tasks."
+          "Task Journal brings completed tasks and progress photos together. Open it from Home, or choose Task Journal in a plant’s menu to see that plant only. It replaces the old Plant Journal window; Home still shows pending tasks."
         ]
       },
       {
-        "heading": "Completed task tiles",
+        "heading": "Completed tasks",
         "body": [
-          "Each tile shows a completed task’s type, plant name and location.",
-          "The right-hand column has three rows: Completed, the completion date, and the person who completed the task. If no person was recorded, an unknown-user label is shown.",
-          "A note saved with the completion is displayed beneath the task details."
+          "Task tiles keep their type, plant and location. The completion column shows Completed, the date and the person who completed the task on three rows. Notes are always visible when present. Owners can edit the linked reminder or delete the task entry; Plant details opens the plant."
         ]
       },
       {
-        "heading": "Viewing notes",
+        "heading": "Adding a photo",
         "body": [
-          "Notes are visible as soon as the history loads. Longer notes wrap onto as many lines as needed.",
-          "Add a note when marking a task complete. Tasks without a note do not show an empty notes section."
+          "Add photo is the first action in the + menu. Choose a plant you own, take a photo or select one from your gallery, and optionally add a photo date and notes. Adjust the framing and save. Journal photos are separate entries and do not replace the plant’s main photo."
         ]
       },
       {
-        "heading": "Task tile menu",
+        "heading": "One photo every seven days",
         "body": [
-          "Tap the main part of a completed task tile to open its action menu.",
-          "Edit reminder opens the associated reminder so its recurrence or settings can be changed. This action is available only to the plant owner.",
-          "Plant details: navigates directly to the Plant Details view for the related plant.",
-          "Delete task permanently removes the selected completed history entry. Only the plant owner can delete it."
+          "You can create one photo entry per plant every seven days (168 hours), counted from the server’s upload time. Changing its photo date, editing or deleting it does not restart this interval. The form shows when the next photo can be added."
         ]
       },
       {
-        "heading": "Floating Action Button (FAB) actions",
+        "heading": "Photo tiles and editing",
         "body": [
-          "The Task History screen includes a Floating Action Button (FAB) with actions for working with the history list.",
-          "Sort: changes the ordering of completed tasks.",
-          "Filter: narrows down the history list by selected criteria.",
-          "Delete: supports bulk deletion based on criteria (for example, tasks for a selected plant, tasks for a selected location, tasks of a specific type, or tasks older than a chosen threshold).",
-          "Send export emails a spreadsheet using the current filters, with an option to include pending tasks. Only the owner can export their history."
+          "Photo tiles appear among completed tasks, with a fading image, Added and its timestamp at the top right, and notes at the bottom. They have no task-type badge. Tap a tile for Edit photo, Plant details or Delete photo. Owners can replace the image, change the optional date or notes, and delete after confirmation."
         ]
       },
       {
-        "heading": "Sorting options",
+        "heading": "Sorting and filtering",
         "body": [
-          "Sorting helps you review history in the order that best matches your workflow.",
-          "Available sorting options include: Completion date, Plant name, and Location."
+          "Sort by entry date, plant name or location. Filter by plant, location, type or entry date range; choose Photo to show only photos. A photo’s entry date is when it was added, while its optional photo date is shown separately."
         ]
       },
       {
-        "heading": "Filtering options",
+        "heading": "Task export and bulk deletion",
         "body": [
-          "Filters help you focus on a specific subset of completed tasks.",
-          "You can filter by Plant name, Location, Task type, and Completed date range.",
-          "Filters can be combined to narrow the list further, for example: Fertilising tasks completed in a selected location during a given month."
+          "Export tasks emails a spreadsheet of your tasks using the current task filters; pending tasks can be included. Delete tasks removes completed tasks matching the chosen criteria. Both actions are owner-only and exclude photos, even in a mixed journal. Delete photos individually from their tile menu."
         ]
       },
       {
-        "heading": "Bulk deletion (Delete action)",
+        "heading": "Private photos and shared plants",
         "body": [
-          "Bulk deletion allows you to permanently delete multiple completed tasks at once based on specified criteria.",
-          "Typical scenarios include clearing history for one plant, removing tasks for a location, deleting only one task type, or deleting tasks older than a selected date.",
-          "Bulk deletion is permanent and cannot be undone."
-        ]
-      },
-      {
-        "heading": "How Task History differs from Home",
-        "body": [
-          "Home lists pending tasks, including future tasks in All; Today and Overdue narrow the list. Task History lists completed tasks.",
-          "Task History focuses on tasks that are already completed and supports reviewing, sorting, filtering, and deleting historical entries.",
-          "Together, these screens cover both day-to-day execution (Home) and long-term tracking (Task History)."
-        ]
-      },
-      {
-        "heading": "Shared care history",
-        "body": [
-          "Care history for actively shared plants is visible with a Shared label. When an authorized caregiver completes a task, that completion is recorded in the same care history. Recipients cannot delete or export the owner’s history."
+          "Photos are resized and stored privately on the server. Only the owner and people with active sharing access to that plant can view them. Recipients can view the journal but cannot add, edit or delete its photos. Replaced and deleted photos are cleaned up; deleting a plant removes its journal photos too."
         ]
       }
     ]

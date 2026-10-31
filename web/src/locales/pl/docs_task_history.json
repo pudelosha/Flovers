@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Historia zadań",
+    "title": "Dziennik zadań",
     "sections": [
       {
-        "heading": "Co znajdziesz w Historii zadań",
+        "heading": "Jeden dziennik pielęgnacji i rozwoju",
         "body": [
-          "W Historii zadań przejrzysz wykonane zadania i uporządkujesz zapisane wpisy.",
-          "Sprawdzisz, kiedy i jak pielęgnowano poszczególne rośliny.",
-          "Historia może pokazywać wszystkie wykonane zadania albo od razu wybraną część, np. zadania jednej rośliny."
+          "Dziennik zadań łączy wykonane zadania ze zdjęciami pokazującymi rozwój roślin. Otworzysz go z ekranu Start. Opcja Dziennik zadań w menu rośliny pokaże wpisy tylko dla niej i zastępuje dawne okno dziennika rośliny. Oczekujące zadania nadal znajdziesz na ekranie Start."
         ]
       },
       {
-        "heading": "Kafelki wykonanych zadań",
+        "heading": "Wykonane zadania",
         "body": [
-          "Każdy kafelek przedstawia wykonane zadanie: jego rodzaj, nazwę rośliny i lokalizację.",
-          "Prawa kolumna ma trzy wiersze: status wykonania, datę i osobę, która wykonała zadanie. Jeśli wykonawca nie został zapisany, pojawi się informacja o nieznanym użytkowniku.",
-          "Notatka dodana przy wykonaniu zadania jest widoczna pod jego szczegółami."
+          "Kafelki zadań nadal pokazują rodzaj czynności, roślinę i lokalizację. Po prawej są trzy wiersze: Wykonano, data oraz osoba, która wykonała zadanie. Notatka jest zawsze widoczna, jeśli została dodana. Właściciel może edytować powiązane przypomnienie lub usunąć wpis zadania. Szczegóły rośliny otwierają jej widok."
         ]
       },
       {
-        "heading": "Notatki do zadań",
+        "heading": "Dodawanie zdjęcia",
         "body": [
-          "Notatki widać od razu po wczytaniu historii. Dłuższy tekst zajmuje tyle wierszy, ile potrzeba.",
-          "Notatkę dodajesz podczas oznaczania zadania jako wykonanego. Jeśli jej nie ma, kafelek nie pokazuje pustej sekcji."
+          "Dodaj zdjęcie to pierwsza opcja w menu +. Wybierz własną roślinę, zrób zdjęcie lub wybierz je z galerii. Możesz też podać datę zdjęcia i dodać notatki. Ustaw kadr i zapisz. Zdjęcie w dzienniku jest osobnym wpisem i nie zastępuje głównego zdjęcia rośliny."
         ]
       },
       {
-        "heading": "Menu zadania",
+        "heading": "Jedno zdjęcie co siedem dni",
         "body": [
-          "Dotknij głównej części kafelka wykonanego zadania, aby otworzyć menu.",
-          "Edytuj przypomnienie otwiera powiązane przypomnienie, w którym można zmienić częstotliwość lub inne ustawienia. Ta opcja jest dostępna tylko dla właściciela rośliny.",
-          "Szczegóły rośliny: otwiera Szczegóły rośliny, której dotyczy zadanie.",
-          "Usuń zadanie trwale usuwa wybrany wpis z historii. Może to zrobić tylko właściciel rośliny."
+          "Dla każdej rośliny możesz utworzyć jeden wpis ze zdjęciem co siedem dni (168 godzin), licząc od czasu przesłania na serwer. Zmiana daty zdjęcia, edycja ani usunięcie wpisu nie skracają tego odstępu. Formularz pokazuje, kiedy można dodać kolejne zdjęcie."
         ]
       },
       {
-        "heading": "Menu przycisku szybkich akcji",
+        "heading": "Kafelki zdjęć i edycja",
         "body": [
-          "Przycisk szybkich akcji w Historii zadań otwiera menu do zarządzania całą listą.",
-          "Sortuj: zmienia kolejność zadań na liście.",
-          "Filtruj: pokazuje zadania pasujące do wybranych kryteriów.",
-          "Usuń: pozwala usunąć wiele zadań naraz, np. dla wybranej rośliny lub lokalizacji, zadania jednego rodzaju albo starsze niż wskazana data.",
-          "Opcja Wyślij eksport wysyła e-mailem arkusz zgodny z bieżącymi filtrami. Możesz dołączyć zadania oczekujące. Eksport historii jest dostępny tylko dla właściciela."
+          "Zdjęcia pojawiają się pomiędzy wykonanymi zadaniami. Kafelek ma zdjęcie z łagodnym przejściem w tło, napis Dodano z datą w prawym górnym rogu oraz notatki na dole. Nie ma oznaczenia rodzaju zadania. Dotknij kafelka, aby wybrać Edytuj zdjęcie, Szczegóły rośliny lub Usuń zdjęcie. Właściciel może wymienić zdjęcie, zmienić datę lub notatki oraz usunąć wpis po potwierdzeniu."
         ]
       },
       {
-        "heading": "Sortowanie",
+        "heading": "Sortowanie i filtrowanie",
         "body": [
-          "Zmień kolejność wpisów, aby łatwiej znaleźć to, czego szukasz.",
-          "Możesz sortować według daty wykonania, nazwy rośliny lub lokalizacji."
+          "Sortuj według daty wpisu, nazwy rośliny lub lokalizacji. Filtry obejmują roślinę, lokalizację, rodzaj wpisu i zakres dat. Rodzaj Zdjęcie pokazuje tylko zdjęcia. Data wpisu oznacza moment dodania zdjęcia; opcjonalna data jego wykonania jest wyświetlana osobno."
         ]
       },
       {
-        "heading": "Filtrowanie",
+        "heading": "Eksport i zbiorcze usuwanie zadań",
         "body": [
-          "Filtry pozwalają wyświetlić tylko te wykonane zadania, które cię interesują.",
-          "Możesz wybrać nazwę rośliny, lokalizację, rodzaj zadania i zakres dat wykonania.",
-          "Filtry można łączyć, np. żeby zobaczyć tylko nawożenie roślin w wybranym miejscu w danym miesiącu."
+          "Eksportuj zadania wysyła arkusz z Twoimi zadaniami zgodnie z bieżącymi filtrami zadań. Możesz uwzględnić również zadania oczekujące. Usuń zadania usuwa wykonane zadania pasujące do wybranych kryteriów. Obie opcje są dostępne tylko właścicielowi i nie obejmują zdjęć, również w mieszanym dzienniku. Zdjęcia usuwa się pojedynczo z menu kafelka."
         ]
       },
       {
-        "heading": "Usuwanie wielu zadań naraz",
+        "heading": "Prywatne zdjęcia i udostępnianie",
         "body": [
-          "Opcja Usuń pozwala trwale usunąć wiele wykonanych zadań spełniających wybrane kryteria.",
-          "Możesz np. wyczyścić historię jednej rośliny, usunąć zadania z danej lokalizacji, tylko jeden rodzaj zadań lub wpisy starsze niż wskazana data.",
-          "Usunięcia nie można cofnąć."
-        ]
-      },
-      {
-        "heading": "Historia zadań a ekran główny",
-        "body": [
-          "Strona główna pokazuje zadania oczekujące, również przyszłe w widoku Wszystkie. Widoki Na dziś i Zaległe zawężają listę. Historia zadań pokazuje zadania wykonane.",
-          "W Historii zadań sprawdzisz to, co już zostało zrobione. Możesz przeglądać, sortować, filtrować i usuwać te wpisy.",
-          "Ekran główny pomaga w codziennej pielęgnacji, a Historia zadań pozwala wrócić do wcześniejszych działań."
-        ]
-      },
-      {
-        "heading": "Wspólna historia pielęgnacji",
-        "body": [
-          "Historia pielęgnacji roślin udostępnionych Tobie jest dostępna i odpowiednio oznaczona. Jeśli uprawniona osoba wykona zadanie, wpis trafia do tej samej historii. Odbiorca nie może usuwać ani eksportować historii właściciela."
+          "Zdjęcia są zmniejszane i przechowywane prywatnie na serwerze. Widzi je tylko właściciel i osoby z aktywnym dostępem do udostępnionej rośliny. Odbiorcy mogą przeglądać dziennik, ale nie mogą dodawać, edytować ani usuwać jego zdjęć. Wymienione i usunięte zdjęcia są sprzątane z serwera. Usunięcie rośliny usuwa też jej zdjęcia w dzienniku."
         ]
       }
     ]

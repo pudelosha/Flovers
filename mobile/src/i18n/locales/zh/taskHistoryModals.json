@@ -12,11 +12,12 @@
         "moisture": "喷雾",
         "fertilising": "施肥",
         "care": "护理",
-        "repot": "换盆"
+        "repot": "换盆",
+        "photo": "照片"
       }
     },
     "delete": {
-      "title": "删除历史记录",
+      "title": "删除已完成的任务",
       "scopeLabel": "范围",
       "modes": {
         "plant": "删除所选植物的记录",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} 天"
     },
     "filter": {
-      "title": "筛选历史记录",
+      "title": "筛选日志",
       "plantLabel": "植物",
       "locationLabel": "位置",
-      "taskTypesLabel": "任务类型",
-      "completedDateRangeLabel": "完成日期范围",
+      "taskTypesLabel": "记录类型",
+      "completedDateRangeLabel": "记录日期范围",
       "fromLabel": "从",
       "toLabel": "到",
       "anyPlant": "任意植物",
@@ -41,11 +42,11 @@
       "clear": "清除"
     },
     "sort": {
-      "title": "排序历史记录",
+      "title": "排序日志",
       "sortByLabel": "排序依据",
       "directionLabel": "方向",
       "keys": {
-        "completedAt": "完成日期",
+        "completedAt": "记录日期",
         "plant": "植物名称",
         "location": "位置"
       },
@@ -56,10 +57,10 @@
       "reset": "重置"
     },
     "export": {
-      "title": "发送历史导出",
+      "title": "导出任务",
       "noticeTitle": "Excel 导出将使用当前应用的条件。",
-      "noticeFiltered": "仅包含符合以下筛选条件的任务历史记录。如果需要不同的数据，请先更改筛选条件，然后再次发送。",
-      "noticeAllData": "当前未应用任何筛选条件，因此导出将包含此页面的所有可用任务历史数据。",
+      "noticeFiltered": "仅导出符合当前筛选条件的任务，不包含照片。如需其他任务，请先更改筛选条件。",
+      "noticeAllData": "导出你所拥有植物的所有可用已完成任务，不包含照片。",
       "criteriaTitle": "已应用的条件",
       "plantLabel": "植物",
       "locationLabel": "位置",

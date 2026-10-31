@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Historique des tâches",
+    "title": "Journal des tâches",
     "sections": [
       {
-        "heading": "Retrouver les soins effectués",
+        "heading": "Les soins et la croissance dans un même journal",
         "body": [
-          "L’historique permet de consulter et de gérer les tâches déjà terminées.",
-          "Tu peux voir quels soins ont été faits, quand et pour quelles plantes.",
-          "L’écran peut présenter toutes les tâches terminées ou s’ouvrir avec un filtre, par exemple pour une plante précise."
+          "Le Journal des tâches réunit les tâches terminées et les photos de croissance. Ouvre-le depuis l’accueil ou depuis le menu d’une plante pour ne voir que ses entrées. Il remplace l’ancienne fenêtre du journal de la plante. Les tâches à faire restent sur l’accueil."
         ]
       },
       {
-        "heading": "Les cartes de tâches terminées",
+        "heading": "Les tâches terminées",
         "body": [
-          "Chaque tuile présente une tâche terminée avec son type de soin, le nom de la plante et son emplacement.",
-          "La colonne de droite comporte trois lignes : l’état terminé, la date et la personne ayant effectué la tâche. Si aucune personne n’a été enregistrée, un utilisateur inconnu est indiqué.",
-          "La note éventuellement enregistrée à la fin de la tâche apparaît sous ses détails."
+          "Les tuiles conservent le type de tâche, la plante et l’emplacement. La colonne de droite affiche trois lignes : Terminée, la date et la personne qui s’en est occupée. Les notes sont toujours visibles lorsqu’il y en a. Le propriétaire peut modifier le rappel associé ou supprimer l’entrée. Détails de la plante ouvre sa fiche."
         ]
       },
       {
-        "heading": "Consulter les notes",
+        "heading": "Ajouter une photo",
         "body": [
-          "Les notes sont visibles dès le chargement de l’historique. Les textes longs occupent autant de lignes que nécessaire.",
-          "Vous pouvez ajouter une note au moment de marquer une tâche comme terminée. Une tâche sans note n’affiche pas de section vide."
+          "Ajouter une photo est la première option du menu +. Choisis une plante qui t’appartient, prends une photo ou sélectionnes-en une dans la galerie. La date de la photo et les notes sont facultatives. Ajuste le cadrage et enregistre. Les photos du journal sont des entrées distinctes et ne remplacent pas la photo principale de la plante."
         ]
       },
       {
-        "heading": "Menu d’une tâche",
+        "heading": "Une photo tous les sept jours",
         "body": [
-          "Touchez la partie principale d’une tuile de tâche terminée pour ouvrir son menu d’actions.",
-          "Modifier le rappel ouvre le rappel associé pour changer sa fréquence ou ses paramètres. Cette action est réservée au propriétaire de la plante.",
-          "Détails de la plante : ouvre directement les détails de la plante concernée.",
-          "Supprimer la tâche retire définitivement l’entrée sélectionnée de l’historique. Seul le propriétaire de la plante peut le faire."
+          "Tu peux créer une entrée photo par plante tous les sept jours (168 heures), à compter de l’envoi sur le serveur. Changer la date de la photo, modifier ou supprimer l’entrée ne raccourcit pas ce délai. Le formulaire indique quand tu pourras ajouter la prochaine photo."
         ]
       },
       {
-        "heading": "Les actions rapides",
+        "heading": "Les tuiles photo et leur modification",
         "body": [
-          "Le bouton d’actions rapides ouvre les options de gestion de l’historique.",
-          "« Trier » : change l’ordre des tâches terminées.",
-          "« Filtrer » : limite la liste selon tes critères.",
-          "« Supprimer » : efface plusieurs tâches selon des critères, par exemple la plante, l’emplacement, le type de soin ou leur ancienneté.",
-          "Envoyer l’export transmet un tableau par e-mail avec les filtres actuels et la possibilité d’inclure les tâches en attente. Seul le propriétaire peut exporter son historique."
+          "Les photos apparaissent parmi les tâches terminées, avec une image en fondu, Ajoutée le et l’horodatage en haut à droite, puis les notes en bas. Elles n’ont pas de type de tâche. Touche une tuile pour Modifier la photo, Détails de la plante ou Supprimer la photo. Le propriétaire peut remplacer l’image, modifier la date ou les notes et supprimer l’entrée après confirmation."
         ]
       },
       {
-        "heading": "Trier l’historique",
+        "heading": "Trier et filtrer",
         "body": [
-          "Le tri te permet de parcourir les soins dans l’ordre qui te convient.",
-          "Tu peux trier par date de réalisation, nom de plante ou emplacement."
+          "Trie par date d’entrée, nom de plante ou emplacement. Filtre par plante, emplacement, type ou période ; choisis Photo pour ne voir que les photos. La date d’entrée correspond à l’ajout de la photo. Sa date de prise de vue, facultative, est indiquée séparément."
         ]
       },
       {
-        "heading": "Filtrer l’historique",
+        "heading": "Exporter et supprimer des tâches",
         "body": [
-          "Les filtres permettent de retrouver certains soins terminés.",
-          "Tu peux filtrer par plante, emplacement, type de soin et période de réalisation.",
-          "Combine les filtres pour préciser ta recherche, par exemple les fertilisations d’un emplacement pendant un mois donné."
+          "Exporter les tâches envoie par email un tableur de tes tâches selon les filtres actuels. Tu peux inclure les tâches en attente. Supprimer des tâches retire les tâches terminées correspondant aux critères choisis. Ces actions sont réservées au propriétaire et excluent toujours les photos. Supprime les photos une par une depuis le menu de leur tuile."
         ]
       },
       {
-        "heading": "Supprimer plusieurs tâches",
+        "heading": "Photos privées et plantes partagées",
         "body": [
-          "La suppression groupée efface définitivement plusieurs tâches terminées selon les critères choisis.",
-          "Tu peux par exemple vider l’historique d’une plante, retirer les tâches d’un emplacement ou d’un type, ou effacer celles antérieures à une date.",
-          "La suppression est définitive et ne peut pas être annulée."
-        ]
-      },
-      {
-        "heading": "L’historique et l’accueil",
-        "body": [
-          "L’accueil affiche les tâches en attente, y compris à venir dans Toutes. Aujourd’hui et En retard limitent la liste. L’historique présente les tâches terminées.",
-          "L’historique présente les tâches déjà terminées, que tu peux consulter, trier, filtrer ou supprimer.",
-          "Ensemble, ces écrans permettent de gérer les soins du jour et de suivre l’entretien dans la durée."
-        ]
-      },
-      {
-        "heading": "Histoire de soins partagés",
-        "body": [
-          "L’historique d’entretien des plantes activement partagées est visible avec une étiquette Partagé. Lorsqu'un soignant autorisé termine une tâche, cet achèvement est enregistré dans le même historique de soins. Les destinataires ne peuvent pas supprimer ou exporter l’historique du propriétaire."
+          "Les photos sont redimensionnées et stockées dans un espace privé sur le serveur. Seuls le propriétaire et les personnes disposant d’un accès actif à la plante peuvent les voir. Les destinataires peuvent consulter le journal, mais pas ajouter, modifier ou supprimer ses photos. Les images remplacées ou supprimées sont nettoyées. Supprimer une plante supprime aussi ses photos du journal."
         ]
       }
     ]

@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Storico attività",
+    "title": "Diario delle attività",
     "sections": [
       {
-        "heading": "Cosa trovi nello Storico attività",
+        "heading": "Cure e crescita in un unico diario",
         "body": [
-          "Nello Storico attività puoi consultare le attività completate e gestire le registrazioni salvate.",
-          "Puoi vedere come sono state curate le tue piante e in quali date.",
-          "Lo storico può mostrare tutte le attività completate oppure aprirsi con un filtro già applicato, per esempio sulle attività di una sola pianta."
+          "Il Diario delle attività riunisce le attività completate e le foto della crescita. Aprilo dalla schermata Home oppure dal menu di una pianta per vedere solo le sue voci. Sostituisce la vecchia finestra del diario della pianta. Le attività in sospeso restano nella Home."
         ]
       },
       {
-        "heading": "Riquadri delle attività completate",
+        "heading": "Attività completate",
         "body": [
-          "Ogni scheda mostra un’attività completata con tipo di cura, nome della pianta e posizione.",
-          "La colonna a destra ha tre righe: stato di completamento, data e persona che ha svolto l’attività. Se non è stata registrata una persona, viene mostrato un utente sconosciuto.",
-          "L’eventuale nota salvata al completamento compare sotto i dettagli dell’attività."
+          "Le schede mantengono tipo di attività, pianta e posizione. A destra compaiono tre righe: Completata, la data e la persona che l’ha svolta. Le note, se presenti, sono sempre visibili. Il proprietario può modificare il promemoria collegato o eliminare la voce dell’attività. Dettagli della pianta apre la pianta."
         ]
       },
       {
-        "heading": "Visualizzare le note",
+        "heading": "Aggiungere una foto",
         "body": [
-          "Le note sono visibili appena si carica lo storico. I testi lunghi vanno a capo su tutte le righe necessarie.",
-          "Puoi aggiungere una nota quando segni l’attività come completata. Le attività senza nota non mostrano una sezione vuota."
+          "Aggiungi foto è la prima voce del menu +. Scegli una pianta di tua proprietà, scatta una foto o selezionala dalla galleria. Puoi aggiungere una data della foto e delle note. Regola l’inquadratura e salva. Le foto del diario sono voci separate e non sostituiscono la foto principale della pianta."
         ]
       },
       {
-        "heading": "Menu della scheda attività",
+        "heading": "Una foto ogni sette giorni",
         "body": [
-          "Tocca la parte principale di una scheda completata per aprire il menu delle azioni.",
-          "Modifica promemoria apre il promemoria associato per cambiarne la frequenza o le impostazioni. L’azione è disponibile solo al proprietario della pianta.",
-          "Dettagli pianta: apre i Dettagli della pianta a cui si riferisce l'attività.",
-          "Elimina attività rimuove definitivamente la voce selezionata dallo storico. Può farlo solo il proprietario della pianta."
+          "Puoi creare una voce con foto per pianta ogni sette giorni (168 ore), a partire dall’ora di caricamento sul server. Modificare la data, modificare o eliminare la voce non riduce l’intervallo. Il modulo indica quando puoi aggiungere la foto successiva."
         ]
       },
       {
-        "heading": "Menu delle azioni rapide",
+        "heading": "Schede delle foto e modifiche",
         "body": [
-          "Il pulsante delle azioni rapide nello Storico attività apre un menu per gestire l’intero elenco.",
-          "Ordina: cambia l’ordine delle attività completate.",
-          "Filtra: mostra solo le attività che corrispondono ai criteri scelti.",
-          "Elimina: rimuove più attività insieme, per esempio quelle di una pianta o di una posizione, quelle di un certo tipo oppure quelle più vecchie del periodo indicato.",
-          "Invia esportazione manda via email un foglio con i filtri attuali, con l’opzione di includere le attività in sospeso. Solo il proprietario può esportare il proprio storico."
+          "Le foto compaiono tra le attività completate, con un’immagine sfumata, Aggiunta e data in alto a destra, e note in basso. Non mostrano il tipo di attività. Tocca la scheda per Modifica foto, Dettagli della pianta o Elimina foto. Il proprietario può sostituire l’immagine, cambiare la data o le note ed eliminare la voce dopo conferma."
         ]
       },
       {
-        "heading": "Ordinamento",
+        "heading": "Ordinamento e filtri",
         "body": [
-          "Cambia l’ordine delle voci per trovare più facilmente ciò che cerchi.",
-          "Puoi ordinare per data di completamento, nome della pianta o posizione."
+          "Ordina per data della voce, nome della pianta o posizione. Filtra per pianta, posizione, tipo o intervallo di date; scegli Foto per mostrare solo le foto. La data della voce è quella di aggiunta, mentre la data facoltativa della foto è indicata separatamente."
         ]
       },
       {
-        "heading": "Filtri",
+        "heading": "Esportazione ed eliminazione delle attività",
         "body": [
-          "Con i filtri visualizzi solo le attività completate che ti interessano.",
-          "Puoi scegliere nome della pianta, posizione, tipo di attività e intervallo delle date di completamento.",
-          "Puoi combinare i filtri, per esempio per vedere solo le concimazioni eseguite in una certa posizione durante un determinato mese."
+          "Esporta attività invia via email un foglio di calcolo delle tue attività con i filtri attuali. Puoi includere le attività in sospeso. Elimina attività rimuove le attività completate che corrispondono ai criteri scelti. Entrambe le azioni sono riservate al proprietario e non includono mai le foto. Le foto si eliminano singolarmente dal menu della scheda."
         ]
       },
       {
-        "heading": "Eliminare più attività insieme",
+        "heading": "Foto private e piante condivise",
         "body": [
-          "L’opzione Elimina rimuove definitivamente più attività completate che corrispondono ai criteri scelti.",
-          "Puoi, per esempio, svuotare lo storico di una pianta, rimuovere le attività di una posizione, eliminare un solo tipo di attività o le voci precedenti a una certa data.",
-          "L’eliminazione non può essere annullata."
-        ]
-      },
-      {
-        "heading": "Storico attività e schermata iniziale",
-        "body": [
-          "Home mostra le attività da completare, anche future nella vista Tutte. Oggi e Scadute restringono l’elenco. Lo storico mostra quelle completate.",
-          "Nello Storico attività vedi ciò che è già stato fatto. Puoi consultare, ordinare, filtrare ed eliminare le voci.",
-          "La schermata iniziale ti aiuta nella cura quotidiana, mentre lo Storico attività ti permette di ripercorrere gli interventi passati."
-        ]
-      },
-      {
-        "heading": "Storia dell'assistenza condivisa",
-        "body": [
-          "La cronologia delle cure per le piante d'appartamento condivise attivamente è visibile con l'etichetta Condiviso. Quando un caregiver autorizzato completa un'attività, tale completamento viene registrato nella stessa cronologia assistenziale. I destinatari non possono eliminare o esportare la cronologia del proprietario."
+          "Le foto vengono ridimensionate e conservate in uno spazio privato sul server. Sono visibili solo al proprietario e alle persone con accesso di condivisione attivo alla pianta. I destinatari possono consultare il diario, ma non aggiungerne, modificarne o eliminarne le foto. Le immagini sostituite o eliminate vengono rimosse. Eliminare una pianta rimuove anche le sue foto del diario."
         ]
       }
     ]

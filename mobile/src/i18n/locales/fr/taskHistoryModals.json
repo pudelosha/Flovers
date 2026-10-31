@@ -12,11 +12,12 @@
         "moisture": "Brumisation",
         "fertilising": "Fertilisation",
         "care": "Entretien",
-        "repot": "Rempoter"
+        "repot": "Rempoter",
+        "photo": "Photo"
       }
     },
     "delete": {
-      "title": "Supprimer l'historique",
+      "title": "Supprimer des tâches terminées",
       "scopeLabel": "Portée",
       "modes": {
         "plant": "Supprimer pour la plante sélectionnée",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} jours"
     },
     "filter": {
-      "title": "Filtrer l'historique",
+      "title": "Filtrer le journal",
       "plantLabel": "Plante",
       "locationLabel": "Emplacement",
-      "taskTypesLabel": "Types de tâches",
-      "completedDateRangeLabel": "Plage de dates de complétion",
+      "taskTypesLabel": "Types d’entrée",
+      "completedDateRangeLabel": "Période des entrées",
       "fromLabel": "De",
       "toLabel": "À",
       "anyPlant": "Toute plante",
@@ -41,11 +42,11 @@
       "clear": "Effacer"
     },
     "sort": {
-      "title": "Trier l'historique",
+      "title": "Trier le journal",
       "sortByLabel": "Trier par",
       "directionLabel": "Direction",
       "keys": {
-        "completedAt": "Date de complétion",
+        "completedAt": "Date de l’entrée",
         "plant": "Nom de la plante",
         "location": "Emplacement"
       },
@@ -56,10 +57,10 @@
       "reset": "Réinitialiser"
     },
     "export": {
-      "title": "Envoyer l'export de l'historique",
+      "title": "Exporter les tâches",
       "noticeTitle": "L'export Excel utilisera les critères actuellement appliqués.",
-      "noticeFiltered": "Seul l'historique des tâches correspondant aux filtres ci-dessous sera inclus. Si vous avez besoin de données différentes, modifiez d'abord les filtres puis renvoyez.",
-      "noticeAllData": "Aucun filtre n'est actuellement appliqué, donc l'export inclura toutes les données d'historique des tâches disponibles pour cet écran.",
+      "noticeFiltered": "L’export contient uniquement les tâches correspondant à ces filtres, sans les photos. Modifie d’abord les filtres si tu souhaites d’autres tâches.",
+      "noticeAllData": "L’export contient toutes les tâches terminées disponibles pour tes plantes, sans les photos.",
       "criteriaTitle": "Critères appliqués",
       "plantLabel": "Plante",
       "locationLabel": "Emplacement",

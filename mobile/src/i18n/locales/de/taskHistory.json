@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Aufgabenverlauf"
+      "title": "Pflegetagebuch"
     },
     "fab": {
       "sort": "Sortieren",
       "filter": "Filtern",
-      "sendExport": "Export senden",
-      "delete": "Löschen",
+      "sendExport": "Aufgaben exportieren",
+      "delete": "Aufgaben löschen",
       "clearFilter": "Filter löschen",
-      "showAllHistory": "Gesamten Verlauf anzeigen"
+      "showAllHistory": "Gesamtes Tagebuch anzeigen"
     },
     "common": {
       "unnamedPlant": "Unbenannte Pflanze"
     },
     "toasts": {
-      "failedToLoad": "Aufgabenverlauf konnte nicht geladen werden",
-      "historyDeleted": "Verlauf gelöscht",
-      "failedToDeleteHistory": "Verlauf konnte nicht gelöscht werden",
-      "historyTaskDeleted": "Verlaufsaufgabe gelöscht",
-      "failedToDeleteHistoryTask": "Verlaufsaufgabe konnte nicht gelöscht werden",
+      "failedToLoad": "Das Tagebuch konnte nicht geladen werden.",
+      "historyDeleted": "Erledigte Aufgaben gelöscht.",
+      "failedToDeleteHistory": "Die erledigten Aufgaben konnten nicht gelöscht werden.",
+      "historyTaskDeleted": "Erledigte Aufgabe gelöscht.",
+      "failedToDeleteHistoryTask": "Die erledigte Aufgabe konnte nicht gelöscht werden.",
       "taskNotLinkedToPlant": "Diese Aufgabe ist keiner Pflanze zugeordnet.",
-      "exportSent": "Exportanforderung für den Aufgabenverlauf gesendet",
-      "failedToSendExport": "Export für den Aufgabenverlauf konnte nicht gesendet werden",
+      "exportSent": "Aufgabenexport angefordert.",
+      "failedToSendExport": "Der Aufgabenexport konnte nicht gesendet werden.",
       "exportNotAvailableYet": "Export ist noch nicht verfügbar."
     },
     "empty": {
-      "title": "Noch keine abgeschlossenen Aufgaben",
-      "descBeforeBold": "Dieser Bildschirm zeigt",
-      "bold": "abgeschlossene Erinnerungsaufgaben",
-      "descAfterBold": "von deiner Startseite (ausstehende Aufgaben werden nicht angezeigt).",
+      "title": "Dein Tagebuch ist noch leer",
+      "descBeforeBold": "In diesem Tagebuch findest du",
+      "bold": "erledigte Aufgaben und Pflanzenfotos.",
+      "descAfterBold": "Füge über das + Menü ein Foto hinzu oder erledige eine Aufgabe, um dein Tagebuch zu beginnen.",
       "filteredToPlantId": "Derzeit gefiltert nach Pflanzen-ID {{plantId}}.",
-      "openFromTaskHint": "Öffne es aus einer bestimmten Aufgabe, um den Verlauf nur für diese Pflanze zu sehen."
+      "openFromTaskHint": "Öffne das Tagebuch über eine Pflanze oder Aufgabe, um nur die Einträge dieser Pflanze zu sehen."
     },
     "tile": {
       "completedOn": "Abgeschlossen am {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "Besprühen",
       "care": "Pflege",
       "repot": "Umtopfen"
+    },
+    "photo": {
+      "add": "Foto hinzufügen",
+      "edit": "Foto bearbeiten",
+      "filterType": "Foto",
+      "saved": "Foto im Tagebuch gespeichert.",
+      "deleted": "Foto aus dem Tagebuch gelöscht.",
+      "deleteFailed": "Das Foto konnte nicht gelöscht werden. Bitte versuche es erneut.",
+      "deleteTitle": "Foto löschen?",
+      "deleteConfirm": "Dieses Foto und seine Notizen werden dauerhaft aus dem Tagebuch entfernt.",
+      "delete": "Foto löschen",
+      "titleAdd": "Foto zum Tagebuch hinzufügen",
+      "titleEdit": "Tagebuchfoto bearbeiten",
+      "description": "Halte die Entwicklung deiner Pflanze fest. Pro Pflanze kannst du alle sieben Tage ein Foto hinzufügen.",
+      "plant": "Pflanze",
+      "choosePlant": "Pflanze auswählen",
+      "photo": "Foto",
+      "takePhoto": "Foto aufnehmen",
+      "chooseGallery": "Aus Galerie auswählen",
+      "photoDate": "Aufnahmedatum (optional)",
+      "chooseDate": "Datum auswählen",
+      "clearDate": "Datum entfernen",
+      "notes": "Notizen (optional)",
+      "notesPlaceholder": "Schreibe etwas zu deiner Pflanze…",
+      "save": "Speichern",
+      "saving": "Wird gespeichert…",
+      "added": "Hinzugefügt",
+      "photoTaken": "Aufnahmedatum",
+      "journalGuide": "Tagebuchfoto",
+      "noPhoto": "Wähle ein Foto aus oder nimm eines auf, um fortzufahren.",
+      "noPlant": "Wähle eine Pflanze aus, um fortzufahren.",
+      "cooldown": "Ab {{date}} kannst du ein weiteres Foto dieser Pflanze hinzufügen.",
+      "loadFailed": "Die Fotodetails konnten nicht geladen werden. Bitte versuche es erneut.",
+      "saveFailed": "Das Foto konnte nicht gespeichert werden. Bitte versuche es erneut.",
+      "conflict": "Dieses Foto wurde geändert. Schließe das Formular und öffne es erneut.",
+      "permission": "Nur der Eigentümer der Pflanze kann Tagebuchfotos verwalten.",
+      "tooLarge": "Dieses Foto ist zu groß. Bitte wähle ein kleineres Bild.",
+      "invalidPhoto": "Dieses Foto konnte nicht gelesen werden. Bitte wähle ein anderes Bild.",
+      "storageFull": "Der Fotospeicher ist voll. Lösche ein nicht benötigtes Foto und versuche es erneut.",
+      "cameraDenied": "Erlaube den Kamerazugriff in den Einstellungen deines Handys, um ein Foto aufzunehmen.",
+      "futureDate": "Das Aufnahmedatum darf nicht in der Zukunft liegen.",
+      "retry": "Erneut versuchen",
+      "cancel": "Abbrechen",
+      "noPlants": "Füge zuerst eine Pflanze hinzu, bevor du Tagebuchfotos hinzufügst.",
+      "retryPending": "Die Verbindung wurde unterbrochen. Versuche erneut, dieselben Angaben zu speichern, oder schließe das Tagebuch und öffne es wieder, um zu prüfen, was gespeichert wurde."
     }
   }
 }

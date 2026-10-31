@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
 import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
 import { s } from "../../styles/task-history.styles";
-import type { TaskType } from "../../../home/types/home.types";
+import type { JournalFilterType } from "../../types/task-history.types";
 import {
   ACCENT_BY_TYPE,
   ICON_BY_TYPE,
@@ -29,7 +29,7 @@ type PlantOption = { id: string; name: string };
 export type HistoryFilters = {
   plantId?: string;
   location?: string;
-  types?: TaskType[];
+  types?: JournalFilterType[];
   completedFrom?: string;
   completedTo?: string;
 };
@@ -44,7 +44,8 @@ type Props = {
   onClearAll: () => void;
 };
 
-const TYPE_OPTIONS: TaskType[] = [
+const TYPE_OPTIONS: JournalFilterType[] = [
+  "photo",
   "watering",
   "moisture",
   "fertilising",
@@ -126,7 +127,7 @@ export default function FilterHistoryTasksModal({
 
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
-  const [types, setTypes] = React.useState<TaskType[]>(filters.types || []);
+  const [types, setTypes] = React.useState<JournalFilterType[]>(filters.types || []);
 
   const [plantId, setPlantId] = React.useState<string | undefined>(
     filters.plantId
@@ -158,7 +159,7 @@ export default function FilterHistoryTasksModal({
     }
   }, [visible, filters]);
 
-  const toggleType = (tt: TaskType) => {
+  const toggleType = (tt: JournalFilterType) => {
     setTypes((curr) =>
       curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]
     );
@@ -391,8 +392,8 @@ export default function FilterHistoryTasksModal({
             >
               {TYPE_OPTIONS.map((tt) => {
                 const selected = types.includes(tt);
-                const tint = ACCENT_BY_TYPE[tt];
-                const icon = ICON_BY_TYPE[tt];
+                const tint = tt === "photo" ? "#63BEC2" : ACCENT_BY_TYPE[tt];
+                const icon = tt === "photo" ? "camera-outline" : ICON_BY_TYPE[tt];
 
                 return (
                   <Pressable
@@ -427,7 +428,7 @@ export default function FilterHistoryTasksModal({
                         },
                       ]}
                     >
-                      {t(`home.taskTypes.${tt}`)}
+                      {tt === "photo" ? t("taskHistory.photo.filterType", { defaultValue: "Photo" }) : t(`home.taskTypes.${tt}`)}
                     </Text>
                   </Pressable>
                 );

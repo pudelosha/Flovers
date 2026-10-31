@@ -10,24 +10,29 @@ import {
 import { fetchPlantInstances } from "./plant-instances.service";
 
 import { buildUIHistoryItems } from "../serializers/history.serializer";
-import type { TaskHistoryItem } from "../../features/task-history/types/task-history.types";
+import type { JournalEntry } from "../../features/task-history/types/task-history.types";
 import type { TaskType } from "../../features/home/types/home.types";
+import { fetchJournalPhotos } from "./journal-photos.service";
 
 /**
- * Fetch all *completed* reminder tasks and map them to TaskHistoryItem.
+ * Fetch the complete journal: completed tasks and authorised photo entries.
+ * Both existing endpoints return complete collections, so sorting/filtering is
+ * applied once to the combined list in the journal screen.
  */
-export async function fetchHistoryItems(): Promise<TaskHistoryItem[]> {
-  const [tasks, reminders, plants] = await Promise.all([
+export async function fetchHistoryItems(): Promise<JournalEntry[]> {
+  const [tasks, reminders, plants, photos] = await Promise.all([
     listReminderTasks({ status: "completed", auth: true }),
     listReminders({ auth: true }),
     fetchPlantInstances({ auth: true }),
+    fetchJournalPhotos(),
   ]);
 
-  return buildUIHistoryItems(
+  const completedTasks = buildUIHistoryItems(
     tasks as ApiReminderTask[],
     reminders as ApiReminder[],
     plants as any
   );
+  return [...completedTasks, ...photos];
 }
 
 /**

@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Task history"
+      "title": "Task Journal"
     },
     "fab": {
       "sort": "Sort",
       "filter": "Filter",
-      "sendExport": "Send export",
-      "delete": "Delete",
+      "sendExport": "Export tasks",
+      "delete": "Delete tasks",
       "clearFilter": "Clear filter",
-      "showAllHistory": "Show all history"
+      "showAllHistory": "Show full journal"
     },
     "common": {
       "unnamedPlant": "Unnamed plant"
     },
     "toasts": {
-      "failedToLoad": "Failed to load task history",
-      "historyDeleted": "History deleted",
-      "failedToDeleteHistory": "Failed to delete history",
-      "historyTaskDeleted": "History task deleted",
-      "failedToDeleteHistoryTask": "Failed to delete history task",
+      "failedToLoad": "Could not load the journal.",
+      "historyDeleted": "Completed tasks deleted.",
+      "failedToDeleteHistory": "Could not delete the completed tasks.",
+      "historyTaskDeleted": "Completed task deleted.",
+      "failedToDeleteHistoryTask": "Could not delete the completed task.",
       "taskNotLinkedToPlant": "This task is not linked to a plant.",
-      "exportSent": "Task history export request sent",
-      "failedToSendExport": "Failed to send task history export",
+      "exportSent": "Task export requested.",
+      "failedToSendExport": "Could not send the task export.",
       "exportNotAvailableYet": "Export is not available yet."
     },
     "empty": {
-      "title": "No completed tasks yet",
-      "descBeforeBold": "This screen shows",
-      "bold": "closed reminder tasks",
-      "descAfterBold": "from your Home page (pending tasks are not shown).",
+      "title": "Your journal is empty",
+      "descBeforeBold": "This journal brings together",
+      "bold": "completed tasks and plant photos.",
+      "descAfterBold": "Add a photo from the + menu or complete a task to start your journal.",
       "filteredToPlantId": "Currently filtered to plant id {{plantId}}.",
-      "openFromTaskHint": "Open it from a specific task to see history just for that plant."
+      "openFromTaskHint": "Open the journal from a plant or task to see entries for that plant only."
     },
     "tile": {
       "completedOn": "Completed on {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "misting",
       "care": "care",
       "repot": "repot"
+    },
+    "photo": {
+      "add": "Add photo",
+      "edit": "Edit photo",
+      "filterType": "Photo",
+      "saved": "Journal photo saved.",
+      "deleted": "Journal photo deleted.",
+      "deleteFailed": "Could not delete the photo. Please try again.",
+      "deleteTitle": "Delete photo?",
+      "deleteConfirm": "This photo and its notes will be permanently removed from the journal.",
+      "delete": "Delete photo",
+      "titleAdd": "Add journal photo",
+      "titleEdit": "Edit journal photo",
+      "description": "Document your plant’s growth. You can add one photo per plant every seven days.",
+      "plant": "Plant",
+      "choosePlant": "Choose a plant",
+      "photo": "Photo",
+      "takePhoto": "Take a photo",
+      "chooseGallery": "Choose from gallery",
+      "photoDate": "Photo date (optional)",
+      "chooseDate": "Choose date",
+      "clearDate": "Clear date",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Add a note about your plant…",
+      "save": "Save",
+      "saving": "Saving…",
+      "added": "Added",
+      "photoTaken": "Photo date",
+      "journalGuide": "Journal photo",
+      "noPhoto": "Choose or take a photo to continue.",
+      "noPlant": "Choose a plant to continue.",
+      "cooldown": "You can add another photo for this plant on {{date}}.",
+      "loadFailed": "Could not load the photo details. Please try again.",
+      "saveFailed": "Could not save the photo. Please try again.",
+      "conflict": "This photo changed. Close this form and open it again.",
+      "permission": "Only the plant owner can manage journal photos.",
+      "tooLarge": "This photo is too large. Please choose a smaller image.",
+      "invalidPhoto": "Could not read this photo. Please choose another image.",
+      "storageFull": "Photo storage is full. Remove an unused photo and try again.",
+      "cameraDenied": "Allow camera access in your phone settings to take a photo.",
+      "futureDate": "The photo date cannot be in the future.",
+      "retry": "Try again",
+      "cancel": "Cancel",
+      "noPlants": "Add a plant before adding journal photos.",
+      "retryPending": "The connection was interrupted. Retry saving the same details, or close and reopen the journal to check what was saved."
     }
   }
 }

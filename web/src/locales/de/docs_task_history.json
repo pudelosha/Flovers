@@ -1,84 +1,53 @@
 {
   "docs_task_history": {
-    "title": "Pflegeverlauf",
+    "title": "Pflegetagebuch",
     "sections": [
       {
-        "heading": "Was du im Pflegeverlauf findest",
+        "heading": "Pflege und Wachstum an einem Ort",
         "body": [
-          "Im Pflegeverlauf siehst du erledigte Aufgaben und kannst die gespeicherten Einträge verwalten.",
-          "Du kannst nachsehen, wann du welche Pflanze wie gepflegt hast.",
-          "Der Verlauf kann alle erledigten Aufgaben zeigen oder bereits gefiltert sein, zum Beispiel auf die Aufgaben einer bestimmten Pflanze."
+          "Das Pflegetagebuch vereint erledigte Aufgaben und Entwicklungsfotos. Du erreichst es über die Startseite. Im Pflanzenmenü öffnet Pflegetagebuch nur die Einträge dieser Pflanze und ersetzt das bisherige Pflanzentagebuch-Fenster. Offene Aufgaben bleiben auf der Startseite."
         ]
       },
       {
-        "heading": "Kacheln erledigter Aufgaben",
+        "heading": "Erledigte Aufgaben",
         "body": [
-          "Jede Kachel zeigt eine erledigte Aufgabe mit Aufgabenart, Pflanzenname und Standort.",
-          "Rechts stehen drei Zeilen: der Erledigungsstatus, das Datum und die Person, die die Aufgabe erledigt hat. Ist keine Person erfasst, wird ein unbekannter Nutzer angezeigt.",
-          "Eine beim Erledigen gespeicherte Notiz steht unter den Aufgabendetails."
+          "Aufgabenkacheln zeigen weiterhin die Tätigkeit, die Pflanze und den Standort. Rechts stehen auf drei Zeilen: Erledigt, das Datum und die Person, die die Aufgabe erledigt hat. Vorhandene Notizen sind immer sichtbar. Eigentümer können die zugehörige Erinnerung bearbeiten oder den Aufgabeneintrag löschen. Pflanzendetails öffnet die Pflanze."
         ]
       },
       {
-        "heading": "Notizen ansehen",
+        "heading": "Ein Foto hinzufügen",
         "body": [
-          "Notizen sind nach dem Laden des Verlaufs sofort sichtbar. Längere Texte werden über die benötigten Zeilen umgebrochen.",
-          "Eine Notiz wird beim Markieren einer Aufgabe als erledigt hinzugefügt. Ohne Notiz erscheint kein leerer Notizbereich."
+          "Foto hinzufügen steht im + Menü an erster Stelle. Wähle eine eigene Pflanze, nimm ein Foto auf oder wähle eines aus der Galerie. Aufnahmedatum und Notizen sind optional. Passe den Bildausschnitt an und speichere. Tagebuchfotos sind eigene Einträge und ersetzen das Hauptfoto der Pflanze nicht."
         ]
       },
       {
-        "heading": "Menü der Aufgabenkachel",
+        "heading": "Ein Foto alle sieben Tage",
         "body": [
-          "Tippe auf den Hauptbereich einer erledigten Aufgabenkachel, um ihr Aktionsmenü zu öffnen.",
-          "Erinnerung bearbeiten öffnet die zugehörige Erinnerung, um Wiederholung oder Einstellungen zu ändern. Diese Aktion ist nur für den Pflanzeneigentümer verfügbar.",
-          "Pflanzendetails: Öffnet direkt die Details der zugehörigen Pflanze.",
-          "Aufgabe löschen entfernt den ausgewählten abgeschlossenen Verlaufseintrag dauerhaft. Das kann nur der Pflanzeneigentümer tun."
+          "Pro Pflanze kannst du alle sieben Tage (168 Stunden) einen Fotoeintrag erstellen. Entscheidend ist der Upload-Zeitpunkt auf dem Server. Ein anderes Aufnahmedatum, Bearbeiten oder Löschen verkürzt diesen Abstand nicht. Das Formular zeigt, wann du das nächste Foto hinzufügen kannst."
         ]
       },
       {
-        "heading": "Schnellaktionen",
+        "heading": "Fotokacheln und Bearbeitung",
         "body": [
-          "Die Schaltfläche für Schnellaktionen im Pflegeverlauf öffnet ein Menü für die gesamte Liste.",
-          "Sortieren: ändert die Reihenfolge der erledigten Aufgaben.",
-          "Filtern: zeigt nur Aufgaben, die zu deinen gewählten Kriterien passen.",
-          "Löschen: entfernt mehrere Aufgaben auf einmal, zum Beispiel für eine bestimmte Pflanze oder einen Standort, eine bestimmte Aufgabenart oder Aufgaben ab einem gewählten Alter.",
-          "Export senden mailt eine Tabelle mit den aktuellen Filtern; offene Aufgaben können einbezogen werden. Nur der Eigentümer kann seinen Verlauf exportieren."
+          "Fotokacheln stehen zwischen den erledigten Aufgaben. Sie zeigen ein sanft ausblendendes Bild, oben rechts Hinzugefügt mit Zeitstempel und unten die Notizen. Eine Aufgabenart wird nicht angezeigt. Tippe auf die Kachel für Foto bearbeiten, Pflanzendetails oder Foto löschen. Eigentümer können das Bild ersetzen, Datum und Notizen ändern und den Eintrag nach Bestätigung löschen."
         ]
       },
       {
-        "heading": "Sortieren",
+        "heading": "Sortieren und Filtern",
         "body": [
-          "Ändere die Reihenfolge der Einträge, damit du leichter findest, was du suchst.",
-          "Du kannst nach Erledigungsdatum, Pflanzenname oder Standort sortieren."
+          "Sortiere nach Eintragsdatum, Pflanzenname oder Standort. Filtere nach Pflanze, Standort, Art oder Zeitraum. Mit Foto werden nur Fotos angezeigt. Das Eintragsdatum eines Fotos ist der Zeitpunkt des Hinzufügens; das optionale Aufnahmedatum steht separat dabei."
         ]
       },
       {
-        "heading": "Filtern",
+        "heading": "Aufgaben exportieren und gesammelt löschen",
         "body": [
-          "Mit Filtern zeigst du nur die erledigten Aufgaben an, die dich interessieren.",
-          "Du kannst Pflanzenname, Standort, Aufgabentyp und einen Zeitraum für das Erledigungsdatum wählen.",
-          "Die Filter lassen sich kombinieren, etwa um nur Düngeaufgaben an einem bestimmten Standort aus einem bestimmten Monat zu sehen."
+          "Aufgaben exportieren sendet eine Tabelle deiner Aufgaben mit den aktuellen Aufgabenfiltern per E-Mail. Offene Aufgaben lassen sich einschließen. Aufgaben löschen entfernt erledigte Aufgaben nach den gewählten Kriterien. Beide Aktionen sind Eigentümern vorbehalten und schließen Fotos auch in einem gemischten Tagebuch aus. Fotos löschst du einzeln im Kachelmenü."
         ]
       },
       {
-        "heading": "Mehrere Aufgaben auf einmal löschen",
+        "heading": "Private Fotos und geteilte Pflanzen",
         "body": [
-          "Mit Löschen entfernst du mehrere erledigte Aufgaben dauerhaft, die zu deinen gewählten Kriterien passen.",
-          "Du kannst zum Beispiel den Verlauf einer Pflanze leeren, Aufgaben eines Standorts entfernen, eine bestimmte Aufgabenart löschen oder Einträge vor einem gewählten Datum entfernen.",
-          "Das Löschen lässt sich nicht rückgängig machen."
-        ]
-      },
-      {
-        "heading": "Pflegeverlauf und Startseite",
-        "body": [
-          "Die Startseite zeigt offene Aufgaben, unter Alle auch zukünftige. Heute und Überfällig grenzen die Liste ein. Im Aufgabenverlauf stehen erledigte Aufgaben.",
-          "Im Pflegeverlauf siehst du, was bereits erledigt wurde. Du kannst die Einträge ansehen, sortieren, filtern und löschen.",
-          "Die Startseite hilft dir bei der täglichen Pflege, im Pflegeverlauf kannst du frühere Arbeiten nachschlagen."
-        ]
-      },
-      {
-        "heading": "Gemeinsame Pflegegeschichte",
-        "body": [
-          "Der Pflegeverlauf für aktiv geteilte Pflanzen ist mit dem Label „Geteilt“ sichtbar. Wenn eine autorisierte Pflegekraft eine Aufgabe erledigt, wird diese Erledigung in derselben Pflegehistorie aufgezeichnet. Empfänger können den Verlauf des Eigentümers nicht löschen oder exportieren."
+          "Fotos werden verkleinert und privat auf dem Server gespeichert. Nur der Eigentümer und Personen mit aktivem Freigabezugriff auf diese Pflanze können sie ansehen. Empfänger können das Tagebuch lesen, aber keine Fotos hinzufügen, bearbeiten oder löschen. Ersetzte und gelöschte Fotos werden bereinigt. Beim Löschen einer Pflanze werden auch ihre Tagebuchfotos entfernt."
         ]
       }
     ]

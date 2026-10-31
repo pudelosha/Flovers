@@ -25,7 +25,7 @@
           "Marcar como concluída: conclui a tarefa e permite adicionar uma anotação ao histórico de cuidados.",
           "Editar lembrete: abre o lembrete da tarefa para você mudar a frequência.",
           "Detalhes da planta: abre os Detalhes da planta correspondente.",
-          "Mostrar histórico: mostra as tarefas já concluídas para a mesma planta ou o mesmo lembrete."
+          "Diário de tarefas abre os registros desta planta: tarefas concluídas, anotações e fotos do crescimento."
         ]
       },
       {
@@ -36,7 +36,7 @@
           "Mostrar para hoje: mostra as tarefas previstas para hoje.",
           "Ordenar: muda a ordem das tarefas na lista.",
           "Filtrar: mostra apenas as tarefas que atendem aos critérios escolhidos.",
-          "Histórico: abre o Histórico de tarefas, explicado em uma página própria."
+          "Diário de tarefas abre o diário de tarefas concluídas e fotos das plantas, explicado em uma página própria."
         ]
       },
       {
@@ -68,8 +68,8 @@
         "heading": "Abra outras telas",
         "body": [
           "Os menus das tarefas e o botão de ações rápidas levam a outras partes do aplicativo.",
-          "Pelo menu de uma tarefa, você pode abrir os Detalhes da planta ou o histórico.",
-          "Pelo botão de ações rápidas, você pode abrir o Histórico de tarefas ou ordenar e filtrar a lista."
+          "Pelo menu de uma tarefa, você pode abrir os Detalhes da planta ou o Diário de tarefas dela.",
+          "O menu + permite abrir o Diário de tarefas ou ordenar e filtrar as tarefas pendentes."
         ]
       },
       {

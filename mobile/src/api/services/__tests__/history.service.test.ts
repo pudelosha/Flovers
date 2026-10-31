@@ -6,6 +6,7 @@ import {
   listReminders,
 } from "../reminders.service";
 import { fetchPlantInstances } from "../plant-instances.service";
+import { fetchJournalPhotos } from "../journal-photos.service";
 import {
   bulkDeleteHistoryEntries,
   deleteHistoryEntry,
@@ -28,6 +29,10 @@ jest.mock("../plant-instances.service", () => ({
   fetchPlantInstances: jest.fn(),
 }));
 
+jest.mock("../journal-photos.service", () => ({
+  fetchJournalPhotos: jest.fn(),
+}));
+
 const mockedRequest = request as jest.Mock;
 const mockedListTasks = listReminderTasks as jest.Mock;
 const mockedListReminders = listReminders as jest.Mock;
@@ -39,6 +44,7 @@ describe("history.service", () => {
     jest.setSystemTime(new Date("2026-05-13T10:00:00Z"));
     jest.clearAllMocks();
     mockedRequest.mockResolvedValue(undefined);
+    (fetchJournalPhotos as jest.Mock).mockResolvedValue([]);
     mockedListTasks.mockResolvedValue([
       {
         id: 11,
@@ -83,6 +89,26 @@ describe("history.service", () => {
     await expect(fetchHistoryItems()).resolves.toEqual([
       expect.objectContaining({ id: "11", reminderId: "3", note: "done" }),
     ]);
+  });
+
+  it("includes authorised photo entries without treating them as reminder types", async () => {
+    const photo = {
+      entryKind: "photo", id: "11", plantId: "2", plant: "Fern",
+      location: "Kitchen", type: "photo", completedAt: "2026-05-13T09:00:00Z",
+      createdAt: "2026-05-13T09:00:00Z", recordedDate: "2026-05-10",
+      revision: 1, photo: { id: "photo-11" }, note: "New leaf",
+    };
+    (fetchJournalPhotos as jest.Mock).mockResolvedValue([photo]);
+
+    const entries = await fetchHistoryItems();
+    expect(entries).toHaveLength(2);
+    expect(entries[0]).toEqual(expect.objectContaining({ id: "11", type: "moisture" }));
+    expect(entries[1]).toEqual(photo);
+  });
+
+  it("fails the journal load when photo access cannot be established", async () => {
+    (fetchJournalPhotos as jest.Mock).mockRejectedValue(new Error("Photo access failed"));
+    await expect(fetchHistoryItems()).rejects.toThrow("Photo access failed");
   });
 
   it("supports single, bulk and export history actions", async () => {

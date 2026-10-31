@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Historia zadań"
+      "title": "Dziennik zadań"
     },
     "fab": {
       "sort": "Sortuj",
       "filter": "Filtruj",
-      "sendExport": "Wyślij eksport",
-      "delete": "Usuń",
+      "sendExport": "Eksportuj zadania",
+      "delete": "Usuń zadania",
       "clearFilter": "Wyczyść filtr",
-      "showAllHistory": "Pokaż całą historię"
+      "showAllHistory": "Pokaż cały dziennik"
     },
     "common": {
       "unnamedPlant": "Nienazwana roślina"
     },
     "toasts": {
-      "failedToLoad": "Nie udało się załadować historii zadań",
-      "historyDeleted": "Historia usunięta",
-      "failedToDeleteHistory": "Nie udało się usunąć historii",
-      "historyTaskDeleted": "Zadanie z historii usunięte",
-      "failedToDeleteHistoryTask": "Nie udało się usunąć zadania z historii",
+      "failedToLoad": "Nie udało się wczytać dziennika.",
+      "historyDeleted": "Usunięto wykonane zadania.",
+      "failedToDeleteHistory": "Nie udało się usunąć wykonanych zadań.",
+      "historyTaskDeleted": "Usunięto wykonane zadanie.",
+      "failedToDeleteHistoryTask": "Nie udało się usunąć wykonanego zadania.",
       "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną.",
-      "exportSent": "Wysłano żądanie eksportu historii zadań",
-      "failedToSendExport": "Nie udało się wysłać eksportu historii zadań",
+      "exportSent": "Zlecono eksport zadań.",
+      "failedToSendExport": "Nie udało się wysłać eksportu zadań.",
       "exportNotAvailableYet": "Eksport nie jest jeszcze dostępny."
     },
     "empty": {
-      "title": "Brak ukończonych zadań",
-      "descBeforeBold": "Ten ekran pokazuje",
-      "bold": "zamknięte zadania przypomnień",
-      "descAfterBold": "z Twojej strony głównej (oczekujące zadania nie są wyświetlane).",
+      "title": "Twój dziennik jest pusty",
+      "descBeforeBold": "W tym dzienniku znajdziesz",
+      "bold": "wykonane zadania i zdjęcia roślin.",
+      "descAfterBold": "Dodaj zdjęcie z menu + lub wykonaj zadanie, aby rozpocząć swój dziennik.",
       "filteredToPlantId": "Obecnie filtrowane według rośliny o id {{plantId}}.",
-      "openFromTaskHint": "Otwórz z poziomu konkretnego zadania, aby zobaczyć historię tylko dla tej rośliny."
+      "openFromTaskHint": "Otwórz dziennik z menu rośliny lub zadania, aby zobaczyć wpisy tylko dla tej rośliny."
     },
     "tile": {
       "completedOn": "Ukończono {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "zraszanie",
       "care": "pielęgnacja",
       "repot": "przesadzanie"
+    },
+    "photo": {
+      "add": "Dodaj zdjęcie",
+      "edit": "Edytuj zdjęcie",
+      "filterType": "Zdjęcie",
+      "saved": "Zapisano zdjęcie w dzienniku.",
+      "deleted": "Usunięto zdjęcie z dziennika.",
+      "deleteFailed": "Nie udało się usunąć zdjęcia. Spróbuj ponownie.",
+      "deleteTitle": "Usunąć zdjęcie?",
+      "deleteConfirm": "Zdjęcie wraz z notatkami zostanie trwale usunięte z dziennika.",
+      "delete": "Usuń zdjęcie",
+      "titleAdd": "Dodaj zdjęcie do dziennika",
+      "titleEdit": "Edytuj zdjęcie w dzienniku",
+      "description": "Dokumentuj rozwój swojej rośliny. Dla każdej rośliny możesz dodać jedno zdjęcie co siedem dni.",
+      "plant": "Roślina",
+      "choosePlant": "Wybierz roślinę",
+      "photo": "Zdjęcie",
+      "takePhoto": "Zrób zdjęcie",
+      "chooseGallery": "Wybierz z galerii",
+      "photoDate": "Data zdjęcia (opcjonalnie)",
+      "chooseDate": "Wybierz datę",
+      "clearDate": "Usuń datę",
+      "notes": "Notatki (opcjonalnie)",
+      "notesPlaceholder": "Napisz coś o swojej roślinie…",
+      "save": "Zapisz",
+      "saving": "Zapisywanie…",
+      "added": "Dodano",
+      "photoTaken": "Data zdjęcia",
+      "journalGuide": "Zdjęcie do dziennika",
+      "noPhoto": "Wybierz lub zrób zdjęcie, aby kontynuować.",
+      "noPlant": "Wybierz roślinę, aby kontynuować.",
+      "cooldown": "Kolejne zdjęcie tej rośliny możesz dodać {{date}}.",
+      "loadFailed": "Nie udało się wczytać szczegółów zdjęcia. Spróbuj ponownie.",
+      "saveFailed": "Nie udało się zapisać zdjęcia. Spróbuj ponownie.",
+      "conflict": "To zdjęcie zostało zmienione. Zamknij formularz i otwórz go ponownie.",
+      "permission": "Zdjęciami w dzienniku może zarządzać tylko właściciel rośliny.",
+      "tooLarge": "To zdjęcie jest za duże. Wybierz mniejszy plik.",
+      "invalidPhoto": "Nie udało się odczytać zdjęcia. Wybierz inne.",
+      "storageFull": "Brakuje miejsca na zdjęcia. Usuń niepotrzebne zdjęcie i spróbuj ponownie.",
+      "cameraDenied": "Aby zrobić zdjęcie, zezwól na dostęp do aparatu w ustawieniach telefonu.",
+      "futureDate": "Data zdjęcia nie może być przyszła.",
+      "retry": "Spróbuj ponownie",
+      "cancel": "Anuluj",
+      "noPlants": "Najpierw dodaj roślinę, aby móc dodawać jej zdjęcia do dziennika.",
+      "retryPending": "Połączenie zostało przerwane. Spróbuj ponownie zapisać te same dane albo zamknij dziennik i otwórz go ponownie, aby sprawdzić, co zostało zapisane."
     }
   }
 }

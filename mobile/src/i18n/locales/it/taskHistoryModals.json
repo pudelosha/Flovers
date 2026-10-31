@@ -12,11 +12,12 @@
         "moisture": "Nebulizzazione",
         "fertilising": "Fertilizzazione",
         "care": "Cura",
-        "repot": "Rinvaso"
+        "repot": "Rinvaso",
+        "photo": "Foto"
       }
     },
     "delete": {
-      "title": "Elimina cronologia",
+      "title": "Elimina attività completate",
       "scopeLabel": "Ambito",
       "modes": {
         "plant": "Elimina per la pianta selezionata",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} giorni"
     },
     "filter": {
-      "title": "Filtra cronologia",
+      "title": "Filtra diario",
       "plantLabel": "Pianta",
       "locationLabel": "Posizione",
-      "taskTypesLabel": "Tipi di attività",
-      "completedDateRangeLabel": "Intervallo date di completamento",
+      "taskTypesLabel": "Tipi di voce",
+      "completedDateRangeLabel": "Intervallo di date delle voci",
       "fromLabel": "Da",
       "toLabel": "A",
       "anyPlant": "Qualsiasi pianta",
@@ -41,11 +42,11 @@
       "clear": "Cancella"
     },
     "sort": {
-      "title": "Ordina cronologia",
+      "title": "Ordina diario",
       "sortByLabel": "Ordina per",
       "directionLabel": "Direzione",
       "keys": {
-        "completedAt": "Data di completamento",
+        "completedAt": "Data della voce",
         "plant": "Nome della pianta",
         "location": "Posizione"
       },
@@ -56,10 +57,10 @@
       "reset": "Reimposta"
     },
     "export": {
-      "title": "Invia esportazione cronologia",
+      "title": "Esporta attività",
       "noticeTitle": "L'esportazione Excel utilizzerà i criteri attualmente applicati.",
-      "noticeFiltered": "Verrà inclusa solo la cronologia delle attività che corrisponde ai filtri mostrati di seguito. Se hai bisogno di dati diversi, modifica prima i filtri e poi invia di nuovo.",
-      "noticeAllData": "Attualmente non sono applicati filtri, quindi l'esportazione includerà tutti i dati disponibili della cronologia delle attività per questa schermata.",
+      "noticeFiltered": "L’esportazione include solo le attività che corrispondono a questi filtri, senza foto. Se ti servono altre attività, modifica prima i filtri.",
+      "noticeAllData": "L’esportazione include tutte le attività completate disponibili delle tue piante, senza foto.",
       "criteriaTitle": "Criteri applicati",
       "plantLabel": "Pianta",
       "locationLabel": "Posizione",

@@ -12,11 +12,12 @@
         "moisture": "Penyemprotan",
         "fertilising": "Pemupukan",
         "care": "Perawatan",
-        "repot": "Ganti pot"
+        "repot": "Ganti pot",
+        "photo": "Foto"
       }
     },
     "delete": {
-      "title": "Hapus riwayat",
+      "title": "Hapus tugas selesai",
       "scopeLabel": "Ruang lingkup",
       "modes": {
         "plant": "Hapus untuk tanaman hias yang dipilih",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} hari"
     },
     "filter": {
-      "title": "Saring riwayat",
+      "title": "Filter jurnal",
       "plantLabel": "Tanaman",
       "locationLabel": "Lokasi",
-      "taskTypesLabel": "Jenis tugas",
-      "completedDateRangeLabel": "Rentang tanggal selesai",
+      "taskTypesLabel": "Jenis entri",
+      "completedDateRangeLabel": "Rentang tanggal entri",
       "fromLabel": "Dari",
       "toLabel": "Untuk",
       "anyPlant": "Tanaman hias apa pun",
@@ -41,11 +42,11 @@
       "clear": "Jelas"
     },
     "sort": {
-      "title": "Urutkan sejarah",
+      "title": "Urutkan jurnal",
       "sortByLabel": "Urutkan berdasarkan",
       "directionLabel": "Arah",
       "keys": {
-        "completedAt": "Tanggal selesai",
+        "completedAt": "Tanggal entri",
         "plant": "Nama tanaman hias",
         "location": "Lokasi"
       },
@@ -56,10 +57,10 @@
       "reset": "Setel ulang"
     },
     "export": {
-      "title": "Kirim ekspor riwayat",
+      "title": "Ekspor tugas",
       "noticeTitle": "Ekspor Excel akan menggunakan kriteria yang diterapkan saat ini.",
-      "noticeFiltered": "Hanya riwayat tugas yang cocok dengan filter yang ditunjukkan di bawah ini yang akan disertakan. Jika Anda memerlukan data yang berbeda, ubah filter terlebih dahulu lalu kirim lagi.",
-      "noticeAllData": "Saat ini tidak ada filter yang diterapkan, sehingga ekspor akan menyertakan semua data riwayat tugas yang tersedia untuk layar ini.",
+      "noticeFiltered": "Ekspor hanya berisi tugas yang sesuai dengan filter ini, tanpa foto. Ubah filter terlebih dahulu jika Anda membutuhkan tugas lain.",
+      "noticeAllData": "Ekspor berisi semua tugas selesai yang tersedia untuk tanaman Anda, tanpa foto.",
       "criteriaTitle": "Kriteria yang diterapkan",
       "plantLabel": "Tanaman",
       "locationLabel": "Lokasi",

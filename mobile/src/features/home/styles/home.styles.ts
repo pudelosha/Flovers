@@ -150,8 +150,6 @@ export const s = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 12,
     backgroundColor: "#000000",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.18)",
     gap: 6,
   },
   menuItem: {

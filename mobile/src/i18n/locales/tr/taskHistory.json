@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Görev geçmişi"
+      "title": "Görev günlüğü"
     },
     "fab": {
       "sort": "Sırala",
       "filter": "Filtrele",
-      "sendExport": "Dışa aktarma gönder",
-      "delete": "Sil",
+      "sendExport": "Görevleri dışa aktar",
+      "delete": "Görevleri sil",
       "clearFilter": "Filtreyi temizle",
-      "showAllHistory": "Tüm geçmişi göster"
+      "showAllHistory": "Tüm günlüğü göster"
     },
     "common": {
       "unnamedPlant": "İsimsiz ev bitkisi"
     },
     "toasts": {
-      "failedToLoad": "Görev geçmişi yüklenemedi",
-      "historyDeleted": "Geçmiş silindi",
-      "failedToDeleteHistory": "Geçmiş silinemedi",
-      "historyTaskDeleted": "Geçmiş görevi silindi",
-      "failedToDeleteHistoryTask": "Geçmiş görevi silinemedi",
+      "failedToLoad": "Günlük yüklenemedi.",
+      "historyDeleted": "Tamamlanan görevler silindi.",
+      "failedToDeleteHistory": "Tamamlanan görevler silinemedi.",
+      "historyTaskDeleted": "Tamamlanan görev silindi.",
+      "failedToDeleteHistoryTask": "Tamamlanan görev silinemedi.",
       "taskNotLinkedToPlant": "Bu görev bir bitkiye bağlı değil.",
-      "exportSent": "Görev geçmişini dışa aktarma isteği gönderildi",
-      "failedToSendExport": "Görev geçmişini dışa aktarma işlemi gönderilemedi",
+      "exportSent": "Görev dışa aktarma isteği gönderildi.",
+      "failedToSendExport": "Görev dışa aktarma gönderilemedi.",
       "exportNotAvailableYet": "İhracat henüz kullanılamıyor."
     },
     "empty": {
-      "title": "Henüz tamamlanmış görev yok",
-      "descBeforeBold": "Bu ekran şunları gösterir:",
-      "bold": "kapalı hatırlatma görevleri",
-      "descAfterBold": "Ana sayfanızdan (bekleyen görevler gösterilmez).",
+      "title": "Günlüğünüz henüz boş",
+      "descBeforeBold": "Bu günlükte",
+      "bold": "tamamlanan görevler ve bitki fotoğrafları yer alır.",
+      "descAfterBold": "Günlüğe başlamak için + menüsünden bir fotoğraf ekleyin veya bir görevi tamamlayın.",
       "filteredToPlantId": "Şu anda ev bitkisi kimliği {{plantId}}'ye göre filtrelendi.",
-      "openFromTaskHint": "Yalnızca o ev bitkisinin geçmişini görmek için belirli bir görevden açın."
+      "openFromTaskHint": "Yalnızca bir bitkinin kayıtlarını görmek için günlüğü o bitkinin veya görevin menüsünden açın."
     },
     "tile": {
       "completedOn": "{{date}} tarihinde tamamlandı",
@@ -52,6 +52,51 @@
       "moisture": "buğulanma",
       "care": "bakım",
       "repot": "saksıyı değiştirmek"
+    },
+    "photo": {
+      "add": "Fotoğraf ekle",
+      "edit": "Fotoğrafı düzenle",
+      "filterType": "Fotoğraf",
+      "saved": "Fotoğraf günlüğe kaydedildi.",
+      "deleted": "Fotoğraf günlükten silindi.",
+      "deleteFailed": "Fotoğraf silinemedi. Lütfen tekrar deneyin.",
+      "deleteTitle": "Fotoğraf silinsin mi?",
+      "deleteConfirm": "Bu fotoğraf ve notları günlükten kalıcı olarak silinecek.",
+      "delete": "Fotoğrafı sil",
+      "titleAdd": "Günlüğe fotoğraf ekle",
+      "titleEdit": "Günlük fotoğrafını düzenle",
+      "description": "Bitkinizin gelişimini kaydedin. Her bitki için yedi günde bir fotoğraf ekleyebilirsiniz.",
+      "plant": "Bitki",
+      "choosePlant": "Bitki seçin",
+      "photo": "Fotoğraf",
+      "takePhoto": "Fotoğraf çek",
+      "chooseGallery": "Galeriden seç",
+      "photoDate": "Fotoğraf tarihi (isteğe bağlı)",
+      "chooseDate": "Tarih seç",
+      "clearDate": "Tarihi kaldır",
+      "notes": "Notlar (isteğe bağlı)",
+      "notesPlaceholder": "Bitkiniz hakkında bir not ekleyin…",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor…",
+      "added": "Eklenme",
+      "photoTaken": "Fotoğraf tarihi",
+      "journalGuide": "Günlük fotoğrafı",
+      "noPhoto": "Devam etmek için bir fotoğraf seçin veya çekin.",
+      "noPlant": "Devam etmek için bir bitki seçin.",
+      "cooldown": "Bu bitki için {{date}} tarihinde yeni bir fotoğraf ekleyebilirsiniz.",
+      "loadFailed": "Fotoğraf bilgileri yüklenemedi. Lütfen tekrar deneyin.",
+      "saveFailed": "Fotoğraf kaydedilemedi. Lütfen tekrar deneyin.",
+      "conflict": "Bu fotoğraf değiştirildi. Formu kapatıp yeniden açın.",
+      "permission": "Günlük fotoğraflarını yalnızca bitkinin sahibi yönetebilir.",
+      "tooLarge": "Bu fotoğraf çok büyük. Daha küçük bir görsel seçin.",
+      "invalidPhoto": "Bu fotoğraf okunamadı. Başka bir görsel seçin.",
+      "storageFull": "Fotoğraf depolama alanı dolu. Gereksiz bir fotoğrafı silip tekrar deneyin.",
+      "cameraDenied": "Fotoğraf çekmek için telefon ayarlarından kamera erişimine izin verin.",
+      "futureDate": "Fotoğraf tarihi gelecekte olamaz.",
+      "retry": "Tekrar dene",
+      "cancel": "İptal",
+      "noPlants": "Günlüğe fotoğraf eklemeden önce bir bitki ekleyin.",
+      "retryPending": "Bağlantı kesildi. Aynı bilgileri yeniden kaydetmeyi deneyin veya kaydedilenleri kontrol etmek için günlüğü kapatıp yeniden açın."
     }
   }
 }

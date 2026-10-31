@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "작업 기록"
+      "title": "작업 일지"
     },
     "fab": {
       "sort": "정렬",
       "filter": "필터",
-      "sendExport": "내보내기 전송",
-      "delete": "삭제",
+      "sendExport": "작업 내보내기",
+      "delete": "작업 삭제",
       "clearFilter": "필터 초기화",
-      "showAllHistory": "모든 기록 보기"
+      "showAllHistory": "전체 일지 보기"
     },
     "common": {
       "unnamedPlant": "이름 없는 식물"
     },
     "toasts": {
-      "failedToLoad": "작업 기록을 불러오지 못했습니다",
-      "historyDeleted": "기록이 삭제되었습니다",
-      "failedToDeleteHistory": "기록 삭제에 실패했습니다",
-      "historyTaskDeleted": "기록 작업이 삭제되었습니다",
-      "failedToDeleteHistoryTask": "기록 작업 삭제에 실패했습니다",
+      "failedToLoad": "일지를 불러오지 못했어요.",
+      "historyDeleted": "완료한 작업들을 삭제했어요.",
+      "failedToDeleteHistory": "완료한 작업들을 삭제하지 못했어요.",
+      "historyTaskDeleted": "완료한 작업을 삭제했어요.",
+      "failedToDeleteHistoryTask": "완료한 작업을 삭제하지 못했어요.",
       "taskNotLinkedToPlant": "이 작업은 식물과 연결되어 있지 않습니다.",
-      "exportSent": "작업 기록 내보내기 요청이 전송되었습니다",
-      "failedToSendExport": "작업 기록 내보내기 전송에 실패했습니다",
+      "exportSent": "작업 내보내기를 요청했어요.",
+      "failedToSendExport": "작업 내보내기를 전송하지 못했어요.",
       "exportNotAvailableYet": "내보내기를 아직 사용할 수 없습니다."
     },
     "empty": {
-      "title": "완료된 작업이 아직 없습니다",
-      "descBeforeBold": "이 화면은",
-      "bold": "완료된 알림 작업",
-      "descAfterBold": "을(를) 홈 페이지에서 표시합니다 (대기 중인 작업은 표시되지 않습니다).",
+      "title": "아직 일지가 비어 있어요",
+      "descBeforeBold": "이 일지에서는",
+      "bold": "완료한 작업과 식물 사진을 볼 수 있어요.",
+      "descAfterBold": "+ 메뉴에서 사진을 추가하거나 작업을 완료해 일지를 시작해 보세요.",
       "filteredToPlantId": "현재 식물 ID {{plantId}}로 필터링되어 있습니다.",
-      "openFromTaskHint": "특정 작업에서 열어 해당 식물의 기록만 확인하세요."
+      "openFromTaskHint": "식물이나 작업 메뉴에서 일지를 열면 해당 식물의 기록만 볼 수 있어요."
     },
     "tile": {
       "completedOn": "{{date}}에 완료됨",
@@ -52,6 +52,51 @@
       "moisture": "분무",
       "care": "관리",
       "repot": "분갈이"
+    },
+    "photo": {
+      "add": "사진 추가",
+      "edit": "사진 편집",
+      "filterType": "사진",
+      "saved": "일지에 사진을 저장했어요.",
+      "deleted": "일지에서 사진을 삭제했어요.",
+      "deleteFailed": "사진을 삭제하지 못했어요. 다시 시도해 주세요.",
+      "deleteTitle": "사진을 삭제할까요?",
+      "deleteConfirm": "이 사진과 메모가 일지에서 영구적으로 삭제돼요.",
+      "delete": "사진 삭제",
+      "titleAdd": "일지에 사진 추가",
+      "titleEdit": "일지 사진 편집",
+      "description": "식물의 성장을 기록해 보세요. 식물마다 7일에 한 장씩 사진을 추가할 수 있어요.",
+      "plant": "식물",
+      "choosePlant": "식물 선택",
+      "photo": "사진",
+      "takePhoto": "사진 촬영",
+      "chooseGallery": "갤러리에서 선택",
+      "photoDate": "촬영일 (선택 사항)",
+      "chooseDate": "날짜 선택",
+      "clearDate": "날짜 지우기",
+      "notes": "메모 (선택 사항)",
+      "notesPlaceholder": "식물에 대한 메모를 남겨 보세요…",
+      "save": "저장",
+      "saving": "저장 중…",
+      "added": "추가일",
+      "photoTaken": "촬영일",
+      "journalGuide": "일지 사진",
+      "noPhoto": "계속하려면 사진을 선택하거나 촬영해 주세요.",
+      "noPlant": "계속하려면 식물을 선택해 주세요.",
+      "cooldown": "이 식물의 다음 사진은 {{date}}부터 추가할 수 있어요.",
+      "loadFailed": "사진 정보를 불러오지 못했어요. 다시 시도해 주세요.",
+      "saveFailed": "사진을 저장하지 못했어요. 다시 시도해 주세요.",
+      "conflict": "사진이 변경되었어요. 양식을 닫았다가 다시 열어 주세요.",
+      "permission": "식물 소유자만 일지 사진을 관리할 수 있어요.",
+      "tooLarge": "사진이 너무 커요. 더 작은 이미지를 선택해 주세요.",
+      "invalidPhoto": "사진을 읽을 수 없어요. 다른 이미지를 선택해 주세요.",
+      "storageFull": "사진 저장 공간이 가득 찼어요. 필요 없는 사진을 삭제한 뒤 다시 시도해 주세요.",
+      "cameraDenied": "사진을 촬영하려면 휴대폰 설정에서 카메라 접근을 허용해 주세요.",
+      "futureDate": "촬영일은 미래 날짜로 지정할 수 없어요.",
+      "retry": "다시 시도",
+      "cancel": "취소",
+      "noPlants": "일지에 사진을 추가하려면 먼저 식물을 추가해 주세요.",
+      "retryPending": "연결이 끊어졌어요. 같은 내용으로 저장을 다시 시도하거나 일지를 닫았다가 다시 열어 저장된 내용을 확인해 주세요."
     }
   }
 }

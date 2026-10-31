@@ -12,11 +12,12 @@
         "moisture": "Yaprakları püskürtme",
         "fertilising": "Gübreleme",
         "care": "Bakım",
-        "repot": "Saksı değişimi"
+        "repot": "Saksı değişimi",
+        "photo": "Fotoğraf"
       }
     },
     "delete": {
-      "title": "Geçmişi sil",
+      "title": "Tamamlanan görevleri sil",
       "scopeLabel": "Kapsam",
       "modes": {
         "plant": "Seçilen ev bitkisi için sil",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} gün"
     },
     "filter": {
-      "title": "Filtre geçmişi",
+      "title": "Günlüğü filtrele",
       "plantLabel": "Bitki",
       "locationLabel": "Konum",
-      "taskTypesLabel": "Görev türleri",
-      "completedDateRangeLabel": "Tamamlanan tarih aralığı",
+      "taskTypesLabel": "Kayıt türleri",
+      "completedDateRangeLabel": "Kayıt tarihi aralığı",
       "fromLabel": "Gönderen",
       "toLabel": "Kime",
       "anyPlant": "Herhangi bir ev bitkisi",
@@ -41,11 +42,11 @@
       "clear": "Temizle"
     },
     "sort": {
-      "title": "Geçmişi sırala",
+      "title": "Günlüğü sırala",
       "sortByLabel": "Sırala",
       "directionLabel": "Yön",
       "keys": {
-        "completedAt": "Tamamlanma tarihi",
+        "completedAt": "Kayıt tarihi",
         "plant": "Ev bitkisi adı",
         "location": "Konum"
       },
@@ -56,10 +57,10 @@
       "reset": "Sıfırla"
     },
     "export": {
-      "title": "Geçmişi dışa aktarma gönder",
+      "title": "Görevleri dışa aktar",
       "noticeTitle": "Excel dışa aktarımında geçerli olarak uygulanan ölçütler kullanılacaktır.",
-      "noticeFiltered": "Yalnızca aşağıda gösterilen filtrelerle eşleşen görev geçmişi dahil edilecektir. Farklı verilere ihtiyacınız varsa önce filtreleri değiştirin, ardından tekrar gönderin.",
-      "noticeAllData": "Şu anda hiçbir filtre uygulanmadığından, dışa aktarma işlemi bu ekran için mevcut tüm görev geçmişi verilerini içerecektir.",
+      "noticeFiltered": "Yalnızca bu filtrelere uyan görevler dışa aktarılır; fotoğraflar dahil edilmez. Başka görevler gerekiyorsa önce filtreleri değiştirin.",
+      "noticeAllData": "Bitkilerinize ait mevcut tüm tamamlanmış görevler dışa aktarılır; fotoğraflar dahil edilmez.",
       "criteriaTitle": "Uygulanan kriterler",
       "plantLabel": "Bitki",
       "locationLabel": "Konum",

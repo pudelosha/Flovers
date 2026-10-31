@@ -12,11 +12,12 @@
         "moisture": "Zraszanie",
         "fertilising": "Nawożenie",
         "care": "Pielęgnacja",
-        "repot": "Przesadzanie"
+        "repot": "Przesadzanie",
+        "photo": "Zdjęcie"
       }
     },
     "delete": {
-      "title": "Usuń historię",
+      "title": "Usuń wykonane zadania",
       "scopeLabel": "Zakres",
       "modes": {
         "plant": "Usuń dla wybranej rośliny",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} dni"
     },
     "filter": {
-      "title": "Filtruj historię",
+      "title": "Filtruj dziennik",
       "plantLabel": "Roślina",
       "locationLabel": "Lokalizacja",
-      "taskTypesLabel": "Typy zadań",
-      "completedDateRangeLabel": "Zakres dat wykonania",
+      "taskTypesLabel": "Rodzaje wpisów",
+      "completedDateRangeLabel": "Zakres dat wpisów",
       "fromLabel": "Od",
       "toLabel": "Do",
       "anyPlant": "Dowolna roślina",
@@ -41,11 +42,11 @@
       "clear": "Wyczyść"
     },
     "sort": {
-      "title": "Sortuj historię",
+      "title": "Sortuj dziennik",
       "sortByLabel": "Sortuj według",
       "directionLabel": "Kierunek",
       "keys": {
-        "completedAt": "Data wykonania",
+        "completedAt": "Data wpisu",
         "plant": "Nazwa rośliny",
         "location": "Lokalizacja"
       },
@@ -56,10 +57,10 @@
       "reset": "Resetuj"
     },
     "export": {
-      "title": "Wyślij eksport historii",
+      "title": "Eksportuj zadania",
       "noticeTitle": "Eksport do Excela użyje aktualnie zastosowanych kryteriów.",
-      "noticeFiltered": "Uwzględniona zostanie tylko historia zadań pasująca do poniższych filtrów. Jeśli potrzebujesz innych danych, najpierw zmień filtry, a następnie wyślij ponownie.",
-      "noticeAllData": "Obecnie nie zastosowano żadnych filtrów, więc eksport będzie zawierał wszystkie dostępne dane historii zadań dla tego widoku.",
+      "noticeFiltered": "Eksport obejmuje tylko zadania pasujące do tych filtrów, bez zdjęć. Jeśli potrzebujesz innych zadań, najpierw zmień filtry.",
+      "noticeAllData": "Eksport obejmuje wszystkie dostępne wykonane zadania należące do Ciebie, bez zdjęć.",
       "criteriaTitle": "Zastosowane kryteria",
       "plantLabel": "Roślina",
       "locationLabel": "Lokalizacja",

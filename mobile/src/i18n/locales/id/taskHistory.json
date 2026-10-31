@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Riwayat tugas"
+      "title": "Jurnal tugas"
     },
     "fab": {
       "sort": "Urutkan",
       "filter": "Filter",
-      "sendExport": "Kirim ekspor",
-      "delete": "Hapus",
+      "sendExport": "Ekspor tugas",
+      "delete": "Hapus tugas",
       "clearFilter": "Hapus filter",
-      "showAllHistory": "Tampilkan semua riwayat"
+      "showAllHistory": "Tampilkan seluruh jurnal"
     },
     "common": {
       "unnamedPlant": "Tanaman hias tanpa nama"
     },
     "toasts": {
-      "failedToLoad": "Gagal memuat riwayat tugas",
-      "historyDeleted": "Riwayat dihapus",
-      "failedToDeleteHistory": "Gagal menghapus riwayat",
-      "historyTaskDeleted": "Tugas riwayat dihapus",
-      "failedToDeleteHistoryTask": "Gagal menghapus tugas riwayat",
+      "failedToLoad": "Jurnal tidak dapat dimuat.",
+      "historyDeleted": "Tugas selesai telah dihapus.",
+      "failedToDeleteHistory": "Tugas selesai tidak dapat dihapus.",
+      "historyTaskDeleted": "Tugas selesai telah dihapus.",
+      "failedToDeleteHistoryTask": "Tugas selesai tidak dapat dihapus.",
       "taskNotLinkedToPlant": "Tugas ini tidak terhubung ke tanaman.",
-      "exportSent": "Permintaan ekspor riwayat tugas terkirim",
-      "failedToSendExport": "Gagal mengirim ekspor riwayat tugas",
+      "exportSent": "Ekspor tugas telah diminta.",
+      "failedToSendExport": "Ekspor tugas tidak dapat dikirim.",
       "exportNotAvailableYet": "Ekspor belum tersedia."
     },
     "empty": {
-      "title": "Belum ada tugas yang selesai",
-      "descBeforeBold": "Layar ini menunjukkan",
-      "bold": "tugas pengingat tertutup",
-      "descAfterBold": "dari halaman Beranda Anda (tugas yang tertunda tidak ditampilkan).",
+      "title": "Jurnal Anda masih kosong",
+      "descBeforeBold": "Jurnal ini menampilkan",
+      "bold": "tugas yang selesai dan foto tanaman.",
+      "descAfterBold": "Tambahkan foto dari menu + atau selesaikan tugas untuk mulai mengisi jurnal.",
       "filteredToPlantId": "Saat ini difilter ke id tanaman hias {{plantId}}.",
-      "openFromTaskHint": "Buka dari tugas tertentu untuk melihat sejarah hanya untuk tanaman hias itu."
+      "openFromTaskHint": "Buka jurnal dari tanaman atau tugas untuk melihat entri tanaman itu saja."
     },
     "tile": {
       "completedOn": "Selesai pada {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "gerimis",
       "care": "peduli",
       "repot": "merepoting"
+    },
+    "photo": {
+      "add": "Tambah foto",
+      "edit": "Edit foto",
+      "filterType": "Foto",
+      "saved": "Foto tersimpan di jurnal.",
+      "deleted": "Foto dihapus dari jurnal.",
+      "deleteFailed": "Foto tidak dapat dihapus. Coba lagi.",
+      "deleteTitle": "Hapus foto?",
+      "deleteConfirm": "Foto ini beserta catatannya akan dihapus secara permanen dari jurnal.",
+      "delete": "Hapus foto",
+      "titleAdd": "Tambah foto ke jurnal",
+      "titleEdit": "Edit foto jurnal",
+      "description": "Dokumentasikan pertumbuhan tanaman Anda. Anda dapat menambahkan satu foto per tanaman setiap tujuh hari.",
+      "plant": "Tanaman",
+      "choosePlant": "Pilih tanaman",
+      "photo": "Foto",
+      "takePhoto": "Ambil foto",
+      "chooseGallery": "Pilih dari galeri",
+      "photoDate": "Tanggal foto (opsional)",
+      "chooseDate": "Pilih tanggal",
+      "clearDate": "Hapus tanggal",
+      "notes": "Catatan (opsional)",
+      "notesPlaceholder": "Tulis catatan tentang tanaman Anda…",
+      "save": "Simpan",
+      "saving": "Menyimpan…",
+      "added": "Ditambahkan",
+      "photoTaken": "Tanggal foto",
+      "journalGuide": "Foto jurnal",
+      "noPhoto": "Pilih atau ambil foto untuk melanjutkan.",
+      "noPlant": "Pilih tanaman untuk melanjutkan.",
+      "cooldown": "Anda dapat menambahkan foto berikutnya untuk tanaman ini pada {{date}}.",
+      "loadFailed": "Detail foto tidak dapat dimuat. Coba lagi.",
+      "saveFailed": "Foto tidak dapat disimpan. Coba lagi.",
+      "conflict": "Foto ini telah berubah. Tutup formulir, lalu buka kembali.",
+      "permission": "Hanya pemilik tanaman yang dapat mengelola foto jurnal.",
+      "tooLarge": "Foto ini terlalu besar. Pilih gambar yang lebih kecil.",
+      "invalidPhoto": "Foto ini tidak dapat dibaca. Pilih gambar lain.",
+      "storageFull": "Penyimpanan foto penuh. Hapus foto yang tidak diperlukan, lalu coba lagi.",
+      "cameraDenied": "Izinkan akses kamera di pengaturan ponsel untuk mengambil foto.",
+      "futureDate": "Tanggal foto tidak boleh di masa depan.",
+      "retry": "Coba lagi",
+      "cancel": "Batal",
+      "noPlants": "Tambahkan tanaman sebelum menambahkan foto ke jurnal.",
+      "retryPending": "Koneksi terputus. Coba simpan kembali data yang sama, atau tutup lalu buka kembali jurnal untuk memeriksa apa yang sudah tersimpan."
     }
   }
 }

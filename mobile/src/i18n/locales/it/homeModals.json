@@ -11,7 +11,7 @@
       "title": "Segna attività come completata",
       "overdueInfo": "Questa attività è in ritardo. La prossima data verrà calcolata dalla data di completamento {{intervalText}}.",
       "noteLabel": "Nota (facoltativa)",
-      "noteHint": "Questa nota verrà salvata e sarà visibile in seguito per la pianta specifica nel Diario delle piante.",
+      "noteHint": "La nota verrà salvata con l’attività completata nel Diario delle attività.",
       "notePlaceholder": "Puoi aggiungere una breve nota su ciò che hai fatto, osservazioni, ecc.",
       "confirm": "Segna come completata"
     },
@@ -19,7 +19,7 @@
       "completionDateHint": "Questa data verrà salvata per ogni attività completata. Le date future non sono consentite.",
       "title": "Segna {{count}} attività come completate",
       "overdueInfo": "Alcune attività sono in ritardo. La prossima data verrà calcolata dalla data di completamento selezionata {{intervalText}}.",
-      "noteHint": "Questa nota verrà salvata per ogni attività completata e sarà visibile in seguito per la pianta specifica nel Diario delle piante.",
+      "noteHint": "La nota verrà salvata con ciascuna attività completata nel Diario delle attività.",
       "confirm": "Segna come completate"
     },
     "filter": {

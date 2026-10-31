@@ -12,11 +12,12 @@
         "moisture": "Rociado",
         "fertilising": "Fertilización",
         "care": "Cuidado",
-        "repot": "Trasplantar"
+        "repot": "Trasplantar",
+        "photo": "Foto"
       }
     },
     "delete": {
-      "title": "Eliminar historial",
+      "title": "Eliminar tareas completadas",
       "scopeLabel": "Ámbito",
       "modes": {
         "plant": "Eliminar para la planta seleccionada",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} días"
     },
     "filter": {
-      "title": "Filtrar historial",
+      "title": "Filtrar diario",
       "plantLabel": "Planta",
       "locationLabel": "Ubicación",
-      "taskTypesLabel": "Tipos de tarea",
-      "completedDateRangeLabel": "Rango de fechas de finalización",
+      "taskTypesLabel": "Tipos de entrada",
+      "completedDateRangeLabel": "Intervalo de fechas de las entradas",
       "fromLabel": "Desde",
       "toLabel": "Hasta",
       "anyPlant": "Cualquier planta",
@@ -41,11 +42,11 @@
       "clear": "Limpiar"
     },
     "sort": {
-      "title": "Ordenar historial",
+      "title": "Ordenar diario",
       "sortByLabel": "Ordenar por",
       "directionLabel": "Dirección",
       "keys": {
-        "completedAt": "Fecha de finalización",
+        "completedAt": "Fecha de la entrada",
         "plant": "Nombre de la planta",
         "location": "Ubicación"
       },
@@ -56,10 +57,10 @@
       "reset": "Restablecer"
     },
     "export": {
-      "title": "Enviar exportación del historial",
+      "title": "Exportar tareas",
       "noticeTitle": "La exportación de Excel usará los criterios aplicados actualmente.",
-      "noticeFiltered": "Solo se incluirá el historial de tareas que coincida con los filtros mostrados a continuación. Si necesitas datos diferentes, cambia primero los filtros y luego vuelve a enviar.",
-      "noticeAllData": "Actualmente no hay filtros aplicados, por lo que la exportación incluirá todos los datos de historial de tareas disponibles para esta pantalla.",
+      "noticeFiltered": "La exportación incluye solo las tareas que coinciden con estos filtros, sin fotos. Si necesitas otras tareas, cambia primero los filtros.",
+      "noticeAllData": "La exportación incluye todas las tareas completadas disponibles de tus plantas, sin fotos.",
       "criteriaTitle": "Criterios aplicados",
       "plantLabel": "Planta",
       "locationLabel": "Ubicación",

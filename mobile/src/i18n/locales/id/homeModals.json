@@ -11,7 +11,7 @@
       "title": "Tandai tugas sebagai selesai",
       "overdueInfo": "Tugas ini sudah terlambat. Tanggal jatuh tempo berikutnya akan dihitung dari tanggal penyelesaian {{intervalText}}.",
       "noteLabel": "Catatan (opsional)",
-      "noteHint": "Catatan ini akan disimpan dan dapat dilihat nanti per tanaman hias di Jurnal tanaman hias.",
+      "noteHint": "Catatan ini akan disimpan bersama tugas yang selesai di Jurnal tugas.",
       "notePlaceholder": "Anda dapat menambahkan catatan singkat tentang apa yang Anda lakukan, observasi, dll.",
       "confirm": "Tandai selesai"
     },
@@ -19,7 +19,7 @@
       "completionDateHint": "Tanggal ini akan disimpan untuk setiap tugas yang diselesaikan. Tanggal yang akan datang tidak diperbolehkan.",
       "title": "Tandai tugas {{count}} sebagai selesai",
       "overdueInfo": "Beberapa tugas sudah terlambat. Tanggal jatuh tempo berikutnya akan dihitung dari tanggal penyelesaian yang dipilih {{intervalText}}.",
-      "noteHint": "Catatan ini akan disimpan untuk setiap tugas yang diselesaikan dan nanti dapat dilihat per tanaman hias di Jurnal tanaman hias.",
+      "noteHint": "Catatan ini akan disimpan bersama setiap tugas yang selesai di Jurnal tugas.",
       "confirm": "Tandai selesai"
     },
     "filter": {

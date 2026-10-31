@@ -11,7 +11,7 @@
       "title": "标记任务为完成",
       "overdueInfo": "此任务已逾期。下一个日期将从完成日期开始计算 {{intervalText}}。",
       "noteLabel": "备注（可选）",
-      "noteHint": "该备注将被保存，并在后续在植物日志中显示该植物。",
+      "noteHint": "这条备注将随已完成任务保存在任务日志中。",
       "notePlaceholder": "您可以添加简短的备注，关于您做了什么，观察结果等。",
       "confirm": "标记为完成"
     },
@@ -19,7 +19,7 @@
       "completionDateHint": "此日期将保存到每个已完成的任务。不能选择未来日期。",
       "title": "标记 {{count}} 个任务为完成",
       "overdueInfo": "部分任务已逾期。下一个日期将从所选完成日期开始计算 {{intervalText}}。",
-      "noteHint": "该备注将为每个完成的任务保存，并在后续在植物日志中显示该植物。",
+      "noteHint": "这条备注将分别随每项已完成任务保存在任务日志中。",
       "confirm": "标记为完成"
     },
     "filter": {

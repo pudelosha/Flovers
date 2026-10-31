@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "任务历史"
+      "title": "任务日志"
     },
     "fab": {
       "sort": "排序",
       "filter": "筛选",
-      "sendExport": "发送导出",
-      "delete": "删除",
+      "sendExport": "导出任务",
+      "delete": "删除任务",
       "clearFilter": "清除筛选",
-      "showAllHistory": "显示所有历史"
+      "showAllHistory": "显示全部日志"
     },
     "common": {
       "unnamedPlant": "未命名植物"
     },
     "toasts": {
-      "failedToLoad": "加载任务历史失败",
-      "historyDeleted": "历史已删除",
-      "failedToDeleteHistory": "删除历史失败",
-      "historyTaskDeleted": "历史任务已删除",
-      "failedToDeleteHistoryTask": "删除历史任务失败",
+      "failedToLoad": "无法加载日志。",
+      "historyDeleted": "已删除已完成的任务。",
+      "failedToDeleteHistory": "无法删除已完成的任务。",
+      "historyTaskDeleted": "已删除这条已完成任务。",
+      "failedToDeleteHistoryTask": "无法删除这条已完成任务。",
       "taskNotLinkedToPlant": "此任务未关联到任何植物。",
-      "exportSent": "任务历史导出请求已发送",
-      "failedToSendExport": "发送任务历史导出失败",
+      "exportSent": "已请求导出任务。",
+      "failedToSendExport": "无法发送任务导出。",
       "exportNotAvailableYet": "导出尚不可用。"
     },
     "empty": {
-      "title": "尚无已完成的任务",
-      "descBeforeBold": "此页面显示",
-      "bold": "已关闭的提醒任务",
-      "descAfterBold": "来自您的主页（不会显示待处理任务）。",
+      "title": "日志还是空的",
+      "descBeforeBold": "在这里可以查看",
+      "bold": "已完成的任务和植物照片。",
+      "descAfterBold": "从 + 菜单添加照片，或完成一项任务，开始记录吧。",
       "filteredToPlantId": "当前已筛选至植物 ID {{plantId}}。",
-      "openFromTaskHint": "从特定任务中打开以仅查看该植物的历史记录。"
+      "openFromTaskHint": "从植物或任务菜单打开日志，可以只查看该植物的记录。"
     },
     "tile": {
       "completedOn": "完成于 {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "喷雾",
       "care": "养护",
       "repot": "换盆"
+    },
+    "photo": {
+      "add": "添加照片",
+      "edit": "编辑照片",
+      "filterType": "照片",
+      "saved": "已保存日志照片。",
+      "deleted": "已删除日志照片。",
+      "deleteFailed": "无法删除照片，请重试。",
+      "deleteTitle": "删除照片？",
+      "deleteConfirm": "这张照片及其备注将从日志中永久删除。",
+      "delete": "删除照片",
+      "titleAdd": "添加日志照片",
+      "titleEdit": "编辑日志照片",
+      "description": "记录植物的成长。每株植物每七天可以添加一张照片。",
+      "plant": "植物",
+      "choosePlant": "选择植物",
+      "photo": "照片",
+      "takePhoto": "拍照",
+      "chooseGallery": "从相册选择",
+      "photoDate": "照片日期（可选）",
+      "chooseDate": "选择日期",
+      "clearDate": "清除日期",
+      "notes": "备注（可选）",
+      "notesPlaceholder": "记录一下植物的近况…",
+      "save": "保存",
+      "saving": "保存中…",
+      "added": "添加时间",
+      "photoTaken": "照片日期",
+      "journalGuide": "日志照片",
+      "noPhoto": "请选择或拍摄照片以继续。",
+      "noPlant": "请选择植物以继续。",
+      "cooldown": "你可以在 {{date}} 为这株植物添加下一张照片。",
+      "loadFailed": "无法加载照片详情，请重试。",
+      "saveFailed": "无法保存照片，请重试。",
+      "conflict": "这张照片已被修改，请关闭表单后重新打开。",
+      "permission": "只有植物所有者可以管理日志照片。",
+      "tooLarge": "这张照片太大，请选择较小的图片。",
+      "invalidPhoto": "无法读取这张照片，请选择其他图片。",
+      "storageFull": "照片存储空间已满，请删除不需要的照片后重试。",
+      "cameraDenied": "请在手机设置中允许访问相机以拍照。",
+      "futureDate": "照片日期不能晚于今天。",
+      "retry": "重试",
+      "cancel": "取消",
+      "noPlants": "请先添加植物，再添加日志照片。",
+      "retryPending": "连接中断了。请重试保存相同内容，或关闭日志后重新打开，检查哪些内容已保存。"
     }
   }
 }

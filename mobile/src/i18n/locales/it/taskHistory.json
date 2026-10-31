@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "Cronologia attività"
+      "title": "Diario delle attività"
     },
     "fab": {
       "sort": "Ordina",
       "filter": "Filtra",
-      "sendExport": "Invia esportazione",
-      "delete": "Elimina",
+      "sendExport": "Esporta attività",
+      "delete": "Elimina attività",
       "clearFilter": "Cancella filtro",
-      "showAllHistory": "Mostra tutta la cronologia"
+      "showAllHistory": "Mostra tutto il diario"
     },
     "common": {
       "unnamedPlant": "Pianta senza nome"
     },
     "toasts": {
-      "failedToLoad": "Impossibile caricare la cronologia delle attività",
-      "historyDeleted": "Cronologia eliminata",
-      "failedToDeleteHistory": "Impossibile eliminare la cronologia",
-      "historyTaskDeleted": "Attività della cronologia eliminata",
-      "failedToDeleteHistoryTask": "Impossibile eliminare l'attività della cronologia",
+      "failedToLoad": "Impossibile caricare il diario.",
+      "historyDeleted": "Attività completate eliminate.",
+      "failedToDeleteHistory": "Impossibile eliminare le attività completate.",
+      "historyTaskDeleted": "Attività completata eliminata.",
+      "failedToDeleteHistoryTask": "Impossibile eliminare l’attività completata.",
       "taskNotLinkedToPlant": "Questa attività non è collegata a una pianta.",
-      "exportSent": "Richiesta di esportazione della cronologia attività inviata",
-      "failedToSendExport": "Impossibile inviare l'esportazione della cronologia attività",
+      "exportSent": "Esportazione delle attività richiesta.",
+      "failedToSendExport": "Impossibile inviare l’esportazione delle attività.",
       "exportNotAvailableYet": "L'esportazione non è ancora disponibile."
     },
     "empty": {
-      "title": "Nessuna attività completata ancora",
-      "descBeforeBold": "Questa schermata mostra",
-      "bold": "attività di promemoria chiuse",
-      "descAfterBold": "dalla tua pagina Home (le attività in sospeso non sono mostrate).",
+      "title": "Il tuo diario è vuoto",
+      "descBeforeBold": "Questo diario raccoglie",
+      "bold": "le attività completate e le foto delle piante.",
+      "descAfterBold": "Aggiungi una foto dal menu + o completa un’attività per iniziare il diario.",
       "filteredToPlantId": "Attualmente filtrato per l'id pianta {{plantId}}.",
-      "openFromTaskHint": "Aprilo da un'attività specifica per vedere la cronologia solo per quella pianta."
+      "openFromTaskHint": "Apri il diario da una pianta o da un’attività per vedere solo le voci di quella pianta."
     },
     "tile": {
       "completedOn": "Completato il {{date}}",
@@ -52,6 +52,51 @@
       "moisture": "nebulizzazione",
       "care": "cura",
       "repot": "rinvaso"
+    },
+    "photo": {
+      "add": "Aggiungi foto",
+      "edit": "Modifica foto",
+      "filterType": "Foto",
+      "saved": "Foto salvata nel diario.",
+      "deleted": "Foto eliminata dal diario.",
+      "deleteFailed": "Impossibile eliminare la foto. Riprova.",
+      "deleteTitle": "Eliminare la foto?",
+      "deleteConfirm": "La foto e le sue note verranno eliminate definitivamente dal diario.",
+      "delete": "Elimina foto",
+      "titleAdd": "Aggiungi foto al diario",
+      "titleEdit": "Modifica foto del diario",
+      "description": "Documenta la crescita della tua pianta. Puoi aggiungere una foto per pianta ogni sette giorni.",
+      "plant": "Pianta",
+      "choosePlant": "Scegli una pianta",
+      "photo": "Foto",
+      "takePhoto": "Scatta una foto",
+      "chooseGallery": "Scegli dalla galleria",
+      "photoDate": "Data della foto (facoltativa)",
+      "chooseDate": "Scegli la data",
+      "clearDate": "Rimuovi data",
+      "notes": "Note (facoltative)",
+      "notesPlaceholder": "Aggiungi una nota sulla tua pianta…",
+      "save": "Salva",
+      "saving": "Salvataggio…",
+      "added": "Aggiunta",
+      "photoTaken": "Data della foto",
+      "journalGuide": "Foto del diario",
+      "noPhoto": "Scegli o scatta una foto per continuare.",
+      "noPlant": "Scegli una pianta per continuare.",
+      "cooldown": "Puoi aggiungere un’altra foto di questa pianta dal {{date}}.",
+      "loadFailed": "Impossibile caricare i dettagli della foto. Riprova.",
+      "saveFailed": "Impossibile salvare la foto. Riprova.",
+      "conflict": "La foto è stata modificata. Chiudi il modulo e riaprilo.",
+      "permission": "Solo il proprietario della pianta può gestire le foto del diario.",
+      "tooLarge": "La foto è troppo grande. Scegli un’immagine più piccola.",
+      "invalidPhoto": "Impossibile leggere la foto. Scegli un’altra immagine.",
+      "storageFull": "Lo spazio per le foto è esaurito. Elimina una foto che non ti serve e riprova.",
+      "cameraDenied": "Per scattare una foto, consenti l’accesso alla fotocamera nelle impostazioni del telefono.",
+      "futureDate": "La data della foto non può essere futura.",
+      "retry": "Riprova",
+      "cancel": "Annulla",
+      "noPlants": "Aggiungi una pianta prima di inserire foto nel diario.",
+      "retryPending": "La connessione si è interrotta. Riprova a salvare gli stessi dati oppure chiudi e riapri il diario per controllare cosa è stato salvato."
     }
   }
 }

@@ -37,7 +37,6 @@ import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/modals/EditPlantModal";
 import ConfirmDeleteModal from "../components/modals/ConfirmDeleteModal";
 import PlantQrModal from "../components/modals/PlantQrModal";
-import PlantJournalModal from "../components/modals/PlantJournalModal";
 
 import SortPlantsModal, { SortDir, SortKey } from "../components/modals/SortPlantsModal";
 import FilterPlantsModal from "../components/modals/FilterPlantsModal";
@@ -177,9 +176,6 @@ export default function PlantsScreen() {
   const [qrPlantId, setQrPlantId] = useState<string>("");
   const qrModalRef = useRef<any>(null);
 
-  const [journalVisible, setJournalVisible] = useState(false);
-  const [journalPlantName, setJournalPlantName] = useState("");
-  const [journalPlantId, setJournalPlantId] = useState<string>("");
 
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
@@ -259,9 +255,6 @@ export default function PlantsScreen() {
       setQrPlantId("");
       qrModalRef.current = null;
 
-      setJournalVisible(false);
-      setJournalPlantName("");
-      setJournalPlantId("");
 
       return () => { editRequestRef.current += 1; };
     }, [closeFloatingMenus])
@@ -327,9 +320,7 @@ export default function PlantsScreen() {
 
   const openJournal = (p: Plant) => {
     closeFloatingMenus();
-    setJournalPlantId(p.id);
-    setJournalPlantName(p.name);
-    setJournalVisible(true);
+    nav.navigate("TaskHistory", { plantId: String(p.id) });
   };
 
   const openEditModal = useCallback(
@@ -599,8 +590,7 @@ export default function PlantsScreen() {
     !confirmDeleteId &&
     !sortOpen &&
     !filterOpen &&
-    !qrVisible &&
-    !journalVisible;
+    !qrVisible;
 
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
@@ -1007,17 +997,6 @@ export default function PlantsScreen() {
               "error"
             );
           }
-        }}
-      />
-
-      <PlantJournalModal
-        visible={journalVisible}
-        plantId={journalPlantId}
-        plantName={journalPlantName}
-        onClose={() => {
-          setJournalVisible(false);
-          setJournalPlantName("");
-          setJournalPlantId("");
         }}
       />
 

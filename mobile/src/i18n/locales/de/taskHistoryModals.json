@@ -12,11 +12,12 @@
         "moisture": "Besprühen",
         "fertilising": "Düngen",
         "care": "Pflege",
-        "repot": "Umtopfen"
+        "repot": "Umtopfen",
+        "photo": "Foto"
       }
     },
     "delete": {
-      "title": "Verlauf löschen",
+      "title": "Erledigte Aufgaben löschen",
       "scopeLabel": "Bereich",
       "modes": {
         "plant": "Für ausgewählte Pflanze löschen",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} Tage"
     },
     "filter": {
-      "title": "Verlauf filtern",
+      "title": "Tagebuch filtern",
       "plantLabel": "Pflanze",
       "locationLabel": "Standort",
-      "taskTypesLabel": "Aufgabentypen",
-      "completedDateRangeLabel": "Abschlusszeitraum",
+      "taskTypesLabel": "Eintragsarten",
+      "completedDateRangeLabel": "Zeitraum der Einträge",
       "fromLabel": "Von",
       "toLabel": "Bis",
       "anyPlant": "Beliebige Pflanze",
@@ -41,11 +42,11 @@
       "clear": "Zurücksetzen"
     },
     "sort": {
-      "title": "Verlauf sortieren",
+      "title": "Tagebuch sortieren",
       "sortByLabel": "Sortieren nach",
       "directionLabel": "Richtung",
       "keys": {
-        "completedAt": "Abschlussdatum",
+        "completedAt": "Eintragsdatum",
         "plant": "Pflanzenname",
         "location": "Standort"
       },
@@ -56,10 +57,10 @@
       "reset": "Zurücksetzen"
     },
     "export": {
-      "title": "Verlaufsexport senden",
+      "title": "Aufgaben exportieren",
       "noticeTitle": "Der Excel-Export verwendet die aktuell angewendeten Kriterien.",
-      "noticeFiltered": "Es wird nur der Aufgabenverlauf berücksichtigt, der den unten angezeigten Filtern entspricht. Wenn du andere Daten benötigst, ändere zuerst die Filter und sende dann erneut.",
-      "noticeAllData": "Derzeit sind keine Filter angewendet, daher enthält der Export alle verfügbaren Aufgabenverlaufsdaten für diesen Bildschirm.",
+      "noticeFiltered": "Der Export enthält nur Aufgaben, die diesen Filtern entsprechen. Fotos werden nicht exportiert. Ändere zuerst die Filter, wenn du andere Aufgaben benötigst.",
+      "noticeAllData": "Der Export enthält alle verfügbaren erledigten Aufgaben deiner eigenen Pflanzen. Fotos werden nicht exportiert.",
       "criteriaTitle": "Angewendete Kriterien",
       "plantLabel": "Pflanze",
       "locationLabel": "Standort",

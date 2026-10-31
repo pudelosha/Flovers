@@ -25,7 +25,7 @@
           "Tandai sebagai selesai: menutup tugas dan memungkinkan Anda menambahkan catatan secara opsional, membantu Anda membuat riwayat perawatan terperinci.",
           "Edit pengingat: membuka Pengingat yang terkait dengan tugas sehingga Anda dapat mengubah pengaturan pengulangannya.",
           "Detail tanaman: menavigasi langsung ke tampilan Detail tanaman hias untuk tanaman hias terkait.",
-          "Tampilkan riwayat: membuka riwayat tugas yang menampilkan tugas yang diselesaikan sebelumnya untuk tanaman hias atau pengingat yang sama."
+          "Jurnal tugas membuka entri tanaman ini: tugas selesai, catatan, dan foto perkembangannya."
         ]
       },
       {
@@ -36,7 +36,7 @@
           "Tampilkan batas waktu hari ini: menerapkan filter pintasan yang menampilkan tugas yang harus diselesaikan hari ini.",
           "Sortir: mengubah urutan tugas dalam daftar.",
           "Filter: mempersempit daftar berdasarkan kriteria yang dipilih.",
-          "Riwayat: menavigasi ke layar Riwayat Tugas, yang didokumentasikan secara terpisah."
+          "Jurnal tugas membuka kumpulan tugas selesai dan foto tanaman, yang dijelaskan di halaman tersendiri."
         ]
       },
       {
@@ -68,8 +68,8 @@
         "heading": "Navigasi dari Rumah",
         "body": [
           "Layar Beranda menyediakan navigasi cepat ke bagian lain aplikasi melalui tindakan tugas dan pintasan FAB.",
-          "Dari tugas individual, Anda dapat melompat langsung ke Detail tanaman hias atau riwayat tugas.",
-          "Dari FAB Anda dapat membuka Riwayat Tugas atau menyaring daftar tugas menggunakan pengurutan dan pemfilteran."
+          "Dari menu tugas, Anda dapat membuka Detail tanaman atau Jurnal tugas tanaman tersebut.",
+          "Menu + memungkinkan Anda membuka Jurnal tugas atau mengurutkan dan memfilter tugas tertunda."
         ]
       },
       {

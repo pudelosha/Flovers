@@ -12,11 +12,12 @@
         "moisture": "Misting",
         "fertilising": "Fertilising",
         "care": "Care",
-        "repot": "Repot"
+        "repot": "Repot",
+        "photo": "Photo"
       }
     },
     "delete": {
-      "title": "Delete history",
+      "title": "Delete completed tasks",
       "scopeLabel": "Scope",
       "modes": {
         "plant": "Delete for selected plant",
@@ -29,11 +30,11 @@
       "daysValue": "{{days}} days"
     },
     "filter": {
-      "title": "Filter history",
+      "title": "Filter journal",
       "plantLabel": "Plant",
       "locationLabel": "Location",
-      "taskTypesLabel": "Task types",
-      "completedDateRangeLabel": "Completed date range",
+      "taskTypesLabel": "Entry types",
+      "completedDateRangeLabel": "Entry date range",
       "fromLabel": "From",
       "toLabel": "To",
       "anyPlant": "Any plant",
@@ -41,11 +42,11 @@
       "clear": "Clear"
     },
     "sort": {
-      "title": "Sort history",
+      "title": "Sort journal",
       "sortByLabel": "Sort by",
       "directionLabel": "Direction",
       "keys": {
-        "completedAt": "Completed date",
+        "completedAt": "Entry date",
         "plant": "Plant name",
         "location": "Location"
       },
@@ -56,10 +57,10 @@
       "reset": "Reset"
     },
     "export": {
-      "title": "Send history export",
+      "title": "Export tasks",
       "noticeTitle": "The Excel export will use the currently applied criteria.",
-      "noticeFiltered": "Only task history matching the filters shown below will be included. If you need different data, change the filters first and then send again.",
-      "noticeAllData": "No filters are currently applied, so the export will include all available task history data for this screen.",
+      "noticeFiltered": "The export includes only tasks matching these filters. Photos are not included. Change the filters first if you need different tasks.",
+      "noticeAllData": "The export includes all your available completed tasks. Photos are not included.",
       "criteriaTitle": "Applied criteria",
       "plantLabel": "Plant",
       "locationLabel": "Location",

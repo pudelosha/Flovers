@@ -1,37 +1,37 @@
 {
   "taskHistory": {
     "header": {
-      "title": "タスク履歴"
+      "title": "お手入れ日誌"
     },
     "fab": {
       "sort": "並べ替え",
       "filter": "フィルター",
-      "sendExport": "エクスポートを送信",
-      "delete": "削除",
+      "sendExport": "タスクをエクスポート",
+      "delete": "タスクを削除",
       "clearFilter": "フィルターをクリア",
-      "showAllHistory": "すべての履歴を表示"
+      "showAllHistory": "日誌をすべて表示"
     },
     "common": {
       "unnamedPlant": "名前のない植物"
     },
     "toasts": {
-      "failedToLoad": "タスク履歴の読み込みに失敗しました",
-      "historyDeleted": "履歴を削除しました",
-      "failedToDeleteHistory": "履歴の削除に失敗しました",
-      "historyTaskDeleted": "履歴タスクを削除しました",
-      "failedToDeleteHistoryTask": "履歴タスクの削除に失敗しました",
+      "failedToLoad": "日誌を読み込めませんでした。",
+      "historyDeleted": "完了タスクを削除しました。",
+      "failedToDeleteHistory": "完了タスクを削除できませんでした。",
+      "historyTaskDeleted": "完了タスクを削除しました。",
+      "failedToDeleteHistoryTask": "完了タスクを削除できませんでした。",
       "taskNotLinkedToPlant": "このタスクは植物に紐付けられていません。",
-      "exportSent": "タスク履歴のエクスポート要求を送信しました",
-      "failedToSendExport": "タスク履歴のエクスポート送信に失敗しました",
+      "exportSent": "タスクの出力をリクエストしました。",
+      "failedToSendExport": "タスクの出力を送信できませんでした。",
       "exportNotAvailableYet": "エクスポートはまだ利用できません。"
     },
     "empty": {
-      "title": "まだ完了したタスクはありません",
-      "descBeforeBold": "この画面には",
-      "bold": "完了したリマインダータスク",
-      "descAfterBold": "ホーム画面からの（保留中のタスクは表示されません）。",
+      "title": "日誌はまだ空です",
+      "descBeforeBold": "この日誌には",
+      "bold": "完了したタスクと植物の写真が表示されます。",
+      "descAfterBold": "+ メニューから写真を追加するか、タスクを完了して記録を始めましょう。",
       "filteredToPlantId": "現在、植物ID {{plantId}} でフィルターされています。",
-      "openFromTaskHint": "特定のタスクから開くと、その植物の履歴のみを表示できます。"
+      "openFromTaskHint": "植物やタスクのメニューから日誌を開くと、その植物の記録だけを表示できます。"
     },
     "tile": {
       "completedOn": "{{date}} に完了",
@@ -52,6 +52,51 @@
       "moisture": "霧吹き",
       "care": "ケア",
       "repot": "植え替え"
+    },
+    "photo": {
+      "add": "写真を追加",
+      "edit": "写真を編集",
+      "filterType": "写真",
+      "saved": "日誌に写真を保存しました。",
+      "deleted": "日誌から写真を削除しました。",
+      "deleteFailed": "写真を削除できませんでした。もう一度お試しください。",
+      "deleteTitle": "写真を削除しますか？",
+      "deleteConfirm": "この写真とメモは日誌から完全に削除されます。",
+      "delete": "写真を削除",
+      "titleAdd": "日誌に写真を追加",
+      "titleEdit": "日誌の写真を編集",
+      "description": "植物の成長を写真で記録しましょう。植物ごとに7日間に1枚追加できます。",
+      "plant": "植物",
+      "choosePlant": "植物を選択",
+      "photo": "写真",
+      "takePhoto": "写真を撮る",
+      "chooseGallery": "ギャラリーから選ぶ",
+      "photoDate": "撮影日（任意）",
+      "chooseDate": "日付を選択",
+      "clearDate": "日付をクリア",
+      "notes": "メモ（任意）",
+      "notesPlaceholder": "植物の様子をメモしましょう…",
+      "save": "保存",
+      "saving": "保存中…",
+      "added": "追加日時",
+      "photoTaken": "撮影日",
+      "journalGuide": "日誌の写真",
+      "noPhoto": "写真を選ぶか撮影してください。",
+      "noPlant": "植物を選択してください。",
+      "cooldown": "この植物の次の写真は{{date}}から追加できます。",
+      "loadFailed": "写真の詳細を読み込めませんでした。もう一度お試しください。",
+      "saveFailed": "写真を保存できませんでした。もう一度お試しください。",
+      "conflict": "この写真は変更されています。フォームを閉じて開き直してください。",
+      "permission": "日誌の写真を管理できるのは植物の所有者のみです。",
+      "tooLarge": "写真のサイズが大きすぎます。小さい画像を選んでください。",
+      "invalidPhoto": "この写真を読み込めませんでした。別の画像を選んでください。",
+      "storageFull": "写真の保存容量がいっぱいです。不要な写真を削除して、もう一度お試しください。",
+      "cameraDenied": "撮影するには、スマートフォンの設定でカメラへのアクセスを許可してください。",
+      "futureDate": "撮影日に未来の日付は指定できません。",
+      "retry": "再試行",
+      "cancel": "キャンセル",
+      "noPlants": "日誌に写真を追加するには、先に植物を追加してください。",
+      "retryPending": "接続が中断されました。同じ内容で保存を再試行するか、日誌を閉じて開き直し、保存済みの内容を確認してください。"
     }
   }
 }

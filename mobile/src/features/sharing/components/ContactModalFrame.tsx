@@ -6,9 +6,9 @@ import ModalCloseButton from "../../../shared/ui/ModalCloseButton";
 import { prompts as pr } from "../../profile/styles/profile.styles";
 
 /** Contacts use the same centered glass prompt and controls as the Profile dialogs. */
-export default function ContactModalFrame({ visible, title, onClose, children, sharingLayout = false }: {
+export default function ContactModalFrame({ visible, title, onClose, children, sharingLayout = false, scrollEnabled = true }: {
   visible: boolean; title: string; onClose: () => void; children: React.ReactNode;
-  sharingLayout?: boolean;
+  sharingLayout?: boolean; scrollEnabled?: boolean;
 }) {
   const { t } = useTranslation();
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function ContactModalFrame({ visible, title, onClose, children, s
           <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.35)" }]} />
         </View>
         <View style={[pr.promptInner, s.inner, sharingLayout && s.sharingInner, sharingLayout && s.squareBottom]}>
-          <ScrollView style={{ flex: 1 }} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
+          <ScrollView style={{ flex: 1 }} scrollEnabled={scrollEnabled} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
             contentContainerStyle={[s.content, sharingLayout && s.sharingContent]}>
             <Text style={pr.promptTitle}>{title}</Text>
             {children}
