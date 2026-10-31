@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "Cihaz kurulumu",
+      "sampleCodeHint": "Her cihaz için örnek Arduino/ESP kodu oluşturabilirsiniz. Cihaz kartının menüsünü açın, «{{deviceDetails}}» seçeneğini seçin ve kodu e-postayla almak için «{{emailCode}}» düğmesine dokunun.",
       "httpEndpoints": "HTTP uç noktaları",
       "addReadingPost": "Okuma ekle (POST)",
       "readReadingsGetPost": "Sensör okumalarını okuyun (GET/POST)",

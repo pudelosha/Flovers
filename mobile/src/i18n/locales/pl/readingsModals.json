@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "Konfiguracja urządzenia",
+      "sampleCodeHint": "Możesz wygenerować przykładowy kod Arduino/ESP dla konkretnego urządzenia. Otwórz menu jego kafelka, wybierz „{{deviceDetails}}”, a następnie „{{emailCode}}”. Kod otrzymasz e-mailem.",
       "httpEndpoints": "Punkty końcowe HTTP",
       "addReadingPost": "Dodaj odczyt (POST)",
       "readReadingsGetPost": "Odczytaj odczyty (GET/POST)",

@@ -12,7 +12,7 @@ it.each([false, true])("absorbs a blank panel press without dismissing while kee
   </ContactModalFrame>);
   // The glass must follow the panel rather than covering its outer margins.
   expect(within(view.getByTestId("contact-modal-content")).getByTestId("contact-modal-glass")).toBeTruthy();
-  fireEvent.press(view.getByTestId("contact-modal-content"), { stopPropagation });
+  fireEvent(view.getByTestId("contact-modal-content"), "touchStart", { stopPropagation });
   expect(stopPropagation).toHaveBeenCalledTimes(1);
   expect(close).not.toHaveBeenCalled();
   fireEvent.changeText(view.getByLabelText("Notes"), "A new leaf");
@@ -56,6 +56,22 @@ it("lets the photo editor pause outer scrolling without changing panel dismissal
     <Text>Framing editor</Text>
   </ContactModalFrame>);
   expect(view.UNSAFE_getByType(ScrollView).props.scrollEnabled).toBe(false);
-  fireEvent.press(view.getByTestId("contact-modal-content"), { stopPropagation: jest.fn() });
+  fireEvent(view.getByTestId("contact-modal-content"), "touchStart", { stopPropagation: jest.fn() });
+  expect(close).not.toHaveBeenCalled();
+});
+
+it("does not install a parent press responder above the scrollable contact form", () => {
+  const close = jest.fn(), change = jest.fn();
+  const view = render(<ContactModalFrame visible title="Edit contact" onClose={close}>
+    <TextInput accessibilityLabel="Contact name" onChangeText={change} />
+    <Text>Shared plant details</Text>
+  </ContactModalFrame>);
+  const panel = view.getByTestId("contact-modal-content");
+  expect(panel.props.onStartShouldSetResponder).toBeUndefined();
+  expect(panel.props.onMoveShouldSetResponder).toBeUndefined();
+  fireEvent(panel, "touchStart", { stopPropagation: jest.fn() });
+  fireEvent.scroll(view.UNSAFE_getByType(ScrollView), { nativeEvent: { contentOffset: { x: 0, y: 180 } } });
+  fireEvent.changeText(view.getByLabelText("Contact name"), "Mum");
+  expect(change).toHaveBeenCalledWith("Mum");
   expect(close).not.toHaveBeenCalled();
 });

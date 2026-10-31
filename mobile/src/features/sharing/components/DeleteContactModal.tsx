@@ -27,7 +27,7 @@ export default function DeleteContactModal({ contact, onClose }: {
     }
   };
   return (
-    <ContactModalFrame visible={!!contact} title={t("sharing.contacts.deleteTitle", { defaultValue: "Delete contact?" })} onClose={onClose}>
+    <ContactModalFrame centerContent visible={!!contact} title={t("sharing.contacts.deleteTitle", { defaultValue: "Delete contact?" })} onClose={onClose}>
       {!!contact && (
         <>
           <Text style={[s.text, local.body]}>{t("sharing.contacts.deleteRealHint", {

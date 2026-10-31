@@ -1,6 +1,6 @@
 import React from "react";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
-import { launchImageLibrary } from "react-native-image-picker";
+import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 import JournalPhotoModal from "../JournalPhotoModal";
 import { createJournalPhoto, fetchJournalPhoto, fetchJournalPhotoAvailability, updateJournalPhoto } from "../../../../../api/services/journal-photos.service";
 import { usePlantPhoto } from "../../../../../shared/hooks/usePlantPhoto";
@@ -35,6 +35,7 @@ beforeEach(() => {
   jest.clearAllMocks(); available.mockResolvedValue([{ plant_id: "7", next_photo_at: null }, { plant_id: "8", next_photo_at: null }]);
   (usePlantPhoto as jest.Mock).mockImplementation((photo: any) => ({ uri: photo ? "data:image/jpeg;base64,a" : null, loading: false, error: null, refresh: jest.fn() }));
   (launchImageLibrary as jest.Mock).mockResolvedValue({ assets: [{ uri: "file:///photo.jpg", width: 600, height: 800 }] });
+  (launchCamera as jest.Mock).mockResolvedValue({ assets: [{ uri: "file:///camera-replacement.jpg", width: 900, height: 1200 }] });
   create.mockResolvedValue(entry); update.mockResolvedValue(entry);
   (fetchJournalPhoto as jest.Mock).mockResolvedValue(entry);
 });
@@ -75,6 +76,7 @@ it("uses the same upload key when retrying a failed upload", async () => {
 it("blocks new photos during that plant's cooldown but permits another plant", async () => {
   available.mockResolvedValue([{ plant_id: "7", next_photo_at: "2099-01-01T00:00:00Z" }, { plant_id: "8", next_photo_at: null }]);
   const { view } = await open(); await pick(view); await save(view); expect(create).not.toHaveBeenCalled();
+  fireEvent.press(view.getByLabelText("taskHistory.photo.choosePlant"));
   fireEvent.press(view.getByText("Aloe")); await save(view); expect(create).toHaveBeenCalledWith("8", expect.any(String), expect.any(String), expect.any(Object));
 });
 it("locks the plant and allows metadata-only edits during cooldown", async () => {
@@ -89,6 +91,17 @@ it("replaces a photo with the same entry revision and new image dimensions", asy
   const { view } = await open({ entry }); await pick(view); await save(view);
   expect(view.getByTestId("journal-framing").props).toMatchObject({ width: 600, height: 800 });
   expect(update).toHaveBeenCalledWith(entry, expect.any(Object), expect.objectContaining({ uri: "file:///photo.jpg", uploadKey: expect.any(String) }));
+});
+
+it("previews a replacement camera image immediately while keeping notes and uploading only on Save", async () => {
+  const { view } = await open({ entry });
+  await act(async () => fireEvent.press(view.getByText("taskHistory.photo.takePhoto")));
+  expect(view.getByTestId("journal-framing").props).toMatchObject({ uri: "file:///camera-replacement.jpg", width: 900, height: 1200, value: framing });
+  expect(view.getByLabelText("taskHistory.photo.notes").props.value).toBe("Old note");
+  expect(update).not.toHaveBeenCalled();
+  await save(view);
+  expect(update).toHaveBeenCalledWith(entry, { notes: "Old note", taken_on: "2026-01-02", framing },
+    expect.objectContaining({ uri: "file:///camera-replacement.jpg", uploadKey: expect.any(String) }));
 });
 it("does not reveal the edit form before private image bytes are loaded", async () => {
   (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: true, error: null });
@@ -118,7 +131,10 @@ it("freezes an uncertain submission so retry cannot silently discard changed fie
   fireEvent.changeText(view.getByLabelText("taskHistory.photo.notes"), "Submitted note"); await save(view);
   expect(view.getByLabelText("taskHistory.photo.notes").props.editable).toBe(false);
   expect(view.getByTestId("journal-framing").props.disabled).toBe(true);
-  fireEvent.press(view.getByText("Aloe")); await save(view);
+  expect(view.getByLabelText("taskHistory.photo.choosePlant").props.accessibilityState.disabled).toBe(true);
+  fireEvent.press(view.getByLabelText("taskHistory.photo.choosePlant"));
+  expect(view.queryByText("Aloe")).toBeNull();
+  await save(view);
   expect(create.mock.calls[1]).toEqual(create.mock.calls[0]);
   expect(create.mock.calls[1][0]).toBe("7");
 });
@@ -126,6 +142,19 @@ it("asks the journal to refresh when closing after an uncertain upload", async (
   create.mockRejectedValueOnce(new Error("Connection lost"));
   const { view, onClose } = await open(); await pick(view); await save(view);
   fireEvent.press(view.getByText("Close frame")); expect(onClose).toHaveBeenCalledWith(true);
+});
+
+it("uses a collapsed plant dropdown, applies a selection and closes the list", async () => {
+  const { view } = await open();
+  expect(view.queryByText("Aloe")).toBeNull();
+  expect(view.getByLabelText("taskHistory.photo.choosePlant").props.accessibilityState.expanded).toBe(false);
+  fireEvent.press(view.getByLabelText("taskHistory.photo.choosePlant"));
+  expect(view.getAllByRole("radio")).toHaveLength(2);
+  fireEvent.press(view.getByText("Aloe"));
+  expect(view.queryAllByRole("radio")).toHaveLength(0);
+  expect(view.getByText("Aloe")).toBeTruthy();
+  await pick(view); await save(view);
+  expect(create).toHaveBeenCalledWith("8", expect.any(String), expect.any(String), expect.any(Object));
 });
 it("ignores a picker result after changing to another entry context", async () => {
   let finish: any; (launchImageLibrary as jest.Mock).mockReturnValueOnce(new Promise(resolve => { finish = resolve; }));

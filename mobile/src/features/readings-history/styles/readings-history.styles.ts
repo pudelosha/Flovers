@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
-  screenContent: { paddingHorizontal: 16, paddingTop: 21, paddingBottom: 24 },
+  screenContent: { paddingHorizontal: 16, paddingTop: 21, paddingBottom: 21 },
 
   // Big glass frame (like your tiles) holding segmented, plant name, date nav, chart, pills
   frameWrap: {

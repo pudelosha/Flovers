@@ -3,9 +3,10 @@ import { Keyboard, PermissionsAndroid, Platform, Pressable, StyleSheet, Text, Te
 import DateTimePicker from "@react-native-community/datetimepicker";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { launchCamera, launchImageLibrary, type CameraOptions } from "react-native-image-picker";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import AppModalHost from "../../../../shared/ui/AppModalHost";
 import { useTranslation } from "react-i18next";
 import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
+import { s as reminderStyles } from "../../../reminders/styles/reminders.styles";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import PlantPhotoFramingEditor from "../../../../shared/ui/PlantPhotoFramingEditor";
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
@@ -23,8 +24,6 @@ const dayString = (date: Date) => `${date.getFullYear()}-${String(date.getMonth(
 
 export default function JournalPhotoModal({ visible, onClose, onSaved, plantOptions, preferredPlantId, entry }: Props) {
   const { t } = useTranslation();
-  // This screen extends behind the tab bar, unlike the modal content area.
-  const insets = useSafeAreaInsets();
   const tr = (key: string, values?: Record<string, unknown>) => String(t(`taskHistory.photo.${key}`, values));
   const contextKey = `${visible}:${entry?.id ?? "new"}:${preferredPlantId ?? ""}`;
   const generation = useRef({ context: contextKey, value: 0 });
@@ -34,6 +33,7 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
   const [retry, setRetry] = useState(0);
   const [availability, setAvailability] = useState<JournalPhotoAvailability[]>([]);
   const [plantId, setPlantId] = useState("");
+  const [plantOpen, setPlantOpen] = useState(false);
   const [selection, setSelection] = useState<Selection | null>(null);
   const [framing, setFraming] = useState<PhotoFraming>(DEFAULT_PHOTO_FRAMING);
   const [notes, setNotes] = useState("");
@@ -60,7 +60,7 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
     setLoadedEntry(null); pendingSave.current = null; setRetryPending(false); setConflicted(false);
     setReadyContext(""); setError(""); setLoadError(false); setSelection(null);
     setFraming(normalizePhotoFraming(entry?.photo.framing)); setNotes(entry?.note ?? "");
-    setTakenOn(entry?.recordedDate ?? ""); setDateOpen(false); setInteracting(false);
+    setTakenOn(entry?.recordedDate ?? ""); setDateOpen(false); setPlantOpen(false); setInteracting(false);
     setPlantId(entry?.plantId ?? (plantOptions.some(plant => plant.id === preferredPlantId && plantAccess(plant.access).canEdit)
       ? preferredPlantId! : plantOptions.filter(plant => plantAccess(plant.access).canEdit)[0]?.id ?? ""));
     Promise.all([fetchJournalPhotoAvailability(), entry ? fetchJournalPhoto(entry.id) : Promise.resolve(null)]).then(([result, fresh]) => {
@@ -76,6 +76,7 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
 
   const choose = async (camera: boolean) => {
     if (busyRef.current || retryPending) return;
+    setPlantOpen(false);
     const version = generation.current.value;
     try {
       if (camera && Platform.OS === "android") {
@@ -106,7 +107,7 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
     if (entry && (!activeEntry || !plantAccess(activeEntry.access).canEdit)) { setError(tr("permission")); return; }
     if (takenOn && takenOn > dayString(new Date())) { setError(tr("futureDate")); return; }
     const version = generation.current.value;
-    busyRef.current = true; setBusy(true); setError(""); Keyboard.dismiss();
+    busyRef.current = true; setBusy(true); setPlantOpen(false); setError(""); Keyboard.dismiss();
     const submission = pendingSave.current ?? { entry: activeEntry, plantId, selection,
       values: { notes, taken_on: takenOn || null, framing } };
     pendingSave.current = submission;
@@ -138,13 +139,14 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
   const uri = selection?.uri ?? privatePhoto.uri;
   const editingForbidden = !!entry && (!activeEntry || !plantAccess(activeEntry.access).canEdit);
   const fieldsDisabled = busy || retryPending || conflicted || editingForbidden;
+  const selectedPlant = ownedPlants.find(plant => plant.id === plantId);
   const button = (label: string, onPress: () => void, icon?: string, primary = false, disabled = false, equalWidth = false) =>
     <Pressable accessibilityRole="button" style={[styles.button, equalWidth && styles.equalButton, primary && styles.primary, disabled && styles.disabled]}
       disabled={disabled} onPress={onPress}>
       {icon && <MaterialCommunityIcons name={icon} color="#FFFFFF" size={20} />}
       <Text style={styles.buttonText}>{label}</Text>
     </Pressable>;
-  return <View style={[StyleSheet.absoluteFill, { bottom: 64 + Math.max(insets.bottom, 10), zIndex: 6000, elevation: 6000 }]}>
+  return <AppModalHost>
     <ContactModalFrame visible title={tr(entry ? "titleEdit" : "titleAdd")} onClose={close}
       fullScreen scrollEnabled={!interacting}>
       {loading ? <View style={styles.loading}><CenteredSpinner size={42} /></View>
@@ -155,20 +157,36 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
           <Text style={styles.description}>{tr("description")}</Text>
           <Text style={styles.label}>{tr("plant")}</Text>
           {entry ? <View style={styles.locked}><MaterialCommunityIcons name="lock-outline" size={17} color="#FFFFFF" /><Text style={styles.text}>{activeEntry?.plant ?? entry.plant}</Text></View>
-            : ownedPlants.length ? ownedPlants.map(plant => <Pressable key={plant.id} disabled={fieldsDisabled} style={styles.plant}
-              accessibilityRole="radio" accessibilityState={{ checked: plant.id === plantId }}
-              onPress={() => { setPlantId(plant.id); setError(""); }}>
-              <MaterialCommunityIcons name={plant.id === plantId ? "radiobox-marked" : "radiobox-blank"} color="#FFFFFF" size={22} />
-              <View style={{ flex: 1 }}><Text style={styles.text}>{plant.name}</Text>{!!plant.location && <Text style={styles.description}>{plant.location}</Text>}</View>
-            </Pressable>) : <Text style={styles.description}>{tr("noPlants")}</Text>}
+            : ownedPlants.length ? <View style={[reminderStyles.dropdown, styles.plantDropdown]}>
+              <Pressable style={[reminderStyles.dropdownHeader, fieldsDisabled && styles.disabled]}
+                accessibilityRole="button" accessibilityLabel={tr("choosePlant")}
+                accessibilityState={{ expanded: plantOpen && !fieldsDisabled, disabled: fieldsDisabled }}
+                disabled={fieldsDisabled} onPress={() => { setDateOpen(false); setPlantOpen(value => !value); }}
+                android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+                <Text style={[reminderStyles.dropdownValue, { flex: 1 }]}>{selectedPlant?.name || tr("choosePlant")}</Text>
+                <MaterialCommunityIcons name={plantOpen && !fieldsDisabled ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              </Pressable>
+              {plantOpen && !fieldsDisabled && <View style={reminderStyles.dropdownList}>
+                {ownedPlants.map(plant => <Pressable key={plant.id} style={reminderStyles.dropdownItem}
+                  accessibilityRole="radio" accessibilityState={{ checked: plant.id === plantId }}
+                  onPress={() => { setPlantId(plant.id); setPlantOpen(false); setError(""); }}>
+                  <View style={{ flex: 1, minWidth: 0 }}>
+                    <Text style={reminderStyles.dropdownItemText}>{plant.name}</Text>
+                    {!!plant.location && <Text style={styles.description}>{plant.location}</Text>}
+                  </View>
+                  {plant.id === plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>)}
+              </View>}
+              {!!selectedPlant?.location && <Text style={styles.selectedLocation}>{selectedPlant.location}</Text>}
+            </View> : <Text style={styles.description}>{tr("noPlants")}</Text>}
           {cooldown && <Text style={styles.description}>{tr("cooldown", { date: new Date(next!).toLocaleString() })}</Text>}
-          {!!uri && <PlantPhotoFramingEditor uri={uri} width={selection ? selection.width : activeEntry?.photo.width}
+          {!!uri && <PlantPhotoFramingEditor key={selection?.uploadKey ?? activeEntry?.photo.id} uri={uri} width={selection ? selection.width : activeEntry?.photo.width}
             height={selection ? selection.height : activeEntry?.photo.height} value={framing} onChange={setFraming}
             disabled={fieldsDisabled} onInteractionChange={setInteracting} journalLabel={tr("journalGuide")} />}
           {button(tr("takePhoto"), () => { void choose(true); }, "camera", true, fieldsDisabled)}
           {button(tr("chooseGallery"), () => { void choose(false); }, "image-multiple-outline", false, fieldsDisabled)}
           <Text style={styles.label}>{tr("photoDate")}</Text>
-          {button(takenOn || tr("chooseDate"), () => setDateOpen(true), "calendar-outline", false, fieldsDisabled)}
+          {button(takenOn || tr("chooseDate"), () => { setPlantOpen(false); setDateOpen(true); }, "calendar-outline", false, fieldsDisabled)}
           {!!takenOn && <Pressable disabled={fieldsDisabled} onPress={() => setTakenOn("")}><Text style={styles.description}>{tr("clearDate")}</Text></Pressable>}
           {dateOpen && !fieldsDisabled && <DateTimePicker value={takenOn ? new Date(takenOn + "T12:00:00") : new Date()} maximumDate={new Date()} mode="date"
             display={Platform.OS === "ios" ? "inline" : "default"} onChange={(_event, date) => {
@@ -188,14 +206,15 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
           </View>
         </View>}
     </ContactModalFrame>
-  </View>;
+  </AppModalHost>;
 }
 const styles = StyleSheet.create({
   form: { marginHorizontal: 16, gap: 12 }, loading: { minHeight: 220, justifyContent: "center" },
   description: { color: "rgba(255,255,255,0.8)", fontSize: 13, lineHeight: 20 },
   label: { color: "#FFFFFF", fontSize: 15, fontWeight: "700", marginTop: 5 },
   text: { color: "#FFFFFF", fontSize: 15, fontWeight: "600" },
-  plant: { flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 18, backgroundColor: "rgba(255,255,255,0.12)" },
+  plantDropdown: { marginHorizontal: 0, marginBottom: 0 },
+  selectedLocation: { color: "rgba(255,255,255,0.8)", fontSize: 13, marginTop: 6 },
   locked: { flexDirection: "row", gap: 8, alignItems: "center", paddingVertical: 8 },
   button: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 8, minHeight: 44,
     paddingHorizontal: 14, paddingVertical: 12, borderRadius: 22, backgroundColor: "rgba(255,255,255,0.17)" },

@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "Настройка устройства",
+      "sampleCodeHint": "Для каждого устройства можно сгенерировать пример кода Arduino/ESP. Откройте меню на карточке устройства, выберите «{{deviceDetails}}», затем нажмите «{{emailCode}}», чтобы получить код по электронной почте.",
       "httpEndpoints": "Конечные точки HTTP",
       "addReadingPost": "Добавить чтение (POST)",
       "readReadingsGetPost": "Чтение показаний датчика (GET/POST)",

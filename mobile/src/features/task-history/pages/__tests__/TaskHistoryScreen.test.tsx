@@ -1,5 +1,6 @@
 import React from "react";
-import { act, render } from "@testing-library/react-native";
+import { act, fireEvent, render } from "@testing-library/react-native";
+import { Pressable, Text } from "react-native";
 import TaskHistoryScreen from "../TaskHistoryScreen";
 import TaskHistoryTile from "../../components/TaskHistoryTile";
 import JournalPhotoTile from "../../components/JournalPhotoTile";
@@ -69,6 +70,7 @@ function actions(view: ReturnType<typeof render>) {
 
 beforeEach(() => {
   jest.clearAllMocks();
+  (JournalPhotoModal as jest.Mock).mockImplementation(() => null);
   mockRoute = {};
   mockPhotoLoading = false;
   (fetchHistoryItems as jest.Mock).mockResolvedValue([task, photo]);
@@ -127,6 +129,23 @@ it("keeps the journal hidden until its private photo bytes are ready", async () 
   mockPhotoLoading = false;
   view.rerender(<TaskHistoryScreen />);
   expect(view.UNSAFE_getByType(JournalPhotoTile)).toBeTruthy();
+});
+
+it("preserves the camera selection when foreground photo revalidation shows the list spinner", async () => {
+  (JournalPhotoModal as jest.Mock).mockImplementation(function Editor({ visible }: any) {
+    const [preview, setPreview] = React.useState("existing photo");
+    return visible ? <Pressable onPress={() => setPreview("new camera photo")}><Text>{preview}</Text></Pressable> : null;
+  });
+  const view = await renderScreen();
+  act(() => view.UNSAFE_getByType(JournalPhotoTile).props.onEdit());
+  fireEvent.press(view.getByText("existing photo"));
+  mockPhotoLoading = true;
+  view.rerender(<TaskHistoryScreen />);
+  expect(view.getByText("new camera photo")).toBeTruthy();
+  expect(view.UNSAFE_queryByType(JournalPhotoTile)).toBeNull();
+  mockPhotoLoading = false;
+  view.rerender(<TaskHistoryScreen />);
+  expect(view.getByText("new camera photo")).toBeTruthy();
 });
 
 it("keeps shared photos viewable while denying add, edit and delete", async () => {

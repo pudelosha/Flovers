@@ -595,23 +595,6 @@ export default function TaskHistoryScreen() {
     }
   };
 
-  // Early return while loading (match other screens)
-  if (contentLoading) {
-    return (
-      <View style={{ flex: 1 }}>
-        <GlassHeader
-          title={t("taskHistory.header.title")}
-          gradientColors={HEADER_GRADIENT_TINT}
-          solidFallback={HEADER_SOLID_FALLBACK}
-          showSeparator={false}
-          rightIconName="qrcode-scan"
-          onPressRight={() => nav.navigate("Scanner" as never)}
-        />
-        <CenteredSpinner size={56} color="#FFFFFF" />
-      </View>
-    );
-  }
-
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
@@ -623,6 +606,8 @@ export default function TaskHistoryScreen() {
         onPressRight={() => nav.navigate("Scanner" as never)}
       />
 
+      {/* Keep editors mounted when camera/gallery foregrounding revalidates photos. */}
+      {contentLoading ? <CenteredSpinner size={56} color="#FFFFFF" /> : <>
       {/* Backdrop to dismiss menus (kept under FlatList so menus stay above) */}
       {openMenuId && (
         <View
@@ -764,6 +749,7 @@ export default function TaskHistoryScreen() {
       />
 
       {/* FAB: Sort / Filter / Send export / Delete / Clear filter / Show all history (when plantIdFilter) */}
+      </>}
       {showFAB && (
         <View
           onStartShouldSetResponderCapture={() => {

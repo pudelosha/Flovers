@@ -95,6 +95,14 @@ export default function NotificationsCard({
         </View>
       </Pressable>
 
+      <Pressable style={controls.toggleRow}
+        accessibilityRole="checkbox" accessibilityLabel={t("profile.notifications.sharedEmailLabel")}
+        accessibilityState={{ checked: sharedTaskEmail }} onPress={() => setSharedTaskEmail((previous: boolean) => !previous)}>
+        <MaterialCommunityIcons name={sharedTaskEmail ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+          size={20} color="#FFFFFF" style={controls.toggleIcon} />
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.sharedEmailLabel")}</Text>
+      </Pressable>
+
       <View style={controls.sectionDivider} />
 
       {/* MOBILE */}
@@ -155,19 +163,13 @@ export default function NotificationsCard({
         </View>
       </Pressable>
 
-      <View style={controls.sectionDivider} />
-      <Text style={controls.sectionTitle}>{t("profile.notifications.sharedSection")}</Text>
-      <Text style={controls.toggleHint}>{t("profile.notifications.sharedHint")}</Text>
-      {[
-        { key: "sharedEmailLabel", value: sharedTaskEmail, setValue: setSharedTaskEmail },
-        { key: "sharedPushLabel", value: sharedTaskPush, setValue: setSharedTaskPush },
-      ].map(({ key, value, setValue }) => <Pressable key={key} style={controls.toggleRow}
-        accessibilityRole="checkbox" accessibilityLabel={t(`profile.notifications.${key}`)}
-        accessibilityState={{ checked: value }} onPress={() => setValue((previous: boolean) => !previous)}>
-        <MaterialCommunityIcons name={value ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+      <Pressable style={controls.toggleRow}
+        accessibilityRole="checkbox" accessibilityLabel={t("profile.notifications.sharedPushLabel")}
+        accessibilityState={{ checked: sharedTaskPush }} onPress={() => setSharedTaskPush((previous: boolean) => !previous)}>
+        <MaterialCommunityIcons name={sharedTaskPush ? "checkbox-marked-outline" : "checkbox-blank-outline"}
           size={20} color="#FFFFFF" style={controls.toggleIcon} />
-        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t(`profile.notifications.${key}`)}</Text>
-      </Pressable>)}
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.sharedPushLabel")}</Text>
+      </Pressable>
 
       <Pressable style={controls.saveBtn} onPress={onSave}>
         <MaterialCommunityIcons name="content-save" size={18} color="#FFFFFF" />

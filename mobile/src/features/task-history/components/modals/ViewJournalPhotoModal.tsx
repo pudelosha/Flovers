@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import AppModalHost from "../../../../shared/ui/AppModalHost";
 import { useTranslation } from "react-i18next";
 import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
@@ -13,7 +13,6 @@ export default function ViewJournalPhotoModal({ visible, entry, onClose }: {
   visible: boolean; entry: JournalPhotoItem | null; onClose: () => void;
 }) {
   const { t } = useTranslation();
-  const insets = useSafeAreaInsets();
   const [loaded, setLoaded] = useState<{ context: string; entry: JournalPhotoItem } | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [retry, setRetry] = useState(0);
@@ -41,7 +40,7 @@ export default function ViewJournalPhotoModal({ visible, entry, onClose }: {
   if (!visible || !entry) return null;
   const expired = !!current?.access?.expires_at && Date.parse(current.access.expires_at) <= Date.now();
   const error = loadError === context || expired || !!photo.error || (!!photo.uri && failedUri === photo.uri);
-  return <View style={[StyleSheet.absoluteFill, { bottom: 64 + Math.max(insets.bottom, 10), zIndex: 6000, elevation: 6000 }]}>
+  return <AppModalHost>
     <ContactModalFrame visible title={String(t("taskHistory.photo.viewTitle", { defaultValue: "Photo" }))}
       onClose={onClose} fullScreen>
       <View style={styles.content}>
@@ -65,7 +64,7 @@ export default function ViewJournalPhotoModal({ visible, entry, onClose }: {
         </Pressable>
       </View>
     </ContactModalFrame>
-  </View>;
+  </AppModalHost>;
 }
 const styles = StyleSheet.create({
   content: { flex: 1, marginHorizontal: 16, gap: 14 },

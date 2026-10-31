@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import type { LayoutChangeEvent, StyleProp, ViewStyle } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -12,6 +13,8 @@ type Props = {
   onDelete?: () => void;
   canEdit?: boolean;
   onPlantDetails?: () => void;
+  style?: StyleProp<ViewStyle>;
+  onLayout?: (event: LayoutChangeEvent) => void;
 };
 
 export default function ReminderMiniTileMenu({
@@ -21,6 +24,8 @@ export default function ReminderMiniTileMenu({
   onDelete,
   canEdit = true,
   onPlantDetails,
+  style,
+  onLayout,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -36,7 +41,7 @@ export default function ReminderMiniTileMenu({
   );
 
   return (
-    <View style={[s.menuSheet, styles.menuSheet]} pointerEvents="auto">
+    <View style={[s.menuSheet, styles.menuSheet, style]} pointerEvents="auto" onLayout={onLayout}>
       {canEdit && <>
       <MenuItem
         label={tr("reminders.menu.edit", "Edit reminder")}

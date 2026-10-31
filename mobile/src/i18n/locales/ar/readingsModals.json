@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "إعداد الجهاز",
+      "sampleCodeHint": "يمكنك إنشاء نموذج كود Arduino/ESP لكل جهاز. افتح قائمة بطاقة الجهاز، واختر «{{deviceDetails}}»، ثم اضغط على «{{emailCode}}» ليصلك الكود عبر البريد الإلكتروني.",
       "httpEndpoints": "نقاط نهاية HTTP",
       "addReadingPost": "إضافة قراءة (POST)",
       "readReadingsGetPost": "قراءة القراءات (GET/POST)",

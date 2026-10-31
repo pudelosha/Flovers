@@ -8,7 +8,6 @@ import {
   LayoutChangeEvent,
   Text,
   Pressable,
-  useWindowDimensions,
   Animated,
   Easing,
   StyleSheet,
@@ -16,7 +15,6 @@ import {
 import LinearGradient from "react-native-linear-gradient";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import { useTranslation } from "react-i18next";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -213,25 +211,12 @@ export default function ReadingsHistoryScreen() {
     });
   }, [range]);
 
-  // ----------- Height calculation including top & bottom bars ----------
-  const { height: windowH } = useWindowDimensions();
+  // Measure the actual content viewport instead of estimating system/header heights.
   const insets = useSafeAreaInsets();
-  const tabBarH = useBottomTabBarHeight();
-
-  const [headerH, setHeaderH] = useState<number>(0);
-  const onHeaderLayout = (e: LayoutChangeEvent) => {
-    const h = Math.ceil(e.nativeEvent.layout.height);
-    if (h !== headerH) setHeaderH(h);
-  };
-
-  const frameViewportH =
-    windowH -
-    insets.top -
-    insets.bottom -
-    tabBarH -
-    headerH -
-    0 /* scene top padding */ -
-    0; /* scene bottom padding */
+  const tabBarH = 64 + Math.max(insets.bottom, 10); // custom GlassTabBar height
+  const [viewportHeight, setViewportHeight] = useState(0);
+  const [chartChromeHeight, setChartChromeHeight] = useState(0);
+  const frameViewportH = viewportHeight - tabBarH - 42; // 21pt above and below the tile
 
   const [chartHeight, setChartHeight] = useState<number>(180);
   const segH = useRef(0),
@@ -243,18 +228,14 @@ export default function ReadingsHistoryScreen() {
     if (!Number.isFinite(frameViewportH)) return;
     const innerPaddingTop = 14;
     const innerPaddingBottom = 16;
-    const gaps =
-      10 + // seg->name
-      8 + // name->date
-      10 + // date->chart
-      12 + // chart->pills
-      4; // pills top
-    const allowance = innerPaddingTop + innerPaddingBottom + gaps;
+    // Section measurements already include their margins. Measure the chart's
+    // unit, axis labels and padding as well, rather than counting only its bars.
+    const allowance = innerPaddingTop + innerPaddingBottom + chartChromeHeight;
     const nonChart = segH.current + nameH.current + dateH.current + pillsH.current + allowance;
 
     const available = Math.max(140, Math.floor(frameViewportH - nonChart));
     if (available !== chartHeight && Number.isFinite(available)) setChartHeight(available);
-  }, [frameViewportH, chartHeight]);
+  }, [frameViewportH, chartHeight, chartChromeHeight]);
 
   const onLayoutSeg = (e: LayoutChangeEvent) => {
     const h = Math.ceil(e.nativeEvent.layout.height);
@@ -585,7 +566,7 @@ export default function ReadingsHistoryScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <View onLayout={onHeaderLayout}>
+      <View>
         <GlassHeader
           title={t("readingsHistory.headerTitle")}
           gradientColors={HEADER_GRADIENT_TINT}
@@ -597,6 +578,7 @@ export default function ReadingsHistoryScreen() {
       </View>
 
       <Animated.View
+        onLayout={(event) => setViewportHeight(event.nativeEvent.layout.height)}
         style={{
           flex: 1,
           opacity: contentOpacity,
@@ -883,6 +865,10 @@ export default function ReadingsHistoryScreen() {
                 />
               </View>
 
+              <View onLayout={(event) => {
+                const chrome = Math.max(0, event.nativeEvent.layout.height - chartHeight);
+                setChartChromeHeight((previous) => Math.abs(previous - chrome) < 1 ? previous : chrome);
+              }}>
               <HistoryChart
                 labels={labels}
                 values={displayValues}
@@ -893,6 +879,7 @@ export default function ReadingsHistoryScreen() {
                 fixedLabelIndex={latestLabelIndex !== null ? latestLabelIndex : undefined}
                 labelMode={barLabelMode}
               />
+              </View>
 
               <View onLayout={onLayoutPills}>
                 <MetricPills value={metric} onChange={setMetric} />
@@ -900,7 +887,6 @@ export default function ReadingsHistoryScreen() {
             </View>
           </View>
 
-          <View style={{ height: 60 }} />
         </ScrollView>
       </Animated.View>
 

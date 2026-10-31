@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useIsFocused } from "@react-navigation/native";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import FAB from "../../../shared/ui/FAB";
+import AppModalHost from "../../../shared/ui/AppModalHost";
 import GlassCard from "../../profile/components/GlassCard";
 import AddContactModal from "../components/AddContactModal";
 import ContactDetailsModal from "../components/ContactDetailsModal";
@@ -294,9 +295,11 @@ export default function ContactsScreen() {
           </View>
         </View>
       )}
+      <AppModalHost>
       <AddContactModal visible={isFocused && addVisible} onClose={() => setAddVisible(false)} />
       <ContactDetailsModal contact={isFocused ? selectedContact : null} onClose={() => setSelectedContactId(null)} />
       <DeleteContactModal contact={isFocused ? deletingContact : null} onClose={() => setDeletingContactId(null)} />
+      </AppModalHost>
     </View>
   );
 }

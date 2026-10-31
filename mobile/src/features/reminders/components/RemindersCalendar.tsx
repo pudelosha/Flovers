@@ -1,5 +1,7 @@
-import React, { useMemo, useCallback, useEffect, useState } from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import React, { useMemo, useCallback, useEffect, useRef, useState } from "react";
+import { BackHandler, Pressable, View, Text, ScrollView, StyleSheet, useWindowDimensions } from "react-native";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Calendar from "react-native-calendars/src/calendar";
 import { LocaleConfig } from "react-native-calendars";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -8,6 +10,8 @@ import LinearGradient from "react-native-linear-gradient";
 import type { Reminder as UIReminder, ReminderType } from "../types/reminders.types";
 import { ACCENT_BY_TYPE } from "../constants/reminders.constants";
 import ReminderMiniTile from "./ReminderMiniTile";
+import ReminderMiniTileMenu from "./ReminderMiniTileMenu";
+import { plantAccess } from "../../../shared/utils/plantAccess";
 import { s } from "../styles/reminders.styles";
 
 import { useTranslation } from "react-i18next";
@@ -89,6 +93,39 @@ export default function RemindersCalendar({
   const { t, i18n } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const nav = useNavigation<any>();
+  const focused = useIsFocused();
+  const insets = useSafeAreaInsets();
+  const window = useWindowDimensions();
+  const tileRefs = useRef<Record<string, View | null>>({});
+  const hostRef = useRef<View | null>(null);
+  const menuRequest = useRef(0);
+  const menuContext = `${selectedDate}:${currentLanguage}:${window.width}:${window.height}:${focused}`;
+  const currentContext = useRef(menuContext);
+  currentContext.current = menuContext;
+  const [menuAnchor, setMenuAnchor] = useState<{ id: string; context: string; right: number; top: number; width: number; height: number } | null>(null);
+  const [menuHeight, setMenuHeight] = useState(156);
+  const closeMenu = useCallback(() => {
+    menuRequest.current += 1;
+    setMenuAnchor(null);
+    onToggleMenu("");
+  }, [onToggleMenu]);
+  const toggleMenu = (id: string) => {
+    if (openMenuId === id) { closeMenu(); return; }
+    const request = ++menuRequest.current;
+    const context = menuContext;
+    tileRefs.current[id]?.measureInWindow((x, y, width, height) => {
+      if (request !== menuRequest.current || currentContext.current !== context || width <= 0 || height <= 0) return;
+      hostRef.current?.measureInWindow((hostX, hostY, hostWidth, hostHeight) => {
+        if (request !== menuRequest.current || currentContext.current !== context || hostWidth <= 0 || hostHeight <= 0) return;
+        setMenuHeight(156);
+        setMenuAnchor({ id, context, right: Math.max(12, hostWidth - (x - hostX) - width + 6), top: y - hostY - 6,
+          width: hostWidth, height: hostHeight });
+        onToggleMenu(id);
+      });
+    });
+  };
+  useEffect(() => () => { menuRequest.current += 1; }, []);
   const i18nResolvedLanguage = (i18n as any).resolvedLanguage as
     | string
     | undefined;
@@ -230,6 +267,16 @@ export default function RemindersCalendar({
     () => reminders.filter((r) => toISODateOnly(r.dueDate) === selectedDate),
     [reminders, selectedDate]
   );
+  const menuReminder = focused && menuAnchor?.context === menuContext && menuAnchor.id === openMenuId
+    ? remindersForSelected.find(reminder => reminder.id === openMenuId) : undefined;
+  const topLimit = 8;
+  const bottomLimit = (menuAnchor?.height ?? window.height) - 64 - Math.max(insets.bottom, 10) - 12;
+  const menuTop = menuAnchor ? Math.max(topLimit, Math.min(menuAnchor.top, bottomLimit - menuHeight)) : topLimit;
+  useEffect(() => {
+    if (!menuReminder) return;
+    const handler = BackHandler.addEventListener("hardwareBackPress", () => { closeMenu(); return true; });
+    return () => handler.remove();
+  }, [menuReminder?.id, closeMenu]);
 
   const typeLabel = (tt: ReminderType) =>
     tr(
@@ -238,13 +285,15 @@ export default function RemindersCalendar({
     );
 
   return (
+    <View ref={hostRef} collapsable={false} testID="reminders-calendar-host"
+      style={[styles.calendarHost, !!menuReminder && styles.calendarHostRaised]}>
     <ScrollView
       style={s.calendarWrap}
       contentContainerStyle={s.calendarScrollContent}
       showsVerticalScrollIndicator={false}
-      onScrollBeginDrag={() => onToggleMenu("")}
+      onScrollBeginDrag={closeMenu}
     >
-      <View style={s.calendarCard}>
+      <View style={s.calendarCard} testID="reminders-calendar-card">
         {/* Base green gradient: light -> dark */}
         <LinearGradient
           pointerEvents="none"
@@ -338,12 +387,16 @@ export default function RemindersCalendar({
               return (
                 <View
                   key={item.id}
+                  ref={node => { tileRefs.current[item.id] = node; }}
+                  collapsable={false}
+                  testID={`calendar-reminder-${item.id}`}
                   style={[styles.miniTileSlot, isMenuOpen && styles.miniTileSlotRaised]}
                 >
                   <ReminderMiniTile
                     reminder={item}
                     isMenuOpen={isMenuOpen}
-                    onToggleMenu={() => onToggleMenu(item.id)}
+                    renderMenu={false}
+                    onToggleMenu={() => toggleMenu(item.id)}
                     onToggleActive={() => onToggleActive(item)}
                     onEdit={() => onEdit(item)}
                     onDelete={() => onDelete(item)}
@@ -357,10 +410,27 @@ export default function RemindersCalendar({
 
       <View style={{ height: 140 }} />
     </ScrollView>
+    {!!menuReminder && !!menuAnchor && <View style={styles.menuOverlay}
+      testID="calendar-reminder-menu-overlay" accessibilityViewIsModal>
+        <Pressable testID="calendar-reminder-menu-backdrop" style={StyleSheet.absoluteFill}
+          accessibilityRole="button" accessibilityLabel={String(tr("sharing.common.close", "Close"))} onPress={closeMenu} />
+        <ReminderMiniTileMenu isActive={menuReminder.isActive} canEdit={plantAccess(menuReminder.access).canEdit}
+          style={{ top: menuTop, right: menuAnchor.right, maxWidth: Math.max(0, menuAnchor.width - menuAnchor.right - 12),
+            elevation: 0, shadowOpacity: 0 }}
+          onLayout={event => { const height = event.nativeEvent.layout.height; if (height > 0) setMenuHeight(height); }}
+          onToggleActive={() => { closeMenu(); onToggleActive(menuReminder); }}
+          onEdit={() => { closeMenu(); onEdit(menuReminder); }}
+          onDelete={() => { closeMenu(); onDelete(menuReminder); }}
+          onPlantDetails={() => { closeMenu(); nav.navigate("PlantDetails", { id: menuReminder.plantId }); }} />
+    </View>}
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  calendarHost: { flex: 1, position: "relative" },
+  calendarHostRaised: { zIndex: 50, elevation: 50 },
+  menuOverlay: { ...StyleSheet.absoluteFillObject, zIndex: 1000 },
   miniTileSlot: {
     marginBottom: 8,
     zIndex: 1,

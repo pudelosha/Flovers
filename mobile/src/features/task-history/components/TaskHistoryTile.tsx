@@ -174,14 +174,11 @@ export default function TaskHistoryTile({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
+      <Pressable testID="task-history-tile-body" accessible={false}
+        style={styles.tileBody} onPress={onToggleBody}
+        android_ripple={{ color: "rgba(255,255,255,0.10)" }}>
       <View style={s.cardRow}>
-        {/* BODY (pressable): opens the inline menu */}
-        <Pressable
-          accessible={false}
-          style={s.cardBodyPressable}
-          onPress={onToggleBody}
-          android_ripple={{ color: "rgba(255,255,255,0.10)" }}
-        >
+        <View style={s.cardBodyPressable}>
           {/* Left: icon only */}
           <View style={s.leftCol}>
             <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000000", 0.15) }]}>
@@ -228,13 +225,14 @@ export default function TaskHistoryTile({
               {completedBy}
             </Text>
           </View>
-        </Pressable>
+        </View>
       </View>
 
       {hasNote && <View style={[s.noteBox, styles.noteSection]}>
         <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
         <Text style={s.noteText}>{item.note}</Text>
       </View>}
+      </Pressable>
 
       {/* Inline menu */}
       {isMenuOpen && (
@@ -280,6 +278,7 @@ export default function TaskHistoryTile({
 }
 
 const styles = StyleSheet.create({
+  tileBody: { borderRadius: 28, overflow: "hidden" },
   noteSection: {
     marginHorizontal: 20,
     paddingTop: 0,

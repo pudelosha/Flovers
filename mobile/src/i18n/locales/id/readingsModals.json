@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "Penyiapan perangkat",
+      "sampleCodeHint": "Kamu bisa membuat contoh kode Arduino/ESP untuk setiap perangkat. Buka menu pada kartu perangkat, pilih «{{deviceDetails}}», lalu ketuk «{{emailCode}}» untuk menerima kodenya lewat email.",
       "httpEndpoints": "Titik akhir HTTP",
       "addReadingPost": "Tambahkan bacaan (POST)",
       "readReadingsGetPost": "Membaca pembacaan sensor (GET/POST)",

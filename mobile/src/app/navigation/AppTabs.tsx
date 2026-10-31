@@ -22,6 +22,7 @@ import ContactsScreen from "../../features/sharing/pages/ContactsScreen";
 import SharedPlantsScreen from "../../features/sharing/pages/SharedPlantsScreen";
 import SharePlantModal from "../../features/sharing/components/SharePlantModal";
 import SharingToastHost from "../../features/sharing/components/SharingToastHost";
+import AppModalHost from "../../shared/ui/AppModalHost";
 import { SharingPreviewProvider, useSharingPreview } from "../../features/sharing/state/SharingPreviewProvider";
 import { ContactsProvider } from "../../features/sharing/state/ContactsProvider";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
@@ -378,16 +379,14 @@ function AppTabsNavigator() {
 }
 
 export default function AppTabs() {
-  const insets = useSafeAreaInsets();
-  const tabBarHeight = TAB_CONTENT_HEIGHT + Math.max(insets.bottom, MIN_TAB_BOTTOM_PADDING);
   return (
     <SharingPreviewProvider>
       <ContactsProvider>
       <View style={{ flex: 1 }}>
         <AppTabsNavigator />
-        <View pointerEvents="box-none" style={[StyleSheet.absoluteFill, { bottom: tabBarHeight }]}>
+        <AppModalHost>
           <SharePlantModal />
-        </View>
+        </AppModalHost>
         <SharingToastHost />
       </View>
       </ContactsProvider>

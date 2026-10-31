@@ -54,6 +54,22 @@ it("omits the notes section when no meaningful note was added", () => {
   expect(view.getByText("Anna")).toBeTruthy();
 });
 
+it("opens the submenu from the note and the surrounding tile space without bubbling menu actions", () => {
+  const toggleMenu = jest.fn(), pressBody = jest.fn(), goToPlant = jest.fn();
+  const view = render(<TaskHistoryTile item={{ ...item, note: "Short note" }} isMenuOpen
+    onToggleMenu={toggleMenu} onPressBody={pressBody} onGoToPlant={goToPlant} />);
+  const body = view.getByTestId("task-history-tile-body");
+  expect(within(body).getByText("Short note")).toBeTruthy();
+  fireEvent.press(body);
+  fireEvent.press(view.getByText("Short note"));
+  expect(toggleMenu).toHaveBeenCalledTimes(2);
+  expect(pressBody).toHaveBeenCalledTimes(2);
+  fireEvent.press(view.getByText("taskHistory.menu.goToPlant"));
+  expect(toggleMenu).toHaveBeenCalledTimes(3);
+  expect(pressBody).toHaveBeenCalledTimes(2);
+  expect(goToPlant).toHaveBeenCalledTimes(1);
+});
+
 it("keeps owner menu actions and prevents shared viewers from editing or deleting history", () => {
   const toggleMenu = jest.fn(), goToPlant = jest.fn();
   const view = render(<TaskHistoryTile item={item} isMenuOpen onToggleMenu={toggleMenu} onGoToPlant={goToPlant} />);

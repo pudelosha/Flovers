@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "기기 설정",
+      "sampleCodeHint": "기기별 Arduino/ESP 예제 코드를 생성할 수 있습니다. 해당 기기 카드의 메뉴에서 ‘{{deviceDetails}}’를 선택한 다음 ‘{{emailCode}}’를 누르면 이메일로 코드를 받을 수 있습니다.",
       "httpEndpoints": "HTTP 엔드포인트",
       "addReadingPost": "측정값 추가(POST)",
       "readReadingsGetPost": "측정값 읽기(GET/POST)",

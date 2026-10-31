@@ -2,6 +2,7 @@ import React from "react";
 import { Pressable, Text, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
+import AppModalHost from "../../../../shared/ui/AppModalHost";
 import { s } from "../../styles/task-history.styles";
 
 export default function ConfirmDeleteJournalPhotoModal({ visible, busy, onClose, onConfirm }: {
@@ -12,6 +13,7 @@ export default function ConfirmDeleteJournalPhotoModal({ visible, busy, onClose,
 }) {
   const { t } = useTranslation();
   return (
+    <AppModalHost>
     <ContactModalFrame visible={visible}
       title={t("taskHistory.photo.deleteTitle", { defaultValue: "Delete photo" })}
       onClose={onClose}>
@@ -30,5 +32,6 @@ export default function ConfirmDeleteJournalPhotoModal({ visible, busy, onClose,
         </Pressable>
       </View>
     </ContactModalFrame>
+    </AppModalHost>
   );
 }

@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "डिवाइस सेटअप",
+      "sampleCodeHint": "आप हर डिवाइस के लिए Arduino/ESP का नमूना कोड बना सकते हैं। उस डिवाइस के कार्ड का मेन्यू खोलें, «{{deviceDetails}}» चुनें और फिर «{{emailCode}}» पर टैप करें। कोड आपको ईमेल से मिल जाएगा।",
       "httpEndpoints": "HTTP एंडपॉइंट्स",
       "addReadingPost": "रीडिंग जोड़ें (POST)",
       "readReadingsGetPost": "रीडिंग पढ़ें (GET/POST)",

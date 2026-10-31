@@ -51,9 +51,14 @@ describe("NotificationsCard", () => {
     expect(baseProps.onSave).toHaveBeenCalledTimes(1);
   });
 
-  it("shows a third Shared section with independent email and push consent", () => {
+  it("places completion consent last in each channel and preserves independent preferences", () => {
     const view = render(<NotificationsCard {...baseProps} />);
-    expect(view.getByText("profile.notifications.sharedSection")).toBeTruthy();
+    expect(view.queryByText("profile.notifications.sharedSection")).toBeNull();
+    expect(view.queryByText("profile.notifications.sharedHint")).toBeNull();
+    const switches = view.getAllByRole("checkbox");
+    expect(switches).toHaveLength(8);
+    expect(switches[3].props.accessibilityLabel).toBe("profile.notifications.sharedEmailLabel");
+    expect(switches[7].props.accessibilityLabel).toBe("profile.notifications.sharedPushLabel");
     const email = view.getByRole("checkbox", { name: "profile.notifications.sharedEmailLabel" });
     const push = view.getByRole("checkbox", { name: "profile.notifications.sharedPushLabel" });
     expect(email.props.accessibilityState.checked).toBe(false);

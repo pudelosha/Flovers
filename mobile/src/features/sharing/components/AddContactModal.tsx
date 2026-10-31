@@ -40,6 +40,7 @@ export default function AddContactModal({ visible, onClose }: Props) {
 
   return (
     <ContactModalFrame
+      centerContent
       visible={visible}
       title={t("sharing.invite.title", { defaultValue: "Add contact" })}
       onClose={onClose}

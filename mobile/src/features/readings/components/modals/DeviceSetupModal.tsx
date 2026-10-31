@@ -157,6 +157,13 @@ export default function DeviceSetupModal({
               {t("readingsModals.deviceSetup.title")}
             </Text>
 
+            <Text style={styles.sampleCodeHint}>
+              {String(t("readingsModals.deviceSetup.sampleCodeHint", {
+                deviceDetails: t("readings.menu.deviceDetails"),
+                emailCode: t("readingsModals.deviceDetails.emailCode"),
+              }))}
+            </Text>
+
             <View style={{ marginHorizontal: 16, gap: 12 }}>
               {/* Endpoints */}
               <Text style={styles.inputLabel}>
@@ -494,6 +501,7 @@ function CodeBlock({ text }: { text: string }) {
 }
 
 const styles = StyleSheet.create({
+  sampleCodeHint: { marginHorizontal: 16, color: "rgba(255,255,255,0.9)", fontSize: 13, lineHeight: 19 },
   inputLabel: {
     marginTop: 8,
     marginBottom: 6,

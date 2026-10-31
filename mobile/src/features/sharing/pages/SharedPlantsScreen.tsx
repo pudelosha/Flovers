@@ -5,6 +5,7 @@ import { useIsFocused, useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import FAB from "../../../shared/ui/FAB";
+import AppModalHost from "../../../shared/ui/AppModalHost";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
 import type { FabAction } from "../../../shared/ui/FAB";
@@ -229,7 +230,9 @@ export default function SharedPlantsScreen() {
           </Pressable>}
         </View>
       </View>}
+      <AppModalHost>
       <ContactModalFrame visible={isFocused && (removing !== null || deleting !== null)}
+        centerContent={removing !== null}
         title={deleting ? t("sharing.plants.deleteSharingTitle", { defaultValue: "Delete sharing?" }) : removing?.direction === "incoming"
           ? t("sharing.plants.leaveTitle", { defaultValue: "Leave shared plant?" })
           : t("sharing.plants.removeTitle", { defaultValue: "Remove access?" })}
@@ -284,6 +287,7 @@ export default function SharedPlantsScreen() {
             setRemoveConflict(false);
           }} />}
       </ContactModalFrame>
+      </AppModalHost>
     </View>
   );
 }

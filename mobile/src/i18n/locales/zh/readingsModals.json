@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "设备设置",
+      "sampleCodeHint": "你可以为每个设备生成 Arduino/ESP 示例代码。打开该设备卡片上的菜单，选择“{{deviceDetails}}”，然后点击“{{emailCode}}”，即可通过电子邮件接收代码。",
       "httpEndpoints": "HTTP 端点",
       "addReadingPost": "添加读数 (POST)",
       "readReadingsGetPost": "读取读数 (GET/POST)",

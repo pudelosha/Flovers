@@ -17,6 +17,7 @@
     },
     "deviceSetup": {
       "title": "Geräteeinrichtung",
+      "sampleCodeHint": "Für jedes Gerät kannst du Beispielcode für Arduino/ESP erstellen lassen. Öffne das Menü der jeweiligen Gerätekachel, wähle „{{deviceDetails}}“ und tippe auf „{{emailCode}}“. Der Code wird dir per E-Mail zugeschickt.",
       "httpEndpoints": "HTTP-Endpunkte",
       "addReadingPost": "Messwert hinzufügen (POST)",
       "readReadingsGetPost": "Messwerte lesen (GET/POST)",

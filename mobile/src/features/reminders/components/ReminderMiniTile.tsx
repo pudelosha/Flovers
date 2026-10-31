@@ -18,6 +18,7 @@ type Props = {
   onToggleActive?: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
+  renderMenu?: boolean;
 };
 
 function toTypeKey(t: string) {
@@ -59,6 +60,7 @@ export default function ReminderMiniTile({
   onToggleActive,
   onEdit,
   onDelete,
+  renderMenu = true,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -152,7 +154,7 @@ export default function ReminderMiniTile({
         </View>
       </Pressable>
 
-      {isMenuOpen && (
+      {isMenuOpen && renderMenu && (
         <ReminderMiniTileMenu
           canEdit={access.canEdit}
           onPlantDetails={() => {
