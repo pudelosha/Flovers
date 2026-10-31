@@ -9,13 +9,14 @@ export type ContactsSnapshot = {
 
 export type ContactsErrorCode =
   | "invalid" | "notFound" | "self" | "alreadyContact" | "alreadyPending"
-  | "throttled" | "unavailable";
+  | "alreadyRegistered" | "throttled" | "unavailable";
 
 export type ContactsMutationResult =
   | { ok: true }
   | { ok: false; reason: ContactsErrorCode | "busy" | "staleSession" };
 
 export const CONTACT_ERROR_MESSAGES: Record<ContactsErrorCode, string> = {
+  alreadyRegistered: "This email is already registered. Use Add contact instead.",
   invalid: "Enter a valid email address or Flovers ID.",
   notFound: "No active Flovers account matches this email address or ID.",
   self: "You cannot invite yourself.",

@@ -177,7 +177,8 @@
       "alreadyContact": "Diese Person ist bereits in deinen Kontakten.",
       "alreadyPending": "Für diese Person gibt es bereits eine offene Einladung.",
       "throttled": "Zu viele Anfragen. Warte kurz und versuche es erneut.",
-      "unavailable": "Verbindung fehlgeschlagen. Bitte versuche es erneut."
+      "unavailable": "Verbindung fehlgeschlagen. Bitte versuche es erneut.",
+      "alreadyRegistered": "Diese E-Mail-Adresse ist bereits registriert. Nutze Kontakt hinzuf?gen."
     },
     "access": {
       "sharedBy": "Geteilt von {{name}}",
@@ -196,6 +197,14 @@
       "expired": "Wähle ein Enddatum, das noch nicht vergangen ist.",
       "throttled": "Zu viele Anfragen. Warte kurz und versuche es erneut.",
       "unavailable": "Die Freigabe konnte nicht geladen oder gespeichert werden. Versuche es erneut."
+    },
+    "emailInvite": {
+      "title": "Per E-Mail einladen",
+      "description": "Lade jemanden ein, der noch kein Flovers-Konto hat. Wir senden die Anleitung in der gew?hlten Sprache. Die Einladung gilt 30 Tage.",
+      "pending": "Wartet auf Registrierung",
+      "alreadyRegistered": "Diese E-Mail-Adresse ist bereits registriert. Nutze Kontakt hinzuf?gen.",
+      "language": "Sprache der Einladung",
+      "email": "E-Mail-Adresse"
     }
   }
 }

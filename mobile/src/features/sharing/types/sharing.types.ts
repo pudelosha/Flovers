@@ -6,6 +6,7 @@ export type SharingContact = {
 };
 
 export type ContactInvitation = {
+  awaitingRegistration?: boolean;
   id: string;
   contact: SharingContact;
   direction: "incoming" | "outgoing";

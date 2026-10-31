@@ -429,7 +429,7 @@ export default function RemindersCalendar({
 
 const styles = StyleSheet.create({
   calendarHost: { flex: 1, position: "relative" },
-  calendarHostRaised: { zIndex: 50, elevation: 50 },
+  calendarHostRaised: { zIndex: 50, elevation: 0 },
   menuOverlay: { ...StyleSheet.absoluteFillObject, zIndex: 1000 },
   miniTileSlot: {
     marginBottom: 8,

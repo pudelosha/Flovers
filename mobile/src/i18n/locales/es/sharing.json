@@ -177,7 +177,8 @@
       "alreadyContact": "Esta persona ya está en tus contactos.",
       "alreadyPending": "Ya hay una invitación pendiente para esta persona.",
       "throttled": "Demasiadas solicitudes. Espera un poco y vuelve a intentarlo.",
-      "unavailable": "No se ha podido conectar. Vuelve a intentarlo."
+      "unavailable": "No se ha podido conectar. Vuelve a intentarlo.",
+      "alreadyRegistered": "Este correo ya est? registrado. Usa A?adir contacto."
     },
     "access": {
       "sharedBy": "Compartida por {{name}}",
@@ -196,6 +197,14 @@
       "expired": "Elige una fecha de finalización que no haya pasado.",
       "throttled": "Demasiadas solicitudes. Espera un momento e inténtalo de nuevo.",
       "unavailable": "No se pudo cargar o actualizar la configuración de uso compartido. Inténtalo de nuevo."
+    },
+    "emailInvite": {
+      "title": "Invitar por correo",
+      "description": "Invita a alguien que a?n no tenga cuenta en Flovers. Le enviaremos las instrucciones en el idioma elegido. La invitaci?n caduca en 30 d?as.",
+      "pending": "Pendiente de registro",
+      "alreadyRegistered": "Este correo ya est? registrado. Usa A?adir contacto.",
+      "language": "Idioma de la invitaci?n",
+      "email": "Correo electr?nico"
     }
   }
 }

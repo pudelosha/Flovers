@@ -9,7 +9,7 @@ export class ContactsServiceError extends Error {
   }
 }
 
-const errorCodes: ContactsErrorCode[] = ["invalid", "notFound", "self", "alreadyContact", "alreadyPending", "throttled", "unavailable"];
+const errorCodes: ContactsErrorCode[] = ["invalid", "notFound", "self", "alreadyContact", "alreadyPending", "alreadyRegistered", "throttled", "unavailable"];
 
 export function contactsErrorCode(error: unknown): ContactsErrorCode {
   if (error instanceof ContactsServiceError) return error.reason;
@@ -52,15 +52,26 @@ export function parseContactsSnapshot(response: unknown): ContactsSnapshot {
   if (counts.contacts !== contacts.length || counts.incoming !== incoming || counts.outgoing !== outgoing) {
     throw new ContactsServiceError("unavailable");
   }
+  if (data.email_invitations !== undefined) {
+    if (!Array.isArray(data.email_invitations)) throw new ContactsServiceError("unavailable");
+    for (const raw of data.email_invitations) {
+      const item = record(raw);
+      if (typeof item.id !== "string" || !item.id || typeof item.email !== "string" || !item.email.includes("@") || !isContactIdentifier(item.email)) {
+        throw new ContactsServiceError("unavailable");
+      }
+      invitations.push({ id: `email:${item.id}`, direction: "outgoing", awaitingRegistration: true,
+        contact: { id: `email:${item.id}`, name: item.email, email: "", floversId: "" } });
+    }
+  }
   return {
     currentUser: person(data.current_user), contacts, invitations,
-    counts: { contacts: contacts.length, incoming, outgoing },
+    counts: { contacts: contacts.length, incoming, outgoing: invitations.length - incoming },
   };
 }
 
-async function contactsRequest(path: string, method: "GET" | "POST" | "PATCH" | "DELETE", body?: unknown) {
+async function contactsRequest(path: string, method: "GET" | "POST" | "PATCH" | "DELETE", body?: unknown, timeoutMs?: number) {
   try {
-    return parseContactsSnapshot(await request<unknown>(path, method, body, { auth: true }));
+    return parseContactsSnapshot(await request<unknown>(path, method, body, timeoutMs ? { auth: true, timeoutMs } : { auth: true }));
   } catch (error) {
     throw new ContactsServiceError(contactsErrorCode(error));
   }
@@ -74,6 +85,9 @@ export function isContactIdentifier(value: string) {
 export const fetchContacts = () => contactsRequest("/contacts/", "GET");
 export const sendContactInvitation = (identifier: string) => contactsRequest("/contacts/invitations/", "POST", { identifier: identifier.trim() });
 export const acceptContactInvitation = (id: string) => contactsRequest(`/contacts/invitations/${encodeURIComponent(id)}/accept/`, "POST", {});
-export const dismissContactInvitation = (id: string) => contactsRequest(`/contacts/invitations/${encodeURIComponent(id)}/`, "DELETE");
+export const dismissContactInvitation = (id: string) => id.startsWith("email:")
+  ? contactsRequest(`/contacts/email-invitations/${encodeURIComponent(id.slice(6))}/`, "DELETE")
+  : contactsRequest(`/contacts/invitations/${encodeURIComponent(id)}/`, "DELETE");
+export const sendEmailInvitation = (email: string, language: string) => contactsRequest("/contacts/email-invitations/", "POST", { email: email.trim(), language }, 60000);
 export const renameContact = (id: string, name: string) => contactsRequest(`/contacts/${encodeURIComponent(id)}/`, "PATCH", { name: name.trim() });
 export const deleteContact = (id: string) => contactsRequest(`/contacts/${encodeURIComponent(id)}/`, "DELETE");

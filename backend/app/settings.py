@@ -259,3 +259,7 @@ SUPPORTED_LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "
 
 # Contact (Support/Report Bug) inbox
 SUPPORT_INBOX_EMAIL = env("SUPPORT_INBOX_EMAIL", default="support@flovers.app")
+
+# Optional store links for invitations; leave blank until the listing is ready.
+INVITATION_GOOGLE_PLAY_URL = env("INVITATION_GOOGLE_PLAY_URL", default="")
+INVITATION_APP_STORE_URL = env("INVITATION_APP_STORE_URL", default="")

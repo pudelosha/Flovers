@@ -1,0 +1,10 @@
+<h2>{{ title }}</h2>
+<p><strong>{{ inviter }}</strong> {{ intro }}</p>
+<p>{{ steps }}</p>
+<p><strong>{{ invite_email }}</strong></p>
+<p>{{ consent }}</p>
+<p>{{ id_label }}: {{ inviter_id }}</p>
+<p><a href="{{ website_url }}">{{ website }}</a></p>
+{% if google_play_url %}<p><a href="{{ google_play_url }}">Google Play</a></p>{% endif %}
+{% if app_store_url %}<p><a href="{{ app_store_url }}">App Store</a></p>{% endif %}
+<p>{{ ignore }}</p>

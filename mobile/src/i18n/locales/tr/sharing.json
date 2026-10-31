@@ -177,7 +177,8 @@
       "alreadyContact": "Bu kişi zaten kişileriniz arasında.",
       "alreadyPending": "Bu kişi için bir davetiye zaten beklemede.",
       "throttled": "Çok fazla istek var. Biraz bekleyip tekrar deneyin.",
-      "unavailable": "Bağlantı kurulamadı. Lütfen tekrar deneyin."
+      "unavailable": "Bağlantı kurulamadı. Lütfen tekrar deneyin.",
+      "alreadyRegistered": "Bu e-posta zaten kay?tl?. Ki?i ekle se?ene?ini kullan?n."
     },
     "access": {
       "sharedBy": "{{name}} tarafından paylaşıldı",
@@ -196,6 +197,14 @@
       "expired": "Geçmemiş bir bitiş tarihi seçin.",
       "throttled": "Çok fazla istek var. Biraz bekleyip tekrar deneyin.",
       "unavailable": "Paylaşım yüklenemedi veya güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "emailInvite": {
+      "title": "E-postayla davet et",
+      "description": "Hen?z Flovers hesab? olmayan birini davet edin. Se?ti?iniz dilde talimatlar g?nderece?iz. Davet 30 g?n ge?erlidir.",
+      "pending": "Kay?t olmas? bekleniyor",
+      "alreadyRegistered": "Bu e-posta zaten kay?tl?. Ki?i ekle se?ene?ini kullan?n.",
+      "language": "Davet dili",
+      "email": "E-posta adresi"
     }
   }
 }

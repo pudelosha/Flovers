@@ -91,7 +91,11 @@ def test_create_list_private_image_and_availability_without_changing_cover(scene
     assert filtered["results"] == [] and len(filtered["availability"]) == 1
 
 
-def test_rolling_limit_is_per_plant_and_uses_server_time_not_optional_date(scene):
+def test_rolling_limit_is_per_plant_and_uses_server_time_not_optional_date(scene, monkeypatch):
+    # Image processing may take over a second on busy CI machines. Freeze the
+    # clock so the one-second-before-boundary assertion tests the actual limit.
+    fixed_now = timezone.now()
+    monkeypatch.setattr(timezone, "now", lambda: fixed_now)
     result = scene.create(taken_on="2001-01-01")
     assert result.status_code == 201
     blocked = scene.create()
@@ -381,3 +385,23 @@ def test_concurrent_edits_cannot_overwrite_each_other(scene):
         statuses = list(pool.map(save, ["First", "Second"]))
     assert sorted(statuses) == [200, 409]
     assert JournalPhotoEntry.objects.get().revision == 1
+
+
+@pytest.mark.parametrize("mode", ["plant", "location", "types", "olderThan"])
+def test_bulk_task_deletion_preserves_journal_photo_and_private_file(scene, mode):
+    from reminders.models import Reminder, ReminderTask
+    photo = scene.create(notes="Keep this progress photo").data
+    reminder = Reminder.objects.create(user=scene.owner, plant=scene.plant, type="water",
+        start_date=timezone.localdate(), interval_value=7)
+    task = ReminderTask.objects.create(reminder=reminder, user=scene.owner, due_date=timezone.localdate(),
+        status="completed", completed_at=timezone.now()-timedelta(days=60))
+    payload = {"plant": {"mode": mode, "plantId": str(scene.plant.pk)},
+               "location": {"mode": mode, "location": "Kitchen"},
+               "types": {"mode": mode, "types": ["watering"]},
+               "olderThan": {"mode": mode, "days": 30}}[mode]
+    response = scene.client.post(reverse("reminder-task-bulk-delete"), payload, format="json")
+    assert response.status_code == 200 and response.data["deleted"] == 1
+    assert not ReminderTask.objects.filter(pk=task.pk).exists()
+    assert JournalPhotoEntry.objects.filter(pk=photo["id"]).exists()
+    assert PlantImage.objects.filter(pk=photo["photo"]["id"]).exists()
+    assert scene.client.get(photo["photo"]["url"]).status_code == 200

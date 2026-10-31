@@ -9,6 +9,7 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 import FAB from "../../../shared/ui/FAB";
 import AppModalHost from "../../../shared/ui/AppModalHost";
 import GlassCard from "../../profile/components/GlassCard";
+import InviteByEmailModal from "../components/InviteByEmailModal";
 import AddContactModal from "../components/AddContactModal";
 import ContactDetailsModal from "../components/ContactDetailsModal";
 import DeleteContactModal from "../components/DeleteContactModal";
@@ -37,6 +38,7 @@ export default function ContactsScreen() {
   const invitations = snapshot?.invitations ?? [];
   const currentUser = snapshot?.currentUser;
   const [actionError, setActionError] = useState<string | null>(null);
+  const [emailInviteVisible, setEmailInviteVisible] = useState(false);
   const [addVisible, setAddVisible] = useState(false);
   const [selectedContactId, setSelectedContactId] = useState<string | null>(null);
   const [deletingContactId, setDeletingContactId] = useState<string | null>(null);
@@ -103,16 +105,17 @@ export default function ContactsScreen() {
   useEffect(() => {
     if (!isFocused) {
       setAddVisible(false);
+      setEmailInviteVisible(false);
       setSelectedContactId(null);
       setDeletingContactId(null);
       closeMenu();
     }
   }, [isFocused, closeMenu]);
   useEffect(() => {
-    if (!isFocused || addVisible || selectedContactId || deletingContactId) {
+    if (!isFocused || emailInviteVisible || addVisible || selectedContactId || deletingContactId) {
       setFabCloseSignal((value) => value + 1);
     }
-  }, [isFocused, addVisible, selectedContactId, deletingContactId]);
+  }, [isFocused, emailInviteVisible, addVisible, selectedContactId, deletingContactId]);
   useEffect(() => {
     if (menuOpenId && !contacts.some((contact) => contact.id === menuOpenId)) closeMenu();
   }, [contacts, menuOpenId, closeMenu]);
@@ -169,6 +172,7 @@ export default function ContactsScreen() {
                 ? t("sharing.requests.incoming", { defaultValue: "Incoming" })
                 : t("sharing.requests.outgoing", { defaultValue: "Sent" })}</Text>
               {renderIdentity(invitation.contact)}
+              {invitation.awaitingRegistration && <Text style={s.hint}>{t("sharing.emailInvite.pending")}</Text>}
               {invitation.direction === "incoming" ? (
                 <View style={local.invitationActions}>
                   <SharingButton
@@ -258,7 +262,7 @@ export default function ContactsScreen() {
         </GlassCard>}
         </>}
       </SharingPage>
-      {isFocused && !!snapshot && !addVisible && !selectedContact && !deletingContact && (
+      {isFocused && !!snapshot && !emailInviteVisible && !addVisible && !selectedContact && !deletingContact && (
         <FAB
           position={settings.fabPosition}
           closeSignal={fabCloseSignal}
@@ -268,6 +272,10 @@ export default function ContactsScreen() {
             icon: "account-plus-outline",
             label: t("sharing.contacts.add", { defaultValue: "Add contact" }),
             onPress: () => { closeMenu(); setAddVisible(true); },
+          }, {
+            key: "invite-by-email", icon: "email-plus-outline",
+            label: t("sharing.emailInvite.title"),
+            onPress: () => { closeMenu(); setEmailInviteVisible(true); },
           }]}
         />
       )}
@@ -296,6 +304,7 @@ export default function ContactsScreen() {
         </View>
       )}
       <AppModalHost>
+      <InviteByEmailModal visible={isFocused && emailInviteVisible} onClose={() => setEmailInviteVisible(false)} />
       <AddContactModal visible={isFocused && addVisible} onClose={() => setAddVisible(false)} />
       <ContactDetailsModal contact={isFocused ? selectedContact : null} onClose={() => setSelectedContactId(null)} />
       <DeleteContactModal contact={isFocused ? deletingContact : null} onClose={() => setDeletingContactId(null)} />

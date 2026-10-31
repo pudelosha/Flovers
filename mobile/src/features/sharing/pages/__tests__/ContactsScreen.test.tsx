@@ -10,16 +10,22 @@ import GlassCard from "../../../profile/components/GlassCard";
 import FAB from "../../../../shared/ui/FAB";
 import { SharingPage } from "../../components/SharingUI";
 
+jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: (key: string, options?: any) => {
+  const catalog = require("../../../../i18n/locales/en/sharing.json");
+  const text = options?.defaultValue ?? key.split(".").reduce((value: any, part) => value?.[part], catalog) ?? key;
+  return text.replace(/{{(\w+)}}/g, (_match: string, name: string) => String(options?.[name] ?? ""));
+} }) }));
+
 let mockFocused = true;
 let mockFabPosition = "right";
 jest.mock("@react-navigation/native", () => ({ useIsFocused: () => mockFocused }));
 jest.mock("react-native-safe-area-context", () => ({ useSafeAreaInsets: () => ({ top: 0, bottom: 0, left: 0, right: 0 }) }));
-jest.mock("../../../../app/providers/SettingsProvider", () => ({ useSettings: () => ({ settings: { fabPosition: mockFabPosition } }) }));
+jest.mock("../../../../app/providers/SettingsProvider", () => ({ useSettings: () => ({ settings: { fabPosition: mockFabPosition, language: "pl" } }) }));
 jest.mock("../../../../api/client", () => ({ getAuthSessionId: () => 1 }));
 jest.mock("../../../../app/providers/useAuth", () => ({ useAuth: () => ({ user: { id: 1, email: "owner@example.test" } }) }));
 jest.mock("@react-native-clipboard/clipboard", () => ({ __esModule: true, default: { setString: jest.fn() } }));
 jest.mock("../../../../api/services/contacts.service", () => ({
-  fetchContacts: jest.fn(), sendContactInvitation: jest.fn(), acceptContactInvitation: jest.fn(), dismissContactInvitation: jest.fn(), renameContact: jest.fn(), deleteContact: jest.fn(),
+  sendEmailInvitation: jest.fn(), fetchContacts: jest.fn(), sendContactInvitation: jest.fn(), acceptContactInvitation: jest.fn(), dismissContactInvitation: jest.fn(), renameContact: jest.fn(), deleteContact: jest.fn(),
   contactsErrorCode: (error: any) => error.reason || "unavailable", isContactIdentifier: (value: string) => value.includes("@") || value.startsWith("FL-"),
 }));
 jest.mock("../../components/SharingUI", () => {
@@ -96,4 +102,36 @@ describe("real Contacts screen", () => {
   it("dismisses only the expanded menu on Android Back", async () => {
     let onBack: any; jest.spyOn(BackHandler, "addEventListener").mockImplementation((_event, callback) => { onBack = callback; return { remove: jest.fn() }; }); const view = await setup(); fireEvent.press(view.getByRole("button", { name: "Actions for Bob" })); act(() => expect(onBack()).toBe(true)); expect(view.queryByRole("button", { name: "Edit" })).toBeNull();
   });
+});
+
+
+it("invites a new user from FAB with profile language, supports language changes and shows pending registration", async () => {
+  const view = await setup();
+  fireEvent.press(view.getByText("plus"));
+  fireEvent.press(view.getByText("Invite by email"));
+  const field = await view.findByLabelText("Email address");
+  expect(view.getByText(/does not have a Flovers account/)).toBeTruthy();
+  fireEvent.changeText(field, "invalid");
+  fireEvent.press(view.getByRole("button", { name: "Send invitation" }));
+  await view.findByRole("alert");
+  expect(api.sendEmailInvitation).not.toHaveBeenCalled();
+  fireEvent.changeText(field, "registered@example.test");
+  (api.sendEmailInvitation as jest.Mock).mockRejectedValueOnce({ reason: "alreadyRegistered" });
+  fireEvent.press(view.getByRole("button", { name: "Send invitation" }));
+  await view.findByText("This email is already registered. Use Add contact instead.");
+  expect(api.sendEmailInvitation).toHaveBeenCalledWith("registered@example.test", "pl");
+  fireEvent.press(view.getByText(/Polski/));
+  fireEvent.press(view.getByText(/Deutsch/));
+  fireEvent.changeText(field, "new@example.test");
+  const invitation = { id: "email:19", direction: "outgoing", awaitingRegistration: true,
+    contact: { id: "email:19", name: "new@example.test", email: "", floversId: "" } };
+  (api.sendEmailInvitation as jest.Mock).mockResolvedValueOnce(snapshot([bob], [invitation]));
+  fireEvent.press(view.getByRole("button", { name: "Send invitation" }));
+  await view.findByText("Waiting for registration");
+  expect(api.sendEmailInvitation).toHaveBeenLastCalledWith("new@example.test", "de");
+  expect(view.queryByLabelText("Email address")).toBeNull();
+  (api.dismissContactInvitation as jest.Mock).mockResolvedValueOnce(snapshot([bob], []));
+  fireEvent.press(view.getByRole("button", { name: "Cancel invitation" }));
+  await view.findByText("No pending invitations");
+  expect(api.dismissContactInvitation).toHaveBeenCalledWith("email:19");
 });

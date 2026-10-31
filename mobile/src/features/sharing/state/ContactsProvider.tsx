@@ -4,7 +4,7 @@ import { getAuthSessionId } from "../../../api/client";
 import { useAuth } from "../../../app/providers/useAuth";
 import {
   acceptContactInvitation, contactsErrorCode, deleteContact, dismissContactInvitation,
-  fetchContacts, isContactIdentifier, renameContact, sendContactInvitation,
+  fetchContacts, isContactIdentifier, renameContact, sendContactInvitation, sendEmailInvitation,
 } from "../../../api/services/contacts.service";
 import type { ContactsErrorCode, ContactsMutationResult, ContactsSnapshot } from "../types/contacts.types";
 import type { SharingToastKind } from "../types/sharing.types";
@@ -13,6 +13,7 @@ import { useSharingPreview } from "./SharingPreviewProvider";
 type ContactsState = { snapshot: ContactsSnapshot | null; loading: boolean; error: ContactsErrorCode | null; pending: string | null };
 type ContactsContextValue = ContactsState & {
   refresh: () => Promise<boolean>;
+  inviteByEmail: (email: string, language: string) => Promise<ContactsMutationResult>;
   inviteContact: (identifier: string) => Promise<ContactsMutationResult>;
   acceptInvitation: (id: string) => Promise<ContactsMutationResult>;
   dismissInvitation: (id: string) => Promise<ContactsMutationResult>;
@@ -83,6 +84,9 @@ function ContactsSession({ identity, session, children }: { identity: string | n
 
   const value = useMemo<ContactsContextValue>(() => ({
     ...state, refresh,
+    inviteByEmail: (email, language) => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
+      ? Promise.resolve({ ok: false, reason: "invalid" })
+      : mutate("email-invite", () => sendEmailInvitation(email, language), "contactsInvitationAdded"),
     inviteContact: (identifier) => !isContactIdentifier(identifier)
       ? Promise.resolve({ ok: false, reason: "invalid" })
       : mutate("invite", () => sendContactInvitation(identifier), "contactsInvitationAdded"),

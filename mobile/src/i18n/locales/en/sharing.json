@@ -177,7 +177,8 @@
       "alreadyContact": "This person is already in your contacts.",
       "alreadyPending": "An invitation for this person is already pending.",
       "throttled": "Too many requests. Wait a little and try again.",
-      "unavailable": "Could not connect. Please try again."
+      "unavailable": "Could not connect. Please try again.",
+      "alreadyRegistered": "This email is already registered. Use Add contact instead."
     },
     "access": {
       "sharedBy": "Shared by {{name}}",
@@ -196,6 +197,14 @@
       "expired": "Choose an end date that has not passed.",
       "throttled": "Too many requests. Wait a little and try again.",
       "unavailable": "Could not load or update sharing. Please try again."
+    },
+    "emailInvite": {
+      "title": "Invite by email",
+      "description": "Invite someone who does not have a Flovers account yet. We will email them instructions in the selected language. Invitations expire after 30 days.",
+      "pending": "Waiting for registration",
+      "alreadyRegistered": "This email is already registered. Use Add contact instead.",
+      "language": "Invitation language",
+      "email": "Email address"
     }
   }
 }

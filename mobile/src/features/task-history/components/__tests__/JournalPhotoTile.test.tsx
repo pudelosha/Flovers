@@ -27,12 +27,13 @@ beforeEach(() => {
   mockPhoto = { uri: "data:image/jpeg;base64,PRIVATE", loading: false, error: null, refresh: jest.fn() };
 });
 
-it("renders a fading authorised photo, Added timestamp and full note without task-type labels", () => {
+it("renders a fading authorised photo, Added date and full note without task-type labels", () => {
   const view = render(<JournalPhotoTile {...props()} />);
   expect(usePlantPhoto).toHaveBeenCalledWith(item.photo, { variant: "display", expiresAt: null });
   expect(view.UNSAFE_getByType(FramedPlantImage).props.uri).toBe("data:image/jpeg;base64,PRIVATE");
   expect(view.getByText("Added")).toBeTruthy();
-  expect(view.getByText(/31\.10\.2026 \d{2}:\d{2}/)).toBeTruthy();
+  expect(view.getByText("31.10.2026")).toBeTruthy();
+  expect(view.queryByText(/\d{2}:\d{2}/)).toBeNull();
   expect(view.getByText("Photo date: 28.10.2026")).toBeTruthy();
   expect(view.getByText("Note")).toBeTruthy();
   expect(view.getByText(item.note!).props.numberOfLines).toBeUndefined();
@@ -82,4 +83,19 @@ it("shows a spinner or failure placeholder without falling back to another plant
   view.rerender(<JournalPhotoTile {...props()} />);
   expect(view.getByText("image-off-outline")).toBeTruthy();
   expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+});
+
+
+it("opens the full photo from the shortcut without expanding the tile menu", () => {
+  const handlers = props();
+  const view = render(<JournalPhotoTile {...handlers} />);
+  const stopPropagation = jest.fn();
+  fireEvent.press(view.getByRole("button", { name: "View photo" }), { stopPropagation });
+  expect(stopPropagation).toHaveBeenCalledTimes(1);
+  expect(handlers.onViewPhoto).toHaveBeenCalledTimes(1);
+  expect(handlers.onToggleMenu).not.toHaveBeenCalled();
+  view.rerender(<JournalPhotoTile {...handlers} isMenuOpen />);
+  fireEvent.press(view.getByRole("button", { name: "View photo" }), { stopPropagation });
+  expect(handlers.onViewPhoto).toHaveBeenCalledTimes(2);
+  expect(handlers.onToggleMenu).toHaveBeenCalledTimes(1);
 });

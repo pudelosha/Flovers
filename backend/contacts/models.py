@@ -41,3 +41,18 @@ class Connection(models.Model):
 
     def __str__(self):
         return f"Connection<{self.user_low_id}, {self.user_high_id}: {self.status}>"
+
+
+class EmailInvitation(models.Model):
+    """A private invitation to join; never grants contact or plant access."""
+    sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
+                               related_name="email_contact_invitations")
+    email = models.EmailField(max_length=254, db_index=True)
+    language = models.CharField(max_length=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+    sent_at = models.DateTimeField(null=True)
+    expires_at = models.DateTimeField()
+    closed = models.BooleanField(default=False)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["sender", "email"], name="contacts_unique_email_invite")]

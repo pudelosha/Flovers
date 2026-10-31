@@ -218,6 +218,10 @@ export default function ReadingsHistoryScreen() {
   const [chartChromeHeight, setChartChromeHeight] = useState(0);
   const frameViewportH = viewportHeight - tabBarH - 42; // 21pt above and below the tile
 
+  const [layoutRevision, setLayoutRevision] = useState(0);
+  const [settledLayout, setSettledLayout] = useState("");
+  const [pageReady, setPageReady] = useState(false);
+  const focused = useRef(true);
   const [chartHeight, setChartHeight] = useState<number>(180);
   const segH = useRef(0),
     nameH = useRef(0),
@@ -241,6 +245,7 @@ export default function ReadingsHistoryScreen() {
     const h = Math.ceil(e.nativeEvent.layout.height);
     if (h !== segH.current) {
       segH.current = h;
+      setLayoutRevision(value => value + 1);
       updateChartHeight();
     }
   };
@@ -248,6 +253,7 @@ export default function ReadingsHistoryScreen() {
     const h = Math.ceil(e.nativeEvent.layout.height);
     if (h !== nameH.current) {
       nameH.current = h;
+      setLayoutRevision(value => value + 1);
       updateChartHeight();
     }
   };
@@ -255,6 +261,7 @@ export default function ReadingsHistoryScreen() {
     const h = Math.ceil(e.nativeEvent.layout.height);
     if (h !== dateH.current) {
       dateH.current = h;
+      setLayoutRevision(value => value + 1);
       updateChartHeight();
     }
   };
@@ -262,6 +269,7 @@ export default function ReadingsHistoryScreen() {
     const h = Math.ceil(e.nativeEvent.layout.height);
     if (h !== pillsH.current) {
       pillsH.current = h;
+      setLayoutRevision(value => value + 1);
       updateChartHeight();
     }
   };
@@ -274,6 +282,8 @@ export default function ReadingsHistoryScreen() {
   // LIVE: loading + chart data
   const [loadingDevice, setLoadingDevice] = useState(true);
   const [loadingHistory, setLoadingHistory] = useState(false);
+  const [loadedHistoryKey, setLoadedHistoryKey] = useState("");
+  const historyKey = JSON.stringify([device?.id, range, metric, historyStat, anchor.toISOString(), reloadToken, i18n.language]);
   const [labels, setLabels] = useState<string[]>([]);
   const [values, setValues] = useState<(number | null)[]>([]);
 
@@ -440,7 +450,7 @@ export default function ReadingsHistoryScreen() {
 
         showToast(msg, "error");
       } finally {
-        if (mounted) setLoadingHistory(false);
+        if (mounted) { setLoadedHistoryKey(historyKey); setLoadingHistory(false); }
       }
     };
 
@@ -449,7 +459,7 @@ export default function ReadingsHistoryScreen() {
     return () => {
       mounted = false;
     };
-  }, [device, range, metric, historyStat, anchor, span, reloadToken, showToast, t, i18n.language]);
+  }, [device, range, metric, historyStat, anchor, span, reloadToken, showToast, t, i18n.language, historyKey]);
 
   const navTo = useCallback(
     (name: string) => {
@@ -459,6 +469,19 @@ export default function ReadingsHistoryScreen() {
   );
 
   // ---------- ✨ ENTER/EXIT ANIMATION + reset current period ----------
+  const layoutKey = JSON.stringify([historyKey, loadedHistoryKey, viewportHeight, chartHeight, chartChromeHeight, layoutRevision, settings.dateFormat]);
+  useEffect(() => {
+    if (loadingDevice || loadingHistory || (device && loadedHistoryKey !== historyKey) ||
+        viewportHeight <= 0 || chartChromeHeight <= 0 ||
+        !segH.current || !nameH.current || !dateH.current || !pillsH.current) return;
+    let secondFrame: number | undefined;
+    const firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => setSettledLayout(layoutKey));
+    });
+    return () => { cancelAnimationFrame(firstFrame); if (secondFrame !== undefined) cancelAnimationFrame(secondFrame); };
+  }, [layoutKey, loadingDevice, loadingHistory, device, loadedHistoryKey, historyKey, viewportHeight, chartChromeHeight]);
+  const contentReady = !loadingDevice && !loadingHistory && (!device || loadedHistoryKey === historyKey) && settledLayout === layoutKey;
+
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
   const contentTranslateY = entry.interpolate({
@@ -472,6 +495,11 @@ export default function ReadingsHistoryScreen() {
 
   useFocusEffect(
     useCallback(() => {
+      focused.current = true;
+      setPageReady(false);
+      setSettledLayout("");
+      entry.stopAnimation();
+      entry.setValue(0);
       const now = new Date();
 
       if (params.metric) setMetric(params.metric);
@@ -483,24 +511,32 @@ export default function ReadingsHistoryScreen() {
       setAnchor(now);
       setChartMenuOpen(false);
 
-      Animated.timing(entry, {
-        toValue: 1,
-        duration: 220,
-        easing: Easing.out(Easing.cubic),
-        useNativeDriver: true,
-      }).start();
+
 
       return () => {
-        Animated.timing(entry, {
-          toValue: 0,
-          duration: 160,
-          easing: Easing.in(Easing.cubic),
-          useNativeDriver: true,
-        }).start();
+        focused.current = false;
+        setPageReady(false);
+        entry.stopAnimation();
+        entry.setValue(0);
       };
     }, [entry, params.metric, params.range])
   );
   // -----------------------------------------------------------------
+
+  // Once shown, keep the tile in place for date/range/metric requests.
+  // Only a focus transition resets this latch and replays its entry animation.
+  useEffect(() => {
+    if (focused.current && contentReady) setPageReady(true);
+  }, [contentReady]);
+
+  useEffect(() => {
+    if (!pageReady) { entry.stopAnimation(); entry.setValue(0); return; }
+    const animation = Animated.timing(entry, {
+      toValue: 1, duration: 220, easing: Easing.out(Easing.cubic), useNativeDriver: true,
+    });
+    animation.start();
+    return () => animation.stop();
+  }, [pageReady, entry]);
 
   // --------- Derived helpers for labels & navigation limits ---------
   const today = new Date();
@@ -578,15 +614,17 @@ export default function ReadingsHistoryScreen() {
       </View>
 
       <Animated.View
+        testID="readings-history-content" pointerEvents={pageReady ? "auto" : "none"}
+        accessibilityElementsHidden={!pageReady} importantForAccessibility={pageReady ? "auto" : "no-hide-descendants"}
         onLayout={(event) => setViewportHeight(event.nativeEvent.layout.height)}
         style={{
           flex: 1,
-          opacity: contentOpacity,
+          opacity: pageReady ? contentOpacity : 0,
           transform: [{ translateY: contentTranslateY }, { scale: contentScale }],
         }}
       >
         <ScrollView
-          contentContainerStyle={s.screenContent}
+          contentContainerStyle={[s.screenContent, { paddingBottom: tabBarH + 21 }]}
           showsVerticalScrollIndicator={false}
         >
           <View style={s.frameWrap}>
@@ -618,11 +656,11 @@ export default function ReadingsHistoryScreen() {
             </View>
 
             <View style={s.inner}>
-              <View onLayout={onLayoutSeg}>
+              <View testID="readings-history-seg" onLayout={onLayoutSeg}>
                 <HistorySegmented value={range} onChange={setRange} />
               </View>
 
-              <View onLayout={onLayoutName}>
+              <View testID="readings-history-name" onLayout={onLayoutName}>
                 <View
                   style={{
                     position: "relative",
@@ -855,7 +893,7 @@ export default function ReadingsHistoryScreen() {
                 </View>
               </View>
 
-              <View onLayout={onLayoutDate}>
+              <View testID="readings-history-date" onLayout={onLayoutDate}>
                 <DateNavigator
                   range={range}
                   span={span}
@@ -865,7 +903,7 @@ export default function ReadingsHistoryScreen() {
                 />
               </View>
 
-              <View onLayout={(event) => {
+              <View testID="readings-history-chart-layout" onLayout={(event) => {
                 const chrome = Math.max(0, event.nativeEvent.layout.height - chartHeight);
                 setChartChromeHeight((previous) => Math.abs(previous - chrome) < 1 ? previous : chrome);
               }}>
@@ -881,7 +919,7 @@ export default function ReadingsHistoryScreen() {
               />
               </View>
 
-              <View onLayout={onLayoutPills}>
+              <View testID="readings-history-pills" onLayout={onLayoutPills}>
                 <MetricPills value={metric} onChange={setMetric} />
               </View>
             </View>
@@ -890,7 +928,7 @@ export default function ReadingsHistoryScreen() {
         </ScrollView>
       </Animated.View>
 
-      {loadingHistory && <CenteredSpinner overlay size={40} color="#FFFFFF" />}
+      {(!pageReady || loadingHistory || (!!device && loadedHistoryKey !== historyKey)) && <CenteredSpinner overlay size={56} color="#FFFFFF" />}
 
       <DeleteReadingsModal
         visible={deleteModalVisible}

@@ -98,3 +98,11 @@ it("hides a menu when changing the selected date", () => {
   const view = open(); view.rerender(<Harness date="2026-11-01" />);
   expect(view.queryByTestId("calendar-reminder-menu-overlay")).toBeNull();
 });
+
+
+it("raises the calendar menu without casting a shadow over the floating button layer", () => {
+  const view = open();
+  const host = view.getByTestId("reminders-calendar-host");
+  expect(StyleSheet.flatten(host.props.style).elevation).toBe(0);
+  expect(view.UNSAFE_queryByType(Modal)).toBeNull();
+});

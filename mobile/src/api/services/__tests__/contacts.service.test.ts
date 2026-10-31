@@ -39,3 +39,18 @@ it("recognizes emails and public IDs with optional dashes case-insensitively", (
   expect(isContactIdentifier("FL-12345678-1234-1234-1234-123456789ABC")).toBe(true);
   expect(isContactIdentifier("FL-DEMO-ME")).toBe(false); expect(isContactIdentifier("not an email")).toBe(false);
 });
+
+
+it("merges private email invitations without fake public IDs and cancels them through their own endpoint", async () => {
+  const response: any = envelope();
+  response.data.email_invitations = [{ id: "15", email: "new@example.test", language: "pl" }];
+  const data = parseContactsSnapshot(response);
+  expect(data.counts.outgoing).toBe(1);
+  expect(data.invitations[1]).toMatchObject({ id: "email:15", awaitingRegistration: true,
+    contact: { name: "new@example.test", floversId: "" } });
+  (request as jest.Mock).mockResolvedValue(response);
+  await dismissContactInvitation("email:15");
+  expect(request).toHaveBeenLastCalledWith("/contacts/email-invitations/15/", "DELETE", undefined, { auth: true });
+  response.data.email_invitations = [{ id: "15", email: "FL-" + "A".repeat(32) }];
+  expect(() => parseContactsSnapshot(response)).toThrow();
+});

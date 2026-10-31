@@ -1,0 +1,10 @@
+{{ title }}
+{{ inviter }} {{ intro }}
+{{ steps }}
+{{ invite_email }}
+{{ consent }}
+{{ id_label }}: {{ inviter_id }}
+{{ website }}: {{ website_url }}
+{% if google_play_url %}Google Play: {{ google_play_url }}{% endif %}
+{% if app_store_url %}App Store: {{ app_store_url }}{% endif %}
+{{ ignore }}

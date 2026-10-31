@@ -28,8 +28,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
     return (settings.dateFormat || "DD.MM.YYYY").replace("YYYY", String(dt.getFullYear()))
       .replace("MM", String(dt.getMonth() + 1).padStart(2, "0")).replace("DD", String(dt.getDate()).padStart(2, "0"));
   };
-  const created = new Date(item.createdAt);
-  const timestamp = `${date(item.createdAt)} ${String(created.getHours()).padStart(2, "0")}:${String(created.getMinutes()).padStart(2, "0")}`;
+  const addedDate = date(item.createdAt);
   const action = (callback: () => void) => { onToggleMenu(); callback(); };
   return <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
     <View style={styles.glass}>
@@ -65,7 +64,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
             </View>
             <View style={styles.added}>
               <Text style={s.completedLabel}>{t("taskHistory.photo.added", { defaultValue: "Added" })}</Text>
-              <Text style={s.completedDateText}>{timestamp}</Text>
+              <Text style={s.completedDateText}>{addedDate}</Text>
             </View>
           </View>
         </View>
@@ -76,6 +75,16 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
             <Text style={s.noteText}>{item.note}</Text>
           </View>}
         </View>}
+      </Pressable>
+      <Pressable accessibilityRole="button"
+        accessibilityLabel={t("taskHistory.photo.view", { defaultValue: "View photo" })}
+        style={styles.photoShortcut}
+        onPress={(event) => {
+          event.stopPropagation();
+          if (isMenuOpen) onToggleMenu();
+          onViewPhoto();
+        }}>
+        <MaterialCommunityIcons name="image-outline" size={24} color="#FFFFFF" />
       </Pressable>
     </View>
     {isMenuOpen && <View style={s.menuSheet}>
@@ -106,6 +115,7 @@ const styles = StyleSheet.create({
   heroContent: { flexGrow: 1, flexDirection: "row", gap: 12, paddingHorizontal: 20, paddingVertical: 14, alignItems: "flex-end" },
   topScrim: { position: "absolute", top: 0, left: 0, right: 0, height: 64 },
   added: { flex: 1, minWidth: 0, alignItems: "flex-end", alignSelf: "flex-start" },
-  identity: { flex: 1, minWidth: 0, gap: 4 },
+  photoShortcut: { position: "absolute", top: 14, left: 12, width: 40, height: 40, justifyContent: "center", alignItems: "center" },
+  identity: { flex: 1, minWidth: 0, gap: 4, paddingTop: 40 },
   notes: { paddingHorizontal: 20, paddingBottom: 16 },
 });

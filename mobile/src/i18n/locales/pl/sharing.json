@@ -177,7 +177,8 @@
       "alreadyContact": "Ta osoba jest już w Twoich kontaktach.",
       "alreadyPending": "Zaproszenie dla tej osoby już oczekuje na odpowiedź.",
       "throttled": "Za dużo prób. Odczekaj chwilę i spróbuj ponownie.",
-      "unavailable": "Nie udało się połączyć. Spróbuj ponownie."
+      "unavailable": "Nie udało się połączyć. Spróbuj ponownie.",
+      "alreadyRegistered": "Ten adres e-mail jest ju? zarejestrowany. U?yj opcji Dodaj kontakt."
     },
     "access": {
       "sharedBy": "Udostępnia: {{name}}",
@@ -196,6 +197,14 @@
       "expired": "Wybierz datę zakończenia, która jeszcze nie minęła.",
       "throttled": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
       "unavailable": "Nie udało się wczytać lub zapisać udostępniania. Spróbuj ponownie."
+    },
+    "emailInvite": {
+      "title": "Zapro? przez e-mail",
+      "description": "Zapro? osob?, kt?ra nie ma jeszcze konta we Flovers. Wy?lemy jej instrukcje w wybranym j?zyku. Zaproszenie jest wa?ne przez 30 dni.",
+      "pending": "Oczekuje na rejestracj?",
+      "alreadyRegistered": "Ten adres e-mail jest ju? zarejestrowany. U?yj opcji Dodaj kontakt.",
+      "language": "J?zyk zaproszenia",
+      "email": "Adres e-mail"
     }
   }
 }

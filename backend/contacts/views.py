@@ -5,7 +5,7 @@ from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework.views import APIView
 
 from . import services
-from .serializers import ContactNameSerializer, InvitationSerializer
+from .serializers import ContactNameSerializer, InvitationSerializer, EmailInvitationSerializer
 
 
 class ActiveAccountPermission(BasePermission):
@@ -38,6 +38,7 @@ class ContactsBaseView(APIView):
 
 class ContactsView(ContactsBaseView):
     def get(self, request):
+        services.claim_email_invitations(request.user)
         return ok(services.contact_snapshot(request.user), "Contacts fetched.")
 
 
@@ -66,3 +67,15 @@ class ContactDetailView(ContactsBaseView):
 
     def delete(self, request, user_id):
         return ok(services.remove_contact(request.user, user_id), "Contact removed.")
+
+
+class EmailInvitationCreateView(InvitationCreateView):
+    def post(self, request):
+        data = validated(EmailInvitationSerializer, request.data)
+        return ok(services.invite_by_email(request.user, data["email"], data["language"]),
+                  "Email invitation sent.", status.HTTP_201_CREATED)
+
+
+class EmailInvitationCancelView(ContactsBaseView):
+    def delete(self, request, invitation_id):
+        return ok(services.cancel_email_invitation(request.user, invitation_id), "Invitation cancelled.")

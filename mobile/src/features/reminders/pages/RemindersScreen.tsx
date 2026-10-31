@@ -930,7 +930,8 @@ export default function RemindersScreen() {
 
       {/* Capture taps on the FAB (including the main button) to hide any open tile menu */}
       {showFAB && (
-        <View
+        <View pointerEvents="box-none" testID="reminders-fab-layer"
+          style={[StyleSheet.absoluteFill, { zIndex: 2000, elevation: 2000 }]}
           onStartShouldSetResponderCapture={() => {
             setMenuOpenId(null);
             return false;

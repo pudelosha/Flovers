@@ -177,7 +177,8 @@
       "alreadyContact": "Orang ini sudah ada di kontak Anda.",
       "alreadyPending": "Undangan untuk orang ini sudah menunggu keputusan.",
       "throttled": "Terlalu banyak permintaan. Tunggu sebentar dan coba lagi.",
-      "unavailable": "Tidak dapat terhubung. Silakan coba lagi."
+      "unavailable": "Tidak dapat terhubung. Silakan coba lagi.",
+      "alreadyRegistered": "Email ini sudah terdaftar. Gunakan Tambah kontak."
     },
     "access": {
       "sharedBy": "Dibagikan oleh {{name}}",
@@ -196,6 +197,14 @@
       "expired": "Pilih tanggal akhir yang belum lewat.",
       "throttled": "Terlalu banyak permintaan. Tunggu sebentar dan coba lagi.",
       "unavailable": "Tidak dapat memuat atau memperbarui berbagi. Silakan coba lagi."
+    },
+    "emailInvite": {
+      "title": "Undang lewat email",
+      "description": "Undang orang yang belum memiliki akun Flovers. Kami akan mengirim panduan dalam bahasa yang dipilih. Undangan berlaku selama 30 hari.",
+      "pending": "Menunggu pendaftaran",
+      "alreadyRegistered": "Email ini sudah terdaftar. Gunakan Tambah kontak.",
+      "language": "Bahasa undangan",
+      "email": "Alamat email"
     }
   }
 }
