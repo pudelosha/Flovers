@@ -30,6 +30,7 @@ import TaskHistoryTile from "../components/TaskHistoryTile";
 import JournalPhotoTile from "../components/JournalPhotoTile";
 import JournalPhotoModal from "../components/modals/JournalPhotoModal";
 import ConfirmDeleteJournalPhotoModal from "../components/modals/ConfirmDeleteJournalPhotoModal";
+import ViewJournalPhotoModal from "../components/modals/ViewJournalPhotoModal";
 import { isJournalPhoto, journalEntryKey, type JournalEntry, type JournalPhotoItem, type TaskHistoryItem } from "../types/task-history.types";
 import type { TaskType } from "../../home/types/home.types";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
@@ -120,6 +121,7 @@ export default function TaskHistoryScreen() {
   const [exporting, setExporting] = useState(false);
   const [photoOpen, setPhotoOpen] = useState(false);
   const [editingPhoto, setEditingPhoto] = useState<JournalPhotoItem | null>(null);
+  const [viewingPhoto, setViewingPhoto] = useState<JournalPhotoItem | null>(null);
   const [deletingPhoto, setDeletingPhoto] = useState<JournalPhotoItem | null>(null);
   const [photoDeleting, setPhotoDeleting] = useState(false);
 
@@ -196,6 +198,7 @@ export default function TaskHistoryScreen() {
       setExportOpen(false);
       setPhotoOpen(false);
       setEditingPhoto(null);
+      setViewingPhoto(null);
       setDeletingPhoto(null);
       closeFloatingMenus();
       setFilters(INITIAL_FILTERS);
@@ -401,7 +404,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !contentLoading && !sortOpen && !filterOpen && !deleteOpen && !exportOpen && !photoOpen && !deletingPhoto;
+    !contentLoading && !sortOpen && !filterOpen && !deleteOpen && !exportOpen && !photoOpen && !deletingPhoto && !viewingPhoto;
 
   // FAB actions
   const canManageVisibleHistory = derivedItems.some((item) => !isJournalPhoto(item) && plantAccess(item.access).canEdit);
@@ -663,6 +666,7 @@ export default function TaskHistoryScreen() {
                 item={item}
                 isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(entryKey)}
+                onViewPhoto={() => { closeFloatingMenus(); setViewingPhoto(item); }}
                 onEdit={() => handleEditPhoto(item)}
                 onPlantDetails={() => handleGoToPlant(item)}
                 onDelete={() => {
@@ -852,6 +856,8 @@ export default function TaskHistoryScreen() {
         onClose={() => { if (!photoDeleting) setDeletingPhoto(null); }}
         onConfirm={handleConfirmDeletePhoto}
       />
+
+      <ViewJournalPhotoModal visible={!!viewingPhoto} entry={viewingPhoto} onClose={() => setViewingPhoto(null)} />
 
       <TopSnackbar
         visible={toastVisible}

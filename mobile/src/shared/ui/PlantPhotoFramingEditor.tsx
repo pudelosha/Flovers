@@ -5,7 +5,7 @@ import Slider from "@react-native-community/slider";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import CenteredSpinner from "./CenteredSpinner";
-import { DEFAULT_PHOTO_FRAMING, PHOTO_DETAILS_ASPECT_RATIO, PHOTO_MAX_ZOOM, PHOTO_MIN_ZOOM,
+import { DEFAULT_PHOTO_FRAMING, PHOTO_DETAILS_ASPECT_RATIO, PHOTO_JOURNAL_ASPECT_RATIO, PHOTO_MAX_ZOOM, PHOTO_MIN_ZOOM,
   normalizePhotoFraming, panPhotoFraming, photoImageLayout, zoomPhotoFraming } from "../utils/photoFraming";
 import type { PhotoFraming, PhotoSize } from "../utils/photoFraming";
 
@@ -97,6 +97,7 @@ export default function PlantPhotoFramingEditor({ uri, width, height, value, onC
   // Plants uses a full-width 96dp tile; these are fixed guides, not draggable handles.
   const tileAspect = Math.max(PHOTO_DETAILS_ASPECT_RATIO, (window.width - 32) / 96);
   const bandHeight = viewport.width / tileAspect;
+  const journalBandHeight = viewport.width / PHOTO_JOURNAL_ASPECT_RATIO;
   const blocked = disabled || !ready;
   return <View style={styles.editor}>
     <View testID="photo-framing-viewport" style={styles.viewport} {...responder.panHandlers}
@@ -113,7 +114,10 @@ export default function PlantPhotoFramingEditor({ uri, width, height, value, onC
             setReadyUri(uri); setFailedUri(null);
           }} onError={() => setFailedUri(uri)} />
         {ready && <>
-          <View testID="photo-details-guide" style={[StyleSheet.absoluteFill, styles.detailsGuide]} />
+          <View testID="photo-details-guide" style={[
+            journalLabel ? { position: "absolute", left: 0, right: 0, top: (viewport.height - journalBandHeight) / 2, height: journalBandHeight }
+              : StyleSheet.absoluteFill, styles.detailsGuide,
+          ]} />
           {!journalLabel && <View testID="photo-tiles-guide" style={[styles.tilesGuide, { top: (viewport.height - bandHeight) / 2, height: bandHeight }]} />}
         </>}
         {readyUri !== uri && failedUri !== uri && <View style={styles.state}><CenteredSpinner size={30} /></View>}

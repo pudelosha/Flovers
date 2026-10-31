@@ -6,9 +6,10 @@ import ModalCloseButton from "../../../shared/ui/ModalCloseButton";
 import { prompts as pr } from "../../profile/styles/profile.styles";
 
 /** Contacts use the same centered glass prompt and controls as the Profile dialogs. */
-export default function ContactModalFrame({ visible, title, onClose, children, sharingLayout = false, scrollEnabled = true }: {
+export default function ContactModalFrame({ visible, title, onClose, children, sharingLayout = false, scrollEnabled = true,
+  fullScreen = false }: {
   visible: boolean; title: string; onClose: () => void; children: React.ReactNode;
-  sharingLayout?: boolean; scrollEnabled?: boolean;
+  sharingLayout?: boolean; scrollEnabled?: boolean; fullScreen?: boolean;
 }) {
   const { t } = useTranslation();
   useEffect(() => {
@@ -24,24 +25,31 @@ export default function ContactModalFrame({ visible, title, onClose, children, s
   const close = () => { Keyboard.dismiss(); onClose(); };
   return (
     <View style={s.overlay} accessibilityViewIsModal>
-      <Pressable style={pr.backdrop} onPress={close} accessibilityRole="button"
+      <Pressable testID="contact-modal-backdrop" style={pr.backdrop} onPress={close} accessibilityRole="button"
         accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })} />
-      <KeyboardAvoidingView pointerEvents="box-none" style={[pr.promptWrap, sharingLayout && s.sharingWrap]}
+      <KeyboardAvoidingView pointerEvents="box-none" style={[pr.promptWrap, sharingLayout && s.sharingWrap, fullScreen && s.fullWrap]}
         behavior={Platform.OS === "ios" ? "padding" : undefined}>
-        <View pointerEvents="none" style={[pr.promptGlass, sharingLayout && s.squareBottom]}>
-          <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)" />
-          <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.35)" }]} />
-        </View>
-        <View style={[pr.promptInner, s.inner, sharingLayout && s.sharingInner, sharingLayout && s.squareBottom]}>
+        {/* A real press target keeps empty panel areas above the dismiss backdrop.
+            Child controls, scrolling and photo gestures retain responder priority. */}
+        <Pressable testID="contact-modal-content" accessible={false}
+          onPress={(event) => event?.stopPropagation()}
+          style={[pr.promptInner, s.inner, sharingLayout && s.sharingInner, sharingLayout && s.squareBottom, fullScreen && s.fullInner]}>
+          {/* Keep the glass aligned and clipped to the same bounds as the form. */}
+          <View testID="contact-modal-glass" pointerEvents="none" style={[pr.promptGlass, sharingLayout && s.squareBottom, fullScreen && s.fullGlass]}>
+            <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={14}
+              reducedTransparencyFallbackColor="rgba(255,255,255,0.25)" />
+            <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.35)" }]} />
+          </View>
+          <View style={fullScreen ? s.fullBody : s.body}>
           <ScrollView style={{ flex: 1 }} scrollEnabled={scrollEnabled} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
-            contentContainerStyle={[s.content, sharingLayout && s.sharingContent]}>
+            contentContainerStyle={[s.content, sharingLayout && s.sharingContent, fullScreen && s.fullContent]}>
             <Text style={pr.promptTitle}>{title}</Text>
             {children}
           </ScrollView>
           <ModalCloseButton onPress={close} accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })}
-            style={{ top: 8, right: 8 }} />
-        </View>
+            style={{ top: 8, right: fullScreen ? 32 : 8 }} />
+          </View>
+        </Pressable>
       </KeyboardAvoidingView>
     </View>
   );
@@ -56,4 +64,12 @@ const s = StyleSheet.create({
   content: { flexGrow: 1, justifyContent: "center", paddingTop: 44, paddingBottom: 120 },
   squareBottom: { borderBottomLeftRadius: 0, borderBottomRightRadius: 0 },
   sharingContent: { justifyContent: "flex-start", paddingBottom: 20 },
+  fullWrap: { paddingHorizontal: 0 },
+  fullInner: { width: "100%", maxWidth: "100%", height: "100%", maxHeight: "100%", borderRadius: 0,
+    justifyContent: "flex-end", alignItems: "center" },
+  fullGlass: { borderRadius: 0 },
+  body: { flex: 1, width: "100%" },
+  // Match the standard 7% top gap and 24dp side inset; keep scrolling to the tab bar.
+  fullBody: { height: "93%", maxHeight: "93%", width: "100%", maxWidth: 568, paddingHorizontal: 24, position: "relative" },
+  fullContent: { justifyContent: "flex-start", paddingBottom: 20 },
 });

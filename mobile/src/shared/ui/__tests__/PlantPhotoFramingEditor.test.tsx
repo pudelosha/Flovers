@@ -4,6 +4,7 @@ import { act, fireEvent, render } from "@testing-library/react-native";
 import PlantPhotoFramingEditor from "../PlantPhotoFramingEditor";
 import FramedPlantImage from "../FramedPlantImage";
 import { DEFAULT_PHOTO_FRAMING } from "../../utils/photoFraming";
+import { PHOTO_JOURNAL_ASPECT_RATIO } from "../../utils/photoFraming";
 
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: (_key: string, values: any) => values?.defaultValue ?? _key }) }));
 jest.mock("@react-native-community/slider", () => (props: any) =>
@@ -89,4 +90,23 @@ it("renders saved framing immediately when the same photo is repositioned", () =
   expect(after.left).not.toBe(before.left);
   expect(after.top).not.toBe(before.top);
   expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: "data:image/jpeg;base64,PRIVATE" });
+});
+
+it("matches the journal crop guide to the compact tile after moving and zooming a photo", () => {
+  const framing = { focal_x: 0.4, focal_y: 0.6, zoom: 2 };
+  const photo = { id: "journal-photo", url: "/photo/", thumbnail_url: "/photo/thumb/",
+    width: 960, height: 1280, byte_size: 90000, framing };
+  const editor = render(<PlantPhotoFramingEditor uri="file:///journal.jpg" width={photo.width} height={photo.height}
+    value={framing} onChange={jest.fn()} journalLabel="Journal photo" />);
+  fireEvent(editor.getByTestId("photo-framing-viewport"), "layout", { nativeEvent: { layout: { width: 320, height: 200 } } });
+  const guide = StyleSheet.flatten(editor.getByTestId("photo-details-guide").props.style);
+  expect(guide.height).toBeCloseTo(320 / PHOTO_JOURNAL_ASPECT_RATIO);
+  expect(editor.queryByTestId("photo-tiles-guide")).toBeNull();
+  const preview = StyleSheet.flatten(editor.UNSAFE_getByType(Image).props.style);
+  const tile = render(<FramedPlantImage testID="journal-crop" uri="data:image/jpeg;base64,PRIVATE" photo={photo} />);
+  fireEvent(tile.getByTestId("journal-crop"), "layout", { nativeEvent: { layout: { width: 320, height: guide.height } } });
+  const actual = StyleSheet.flatten(tile.UNSAFE_getByType(ImageBackground).props.style);
+  expect(actual.width).toBeCloseTo(preview.width);
+  expect(actual.left).toBeCloseTo(preview.left);
+  expect(actual.top).toBeCloseTo(preview.top - guide.top);
 });

@@ -1,5 +1,6 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
+import MaskedView from "@react-native-masked-view/masked-view";
 import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -9,14 +10,16 @@ import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
 import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
+import { PHOTO_JOURNAL_ASPECT_RATIO } from "../../../shared/utils/photoFraming";
 import type { JournalPhotoItem } from "../types/task-history.types";
 import { s } from "../styles/task-history.styles";
 
-export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onEdit, onPlantDetails, onDelete }: {
+export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onViewPhoto, onEdit, onPlantDetails, onDelete }: {
   item: JournalPhotoItem; isMenuOpen: boolean; onToggleMenu: () => void;
-  onEdit: () => void; onPlantDetails: () => void; onDelete: () => void;
+  onViewPhoto: () => void; onEdit: () => void; onPlantDetails: () => void; onDelete: () => void;
 }) {
   const { t } = useTranslation();
+  const window = useWindowDimensions();
   const { settings } = useSettings();
   const photo = usePlantPhoto(item.photo, { variant: "display", expiresAt: item.access?.expires_at });
   const access = plantAccess(item.access);
@@ -30,35 +33,56 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onEdi
   const action = (callback: () => void) => { onToggleMenu(); callback(); };
   return <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
     <View style={styles.glass}>
-      <LinearGradient colors={["rgba(63,110,97,0.9)", "rgba(35,65,56,0.94)"]} style={StyleSheet.absoluteFill} />
+      <LinearGradient start={{ x: 0, y: 0.5 }} end={{ x: 1, y: 0.5 }}
+        colors={["rgba(16,80,63,0.9)", "rgba(5,31,24,0.9)"]} style={StyleSheet.absoluteFill} />
+      <LinearGradient pointerEvents="none" start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}
+        colors={["rgba(255,255,255,0.06)", "rgba(255,255,255,0.02)", "rgba(255,255,255,0.08)"]}
+        locations={[0, 0.5, 1]} style={StyleSheet.absoluteFill} />
+      <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.14)" }]} pointerEvents="none" />
       {access.isShared && <View style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
       <Pressable onPress={onToggleMenu} accessibilityRole="button" accessibilityLabel={item.plant}>
-        <View style={styles.hero}>
-          {photo.uri ? <FramedPlantImage uri={photo.uri} photo={item.photo} style={StyleSheet.absoluteFill} onError={photo.refresh} />
+        <View style={[styles.hero, { minHeight: Math.max(0, window.width - 32) / PHOTO_JOURNAL_ASPECT_RATIO }]}>
+          <View pointerEvents="none" style={styles.photoSurface}>
+            {photo.uri ? <MaskedView style={StyleSheet.absoluteFill} maskElement={
+            <LinearGradient colors={["rgba(0,0,0,1)", "rgba(0,0,0,0.92)", "rgba(0,0,0,0.75)", "rgba(0,0,0,0.50)", "rgba(0,0,0,0.22)", "rgba(0,0,0,0)"]}
+              locations={[0, 0.1, 0.45, 0.68, 0.88, 1]} style={StyleSheet.absoluteFill} />
+          }>
+            <FramedPlantImage uri={photo.uri} photo={item.photo} style={StyleSheet.absoluteFill} onError={photo.refresh} />
+          </MaskedView>
             : photo.loading ? <CenteredSpinner size={30} />
             : <MaterialCommunityIcons name="image-off-outline" size={32} color="rgba(255,255,255,0.65)" />}
-          <LinearGradient pointerEvents="none" colors={["rgba(0,0,0,0.15)", "rgba(37,70,59,0.1)", "rgba(42,76,65,1)"]}
-            locations={[0, 0.35, 1]} style={StyleSheet.absoluteFill} />
-          <View style={styles.added}>
-            <Text style={styles.meta}>{t("taskHistory.photo.added", { defaultValue: "Added" })}</Text>
-            <Text style={styles.meta}>{timestamp}</Text>
           </View>
-          <View style={styles.identity}>
-            <Text style={styles.name}>{item.plant}</Text>
-            {!!item.location && <View style={styles.location}>
-              <MaterialCommunityIcons name="map-marker-outline" size={16} color="#FFFFFF" />
-              <Text style={styles.text}>{item.location}</Text>
-            </View>}
-            {access.isShared && <SharedPlantBadge access={item.access} compact />}
+          <LinearGradient pointerEvents="none" colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0)"]}
+            style={styles.topScrim} />
+          <View style={styles.heroContent}>
+            <View style={styles.identity}>
+              <Text style={s.plantName}>{item.plant}</Text>
+              {!!item.location && <View style={s.locationRow}>
+                <MaterialCommunityIcons name="map-marker" size={12} color="#FFFFFF" style={s.locationIcon} />
+                <Text style={s.location}>{item.location}</Text>
+              </View>}
+              {access.isShared && <SharedPlantBadge access={item.access} compact />}
+            </View>
+            <View style={styles.added}>
+              <Text style={s.completedLabel}>{t("taskHistory.photo.added", { defaultValue: "Added" })}</Text>
+              <Text style={s.completedDateText}>{timestamp}</Text>
+            </View>
           </View>
         </View>
         {(!!item.recordedDate || !!item.note?.trim()) && <View style={styles.notes}>
-          {!!item.recordedDate && <Text style={styles.meta}>{t("taskHistory.photo.photoTaken", { defaultValue: "Photo date" })}: {date(item.recordedDate)}</Text>}
-          {!!item.note?.trim() && <Text style={styles.text}>{item.note}</Text>}
+          {!!item.recordedDate && <Text style={s.metaCompact}>{t("taskHistory.photo.photoTaken", { defaultValue: "Photo date" })}: {date(item.recordedDate)}</Text>}
+          {!!item.note?.trim() && <View style={s.noteBox}>
+            <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel", { defaultValue: "Note" })}</Text>
+            <Text style={s.noteText}>{item.note}</Text>
+          </View>}
         </View>}
       </Pressable>
     </View>
     {isMenuOpen && <View style={s.menuSheet}>
+      <Pressable style={s.menuItem} onPress={() => action(onViewPhoto)}>
+        <MaterialCommunityIcons name="image-outline" size={18} color="#FFFFFF" style={{ marginRight: 10 }} />
+        <Text style={s.menuItemText}>{t("taskHistory.photo.view", { defaultValue: "View photo" })}</Text>
+      </Pressable>
       {access.canEdit && <Pressable style={s.menuItem} onPress={() => action(onEdit)}>
         <MaterialCommunityIcons name="image-edit-outline" size={18} color="#FFFFFF" style={{ marginRight: 10 }} />
         <Text style={s.menuItemText}>{t("taskHistory.photo.edit", { defaultValue: "Edit photo" })}</Text>
@@ -76,12 +100,12 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onEdi
 }
 const styles = StyleSheet.create({
   glass: { borderRadius: 28, overflow: "hidden" },
-  hero: { aspectRatio: 1.6, justifyContent: "center", alignItems: "center" },
-  added: { position: "absolute", top: 16, right: 16, alignItems: "flex-end" },
-  identity: { position: "absolute", bottom: 14, left: 18, right: 18, gap: 4 },
-  name: { color: "#FFFFFF", fontSize: 22, fontWeight: "800" },
-  location: { flexDirection: "row", alignItems: "center", gap: 5 },
-  text: { color: "#FFFFFF", fontSize: 14, lineHeight: 21 },
-  meta: { color: "rgba(255,255,255,0.85)", fontSize: 11, lineHeight: 17 },
-  notes: { paddingHorizontal: 18, paddingBottom: 18, gap: 6 },
+  // Half the old 1.6-aspect photo height; text may grow the area when needed.
+  hero: { justifyContent: "center" },
+  photoSurface: { ...StyleSheet.absoluteFillObject, justifyContent: "center", alignItems: "center" },
+  heroContent: { flexGrow: 1, flexDirection: "row", gap: 12, paddingHorizontal: 20, paddingVertical: 14, alignItems: "flex-end" },
+  topScrim: { position: "absolute", top: 0, left: 0, right: 0, height: 64 },
+  added: { flex: 1, minWidth: 0, alignItems: "flex-end", alignSelf: "flex-start" },
+  identity: { flex: 1, minWidth: 0, gap: 4 },
+  notes: { paddingHorizontal: 20, paddingBottom: 16 },
 });

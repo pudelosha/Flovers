@@ -8,6 +8,8 @@ import type { JournalPhotoItem } from "../../types/task-history.types";
 
 let mockPhoto: any;
 jest.mock("../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: jest.fn(() => mockPhoto) }));
+jest.mock("@react-native-masked-view/masked-view", () => (props: any) =>
+  require("react").createElement(require("react-native").View, props, props.children));
 
 const access = { is_owner: true, is_shared: false, can_edit: true, can_complete_tasks: true,
   owner: { id: "1", name: "Anna" }, expires_at: null };
@@ -18,7 +20,7 @@ const item: JournalPhotoItem = {
   photo: { id: "photo1", url: "/private/", thumbnail_url: "/private/thumb/", width: 1000, height: 800, byte_size: 5000 },
 };
 function props() {
-  return { item, isMenuOpen: false, onToggleMenu: jest.fn(), onEdit: jest.fn(), onPlantDetails: jest.fn(), onDelete: jest.fn() };
+  return { item, isMenuOpen: false, onToggleMenu: jest.fn(), onViewPhoto: jest.fn(), onEdit: jest.fn(), onPlantDetails: jest.fn(), onDelete: jest.fn() };
 }
 beforeEach(() => {
   jest.clearAllMocks();
@@ -32,6 +34,7 @@ it("renders a fading authorised photo, Added timestamp and full note without tas
   expect(view.getByText("Added")).toBeTruthy();
   expect(view.getByText(/31\.10\.2026 \d{2}:\d{2}/)).toBeTruthy();
   expect(view.getByText("Photo date: 28.10.2026")).toBeTruthy();
+  expect(view.getByText("Note")).toBeTruthy();
   expect(view.getByText(item.note!).props.numberOfLines).toBeUndefined();
   expect(view.queryByText("watering")).toBeNull();
   expect(view.queryByText("water")).toBeNull();
@@ -44,21 +47,27 @@ it("opens the owner menu from the photo and closes it before editing", () => {
   expect(handlers.onToggleMenu).toHaveBeenCalledTimes(1);
   view.rerender(<JournalPhotoTile {...handlers} isMenuOpen />);
   expect(view.getByText("Edit photo")).toBeTruthy();
+  expect(view.getByText("View photo")).toBeTruthy();
   expect(view.getByText("Plant details")).toBeTruthy();
   expect(view.getByText("Delete photo")).toBeTruthy();
   expect(view.getByText("flower-tulip-outline")).toBeTruthy();
-  fireEvent.press(view.getByText("Edit photo"));
+  fireEvent.press(view.getByText("View photo"));
   expect(handlers.onToggleMenu).toHaveBeenCalledTimes(2);
+  expect(handlers.onViewPhoto).toHaveBeenCalledTimes(1);
+  fireEvent.press(view.getByText("Edit photo"));
+  expect(handlers.onToggleMenu).toHaveBeenCalledTimes(3);
   expect(handlers.onEdit).toHaveBeenCalledTimes(1);
 });
 
-it("shows shared status while exposing only Plant details to shared viewers", () => {
+it("allows shared viewers to open the full photo and plant details without exposing mutations", () => {
   const handlers = props();
   const shared = { ...access, is_owner: false, is_shared: true, can_edit: false, expires_at: "2026-12-31T12:00:00Z" };
   const view = render(<JournalPhotoTile {...handlers} item={{ ...item, access: shared }} isMenuOpen />);
   expect(view.getByText("Shared")).toBeTruthy();
   expect(view.queryByText("Edit photo")).toBeNull();
   expect(view.queryByText("Delete photo")).toBeNull();
+  fireEvent.press(view.getByText("View photo"));
+  expect(handlers.onViewPhoto).toHaveBeenCalledTimes(1);
   expect(usePlantPhoto).toHaveBeenCalledWith(item.photo, { variant: "display", expiresAt: shared.expires_at });
   fireEvent.press(view.getByText("Plant details"));
   expect(handlers.onPlantDetails).toHaveBeenCalledTimes(1);

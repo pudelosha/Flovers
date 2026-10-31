@@ -8,6 +8,7 @@ import FilterHistoryTasksModal from "../../components/modals/FilterHistoryTasksM
 import SendHistoryExportModal from "../../components/modals/SendHistoryExportModal";
 import DeleteHistoryTasksModal from "../../components/modals/DeleteHistoryTasksModal";
 import ConfirmDeleteJournalPhotoModal from "../../components/modals/ConfirmDeleteJournalPhotoModal";
+import ViewJournalPhotoModal from "../../components/modals/ViewJournalPhotoModal";
 import FAB from "../../../../shared/ui/FAB";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import { fetchHistoryItems, sendHistoryExportEmail } from "../../../../api/services/history.service";
@@ -43,6 +44,7 @@ jest.mock("../../../../shared/ui/TopSnackbar", () => jest.fn(() => null));
 jest.mock("../../components/TaskHistoryTile", () => jest.fn(() => null));
 jest.mock("../../components/JournalPhotoTile", () => jest.fn(() => null));
 jest.mock("../../components/modals/JournalPhotoModal", () => jest.fn(() => null));
+jest.mock("../../components/modals/ViewJournalPhotoModal", () => jest.fn(() => null));
 jest.mock("../../components/modals/SortHistoryTasksModal", () => jest.fn(() => null));
 jest.mock("../../components/modals/FilterHistoryTasksModal", () => jest.fn(() => null));
 jest.mock("../../components/modals/DeleteHistoryTasksModal", () => jest.fn(() => null));
@@ -138,6 +140,19 @@ it("keeps shared photos viewable while denying add, edit and delete", async () =
   expect(view.UNSAFE_getByType(ConfirmDeleteJournalPhotoModal).props.visible).toBe(false);
   act(() => tile.props.onPlantDetails());
   expect(mockNavigate).toHaveBeenCalledWith("PlantDetails", { id: "9" });
+});
+
+it.each([owner, viewer])("opens the full photo viewer for owners and shared viewers", async (access) => {
+  (fetchHistoryItems as jest.Mock).mockResolvedValue([{ ...photo, access }]);
+  const view = await renderScreen();
+  act(() => view.UNSAFE_getByType(JournalPhotoTile).props.onViewPhoto());
+  const modal = view.UNSAFE_getByType(ViewJournalPhotoModal);
+  expect(modal.props.visible).toBe(true);
+  expect(modal.props.entry.id).toBe(photo.id);
+  expect(view.UNSAFE_queryByType(FAB)).toBeNull();
+  act(() => modal.props.onClose());
+  expect(view.UNSAFE_getByType(ViewJournalPhotoModal).props.visible).toBe(false);
+  expect(view.UNSAFE_getByType(FAB)).toBeTruthy();
 });
 
 it.each(["route", "filter"])("hides Add photo for an incoming shared plant selected by %s even when another plant is owned", async (mode) => {

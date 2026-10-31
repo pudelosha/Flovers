@@ -3,6 +3,7 @@ export type PhotoSize = { width: number; height: number };
 export type PhotoPoint = { x: number; y: number };
 
 export const PHOTO_DETAILS_ASPECT_RATIO = 1.6;
+export const PHOTO_JOURNAL_ASPECT_RATIO = PHOTO_DETAILS_ASPECT_RATIO * 2;
 export const PHOTO_MIN_ZOOM = 1;
 export const PHOTO_MAX_ZOOM = 4;
 export const DEFAULT_PHOTO_FRAMING: PhotoFraming = Object.freeze({ focal_x: 0.5, focal_y: 0.5, zoom: 1 });

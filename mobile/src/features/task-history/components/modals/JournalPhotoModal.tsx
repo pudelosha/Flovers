@@ -138,14 +138,15 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
   const uri = selection?.uri ?? privatePhoto.uri;
   const editingForbidden = !!entry && (!activeEntry || !plantAccess(activeEntry.access).canEdit);
   const fieldsDisabled = busy || retryPending || conflicted || editingForbidden;
-  const button = (label: string, onPress: () => void, icon?: string, primary = false, disabled = false) =>
-    <Pressable accessibilityRole="button" style={[styles.button, primary && styles.primary, disabled && styles.disabled]}
+  const button = (label: string, onPress: () => void, icon?: string, primary = false, disabled = false, equalWidth = false) =>
+    <Pressable accessibilityRole="button" style={[styles.button, equalWidth && styles.equalButton, primary && styles.primary, disabled && styles.disabled]}
       disabled={disabled} onPress={onPress}>
       {icon && <MaterialCommunityIcons name={icon} color="#FFFFFF" size={20} />}
       <Text style={styles.buttonText}>{label}</Text>
     </Pressable>;
   return <View style={[StyleSheet.absoluteFill, { bottom: 64 + Math.max(insets.bottom, 10), zIndex: 6000, elevation: 6000 }]}>
-    <ContactModalFrame visible title={tr(entry ? "titleEdit" : "titleAdd")} onClose={close} sharingLayout scrollEnabled={!interacting}>
+    <ContactModalFrame visible title={tr(entry ? "titleEdit" : "titleAdd")} onClose={close}
+      fullScreen scrollEnabled={!interacting}>
       {loading ? <View style={styles.loading}><CenteredSpinner size={42} /></View>
         : loadError || (entry && !selection && !!privatePhoto.error) ? <View style={styles.form}>
           <Text style={styles.error}>{tr("loadFailed")}</Text>
@@ -181,9 +182,9 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
           {!!error && <Text accessibilityRole="alert" style={styles.error}>{error}</Text>}
           {conflicted && button(tr("retry"), () => setRetry(value => value + 1))}
           <View style={styles.actions}>
-            {button(tr("cancel"), close, undefined, false, busy)}
+            {button(tr("cancel"), close, undefined, false, busy, true)}
             {button(tr(busy ? "saving" : "save"), () => { void save(); }, undefined, true,
-              busy || cooldown || conflicted || editingForbidden || !plantId || (!entry && !selection))}
+              busy || cooldown || conflicted || editingForbidden || !plantId || (!entry && !selection), true)}
           </View>
         </View>}
     </ContactModalFrame>
@@ -198,7 +199,8 @@ const styles = StyleSheet.create({
   locked: { flexDirection: "row", gap: 8, alignItems: "center", paddingVertical: 8 },
   button: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 8, minHeight: 44,
     paddingHorizontal: 14, paddingVertical: 12, borderRadius: 22, backgroundColor: "rgba(255,255,255,0.17)" },
-  buttonText: { color: "#FFFFFF", fontSize: 14, fontWeight: "700", textAlign: "center" },
+  buttonText: { color: "#FFFFFF", fontSize: 14, fontWeight: "700", textAlign: "center", flexShrink: 1 },
+  equalButton: { flex: 1, minWidth: 0 },
   primary: { backgroundColor: "#0B7285" }, disabled: { opacity: 0.5 },
   input: { minHeight: 100, textAlignVertical: "top", borderRadius: 18, backgroundColor: "rgba(255,255,255,0.14)",
     color: "#FFFFFF", fontSize: 14, padding: 14 },
