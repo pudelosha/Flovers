@@ -122,6 +122,11 @@
         "care": "Entretien",
         "repot": "Rempotage"
       }
+    },
+    "activity": {
+      "title": "Activité",
+      "empty": "Aucune tâche terminée pour le moment.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

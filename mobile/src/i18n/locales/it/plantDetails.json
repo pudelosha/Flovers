@@ -122,6 +122,11 @@
         "care": "Cura",
         "repot": "Rinvaso"
       }
+    },
+    "activity": {
+      "title": "Attività",
+      "empty": "Nessuna attività completata finora.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

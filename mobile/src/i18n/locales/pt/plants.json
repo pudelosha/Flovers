@@ -40,6 +40,16 @@
       "updateFailedMsg": "Falha ao atualizar esta planta.",
       "deleteFailedTitle": "Erro ao excluir",
       "deleteFailedMsg": "Falha ao excluir esta planta."
+    },
+    "search": {
+      "title": "Pesquisar plantas",
+      "description": "Encontre uma planta pela alcunha, espécie (incluindo o nome latino) ou localização. A pesquisa respeita os filtros atuais.",
+      "input": "Nome, espécie ou localização",
+      "clear": "Limpar pesquisa",
+      "apply": "Pesquisar",
+      "active": "Pesquisa: {{query}}",
+      "noResults": "Nenhuma planta corresponde",
+      "noResultsDescription": "Experimente outra pesquisa ou altere os filtros."
     }
   }
 }

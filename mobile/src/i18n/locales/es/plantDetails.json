@@ -122,6 +122,11 @@
         "care": "Cuidado",
         "repot": "Trasplantar"
       }
+    },
+    "activity": {
+      "title": "Actividad",
+      "empty": "Todavía no hay tareas completadas.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

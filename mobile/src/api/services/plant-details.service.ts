@@ -207,8 +207,15 @@ async function buildCompositeForPlant(
   const deviceLinked = !!device;
   const readingDevice = mapReadingDeviceSummary(device);
 
+  const activity = (Array.isArray(plant.recent_activity) ? plant.recent_activity : [])
+    .filter(item => item && Number.isFinite(Date.parse(item.completed_at)))
+    .slice(0,5).map(item => ({
+      id: String(item.id),type:toPlantReminderType(item.type),completedAt:item.completed_at,
+      actor:typeof item.completed_by?.name === "string" ? item.completed_by.name.trim() || null : null,
+    }));
   return {
     plant,
+    activity,
     latestReadings,
     deviceLinked,
     deviceName: device?.device_name ?? null,

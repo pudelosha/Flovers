@@ -122,6 +122,11 @@
         "care": "Perawatan",
         "repot": "Ganti pot"
       }
+    },
+    "activity": {
+      "title": "Aktivitas",
+      "empty": "Belum ada tugas yang selesai.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

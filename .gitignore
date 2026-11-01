@@ -119,6 +119,8 @@ ml/**/*.log
 # Assets / generated data
 ############################
 plants/
+# Keep the mobile Plants feature source visible to Git.
+!mobile/src/features/plants/
 
 # Ignore everything inside translations
 translations/*

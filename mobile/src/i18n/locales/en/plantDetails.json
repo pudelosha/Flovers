@@ -122,6 +122,11 @@
         "care": "Care",
         "repot": "Repot"
       }
+    },
+    "activity": {
+      "title": "Activity",
+      "empty": "No completed tasks yet.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

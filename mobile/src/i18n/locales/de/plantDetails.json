@@ -122,6 +122,11 @@
         "care": "Pflege",
         "repot": "Umtopfen"
       }
+    },
+    "activity": {
+      "title": "Aktivität",
+      "empty": "Noch keine erledigten Aufgaben.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

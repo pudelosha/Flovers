@@ -40,6 +40,16 @@
       "updateFailedMsg": "Tidak dapat memperbarui tanaman hias ini.",
       "deleteFailedTitle": "Penghapusan gagal",
       "deleteFailedMsg": "Tidak dapat menghapus tanaman hias ini."
+    },
+    "search": {
+      "title": "Cari tanaman",
+      "description": "Temukan tanaman berdasarkan nama panggilan, nama spesies (termasuk nama Latin), atau lokasi. Filter saat ini tetap berlaku.",
+      "input": "Nama, spesies, atau lokasi",
+      "clear": "Hapus pencarian",
+      "apply": "Cari",
+      "active": "Pencarian: {{query}}",
+      "noResults": "Tidak ada tanaman yang cocok",
+      "noResultsDescription": "Coba pencarian lain atau ubah filter."
     }
   }
 }

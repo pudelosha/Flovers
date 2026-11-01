@@ -122,6 +122,11 @@
         "care": "Cuidados",
         "repot": "Replantar"
       }
+    },
+    "activity": {
+      "title": "Atividade",
+      "empty": "Ainda não há tarefas concluídas.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

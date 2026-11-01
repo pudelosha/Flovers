@@ -40,6 +40,16 @@
       "updateFailedMsg": "この植物を更新できませんでした。",
       "deleteFailedTitle": "削除エラー",
       "deleteFailedMsg": "この植物を削除できませんでした。"
+    },
+    "search": {
+      "title": "植物を検索",
+      "description": "ニックネーム、種類名（学名を含む）、場所で植物を探します。現在の絞り込み条件も適用されます。",
+      "input": "名前、種類、場所",
+      "clear": "検索をクリア",
+      "apply": "検索",
+      "active": "検索：{{query}}",
+      "noResults": "一致する植物がありません",
+      "noResultsDescription": "検索語を変えるか、絞り込み条件を見直してください。"
     }
   }
 }

@@ -40,6 +40,16 @@
       "updateFailedMsg": "Could not update this plant.",
       "deleteFailedTitle": "Delete failed",
       "deleteFailedMsg": "Could not delete this plant."
+    },
+    "search": {
+      "title": "Search plants",
+      "description": "Find a plant by its nickname, species name (including Latin name), or location. Search works with your current filters.",
+      "input": "Name, species or location",
+      "clear": "Clear search",
+      "apply": "Search",
+      "active": "Search: {{query}}",
+      "noResults": "No matching plants",
+      "noResultsDescription": "Try another search or change your filters."
     }
   }
 }

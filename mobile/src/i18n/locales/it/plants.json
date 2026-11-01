@@ -40,6 +40,16 @@
       "updateFailedMsg": "Impossibile aggiornare questa pianta.",
       "deleteFailedTitle": "Errore di eliminazione",
       "deleteFailedMsg": "Impossibile eliminare questa pianta."
+    },
+    "search": {
+      "title": "Cerca piante",
+      "description": "Trova una pianta per soprannome, nome della specie (anche latino) o posizione. La ricerca rispetta i filtri attivi.",
+      "input": "Nome, specie o posizione",
+      "clear": "Cancella ricerca",
+      "apply": "Cerca",
+      "active": "Ricerca: {{query}}",
+      "noResults": "Nessuna pianta corrispondente",
+      "noResultsDescription": "Prova un’altra ricerca o cambia i filtri."
     }
   }
 }

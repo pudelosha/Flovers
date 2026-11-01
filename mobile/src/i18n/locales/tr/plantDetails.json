@@ -122,6 +122,11 @@
         "care": "Bakım",
         "repot": "Saksı değişimi"
       }
+    },
+    "activity": {
+      "title": "Etkinlik",
+      "empty": "Henüz tamamlanmış görev yok.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

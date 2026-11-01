@@ -40,6 +40,8 @@ import PlantQrModal from "../components/modals/PlantQrModal";
 
 import SortPlantsModal, { SortDir, SortKey } from "../components/modals/SortPlantsModal";
 import FilterPlantsModal from "../components/modals/FilterPlantsModal";
+import SearchPlantsModal from "../components/modals/SearchPlantsModal";
+import {matchesPlantSearch} from "../utils/plantSearch";
 
 import {
   HEADER_GRADIENT_TINT,
@@ -90,6 +92,7 @@ function mapApiToPlant(
     access: item.access,
     name,
     latin,
+    species: item.plant_definition?.name || undefined,
     location,
     notes: item.notes || "",
     imageUrl,
@@ -163,6 +166,9 @@ export default function PlantsScreen() {
 
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
+  const searchListRef=useRef<any>(null);
+  const [searchOpen,setSearchOpen]=useState(false);
+  const [searchQuery,setSearchQuery]=useState("");
   const [sortKey, setSortKey] = useState<SortKey>("plant");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
 
@@ -184,6 +190,11 @@ export default function PlantsScreen() {
     setMenuOpenId(null);
     setFabCloseSignal((value) => value + 1);
   }, []);
+
+  const applySearch=useCallback((value:string)=>{
+    closeFloatingMenus();setSearchQuery(value);setSearchOpen(false);
+    requestAnimationFrame(()=>searchListRef.current?.scrollToOffset({offset:0,animated:false}));
+  },[closeFloatingMenus]);
 
   const closeFabMenu = useCallback(() => {
     setFabCloseSignal((value) => value + 1);
@@ -553,6 +564,7 @@ export default function PlantsScreen() {
 
   const derivedPlants = useMemo(() => {
     const filtered = plants.filter((p) => {
+      if(!matchesPlantSearch(p,searchQuery))return false;
       if (activeFilters.location && norm(p.location) !== norm(activeFilters.location))
         return false;
       if (activeFilters.latin && norm(p.latin) !== norm(activeFilters.latin)) return false;
@@ -570,7 +582,7 @@ export default function PlantsScreen() {
     });
 
     return sorted;
-  }, [plants, activeFilters, sortKey, sortDir]);
+  }, [plants, activeFilters, sortKey, sortDir, searchQuery]);
 
   const photoTargets = useMemo(() => derivedPlants.map((plant) => ({
     photo: plant.photo,
@@ -590,6 +602,7 @@ export default function PlantsScreen() {
     !confirmDeleteId &&
     !sortOpen &&
     !filterOpen &&
+    !searchOpen &&
     !qrVisible;
 
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -689,6 +702,7 @@ export default function PlantsScreen() {
       )}
 
       <Animated.FlatList
+        ref={searchListRef}
         style={{ flex: 1 }}
         data={derivedPlants}
         keyExtractor={(p) => p.id}
@@ -737,7 +751,14 @@ export default function PlantsScreen() {
             </Animated.View>
           );
         }}
-        ListHeaderComponent={() => <View style={{ height: 0 }} />}
+        ListHeaderComponent={searchQuery ? <View style={{flexDirection:"row",alignItems:"center",gap:10,marginBottom:14}}>
+          <MaterialCommunityIcons name="magnify" size={20} color="#FFFFFF"/>
+          <Text style={{flex:1,minWidth:0,color:"#FFFFFF",fontSize:14}}>{t("plants.search.active",{defaultValue:"Search: {{query}}",query:searchQuery})}</Text>
+          <Pressable accessibilityRole="button" hitSlop={8} onPress={()=>applySearch("")}
+            accessibilityLabel={String(t("plants.search.clear",{defaultValue:"Clear search"}))}>
+            <MaterialCommunityIcons name="close" size={22} color="#FFFFFF"/>
+          </Pressable>
+        </View> : <View style={{height:0}}/>}
         ListFooterComponent={<View style={{ height: listFooterHeight }} />}
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -790,10 +811,11 @@ export default function PlantsScreen() {
                   style={{ marginBottom: 10 }}
                 />
                 <Text style={s.emptyTitle}>
-                  {t("plants.empty.title", { defaultValue: "No plants yet" })}
+                  {searchQuery || isFilterActive ? t("plants.search.noResults",{defaultValue:"No matching plants"}) : t("plants.empty.title", { defaultValue: "No plants yet" })}
                 </Text>
                 <View style={s.emptyDescBox}>
                   <Text style={s.emptyText}>
+                    {searchQuery || isFilterActive ? t("plants.search.noResultsDescription",{defaultValue:"Try another search or change your filters."}) : <>
                     {t("plants.empty.desc1", {
                       defaultValue:
                         'Tap the “+” button in the bottom-right corner to add your first plant.',
@@ -803,6 +825,7 @@ export default function PlantsScreen() {
                         "The Create Plant Wizard will help you set up your plant and specify its parameters, as well as schedule reminders.",
                     })}
                     {"\n\n"}
+                    </>}
                   </Text>
                 </View>
               </View>
@@ -829,6 +852,10 @@ export default function PlantsScreen() {
                 icon: "plus",
                 label: t("plants.fab.create", { defaultValue: "Create plant" }),
                 onPress: openCreatePlantWizard,
+              },
+              {
+                key:"search",icon:"magnify",label:t("plants.search.apply",{defaultValue:"Search"}),
+                onPress:()=>{closeFloatingMenus();setSearchOpen(true);},
               },
               {
                 key: "sort",
@@ -869,6 +896,9 @@ export default function PlantsScreen() {
           />
         </View>
       )}
+
+      <SearchPlantsModal visible={searchOpen} query={searchQuery} onCancel={()=>setSearchOpen(false)}
+        onApply={applySearch}/>
 
       <EditPlantModal
         visible={editOpen}

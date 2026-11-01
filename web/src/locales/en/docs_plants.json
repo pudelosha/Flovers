@@ -38,6 +38,12 @@
         ]
       },
       {
+        "heading": "Search plants",
+        "body": [
+          "Search is the second FAB option, directly below Create plant. It opens a modal where you can search by nickname, common or Latin species name, or location. Search ignores case and accents; multiple words may match across these fields. It searches the plants already available to you, including shared plants, and combines with current filters and sorting. Search applies the text, while Cancel or X leaves the previous search unchanged. The active text appears above the list; clear it there or with Clear search in the modal. No matching plants means the search or filters found nothing, not that you need to create a new plant."
+        ]
+      },
+      {
         "heading": "Delete plant (important notes)",
         "body": [
           "Delete plant is a permanent action and cannot be undone.",

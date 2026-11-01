@@ -40,6 +40,16 @@
       "updateFailedMsg": "이 식물을 업데이트하는 데 실패했습니다.",
       "deleteFailedTitle": "삭제 오류",
       "deleteFailedMsg": "이 식물을 삭제하는 데 실패했습니다."
+    },
+    "search": {
+      "title": "식물 검색",
+      "description": "별명, 종 이름(학명 포함), 위치로 식물을 찾으세요. 현재 필터도 함께 적용됩니다.",
+      "input": "이름, 종 또는 위치",
+      "clear": "검색 지우기",
+      "apply": "검색",
+      "active": "검색: {{query}}",
+      "noResults": "일치하는 식물이 없습니다",
+      "noResultsDescription": "다른 검색어를 입력하거나 필터를 변경하세요."
     }
   }
 }

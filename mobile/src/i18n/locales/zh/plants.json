@@ -40,6 +40,16 @@
       "updateFailedMsg": "无法更新此植物。",
       "deleteFailedTitle": "删除错误",
       "deleteFailedMsg": "无法删除此植物。"
+    },
+    "search": {
+      "title": "搜索植物",
+      "description": "按昵称、物种名称（包括拉丁名）或位置查找植物。搜索会保留当前筛选条件。",
+      "input": "名称、物种或位置",
+      "clear": "清除搜索",
+      "apply": "搜索",
+      "active": "搜索：{{query}}",
+      "noResults": "没有匹配的植物",
+      "noResultsDescription": "请尝试其他搜索词或调整筛选条件。"
     }
   }
 }

@@ -40,6 +40,16 @@
       "updateFailedMsg": "Nie udało się zaktualizować tej rośliny.",
       "deleteFailedTitle": "Błąd usuwania",
       "deleteFailedMsg": "Nie udało się usunąć tej rośliny."
+    },
+    "search": {
+      "title": "Szukaj roślin",
+      "description": "Znajdź roślinę po własnej nazwie, nazwie gatunku (także łacińskiej) lub lokalizacji. Wyszukiwanie uwzględnia obecne filtry.",
+      "input": "Nazwa, gatunek lub lokalizacja",
+      "clear": "Wyczyść wyszukiwanie",
+      "apply": "Szukaj",
+      "active": "Szukasz: {{query}}",
+      "noResults": "Brak pasujących roślin",
+      "noResultsDescription": "Spróbuj innego hasła lub zmień filtry."
     }
   }
 }

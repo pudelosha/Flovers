@@ -38,6 +38,7 @@ import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
 import PlantRemindersTile from "../components/PlantRemindersTile";
 import PlantQrTile from "../components/PlantQrTile";
 import PlantInfoTile from "../components/PlantInfoTile";
+import PlantActivityTile from "../components/PlantActivityTile";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 
 import PostponeTaskModal, { type PostponeTaskTarget } from "../../home/components/modals/PostponeTaskModal";
@@ -818,6 +819,10 @@ export default function PlantDetailsScreen() {
                   </Text>
                 </View>
               )}
+            </GlassFrame>
+
+            <GlassFrame>
+              <PlantActivityTile items={details.activity ?? []}/>
             </GlassFrame>
 
             {plantAccess(details.plant.access).isOwner && reminders.length > 0 && (

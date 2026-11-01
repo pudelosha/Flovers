@@ -40,6 +40,16 @@
       "updateFailedMsg": "Bu ev bitkisi güncellenemedi.",
       "deleteFailedTitle": "Silinemedi",
       "deleteFailedMsg": "Bu ev bitkisi silinemedi."
+    },
+    "search": {
+      "title": "Bitki ara",
+      "description": "Bitkiyi takma adı, tür adı (Latince adı dahil) veya konumuyla bulun. Mevcut filtreleriniz geçerliliğini korur.",
+      "input": "Ad, tür veya konum",
+      "clear": "Aramayı temizle",
+      "apply": "Ara",
+      "active": "Arama: {{query}}",
+      "noResults": "Eşleşen bitki yok",
+      "noResultsDescription": "Başka bir arama deneyin veya filtreleri değiştirin."
     }
   }
 }

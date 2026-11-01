@@ -122,6 +122,11 @@
         "care": "관리",
         "repot": "분갈이"
       }
+    },
+    "activity": {
+      "title": "활동",
+      "empty": "아직 완료된 작업이 없습니다.",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

@@ -40,6 +40,16 @@
       "updateFailedMsg": "Diese Pflanze konnte nicht aktualisiert werden.",
       "deleteFailedTitle": "Löschfehler",
       "deleteFailedMsg": "Diese Pflanze konnte nicht gelöscht werden."
+    },
+    "search": {
+      "title": "Pflanzen suchen",
+      "description": "Finde eine Pflanze über ihren Spitznamen, Artnamen (auch auf Latein) oder Standort. Deine aktuellen Filter bleiben aktiv.",
+      "input": "Name, Art oder Standort",
+      "clear": "Suche löschen",
+      "apply": "Suchen",
+      "active": "Suche: {{query}}",
+      "noResults": "Keine passenden Pflanzen",
+      "noResultsDescription": "Versuche einen anderen Suchbegriff oder ändere die Filter."
     }
   }
 }

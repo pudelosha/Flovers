@@ -272,7 +272,24 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
 # detail serializer for GET /plant-instances/<id>/
 # returns the full editable payload + nested read bits
 class PlantInstanceDetailSerializer(serializers.ModelSerializer):
+    recent_activity = serializers.SerializerMethodField()
     photo = serializers.SerializerMethodField()
+
+    def get_recent_activity(self, obj):
+        request = self.context.get("request")
+        user = getattr(request, "user", None)
+        if not user or not user.is_authenticated or not user.is_active:
+            return []
+        from reminders.views import _visible_tasks
+        from reminders.serializers import ReminderTaskJournalSerializer
+        # Match the immutable event plant, not the reminder's current plant.
+        # A reminder moved elsewhere must not expose either plant's history.
+        tasks = _visible_tasks(user).filter(
+            status="completed", completed_at__isnull=False, _event_plant_id=obj.pk,
+        ).select_related("completed_by", "reminder__plant__user").order_by("-completed_at", "-pk")[:5]
+        context = {**self.context, "event_plants": {obj.pk: obj}}
+        rows = ReminderTaskJournalSerializer(tasks, many=True, context=context).data
+        return [{key: row[key] for key in ("id", "type", "completed_at", "completed_by")} for row in rows]
 
     def get_photo(self, obj):
         return photo_metadata(obj, self.context.get("request"))
@@ -297,6 +314,7 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "notes",
             "purchase_date",
             "photo",
+            "recent_activity",
             # do not return backend photo_uri (local-only on device)
             # "photo_uri",
             "light_level",

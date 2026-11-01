@@ -122,6 +122,11 @@
         "care": "护理",
         "repot": "换盆"
       }
+    },
+    "activity": {
+      "title": "动态",
+      "empty": "尚无已完成的任务。",
+      "line": "{{actor}} · {{task}}"
     }
   }
 }

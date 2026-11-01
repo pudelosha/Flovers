@@ -107,7 +107,7 @@ English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Ch
 - **Secure sessions:** authentication tokens use platform secure storage rather than plaintext AsyncStorage.
 - **Consistent presentation:** shared modal layouts, loading states, entry animations and a cleaner borderless tile design.
 
-**Prepared for the next update:** an **Activity** tile beneath the main Plant details tile, showing the five latest completions with actor and timestamp; and a **Search plants** modal, second in the Plants FAB menu, for nicknames, species and locations. These two additions are prepared for the next feature release and are not yet included in the published source.
+**Latest additions:** an **Activity** tile beneath the main Plant details tile shows the five latest completions with actor and timestamp. A **Search plants** modal, second in the Plants FAB menu, finds nicknames, common or Latin species names, and locations while preserving your filters and sorting. Activity requires the matching backend deployment; search uses the plant data already loaded in the app.
 
 ## Project structure
 

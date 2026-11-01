@@ -80,7 +80,14 @@ export type ApiPlantInstanceListItem = {
 };
 
 /** DETAIL (full) for editing */
+export type ApiPlantActivity = {
+  id: number;
+  type: string;
+  completed_at: string;
+  completed_by: {id: string; name: string} | null;
+};
 export type ApiPlantInstanceDetailFull = {
+  recent_activity?: ApiPlantActivity[];
   photo?: PlantPhoto | null;
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
@@ -175,6 +182,7 @@ export type Plant = {
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: string;
   name: string;
+  species?: string;
   latin?: string;
   location?: string;
   notes: string;

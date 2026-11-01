@@ -1,5 +1,7 @@
 import React from "react";
-import { render, waitFor } from "@testing-library/react-native";
+import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
+import FAB from "../FAB";
+import SearchPlantsModal from "../../../features/plants/components/modals/SearchPlantsModal";
 import PlantsScreen from "../../../features/plants/pages/PlantsScreen";
 import PlantDetailsScreen from "../../../features/plant-details/pages/PlantDetailsScreen";
 import CenteredSpinner from "../CenteredSpinner";
@@ -106,4 +108,21 @@ it("also waits for a definition image when the plant has no private photo", asyn
   mockNativeImageReady = true;
   view.rerender(<PlantDetailsScreen />);
   expect(view.getByTestId("plant-details-tile")).toBeTruthy();
+});
+
+it("places Search second in Plants FAB and searches species while preserving the applied query on cancel",async()=>{
+ mockPhotoLoading=false;
+ (fetchPlantInstances as jest.Mock).mockResolvedValue([
+  {id:1,display_name:"Bird",plant_definition:{id:1,name:"Bird of paradise",latin:"Strelitzia alba"},location:{id:1,name:"Living room"}},
+  {id:2,display_name:"Pilea",plant_definition:{id:2,name:"Chinese money plant",latin:"Pilea peperomioides"},location:{id:2,name:"Kitchen"}},
+ ]);
+ const view=render(<PlantsScreen/>);await waitFor(()=>expect(view.getAllByTestId("plant-tile")).toHaveLength(2));
+ const actions=view.UNSAFE_getByType(FAB).props.actions;expect(actions.slice(0,2).map((a:any)=>a.key)).toEqual(["create","search"]);
+ act(()=>{actions[1].onPress();});expect(view.UNSAFE_getByType(SearchPlantsModal).props.visible).toBe(true);
+ fireEvent.changeText(view.getByLabelText("Name, species or location"),"PARADISE living");fireEvent.press(view.getByText("Search"));
+ await waitFor(()=>expect(view.getAllByTestId("plant-tile")).toHaveLength(1));expect(view.getByTestId("plant-tile").props.children).toBe("Bird");
+ act(()=>{view.UNSAFE_getByType(FAB).props.actions[1].onPress();});
+ fireEvent.changeText(view.getByLabelText("Name, species or location"),"Pilea");fireEvent.press(view.getByText("Cancel"));
+ expect(view.getByTestId("plant-tile").props.children).toBe("Bird");
+ fireEvent.press(view.getByLabelText("Clear search"));await waitFor(()=>expect(view.getAllByTestId("plant-tile")).toHaveLength(2));
 });
