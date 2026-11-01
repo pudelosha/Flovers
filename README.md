@@ -1,248 +1,191 @@
-# Flovers — Plant care, reminders & IoT readings
+<p align="center">
+  <img src="web/public/favicon.png" width="88" alt="Flovers logo" />
+</p>
 
-Flovers is a **React Native** app (TypeScript) backed by a **Django** API that helps you manage your plants, schedule care routines, recognize plant species with ML, and monitor **real sensor readings** (temperature, humidity, light, soil moisture) from linked devices. Users can create “Plant Instances”, attach reminders, connect IoT devices, and control watering pumps — all secured with **JWT authentication**.
+# Flovers — Your plants. Your routines. A little help from friends.
 
----
+Flovers brings your plant collection, daily care, progress photos and live sensor readings into one mobile app. Know what needs attention, keep a record of what you have done, and let someone you trust care for your plants while you are away.
 
-## ✨ What it does
+Use it with a few houseplants or connect an ESP32 for sensor monitoring and controlled watering. Devices are optional: plants, reminders, photos and shared care work without them.
 
-### 🌱 Plants (Plant Instances)
-- Add your own plants with rich details:
-  - Location (indoor/outdoor/other)
-  - Light level, orientation, distance from window
-  - Pot material, soil mix, purchase date, photo, notes
-- Access plants via **QR code** (scan-to-open)
-- Edit or delete any plant at any time
+**[Website](https://flovers.app/) · [User guide](https://flovers.app/en/docs) · [Wiring diagrams](https://flovers.app/en/schemas) · [Deployment guide](deployment/README.md)**
 
-### ⏰ Reminders
-- Schedule care tasks for:
-  - Watering
-  - Misting / spraying
-  - Fertilising
-  - General care
-  - Repotting
-- Repeating intervals (days or months)
-- Track task progress and mark tasks as **pending / completed**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/79019890-31c7-453f-a501-3e77b25348a2" width="19%" alt="Plant collection" />
+  <img src="https://github.com/user-attachments/assets/528d751c-63f8-4fa9-a6ff-3cf83311d431" width="19%" alt="Create a plant" />
+  <img src="https://github.com/user-attachments/assets/648f8172-82ed-442e-a9d5-4c5541d8bbbb" width="19%" alt="Care reminders" />
+  <img src="https://github.com/user-attachments/assets/73dd438b-2096-43d4-b5f7-90868caa5121" width="19%" alt="Profile and preferences" />
+  <img src="https://github.com/user-attachments/assets/8472819a-94a8-4d01-b0f2-8a1fe414340f" width="19%" alt="Plant care controls" />
+</p>
 
-### 🤖 Plant Recognition
-- Identify plants from the mobile camera or gallery
-- Backend ML model trained on **700+ plant species**
-- Recognition results are linked with plant definitions, pictures, and care metadata
-- Use recognition during plant creation to prefill species-based care suggestions
+## What you can do
 
-### 🌡️ Readings (IoT Devices)
-- Link a device to a specific plant
-- Configure a **sampling interval (1–24 hours)**
-- Toggle sensors for **temperature, humidity, light,** and **soil moisture**
-- Enable **moisture alerts** with a threshold slider (0–100%)
-- View the latest snapshot per tile or open detailed history
-- Enable/disable device ingestion and rotate account secrets for security
-- Configure devices with an optional **watering pump**
-- Let the backend automatically schedule watering when moisture drops below a threshold
-- Schedule or recall pump watering tasks manually from the mobile app
+### Build a collection that feels like yours
 
-### 🔔 Notifications & Profile
-- Email and push notification preferences for reminder and moisture events
-- Multilingual UI and email templates
-- Profile settings for language, units, background, tile style, and FAB position
-- Account management, password/email changes, support messages, and bug reports
+- Create plants through a guided wizard, with or without a linked species definition.
+- Record nicknames, locations, purchase dates, notes, light conditions, orientation, distance from a window, pot material and soil mix.
+- Identify a plant from a camera or gallery photo and use the linked catalogue information to help set up its care.
+- Take or upload your own plant photo, then **pan and zoom its framing** with previews for list tiles and Plant details.
+- Fall back to the catalogue photo when no personal photo is provided.
+- Generate, save or email plant QR codes. Scan a code to open a plant you own or have permission to view.
 
-### 🔐 Authentication
-- Full **JWT** register/login system
-- All plant, reminder, and reading data are private per user session
+### Turn care into a manageable daily routine
 
----
+- Create recurring reminders for **watering, misting, fertilising, repotting and general care**.
+- Use **Home as a task list or calendar**, switching through the FAB menu or a horizontal swipe.
+- See actual pending tasks on their current due dates, including overdue, postponed and shared tasks. The calendar does not invent future repetitions.
+- Complete tasks individually or complete the eligible tasks currently visible, with optional notes and a completion date.
+- **Postpone one task** until tomorrow, in two or three days, or a chosen later date without changing the recurring reminder definition.
+- **Undo an eligible completion** from Task Journal. The owner can restore the task, remove its untouched successor and reverse the completing person's XP. Later edits or activity prevent unsafe undo.
+- Sort and filter your tasks and manage recurring reminder rules separately in Reminders.
 
-## 🧱 Tech Stack
+The next recurring task is calculated from the chosen completion date and the reminder interval. Undo is available for eligible completions recorded after its backend update; older entries lack the safety record needed to restore them reliably.
 
-- **Mobile:** React Native (TypeScript)
-- **Backend:** Django + Django REST Framework
-- **Auth:** JWT (JSON Web Token)
-- **UI/UX:** Glass/blur overlays, animated lists, modern modals & sliders
-- **State/data:** Typed service layer with API mappers for UI isolation
-- **ML:** Backend plant-recognition model trained on 700+ plants with definitions and pictures
-- **Deployment:** VPS-hosted backend and React documentation site
+### Share care, not account credentials
 
----
+- Add contacts using an email address or **Flovers ID**, and manage incoming and outgoing requests.
+- Invite someone who does not yet have Flovers by email, choosing the invitation language.
+- Share one plant or select several together when preparing for a holiday.
+- Give each contact **read-only access or permission to complete tasks**. Reminder definitions and plant editing stay with the owner.
+- Set an optional access end date, revoke one person's access, or remove a plant's sharing for everyone while keeping the plant.
+- View shared plants, permitted readings and care history. Shared labels distinguish them in the main screens.
+- Let caregivers use QR scanning for plants they can access.
 
-## 🔐 Authentication
+### Keep a visual care journal
 
-The app uses **JWT** authentication. Tokens are attached automatically to API requests, and all resources are isolated per logged-in user.
+- Review completed tasks with their date, notes and **who completed them**.
+- Add a development photo **once every seven days per plant**, with an optional photo date and note.
+- Mix photo entries and completed care tasks in one **Task Journal**, with filters, sorting and server-side pagination.
+- Open a full photo without the tile gradient and move between that plant's photos with Previous and Next.
+- Let owners add, edit and delete journal photos while shared viewers can see them.
+- Email task-history exports as spreadsheets.
 
----
+Personal photos are resized and compressed for mobile use, stored privately on the server and accessible only to the owner and people with active sharing access. Replacing or removing a photo cleans up unused files. See [private photo storage and backups](deployment/PRIVATE_PHOTOS.md).
 
-## 🚀 Getting Started
+### Add live readings and watering hardware
 
-### Prerequisites
+- Link a device to a plant and choose sensors for **temperature, air humidity, light and soil moisture**.
+- View current readings and explore **day, week and month charts**.
+- Set the expected reading interval. A device tile pulses red when readings become overdue, with optional email and push alerts.
+- Configure low-moisture alerts and optional automatic watering thresholds.
+- Schedule or recall manual pump watering, choosing a duration from **1 to 300 seconds**.
+- Set the automatic pump duration in device settings for the generated firmware; manual watering and automatic watering have separate duration rules.
+- Generate and email device-specific Arduino/ESP32 sample code from the app.
 
-- Node 20+
-- Yarn or npm
-- React Native environment set up (Android Studio and/or Xcode)
-- Python 3.11+ with Django & DRF
-- A running Django backend with the necessary REST endpoints
+Device settings embedded in generated firmware require regenerating and uploading the code to the board. Compatible firmware includes HTTPS certificate verification, cooldown safeguards and protections against repeating a watering job after retries.
 
-### Setup (mobile)
+### Grow your gardening profile
 
-```bash
-# Install dependencies
-yarn
-# or
-npm install
+- Earn XP from completed care tasks and progress through **levels 1–100 and ten gardening ranks**, from Seedling to Plant Legend.
+- Reach early levels quickly, with increasing XP requirements for later levels.
+- Keep progression fair through daily limits, diminishing rewards and per-plant care checks.
+- See your current level and progress in Profile without XP pop-ups interrupting care.
+- Personalise language, temperature units, date format, background, tile appearance and FAB position.
 
-# iOS setup
-cd ios && pod install && cd ..
-yarn ios
+### Choose the notifications you need
 
-# Android setup
-yarn android
+- Configure email and push notifications independently, including reminder delivery times.
+- Choose whether due tasks for shared plants are included in your reminders.
+- Opt in to notifications when another person completes a task for a plant you share.
+- Configure device alerts for low soil moisture and missing readings.
 
-# Start Metro bundler
-yarn start
+### Use Flovers in your language
+
+The mobile app, backend messages and website support **15 languages**:
+
+English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Chinese, Japanese, Korean, Indonesian, Russian and Turkish.
+
+## Recent improvements
+
+- **Home calendar:** moved from Reminders to the screen where tasks are completed; selected-day circles and coloured dots keep it compact.
+- **Task postponement and safe undo:** correct a task's timing or an accidental completion without silently overwriting later care.
+- **Contacts and shared plants:** help someone look after your collection with explicit access permissions.
+- **Task Journal:** combined care history and progress photos, full-photo navigation and paginated loading.
+- **Private synced photos:** camera/gallery uploads, reusable framing, shared access checks and old-file cleanup.
+- **Profile progression:** increasing level requirements and safeguards against farming XP.
+- **Device reliability:** configurable reading intervals and pump timings, overdue-reading indicators and alerts.
+- **Secure sessions:** authentication tokens use platform secure storage rather than plaintext AsyncStorage.
+- **Consistent presentation:** shared modal layouts, loading states, entry animations and a cleaner borderless tile design.
+
+**Prepared for the next update:** an **Activity** tile beneath the main Plant details tile, showing the five latest completions with actor and timestamp; and a **Search plants** modal, second in the Plants FAB menu, for nicknames, species and locations. These two additions are prepared for the next feature release and are not yet included in the published source.
+
+## Project structure
+
+| Directory | Purpose |
+| --- | --- |
+| [`mobile/`](mobile/) | React Native and TypeScript app, native Android/iOS projects and typed API services |
+| [`backend/`](backend/) | Django REST API, authentication, care tasks, sharing, notifications, device integration and recognition |
+| [`web/`](web/) | React/Vite website, multilingual documentation, wiring diagrams and legal pages |
+| [`deployment/`](deployment/) | VPS deployment scripts, runtime configuration and private photo storage guidance |
+| [`ml/`](ml/) | Plant-recognition training tools and supporting work |
+| [`translations/`](translations/) | Translation tooling and supporting data |
+
+The backend uses **Django REST Framework, JWT, PostgreSQL, Celery and Redis**. Plant recognition uses **PyTorch/torchvision**, with CPU-only packages in the Docker image. The mobile UI uses React Navigation, native camera and sensor integrations, private photo loading and platform secure token storage.
+
+Android is the primary tested platform. The iOS project and platform-specific handling are included; an iOS release still needs validation with Xcode and real devices.
+
+## Run locally
+
+### Mobile
+
+Use a Node.js version compatible with both projects, such as **22.12 or later**, plus npm and the native Android or iOS toolchain. Start from the repository root:
+
+```sh
+cd mobile
+npm ci
+npm start
 ```
 
----
+In another terminal, from the repository root:
 
-## 🧩 Docker & Local Development
-
-Flovers includes a complete **Docker Compose setup** for the backend stack.
-
-### Services
-
-| Service | Description |
-|----------|-------------|
-| **web** | Django backend (auto-runs migrations + dev server on port `8000`) |
-| **worker** | Celery worker for background tasks (e.g. scheduled jobs, notifications) |
-| **beat** | Celery Beat scheduler for periodic tasks |
-| **redis** | Message broker used by Celery |
-| **db** | PostgreSQL 16 database |
-| **mailhog** | Optional local SMTP testing service with web UI at [http://localhost:8025](http://localhost:8025) |
-
-### Example `docker-compose.yml`
-
-```yaml
-services:
-  web:
-    build:
-      context: ./backend
-    command: bash -lc "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-    env_file: ./backend/.env
-    working_dir: /app
-    volumes:
-      - ./backend:/app
-      - static_volume:/app/staticfiles
-      - media_volume:/app/media
-    ports:
-      - "${BACKEND_BIND_ADDRESS:-127.0.0.1}:8000:8000"
-    depends_on:
-      - db
-      - redis
-      - mailhog
-
-  worker:
-    build:
-      context: ./backend
-    command: celery -A app worker -l info
-    env_file: ./backend/.env
-    working_dir: /app
-    volumes:
-      - ./backend:/app
-    depends_on:
-      - redis
-      - db
-
-  beat:
-    build:
-      context: ./backend
-    command: celery -A app beat -l info
-    env_file: ./backend/.env
-    working_dir: /app
-    volumes:
-      - ./backend:/app
-    depends_on:
-      - redis
-      - db
-
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "127.0.0.1:6379:6379"
-
-  db:
-    image: postgres:16-alpine
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB:-appdb}
-      POSTGRES_USER: ${POSTGRES_USER:-appuser}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-apppass}
-    ports:
-      - "127.0.0.1:5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
-  mailhog:
-    image: mailhog/mailhog:latest
-    # SMTP is at 1025 inside the network; HTTP UI is exposed on 8025
-    ports:
-      - "127.0.0.1:8025:8025"
-
-volumes:
-  pgdata:
-  static_volume:
-  media_volume:
+```sh
+cd mobile
+npm run android
 ```
 
-### Run everything
+For iOS, use macOS with Xcode and install the CocoaPods dependencies before building:
 
-```bash
-# Build and start all services
+```sh
+cd mobile
+bundle install
+cd ios
+bundle exec pod install
+cd ..
+npm run ios
+```
+
+Configure `API_BASE` and `PUBLIC_BASE_URL` for your environment before building. The checked-in Android dotenv mapping currently uses `.env.production` for both debug and release; select your intended environment explicitly when developing against a local backend.
+
+### Website and documentation
+
+```sh
+cd web
+npm ci
+npm run dev
+```
+
+### Backend
+
+The root [`docker-compose.yml`](docker-compose.yml) defines the development stack: Django, a Celery worker, Celery Beat, Redis, PostgreSQL 16 and MailHog.
+
+Before starting, configure `backend/.env` for development, database and email settings. The Compose file also expects the Firebase service-account file at `backend/secrets/firebase.json`. Plant recognition requires the matching model weights and class mapping under `backend/plant_recognition/artifacts/` for the configured `PLANT_MODEL`.
+
+From the repository root:
+
+```sh
 docker compose up --build
 ```
 
-Once running:
-- Backend available at: **http://localhost:8000**
-- MailHog UI, if enabled for local email testing: **http://localhost:8025**
-- PostgreSQL: **localhost:5432**
+The development API is available at `http://localhost:8000`, and MailHog's email viewer at `http://localhost:8025`. The web service applies migrations at startup. The Docker image uses Python 3.12.
 
-Production email delivery is handled from the VPS environment; MailHog remains useful for local development and testing.
+Production uses a separate VPS Compose configuration. See the [deployment guide](deployment/README.md) for environment variables, trusted proxy settings, migrations, firmware compatibility and backup requirements.
 
-### Environment variables
+## Delivery and maintenance
 
-Backend environment variables are stored in `backend/.env`.  
-Example:
-```env
-APP_ENV=development
-DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
-USE_POSTGRES=True
-POSTGRES_DB=appdb
-POSTGRES_USER=appuser
-POSTGRES_PASSWORD=apppass
-```
+- **Backend:** relevant pushes to `main` build a commit-tagged image and deploy it to the VPS. The rollout applies migrations before starting the updated application services.
+- **Website:** relevant pushes publish the documentation site through GitHub Pages.
+- **Android testing builds:** the Google Play internal-test workflow is **manually triggered in GitHub Actions**, so routine commits do not create mobile releases.
+- **VPS storage:** CPU-only recognition dependencies and bounded backend-image retention reduce image accumulation while preserving the previous image for rollback.
+- **Private media:** uploaded photos use persistent private storage; backups must include the database and private media together.
 
-Development defaults are enabled only by explicit `APP_ENV=development` or `test`.
-Production requires private `SECRET_KEY` and `JWT_SIGNING_KEY` values of at least
-32 characters. Backend and infrastructure host ports bind to loopback by default;
-set `BACKEND_BIND_ADDRESS` explicitly for a physical development phone on your LAN.
-See [backend rollout configuration](deployment/README.md) for the existing VPS's
-Caddy/Traefik alternatives, trusted proxy identity, shared throttling cache and
-required database/firmware migrations.
-
----
-
-## 🌍 Deployment & Web
-
-- Backend is hosted on a VPS
-- Web documentation site: [https://flovers.app/](https://flovers.app/)
-- The web project is a React documentation/presentation site for the mobile app and backend ecosystem
-
----
-
-## 📸 Photos
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/79019890-31c7-453f-a501-3e77b25348a2" width="19%" alt="Plants" />
-  <img src="https://github.com/user-attachments/assets/528d751c-63f8-4fa9-a6ff-3cf83311d431" width="19%" alt="Create Plant" />
-  <img src="https://github.com/user-attachments/assets/648f8172-82ed-442e-a9d5-4c5541d8bbbb" width="19%" alt="Reminders" />
-  <img src="https://github.com/user-attachments/assets/73dd438b-2096-43d4-b5f7-90868caa5121" width="19%" alt="Profile" />
-  <img src="https://github.com/user-attachments/assets/8472819a-94a8-4d01-b0f2-8a1fe414340f" width="19%" alt="Modal" />
-</p>
-
+See the checked-in [workflows](.github/workflows/) for exact triggers and the [deployment documentation](deployment/README.md) for operational limits. An image rollback does not automatically reverse database migrations.
