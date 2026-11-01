@@ -89,6 +89,7 @@ type Props = {
   access?: ApiPlantAccess;
   reminders: PlantReminderSummary[];
   onMarkComplete: (reminderId: string) => void;
+  onPostpone?: (reminderId: string) => void;
   onEditReminder: (reminderId: string) => void;
   onShowHistory: () => void;
   collapseMenusSignal?: number;
@@ -103,6 +104,7 @@ export default function PlantRemindersTile({
   access,
   reminders,
   onMarkComplete,
+  onPostpone,
   onEditReminder,
   onShowHistory,
   collapseMenusSignal,
@@ -245,6 +247,7 @@ export default function PlantRemindersTile({
                     setMenuOpenId(null);
                     onMarkComplete(r.id);
                   }}
+                  onPostpone={onPostpone && r.taskId && r.dueDate ? () => {setMenuOpenId(null);onPostpone(r.id);} : undefined}
                   onEdit={() => {
                     setMenuOpenId(null);
                     onEditReminder(r.id);

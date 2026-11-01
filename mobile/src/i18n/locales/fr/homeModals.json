@@ -49,6 +49,21 @@
         "asc": "Croissant",
         "desc": "Décroissant"
       }
+    },
+    "postpone": {
+      "title": "Reporter la tâche",
+      "description": "Seule la date d’échéance de cette tâche changera. La date de début et la fréquence du rappel resteront inchangées.",
+      "currentDue": "Échéance actuelle : {{date}}",
+      "tomorrow": "Demain",
+      "inTwoDays": "Dans 2 jours",
+      "inThreeDays": "Dans 3 jours",
+      "dueDate": "Nouvelle échéance",
+      "chooseDate": "Choisir une date",
+      "invalidDate": "Choisissez une date valide après l’échéance actuelle et qui ne soit pas dans le passé.",
+      "failed": "Impossible de reporter la tâche. Veuillez réessayer.",
+      "saved": "Tâche reportée.",
+      "conflict": "Cette tâche a été modifiée. Chargement des données à jour.",
+      "save": "Reporter"
     }
   }
 }

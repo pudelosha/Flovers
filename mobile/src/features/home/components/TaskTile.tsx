@@ -17,6 +17,7 @@ type Props = {
   isMenuOpen: boolean;
   onToggleMenu: () => void;
   onMarkComplete: () => void;
+  onPostpone?: () => void;
   onEdit: () => void;
   onGoToPlant: () => void;
   onShowHistory?: () => void;
@@ -34,6 +35,7 @@ export default function TaskTile({
   task,
   isMenuOpen,
   onMarkComplete,
+  onPostpone,
   onEdit,
   onGoToPlant,
   onShowHistory,
@@ -207,6 +209,7 @@ export default function TaskTile({
           canComplete={access.canCompleteTasks}
           canEdit={access.canEdit}
           onMarkComplete={onMarkComplete}
+          onPostpone={onPostpone}
           onEdit={onEdit}
           onGoToPlant={onGoToPlant}
           onShowHistory={onShowHistory}

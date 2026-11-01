@@ -170,3 +170,12 @@ describe("reminders.service and serializer", () => {
     );
   });
 });
+
+
+it("posts a single-occurrence due date with an optimistic concurrency check",async()=>{
+ const {postponeReminderTask}=require("../reminders.service");
+ const {request}=require("../../client");
+ (request as jest.Mock).mockResolvedValue({id:7,due_date:"2026-11-03"});
+ await postponeReminderTask(7,"2026-11-03","2026-11-01");
+ expect(request).toHaveBeenLastCalledWith("/reminders/tasks/7/postpone/","POST",{due_date:"2026-11-03",expected_due_date:"2026-11-01"},{auth:true});
+});

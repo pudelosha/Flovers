@@ -29,7 +29,8 @@
       {
         "heading": "Photo tiles and editing",
         "body": [
-          "Photo tiles appear among completed tasks, with a fading image, Added and its timestamp at the top right, and notes at the bottom. They have no task-type badge. Tap a tile for View photo, Edit photo, Plant details or Delete photo. Owners can replace the image, change the optional date or notes, and delete after confirmation. View photo opens the full image in a modal, without cropping or the tile’s gradient. Owners and people with active sharing access can use this view."
+          "Photo tiles appear among completed tasks, with a fading image, Added and its timestamp at the top right, and notes at the bottom. They have no task-type badge. Tap a tile for View photo, Edit photo, Plant details or Delete photo. Owners can replace the image, change the optional date or notes, and delete after confirmation. View photo opens the full image in a modal, without cropping or the tile’s gradient. Owners and people with active sharing access can use this view.",
+          "In the photo preview, Previous opens an older photo of the same plant and Next opens a newer one, including photos not yet loaded in the journal list. The upload date and time appear beneath the image. Navigation is hidden for a single photo, and unavailable directions are disabled."
         ]
       },
       {

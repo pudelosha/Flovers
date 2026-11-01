@@ -9,13 +9,14 @@ import { s } from "../styles/plant-details.styles";
 
 type Props = {
   onMarkComplete: () => void;
+  onPostpone?: () => void;
   onEdit: () => void;
   onShowHistory: () => void;
   canEdit?: boolean;
   canComplete?: boolean;
 };
 
-export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistory, canEdit = true, canComplete = true }: Props) {
+export default function PlantReminderMenu({ onMarkComplete, onPostpone, onEdit, onShowHistory, canEdit = true, canComplete = true }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -45,6 +46,12 @@ export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistor
         <Text style={s.menuItemText}>
           {tr("plantDetails.reminders.menu.markComplete", "Mark as complete")}
         </Text>
+      </Pressable>}
+
+      {canEdit && onPostpone && <Pressable style={s.menuItem} onPress={onPostpone}
+        android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+        <MaterialCommunityIcons name="calendar-clock" size={18} color="#FFFFFF" style={{marginRight:8}}/>
+        <Text style={s.menuItemText}>{t("homeModals.postpone.title",{defaultValue:"Postpone task"})}</Text>
       </Pressable>}
 
       {canEdit && <Pressable style={s.menuItem} onPress={onEdit} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>

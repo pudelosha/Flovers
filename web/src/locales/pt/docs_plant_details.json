@@ -74,6 +74,12 @@
         "body": [
           "Uma planta de casa recebida é marcada como Compartilhada. Você pode visualizar suas informações, histórico de cuidados e leituras de sensores vinculados. O bloco de definição de lembrete e os controles de edição permanecem apenas para o proprietário. Conclua as tarefas compartilhadas permitidas na página inicial."
         ]
+      },
+      {
+        "heading": "Adiar tarefa",
+        "body": [
+          "Só o proprietário da planta pode adiar uma tarefa pendente. No Início ou nos detalhes da planta, escolha Adiar tarefa, logo abaixo de Marcar como concluída no menu. Amanhã, Daqui a 2 dias e Daqui a 3 dias preenchem a data a partir de hoje. Também pode escrever uma data no formato do perfil ou usar o calendário. A nova data deve ser posterior à atual e não estar no passado. Só o vencimento desta tarefa muda; o início e a frequência do lembrete mantêm-se. O próximo vencimento continua a ser calculado a partir da data de conclusão."
+        ]
       }
     ]
   }

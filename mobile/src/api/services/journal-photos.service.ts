@@ -84,6 +84,23 @@ export async function fetchJournalPhoto(id: string): Promise<JournalPhotoItem> {
     await request(`/journal/photos/${id}/`, 'GET', undefined, { auth: true }),
   );
 }
+export type JournalPhotoPreview = {
+  entry: JournalPhotoItem;
+  previousId: string | null;
+  nextId: string | null;
+};
+export async function fetchJournalPhotoPreview(id: string): Promise<JournalPhotoPreview> {
+  if (!UUID.test(id)) throw invalid();
+  const body = await request<any>(`/journal/photos/${id}/?navigation=1`, 'GET', undefined, { auth: true });
+  const entry = parseJournalPhoto(body);
+  // Older backends still support the viewer; navigation appears after deployment.
+  if (body.navigation === undefined) return { entry, previousId: null, nextId: null };
+  const { previous_id: previousId, next_id: nextId } = body.navigation ?? {};
+  const valid = (value: unknown) => value === null || (typeof value === 'string' && UUID.test(value) && value !== entry.id);
+  if (!valid(previousId) || !valid(nextId) || (previousId && previousId === nextId)) throw invalid();
+  return { entry, previousId, nextId };
+}
+
 export async function fetchJournalPhotoAvailability(): Promise<
   JournalPhotoAvailability[]
 > {

@@ -60,3 +60,13 @@ it("keeps Plant details third when a reminder is paused", () => {
   expect(view.getAllByText(/^(Edit reminder|Resume reminder|Plant details|Delete reminder)$/)
     .map(item => item.props.children)).toEqual(["Edit reminder", "Resume reminder", "Plant details", "Delete reminder"]);
 });
+
+
+it.each([TaskMenu,PlantReminderMenu])("places owner Postpone immediately after Complete and hides it for caregivers",(Menu:any)=>{
+ const postpone=jest.fn();
+ const view=render(<Menu onMarkComplete={noop} onPostpone={postpone} onEdit={noop} onGoToPlant={noop} onShowHistory={noop}/>);
+ const labels=view.getAllByText(/^(home.menu.markAsComplete|Mark as complete|Postpone task|home.menu.editReminder|Edit reminder)$/).map(item=>item.props.children);
+ expect(labels[1]).toBe("Postpone task");fireEvent.press(view.getByText("Postpone task"));expect(postpone).toHaveBeenCalledTimes(1);
+ view.rerender(<Menu canEdit={false} canComplete onMarkComplete={noop} onPostpone={postpone} onEdit={noop} onGoToPlant={noop} onShowHistory={noop}/>);
+ expect(view.queryByText("Postpone task")).toBeNull();
+});

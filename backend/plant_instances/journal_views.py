@@ -2,6 +2,7 @@
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from django.http import Http404
+from django.db.models import Q
 from django.utils import timezone
 from rest_framework import serializers
 from rest_framework.parsers import FormParser, JSONParser, MultiPartParser
@@ -144,7 +145,17 @@ class JournalPhotoDetailView(JournalPhotoBaseView):
         entry = self._visible(request).filter(pk=entry_id).first()
         if entry is None:
             raise Http404
-        return Response(entry_data(entry, request.user))
+        data = entry_data(entry, request.user)
+        if request.query_params.get("navigation") == "1":
+            # Seek within this plant, not just the journal page the client loaded.
+            # The composite plant/date/id index keeps each neighbor lookup bounded.
+            visible = self._visible(request).filter(plant_id=entry.plant_id)
+            older = visible.filter(Q(created_at__lt=entry.created_at) |
+                Q(created_at=entry.created_at, pk__lt=entry.pk)).order_by("-created_at", "-pk").values_list("pk", flat=True).first()
+            newer = visible.filter(Q(created_at__gt=entry.created_at) |
+                Q(created_at=entry.created_at, pk__gt=entry.pk)).order_by("created_at", "pk").values_list("pk", flat=True).first()
+            data["navigation"] = {"previous_id": str(older) if older else None, "next_id": str(newer) if newer else None}
+        return Response(data)
 
     def patch(self, request, entry_id):
         current = self._owned(request, entry_id)

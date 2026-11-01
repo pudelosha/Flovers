@@ -49,6 +49,21 @@
         "asc": "Crescente",
         "desc": "Decrescente"
       }
+    },
+    "postpone": {
+      "title": "Adiar tarefa",
+      "description": "Só vai alterar a data de vencimento desta tarefa. A data de início e a frequência do lembrete mantêm-se.",
+      "currentDue": "Vencimento atual: {{date}}",
+      "tomorrow": "Amanhã",
+      "inTwoDays": "Daqui a 2 dias",
+      "inThreeDays": "Daqui a 3 dias",
+      "dueDate": "Nova data de vencimento",
+      "chooseDate": "Escolher data",
+      "invalidDate": "Escolha uma data válida posterior ao vencimento atual e que não esteja no passado.",
+      "failed": "Não foi possível adiar a tarefa. Tente novamente.",
+      "saved": "Tarefa adiada.",
+      "conflict": "Esta tarefa foi alterada. A carregar os dados atualizados.",
+      "save": "Adiar"
     }
   }
 }

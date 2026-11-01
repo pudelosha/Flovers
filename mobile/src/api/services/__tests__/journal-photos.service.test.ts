@@ -5,6 +5,7 @@ import {
   deleteJournalPhoto,
   fetchJournalPhotoAvailability,
   fetchJournalPhotos,
+  fetchJournalPhotoPreview,
   parseJournalPhoto,
   updateJournalPhoto,
 } from '../journal-photos.service';
@@ -180,4 +181,21 @@ it('preserves cached bytes when the backend rejects a stale revision', async () 
     updateJournalPhoto(parseJournalPhoto(row), values),
   ).rejects.toThrow('Stale revision');
   expect(clearPlantPhotoCache).not.toHaveBeenCalled();
+});
+
+
+it("loads a single photo and adjacent IDs without fetching a collection",async()=>{
+ const older="00000000-0000-4000-8000-000000000004";
+ mockedRequest.mockResolvedValue({...row,navigation:{previous_id:older,next_id:null}});
+ await expect(fetchJournalPhotoPreview(entryId)).resolves.toMatchObject({entry:{id:entryId},previousId:older,nextId:null});
+ expect(mockedRequest).toHaveBeenCalledTimes(1);
+ expect(mockedRequest).toHaveBeenCalledWith(`/journal/photos/${entryId}/?navigation=1`,"GET",undefined,{auth:true});
+});
+it("keeps the preview working against older backends without navigation metadata",async()=>{
+ mockedRequest.mockResolvedValue(row);
+ await expect(fetchJournalPhotoPreview(entryId)).resolves.toMatchObject({previousId:null,nextId:null});
+});
+it.each([{previous_id:"../invalid",next_id:null},{previous_id:entryId,next_id:null},{previous_id:null}])("rejects invalid preview navigation metadata",async(navigation)=>{
+ mockedRequest.mockResolvedValue({...row,navigation});
+ await expect(fetchJournalPhotoPreview(entryId)).rejects.toMatchObject({status:502});
 });

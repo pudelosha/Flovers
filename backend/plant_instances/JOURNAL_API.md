@@ -58,3 +58,24 @@ appends older pages with a small footer spinner, preserving rendered tiles and
 scroll position. Duplicate end-of-list events are coalesced; failed pages retain
 the current list and offer retry. New criteria, refresh, navigation or unmount
 invalidate outstanding requests so stale responses cannot overwrite current data.
+
+
+## Photo preview navigation
+
+`GET /journal/photos/<uuid>/?navigation=1` returns the usual authorized photo
+metadata plus `navigation: {previous_id, next_id}`. Previous means older and Next
+means newer, ordered by upload time and UUID to break timestamp ties. Both IDs
+are nullable. Each neighbor lookup fetches at most one ID using the existing
+plant/upload-time/id index. No complete photo collection is downloaded, and
+navigation is independent of journal filters and currently loaded feed pages.
+
+Only photos of the same plant with current access are eligible. Each subsequent
+preview request and private-image request checks authorization again. Revoked or
+expired sharing cannot be used to continue viewing photos. A missing/deleted photo
+returns 404. The optional query preserves the existing detail response for old
+clients; new mobile clients also accept older backends without navigation metadata.
+
+The preview uses the shared full-screen modal, waits for fresh metadata and image
+loading, shows the upload date and local time below the image, and places equal-width
+Previous/Next buttons above Close. Single-photo navigation is hidden, unavailable
+directions are disabled, and reopening starts at the originally selected photo.

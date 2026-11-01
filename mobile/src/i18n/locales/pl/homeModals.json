@@ -49,6 +49,21 @@
         "asc": "Rosnąco",
         "desc": "Malejąco"
       }
+    },
+    "postpone": {
+      "title": "Przełóż zadanie",
+      "description": "Zmienisz tylko termin tego zadania. Data rozpoczęcia i częstotliwość przypomnienia pozostaną bez zmian.",
+      "currentDue": "Obecny termin: {{date}}",
+      "tomorrow": "Jutro",
+      "inTwoDays": "Za 2 dni",
+      "inThreeDays": "Za 3 dni",
+      "dueDate": "Nowy termin",
+      "chooseDate": "Wybierz datę",
+      "invalidDate": "Wybierz datę późniejszą niż obecny termin zadania. Nie może to być data z przeszłości.",
+      "failed": "Nie udało się przełożyć zadania. Spróbuj ponownie.",
+      "saved": "Zadanie przełożone.",
+      "conflict": "To zadanie zostało zmienione. Wczytujemy aktualne dane.",
+      "save": "Przełóż"
     }
   }
 }

@@ -74,6 +74,12 @@
         "body": [
           "Une plante reçue est marquée Partagée. Vous pouvez afficher ses informations, son historique de soins et les lectures des capteurs liés. La vignette de définition de rappel et les contrôles d’édition restent réservés au propriétaire. Effectuez les tâches partagées autorisées sur Accueil."
         ]
+      },
+      {
+        "heading": "Reporter la tâche",
+        "body": [
+          "Seul le propriétaire de la plante peut reporter une tâche en attente. Dans Accueil ou les détails de la plante, choisissez Reporter la tâche juste sous Marquer comme terminée dans le menu. Demain, Dans 2 jours et Dans 3 jours remplissent la date à partir d’aujourd’hui. Vous pouvez aussi saisir une date au format de votre profil ou utiliser le calendrier. La nouvelle échéance doit être postérieure à l’actuelle et ne pas être dans le passé. Seule cette tâche change, sans modifier la date de début ni la fréquence du rappel. L’échéance suivante reste calculée à partir de la date de réalisation."
+        ]
       }
     ]
   }

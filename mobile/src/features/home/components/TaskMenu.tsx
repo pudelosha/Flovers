@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 type Props = {
   onMarkComplete: () => void;
+  onPostpone?: () => void;
   onEdit: () => void;
   onGoToPlant: () => void;
 
@@ -28,6 +29,7 @@ type Props = {
 
 export default function TaskMenu({
   onMarkComplete,
+  onPostpone,
   onEdit,
   onGoToPlant,
   onShowHistory,
@@ -55,6 +57,12 @@ export default function TaskMenu({
           style={{ marginRight: 8 }}
         />
         <Text style={s.menuItemText}>{t("home.menu.markAsComplete")}</Text>
+      </Pressable>}
+
+      {canEdit && onPostpone && <Pressable style={s.menuItem} onPress={onPostpone}
+        android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+        <MaterialCommunityIcons name="calendar-clock" size={18} color="#FFFFFF" style={{marginRight:8}}/>
+        <Text style={s.menuItemText}>{t("homeModals.postpone.title",{defaultValue:"Postpone task"})}</Text>
       </Pressable>}
 
       {canEdit && <Pressable

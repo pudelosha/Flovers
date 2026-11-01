@@ -74,6 +74,12 @@
         "body": [
           "Roślina udostępniona Tobie ma odpowiednie oznaczenie. Możesz przeglądać jej dane, historię pielęgnacji i odczyty z czujników. Kafelek przypomnień i opcje edycji są dostępne tylko dla właściciela. Zadania, na które masz uprawnienia, oznaczysz jako wykonane na ekranie Start."
         ]
+      },
+      {
+        "heading": "Przełóż zadanie",
+        "body": [
+          "Tylko właściciel rośliny może przełożyć oczekujące zadanie. Na ekranie Start lub w szczegółach rośliny otwórz menu zadania i wybierz Przełóż zadanie, tuż pod Oznacz jako wykonane. Przyciski Jutro, Za 2 dni i Za 3 dni wpisują datę liczoną od dzisiaj. Możesz też wpisać datę w formacie ustawionym w profilu lub wybrać ją z kalendarza. Nowy termin musi być późniejszy od obecnego i nie może przypadać w przeszłości. Zapis zmienia wyłącznie termin tego zadania, bez zmiany daty rozpoczęcia ani częstotliwości przypomnienia. Po wykonaniu zadania kolejny termin jest nadal ustalany na podstawie daty wykonania."
+        ]
       }
     ]
   }

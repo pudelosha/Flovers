@@ -49,6 +49,21 @@
         "asc": "Artan",
         "desc": "Azalan"
       }
+    },
+    "postpone": {
+      "title": "Görevi ertele",
+      "description": "Yalnızca bu görevin son tarihi değişir. Hatırlatıcının başlangıç tarihi ve tekrar aralığı aynı kalır.",
+      "currentDue": "Mevcut son tarih: {{date}}",
+      "tomorrow": "Yarın",
+      "inTwoDays": "2 gün sonra",
+      "inThreeDays": "3 gün sonra",
+      "dueDate": "Yeni son tarih",
+      "chooseDate": "Tarih seç",
+      "invalidDate": "Mevcut son tarihten sonraki geçerli bir tarih seçin. Geçmiş bir tarih seçilemez.",
+      "failed": "Görev ertelenemedi. Lütfen tekrar deneyin.",
+      "saved": "Görev ertelendi.",
+      "conflict": "Bu görev değiştirildi. Güncel bilgiler yükleniyor.",
+      "save": "Ertele"
     }
   }
 }

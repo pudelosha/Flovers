@@ -74,6 +74,12 @@
         "body": [
           "Una planta recibida está marcada como Compartida. Puede ver su información, historial de atención y lecturas de sensores vinculados. El mosaico de definición de recordatorio y los controles de edición siguen siendo propiedad exclusiva del propietario. Complete las tareas compartidas permitidas en Inicio."
         ]
+      },
+      {
+        "heading": "Posponer tarea",
+        "body": [
+          "Solo el propietario de la planta puede posponer una tarea pendiente. En Inicio o en los detalles de la planta, elige Posponer tarea justo debajo de Marcar como completada en el menú. Mañana, En 2 días y En 3 días rellenan la fecha a partir de hoy. También puedes escribir una fecha con el formato de tu perfil o usar el calendario. La nueva fecha debe ser posterior a la actual y no estar en el pasado. Solo cambia el vencimiento de esta tarea, no el inicio ni la frecuencia del recordatorio. El siguiente vencimiento sigue calculándose a partir de la fecha de realización."
+        ]
       }
     ]
   }

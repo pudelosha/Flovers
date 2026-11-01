@@ -113,6 +113,11 @@ class ReminderTaskJournalSerializer(serializers.ModelSerializer):
         fields = ["id", "type", "completed_at", "note", "completed_by", "access"]
 
 
+class ReminderTaskPostponeSerializer(serializers.Serializer):
+    due_date = serializers.DateField(input_formats=["%Y-%m-%d"])
+    expected_due_date = serializers.DateField(input_formats=["%Y-%m-%d"])
+
+
 class ReminderTaskCompleteSerializer(serializers.Serializer):
     note = serializers.CharField(required=False, allow_blank=True, trim_whitespace=True)
     notes = serializers.CharField(required=False, allow_blank=True, trim_whitespace=True)

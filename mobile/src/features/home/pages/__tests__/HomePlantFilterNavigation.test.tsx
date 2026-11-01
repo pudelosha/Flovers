@@ -1,6 +1,8 @@
 import React from "react";
 import { act, render, waitFor } from "@testing-library/react-native";
 import HomeScreen from "../HomeScreen";
+import TaskTile from "../../components/TaskTile";
+import PostponeTaskModal from "../../components/modals/PostponeTaskModal";
 import FilterHomeTasksModal from "../../components/modals/FilterHomeTasksModal";
 import FAB from "../../../../shared/ui/FAB";
 import { fetchHomeTasks } from "../../../../api/services/home.service";
@@ -102,4 +104,20 @@ describe("Home navigation from shared plants", () => {
     expect(view.getByText("Bird task")).toBeTruthy(); expect(filterProps(view).visible).toBe(false);
     expect(mockNavigation.setParams).not.toHaveBeenCalled();
   });
+});
+
+
+it("opens postponement for the selected Home task and refreshes the list after saving", async () => {
+  jest.clearAllMocks();mockFocused=true;mockParams=undefined;
+  (fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
+  const view=render(<HomeScreen/>);await view.findByText("Bird task");
+  const tile=view.UNSAFE_getAllByType(TaskTile).find(tile=>tile.props.task.id==="a")!;
+  act(()=>{tile.props.onPostpone();});
+  let modal=view.UNSAFE_getByType(PostponeTaskModal);
+  expect(modal.props.visible).toBe(true);expect(modal.props.task.id).toBe("a");
+  expect(modal.props.task.plant).toBe("Bird task");
+  const calls=(fetchHomeTasks as jest.Mock).mock.calls.length;
+  await act(async()=>{modal.props.onClose();modal.props.onSaved();});
+  await waitFor(()=>expect((fetchHomeTasks as jest.Mock).mock.calls.length).toBeGreaterThan(calls));
+  expect(view.UNSAFE_getByType(PostponeTaskModal).props.visible).toBe(false);
 });

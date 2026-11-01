@@ -1,4 +1,4 @@
-import { request } from "../client";
+import { ApiError, request } from "../client";
 
 export type ApiReminder = {
   access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
@@ -59,6 +59,13 @@ export async function listReminderTasks(
     undefined,
     { auth: params?.auth ?? true }
   );
+}
+
+/** Postpone one occurrence without updating the recurring reminder. */
+export async function postponeReminderTask(taskId: number, dueDate: string, expectedDueDate: string): Promise<ApiReminderTask> {
+  if (!Number.isSafeInteger(taskId) || taskId < 1) throw new ApiError(400, { code: "invalid_task" });
+  return request(`/reminders/tasks/${taskId}/postpone/`, "POST",
+    { due_date: dueDate, expected_due_date: expectedDueDate }, { auth: true });
 }
 
 // Accepts optional completion metadata while keeping old call signatures working.

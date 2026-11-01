@@ -49,6 +49,21 @@
         "asc": "升序",
         "desc": "降序"
       }
+    },
+    "postpone": {
+      "title": "推迟任务",
+      "description": "只更改此任务的到期日期。提醒的开始日期和重复间隔保持不变。",
+      "currentDue": "当前到期日期：{{date}}",
+      "tomorrow": "明天",
+      "inTwoDays": "2天后",
+      "inThreeDays": "3天后",
+      "dueDate": "新的到期日期",
+      "chooseDate": "选择日期",
+      "invalidDate": "请选择晚于当前到期日期且不在过去的有效日期。",
+      "failed": "无法推迟任务，请重试。",
+      "saved": "任务已推迟。",
+      "conflict": "此任务已更改，正在加载最新信息。",
+      "save": "推迟"
     }
   }
 }

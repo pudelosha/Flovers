@@ -49,6 +49,21 @@
         "asc": "Ascending",
         "desc": "Descending"
       }
+    },
+    "postpone": {
+      "title": "Postpone task",
+      "description": "Change only this task’s due date. The reminder’s start date and recurring interval stay unchanged.",
+      "currentDue": "Current due date: {{date}}",
+      "tomorrow": "Tomorrow",
+      "inTwoDays": "In 2 days",
+      "inThreeDays": "In 3 days",
+      "dueDate": "New due date",
+      "chooseDate": "Choose date",
+      "invalidDate": "Choose a valid date after the current due date, not in the past.",
+      "failed": "Could not postpone the task. Please try again.",
+      "saved": "Task postponed.",
+      "conflict": "This task changed. Reloading its latest details.",
+      "save": "Postpone"
     }
   }
 }

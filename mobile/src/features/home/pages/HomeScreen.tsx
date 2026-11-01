@@ -21,6 +21,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
+import PostponeTaskModal, { type PostponeTaskTarget } from "../components/modals/PostponeTaskModal";
 import CompleteTaskModal from "../components/modals/CompleteTaskModal";
 import type { Task, TaskType } from "../types/home.types";
 import {
@@ -127,6 +128,8 @@ export default function HomeScreen() {
     setToastVisible(true);
   };
 
+  const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(null);
+
   type CompleteMode = "single" | "bulk";
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
   const [completeMode, setCompleteMode] = useState<CompleteMode>("single");
@@ -226,6 +229,7 @@ export default function HomeScreen() {
       setSortOpen(false);
       setFilterOpen(false);
       closeCompleteModal();
+      setPostponeTask(null);
 
       requestAnimationFrame(() => {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
@@ -486,7 +490,7 @@ export default function HomeScreen() {
   });
   const emptyOpacity = emptyAnim;
 
-  const showFAB = !sortOpen && !filterOpen;
+  const showFAB = !sortOpen && !filterOpen && !postponeTask;
 
   // open / close / confirm handlers for complete-with-note (single + bulk)
   const openCompleteModal = (selectedTasks: HomeTask[], mode: CompleteMode) => {
@@ -730,6 +734,11 @@ export default function HomeScreen() {
                 onMarkComplete={() => {
                   setMenuOpenId(null);
                   openCompleteModal([item as HomeTask], "single");
+                }}
+                onPostpone={() => {
+                  if (!plantAccess(item.access).canEdit) return;
+                  closeFloatingMenus();
+                  setPostponeTask({ id: item.id, plant: item.plant, dueDate: item.dueDate });
                 }}
                 onEdit={() => {
                   setMenuOpenId(null);
@@ -987,6 +996,18 @@ export default function HomeScreen() {
         }}
         onClearAll={() => {
           setFilters(INITIAL_FILTERS);
+        }}
+      />
+
+      <PostponeTaskModal visible={isFocused && !!postponeTask} task={postponeTask}
+        onClose={() => setPostponeTask(null)}
+        onSaved={() => {
+          showToast(String(t("homeModals.postpone.saved", { defaultValue: "Task postponed." })), "success");
+          void (async () => { if (loadInFlightRef.current) await loadInFlightRef.current; await load(); })();
+        }}
+        onConflict={() => {
+          showToast(String(t("homeModals.postpone.conflict", { defaultValue: "This task changed. Reloading its latest details." })), "error");
+          void (async () => { if (loadInFlightRef.current) await loadInFlightRef.current; await load(); })();
         }}
       />
 

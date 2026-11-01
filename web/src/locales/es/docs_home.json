@@ -77,6 +77,12 @@
         "body": [
           "Inicio también muestra tareas para plantas compartidas contigo. Aparece una etiqueta Compartida debajo de la fecha de vencimiento. Puede completar estas tareas solo cuando el propietario haya habilitado la finalización de tareas para usted. Los destinatarios de solo visualización pueden inspeccionar la tarea y abrir su planta."
         ]
+      },
+      {
+        "heading": "Posponer tarea",
+        "body": [
+          "Solo el propietario de la planta puede posponer una tarea pendiente. En Inicio o en los detalles de la planta, elige Posponer tarea justo debajo de Marcar como completada en el menú. Mañana, En 2 días y En 3 días rellenan la fecha a partir de hoy. También puedes escribir una fecha con el formato de tu perfil o usar el calendario. La nueva fecha debe ser posterior a la actual y no estar en el pasado. Solo cambia el vencimiento de esta tarea, no el inicio ni la frecuencia del recordatorio. El siguiente vencimiento sigue calculándose a partir de la fecha de realización."
+        ]
       }
     ]
   }

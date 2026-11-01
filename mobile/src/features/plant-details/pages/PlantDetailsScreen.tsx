@@ -40,6 +40,7 @@ import PlantQrTile from "../components/PlantQrTile";
 import PlantInfoTile from "../components/PlantInfoTile";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 
+import PostponeTaskModal, { type PostponeTaskTarget } from "../../home/components/modals/PostponeTaskModal";
 import CompleteTaskModal from "../../home/components/modals/CompleteTaskModal";
 import { markHomeTaskComplete } from "../../../api/services/home.service";
 
@@ -114,6 +115,7 @@ export default function PlantDetailsScreen() {
   const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
   const [error, setError] = useState<string>("");
 
+  const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(null);
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
   const [completeReminderId, setCompleteReminderId] = useState<string | null>(null);
   const [completeNote, setCompleteNote] = useState("");
@@ -620,6 +622,7 @@ export default function PlantDetailsScreen() {
 
         setToastVisible(false);
         setCompleteModalVisible(false);
+        setPostponeTask(null);
         setCompleteReminderId(null);
         setCompleteNote("");
 
@@ -825,6 +828,13 @@ export default function PlantDetailsScreen() {
                 reminders={reminders}
                 onTileTouch={dismissMenus}
                 onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
+                onPostpone={(reminderId) => {
+                  const reminder = details.reminders.find(item => item.id === reminderId);
+                  if (!plantAccess(details.plant.access).canEdit || !reminder?.taskId || !reminder.dueDate) return;
+                  dismissMenus();
+                  setPostponeTask({ id: reminder.taskId, dueDate: reminder.dueDate,
+                    plant: details.plant.display_name || details.plant.plant_definition?.name || "" });
+                }}
                 onEditReminder={(reminderId) => {
                   nav.navigate("Reminders", { editReminderId: String(reminderId) });
                 }}
@@ -961,6 +971,22 @@ export default function PlantDetailsScreen() {
         setFSoilMix={setFSoilMix}
         onCancel={closeEdit}
         onSave={onUpdate}
+      />
+
+      <PostponeTaskModal visible={isFocused && !!postponeTask} task={postponeTask}
+        onClose={() => setPostponeTask(null)}
+        onSaved={() => {
+          showToast(String(t("homeModals.postpone.saved", { defaultValue: "Task postponed." })), "success");
+          void loadDetails().then(() => setRefreshCounter(value => value + 1)).catch(() => {
+            showToast(String(t("plantDetails.errors.failedToLoad", { defaultValue: "Could not reload plant details." })), "error");
+          });
+        }}
+        onConflict={() => {
+          showToast(String(t("homeModals.postpone.conflict", { defaultValue: "This task changed. Reloading its latest details." })), "error");
+          void loadDetails().then(() => setRefreshCounter(value => value + 1)).catch(() => {
+            showToast(String(t("plantDetails.errors.failedToLoad", { defaultValue: "Could not reload plant details." })), "error");
+          });
+        }}
       />
 
       <CompleteTaskModal

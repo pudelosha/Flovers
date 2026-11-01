@@ -74,6 +74,12 @@
         "body": [
           "Eine erhaltene Pflanze ist mit „Geteilt“ gekennzeichnet. Sie können dessen Informationen, den Pflegeverlauf und die verknüpften Sensormesswerte anzeigen. Die Erinnerungsdefinitionskachel und die Bearbeitungssteuerelemente bleiben nur dem Besitzer vorbehalten. Erledigen Sie zulässige gemeinsame Aufgaben auf der Startseite."
         ]
+      },
+      {
+        "heading": "Aufgabe verschieben",
+        "body": [
+          "Nur der Pflanzenbesitzer kann eine offene Aufgabe verschieben. Wähle in Home oder den Pflanzendetails im Aufgabenmenü direkt unter Als erledigt markieren die Option Aufgabe verschieben. Morgen, In 2 Tagen und In 3 Tagen setzen das Datum ausgehend von heute. Du kannst auch ein Datum im Format deines Profils eingeben oder den Kalender nutzen. Der neue Termin muss nach dem bisherigen liegen und darf nicht in der Vergangenheit liegen. Nur der Termin dieser Aufgabe ändert sich, nicht Startdatum oder Wiederholungsintervall der Erinnerung. Der nächste Termin wird weiterhin anhand des Abschlussdatums berechnet."
+        ]
       }
     ]
   }

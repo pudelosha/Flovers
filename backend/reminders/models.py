@@ -213,6 +213,36 @@ class ReminderTask(models.Model):
         return anchor_date + relativedelta(months=interval_value)
 
     @transaction.atomic
+    def postpone(self, due_date, *, actor, expected_due_date):
+        """Move only this pending occurrence, without editing the reminder."""
+        from django.http import Http404
+        from sharing.permissions import locked_plant_access
+
+        plant_id = Reminder.objects.values_list("plant_id", flat=True).get(pk=self.reminder_id)
+        with locked_plant_access(actor, plant_id, require_completion=False) as plant:
+            if plant.user_id != actor.pk:
+                raise Http404
+            reminder = Reminder.objects.select_for_update().get(pk=self.reminder_id)
+            current = type(self).objects.select_for_update().get(pk=self.pk, reminder_id=reminder.pk)
+            if reminder.plant_id != plant.pk or reminder.user_id != actor.pk or current.user_id != actor.pk:
+                raise Http404
+            if current.status != "pending" or not reminder.is_active:
+                raise ValidationError("Only an active pending task can be postponed.", code="task_unavailable")
+            if due_date < timezone.localdate():
+                raise ValidationError("The new due date cannot be in the past.", code="invalid_due_date")
+            # Safe retry after a successful save must not move the date again.
+            if due_date == current.due_date:
+                self.__dict__.update(current.__dict__)
+                return
+            if expected_due_date != current.due_date:
+                raise ValidationError("The task changed. Reload it before postponing.", code="task_changed")
+            if due_date <= current.due_date:
+                raise ValidationError("The new due date must be later than the current due date.", code="invalid_due_date")
+            current.due_date = due_date
+            current.save(update_fields=["due_date", "updated_at"])
+            self.__dict__.update(current.__dict__)
+
+    @transaction.atomic
     def mark_complete_and_spawn_next(self, note=None, completed_date=None, actor=None):
         """
         Complete this task and create the next pending one.

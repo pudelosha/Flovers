@@ -49,6 +49,21 @@
         "asc": "Ascendente",
         "desc": "Descendente"
       }
+    },
+    "postpone": {
+      "title": "Posponer tarea",
+      "description": "Solo cambiará la fecha de vencimiento de esta tarea. La fecha de inicio y la frecuencia del recordatorio no cambiarán.",
+      "currentDue": "Vencimiento actual: {{date}}",
+      "tomorrow": "Mañana",
+      "inTwoDays": "En 2 días",
+      "inThreeDays": "En 3 días",
+      "dueDate": "Nueva fecha de vencimiento",
+      "chooseDate": "Elegir fecha",
+      "invalidDate": "Elige una fecha válida posterior al vencimiento actual y que no esté en el pasado.",
+      "failed": "No se pudo posponer la tarea. Inténtalo de nuevo.",
+      "saved": "Tarea pospuesta.",
+      "conflict": "Esta tarea ha cambiado. Cargando los datos actualizados.",
+      "save": "Posponer"
     }
   }
 }

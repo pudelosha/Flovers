@@ -28,6 +28,7 @@ from .serializers import (
     ReminderTaskSerializer,
     ReminderTaskJournalSerializer,
     ReminderTaskCompleteSerializer,
+    ReminderTaskPostponeSerializer,
     ReminderTaskExportEmailSerializer,
 )
 
@@ -252,6 +253,26 @@ class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
             elif previous_schedule != tuple(getattr(reminder, field) for field in schedule_fields):
                 task.due_date = reminder._next_due_from_anchor()
                 task.save(update_fields=["due_date", "updated_at"])
+
+
+class TaskPostponeView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, pk):
+        task = get_object_or_404(ReminderTask.objects.filter(
+            user=request.user, reminder__user=request.user, reminder__plant__user=request.user,
+        ), pk=pk)
+        serializer = ReminderTaskPostponeSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        try:
+            task.postpone(actor=request.user, **serializer.validated_data)
+        except (Reminder.DoesNotExist, ReminderTask.DoesNotExist):
+            return Response({"detail": "Task no longer exists.", "code": "task_unavailable"}, status=404)
+        except DjangoValidationError as exc:
+            code = getattr(exc, "code", "task_changed")
+            return Response({"detail": exc.messages, "code": code},
+                            status=400 if code == "invalid_due_date" else 409)
+        return Response(ReminderTaskSerializer(task, context={"request": request}).data)
 
 
 class TaskCompleteView(APIView):

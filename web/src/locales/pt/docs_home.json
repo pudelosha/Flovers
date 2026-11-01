@@ -77,6 +77,12 @@
         "body": [
           "A página inicial também mostra tarefas para plantas compartilhadas com você. Um rótulo Compartilhado aparece abaixo da data de vencimento. Você poderá concluir essas tarefas somente quando o proprietário tiver habilitado a conclusão da tarefa para você. Os destinatários somente visualização podem inspecionar a tarefa e abrir sua planta de casa."
         ]
+      },
+      {
+        "heading": "Adiar tarefa",
+        "body": [
+          "Só o proprietário da planta pode adiar uma tarefa pendente. No Início ou nos detalhes da planta, escolha Adiar tarefa, logo abaixo de Marcar como concluída no menu. Amanhã, Daqui a 2 dias e Daqui a 3 dias preenchem a data a partir de hoje. Também pode escrever uma data no formato do perfil ou usar o calendário. A nova data deve ser posterior à atual e não estar no passado. Só o vencimento desta tarefa muda; o início e a frequência do lembrete mantêm-se. O próximo vencimento continua a ser calculado a partir da data de conclusão."
+        ]
       }
     ]
   }

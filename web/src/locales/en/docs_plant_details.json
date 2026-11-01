@@ -74,6 +74,12 @@
         "body": [
           "A received plant is marked Shared. You can view its information, care history and linked sensor readings. The reminder-definition tile and editing controls remain owner-only. Complete permitted shared tasks on Home."
         ]
+      },
+      {
+        "heading": "Postpone task",
+        "body": [
+          "Only the plant owner can postpone a pending task. In Home or Plant details, choose Postpone task directly below Mark as complete in the task menu. Tomorrow, In 2 days and In 3 days fill the date field relative to today. You can also type a date in your profile’s date format or use the calendar. Choose a later due date, not a past date. Save changes only this task’s due date; the reminder’s start date and recurring interval are unchanged. Completing the task still schedules its next occurrence according to the existing completion-based rules."
+        ]
       }
     ]
   }

@@ -49,6 +49,21 @@
         "asc": "Crescente",
         "desc": "Decrescente"
       }
+    },
+    "postpone": {
+      "title": "Rimanda attività",
+      "description": "Cambierai solo la scadenza di questa attività. La data di inizio e la frequenza del promemoria resteranno invariate.",
+      "currentDue": "Scadenza attuale: {{date}}",
+      "tomorrow": "Domani",
+      "inTwoDays": "Tra 2 giorni",
+      "inThreeDays": "Tra 3 giorni",
+      "dueDate": "Nuova scadenza",
+      "chooseDate": "Scegli la data",
+      "invalidDate": "Scegli una data valida successiva alla scadenza attuale e non nel passato.",
+      "failed": "Non è stato possibile rimandare l’attività. Riprova.",
+      "saved": "Attività rimandata.",
+      "conflict": "Questa attività è stata modificata. Caricamento dei dati aggiornati.",
+      "save": "Rimanda"
     }
   }
 }

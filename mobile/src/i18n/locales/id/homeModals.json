@@ -49,6 +49,21 @@
         "asc": "Naik",
         "desc": "Menurun"
       }
+    },
+    "postpone": {
+      "title": "Tunda tugas",
+      "description": "Hanya tanggal jatuh tempo tugas ini yang berubah. Tanggal mulai dan interval pengulangan pengingat tetap sama.",
+      "currentDue": "Jatuh tempo saat ini: {{date}}",
+      "tomorrow": "Besok",
+      "inTwoDays": "2 hari lagi",
+      "inThreeDays": "3 hari lagi",
+      "dueDate": "Tanggal jatuh tempo baru",
+      "chooseDate": "Pilih tanggal",
+      "invalidDate": "Pilih tanggal yang valid setelah jatuh tempo saat ini dan bukan tanggal yang sudah lewat.",
+      "failed": "Tugas tidak dapat ditunda. Coba lagi.",
+      "saved": "Tugas ditunda.",
+      "conflict": "Tugas ini telah berubah. Memuat informasi terbaru.",
+      "save": "Tunda"
     }
   }
 }

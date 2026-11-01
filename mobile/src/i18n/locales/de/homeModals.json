@@ -49,6 +49,21 @@
         "asc": "Aufsteigend",
         "desc": "Absteigend"
       }
+    },
+    "postpone": {
+      "title": "Aufgabe verschieben",
+      "description": "Du änderst nur den Fälligkeitstermin dieser Aufgabe. Startdatum und Wiederholungsintervall der Erinnerung bleiben unverändert.",
+      "currentDue": "Aktuell fällig: {{date}}",
+      "tomorrow": "Morgen",
+      "inTwoDays": "In 2 Tagen",
+      "inThreeDays": "In 3 Tagen",
+      "dueDate": "Neuer Fälligkeitstermin",
+      "chooseDate": "Datum wählen",
+      "invalidDate": "Wähle ein gültiges Datum nach dem aktuellen Fälligkeitstermin, das nicht in der Vergangenheit liegt.",
+      "failed": "Die Aufgabe konnte nicht verschoben werden. Bitte versuche es erneut.",
+      "saved": "Aufgabe verschoben.",
+      "conflict": "Diese Aufgabe wurde geändert. Die aktuellen Daten werden geladen.",
+      "save": "Verschieben"
     }
   }
 }
