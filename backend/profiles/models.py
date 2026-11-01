@@ -213,7 +213,7 @@ class AccountProgression(TimeStampedModel):
 
 
 class TaskXPAward(models.Model):
-    """Immutable award decisions, including zero XP, independent of task history."""
+    """Deduplicated award decisions; completion undo explicitly reverses an award."""
 
     REASON_AWARDED = "awarded"
     REASON_EARLY = "early"
@@ -236,13 +236,14 @@ class TaskXPAward(models.Model):
         (REASON_DAILY_CAP, "Daily cap reached"),
         (REASON_LEVEL_CAP, "Maximum level reached"),
     ])
+    is_reversed = models.BooleanField(default=False, editable=False)
     created_at = models.DateTimeField(default=timezone.now, editable=False)
 
     class Meta:
         constraints = [
             models.UniqueConstraint(
                 fields=["user", "plant_id", "care_type", "earned_on"],
-                condition=models.Q(xp__gt=0), name="xp_one_plant_care_per_day",
+                condition=models.Q(xp__gt=0, is_reversed=False), name="xp_one_plant_care_per_day",
             ),
             models.CheckConstraint(condition=models.Q(xp__lte=100), name="task_xp_at_most_first_reward"),
         ]

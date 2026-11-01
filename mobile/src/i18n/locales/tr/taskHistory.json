@@ -102,6 +102,14 @@
       "close": "Kapat",
       "previous": "Önceki",
       "next": "Sonraki"
+    },
+    "undo": {
+      "title": "Tamamlamayı geri al",
+      "description": "Görev ilk son tarihiyle yeniden açılır ve tamamlanınca oluşturulan sonraki görev değiştirilmediyse silinir. Hatırlatıcı değişmez. Verilen XP, görevi tamamlayan kişiden geri alınır. Tamamlama notu yerine önceki görev notu geri yüklenir. Teslim edilmiş bildirimler geri alınamaz.",
+      "confirm": "Geri al",
+      "saved": "Tamamlama geri alındı. Görev yeniden Ana sayfada.",
+      "unavailable": "Bu görev değiştiği için artık geri alınamaz. Günlük yeniden yükleniyor.",
+      "failed": "Tamamlama geri alınamadı. Lütfen tekrar deneyin."
     }
   }
 }

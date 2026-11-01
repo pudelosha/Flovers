@@ -46,7 +46,7 @@ def get_progression(user):
     """Read one consistent balance/quota snapshot without creating any rows."""
     earned_on = timezone.now().astimezone(datetime_timezone.utc).date()
     daily_sum = TaskXPAward.objects.filter(
-        user_id=OuterRef("user_id"), earned_on=earned_on,
+        user_id=OuterRef("user_id"), earned_on=earned_on, is_reversed=False,
     ).values("user_id").annotate(total=Sum("xp")).values("total")
     snapshot = AccountProgression.objects.filter(user_id=user.pk).annotate(
         daily_xp=Coalesce(Subquery(daily_sum, output_field=models.IntegerField()), Value(0)),
@@ -68,7 +68,7 @@ def award_task_completion(task, receipt_now, actor=None):
     actor_id = actor.pk if actor is not None else (task.completed_by_id or task.user_id)
     get_user_model().objects.select_for_update().get(pk=actor_id)
     previous = TaskXPAward.objects.filter(source_task_id=task.pk).first()
-    if previous is not None:
+    if previous is not None and not previous.is_reversed:
         return previous
 
     progression, _ = AccountProgression.objects.get_or_create(user_id=actor_id)
@@ -77,7 +77,7 @@ def award_task_completion(task, receipt_now, actor=None):
     # Task dates use the server's configured care calendar. Request/profile
     # timezone changes and client-supplied completion dates cannot move it.
     due_today = timezone.localdate(receipt_now, timezone=timezone.get_default_timezone())
-    today_awards = TaskXPAward.objects.filter(user_id=actor_id, earned_on=earned_on)
+    today_awards = TaskXPAward.objects.filter(user_id=actor_id, earned_on=earned_on, is_reversed=False)
     xp = 0
     if task.due_date > due_today:
         reason = TaskXPAward.REASON_EARLY
@@ -96,11 +96,19 @@ def award_task_completion(task, receipt_now, actor=None):
         xp = min(reward, DAILY_CAP - (summary["total"] or 0), MAX_TOTAL_XP - progression.total_xp)
         reason = TaskXPAward.REASON_AWARDED if xp > 0 else TaskXPAward.REASON_DAILY_CAP
 
-    award = TaskXPAward.objects.create(
+    values = dict(
         user_id=actor_id, source_task_id=task.pk, plant_id=task.reminder.plant_id,
         care_type=task.reminder.type, earned_on=earned_on, xp=xp, reason=reason,
-        created_at=receipt_now,
+        created_at=receipt_now, is_reversed=False,
     )
+    if previous is None:
+        award = TaskXPAward.objects.create(**values)
+    else:
+        # Re-completion is a new decision under current caps, not a second row.
+        for key, value in values.items():
+            setattr(previous, key, value)
+        previous.save(update_fields=list(values))
+        award = previous
     if xp:
         progression.total_xp += xp
         progression.save(update_fields=["total_xp", "updated_at"])

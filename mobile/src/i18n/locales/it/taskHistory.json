@@ -102,6 +102,14 @@
       "close": "Chiudi",
       "previous": "Precedente",
       "next": "Successiva"
+    },
+    "undo": {
+      "title": "Annulla completamento",
+      "description": "L’attività verrà riaperta con la scadenza originale e l’attività successiva, se invariata, verrà rimossa. Il promemoria non cambia. Gli XP assegnati verranno sottratti a chi l’ha completata. La nota di completamento verrà sostituita dalla nota precedente. Le notifiche già inviate non possono essere ritirate.",
+      "confirm": "Annulla completamento",
+      "saved": "Completamento annullato. L’attività è di nuovo in Home.",
+      "unavailable": "Questa attività è cambiata e non può più essere ripristinata. Ricaricamento del diario.",
+      "failed": "Impossibile annullare il completamento. Riprova."
     }
   }
 }

@@ -102,6 +102,14 @@
       "close": "Tutup",
       "previous": "Sebelumnya",
       "next": "Berikutnya"
+    },
+    "undo": {
+      "title": "Batalkan penyelesaian",
+      "description": "Tugas dibuka kembali dengan tanggal jatuh tempo semula dan tugas berikutnya yang dihasilkan akan dihapus jika belum berubah. Pengingat tetap sama. XP ditarik dari orang yang menyelesaikannya. Catatan penyelesaian diganti dengan catatan tugas sebelumnya. Notifikasi yang sudah diterima tidak dapat ditarik kembali.",
+      "confirm": "Batalkan penyelesaian",
+      "saved": "Penyelesaian dibatalkan. Tugas kembali ke Beranda.",
+      "unavailable": "Tugas ini telah berubah dan tidak dapat dipulihkan lagi. Memuat ulang jurnal.",
+      "failed": "Penyelesaian tidak dapat dibatalkan. Coba lagi."
     }
   }
 }

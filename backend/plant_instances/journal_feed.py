@@ -134,7 +134,8 @@ def task_data(task, request, context):
             "plant_name": event.get("plant_name", ""), "location_name": event.get("location_name", ""),
             "type": next((ui for ui, model in UI_TO_MODEL_TYPE.items() if model == event["type"]), "care"),
             "completed_at": task.completed_at.isoformat(), "completed_by": record["completed_by"],
-            "notes": task.note or "", "access": record["access"]}
+            "notes": task.note or "", "access": record["access"],
+            "undo_completion": context.get("undo_versions", {}).get(task.pk)}
 
 
 class JournalFeedView(APIView):
@@ -178,6 +179,8 @@ class JournalFeedView(APIView):
         page = candidates[:limit]
         event_ids = {row.event["plant_id"] for row, kind in page if kind == "task"}
         context = {"request": request, "event_plants": PlantInstance.objects.select_related("user").in_bulk(event_ids)}
+        from reminders.undo import undo_versions
+        context["undo_versions"] = undo_versions([row for row, kind in page if kind == "task"], request.user)
         results = [{"kind": kind, "data": task_data(row, request, context) if kind == "task" else entry_data(row, request.user)} for row, kind in page]
         next_cursor = None
         if len(candidates) > limit and page:

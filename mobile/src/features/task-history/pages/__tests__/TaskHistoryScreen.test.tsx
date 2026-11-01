@@ -3,6 +3,7 @@ import { act, fireEvent, render } from '@testing-library/react-native';
 import { Animated, Pressable, Text } from 'react-native';
 import TaskHistoryScreen from '../TaskHistoryScreen';
 import TaskHistoryTile from '../../components/TaskHistoryTile';
+import UndoTaskCompletionModal from '../../components/modals/UndoTaskCompletionModal';
 import JournalPhotoTile from '../../components/JournalPhotoTile';
 import JournalPhotoModal from '../../components/modals/JournalPhotoModal';
 import FilterHistoryTasksModal from '../../components/modals/FilterHistoryTasksModal';
@@ -489,4 +490,18 @@ it('uses whole-journal filter and delete choices even when their plants are not 
   expect(actions(view).some((action: any) => action.key === 'delete')).toBe(
     true,
   );
+});
+
+it('opens Undo for the eligible task and refreshes the Journal after confirmation', async () => {
+ const eligible={...task,undoCompletion:'aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee'};
+ (fetchJournalPage as jest.Mock).mockResolvedValue({items:[eligible,photo],nextCursor:null,canManageTasks:true});
+ const view=await renderScreen();
+ act(()=>{view.UNSAFE_getByType(TaskHistoryTile).props.onUndo(eligible);});
+ const modal=view.UNSAFE_getByType(UndoTaskCompletionModal);
+ expect(modal.props.visible).toBe(true);expect(modal.props.item.id).toBe('5');
+ expect(view.UNSAFE_queryByType(FAB)).toBeNull();
+ (fetchJournalPage as jest.Mock).mockResolvedValue({items:[photo],nextCursor:null,canManageTasks:false});
+ await act(async()=>{modal.props.onClose();modal.props.onSaved();await Promise.resolve();});
+ expect(view.UNSAFE_getByType(UndoTaskCompletionModal).props.visible).toBe(false);
+ expect(view.UNSAFE_queryByType(TaskHistoryTile)).toBeNull();expect(view.UNSAFE_getByType(JournalPhotoTile)).toBeTruthy();
 });

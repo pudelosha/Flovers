@@ -62,6 +62,7 @@ function parseEntry(entry: any): JournalEntry {
     id: value.id,
     plantId: value.plant_id,
     reminderId: value.reminder_id,
+    undoCompletion: value.access.can_edit && typeof value.undo_completion === "string" && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value.undo_completion) ? value.undo_completion : undefined,
     plant: value.plant_name,
     location: value.location_name,
     type: value.type,

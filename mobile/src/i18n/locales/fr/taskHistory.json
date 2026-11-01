@@ -102,6 +102,14 @@
       "close": "Fermer",
       "previous": "Précédente",
       "next": "Suivante"
+    },
+    "undo": {
+      "title": "Annuler la réalisation",
+      "description": "La tâche sera rouverte à son échéance d’origine et la tâche suivante, si elle est inchangée, sera supprimée. Le rappel reste inchangé. Les XP attribués seront retirés à la personne qui l’a réalisée. La note de réalisation sera remplacée par la note précédente. Les notifications déjà envoyées ne peuvent pas être rappelées.",
+      "confirm": "Annuler la réalisation",
+      "saved": "Réalisation annulée. La tâche est de nouveau dans Accueil.",
+      "unavailable": "Cette tâche a changé et ne peut plus être rétablie. Rechargement du journal.",
+      "failed": "Impossible d’annuler la réalisation. Veuillez réessayer."
     }
   }
 }

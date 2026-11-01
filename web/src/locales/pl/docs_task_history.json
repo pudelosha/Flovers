@@ -51,6 +51,12 @@
         "body": [
           "Zdjęcia są zmniejszane i przechowywane prywatnie na serwerze. Widzi je tylko właściciel i osoby z aktywnym dostępem do udostępnionej rośliny. Odbiorcy mogą przeglądać dziennik, ale nie mogą dodawać, edytować ani usuwać jego zdjęć. Wymienione i usunięte zdjęcia są sprzątane z serwera. Usunięcie rośliny usuwa też jej zdjęcia w dzienniku."
         ]
+      },
+      {
+        "heading": "Cofnij wykonanie",
+        "body": [
+          "Właściciel może cofnąć ostatnie wykonane zadanie każdego przypomnienia, a nie tylko ostatnie zadanie całej rośliny. Opcja Cofnij wykonanie pojawia się w menu zadania, dopóki kolejne wygenerowane zadanie i przypomnienie nie zostały zmienione. Potwierdzenie przywraca zadanie z pierwotnym terminem i wcześniejszą notatką, usuwa utworzone kolejne zadanie oraz odejmuje XP osobie, która je wykonała — także opiekunowi udostępnionej rośliny. Wysłanych powiadomień nie można cofnąć. Ponowne wykonanie podlega bieżącym limitom XP i nie dubluje nagrody. Ta opcja nie dotyczy zdjęć. Starsze wykonania bez zapisu potrzebnego do bezpiecznego cofnięcia nie mają tej opcji; jest ona dostępna dla spełniających warunki wykonań po aktualizacji backendu."
+        ]
       }
     ]
   }

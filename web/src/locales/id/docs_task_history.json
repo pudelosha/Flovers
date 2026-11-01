@@ -51,6 +51,12 @@
         "body": [
           "Foto diperkecil dan disimpan secara pribadi di server. Hanya pemilik dan orang dengan akses berbagi aktif ke tanaman itu yang dapat melihatnya. Penerima dapat membaca jurnal, tetapi tidak dapat menambah, mengedit, atau menghapus fotonya. Foto yang diganti atau dihapus akan dibersihkan. Menghapus tanaman juga menghapus foto jurnalnya."
         ]
+      },
+      {
+        "heading": "Batalkan penyelesaian",
+        "body": [
+          "Hanya pemilik yang dapat membatalkan penyelesaian terakhir dari setiap pengingat, bukan hanya tugas terakhir suatu tanaman. Opsi muncul selama pengingat dan tugas berikutnya belum berubah. Konfirmasi memulihkan tanggal dan catatan lama, menghapus tugas berikutnya, dan menarik XP dari orang yang menyelesaikannya, termasuk perawat bersama. Notifikasi terkirim tidak ditarik. Penyelesaian ulang mengikuti batas XP saat ini tanpa menggandakan hadiah. Foto tidak termasuk. Penyelesaian lama tanpa catatan keamanan tidak memenuhi syarat; fitur berlaku untuk penyelesaian yang memenuhi syarat setelah pembaruan backend."
+        ]
       }
     ]
   }

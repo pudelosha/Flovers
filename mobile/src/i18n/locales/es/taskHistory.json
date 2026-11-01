@@ -102,6 +102,14 @@
       "close": "Cerrar",
       "previous": "Anterior",
       "next": "Siguiente"
+    },
+    "undo": {
+      "title": "Deshacer finalización",
+      "description": "La tarea volverá a estar pendiente con su fecha original y se eliminará la siguiente tarea generada si no ha cambiado. El recordatorio no cambia. Se retirarán los XP a quien la completó. La nota de finalización se sustituirá por la nota anterior. Las notificaciones ya enviadas no se pueden retirar.",
+      "confirm": "Deshacer",
+      "saved": "Finalización deshecha. La tarea vuelve a Inicio.",
+      "unavailable": "Esta tarea ha cambiado y ya no se puede restaurar. Recargando el diario.",
+      "failed": "No se pudo deshacer la finalización. Inténtalo de nuevo."
     }
   }
 }

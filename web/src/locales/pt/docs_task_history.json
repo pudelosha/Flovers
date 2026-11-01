@@ -51,6 +51,12 @@
         "body": [
           "As fotos são reduzidas e armazenadas de forma privada no servidor. Só o proprietário e as pessoas com acesso compartilhado ativo à planta podem vê-las. Os destinatários podem consultar o diário, mas não adicionar, editar ou excluir suas fotos. Imagens substituídas ou excluídas são removidas do servidor. Excluir uma planta também exclui suas fotos do diário."
         ]
+      },
+      {
+        "heading": "Anular conclusão",
+        "body": [
+          "Só o proprietário pode anular a última conclusão de cada lembrete, não apenas a última da planta. A opção aparece enquanto o lembrete e a tarefa seguinte estiverem inalterados. Repõe a data e a nota anteriores, remove a tarefa seguinte e retira os XP à pessoa que concluiu a tarefa, incluindo quem cuida de uma planta partilhada. As notificações enviadas mantêm-se. Uma nova conclusão respeita os limites XP atuais e não duplica recompensas. As fotografias estão excluídas. Conclusões antigas sem registo de segurança não são elegíveis: a função aplica-se às que cumpram os requisitos após a atualização do backend."
+        ]
       }
     ]
   }

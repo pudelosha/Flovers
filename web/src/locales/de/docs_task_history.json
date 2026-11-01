@@ -51,6 +51,12 @@
         "body": [
           "Fotos werden verkleinert und privat auf dem Server gespeichert. Nur der Eigentümer und Personen mit aktivem Freigabezugriff auf diese Pflanze können sie ansehen. Empfänger können das Tagebuch lesen, aber keine Fotos hinzufügen, bearbeiten oder löschen. Ersetzte und gelöschte Fotos werden bereinigt. Beim Löschen einer Pflanze werden auch ihre Tagebuchfotos entfernt."
         ]
+      },
+      {
+        "heading": "Abschluss rückgängig machen",
+        "body": [
+          "Nur der Besitzer kann den letzten Abschluss jeder Erinnerung rückgängig machen, nicht nur den letzten einer Pflanze. Die Menüoption erscheint nur, solange Folgeaufgabe und Erinnerung unverändert sind. Die ursprüngliche Aufgabe mit Termin und vorheriger Notiz wird wiederhergestellt, die Folgeaufgabe entfernt und XP werden der ausführenden Person abgezogen, auch bei geteilten Pflanzen. Zugestellte Benachrichtigungen bleiben bestehen. Erneutes Abschließen unterliegt den aktuellen XP-Limits und verdoppelt keine Belohnungen. Fotos sind ausgeschlossen. Ältere Abschlüsse ohne Sicherheitsdatensatz sind nicht berechtigt; die Funktion gilt für passende Abschlüsse nach dem Backend-Update."
+        ]
       }
     ]
   }

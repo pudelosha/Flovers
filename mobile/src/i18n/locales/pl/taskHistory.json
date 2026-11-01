@@ -102,6 +102,14 @@
       "close": "Zamknij",
       "previous": "Poprzednie",
       "next": "Następne"
+    },
+    "undo": {
+      "title": "Cofnij wykonanie",
+      "description": "Przywrócisz zadanie z jego pierwotnym terminem i usuniesz niezmienione kolejne zadanie utworzone po wykonaniu. Przypomnienie pozostanie bez zmian. Przyznane XP zostaną odjęte osobie, która wykonała zadanie. Notatka z wykonania zostanie usunięta, a wcześniejsza notatka zadania przywrócona. Wysłanych powiadomień nie można cofnąć.",
+      "confirm": "Cofnij",
+      "saved": "Wykonanie cofnięte. Zadanie znów jest na ekranie Start.",
+      "unavailable": "To zadanie zostało zmienione i nie można już cofnąć wykonania. Wczytujemy dziennik ponownie.",
+      "failed": "Nie udało się cofnąć wykonania. Spróbuj ponownie."
     }
   }
 }

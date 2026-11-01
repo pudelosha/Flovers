@@ -51,6 +51,12 @@
         "body": [
           "Le foto vengono ridimensionate e conservate in uno spazio privato sul server. Sono visibili solo al proprietario e alle persone con accesso di condivisione attivo alla pianta. I destinatari possono consultare il diario, ma non aggiungerne, modificarne o eliminarne le foto. Le immagini sostituite o eliminate vengono rimosse. Eliminare una pianta rimuove anche le sue foto del diario."
         ]
+      },
+      {
+        "heading": "Annulla completamento",
+        "body": [
+          "Solo il proprietario può annullare l’ultimo completamento di ciascun promemoria, non solo l’ultimo della pianta. L’opzione compare finché l’attività successiva e il promemoria non cambiano. Ripristina scadenza e nota precedenti, rimuove l’attività successiva e sottrae gli XP a chi ha completato l’attività, anche a un contatto con accesso condiviso. Le notifiche inviate non vengono ritirate. Un nuovo completamento rispetta i limiti XP attuali e non duplica le ricompense. Non vale per le foto. I vecchi completamenti senza il registro di sicurezza sono esclusi: la funzione vale per quelli idonei successivi all’aggiornamento del backend."
+        ]
       }
     ]
   }

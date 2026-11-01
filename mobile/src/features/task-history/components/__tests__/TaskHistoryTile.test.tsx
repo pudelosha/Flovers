@@ -82,3 +82,13 @@ it("keeps owner menu actions and prevents shared viewers from editing or deletin
   expect(toggleMenu).toHaveBeenCalledTimes(1);
   expect(goToPlant).toHaveBeenCalledWith(expect.objectContaining({ id: "15" }));
 });
+
+it("offers Undo only for an owner with server eligibility and forwards the selected task",()=>{
+ const undo=jest.fn(),toggle=jest.fn();const eligible={...item,undoCompletion:"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"};
+ const view=render(<TaskHistoryTile item={eligible} isMenuOpen onToggleMenu={toggle} onUndo={undo}/>);
+ fireEvent.press(view.getByText("Undo completion"));expect(undo).toHaveBeenCalledWith(eligible);expect(toggle).toHaveBeenCalledTimes(1);
+ view.rerender(<TaskHistoryTile item={item} isMenuOpen onToggleMenu={toggle} onUndo={undo}/>);
+ expect(view.queryByText("Undo completion")).toBeNull();
+ view.rerender(<TaskHistoryTile item={{...eligible,access:sharedAccess}} isMenuOpen onToggleMenu={toggle} onUndo={undo}/>);
+ expect(view.queryByText("Undo completion")).toBeNull();
+});

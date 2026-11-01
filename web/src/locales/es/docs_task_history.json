@@ -51,6 +51,12 @@
         "body": [
           "Las fotos se reducen y se almacenan de forma privada en el servidor. Solo pueden verlas el propietario y quienes tengan acceso compartido activo a esa planta. Los destinatarios pueden consultar el diario, pero no añadir, editar ni eliminar sus fotos. Las imágenes sustituidas o eliminadas se limpian del servidor. Eliminar una planta también elimina sus fotos del diario."
         ]
+      },
+      {
+        "heading": "Deshacer finalización",
+        "body": [
+          "Solo el propietario puede deshacer la última finalización de cada recordatorio, no solo la última de la planta. La opción aparece mientras el recordatorio y la siguiente tarea no hayan cambiado. Restaura la fecha y la nota anteriores, elimina la siguiente tarea y retira los XP a quien completó la original, incluido un cuidador compartido. Las notificaciones enviadas no se retiran. Volver a completar respeta los límites XP actuales y no duplica recompensas. Las fotos quedan excluidas. Las finalizaciones antiguas sin registro de seguridad no son aptas: la función se aplica a las que cumplan las condiciones tras actualizar el backend."
+        ]
       }
     ]
   }

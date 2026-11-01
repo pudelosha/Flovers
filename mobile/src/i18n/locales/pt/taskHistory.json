@@ -102,6 +102,14 @@
       "close": "Fechar",
       "previous": "Anterior",
       "next": "Seguinte"
+    },
+    "undo": {
+      "title": "Anular conclusão",
+      "description": "A tarefa volta a ficar pendente na data original e a tarefa seguinte, se não foi alterada, é removida. O lembrete mantém-se. Os XP atribuídos são retirados à pessoa que concluiu a tarefa. A nota de conclusão é substituída pela nota anterior. As notificações já enviadas não podem ser retiradas.",
+      "confirm": "Anular conclusão",
+      "saved": "Conclusão anulada. A tarefa está novamente no Início.",
+      "unavailable": "Esta tarefa foi alterada e já não pode ser reposta. A recarregar o diário.",
+      "failed": "Não foi possível anular a conclusão. Tente novamente."
     }
   }
 }

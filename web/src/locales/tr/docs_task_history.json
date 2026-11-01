@@ -51,6 +51,12 @@
         "body": [
           "Fotoğraflar küçültülür ve sunucuda özel olarak saklanır. Yalnızca bitkinin sahibi ve o bitkiye etkin paylaşım erişimi olan kişiler görebilir. Alıcılar günlüğü görüntüleyebilir ancak fotoğraf ekleyemez, düzenleyemez veya silemez. Değiştirilen ve silinen fotoğraflar temizlenir. Bir bitki silindiğinde günlük fotoğrafları da silinir."
         ]
+      },
+      {
+        "heading": "Tamamlamayı geri al",
+        "body": [
+          "Yalnızca bitkinin sahibi her hatırlatıcının son tamamlamasını geri alabilir; bu, bitkinin yalnızca son göreviyle sınırlı değildir. Seçenek, hatırlatıcı ve sonraki görev değişmediyse görünür. İlk tarih ve önceki not geri yüklenir, sonraki görev silinir ve paylaşılan bakım veren dahil tamamlayan kişinin XP’si geri alınır. Teslim edilmiş bildirimler geri çekilmez. Yeniden tamamlama güncel XP sınırlarına uyar ve ödülü çoğaltmaz. Fotoğraflar kapsam dışıdır. Güvenlik kaydı olmayan eski tamamlamalar uygun değildir; özellik backend güncellemesinden sonraki uygun tamamlamalar için geçerlidir."
+        ]
       }
     ]
   }

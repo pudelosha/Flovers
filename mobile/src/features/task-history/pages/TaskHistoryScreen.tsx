@@ -35,6 +35,7 @@ import {
   HEADER_SOLID_FALLBACK,
 } from '../constants/task-history.constants';
 import TaskHistoryTile from '../components/TaskHistoryTile';
+import UndoTaskCompletionModal from '../components/modals/UndoTaskCompletionModal';
 import JournalPhotoTile from '../components/JournalPhotoTile';
 import JournalPhotoModal from '../components/modals/JournalPhotoModal';
 import ConfirmDeleteJournalPhotoModal from '../components/modals/ConfirmDeleteJournalPhotoModal';
@@ -168,6 +169,7 @@ export default function TaskHistoryScreen() {
     null,
   );
   const [photoDeleting, setPhotoDeleting] = useState(false);
+  const [undoTask,setUndoTask]=useState<TaskHistoryItem|null>(null);
 
   const isFilterActive = useMemo(
     () =>
@@ -263,6 +265,7 @@ export default function TaskHistoryScreen() {
     setEditingPhoto(null);
     setViewingPhoto(null);
     setDeletingPhoto(null);
+    setUndoTask(null);
     optionsRef.current = null;
     return () => {
       loadRequestRef.current += 1;
@@ -443,7 +446,7 @@ export default function TaskHistoryScreen() {
     !filterOpen &&
     !deleteOpen &&
     !exportOpen &&
-    !photoOpen &&
+    !undoTask && !photoOpen &&
     !deletingPhoto &&
     !viewingPhoto;
 
@@ -762,6 +765,7 @@ export default function TaskHistoryScreen() {
                       isMenuOpen={isOpen}
                       onToggleMenu={() => onToggleMenu(entryKey)}
                       onPressBody={closeFabMenu}
+                      onUndo={target=>{if(!plantAccess(target.access).canEdit || !target.undoCompletion)return;closeFloatingMenus();setUndoTask(target);}}
                       onDelete={handleDeleteItem}
                       onEditReminder={handleEditHistoryReminder}
                       onGoToPlant={handleGoToPlant}
@@ -922,6 +926,11 @@ export default function TaskHistoryScreen() {
         onCancel={() => setDeleteOpen(false)}
         onConfirm={handleConfirmDelete}
       />
+
+      <UndoTaskCompletionModal visible={isFocused && !!undoTask} item={undoTask}
+        onClose={()=>setUndoTask(null)}
+        onSaved={()=>{showToast(String(t('taskHistory.undo.saved',{defaultValue:'Completion undone. The task is back in Home.'})),'success');void load();}}
+        onConflict={()=>{showToast(String(t('taskHistory.undo.unavailable',{defaultValue:'This task changed and can no longer be undone. Reloading the journal.'})),'error');void load();}}/>
 
       <JournalPhotoModal
         visible={photoOpen}

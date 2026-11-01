@@ -68,6 +68,7 @@ type Props = {
   isMenuOpen: boolean;
   onToggleMenu: () => void;
   // optional callbacks
+  onUndo?: (item: TaskHistoryItem) => void;
   onDelete?: (item: TaskHistoryItem) => void;
   onEditReminder?: (item: TaskHistoryItem) => void;
   onGoToPlant?: (item: TaskHistoryItem) => void;
@@ -79,6 +80,7 @@ export default function TaskHistoryTile({
   isMenuOpen,
   onToggleMenu,
   onDelete,
+  onUndo,
   onEditReminder,
   onGoToPlant,
   onPressBody,
@@ -238,6 +240,12 @@ export default function TaskHistoryTile({
       {/* Inline menu */}
       {isMenuOpen && (
         <FloatingTileMenu style={s.menuSheet}>
+          {access.canEdit && item.undoCompletion && onUndo && <Pressable style={s.menuItem}
+            onPress={()=>{onToggleMenu();onUndo(item);}}>
+            <MaterialCommunityIcons name="undo-variant" size={18} color="#FFFFFF" style={{marginRight:8}}/>
+            <Text style={s.menuItemText}>{t("taskHistory.undo.title",{defaultValue:"Undo completion"})}</Text>
+          </Pressable>}
+
           {/* Edit reminder */}
           {access.canEdit && <Pressable style={s.menuItem} onPress={handleEditReminder}>
             <MaterialCommunityIcons

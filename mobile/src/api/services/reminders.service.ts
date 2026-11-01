@@ -68,6 +68,13 @@ export async function postponeReminderTask(taskId: number, dueDate: string, expe
     { due_date: dueDate, expected_due_date: expectedDueDate }, { auth: true });
 }
 
+/** Server rechecks eligibility and the exact completion generation. */
+export async function undoReminderTask(taskId: number, expectedCompletion: string): Promise<ApiReminderTask> {
+  if (!Number.isSafeInteger(taskId) || taskId < 1) throw new ApiError(400, {code:"invalid_task"});
+  return request(`/reminders/tasks/${taskId}/undo-completion/`, "POST",
+    {expected_completion:expectedCompletion}, {auth:true});
+}
+
 // Accepts optional completion metadata while keeping old call signatures working.
 export async function completeReminderTask(
   taskId: number,

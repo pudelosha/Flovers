@@ -102,6 +102,14 @@
       "close": "Schließen",
       "previous": "Vorheriges",
       "next": "Nächstes"
+    },
+    "undo": {
+      "title": "Abschluss rückgängig machen",
+      "description": "Die Aufgabe wird mit ihrem ursprünglichen Termin wieder geöffnet. Die unveränderte Folgeaufgabe wird entfernt, die Erinnerung bleibt unverändert. Vergebene XP werden der ausführenden Person abgezogen. Die Abschlussnotiz wird durch die vorherige Aufgabennotiz ersetzt. Bereits zugestellte Benachrichtigungen lassen sich nicht zurückrufen.",
+      "confirm": "Rückgängig",
+      "saved": "Abschluss rückgängig gemacht. Die Aufgabe ist wieder in Home.",
+      "unavailable": "Diese Aufgabe wurde geändert und kann nicht mehr zurückgesetzt werden. Das Journal wird neu geladen.",
+      "failed": "Der Abschluss konnte nicht rückgängig gemacht werden. Bitte erneut versuchen."
     }
   }
 }

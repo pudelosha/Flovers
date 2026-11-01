@@ -179,3 +179,9 @@ it("posts a single-occurrence due date with an optimistic concurrency check",asy
  await postponeReminderTask(7,"2026-11-03","2026-11-01");
  expect(request).toHaveBeenLastCalledWith("/reminders/tasks/7/postpone/","POST",{due_date:"2026-11-03",expected_due_date:"2026-11-01"},{auth:true});
 });
+
+it("posts an authenticated undo request for the exact completion generation",async()=>{
+ const {undoReminderTask}=require("../reminders.service");
+ await undoReminderTask(7,"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee");
+ expect(request).toHaveBeenCalledWith("/reminders/tasks/7/undo-completion/","POST",{expected_completion:"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"},{auth:true});
+});

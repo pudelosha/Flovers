@@ -51,6 +51,12 @@
         "body": [
           "Photos are resized and stored privately on the server. Only the owner and people with active sharing access to that plant can view them. Recipients can view the journal but cannot add, edit or delete its photos. Replaced and deleted photos are cleaned up; deleting a plant removes its journal photos too."
         ]
+      },
+      {
+        "heading": "Undo completion",
+        "body": [
+          "Only the owner can undo the latest completed task of each reminder, not just the latest task of a plant. Undo completion appears in the task menu only while the generated next task and reminder are unchanged. Confirming reopens the original task on its original due date, removes the generated pending occurrence, restores its earlier note and reverses XP for the person who completed it, including a shared caregiver. Already delivered notifications cannot be recalled. Completing the restored task again uses the current XP limits and cannot duplicate rewards. Photos cannot be undone this way. Older completions without the safety record are ineligible; this action is available for eligible completions made after the backend update."
+        ]
       }
     ]
   }

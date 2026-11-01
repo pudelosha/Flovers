@@ -275,6 +275,25 @@ class TaskPostponeView(APIView):
         return Response(ReminderTaskSerializer(task, context={"request": request}).data)
 
 
+class TaskUndoCompletionView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, pk):
+        from rest_framework import serializers
+        from .undo import undo_completion
+        class Input(serializers.Serializer):
+            expected_completion = serializers.UUIDField()
+        data = Input(data=request.data)
+        data.is_valid(raise_exception=True)
+        try:
+            task = undo_completion(pk, request.user, data.validated_data["expected_completion"])
+        except (Reminder.DoesNotExist, ReminderTask.DoesNotExist):
+            return Response({"code": "undo_unavailable"}, status=404)
+        except DjangoValidationError as error:
+            return Response({"detail": error.messages, "code": "undo_unavailable"}, status=409)
+        return Response(ReminderTaskSerializer(task, context={"request": request}).data)
+
+
 class TaskCompleteView(APIView):
     permission_classes = [IsAuthenticated]
 

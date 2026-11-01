@@ -3,6 +3,7 @@ import type { PlantPhoto } from "../../../api/services/plant-photos.service";
 import type { ApiPlantAccess } from "../../../shared/utils/plantAccess";
 
 export type TaskHistoryItem = {
+  undoCompletion?: string;
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;
   id: string;
   plantId?: string;

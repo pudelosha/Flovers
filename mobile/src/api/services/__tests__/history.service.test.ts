@@ -129,3 +129,8 @@ describe('history.service', () => {
     );
   });
 });
+
+it.each([[true,"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",true],[false,"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",false],[true,"bad-token",false],[true,null,false]])("only accepts a server UUID for owner undo eligibility",async(canEdit,token,available)=>{
+ mockedRequest.mockResolvedValue({results:[{kind:"task",data:{...task,access:{can_edit:canEdit},undo_completion:token}}],next_cursor:null,can_manage_tasks:true});
+ const page=await fetchJournalPage();expect(!!(page.items[0] as any).undoCompletion).toBe(available);
+});

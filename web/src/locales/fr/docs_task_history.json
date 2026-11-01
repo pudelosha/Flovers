@@ -51,6 +51,12 @@
         "body": [
           "Les photos sont redimensionnées et stockées dans un espace privé sur le serveur. Seuls le propriétaire et les personnes disposant d’un accès actif à la plante peuvent les voir. Les destinataires peuvent consulter le journal, mais pas ajouter, modifier ou supprimer ses photos. Les images remplacées ou supprimées sont nettoyées. Supprimer une plante supprime aussi ses photos du journal."
         ]
+      },
+      {
+        "heading": "Annuler la réalisation",
+        "body": [
+          "Seul le propriétaire peut annuler la dernière réalisation de chaque rappel, pas seulement la dernière de la plante. L’option reste disponible tant que le rappel et la tâche suivante sont inchangés. Elle restaure l’échéance et la note précédentes, supprime la tâche suivante et retire les XP à la personne qui a réalisé la tâche, y compris un contact aidant. Les notifications envoyées restent reçues. Une nouvelle réalisation respecte les limites XP actuelles, sans doubler les récompenses. Les photos sont exclues. Les anciennes réalisations sans enregistrement de sécurité ne sont pas éligibles : la fonction concerne celles répondant aux conditions après la mise à jour du backend."
+        ]
       }
     ]
   }

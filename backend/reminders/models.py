@@ -139,6 +139,7 @@ class ReminderTask(models.Model):
 
     note = models.TextField(null=True, blank=True)
     completed_event = models.JSONField(null=True, blank=True, editable=False)
+    completion_undo = models.JSONField(null=True, blank=True, editable=False)
 
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
@@ -285,6 +286,7 @@ class ReminderTask(models.Model):
         if completed_date > today:
             raise ValueError("completed_date cannot be in the future.")
 
+        previous_note = current.note
         if note is not None:
             current.note = note
 
@@ -318,9 +320,14 @@ class ReminderTask(models.Model):
                 rem.interval_unit,
             )
 
-        return ReminderTask.objects.create(
+        successor = ReminderTask.objects.create(
             reminder=rem,
             user=self.user,
             due_date=next_due,
             status="pending",
         )
+
+        from .undo import record_completion
+        record_completion(current, reminder, successor, previous_note)
+        self.completion_undo = current.completion_undo
+        return successor

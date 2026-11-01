@@ -102,6 +102,14 @@
       "close": "Close",
       "previous": "Previous",
       "next": "Next"
+    },
+    "undo": {
+      "title": "Undo completion",
+      "description": "Reopen this task with its original due date and remove the unchanged next task created by its completion. The reminder stays unchanged. Any XP awarded is reversed for the person who completed it. The completion note is removed and the earlier task note is restored. Already delivered notifications cannot be recalled.",
+      "confirm": "Undo",
+      "saved": "Completion undone. The task is back in Home.",
+      "unavailable": "This task changed and can no longer be undone. Reloading the journal.",
+      "failed": "Could not undo completion. Please try again."
     }
   }
 }
