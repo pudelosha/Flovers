@@ -35,7 +35,8 @@
       {
         "heading": "Sortowanie i filtrowanie",
         "body": [
-          "Sortuj według daty wpisu, nazwy rośliny lub lokalizacji. Filtry obejmują roślinę, lokalizację, rodzaj wpisu i zakres dat. Rodzaj Zdjęcie pokazuje tylko zdjęcia. Data wpisu oznacza moment dodania zdjęcia; opcjonalna data jego wykonania jest wyświetlana osobno."
+          "Sortuj według daty wpisu, nazwy rośliny lub lokalizacji. Filtry obejmują roślinę, lokalizację, rodzaj wpisu i zakres dat. Rodzaj Zdjęcie pokazuje tylko zdjęcia. Data wpisu oznacza moment dodania zdjęcia; opcjonalna data jego wykonania jest wyświetlana osobno.",
+          "Starsze wpisy wczytują się automatycznie podczas przewijania. Sortowanie i filtry obejmują cały dziennik, także wpisy, których jeszcze nie widać na ekranie."
         ]
       },
       {

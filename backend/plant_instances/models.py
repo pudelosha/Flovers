@@ -120,6 +120,7 @@ class JournalPhotoEntry(models.Model):
 
     class Meta:
         ordering = ["-created_at", "-id"]
+        indexes = [models.Index(fields=["plant", "-created_at", "-id"], name="journal_photo_plant_date")]
 
 
 class JournalPhotoUpload(models.Model):

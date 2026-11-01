@@ -1,135 +1,131 @@
-import { request } from "../../client";
+import { request } from '../../client';
 import {
   bulkDeleteReminderTasks,
   deleteReminderTask,
-  listReminderTasks,
-  listReminders,
-} from "../reminders.service";
-import { fetchPlantInstances } from "../plant-instances.service";
-import { fetchJournalPhotos } from "../journal-photos.service";
+} from '../reminders.service';
 import {
+  fetchJournalPage,
+  fetchJournalOptions,
   bulkDeleteHistoryEntries,
   deleteHistoryEntry,
-  fetchHistoryItems,
   sendHistoryExportEmail,
-} from "../history.service";
-
-jest.mock("../../client", () => ({
+} from '../history.service';
+jest.mock('../../client', () => ({
+  ...jest.requireActual('../../client'),
   request: jest.fn(),
 }));
-
-jest.mock("../reminders.service", () => ({
+jest.mock('../reminders.service', () => ({
   bulkDeleteReminderTasks: jest.fn(),
   deleteReminderTask: jest.fn(),
-  listReminderTasks: jest.fn(),
-  listReminders: jest.fn(),
 }));
-
-jest.mock("../plant-instances.service", () => ({
-  fetchPlantInstances: jest.fn(),
-}));
-
-jest.mock("../journal-photos.service", () => ({
-  fetchJournalPhotos: jest.fn(),
-}));
-
 const mockedRequest = request as jest.Mock;
-const mockedListTasks = listReminderTasks as jest.Mock;
-const mockedListReminders = listReminders as jest.Mock;
-const mockedFetchPlants = fetchPlantInstances as jest.Mock;
-
-describe("history.service", () => {
+const task = {
+  id: '11',
+  plant_id: '2',
+  reminder_id: '3',
+  plant_name: 'Fern',
+  location_name: 'Kitchen',
+  type: 'moisture',
+  completed_at: '2026-05-12T08:00:00Z',
+  notes: 'done',
+  completed_by: { id: '1', name: 'Owner' },
+  access: { can_edit: true },
+};
+describe('history.service', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
-    jest.setSystemTime(new Date("2026-05-13T10:00:00Z"));
     jest.clearAllMocks();
     mockedRequest.mockResolvedValue(undefined);
-    (fetchJournalPhotos as jest.Mock).mockResolvedValue([]);
-    mockedListTasks.mockResolvedValue([
+  });
+  it('fetches a bounded authenticated feed with filters, sort and opaque cursor', async () => {
+    mockedRequest.mockResolvedValue({
+      results: [{ kind: 'task', data: task }],
+      next_cursor: 'signed:cursor',
+      can_manage_tasks: true,
+    });
+    const result = await fetchJournalPage(
       {
-        id: 11,
-        reminder: 3,
-        due_date: "2026-05-12",
-        status: "completed",
-        completed_at: "2026-05-12T08:00:00Z",
-        note: "done",
+        plantId: '2',
+        location: 'Living room',
+        types: ['photo', 'moisture'],
+        sortKey: 'plant',
+        sortDir: 'asc',
       },
-    ]);
-    mockedListReminders.mockResolvedValue([
-      { id: 3, plant: 2, type: "moisture", is_active: true },
-    ]);
-    mockedFetchPlants.mockResolvedValue([
-      { id: 2, display_name: "Fern", location: { name: "Kitchen" } },
-    ]);
+      'opaque+cursor',
+    );
+    expect(mockedRequest).toHaveBeenCalledTimes(1);
+    const [path, method, body, auth] = mockedRequest.mock.calls[0];
+    expect(path).toContain('/journal/entries/?');
+    expect(path).toContain('types=photo%2Cmoisture');
+    expect(path).toContain('location=Living%20room');
+    expect(path).toContain('limit=30');
+    expect(path).toContain('cursor=opaque%2Bcursor');
+    expect([method, body, auth]).toEqual(['GET', undefined, { auth: true }]);
+    expect(result).toMatchObject({
+      nextCursor: 'signed:cursor',
+      canManageTasks: true,
+      items: [
+        {
+          id: '11',
+          plantId: '2',
+          reminderId: '3',
+          plant: 'Fern',
+          note: 'done',
+        },
+      ],
+    });
   });
-
-  afterEach(() => {
-    jest.useRealTimers();
+  it.each([
+    { results: null },
+    { results: [{ kind: 'wrong', data: task }] },
+    { results: [{ kind: 'task', data: { ...task, access: null } }] },
+    { results: Array(31).fill({ kind: 'task', data: task }) },
+  ])('rejects invalid feed data', async invalid => {
+    mockedRequest.mockResolvedValue({
+      next_cursor: null,
+      can_manage_tasks: true,
+      ...invalid,
+    });
+    await expect(fetchJournalPage()).rejects.toMatchObject({ status: 502 });
   });
-
-  it("fetches completed history items", async () => {
-    await expect(fetchHistoryItems()).resolves.toEqual([
-      expect.objectContaining({
-        id: "11",
-        reminderId: "3",
-        type: "moisture",
-        plant: "Fern",
-        location: "Kitchen",
-        completedAt: "2026-05-12T08:00:00Z",
-        note: "done",
-      }),
-    ]);
+  it('fetches lightweight global options once, independent of loaded journal pages', async () => {
+    mockedRequest.mockResolvedValue({
+      plants: [{ id: '2', name: 'Fern' }],
+      locations: ['Kitchen'],
+      owned_plants: [{ id: '2', name: 'Fern', location: 'Kitchen' }],
+      delete_plants: [],
+      delete_locations: [],
+    });
+    await expect(fetchJournalOptions()).resolves.toMatchObject({
+      plants: [{ id: '2', name: 'Fern' }],
+      ownedPlants: [{ id: '2', name: 'Fern', location: 'Kitchen' }],
+      deletePlants: [],
+    });
+    expect(mockedRequest).toHaveBeenCalledWith(
+      '/journal/options/',
+      'GET',
+      undefined,
+      { auth: true },
+    );
   });
-
-  it("keeps completed history when its reminder is paused", async () => {
-    mockedListReminders.mockResolvedValue([
-      { id: 3, plant: 2, type: "moisture", is_active: false },
-    ]);
-
-    await expect(fetchHistoryItems()).resolves.toEqual([
-      expect.objectContaining({ id: "11", reminderId: "3", note: "done" }),
-    ]);
-  });
-
-  it("includes authorised photo entries without treating them as reminder types", async () => {
-    const photo = {
-      entryKind: "photo", id: "11", plantId: "2", plant: "Fern",
-      location: "Kitchen", type: "photo", completedAt: "2026-05-13T09:00:00Z",
-      createdAt: "2026-05-13T09:00:00Z", recordedDate: "2026-05-10",
-      revision: 1, photo: { id: "photo-11" }, note: "New leaf",
-    };
-    (fetchJournalPhotos as jest.Mock).mockResolvedValue([photo]);
-
-    const entries = await fetchHistoryItems();
-    expect(entries).toHaveLength(2);
-    expect(entries[0]).toEqual(expect.objectContaining({ id: "11", type: "moisture" }));
-    expect(entries[1]).toEqual(photo);
-  });
-
-  it("fails the journal load when photo access cannot be established", async () => {
-    (fetchJournalPhotos as jest.Mock).mockRejectedValue(new Error("Photo access failed"));
-    await expect(fetchHistoryItems()).rejects.toThrow("Photo access failed");
-  });
-
-  it("supports single, bulk and export history actions", async () => {
-    await deleteHistoryEntry("11");
+  it('supports single, bulk and export history actions', async () => {
+    await deleteHistoryEntry('11');
     expect(deleteReminderTask).toHaveBeenCalledWith(11, { auth: true });
 
-    await deleteHistoryEntry("");
+    await deleteHistoryEntry('');
     expect(deleteReminderTask).toHaveBeenCalledTimes(1);
 
-    await bulkDeleteHistoryEntries({ mode: "olderThan", days: 90 });
+    await bulkDeleteHistoryEntries({ mode: 'olderThan', days: 90 });
     expect(bulkDeleteReminderTasks).toHaveBeenCalledWith(
-      { mode: "olderThan", days: 90 },
-      { auth: true }
+      { mode: 'olderThan', days: 90 },
+      { auth: true },
     );
 
-    await sendHistoryExportEmail({ location: "Kitchen", lang: "en" });
+    await sendHistoryExportEmail({ location: 'Kitchen', lang: 'en' });
     expect(mockedRequest).toHaveBeenCalledWith(
-      "/reminders/tasks/export-email/",
-      "POST",
-      { location: "Kitchen", lang: "en" },
-      { auth: true }
+      '/reminders/tasks/export-email/',
+      'POST',
+      { location: 'Kitchen', lang: 'en' },
+      { auth: true },
     );
   });
 });

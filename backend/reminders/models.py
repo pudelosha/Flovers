@@ -145,6 +145,7 @@ class ReminderTask(models.Model):
 
     class Meta:
         ordering = ["due_date", "id"]
+        indexes = [models.Index(fields=["user", "status", "-completed_at", "-id"], name="task_journal_user_date")]
         constraints = [
             models.UniqueConstraint(fields=["reminder"], condition=models.Q(status="pending"), name="one_pending_task_per_reminder"),
             models.CheckConstraint(condition=~models.Q(status="completed") | models.Q(completed_event__isnull=False), name="completed_task_has_event"),
