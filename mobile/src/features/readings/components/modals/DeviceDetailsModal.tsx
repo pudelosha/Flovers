@@ -115,6 +115,7 @@ export default function DeviceDetailsModal({
         onClose={onClose}
         closeLabel={tr('readingsModals.common.close', 'Close')}
         scrollable={false}
+        closeButtonRight={8}
       >
         <ScrollView
           keyboardDismissMode="on-drag"
@@ -257,6 +258,7 @@ export default function DeviceDetailsModal({
                 s.promptButtonsRow,
                 {
                   marginTop: 4,
+                  paddingHorizontal: 0,
                 },
               ]}
             >

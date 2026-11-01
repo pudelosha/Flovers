@@ -48,7 +48,7 @@ from .notifications import (
 # ---------- helpers ----------
 
 PUMP_TASK_TTL_HOURS = 2
-PUMP_MAX_RUN_SECONDS = 30
+LEGACY_PUMP_RUN_SECONDS = 30
 logger = logging.getLogger(__name__)
 
 
@@ -355,7 +355,7 @@ def _pump_cooldown_until(device):
 
 
 def _reserve_pump_cooldown(device, now, duration_seconds=None):
-    until = now + timedelta(minutes=max(1, device.pump_cooldown_minutes), seconds=duration_seconds or PUMP_MAX_RUN_SECONDS)
+    until = now + timedelta(minutes=max(1, device.pump_cooldown_minutes), seconds=duration_seconds or LEGACY_PUMP_RUN_SECONDS)
     current = _pump_cooldown_until(device)
     device.pump_safety_until = max(current, until) if current else until
     device.save(update_fields=["pump_safety_until", "updated_at"])
@@ -670,6 +670,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             pump_included=device.pump_included,
             automatic_pump_launch=device.automatic_pump_launch,
             pump_threshold_pct=device.pump_threshold_pct,
+            pump_duration_seconds=device.pump_duration_seconds,
             interval_minutes=device.effective_interval_minutes,
             tls_ca_cert=getattr(settings, "IOT_TLS_CA_CERT", "") or None,
         )
@@ -690,6 +691,7 @@ class ReadingDeviceViewSet(viewsets.ModelViewSet):
             pump_included=device.pump_included,
             automatic_pump_launch=device.automatic_pump_launch,
             pump_threshold_pct=device.pump_threshold_pct,
+            pump_duration_seconds=device.pump_duration_seconds,
             interval_minutes=device.effective_interval_minutes,
             tls_ca_cert=getattr(settings, "IOT_TLS_CA_CERT", "") or None,
         )
@@ -1118,6 +1120,8 @@ def pump_auto_claim(request):
     device, error = _resolve_device_from_secret_and_key(request)
     if error is not None:
         return error
+    duration = PumpScheduleSerializer(data=request.data)
+    duration.is_valid(raise_exception=True)
     measurement = ReadingIngestSerializer(data={"metrics": {"moisture": request.data.get("moisture")}})
     measurement.is_valid(raise_exception=True)
     moisture = measurement.validated_data["metrics"]["moisture"]
@@ -1133,10 +1137,11 @@ def pump_auto_claim(request):
             return Response({"run": False, "task_id": None, "reason": "moisture_above_threshold", **config})
         if _get_open_manual_pump_task(device) is not None:
             return Response({"run": False, "task_id": None, "reason": "manual_task_has_priority", **config})
-        _reserve_pump_cooldown(device, now)
+        run_seconds = duration.validated_data.get("duration_seconds", LEGACY_PUMP_RUN_SECONDS)
+        _reserve_pump_cooldown(device, now, run_seconds)
         task = PumpTask.objects.create(
             device=device, source=PumpTask.SOURCE_AUTOMATIC, status=PumpTask.STATUS_DELIVERED,
-            requested_at=now, delivered_at=now, expires_at=now + timedelta(minutes=2),
+            requested_at=now, delivered_at=now, expires_at=now + timedelta(minutes=2, seconds=run_seconds),
             moisture_at_request=moisture, threshold_at_request=device.pump_threshold_pct,
         )
         return Response({

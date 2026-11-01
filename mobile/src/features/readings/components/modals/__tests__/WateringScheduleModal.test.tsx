@@ -78,3 +78,16 @@ describe("WateringScheduleModal", () => {
     expect(onRecallWatering).toHaveBeenCalledTimes(1);
   });
 });
+
+it("defaults each newly opened manual schedule to 20 seconds",()=>{
+  const onScheduleWatering=jest.fn();
+  const props={visible:true,pumpIncluded:true,durationSupported:true,deviceId:7,onClose:jest.fn(),onScheduleWatering};
+  const view=render(<WateringScheduleModal {...props}/>);
+  expect(view.getByLabelText("Watering duration (seconds)").props.value).toBe("20");
+  fireEvent.changeText(view.getByLabelText("Watering duration (seconds)"),"55");
+  view.rerender(<WateringScheduleModal {...props} visible={false}/>);
+  view.rerender(<WateringScheduleModal {...props}/>);
+  expect(view.getByLabelText("Watering duration (seconds)").props.value).toBe("20");
+  const buttons=view.getAllByText("Schedule watering");fireEvent.press(buttons[buttons.length-1]);
+  expect(onScheduleWatering).toHaveBeenCalledWith(20);
+});

@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "1 ile 1440 arasında bir tam sayı girin.",
       "sendEmailMissingReadings": "Okuma alınmadığında e-posta gönder",
       "sendPushMissingReadings": "Okuma alınmadığında anlık bildirim gönder",
-      "missingReadingsInfo": "Etkin cihazlarda okuma geciktiğinde bir kez uyarı gönderilir. Yeni bir okuma uyarıyı sıfırlar. Bu seçenekler toprak nemi ve sulama bildirimlerinden bağımsızdır."
+      "missingReadingsInfo": "Etkin cihazlarda okuma geciktiğinde bir kez uyarı gönderilir. Yeni bir okuma uyarıyı sıfırlar. Bu seçenekler toprak nemi ve sulama bildirimlerinden bağımsızdır.",
+      "pumpDurationLabel": "Pompa çalışma süresi (saniye)",
+      "pumpDurationHint": "1–300 saniye seçin (varsayılan 20). Bu değer, cihaz için oluşturulan koda eklenir. Değişiklikten sonra kodu yeniden oluşturup karta yükleyin. Planlanan sulama için farklı bir süre seçebilirsiniz.",
+      "pumpDurationInvalid": "1 ile 300 arasında bir tam sayı girin."
     }
   }
 }

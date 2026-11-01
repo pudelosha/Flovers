@@ -3,6 +3,8 @@ import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
+import { FAB_LAYER } from "./FloatingTileMenu";
+
 export type FabAction = {
   key: string;
   icon: string;
@@ -55,7 +57,7 @@ export default function FAB({
   return (
     <View
       pointerEvents="box-none"
-      style={[StyleSheet.absoluteFill, { zIndex: 1000, elevation: 1000 }]}
+      style={[StyleSheet.absoluteFill, { zIndex: FAB_LAYER, elevation: FAB_LAYER }]}
     >
       {/* Backdrop only when open */}
       {open && (

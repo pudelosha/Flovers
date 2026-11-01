@@ -30,6 +30,7 @@ export default function AppModalFrame({
   scrollable = true,
   reserveBottomBar = true,
   closeLabel,
+  closeButtonRight,
   loading = false,
   loadingTestID = 'app-modal-loading',
 }: {
@@ -42,6 +43,7 @@ export default function AppModalFrame({
   scrollable?: boolean;
   reserveBottomBar?: boolean;
   closeLabel?: string;
+  closeButtonRight?: number;
   loading?: boolean;
   loadingTestID?: string;
   fullScreen?: boolean;
@@ -148,7 +150,7 @@ export default function AppModalFrame({
                 accessibilityLabel={
                   closeLabel ?? t('sharing.common.close', { defaultValue: 'Close' })
                 }
-                style={{ top: 8, right: fullScreen ? 32 : 8 }}
+                style={{ top: 8, right: closeButtonRight ?? (fullScreen ? 32 : 8) }}
               />
             </View>
           </View>

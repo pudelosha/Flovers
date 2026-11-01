@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Enter a whole number from 1 to 1440.",
       "sendEmailMissingReadings": "Send email when readings are not received",
       "sendPushMissingReadings": "Send push notification when readings are not received",
-      "missingReadingsInfo": "For active devices, notify once when a reading is overdue. A new reading resets the alert. These options work independently of soil moisture and watering notifications."
+      "missingReadingsInfo": "For active devices, notify once when a reading is overdue. A new reading resets the alert. These options work independently of soil moisture and watering notifications.",
+      "pumpDurationLabel": "Pump run time (seconds)",
+      "pumpDurationHint": "Choose 1–300 seconds (default 20). This sets the duration in generated device code. Generate and upload the code again to apply a change. Scheduled watering can use a different duration.",
+      "pumpDurationInvalid": "Enter a whole number from 1 to 300."
     }
   }
 }

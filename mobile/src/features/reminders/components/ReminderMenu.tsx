@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
 import { Pressable, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -29,7 +30,7 @@ export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelet
   );
 
   return (
-    <View style={s.menuSheet} pointerEvents="auto">
+    <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       {canEdit && <>
       <MenuItem
         label={tr("reminders.menu.edit", "Edit reminder")}
@@ -59,7 +60,7 @@ export default function ReminderMenu({ isActive, onToggleActive, onEdit, onDelet
           onDelete();
         }}
       />}
-    </View>
+    </FloatingTileMenu>
   );
 }
 

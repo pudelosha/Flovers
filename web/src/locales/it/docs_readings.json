@@ -8,7 +8,8 @@
           "Nella schermata Misurazioni controlli i dispositivi IoT collegati alle tue piante e ne modifichi le impostazioni.",
           "I dispositivi possono inviare a Flovers temperatura e umidità dell’aria, intensità della luce e umidità del terreno.",
           "Questa funzione è pensata per chi usa o costruisce i propri dispositivi, per esempio con schede Arduino o ESP, e vuole seguire nel tempo le condizioni in cui crescono le piante.",
-          "Puoi anche collegare una pompa dell’acqua per richiedere un’annaffiatura dall’app o attivare quella automatica in base all’umidità del terreno."
+          "Puoi anche collegare una pompa dell’acqua per richiedere un’annaffiatura dall’app o attivare quella automatica in base all’umidità del terreno.",
+          "Durata della pompa (secondi): Scegli da 1 a 300 secondi (predefinito: 20). Questo valore viene inserito nel codice generato per il dispositivo. Dopo una modifica, genera di nuovo il codice e caricalo sulla scheda. Per un’annaffiatura programmata puoi scegliere una durata diversa. Anche l’annaffiatura programmata ha una durata predefinita di 20 secondi. I dispositivi esistenti mantengono i precedenti 30 secondi finché non li modifichi."
         ]
       },
       {

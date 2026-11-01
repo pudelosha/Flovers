@@ -828,6 +828,7 @@ export default function ReadingsScreen() {
       };
       intervalMinutes: number;
       pumpCooldownMinutes: number;
+      pumpDurationSeconds: number;
       sendEmailNotifications?: boolean;
       sendPushNotifications?: boolean;
       sendEmailMissingReadings?: boolean;
@@ -862,6 +863,7 @@ export default function ReadingsScreen() {
             send_email_missing_readings: !!payload.sendEmailMissingReadings,
             send_push_missing_readings: !!payload.sendPushMissingReadings,
             pump_cooldown_minutes: payload.pumpCooldownMinutes,
+            pump_duration_seconds: payload.pumpDurationSeconds,
             sensors: {
               temperature: payload.sensors.temperature,
               humidity: payload.sensors.humidity,
@@ -901,6 +903,7 @@ export default function ReadingsScreen() {
             send_email_missing_readings: !!payload.sendEmailMissingReadings,
             send_push_missing_readings: !!payload.sendPushMissingReadings,
             pump_cooldown_minutes: payload.pumpCooldownMinutes,
+            pump_duration_seconds: payload.pumpDurationSeconds,
             sensors: {
               temperature: payload.sensors.temperature,
               humidity: payload.sensors.humidity,
@@ -1490,6 +1493,8 @@ export default function ReadingsScreen() {
               })()
             : true
         }
+        initialPumpDurationSeconds={upsertMode === "edit"
+          ? devicesRaw.find((device) => String(device.id) === upsertReadingId)?.pump_duration_seconds ?? 30 : 20}
         initialPumpCooldownMinutes={upsertMode === "edit"
           ? devicesRaw.find((device) => String(device.id) === upsertReadingId)?.pump_cooldown_minutes ?? 60 : 60}
         initialIntervalMinutes={

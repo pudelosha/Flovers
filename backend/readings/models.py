@@ -64,6 +64,9 @@ class ReadingDevice(models.Model):
     send_email_missing_readings = models.BooleanField(default=False)
     send_push_missing_readings = models.BooleanField(default=False)
 
+    pump_duration_seconds = models.PositiveSmallIntegerField(
+        default=20, validators=[MinValueValidator(1), MaxValueValidator(300)],
+    )
     pump_included = models.BooleanField(default=False)
     automatic_pump_launch = models.BooleanField(default=False)
     pump_threshold_pct = models.FloatField(null=True, blank=True)

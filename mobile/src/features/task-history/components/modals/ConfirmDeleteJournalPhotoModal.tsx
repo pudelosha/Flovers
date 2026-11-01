@@ -14,7 +14,7 @@ export default function ConfirmDeleteJournalPhotoModal({ visible, busy, onClose,
   const { t } = useTranslation();
   return (
     <AppModalHost>
-    <ContactModalFrame visible={visible}
+    <ContactModalFrame visible={visible} centerContent
       title={t("taskHistory.photo.deleteTitle", { defaultValue: "Delete photo" })}
       onClose={onClose}>
       <Text style={{ color: "#FFFFFF", fontSize: 14, lineHeight: 21, marginHorizontal: 16, marginBottom: 20 }}>

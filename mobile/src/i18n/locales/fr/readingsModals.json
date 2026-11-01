@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Saisissez un nombre entier de 1 à 1440.",
       "sendEmailMissingReadings": "Envoyer un e-mail si aucun relevé n’est reçu",
       "sendPushMissingReadings": "Envoyer une notification push si aucun relevé n’est reçu",
-      "missingReadingsInfo": "Pour les appareils actifs, une seule alerte est envoyée lorsqu’un relevé est en retard. Un nouveau relevé réinitialise l’alerte. Ces options sont indépendantes des notifications d’humidité du sol et d’arrosage."
+      "missingReadingsInfo": "Pour les appareils actifs, une seule alerte est envoyée lorsqu’un relevé est en retard. Un nouveau relevé réinitialise l’alerte. Ces options sont indépendantes des notifications d’humidité du sol et d’arrosage.",
+      "pumpDurationLabel": "Durée de fonctionnement de la pompe (secondes)",
+      "pumpDurationHint": "Choisissez entre 1 et 300 secondes (20 par défaut). Cette valeur est intégrée au code généré pour l’appareil. Après une modification, générez à nouveau le code et chargez-le sur la carte. Un arrosage programmé peut avoir une durée différente.",
+      "pumpDurationInvalid": "Saisissez un nombre entier entre 1 et 300."
     }
   }
 }

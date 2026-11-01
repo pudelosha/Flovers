@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 // PlantInfoMenu.tsx
 import React, { useCallback } from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
@@ -12,12 +13,13 @@ type Props = {
   onEditPlant: () => void;
   onChangeImage: () => void;
   onShowReminders: () => void;
+  onJournal?: () => void;
   onShare?: () => void;
   sharingActive?: boolean;
   canEdit?: boolean;
 };
 
-export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChangeImage, onShowReminders, onShare, sharingActive, canEdit = true }: Props) {
+export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChangeImage, onShowReminders, onJournal, onShare, sharingActive, canEdit = true }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -32,7 +34,7 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
   );
 
   return (
-    <View style={s.menuSheet} pointerEvents="auto">
+    <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       <Pressable style={s.menuItem} onPress={onPlantDefinition} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
         <MaterialCommunityIcons name="book-open-variant" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.plantDefinition", "Plant definition")}</Text>
@@ -57,7 +59,11 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
         <MaterialCommunityIcons name="calendar" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
         <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.showReminders", "Show reminders")}</Text>
       </Pressable>}
-    </View>
+      {onJournal && <Pressable style={s.menuItem} onPress={onJournal} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+        <MaterialCommunityIcons name="notebook-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
+        <Text style={s.menuItemText}>{tr("plants.menu.journal", "Task Journal")}</Text>
+      </Pressable>}
+    </FloatingTileMenu>
   );
 }
 

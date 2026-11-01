@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -29,7 +30,7 @@ export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistor
   );
 
   return (
-    <View style={s.menuSheet} pointerEvents="auto">
+    <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       {canComplete && <Pressable
         style={s.menuItem}
         onPress={onMarkComplete}
@@ -63,6 +64,6 @@ export default function PlantReminderMenu({ onMarkComplete, onEdit, onShowHistor
           {tr("plantDetails.reminders.menu.showHistory", "Show history")}
         </Text>
       </Pressable>
-    </View>
+    </FloatingTileMenu>
   );
 }

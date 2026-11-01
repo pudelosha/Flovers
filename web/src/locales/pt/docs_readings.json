@@ -8,7 +8,8 @@
           "Na tela Leituras, você consulta e gerencia os dispositivos IoT associados às plantas.",
           "Eles podem enviar temperatura do ar, umidade do ar, luz e umidade do solo ao Flovers.",
           "Essa função atende a quem usa ou monta seus próprios dispositivos, como placas Arduino ou ESP, para acompanhar as condições das plantas.",
-          "Você também pode configurar uma bomba para receber pedidos de rega pelo aplicativo ou regar automaticamente conforme a umidade do solo."
+          "Você também pode configurar uma bomba para receber pedidos de rega pelo aplicativo ou regar automaticamente conforme a umidade do solo.",
+          "Tempo de funcionamento da bomba (segundos): Escolha entre 1 e 300 segundos (20 por predefinição). Este valor é incluído no código gerado para o dispositivo. Após uma alteração, volte a gerar o código e carregue-o na placa. A rega agendada pode ter uma duração diferente. A rega agendada também tem uma duração predefinida de 20 segundos. Os dispositivos existentes mantêm os anteriores 30 segundos até alterar essa definição."
         ]
       },
       {

@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Introduce un número entero de 1 a 1440.",
       "sendEmailMissingReadings": "Enviar un correo si no se reciben lecturas",
       "sendPushMissingReadings": "Enviar una notificación push si no se reciben lecturas",
-      "missingReadingsInfo": "En los dispositivos activos se envía un solo aviso cuando una lectura se retrasa. Una nueva lectura restablece el aviso. Estas opciones son independientes de las notificaciones de humedad del suelo y riego."
+      "missingReadingsInfo": "En los dispositivos activos se envía un solo aviso cuando una lectura se retrasa. Una nueva lectura restablece el aviso. Estas opciones son independientes de las notificaciones de humedad del suelo y riego.",
+      "pumpDurationLabel": "Tiempo de funcionamiento de la bomba (segundos)",
+      "pumpDurationHint": "Elige entre 1 y 300 segundos (20 por defecto). Este valor se incluye en el código generado para el dispositivo. Tras cambiarlo, vuelve a generar el código y súbelo a la placa. El riego programado puede tener otra duración.",
+      "pumpDurationInvalid": "Introduce un número entero entre 1 y 300."
     }
   }
 }

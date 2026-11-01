@@ -8,7 +8,8 @@
           "Sensör okumaları ekranı, ev bitkilerinize bağlı IoT cihazlarını görüntülemenize ve yönetmenize olanak tanır.",
           "Her cihaz, hava sıcaklığı, hava nemi, ışık seviyesi ve toprak nemi gibi çevresel ölçümleri Flovers'ye gönderebilir.",
           "Bu özellik, örneğin Arduino veya ESP tabanlı kartlar gibi kendi cihazlarını oluşturan veya kullanan ve evdeki bitki koşullarını zaman içinde izlemek isteyen kullanıcılar için tasarlanmıştır.",
-          "Cihazlar ayrıca manuel programlı sulama ve otomatik toprak nemi bazlı sulama için bir su pompasıyla da yapılandırılabilir."
+          "Cihazlar ayrıca manuel programlı sulama ve otomatik toprak nemi bazlı sulama için bir su pompasıyla da yapılandırılabilir.",
+          "Pompa çalışma süresi (saniye): 1–300 saniye seçin (varsayılan 20). Bu değer, cihaz için oluşturulan koda eklenir. Değişiklikten sonra kodu yeniden oluşturup karta yükleyin. Planlanan sulama için farklı bir süre seçebilirsiniz. Planlanan sulamanın varsayılan süresi de 20 saniyedir. Mevcut cihazlar, siz değiştirene kadar önceki 30 saniyelik ayarlarını korur."
         ]
       },
       {

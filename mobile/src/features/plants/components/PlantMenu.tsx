@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
 import { Pressable, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -44,7 +45,7 @@ export default function PlantMenu({
   );
 
   return (
-    <View style={s.menuSheet} pointerEvents="auto">
+    <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       <MenuItem
         label={tr("plants.menu.details", "Plant details")}
         icon="sprout-outline"
@@ -88,7 +89,7 @@ export default function PlantMenu({
         danger
         onPress={onDelete}
       />}
-    </View>
+    </FloatingTileMenu>
   );
 }
 

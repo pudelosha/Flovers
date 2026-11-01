@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "请输入 1 到 1440 之间的整数。",
       "sendEmailMissingReadings": "未收到读数时发送邮件",
       "sendPushMissingReadings": "未收到读数时发送推送通知",
-      "missingReadingsInfo": "对于已启用的设备，读数逾期时仅提醒一次。收到新读数后会重置提醒。这些选项独立于土壤湿度和浇水通知。"
+      "missingReadingsInfo": "对于已启用的设备，读数逾期时仅提醒一次。收到新读数后会重置提醒。这些选项独立于土壤湿度和浇水通知。",
+      "pumpDurationLabel": "水泵运行时间（秒）",
+      "pumpDurationHint": "可设为1–300秒，默认为20秒。此设置会写入生成的设备代码。修改后，请重新生成代码并上传到开发板。手动安排的浇水任务可以使用不同的时长。",
+      "pumpDurationInvalid": "请输入1到300之间的整数。"
     }
   }
 }

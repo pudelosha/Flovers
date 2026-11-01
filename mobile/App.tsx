@@ -4,6 +4,7 @@ import { Provider as PaperProvider, MD3LightTheme } from "react-native-paper";
 import { AuthProvider } from "./src/app/providers/AuthContext";
 import { SettingsProvider } from "./src/app/providers/SettingsProvider";
 import { LanguageProvider } from "./src/app/providers/LanguageProvider";
+import { FloatingTileMenuProvider } from "./src/shared/ui/FloatingTileMenu";
 import RootNavigator from "./src/app/navigation/RootNavigator";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./src/i18n";
@@ -32,7 +33,7 @@ export default function App() {
           <AuthProvider>
             <LanguageProvider>
               <SettingsProvider>
-                <RootNavigator />
+                <FloatingTileMenuProvider><RootNavigator /></FloatingTileMenuProvider>
               </SettingsProvider>
             </LanguageProvider>
           </AuthProvider>

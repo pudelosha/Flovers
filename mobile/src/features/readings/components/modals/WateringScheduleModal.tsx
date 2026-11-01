@@ -104,9 +104,9 @@ export default function WateringScheduleModal({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
-  const [durationText, setDurationText] = React.useState('30');
+  const [durationText, setDurationText] = React.useState('20');
   React.useEffect(() => {
-    if (visible) setDurationText('30');
+    if (visible) setDurationText('20');
   }, [visible, deviceId]);
   const durationSeconds = Number(durationText);
   const validDuration =

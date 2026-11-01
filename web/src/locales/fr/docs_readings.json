@@ -8,7 +8,8 @@
           "L’écran « Relevés » permet de consulter et de gérer les appareils connectés associés à tes plantes.",
           "Chaque appareil peut envoyer à Flovers des mesures de température de l’air, d’humidité de l’air, de luminosité et d’humidité du sol.",
           "Cette fonction s’adresse aux personnes qui utilisent ou fabriquent leurs propres appareils, par exemple à base d’Arduino ou d’ESP, pour suivre les conditions dans la durée.",
-          "Un appareil peut aussi être équipé d’une pompe, avec des demandes d’arrosage depuis l’application et un arrosage automatique selon l’humidité du sol."
+          "Un appareil peut aussi être équipé d’une pompe, avec des demandes d’arrosage depuis l’application et un arrosage automatique selon l’humidité du sol.",
+          "Durée de fonctionnement de la pompe (secondes): Choisissez entre 1 et 300 secondes (20 par défaut). Cette valeur est intégrée au code généré pour l’appareil. Après une modification, générez à nouveau le code et chargez-le sur la carte. Un arrosage programmé peut avoir une durée différente. L’arrosage programmé est lui aussi réglé sur 20 secondes par défaut. Les appareils existants conservent leur ancien réglage de 30 secondes tant que vous ne le modifiez pas."
         ]
       },
       {

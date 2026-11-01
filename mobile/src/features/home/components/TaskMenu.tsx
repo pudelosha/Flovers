@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -41,7 +42,7 @@ export default function TaskMenu({
     showDelete === true || (showDelete === undefined && typeof onDelete === "function");
 
   return (
-    <View style={s.menuSheet} pointerEvents="auto">
+    <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       {canComplete && <Pressable
         style={s.menuItem}
         onPress={onMarkComplete}
@@ -115,6 +116,6 @@ export default function TaskMenu({
           <Text style={[s.menuItemText, { color: "#FF6B6B" }]}>{t("home.menu.delete")}</Text>
         </Pressable>
       )}
-    </View>
+    </FloatingTileMenu>
   );
 }

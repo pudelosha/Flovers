@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Masukkan bilangan bulat dari 1 hingga 1440.",
       "sendEmailMissingReadings": "Kirim email jika pembacaan tidak diterima",
       "sendPushMissingReadings": "Kirim notifikasi push jika pembacaan tidak diterima",
-      "missingReadingsInfo": "Untuk perangkat aktif, peringatan dikirim sekali saat pembacaan terlambat. Pembacaan baru mengatur ulang peringatan. Opsi ini terpisah dari notifikasi kelembapan tanah dan penyiraman."
+      "missingReadingsInfo": "Untuk perangkat aktif, peringatan dikirim sekali saat pembacaan terlambat. Pembacaan baru mengatur ulang peringatan. Opsi ini terpisah dari notifikasi kelembapan tanah dan penyiraman.",
+      "pumpDurationLabel": "Durasi pompa (detik)",
+      "pumpDurationHint": "Pilih 1–300 detik (default 20). Nilai ini dimasukkan ke kode perangkat yang dibuat. Setelah mengubahnya, buat ulang kode dan unggah ke papan. Penyiraman terjadwal dapat menggunakan durasi yang berbeda.",
+      "pumpDurationInvalid": "Masukkan bilangan bulat dari 1 hingga 300."
     }
   }
 }

@@ -8,7 +8,8 @@
           "The Readings screen allows you to view and manage IoT devices linked to your plants.",
           "Each device can send environmental measurements such as air temperature, air humidity, light level, and soil moisture to Flovers.",
           "This feature is designed for users who build or use their own devices, for example Arduino or ESP-based boards, and want to monitor plant conditions over time.",
-          "Devices may also be configured with a water pump for manual scheduled watering and automatic soil-moisture-based watering."
+          "Devices may also be configured with a water pump for manual scheduled watering and automatic soil-moisture-based watering.",
+          "Pump run time (seconds): Choose 1–300 seconds (default 20). This sets the duration in generated device code. Generate and upload the code again to apply a change. Scheduled watering can use a different duration. Schedule watering also defaults to 20 seconds. Existing devices retain their previous 30-second setting until you change it."
         ]
       },
       {

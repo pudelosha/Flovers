@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Inserisci un numero intero da 1 a 1440.",
       "sendEmailMissingReadings": "Invia un’email quando non arrivano letture",
       "sendPushMissingReadings": "Invia una notifica push quando non arrivano letture",
-      "missingReadingsInfo": "Per i dispositivi attivi viene inviato un solo avviso quando una lettura è in ritardo. Una nuova lettura reimposta l’avviso. Queste opzioni sono indipendenti dalle notifiche di umidità del terreno e irrigazione."
+      "missingReadingsInfo": "Per i dispositivi attivi viene inviato un solo avviso quando una lettura è in ritardo. Una nuova lettura reimposta l’avviso. Queste opzioni sono indipendenti dalle notifiche di umidità del terreno e irrigazione.",
+      "pumpDurationLabel": "Durata della pompa (secondi)",
+      "pumpDurationHint": "Scegli da 1 a 300 secondi (predefinito: 20). Questo valore viene inserito nel codice generato per il dispositivo. Dopo una modifica, genera di nuovo il codice e caricalo sulla scheda. Per un’annaffiatura programmata puoi scegliere una durata diversa.",
+      "pumpDurationInvalid": "Inserisci un numero intero da 1 a 300."
     }
   }
 }

@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -63,7 +64,7 @@ export default function ReadingMenu({
   );
 
   return (
-    <View style={s.menuSheet} pointerEvents="auto">
+    <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       {canEdit && <Item
         icon="pencil-outline"
         label={tr("readings.menu.editDevice", "Edit device")}
@@ -94,6 +95,6 @@ export default function ReadingMenu({
         danger
         onPress={onDelete}
       />}
-    </View>
+    </FloatingTileMenu>
   );
 }

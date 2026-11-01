@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useMemo } from "react";
 import {
   View,
@@ -236,7 +237,7 @@ export default function TaskHistoryTile({
 
       {/* Inline menu */}
       {isMenuOpen && (
-        <View style={s.menuSheet}>
+        <FloatingTileMenu style={s.menuSheet}>
           {/* Edit reminder */}
           {access.canEdit && <Pressable style={s.menuItem} onPress={handleEditReminder}>
             <MaterialCommunityIcons
@@ -271,7 +272,7 @@ export default function TaskHistoryTile({
               {t("taskHistory.menu.deleteTask")}
             </Text>
           </Pressable>}
-        </View>
+        </FloatingTileMenu>
       )}
     </View>
   );

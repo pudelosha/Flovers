@@ -25,7 +25,7 @@ def test_firmware_embeds_minute_interval_for_both_variants(minutes, pump):
     code = generate_arduino_code(base_url="https://api.example.com", secret="test-secret",
                                 device_id=1, device_key="DEVICE", interval_minutes=minutes, pump_included=pump)
     assert f"SEND_INTERVAL_MS = {minutes}UL * 60UL * 1000UL;" in code
-    assert "const unsigned long PUMP_RUN_MS = 30000UL;" in code if pump else "PUMP_RUN_MS" not in code
+    assert "const unsigned long PUMP_RUN_MS = 20000UL;" in code if pump else "PUMP_RUN_MS" not in code
 
 
 @pytest.mark.parametrize("minutes", [0, -1, 1441, 1.5, True])

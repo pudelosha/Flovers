@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Gib eine ganze Zahl von 1 bis 1440 ein.",
       "sendEmailMissingReadings": "E-Mail senden, wenn Messwerte ausbleiben",
       "sendPushMissingReadings": "Push-Mitteilung senden, wenn Messwerte ausbleiben",
-      "missingReadingsInfo": "Bei aktiven Geräten erfolgt eine einmalige Warnung, wenn ein Messwert überfällig ist. Ein neuer Messwert setzt die Warnung zurück. Diese Optionen sind unabhängig von Bodenfeuchte- und Bewässerungsmitteilungen."
+      "missingReadingsInfo": "Bei aktiven Geräten erfolgt eine einmalige Warnung, wenn ein Messwert überfällig ist. Ein neuer Messwert setzt die Warnung zurück. Diese Optionen sind unabhängig von Bodenfeuchte- und Bewässerungsmitteilungen.",
+      "pumpDurationLabel": "Pumpenlaufzeit (Sekunden)",
+      "pumpDurationHint": "Wähle 1–300 Sekunden (Standard: 20). Dieser Wert wird in den erzeugten Gerätecode übernommen. Erzeuge den Code nach einer Änderung erneut und lade ihn auf das Board. Für geplantes Gießen kannst du eine andere Dauer wählen.",
+      "pumpDurationInvalid": "Gib eine ganze Zahl von 1 bis 300 ein."
     }
   }
 }

@@ -91,6 +91,7 @@ export type ApiReadingDevice = {
   last_pump_run_at?: string | null;
   last_pump_run_source?: "manual" | "automatic" | null;
   pump_cooldown_minutes?: number;
+  pump_duration_seconds?: number;
   pending_pump_task?: ApiPumpTask | null;
 
   send_email_watering_notifications?: boolean;
@@ -109,6 +110,7 @@ export type ApiReadingDeviceCreatePayload = {
   interval_hours?: number; // 1..24
   interval_minutes?: number; // 1..1440; canonical, default 60
   pump_cooldown_minutes?: number;
+  pump_duration_seconds?: number;
   sensors: {
     temperature: boolean;
     humidity: boolean;
@@ -160,6 +162,7 @@ export type ApiReadingDeviceUpdatePayload = Partial<{
   interval_hours: number;
   interval_minutes: number;
   pump_cooldown_minutes: number;
+  pump_duration_seconds: number;
   sensors: {
     temperature?: boolean;
     humidity?: boolean;

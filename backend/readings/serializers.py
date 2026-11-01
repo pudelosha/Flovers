@@ -153,6 +153,7 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
             "last_pump_run_at",
             "last_pump_run_source",
             "pump_cooldown_minutes",
+            "pump_duration_seconds",
             "pending_pump_task",
 
             "last_read_at",

@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import type { LayoutChangeEvent, StyleProp, ViewStyle } from "react-native";
@@ -41,7 +42,7 @@ export default function ReminderMiniTileMenu({
   );
 
   return (
-    <View style={[s.menuSheet, styles.menuSheet, style]} pointerEvents="auto" onLayout={onLayout}>
+    <FloatingTileMenu style={[s.menuSheet, styles.menuSheet, style]} pointerEvents="auto" onLayout={onLayout}>
       {canEdit && <>
       <MenuItem
         label={tr("reminders.menu.edit", "Edit reminder")}
@@ -69,7 +70,7 @@ export default function ReminderMiniTileMenu({
         danger
         onPress={onDelete}
       />}
-    </View>
+    </FloatingTileMenu>
   );
 }
 

@@ -8,7 +8,8 @@
           "Na ekranie Odczyty sprawdzisz pomiary z urządzeń IoT połączonych z twoimi roślinami i zmienisz ustawienia tych urządzeń.",
           "Urządzenia mogą przesyłać do Flovers temperaturę i wilgotność powietrza, natężenie światła oraz wilgotność gleby.",
           "To funkcja dla osób, które korzystają z własnych urządzeń, np. płytek Arduino lub ESP, i chcą śledzić warunki, w jakich rosną ich rośliny.",
-          "Do urządzenia możesz też podłączyć pompę. Pozwoli ci to zlecać podlewanie z aplikacji lub włączyć podlewanie automatyczne, zależne od wilgotności gleby."
+          "Do urządzenia możesz też podłączyć pompę. Pozwoli ci to zlecać podlewanie z aplikacji lub włączyć podlewanie automatyczne, zależne od wilgotności gleby.",
+          "Czas pracy pompy (sekundy): Wybierz od 1 do 300 sekund (domyślnie 20). Ta wartość trafia do wygenerowanego kodu urządzenia. Po zmianie wygeneruj kod ponownie i wgraj go na płytkę. Przy ręcznym planowaniu podlewania możesz ustawić inny czas. Przy planowaniu podlewania domyślny czas też wynosi 20 sekund. Istniejące urządzenia zachowują wcześniejsze ustawienie 30 sekund, dopóki go nie zmienisz."
         ]
       },
       {

@@ -8,7 +8,8 @@
           "Layar pembacaan sensor memungkinkan Anda melihat dan mengelola perangkat IoT yang terhubung ke tanaman hias Anda.",
           "Setiap perangkat dapat mengirimkan pengukuran lingkungan seperti suhu udara, kelembapan udara, tingkat cahaya, dan kelembapan tanah ke Flovers.",
           "Fitur ini dirancang untuk pengguna yang membuat atau menggunakan perangkat mereka sendiri, misalnya papan berbasis Arduino atau ESP, dan ingin memantau kondisi tanaman hias dari waktu ke waktu.",
-          "Perangkat juga dapat dikonfigurasi dengan pompa air untuk penyiraman terjadwal secara manual dan penyiraman otomatis berbasis kelembaban tanah."
+          "Perangkat juga dapat dikonfigurasi dengan pompa air untuk penyiraman terjadwal secara manual dan penyiraman otomatis berbasis kelembaban tanah.",
+          "Durasi pompa (detik): Pilih 1–300 detik (default 20). Nilai ini dimasukkan ke kode perangkat yang dibuat. Setelah mengubahnya, buat ulang kode dan unggah ke papan. Penyiraman terjadwal dapat menggunakan durasi yang berbeda. Penyiraman terjadwal juga menggunakan default 20 detik. Perangkat yang sudah ada tetap menggunakan pengaturan sebelumnya, yaitu 30 detik, hingga Anda mengubahnya."
         ]
       },
       {

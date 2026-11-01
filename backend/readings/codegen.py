@@ -197,13 +197,15 @@ def _section_timing(*, pump_enabled: bool, interval_minutes: int) -> str:
     )
 
 
-def _section_pump_config(*, fallback_pump_threshold: int) -> str:
+def _section_pump_config(*, fallback_pump_threshold: int, pump_duration_seconds: int) -> str:
     return _clean_section(
         f"""
         // -------------------- Pump ---------------------
 
-        // Default pump run time. Adjust manually if your pump needs more or less time.
-        const unsigned long PUMP_RUN_MS = 30000UL;
+        // Default run time from device settings (1-300 seconds).
+        // Re-generate and upload the sketch after changing this device setting.
+        // Scheduled manual jobs may specify their own duration.
+        const unsigned long PUMP_RUN_MS = {pump_duration_seconds * 1000}UL;
 
         // Safety cooldown for automatic watering.
         // This applies after automatic watering and after manual watering.
@@ -1092,7 +1094,8 @@ def _section_pump_helpers() -> str:
             json += "\\"secret\\":\\"" + String(secret) + "\\",";
             json += "\\"device_key\\":\\"" + String(deviceKey) + "\\",";
             json += "\\"device_id\\":" + String(DEVICE_ID) + ",";
-            json += "\\"moisture\\":" + String(moisture) + "}";
+            json += "\\"moisture\\":" + String(moisture) + ",";
+            json += "\\"duration_seconds\\":" + String(PUMP_RUN_MS / 1000UL) + "}";
             String response = "";
             if (!postJson(pumpAutoClaimUrl, json, response, "automatic watering claim") ||
                 !jsonBoolValue(response, "run", false))
@@ -1413,10 +1416,13 @@ def generate_arduino_code(
     pump_included: bool = False,
     automatic_pump_launch: bool = False,
     pump_threshold_pct: float | int | None = None,
+    pump_duration_seconds: int = 20,
     interval_hours: int = 1,
     interval_minutes: int | None = None,
     tls_ca_cert: str | None = None,
 ) -> str:
+    if isinstance(pump_duration_seconds, bool) or not isinstance(pump_duration_seconds, int) or not 1 <= pump_duration_seconds <= 300:
+        raise ValueError("pump_duration_seconds must be a whole number between 1 and 300")
     if interval_minutes is None:
         interval_hours = int(interval_hours)
         if not 1 <= interval_hours <= 24:
@@ -1477,6 +1483,7 @@ def generate_arduino_code(
         sections.append(
             _section_pump_config(
                 fallback_pump_threshold=fallback_pump_threshold,
+                pump_duration_seconds=pump_duration_seconds,
             )
         )
 

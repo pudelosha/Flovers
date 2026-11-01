@@ -380,6 +380,10 @@ export default function PlantInfoTile({
                   closeMenu();
                   onOpenChangeImage?.(String(plant.id));
                 }}
+                onJournal={() => {
+                  closeMenu();
+                  nav.navigate("TaskHistory", { plantId: String(plant.id) });
+                }}
                 onShowReminders={() => {
                   closeMenu();
                   nav.navigate("Reminders" as never, { plantId: String(plant.id) } as never);

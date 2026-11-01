@@ -67,3 +67,28 @@ it("loads and changes existing missing-reading preferences", () => {
     sendEmailMissingReadings: false, sendPushMissingReadings: true,
   }));
 });
+
+
+it("defaults pump run time to 20 seconds and saves a selected value", () => {
+  const view = render(<UpsertReadingDeviceModal {...props} />);
+  const input = view.getByLabelText("Pump run time (seconds)");
+  expect(input.props.value).toBe("20");
+  fireEvent.changeText(input, "300");
+  fireEvent.press(view.getByText("readingsModals.common.save"));
+  expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({pumpDurationSeconds:300}));
+});
+it.each(["", "0", "301", "-1", "1.5", "2e2", "abc"])("blocks invalid pump run time %s", (value) => {
+  const view = render(<UpsertReadingDeviceModal {...props} />);
+  fireEvent.changeText(view.getByLabelText("Pump run time (seconds)"), value);
+  fireEvent.press(view.getByText("readingsModals.common.save"));
+  expect(props.onSave).not.toHaveBeenCalled();
+  expect(view.getByText("Enter a whole number from 1 to 300.")).toBeTruthy();
+});
+it("reloads each device's saved duration and preserves the minimum boundary", () => {
+  const view=render(<UpsertReadingDeviceModal {...props} initialPumpDurationSeconds={45}/>);
+  expect(view.getByLabelText("Pump run time (seconds)").props.value).toBe("45");
+  view.rerender(<UpsertReadingDeviceModal {...props} initialPumpDurationSeconds={1}/>);
+  expect(view.getByLabelText("Pump run time (seconds)").props.value).toBe("1");
+  fireEvent.press(view.getByText("readingsModals.common.save"));
+  expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({pumpDurationSeconds:1}));
+});

@@ -8,7 +8,8 @@
           "Unter Messwerte siehst du die IoT-Geräte, die mit deinen Pflanzen verbunden sind, und kannst ihre Einstellungen ändern.",
           "Die Geräte können Lufttemperatur, Luftfeuchtigkeit, Lichtstärke und Bodenfeuchte an Flovers senden.",
           "Die Funktion ist für dich gedacht, wenn du eigene Geräte nutzt oder baust, etwa mit Arduino- oder ESP-Platinen, und die Bedingungen deiner Pflanzen über längere Zeit beobachten möchtest.",
-          "Du kannst auch eine Wasserpumpe anschließen. Damit lässt sich Gießen aus der App beauftragen oder automatisch anhand der Bodenfeuchte auslösen."
+          "Du kannst auch eine Wasserpumpe anschließen. Damit lässt sich Gießen aus der App beauftragen oder automatisch anhand der Bodenfeuchte auslösen.",
+          "Pumpenlaufzeit (Sekunden): Wähle 1–300 Sekunden (Standard: 20). Dieser Wert wird in den erzeugten Gerätecode übernommen. Erzeuge den Code nach einer Änderung erneut und lade ihn auf das Board. Für geplantes Gießen kannst du eine andere Dauer wählen. Auch beim Planen des Gießens sind 20 Sekunden voreingestellt. Bestehende Geräte behalten ihre bisherige Einstellung von 30 Sekunden, bis du sie änderst."
         ]
       },
       {

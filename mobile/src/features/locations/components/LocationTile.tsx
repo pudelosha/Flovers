@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
@@ -118,7 +119,7 @@ export default function LocationTile({
       </Pressable>
 
       {isMenuOpen && (
-        <View style={s.menuSheet}>
+        <FloatingTileMenu style={s.menuSheet}>
           <Pressable
             style={s.menuItem}
             onPress={onEdit}
@@ -148,7 +149,7 @@ export default function LocationTile({
               {tr("locations.menu.delete", "Delete location")}
             </Text>
           </Pressable>
-        </View>
+        </FloatingTileMenu>
       )}
     </View>
   );

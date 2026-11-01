@@ -175,7 +175,10 @@
       "intervalMinutesValidation": "Wpisz liczbę całkowitą od 1 do 1440.",
       "sendEmailMissingReadings": "Wyślij e-mail, gdy urządzenie nie przesyła odczytów",
       "sendPushMissingReadings": "Wyślij powiadomienie push, gdy urządzenie nie przesyła odczytów",
-      "missingReadingsInfo": "Dla aktywnego urządzenia wyślemy jeden alert, gdy odczyt się spóźni. Nowy odczyt resetuje alert. Te ustawienia są niezależne od powiadomień o wilgotności gleby i podlewaniu."
+      "missingReadingsInfo": "Dla aktywnego urządzenia wyślemy jeden alert, gdy odczyt się spóźni. Nowy odczyt resetuje alert. Te ustawienia są niezależne od powiadomień o wilgotności gleby i podlewaniu.",
+      "pumpDurationLabel": "Czas pracy pompy (sekundy)",
+      "pumpDurationHint": "Wybierz od 1 do 300 sekund (domyślnie 20). Ta wartość trafia do wygenerowanego kodu urządzenia. Po zmianie wygeneruj kod ponownie i wgraj go na płytkę. Przy ręcznym planowaniu podlewania możesz ustawić inny czas.",
+      "pumpDurationInvalid": "Wpisz liczbę całkowitą od 1 do 300."
     }
   }
 }

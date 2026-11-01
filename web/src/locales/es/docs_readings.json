@@ -8,7 +8,8 @@
           "En «Lecturas» puedes consultar y gestionar los dispositivos conectados a tus plantas.",
           "Cada dispositivo puede enviar temperatura del aire, humedad del aire, intensidad de luz y humedad del suelo a Flovers.",
           "Esta función está pensada para quienes montan o utilizan sus propios dispositivos, por ejemplo con Arduino o ESP, y quieren observar las condiciones con el tiempo.",
-          "También puedes configurar una bomba para solicitar riegos desde la aplicación o regar automáticamente según la humedad del suelo."
+          "También puedes configurar una bomba para solicitar riegos desde la aplicación o regar automáticamente según la humedad del suelo.",
+          "Tiempo de funcionamiento de la bomba (segundos): Elige entre 1 y 300 segundos (20 por defecto). Este valor se incluye en el código generado para el dispositivo. Tras cambiarlo, vuelve a generar el código y súbelo a la placa. El riego programado puede tener otra duración. El riego programado también usa 20 segundos por defecto. Los dispositivos existentes conservan su ajuste anterior de 30 segundos hasta que lo cambies."
         ]
       },
       {

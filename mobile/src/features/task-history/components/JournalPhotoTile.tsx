@@ -1,3 +1,4 @@
+import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React from "react";
 import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import MaskedView from "@react-native-masked-view/masked-view";
@@ -87,7 +88,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
         <MaterialCommunityIcons name="image-search-outline" size={24} color="#FFFFFF" />
       </Pressable>
     </View>
-    {isMenuOpen && <View style={s.menuSheet}>
+    {isMenuOpen && <FloatingTileMenu style={s.menuSheet}>
       <Pressable style={s.menuItem} onPress={() => action(onViewPhoto)}>
         <MaterialCommunityIcons name="image-search-outline" size={18} color="#FFFFFF" style={{ marginRight: 10 }} />
         <Text style={s.menuItemText}>{t("taskHistory.photo.view", { defaultValue: "View photo" })}</Text>
@@ -104,7 +105,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
         <MaterialCommunityIcons name="trash-can-outline" size={18} color="#FF6B6B" style={{ marginRight: 10 }} />
         <Text style={[s.menuItemText, { color: "#FF6B6B" }]}>{t("taskHistory.photo.delete", { defaultValue: "Delete photo" })}</Text>
       </Pressable>}
-    </View>}
+    </FloatingTileMenu>}
   </View>;
 }
 const styles = StyleSheet.create({
