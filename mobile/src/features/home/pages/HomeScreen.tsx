@@ -3,6 +3,7 @@ import {
   View,
   Pressable,
   RefreshControl,
+  PanResponder,
   Animated,
   Easing,
   StyleSheet,
@@ -21,6 +22,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
+import TaskCalendar, {taskDateKey} from "../components/TaskCalendar";
 import PostponeTaskModal, { type PostponeTaskTarget } from "../components/modals/PostponeTaskModal";
 import CompleteTaskModal from "../components/modals/CompleteTaskModal";
 import type { Task, TaskType } from "../types/home.types";
@@ -94,6 +96,8 @@ export default function HomeScreen() {
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
+  const [viewMode,setViewMode]=useState<"list"|"calendar">("list");
+  const [selectedDate,setSelectedDate]=useState(()=>toYYYYMMDD());
 
   // Loading UX (match Plants behavior so entry/re-entry clears old list first)
   const [loading, setLoading] = useState(true);
@@ -164,6 +168,7 @@ export default function HomeScreen() {
     const request = `${requestedPlantId}:${filterRequestId ?? ""}`;
     if (handledFilterRequest.current === request) return;
     handledFilterRequest.current = request;
+    setViewMode("list");
     setFilters({ ...INITIAL_FILTERS, types: [], plantId: requestedPlantId });
     setViewFilter("all");
     setSortOpen(false);
@@ -404,6 +409,21 @@ export default function HomeScreen() {
     return sorted;
   }, [tasks, viewFilter, filters, sortKey, sortDir]);
 
+  const visibleTasks=useMemo(()=>viewMode==="calendar"
+    ? derivedTasks.filter(task=>taskDateKey(task.dueDate)===selectedDate) : derivedTasks,
+    [derivedTasks,viewMode,selectedDate]);
+
+  const switchView=useCallback(()=>{
+    closeFloatingMenus();
+    setViewMode(current=>current==="list" ? "calendar" : "list");
+    requestAnimationFrame(()=>listRef.current?.scrollToOffset({offset:0,animated:false}));
+  },[closeFloatingMenus]);
+  const gestureBlocked=sortOpen || filterOpen || !!postponeTask || completeModalVisible;
+  const panResponder=useMemo(()=>PanResponder.create({
+    onMoveShouldSetPanResponder:(_event,gesture)=>!gestureBlocked && Math.abs(gesture.dx)>24 && Math.abs(gesture.dx)>Math.abs(gesture.dy)*1.5,
+    onPanResponderRelease:(_event,gesture)=>{if(Math.abs(gesture.dx)>=40)switchView();},
+  }),[gestureBlocked,switchView]);
+
   // ---------- ENTRANCE ANIMATION (per-task tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
@@ -435,11 +455,11 @@ export default function HomeScreen() {
 
   useEffect(() => {
     if (loading) return;
-    const ids = derivedTasks.map((tsk) => tsk.id);
+    const ids = visibleTasks.map((tsk) => tsk.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
-  }, [loading, derivedTasks.length, primeAnimations, runStaggerIn, derivedTasks]);
+  }, [loading, visibleTasks, primeAnimations, runStaggerIn]);
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
@@ -450,7 +470,7 @@ export default function HomeScreen() {
       return;
     }
 
-    if (derivedTasks.length === 0) {
+    if (visibleTasks.length === 0) {
       emptyAnim.setValue(0);
       Animated.timing(emptyAnim, {
         toValue: 1,
@@ -461,7 +481,7 @@ export default function HomeScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, derivedTasks.length, emptyAnim]);
+  }, [loading, visibleTasks.length, emptyAnim]);
 
   // --- Spinner (match Plants: show whenever loading is true) ---
   if (loading) {
@@ -578,6 +598,9 @@ export default function HomeScreen() {
 
   // FAB actions, mirroring Reminders
   const baseFabActions = [
+    {key:viewMode==="list" ? "calendar" : "list",
+      label:t(viewMode==="list" ? "home.fab.calendar" : "home.fab.list",{defaultValue:viewMode==="list" ? "Calendar" : "List"}),
+      icon:viewMode==="list" ? "calendar-month" : "view-list",onPress:switchView},
     {
       key: "sort",
       label: t("home.fab.sort"),
@@ -642,6 +665,7 @@ export default function HomeScreen() {
             onPress: () => {
               setMenuOpenId(null);
               setViewFilter("today");
+              setSelectedDate(toYYYYMMDD());
               requestAnimationFrame(() =>
                 listRef.current?.scrollToOffset({ offset: 0, animated: true })
               );
@@ -651,7 +675,7 @@ export default function HomeScreen() {
         ]
       : [
           // Put "Mark visible as complete" at the top when a view filter is active
-          ...(derivedTasks.some((task) => plantAccess(task.access).canCompleteTasks)
+          ...(visibleTasks.some((task) => plantAccess(task.access).canCompleteTasks)
             ? [
                 {
                   key: "completeVisible",
@@ -659,7 +683,7 @@ export default function HomeScreen() {
                   icon: "check-circle-outline",
                   onPress: () => {
                     setMenuOpenId(null);
-                    openCompleteModal(derivedTasks as HomeTask[], "bulk");
+                    openCompleteModal(visibleTasks as HomeTask[], "bulk");
                   },
                 } as const,
               ]
@@ -681,7 +705,7 @@ export default function HomeScreen() {
         ];
 
   return (
-    <View style={{ flex: 1 }}>
+    <View testID="home-view-switch" style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
         title={t("home.header.title")}
         gradientColors={HEADER_GRADIENT_TINT}
@@ -703,7 +727,7 @@ export default function HomeScreen() {
       <Animated.FlatList
         ref={listRef}
         style={{ flex: 1 }}
-        data={derivedTasks}
+        data={visibleTasks}
         keyExtractor={(tsk) => tsk.id}
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
@@ -784,7 +808,8 @@ export default function HomeScreen() {
             </Animated.View>
           );
         }}
-        ListHeaderComponent={<View style={{ height: 0 }} />}
+        ListHeaderComponent={viewMode==="calendar" ? <TaskCalendar tasks={derivedTasks as Task[]}
+          selectedDate={selectedDate} onSelectDate={date=>{closeFloatingMenus();setSelectedDate(date);}}/> : <View style={{height:0}}/>}
         ListFooterComponent={<View style={{ height: 140 }} />}
         contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -794,6 +819,9 @@ export default function HomeScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ListEmptyComponent={() => {
+          if(viewMode==="calendar") return <View style={[s.emptyGlass,{padding:22,marginTop:12}]}>
+            <Text style={[s.emptyTitle,{textAlign:"center"}]}>{t("home.calendar.noItems",{defaultValue:"No tasks for this day."})}</Text>
+          </View>;
           if (viewFilter === "all") {
             return (
               <Animated.View

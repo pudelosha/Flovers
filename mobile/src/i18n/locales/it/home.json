@@ -11,7 +11,9 @@
       "sort": "Ordina",
       "filter": "Filtra",
       "clearFilter": "Cancella filtro",
-      "history": "Diario delle attività"
+      "history": "Diario delle attività",
+      "calendar": "Calendario",
+      "list": "Elenco"
     },
     "menu": {
       "markAsComplete": "Segna come completata",
@@ -71,6 +73,57 @@
       "today": {
         "title": "Nessuna attività in scadenza oggi",
         "body": "Non hai attività in scadenza oggi.\n\nUsa \"Mostra tutte le attività\" dal FAB per vedere i promemoria futuri, oppure modifica le pianificazioni dei promemoria nelle tue piante."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "Programmato per {{date}}",
+      "noItems": "Nessuna attività per questo giorno.",
+      "today": "Oggi",
+      "weekdays": {
+        "monday": "Lunedì",
+        "tuesday": "Martedì",
+        "wednesday": "Mercoledì",
+        "thursday": "Giovedì",
+        "friday": "Venerdì",
+        "saturday": "Sabato",
+        "sunday": "Domenica"
+      },
+      "weekdaysShort": {
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mer",
+        "thu": "Gio",
+        "fri": "Ven",
+        "sat": "Sab",
+        "sun": "Dom"
+      },
+      "months": {
+        "january": "Gennaio",
+        "february": "Febbraio",
+        "march": "Marzo",
+        "april": "Aprile",
+        "may": "Maggio",
+        "june": "Giugno",
+        "july": "Luglio",
+        "august": "Agosto",
+        "september": "Settembre",
+        "october": "Ottobre",
+        "november": "Novembre",
+        "december": "Dicembre"
+      },
+      "monthsShort": {
+        "january": "Gen",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Apr",
+        "may": "Mag",
+        "june": "Giu",
+        "july": "Lug",
+        "august": "Ago",
+        "september": "Set",
+        "october": "Ott",
+        "november": "Nov",
+        "december": "Dic"
       }
     }
   }

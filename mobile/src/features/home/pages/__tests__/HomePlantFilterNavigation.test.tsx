@@ -2,6 +2,8 @@ import React from "react";
 import { act, render, waitFor } from "@testing-library/react-native";
 import HomeScreen from "../HomeScreen";
 import TaskTile from "../../components/TaskTile";
+import TaskCalendar from "../../components/TaskCalendar";
+import {PanResponder} from "react-native";
 import PostponeTaskModal from "../../components/modals/PostponeTaskModal";
 import FilterHomeTasksModal from "../../components/modals/FilterHomeTasksModal";
 import FAB from "../../../../shared/ui/FAB";
@@ -11,7 +13,7 @@ let mockFocused = true;
 let mockParams: any;
 const mockNavigation = { navigate: jest.fn(), setParams: jest.fn() };
 const mockT = (key: string, options: any = {}) => options.defaultValue ?? key;
-jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
+jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT,i18n:{language:"en"} }) }));
 jest.mock("@react-navigation/native", () => ({
   useNavigation: () => mockNavigation,
   useRoute: () => ({ name: "Home", key: "home-route", params: mockParams }),
@@ -20,6 +22,9 @@ jest.mock("@react-navigation/native", () => ({
 }));
 jest.mock("../../../../app/providers/SettingsProvider", () => ({ useSettings: () => ({ settings: { fabPosition: "right" } }) }));
 jest.mock("../../../../api/services/home.service", () => ({ fetchHomeTasks: jest.fn(), markHomeTaskComplete: jest.fn() }));
+jest.mock("react-native-calendars",()=>({LocaleConfig:{locales:{},defaultLocale:"en"}}));
+jest.mock("react-native-calendars/src/calendar",()=> (props:any)=>require("react").createElement(require("react-native").View,props));
+jest.mock("../../../../app/providers/LanguageProvider",()=>({useLanguage:()=>({currentLanguage:"en"})}));
 jest.mock("../../components/TaskTile", () => (props: any) => require("react").createElement(require("react-native").Text, { testID: `task-${props.task.id}` }, props.task.plant));
 jest.mock("../../components/modals/FilterHomeTasksModal", () => () => null);
 jest.mock("../../components/modals/SortHomeTasksModal", () => () => null);
@@ -120,4 +125,43 @@ it("opens postponement for the selected Home task and refreshes the list after s
   await act(async()=>{modal.props.onClose();modal.props.onSaved();});
   await waitFor(()=>expect((fetchHomeTasks as jest.Mock).mock.calls.length).toBeGreaterThan(calls));
   expect(view.UNSAFE_getByType(PostponeTaskModal).props.visible).toBe(false);
+});
+
+
+it("switches Home to actual tasks on the selected day and back without fetching again",async()=>{
+ jest.clearAllMocks();mockFocused=true;mockParams=undefined;(fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
+ const view=render(<HomeScreen/>);await view.findByText("Bird task");
+ const calls=(fetchHomeTasks as jest.Mock).mock.calls.length;
+ act(()=>{view.UNSAFE_getByType(FAB).props.actions.find((a:any)=>a.key==="calendar").onPress();});
+ expect(view.getByText("Pilea task")).toBeTruthy();expect(view.queryByText("Bird task")).toBeNull();
+ const calendar=view.UNSAFE_getByType(TaskCalendar);
+ expect(calendar.props.tasks).toHaveLength(2);
+ const future=tasks()[0].dueDate;
+ const day=`${future.getFullYear()}-${String(future.getMonth()+1).padStart(2,"0")}-${String(future.getDate()).padStart(2,"0")}`;
+ act(()=>{calendar.props.onSelectDate(day);});
+ expect(view.getByText("Bird task")).toBeTruthy();expect(view.queryByText("Pilea task")).toBeNull();
+ act(()=>{view.UNSAFE_getByType(FAB).props.actions.find((a:any)=>a.key==="list").onPress();});
+ expect(view.getByText("Pilea task")).toBeTruthy();expect(view.getByText("Bird task")).toBeTruthy();
+ expect((fetchHomeTasks as jest.Mock).mock.calls.length).toBe(calls);
+});
+it("shows a calendar-day empty state and keeps filters when changing views",async()=>{
+ jest.clearAllMocks();mockFocused=true;mockParams=undefined;(fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
+ const view=render(<HomeScreen/>);await view.findByText("Bird task");
+ applyFilters(view,{...allFilters,plantId:"1"});
+ act(()=>{view.UNSAFE_getByType(FAB).props.actions.find((a:any)=>a.key==="calendar").onPress();});
+ expect(view.getByText("No tasks for this day.")).toBeTruthy();
+ expect(view.UNSAFE_getByType(TaskCalendar).props.tasks.map((t:any)=>t.plantId)).toEqual(["1"]);
+ expect(view.queryByText("No tasks yet")).toBeNull();
+});
+it("switches views on a horizontal swipe but rejects vertical scrolling",async()=>{
+ jest.clearAllMocks();mockFocused=true;mockParams=undefined;(fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
+ const spy=jest.spyOn(PanResponder,"create");
+ try{
+  const view=render(<HomeScreen/>);await view.findByText("Bird task");
+  const handlers=spy.mock.calls[spy.mock.calls.length-1][0];
+  expect(handlers.onMoveShouldSetPanResponder!({} as any,{dx:5,dy:70} as any)).toBe(false);
+  expect(handlers.onMoveShouldSetPanResponder!({} as any,{dx:80,dy:5} as any)).toBe(true);
+  act(()=>{handlers.onPanResponderRelease!({} as any,{dx:80,dy:5} as any);});
+  expect(view.UNSAFE_getByType(TaskCalendar)).toBeTruthy();
+ }finally{spy.mockRestore();}
 });

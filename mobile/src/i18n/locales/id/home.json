@@ -11,7 +11,9 @@
       "sort": "Urutkan",
       "filter": "Filter",
       "clearFilter": "Hapus filter",
-      "history": "Jurnal tugas"
+      "history": "Jurnal tugas",
+      "calendar": "Kalender",
+      "list": "Daftar"
     },
     "menu": {
       "markAsComplete": "Tandai selesai",
@@ -71,6 +73,57 @@
       "today": {
         "title": "Tidak ada tugas yang harus diselesaikan hari ini",
         "body": "Tidak ada tugas untuk hari ini.\n\nKetuk tombol + lalu pilih \"Tampilkan semua tugas\" untuk melihat tugas mendatang, atau sesuaikan jadwal pengingat tanaman."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "Dijadwalkan pada {{date}}",
+      "noItems": "Tidak ada tugas untuk hari ini.",
+      "today": "Hari ini",
+      "weekdays": {
+        "monday": "Senin",
+        "tuesday": "Selasa",
+        "wednesday": "Rabu",
+        "thursday": "Kamis",
+        "friday": "Jumat",
+        "saturday": "Sabtu",
+        "sunday": "Minggu"
+      },
+      "weekdaysShort": {
+        "mon": "Senin",
+        "tue": "Selasa",
+        "wed": "Rabu",
+        "thu": "Kam",
+        "fri": "Jumat",
+        "sat": "Sabtu",
+        "sun": "Matahari"
+      },
+      "months": {
+        "january": "Januari",
+        "february": "Februari",
+        "march": "Bulan Maret",
+        "april": "April",
+        "may": "Mei",
+        "june": "Juni",
+        "july": "Juli",
+        "august": "Agustus",
+        "september": "September",
+        "october": "Oktober",
+        "november": "November",
+        "december": "Desember"
+      },
+      "monthsShort": {
+        "january": "Januari",
+        "february": "Februari",
+        "march": "Maret",
+        "april": "April",
+        "may": "Mei",
+        "june": "Juni",
+        "july": "Juli",
+        "august": "Agustus",
+        "september": "September",
+        "october": "Oktober",
+        "november": "November",
+        "december": "Desember"
       }
     }
   }

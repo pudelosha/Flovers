@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Lista e calendário",
-        "body": [
-          "Você pode ver os lembretes em uma lista ou no calendário.",
-          "Deslize a tela para a esquerda ou a direita, ou use o botão de ações rápidas para trocar de modo.",
-          "Os dois mostram os mesmos dados. Use a lista para conferir os lembretes e o calendário para ver as próximas datas."
-        ]
-      },
-      {
         "heading": "Lista de lembretes",
         "body": [
           "Cada cartão corresponde a um lembrete que você criou.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "Calendário",
-        "body": [
-          "No calendário, os lembretes aparecem nos dias previstos.",
-          "Toque em um dia para ver os cuidados programados abaixo do calendário.",
-          "Cores e ícones indicam os tipos de tarefa e ajudam você a ver como os cuidados estão distribuídos entre os dias."
-        ]
-      },
-      {
         "heading": "Botão de ações rápidas",
         "body": [
-          "O botão de ações rápidas abre as opções dos lembretes e permite mudar entre lista e calendário.",
-          "Nele você encontra Adicionar lembrete, Lista/Calendário, Ordenar e Filtrar.",
+          "O FAB de Lembretes oferece Adicionar lembrete, Ordenar, Filtrar e, quando aplicável, Limpar filtro. A alternância Lista/Calendário está no Início.",
           "Ordene por data prevista, nome da planta ou localização.",
           "Filtre por nome da planta, localização, tipo de tarefa ou intervalo de datas previstas."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "As definições dos lembretes ficam com o proprietário",
         "body": [
-          "Lembretes exibe apenas suas próprias definições de lembrete, incluindo a visualização do calendário. Compartilhar uma planta de casa não compartilha o editor de lembretes ou suas regras recorrentes. As tarefas geradas ainda podem aparecer na tela inicial do destinatário, onde a permissão determina se elas podem ser concluídas."
+          "Lembretes apresenta as suas próprias regras de cuidados recorrentes para adicionar, editar, pausar, retomar ou eliminar. O calendário de tarefas está agora no Início. A partilha dá acesso às tarefas geradas conforme as permissões, não às definições dos lembretes."
         ]
       }
     ]

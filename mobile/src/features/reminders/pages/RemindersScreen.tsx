@@ -4,9 +4,6 @@ import {
   Pressable,
   Text,
   RefreshControl,
-  PanResponder,
-  GestureResponderEvent,
-  PanResponderGestureState,
   StyleSheet,
   Animated,
   Easing,
@@ -30,7 +27,6 @@ import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
-import RemindersCalendar from "../components/RemindersCalendar";
 import type {
   Reminder as UIReminder,
   ReminderType,
@@ -56,7 +52,6 @@ import EditReminderModal from "../components/modals/EditReminderModal";
 import SortRemindersModal from "../components/modals/SortRemindersModal";
 import FilterRemindersModal from "../components/modals/FilterRemindersModal";
 
-type ViewMode = "list" | "calendar";
 type PlantOption = { id: string; name: string; location?: string; canEdit?: boolean };
 
 type SortKey = "dueDate" | "plant" | "location";
@@ -141,8 +136,6 @@ export default function RemindersScreen() {
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
-  const [viewMode, setViewMode] = useState<ViewMode>("list");
-  const [selectedDate, setSelectedDate] = useState<string>(todayISO());
 
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
@@ -281,7 +274,6 @@ export default function RemindersScreen() {
         ? String(params.plantId)
         : undefined;
 
-      setViewMode("list");
 
       setFilters(() => {
         if (plantIdFromRoute) {
@@ -352,37 +344,6 @@ export default function RemindersScreen() {
       setRefreshing(false);
     }
   }, [closeFloatingMenus, load]);
-  const openList = () => {
-    closeFloatingMenus();
-    setViewMode("list");
-  };
-  const openCalendar = () => {
-    closeFloatingMenus();
-    setViewMode("calendar");
-  };
-
-  // Swipe: toggle on every horizontal swipe (left or right)
-  const panResponder = useMemo(
-    () =>
-      PanResponder.create({
-        onMoveShouldSetPanResponder: (
-          _e: GestureResponderEvent,
-          g: PanResponderGestureState
-        ) => {
-          const dx = Math.abs(g.dx);
-          const dy = Math.abs(g.dy);
-          return dx > 24 && dx > dy * 1.5;
-        },
-        onPanResponderRelease: (_e, g) => {
-          if (Math.abs(g.dx) >= 40) {
-            closeFloatingMenus();
-            setViewMode((prev) => (prev === "list" ? "calendar" : "list"));
-          }
-        },
-      }),
-    [closeFloatingMenus]
-  );
-
   // FAB "Add" opens the same modal in CREATE mode
   const openAddReminder = () => {
     setEditingId(null);
@@ -674,19 +635,19 @@ export default function RemindersScreen() {
 
   useEffect(() => {
     // Only animate list view after loading completes
-    if (loading || viewMode !== "list") return;
+    if (loading) return;
     const ids = derivedReminders.map((r) => r.id);
     primeAnimations(ids);
     const raf = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, viewMode, derivedReminders.length]);
+  }, [loading, derivedReminders.length]);
 
   // ---------- EMPTY-STATE ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (loading || viewMode !== "list") {
+    if (loading) {
       emptyAnim.setValue(0);
       return;
     }
@@ -702,7 +663,7 @@ export default function RemindersScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, viewMode, derivedReminders.length, emptyAnim]);
+  }, [loading, derivedReminders.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],
@@ -739,23 +700,6 @@ export default function RemindersScreen() {
       icon: "plus",
       onPress: openAddReminder,
     }] : []),
-    ...(viewMode === "list"
-      ? [
-          {
-            key: "calendar",
-            label: tr("reminders.fab.calendar", "Calendar"),
-            icon: "calendar-month",
-            onPress: openCalendar,
-          },
-        ]
-      : [
-          {
-            key: "list",
-            label: tr("reminders.fab.list", "List"),
-            icon: "view-list",
-            onPress: openList,
-          },
-        ]),
     {
       key: "sort",
       label: tr("reminders.fab.sort", "Sort"),
@@ -781,7 +725,7 @@ export default function RemindersScreen() {
   ];
 
   return (
-    <View style={{ flex: 1 }} {...panResponder.panHandlers}>
+    <View style={{ flex: 1 }}>
       <GlassHeader
         title={tr("reminders.headerTitle", "Reminders")}
         gradientColors={HEADER_GRADIENT_TINT}
@@ -799,7 +743,6 @@ export default function RemindersScreen() {
         />
       )}
 
-      {viewMode === "list" ? (
         <Animated.FlatList
           data={derivedReminders}
           keyExtractor={(r) => r.id}
@@ -912,22 +855,6 @@ export default function RemindersScreen() {
             ) : null
           }
         />
-      ) : (
-        <RemindersCalendar
-          reminders={derivedReminders}
-          selectedDate={selectedDate}
-          openMenuId={menuOpenId}
-          onSelectDate={(iso) => {
-            closeFloatingMenus();
-            setSelectedDate(iso);
-          }}
-          onToggleMenu={onToggleMenu}
-          onToggleActive={askToggleReminder}
-          onEdit={openEditModal}
-          onDelete={askDelete}
-        />
-      )}
-
       {/* Capture taps on the FAB (including the main button) to hide any open tile menu */}
       {showFAB && (
         <View pointerEvents="box-none" testID="reminders-fab-layer"

@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Dua tampilan: Daftar pengingat dan Kalender",
-        "body": [
-          "Layar ini memiliki dua mode: daftar pengingat dan tampilan kalender.",
-          "Anda dapat beralih di antara keduanya dengan menggeser ke kiri/kanan atau dengan menggunakan opsi Tombol Tindakan Mengambang (FAB) yang mengubah tampilan.",
-          "Kedua tampilan memperlihatkan data yang sama, hanya disajikan secara berbeda tergantung pada apakah Anda menginginkan daftar cepat atau ikhtisar jadwal."
-        ]
-      },
-      {
         "heading": "Tampilan daftar pengingat",
         "body": [
           "Dalam tampilan daftar, setiap ubin mewakili satu pengingat yang dibuat oleh pengguna.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "Tampilan kalender",
-        "body": [
-          "Dalam tampilan kalender, pengingat divisualisasikan sebagai item terjadwal pada hari kalender.",
-          "Untuk melihat detail tanggal tertentu, ketuk hari di kalender; item yang dijadwalkan untuk hari itu akan muncul di bawah kalender.",
-          "Kalender menggunakan penanda visual untuk menunjukkan jenis tugas mana yang muncul pada hari tertentu, membantu Anda melihat distribusi rutin secara sekilas."
-        ]
-      },
-      {
         "heading": "Tindakan yang luar biasa",
         "body": [
-          "Tombol Tindakan Mengambang (FAB) menyediakan tindakan cepat untuk mengelola pengingat dan navigasi antara dua tampilan.",
-          "Tindakan yang tersedia meliputi: Tambahkan pengingat, ubah tampilan (Daftar/Kalender), Urutkan, dan Filter.",
+          "FAB Pengingat menawarkan Tambah pengingat, Urutkan, Filter, dan Hapus filter bila berlaku. Pergantian Daftar/Kalender tersedia di Beranda.",
           "Penyortiran dapat dilakukan berdasarkan tanggal jatuh tempo, nama tanaman hias, atau lokasi.",
           "Pemfilteran dapat diterapkan berdasarkan nama tanaman hias, lokasi, jenis tugas, dan rentang tanggal jatuh tempo."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "Definisi pengingat tetap ada pada pemiliknya",
         "body": [
-          "Pengingat hanya menampilkan definisi pengingat Anda sendiri, termasuk tampilan kalender. Berbagi tanaman tidak membagikan editor pengingat atau aturan berulangnya. Tugas yang dihasilkan masih dapat muncul di layar Beranda penerima, di mana izin menentukan apakah tugas tersebut dapat diselesaikan."
+          "Pengingat menampilkan aturan perawatan berulang milik Anda untuk ditambah, diedit, dijeda, dilanjutkan, atau dihapus. Kalender tugas kini berada di Beranda. Berbagi memberi akses ke tugas yang dibuat sesuai izin, bukan ke definisi pengingat."
         ]
       }
     ]

@@ -11,7 +11,9 @@
       "sort": "排序",
       "filter": "筛选",
       "clearFilter": "清除筛选",
-      "history": "任务日志"
+      "history": "任务日志",
+      "calendar": "日历",
+      "list": "列表"
     },
     "menu": {
       "markAsComplete": "标记为已完成",
@@ -71,6 +73,57 @@
       "today": {
         "title": "今天没有到期任务",
         "body": "您今天没有任何到期任务。\n\n使用 FAB 中的“显示所有任务”查看即将到来的提醒，或调整植物上的提醒计划。"
+      }
+    },
+    "calendar": {
+      "scheduledOn": "计划在 {{date}}",
+      "noItems": "这一天没有任务。",
+      "today": "今天",
+      "weekdays": {
+        "monday": "星期一",
+        "tuesday": "星期二",
+        "wednesday": "星期三",
+        "thursday": "星期四",
+        "friday": "星期五",
+        "saturday": "星期六",
+        "sunday": "星期日"
+      },
+      "weekdaysShort": {
+        "mon": "周一",
+        "tue": "周二",
+        "wed": "周三",
+        "thu": "周四",
+        "fri": "周五",
+        "sat": "周六",
+        "sun": "周日"
+      },
+      "months": {
+        "january": "一月",
+        "february": "二月",
+        "march": "三月",
+        "april": "四月",
+        "may": "五月",
+        "june": "六月",
+        "july": "七月",
+        "august": "八月",
+        "september": "九月",
+        "october": "十月",
+        "november": "十一月",
+        "december": "十二月"
+      },
+      "monthsShort": {
+        "january": "1月",
+        "february": "2月",
+        "march": "3月",
+        "april": "4月",
+        "may": "5月",
+        "june": "6月",
+        "july": "7月",
+        "august": "8月",
+        "september": "9月",
+        "october": "10月",
+        "november": "11月",
+        "december": "12月"
       }
     }
   }

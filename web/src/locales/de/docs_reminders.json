@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Liste und Kalender",
-        "body": [
-          "Du kannst deine Erinnerungen als Liste oder im Kalender ansehen.",
-          "Wische nach links oder rechts, um die Ansicht zu wechseln, oder nutze die entsprechende Option im Menü der Schaltfläche für Schnellaktionen.",
-          "Beide Ansichten zeigen dieselben Erinnerungen. In der Liste prüfst du schnell die Einstellungen, im Kalender siehst du die anstehenden Termine."
-        ]
-      },
-      {
         "heading": "Erinnerungsliste",
         "body": [
           "Jede Kachel in der Liste steht für eine Erinnerung, die du erstellt hast.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "Kalender",
-        "body": [
-          "Im Kalender siehst du die Aufgaben aus deinen Erinnerungen an den jeweiligen Tagen.",
-          "Tippe auf einen Tag, um die dafür geplanten Aufgaben unter dem Kalender anzuzeigen.",
-          "Markierungen an den Tagen zeigen die Aufgabenarten. So erkennst du auf einen Blick, wie sich die Pflege verteilt."
-        ]
-      },
-      {
         "heading": "Schnellaktionen",
         "body": [
-          "Die Schaltfläche für Schnellaktionen öffnet ein Menü, in dem du Erinnerungen verwaltest und die Ansicht wechselst.",
-          "Dort findest du Erinnerung hinzufügen, den Wechsel zwischen Liste und Kalender, Sortieren und Filtern.",
+          "Das FAB-Menü in Erinnerungen bietet Erinnerung hinzufügen, Sortieren, Filtern und gegebenenfalls Filter löschen. Zwischen Liste und Kalender wechselst du in Home.",
           "Du kannst nach Fälligkeitsdatum, Pflanzenname oder Standort sortieren.",
           "Mit den Filtern wählst du Pflanzenname, Standort, Aufgabentyp und einen Zeitraum für die Fälligkeit."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "Erinnerungsdefinitionen bleiben beim Eigentümer",
         "body": [
-          "Erinnerungen zeigt nur Ihre eigenen Erinnerungsdefinitionen an, einschließlich der Kalenderansicht. Durch das Teilen einer Pflanze werden weder der Erinnerungseditor noch seine wiederkehrenden Regeln geteilt. Die generierten Aufgaben können weiterhin auf dem Startbildschirm des Empfängers angezeigt werden, wo die Berechtigung darüber entscheidet, ob sie erledigt werden können."
+          "Erinnerungen ist eine Liste deiner eigenen wiederkehrenden Pflegepläne. Du kannst sie hinzufügen, bearbeiten, pausieren, fortsetzen oder löschen. Der Aufgabenkalender befindet sich jetzt in Home. Geteilte Pflanzen geben je nach Berechtigung Zugriff auf erzeugte Aufgaben, nicht auf die Erinnerungsregeln."
         ]
       }
     ]

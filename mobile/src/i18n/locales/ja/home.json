@@ -11,7 +11,9 @@
       "sort": "並び替え",
       "filter": "フィルター",
       "clearFilter": "フィルターをクリア",
-      "history": "お手入れ日誌"
+      "history": "お手入れ日誌",
+      "calendar": "カレンダー",
+      "list": "リスト"
     },
     "menu": {
       "markAsComplete": "完了としてマーク",
@@ -71,6 +73,57 @@
       "today": {
         "title": "今日のタスクはありません",
         "body": "今日期限のタスクはありません。\n\nFABの「すべてのタスクを表示」を使用して今後のリマインダーを確認するか、植物のリマインダースケジュールを調整してください。"
+      }
+    },
+    "calendar": {
+      "scheduledOn": "{{date}} に予定されています",
+      "noItems": "この日のタスクはありません。",
+      "today": "今日",
+      "weekdays": {
+        "monday": "月曜日",
+        "tuesday": "火曜日",
+        "wednesday": "水曜日",
+        "thursday": "木曜日",
+        "friday": "金曜日",
+        "saturday": "土曜日",
+        "sunday": "日曜日"
+      },
+      "weekdaysShort": {
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土",
+        "sun": "日"
+      },
+      "months": {
+        "january": "1月",
+        "february": "2月",
+        "march": "3月",
+        "april": "4月",
+        "may": "5月",
+        "june": "6月",
+        "july": "7月",
+        "august": "8月",
+        "september": "9月",
+        "october": "10月",
+        "november": "11月",
+        "december": "12月"
+      },
+      "monthsShort": {
+        "january": "1月",
+        "february": "2月",
+        "march": "3月",
+        "april": "4月",
+        "may": "5月",
+        "june": "6月",
+        "july": "7月",
+        "august": "8月",
+        "september": "9月",
+        "october": "10月",
+        "november": "11月",
+        "december": "12月"
       }
     }
   }

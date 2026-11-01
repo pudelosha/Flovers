@@ -11,7 +11,9 @@
       "sort": "Sort",
       "filter": "Filter",
       "clearFilter": "Clear filter",
-      "history": "Task Journal"
+      "history": "Task Journal",
+      "calendar": "Calendar",
+      "list": "List"
     },
     "menu": {
       "markAsComplete": "Mark as complete",
@@ -71,6 +73,57 @@
       "today": {
         "title": "No tasks due today",
         "body": "You don't have any tasks due today.\n\nUse \"Show all tasks\" from the FAB to see upcoming reminders, or adjust your reminder schedules on your plants."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "Scheduled on {{date}}",
+      "noItems": "No tasks for this day.",
+      "today": "Today",
+      "weekdays": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "weekdaysShort": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      },
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "monthsShort": {
+        "january": "Jan",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Apr",
+        "may": "May",
+        "june": "Jun",
+        "july": "Jul",
+        "august": "Aug",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Dec"
       }
     }
   }

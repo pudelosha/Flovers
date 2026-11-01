@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Lista i kalendarz",
-        "body": [
-          "Przypomnienia możesz przeglądać na liście lub w kalendarzu.",
-          "Aby zmienić widok, przesuń ekran w lewo lub w prawo albo wybierz odpowiednią opcję z menu przycisku szybkich akcji.",
-          "Oba widoki pokazują te same przypomnienia. Na liście szybko sprawdzisz ich ustawienia, a w kalendarzu zobaczysz, kiedy wypadają zadania."
-        ]
-      },
-      {
         "heading": "Lista przypomnień",
         "body": [
           "Każdy kafelek na liście to jedno utworzone przez ciebie przypomnienie.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "Kalendarz",
-        "body": [
-          "W kalendarzu zobaczysz zadania z przypomnień przypisane do poszczególnych dni.",
-          "Wybierz dzień, aby zobaczyć pod kalendarzem zaplanowane na niego zadania.",
-          "Oznaczenia przy dniach pokazują rodzaje zadań, dzięki czemu łatwiej zorientować się w planie pielęgnacji."
-        ]
-      },
-      {
         "heading": "Menu przycisku szybkich akcji",
         "body": [
-          "Przycisk szybkich akcji otwiera menu, z którego zarządzisz przypomnieniami i zmienisz widok.",
-          "Znajdziesz w nim opcje: Dodaj przypomnienie, zmiana widoku (Lista/Kalendarz), Sortuj i Filtruj.",
+          "Menu FAB w Przypomnieniach zawiera Dodaj przypomnienie, Sortuj, Filtruj i — gdy filtr jest aktywny — Wyczyść filtr. Przełączanie listy i kalendarza jest dostępne na ekranie Start.",
           "Listę możesz posortować według terminu, nazwy rośliny lub lokalizacji.",
           "Filtry pozwalają wybrać roślinę, lokalizację, rodzaj zadania i zakres terminów."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "Przypomnieniami zarządza właściciel",
         "body": [
-          "Na ekranie Przypomnienia i w kalendarzu widzisz wyłącznie własne przypomnienia. Udostępnienie rośliny nie daje drugiej osobie dostępu do ich edycji ani ustawionych cykli. Wygenerowane zadania mogą jednak pojawiać się na jej ekranie Start — o możliwości ich wykonania decydują nadane uprawnienia."
+          "Przypomnienia to lista Twoich cyklicznych zasad pielęgnacji. Możesz je dodawać, edytować, wstrzymywać, wznawiać i usuwać. Kalendarz zadań znajdziesz teraz na ekranie Start. Udostępnienie rośliny pozwala drugiej osobie korzystać z wygenerowanych zadań zgodnie z nadanymi uprawnieniami, ale nie daje dostępu do definicji przypomnień."
         ]
       }
     ]

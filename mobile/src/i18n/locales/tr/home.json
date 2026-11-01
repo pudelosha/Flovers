@@ -11,7 +11,9 @@
       "sort": "Sırala",
       "filter": "Filtrele",
       "clearFilter": "Filtreyi temizle",
-      "history": "Görev günlüğü"
+      "history": "Görev günlüğü",
+      "calendar": "Takvim",
+      "list": "Liste"
     },
     "menu": {
       "markAsComplete": "Tamamlandı olarak işaretle",
@@ -71,6 +73,57 @@
       "today": {
         "title": "Bugün teslim edilmesi gereken görev yok",
         "body": "Bugün yapılacak göreviniz yok.\n\nYaklaşan görevleri görmek için + düğmesinden \"Tüm görevleri göster\" seçeneğini kullanın veya bitkilerinizin hatırlatma takvimini düzenleyin."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "{{date}} tarihinde planlandı",
+      "noItems": "Bu gün için görev yok.",
+      "today": "Bugün",
+      "weekdays": {
+        "monday": "Pazartesi",
+        "tuesday": "Salı",
+        "wednesday": "Çarşamba",
+        "thursday": "Perşembe",
+        "friday": "Cuma",
+        "saturday": "Cumartesi",
+        "sunday": "Pazar"
+      },
+      "weekdaysShort": {
+        "mon": "Pazartesi",
+        "tue": "Salı",
+        "wed": "Çar",
+        "thu": "Per",
+        "fri": "Cuma",
+        "sat": "Cumartesi",
+        "sun": "Güneş"
+      },
+      "months": {
+        "january": "Ocak",
+        "february": "Şubat",
+        "march": "Mart",
+        "april": "Nisan",
+        "may": "Mayıs",
+        "june": "Haziran",
+        "july": "Temmuz",
+        "august": "Ağustos",
+        "september": "Eylül",
+        "october": "Ekim",
+        "november": "Kasım",
+        "december": "Aralık"
+      },
+      "monthsShort": {
+        "january": "Ocak",
+        "february": "Şubat",
+        "march": "Mart",
+        "april": "Nisan",
+        "may": "Mayıs",
+        "june": "Haziran",
+        "july": "Temmuz",
+        "august": "Ağustos",
+        "september": "Eylül",
+        "october": "Ekim",
+        "november": "Kasım",
+        "december": "Aralık"
       }
     }
   }

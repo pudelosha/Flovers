@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Dos vistas: lista y calendario",
-        "body": [
-          "Puedes ver tus recordatorios en una lista o en un calendario.",
-          "Desliza a izquierda o derecha para cambiar de vista, o usa la opción correspondiente del menú de acciones rápidas.",
-          "Las dos vistas muestran los mismos recordatorios: elige la lista para revisarlos o el calendario para ver cómo se distribuyen."
-        ]
-      },
-      {
         "heading": "La lista de recordatorios",
         "body": [
           "Cada tarjeta representa un recordatorio que has creado.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "El calendario",
-        "body": [
-          "El calendario sitúa los recordatorios en sus días previstos.",
-          "Toca una fecha para ver debajo los cuidados programados para ese día.",
-          "Los indicadores visuales distinguen los tipos de cuidado para que veas su distribución de un vistazo."
-        ]
-      },
-      {
         "heading": "Acciones rápidas",
         "body": [
-          "El botón de acciones rápidas abre las opciones para gestionar recordatorios y cambiar de vista.",
-          "Incluye «Añadir recordatorio», el cambio entre «Lista» y «Calendario», «Ordenar» y «Filtrar».",
+          "El FAB de Recordatorios ofrece Añadir recordatorio, Ordenar, Filtrar y, cuando corresponda, Borrar filtro. El cambio Lista/Calendario está en Inicio.",
           "Puedes ordenar por fecha prevista, nombre de planta o ubicación.",
           "Puedes filtrar por planta, ubicación, tipo de cuidado y un intervalo de fechas previstas."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "Las definiciones de recordatorio permanecen en manos del propietario",
         "body": [
-          "Recordatorios muestra solo sus propias definiciones de recordatorios, incluida la vista de calendario. Compartir una planta no comparte el editor de recordatorios ni sus reglas recurrentes. Las tareas generadas aún pueden aparecer en la pantalla de inicio del destinatario, donde el permiso determina si se pueden completar."
+          "Recordatorios muestra tus propias reglas de cuidado recurrentes para añadir, editar, pausar, reanudar o eliminar. El calendario de tareas está ahora en Inicio. Compartir una planta da acceso a las tareas generadas según los permisos, no a las definiciones de los recordatorios."
         ]
       }
     ]

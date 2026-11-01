@@ -11,7 +11,9 @@
       "sort": "Trier",
       "filter": "Filtrer",
       "clearFilter": "Effacer le filtre",
-      "history": "Journal des tâches"
+      "history": "Journal des tâches",
+      "calendar": "Calendrier",
+      "list": "Liste"
     },
     "menu": {
       "markAsComplete": "Marquer comme terminé",
@@ -71,6 +73,57 @@
       "today": {
         "title": "Aucune tâche prévue aujourd’hui",
         "body": "Vous n’avez aucune tâche prévue aujourd’hui.\n\nUtilisez \"Afficher toutes les tâches\" depuis le FAB pour voir les rappels à venir, ou ajustez les plannings de rappel de vos plantes."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "Planifié pour le {{date}}",
+      "noItems": "Aucune tâche pour ce jour.",
+      "today": "Aujourd'hui",
+      "weekdays": {
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
+      },
+      "weekdaysShort": {
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mer",
+        "thu": "Jeu",
+        "fri": "Ven",
+        "sat": "Sam",
+        "sun": "Dim"
+      },
+      "months": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juillet",
+        "august": "Août",
+        "september": "Septembre",
+        "october": "Octobre",
+        "november": "Novembre",
+        "december": "Décembre"
+      },
+      "monthsShort": {
+        "january": "Jan",
+        "february": "Fév",
+        "march": "Mar",
+        "april": "Avr",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juil",
+        "august": "Août",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Déc"
       }
     }
   }

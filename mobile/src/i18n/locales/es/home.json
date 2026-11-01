@@ -11,7 +11,9 @@
       "sort": "Ordenar",
       "filter": "Filtrar",
       "clearFilter": "Borrar filtro",
-      "history": "Diario de tareas"
+      "history": "Diario de tareas",
+      "calendar": "Calendario",
+      "list": "Lista"
     },
     "menu": {
       "markAsComplete": "Marcar como completada",
@@ -71,6 +73,57 @@
       "today": {
         "title": "No hay tareas para hoy",
         "body": "No tienes tareas programadas para hoy.\n\nUsa \"Mostrar todas las tareas\" desde el FAB para ver los próximos recordatorios, o ajusta los horarios de tus recordatorios en tus plantas."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "Programado para {{date}}",
+      "noItems": "No hay tareas para este día.",
+      "today": "Hoy",
+      "weekdays": {
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado",
+        "sunday": "Domingo"
+      },
+      "weekdaysShort": {
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mié",
+        "thu": "Jue",
+        "fri": "Vie",
+        "sat": "Sáb",
+        "sun": "Dom"
+      },
+      "months": {
+        "january": "Enero",
+        "february": "Febrero",
+        "march": "Marzo",
+        "april": "Abril",
+        "may": "Mayo",
+        "june": "Junio",
+        "july": "Julio",
+        "august": "Agosto",
+        "september": "Septiembre",
+        "october": "Octubre",
+        "november": "Noviembre",
+        "december": "Diciembre"
+      },
+      "monthsShort": {
+        "january": "Ene",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Abr",
+        "may": "May",
+        "june": "Jun",
+        "july": "Jul",
+        "august": "Ago",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Dic"
       }
     }
   }

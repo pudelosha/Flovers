@@ -11,7 +11,9 @@
       "sort": "정렬",
       "filter": "필터",
       "clearFilter": "필터 해제",
-      "history": "작업 일지"
+      "history": "작업 일지",
+      "calendar": "캘린더",
+      "list": "목록"
     },
     "menu": {
       "markAsComplete": "완료로 표시",
@@ -71,6 +73,57 @@
       "today": {
         "title": "오늘 예정된 작업이 없습니다",
         "body": "오늘 예정된 작업이 없습니다.\n\nFAB에서 \"모든 작업 보기\"를 사용하여 예정된 알림을 확인하거나 식물의 알림 일정을 조정하세요."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "{{date}}에 예정됨",
+      "noItems": "이 날짜에는 작업이 없습니다.",
+      "today": "오늘",
+      "weekdays": {
+        "monday": "월요일",
+        "tuesday": "화요일",
+        "wednesday": "수요일",
+        "thursday": "목요일",
+        "friday": "금요일",
+        "saturday": "토요일",
+        "sunday": "일요일"
+      },
+      "weekdaysShort": {
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토",
+        "sun": "일"
+      },
+      "months": {
+        "january": "1월",
+        "february": "2월",
+        "march": "3월",
+        "april": "4월",
+        "may": "5월",
+        "june": "6월",
+        "july": "7월",
+        "august": "8월",
+        "september": "9월",
+        "october": "10월",
+        "november": "11월",
+        "december": "12월"
+      },
+      "monthsShort": {
+        "january": "1월",
+        "february": "2월",
+        "march": "3월",
+        "april": "4월",
+        "may": "5월",
+        "june": "6월",
+        "july": "7월",
+        "august": "8월",
+        "september": "9월",
+        "october": "10월",
+        "november": "11월",
+        "december": "12월"
       }
     }
   }

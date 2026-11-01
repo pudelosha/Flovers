@@ -19,6 +19,12 @@
         ]
       },
       {
+        "heading": "Task calendar",
+        "body": [
+          "Home has List and Calendar views. Switch through the FAB or swipe horizontally. The calendar marks only real pending tasks on their current due dates, including overdue, postponed and shared tasks; it does not project future repetitions. Tap a day to see its task tiles below the calendar, with the same completion, postponement and navigation actions and sharing permissions as the list. Filters apply to both views. Mark visible as complete affects only tasks displayed for the selected day."
+        ]
+      },
+      {
         "heading": "Task tile menu (per-task actions)",
         "body": [
           "Tap the main part of a task tile to open its action menu.",

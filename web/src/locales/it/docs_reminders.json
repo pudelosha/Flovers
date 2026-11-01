@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Elenco e calendario",
-        "body": [
-          "Puoi consultare i promemoria in un elenco o nel calendario.",
-          "Per cambiare vista, scorri verso destra o sinistra oppure usa l’apposita opzione nel menu del pulsante delle azioni rapide.",
-          "Le due viste mostrano gli stessi promemoria. Nell’elenco controlli rapidamente le impostazioni, nel calendario vedi quando sono previste le attività."
-        ]
-      },
-      {
         "heading": "Elenco dei promemoria",
         "body": [
           "Ogni riquadro dell’elenco corrisponde a un promemoria che hai creato.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "Calendario",
-        "body": [
-          "Nel calendario trovi le attività dei promemoria distribuite nei rispettivi giorni.",
-          "Tocca un giorno per vedere sotto il calendario le attività previste per quella data.",
-          "Gli indicatori sui giorni mostrano i tipi di attività e ti aiutano a capire a colpo d’occhio come si distribuisce la cura delle piante."
-        ]
-      },
-      {
         "heading": "Menu delle azioni rapide",
         "body": [
-          "Il pulsante delle azioni rapide apre il menu per gestire i promemoria e cambiare vista.",
-          "Trovi Aggiungi promemoria, il cambio di vista tra Elenco e Calendario, Ordina e Filtra.",
+          "Il FAB di Promemoria offre Aggiungi promemoria, Ordina, Filtra e, se necessario, Rimuovi filtro. Il cambio Elenco/Calendario è disponibile in Home.",
           "Puoi ordinare per data di scadenza, nome della pianta o posizione.",
           "Con i filtri puoi scegliere nome della pianta, posizione, tipo di attività e intervallo delle scadenze."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "Le definizioni dei promemoria restano di proprietà del proprietario",
         "body": [
-          "Promemoria visualizza solo le definizioni dei promemoria, inclusa la vista del calendario. La condivisione di una pianta d'appartamento non condivide l'editor dei promemoria o le sue regole ricorrenti. Le attività generate possono comunque essere visualizzate nella schermata Home del destinatario, dove l'autorizzazione determina se possono essere completate."
+          "Promemoria è l’elenco delle tue regole di cura ricorrenti: puoi aggiungerle, modificarle, sospenderle, riprenderle o eliminarle. Il calendario delle attività si trova ora in Home. La condivisione dà accesso alle attività generate in base ai permessi, non alle regole dei promemoria."
         ]
       }
     ]

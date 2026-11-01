@@ -11,7 +11,9 @@
       "sort": "ترتيب",
       "filter": "تصفية",
       "clearFilter": "مسح التصفية",
-      "history": "سجل المهام"
+      "history": "سجل المهام",
+      "calendar": "التقويم",
+      "list": "القائمة"
     },
     "menu": {
       "markAsComplete": "تحديد كمكتمل",
@@ -71,6 +73,57 @@
       "today": {
         "title": "لا توجد مهام مستحقة اليوم",
         "body": "ليس لديك أي مهام مستحقة اليوم.\n\nاستخدم \"عرض جميع المهام\" من زر الإجراء العائم لرؤية التذكيرات القادمة، أو قم بضبط جداول التذكير الخاصة بنباتاتك."
+      }
+    },
+    "calendar": {
+      "scheduledOn": "مجدول في {{date}}",
+      "noItems": "لا توجد مهام لهذا اليوم.",
+      "today": "اليوم",
+      "weekdays": {
+        "monday": "الاثنين",
+        "tuesday": "الثلاثاء",
+        "wednesday": "الأربعاء",
+        "thursday": "الخميس",
+        "friday": "الجمعة",
+        "saturday": "السبت",
+        "sunday": "الأحد"
+      },
+      "weekdaysShort": {
+        "mon": "اثن",
+        "tue": "ثلا",
+        "wed": "أرب",
+        "thu": "خمي",
+        "fri": "جمع",
+        "sat": "سبت",
+        "sun": "أحد"
+      },
+      "months": {
+        "january": "يناير",
+        "february": "فبراير",
+        "march": "مارس",
+        "april": "أبريل",
+        "may": "مايو",
+        "june": "يونيو",
+        "july": "يوليو",
+        "august": "أغسطس",
+        "september": "سبتمبر",
+        "october": "أكتوبر",
+        "november": "نوفمبر",
+        "december": "ديسمبر"
+      },
+      "monthsShort": {
+        "january": "ينا",
+        "february": "فبر",
+        "march": "مار",
+        "april": "أبر",
+        "may": "ماي",
+        "june": "يون",
+        "july": "يول",
+        "august": "أغس",
+        "september": "سبت",
+        "october": "أكت",
+        "november": "نوف",
+        "december": "ديس"
       }
     }
   }

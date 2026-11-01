@@ -10,14 +10,6 @@
         ]
       },
       {
-        "heading": "Deux vues : liste et calendrier",
-        "body": [
-          "Tu peux afficher tes rappels sous forme de liste ou dans un calendrier.",
-          "Pour changer de vue, balaie l’écran vers la gauche ou la droite, ou utilise l’option correspondante du menu d’actions rapides.",
-          "Les deux vues présentent les mêmes rappels : choisis la liste pour les parcourir ou le calendrier pour voir leur répartition."
-        ]
-      },
-      {
         "heading": "La liste des rappels",
         "body": [
           "Chaque carte représente un rappel que tu as créé.",
@@ -36,18 +28,9 @@
         ]
       },
       {
-        "heading": "Le calendrier",
-        "body": [
-          "Le calendrier répartit les rappels sur les jours prévus.",
-          "Touche une date pour afficher en dessous les soins programmés ce jour-là.",
-          "Des repères visuels indiquent les types de soins prévus chaque jour pour voir rapidement leur répartition."
-        ]
-      },
-      {
         "heading": "Les actions rapides",
         "body": [
-          "Le bouton d’actions rapides ouvre les options de gestion des rappels et de changement de vue.",
-          "Tu y trouves « Ajouter un rappel », le passage entre « Liste » et « Calendrier », ainsi que « Trier » et « Filtrer ».",
+          "Le FAB de Rappels propose Ajouter un rappel, Trier, Filtrer et Effacer le filtre si nécessaire. Le choix Liste/Calendrier se fait dans Accueil.",
           "Tu peux trier par échéance, nom de plante ou emplacement.",
           "Tu peux filtrer par plante, emplacement, type de soin et période d’échéance."
         ]
@@ -72,7 +55,7 @@
       {
         "heading": "Les définitions de rappel restent avec le propriétaire",
         "body": [
-          "Rappels affiche uniquement vos propres définitions de rappel, y compris la vue du calendrier. Partager une plante ne partage pas l'éditeur de rappels ni ses règles récurrentes. Les tâches générées peuvent toujours apparaître sur l'écran d'accueil du destinataire, où l'autorisation détermine si elles peuvent être complétées."
+          "Rappels présente vos propres règles de soins récurrentes à ajouter, modifier, suspendre, reprendre ou supprimer. Le calendrier des tâches se trouve désormais dans Accueil. Le partage donne accès aux tâches générées selon les droits accordés, pas aux définitions des rappels."
         ]
       }
     ]
