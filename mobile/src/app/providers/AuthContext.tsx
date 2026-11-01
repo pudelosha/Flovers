@@ -91,17 +91,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const operation = ++operationRef.current;
     const auth = await loginUser(p);
     if (operation !== operationRef.current) return;
-    // Queue persistence before exposing the session to refreshes or profile updates.
-    const persistence = persistAuth(auth.access, auth.refresh, auth.user);
-    setAuthToken(auth.access);
-    accessRef.current = auth.access;
-    refreshRef.current = auth.refresh;
-    userRef.current = auth.user;
-    setToken(auth.access);
-    setUser(auth.user);
-    setLoading(false);
+    // Publish authentication only after the encrypted session is durable.
     try {
-      await persistence;
+      await persistAuth(auth.access, auth.refresh, auth.user);
+      if (operation !== operationRef.current) return;
+      setAuthToken(auth.access);
+      accessRef.current = auth.access;
+      refreshRef.current = auth.refresh;
+      userRef.current = auth.user;
+      setToken(auth.access);
+      setUser(auth.user);
+      setLoading(false);
     } catch (error) {
       if (operation === operationRef.current) await logoutSession(getAuthSessionId());
       throw error;

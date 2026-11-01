@@ -1,4 +1,4 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { readStoredAuth, writeStoredAuth, clearStoredAuth } from "./auth.storage";
 import { request, ApiError } from "../client";
 
 export type AuthUserInfo = {
@@ -57,9 +57,6 @@ export type ConfirmEmailPayload = {
 
 export type ConfirmEmailResponse = { message: string };
 
-const ACCESS_TOKEN_KEY = "auth_access_token";
-const REFRESH_TOKEN_KEY = "auth_refresh_token";
-const USER_KEY = "auth_user";
 let storageGeneration = 0;
 let storageQueue: Promise<void> = Promise.resolve();
 
@@ -69,34 +66,13 @@ function serializeStorage<T>(operation: () => Promise<T>): Promise<T> {
   return result;
 }
 
-async function completeStorageWrites(writes: Promise<unknown>[]): Promise<void> {
-  // A failed write must not release the queue while sibling writes can still finish.
-  const results = await Promise.allSettled(writes);
-  const failure = results.find((result): result is PromiseRejectedResult => result.status === "rejected");
-  if (failure) throw failure.reason;
-}
-
 export async function bootstrapAuth(): Promise<{
   access: string | null;
   refresh: string | null;
   user: AuthUserInfo;
 }> {
   return serializeStorage(async () => {
-    const [access, refresh, userRaw] = await Promise.all([
-      AsyncStorage.getItem(ACCESS_TOKEN_KEY),
-      AsyncStorage.getItem(REFRESH_TOKEN_KEY),
-      AsyncStorage.getItem(USER_KEY),
-    ]);
-
-    let user: AuthUserInfo = null;
-
-    try {
-      user = userRaw ? (JSON.parse(userRaw) as AuthUserInfo) : null;
-    } catch {
-      user = null;
-    }
-
-    return { access, refresh, user };
+    return (await readStoredAuth()) ?? { access: null, refresh: null, user: null };
   });
 }
 
@@ -108,25 +84,25 @@ export async function persistAuth(
   const generation = ++storageGeneration;
   await serializeStorage(async () => {
     if (generation !== storageGeneration) return;
-    await completeStorageWrites([
-      AsyncStorage.setItem(ACCESS_TOKEN_KEY, access),
-      AsyncStorage.setItem(REFRESH_TOKEN_KEY, refresh),
-      AsyncStorage.setItem(USER_KEY, JSON.stringify(user ?? null)),
-    ]);
+    await writeStoredAuth({ access, refresh, user: user ?? null });
   });
 }
 
 export async function updateStoredAccessToken(access: string): Promise<void> {
   const generation = storageGeneration;
   await serializeStorage(async () => {
-    if (generation === storageGeneration) await AsyncStorage.setItem(ACCESS_TOKEN_KEY, access);
+    if (generation !== storageGeneration) return;
+    const auth = await readStoredAuth();
+    await writeStoredAuth({ access, refresh: auth?.refresh ?? null, user: auth?.user ?? null });
   });
 }
 
 export async function updateStoredUser(user: AuthUserInfo): Promise<void> {
   const generation = storageGeneration;
   await serializeStorage(async () => {
-    if (generation === storageGeneration) await AsyncStorage.setItem(USER_KEY, JSON.stringify(user));
+    if (generation !== storageGeneration) return;
+    const auth = await readStoredAuth();
+    if (auth) await writeStoredAuth({ ...auth, user });
   });
 }
 
@@ -134,17 +110,13 @@ export async function clearAuth(): Promise<void> {
   const generation = ++storageGeneration;
   await serializeStorage(async () => {
     if (generation !== storageGeneration) return;
-    await completeStorageWrites([
-      AsyncStorage.removeItem(ACCESS_TOKEN_KEY),
-      AsyncStorage.removeItem(REFRESH_TOKEN_KEY),
-      AsyncStorage.removeItem(USER_KEY),
-    ]);
+    await clearStoredAuth();
   });
 }
 
 // compatibility wrappers (safe to keep if referenced elsewhere)
 export async function bootstrapToken(): Promise<string | null> {
-  return serializeStorage(() => AsyncStorage.getItem(ACCESS_TOKEN_KEY));
+  return serializeStorage(async () => (await readStoredAuth())?.access ?? null);
 }
 
 export async function persistToken(access: string): Promise<void> {
@@ -154,7 +126,10 @@ export async function persistToken(access: string): Promise<void> {
 export async function clearToken(): Promise<void> {
   const generation = ++storageGeneration;
   await serializeStorage(async () => {
-    if (generation === storageGeneration) await AsyncStorage.removeItem(ACCESS_TOKEN_KEY);
+    if (generation !== storageGeneration) return;
+    const auth = await readStoredAuth();
+    if (auth) await writeStoredAuth({ ...auth, access: null });
+    else await clearStoredAuth();
   });
 }
 

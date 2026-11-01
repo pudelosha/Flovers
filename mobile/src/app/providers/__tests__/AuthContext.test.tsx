@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Text } from "react-native";
 import { act, render, waitFor } from "@testing-library/react-native";
+import * as Keychain from "react-native-keychain";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AuthContext, AuthProvider } from "../AuthContext";
 import { getAuthSessionId } from "../../../api/client";
@@ -99,4 +100,32 @@ describe("AuthProvider session lifecycle", () => {
     expect(auth.user?.email).toBe("updated-b@example.com");
     expect((await readStored()).user.email).toBe("updated-b@example.com");
   });
+});
+
+
+it("does not expose a login before secure persistence completes, or resurrect it after logout",async()=>{
+ const view=render(<AuthProvider><Probe/></AuthProvider>);
+ await waitFor(()=>expect(auth.loading).toBe(false));
+ const writer=Keychain.setGenericPassword as jest.Mock;const original=writer.getMockImplementation()!;
+ const gate=deferred<void>();
+ writer.mockImplementation((...args:any[])=>gate.promise.then(()=>original(...args)));
+ mockedLogin.mockResolvedValueOnce({access:"pending",refresh:"refresh-pending",user:{id:"a"}});
+ try{
+   let loggingIn!:Promise<void>;
+   await act(async()=>{loggingIn=auth.login({email:"a@example.test",password:"password8"});for(let i=0;i<20;i++)await Promise.resolve();});
+   expect(writer).toHaveBeenCalled();expect(auth.token).toBeNull();
+   let loggingOut!:Promise<void>;
+   act(()=>{loggingOut=auth.logout();});
+   await act(async()=>{gate.resolve();await loggingIn;await loggingOut;});
+   expect(auth.token).toBeNull();await expect(readStored()).resolves.toEqual({access:null,refresh:null,user:null});
+ }finally{writer.mockImplementation(original);view.unmount();}
+});
+
+it("keeps the login screen unauthenticated when native secure storage fails",async()=>{
+ render(<AuthProvider><Probe/></AuthProvider>);
+ await waitFor(()=>expect(auth.loading).toBe(false));
+ mockedLogin.mockResolvedValueOnce({access:"unpersisted",refresh:"unpersisted-refresh",user:null});
+ (Keychain.setGenericPassword as jest.Mock).mockRejectedValueOnce(new Error("keystore unavailable"));
+ await act(async()=>{await expect(auth.login({email:"a@example.test",password:"password8"})).rejects.toMatchObject({code:"secure_auth_storage_unavailable"});});
+ expect(auth.token).toBeNull();await expect(readStored()).resolves.toEqual({access:null,refresh:null,user:null});
 });

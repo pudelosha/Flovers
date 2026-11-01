@@ -146,3 +146,21 @@ jest.mock("./src/app/providers/SettingsProvider", () => ({
     },
   }),
 }));
+
+
+jest.mock("react-native-keychain", () => {
+  const records = new Map();
+  return {
+    ACCESSIBLE: { AFTER_FIRST_UNLOCK_THIS_DEVICE_ONLY: "AccessibleAfterFirstUnlockThisDeviceOnly" },
+    STORAGE_TYPE: { AES_GCM_NO_AUTH: "KeystoreAESGCM_NoAuth" },
+    SECURITY_LEVEL: { SECURE_SOFTWARE: "SECURE_SOFTWARE" },
+    setGenericPassword: jest.fn(async (username, password, options) => {
+      records.set(options.service, {username,password,service:options.service});
+      return {service:options.service,storage:"KeystoreAESGCM_NoAuth"};
+    }),
+    getGenericPassword: jest.fn(async (options) => records.get(options.service) || false),
+    resetGenericPassword: jest.fn(async (options) => {records.delete(options.service);return true;}),
+    __resetMockStorage: () => records.clear(),
+  };
+});
+beforeEach(() => { require("react-native-keychain").__resetMockStorage(); });
