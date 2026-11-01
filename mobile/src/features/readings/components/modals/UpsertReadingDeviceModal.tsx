@@ -1,25 +1,16 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  TextInput,
-  ScrollView,
-  Switch,
-  StyleSheet,
-} from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Clipboard from "@react-native-clipboard/clipboard";
-import { useTranslation } from "react-i18next";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, Pressable, TextInput, ScrollView, Switch, StyleSheet } from 'react-native';
 
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Clipboard from '@react-native-clipboard/clipboard';
+import { useTranslation } from 'react-i18next';
 
 // Match the Edit Plant modal styling:
-import { s as sp } from "../../../plants/styles/plants.styles"; // dropdown / inputs styles
-import { prompts as pr } from "../../../profile/styles/profile.styles"; // prompt chrome (backdrop/sheet/buttons)
+import { s as sp } from '../../../plants/styles/plants.styles'; // dropdown / inputs styles
+import { prompts as pr } from '../../../profile/styles/profile.styles'; // prompt chrome (backdrop/sheet/buttons)
 
-type Mode = "add" | "edit";
+type Mode = 'add' | 'edit';
 type PlantOption = { id: string; name: string; location?: string | null };
 
 type Props = {
@@ -109,7 +100,7 @@ type Props = {
 
 let Slider: any = null;
 try {
-  Slider = require("@react-native-community/slider").default;
+  Slider = require('@react-native-community/slider').default;
 } catch {}
 
 export default function UpsertReadingDeviceModal({
@@ -149,71 +140,66 @@ export default function UpsertReadingDeviceModal({
   const [plantOpen, setPlantOpen] = React.useState(false);
 
   const defaultMoistPct =
-    typeof initialMoistureAlertPct === "number"
+    typeof initialMoistureAlertPct === 'number'
       ? initialMoistureAlertPct
-      : typeof initialHumidityAlertPct === "number"
+      : typeof initialHumidityAlertPct === 'number'
       ? initialHumidityAlertPct
       : 30;
 
   // Local state (will be reset by sync effect below when props/visibility change)
   const [plantId, setPlantId] = React.useState<string>(
-    mode === "edit" && initialPlantId ? initialPlantId : ""
+    mode === 'edit' && initialPlantId ? initialPlantId : '',
   );
-  const [name, setName] = React.useState<string>(initialName ?? "");
-  const [notes, setNotes] = React.useState<string>(initialNotes ?? "");
+  const [name, setName] = React.useState<string>(initialName ?? '');
+  const [notes, setNotes] = React.useState<string>(initialNotes ?? '');
   const [enabled, setEnabled] = React.useState<boolean>(initialEnabled);
 
-  const [sensorTemp, setSensorTemp] = React.useState<boolean>(
-    initialSensors?.temperature ?? true
-  );
-  const [sensorHum, setSensorHum] = React.useState<boolean>(
-    initialSensors?.humidity ?? true
-  );
-  const [sensorLight, setSensorLight] = React.useState<boolean>(
-    initialSensors?.light ?? true
-  );
-  const [sensorMoist, setSensorMoist] = React.useState<boolean>(
-    initialSensors?.moisture ?? true
-  );
+  const [sensorTemp, setSensorTemp] = React.useState<boolean>(initialSensors?.temperature ?? true);
+  const [sensorHum, setSensorHum] = React.useState<boolean>(initialSensors?.humidity ?? true);
+  const [sensorLight, setSensorLight] = React.useState<boolean>(initialSensors?.light ?? true);
+  const [sensorMoist, setSensorMoist] = React.useState<boolean>(initialSensors?.moisture ?? true);
 
   const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(
-    Boolean(initialMoistureAlertEnabled)
+    Boolean(initialMoistureAlertEnabled),
   );
   const [moistAlertPct, setMoistAlertPct] = React.useState<number>(
-    Math.max(0, Math.min(100, defaultMoistPct))
+    Math.max(0, Math.min(100, defaultMoistPct)),
   );
 
   const [intervalMinutes, setIntervalMinutes] = React.useState<string>(
-    String(initialIntervalMinutes ?? initialIntervalHours * 60)
+    String(initialIntervalMinutes ?? initialIntervalHours * 60),
   );
 
-  const [pumpCooldownMinutes, setPumpCooldownMinutes] = React.useState(String(initialPumpCooldownMinutes));
+  const [pumpCooldownMinutes, setPumpCooldownMinutes] = React.useState(
+    String(initialPumpCooldownMinutes),
+  );
 
   // Additional state for notifications and pump control
-  const [sendEmailNotifications, setSendEmailNotifications] =
-    React.useState<boolean>(initialSendEmailNotifications);
-  const [sendPushNotifications, setSendPushNotifications] =
-    React.useState<boolean>(initialSendPushNotifications);
-  const [sendEmailMissingReadings, setSendEmailMissingReadings] =
-    React.useState<boolean>(initialSendEmailMissingReadings);
-  const [sendPushMissingReadings, setSendPushMissingReadings] =
-    React.useState<boolean>(initialSendPushMissingReadings);
-  const [pumpIncluded, setPumpIncluded] =
-    React.useState<boolean>(initialPumpIncluded);
-  const [automaticPumpLaunch, setAutomaticPumpLaunch] =
-    React.useState<boolean>(initialAutomaticPumpLaunch);
+  const [sendEmailNotifications, setSendEmailNotifications] = React.useState<boolean>(
+    initialSendEmailNotifications,
+  );
+  const [sendPushNotifications, setSendPushNotifications] = React.useState<boolean>(
+    initialSendPushNotifications,
+  );
+  const [sendEmailMissingReadings, setSendEmailMissingReadings] = React.useState<boolean>(
+    initialSendEmailMissingReadings,
+  );
+  const [sendPushMissingReadings, setSendPushMissingReadings] = React.useState<boolean>(
+    initialSendPushMissingReadings,
+  );
+  const [pumpIncluded, setPumpIncluded] = React.useState<boolean>(initialPumpIncluded);
+  const [automaticPumpLaunch, setAutomaticPumpLaunch] = React.useState<boolean>(
+    initialAutomaticPumpLaunch,
+  );
   const [pumpThresholdPct, setPumpThresholdPct] = React.useState<number>(
-    Math.max(0, Math.min(100, initialPumpThresholdPct))
+    Math.max(0, Math.min(100, initialPumpThresholdPct)),
   );
 
-  const [
-    sendEmailWateringNotifications,
-    setSendEmailWateringNotifications,
-  ] = React.useState<boolean>(initialSendEmailWateringNotifications);
-  const [
-    sendPushWateringNotifications,
-    setSendPushWateringNotifications,
-  ] = React.useState<boolean>(initialSendPushWateringNotifications);
+  const [sendEmailWateringNotifications, setSendEmailWateringNotifications] =
+    React.useState<boolean>(initialSendEmailWateringNotifications);
+  const [sendPushWateringNotifications, setSendPushWateringNotifications] = React.useState<boolean>(
+    initialSendPushWateringNotifications,
+  );
 
   // show/hide secret
   const [showSecret, setShowSecret] = React.useState(false);
@@ -228,16 +214,16 @@ export default function UpsertReadingDeviceModal({
     if (!visible) return;
 
     const nextDefaultMoistPct =
-      typeof initialMoistureAlertPct === "number"
+      typeof initialMoistureAlertPct === 'number'
         ? initialMoistureAlertPct
-        : typeof initialHumidityAlertPct === "number"
+        : typeof initialHumidityAlertPct === 'number'
         ? initialHumidityAlertPct
         : 30;
 
     setPlantOpen(false);
-    setPlantId(mode === "edit" && initialPlantId ? initialPlantId : "");
-    setName(initialName ?? "");
-    setNotes(initialNotes ?? "");
+    setPlantId(mode === 'edit' && initialPlantId ? initialPlantId : '');
+    setName(initialName ?? '');
+    setNotes(initialNotes ?? '');
     setEnabled(initialEnabled);
 
     setSensorTemp(initialSensors?.temperature ?? true);
@@ -259,12 +245,8 @@ export default function UpsertReadingDeviceModal({
     setAutomaticPumpLaunch(Boolean(initialAutomaticPumpLaunch));
     setPumpThresholdPct(Math.max(0, Math.min(100, initialPumpThresholdPct)));
 
-    setSendEmailWateringNotifications(
-      Boolean(initialSendEmailWateringNotifications)
-    );
-    setSendPushWateringNotifications(
-      Boolean(initialSendPushWateringNotifications)
-    );
+    setSendEmailWateringNotifications(Boolean(initialSendEmailWateringNotifications));
+    setSendPushWateringNotifications(Boolean(initialSendPushWateringNotifications));
 
     setShowSecret(false);
   }, [
@@ -292,14 +274,11 @@ export default function UpsertReadingDeviceModal({
     initialSendPushWateringNotifications,
   ]);
 
-  const selectedPlant = React.useMemo(
-    () => plants.find((p) => p.id === plantId),
-    [plantId, plants]
-  );
+  const selectedPlant = React.useMemo(() => plants.find(p => p.id === plantId), [plantId, plants]);
 
   // When user picks a plant and the device name is still empty, auto-fill "Plant – Location"
   const buildNameFromPlant = (p: PlantOption) => {
-    const loc = p.location ? ` – ${p.location}` : "";
+    const loc = p.location ? ` – ${p.location}` : '';
     return `${p.name}${loc}`;
   };
 
@@ -311,18 +290,27 @@ export default function UpsertReadingDeviceModal({
   // Required: both plantId and non-empty device name
   const cooldown = Number(pumpCooldownMinutes);
   const interval = Number(intervalMinutes);
-  const validInterval = /^\d+$/.test(intervalMinutes) && Number.isInteger(interval)
-    && interval >= 1 && interval <= 1440;
-  const validCooldown = /^\d+$/.test(pumpCooldownMinutes) && Number.isInteger(cooldown) && cooldown >= 1 && cooldown <= 32767;
-  const canSave = Boolean(plantId) && Boolean((name || "").trim()) && validInterval
-    && (!pumpIncluded || validCooldown);
+  const validInterval =
+    /^\d+$/.test(intervalMinutes) &&
+    Number.isInteger(interval) &&
+    interval >= 1 &&
+    interval <= 1440;
+  const validCooldown =
+    /^\d+$/.test(pumpCooldownMinutes) &&
+    Number.isInteger(cooldown) &&
+    cooldown >= 1 &&
+    cooldown <= 32767;
+  const canSave =
+    Boolean(plantId) &&
+    Boolean((name || '').trim()) &&
+    validInterval &&
+    (!pumpIncluded || validCooldown);
 
   const handleSave = () => {
     if (!canSave) return;
 
     const shouldEnableMoistureAlert =
-      sensorMoist &&
-      (sendEmailNotifications || sendPushNotifications || moistAlertEnabled);
+      sensorMoist && (sendEmailNotifications || sendPushNotifications || moistAlertEnabled);
 
     const shouldUseAutomaticPumpLaunch = pumpIncluded && automaticPumpLaunch;
 
@@ -331,7 +319,7 @@ export default function UpsertReadingDeviceModal({
       plantId,
       name: name.trim(),
       notes,
-      enabled: mode === "edit" ? enabled : undefined,
+      enabled: mode === 'edit' ? enabled : undefined,
       sensors: {
         temperature: sensorTemp,
         humidity: sensorHum,
@@ -340,8 +328,7 @@ export default function UpsertReadingDeviceModal({
 
         // Keep child UI state in React state, but only apply/save it when the parent capability is available.
         moistureAlertEnabled: sensorMoist ? shouldEnableMoistureAlert : false,
-        moistureAlertPct:
-          sensorMoist && shouldEnableMoistureAlert ? moistAlertPct : undefined,
+        moistureAlertPct: sensorMoist && shouldEnableMoistureAlert ? moistAlertPct : undefined,
       },
       intervalMinutes: interval,
       pumpCooldownMinutes: validCooldown ? cooldown : initialPumpCooldownMinutes,
@@ -358,18 +345,12 @@ export default function UpsertReadingDeviceModal({
       // Auto pump launch is only applied when Include Water Pump is enabled.
       // Its checkbox state is preserved locally even while locked.
       automaticPumpLaunch: shouldUseAutomaticPumpLaunch,
-      pumpThresholdPct: shouldUseAutomaticPumpLaunch
-        ? pumpThresholdPct
-        : undefined,
+      pumpThresholdPct: shouldUseAutomaticPumpLaunch ? pumpThresholdPct : undefined,
 
       // Watering-complete notifications are only applied when Include Water Pump is enabled.
       // Their checkbox state is preserved locally even while locked.
-      sendEmailWateringNotifications: pumpIncluded
-        ? sendEmailWateringNotifications
-        : false,
-      sendPushWateringNotifications: pumpIncluded
-        ? sendPushWateringNotifications
-        : false,
+      sendEmailWateringNotifications: pumpIncluded ? sendEmailWateringNotifications : false,
+      sendPushWateringNotifications: pumpIncluded ? sendPushWateringNotifications : false,
     });
   };
 
@@ -377,408 +358,415 @@ export default function UpsertReadingDeviceModal({
   if (!visible) return null;
 
   const title =
-    mode === "add"
-      ? t("readingsModals.upsert.linkDeviceTitle")
-      : t("readingsModals.upsert.editDeviceTitle");
+    mode === 'add'
+      ? t('readingsModals.upsert.linkDeviceTitle')
+      : t('readingsModals.upsert.editDeviceTitle');
 
   return (
     <>
-      <Pressable style={pr.backdrop} onPress={onCancel} />
-
-      <View style={pr.promptWrap}>
-        <View style={pr.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            style={
-              {
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0,0,0,0.35)",
-              } as any
-            }
-          />
-        </View>
-
-        <View
-          style={[
-            pr.promptInner,
-            {
-              maxHeight: "86%",
-              position: "relative",
-            },
-          ]}
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={t('readingsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
+          style={appModalStyles.scroll}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={appModalStyles.scrollContent}
         >
-          <ScrollView
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={pr.promptTitle}>{title}</Text>
+          <Text style={pr.promptTitle}>{title}</Text>
 
-            {/* 1) Plant dropdown */}
-            <View style={sp.dropdown}>
-              <Pressable
-                style={sp.dropdownHeader}
-                onPress={() => setPlantOpen((o) => !o)}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={sp.dropdownValue}>
-                  {selectedPlant
-                    ? selectedPlant.name
-                    : t("readingsModals.upsert.selectPlant")}
-                </Text>
-
-                <MaterialCommunityIcons
-                  name={plantOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
-
-              {plantOpen && (
-                <View style={sp.dropdownList}>
-                  {plants.map((p) => (
-                    <Pressable
-                      key={p.id}
-                      style={sp.dropdownItem}
-                      onPress={() => {
-                        setPlantId(p.id);
-                        setPlantOpen(false);
-
-                        if (!(name || "").trim()) {
-                          setName(buildNameFromPlant(p));
-                        }
-                      }}
-                    >
-                      <Text style={sp.dropdownItemText}>{p.name}</Text>
-
-                      {plantId === p.id && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            {/* 2) Location (read-only) */}
-            <TextInput
-              style={pr.input}
-              value={selectedPlant?.location ?? ""}
-              placeholder={t("readingsModals.upsert.locationPlaceholder")}
-              placeholderTextColor="rgba(255,255,255,0.7)"
-              editable={false}
-              pointerEvents="none"
-            />
-
-            {/* 3) Device name (mandatory) */}
-            <TextInput
-              style={pr.input}
-              placeholder={t("readingsModals.upsert.deviceNameRequired")}
-              placeholderTextColor="rgba(255,255,255,0.7)"
-              value={name}
-              onChangeText={setName}
-            />
-
-            {/* Move notes up and place it beneath Device Name */}
-            <TextInput
-              style={[
-                pr.input,
-                { height: 120, textAlignVertical: "top", paddingTop: 10 },
-              ]}
-              placeholder={t("readingsModals.upsert.notesOptional")}
-              placeholderTextColor="rgba(255,255,255,0.7)"
-              value={notes}
-              onChangeText={setNotes}
-              multiline
-            />
-
-            <View style={{ marginHorizontal: 16, gap: 8 }}>
-              <Text style={styles.sectionHeader}>{t("readingsModals.upsert.intervalMinutes", { defaultValue: "Reading interval (minutes)" })}</Text>
-              <TextInput testID="reading-interval-minutes" style={pr.input}
-                accessibilityLabel={t("readingsModals.upsert.intervalMinutes", { defaultValue: "Reading interval (minutes)" })}
-                keyboardType="number-pad" value={intervalMinutes} onChangeText={setIntervalMinutes} />
-              {!validInterval && <Text accessibilityRole="alert" style={{ color: "#FF9090" }}>{t("readingsModals.upsert.intervalMinutesValidation", { defaultValue: "Enter a whole number from 1 to 1440." })}</Text>}
-              <Text style={styles.sectionInfoTextNoMargin}>{t("readingsModals.upsert.intervalFirmwareHint", { defaultValue: "Choose 1–1440 minutes. After changing this interval, generate and upload the updated board code." })}</Text>
-            </View>
-
-            {/* Sensors Section */}
-            <View style={styles.separatorLine} />
-
-            <Text style={styles.sectionHeader}>
-              {t("readingsModals.upsert.sensors")}
-            </Text>
-
-            <View style={{ gap: 10, marginHorizontal: 16, marginTop: 6 }}>
-              <RowSwitch
-                label={t("readingsModals.upsert.sensorTemperature")}
-                value={sensorTemp}
-                onValueChange={setSensorTemp}
-                weight="600"
-              />
-
-              <RowSwitch
-                label={t("readingsModals.upsert.sensorHumidity")}
-                value={sensorHum}
-                onValueChange={setSensorHum}
-                weight="600"
-              />
-
-              <RowSwitch
-                label={t("readingsModals.upsert.sensorLight")}
-                value={sensorLight}
-                onValueChange={setSensorLight}
-                weight="600"
-              />
-
-              <RowSwitch
-                label={t("readingsModals.upsert.sensorSoilMoisture")}
-                value={sensorMoist}
-                onValueChange={setSensorMoist}
-                weight="600"
-              />
-            </View>
-
-            {/* Water Pump Section */}
-            <View style={styles.separatorLine} />
-
-            <Text style={styles.sectionHeader}>
-              {t("readingsModals.upsert.waterPump")}
-            </Text>
-
-            <View style={{ marginHorizontal: 16 }}>
-              <RowSwitch
-                label={t("readingsModals.upsert.pumpIncluded")}
-                value={pumpIncluded}
-                onValueChange={setPumpIncluded}
-                weight="600"
-              />
-
-              {pumpIncluded && <View style={{ gap: 8, marginVertical: 10 }}>
-                <Text style={sp.dropdownItemText}>{t("readingsModals.upsert.pumpCooldownMinutes", { defaultValue: "Automatic watering cooldown (minutes)" })}</Text>
-                <TextInput style={pr.input} value={pumpCooldownMinutes} onChangeText={setPumpCooldownMinutes}
-                  keyboardType="number-pad" accessibilityLabel={t("readingsModals.upsert.pumpCooldownMinutes", { defaultValue: "Automatic watering cooldown (minutes)" })} />
-                {!validCooldown && <Text accessibilityRole="alert" style={{ color: "#FF9090" }}>{t("readingsModals.upsert.pumpCooldownInvalid", { defaultValue: "Enter a whole number from 1 to 32767." })}</Text>}
-                <Text style={styles.sectionInfoTextNoMargin}>{t("readingsModals.upsert.pumpCooldownHint", { defaultValue: "Choose 1–32767 minutes (default 60). The server applies this value when the board next checks for watering tasks. It does not change watering duration." })}</Text>
-              </View>}
-
-              <CheckRow
-                label={t("readingsModals.upsert.automaticPumpLaunch")}
-                checked={automaticPumpLaunch}
-                disabled={!pumpIncluded}
-                onToggle={() => setAutomaticPumpLaunch((v) => !v)}
-              />
-
-              {Slider ? (
-                <View
-                  style={[
-                    {
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      marginLeft: 16,
-                      marginRight: 16,
-                    },
-                    !pumpIncluded || !automaticPumpLaunch
-                      ? { opacity: 0.45 }
-                      : null,
-                  ]}
-                >
-                  <Slider
-                    minimumValue={0}
-                    maximumValue={100}
-                    step={1}
-                    value={pumpThresholdPct}
-                    disabled={!pumpIncluded || !automaticPumpLaunch}
-                    onValueChange={(v: number) =>
-                      setPumpThresholdPct(
-                        Math.max(0, Math.min(100, Math.round(v)))
-                      )
-                    }
-                    style={{ flex: 1 }}
-                  />
-
-                  <Text
-                    style={{
-                      color: "#fff",
-                      fontWeight: "600",
-                      marginLeft: 8,
-                    }}
-                  >
-                    {pumpThresholdPct}%
-                  </Text>
-                </View>
-              ) : null}
-            </View>
-
-            {/* Notifications Section */}
-            <View style={styles.separatorLine} />
-
-            <Text style={styles.sectionHeader}>
-              {t("readingsModals.upsert.notifications")}
-            </Text>
-
-            <Text style={styles.sectionInfoText}>
-              {t("readingsModals.upsert.missingReadingsInfo", { defaultValue: "Notify me once when an active device misses its reading interval. A new reading resets the alert." })}
-            </Text>
-            <View style={{ marginHorizontal: 16, marginVertical: 10 }}>
-              <CheckRow
-                label={t("readingsModals.upsert.sendEmailMissingReadings", { defaultValue: "Email me when readings are missing" })}
-                checked={sendEmailMissingReadings}
-                onToggle={() => setSendEmailMissingReadings((value) => !value)}
-              />
-              <CheckRow
-                label={t("readingsModals.upsert.sendPushMissingReadings", { defaultValue: "Send a push notification when readings are missing" })}
-                checked={sendPushMissingReadings}
-                onToggle={() => setSendPushMissingReadings((value) => !value)}
-              />
-            </View>
-
-            <Text style={styles.sectionInfoText}>
-              {t(
-                "readingsModals.upsert.notificationsSoilMoistureInfo",
-                "Soil moisture alerts are available only when the Soil Moisture sensor is enabled."
-              )}
-            </Text>
-
-            <View
-              style={{ marginHorizontal: 16, marginTop: 10, marginBottom: 10 }}
+          {/* 1) Plant dropdown */}
+          <View style={sp.dropdown}>
+            <Pressable
+              style={sp.dropdownHeader}
+              onPress={() => setPlantOpen(o => !o)}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
             >
-              <CheckRow
-                label={t("readingsModals.upsert.sendEmailNotifications")}
-                checked={sendEmailNotifications}
-                disabled={!sensorMoist}
-                onToggle={() => setSendEmailNotifications((v) => !v)}
-              />
-
-              <CheckRow
-                label={t("readingsModals.upsert.sendPushNotifications")}
-                checked={sendPushNotifications}
-                disabled={!sensorMoist}
-                onToggle={() => setSendPushNotifications((v) => !v)}
-              />
-
-              {Slider ? (
-                <View
-                  style={[
-                    {
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      marginLeft: 16,
-                      marginRight: 16,
-                      marginTop: 5,
-                    },
-                    !sensorMoist ? { opacity: 0.45 } : null,
-                  ]}
-                >
-                  <Slider
-                    minimumValue={0}
-                    maximumValue={100}
-                    step={1}
-                    value={moistAlertPct}
-                    disabled={!sensorMoist}
-                    onValueChange={(v: number) => {
-                      setMoistAlertEnabled(true);
-                      setMoistAlertPct(
-                        Math.max(0, Math.min(100, Math.round(v)))
-                      );
-                    }}
-                    style={{ flex: 1 }}
-                  />
-
-                  <Text
-                    style={{
-                      color: "#fff",
-                      fontWeight: "600",
-                      marginLeft: 8,
-                    }}
-                  >
-                    {moistAlertPct}%
-                  </Text>
-                </View>
-              ) : null}
-
-              <Text style={styles.sectionInfoTextNoMargin}>
-                {t(
-                  "readingsModals.upsert.wateringNotificationsInfo",
-                  "Watering completion notifications are available only when this device has an included water pump. They can be sent after scheduled watering completes or after automatic watering is triggered and completed."
-                )}
+              <Text style={sp.dropdownValue}>
+                {selectedPlant ? selectedPlant.name : t('readingsModals.upsert.selectPlant')}
               </Text>
 
-              <CheckRow
-                label={t(
-                  "readingsModals.upsert.sendEmailWateringNotifications",
-                  "Send email notification when watering is complete"
-                )}
-                checked={sendEmailWateringNotifications}
-                disabled={!pumpIncluded}
-                onToggle={() =>
-                  setSendEmailWateringNotifications((v) => !v)
-                }
+              <MaterialCommunityIcons
+                name={plantOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
               />
+            </Pressable>
 
-              <CheckRow
-                label={t(
-                  "readingsModals.upsert.sendPushWateringNotifications",
-                  "Send push notification when watering is complete"
-                )}
-                checked={sendPushWateringNotifications}
-                disabled={!pumpIncluded}
-                onToggle={() =>
-                  setSendPushWateringNotifications((v) => !v)
-                }
-              />
-            </View>
+            {plantOpen && (
+              <View style={sp.dropdownList}>
+                {plants.map(p => (
+                  <Pressable
+                    key={p.id}
+                    style={sp.dropdownItem}
+                    onPress={() => {
+                      setPlantId(p.id);
+                      setPlantOpen(false);
 
-            {/* Footer */}
-            <View style={{ paddingVertical: 16 }}>
-              <View style={pr.promptButtonsRow}>
-                <Pressable style={pr.promptBtn} onPress={onCancel}>
-                  <Text style={pr.promptBtnText}>
-                    {t("readingsModals.common.cancel")}
-                  </Text>
-                </Pressable>
+                      if (!(name || '').trim()) {
+                        setName(buildNameFromPlant(p));
+                      }
+                    }}
+                  >
+                    <Text style={sp.dropdownItemText}>{p.name}</Text>
 
-                <Pressable
-                  style={[
-                    pr.promptBtn,
-                    pr.promptPrimary,
-                    !canSave ? { opacity: 0.5 } : null,
-                  ]}
-                  disabled={!canSave}
-                  onPress={handleSave}
-                >
-                  <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
-                    {t("readingsModals.common.save")}
-                  </Text>
-                </Pressable>
+                    {plantId === p.id && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+                  </Pressable>
+                ))}
               </View>
-            </View>
-          </ScrollView>
+            )}
+          </View>
 
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={t("readingsModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
+          {/* 2) Location (read-only) */}
+          <TextInput
+            style={pr.input}
+            value={selectedPlant?.location ?? ''}
+            placeholder={t('readingsModals.upsert.locationPlaceholder')}
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            editable={false}
+            pointerEvents="none"
           />
-        </View>
-      </View>
+
+          {/* 3) Device name (mandatory) */}
+          <TextInput
+            style={pr.input}
+            placeholder={t('readingsModals.upsert.deviceNameRequired')}
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            value={name}
+            onChangeText={setName}
+          />
+
+          {/* Move notes up and place it beneath Device Name */}
+          <TextInput
+            style={[
+              pr.input,
+              {
+                height: 120,
+                textAlignVertical: 'top',
+                paddingTop: 10,
+              },
+            ]}
+            placeholder={t('readingsModals.upsert.notesOptional')}
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            value={notes}
+            onChangeText={setNotes}
+            multiline
+          />
+
+          <View style={{ marginHorizontal: 16, gap: 8 }}>
+            <Text style={[styles.sectionHeader, { marginLeft: 0 }]}>
+              {t('readingsModals.upsert.intervalMinutes', {
+                defaultValue: 'Reading interval (minutes)',
+              })}
+            </Text>
+            <TextInput
+              testID="reading-interval-minutes"
+              style={[pr.input, styles.nestedInput]}
+              accessibilityLabel={t('readingsModals.upsert.intervalMinutes', {
+                defaultValue: 'Reading interval (minutes)',
+              })}
+              keyboardType="number-pad"
+              value={intervalMinutes}
+              onChangeText={setIntervalMinutes}
+            />
+            {!validInterval && (
+              <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>
+                {t('readingsModals.upsert.intervalMinutesValidation', {
+                  defaultValue: 'Enter a whole number from 1 to 1440.',
+                })}
+              </Text>
+            )}
+            <Text style={styles.sectionInfoTextNoMargin}>
+              {t('readingsModals.upsert.intervalFirmwareHint', {
+                defaultValue:
+                  'Choose 1–1440 minutes. After changing this interval, generate and upload the updated board code.',
+              })}
+            </Text>
+          </View>
+
+          {/* Sensors Section */}
+          <View style={styles.separatorLine} />
+
+          <Text style={styles.sectionHeader}>{t('readingsModals.upsert.sensors')}</Text>
+
+          <View style={{ gap: 10, marginHorizontal: 16, marginTop: 6 }}>
+            <RowSwitch
+              label={t('readingsModals.upsert.sensorTemperature')}
+              value={sensorTemp}
+              onValueChange={setSensorTemp}
+              weight="600"
+            />
+
+            <RowSwitch
+              label={t('readingsModals.upsert.sensorHumidity')}
+              value={sensorHum}
+              onValueChange={setSensorHum}
+              weight="600"
+            />
+
+            <RowSwitch
+              label={t('readingsModals.upsert.sensorLight')}
+              value={sensorLight}
+              onValueChange={setSensorLight}
+              weight="600"
+            />
+
+            <RowSwitch
+              label={t('readingsModals.upsert.sensorSoilMoisture')}
+              value={sensorMoist}
+              onValueChange={setSensorMoist}
+              weight="600"
+            />
+          </View>
+
+          {/* Water Pump Section */}
+          <View style={styles.separatorLine} />
+
+          <Text style={styles.sectionHeader}>{t('readingsModals.upsert.waterPump')}</Text>
+
+          <View style={{ marginHorizontal: 16 }}>
+            <RowSwitch
+              label={t('readingsModals.upsert.pumpIncluded')}
+              value={pumpIncluded}
+              onValueChange={setPumpIncluded}
+              weight="600"
+            />
+
+            {pumpIncluded && (
+              <View style={{ gap: 8, marginVertical: 10 }}>
+                <Text style={sp.dropdownItemText}>
+                  {t('readingsModals.upsert.pumpCooldownMinutes', {
+                    defaultValue: 'Automatic watering cooldown (minutes)',
+                  })}
+                </Text>
+                <TextInput
+                  style={[pr.input, styles.nestedInput]}
+                  value={pumpCooldownMinutes}
+                  onChangeText={setPumpCooldownMinutes}
+                  keyboardType="number-pad"
+                  accessibilityLabel={t('readingsModals.upsert.pumpCooldownMinutes', {
+                    defaultValue: 'Automatic watering cooldown (minutes)',
+                  })}
+                />
+                {!validCooldown && (
+                  <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>
+                    {t('readingsModals.upsert.pumpCooldownInvalid', {
+                      defaultValue: 'Enter a whole number from 1 to 32767.',
+                    })}
+                  </Text>
+                )}
+                <Text style={styles.sectionInfoTextNoMargin}>
+                  {t('readingsModals.upsert.pumpCooldownHint', {
+                    defaultValue:
+                      'Choose 1–32767 minutes (default 60). The server applies this value when the board next checks for watering tasks. It does not change watering duration.',
+                  })}
+                </Text>
+              </View>
+            )}
+
+            <CheckRow
+              label={t('readingsModals.upsert.automaticPumpLaunch')}
+              checked={automaticPumpLaunch}
+              disabled={!pumpIncluded}
+              onToggle={() => setAutomaticPumpLaunch(v => !v)}
+            />
+
+            {Slider ? (
+              <View
+                style={[
+                  {
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    marginLeft: 16,
+                    marginRight: 16,
+                  },
+                  !pumpIncluded || !automaticPumpLaunch
+                    ? {
+                        opacity: 0.45,
+                      }
+                    : null,
+                ]}
+              >
+                <Slider
+                  minimumValue={0}
+                  maximumValue={100}
+                  step={1}
+                  value={pumpThresholdPct}
+                  disabled={!pumpIncluded || !automaticPumpLaunch}
+                  onValueChange={(v: number) =>
+                    setPumpThresholdPct(Math.max(0, Math.min(100, Math.round(v))))
+                  }
+                  style={{ flex: 1 }}
+                />
+
+                <Text
+                  style={{
+                    color: '#fff',
+                    fontWeight: '600',
+                    marginLeft: 8,
+                  }}
+                >
+                  {pumpThresholdPct}%
+                </Text>
+              </View>
+            ) : null}
+          </View>
+
+          {/* Notifications Section */}
+          <View style={styles.separatorLine} />
+
+          <Text style={styles.sectionHeader}>{t('readingsModals.upsert.notifications')}</Text>
+
+          <Text style={styles.sectionInfoText}>
+            {t('readingsModals.upsert.missingReadingsInfo', {
+              defaultValue:
+                'Notify me once when an active device misses its reading interval. A new reading resets the alert.',
+            })}
+          </Text>
+          <View style={{ marginHorizontal: 16, marginVertical: 10 }}>
+            <CheckRow
+              label={t('readingsModals.upsert.sendEmailMissingReadings', {
+                defaultValue: 'Email me when readings are missing',
+              })}
+              checked={sendEmailMissingReadings}
+              onToggle={() => setSendEmailMissingReadings(value => !value)}
+            />
+            <CheckRow
+              label={t('readingsModals.upsert.sendPushMissingReadings', {
+                defaultValue: 'Send a push notification when readings are missing',
+              })}
+              checked={sendPushMissingReadings}
+              onToggle={() => setSendPushMissingReadings(value => !value)}
+            />
+          </View>
+
+          <Text style={styles.sectionInfoText}>
+            {t(
+              'readingsModals.upsert.notificationsSoilMoistureInfo',
+              'Soil moisture alerts are available only when the Soil Moisture sensor is enabled.',
+            )}
+          </Text>
+
+          <View style={{ marginHorizontal: 16, marginTop: 10, marginBottom: 10 }}>
+            <CheckRow
+              label={t('readingsModals.upsert.sendEmailNotifications')}
+              checked={sendEmailNotifications}
+              disabled={!sensorMoist}
+              onToggle={() => setSendEmailNotifications(v => !v)}
+            />
+
+            <CheckRow
+              label={t('readingsModals.upsert.sendPushNotifications')}
+              checked={sendPushNotifications}
+              disabled={!sensorMoist}
+              onToggle={() => setSendPushNotifications(v => !v)}
+            />
+
+            {Slider ? (
+              <View
+                style={[
+                  {
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    marginLeft: 16,
+                    marginRight: 16,
+                    marginTop: 5,
+                  },
+                  !sensorMoist
+                    ? {
+                        opacity: 0.45,
+                      }
+                    : null,
+                ]}
+              >
+                <Slider
+                  minimumValue={0}
+                  maximumValue={100}
+                  step={1}
+                  value={moistAlertPct}
+                  disabled={!sensorMoist}
+                  onValueChange={(v: number) => {
+                    setMoistAlertEnabled(true);
+                    setMoistAlertPct(Math.max(0, Math.min(100, Math.round(v))));
+                  }}
+                  style={{ flex: 1 }}
+                />
+
+                <Text
+                  style={{
+                    color: '#fff',
+                    fontWeight: '600',
+                    marginLeft: 8,
+                  }}
+                >
+                  {moistAlertPct}%
+                </Text>
+              </View>
+            ) : null}
+
+            <Text style={styles.sectionInfoTextNoMargin}>
+              {t(
+                'readingsModals.upsert.wateringNotificationsInfo',
+                'Watering completion notifications are available only when this device has an included water pump. They can be sent after scheduled watering completes or after automatic watering is triggered and completed.',
+              )}
+            </Text>
+
+            <CheckRow
+              label={t(
+                'readingsModals.upsert.sendEmailWateringNotifications',
+                'Send email notification when watering is complete',
+              )}
+              checked={sendEmailWateringNotifications}
+              disabled={!pumpIncluded}
+              onToggle={() => setSendEmailWateringNotifications(v => !v)}
+            />
+
+            <CheckRow
+              label={t(
+                'readingsModals.upsert.sendPushWateringNotifications',
+                'Send push notification when watering is complete',
+              )}
+              checked={sendPushWateringNotifications}
+              disabled={!pumpIncluded}
+              onToggle={() => setSendPushWateringNotifications(v => !v)}
+            />
+          </View>
+
+          {/* Footer */}
+          <View style={{ paddingVertical: 16 }}>
+            <View style={pr.promptButtonsRow}>
+              <Pressable style={pr.promptBtn} onPress={onCancel}>
+                <Text style={pr.promptBtnText}>{t('readingsModals.common.cancel')}</Text>
+              </Pressable>
+
+              <Pressable
+                style={[
+                  pr.promptBtn,
+                  pr.promptPrimary,
+                  !canSave
+                    ? {
+                        opacity: 0.5,
+                      }
+                    : null,
+                ]}
+                disabled={!canSave}
+                onPress={handleSave}
+              >
+                <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                  {t('readingsModals.common.save')}
+                </Text>
+              </Pressable>
+            </View>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
@@ -788,23 +776,30 @@ function RowSwitch({
   label,
   value,
   onValueChange,
-  weight = "600",
+  weight = '600',
 }: {
   label: string;
   value: boolean;
   onValueChange: (v: boolean) => void;
-  weight?: "600" | "700";
+  weight?: '600' | '700';
 }) {
   return (
     <View
       style={{
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         paddingVertical: 8,
       }}
     >
-      <Text style={[sp.dropdownItemText, { fontWeight: weight as any }]}>
+      <Text
+        style={[
+          sp.dropdownItemText,
+          {
+            fontWeight: weight as any,
+          },
+        ]}
+      >
         {label}
       </Text>
 
@@ -832,10 +827,11 @@ function CheckRow({
       onPress={disabled ? undefined : onToggle}
       disabled={disabled}
       style={{
-        width: "100%",
-        flexDirection: "row",
-        alignItems: "flex-start",
+        width: '100%',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
         paddingRight: 8,
+        marginBottom: 10,
         opacity: disabled ? 0.45 : 1,
       }}
     >
@@ -845,17 +841,15 @@ function CheckRow({
           height: 20,
           borderRadius: 4,
           borderWidth: 2,
-          borderColor: "#FFFFFF",
-          alignItems: "center",
-          justifyContent: "center",
+          borderColor: '#FFFFFF',
+          alignItems: 'center',
+          justifyContent: 'center',
           marginRight: 10,
           marginTop: 1,
           flexShrink: 0,
         }}
       >
-        {checked ? (
-          <MaterialCommunityIcons name="check" size={16} color="#FFFFFF" />
-        ) : null}
+        {checked ? <MaterialCommunityIcons name="check" size={16} color="#FFFFFF" /> : null}
       </View>
 
       <Text
@@ -865,7 +859,7 @@ function CheckRow({
             flex: 1,
             flexShrink: 1,
             minWidth: 0,
-            fontWeight: "600",
+            fontWeight: '600',
             fontSize: 12,
             opacity: 0.9,
             lineHeight: 18,
@@ -879,18 +873,20 @@ function CheckRow({
 }
 
 const styles = StyleSheet.create({
+  // These fields already sit inside the standard 16dp form inset.
+  nestedInput: { marginHorizontal: 0 },
   // Separator line - white for testing, matches the visual style
   separatorLine: {
     borderBottomWidth: 1,
-    borderBottomColor: "#FFFFFF", // White for testing purposes
+    borderBottomColor: '#FFFFFF', // White for testing purposes
     marginVertical: 12,
     marginHorizontal: 16,
   },
 
   // Section headers: identical font style to pr.promptTitle
   sectionHeader: {
-    color: "#FFFFFF",
-    fontWeight: "700",
+    color: '#FFFFFF',
+    fontWeight: '700',
     fontSize: 18,
     marginLeft: 16,
     marginBottom: 8,
@@ -898,9 +894,9 @@ const styles = StyleSheet.create({
   },
 
   sectionInfoText: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
     fontSize: 12,
-    fontWeight: "600",
+    fontWeight: '600',
     opacity: 0.8,
     lineHeight: 18,
     marginHorizontal: 16,
@@ -908,9 +904,9 @@ const styles = StyleSheet.create({
   },
 
   sectionInfoTextNoMargin: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
     fontSize: 12,
-    fontWeight: "600",
+    fontWeight: '600',
     opacity: 0.8,
     lineHeight: 18,
     marginTop: 12,

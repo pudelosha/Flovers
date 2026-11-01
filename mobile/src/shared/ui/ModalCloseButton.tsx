@@ -4,6 +4,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 type Props = {
   onPress: () => void;
+  testID?: string;
   accessibilityLabel?: string;
   style?: StyleProp<ViewStyle>;
   size?: number;
@@ -12,6 +13,7 @@ type Props = {
 
 export default function ModalCloseButton({
   onPress,
+  testID,
   accessibilityLabel = "Close",
   style,
   size = 34,
@@ -19,6 +21,7 @@ export default function ModalCloseButton({
 }: Props) {
   return (
     <Pressable
+      testID={testID}
       onPress={onPress}
       hitSlop={10}
       accessibilityRole="button"

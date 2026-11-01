@@ -84,12 +84,12 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
           if (isMenuOpen) onToggleMenu();
           onViewPhoto();
         }}>
-        <MaterialCommunityIcons name="image-outline" size={24} color="#FFFFFF" />
+        <MaterialCommunityIcons name="image-search-outline" size={24} color="#FFFFFF" />
       </Pressable>
     </View>
     {isMenuOpen && <View style={s.menuSheet}>
       <Pressable style={s.menuItem} onPress={() => action(onViewPhoto)}>
-        <MaterialCommunityIcons name="image-outline" size={18} color="#FFFFFF" style={{ marginRight: 10 }} />
+        <MaterialCommunityIcons name="image-search-outline" size={18} color="#FFFFFF" style={{ marginRight: 10 }} />
         <Text style={s.menuItemText}>{t("taskHistory.photo.view", { defaultValue: "View photo" })}</Text>
       </Pressable>
       {access.canEdit && <Pressable style={s.menuItem} onPress={() => action(onEdit)}>

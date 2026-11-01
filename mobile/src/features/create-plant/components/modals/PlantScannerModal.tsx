@@ -1,10 +1,5 @@
-import React, {
-  useState,
-  useEffect,
-  useMemo,
-  useCallback,
-  useRef,
-} from "react";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import {
   View,
   Pressable,
@@ -16,23 +11,21 @@ import {
   Alert,
   PermissionsAndroid,
   Platform,
-} from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
-import { wiz } from "../../styles/wizard.styles";
-import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
-import type { Suggestion } from "../../types/create-plant.types";
+} from 'react-native';
+
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
+import { fetchPlantProfile } from '../../../../api/services/plant-definitions.service';
+import { wiz } from '../../styles/wizard.styles';
+import { s as remindersStyles } from '../../../reminders/styles/reminders.styles';
+import type { Suggestion } from '../../types/create-plant.types';
 import {
   recognizePlantFromUri,
   type ApiRecognitionResult,
-} from "../../../../api/services/plant-recognition.service";
-import { launchCamera, launchImageLibrary } from "react-native-image-picker";
-import { useSettings } from "../../../../app/providers/SettingsProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+} from '../../../../api/services/plant-recognition.service';
+import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
+import { useSettings } from '../../../../app/providers/SettingsProvider';
 
 type Props = {
   visible: boolean;
@@ -41,7 +34,7 @@ type Props = {
 };
 
 async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
-  if (Platform.OS !== "android") return true;
+  if (Platform.OS !== 'android') return true;
 
   const perms: string[] = [
     PermissionsAndroid.PERMISSIONS.CAMERA,
@@ -51,7 +44,7 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   ].filter(Boolean) as string[];
 
   const results = await PermissionsAndroid.requestMultiple(perms);
-  return perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
+  return perms.every(p => results[p] === PermissionsAndroid.RESULTS.GRANTED);
 }
 
 function toPercent(prob01: number | undefined | null): string | null {
@@ -86,31 +79,20 @@ function toSuggestion(item: ApiRecognitionResult): Suggestion {
 }
 
 function formatPlantDisplayName(value: string | undefined | null): string {
-  return String(value || "")
-    .replace(/_/g, " ")
-    .replace(/\s+/g, " ")
+  return String(value || '')
+    .replace(/_/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
-const TranslatedText = ({
-  text,
-  style,
-}: {
-  text: string;
-  style?: any;
-}) => {
+const TranslatedText = ({ text, style }: { text: string; style?: any }) => {
   return <Text style={style}>{text}</Text>;
 };
 
-export default function PlantScannerModal({
-  visible,
-  onClose,
-  onPlantDetected,
-}: Props) {
+export default function PlantScannerModal({ visible, onClose, onPlantDetected }: Props) {
   const { settings } = useSettings();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
 
   void settings;
@@ -119,15 +101,13 @@ export default function PlantScannerModal({
   const [isPicking, setIsPicking] = useState(false);
   const [isRecognizing, setIsRecognizing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [candidates, setCandidates] = useState<ApiRecognitionResult[] | null>(
-    null
-  );
+  const [candidates, setCandidates] = useState<ApiRecognitionResult[] | null>(null);
 
   const busy = isPicking || isRecognizing;
 
-  const stage: "photo" | "results" = useMemo(
-    () => (candidates && candidates.length > 0 ? "results" : "photo"),
-    [candidates]
+  const stage: 'photo' | 'results' = useMemo(
+    () => (candidates && candidates.length > 0 ? 'results' : 'photo'),
+    [candidates],
   );
 
   const closestMatch = candidates?.[0] ?? null;
@@ -141,109 +121,82 @@ export default function PlantScannerModal({
 
       return translated;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const i18nText = useMemo(
     () => ({
-      title: getTranslation("createPlant.scannerModal.title", "Scan Plant"),
+      title: getTranslation('createPlant.scannerModal.title', 'Scan Plant'),
       selectPlant: getTranslation(
-        "createPlant.scannerModal.selectPlant",
-        "Select the detected plant"
+        'createPlant.scannerModal.selectPlant',
+        'Select the detected plant',
       ),
       scanInstructions: getTranslation(
-        "createPlant.scannerModal.scanInstructions",
-        "Take a photo or choose one from your gallery. Please use a clear, good-quality image that shows the plant's leaf shape well, centered and not blocked by other plants or objects."
+        'createPlant.scannerModal.scanInstructions',
+        "Take a photo or choose one from your gallery. Please use a clear, good-quality image that shows the plant's leaf shape well, centered and not blocked by other plants or objects.",
       ),
-      noPhoto: getTranslation(
-        "createPlant.scannerModal.noPhoto",
-        "No photo selected"
-      ),
-      takePhoto: getTranslation(
-        "createPlant.scannerModal.takePhoto",
-        "Take a photo"
-      ),
-      fromGallery: getTranslation(
-        "createPlant.scannerModal.fromGallery",
-        "From gallery"
-      ),
-      recognize: getTranslation(
-        "createPlant.scannerModal.recognize",
-        "Recognize plant"
-      ),
+      noPhoto: getTranslation('createPlant.scannerModal.noPhoto', 'No photo selected'),
+      takePhoto: getTranslation('createPlant.scannerModal.takePhoto', 'Take a photo'),
+      fromGallery: getTranslation('createPlant.scannerModal.fromGallery', 'From gallery'),
+      recognize: getTranslation('createPlant.scannerModal.recognize', 'Recognize plant'),
       cameraRequired: getTranslation(
-        "createPlant.scannerModal.cameraRequired",
-        "Permission required"
+        'createPlant.scannerModal.cameraRequired',
+        'Permission required',
       ),
       cameraPermissionMessage: getTranslation(
-        "createPlant.scannerModal.cameraPermissionMessage",
-        "Please grant camera and media permissions to take a photo."
+        'createPlant.scannerModal.cameraPermissionMessage',
+        'Please grant camera and media permissions to take a photo.',
       ),
       libraryRequired: getTranslation(
-        "createPlant.scannerModal.libraryRequired",
-        "Permission required"
+        'createPlant.scannerModal.libraryRequired',
+        'Permission required',
       ),
       libraryPermissionMessage: getTranslation(
-        "createPlant.scannerModal.libraryPermissionMessage",
-        "Please grant media permissions to pick a photo."
+        'createPlant.scannerModal.libraryPermissionMessage',
+        'Please grant media permissions to pick a photo.',
       ),
-      cameraError: getTranslation(
-        "createPlant.scannerModal.cameraError",
-        "Camera error"
-      ),
-      libraryError: getTranslation(
-        "createPlant.scannerModal.libraryError",
-        "Picker error"
-      ),
+      cameraError: getTranslation('createPlant.scannerModal.cameraError', 'Camera error'),
+      libraryError: getTranslation('createPlant.scannerModal.libraryError', 'Picker error'),
       cameraFailure: getTranslation(
-        "createPlant.scannerModal.cameraFailure",
-        "Failed to open camera."
+        'createPlant.scannerModal.cameraFailure',
+        'Failed to open camera.',
       ),
       libraryFailure: getTranslation(
-        "createPlant.scannerModal.libraryFailure",
-        "Failed to open gallery."
+        'createPlant.scannerModal.libraryFailure',
+        'Failed to open gallery.',
       ),
       recognitionFailure: getTranslation(
-        "createPlant.scannerModal.recognitionFailure",
-        "Failed to recognize the plant."
+        'createPlant.scannerModal.recognitionFailure',
+        'Failed to recognize the plant.',
       ),
       noResults: getTranslation(
-        "createPlant.scannerModal.noResults",
-        "No results returned. Try a clearer photo."
+        'createPlant.scannerModal.noResults',
+        'No results returned. Try a clearer photo.',
       ),
       resultsDescription: getTranslation(
-        "createPlant.scannerModal.resultsDescription",
-        "These are the top 3 matches based on the provided picture. Tap one of the 3 images below to select the plant definition."
+        'createPlant.scannerModal.resultsDescription',
+        'These are the top 3 matches based on the provided picture. Tap one of the 3 images below to select the plant definition.',
       ),
-      matchRate: getTranslation(
-        "createPlant.scannerModal.matchRate",
-        "Match rate"
-      ),
-      closestMatch: getTranslation(
-        "createPlant.scannerModal.closestMatch",
-        "Closest match"
-      ),
-      back: getTranslation("createPlant.scannerModal.back", "Back"),
-      close: getTranslation("createPlant.scannerModal.close", "Close"),
+      matchRate: getTranslation('createPlant.scannerModal.matchRate', 'Match rate'),
+      closestMatch: getTranslation('createPlant.scannerModal.closestMatch', 'Closest match'),
+      back: getTranslation('createPlant.scannerModal.back', 'Back'),
+      close: getTranslation('createPlant.scannerModal.close', 'Close'),
       plantRecognitionErrorTitle: getTranslation(
-        "createPlant.scannerModal.plantRecognitionErrorTitle",
-        "Plant Recognition Error"
+        'createPlant.scannerModal.plantRecognitionErrorTitle',
+        'Plant Recognition Error',
       ),
       plantRecognitionErrorMessage: getTranslation(
-        "createPlant.scannerModal.plantRecognitionErrorMessage",
-        "Failed to fetch plant details for {{key}}. {{message}}"
+        'createPlant.scannerModal.plantRecognitionErrorMessage',
+        'Failed to fetch plant details for {{key}}. {{message}}',
       ),
-      tryAgain: getTranslation(
-        "createPlant.scannerModal.tryAgain",
-        "Please try again."
-      ),
+      tryAgain: getTranslation('createPlant.scannerModal.tryAgain', 'Please try again.'),
     }),
-    [getTranslation]
+    [getTranslation],
   );
 
   useEffect(() => {
     if (visible) {
-      console.log("PlantScannerModal rendering with language:", currentLanguage);
+      console.log('PlantScannerModal rendering with language:', currentLanguage);
     }
   }, [currentLanguage, visible]);
 
@@ -270,7 +223,7 @@ export default function PlantScannerModal({
     const plant = toSuggestion(item);
     const key = item.external_id;
 
-    console.log("Fetching plant profile for key:", key);
+    console.log('Fetching plant profile for key:', key);
 
     try {
       const plantProfile = await fetchPlantProfile(key, {
@@ -286,17 +239,17 @@ export default function PlantScannerModal({
 
       onClose();
     } catch (error: any) {
-      console.error("Error while fetching plant profile for key:", key, error);
+      console.error('Error while fetching plant profile for key:', key, error);
 
       Alert.alert(
         i18nText.plantRecognitionErrorTitle,
-        t("createPlant.scannerModal.plantRecognitionErrorMessage", {
+        t('createPlant.scannerModal.plantRecognitionErrorMessage', {
           key,
           message: error?.message || i18nText.tryAgain,
           defaultValue: `Failed to fetch plant details for ${key}. ${
             error?.message || i18nText.tryAgain
           }`,
-        })
+        }),
       );
     }
   };
@@ -315,7 +268,7 @@ export default function PlantScannerModal({
       }
 
       const res = await launchCamera({
-        mediaType: "photo",
+        mediaType: 'photo',
         includeBase64: false,
         quality: 0.92,
       });
@@ -354,7 +307,7 @@ export default function PlantScannerModal({
       }
 
       const res = await launchImageLibrary({
-        mediaType: "photo",
+        mediaType: 'photo',
         selectionLimit: 1,
         includeBase64: false,
         quality: 0.92,
@@ -404,11 +357,7 @@ export default function PlantScannerModal({
       setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
     } catch (e: any) {
       setCandidates(null);
-      setError(
-        e?.message ??
-          (e?.response?.data?.detail as string) ??
-          i18nText.recognitionFailure
-      );
+      setError(e?.message ?? (e?.response?.data?.detail as string) ?? i18nText.recognitionFailure);
     } finally {
       setIsRecognizing(false);
     }
@@ -416,139 +365,101 @@ export default function PlantScannerModal({
 
   return (
     <>
-      <Pressable
-        style={remindersStyles.promptBackdrop}
-        onPress={() => {
+      <AppModalFrame
+        visible
+        onClose={() => {
           if (!busy) onClose();
         }}
-      />
-
-      <View style={remindersStyles.promptWrap}>
-        <View style={remindersStyles.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            style={
-              {
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0,0,0,0.35)",
-              } as any
-            }
-          />
-        </View>
-
-        <View
-          style={[
-            remindersStyles.promptInner,
-            {
-              maxHeight: "86%",
-              position: "relative",
-              paddingBottom: insets.bottom || 12,
-            },
-          ]}
+        closeLabel={i18nText.close}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
+          style={appModalStyles.scroll}
+          ref={scrollRef}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+          showsVerticalScrollIndicator={false}
         >
-          <ScrollView
-            ref={scrollRef}
-            keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[
-              styles.scrollContent,
-              {
-                paddingTop: 44,
-                paddingBottom: 120,
-              },
+          <Text
+            style={[
+              remindersStyles.promptTitle,
+              styles.modalTitle,
+              stage === 'results' ? styles.resultsTitle : null,
             ]}
-            showsVerticalScrollIndicator={false}
           >
-            <Text
-              style={[
-                remindersStyles.promptTitle,
-                styles.modalTitle,
-                stage === "results" ? styles.resultsTitle : null,
-              ]}
-            >
-              {stage === "photo" ? i18nText.title : i18nText.selectPlant}
-            </Text>
+            {stage === 'photo' ? i18nText.title : i18nText.selectPlant}
+          </Text>
 
-            {stage === "photo" ? (
-              <>
-                <TranslatedText
-                  text={i18nText.scanInstructions}
-                  style={wiz.subtitle}
-                />
+          {stage === 'photo' ? (
+            <>
+              <TranslatedText text={i18nText.scanInstructions} style={wiz.subtitle} />
 
-                <View style={[wiz.hero, styles.previewFrame]}>
-                  {photoUri ? (
-                    <Image
-                      source={{ uri: photoUri }}
-                      style={{ width: "100%", height: "100%" }}
-                      resizeMode="cover"
-                    />
-                  ) : (
-                    <View style={styles.previewPlaceholder}>
-                      <MaterialCommunityIcons
-                        name="image-plus"
-                        size={28}
-                        color="#FFFFFF"
-                      />
-                      <Text style={styles.previewText}>{i18nText.noPhoto}</Text>
-                    </View>
-                  )}
-                </View>
+              <View style={[wiz.hero, styles.previewFrame]}>
+                {photoUri ? (
+                  <Image
+                    source={{ uri: photoUri }}
+                    style={{ width: '100%', height: '100%' }}
+                    resizeMode="cover"
+                  />
+                ) : (
+                  <View style={styles.previewPlaceholder}>
+                    <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
+                    <Text style={styles.previewText}>{i18nText.noPhoto}</Text>
+                  </View>
+                )}
+              </View>
 
-                <View style={styles.actionsRow}>
-                  <Pressable
-                    disabled={busy}
-                    style={[styles.actionCard, busy && { opacity: 0.6 }]}
-                    onPress={doLaunchCamera}
-                  >
-                    <MaterialCommunityIcons
-                      name="camera"
-                      size={24}
-                      color="#FFFFFF"
-                    />
-                    <Text style={styles.actionLabel}>{i18nText.takePhoto}</Text>
-                  </Pressable>
-
-                  <Pressable
-                    disabled={busy}
-                    style={[styles.actionCard, busy && { opacity: 0.6 }]}
-                    onPress={doLaunchLibrary}
-                  >
-                    <MaterialCommunityIcons
-                      name="image-multiple"
-                      size={24}
-                      color="#FFFFFF"
-                    />
-                    <Text style={styles.actionLabel}>{i18nText.fromGallery}</Text>
-                  </Pressable>
-                </View>
-
+              <View style={styles.actionsRow}>
                 <Pressable
-                  disabled={!photoUri || isRecognizing}
-                  onPress={handleRecognize}
+                  disabled={busy}
                   style={[
-                    wiz.actionFull,
-                    styles.recognizeButton,
-                    {
-                      marginTop: 12,
-                      backgroundColor: "rgba(11,114,133,0.9)",
-                      opacity: !photoUri || isRecognizing ? 0.45 : 1,
+                    styles.actionCard,
+                    busy && {
+                      opacity: 0.6,
                     },
                   ]}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                  onPress={doLaunchCamera}
                 >
-                  <View style={styles.recognizeButtonContent}>
-                    {isRecognizing ? (
-                      <ActivityIndicator size="small" color="#FFFFFF" />
-                    ) : (
-                      <>
+                  <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
+                  <Text style={styles.actionLabel}>{i18nText.takePhoto}</Text>
+                </Pressable>
+
+                <Pressable
+                  disabled={busy}
+                  style={[
+                    styles.actionCard,
+                    busy && {
+                      opacity: 0.6,
+                    },
+                  ]}
+                  onPress={doLaunchLibrary}
+                >
+                  <MaterialCommunityIcons name="image-multiple" size={24} color="#FFFFFF" />
+                  <Text style={styles.actionLabel}>{i18nText.fromGallery}</Text>
+                </Pressable>
+              </View>
+
+              <Pressable
+                disabled={!photoUri || isRecognizing}
+                onPress={handleRecognize}
+                style={[
+                  wiz.actionFull,
+                  styles.recognizeButton,
+                  {
+                    marginTop: 12,
+                    backgroundColor: 'rgba(11,114,133,0.9)',
+                    opacity: !photoUri || isRecognizing ? 0.45 : 1,
+                  },
+                ]}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+              >
+                <View style={styles.recognizeButtonContent}>
+                  {isRecognizing ? (
+                    <ActivityIndicator size="small" color="#FFFFFF" />
+                  ) : (
+                    <>
                       <MaterialCommunityIcons
                         name="leaf"
                         size={18}
@@ -557,210 +468,210 @@ export default function PlantScannerModal({
                       />
 
                       <Text
-                        style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}
+                        style={[
+                          wiz.actionText,
+                          {
+                            opacity: !photoUri ? 0.55 : 1,
+                          },
+                        ]}
                       >
                         {i18nText.recognize}
                       </Text>
-                      </>
-                    )}
+                    </>
+                  )}
+                </View>
+              </Pressable>
+
+              {error && (
+                <Text
+                  style={[
+                    wiz.subtitle,
+                    {
+                      color: '#ffdddd',
+                      marginTop: 10,
+                    },
+                  ]}
+                >
+                  {error}
+                </Text>
+              )}
+
+              <View style={styles.bottomRowFull}>
+                <Pressable
+                  style={[
+                    styles.bottomBtn,
+                    {
+                      flex: 1,
+                    },
+                  ]}
+                  onPress={() => {
+                    if (!busy) onClose();
+                  }}
+                >
+                  <Text style={styles.bottomBtnText}>{i18nText.close}</Text>
+                </Pressable>
+              </View>
+            </>
+          ) : (
+            <>
+              <Text style={[wiz.subtitle, styles.resultsDescription]}>
+                {i18nText.resultsDescription}
+              </Text>
+
+              <View style={styles.previewMiniWrap}>
+                <View style={styles.previewMiniFrame}>
+                  {photoUri ? (
+                    <Image
+                      source={{ uri: photoUri }}
+                      style={{ width: '100%', height: '100%' }}
+                      resizeMode="cover"
+                    />
+                  ) : (
+                    <View style={styles.previewPlaceholder}>
+                      <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
+                      <Text style={styles.previewText}>{i18nText.noPhoto}</Text>
+                    </View>
+                  )}
+                </View>
+
+                <View style={styles.previewArrowWrap}>
+                  <MaterialCommunityIcons
+                    name="arrow-right"
+                    size={34}
+                    color="rgba(255,255,255,0.95)"
+                  />
+                </View>
+
+                <View style={styles.closestMatchFrame}>
+                  {closestMatch?.image_thumb ? (
+                    <Image
+                      source={{ uri: closestMatch.image_thumb }}
+                      style={{ width: '100%', height: '100%' }}
+                      resizeMode="cover"
+                    />
+                  ) : (
+                    <View style={styles.candidateImagePlaceholder}>
+                      <MaterialCommunityIcons name="leaf" size={28} color="rgba(255,255,255,0.9)" />
+                    </View>
+                  )}
+
+                  <View style={styles.closestMatchBadge}>
+                    <Text style={styles.closestMatchBadgeText}>{i18nText.closestMatch}</Text>
                   </View>
+                </View>
+              </View>
+
+              <View style={{ marginTop: 12, gap: 10 }}>
+                {(candidates ?? []).slice(0, 3).map((item, idx) => {
+                  const pct = toPercent(item.probability ?? item.confidence);
+                  const pctValue = toPercentNumber(item.probability ?? item.confidence);
+
+                  return (
+                    <Pressable
+                      key={`${item.latin}-${idx}`}
+                      onPress={() => handleSelectCandidate(item)}
+                      style={styles.candidateCard}
+                      android_ripple={{ color: 'rgba(255,255,255,0.10)' }}
+                    >
+                      <View style={styles.candidateImageWrap}>
+                        {item.image_thumb ? (
+                          <Image
+                            source={{ uri: item.image_thumb }}
+                            style={styles.candidateImage}
+                            resizeMode="cover"
+                          />
+                        ) : (
+                          <View style={styles.candidateImagePlaceholder}>
+                            <MaterialCommunityIcons
+                              name="leaf"
+                              size={28}
+                              color="rgba(255,255,255,0.9)"
+                            />
+                          </View>
+                        )}
+                      </View>
+
+                      <View style={styles.candidateContent}>
+                        <Text style={styles.candidateLatin} numberOfLines={2} ellipsizeMode="tail">
+                          {formatPlantDisplayName(item.latin || item.name)}
+                        </Text>
+
+                        <View style={styles.matchMetaRow}>
+                          <Text style={styles.matchLabelText}>{i18nText.matchRate}</Text>
+                        </View>
+
+                        <View style={styles.matchBarTrack}>
+                          <View
+                            style={[
+                              styles.matchBarFill,
+                              {
+                                width: `${pctValue}%`,
+                              },
+                            ]}
+                          />
+
+                          <View style={styles.matchBarTextOverlay}>
+                            <Text style={styles.matchPercentText}>{pct ?? '0%'}</Text>
+                          </View>
+                        </View>
+                      </View>
+                    </Pressable>
+                  );
+                })}
+              </View>
+
+              {error && (
+                <Text
+                  style={[
+                    wiz.subtitle,
+                    {
+                      color: '#ffdddd',
+                      marginTop: 10,
+                    },
+                  ]}
+                >
+                  {error}
+                </Text>
+              )}
+
+              <View style={styles.bottomRowFull}>
+                <Pressable
+                  style={[
+                    styles.bottomBtn,
+                    {
+                      flex: 1,
+                    },
+                  ]}
+                  onPress={() => {
+                    if (busy) return;
+
+                    setCandidates(null);
+                    setError(null);
+
+                    setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: true }), 0);
+                  }}
+                >
+                  <Text style={styles.bottomBtnText}>{i18nText.back}</Text>
                 </Pressable>
 
-                {error && (
-                  <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 10 }]}>
-                    {error}
-                  </Text>
-                )}
-
-                <View style={styles.bottomRowFull}>
-                  <Pressable
-                    style={[styles.bottomBtn, { flex: 1 }]}
-                    onPress={() => {
-                      if (!busy) onClose();
-                    }}
-                  >
-                    <Text style={styles.bottomBtnText}>{i18nText.close}</Text>
-                  </Pressable>
-                </View>
-              </>
-            ) : (
-              <>
-                <Text style={[wiz.subtitle, styles.resultsDescription]}>
-                  {i18nText.resultsDescription}
-                </Text>
-
-                <View style={styles.previewMiniWrap}>
-                  <View style={styles.previewMiniFrame}>
-                    {photoUri ? (
-                      <Image
-                        source={{ uri: photoUri }}
-                        style={{ width: "100%", height: "100%" }}
-                        resizeMode="cover"
-                      />
-                    ) : (
-                      <View style={styles.previewPlaceholder}>
-                        <MaterialCommunityIcons
-                          name="image-plus"
-                          size={28}
-                          color="#FFFFFF"
-                        />
-                        <Text style={styles.previewText}>{i18nText.noPhoto}</Text>
-                      </View>
-                    )}
-                  </View>
-
-                  <View style={styles.previewArrowWrap}>
-                    <MaterialCommunityIcons
-                      name="arrow-right"
-                      size={34}
-                      color="rgba(255,255,255,0.95)"
-                    />
-                  </View>
-
-                  <View style={styles.closestMatchFrame}>
-                    {closestMatch?.image_thumb ? (
-                      <Image
-                        source={{ uri: closestMatch.image_thumb }}
-                        style={{ width: "100%", height: "100%" }}
-                        resizeMode="cover"
-                      />
-                    ) : (
-                      <View style={styles.candidateImagePlaceholder}>
-                        <MaterialCommunityIcons
-                          name="leaf"
-                          size={28}
-                          color="rgba(255,255,255,0.9)"
-                        />
-                      </View>
-                    )}
-
-                    <View style={styles.closestMatchBadge}>
-                      <Text style={styles.closestMatchBadgeText}>
-                        {i18nText.closestMatch}
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-
-                <View style={{ marginTop: 12, gap: 10 }}>
-                  {(candidates ?? []).slice(0, 3).map((item, idx) => {
-                    const pct = toPercent(item.probability ?? item.confidence);
-                    const pctValue = toPercentNumber(
-                      item.probability ?? item.confidence
-                    );
-
-                    return (
-                      <Pressable
-                        key={`${item.latin}-${idx}`}
-                        onPress={() => handleSelectCandidate(item)}
-                        style={styles.candidateCard}
-                        android_ripple={{ color: "rgba(255,255,255,0.10)" }}
-                      >
-                        <View style={styles.candidateImageWrap}>
-                          {item.image_thumb ? (
-                            <Image
-                              source={{ uri: item.image_thumb }}
-                              style={styles.candidateImage}
-                              resizeMode="cover"
-                            />
-                          ) : (
-                            <View style={styles.candidateImagePlaceholder}>
-                              <MaterialCommunityIcons
-                                name="leaf"
-                                size={28}
-                                color="rgba(255,255,255,0.9)"
-                              />
-                            </View>
-                          )}
-                        </View>
-
-                        <View style={styles.candidateContent}>
-                          <Text
-                            style={styles.candidateLatin}
-                            numberOfLines={2}
-                            ellipsizeMode="tail"
-                          >
-                            {formatPlantDisplayName(item.latin || item.name)}
-                          </Text>
-
-                          <View style={styles.matchMetaRow}>
-                            <Text style={styles.matchLabelText}>
-                              {i18nText.matchRate}
-                            </Text>
-                          </View>
-
-                          <View style={styles.matchBarTrack}>
-                            <View
-                              style={[
-                                styles.matchBarFill,
-                                {
-                                  width: `${pctValue}%`,
-                                },
-                              ]}
-                            />
-
-                            <View style={styles.matchBarTextOverlay}>
-                              <Text style={styles.matchPercentText}>
-                                {pct ?? "0%"}
-                              </Text>
-                            </View>
-                          </View>
-                        </View>
-                      </Pressable>
-                    );
-                  })}
-                </View>
-
-                {error && (
-                  <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 10 }]}>
-                    {error}
-                  </Text>
-                )}
-
-                <View style={styles.bottomRowFull}>
-                  <Pressable
-                    style={[styles.bottomBtn, { flex: 1 }]}
-                    onPress={() => {
-                      if (busy) return;
-
-                      setCandidates(null);
-                      setError(null);
-
-                      setTimeout(
-                        () => scrollRef.current?.scrollTo({ y: 0, animated: true }),
-                        0
-                      );
-                    }}
-                  >
-                    <Text style={styles.bottomBtnText}>{i18nText.back}</Text>
-                  </Pressable>
-
-                  <Pressable
-                    style={[styles.bottomBtn, { flex: 1 }]}
-                    onPress={() => {
-                      if (!busy) onClose();
-                    }}
-                  >
-                    <Text style={styles.bottomBtnText}>{i18nText.close}</Text>
-                  </Pressable>
-                </View>
-              </>
-            )}
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={() => {
-              if (!busy) onClose();
-            }}
-            accessibilityLabel={i18nText.close}
-            style={{
-              top: 8,
-              right: 8,
-              opacity: busy ? 0.5 : 1,
-            }}
-          />
-        </View>
-      </View>
+                <Pressable
+                  style={[
+                    styles.bottomBtn,
+                    {
+                      flex: 1,
+                    },
+                  ]}
+                  onPress={() => {
+                    if (!busy) onClose();
+                  }}
+                >
+                  <Text style={styles.bottomBtnText}>{i18nText.close}</Text>
+                </Pressable>
+              </View>
+            </>
+          )}
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
@@ -786,42 +697,42 @@ const styles = StyleSheet.create({
   previewFrame: {
     marginTop: 8,
     marginBottom: 10,
-    overflow: "hidden",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.08)",
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.08)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.18)",
+    borderColor: 'rgba(255,255,255,0.18)',
   },
   previewPlaceholder: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   previewText: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.92)',
+    fontWeight: '600',
     marginTop: 8,
   },
 
   actionsRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginBottom: 4,
     gap: 10,
   },
   actionCard: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingVertical: 14,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.16)",
+    backgroundColor: 'rgba(255,255,255,0.16)',
   },
   actionLabel: {
     marginTop: 6,
     fontSize: 14,
-    fontWeight: "600",
-    color: "#FFFFFF",
+    fontWeight: '600',
+    color: '#FFFFFF',
   },
   recognizeButton: {
     height: 44,
@@ -829,169 +740,169 @@ const styles = StyleSheet.create({
   },
   recognizeButtonContent: {
     height: 20,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
     gap: 10,
   },
 
   previewMiniWrap: {
     marginTop: 10,
-    flexDirection: "row",
-    alignItems: "center",
-    width: "100%",
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
     gap: 12,
   },
   previewMiniFrame: {
     flex: 43,
     aspectRatio: 0.92,
     borderRadius: 16,
-    overflow: "hidden",
-    backgroundColor: "rgba(255,255,255,0.08)",
+    overflow: 'hidden',
+    backgroundColor: 'rgba(255,255,255,0.08)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.18)",
+    borderColor: 'rgba(255,255,255,0.18)',
   },
   previewArrowWrap: {
     flex: 14,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     zIndex: 2,
   },
   closestMatchFrame: {
     flex: 43,
     aspectRatio: 0.92,
     borderRadius: 16,
-    overflow: "hidden",
-    backgroundColor: "rgba(255,255,255,0.08)",
+    overflow: 'hidden',
+    backgroundColor: 'rgba(255,255,255,0.08)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.18)",
-    position: "relative",
+    borderColor: 'rgba(255,255,255,0.18)',
+    position: 'relative',
   },
   closestMatchBadge: {
-    position: "absolute",
+    position: 'absolute',
     left: 8,
     right: 8,
     bottom: 8,
     paddingHorizontal: 8,
     paddingVertical: 5,
     borderRadius: 10,
-    backgroundColor: "rgba(0,0,0,0.58)",
+    backgroundColor: 'rgba(0,0,0,0.58)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.16)",
+    borderColor: 'rgba(255,255,255,0.16)',
   },
   closestMatchBadgeText: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
     fontSize: 12,
-    fontWeight: "800",
-    textAlign: "center",
+    fontWeight: '800',
+    textAlign: 'center',
   },
 
   candidateCard: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     height: 108,
     paddingVertical: 12,
     paddingHorizontal: 14,
     borderRadius: 18,
-    backgroundColor: "rgba(255,255,255,0.14)",
+    backgroundColor: 'rgba(255,255,255,0.14)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.14)",
-    overflow: "hidden",
+    borderColor: 'rgba(255,255,255,0.14)',
+    overflow: 'hidden',
     gap: 14,
   },
   candidateImageWrap: {
     width: 84,
     height: 84,
     borderRadius: 14,
-    overflow: "hidden",
-    backgroundColor: "rgba(255,255,255,0.08)",
+    overflow: 'hidden',
+    backgroundColor: 'rgba(255,255,255,0.08)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.14)",
+    borderColor: 'rgba(255,255,255,0.14)',
   },
   candidateImage: {
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
   },
   candidateImagePlaceholder: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.08)",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.08)',
   },
   candidateContent: {
     flex: 1,
     height: 84,
-    justifyContent: "center",
+    justifyContent: 'center',
     minWidth: 0,
-    overflow: "hidden",
+    overflow: 'hidden',
   },
   candidateName: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 15,
   },
   candidateLatin: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 15,
     flexShrink: 1,
     lineHeight: 18,
   },
   candidateRight: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 10,
     marginLeft: 10,
   },
   matchMetaRow: {
     marginTop: 4,
     marginBottom: 4,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-start",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   matchLabelText: {
-    color: "rgba(255,255,255,0.82)",
-    fontWeight: "700",
+    color: 'rgba(255,255,255,0.82)',
+    fontWeight: '700',
     fontSize: 11,
     lineHeight: 13,
   },
   matchBarTrack: {
-    width: "100%",
+    width: '100%',
     height: 18,
     borderRadius: 999,
-    overflow: "hidden",
-    backgroundColor: "rgba(255,255,255,0.16)",
+    overflow: 'hidden',
+    backgroundColor: 'rgba(255,255,255,0.16)',
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.10)",
-    position: "relative",
-    justifyContent: "center",
+    borderColor: 'rgba(255,255,255,0.10)',
+    position: 'relative',
+    justifyContent: 'center',
   },
   matchBarFill: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
     top: 0,
     bottom: 0,
     minWidth: 36,
     borderRadius: 999,
-    backgroundColor: "rgba(11,114,133,0.95)",
+    backgroundColor: 'rgba(11,114,133,0.95)',
   },
   matchBarTextOverlay: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingHorizontal: 6,
   },
   matchPercentText: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 12,
     lineHeight: 14,
-    textAlign: "center",
+    textAlign: 'center',
     paddingVertical: 1,
   },
 
@@ -999,33 +910,33 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 999,
-    backgroundColor: "rgba(11,114,133,0.35)",
+    backgroundColor: 'rgba(11,114,133,0.35)',
     borderWidth: 0,
-    borderColor: "rgba(11,114,133,0.65)",
+    borderColor: 'rgba(11,114,133,0.65)',
   },
   pillText: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 12,
   },
 
   bottomRowFull: {
     marginTop: 14,
-    flexDirection: "row",
-    width: "100%",
+    flexDirection: 'row',
+    width: '100%',
     gap: 10,
     paddingBottom: 12,
   },
   bottomBtn: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingVertical: 12,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.14)",
+    backgroundColor: 'rgba(255,255,255,0.14)',
   },
   bottomBtnText: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 14,
   },
 });

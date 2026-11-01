@@ -109,6 +109,8 @@ export default function PlantDetailsScreen() {
   const idFromNav: number | undefined = route.params?.plantId ?? route.params?.id;
 
   const [loading, setLoading] = useState(true);
+  const [detailsRevision, setDetailsRevision] = useState(0);
+  const [readyImageKey, setReadyImageKey] = useState<string | null>(null);
   const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
   const [error, setError] = useState<string>("");
 
@@ -257,9 +259,11 @@ export default function PlantDetailsScreen() {
     if (qrFromNav) {
       const full = await fetchPlantDetailsByQr(qrFromNav);
       setDetails(full);
+      setDetailsRevision(value => value + 1);
     } else if (idFromNav) {
       const full = await fetchPlantDetailsById(Number(idFromNav));
       setDetails(full);
+      setDetailsRevision(value => value + 1);
     }
   }, [qrFromNav, idFromNav, tr]);
 
@@ -732,7 +736,11 @@ export default function PlantDetailsScreen() {
     expiresAt: details?.plant.access?.expires_at,
   }], [details?.plant.photo, details?.plant.access?.expires_at]);
   const photoPreload = usePlantPhotoPreload(photoTargets, !loading && !error, photoReloadSignal);
-  const isInitialLoading = !error && (loading || photoPreload.loading);
+  const imageReadyKey = `${details?.plant.id ?? ""}:${detailsRevision}:${photoReloadSignal}`;
+  const onImageReadyChange = useCallback((ready: boolean) => {
+    setReadyImageKey(ready ? imageReadyKey : null);
+  }, [imageReadyKey]);
+  const isInitialLoading = !error && (loading || photoPreload.loading || (!!details && readyImageKey !== imageReadyKey));
   const entryStyle = useScreenEntryAnimation(!isInitialLoading, isFocused);
 
   return (
@@ -746,10 +754,13 @@ export default function PlantDetailsScreen() {
         showSeparator={false}
       />
 
-      <Animated.View style={[{ flex: 1 }, !isInitialLoading && entryStyle]}>
-        {isInitialLoading ? (
-          <CenteredSpinner />
-        ) : error ? (
+      <View style={{ flex: 1 }}>
+      <Animated.View testID="plant-details-content"
+        pointerEvents={isInitialLoading ? "none" : "auto"}
+        accessibilityElementsHidden={isInitialLoading}
+        importantForAccessibility={isInitialLoading ? "no-hide-descendants" : "auto"}
+        style={[{ flex: 1 }, entryStyle, isInitialLoading && { opacity: 0 }]}>
+        {error ? (
           <View style={styles.centerBox}>
             <Text style={styles.title}>
               {tr("plantDetails.states.error.title", "Error")}
@@ -783,6 +794,7 @@ export default function PlantDetailsScreen() {
                   collapseMenusSignal={dismissMenusTick}
                   onTileTouch={dismissMenus}
                   photoReloadSignal={photoReloadSignal}
+                  onImageReadyChange={onImageReadyChange}
                   onOpenDefinition={(plantDefinitionId) => {
                     setDismissMenusTick((t) => t + 1);
                     openDefinition(plantDefinitionId);
@@ -884,6 +896,8 @@ export default function PlantDetailsScreen() {
           </ScrollView>
         )}
       </Animated.View>
+      {isInitialLoading && <CenteredSpinner overlay />}
+      </View>
 
       {(editLoading || saving) && (
         <View

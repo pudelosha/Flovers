@@ -53,7 +53,7 @@ it("waits for server confirmation, blocks duplicate taps/close, then clears only
   const view = setup(); enter(view);
   fireEvent.press(view.getByText("profile.common.delete"));
   fireEvent.press(view.getByText("profileModals.common.deleting"));
-  fireEvent.press(view.getByRole("button", { name: "profile.common.close" }));
+  fireEvent.press(view.getByTestId("app-modal-close"));
   expect(remove).toHaveBeenCalledTimes(1);
   expect(photo).not.toHaveBeenCalled(); expect(mockLogout).not.toHaveBeenCalled();
   expect(view.onClose).not.toHaveBeenCalled();

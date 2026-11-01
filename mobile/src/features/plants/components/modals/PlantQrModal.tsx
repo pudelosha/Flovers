@@ -1,13 +1,13 @@
-import React, { useCallback, useEffect, useRef } from "react";
-import { View, Text, Pressable, ScrollView, StyleSheet } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import QRCode from "react-native-qrcode-svg";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useCallback, useEffect, useRef } from 'react';
+import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native';
 
-import { s } from "../../styles/plants.styles";
+import QRCode from 'react-native-qrcode-svg';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
+
+import { s } from '../../styles/plants.styles';
 
 type Props = {
   visible: boolean;
@@ -37,9 +37,9 @@ export default function PlantQrModal({
       void currentLanguage;
       const txt = t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const setQrInstance = useCallback(
@@ -47,7 +47,7 @@ export default function PlantQrModal({
       qrRef.current = ref;
       onQrRef?.(ref);
     },
-    [onQrRef]
+    [onQrRef],
   );
 
   useEffect(() => {
@@ -60,143 +60,133 @@ export default function PlantQrModal({
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onClose} />
+      <AppModalFrame
+        visible
+        onClose={onClose}
+        closeLabel={tr('plantsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
+          style={appModalStyles.scroll}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={appModalStyles.scrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <Text style={s.promptTitle}>{tr('plantsModals.qr.title', 'Plant QR code')}</Text>
 
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
+          <Text
+            style={[
+              s.confirmText,
+              {
+                marginBottom: 10,
+              },
+            ]}
+          >
+            {tr(
+              'plantsModals.qr.p1',
+              'Each plant has a unique QR code. Scanning it in the app opens this plant instantly.',
+            )}{' '}
+            <Text style={{ fontWeight: '800' }}>({plantName})</Text>.
+          </Text>
+
+          <Text
+            style={[
+              s.confirmText,
+              {
+                marginBottom: 14,
+              },
+            ]}
+          >
+            {tr(
+              'plantsModals.qr.p2',
+              'You can save or send the QR code, print it, and attach it to the pot for quick access later.',
+            )}
+          </Text>
 
           <View
-            pointerEvents="none"
             style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            } as any}
-          />
-        </View>
-
-        <View
-          style={[
-            s.promptInner,
-            {
-              maxHeight: "86%",
-              position: "relative",
-            },
-          ]}
-        >
-          <ScrollView
-            keyboardShouldPersistTaps="handled"
-            contentContainerStyle={{
-              paddingTop: 44,
-              paddingBottom: 120,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: 4,
+              marginBottom: 16,
             }}
-            showsVerticalScrollIndicator={false}
           >
-            <Text style={s.promptTitle}>
-              {tr("plantsModals.qr.title", "Plant QR code")}
-            </Text>
+            <QRCode value={qrValue} size={220} getRef={setQrInstance} />
+          </View>
 
-            <Text style={[s.confirmText, { marginBottom: 10 }]}>
-              {tr(
-                "plantsModals.qr.p1",
-                "Each plant has a unique QR code. Scanning it in the app opens this plant instantly."
-              )}{" "}
-              <Text style={{ fontWeight: "800" }}>({plantName})</Text>.
-            </Text>
-
-            <Text style={[s.confirmText, { marginBottom: 14 }]}>
-              {tr(
-                "plantsModals.qr.p2",
-                "You can save or send the QR code, print it, and attach it to the pot for quick access later."
-              )}
-            </Text>
-
-            <View
-              style={{
-                alignItems: "center",
-                justifyContent: "center",
-                marginTop: 4,
-                marginBottom: 16,
-              }}
+          <View
+            style={[
+              s.promptButtonsRow,
+              {
+                justifyContent: 'space-between',
+              },
+            ]}
+          >
+            <Pressable
+              style={[
+                s.promptBtn,
+                s.promptPrimary,
+                styles.actionBtn,
+                {
+                  marginRight: 8,
+                },
+              ]}
+              android_ripple={{ color: 'rgba(255,255,255,0.16)' }}
+              onPress={onPressSave}
             >
-              <QRCode value={qrValue} size={220} getRef={setQrInstance} />
-            </View>
+              <MaterialCommunityIcons
+                name="content-save-outline"
+                size={18}
+                color="#FFFFFF"
+                style={{ marginRight: 6 }}
+              />
 
-            <View style={[s.promptButtonsRow, { justifyContent: "space-between" }]}>
-              <Pressable
-                style={[
-                  s.promptBtn,
-                  s.promptPrimary,
-                  styles.actionBtn,
-                  { marginRight: 8 },
-                ]}
-                android_ripple={{ color: "rgba(255,255,255,0.16)" }}
-                onPress={onPressSave}
-              >
-                <MaterialCommunityIcons
-                  name="content-save-outline"
-                  size={18}
-                  color="#FFFFFF"
-                  style={{ marginRight: 6 }}
-                />
+              <Text style={s.promptPrimaryText}>{tr('plantsModals.qr.save', 'Save')}</Text>
+            </Pressable>
 
-                <Text style={s.promptPrimaryText}>
-                  {tr("plantsModals.qr.save", "Save")}
-                </Text>
-              </Pressable>
+            <Pressable
+              style={[
+                s.promptBtn,
+                s.promptPrimary,
+                styles.actionBtn,
+                {
+                  marginLeft: 8,
+                },
+              ]}
+              android_ripple={{ color: 'rgba(255,255,255,0.16)' }}
+              onPress={onPressEmail}
+            >
+              <MaterialCommunityIcons
+                name="email-outline"
+                size={18}
+                color="#FFFFFF"
+                style={{ marginRight: 6 }}
+              />
 
-              <Pressable
-                style={[
-                  s.promptBtn,
-                  s.promptPrimary,
-                  styles.actionBtn,
-                  { marginLeft: 8 },
-                ]}
-                android_ripple={{ color: "rgba(255,255,255,0.16)" }}
-                onPress={onPressEmail}
-              >
-                <MaterialCommunityIcons
-                  name="email-outline"
-                  size={18}
-                  color="#FFFFFF"
-                  style={{ marginRight: 6 }}
-                />
+              <Text style={s.promptPrimaryText}>{tr('plantsModals.qr.email', 'Send')}</Text>
+            </Pressable>
+          </View>
 
-                <Text style={s.promptPrimaryText}>
-                  {tr("plantsModals.qr.email", "Send")}
-                </Text>
-              </Pressable>
-            </View>
-
-            <View style={[s.promptButtonsRow, { justifyContent: "flex-end" }]}>
-              <Pressable
-                style={s.promptBtn}
-                android_ripple={{ color: "rgba(255,255,255,0.16)" }}
-                onPress={onClose}
-              >
-                <Text style={s.promptBtnText}>
-                  {tr("plantsModals.common.close", "Close")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={onClose}
-            accessibilityLabel={tr("plantsModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+          <View
+            style={[
+              s.promptButtonsRow,
+              {
+                justifyContent: 'flex-end',
+              },
+            ]}
+          >
+            <Pressable
+              style={s.promptBtn}
+              android_ripple={{ color: 'rgba(255,255,255,0.16)' }}
+              onPress={onClose}
+            >
+              <Text style={s.promptBtnText}>{tr('plantsModals.common.close', 'Close')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
@@ -204,8 +194,8 @@ export default function PlantQrModal({
 const styles = StyleSheet.create({
   actionBtn: {
     flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

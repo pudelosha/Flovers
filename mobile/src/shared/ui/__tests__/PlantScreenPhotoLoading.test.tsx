@@ -11,6 +11,7 @@ const mockT = (key: string, values?: any) => values?.defaultValue ?? key;
 const mockNavigation = { navigate: jest.fn(), setParams: jest.fn() };
 let mockRoute: any = { params: {} };
 let mockPhotoLoading = true;
+let mockNativeImageReady = false;
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
 jest.mock("@react-navigation/native", () => ({
   useNavigation: () => mockNavigation,
@@ -34,8 +35,11 @@ jest.mock("../TopSnackbar", () => () => null);
 jest.mock("../FAB", () => () => null);
 jest.mock("../../../features/plants/components/PlantTile", () => (props: any) =>
   require("react").createElement(require("react-native").Text, { testID: "plant-tile" }, props.plant.name));
-jest.mock("../../../features/plant-details/components/PlantInfoTile", () => (props: any) =>
-  require("react").createElement(require("react-native").Text, { testID: "plant-details-tile" }, props.plant.display_name));
+jest.mock("../../../features/plant-details/components/PlantInfoTile", () => (props: any) => {
+  const React = require("react");
+  React.useEffect(() => { props.onImageReadyChange?.(mockNativeImageReady); }, [props.onImageReadyChange, mockNativeImageReady]);
+  return React.createElement(require("react-native").Text, { testID: "plant-details-tile" }, props.plant.display_name);
+});
 jest.mock("../../../features/plant-details/components/PlantLatestReadingsTile", () => () => null);
 jest.mock("../../../features/plant-details/components/PlantRemindersTile", () => () => null);
 jest.mock("../../../features/plant-details/components/PlantQrTile", () => () => null);
@@ -54,7 +58,7 @@ const photo = { id: "photo-1", url: "/private-photo/", thumbnail_url: "/private-
   framing: { focal_x: 0.5, focal_y: 0.5, zoom: 2 }, byte_size: 90000 };
 const plant = { id: 7, display_name: "Bird", photo, plant_definition: { id: 1, name: "Bird of paradise", image: "/catalogue.jpg" } };
 beforeEach(() => {
-  jest.clearAllMocks(); mockPhotoLoading = true; mockRoute = { params: {} };
+  jest.clearAllMocks(); mockPhotoLoading = true; mockNativeImageReady = false; mockRoute = { params: {} };
   (fetchPlantInstances as jest.Mock).mockResolvedValue([plant]);
   (fetchPlantDetailsById as jest.Mock).mockResolvedValue({ plant, latestReadings: null, deviceLinked: false, sensors: {}, reminders: [] });
 });
@@ -72,7 +76,7 @@ it("waits for the Plants screen's custom photo after plant metadata arrives", as
   expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
 });
 
-it("waits for Plant Details photo bytes before showing any plant tile", async () => {
+it("waits for Plant Details metadata, private bytes and native image decoding before showing the screen", async () => {
   mockRoute = { params: { id: 7 } };
   const view = render(<PlantDetailsScreen />);
   await waitFor(() => expect(usePlantPhotoPreload).toHaveBeenLastCalledWith([
@@ -82,6 +86,24 @@ it("waits for Plant Details photo bytes before showing any plant tile", async ()
   expect(view.queryByTestId("plant-details-tile")).toBeNull();
   mockPhotoLoading = false;
   view.rerender(<PlantDetailsScreen />);
+  expect(view.queryByTestId("plant-details-tile")).toBeNull();
+  expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
+  mockNativeImageReady = true;
+  view.rerender(<PlantDetailsScreen />);
   expect(view.getByTestId("plant-details-tile").props.children).toBe("Bird");
   expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+});
+
+
+it("also waits for a definition image when the plant has no private photo", async () => {
+  mockRoute = { params: { id: 7 } };
+  mockPhotoLoading = false;
+  (fetchPlantDetailsById as jest.Mock).mockResolvedValue({ plant: { ...plant, photo: null }, latestReadings: null, deviceLinked: false, sensors: {}, reminders: [] });
+  const view = render(<PlantDetailsScreen />);
+  await waitFor(() => expect(fetchPlantDetailsById).toHaveBeenCalled());
+  expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
+  expect(view.queryByTestId("plant-details-tile")).toBeNull();
+  mockNativeImageReady = true;
+  view.rerender(<PlantDetailsScreen />);
+  expect(view.getByTestId("plant-details-tile")).toBeTruthy();
 });

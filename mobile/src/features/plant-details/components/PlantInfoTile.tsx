@@ -39,6 +39,7 @@ type Props = {
    * Parent should bump this after image change/removal.
    */
   photoReloadSignal?: number;
+  onImageReadyChange?: (ready: boolean) => void;
 };
 
 function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
@@ -51,8 +52,8 @@ function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
   return null;
 }
 
-function ImageMasked({ uri }: { uri: string }) {
-  return <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
+function ImageMasked({ uri, onLoad, onError }: { uri: string; onLoad: () => void; onError: () => void }) {
+  return <ImageBackground source={{ uri }} onLoad={onLoad} onError={onError} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
 }
 
 /** RN Image cache-buster for local file URIs */
@@ -123,6 +124,7 @@ export default function PlantInfoTile({
   onOpenEditPlant,
   onOpenChangeImage,
   photoReloadSignal,
+  onImageReadyChange,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -147,6 +149,8 @@ export default function PlantInfoTile({
   const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] = useState(false);
 
   // local photo uri for THIS plant id
+  const [loadedImageKey, setLoadedImageKey] = useState("");
+  const [failedImageKey, setFailedImageKey] = useState("");
   const [localPlantPhoto, setLocalPlantPhoto] = useState<{ key: string; uri: string | null } | null>(null);
   const localLookupKey = plant?.id && access.isOwner && !plant.photo ? `${plant.id}:${photoReloadSignal ?? 0}` : null;
   const localPhotoLoading = !!localLookupKey && localPlantPhoto?.key !== localLookupKey;
@@ -200,6 +204,14 @@ export default function PlantInfoTile({
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
   }, [localPlantPhoto, syncedPhotoUri, plant, localLookupKey, localPhotoLoading]);
+
+  const imageKey = imageUrl ? `${plant?.id}:${photoReloadSignal ?? 0}:${imageUrl}` : "";
+  const imageFailed = !!imageKey && failedImageKey === imageKey;
+  const imageReady = !localPhotoLoading && !(plant?.photo && photoLoading) &&
+    (!imageUrl || imageFailed || loadedImageKey === imageKey);
+  useEffect(() => { onImageReadyChange?.(imageReady); }, [imageReady, onImageReadyChange]);
+  const onImageLoad = () => setLoadedImageKey(imageKey);
+  const onImageError = () => setFailedImageKey(imageKey);
 
   if (!plant) {
     return (
@@ -264,7 +276,7 @@ export default function PlantInfoTile({
       <View style={styles.heroOuter}>
         <Pressable onPressIn={handleTileTouch} accessible={false}>
           <View style={styles.heroClip}>
-            {imageUrl || (plant.photo && photoLoading) || localPhotoLoading ? (
+            {(imageUrl && !imageFailed) || (plant.photo && photoLoading) || localPhotoLoading ? (
               <View style={styles.heroImage}>
                 {imageUrl ? <MaskedView
                   style={StyleSheet.absoluteFill}
@@ -285,8 +297,8 @@ export default function PlantInfoTile({
                 >
                   {syncedPhotoUri && plant.photo ? (
                     <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
-                      style={StyleSheet.absoluteFillObject} testID="plant-detail-photo" />
-                  ) : <ImageMasked uri={imageUrl} />}
+                      style={StyleSheet.absoluteFillObject} testID="plant-detail-photo" onLoad={onImageLoad} onError={onImageError} />
+                  ) : <ImageMasked uri={imageUrl} onLoad={onImageLoad} onError={onImageError} />}
                 </MaskedView> : <View style={StyleSheet.absoluteFill} testID="plant-detail-photo-loading">
                   <CenteredSpinner size={32} />
                 </View>}

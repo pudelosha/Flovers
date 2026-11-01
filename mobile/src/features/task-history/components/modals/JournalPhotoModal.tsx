@@ -1,43 +1,81 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Keyboard, PermissionsAndroid, Platform, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import DateTimePicker from "@react-native-community/datetimepicker";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { launchCamera, launchImageLibrary, type CameraOptions } from "react-native-image-picker";
-import AppModalHost from "../../../../shared/ui/AppModalHost";
-import { useTranslation } from "react-i18next";
-import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
-import { s as reminderStyles } from "../../../reminders/styles/reminders.styles";
-import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
-import PlantPhotoFramingEditor from "../../../../shared/ui/PlantPhotoFramingEditor";
-import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
-import { DEFAULT_PHOTO_FRAMING, normalizePhotoFraming, type PhotoFraming } from "../../../../shared/utils/photoFraming";
-import { plantAccess } from "../../../../shared/utils/plantAccess";
-import { ApiError } from "../../../../api/client";
-import { createJournalPhoto, fetchJournalPhoto, fetchJournalPhotoAvailability, newJournalUploadKey, updateJournalPhoto,
-  type JournalPhotoAvailability, type JournalPhotoValues, type JournalPlantOption } from "../../../../api/services/journal-photos.service";
-import type { JournalPhotoItem } from "../../types/task-history.types";
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  Keyboard,
+  PermissionsAndroid,
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { launchCamera, launchImageLibrary, type CameraOptions } from 'react-native-image-picker';
+import AppModalHost from '../../../../shared/ui/AppModalHost';
+import { useTranslation } from 'react-i18next';
+import ContactModalFrame from '../../../sharing/components/ContactModalFrame';
+import { s as reminderStyles } from '../../../reminders/styles/reminders.styles';
+import PlantPhotoFramingEditor from '../../../../shared/ui/PlantPhotoFramingEditor';
+import { usePlantPhoto } from '../../../../shared/hooks/usePlantPhoto';
+import {
+  DEFAULT_PHOTO_FRAMING,
+  normalizePhotoFraming,
+  type PhotoFraming,
+} from '../../../../shared/utils/photoFraming';
+import { plantAccess } from '../../../../shared/utils/plantAccess';
+import { ApiError } from '../../../../api/client';
+import {
+  createJournalPhoto,
+  fetchJournalPhoto,
+  fetchJournalPhotoAvailability,
+  newJournalUploadKey,
+  updateJournalPhoto,
+  type JournalPhotoAvailability,
+  type JournalPhotoValues,
+  type JournalPlantOption,
+} from '../../../../api/services/journal-photos.service';
+import type { JournalPhotoItem } from '../../types/task-history.types';
 
-type Props = { visible: boolean; onClose: (refresh?: boolean) => void; onSaved: () => void;
-  plantOptions: JournalPlantOption[]; preferredPlantId?: string; entry?: JournalPhotoItem | null };
+type Props = {
+  visible: boolean;
+  onClose: (refresh?: boolean) => void;
+  onSaved: () => void;
+  plantOptions: JournalPlantOption[];
+  preferredPlantId?: string;
+  entry?: JournalPhotoItem | null;
+};
 type Selection = { uri: string; width?: number; height?: number; uploadKey: string };
-const dayString = (date: Date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+const dayString = (date: Date) =>
+  `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(
+    date.getDate(),
+  ).padStart(2, '0')}`;
 
-export default function JournalPhotoModal({ visible, onClose, onSaved, plantOptions, preferredPlantId, entry }: Props) {
+export default function JournalPhotoModal({
+  visible,
+  onClose,
+  onSaved,
+  plantOptions,
+  preferredPlantId,
+  entry,
+}: Props) {
   const { t } = useTranslation();
-  const tr = (key: string, values?: Record<string, unknown>) => String(t(`taskHistory.photo.${key}`, values));
-  const contextKey = `${visible}:${entry?.id ?? "new"}:${preferredPlantId ?? ""}`;
+  const tr = (key: string, values?: Record<string, unknown>) =>
+    String(t(`taskHistory.photo.${key}`, values));
+  const contextKey = `${visible}:${entry?.id ?? 'new'}:${preferredPlantId ?? ''}`;
   const generation = useRef({ context: contextKey, value: 0 });
-  if (generation.current.context !== contextKey) generation.current = { context: contextKey, value: generation.current.value + 1 };
+  if (generation.current.context !== contextKey)
+    generation.current = { context: contextKey, value: generation.current.value + 1 };
   const context = `${contextKey}:${generation.current.value}`;
-  const [readyContext, setReadyContext] = useState("");
+  const [readyContext, setReadyContext] = useState('');
   const [retry, setRetry] = useState(0);
   const [availability, setAvailability] = useState<JournalPhotoAvailability[]>([]);
-  const [plantId, setPlantId] = useState("");
+  const [plantId, setPlantId] = useState('');
   const [plantOpen, setPlantOpen] = useState(false);
   const [selection, setSelection] = useState<Selection | null>(null);
   const [framing, setFraming] = useState<PhotoFraming>(DEFAULT_PHOTO_FRAMING);
-  const [notes, setNotes] = useState("");
-  const [takenOn, setTakenOn] = useState("");
+  const [notes, setNotes] = useState('');
+  const [takenOn, setTakenOn] = useState('');
   const [dateOpen, setDateOpen] = useState(false);
   const [interacting, setInteracting] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -46,32 +84,79 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
   const activeEntry = entry && loadedEntry?.id === entry.id ? loadedEntry : null;
   const [retryPending, setRetryPending] = useState(false);
   const [conflicted, setConflicted] = useState(false);
-  const pendingSave = useRef<{ entry: JournalPhotoItem | null; plantId: string; selection: Selection | null; values: JournalPhotoValues } | null>(null);
-  const [error, setError] = useState("");
+  const pendingSave = useRef<{
+    entry: JournalPhotoItem | null;
+    plantId: string;
+    selection: Selection | null;
+    values: JournalPhotoValues;
+  } | null>(null);
+  const [error, setError] = useState('');
   const [loadError, setLoadError] = useState(false);
   const ownedPlants = plantOptions.filter(plant => plantAccess(plant.access).canEdit);
-  const privatePhoto = usePlantPhoto(visible ? activeEntry?.photo ?? null : null, { variant: "display", expiresAt: activeEntry?.access?.expires_at });
-  const close = useCallback(() => { if (!busyRef.current) { Keyboard.dismiss(); onClose(retryPending); } }, [onClose, retryPending]);
+  const privatePhoto = usePlantPhoto(visible ? activeEntry?.photo ?? null : null, {
+    variant: 'display',
+    expiresAt: activeEntry?.access?.expires_at,
+  });
+  const close = useCallback(() => {
+    if (!busyRef.current) {
+      Keyboard.dismiss();
+      onClose(retryPending);
+    }
+  }, [onClose, retryPending]);
 
   useEffect(() => {
     if (!visible) return;
     let cancelled = false;
-    busyRef.current = false; setBusy(false);
-    setLoadedEntry(null); pendingSave.current = null; setRetryPending(false); setConflicted(false);
-    setReadyContext(""); setError(""); setLoadError(false); setSelection(null);
-    setFraming(normalizePhotoFraming(entry?.photo.framing)); setNotes(entry?.note ?? "");
-    setTakenOn(entry?.recordedDate ?? ""); setDateOpen(false); setPlantOpen(false); setInteracting(false);
-    setPlantId(entry?.plantId ?? (plantOptions.some(plant => plant.id === preferredPlantId && plantAccess(plant.access).canEdit)
-      ? preferredPlantId! : plantOptions.filter(plant => plantAccess(plant.access).canEdit)[0]?.id ?? ""));
-    Promise.all([fetchJournalPhotoAvailability(), entry ? fetchJournalPhoto(entry.id) : Promise.resolve(null)]).then(([result, fresh]) => {
-      if (!cancelled) {
-        setAvailability(result); setLoadedEntry(fresh);
-        if (fresh) { setFraming(normalizePhotoFraming(fresh.photo.framing)); setNotes(fresh.note ?? "");
-          setTakenOn(fresh.recordedDate ?? ""); setPlantId(fresh.plantId); }
-        setReadyContext(context);
-      }
-    }).catch(() => { if (!cancelled) { setLoadError(true); setReadyContext(context); } });
-    return () => { cancelled = true; };
+    busyRef.current = false;
+    setBusy(false);
+    setLoadedEntry(null);
+    pendingSave.current = null;
+    setRetryPending(false);
+    setConflicted(false);
+    setReadyContext('');
+    setError('');
+    setLoadError(false);
+    setSelection(null);
+    setFraming(normalizePhotoFraming(entry?.photo.framing));
+    setNotes(entry?.note ?? '');
+    setTakenOn(entry?.recordedDate ?? '');
+    setDateOpen(false);
+    setPlantOpen(false);
+    setInteracting(false);
+    setPlantId(
+      entry?.plantId ??
+        (plantOptions.some(
+          plant => plant.id === preferredPlantId && plantAccess(plant.access).canEdit,
+        )
+          ? preferredPlantId!
+          : plantOptions.filter(plant => plantAccess(plant.access).canEdit)[0]?.id ?? ''),
+    );
+    Promise.all([
+      fetchJournalPhotoAvailability(),
+      entry ? fetchJournalPhoto(entry.id) : Promise.resolve(null),
+    ])
+      .then(([result, fresh]) => {
+        if (!cancelled) {
+          setAvailability(result);
+          setLoadedEntry(fresh);
+          if (fresh) {
+            setFraming(normalizePhotoFraming(fresh.photo.framing));
+            setNotes(fresh.note ?? '');
+            setTakenOn(fresh.recordedDate ?? '');
+            setPlantId(fresh.plantId);
+          }
+          setReadyContext(context);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setLoadError(true);
+          setReadyContext(context);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [visible, entry?.id, preferredPlantId, retry]);
 
   const choose = async (camera: boolean) => {
@@ -79,150 +164,454 @@ export default function JournalPhotoModal({ visible, onClose, onSaved, plantOpti
     setPlantOpen(false);
     const version = generation.current.value;
     try {
-      if (camera && Platform.OS === "android") {
+      if (camera && Platform.OS === 'android') {
         const permission = PermissionsAndroid.PERMISSIONS.CAMERA;
-        if (await PermissionsAndroid.request(permission) !== PermissionsAndroid.RESULTS.GRANTED) {
-          if (version === generation.current.value) setError(tr("cameraDenied"));
+        if ((await PermissionsAndroid.request(permission)) !== PermissionsAndroid.RESULTS.GRANTED) {
+          if (version === generation.current.value) setError(tr('cameraDenied'));
           return;
         }
       }
-      const options: CameraOptions = { mediaType: "photo", maxWidth: 1280, maxHeight: 1280, quality: 0.8,
-        includeBase64: false, saveToPhotos: false, assetRepresentationMode: "compatible" };
-      const result = camera ? await launchCamera(options) : await launchImageLibrary({ ...options, selectionLimit: 1 });
+      const options: CameraOptions = {
+        mediaType: 'photo',
+        maxWidth: 1280,
+        maxHeight: 1280,
+        quality: 0.8,
+        includeBase64: false,
+        saveToPhotos: false,
+        assetRepresentationMode: 'compatible',
+      };
+      const result = camera
+        ? await launchCamera(options)
+        : await launchImageLibrary({ ...options, selectionLimit: 1 });
       if (version !== generation.current.value || result.didCancel) return;
       const asset = result.assets?.[0];
-      if (result.errorCode || !asset?.uri) throw new Error("No photo");
-      if (asset.fileSize && asset.fileSize > 5 * 1024 * 1024) { setError(tr("tooLarge")); return; }
-      setSelection({ uri: asset.uri, width: asset.width, height: asset.height, uploadKey: newJournalUploadKey() });
-      setFraming(DEFAULT_PHOTO_FRAMING); setError("");
-    } catch { if (version === generation.current.value) setError(tr("invalidPhoto")); }
+      if (result.errorCode || !asset?.uri) throw new Error('No photo');
+      if (asset.fileSize && asset.fileSize > 5 * 1024 * 1024) {
+        setError(tr('tooLarge'));
+        return;
+      }
+      setSelection({
+        uri: asset.uri,
+        width: asset.width,
+        height: asset.height,
+        uploadKey: newJournalUploadKey(),
+      });
+      setFraming(DEFAULT_PHOTO_FRAMING);
+      setError('');
+    } catch {
+      if (version === generation.current.value) setError(tr('invalidPhoto'));
+    }
   };
 
   const next = availability.find(value => value.plant_id === plantId)?.next_photo_at;
   const cooldown = !entry && !!next && Date.parse(next) > Date.now();
   const save = async () => {
     if (busyRef.current || cooldown || conflicted) return;
-    if (!plantId) { setError(tr("noPlant")); return; }
-    if (!entry && !selection) { setError(tr("noPhoto")); return; }
-    if (entry && (!activeEntry || !plantAccess(activeEntry.access).canEdit)) { setError(tr("permission")); return; }
-    if (takenOn && takenOn > dayString(new Date())) { setError(tr("futureDate")); return; }
+    if (!plantId) {
+      setError(tr('noPlant'));
+      return;
+    }
+    if (!entry && !selection) {
+      setError(tr('noPhoto'));
+      return;
+    }
+    if (entry && (!activeEntry || !plantAccess(activeEntry.access).canEdit)) {
+      setError(tr('permission'));
+      return;
+    }
+    if (takenOn && takenOn > dayString(new Date())) {
+      setError(tr('futureDate'));
+      return;
+    }
     const version = generation.current.value;
-    busyRef.current = true; setBusy(true); setPlantOpen(false); setError(""); Keyboard.dismiss();
-    const submission = pendingSave.current ?? { entry: activeEntry, plantId, selection,
-      values: { notes, taken_on: takenOn || null, framing } };
+    busyRef.current = true;
+    setBusy(true);
+    setPlantOpen(false);
+    setError('');
+    Keyboard.dismiss();
+    const submission = pendingSave.current ?? {
+      entry: activeEntry,
+      plantId,
+      selection,
+      values: { notes, taken_on: takenOn || null, framing },
+    };
     pendingSave.current = submission;
     try {
-      if (submission.entry) await updateJournalPhoto(submission.entry, submission.values, submission.selection ?? undefined);
-      else await createJournalPhoto(submission.plantId, submission.selection!.uri, submission.selection!.uploadKey, submission.values);
-      if (version === generation.current.value) { pendingSave.current = null; onSaved(); }
+      if (submission.entry)
+        await updateJournalPhoto(
+          submission.entry,
+          submission.values,
+          submission.selection ?? undefined,
+        );
+      else
+        await createJournalPhoto(
+          submission.plantId,
+          submission.selection!.uri,
+          submission.selection!.uploadKey,
+          submission.values,
+        );
+      if (version === generation.current.value) {
+        pendingSave.current = null;
+        onSaved();
+      }
     } catch (failure) {
       if (version !== generation.current.value) return;
-      const code = failure instanceof ApiError ? failure.body?.code : "";
-      const uncertain = !(failure instanceof ApiError) || failure.status === 0 || failure.status === 408 || failure.status >= 500;
+      const code = failure instanceof ApiError ? failure.body?.code : '';
+      const uncertain =
+        !(failure instanceof ApiError) ||
+        failure.status === 0 ||
+        failure.status === 408 ||
+        failure.status >= 500;
       setRetryPending(uncertain);
       if (!uncertain) pendingSave.current = null;
-      if (code === "photo_conflict") setConflicted(true);
-      if (code === "journal_photo_cooldown") {
+      if (code === 'photo_conflict') setConflicted(true);
+      if (code === 'journal_photo_cooldown') {
         const nextAt = failure instanceof ApiError ? failure.body?.next_photo_at : null;
-        if (nextAt) setAvailability(values => [...values.filter(value => value.plant_id !== plantId), { plant_id: plantId, next_photo_at: nextAt }]);
-        setError(nextAt ? tr("cooldown", { date: new Date(nextAt).toLocaleString() }) : tr("saveFailed"));
-      } else setError(tr(uncertain ? "retryPending" : code === "photo_conflict" ? "conflict" : code === "upload_too_large" ? "tooLarge"
-        : code === "photo_quota_exceeded" || code === "photo_storage_full" ? "storageFull"
-        : failure instanceof ApiError && failure.status === 403 ? "permission" : "saveFailed"));
+        if (nextAt)
+          setAvailability(values => [
+            ...values.filter(value => value.plant_id !== plantId),
+            { plant_id: plantId, next_photo_at: nextAt },
+          ]);
+        setError(
+          nextAt ? tr('cooldown', { date: new Date(nextAt).toLocaleString() }) : tr('saveFailed'),
+        );
+      } else
+        setError(
+          tr(
+            uncertain
+              ? 'retryPending'
+              : code === 'photo_conflict'
+              ? 'conflict'
+              : code === 'upload_too_large'
+              ? 'tooLarge'
+              : code === 'photo_quota_exceeded' || code === 'photo_storage_full'
+              ? 'storageFull'
+              : failure instanceof ApiError && failure.status === 403
+              ? 'permission'
+              : 'saveFailed',
+          ),
+        );
     } finally {
-      if (version === generation.current.value) { busyRef.current = false; setBusy(false); }
+      if (version === generation.current.value) {
+        busyRef.current = false;
+        setBusy(false);
+      }
     }
   };
 
   if (!visible) return null;
-  const loading = readyContext !== context || (!loadError && !!entry && (!activeEntry || (!selection && !privatePhoto.uri && !privatePhoto.error)));
+  const loading =
+    readyContext !== context ||
+    (!loadError &&
+      !!entry &&
+      (!activeEntry || (!selection && !privatePhoto.uri && !privatePhoto.error)));
   const uri = selection?.uri ?? privatePhoto.uri;
   const editingForbidden = !!entry && (!activeEntry || !plantAccess(activeEntry.access).canEdit);
   const fieldsDisabled = busy || retryPending || conflicted || editingForbidden;
   const selectedPlant = ownedPlants.find(plant => plant.id === plantId);
-  const button = (label: string, onPress: () => void, icon?: string, primary = false, disabled = false, equalWidth = false) =>
-    <Pressable accessibilityRole="button" style={[styles.button, equalWidth && styles.equalButton, primary && styles.primary, disabled && styles.disabled]}
-      disabled={disabled} onPress={onPress}>
+  const button = (
+    label: string,
+    onPress: () => void,
+    icon?: string,
+    primary = false,
+    disabled = false,
+    equalWidth = false,
+  ) => (
+    <Pressable
+      accessibilityRole="button"
+      style={[
+        styles.button,
+        equalWidth && styles.equalButton,
+        primary && styles.primary,
+        disabled && styles.disabled,
+      ]}
+      disabled={disabled}
+      onPress={onPress}
+    >
       {icon && <MaterialCommunityIcons name={icon} color="#FFFFFF" size={20} />}
       <Text style={styles.buttonText}>{label}</Text>
-    </Pressable>;
-  return <AppModalHost>
-    <ContactModalFrame visible title={tr(entry ? "titleEdit" : "titleAdd")} onClose={close}
-      fullScreen scrollEnabled={!interacting}>
-      {loading ? <View style={styles.loading}><CenteredSpinner size={42} /></View>
-        : loadError || (entry && !selection && !!privatePhoto.error) ? <View style={styles.form}>
-          <Text style={styles.error}>{tr("loadFailed")}</Text>
-          {button(tr("retry"), () => { privatePhoto.refresh(); setRetry(value => value + 1); })}
-        </View> : <View style={styles.form}>
-          <Text style={styles.description}>{tr("description")}</Text>
-          <Text style={styles.label}>{tr("plant")}</Text>
-          {entry ? <View style={styles.locked}><MaterialCommunityIcons name="lock-outline" size={17} color="#FFFFFF" /><Text style={styles.text}>{activeEntry?.plant ?? entry.plant}</Text></View>
-            : ownedPlants.length ? <View style={[reminderStyles.dropdown, styles.plantDropdown]}>
-              <Pressable style={[reminderStyles.dropdownHeader, fieldsDisabled && styles.disabled]}
-                accessibilityRole="button" accessibilityLabel={tr("choosePlant")}
-                accessibilityState={{ expanded: plantOpen && !fieldsDisabled, disabled: fieldsDisabled }}
-                disabled={fieldsDisabled} onPress={() => { setDateOpen(false); setPlantOpen(value => !value); }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-                <Text style={[reminderStyles.dropdownValue, { flex: 1 }]}>{selectedPlant?.name || tr("choosePlant")}</Text>
-                <MaterialCommunityIcons name={plantOpen && !fieldsDisabled ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
-              </Pressable>
-              {plantOpen && !fieldsDisabled && <View style={reminderStyles.dropdownList}>
-                {ownedPlants.map(plant => <Pressable key={plant.id} style={reminderStyles.dropdownItem}
-                  accessibilityRole="radio" accessibilityState={{ checked: plant.id === plantId }}
-                  onPress={() => { setPlantId(plant.id); setPlantOpen(false); setError(""); }}>
-                  <View style={{ flex: 1, minWidth: 0 }}>
-                    <Text style={reminderStyles.dropdownItemText}>{plant.name}</Text>
-                    {!!plant.location && <Text style={styles.description}>{plant.location}</Text>}
-                  </View>
-                  {plant.id === plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
-                </Pressable>)}
-              </View>}
-              {!!selectedPlant?.location && <Text style={styles.selectedLocation}>{selectedPlant.location}</Text>}
-            </View> : <Text style={styles.description}>{tr("noPlants")}</Text>}
-          {cooldown && <Text style={styles.description}>{tr("cooldown", { date: new Date(next!).toLocaleString() })}</Text>}
-          {!!uri && <PlantPhotoFramingEditor key={selection?.uploadKey ?? activeEntry?.photo.id} uri={uri} width={selection ? selection.width : activeEntry?.photo.width}
-            height={selection ? selection.height : activeEntry?.photo.height} value={framing} onChange={setFraming}
-            disabled={fieldsDisabled} onInteractionChange={setInteracting} journalLabel={tr("journalGuide")} />}
-          {button(tr("takePhoto"), () => { void choose(true); }, "camera", true, fieldsDisabled)}
-          {button(tr("chooseGallery"), () => { void choose(false); }, "image-multiple-outline", false, fieldsDisabled)}
-          <Text style={styles.label}>{tr("photoDate")}</Text>
-          {button(takenOn || tr("chooseDate"), () => { setPlantOpen(false); setDateOpen(true); }, "calendar-outline", false, fieldsDisabled)}
-          {!!takenOn && <Pressable disabled={fieldsDisabled} onPress={() => setTakenOn("")}><Text style={styles.description}>{tr("clearDate")}</Text></Pressable>}
-          {dateOpen && !fieldsDisabled && <DateTimePicker value={takenOn ? new Date(takenOn + "T12:00:00") : new Date()} maximumDate={new Date()} mode="date"
-            display={Platform.OS === "ios" ? "inline" : "default"} onChange={(_event, date) => {
-              if (Platform.OS !== "ios") setDateOpen(false);
-              if (date) setTakenOn(dayString(date));
-            }} />}
-          {dateOpen && Platform.OS === "ios" && button(String(t("taskHistoryModals.common.done", { defaultValue: "Done" })), () => setDateOpen(false))}
-          <Text style={styles.label}>{tr("notes")}</Text>
-          <TextInput accessibilityLabel={tr("notes")} placeholder={tr("notesPlaceholder")} placeholderTextColor="rgba(255,255,255,0.55)"
-            multiline maxLength={4000} value={notes} onChangeText={setNotes} editable={!fieldsDisabled} style={styles.input} />
-          {!!error && <Text accessibilityRole="alert" style={styles.error}>{error}</Text>}
-          {conflicted && button(tr("retry"), () => setRetry(value => value + 1))}
-          <View style={styles.actions}>
-            {button(tr("cancel"), close, undefined, false, busy, true)}
-            {button(tr(busy ? "saving" : "save"), () => { void save(); }, undefined, true,
-              busy || cooldown || conflicted || editingForbidden || !plantId || (!entry && !selection), true)}
+    </Pressable>
+  );
+  return (
+    <AppModalHost>
+      <ContactModalFrame
+        visible
+        title={tr(entry ? 'titleEdit' : 'titleAdd')}
+        onClose={close}
+        fullScreen
+        loading={loading}
+        scrollEnabled={!interacting}
+      >
+        {loading ? null : loadError || (entry && !selection && !!privatePhoto.error) ? (
+          <View style={styles.form}>
+            <Text style={styles.error}>{tr('loadFailed')}</Text>
+            {button(tr('retry'), () => {
+              privatePhoto.refresh();
+              setRetry(value => value + 1);
+            })}
           </View>
-        </View>}
-    </ContactModalFrame>
-  </AppModalHost>;
+        ) : (
+          <View style={styles.form}>
+            <Text style={styles.description}>{tr('description')}</Text>
+            <Text style={styles.label}>{tr('plant')}</Text>
+            {entry ? (
+              <View style={styles.locked}>
+                <MaterialCommunityIcons name="lock-outline" size={17} color="#FFFFFF" />
+                <Text style={styles.text}>{activeEntry?.plant ?? entry.plant}</Text>
+              </View>
+            ) : ownedPlants.length ? (
+              <View style={[reminderStyles.dropdown, styles.plantDropdown]}>
+                <Pressable
+                  style={[reminderStyles.dropdownHeader, fieldsDisabled && styles.disabled]}
+                  accessibilityRole="button"
+                  accessibilityLabel={tr('choosePlant')}
+                  accessibilityState={{
+                    expanded: plantOpen && !fieldsDisabled,
+                    disabled: fieldsDisabled,
+                  }}
+                  disabled={fieldsDisabled}
+                  onPress={() => {
+                    setDateOpen(false);
+                    setPlantOpen(value => !value);
+                  }}
+                  android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+                >
+                  <Text style={[reminderStyles.dropdownValue, { flex: 1 }]}>
+                    {selectedPlant?.name || tr('choosePlant')}
+                  </Text>
+                  <MaterialCommunityIcons
+                    name={plantOpen && !fieldsDisabled ? 'chevron-up' : 'chevron-down'}
+                    size={20}
+                    color="#FFFFFF"
+                  />
+                </Pressable>
+                {plantOpen && !fieldsDisabled && (
+                  <View style={reminderStyles.dropdownList}>
+                    {ownedPlants.map(plant => (
+                      <Pressable
+                        key={plant.id}
+                        style={reminderStyles.dropdownItem}
+                        accessibilityRole="radio"
+                        accessibilityState={{ checked: plant.id === plantId }}
+                        onPress={() => {
+                          setPlantId(plant.id);
+                          setPlantOpen(false);
+                          setError('');
+                        }}
+                      >
+                        <View style={{ flex: 1, minWidth: 0 }}>
+                          <Text style={reminderStyles.dropdownItemText}>{plant.name}</Text>
+                          {!!plant.location && (
+                            <Text style={styles.description}>{plant.location}</Text>
+                          )}
+                        </View>
+                        {plant.id === plantId && (
+                          <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                        )}
+                      </Pressable>
+                    ))}
+                  </View>
+                )}
+                {!!selectedPlant?.location && (
+                  <Text style={styles.selectedLocation}>{selectedPlant.location}</Text>
+                )}
+              </View>
+            ) : (
+              <Text style={styles.description}>{tr('noPlants')}</Text>
+            )}
+            {cooldown && (
+              <Text style={styles.description}>
+                {tr('cooldown', { date: new Date(next!).toLocaleString() })}
+              </Text>
+            )}
+            {!!uri && (
+              <PlantPhotoFramingEditor
+                key={selection?.uploadKey ?? activeEntry?.photo.id}
+                uri={uri}
+                width={selection ? selection.width : activeEntry?.photo.width}
+                height={selection ? selection.height : activeEntry?.photo.height}
+                value={framing}
+                onChange={setFraming}
+                disabled={fieldsDisabled}
+                onInteractionChange={setInteracting}
+                journalLabel={tr('journalGuide')}
+              />
+            )}
+            {button(
+              tr('takePhoto'),
+              () => {
+                void choose(true);
+              },
+              'camera',
+              true,
+              fieldsDisabled,
+            )}
+            {button(
+              tr('chooseGallery'),
+              () => {
+                void choose(false);
+              },
+              'image-multiple-outline',
+              false,
+              fieldsDisabled,
+            )}
+            <Text style={styles.label}>{tr('photoDate')}</Text>
+            {button(
+              takenOn || tr('chooseDate'),
+              () => {
+                setPlantOpen(false);
+                setDateOpen(true);
+              },
+              'calendar-outline',
+              false,
+              fieldsDisabled,
+            )}
+            {!!takenOn && (
+              <Pressable disabled={fieldsDisabled} onPress={() => setTakenOn('')}>
+                <Text style={styles.description}>{tr('clearDate')}</Text>
+              </Pressable>
+            )}
+            {dateOpen && !fieldsDisabled && (
+              <DateTimePicker
+                value={takenOn ? new Date(takenOn + 'T12:00:00') : new Date()}
+                maximumDate={new Date()}
+                mode="date"
+                display={Platform.OS === 'ios' ? 'inline' : 'default'}
+                onChange={(_event, date) => {
+                  if (Platform.OS !== 'ios') setDateOpen(false);
+                  if (date) setTakenOn(dayString(date));
+                }}
+              />
+            )}
+            {dateOpen &&
+              Platform.OS === 'ios' &&
+              button(String(t('taskHistoryModals.common.done', { defaultValue: 'Done' })), () =>
+                setDateOpen(false),
+              )}
+            <Text style={styles.label}>{tr('notes')}</Text>
+            <TextInput
+              accessibilityLabel={tr('notes')}
+              placeholder={tr('notesPlaceholder')}
+              placeholderTextColor="rgba(255,255,255,0.55)"
+              multiline
+              maxLength={4000}
+              value={notes}
+              onChangeText={setNotes}
+              editable={!fieldsDisabled}
+              style={styles.input}
+            />
+            {!!error && (
+              <Text accessibilityRole="alert" style={styles.error}>
+                {error}
+              </Text>
+            )}
+            {conflicted && button(tr('retry'), () => setRetry(value => value + 1))}
+            <View style={styles.actions}>
+              {button(tr('cancel'), close, undefined, false, busy, true)}
+              {button(
+                tr(busy ? 'saving' : 'save'),
+                () => {
+                  void save();
+                },
+                undefined,
+                true,
+                busy ||
+                  cooldown ||
+                  conflicted ||
+                  editingForbidden ||
+                  !plantId ||
+                  (!entry && !selection),
+                true,
+              )}
+            </View>
+          </View>
+        )}
+      </ContactModalFrame>
+    </AppModalHost>
+  );
 }
 const styles = StyleSheet.create({
-  form: { marginHorizontal: 16, gap: 12 }, loading: { minHeight: 220, justifyContent: "center" },
-  description: { color: "rgba(255,255,255,0.8)", fontSize: 13, lineHeight: 20 },
-  label: { color: "#FFFFFF", fontSize: 15, fontWeight: "700", marginTop: 5 },
-  text: { color: "#FFFFFF", fontSize: 15, fontWeight: "600" },
-  plantDropdown: { marginHorizontal: 0, marginBottom: 0 },
-  selectedLocation: { color: "rgba(255,255,255,0.8)", fontSize: 13, marginTop: 6 },
-  locked: { flexDirection: "row", gap: 8, alignItems: "center", paddingVertical: 8 },
-  button: { flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 8, minHeight: 44,
-    paddingHorizontal: 14, paddingVertical: 12, borderRadius: 22, backgroundColor: "rgba(255,255,255,0.17)" },
-  buttonText: { color: "#FFFFFF", fontSize: 14, fontWeight: "700", textAlign: "center", flexShrink: 1 },
-  equalButton: { flex: 1, minWidth: 0 },
-  primary: { backgroundColor: "#0B7285" }, disabled: { opacity: 0.5 },
-  input: { minHeight: 100, textAlignVertical: "top", borderRadius: 18, backgroundColor: "rgba(255,255,255,0.14)",
-    color: "#FFFFFF", fontSize: 14, padding: 14 },
-  error: { color: "#FFAAAA", fontSize: 13, lineHeight: 20 },
-  actions: { flexDirection: "row", justifyContent: "space-between", gap: 12, marginTop: 8 },
+  form: {
+    marginHorizontal: 16,
+    gap: 12,
+  },
+  description: {
+    color: 'rgba(255,255,255,0.8)',
+    fontSize: 13,
+    lineHeight: 20,
+  },
+  label: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '700',
+    marginTop: 5,
+  },
+  text: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  plantDropdown: {
+    marginHorizontal: 0,
+    marginBottom: 0,
+  },
+  selectedLocation: {
+    color: 'rgba(255,255,255,0.8)',
+    fontSize: 13,
+    marginTop: 6,
+  },
+  locked: {
+    flexDirection: 'row',
+    gap: 8,
+    alignItems: 'center',
+    paddingVertical: 8,
+  },
+  button: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 8,
+    minHeight: 44,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 22,
+    backgroundColor: 'rgba(255,255,255,0.17)',
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '700',
+    textAlign: 'center',
+    flexShrink: 1,
+  },
+  equalButton: {
+    flex: 1,
+    minWidth: 0,
+  },
+  primary: {
+    backgroundColor: '#0B7285',
+  },
+  disabled: {
+    opacity: 0.5,
+  },
+  input: {
+    minHeight: 100,
+    textAlignVertical: 'top',
+    borderRadius: 18,
+    backgroundColor: 'rgba(255,255,255,0.14)',
+    color: '#FFFFFF',
+    fontSize: 14,
+    padding: 14,
+  },
+  error: {
+    color: '#FFAAAA',
+    fontSize: 13,
+    lineHeight: 20,
+  },
+  actions: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+    marginTop: 8,
+  },
 });

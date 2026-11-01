@@ -1,23 +1,21 @@
-import React from "react";
-import { View, Text, Pressable, StyleSheet, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useTranslation } from "react-i18next";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
-import { s } from "../../styles/task-history.styles";
-import type { TaskType } from "../../../home/types/home.types";
-import {
-  ACCENT_BY_TYPE,
-  ICON_BY_TYPE,
-} from "../../../home/constants/home.constants";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
 
-export type HistoryDeleteMode = "plant" | "location" | "types" | "olderThan";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTranslation } from 'react-i18next';
+
+import { s } from '../../styles/task-history.styles';
+import type { TaskType } from '../../../home/types/home.types';
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../../../home/constants/home.constants';
+
+export type HistoryDeleteMode = 'plant' | 'location' | 'types' | 'olderThan';
 
 export type HistoryDeletePayload =
-  | { mode: "plant"; plantId: string }
-  | { mode: "location"; location: string }
-  | { mode: "types"; types: TaskType[] }
-  | { mode: "olderThan"; days: number };
+  | { mode: 'plant'; plantId: string }
+  | { mode: 'location'; location: string }
+  | { mode: 'types'; types: TaskType[] }
+  | { mode: 'olderThan'; days: number };
 
 type PlantOption = { id: string; name: string };
 
@@ -30,28 +28,22 @@ type Props = {
 };
 
 const DAYS_OPTIONS = [30, 60, 180];
-const TYPE_OPTIONS: TaskType[] = [
-  "watering",
-  "moisture",
-  "fertilising",
-  "care",
-  "repot",
-];
+const TYPE_OPTIONS: TaskType[] = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
 
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(255,255,255,${alpha})`;
-  if (!hex || typeof hex !== "string") return fallback;
+  if (!hex || typeof hex !== 'string') return fallback;
 
   let h = hex.trim();
-  if (!h.startsWith("#")) h = `#${h}`;
+  if (!h.startsWith('#')) h = `#${h}`;
 
-  h = h.replace("#", "");
+  h = h.replace('#', '');
 
   if (h.length === 3) {
     h = h
-      .split("")
-      .map((c) => c + c)
-      .join("");
+      .split('')
+      .map(c => c + c)
+      .join('');
   }
 
   if (h.length !== 6) return fallback;
@@ -75,24 +67,20 @@ export default function DeleteHistoryTasksModal({
 }: Props) {
   const { t } = useTranslation();
 
-  const [mode, setMode] = React.useState<HistoryDeleteMode>("plant");
+  const [mode, setMode] = React.useState<HistoryDeleteMode>('plant');
 
   const [plantDropdownOpen, setPlantDropdownOpen] = React.useState(false);
   const [locationDropdownOpen, setLocationDropdownOpen] = React.useState(false);
   const [daysOpen, setDaysOpen] = React.useState(false);
 
-  const [selectedPlantId, setSelectedPlantId] = React.useState<
-    string | undefined
-  >();
-  const [selectedLocation, setSelectedLocation] = React.useState<
-    string | undefined
-  >();
+  const [selectedPlantId, setSelectedPlantId] = React.useState<string | undefined>();
+  const [selectedLocation, setSelectedLocation] = React.useState<string | undefined>();
   const [selectedTypes, setSelectedTypes] = React.useState<TaskType[]>([]);
   const [days, setDays] = React.useState<number>(30);
 
   React.useEffect(() => {
     if (visible) {
-      setMode("plant");
+      setMode('plant');
       setDays(30);
       setDaysOpen(false);
       setPlantDropdownOpen(false);
@@ -109,415 +97,368 @@ export default function DeleteHistoryTasksModal({
   const hasLocationScope = locationOptions.length > 0;
 
   const toggleType = (tt: TaskType) => {
-    setSelectedTypes((curr) =>
-      curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]
-    );
+    setSelectedTypes(curr => (curr.includes(tt) ? curr.filter(x => x !== tt) : [...curr, tt]));
   };
 
   const canConfirm =
-    mode === "olderThan" ||
-    (mode === "plant" && !!selectedPlantId) ||
-    (mode === "location" && !!selectedLocation) ||
-    (mode === "types" && selectedTypes.length > 0);
+    mode === 'olderThan' ||
+    (mode === 'plant' && !!selectedPlantId) ||
+    (mode === 'location' && !!selectedLocation) ||
+    (mode === 'types' && selectedTypes.length > 0);
 
   const handleConfirm = () => {
     if (!canConfirm) return;
 
-    if (mode === "olderThan") {
-      onConfirm({ mode: "olderThan", days });
-    } else if (mode === "plant" && selectedPlantId) {
-      onConfirm({ mode: "plant", plantId: selectedPlantId });
-    } else if (mode === "location" && selectedLocation) {
-      onConfirm({ mode: "location", location: selectedLocation });
-    } else if (mode === "types" && selectedTypes.length > 0) {
-      onConfirm({ mode: "types", types: selectedTypes });
+    if (mode === 'olderThan') {
+      onConfirm({ mode: 'olderThan', days });
+    } else if (mode === 'plant' && selectedPlantId) {
+      onConfirm({ mode: 'plant', plantId: selectedPlantId });
+    } else if (mode === 'location' && selectedLocation) {
+      onConfirm({ mode: 'location', location: selectedLocation });
+    } else if (mode === 'types' && selectedTypes.length > 0) {
+      onConfirm({ mode: 'types', types: selectedTypes });
     }
   };
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={[s.promptGlass, s.promptGlass28]}>
-          <BlurView
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={t('taskHistoryModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
-            s.promptInner28,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
+          <Text style={s.promptTitle}>{t('taskHistoryModals.delete.title')}</Text>
+
+          <Text style={s.inputLabel}>{t('taskHistoryModals.delete.scopeLabel')}</Text>
+
+          <Pressable
+            style={[s.radioRow, !hasPlantScope && styles.disabledRow]}
+            disabled={!hasPlantScope}
+            onPress={() => {
+              if (!hasPlantScope) return;
+              setMode('plant');
             }}
           >
-            <Text style={s.promptTitle}>
-              {t("taskHistoryModals.delete.title")}
-            </Text>
+            <View style={s.radioOuter}>
+              {mode === 'plant' && hasPlantScope && <View style={s.radioInner} />}
+            </View>
 
-            <Text style={s.inputLabel}>
-              {t("taskHistoryModals.delete.scopeLabel")}
-            </Text>
+            <View style={{ flex: 1 }}>
+              <Text style={s.emptyText}>{t('taskHistoryModals.delete.modes.plant')}</Text>
 
-            <Pressable
-              style={[s.radioRow, !hasPlantScope && styles.disabledRow]}
-              disabled={!hasPlantScope}
-              onPress={() => {
-                if (!hasPlantScope) return;
-                setMode("plant");
-              }}
+              {!hasPlantScope && (
+                <Text style={styles.helperText}>{t('taskHistoryModals.delete.noPlantsHint')}</Text>
+              )}
+            </View>
+          </Pressable>
+
+          {mode === 'plant' && hasPlantScope && (
+            <View
+              style={[
+                s.dropdown,
+                {
+                  marginTop: 4,
+                },
+              ]}
             >
-              <View style={s.radioOuter}>
-                {mode === "plant" && hasPlantScope && (
-                  <View style={s.radioInner} />
-                )}
-              </View>
-
-              <View style={{ flex: 1 }}>
-                <Text style={s.emptyText}>
-                  {t("taskHistoryModals.delete.modes.plant")}
-                </Text>
-
-                {!hasPlantScope && (
-                  <Text style={styles.helperText}>
-                    {t("taskHistoryModals.delete.noPlantsHint")}
-                  </Text>
-                )}
-              </View>
-            </Pressable>
-
-            {mode === "plant" && hasPlantScope && (
-              <View style={[s.dropdown, { marginTop: 4 }]}>
-                <Pressable
-                  style={s.dropdownHeader}
-                  onPress={() => {
-                    setLocationDropdownOpen(false);
-                    setDaysOpen(false);
-                    setPlantDropdownOpen((o) => !o);
-                  }}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                >
-                  <Text style={s.dropdownValue}>
-                    {selectedPlantId
-                      ? plantOptions.find((p) => p.id === selectedPlantId)
-                          ?.name || t("taskHistoryModals.common.selectPlant")
-                      : t("taskHistoryModals.common.selectPlant")}
-                  </Text>
-
-                  <MaterialCommunityIcons
-                    name={plantDropdownOpen ? "chevron-up" : "chevron-down"}
-                    size={20}
-                    color="#FFFFFF"
-                  />
-                </Pressable>
-
-                {plantDropdownOpen && (
-                  <View style={s.dropdownList}>
-                    {plantOptions.map((p) => (
-                      <Pressable
-                        key={p.id}
-                        style={s.dropdownItem}
-                        onPress={() => {
-                          setSelectedPlantId(p.id);
-                          setPlantDropdownOpen(false);
-                        }}
-                      >
-                        <Text style={s.dropdownItemText}>{p.name}</Text>
-
-                        {selectedPlantId === p.id && (
-                          <MaterialCommunityIcons
-                            name="check"
-                            size={18}
-                            color="#FFFFFF"
-                          />
-                        )}
-                      </Pressable>
-                    ))}
-                  </View>
-                )}
-              </View>
-            )}
-
-            <Pressable
-              style={[s.radioRow, !hasLocationScope && styles.disabledRow]}
-              disabled={!hasLocationScope}
-              onPress={() => {
-                if (!hasLocationScope) return;
-                setMode("location");
-              }}
-            >
-              <View style={s.radioOuter}>
-                {mode === "location" && hasLocationScope && (
-                  <View style={s.radioInner} />
-                )}
-              </View>
-
-              <View style={{ flex: 1 }}>
-                <Text style={s.emptyText}>
-                  {t("taskHistoryModals.delete.modes.location")}
-                </Text>
-
-                {!hasLocationScope && (
-                  <Text style={styles.helperText}>
-                    {t("taskHistoryModals.delete.noLocationsHint")}
-                  </Text>
-                )}
-              </View>
-            </Pressable>
-
-            {mode === "location" && hasLocationScope && (
-              <View style={[s.dropdown, { marginTop: 4 }]}>
-                <Pressable
-                  style={s.dropdownHeader}
-                  onPress={() => {
-                    setPlantDropdownOpen(false);
-                    setDaysOpen(false);
-                    setLocationDropdownOpen((o) => !o);
-                  }}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                >
-                  <Text style={s.dropdownValue}>
-                    {selectedLocation ||
-                      t("taskHistoryModals.common.selectLocation")}
-                  </Text>
-
-                  <MaterialCommunityIcons
-                    name={locationDropdownOpen ? "chevron-up" : "chevron-down"}
-                    size={20}
-                    color="#FFFFFF"
-                  />
-                </Pressable>
-
-                {locationDropdownOpen && (
-                  <View style={s.dropdownList}>
-                    {locationOptions.map((loc) => (
-                      <Pressable
-                        key={loc}
-                        style={s.dropdownItem}
-                        onPress={() => {
-                          setSelectedLocation(loc);
-                          setLocationDropdownOpen(false);
-                        }}
-                      >
-                        <Text style={s.dropdownItemText}>{loc}</Text>
-
-                        {selectedLocation === loc && (
-                          <MaterialCommunityIcons
-                            name="check"
-                            size={18}
-                            color="#FFFFFF"
-                          />
-                        )}
-                      </Pressable>
-                    ))}
-                  </View>
-                )}
-              </View>
-            )}
-
-            <Pressable style={s.radioRow} onPress={() => setMode("types")}>
-              <View style={s.radioOuter}>
-                {mode === "types" && <View style={s.radioInner} />}
-              </View>
-
-              <Text style={s.emptyText}>
-                {t("taskHistoryModals.delete.modes.types")}
-              </Text>
-            </Pressable>
-
-            {mode === "types" && (
-              <View
-                style={[
-                  s.chipRow,
-                  {
-                    marginTop: 4,
-                    paddingHorizontal: 16,
-                    justifyContent: "space-between",
-                    rowGap: 10,
-                    columnGap: 10,
-                  },
-                ]}
+              <Pressable
+                style={s.dropdownHeader}
+                onPress={() => {
+                  setLocationDropdownOpen(false);
+                  setDaysOpen(false);
+                  setPlantDropdownOpen(o => !o);
+                }}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
               >
-                {TYPE_OPTIONS.map((tt) => {
-                  const selected = selectedTypes.includes(tt);
-                  const tint = ACCENT_BY_TYPE[tt];
-                  const icon = ICON_BY_TYPE[tt];
+                <Text style={s.dropdownValue}>
+                  {selectedPlantId
+                    ? plantOptions.find(p => p.id === selectedPlantId)?.name ||
+                      t('taskHistoryModals.common.selectPlant')
+                    : t('taskHistoryModals.common.selectPlant')}
+                </Text>
 
-                  return (
+                <MaterialCommunityIcons
+                  name={plantDropdownOpen ? 'chevron-up' : 'chevron-down'}
+                  size={20}
+                  color="#FFFFFF"
+                />
+              </Pressable>
+
+              {plantDropdownOpen && (
+                <View style={s.dropdownList}>
+                  {plantOptions.map(p => (
                     <Pressable
-                      key={tt}
-                      onPress={() => toggleType(tt)}
+                      key={p.id}
+                      style={s.dropdownItem}
+                      onPress={() => {
+                        setSelectedPlantId(p.id);
+                        setPlantDropdownOpen(false);
+                      }}
+                    >
+                      <Text style={s.dropdownItemText}>{p.name}</Text>
+
+                      {selectedPlantId === p.id && (
+                        <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                      )}
+                    </Pressable>
+                  ))}
+                </View>
+              )}
+            </View>
+          )}
+
+          <Pressable
+            style={[s.radioRow, !hasLocationScope && styles.disabledRow]}
+            disabled={!hasLocationScope}
+            onPress={() => {
+              if (!hasLocationScope) return;
+              setMode('location');
+            }}
+          >
+            <View style={s.radioOuter}>
+              {mode === 'location' && hasLocationScope && <View style={s.radioInner} />}
+            </View>
+
+            <View style={{ flex: 1 }}>
+              <Text style={s.emptyText}>{t('taskHistoryModals.delete.modes.location')}</Text>
+
+              {!hasLocationScope && (
+                <Text style={styles.helperText}>
+                  {t('taskHistoryModals.delete.noLocationsHint')}
+                </Text>
+              )}
+            </View>
+          </Pressable>
+
+          {mode === 'location' && hasLocationScope && (
+            <View
+              style={[
+                s.dropdown,
+                {
+                  marginTop: 4,
+                },
+              ]}
+            >
+              <Pressable
+                style={s.dropdownHeader}
+                onPress={() => {
+                  setPlantDropdownOpen(false);
+                  setDaysOpen(false);
+                  setLocationDropdownOpen(o => !o);
+                }}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+              >
+                <Text style={s.dropdownValue}>
+                  {selectedLocation || t('taskHistoryModals.common.selectLocation')}
+                </Text>
+
+                <MaterialCommunityIcons
+                  name={locationDropdownOpen ? 'chevron-up' : 'chevron-down'}
+                  size={20}
+                  color="#FFFFFF"
+                />
+              </Pressable>
+
+              {locationDropdownOpen && (
+                <View style={s.dropdownList}>
+                  {locationOptions.map(loc => (
+                    <Pressable
+                      key={loc}
+                      style={s.dropdownItem}
+                      onPress={() => {
+                        setSelectedLocation(loc);
+                        setLocationDropdownOpen(false);
+                      }}
+                    >
+                      <Text style={s.dropdownItemText}>{loc}</Text>
+
+                      {selectedLocation === loc && (
+                        <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                      )}
+                    </Pressable>
+                  ))}
+                </View>
+              )}
+            </View>
+          )}
+
+          <Pressable style={s.radioRow} onPress={() => setMode('types')}>
+            <View style={s.radioOuter}>{mode === 'types' && <View style={s.radioInner} />}</View>
+
+            <Text style={s.emptyText}>{t('taskHistoryModals.delete.modes.types')}</Text>
+          </Pressable>
+
+          {mode === 'types' && (
+            <View
+              style={[
+                s.chipRow,
+                {
+                  marginTop: 4,
+                  paddingHorizontal: 16,
+                  justifyContent: 'space-between',
+                  rowGap: 10,
+                  columnGap: 10,
+                },
+              ]}
+            >
+              {TYPE_OPTIONS.map(tt => {
+                const selected = selectedTypes.includes(tt);
+                const tint = ACCENT_BY_TYPE[tt];
+                const icon = ICON_BY_TYPE[tt];
+
+                return (
+                  <Pressable
+                    key={tt}
+                    onPress={() => toggleType(tt)}
+                    style={[
+                      s.chip,
+                      {
+                        width: '48%',
+                        minHeight: 44,
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 8,
+                        borderWidth: 0,
+                        borderColor: selected ? hexToRgba(tint, 0.95) : hexToRgba(tint, 0.45),
+                        backgroundColor: selected ? hexToRgba(tint, 0.22) : hexToRgba(tint, 0.14),
+                      },
+                    ]}
+                  >
+                    <MaterialCommunityIcons name={icon} size={16} color={tint} />
+
+                    <Text
                       style={[
-                        s.chip,
+                        s.chipText,
                         {
-                          width: "48%",
-                          minHeight: 44,
-                          flexDirection: "row",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          gap: 8,
-                          borderWidth: 0,
-                          borderColor: selected
-                            ? hexToRgba(tint, 0.95)
-                            : hexToRgba(tint, 0.45),
-                          backgroundColor: selected
-                            ? hexToRgba(tint, 0.22)
-                            : hexToRgba(tint, 0.14),
+                          color: tint,
                         },
                       ]}
                     >
-                      <MaterialCommunityIcons name={icon} size={16} color={tint} />
+                      {t(`home.taskTypes.${tt}`)}
+                    </Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+          )}
 
-                      <Text
-                        style={[
-                          s.chipText,
-                          {
-                            color: tint,
-                          },
-                        ]}
-                      >
-                        {t(`home.taskTypes.${tt}`)}
+          <Pressable style={s.radioRow} onPress={() => setMode('olderThan')}>
+            <View style={s.radioOuter}>
+              {mode === 'olderThan' && <View style={s.radioInner} />}
+            </View>
+
+            <Text style={s.emptyText}>{t('taskHistoryModals.delete.modes.olderThan')}</Text>
+          </Pressable>
+
+          {mode === 'olderThan' && (
+            <View
+              style={[
+                s.dropdown,
+                {
+                  marginTop: 8,
+                },
+              ]}
+            >
+              <Pressable
+                style={[s.dropdownHeader, s.flatDropdownHeader]}
+                onPress={() => {
+                  setPlantDropdownOpen(false);
+                  setLocationDropdownOpen(false);
+                  setDaysOpen(o => !o);
+                }}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+              >
+                <Text style={s.dropdownValue}>
+                  {t('taskHistoryModals.delete.daysValue', { days })}
+                </Text>
+
+                <MaterialCommunityIcons
+                  name={daysOpen ? 'chevron-up' : 'chevron-down'}
+                  size={20}
+                  color="#FFFFFF"
+                />
+              </Pressable>
+
+              {daysOpen && (
+                <View style={[s.dropdownList, s.flatDropdownList]}>
+                  {DAYS_OPTIONS.map(opt => (
+                    <Pressable
+                      key={opt}
+                      style={[s.dropdownItem, s.flatDropdownItem]}
+                      onPress={() => {
+                        setDays(opt);
+                        setDaysOpen(false);
+                      }}
+                    >
+                      <Text style={s.dropdownItemText}>
+                        {t('taskHistoryModals.delete.daysValue', {
+                          days: opt,
+                        })}
                       </Text>
+
+                      {days === opt && (
+                        <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                      )}
                     </Pressable>
-                  );
-                })}
-              </View>
-            )}
+                  ))}
+                </View>
+              )}
+            </View>
+          )}
 
-            <Pressable style={s.radioRow} onPress={() => setMode("olderThan")}>
-              <View style={s.radioOuter}>
-                {mode === "olderThan" && <View style={s.radioInner} />}
-              </View>
-
-              <Text style={s.emptyText}>
-                {t("taskHistoryModals.delete.modes.olderThan")}
-              </Text>
+          <View
+            style={[
+              s.promptButtonsRow,
+              {
+                marginTop: 18,
+              },
+            ]}
+          >
+            <Pressable onPress={onCancel} style={s.promptBtn}>
+              <Text style={s.promptBtnText}>{t('taskHistoryModals.common.cancel')}</Text>
             </Pressable>
 
-            {mode === "olderThan" && (
-              <View style={[s.dropdown, { marginTop: 8 }]}>
-                <Pressable
-                  style={[s.dropdownHeader, s.flatDropdownHeader]}
-                  onPress={() => {
-                    setPlantDropdownOpen(false);
-                    setLocationDropdownOpen(false);
-                    setDaysOpen((o) => !o);
-                  }}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                >
-                  <Text style={s.dropdownValue}>
-                    {t("taskHistoryModals.delete.daysValue", { days })}
-                  </Text>
-
-                  <MaterialCommunityIcons
-                    name={daysOpen ? "chevron-up" : "chevron-down"}
-                    size={20}
-                    color="#FFFFFF"
-                  />
-                </Pressable>
-
-                {daysOpen && (
-                  <View style={[s.dropdownList, s.flatDropdownList]}>
-                    {DAYS_OPTIONS.map((opt) => (
-                      <Pressable
-                        key={opt}
-                        style={[s.dropdownItem, s.flatDropdownItem]}
-                        onPress={() => {
-                          setDays(opt);
-                          setDaysOpen(false);
-                        }}
-                      >
-                        <Text style={s.dropdownItemText}>
-                          {t("taskHistoryModals.delete.daysValue", {
-                            days: opt,
-                          })}
-                        </Text>
-
-                        {days === opt && (
-                          <MaterialCommunityIcons
-                            name="check"
-                            size={18}
-                            color="#FFFFFF"
-                          />
-                        )}
-                      </Pressable>
-                    ))}
-                  </View>
-                )}
-              </View>
-            )}
-
-            <View style={[s.promptButtonsRow, { marginTop: 18 }]}>
-              <Pressable onPress={onCancel} style={s.promptBtn}>
-                <Text style={s.promptBtnText}>
-                  {t("taskHistoryModals.common.cancel")}
-                </Text>
-              </Pressable>
-
-              <Pressable
-                onPress={handleConfirm}
+            <Pressable
+              onPress={handleConfirm}
+              style={[
+                s.promptBtn,
+                s.promptDanger,
+                !canConfirm && {
+                  opacity: 0.5,
+                },
+              ]}
+              disabled={!canConfirm}
+            >
+              <Text
                 style={[
-                  s.promptBtn,
-                  s.promptDanger,
-                  !canConfirm && { opacity: 0.5 },
+                  s.promptPrimaryText,
+                  {
+                    color: '#FF6B6B',
+                    fontWeight: '800',
+                  },
                 ]}
-                disabled={!canConfirm}
               >
-                <Text
-                  style={[
-                    s.promptPrimaryText,
-                    {
-                      color: "#FF6B6B",
-                      fontWeight: "800",
-                    },
-                  ]}
-                >
-                  {t("taskHistoryModals.common.delete")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={t("taskHistoryModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+                {t('taskHistoryModals.common.delete')}
+              </Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
@@ -525,7 +466,7 @@ export default function DeleteHistoryTasksModal({
 const styles = StyleSheet.create({
   helperText: {
     fontSize: 12,
-    color: "rgba(255,255,255,0.75)",
+    color: 'rgba(255,255,255,0.75)',
     marginTop: 2,
   },
   disabledRow: {

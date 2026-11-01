@@ -1,26 +1,16 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import {
-  View,
-  Pressable,
-  Text,
-  TextInput,
-  ScrollView,
-  StyleSheet,
-  Keyboard,
-} from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { View, Pressable, Text, TextInput, ScrollView, StyleSheet, Keyboard } from 'react-native';
 
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
 
-import { wiz } from "../../styles/wizard.styles";
-import type { LocationCategory } from "../../types/create-plant.types";
-import { PREDEFINED_LOCATIONS } from "../../constants/create-plant.constants";
+import { wiz } from '../../styles/wizard.styles';
+import type { LocationCategory } from '../../types/create-plant.types';
+import { PREDEFINED_LOCATIONS } from '../../constants/create-plant.constants';
 
 // Reuse the modal shell from Reminders
-import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
+import { s as remindersStyles } from '../../../reminders/styles/reminders.styles';
 
 type Props = {
   visible: boolean;
@@ -33,15 +23,14 @@ type Props = {
 export default function AddLocationModal({
   visible,
   initialName,
-  initialCategory = "indoor",
+  initialCategory = 'indoor',
   onClose,
   onCreate,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const insets = useSafeAreaInsets();
 
-  const [name, setName] = useState(initialName ?? "");
+  const [name, setName] = useState(initialName ?? '');
   const [cat, setCat] = useState<LocationCategory>(initialCategory);
   const scrollRef = useRef<ScrollView>(null);
 
@@ -51,14 +40,14 @@ export default function AddLocationModal({
 
       const txt = t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   useEffect(() => {
     if (visible) {
-      setName(initialName ?? "");
+      setName(initialName ?? '');
       setCat(initialCategory);
       setTimeout(() => scrollRef.current?.scrollTo({ y: 0, animated: false }), 0);
     }
@@ -84,196 +73,197 @@ export default function AddLocationModal({
 
   return (
     <>
-      <Pressable style={remindersStyles.promptBackdrop} onPress={closeModal} />
-
-      <View style={remindersStyles.promptWrap}>
-        <View style={remindersStyles.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            style={
-              {
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0,0,0,0.35)",
-              } as any
-            }
-          />
-        </View>
-
-        <View
-          style={[
-            remindersStyles.promptInner,
-            {
-              maxHeight: "86%",
-              position: "relative",
-              paddingBottom: insets.bottom || 12,
-            },
-          ]}
+      <AppModalFrame
+        visible
+        onClose={closeModal}
+        closeLabel={tr('createPlant.locationModal.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
+          style={appModalStyles.scroll}
+          ref={scrollRef}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+          showsVerticalScrollIndicator={false}
         >
-          <ScrollView
-            ref={scrollRef}
-            keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[
-              styles.scrollContent,
+          <Text style={remindersStyles.promptTitle}>
+            {tr('createPlant.locationModal.title', 'New Location')}
+          </Text>
+
+          <TextInput
+            style={wiz.inputField}
+            placeholder={tr('createPlant.locationModal.locationName', 'Location name')}
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            value={name}
+            onChangeText={setName}
+          />
+
+          <View style={wiz.segmentRow}>
+            {(['indoor', 'outdoor', 'other'] as LocationCategory[]).map(k => (
+              <Pressable
+                key={k}
+                style={[
+                  wiz.segBtn,
+                  cat === k && wiz.segActive,
+                  {
+                    flex: 1,
+                    borderWidth: 0,
+                  },
+                ]}
+                onPress={() => setCat(k)}
+              >
+                <Text style={wiz.segText}>{tr(`createPlant.step03.categories.${k}`, k)}</Text>
+              </Pressable>
+            ))}
+          </View>
+
+          <View style={remindersStyles.promptButtonsRow}>
+            <Pressable style={remindersStyles.promptBtn} onPress={closeModal}>
+              <Text style={remindersStyles.promptBtnText}>
+                {tr('createPlant.locationModal.cancel', 'Cancel')}
+              </Text>
+            </Pressable>
+
+            <Pressable
+              style={[remindersStyles.promptBtn, remindersStyles.promptPrimary]}
+              onPress={() => {
+                Keyboard.dismiss();
+                create();
+              }}
+            >
+              <Text style={[remindersStyles.promptBtnText, remindersStyles.promptPrimaryText]}>
+                {tr('createPlant.locationModal.create', 'Create')}
+              </Text>
+            </Pressable>
+          </View>
+
+          <Text
+            style={[
+              wiz.sectionTitle,
               {
-                paddingTop: 44,
-                paddingBottom: 120,
+                marginTop: 14,
               },
             ]}
-            showsVerticalScrollIndicator={false}
           >
-            <Text style={remindersStyles.promptTitle}>
-              {tr("createPlant.locationModal.title", "New Location")}
-            </Text>
+            {tr('createPlant.step03.quickSuggestions', 'Quick suggestions')}
+          </Text>
 
-            <TextInput
-              style={wiz.inputField}
-              placeholder={tr(
-                "createPlant.locationModal.locationName",
-                "Location name"
-              )}
-              placeholderTextColor="rgba(255,255,255,0.7)"
-              value={name}
-              onChangeText={setName}
-            />
+          <Text
+            style={[
+              wiz.locationCat,
+              {
+                marginBottom: 6,
+              },
+            ]}
+          >
+            {tr('createPlant.step03.categories.indoor', 'Indoor')}
+          </Text>
 
-            <View style={wiz.segmentRow}>
-              {(["indoor", "outdoor", "other"] as LocationCategory[]).map((k) => (
+          <View style={styles.gridWrap}>
+            {PREDEFINED_LOCATIONS.indoor.slice(0, 9).map(labelKey => {
+              const key = `createPlant.locationModal.predefinedLocations.indoor.${labelKey}`;
+              const label = tr(key, labelKey);
+
+              return (
                 <Pressable
-                  key={k}
-                  style={[
-                    wiz.segBtn,
-                    cat === k && wiz.segActive,
-                    {
-                      flex: 1,
-                      borderWidth: 0,
-                    },
-                  ]}
-                  onPress={() => setCat(k)}
+                  key={`ind-${labelKey}`}
+                  style={[wiz.chip, styles.gridChip]}
+                  onPress={() => pickSuggestion(label, 'indoor')}
                 >
-                  <Text style={wiz.segText}>
-                    {tr(`createPlant.step03.categories.${k}`, k)}
+                  <Text
+                    style={[
+                      wiz.chipText,
+                      {
+                        color: '#FFFFFF',
+                      },
+                    ]}
+                  >
+                    {label}
                   </Text>
                 </Pressable>
-              ))}
-            </View>
+              );
+            })}
+          </View>
 
-            <View style={remindersStyles.promptButtonsRow}>
-              <Pressable style={remindersStyles.promptBtn} onPress={closeModal}>
-                <Text style={remindersStyles.promptBtnText}>
-                  {tr("createPlant.locationModal.cancel", "Cancel")}
-                </Text>
-              </Pressable>
+          <Text
+            style={[
+              wiz.locationCat,
+              {
+                marginTop: 12,
+                marginBottom: 6,
+              },
+            ]}
+          >
+            {tr('createPlant.step03.categories.outdoor', 'Outdoor')}
+          </Text>
 
-              <Pressable
-                style={[remindersStyles.promptBtn, remindersStyles.promptPrimary]}
-                onPress={() => {
-                  Keyboard.dismiss();
-                  create();
-                }}
-              >
-                <Text
-                  style={[
-                    remindersStyles.promptBtnText,
-                    remindersStyles.promptPrimaryText,
-                  ]}
+          <View style={styles.gridWrap}>
+            {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map(labelKey => {
+              const key = `createPlant.locationModal.predefinedLocations.outdoor.${labelKey}`;
+              const label = tr(key, labelKey);
+
+              return (
+                <Pressable
+                  key={`out-${labelKey}`}
+                  style={[wiz.chip, styles.gridChip]}
+                  onPress={() => pickSuggestion(label, 'outdoor')}
                 >
-                  {tr("createPlant.locationModal.create", "Create")}
-                </Text>
-              </Pressable>
-            </View>
-
-            <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>
-              {tr("createPlant.step03.quickSuggestions", "Quick suggestions")}
-            </Text>
-
-            <Text style={[wiz.locationCat, { marginBottom: 6 }]}>
-              {tr("createPlant.step03.categories.indoor", "Indoor")}
-            </Text>
-
-            <View style={styles.gridWrap}>
-              {PREDEFINED_LOCATIONS.indoor.slice(0, 9).map((labelKey) => {
-                const key = `createPlant.locationModal.predefinedLocations.indoor.${labelKey}`;
-                const label = tr(key, labelKey);
-
-                return (
-                  <Pressable
-                    key={`ind-${labelKey}`}
-                    style={[wiz.chip, styles.gridChip]}
-                    onPress={() => pickSuggestion(label, "indoor")}
+                  <Text
+                    style={[
+                      wiz.chipText,
+                      {
+                        color: '#FFFFFF',
+                      },
+                    ]}
                   >
-                    <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>
-                      {label}
-                    </Text>
-                  </Pressable>
-                );
-              })}
-            </View>
+                    {label}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
 
-            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>
-              {tr("createPlant.step03.categories.outdoor", "Outdoor")}
-            </Text>
+          <Text
+            style={[
+              wiz.locationCat,
+              {
+                marginTop: 12,
+                marginBottom: 6,
+              },
+            ]}
+          >
+            {tr('createPlant.step03.categories.other', 'Other')}
+          </Text>
 
-            <View style={styles.gridWrap}>
-              {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map((labelKey) => {
-                const key = `createPlant.locationModal.predefinedLocations.outdoor.${labelKey}`;
-                const label = tr(key, labelKey);
+          <View style={styles.gridWrap}>
+            {PREDEFINED_LOCATIONS.other.slice(0, 9).map(labelKey => {
+              const key = `createPlant.locationModal.predefinedLocations.other.${labelKey}`;
+              const label = tr(key, labelKey);
 
-                return (
-                  <Pressable
-                    key={`out-${labelKey}`}
-                    style={[wiz.chip, styles.gridChip]}
-                    onPress={() => pickSuggestion(label, "outdoor")}
+              return (
+                <Pressable
+                  key={`oth-${labelKey}`}
+                  style={[wiz.chip, styles.gridChip]}
+                  onPress={() => pickSuggestion(label, 'other')}
+                >
+                  <Text
+                    style={[
+                      wiz.chipText,
+                      {
+                        color: '#FFFFFF',
+                      },
+                    ]}
                   >
-                    <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>
-                      {label}
-                    </Text>
-                  </Pressable>
-                );
-              })}
-            </View>
-
-            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>
-              {tr("createPlant.step03.categories.other", "Other")}
-            </Text>
-
-            <View style={styles.gridWrap}>
-              {PREDEFINED_LOCATIONS.other.slice(0, 9).map((labelKey) => {
-                const key = `createPlant.locationModal.predefinedLocations.other.${labelKey}`;
-                const label = tr(key, labelKey);
-
-                return (
-                  <Pressable
-                    key={`oth-${labelKey}`}
-                    style={[wiz.chip, styles.gridChip]}
-                    onPress={() => pickSuggestion(label, "other")}
-                  >
-                    <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>
-                      {label}
-                    </Text>
-                  </Pressable>
-                );
-              })}
-            </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={closeModal}
-            accessibilityLabel={tr("createPlant.locationModal.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+                    {label}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
@@ -283,14 +273,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   gridWrap: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
     gap: 10,
   },
   gridChip: {
-    flexBasis: "48%",
-    alignItems: "center",
-    justifyContent: "center",
+    flexBasis: '48%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

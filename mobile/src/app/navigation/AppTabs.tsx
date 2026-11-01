@@ -1,3 +1,4 @@
+import { TAB_CONTENT_HEIGHT, MIN_TAB_BOTTOM_PADDING } from "../../shared/constants/layout";
 import React from "react";
 import { BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -127,8 +128,6 @@ const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
 
 const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
 const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
-const TAB_CONTENT_HEIGHT = 64;
-const MIN_TAB_BOTTOM_PADDING = 10;
 
 function GlassTabBar({ state, navigation }: any) {
   const insets = useSafeAreaInsets();

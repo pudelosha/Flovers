@@ -1,6 +1,6 @@
 import React from "react";
 import { ImageBackground, StyleSheet } from "react-native";
-import { act, render, waitFor } from "@testing-library/react-native";
+import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
 import PlantInfoTile from "../PlantInfoTile";
 import PlantTile from "../../../plants/components/PlantTile";
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
@@ -114,4 +114,33 @@ it.each(["details", "list"])("does not substitute the definition photo or spin f
   expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
   expect(view.queryByTestId(screen === "details" ? "plant-detail-photo-loading" : "plant-tile-photo-loading")).toBeNull();
   expect(getPlantPhotoUri).not.toHaveBeenCalled();
+});
+
+
+it("reports definition image readiness only after native load and settles failed images without hanging", async () => {
+  (getPlantPhotoUri as jest.Mock).mockResolvedValue(null);
+  (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: null });
+  const ready = jest.fn();
+  const view = render(<PlantInfoTile plant={plant as any} onImageReadyChange={ready} />);
+  expect(ready).toHaveBeenLastCalledWith(false);
+  await waitFor(() => expect(view.UNSAFE_getByType(ImageBackground)).toBeTruthy());
+  expect(ready).toHaveBeenLastCalledWith(false);
+  fireEvent(view.UNSAFE_getByType(ImageBackground), "load");
+  expect(ready).toHaveBeenLastCalledWith(true);
+  view.rerender(<PlantInfoTile plant={{ ...plant, id: 8 } as any} onImageReadyChange={ready} />);
+  expect(ready).toHaveBeenLastCalledWith(false);
+  await waitFor(() => expect(view.UNSAFE_getByType(ImageBackground)).toBeTruthy());
+  fireEvent(view.UNSAFE_getByType(ImageBackground), "error");
+  expect(ready).toHaveBeenLastCalledWith(true);
+});
+
+it("waits for a private photo decode, and settles a plant with no image", () => {
+  const ready = jest.fn();
+  const view = render(<PlantInfoTile plant={{ ...plant, photo: metadata, access } as any} onImageReadyChange={ready} />);
+  expect(ready).toHaveBeenLastCalledWith(false);
+  fireEvent(view.UNSAFE_getByType(FramedPlantImage), "load");
+  expect(ready).toHaveBeenLastCalledWith(true);
+  (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: null });
+  view.rerender(<PlantInfoTile plant={{ ...plant, plant_definition: null, access } as any} onImageReadyChange={ready} />);
+  expect(ready).toHaveBeenLastCalledWith(true);
 });

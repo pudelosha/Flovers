@@ -76,7 +76,7 @@ describe("private photo save lifecycle", () => {
     const { screen, onClose, onChanged } = await open(); await pick(screen);
     fireEvent.press(screen.getByText("Save"));
     await waitFor(() => expect(upload).toHaveBeenCalledTimes(1));
-    fireEvent.press(screen.getByRole("button", { name: "Close" }));
+    fireEvent.press(screen.getByTestId("app-modal-close"));
     expect(screen.queryByText("Discard changes?")).toBeNull(); expect(onClose).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled();
     await act(async () => { finish(newPhoto); });
     expect(onChanged).toHaveBeenCalledWith(newPhoto); expect(onClose).toHaveBeenCalledTimes(1);
@@ -93,7 +93,7 @@ describe("private photo save lifecycle", () => {
     const { screen, onChanged } = await open(); await pick(screen); await save(screen);
     expect(deleteLocal).not.toHaveBeenCalled(); expect(onChanged).not.toHaveBeenCalled();
     fireEvent.press(screen.getByText("Save")); expect(upload).toHaveBeenCalledTimes(1);
-    fireEvent.press(screen.getByRole("button", { name: "Close" })); expect(screen.getByText("Discard changes?")).toBeTruthy();
+    fireEvent.press(screen.getByTestId("app-modal-close")); expect(screen.getByText("Discard changes?")).toBeTruthy();
   });
   it("removes a server image only after confirmation and Save", async () => {
     const { screen, onChanged } = await open(); chooseRemove(screen); expect(remove).not.toHaveBeenCalled(); await save(screen);
@@ -171,7 +171,7 @@ describe("private photo save lifecycle", () => {
   it("requires confirmation to discard framing edits and never saves them on close", async () => {
     const { screen, onChanged, onClose } = await open();
     fireEvent(screen.getByTestId("photo-framing-editor"), "change", chosenFraming);
-    fireEvent.press(screen.getByRole("button", { name: "Close" }));
+    fireEvent.press(screen.getByTestId("app-modal-close"));
     expect(screen.getByText("Discard changes?")).toBeTruthy();
     fireEvent.press(screen.getByText("Discard"));
     expect(updateFraming).not.toHaveBeenCalled(); expect(upload).not.toHaveBeenCalled();

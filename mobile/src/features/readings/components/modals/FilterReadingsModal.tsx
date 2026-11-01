@@ -1,15 +1,14 @@
-import React from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useTranslation } from "react-i18next";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, Pressable, ScrollView } from 'react-native';
 
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTranslation } from 'react-i18next';
 
 // Reuse Reminders modal look & feel
-import { s } from "../../../reminders/styles/reminders.styles";
+import { s } from '../../../reminders/styles/reminders.styles';
 
-type Status = "enabled" | "disabled";
+type Status = 'enabled' | 'disabled';
 type PlantOption = { id: string; name: string };
 
 type Filters = {
@@ -43,12 +42,8 @@ export default function FilterReadingsModal({
   const [locOpen, setLocOpen] = React.useState(false);
   const [statusOpen, setStatusOpen] = React.useState(false);
 
-  const [plantId, setPlantId] = React.useState<string | undefined>(
-    filters.plantId
-  );
-  const [location, setLocation] = React.useState<string | undefined>(
-    filters.location
-  );
+  const [plantId, setPlantId] = React.useState<string | undefined>(filters.plantId);
+  const [location, setLocation] = React.useState<string | undefined>(filters.location);
   const [status, setStatus] = React.useState<Status | undefined>(filters.status);
 
   React.useEffect(() => {
@@ -76,332 +71,264 @@ export default function FilterReadingsModal({
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={t('readingsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={s.promptTitle}>
-              {t("readingsModals.filter.title")}
-            </Text>
+          <Text style={s.promptTitle}>{t('readingsModals.filter.title')}</Text>
 
-            {/* Plant dropdown */}
-            <Text style={s.inputLabel}>
-              {t("readingsModals.filter.plantLabel")}
-            </Text>
+          {/* Plant dropdown */}
+          <Text style={s.inputLabel}>{t('readingsModals.filter.plantLabel')}</Text>
 
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setLocOpen(false);
-                  setStatusOpen(false);
-                  setPlantOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {plantId
-                    ? plants.find((p) => p.id === plantId)?.name ||
-                      t("readingsModals.filter.selectPlant")
-                    : t("readingsModals.filter.anyPlant")}
-                </Text>
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setLocOpen(false);
+                setStatusOpen(false);
+                setPlantOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {plantId
+                  ? plants.find(p => p.id === plantId)?.name ||
+                    t('readingsModals.filter.selectPlant')
+                  : t('readingsModals.filter.anyPlant')}
+              </Text>
 
-                <MaterialCommunityIcons
-                  name={plantOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+              <MaterialCommunityIcons
+                name={plantOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-              {plantOpen && (
-                <View style={s.dropdownList}>
+            {plantOpen && (
+              <View style={s.dropdownList}>
+                <Pressable
+                  key="__any_plant"
+                  style={s.dropdownItem}
+                  onPress={() => {
+                    setPlantId(undefined);
+                    setPlantOpen(false);
+                  }}
+                >
+                  <Text style={s.dropdownItemText}>{t('readingsModals.filter.anyPlant')}</Text>
+
+                  {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>
+
+                {plants.map(p => (
                   <Pressable
-                    key="__any_plant"
+                    key={p.id}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setPlantId(undefined);
+                      setPlantId(p.id);
                       setPlantOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>
-                      {t("readingsModals.filter.anyPlant")}
-                    </Text>
+                    <Text style={s.dropdownItemText}>{p.name}</Text>
 
-                    {!plantId && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                    {plantId === p.id && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                  {plants.map((p) => (
-                    <Pressable
-                      key={p.id}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setPlantId(p.id);
-                        setPlantOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{p.name}</Text>
+          {/* Location dropdown */}
+          <Text style={s.inputLabel}>{t('readingsModals.filter.locationLabel')}</Text>
 
-                      {plantId === p.id && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setPlantOpen(false);
+                setStatusOpen(false);
+                setLocOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {location ? location : t('readingsModals.filter.anyLocation')}
+              </Text>
 
-            {/* Location dropdown */}
-            <Text style={s.inputLabel}>
-              {t("readingsModals.filter.locationLabel")}
-            </Text>
+              <MaterialCommunityIcons
+                name={locOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setPlantOpen(false);
-                  setStatusOpen(false);
-                  setLocOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {location ? location : t("readingsModals.filter.anyLocation")}
-                </Text>
+            {locOpen && (
+              <View style={s.dropdownList}>
+                <Pressable
+                  key="__any_location"
+                  style={s.dropdownItem}
+                  onPress={() => {
+                    setLocation(undefined);
+                    setLocOpen(false);
+                  }}
+                >
+                  <Text style={s.dropdownItemText}>{t('readingsModals.filter.anyLocation')}</Text>
 
-                <MaterialCommunityIcons
-                  name={locOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>
 
-              {locOpen && (
-                <View style={s.dropdownList}>
+                {locations.map(loc => (
                   <Pressable
-                    key="__any_location"
+                    key={loc}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setLocation(undefined);
+                      setLocation(loc);
                       setLocOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>
-                      {t("readingsModals.filter.anyLocation")}
-                    </Text>
+                    <Text style={s.dropdownItemText}>{loc}</Text>
 
-                    {!location && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                    {location === loc && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                  {locations.map((loc) => (
-                    <Pressable
-                      key={loc}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setLocation(loc);
-                        setLocOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{loc}</Text>
+          {/* Status dropdown */}
+          <Text style={s.inputLabel}>{t('readingsModals.filter.statusLabel')}</Text>
 
-                      {location === loc && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setPlantOpen(false);
+                setLocOpen(false);
+                setStatusOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {status === 'enabled'
+                  ? t('readingsModals.filter.statusEnabled')
+                  : status === 'disabled'
+                  ? t('readingsModals.filter.statusDisabled')
+                  : t('readingsModals.filter.anyStatus')}
+              </Text>
 
-            {/* Status dropdown */}
-            <Text style={s.inputLabel}>
-              {t("readingsModals.filter.statusLabel")}
-            </Text>
+              <MaterialCommunityIcons
+                name={statusOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setPlantOpen(false);
-                  setLocOpen(false);
-                  setStatusOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {status === "enabled"
-                    ? t("readingsModals.filter.statusEnabled")
-                    : status === "disabled"
-                    ? t("readingsModals.filter.statusDisabled")
-                    : t("readingsModals.filter.anyStatus")}
-                </Text>
+            {statusOpen && (
+              <View style={s.dropdownList}>
+                {[
+                  {
+                    key: undefined,
+                    label: t('readingsModals.filter.anyStatus'),
+                  },
+                  {
+                    key: 'enabled',
+                    label: t('readingsModals.filter.statusEnabled'),
+                  },
+                  {
+                    key: 'disabled',
+                    label: t('readingsModals.filter.statusDisabled'),
+                  },
+                ].map(opt => (
+                  <Pressable
+                    key={`${(opt as any).key ?? 'any'}`}
+                    style={s.dropdownItem}
+                    onPress={() => {
+                      setStatus((opt as any).key as Status | undefined);
+                      setStatusOpen(false);
+                    }}
+                  >
+                    <Text style={s.dropdownItemText}>{opt.label}</Text>
 
-                <MaterialCommunityIcons
-                  name={statusOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+                    {status === (opt as any).key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
 
-              {statusOpen && (
-                <View style={s.dropdownList}>
-                  {[
-                    {
-                      key: undefined,
-                      label: t("readingsModals.filter.anyStatus"),
-                    },
-                    {
-                      key: "enabled",
-                      label: t("readingsModals.filter.statusEnabled"),
-                    },
-                    {
-                      key: "disabled",
-                      label: t("readingsModals.filter.statusDisabled"),
-                    },
-                  ].map((opt) => (
-                    <Pressable
-                      key={`${(opt as any).key ?? "any"}`}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setStatus((opt as any).key as Status | undefined);
-                        setStatusOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{opt.label}</Text>
+                    {(opt as any).key === undefined && status === undefined && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+                  </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                      {status === (opt as any).key && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-
-                      {(opt as any).key === undefined &&
-                        status === undefined && (
-                          <MaterialCommunityIcons
-                            name="check"
-                            size={18}
-                            color="#FFFFFF"
-                          />
-                        )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
-              <Pressable
-                onPress={handleClearAll}
+          <View
+            style={[
+              s.promptButtonsRow,
+              {
+                marginTop: 12,
+              },
+            ]}
+          >
+            <Pressable
+              onPress={handleClearAll}
+              style={[
+                s.promptBtn,
+                {
+                  backgroundColor: 'rgba(255,107,107,0.22)',
+                },
+              ]}
+            >
+              <Text
                 style={[
-                  s.promptBtn,
-                  { backgroundColor: "rgba(255,107,107,0.22)" },
+                  s.promptBtnText,
+                  {
+                    color: '#FF6B6B',
+                    fontWeight: '800',
+                  },
                 ]}
               >
-                <Text
-                  style={[
-                    s.promptBtnText,
-                    { color: "#FF6B6B", fontWeight: "800" },
-                  ]}
-                >
-                  {t("readingsModals.common.clear")}
-                </Text>
-              </Pressable>
+                {t('readingsModals.common.clear')}
+              </Text>
+            </Pressable>
 
-              <Pressable onPress={onCancel} style={s.promptBtn}>
-                <Text style={s.promptBtnText}>
-                  {t("readingsModals.common.cancel")}
-                </Text>
-              </Pressable>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
+              <Text style={s.promptBtnText}>{t('readingsModals.common.cancel')}</Text>
+            </Pressable>
 
-              <Pressable
-                onPress={() =>
-                  onApply({
-                    plantId,
-                    location,
-                    status,
-                  })
-                }
-                style={[s.promptBtn, s.promptPrimary]}
-              >
-                <Text style={s.promptPrimaryText}>
-                  {t("readingsModals.common.apply")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={t("readingsModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+            <Pressable
+              onPress={() =>
+                onApply({
+                  plantId,
+                  location,
+                  status,
+                })
+              }
+              style={[s.promptBtn, s.promptPrimary]}
+            >
+              <Text style={s.promptPrimaryText}>{t('readingsModals.common.apply')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }

@@ -1,24 +1,17 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  TextInput,
-  Platform,
-  ScrollView,
-} from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../../styles/home.styles";
-import type { TaskType } from "../../types/home.types";
-import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../constants/home.constants";
-import { useTranslation } from "react-i18next";
-import { useSettings } from "../../../../app/providers/SettingsProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, Pressable, TextInput, Platform, ScrollView } from 'react-native';
+
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { s } from '../../styles/home.styles';
+import type { TaskType } from '../../types/home.types';
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../../constants/home.constants';
+import { useTranslation } from 'react-i18next';
+import { useSettings } from '../../../../app/providers/SettingsProvider';
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require("@react-native-community/datetimepicker").default;
+  DateTimePicker = require('@react-native-community/datetimepicker').default;
 } catch {}
 
 type PlantOption = { id: string; name: string };
@@ -41,13 +34,7 @@ type Props = {
   onClearAll: () => void;
 };
 
-const TYPE_OPTIONS: TaskType[] = [
-  "watering",
-  "moisture",
-  "fertilising",
-  "care",
-  "repot",
-];
+const TYPE_OPTIONS: TaskType[] = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
 
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;
@@ -56,46 +43,42 @@ function isValidDateYYYYMMDD(v?: string) {
   const d = new Date(v);
   if (isNaN(+d)) return false;
 
-  const [Y, M, D] = v.split("-").map(Number);
+  const [Y, M, D] = v.split('-').map(Number);
 
-  return (
-    d.getUTCFullYear() === Y &&
-    d.getUTCMonth() + 1 === M &&
-    d.getUTCDate() === D
-  );
+  return d.getUTCFullYear() === Y && d.getUTCMonth() + 1 === M && d.getUTCDate() === D;
 }
 
 function toYYYYMMDD(d: Date) {
   const Y = d.getFullYear();
-  const M = String(d.getMonth() + 1).padStart(2, "0");
-  const D = String(d.getDate()).padStart(2, "0");
+  const M = String(d.getMonth() + 1).padStart(2, '0');
+  const D = String(d.getDate()).padStart(2, '0');
   return `${Y}-${M}-${D}`;
 }
 
 function formatDateForDisplay(iso?: string, pattern?: string) {
-  if (!iso || !isValidDateYYYYMMDD(iso)) return "";
+  if (!iso || !isValidDateYYYYMMDD(iso)) return '';
 
-  const [yyyy, mm, dd] = iso.split("-");
-  const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
+  const [yyyy, mm, dd] = iso.split('-');
+  const fmt = pattern && typeof pattern === 'string' ? pattern : 'DD.MM.YYYY';
 
-  return fmt.replace("YYYY", yyyy).replace("MM", mm).replace("DD", dd);
+  return fmt.replace('YYYY', yyyy).replace('MM', mm).replace('DD', dd);
 }
 
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(255,255,255,${alpha})`;
 
-  if (!hex || typeof hex !== "string") return fallback;
+  if (!hex || typeof hex !== 'string') return fallback;
 
   let h = hex.trim();
-  if (!h.startsWith("#")) h = `#${h}`;
+  if (!h.startsWith('#')) h = `#${h}`;
 
-  h = h.replace("#", "");
+  h = h.replace('#', '');
 
   if (h.length === 3) {
     h = h
-      .split("")
-      .map((c) => c + c)
-      .join("");
+      .split('')
+      .map(c => c + c)
+      .join('');
   }
 
   if (h.length !== 6) return fallback;
@@ -126,15 +109,11 @@ export default function FilterHomeTasksModal({
   const [locOpen, setLocOpen] = React.useState(false);
   const [types, setTypes] = React.useState<TaskType[]>(filters.types || []);
 
-  const [plantId, setPlantId] = React.useState<string | undefined>(
-    filters.plantId
-  );
-  const [location, setLocation] = React.useState<string | undefined>(
-    filters.location
-  );
+  const [plantId, setPlantId] = React.useState<string | undefined>(filters.plantId);
+  const [location, setLocation] = React.useState<string | undefined>(filters.location);
 
-  const [dueFrom, setDueFrom] = React.useState(filters.dueFrom || "");
-  const [dueTo, setDueTo] = React.useState(filters.dueTo || "");
+  const [dueFrom, setDueFrom] = React.useState(filters.dueFrom || '');
+  const [dueTo, setDueTo] = React.useState(filters.dueTo || '');
   const [showFromPicker, setShowFromPicker] = React.useState(false);
   const [showToPicker, setShowToPicker] = React.useState(false);
 
@@ -147,15 +126,13 @@ export default function FilterHomeTasksModal({
       setTypes(filters.types || []);
       setPlantId(filters.plantId);
       setLocation(filters.location);
-      setDueFrom(filters.dueFrom || "");
-      setDueTo(filters.dueTo || "");
+      setDueFrom(filters.dueFrom || '');
+      setDueTo(filters.dueTo || '');
     }
   }, [visible, filters]);
 
   const toggleType = (t0: TaskType) => {
-    setTypes((curr) =>
-      curr.includes(t0) ? curr.filter((x) => x !== t0) : [...curr, t0]
-    );
+    setTypes(curr => (curr.includes(t0) ? curr.filter(x => x !== t0) : [...curr, t0]));
   };
 
   const handleClearAll = () => {
@@ -166,8 +143,8 @@ export default function FilterHomeTasksModal({
     setTypes([]);
     setPlantId(undefined);
     setLocation(undefined);
-    setDueFrom("");
-    setDueTo("");
+    setDueFrom('');
+    setDueTo('');
     onClearAll();
   };
 
@@ -175,423 +152,363 @@ export default function FilterHomeTasksModal({
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
-          style={[
-            s.promptInner,
-            {
-              maxHeight: "86%",
-              position: "relative",
-            },
-          ]}
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={t('homeModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
+          style={appModalStyles.scroll}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={appModalStyles.scrollContent}
         >
-          <ScrollView
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={s.promptTitle}>{t("homeModals.filter.title")}</Text>
+          <Text style={s.promptTitle}>{t('homeModals.filter.title')}</Text>
 
-            <Text style={s.inputLabel}>{t("homeModals.filter.plantLabel")}</Text>
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setLocOpen(false);
-                  setShowFromPicker(false);
-                  setShowToPicker(false);
-                  setPlantOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {plantId
-                    ? plants.find((p) => p.id === plantId)?.name ||
-                      t("homeModals.filter.selectPlant")
-                    : t("homeModals.filter.anyPlant")}
-                </Text>
+          <Text style={s.inputLabel}>{t('homeModals.filter.plantLabel')}</Text>
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setLocOpen(false);
+                setShowFromPicker(false);
+                setShowToPicker(false);
+                setPlantOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {plantId
+                  ? plants.find(p => p.id === plantId)?.name || t('homeModals.filter.selectPlant')
+                  : t('homeModals.filter.anyPlant')}
+              </Text>
 
-                <MaterialCommunityIcons
-                  name={plantOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+              <MaterialCommunityIcons
+                name={plantOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-              {plantOpen && (
-                <View style={s.dropdownList}>
+            {plantOpen && (
+              <View style={s.dropdownList}>
+                <Pressable
+                  key="__any_plant"
+                  style={s.dropdownItem}
+                  onPress={() => {
+                    setPlantId(undefined);
+                    setPlantOpen(false);
+                  }}
+                >
+                  <Text style={s.dropdownItemText}>{t('homeModals.filter.anyPlant')}</Text>
+
+                  {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>
+
+                {plants.map(p => (
                   <Pressable
-                    key="__any_plant"
+                    key={p.id}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setPlantId(undefined);
+                      setPlantId(p.id);
                       setPlantOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>
-                      {t("homeModals.filter.anyPlant")}
-                    </Text>
+                    <Text style={s.dropdownItemText}>{p.name}</Text>
 
-                    {!plantId && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                    {plantId === p.id && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                  {plants.map((p) => (
-                    <Pressable
-                      key={p.id}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setPlantId(p.id);
-                        setPlantOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{p.name}</Text>
+          <Text style={s.inputLabel}>{t('homeModals.filter.locationLabel')}</Text>
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setPlantOpen(false);
+                setShowFromPicker(false);
+                setShowToPicker(false);
+                setLocOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {location ? location : t('homeModals.filter.anyLocation')}
+              </Text>
 
-                      {plantId === p.id && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
+              <MaterialCommunityIcons
+                name={locOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-            <Text style={s.inputLabel}>
-              {t("homeModals.filter.locationLabel")}
-            </Text>
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setPlantOpen(false);
-                  setShowFromPicker(false);
-                  setShowToPicker(false);
-                  setLocOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {location ? location : t("homeModals.filter.anyLocation")}
-                </Text>
+            {locOpen && (
+              <View style={s.dropdownList}>
+                <Pressable
+                  key="__any_location"
+                  style={s.dropdownItem}
+                  onPress={() => {
+                    setLocation(undefined);
+                    setLocOpen(false);
+                  }}
+                >
+                  <Text style={s.dropdownItemText}>{t('homeModals.filter.anyLocation')}</Text>
 
-                <MaterialCommunityIcons
-                  name={locOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>
 
-              {locOpen && (
-                <View style={s.dropdownList}>
+                {locations.map(loc => (
                   <Pressable
-                    key="__any_location"
+                    key={loc}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setLocation(undefined);
+                      setLocation(loc);
                       setLocOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>
-                      {t("homeModals.filter.anyLocation")}
-                    </Text>
+                    <Text style={s.dropdownItemText}>{loc}</Text>
 
-                    {!location && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                    {location === loc && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                  {locations.map((loc) => (
-                    <Pressable
-                      key={loc}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setLocation(loc);
-                        setLocOpen(false);
+          <Text style={s.inputLabel}>{t('homeModals.filter.taskTypesLabel')}</Text>
+          <View
+            style={[
+              s.chipRow,
+              {
+                paddingHorizontal: 16,
+                justifyContent: 'space-between',
+                rowGap: 10,
+                columnGap: 10,
+              },
+            ]}
+          >
+            {TYPE_OPTIONS.map(tt => {
+              const selected = types.includes(tt);
+              const tint = ACCENT_BY_TYPE[tt];
+              const icon = ICON_BY_TYPE[tt];
+
+              return (
+                <Pressable
+                  key={tt}
+                  onPress={() => toggleType(tt)}
+                  style={[
+                    s.chip,
+                    {
+                      width: '48%',
+                      minHeight: 44,
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: 8,
+                      borderWidth: 0,
+                      borderColor: selected ? hexToRgba(tint, 0.95) : hexToRgba(tint, 0.45),
+                      backgroundColor: selected ? hexToRgba(tint, 0.24) : hexToRgba(tint, 0.14),
+                    },
+                  ]}
+                >
+                  <MaterialCommunityIcons name={icon} size={16} color={tint} />
+
+                  <Text
+                    style={[
+                      s.chipText,
+                      {
+                        color: tint,
+                      },
+                    ]}
+                  >
+                    {t(`home.taskTypes.${tt}`)}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+
+          <Text
+            style={[
+              s.inputLabel,
+              {
+                marginTop: 12,
+              },
+            ]}
+          >
+            {t('homeModals.filter.dueDateRangeLabel')}
+          </Text>
+
+          <View style={s.inlineRow}>
+            <View style={s.inlineHalfLeft}>
+              <Pressable
+                onPress={() => {
+                  setPlantOpen(false);
+                  setLocOpen(false);
+                  setShowToPicker(false);
+                  setShowFromPicker(true);
+                }}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+              >
+                <TextInput
+                  style={[s.input, s.inputInline]}
+                  placeholder={settings.dateFormat || 'DD.MM.YYYY'}
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  value={formatDateForDisplay(dueFrom, settings.dateFormat)}
+                  editable={false}
+                  pointerEvents="none"
+                />
+              </Pressable>
+
+              {DateTimePicker && showFromPicker && (
+                <View style={{ marginTop: 8, marginBottom: 10 }}>
+                  <DateTimePicker
+                    value={(() => {
+                      const d0 = isValidDateYYYYMMDD(dueFrom)
+                        ? new Date(dueFrom + 'T00:00:00')
+                        : new Date();
+                      return d0;
+                    })()}
+                    mode="date"
+                    display={Platform.OS === 'ios' ? 'inline' : 'default'}
+                    onChange={(event: any, date?: Date) => {
+                      if (Platform.OS === 'android') setShowFromPicker(false);
+                      if (date) setDueFrom(toYYYYMMDD(date));
+                    }}
+                  />
+
+                  {Platform.OS === 'ios' && (
+                    <View
+                      style={{
+                        marginTop: 8,
+                        flexDirection: 'row',
+                        justifyContent: 'flex-end',
                       }}
                     >
-                      <Text style={s.dropdownItemText}>{loc}</Text>
-
-                      {location === loc && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
+                      <Pressable
+                        onPress={() => setShowFromPicker(false)}
+                        style={[s.promptBtn, s.promptPrimary]}
+                      >
+                        <Text style={s.promptPrimaryText}>{t('homeModals.common.apply')}</Text>
+                      </Pressable>
+                    </View>
+                  )}
                 </View>
               )}
             </View>
 
-            <Text style={s.inputLabel}>
-              {t("homeModals.filter.taskTypesLabel")}
-            </Text>
-            <View
-              style={[
-                s.chipRow,
-                {
-                  paddingHorizontal: 16,
-                  justifyContent: "space-between",
-                  rowGap: 10,
-                  columnGap: 10,
-                },
-              ]}
-            >
-              {TYPE_OPTIONS.map((tt) => {
-                const selected = types.includes(tt);
-                const tint = ACCENT_BY_TYPE[tt];
-                const icon = ICON_BY_TYPE[tt];
-
-                return (
-                  <Pressable
-                    key={tt}
-                    onPress={() => toggleType(tt)}
-                    style={[
-                      s.chip,
-                      {
-                        width: "48%",
-                        minHeight: 44,
-                        flexDirection: "row",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: 8,
-                        borderWidth: 0,
-                        borderColor: selected
-                          ? hexToRgba(tint, 0.95)
-                          : hexToRgba(tint, 0.45),
-                        backgroundColor: selected
-                          ? hexToRgba(tint, 0.24)
-                          : hexToRgba(tint, 0.14),
-                      },
-                    ]}
-                  >
-                    <MaterialCommunityIcons name={icon} size={16} color={tint} />
-
-                    <Text
-                      style={[
-                        s.chipText,
-                        {
-                          color: tint,
-                        },
-                      ]}
-                    >
-                      {t(`home.taskTypes.${tt}`)}
-                    </Text>
-                  </Pressable>
-                );
-              })}
-            </View>
-
-            <Text style={[s.inputLabel, { marginTop: 12 }]}>
-              {t("homeModals.filter.dueDateRangeLabel")}
-            </Text>
-
-            <View style={s.inlineRow}>
-              <View style={s.inlineHalfLeft}>
-                <Pressable
-                  onPress={() => {
-                    setPlantOpen(false);
-                    setLocOpen(false);
-                    setShowToPicker(false);
-                    setShowFromPicker(true);
-                  }}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                >
-                  <TextInput
-                    style={[s.input, s.inputInline]}
-                    placeholder={settings.dateFormat || "DD.MM.YYYY"}
-                    placeholderTextColor="rgba(255,255,255,0.7)"
-                    value={formatDateForDisplay(dueFrom, settings.dateFormat)}
-                    editable={false}
-                    pointerEvents="none"
-                  />
-                </Pressable>
-
-                {DateTimePicker && showFromPicker && (
-                  <View style={{ marginTop: 8, marginBottom: 10 }}>
-                    <DateTimePicker
-                      value={(() => {
-                        const d0 = isValidDateYYYYMMDD(dueFrom)
-                          ? new Date(dueFrom + "T00:00:00")
-                          : new Date();
-                        return d0;
-                      })()}
-                      mode="date"
-                      display={Platform.OS === "ios" ? "inline" : "default"}
-                      onChange={(event: any, date?: Date) => {
-                        if (Platform.OS === "android") setShowFromPicker(false);
-                        if (date) setDueFrom(toYYYYMMDD(date));
-                      }}
-                    />
-
-                    {Platform.OS === "ios" && (
-                      <View
-                        style={{
-                          marginTop: 8,
-                          flexDirection: "row",
-                          justifyContent: "flex-end",
-                        }}
-                      >
-                        <Pressable
-                          onPress={() => setShowFromPicker(false)}
-                          style={[s.promptBtn, s.promptPrimary]}
-                        >
-                          <Text style={s.promptPrimaryText}>
-                            {t("homeModals.common.apply")}
-                          </Text>
-                        </Pressable>
-                      </View>
-                    )}
-                  </View>
-                )}
-              </View>
-
-              <View style={s.inlineHalfRight}>
-                <Pressable
-                  onPress={() => {
-                    setPlantOpen(false);
-                    setLocOpen(false);
-                    setShowFromPicker(false);
-                    setShowToPicker(true);
-                  }}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                >
-                  <TextInput
-                    style={[s.input, s.inputInline]}
-                    placeholder={settings.dateFormat || "DD.MM.YYYY"}
-                    placeholderTextColor="rgba(255,255,255,0.7)"
-                    value={formatDateForDisplay(dueTo, settings.dateFormat)}
-                    editable={false}
-                    pointerEvents="none"
-                  />
-                </Pressable>
-
-                {DateTimePicker && showToPicker && (
-                  <View style={{ marginTop: 8, marginBottom: 10 }}>
-                    <DateTimePicker
-                      value={(() => {
-                        const d0 = isValidDateYYYYMMDD(dueTo)
-                          ? new Date(dueTo + "T00:00:00")
-                          : new Date();
-                        return d0;
-                      })()}
-                      mode="date"
-                      display={Platform.OS === "ios" ? "inline" : "default"}
-                      onChange={(event: any, date?: Date) => {
-                        if (Platform.OS === "android") setShowToPicker(false);
-                        if (date) setDueTo(toYYYYMMDD(date));
-                      }}
-                    />
-
-                    {Platform.OS === "ios" && (
-                      <View
-                        style={{
-                          marginTop: 8,
-                          flexDirection: "row",
-                          justifyContent: "flex-end",
-                        }}
-                      >
-                        <Pressable
-                          onPress={() => setShowToPicker(false)}
-                          style={[s.promptBtn, s.promptPrimary]}
-                        >
-                          <Text style={s.promptPrimaryText}>
-                            {t("homeModals.common.apply")}
-                          </Text>
-                        </Pressable>
-                      </View>
-                    )}
-                  </View>
-                )}
-              </View>
-            </View>
-
-            <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
-              <Pressable onPress={handleClearAll} style={[s.promptBtn, s.promptDanger]}>
-                <Text
-                  style={[
-                    s.promptBtnText,
-                    { color: "#FF6B6B", fontWeight: "800" },
-                  ]}
-                >
-                  {t("homeModals.filter.clear")}
-                </Text>
-              </Pressable>
-
-              <Pressable onPress={onCancel} style={s.promptBtn}>
-                <Text style={s.promptBtnText}>
-                  {t("homeModals.common.cancel")}
-                </Text>
-              </Pressable>
-
+            <View style={s.inlineHalfRight}>
               <Pressable
-                onPress={() =>
-                  onApply({
-                    plantId,
-                    location,
-                    types,
-                    dueFrom,
-                    dueTo,
-                  })
-                }
-                style={[s.promptBtn, s.promptPrimary]}
+                onPress={() => {
+                  setPlantOpen(false);
+                  setLocOpen(false);
+                  setShowFromPicker(false);
+                  setShowToPicker(true);
+                }}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
               >
-                <Text style={s.promptPrimaryText}>
-                  {t("homeModals.common.apply")}
-                </Text>
+                <TextInput
+                  style={[s.input, s.inputInline]}
+                  placeholder={settings.dateFormat || 'DD.MM.YYYY'}
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  value={formatDateForDisplay(dueTo, settings.dateFormat)}
+                  editable={false}
+                  pointerEvents="none"
+                />
               </Pressable>
-            </View>
-          </ScrollView>
 
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={t("homeModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+              {DateTimePicker && showToPicker && (
+                <View style={{ marginTop: 8, marginBottom: 10 }}>
+                  <DateTimePicker
+                    value={(() => {
+                      const d0 = isValidDateYYYYMMDD(dueTo)
+                        ? new Date(dueTo + 'T00:00:00')
+                        : new Date();
+                      return d0;
+                    })()}
+                    mode="date"
+                    display={Platform.OS === 'ios' ? 'inline' : 'default'}
+                    onChange={(event: any, date?: Date) => {
+                      if (Platform.OS === 'android') setShowToPicker(false);
+                      if (date) setDueTo(toYYYYMMDD(date));
+                    }}
+                  />
+
+                  {Platform.OS === 'ios' && (
+                    <View
+                      style={{
+                        marginTop: 8,
+                        flexDirection: 'row',
+                        justifyContent: 'flex-end',
+                      }}
+                    >
+                      <Pressable
+                        onPress={() => setShowToPicker(false)}
+                        style={[s.promptBtn, s.promptPrimary]}
+                      >
+                        <Text style={s.promptPrimaryText}>{t('homeModals.common.apply')}</Text>
+                      </Pressable>
+                    </View>
+                  )}
+                </View>
+              )}
+            </View>
+          </View>
+
+          <View
+            style={[
+              s.promptButtonsRow,
+              {
+                marginTop: 12,
+              },
+            ]}
+          >
+            <Pressable onPress={handleClearAll} style={[s.promptBtn, s.promptDanger]}>
+              <Text
+                style={[
+                  s.promptBtnText,
+                  {
+                    color: '#FF6B6B',
+                    fontWeight: '800',
+                  },
+                ]}
+              >
+                {t('homeModals.filter.clear')}
+              </Text>
+            </Pressable>
+
+            <Pressable onPress={onCancel} style={s.promptBtn}>
+              <Text style={s.promptBtnText}>{t('homeModals.common.cancel')}</Text>
+            </Pressable>
+
+            <Pressable
+              onPress={() =>
+                onApply({
+                  plantId,
+                  location,
+                  types,
+                  dueFrom,
+                  dueTo,
+                })
+              }
+              style={[s.promptBtn, s.promptPrimary]}
+            >
+              <Text style={s.promptPrimaryText}>{t('homeModals.common.apply')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }

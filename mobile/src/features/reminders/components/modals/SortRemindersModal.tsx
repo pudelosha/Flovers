@@ -1,15 +1,15 @@
-import React from "react";
-import { View, Text, Pressable, StyleSheet, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../../styles/reminders.styles";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
 
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { s } from '../../styles/reminders.styles';
 
-type SortKey = "dueDate" | "plant" | "location";
-type SortDir = "asc" | "desc";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
+
+type SortKey = 'dueDate' | 'plant' | 'location';
+type SortDir = 'asc' | 'desc';
 
 type Props = {
   visible: boolean;
@@ -36,9 +36,9 @@ export default function SortRemindersModal({
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const [keyOpen, setKeyOpen] = React.useState(false);
@@ -58,242 +58,184 @@ export default function SortRemindersModal({
   if (!visible) return null;
 
   const sortKeyLabel = (kk: SortKey) =>
-    kk === "dueDate"
-      ? tr("remindersModals.sort.keys.dueDate", "Due date")
-      : kk === "plant"
-      ? tr("remindersModals.sort.keys.plant", "Plant name")
-      : tr("remindersModals.sort.keys.location", "Location");
+    kk === 'dueDate'
+      ? tr('remindersModals.sort.keys.dueDate', 'Due date')
+      : kk === 'plant'
+      ? tr('remindersModals.sort.keys.plant', 'Plant name')
+      : tr('remindersModals.sort.keys.location', 'Location');
 
   const sortDirLabel = (dd: SortDir) =>
-    dd === "asc"
-      ? tr("remindersModals.sort.directions.asc", "Ascending")
-      : tr("remindersModals.sort.directions.desc", "Descending");
+    dd === 'asc'
+      ? tr('remindersModals.sort.directions.asc', 'Ascending')
+      : tr('remindersModals.sort.directions.desc', 'Descending');
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={[s.promptGlass, styles.promptGlass28]}>
-          <BlurView
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={tr('remindersModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
-            styles.promptInner28,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={s.promptTitle}>
-              {tr("remindersModals.sort.title", "Sort reminders")}
-            </Text>
+          <Text style={s.promptTitle}>{tr('remindersModals.sort.title', 'Sort reminders')}</Text>
 
-            {/* Sort key dropdown */}
-            <Text style={s.inputLabel}>
-              {tr("remindersModals.sort.sortByLabel", "Sort by")}
-            </Text>
+          {/* Sort key dropdown */}
+          <Text style={s.inputLabel}>{tr('remindersModals.sort.sortByLabel', 'Sort by')}</Text>
 
-            <View style={s.dropdown}>
-              <Pressable
-                style={[s.dropdownHeader, styles.ddHeaderFlat]}
-                onPress={() => {
-                  setDirOpen(false);
-                  setKeyOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>{sortKeyLabel(k)}</Text>
+          <View style={s.dropdown}>
+            <Pressable
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
+              onPress={() => {
+                setDirOpen(false);
+                setKeyOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>{sortKeyLabel(k)}</Text>
 
-                <MaterialCommunityIcons
-                  name={keyOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+              <MaterialCommunityIcons
+                name={keyOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-              {keyOpen && (
-                <View style={[s.dropdownList, styles.ddListFlat]}>
-                  {([
-                    { key: "dueDate", label: sortKeyLabel("dueDate") },
-                    { key: "plant", label: sortKeyLabel("plant") },
-                    { key: "location", label: sortKeyLabel("location") },
-                  ] as const).map((opt) => (
-                    <Pressable
-                      key={opt.key}
-                      style={[s.dropdownItem, styles.ddItemFlat]}
-                      onPress={() => {
-                        setK(opt.key);
-                        setKeyOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{opt.label}</Text>
-
-                      {k === opt.key && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            {/* Direction dropdown */}
-            <Text style={s.inputLabel}>
-              {tr("remindersModals.sort.directionLabel", "Direction")}
-            </Text>
-
-            <View style={s.dropdown}>
-              <Pressable
-                style={[s.dropdownHeader, styles.ddHeaderFlat]}
-                onPress={() => {
-                  setKeyOpen(false);
-                  setDirOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>{sortDirLabel(d)}</Text>
-
-                <MaterialCommunityIcons
-                  name={dirOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
-
-              {dirOpen && (
-                <View style={[s.dropdownList, styles.ddListFlat]}>
-                  {([
-                    { key: "asc", label: sortDirLabel("asc") },
-                    { key: "desc", label: sortDirLabel("desc") },
-                  ] as const).map((opt) => (
-                    <Pressable
-                      key={opt.key}
-                      style={[s.dropdownItem, styles.ddItemFlat]}
-                      onPress={() => {
-                        setD(opt.key);
-                        setDirOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{opt.label}</Text>
-
-                      {d === opt.key && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            <View style={s.promptButtonsRow}>
-              {onReset ? (
-                <Pressable
-                  onPress={onReset}
-                  style={[styles.btnBase, styles.btnDanger]}
-                >
-                  <Text
-                    style={[
-                      s.promptBtnText,
-                      {
-                        color: "#FF6B6B",
-                        fontWeight: "800",
-                      },
-                    ]}
+            {keyOpen && (
+              <View style={[s.dropdownList, styles.ddListFlat]}>
+                {(
+                  [
+                    { key: 'dueDate', label: sortKeyLabel('dueDate') },
+                    { key: 'plant', label: sortKeyLabel('plant') },
+                    { key: 'location', label: sortKeyLabel('location') },
+                  ] as const
+                ).map(opt => (
+                  <Pressable
+                    key={opt.key}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
+                    onPress={() => {
+                      setK(opt.key);
+                      setKeyOpen(false);
+                    }}
                   >
-                    {tr("remindersModals.common.reset", "Reset")}
-                  </Text>
-                </Pressable>
-              ) : null}
+                    <Text style={s.dropdownItemText}>{opt.label}</Text>
 
-              <Pressable onPress={onCancel} style={[styles.btnBase]}>
-                <Text style={s.promptBtnText}>
-                  {tr("remindersModals.common.cancel", "Cancel")}
+                    {k === opt.key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+                  </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
+
+          {/* Direction dropdown */}
+          <Text style={s.inputLabel}>{tr('remindersModals.sort.directionLabel', 'Direction')}</Text>
+
+          <View style={s.dropdown}>
+            <Pressable
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
+              onPress={() => {
+                setKeyOpen(false);
+                setDirOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>{sortDirLabel(d)}</Text>
+
+              <MaterialCommunityIcons
+                name={dirOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
+
+            {dirOpen && (
+              <View style={[s.dropdownList, styles.ddListFlat]}>
+                {(
+                  [
+                    { key: 'asc', label: sortDirLabel('asc') },
+                    { key: 'desc', label: sortDirLabel('desc') },
+                  ] as const
+                ).map(opt => (
+                  <Pressable
+                    key={opt.key}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
+                    onPress={() => {
+                      setD(opt.key);
+                      setDirOpen(false);
+                    }}
+                  >
+                    <Text style={s.dropdownItemText}>{opt.label}</Text>
+
+                    {d === opt.key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+                  </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
+
+          <View style={s.promptButtonsRow}>
+            {onReset ? (
+              <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
+                <Text
+                  style={[
+                    s.promptBtnText,
+                    {
+                      color: '#FF6B6B',
+                      fontWeight: '800',
+                    },
+                  ]}
+                >
+                  {tr('remindersModals.common.reset', 'Reset')}
                 </Text>
               </Pressable>
+            ) : null}
 
-              <Pressable
-                onPress={() => onApply(k, d)}
-                style={[styles.btnBase, styles.btnPrimary]}
-              >
-                <Text style={s.promptPrimaryText}>
-                  {tr("remindersModals.common.apply", "Apply")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
+            <Pressable onPress={onCancel} style={styles.btnBase}>
+              <Text style={s.promptBtnText}>{tr('remindersModals.common.cancel', 'Cancel')}</Text>
+            </Pressable>
 
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={tr("remindersModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+            <Pressable onPress={() => onApply(k, d)} style={[styles.btnBase, styles.btnPrimary]}>
+              <Text style={s.promptPrimaryText}>{tr('remindersModals.common.apply', 'Apply')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  promptGlass28: { borderRadius: 28 },
-  promptInner28: { borderRadius: 28 },
   ddHeaderFlat: {
     borderWidth: 0,
     borderRadius: 16,
     paddingHorizontal: 14,
     paddingVertical: 14,
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
   ddListFlat: {
     borderWidth: 0,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.10)",
+    backgroundColor: 'rgba(255,255,255,0.10)',
   },
   ddItemFlat: {
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.16)",
+    borderColor: 'rgba(255,255,255,0.16)',
     paddingHorizontal: 14,
     paddingVertical: 14,
   },
@@ -301,8 +243,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
-  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
+  btnPrimary: {
+    backgroundColor: 'rgba(11,114,133,0.92)',
+  },
+  btnDanger: {
+    backgroundColor: 'rgba(255,107,107,0.22)',
+  },
 });

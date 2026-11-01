@@ -1,11 +1,12 @@
-import React, { useCallback } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from "@react-native-community/blur";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
-import { s } from "../../styles/plants.styles";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useCallback } from 'react';
+import { View, Text, Pressable, ScrollView } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
+
+import { s } from '../../styles/plants.styles';
 
 type Props = {
   visible: boolean;
@@ -34,17 +35,15 @@ export default function FilterPlantsModal({
       void currentLanguage;
       const txt = t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const [locOpen, setLocOpen] = React.useState(false);
   const [latinOpen, setLatinOpen] = React.useState(false);
 
-  const [location, setLocation] = React.useState<string | undefined>(
-    filters.location
-  );
+  const [location, setLocation] = React.useState<string | undefined>(filters.location);
   const [latin, setLatin] = React.useState<string | undefined>(filters.latin);
 
   React.useEffect(() => {
@@ -60,231 +59,178 @@ export default function FilterPlantsModal({
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            } as any}
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={tr('plantsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={s.promptTitle}>
-              {tr("plantsModals.filter.title", "Filter plants")}
-            </Text>
+          <Text style={s.promptTitle}>{tr('plantsModals.filter.title', 'Filter plants')}</Text>
 
-            {/* Location */}
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setLatinOpen(false);
-                  setLocOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {location ||
-                    tr("plantsModals.filter.anyLocation", "Any location")}
-                </Text>
+          {/* Location */}
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setLatinOpen(false);
+                setLocOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {location || tr('plantsModals.filter.anyLocation', 'Any location')}
+              </Text>
 
-                <MaterialCommunityIcons
-                  name={locOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+              <MaterialCommunityIcons
+                name={locOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-              {locOpen && (
-                <View style={s.dropdownList}>
+            {locOpen && (
+              <View style={s.dropdownList}>
+                <Pressable
+                  key="__any_location"
+                  style={s.dropdownItem}
+                  onPress={() => {
+                    setLocation(undefined);
+                    setLocOpen(false);
+                  }}
+                >
+                  <Text style={s.dropdownItemText}>
+                    {tr('plantsModals.filter.anyLocation', 'Any location')}
+                  </Text>
+
+                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>
+
+                {locations.map(loc => (
                   <Pressable
-                    key="__any_location"
+                    key={loc}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setLocation(undefined);
+                      setLocation(loc);
                       setLocOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>
-                      {tr("plantsModals.filter.anyLocation", "Any location")}
-                    </Text>
+                    <Text style={s.dropdownItemText}>{loc}</Text>
 
-                    {!location && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                    {location === loc && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                  {locations.map((loc) => (
-                    <Pressable
-                      key={loc}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setLocation(loc);
-                        setLocOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{loc}</Text>
+          {/* Latin (type) */}
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setLocOpen(false);
+                setLatinOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {latin || tr('plantsModals.filter.anyLatin', 'Any latin/type')}
+              </Text>
 
-                      {location === loc && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
+              <MaterialCommunityIcons
+                name={latinOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-            {/* Latin (type) */}
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setLocOpen(false);
-                  setLatinOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {latin || tr("plantsModals.filter.anyLatin", "Any latin/type")}
-                </Text>
+            {latinOpen && (
+              <View style={s.dropdownList}>
+                <Pressable
+                  key="__any_latin"
+                  style={s.dropdownItem}
+                  onPress={() => {
+                    setLatin(undefined);
+                    setLatinOpen(false);
+                  }}
+                >
+                  <Text style={s.dropdownItemText}>
+                    {tr('plantsModals.filter.anyLatin', 'Any latin/type')}
+                  </Text>
 
-                <MaterialCommunityIcons
-                  name={latinOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+                  {!latin && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                </Pressable>
 
-              {latinOpen && (
-                <View style={s.dropdownList}>
+                {latinOptions.map(ln => (
                   <Pressable
-                    key="__any_latin"
+                    key={ln}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setLatin(undefined);
+                      setLatin(ln);
                       setLatinOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>
-                      {tr("plantsModals.filter.anyLatin", "Any latin/type")}
-                    </Text>
+                    <Text style={s.dropdownItemText}>{ln}</Text>
 
-                    {!latin && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                    {latin === ln && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
 
-                  {latinOptions.map((ln) => (
-                    <Pressable
-                      key={ln}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setLatin(ln);
-                        setLatinOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>{ln}</Text>
-
-                      {latin === ln && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            <View style={[s.promptButtonsRow, { marginTop: 12 }]}>
-              <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
-                <Text
-                  style={[
-                    s.promptBtnText,
-                    {
-                      color: "#FF6B6B",
-                      fontWeight: "800",
-                    },
-                  ]}
-                >
-                  {tr("plantsModals.common.clear", "Clear")}
-                </Text>
-              </Pressable>
-
-              <Pressable onPress={onCancel} style={s.promptBtn}>
-                <Text style={s.promptBtnText}>
-                  {tr("plantsModals.common.cancel", "Cancel")}
-                </Text>
-              </Pressable>
-
-              <Pressable
-                onPress={() => onApply({ location, latin })}
-                style={[s.promptBtn, s.promptPrimary]}
+          <View
+            style={[
+              s.promptButtonsRow,
+              {
+                marginTop: 12,
+              },
+            ]}
+          >
+            <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
+              <Text
+                style={[
+                  s.promptBtnText,
+                  {
+                    color: '#FF6B6B',
+                    fontWeight: '800',
+                  },
+                ]}
               >
-                <Text style={s.promptPrimaryText}>
-                  {tr("plantsModals.common.apply", "Apply")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
+                {tr('plantsModals.common.clear', 'Clear')}
+              </Text>
+            </Pressable>
 
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={tr("plantsModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
+              <Text style={s.promptBtnText}>{tr('plantsModals.common.cancel', 'Cancel')}</Text>
+            </Pressable>
+
+            <Pressable
+              onPress={() => onApply({ location, latin })}
+              style={[s.promptBtn, s.promptPrimary]}
+            >
+              <Text style={s.promptPrimaryText}>{tr('plantsModals.common.apply', 'Apply')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }

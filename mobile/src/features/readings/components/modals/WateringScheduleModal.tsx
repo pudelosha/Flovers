@@ -1,15 +1,16 @@
-import React from "react";
-import { View, Text, TextInput, Pressable, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../../app/providers/SettingsProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
-import type { ApiPumpTask } from "../../types/readings.types";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, TextInput, Pressable, ScrollView } from 'react-native';
+
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
+import { useSettings } from '../../../../app/providers/SettingsProvider';
+
+import type { ApiPumpTask } from '../../types/readings.types';
 
 // Reuse Reminders modal styles
-import { s } from "../../../reminders/styles/reminders.styles";
+import { s } from '../../../reminders/styles/reminders.styles';
 
 type Props = {
   visible: boolean;
@@ -45,39 +46,39 @@ type Props = {
 };
 
 function formatDateWithSettings(d: Date, settings: any) {
-  const dd = String(d.getDate()).padStart(2, "0");
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
   const yyyy = d.getFullYear();
 
   const fmt = settings?.dateFormat;
 
-  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
-    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+  if (fmt === 'mdy' || fmt === 'MM/DD/YYYY' || fmt === 'MM-DD-YYYY') {
+    const sep = fmt === 'MM-DD-YYYY' ? '-' : '/';
     return `${mm}${sep}${dd}${sep}${yyyy}`;
   }
 
-  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
-    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+  if (fmt === 'ymd' || fmt === 'YYYY-MM-DD' || fmt === 'YYYY/MM/DD') {
+    const sep = fmt === 'YYYY/MM/DD' ? '/' : '-';
     return `${yyyy}${sep}${mm}${sep}${dd}`;
   }
 
-  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
-  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+  if (fmt === 'DD/MM/YYYY') return `${dd}/${mm}/${yyyy}`;
+  if (fmt === 'DD-MM-YYYY') return `${dd}-${mm}-${yyyy}`;
 
   return `${dd}.${mm}.${yyyy}`;
 }
 
 function formatTime(d: Date) {
-  const hh = String(d.getHours()).padStart(2, "0");
-  const min = String(d.getMinutes()).padStart(2, "0");
+  const hh = String(d.getHours()).padStart(2, '0');
+  const min = String(d.getMinutes()).padStart(2, '0');
   return `${hh}:${min}`;
 }
 
 function formatDateTimeWithSettings(value?: Date | string | null, settings?: any) {
-  if (!value) return "";
+  if (!value) return '';
 
-  const date = typeof value === "string" ? new Date(value) : value;
-  if (!(date instanceof Date) || isNaN(+date)) return "";
+  const date = typeof value === 'string' ? new Date(value) : value;
+  if (!(date instanceof Date) || isNaN(+date)) return '';
 
   return `${formatDateWithSettings(date, settings)} ${formatTime(date)}`;
 }
@@ -103,46 +104,46 @@ export default function WateringScheduleModal({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
-  const [durationText, setDurationText] = React.useState("30");
+  const [durationText, setDurationText] = React.useState('30');
   React.useEffect(() => {
-    if (visible) setDurationText("30");
+    if (visible) setDurationText('30');
   }, [visible, deviceId]);
   const durationSeconds = Number(durationText);
-  const validDuration = /^\d+$/.test(durationText) && durationSeconds >= 1 && durationSeconds <= 300;
+  const validDuration =
+    /^\d+$/.test(durationText) && durationSeconds >= 1 && durationSeconds <= 300;
 
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: Record<string, any>) => {
       void currentLanguage;
 
       const txt = values ? t(key, values) : t(key);
-      const isMissing = typeof txt !== "string" || !txt || txt === key;
+      const isMissing = typeof txt !== 'string' || !txt || txt === key;
 
-      if (!isMissing && typeof txt === "string") return txt;
+      if (!isMissing && typeof txt === 'string') return txt;
 
-      let fallbackText = fallback ?? key.split(".").pop() ?? key;
+      let fallbackText = fallback ?? key.split('.').pop() ?? key;
 
       if (values) {
         Object.entries(values).forEach(([name, value]) => {
           fallbackText = fallbackText.replace(
-            new RegExp(`{{\\s*${name}\\s*}}`, "g"),
-            String(value ?? "")
+            new RegExp(`{{\\s*${name}\\s*}}`, 'g'),
+            String(value ?? ''),
           );
         });
       }
 
       return fallbackText;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const hasPendingTask = Boolean(pendingPumpTask) || scheduledJobExists;
 
-  const pendingTaskCreatedAt =
-    pendingPumpTask?.requested_at ?? scheduledJobCreatedAt ?? null;
+  const pendingTaskCreatedAt = pendingPumpTask?.requested_at ?? scheduledJobCreatedAt ?? null;
 
   const formattedPendingTaskCreatedAt = React.useMemo(
     () => formatDateTimeWithSettings(pendingTaskCreatedAt, settings),
-    [pendingTaskCreatedAt, settings]
+    [pendingTaskCreatedAt, settings],
   );
 
   const canScheduleOrRecall =
@@ -174,295 +175,256 @@ export default function WateringScheduleModal({
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onClose} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            // @ts-ignore RN shorthand
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore RN shorthand
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
-          style={[
-            s.promptInner,
+      <AppModalFrame
+        visible
+        onClose={onClose}
+        closeLabel={tr('readingsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
+          style={appModalStyles.scroll}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[
             {
-              maxHeight: "86%",
-              position: "relative",
+              gap: 12,
             },
+            appModalStyles.scrollContent,
           ]}
         >
-          <ScrollView
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              paddingTop: 44,
-              paddingBottom: 120,
-              gap: 12,
-            }}
-          >
-            <Text style={s.promptTitle}>
-              {tr("readingsModals.wateringSchedule.title", "Schedule watering")}
-            </Text>
+          <Text style={s.promptTitle}>
+            {tr('readingsModals.wateringSchedule.title', 'Schedule watering')}
+          </Text>
 
-            <Text style={s.confirmText}>
-              {tr(
-                "readingsModals.wateringSchedule.description",
-                "Manual watering works by creating a pending pump job for this device. The mobile app does not run the pump directly. Instead, the backend stores the scheduled job, and the Arduino board checks for pending jobs when it sends its next reading. If a pending job exists and the board has pump-control logic, it can start the water pump and then mark the job as executed."
+          <Text style={s.confirmText}>
+            {tr(
+              'readingsModals.wateringSchedule.description',
+              'Manual watering works by creating a pending pump job for this device. The mobile app does not run the pump directly. Instead, the backend stores the scheduled job, and the Arduino board checks for pending jobs when it sends its next reading. If a pending job exists and the board has pump-control logic, it can start the water pump and then mark the job as executed.',
+            )}
+          </Text>
+
+          <View style={{ marginHorizontal: 16, gap: 12 }}>
+            <Block
+              label={tr(
+                'readingsModals.wateringSchedule.currentSchedule',
+                'Current watering request',
               )}
-            </Text>
+            >
+              <View
+                style={{
+                  padding: 12,
+                  borderRadius: 12,
+                  backgroundColor: hasPendingTask
+                    ? 'rgba(11,114,133,0.28)'
+                    : 'rgba(255,255,255,0.10)',
+                  gap: 8,
+                }}
+              >
+                <StatusLine
+                  icon={hasPendingTask ? 'clock-check-outline' : 'clock-outline'}
+                  text={
+                    hasPendingTask
+                      ? tr(
+                          'readingsModals.wateringSchedule.pendingJob',
+                          'A watering job is currently scheduled and waiting for the device to pick it up.',
+                        )
+                      : tr(
+                          'readingsModals.wateringSchedule.noPendingJob',
+                          'There is no pending watering job for this device.',
+                        )
+                  }
+                />
 
-            <View style={{ marginHorizontal: 16, gap: 12 }}>
+                {hasPendingTask && (
+                  <StatusLine
+                    icon="calendar-clock"
+                    text={tr(
+                      'readingsModals.wateringSchedule.scheduledAt',
+                      'Scheduled at: {{value}}',
+                      { value: formattedPendingTaskCreatedAt || '—' },
+                    )}
+                  />
+                )}
+              </View>
+            </Block>
+
+            {pumpIncluded && (
               <Block
                 label={tr(
-                  "readingsModals.wateringSchedule.currentSchedule",
-                  "Current watering request"
+                  'readingsModals.wateringSchedule.durationLabel',
+                  'Watering duration (seconds)',
                 )}
+              >
+                {hasPendingTask ? (
+                  <Text style={{ color: '#FFFFFF' }}>
+                    {pendingPumpTask?.duration_seconds != null
+                      ? tr('readingsModals.wateringSchedule.durationValue', '{{seconds}} s', {
+                          seconds: pendingPumpTask.duration_seconds,
+                        })
+                      : tr(
+                          'readingsModals.wateringSchedule.firmwareDuration',
+                          "Uses the duration set in the board's code.",
+                        )}
+                  </Text>
+                ) : durationSupported ? (
+                  <>
+                    <TextInput
+                      accessibilityLabel={tr(
+                        'readingsModals.wateringSchedule.durationLabel',
+                        'Watering duration (seconds)',
+                      )}
+                      value={durationText}
+                      onChangeText={setDurationText}
+                      keyboardType="number-pad"
+                      maxLength={3}
+                      editable={!working}
+                      style={{
+                        color: '#FFFFFF',
+                        backgroundColor: 'rgba(255,255,255,0.12)',
+                        borderRadius: 12,
+                        padding: 12,
+                      }}
+                    />
+                    <Text style={{ color: '#FFFFFF', marginTop: 6 }}>
+                      {tr(
+                        'readingsModals.wateringSchedule.durationHint',
+                        "Choose 1–300 seconds. Automatic watering still uses the duration set in the board's code.",
+                      )}
+                    </Text>
+                  </>
+                ) : (
+                  <Text style={{ color: '#FFFFFF' }}>
+                    {tr(
+                      'readingsModals.wateringSchedule.durationFirmwareRequired',
+                      'To choose a duration, upload the latest device code and wait for the board to connect. Until then, manual watering uses the duration set in its code.',
+                    )}
+                  </Text>
+                )}
+              </Block>
+            )}
+
+            <Block label={tr('readingsModals.wateringSchedule.howItWorks', 'How this works')}>
+              <View
+                style={{
+                  padding: 12,
+                  borderRadius: 12,
+                  backgroundColor: 'rgba(255,255,255,0.10)',
+                  gap: 8,
+                }}
+              >
+                <BulletText
+                  text={tr(
+                    'readingsModals.wateringSchedule.step1',
+                    'When you schedule watering, the backend stores a pending pump job for this device.',
+                  )}
+                />
+
+                <BulletText
+                  text={tr(
+                    'readingsModals.wateringSchedule.step2',
+                    'The Arduino board normally sends readings about once per hour. During that request, it can also ask the backend whether a pump job is waiting.',
+                  )}
+                />
+
+                <BulletText
+                  text={tr(
+                    'readingsModals.wateringSchedule.step3',
+                    'If the board has pump-control logic and finds a pending job, it can start the pump and then report that the job was executed.',
+                  )}
+                />
+
+                <BulletText
+                  text={tr(
+                    'readingsModals.wateringSchedule.step4',
+                    'Manual scheduled watering is independent from automatic moisture-based watering. It does not check the current soil moisture level before running.',
+                  )}
+                />
+              </View>
+            </Block>
+
+            {!pumpIncluded && (
+              <Block
+                label={tr('readingsModals.wateringSchedule.pumpRequiredTitle', 'Pump required')}
               >
                 <View
                   style={{
                     padding: 12,
                     borderRadius: 12,
-                    backgroundColor: hasPendingTask
-                      ? "rgba(11,114,133,0.28)"
-                      : "rgba(255,255,255,0.10)",
+                    backgroundColor: 'rgba(255,255,255,0.10)',
                     gap: 8,
                   }}
                 >
                   <StatusLine
-                    icon={
-                      hasPendingTask
-                        ? "clock-check-outline"
-                        : "clock-outline"
-                    }
-                    text={
-                      hasPendingTask
-                        ? tr(
-                            "readingsModals.wateringSchedule.pendingJob",
-                            "A watering job is currently scheduled and waiting for the device to pick it up."
-                          )
-                        : tr(
-                            "readingsModals.wateringSchedule.noPendingJob",
-                            "There is no pending watering job for this device."
-                          )
-                    }
-                  />
-
-                  {hasPendingTask && (
-                    <StatusLine
-                      icon="calendar-clock"
-                      text={tr(
-                        "readingsModals.wateringSchedule.scheduledAt",
-                        "Scheduled at: {{value}}",
-                        { value: formattedPendingTaskCreatedAt || "—" }
-                      )}
-                    />
-                  )}
-                </View>
-              </Block>
-
-              {pumpIncluded && (
-                <Block label={tr("readingsModals.wateringSchedule.durationLabel", "Watering duration (seconds)")}>
-                  {hasPendingTask ? (
-                    <Text style={{ color: "#FFFFFF" }}>
-                      {pendingPumpTask?.duration_seconds != null
-                        ? tr("readingsModals.wateringSchedule.durationValue", "{{seconds}} s", { seconds: pendingPumpTask.duration_seconds })
-                        : tr("readingsModals.wateringSchedule.firmwareDuration", "Uses the duration set in the board's code.")}
-                    </Text>
-                  ) : durationSupported ? (
-                    <>
-                      <TextInput
-                        accessibilityLabel={tr("readingsModals.wateringSchedule.durationLabel", "Watering duration (seconds)")}
-                        value={durationText}
-                        onChangeText={setDurationText}
-                        keyboardType="number-pad"
-                        maxLength={3}
-                        editable={!working}
-                        style={{ color: "#FFFFFF", backgroundColor: "rgba(255,255,255,0.12)", borderRadius: 12, padding: 12 }}
-                      />
-                      <Text style={{ color: "#FFFFFF", marginTop: 6 }}>
-                        {tr("readingsModals.wateringSchedule.durationHint", "Choose 1–300 seconds. Automatic watering still uses the duration set in the board's code.")}
-                      </Text>
-                    </>
-                  ) : (
-                    <Text style={{ color: "#FFFFFF" }}>
-                      {tr("readingsModals.wateringSchedule.durationFirmwareRequired", "To choose a duration, upload the latest device code and wait for the board to connect. Until then, manual watering uses the duration set in its code.")}
-                    </Text>
-                  )}
-                </Block>
-              )}
-
-              <Block
-                label={tr(
-                  "readingsModals.wateringSchedule.howItWorks",
-                  "How this works"
-                )}
-              >
-                <View
-                  style={{
-                    padding: 12,
-                    borderRadius: 12,
-                    backgroundColor: "rgba(255,255,255,0.10)",
-                    gap: 8,
-                  }}
-                >
-                  <BulletText
+                    icon="alert-circle-outline"
                     text={tr(
-                      "readingsModals.wateringSchedule.step1",
-                      "When you schedule watering, the backend stores a pending pump job for this device."
-                    )}
-                  />
-
-                  <BulletText
-                    text={tr(
-                      "readingsModals.wateringSchedule.step2",
-                      "The Arduino board normally sends readings about once per hour. During that request, it can also ask the backend whether a pump job is waiting."
-                    )}
-                  />
-
-                  <BulletText
-                    text={tr(
-                      "readingsModals.wateringSchedule.step3",
-                      "If the board has pump-control logic and finds a pending job, it can start the pump and then report that the job was executed."
-                    )}
-                  />
-
-                  <BulletText
-                    text={tr(
-                      "readingsModals.wateringSchedule.step4",
-                      "Manual scheduled watering is independent from automatic moisture-based watering. It does not check the current soil moisture level before running."
+                      'readingsModals.wateringSchedule.pumpRequiredText',
+                      'This device is not configured with a water pump. Enable water pump support in the device settings before scheduling watering.',
                     )}
                   />
                 </View>
               </Block>
+            )}
 
-              {!pumpIncluded && (
-                <Block
-                  label={tr(
-                    "readingsModals.wateringSchedule.pumpRequiredTitle",
-                    "Pump required"
-                  )}
-                >
-                  <View
-                    style={{
-                      padding: 12,
-                      borderRadius: 12,
-                      backgroundColor: "rgba(255,255,255,0.10)",
-                      gap: 8,
-                    }}
-                  >
-                    <StatusLine
-                      icon="alert-circle-outline"
-                      text={tr(
-                        "readingsModals.wateringSchedule.pumpRequiredText",
-                        "This device is not configured with a water pump. Enable water pump support in the device settings before scheduling watering."
-                      )}
-                    />
-                  </View>
-                </Block>
-              )}
+            <Pressable
+              disabled={!canScheduleOrRecall}
+              onPress={handleScheduleButtonPress}
+              style={{
+                marginTop: 12,
+                paddingVertical: 12,
+                borderRadius: 16,
+                backgroundColor: hasPendingTask
+                  ? 'rgba(255,255,255,0.12)'
+                  : 'rgba(11,114,133,0.92)',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'row',
+                gap: 8,
+                opacity: canScheduleOrRecall ? 1 : 0.7,
+              }}
+            >
+              <MaterialCommunityIcons
+                name={hasPendingTask ? 'calendar-remove-outline' : 'calendar-blank-outline'}
+                size={18}
+                color="#fff"
+              />
 
-              <Pressable
-                disabled={!canScheduleOrRecall}
-                onPress={handleScheduleButtonPress}
-                style={{
-                  marginTop: 12,
-                  paddingVertical: 12,
-                  borderRadius: 16,
-                  backgroundColor: hasPendingTask
-                    ? "rgba(255,255,255,0.12)"
-                    : "rgba(11,114,133,0.92)",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "row",
-                  gap: 8,
-                  opacity: canScheduleOrRecall ? 1 : 0.7,
-                }}
-              >
-                <MaterialCommunityIcons
-                  name={
-                    hasPendingTask
-                      ? "calendar-remove-outline"
-                      : "calendar-blank-outline"
-                  }
-                  size={18}
-                  color="#fff"
-                />
+              <Text style={hasPendingTask ? s.promptBtnText : s.promptPrimaryText}>
+                {working
+                  ? tr('readingsModals.wateringSchedule.working', 'Updating...')
+                  : hasPendingTask
+                  ? tr(
+                      'readingsModals.wateringSchedule.recallWatering',
+                      'Recall scheduled watering',
+                    )
+                  : tr('readingsModals.wateringSchedule.scheduleWatering', 'Schedule watering')}
+              </Text>
+            </Pressable>
 
-                <Text
-                  style={
-                    hasPendingTask
-                      ? s.promptBtnText
-                      : s.promptPrimaryText
-                  }
-                >
-                  {working
-                    ? tr(
-                        "readingsModals.wateringSchedule.working",
-                        "Updating..."
-                      )
-                    : hasPendingTask
-                    ? tr(
-                        "readingsModals.wateringSchedule.recallWatering",
-                        "Recall scheduled watering"
-                      )
-                    : tr(
-                        "readingsModals.wateringSchedule.scheduleWatering",
-                        "Schedule watering"
-                      )}
-                </Text>
+            <View
+              style={[
+                s.promptButtonsRow,
+                {
+                  marginTop: 4,
+                },
+              ]}
+            >
+              <Pressable style={s.promptBtn} onPress={onClose}>
+                <Text style={s.promptBtnText}>{tr('readingsModals.common.close', 'Close')}</Text>
               </Pressable>
-
-              <View style={[s.promptButtonsRow, { marginTop: 4 }]}>
-                <Pressable style={s.promptBtn} onPress={onClose}>
-                  <Text style={s.promptBtnText}>
-                    {tr("readingsModals.common.close", "Close")}
-                  </Text>
-                </Pressable>
-              </View>
             </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={onClose}
-            accessibilityLabel={tr("readingsModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }
 
-function InfoRow({
-  icon,
-  label,
-  value,
-}: {
-  icon: string;
-  label: string;
-  value: string;
-}) {
+function InfoRow({ icon, label, value }: { icon: string; label: string; value: string }) {
   return (
     <View style={{ gap: 6 }}>
-      <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
         <MaterialCommunityIcons name={icon as any} size={18} color="#fff" />
         <Text style={s.dropdownValue}>{label}</Text>
       </View>
@@ -471,14 +433,14 @@ function InfoRow({
         style={{
           padding: 12,
           borderRadius: 12,
-          backgroundColor: "rgba(255,255,255,0.10)",
+          backgroundColor: 'rgba(255,255,255,0.10)',
         }}
       >
         <Text
           style={[
             s.codeBlockText,
             {
-              fontVariant: ["tabular-nums"],
+              fontVariant: ['tabular-nums'],
               fontSize: 12,
               lineHeight: 18,
             },
@@ -494,13 +456,7 @@ function InfoRow({
   );
 }
 
-function Block({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) {
+function Block({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <View style={{ gap: 6 }}>
       <Text style={s.dropdownValue}>{label}</Text>
@@ -511,7 +467,7 @@ function Block({
 
 function BulletText({ text }: { text: string }) {
   return (
-    <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 8 }}>
+    <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 8 }}>
       <MaterialCommunityIcons
         name="check-circle-outline"
         size={18}
@@ -536,21 +492,10 @@ function BulletText({ text }: { text: string }) {
   );
 }
 
-function StatusLine({
-  icon,
-  text,
-}: {
-  icon: string;
-  text: string;
-}) {
+function StatusLine({ icon, text }: { icon: string; text: string }) {
   return (
-    <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 8 }}>
-      <MaterialCommunityIcons
-        name={icon as any}
-        size={18}
-        color="#fff"
-        style={{ marginTop: 1 }}
-      />
+    <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 8 }}>
+      <MaterialCommunityIcons name={icon as any} size={18} color="#fff" style={{ marginTop: 1 }} />
 
       <Text
         style={[

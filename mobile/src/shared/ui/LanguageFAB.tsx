@@ -1,12 +1,13 @@
-import React, { useCallback, useMemo, useState } from "react";
-import { View, Text, Pressable, StyleSheet, Platform, ScrollView } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { BlurView } from "@react-native-community/blur";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../app/providers/LanguageProvider";
+import AppModalFrame from './AppModalFrame';
+import React, { useCallback, useMemo, useState } from 'react';
+import { View, Text, Pressable, StyleSheet, Platform, ScrollView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../app/providers/LanguageProvider';
 
 // single source of truth for supported language codes
-import { LANGS } from "../../i18n/locales";
+import { LANGS } from '../../i18n/locales';
 
 type LangOption = { code: string; label: string; flag: string };
 
@@ -14,31 +15,31 @@ type Props = {
   options?: LangOption[];
   bottomOffset?: number;
   rightOffset?: number;
-  position?: "left" | "right";
+  position?: 'left' | 'right';
 };
 
 // Labels/flags (EN/PL are translated; others just appear as selectable options)
 const LANG_META: Record<string, { label: string; flag: string }> = {
-  en: { label: "English", flag: "🇬🇧" },
-  pl: { label: "Polski", flag: "🇵🇱" },
-  de: { label: "Deutsch", flag: "🇩🇪" },
-  it: { label: "Italiano", flag: "🇮🇹" },
-  fr: { label: "Français", flag: "🇫🇷" },
-  es: { label: "Español", flag: "🇪🇸" },
-  pt: { label: "Português", flag: "🇵🇹" },
-  ar: { label: "العربية", flag: "🇸🇦" },
-  hi: { label: "हिन्दी", flag: "🇮🇳" },
-  zh: { label: "中文", flag: "🇨🇳" },
-  ja: { label: "日本語", flag: "🇯🇵" },
-  id: { label: "Bahasa Indonesia", flag: "🇮🇩" },
-  ru: { label: "Русский", flag: "🇷🇺" },
-  tr: { label: "Türkçe", flag: "🇹🇷" },
-  ko: { label: "한국어", flag: "🇰🇷" },
+  en: { label: 'English', flag: '🇬🇧' },
+  pl: { label: 'Polski', flag: '🇵🇱' },
+  de: { label: 'Deutsch', flag: '🇩🇪' },
+  it: { label: 'Italiano', flag: '🇮🇹' },
+  fr: { label: 'Français', flag: '🇫🇷' },
+  es: { label: 'Español', flag: '🇪🇸' },
+  pt: { label: 'Português', flag: '🇵🇹' },
+  ar: { label: 'العربية', flag: '🇸🇦' },
+  hi: { label: 'हिन्दी', flag: '🇮🇳' },
+  zh: { label: '中文', flag: '🇨🇳' },
+  ja: { label: '日本語', flag: '🇯🇵' },
+  id: { label: 'Bahasa Indonesia', flag: '🇮🇩' },
+  ru: { label: 'Русский', flag: '🇷🇺' },
+  tr: { label: 'Türkçe', flag: '🇹🇷' },
+  ko: { label: '한국어', flag: '🇰🇷' },
 };
 
 // Default options are derived from LANGS (no duplication)
-const DEFAULT_OPTIONS: LangOption[] = (LANGS as readonly string[]).map((code) => {
-  const meta = LANG_META[code] ?? { label: code, flag: "🌐" };
+const DEFAULT_OPTIONS: LangOption[] = (LANGS as readonly string[]).map(code => {
+  const meta = LANG_META[code] ?? { label: code, flag: '🌐' };
   return { code, label: meta.label, flag: meta.flag };
 });
 
@@ -46,7 +47,7 @@ export default function LanguageFAB({
   options,
   bottomOffset = 20,
   rightOffset = 20,
-  position = "right",
+  position = 'right',
 }: Props) {
   const insets = useSafeAreaInsets();
 
@@ -59,10 +60,10 @@ export default function LanguageFAB({
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      if (typeof txt === 'string' && txt && txt !== key) return txt;
+      return fallback ?? key.split('.').pop() ?? key;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const [open, setOpen] = useState(false);
@@ -71,19 +72,18 @@ export default function LanguageFAB({
 
   const current = useMemo(() => {
     const found =
-      LANGS_LOCAL.find((l) => l.code === currentLanguage) ??
-      LANGS_LOCAL.find((l) => l.code === currentLanguage?.split("-")?.[0]);
+      LANGS_LOCAL.find(l => l.code === currentLanguage) ??
+      LANGS_LOCAL.find(l => l.code === currentLanguage?.split('-')?.[0]);
     return (
       found ?? {
-        code: currentLanguage || "en",
-        label: currentLanguage || "en",
-        flag: "🌐",
+        code: currentLanguage || 'en',
+        label: currentLanguage || 'en',
+        flag: '🌐',
       }
     );
   }, [LANGS_LOCAL, currentLanguage]);
 
-  const horizontalStyle =
-    position === "left" ? { left: rightOffset } : { right: rightOffset };
+  const horizontalStyle = position === 'left' ? { left: rightOffset } : { right: rightOffset };
 
   const bottom = Math.max(insets.bottom, 10) + bottomOffset;
 
@@ -95,7 +95,7 @@ export default function LanguageFAB({
       }
     } catch (e) {
       // keep UI responsive; also helps reveal errors in logs
-      console.warn("LanguageFAB: changeLanguage failed", e);
+      console.warn('LanguageFAB: changeLanguage failed', e);
       setOpen(false);
     }
   };
@@ -104,18 +104,31 @@ export default function LanguageFAB({
     return (
       <View
         pointerEvents="box-none"
-        style={[StyleSheet.absoluteFill, { zIndex: 2000, elevation: 2000 }]}
+        style={[
+          StyleSheet.absoluteFill,
+          {
+            zIndex: 2000,
+            elevation: 2000,
+          },
+        ]}
       >
         <View
           pointerEvents="box-none"
-          style={[s.wrap, horizontalStyle, { bottom, alignItems: "center" }]}
+          style={[
+            s.wrap,
+            horizontalStyle,
+            {
+              bottom,
+              alignItems: 'center',
+            },
+          ]}
         >
           <Pressable
             onPress={() => setOpen(true)}
-            android_ripple={{ color: "rgba(255,255,255,0.2)", borderless: true }}
+            android_ripple={{ color: 'rgba(255,255,255,0.2)', borderless: true }}
             style={s.mainFab}
             accessibilityRole="button"
-            accessibilityLabel={tr("languages.modal.title", "Language")}
+            accessibilityLabel={tr('languages.modal.title', 'Language')}
           >
             <Text style={s.flagText}>{current.flag}</Text>
           </Pressable>
@@ -125,202 +138,174 @@ export default function LanguageFAB({
   }
 
   return (
-    <View
-      pointerEvents="box-none"
-      style={[StyleSheet.absoluteFill, { zIndex: 2000, elevation: 2000 }]}
+    <AppModalFrame
+      visible
+      reserveBottomBar={false}
+      title={tr('languages.modal.title', 'Language')}
+      onClose={() => setOpen(false)}
+      closeLabel={tr('languages.modal.cancel', 'Cancel')}
     >
-      <Pressable
-        style={s.promptBackdrop}
-        onPress={() => setOpen(false)}
-        accessibilityRole="button"
-        accessibilityLabel={tr("languages.modal.cancel", "Cancel")}
-      />
+      <Text style={s.confirmText}>
+        {tr('languages.modal.subtitle', 'Select your preferred language')}
+      </Text>
 
-      <View style={s.promptWrap}>
-        {/* IMPORTANT: make glass non-interactive so it never blocks taps */}
-        <View pointerEvents="none" style={s.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-          <View
-            pointerEvents="none"
-            style={
-              {
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0,0,0,0.35)",
-              } as any
-            }
-          />
-        </View>
+      {/* Scrollable list area (keeps header + cancel visible) */}
+      <View style={s.langScrollWrap}>
+        <View style={s.langList}>
+          {LANGS_LOCAL.map(opt => {
+            const selected =
+              opt.code === current.code ||
+              opt.code === currentLanguage ||
+              opt.code === currentLanguage?.split('-')?.[0];
 
-        <View style={s.promptInner}>
-          <Text style={s.promptTitle}>
-            {tr("languages.modal.title", "Language")}
-          </Text>
-
-          <Text style={s.confirmText}>
-            {tr("languages.modal.subtitle", "Select your preferred language")}
-          </Text>
-
-          {/* Scrollable list area (keeps header + cancel visible) */}
-          <View style={s.langScrollWrap}>
-            <ScrollView
-              style={s.langScroll}
-              contentContainerStyle={s.langList}
-              showsVerticalScrollIndicator={false}
-              bounces={false}
-              keyboardShouldPersistTaps="handled"
-            >
-              {LANGS_LOCAL.map((opt) => {
-                const selected =
-                  opt.code === current.code ||
-                  opt.code === currentLanguage ||
-                  opt.code === currentLanguage?.split("-")?.[0];
-
-                return (
-                  <Pressable
-                    key={opt.code}
-                    onPress={() => onPickLanguage(opt.code)}
-                    style={[s.langRow, selected && s.langRowSelected]}
-                    android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                    accessibilityRole="button"
-                  >
-                    <Text style={s.langFlag}>{opt.flag}</Text>
-                    <Text style={s.langLabel}>
-                      {opt.label} <Text style={s.langCode}>({opt.code})</Text>
-                    </Text>
-                    {selected && <Text style={s.langSelectedMark}>✓</Text>}
-                  </Pressable>
-                );
-              })}
-            </ScrollView>
-          </View>
-
-          <View style={s.promptButtonsRow}>
-            <Pressable
-              style={s.promptBtn}
-              onPress={() => setOpen(false)}
-              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-            >
-              <Text style={s.promptBtnText}>
-                {tr("languages.modal.cancel", "Cancel")}
-              </Text>
-            </Pressable>
-          </View>
+            return (
+              <Pressable
+                key={opt.code}
+                onPress={() => onPickLanguage(opt.code)}
+                style={[s.langRow, selected && s.langRowSelected]}
+                android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+                accessibilityRole="button"
+              >
+                <Text style={s.langFlag}>{opt.flag}</Text>
+                <Text style={s.langLabel}>
+                  {opt.label} <Text style={s.langCode}>({opt.code})</Text>
+                </Text>
+                {selected && <Text style={s.langSelectedMark}>✓</Text>}
+              </Pressable>
+            );
+          })}
         </View>
       </View>
-    </View>
+
+      <View style={s.promptButtonsRow}>
+        <Pressable
+          style={s.promptBtn}
+          onPress={() => setOpen(false)}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <Text style={s.promptBtnText}>{tr('languages.modal.cancel', 'Cancel')}</Text>
+        </Pressable>
+      </View>
+    </AppModalFrame>
   );
 }
 
 const s = StyleSheet.create({
-  wrap: { position: "absolute" },
-
+  wrap: {
+    position: 'absolute',
+  },
   mainFab: {
     width: 56,
     height: 56,
     borderRadius: 28,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#0B7285",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#0B7285',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderColor: 'rgba(255,255,255,0.25)',
     ...Platform.select({
       ios: {
-        shadowColor: "#000",
+        shadowColor: '#000',
         shadowOpacity: 0.25,
         shadowRadius: 10,
-        shadowOffset: { width: 0, height: 6 },
+        shadowOffset: {
+          width: 0,
+          height: 6,
+        },
       },
-      android: { elevation: 10 },
+      android: {
+        elevation: 10,
+      },
     }),
   },
-  flagText: { fontSize: 24, lineHeight: 28 },
-
+  flagText: {
+    fontSize: 24,
+    lineHeight: 28,
+  },
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: 'rgba(0,0,0,0.6)',
     zIndex: 20,
   },
   promptWrap: {
     ...StyleSheet.absoluteFillObject,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     zIndex: 21,
     paddingHorizontal: 24,
   },
   promptGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    overflow: "hidden",
+    overflow: 'hidden',
   },
   promptInner: {
-    width: "100%",
+    width: '100%',
     maxWidth: 520,
     borderRadius: 28,
-    overflow: "hidden",
-    position: "relative",
-    backgroundColor: "transparent",
+    overflow: 'hidden',
+    position: 'relative',
+    backgroundColor: 'transparent',
   },
   promptTitle: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 18,
     marginBottom: 10,
     paddingHorizontal: 16,
     paddingTop: 16,
   },
   confirmText: {
-    color: "rgba(255,255,255,0.95)",
+    color: 'rgba(255,255,255,0.95)',
     paddingHorizontal: 16,
     marginBottom: 12,
-    fontWeight: "600",
+    fontWeight: '600',
   },
-
   langScrollWrap: {
     paddingHorizontal: 16,
     paddingBottom: 6,
     maxHeight: 380, // adjust if needed
   },
-  langScroll: {
-    borderRadius: 16,
-  },
-
   langList: {
     gap: 10,
     paddingBottom: 6,
   },
   langRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 14,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: 'rgba(255,255,255,0.12)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.16)",
+    borderColor: 'rgba(255,255,255,0.16)',
   },
   langRowSelected: {
-    backgroundColor: "rgba(11,114,133,0.30)",
-    borderColor: "rgba(11,114,133,0.75)",
+    backgroundColor: 'rgba(11,114,133,0.30)',
+    borderColor: 'rgba(11,114,133,0.75)',
   },
-  langFlag: { fontSize: 18, marginRight: 10 },
-  langLabel: { color: "#FFFFFF", fontWeight: "800", fontSize: 13 },
-  langCode: { color: "rgba(255,255,255,0.85)", fontWeight: "700" },
+  langFlag: {
+    fontSize: 18,
+    marginRight: 10,
+  },
+  langLabel: {
+    color: '#FFFFFF',
+    fontWeight: '800',
+    fontSize: 13,
+  },
+  langCode: {
+    color: 'rgba(255,255,255,0.85)',
+    fontWeight: '700',
+  },
   langSelectedMark: {
-    marginLeft: "auto",
-    color: "#FFFFFF",
-    fontWeight: "900",
+    marginLeft: 'auto',
+    color: '#FFFFFF',
+    fontWeight: '900',
     fontSize: 14,
   },
-
   promptButtonsRow: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
     gap: 10,
     paddingHorizontal: 16,
     paddingBottom: 16,
@@ -330,7 +315,10 @@ const s = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
-  promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
+  promptBtnText: {
+    color: '#FFFFFF',
+    fontWeight: '800',
+  },
 });

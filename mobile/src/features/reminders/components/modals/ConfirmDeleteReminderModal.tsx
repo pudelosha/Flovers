@@ -1,11 +1,11 @@
-import React, { useCallback } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import { s } from "../../styles/reminders.styles";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useCallback } from 'react';
+import { View, Text, Pressable, ScrollView } from 'react-native';
 
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { s } from '../../styles/reminders.styles';
+
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
 
 type Props = {
   visible: boolean;
@@ -14,12 +14,7 @@ type Props = {
   onConfirm: () => void;
 };
 
-export default function ConfirmDeleteReminderModal({
-  visible,
-  name,
-  onCancel,
-  onConfirm,
-}: Props) {
+export default function ConfirmDeleteReminderModal({ visible, name, onCancel, onConfirm }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -28,115 +23,88 @@ export default function ConfirmDeleteReminderModal({
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   if (!visible) return null;
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            // @ts-ignore for RN shorthand
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore for RN shorthand
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={tr('remindersModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
+          <Text style={s.promptTitle}>
+            {tr('remindersModals.confirmDelete.title', 'Delete reminder')}
+          </Text>
+
+          <Text style={s.confirmText}>
+            {tr(
+              'remindersModals.confirmDelete.areYouSurePrefix',
+              'Are you sure you want to delete',
+            )}{' '}
+            <Text style={{ fontWeight: '800', color: '#fff' }}>{name}</Text>
+            {tr(
+              'remindersModals.confirmDelete.areYouSureSuffix',
+              '? This action cannot be undone.',
+            )}
+          </Text>
+
+          <Text
+            style={[
+              s.confirmText,
+              {
+                color: '#FFB4B4',
+                marginTop: 12,
+              },
+            ]}
           >
-            <Text style={s.promptTitle}>
-              {tr("remindersModals.confirmDelete.title", "Delete reminder")}
-            </Text>
+            {String(
+              tr(
+                'remindersModals.confirmDelete.historyWarning',
+                'Deleting this reminder also permanently deletes all its tasks, including completed history and notes.',
+              ),
+            )}
+          </Text>
 
-            <Text style={s.confirmText}>
-              {tr(
-                "remindersModals.confirmDelete.areYouSurePrefix",
-                "Are you sure you want to delete"
-              )}{" "}
-              <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>
-              {tr(
-                "remindersModals.confirmDelete.areYouSureSuffix",
-                "? This action cannot be undone."
-              )}
-            </Text>
+          <View style={s.promptButtonsRow}>
+            <Pressable style={s.promptBtn} onPress={onCancel}>
+              <Text style={s.promptBtnText}>{tr('remindersModals.common.cancel', 'Cancel')}</Text>
+            </Pressable>
 
-            <Text style={[s.confirmText, { color: "#FFB4B4", marginTop: 12 }]}>
-              {String(tr(
-                "remindersModals.confirmDelete.historyWarning",
-                "Deleting this reminder also permanently deletes all its tasks, including completed history and notes."
-              ))}
-            </Text>
-
-            <View style={s.promptButtonsRow}>
-              <Pressable style={s.promptBtn} onPress={onCancel}>
-                <Text style={s.promptBtnText}>
-                  {tr("remindersModals.common.cancel", "Cancel")}
-                </Text>
-              </Pressable>
-
-              <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
-                <Text
-                  style={[
-                    s.promptBtnText,
-                    {
-                      color: "#FF6B6B",
-                      fontWeight: "800",
-                    },
-                  ]}
-                >
-                  {tr("remindersModals.common.delete", "Delete")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={tr("remindersModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+            <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
+              <Text
+                style={[
+                  s.promptBtnText,
+                  {
+                    color: '#FF6B6B',
+                    fontWeight: '800',
+                  },
+                ]}
+              >
+                {tr('remindersModals.common.delete', 'Delete')}
+              </Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }

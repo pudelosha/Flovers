@@ -1,3 +1,4 @@
+import { bottomNavigationHeight } from "../../../shared/constants/layout";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import { getDisplayTemperature } from "../../../shared/utils/temperature";
 import { historyValue } from "../utils/historyValue";
@@ -213,7 +214,7 @@ export default function ReadingsHistoryScreen() {
 
   // Measure the actual content viewport instead of estimating system/header heights.
   const insets = useSafeAreaInsets();
-  const tabBarH = 64 + Math.max(insets.bottom, 10); // custom GlassTabBar height
+  const tabBarH = bottomNavigationHeight(insets.bottom);
   const [viewportHeight, setViewportHeight] = useState(0);
   const [chartChromeHeight, setChartChromeHeight] = useState(0);
   const frameViewportH = viewportHeight - tabBarH - 42; // 21pt above and below the tile

@@ -10,10 +10,6 @@ jest.mock("react-native-safe-area-context", () => ({ useSafeAreaInsets: () => ({
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: (_key: string, values: any) => values?.defaultValue ?? _key }) }));
 jest.mock("../../../../../api/services/journal-photos.service", () => ({ fetchJournalPhoto: jest.fn() }));
 jest.mock("../../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: jest.fn() }));
-jest.mock("../../../../sharing/components/ContactModalFrame", () => ({ visible, children }: any) => {
-  const React = require("react"), { View } = require("react-native");
-  return visible ? React.createElement(View, null, children) : null;
-});
 const owner = { is_owner: true, is_shared: false, can_edit: true, can_complete_tasks: true,
   owner: { id: "1", name: "Owner" }, expires_at: null };
 const tileEntry: any = { id: "entry", plant: "Bird", photo: { id: "old-image", width: 600, height: 800,
@@ -38,13 +34,13 @@ async function open(entry: any = tileEntry) {
 it("fetches the latest private image and displays its full uncropped image", async () => {
   const { view } = await open();
   expect(fetchPhoto).toHaveBeenCalledWith(tileEntry.id);
-  const image = view.getByTestId("journal-full-photo");
+  const image = view.getByTestId("journal-full-photo", { includeHiddenElements: true });
   expect(image.props.source.uri).toContain("fresh-image");
   expect(image.props.resizeMode).toBe("contain");
   expect(view.UNSAFE_getAllByType(Image)).toHaveLength(1);
   expect(view.UNSAFE_getAllByType(CenteredSpinner)).toHaveLength(1);
   fireEvent(image, "load");
-  expect(StyleSheet.flatten(view.getByTestId("journal-full-photo").props.style).opacity).toBe(1);
+  expect(StyleSheet.flatten(view.getByTestId("journal-full-photo", { includeHiddenElements: true }).props.style).opacity).toBe(1);
   expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
 });
 it("waits for metadata and private bytes instead of showing an old crop", async () => {
@@ -55,14 +51,15 @@ it("waits for metadata and private bytes instead of showing an old crop", async 
   expect(view.queryByTestId("journal-full-photo")).toBeNull();
   expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
   mockImageLoading = false; view.rerender(<ViewJournalPhotoModal visible entry={tileEntry} onClose={jest.fn()} />);
-  expect(view.getByTestId("journal-full-photo").props.source.uri).toContain("fresh-image");
+  expect(view.getByTestId("journal-full-photo", { includeHiddenElements: true }).props.source.uri).toContain("fresh-image");
 });
 it("lets a shared viewer see the photo without offering edits or deletion", async () => {
   const shared = { ...freshEntry, access: { ...owner, is_owner: false, is_shared: true, can_edit: false } };
   fetchPhoto.mockResolvedValue(shared);
   const { view, onClose } = await open(shared);
-  expect(view.getByTestId("journal-full-photo")).toBeTruthy();
+  expect(view.getByTestId("journal-full-photo", { includeHiddenElements: true })).toBeTruthy();
   expect(view.queryByText("Edit photo")).toBeNull(); expect(view.queryByText("Delete photo")).toBeNull();
+  fireEvent(view.getByTestId("journal-full-photo", { includeHiddenElements: true }), "load");
   fireEvent.press(view.getByText("Close")); expect(onClose).toHaveBeenCalledTimes(1);
 });
 it("re-fetches metadata after a failed authorized read", async () => {
@@ -70,7 +67,7 @@ it("re-fetches metadata after a failed authorized read", async () => {
   expect(view.queryByTestId("journal-full-photo")).toBeNull();
   expect(view.getByText("Could not load the photo details. Please try again.")).toBeTruthy();
   fireEvent.press(view.getByText("Try again"));
-  await waitFor(() => expect(view.getByTestId("journal-full-photo")).toBeTruthy());
+  await waitFor(() => expect(view.getByTestId("journal-full-photo", { includeHiddenElements: true })).toBeTruthy());
   expect(fetchPhoto).toHaveBeenCalledTimes(2);
 });
 it("does not retain a previous photo or failure when the modal is reopened", async () => {
@@ -80,7 +77,7 @@ it("does not retain a previous photo or failure when the modal is reopened", asy
   view.rerender(<ViewJournalPhotoModal visible entry={tileEntry} onClose={jest.fn()} />);
   expect(view.queryByTestId("journal-full-photo")).toBeNull();
   await act(async () => finish({ ...freshEntry, photo: { ...freshEntry.photo, id: "newer-image" } }));
-  expect(view.getByTestId("journal-full-photo").props.source.uri).toContain("newer-image");
+  expect(view.getByTestId("journal-full-photo", { includeHiddenElements: true }).props.source.uri).toContain("newer-image");
 });
 it("hides bytes after sharing access expires", async () => {
   fetchPhoto.mockResolvedValue({ ...freshEntry, access: { ...owner, is_owner: false, is_shared: true,

@@ -3,7 +3,6 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import AppModalHost from "../../../../shared/ui/AppModalHost";
 import { useTranslation } from "react-i18next";
 import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
-import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
 import { fetchJournalPhoto } from "../../../../api/services/journal-photos.service";
 import type { JournalPhotoItem } from "../../types/task-history.types";
@@ -42,7 +41,7 @@ export default function ViewJournalPhotoModal({ visible, entry, onClose }: {
   const error = loadError === context || expired || !!photo.error || (!!photo.uri && failedUri === photo.uri);
   return <AppModalHost>
     <ContactModalFrame visible title={String(t("taskHistory.photo.viewTitle", { defaultValue: "Photo" }))}
-      onClose={onClose} fullScreen>
+      onClose={onClose} fullScreen loading={!error && (!current || !photo.uri || readyUri !== photo.uri)}>
       <View style={styles.content}>
         {current && <Text style={styles.name}>{current.plant}</Text>}
         <View style={styles.imagePane}>
@@ -56,7 +55,7 @@ export default function ViewJournalPhotoModal({ visible, entry, onClose }: {
               source={{ uri: photo.uri }} resizeMode="contain"
               style={[StyleSheet.absoluteFill, { opacity: readyUri === photo.uri ? 1 : 0 }]}
               onLoad={() => setReadyUri(photo.uri)} onError={() => setFailedUri(photo.uri)} />}
-            {(!photo.uri || readyUri !== photo.uri) && <CenteredSpinner size={42} />}
+
           </>}
         </View>
         <Pressable accessibilityRole="button" style={styles.button} onPress={onClose}>

@@ -1,15 +1,14 @@
-import React from "react";
-import { View, Text, Pressable, ScrollView, StyleSheet, Keyboard } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../../app/providers/SettingsProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
-import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
-import { TRAIT_ICON_BY_KEY } from "../../../create-plant/constants/create-plant.constants";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React from 'react';
+import { View, Text, Pressable, ScrollView, StyleSheet, Keyboard } from 'react-native';
 
-import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
+import { useSettings } from '../../../../app/providers/SettingsProvider';
+
+import { fetchPlantProfile } from '../../../../api/services/plant-definitions.service';
+import { TRAIT_ICON_BY_KEY } from '../../../create-plant/constants/create-plant.constants';
 
 type Props = {
   visible: boolean;
@@ -18,23 +17,23 @@ type Props = {
 };
 
 function normalizeLang(input: any): string {
-  const raw = typeof input === "string" ? input.trim().toLowerCase() : "";
-  if (!raw) return "en";
-  return raw.split("-")[0] || "en";
+  const raw = typeof input === 'string' ? input.trim().toLowerCase() : '';
+  if (!raw) return 'en';
+  return raw.split('-')[0] || 'en';
 }
 
 function pickText(value: any, lang: string): string {
-  if (value == null) return "";
-  if (typeof value === "string") return value.trim();
+  if (value == null) return '';
+  if (typeof value === 'string') return value.trim();
 
-  if (typeof value === "object" && value.text && typeof value.text === "object") {
+  if (typeof value === 'object' && value.text && typeof value.text === 'object') {
     const v = value.text[lang] ?? value.text.en ?? value.text.pl ?? value.text.de;
-    if (typeof v === "string") return v.trim();
+    if (typeof v === 'string') return v.trim();
   }
 
-  if (typeof value === "object") {
+  if (typeof value === 'object') {
     const v = value[lang] ?? value.en ?? value.pl ?? value.de;
-    if (typeof v === "string") return v.trim();
+    if (typeof v === 'string') return v.trim();
   }
 
   try {
@@ -45,42 +44,39 @@ function pickText(value: any, lang: string): string {
 }
 
 function normalizeTraitKey(raw: string): string {
-  const k = (raw || "").trim().toLowerCase();
-  if (!k) return "";
+  const k = (raw || '').trim().toLowerCase();
+  if (!k) return '';
 
   const map: Record<string, string> = {
-    watering: "water",
-    temp: "temperature",
-    light: "sun",
+    watering: 'water',
+    temp: 'temperature',
+    light: 'sun',
   };
 
   return map[k] ?? k;
 }
 
 function titleCaseKey(key: string): string {
-  const s = (key || "").replace(/[_-]+/g, " ").trim();
-  if (!s) return "";
+  const s = (key || '').replace(/[_-]+/g, ' ').trim();
+  if (!s) return '';
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-function getTemperatureUnitFromSettings(settings?: any): "C" | "F" | "K" {
+function getTemperatureUnitFromSettings(settings?: any): 'C' | 'F' | 'K' {
   const raw =
-    settings?.temperatureUnit ??
-    settings?.tempUnit ??
-    settings?.units?.temperature ??
-    "C";
+    settings?.temperatureUnit ?? settings?.tempUnit ?? settings?.units?.temperature ?? 'C';
 
   const normalized = String(raw).trim().toLowerCase();
 
-  if (normalized === "f" || normalized === "°f" || normalized === "fahrenheit") {
-    return "F";
+  if (normalized === 'f' || normalized === '°f' || normalized === 'fahrenheit') {
+    return 'F';
   }
 
-  if (normalized === "k" || normalized === "kelvin") {
-    return "K";
+  if (normalized === 'k' || normalized === 'kelvin') {
+    return 'K';
   }
 
-  return "C";
+  return 'C';
 }
 
 function cToF(c: number) {
@@ -96,15 +92,15 @@ function formatConvertedTemp(n: number) {
   return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
 }
 
-function convertSingleCelsiusValue(celsius: number, targetUnit: "C" | "F" | "K") {
-  if (targetUnit === "F") return `${formatConvertedTemp(cToF(celsius))}°F`;
-  if (targetUnit === "K") return `${formatConvertedTemp(cToK(celsius))} K`;
+function convertSingleCelsiusValue(celsius: number, targetUnit: 'C' | 'F' | 'K') {
+  if (targetUnit === 'F') return `${formatConvertedTemp(cToF(celsius))}°F`;
+  if (targetUnit === 'K') return `${formatConvertedTemp(cToK(celsius))} K`;
   return `${formatConvertedTemp(celsius)}°C`;
 }
 
 function convertTemperatureText(value: string, settings?: any) {
   const targetUnit = getTemperatureUnitFromSettings(settings);
-  if (targetUnit === "C") return value;
+  if (targetUnit === 'C') return value;
 
   let out = value;
 
@@ -112,26 +108,26 @@ function convertTemperatureText(value: string, settings?: any) {
   out = out.replace(
     /(-?\d+(?:[.,]\d+)?)\s*(?:-|–|—|to)\s*(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi,
     (_, a, b) => {
-      const n1 = Number(String(a).replace(",", "."));
-      const n2 = Number(String(b).replace(",", "."));
+      const n1 = Number(String(a).replace(',', '.'));
+      const n2 = Number(String(b).replace(',', '.'));
       if (!Number.isFinite(n1) || !Number.isFinite(n2)) return _;
-      const v1 = targetUnit === "F" ? cToF(n1) : cToK(n1);
-      const v2 = targetUnit === "F" ? cToF(n2) : cToK(n2);
-      const unit = targetUnit === "F" ? "°F" : " K";
+      const v1 = targetUnit === 'F' ? cToF(n1) : cToK(n1);
+      const v2 = targetUnit === 'F' ? cToF(n2) : cToK(n2);
+      const unit = targetUnit === 'F' ? '°F' : ' K';
       return `${formatConvertedTemp(v1)}-${formatConvertedTemp(v2)}${unit}`;
-    }
+    },
   );
 
   // single values like 22°C or 22 C
   out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi, (_, a) => {
-    const n = Number(String(a).replace(",", "."));
+    const n = Number(String(a).replace(',', '.'));
     if (!Number.isFinite(n)) return _;
     return convertSingleCelsiusValue(n, targetUnit);
   });
 
   // word forms like 22 Celsius
   out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*Celsius\b/gi, (_, a) => {
-    const n = Number(String(a).replace(",", "."));
+    const n = Number(String(a).replace(',', '.'));
     if (!Number.isFinite(n)) return _;
     return convertSingleCelsiusValue(n, targetUnit);
   });
@@ -155,9 +151,9 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      return (isMissing ? undefined : txt) || fallback || key.split('.').pop() || key;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const close = React.useCallback(() => {
@@ -176,20 +172,24 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
       if (!plantDefinitionId || !Number.isFinite(plantDefinitionId)) {
         setLoading(false);
-        setError(tr("plantDetailsModals.definition.noId", "No plant definition id found."));
+        setError(tr('plantDetailsModals.definition.noId', 'No plant definition id found.'));
         return;
       }
 
       setLoading(true);
 
       try {
-        const p = await fetchPlantProfile(Number(plantDefinitionId), { auth: true, lang: preferredLang });
+        const p = await fetchPlantProfile(Number(plantDefinitionId), {
+          auth: true,
+          lang: preferredLang,
+        });
         if (!cancelled) setProfile(p);
       } catch (e: any) {
         if (!cancelled) {
           setProfile(null);
           setError(
-            e?.message || tr("plantDetailsModals.definition.loadFailed", "Failed to load plant definition.")
+            e?.message ||
+              tr('plantDetailsModals.definition.loadFailed', 'Failed to load plant definition.'),
           );
         }
       } finally {
@@ -203,8 +203,8 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     };
   }, [visible, plantDefinitionId, tr, preferredLang]);
 
-  const name = (profile?.name ? String(profile.name) : "").trim();
-  const latin = (profile?.latin ? String(profile.latin) : "").trim();
+  const name = (profile?.name ? String(profile.name) : '').trim();
+  const latin = (profile?.latin ? String(profile.latin) : '').trim();
   const description = pickText(profile?.description, preferredLang);
 
   const preferences = React.useMemo(() => {
@@ -214,21 +214,21 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
     const traits = Array.isArray(p?.traits) ? p.traits : [];
     for (const trt of traits) {
-      const rawKey = String(trt?.key ?? "").trim();
+      const rawKey = String(trt?.key ?? '').trim();
       const key = normalizeTraitKey(rawKey);
       let value = pickText(trt?.value, preferredLang);
       if (!key || !value) continue;
       if (seen.has(key)) continue;
       seen.add(key);
 
-      if (key === "temperature") {
+      if (key === 'temperature') {
         value = convertTemperatureText(value, settings);
       }
 
       out.push({
         key,
         label: tr(`createPlant.step02.traits.${key}`, titleCaseKey(key) || key),
-        icon: (TRAIT_ICON_BY_KEY as any)[key] ?? "leaf",
+        icon: (TRAIT_ICON_BY_KEY as any)[key] ?? 'leaf',
         value,
       });
     }
@@ -242,179 +242,124 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
   return (
     <>
-      <Pressable style={styles.backdrop} onPress={close} />
-
-      <View style={styles.wrap}>
-        <View style={styles.glass} pointerEvents="none">
-          <BlurView
-            style={StyleSheet.absoluteFill}
-            blurType="light"
-            blurAmount={14}
-            overlayColor="transparent"
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-          <View pointerEvents="none" style={styles.glassTint} />
-          <View pointerEvents="none" style={styles.glassHaze} />
-        </View>
-
-        <View style={styles.inner}>
-          {showOnlySpinner ? (
-            <View style={styles.spinnerBox}>
-              <CenteredSpinner size={42} />
-            </View>
-          ) : error ? (
-            <ScrollView
-              style={styles.scroll}
-              keyboardShouldPersistTaps="handled"
-              showsVerticalScrollIndicator={false}
-              contentContainerStyle={styles.scrollContent}
-            >
-              <View style={styles.stateBox}>
-                <Text style={styles.stateText}>
-                  {tr("plantDetailsModals.definition.error", "Something went wrong.")}
-                </Text>
-                <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
-              </View>
-
-              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
-                <Text style={[styles.btnText, styles.btnPrimaryText]}>
-                  {tr("plantDetailsModals.common.close", "Close")}
-                </Text>
-              </Pressable>
-            </ScrollView>
-          ) : !profile ? (
-            <ScrollView
-              style={styles.scroll}
-              keyboardShouldPersistTaps="handled"
-              showsVerticalScrollIndicator={false}
-              contentContainerStyle={styles.scrollContent}
-            >
-              <View style={styles.stateBox}>
-                <Text style={styles.stateText}>
-                  {tr("plantDetailsModals.definition.empty", "No definition data available.")}
-                </Text>
-              </View>
-
-              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
-                <Text style={[styles.btnText, styles.btnPrimaryText]}>
-                  {tr("plantDetailsModals.common.close", "Close")}
-                </Text>
-              </Pressable>
-            </ScrollView>
-          ) : (
-            <ScrollView
-              style={styles.scroll}
-              keyboardShouldPersistTaps="handled"
-              showsVerticalScrollIndicator={false}
-              contentContainerStyle={styles.scrollContent}
-            >
-              <Text style={styles.title} numberOfLines={2}>
-                {name || tr("plantDetailsModals.definition.title", "Plant definition")}
+      <AppModalFrame
+        visible
+        loading={showOnlySpinner}
+        onClose={close}
+        closeLabel={tr('plantDetailsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        {showOnlySpinner ? null : error ? (
+          <ScrollView
+            keyboardDismissMode="on-drag"
+            nestedScrollEnabled
+            style={[styles.scroll, appModalStyles.scroll]}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+          >
+            <View style={styles.stateBox}>
+              <Text style={styles.stateText}>
+                {tr('plantDetailsModals.definition.error', 'Something went wrong.')}
               </Text>
+              <Text
+                style={[
+                  styles.stateText,
+                  {
+                    opacity: 0.9,
+                  },
+                ]}
+              >
+                {error}
+              </Text>
+            </View>
 
-              {!!latin && (
-                <Text style={styles.latin} numberOfLines={2}>
-                  {latin}
+            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+              <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                {tr('plantDetailsModals.common.close', 'Close')}
+              </Text>
+            </Pressable>
+          </ScrollView>
+        ) : !profile ? (
+          <ScrollView
+            keyboardDismissMode="on-drag"
+            nestedScrollEnabled
+            style={[styles.scroll, appModalStyles.scroll]}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+          >
+            <View style={styles.stateBox}>
+              <Text style={styles.stateText}>
+                {tr('plantDetailsModals.definition.empty', 'No definition data available.')}
+              </Text>
+            </View>
+
+            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+              <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                {tr('plantDetailsModals.common.close', 'Close')}
+              </Text>
+            </Pressable>
+          </ScrollView>
+        ) : (
+          <ScrollView
+            keyboardDismissMode="on-drag"
+            nestedScrollEnabled
+            style={[styles.scroll, appModalStyles.scroll]}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+          >
+            <Text style={styles.title} numberOfLines={2}>
+              {name || tr('plantDetailsModals.definition.title', 'Plant definition')}
+            </Text>
+
+            {!!latin && (
+              <Text style={styles.latin} numberOfLines={2}>
+                {latin}
+              </Text>
+            )}
+
+            {!!description && <Text style={styles.desc}>{description}</Text>}
+
+            {!!preferences.length && (
+              <>
+                <Text style={styles.sectionTitle}>
+                  {tr('plantDetailsModals.definition.traits', 'Traits')}
                 </Text>
-              )}
 
-              {!!description && <Text style={styles.desc}>{description}</Text>}
+                <View style={styles.prefsGrid}>
+                  {preferences.map(row => (
+                    <View key={row.key} style={styles.prefRow}>
+                      <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
+                      <Text style={styles.prefLabel}>{row.label}</Text>
+                      <Text style={styles.prefValue}>{row.value}</Text>
+                    </View>
+                  ))}
+                </View>
+              </>
+            )}
 
-              {!!preferences.length && (
-                <>
-                  <Text style={styles.sectionTitle}>
-                    {tr("plantDetailsModals.definition.traits", "Traits")}
-                  </Text>
-
-                  <View style={styles.prefsGrid}>
-                    {preferences.map((row) => (
-                      <View key={row.key} style={styles.prefRow}>
-                        <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
-                        <Text style={styles.prefLabel}>{row.label}</Text>
-                        <Text style={styles.prefValue}>{row.value}</Text>
-                      </View>
-                    ))}
-                  </View>
-                </>
-              )}
-
-              <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
-                <Text style={[styles.btnText, styles.btnPrimaryText]}>
-                  {tr("plantDetailsModals.common.close", "Close")}
-                </Text>
-              </Pressable>
-            </ScrollView>
-          )}
-
-          <ModalCloseButton
-            onPress={close}
-            accessibilityLabel={tr("plantDetailsModals.common.close", "Close")}
-            style={styles.closeButton}
-          />
-        </View>
-      </View>
+            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+              <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                {tr('plantDetailsModals.common.close', 'Close')}
+              </Text>
+            </Pressable>
+          </ScrollView>
+        )}
+      </AppModalFrame>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  backdrop: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.42)",
-    zIndex: 80,
-  },
-  wrap: {
-    ...StyleSheet.absoluteFillObject,
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 81,
-    paddingHorizontal: 24,
-  },
-  glass: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 18,
-    overflow: "hidden",
-  },
-  glassTint: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.22)",
-  },
-  glassHaze: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.06)",
-  },
-
-  inner: {
-    width: "100%",
-    maxWidth: 520,
-    borderRadius: 18,
-    overflow: "hidden",
-    position: "relative",
-    backgroundColor: "transparent",
-    minHeight: 220,
-    height: "86%",
-    maxHeight: "86%",
-  },
-
-  scroll: { flex: 1 },
-  scrollContent: {
-    paddingTop: 44,
-    paddingBottom: 120,
-  },
-
-  spinnerBox: {
+  scroll: {
     flex: 1,
-    minHeight: 220,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 16,
-    paddingTop: 44,
-    paddingVertical: 22,
   },
-
+  scrollContent: {},
   title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 18,
     marginBottom: 6,
     paddingHorizontal: 16,
@@ -422,11 +367,10 @@ const styles = StyleSheet.create({
   latin: {
     marginBottom: 10,
     marginHorizontal: 16,
-    color: "rgba(255,255,255,0.90)",
-    fontWeight: "700",
-    fontStyle: "italic",
+    color: 'rgba(255,255,255,0.90)',
+    fontWeight: '700',
+    fontStyle: 'italic',
   },
-
   stateBox: {
     marginHorizontal: 16,
     marginTop: 16,
@@ -434,57 +378,72 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 12,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.10)",
-    alignItems: "center",
+    backgroundColor: 'rgba(255,255,255,0.10)',
+    alignItems: 'center',
     gap: 10,
   },
   stateText: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.92)',
+    fontWeight: '600',
     lineHeight: 18,
-    textAlign: "center",
+    textAlign: 'center',
   },
-
   desc: {
     marginHorizontal: 16,
     marginBottom: 6,
-    color: "rgba(255,255,255,0.95)",
+    color: 'rgba(255,255,255,0.95)',
     fontSize: 13,
-    fontWeight: "300",
+    fontWeight: '300',
     lineHeight: 18,
-    textAlign: "justify",
+    textAlign: 'justify',
   },
-
   sectionTitle: {
     marginHorizontal: 16,
     marginTop: 10,
     marginBottom: 8,
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
   },
-
-  prefsGrid: { marginHorizontal: 16, marginTop: 4, gap: 8 },
-  prefRow: { flexDirection: "row", alignItems: "center", gap: 10 },
-  prefLabel: { color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: "700", flex: 1 },
-  prefValue: { color: "#FFFFFF", fontSize: 12, fontWeight: "800" },
-
+  prefsGrid: {
+    marginHorizontal: 16,
+    marginTop: 4,
+    gap: 8,
+  },
+  prefRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  prefLabel: {
+    color: 'rgba(255,255,255,0.92)',
+    fontSize: 12,
+    fontWeight: '700',
+    flex: 1,
+  },
+  prefValue: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '800',
+  },
   btn: {
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     height: 44,
     borderRadius: 14,
-    backgroundColor: "rgba(255,255,255,0.12)",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: 'rgba(255,255,255,0.12)',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginHorizontal: 16,
     marginTop: 14,
   },
-
-  btnText: { color: "#FFFFFF", fontWeight: "800" },
-
-  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  btnPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
-  closeButton: {
-    top: 8,
-    right: 8,
+  btnText: {
+    color: '#FFFFFF',
+    fontWeight: '800',
+  },
+  btnPrimary: {
+    backgroundColor: 'rgba(11,114,133,0.92)',
+  },
+  btnPrimaryText: {
+    color: '#FFFFFF',
+    fontWeight: '800',
   },
 });

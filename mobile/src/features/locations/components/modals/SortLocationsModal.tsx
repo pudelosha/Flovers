@@ -1,15 +1,15 @@
-import React, { useCallback } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from "@react-native-community/blur";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useCallback } from 'react';
+import { View, Text, Pressable, ScrollView } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { locStyles as s } from "../../styles/locations.styles";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
 
-export type SortKey = "name" | "count";
-export type SortDir = "asc" | "desc";
+import { locStyles as s } from '../../styles/locations.styles';
+
+export type SortKey = 'name' | 'count';
+export type SortDir = 'asc' | 'desc';
 
 type Props = {
   visible: boolean;
@@ -36,9 +36,9 @@ export default function SortLocationsModal({
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const [keyOpen, setKeyOpen] = React.useState(false);
@@ -59,220 +59,164 @@ export default function SortLocationsModal({
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            style={
-              {
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0,0,0,0.35)",
-              } as any
-            }
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={tr('locationsModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={s.promptTitle}>
-              {tr("locationsModals.sort.title", "Sort locations")}
-            </Text>
+          <Text style={s.promptTitle}>{tr('locationsModals.sort.title', 'Sort locations')}</Text>
 
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setDirOpen(false);
-                  setKeyOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {k === "name"
-                    ? tr("locationsModals.sort.keyName", "Location name")
-                    : tr("locationsModals.sort.keyCount", "Plant count")}
-                </Text>
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setDirOpen(false);
+                setKeyOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {k === 'name'
+                  ? tr('locationsModals.sort.keyName', 'Location name')
+                  : tr('locationsModals.sort.keyCount', 'Plant count')}
+              </Text>
 
-                <MaterialCommunityIcons
-                  name={keyOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
+              <MaterialCommunityIcons
+                name={keyOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
 
-              {keyOpen && (
-                <View style={s.dropdownList}>
-                  {[
-                    {
-                      key: "name",
-                      labelKey: "locationsModals.sort.keyName",
-                      fallback: "Location name",
-                    },
-                    {
-                      key: "count",
-                      labelKey: "locationsModals.sort.keyCount",
-                      fallback: "Plant count",
-                    },
-                  ].map((opt) => (
-                    <Pressable
-                      key={opt.key}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setK(opt.key as SortKey);
-                        setKeyOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>
-                        {tr(opt.labelKey, opt.fallback)}
-                      </Text>
-
-                      {k === opt.key && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            <View style={s.dropdown}>
-              <Pressable
-                style={s.dropdownHeader}
-                onPress={() => {
-                  setKeyOpen(false);
-                  setDirOpen((o) => !o);
-                }}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
-                <Text style={s.dropdownValue}>
-                  {d === "asc"
-                    ? tr("locationsModals.sort.dirAsc", "Ascending")
-                    : tr("locationsModals.sort.dirDesc", "Descending")}
-                </Text>
-
-                <MaterialCommunityIcons
-                  name={dirOpen ? "chevron-up" : "chevron-down"}
-                  size={20}
-                  color="#FFFFFF"
-                />
-              </Pressable>
-
-              {dirOpen && (
-                <View style={s.dropdownList}>
-                  {[
-                    {
-                      key: "asc",
-                      labelKey: "locationsModals.sort.dirAsc",
-                      fallback: "Ascending",
-                    },
-                    {
-                      key: "desc",
-                      labelKey: "locationsModals.sort.dirDesc",
-                      fallback: "Descending",
-                    },
-                  ].map((opt) => (
-                    <Pressable
-                      key={opt.key}
-                      style={s.dropdownItem}
-                      onPress={() => {
-                        setD(opt.key as SortDir);
-                        setDirOpen(false);
-                      }}
-                    >
-                      <Text style={s.dropdownItemText}>
-                        {tr(opt.labelKey, opt.fallback)}
-                      </Text>
-
-                      {d === opt.key && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      )}
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-
-            <View style={s.promptButtonsRow}>
-              {onReset ? (
-                <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
-                  <Text
-                    style={[
-                      s.promptBtnText,
-                      {
-                        color: "#FF6B6B",
-                        fontWeight: "800",
-                      },
-                    ]}
+            {keyOpen && (
+              <View style={s.dropdownList}>
+                {[
+                  {
+                    key: 'name',
+                    labelKey: 'locationsModals.sort.keyName',
+                    fallback: 'Location name',
+                  },
+                  {
+                    key: 'count',
+                    labelKey: 'locationsModals.sort.keyCount',
+                    fallback: 'Plant count',
+                  },
+                ].map(opt => (
+                  <Pressable
+                    key={opt.key}
+                    style={s.dropdownItem}
+                    onPress={() => {
+                      setK(opt.key as SortKey);
+                      setKeyOpen(false);
+                    }}
                   >
-                    {tr("locationsModals.common.reset", "Reset")}
-                  </Text>
-                </Pressable>
-              ) : null}
+                    <Text style={s.dropdownItemText}>{tr(opt.labelKey, opt.fallback)}</Text>
 
-              <Pressable onPress={onCancel} style={s.promptBtn}>
-                <Text style={s.promptBtnText}>
-                  {tr("locationsModals.common.cancel", "Cancel")}
+                    {k === opt.key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+                  </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
+
+          <View style={s.dropdown}>
+            <Pressable
+              style={s.dropdownHeader}
+              onPress={() => {
+                setKeyOpen(false);
+                setDirOpen(o => !o);
+              }}
+              android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+            >
+              <Text style={s.dropdownValue}>
+                {d === 'asc'
+                  ? tr('locationsModals.sort.dirAsc', 'Ascending')
+                  : tr('locationsModals.sort.dirDesc', 'Descending')}
+              </Text>
+
+              <MaterialCommunityIcons
+                name={dirOpen ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color="#FFFFFF"
+              />
+            </Pressable>
+
+            {dirOpen && (
+              <View style={s.dropdownList}>
+                {[
+                  {
+                    key: 'asc',
+                    labelKey: 'locationsModals.sort.dirAsc',
+                    fallback: 'Ascending',
+                  },
+                  {
+                    key: 'desc',
+                    labelKey: 'locationsModals.sort.dirDesc',
+                    fallback: 'Descending',
+                  },
+                ].map(opt => (
+                  <Pressable
+                    key={opt.key}
+                    style={s.dropdownItem}
+                    onPress={() => {
+                      setD(opt.key as SortDir);
+                      setDirOpen(false);
+                    }}
+                  >
+                    <Text style={s.dropdownItemText}>{tr(opt.labelKey, opt.fallback)}</Text>
+
+                    {d === opt.key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+                  </Pressable>
+                ))}
+              </View>
+            )}
+          </View>
+
+          <View style={s.promptButtonsRow}>
+            {onReset ? (
+              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
+                <Text
+                  style={[
+                    s.promptBtnText,
+                    {
+                      color: '#FF6B6B',
+                      fontWeight: '800',
+                    },
+                  ]}
+                >
+                  {tr('locationsModals.common.reset', 'Reset')}
                 </Text>
               </Pressable>
+            ) : null}
 
-              <Pressable
-                onPress={() => onApply(k, d)}
-                style={[s.promptBtn, s.promptPrimary]}
-              >
-                <Text style={s.promptPrimaryText}>
-                  {tr("locationsModals.common.apply", "Apply")}
-                </Text>
-              </Pressable>
-            </View>
-          </ScrollView>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
+              <Text style={s.promptBtnText}>{tr('locationsModals.common.cancel', 'Cancel')}</Text>
+            </Pressable>
 
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={tr("locationsModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+            <Pressable onPress={() => onApply(k, d)} style={[s.promptBtn, s.promptPrimary]}>
+              <Text style={s.promptPrimaryText}>{tr('locationsModals.common.apply', 'Apply')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }

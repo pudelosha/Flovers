@@ -1,11 +1,11 @@
-import React, { useCallback } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
-import { s } from "../../styles/reminders.styles";
-import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";
+import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import React, { useCallback } from 'react';
+import { View, Text, Pressable, ScrollView } from 'react-native';
 
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { s } from '../../styles/reminders.styles';
+
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../../app/providers/LanguageProvider';
 
 type Props = {
   visible: boolean;
@@ -30,104 +30,67 @@ export default function ConfirmToggleReminderModal({
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   if (!visible) return null;
 
   const title = isActive
-    ? tr("remindersModals.toggle.pauseTitle", "Pause reminder")
-    : tr("remindersModals.toggle.resumeTitle", "Resume reminder");
+    ? tr('remindersModals.toggle.pauseTitle', 'Pause reminder')
+    : tr('remindersModals.toggle.resumeTitle', 'Resume reminder');
   const body = isActive
     ? tr(
-        "remindersModals.toggle.pauseBody",
-        "Pause this reminder for {{name}}? Its due task will be hidden until you resume it.",
-        { name }
+        'remindersModals.toggle.pauseBody',
+        'Pause this reminder for {{name}}? Its due task will be hidden until you resume it.',
+        { name },
       )
     : tr(
-        "remindersModals.toggle.resumeBody",
-        "Resume this reminder for {{name}}? Its next due task will appear again.",
-        { name }
+        'remindersModals.toggle.resumeBody',
+        'Resume this reminder for {{name}}? Its next due task will appear again.',
+        { name },
       );
   const action = isActive
-    ? tr("remindersModals.common.pause", "Pause")
-    : tr("remindersModals.common.resume", "Resume");
+    ? tr('remindersModals.common.pause', 'Pause')
+    : tr('remindersModals.common.resume', 'Resume');
 
   return (
     <>
-      <Pressable style={s.promptBackdrop} onPress={onCancel} />
-
-      <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
-          <BlurView
-            // @ts-ignore for RN shorthand
-            style={{ position: "absolute", inset: 0 }}
-            blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-          />
-
-          <View
-            pointerEvents="none"
-            // @ts-ignore for RN shorthand
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundColor: "rgba(0,0,0,0.35)",
-            }}
-          />
-        </View>
-
-        <View
+      <AppModalFrame
+        visible
+        onClose={onCancel}
+        closeLabel={tr('remindersModals.common.close', 'Close')}
+        scrollable={false}
+      >
+        <ScrollView
+          keyboardDismissMode="on-drag"
+          nestedScrollEnabled
           style={[
-            s.promptInner,
             {
-              height: "86%",
-              maxHeight: "86%",
-              position: "relative",
+              flex: 1,
             },
+            appModalStyles.scroll,
           ]}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[appModalStyles.scrollContent, appModalStyles.centeredContent]}
         >
-          <ScrollView
-            style={{ flex: 1 }}
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{
-              flexGrow: 1,
-              justifyContent: "center",
-              paddingTop: 44,
-              paddingBottom: 120,
-            }}
-          >
-            <Text style={s.promptTitle}>{title}</Text>
+          <Text style={s.promptTitle}>{title}</Text>
 
-            <Text style={s.confirmText}>{body}</Text>
+          <Text style={s.confirmText}>{body}</Text>
 
-            <View style={s.promptButtonsRow}>
-              <Pressable style={s.promptBtn} onPress={onCancel}>
-                <Text style={s.promptBtnText}>
-                  {tr("remindersModals.common.cancel", "Cancel")}
-                </Text>
-              </Pressable>
+          <View style={s.promptButtonsRow}>
+            <Pressable style={s.promptBtn} onPress={onCancel}>
+              <Text style={s.promptBtnText}>{tr('remindersModals.common.cancel', 'Cancel')}</Text>
+            </Pressable>
 
-              <Pressable style={[s.promptBtn, s.promptPrimary]} onPress={onConfirm}>
-                <Text style={s.promptPrimaryText}>{action}</Text>
-              </Pressable>
-            </View>
-          </ScrollView>
-
-          <ModalCloseButton
-            onPress={onCancel}
-            accessibilityLabel={tr("remindersModals.common.close", "Close")}
-            style={{
-              top: 8,
-              right: 8,
-            }}
-          />
-        </View>
-      </View>
+            <Pressable style={[s.promptBtn, s.promptPrimary]} onPress={onConfirm}>
+              <Text style={s.promptPrimaryText}>{action}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
+      </AppModalFrame>
     </>
   );
 }

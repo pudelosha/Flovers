@@ -232,7 +232,7 @@ export default function SharedPlantsScreen() {
       </View>}
       <AppModalHost>
       <ContactModalFrame visible={isFocused && (removing !== null || deleting !== null)}
-        centerContent={removing !== null}
+        centerContent
         title={deleting ? t("sharing.plants.deleteSharingTitle", { defaultValue: "Delete sharing?" }) : removing?.direction === "incoming"
           ? t("sharing.plants.leaveTitle", { defaultValue: "Leave shared plant?" })
           : t("sharing.plants.removeTitle", { defaultValue: "Remove access?" })}
