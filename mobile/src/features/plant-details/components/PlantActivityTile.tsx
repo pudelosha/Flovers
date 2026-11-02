@@ -1,6 +1,6 @@
 import React from "react";
-import {View,Text,StyleSheet} from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import {View,Text,StyleSheet} from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import {useTranslation} from "react-i18next";
 import {useSettings} from "../../../app/providers/SettingsProvider";
 import {ACCENT_BY_TYPE,ICON_BY_TYPE} from "../../home/constants/home.constants";
@@ -20,7 +20,9 @@ export default function PlantActivityTile({items}:{items:PlantActivity[]}){
     const actor=item.actor || String(t("taskHistory.tile.unknownUser",{defaultValue:"Unknown user"}));
     const task=String(t(`plantDetails.reminders.type.${item.type}`,{defaultValue:item.type}));
     return <View key={item.id} style={s.row}>
-     <MaterialCommunityIcons name={ICON_BY_TYPE[item.type] || "check-circle-outline"} size={22} color={ACCENT_BY_TYPE[item.type] || "#FFFFFF"} style={s.icon}/>
+     <View style={s.iconBubble}>
+      <MaterialCommunityIcons name={ICON_BY_TYPE[item.type] || "check-circle-outline"} size={20} color={ACCENT_BY_TYPE[item.type] || "#FFFFFF"}/>
+     </View>
      <View style={s.text}>
       <Text style={s.action}>{t("plantDetails.activity.line",{defaultValue:"{{actor}} \u00b7 {{task}}",actor,task})}</Text>
       <Text style={s.date}>{activityDateLabel(item.completedAt,settings.dateFormat || "DD.MM.YYYY")}</Text>
@@ -29,7 +31,7 @@ export default function PlantActivityTile({items}:{items:PlantActivity[]}){
    })}</View>}
  </View>;
 }
-const s=StyleSheet.create({title:{color:"#FFFFFF",fontSize:18,fontWeight:"800",marginBottom:14},
- list:{gap:14},row:{flexDirection:"row",alignItems:"flex-start",gap:12},icon:{marginTop:1},text:{flex:1,minWidth:0},
+const s=StyleSheet.create({title:{color:"#FFFFFF",fontSize:16,fontWeight:"800",marginBottom:8},
+ list:{gap:14},row:{flexDirection:"row",alignItems:"center",gap:10},iconBubble:{width:32,height:32,borderRadius:16,alignItems:"center",justifyContent:"center",backgroundColor:"rgba(0,0,0,0.15)"},text:{flex:1,minWidth:0},
  action:{color:"#FFFFFF",fontSize:14,lineHeight:20,fontWeight:"700"},date:{color:"rgba(255,255,255,0.8)",fontSize:13,lineHeight:18,marginTop:3},
  empty:{color:"rgba(255,255,255,0.9)",fontSize:14,lineHeight:20}});

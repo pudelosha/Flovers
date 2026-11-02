@@ -1,6 +1,6 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { View, Text, Pressable, TextInput, Keyboard, ScrollView } from 'react-native';
+import { View, Text, Pressable, TextInput, Keyboard, ScrollView } from "../../../../shared/theme/native";
 
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../../app/providers/LanguageProvider';

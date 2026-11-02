@@ -1,6 +1,6 @@
-﻿// screens/CreatePlantWizardScreen.tsx
+// screens/CreatePlantWizardScreen.tsx
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { View, ScrollView, Text, Animated, Easing } from "react-native";
+import { View, ScrollView, Text, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
@@ -184,7 +184,7 @@ function WizardBody() {
         contentContainerStyle={[wiz.pageContent, { paddingBottom: extraBottomSpace }]}
         keyboardShouldPersistTaps="handled"
       >
-        <Animated.View style={{ opacity, transform: [{ translateX }, { scale }] }}>
+        <AnimatedView style={{ opacity, transform: [{ translateX }, { scale }] }}>
           {state.step === "selectPlant" && (
             <Step01_SelectPlant
               onScrollToTop={scrollTop}
@@ -227,7 +227,7 @@ function WizardBody() {
               </View>
             </View>
           )}
-        </Animated.View>
+        </AnimatedView>
       </ScrollView>
 
       <PreviousNextBar

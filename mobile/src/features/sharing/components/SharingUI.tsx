@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { Animated, BackHandler, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Animated, BackHandler, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View, AnimatedView } from "../../../shared/theme/native";
 import type { StyleProp, ViewStyle } from "react-native";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../../plants/constants/plants.constants";
@@ -29,12 +29,12 @@ export function SharingPage({ title, children, showBack = true, extraBottomPaddi
           <Text style={sharingStyles.text}>{t("sharing.common.back", { defaultValue: "Back" })}</Text>
         </Pressable>}
       </GlassHeader>
-      <Animated.View testID="sharing-page-content" style={[s.body, contentReady && entryStyle]}>
+      <AnimatedView testID="sharing-page-content" style={[s.body, contentReady && entryStyle]}>
         <ScrollView keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}
           contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 120 + extraBottomPadding }]}>
           {children}
         </ScrollView>
-      </Animated.View>
+      </AnimatedView>
     </View>
   );
 }

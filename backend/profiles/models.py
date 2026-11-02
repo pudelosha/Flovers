@@ -16,6 +16,7 @@ LANG_CHOICES = [
 TEMP_CHOICES = [("C", "Celsius"), ("F", "Fahrenheit"), ("K", "Kelvin")]
 MEASURE_CHOICES = [("metric", "Metric"), ("imperial", "Imperial")]
 BACKGROUND_CHOICES = [("bg1", "Background 1"), ("bg2", "Background 2"), ("bg3", "Background 3"), ("bg4", "Background 4"), ("bg5", "Background 5")]
+THEME_CHOICES = [("dark", "Dark"), ("light", "Light")]
 FAB_CHOICES = [("left", "Left"), ("right", "Right")]
 
 TILE_MOTIVE_CHOICES = [
@@ -54,6 +55,7 @@ class ProfileSettings(TimeStampedModel):
         help_text="Tile gloom style: light or dark.",
     )
 
+    theme = models.CharField(max_length=5, choices=THEME_CHOICES, default="dark")
     background = models.CharField(max_length=3, choices=BACKGROUND_CHOICES, default="bg5")
     fab_position = models.CharField(max_length=5, choices=FAB_CHOICES, default="right")
 

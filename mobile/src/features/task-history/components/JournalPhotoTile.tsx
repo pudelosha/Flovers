@@ -1,9 +1,10 @@
+import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React from "react";
-import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
-import MaskedView from "@react-native-masked-view/masked-view";
-import LinearGradient from "react-native-linear-gradient";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "../../../shared/theme/native";
+import MaskedView from "../../../shared/theme/MaskedView";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
@@ -52,9 +53,9 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
             : photo.loading ? <CenteredSpinner size={30} />
             : <MaterialCommunityIcons name="image-off-outline" size={32} color="rgba(255,255,255,0.65)" />}
           </View>
-          <LinearGradient pointerEvents="none" colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0)"]}
+          <LinearGradient themeRole="photo" pointerEvents="none" colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0)"]}
             style={styles.topScrim} />
-          <View style={styles.heroContent}>
+          <ThemeContrastScope kind={photo.uri ? "photo" : "surface"}><View style={styles.heroContent}>
             <View style={styles.identity}>
               <Text style={s.plantName}>{item.plant}</Text>
               {!!item.location && <View style={s.locationRow}>
@@ -67,7 +68,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
               <Text style={s.completedLabel}>{t("taskHistory.photo.added", { defaultValue: "Added" })}</Text>
               <Text style={s.completedDateText}>{addedDate}</Text>
             </View>
-          </View>
+          </View></ThemeContrastScope>
         </View>
         {(!!item.recordedDate || !!item.note?.trim()) && <View style={styles.notes}>
           {!!item.recordedDate && <Text style={s.metaCompact}>{t("taskHistory.photo.photoTaken", { defaultValue: "Photo date" })}: {date(item.recordedDate)}</Text>}

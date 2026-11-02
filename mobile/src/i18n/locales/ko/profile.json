@@ -102,7 +102,13 @@
       "tileMotiveOptions": {
         "light": "밝은",
         "dark": "어두운"
-      }
+      },
+      "theme": "테마",
+      "themeOptions": {
+        "dark": "다크",
+        "light": "라이트"
+      },
+      "comingSoon": "출시 예정"
     },
     "support": {
       "title": "지원",

@@ -1,5 +1,5 @@
 import React,{useEffect,useRef,useState} from "react";
-import {View,Text,Pressable,StyleSheet} from "react-native";
+import {View,Text,Pressable,StyleSheet} from "../../../../shared/theme/native";
 import {useTranslation} from "react-i18next";
 import AppModalFrame from "../../../../shared/ui/AppModalFrame";
 import {undoReminderTask} from "../../../../api/services/reminders.service";

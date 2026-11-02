@@ -1,6 +1,6 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { View, Text, Pressable, ScrollView } from 'react-native';
+import { View, Text, Pressable, ScrollView } from "../../../../shared/theme/native";
 
 import { useTranslation } from 'react-i18next';
 

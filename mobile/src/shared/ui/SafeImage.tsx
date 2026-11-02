@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Image, ImageStyle, ViewStyle } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Image, ImageStyle, ViewStyle } from "../theme/native";
+import MaterialCommunityIcons from "../theme/Icon";
 
 type Props = {
   uri?: string | null;

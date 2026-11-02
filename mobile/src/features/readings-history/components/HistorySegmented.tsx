@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Pressable, Text } from "react-native";
+import { View, Pressable, Text } from "../../../shared/theme/native";
 import { useTranslation } from "react-i18next";
 import { s } from "../styles/readings-history.styles";
 import type { HistoryRange } from "../types/readings-history.types";

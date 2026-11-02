@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable } from "../../../shared/theme/native";
 import { s } from "../styles/readings-history.styles";
 
 type LabelOverride = "show" | "hide";

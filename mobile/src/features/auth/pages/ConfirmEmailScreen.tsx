@@ -5,7 +5,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   Pressable,
-} from "react-native";
+} from "../../../shared/theme/native";
 import { Text, Button, ActivityIndicator } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";

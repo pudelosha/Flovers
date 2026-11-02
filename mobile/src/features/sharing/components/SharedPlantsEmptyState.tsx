@@ -1,7 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import { StyleSheet, Text, View } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { s } from "../../home/styles/home.styles";
 
 export default function SharedPlantsEmptyState({ title, body }: { title: string; body: string }) {

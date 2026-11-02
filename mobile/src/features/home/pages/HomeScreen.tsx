@@ -7,12 +7,11 @@ import {
   Animated,
   Easing,
   StyleSheet,
-  Text,
-} from "react-native";
+  Text, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
 import { useNavigation, useFocusEffect, useIsFocused, useRoute } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -724,7 +723,7 @@ export default function HomeScreen() {
         />
       )}
 
-      <Animated.FlatList
+      <AnimatedFlatList
         ref={listRef}
         style={{ flex: 1 }}
         data={visibleTasks}
@@ -744,7 +743,7 @@ export default function HomeScreen() {
           const isOpen = menuOpenId === item.id;
 
           return (
-            <Animated.View
+            <AnimatedView
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
                 isOpen && { zIndex: 50, elevation: 50 },
@@ -805,7 +804,7 @@ export default function HomeScreen() {
                   }
                 }}
               />
-            </Animated.View>
+            </AnimatedView>
           );
         }}
         ListHeaderComponent={viewMode==="calendar" ? <TaskCalendar tasks={derivedTasks as Task[]}
@@ -824,7 +823,7 @@ export default function HomeScreen() {
           </View>;
           if (viewFilter === "all") {
             return (
-              <Animated.View
+              <AnimatedView
                 style={[
                   s.emptyWrap,
                   {
@@ -908,7 +907,7 @@ export default function HomeScreen() {
                     </View>
                   </View>
                 </View>
-              </Animated.View>
+              </AnimatedView>
             );
           }
 
@@ -925,7 +924,7 @@ export default function HomeScreen() {
             : t("home.empty.today.body");
 
           return (
-            <Animated.View
+            <AnimatedView
               style={[
                 s.emptyWrap,
                 {
@@ -975,7 +974,7 @@ export default function HomeScreen() {
                   </View>
                 </View>
               </View>
-            </Animated.View>
+            </AnimatedView>
           );
         }}
       />

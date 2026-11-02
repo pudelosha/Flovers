@@ -10,6 +10,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuth } from "./useAuth";
 import { fetchProfileSettings, type ApiProfileSettings } from "../../api/services/profile.service";
 import { DEFAULT_SETTINGS } from "../settings/settings.defaults";
+import {normalizeTheme} from "../settings/themes";
 import type { AppSettings } from "../settings/settings.types";
 
 import i18n from "../../i18n";
@@ -47,7 +48,7 @@ function normalizeTileTransparency(v: any): number {
   return n;
 }
 
-function mapApiToAppSettings(api: ApiProfileSettings): AppSettings {
+function mapApiToAppSettings(api: ApiProfileSettings, fallbackTheme = DEFAULT_SETTINGS.theme): AppSettings {
   return {
     language: api.language,
     dateFormat: api.date_format,
@@ -55,7 +56,8 @@ function mapApiToAppSettings(api: ApiProfileSettings): AppSettings {
     measureUnit: api.measure_unit,
     tileTransparency: normalizeTileTransparency((api as any).tile_transparency),
     tileMotive: api.tile_motive,
-    background: api.background,
+    theme: normalizeTheme(api.theme ?? fallbackTheme),
+    background: "bg5",
     fabPosition: api.fab_position,
   };
 }
@@ -88,7 +90,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
   const applyServerSettings = useCallback((api: ApiProfileSettings) => {
     setSettings((prev) => {
-      const mapped = mapApiToAppSettings(api);
+      const mapped = mapApiToAppSettings(api, prev.theme);
       const next: AppSettings = {
         ...prev,
         ...mapped,
@@ -103,6 +105,8 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
       const next: AppSettings = {
         ...prev,
         ...partial,
+        theme: normalizeTheme(partial.theme ?? prev.theme),
+        background: "bg5",
         tileTransparency: normalizeTileTransparency(
           (partial as any).tileTransparency ?? prev.tileTransparency
         ),
@@ -137,7 +141,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     const handleLanguageChanged = (lng: string) => {
       setSettings((prev) => {
         if (prev.language === lng) return prev;
-        const next = { ...prev, language: lng };
+        const next: AppSettings = { ...prev, language: lng as AppSettings["language"] };
         persistSettings(next);
         return next;
       });
@@ -169,6 +173,8 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         setSettings((prev) => ({
           ...prev,
           ...cached,
+          theme: normalizeTheme(cached.theme),
+          background: "bg5",
           tileTransparency: normalizeTileTransparency(
             (cached as any).tileTransparency ?? prev.tileTransparency
           ),
@@ -179,12 +185,14 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         const api = await fetchProfileSettings({ auth: true });
         if (cancelled) return;
 
-        const mapped = mapApiToAppSettings(api);
+        const mapped = mapApiToAppSettings(api, normalizeTheme(cached?.theme));
 
         const base: AppSettings = cached
           ? {
               ...DEFAULT_SETTINGS,
               ...cached,
+              theme: normalizeTheme(cached.theme),
+              background: "bg5",
               tileTransparency: normalizeTileTransparency(
                 (cached as any).tileTransparency ?? DEFAULT_SETTINGS.tileTransparency
               ),

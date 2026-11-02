@@ -1,7 +1,8 @@
+import {ThemeContrastScope} from "../theme/ThemeContext";
 import React, { useEffect, useState } from "react";
-import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
+import { View, Text, Pressable, StyleSheet, Platform } from "../theme/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../theme/Icon";
 
 import { FAB_LAYER } from "./FloatingTileMenu";
 
@@ -81,7 +82,7 @@ export default function FAB({
       >
         {/* Actions list (stacked upwards) */}
         {open && (
-          <View style={s.actionsWrap} pointerEvents="box-none">
+          <ThemeContrastScope kind="dark"><View style={s.actionsWrap} pointerEvents="box-none">
             {actions.map((a) => (
               <Pressable
                 key={a.key}
@@ -131,7 +132,7 @@ export default function FAB({
                 )}
               </Pressable>
             ))}
-          </View>
+          </View></ThemeContrastScope>
         )}
 
         {/* Main FAB */}

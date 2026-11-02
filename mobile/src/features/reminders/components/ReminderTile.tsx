@@ -1,7 +1,8 @@
+import {useAppTheme} from "../../../shared/theme/ThemeContext";
 import React, { useCallback, useMemo } from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import { Pressable, Text, View, StyleSheet } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { s } from "../styles/reminders.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
@@ -107,6 +108,7 @@ export default function ReminderTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const {isLight}=useAppTheme();
   const nav = useNavigation<any>();
   const access = plantAccess(reminder.access);
 
@@ -187,7 +189,7 @@ export default function ReminderTile({
         />
 
         {/* Accent wash: task-type color (left) -> AuthCard dark (right) */}
-        <LinearGradient
+        <LinearGradient taskAccent={accent}
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
@@ -217,7 +219,7 @@ export default function ReminderTile({
             }}
           >
             <View style={s.leftCol}>
-              <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
+              <View style={[s.leftIconBubble, { backgroundColor: isLight ? hexToRgba(accent, 0.25) : hexToRgba("#000000", 0.15) }]}>
                 <MaterialCommunityIcons name={icon} size={24} color={accent} />
               </View>
             </View>

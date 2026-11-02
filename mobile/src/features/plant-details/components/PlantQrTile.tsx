@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
 import QRCode from "react-native-qrcode-svg";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 

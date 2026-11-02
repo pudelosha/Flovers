@@ -1,8 +1,8 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import type { LayoutChangeEvent, StyleProp, ViewStyle } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { s } from "../styles/reminders.styles";

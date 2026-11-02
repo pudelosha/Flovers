@@ -15,3 +15,5 @@ export function resolveBackground(key: unknown) {
   if (key === "bg5") return BACKGROUNDS.bg5;
   return BACKGROUNDS.bg1;
 }
+
+export const LIGHT_BACKGROUND = require("../../../assets/bg-light.jpg");

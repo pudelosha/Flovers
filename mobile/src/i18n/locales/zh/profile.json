@@ -102,7 +102,13 @@
       "tileMotiveOptions": {
         "light": "亮色",
         "dark": "暗色"
-      }
+      },
+      "theme": "主题",
+      "themeOptions": {
+        "dark": "深色",
+        "light": "浅色"
+      },
+      "comingSoon": "即将推出"
     },
     "support": {
       "title": "支持",

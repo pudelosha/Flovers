@@ -1,5 +1,5 @@
-﻿import React from "react";
-import { View, Pressable, Text } from "react-native";
+import React from "react";
+import { View, Pressable, Text } from "../../../shared/theme/native";
 import { wiz } from "../styles/wizard.styles";
 
 export default function WizardFooter({

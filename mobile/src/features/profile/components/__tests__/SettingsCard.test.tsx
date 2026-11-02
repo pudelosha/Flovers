@@ -22,10 +22,10 @@ describe("SettingsCard", () => {
     setMeasureOpen: jest.fn(),
     tileTransparency: 0.12,
     setTileTransparency: jest.fn(),
-    background: "bg1" as const,
-    setBackground: jest.fn(),
-    bgOpen: false,
-    setBgOpen: jest.fn(),
+    theme: "dark" as const,
+    setTheme: jest.fn(),
+    themeOpen: false,
+    setThemeOpen: jest.fn(),
     tileMotive: "light" as const,
     setTileMotive: jest.fn(),
     tileMotiveOpen: false,
@@ -49,7 +49,7 @@ describe("SettingsCard", () => {
     fireEvent.press(getByText("profile.settings.temperatureOptions.C"));
     fireEvent.press(getByText("profile.settings.measureOptions.metric"));
     fireEvent.press(getByText("profile.settings.fabPositionOptions.right"));
-    fireEvent.press(getByText("profile.settings.backgroundOptions.bg1"));
+    fireEvent.press(getByText("Dark"));
     fireEvent.press(getByText("profile.common.save"));
 
     expect(props.setLangOpen).toHaveBeenCalled();
@@ -57,7 +57,7 @@ describe("SettingsCard", () => {
     expect(props.setTempOpen).toHaveBeenCalled();
     expect(props.setMeasureOpen).toHaveBeenCalled();
     expect(props.setFabOpen).toHaveBeenCalled();
-    expect(props.setBgOpen).toHaveBeenCalled();
+    expect(props.setThemeOpen).toHaveBeenCalled();
     expect(props.onSave).toHaveBeenCalledTimes(1);
   });
 
@@ -80,4 +80,14 @@ describe("SettingsCard", () => {
     expect(props.setLanguage).toHaveBeenCalledWith(code);
     expect(props.setLangOpen).toHaveBeenCalledWith(false);
   });
+  it("replaces background selection with Dark and an available Light option",()=>{
+    const view=render(<SettingsCard {...props} themeOpen/>);
+    expect(view.queryByText("profile.settings.background")).toBeNull();
+    const light=view.getByRole("button",{name:"Light"});
+    expect(light.props.accessibilityState.disabled).toBe(false);
+    fireEvent.press(light);expect(props.setTheme).toHaveBeenCalledWith("light");
+    fireEvent.press(view.getByRole("button",{name:"Dark"}));
+    expect(props.setTheme).toHaveBeenCalledWith("dark");expect(props.setThemeOpen).toHaveBeenCalledWith(false);
+  });
+
 });

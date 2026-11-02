@@ -2,6 +2,7 @@ import type {
   LangCode,
   FabPosition,
   BackgroundKey,
+  ThemeMode,
   TileMotive,
 } from "../../features/profile/types/profile.types";
 
@@ -15,6 +16,7 @@ export type AppSettings = {
   tileTransparency: number; // 0..0.6 in UI
   tileMotive: TileMotive;   // "light" | "dark"
 
-  background: BackgroundKey; // "bg1" | "bg2" | "bg3" | "bg4"
+  theme: ThemeMode;
+  background: BackgroundKey; // compatibility: signed-in Dark always uses bg5
   fabPosition: FabPosition;  // "left" | "right"
 };

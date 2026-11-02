@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { ImageBackground, StyleSheet, View } from "../theme/native";
 import type { StyleProp, ViewStyle } from "react-native";
 import type { PlantPhoto } from "../../api/services/plant-photos.service";
 import { photoImageLayout } from "../utils/photoFraming";

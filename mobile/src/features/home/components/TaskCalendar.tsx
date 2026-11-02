@@ -1,9 +1,9 @@
 import React, { useMemo, useCallback } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import Calendar from "react-native-calendars/src/calendar";
+import { View, Text, StyleSheet } from "../../../shared/theme/native";
+import Calendar from "../../../shared/theme/Calendar";
 import { LocaleConfig } from "react-native-calendars";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import Icon from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";

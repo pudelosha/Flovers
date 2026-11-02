@@ -1,8 +1,8 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 

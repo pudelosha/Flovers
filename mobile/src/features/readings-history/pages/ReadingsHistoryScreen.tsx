@@ -1,3 +1,4 @@
+import {ThemeContrastScope} from "../../../shared/theme/ThemeContext";
 import { bottomNavigationHeight } from "../../../shared/constants/layout";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 import { getDisplayTemperature } from "../../../shared/utils/temperature";
@@ -11,13 +12,12 @@ import {
   Pressable,
   Animated,
   Easing,
-  StyleSheet,
-} from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+  StyleSheet, AnimatedView } from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -614,7 +614,7 @@ export default function ReadingsHistoryScreen() {
         />
       </View>
 
-      <Animated.View
+      <AnimatedView
         testID="readings-history-content" pointerEvents={pageReady ? "auto" : "none"}
         accessibilityElementsHidden={!pageReady} importantForAccessibility={pageReady ? "auto" : "no-hide-descendants"}
         onLayout={(event) => setViewportHeight(event.nativeEvent.layout.height)}
@@ -705,7 +705,7 @@ export default function ReadingsHistoryScreen() {
                   </Pressable>
 
                   {chartMenuOpen && (
-                    <View
+                    <ThemeContrastScope kind="dark"><View
                       pointerEvents="auto"
                       style={chartMenuStyles.sheet}
                     >
@@ -889,7 +889,7 @@ export default function ReadingsHistoryScreen() {
                         </Text>
                       </Pressable>
                       </>}
-                    </View>
+                    </View></ThemeContrastScope>
                   )}
                 </View>
               </View>
@@ -927,7 +927,7 @@ export default function ReadingsHistoryScreen() {
           </View>
 
         </ScrollView>
-      </Animated.View>
+      </AnimatedView>
 
       {(!pageReady || loadingHistory || (!!device && loadedHistoryKey !== historyKey)) && <CenteredSpinner overlay size={56} color="#FFFFFF" />}
 

@@ -15,14 +15,13 @@ import {
   Animated,
   Easing,
   PermissionsAndroid,
-  Platform,
-} from "react-native";
+  Platform, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
 import { PUBLIC_BASE_URL_NORM } from "../../../config";
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
@@ -701,7 +700,7 @@ export default function PlantsScreen() {
         <Pressable onPress={closeFloatingMenus} style={s.backdrop} />
       )}
 
-      <Animated.FlatList
+      <AnimatedFlatList
         ref={searchListRef}
         style={{ flex: 1 }}
         data={derivedPlants}
@@ -721,7 +720,7 @@ export default function PlantsScreen() {
           const isOpen = menuOpenId === item.id;
 
           return (
-            <Animated.View
+            <AnimatedView
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
                 isOpen && { zIndex: 50 },
@@ -748,7 +747,7 @@ export default function PlantsScreen() {
                 onDelete={() => askDelete(item)}
                 onShowQr={() => openShowQr(item)}
               />
-            </Animated.View>
+            </AnimatedView>
           );
         }}
         ListHeaderComponent={searchQuery ? <View style={{flexDirection:"row",alignItems:"center",gap:10,marginBottom:14}}>
@@ -769,7 +768,7 @@ export default function PlantsScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ListEmptyComponent={() => (
-          <Animated.View
+          <AnimatedView
             style={[
               s.emptyWrap,
               {
@@ -830,7 +829,7 @@ export default function PlantsScreen() {
                 </View>
               </View>
             </View>
-          </Animated.View>
+          </AnimatedView>
         )}
       />
 

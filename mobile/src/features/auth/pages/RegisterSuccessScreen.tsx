@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet } from "../../../shared/theme/native";
 import { Text, Button } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 

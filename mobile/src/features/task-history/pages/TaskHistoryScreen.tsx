@@ -11,16 +11,15 @@ import {
   RefreshControl,
   Pressable,
   Animated,
-  StyleSheet,
-} from 'react-native';
+  StyleSheet, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
 import {
   useNavigation,
   useRoute,
   useIsFocused,
 } from '@react-navigation/native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from 'react-i18next';
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import GlassHeader from '../../../shared/ui/GlassHeader';
 import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
@@ -137,7 +136,7 @@ export default function TaskHistoryScreen() {
     'default' | 'success' | 'error'
   >('default');
 
-  const listRef = useRef<Animated.FlatList<JournalEntry>>(null);
+  const listRef = useRef<AnimatedFlatList<JournalEntry>>(null);
   const loadRequestRef = useRef(0);
 
   const showToast = (
@@ -687,7 +686,7 @@ export default function TaskHistoryScreen() {
             />
           )}
 
-          <Animated.FlatList
+          <AnimatedFlatList
             ref={listRef}
             style={{ flex: 1 }}
             data={derivedItems}
@@ -736,7 +735,7 @@ export default function TaskHistoryScreen() {
               const isOpen = openMenuId === entryKey;
 
               return (
-                <Animated.View
+                <AnimatedView
                   style={[
                     { opacity, transform: [{ translateY }, { scale }] },
                     isOpen && { zIndex: 50, elevation: 50 },
@@ -771,7 +770,7 @@ export default function TaskHistoryScreen() {
                       onGoToPlant={handleGoToPlant}
                     />
                   )}
-                </Animated.View>
+                </AnimatedView>
               );
             }}
             ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -786,7 +785,7 @@ export default function TaskHistoryScreen() {
             }}
             ListEmptyComponent={
               !loading ? (
-                <Animated.View
+                <AnimatedView
                   style={[
                     s.emptyWrap,
                     {
@@ -850,7 +849,7 @@ export default function TaskHistoryScreen() {
                       </View>
                     </View>
                   </View>
-                </Animated.View>
+                </AnimatedView>
               ) : null
             }
           />

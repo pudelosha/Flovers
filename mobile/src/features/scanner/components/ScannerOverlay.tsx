@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Pressable, StyleSheet } from "react-native";
-import { Text } from "react-native-paper";
-import LinearGradient from "react-native-linear-gradient";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, StyleSheet } from "../../../shared/theme/native";
+import { Text } from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { scannerStyles as styles } from "../styles/scanner.styles";
 import type { ScannerOverlayProps } from "../types/scanner.types";
 

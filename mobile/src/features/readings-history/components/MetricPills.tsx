@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Pressable, Text } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, Text } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { s } from "../styles/readings-history.styles";
 import type { MetricKey } from "../types/readings-history.types";

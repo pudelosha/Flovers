@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from "react";
-import {Keyboard,Pressable,StyleSheet,Text,TextInput,View} from "react-native";
+import {Keyboard,Pressable,StyleSheet,Text,TextInput,View} from "../../../../shared/theme/native";
 import {useTranslation} from "react-i18next";
 import AppModalFrame from "../../../../shared/ui/AppModalFrame";
 

@@ -8,9 +8,9 @@ import {
   Text,
   TextInput,
   View,
-} from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+} from "../../../../shared/theme/native";
+import DateTimePicker from "../../../../shared/theme/DateTimePicker";
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import { launchCamera, launchImageLibrary, type CameraOptions } from 'react-native-image-picker';
 import AppModalHost from '../../../../shared/ui/AppModalHost';
 import { useTranslation } from 'react-i18next';

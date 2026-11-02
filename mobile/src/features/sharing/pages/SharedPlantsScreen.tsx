@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { BackHandler, Pressable, StyleSheet, Text, View } from "react-native";
+import { BackHandler, Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import FAB from "../../../shared/ui/FAB";
 import AppModalHost from "../../../shared/ui/AppModalHost";

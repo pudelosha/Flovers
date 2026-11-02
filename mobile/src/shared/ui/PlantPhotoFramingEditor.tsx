@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Image, PanResponder, Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
+import { Image, PanResponder, Pressable, StyleSheet, Text, View, useWindowDimensions } from "../theme/native";
 import type { GestureResponderEvent } from "react-native";
-import Slider from "@react-native-community/slider";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Slider from "../theme/Slider";
+import MaterialCommunityIcons from "../theme/Icon";
 import { useTranslation } from "react-i18next";
 import CenteredSpinner from "./CenteredSpinner";
 import { DEFAULT_PHOTO_FRAMING, PHOTO_DETAILS_ASPECT_RATIO, PHOTO_JOURNAL_ASPECT_RATIO, PHOTO_MAX_ZOOM, PHOTO_MIN_ZOOM,

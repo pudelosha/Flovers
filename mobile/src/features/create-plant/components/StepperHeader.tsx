@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text } from "../../../shared/theme/native";
 import { wizard } from "../styles/wizard.styles";
 import { TOTAL_STEPS } from "../constants/create-plant.constants";
 

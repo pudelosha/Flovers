@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
-import { View, Text, Pressable, ScrollView, StyleSheet } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Text, Pressable, ScrollView, StyleSheet } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -23,7 +23,7 @@ import {
 let SliderView: any = View;
 try {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  SliderView = require("@react-native-community/slider").default;
+  SliderView = require("../../../shared/theme/Slider").default;
 } catch {}
 
 const PRIMARY = "#0B7285";

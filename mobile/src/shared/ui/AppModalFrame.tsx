@@ -1,3 +1,4 @@
+import { useAppTheme } from "../theme/ThemeContext";
 import React, { useEffect } from 'react';
 import {
   BackHandler,
@@ -9,7 +10,7 @@ import {
   StyleSheet,
   Text,
   View,
-} from 'react-native';
+} from "../theme/native";
 import { BlurView } from '@react-native-community/blur';
 import { useTranslation } from 'react-i18next';
 import AppModalHost from './AppModalHost';
@@ -50,6 +51,7 @@ export default function AppModalFrame({
   centerContent?: boolean;
 }) {
   const { t } = useTranslation();
+  const {isLight,colors}=useAppTheme();
   useEffect(() => {
     if (!visible) return;
     const handler = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -109,7 +111,7 @@ export default function AppModalFrame({
                 style={[
                   StyleSheet.absoluteFill,
                   {
-                    backgroundColor: 'rgba(0,0,0,0.35)',
+                    backgroundColor: isLight ? colors.modal : 'rgba(0,0,0,0.35)',
                   },
                 ]}
               />

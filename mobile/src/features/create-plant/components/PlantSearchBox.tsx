@@ -1,12 +1,11 @@
-﻿import React, { useRef, useState, useMemo, useEffect, useCallback } from "react";
+import React, { useRef, useState, useMemo, useEffect, useCallback } from "react";
 import { 
   View, 
   Pressable, 
   Animated, 
   ViewStyle,
-  Text
-} from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+  Text, AnimatedText } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { TextInput } from "react-native-paper";
 import { wiz } from "../styles/wizard.styles";
 import { useTranslation } from "react-i18next";
@@ -160,7 +159,7 @@ export default function PlantSearchBox({
       <View style={containerStyle}>
         <MaterialCommunityIcons name="magnify" size={18} color="#FFFFFF" />
 
-        <Animated.Text
+        <AnimatedText
           style={{
             position: "absolute",
             left: labelLeft,
@@ -172,7 +171,7 @@ export default function PlantSearchBox({
           }}
         >
           {placeholderText}
-        </Animated.Text>
+        </AnimatedText>
 
         <TextInput
           mode="flat"

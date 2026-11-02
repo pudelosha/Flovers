@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";

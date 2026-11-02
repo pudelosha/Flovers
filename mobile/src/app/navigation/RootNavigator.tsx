@@ -1,10 +1,15 @@
+import {LIGHT_BACKGROUND} from "../settings/backgrounds";
 import React, { useEffect, useMemo } from "react";
-import { AppState, Image, ImageBackground, StyleSheet, View } from "react-native";
+import { AppState, Image, ImageBackground, StyleSheet, View } from "../../shared/theme/native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../providers/useAuth";
 import { navigationRef, flushPendingNavigation } from "./navigationRef";
 import { useSettings } from "../providers/SettingsProvider";
+import {useAppTheme} from "../../shared/theme/ThemeContext";
+import {StatusBar} from "react-native";
+import SystemBars from "../../shared/theme/SystemBars";
+import {backgroundForSession} from "../settings/themes";
 import { resolveBackground } from "../settings/backgrounds";
 
 // push registration lifecycle
@@ -128,11 +133,12 @@ function AppNavigator() {
 
 export default function RootNavigator() {
   const { loading, token } = useAuth();
-  const { settings, loading: settingsLoading } = useSettings();
+  const {isLight,colors}=useAppTheme();
+  const { loading: settingsLoading } = useSettings();
 
   const bgSource = useMemo(
-    () => resolveBackground(token ? settings?.background : "bg1"),
-    [token, settings?.background]
+    () => isLight && token ? LIGHT_BACKGROUND : resolveBackground(backgroundForSession(!!token)),
+    [token, isLight]
   );
 
   useEffect(() => {
@@ -176,6 +182,9 @@ export default function RootNavigator() {
   return (
     <NavigationContainer linking={linking} ref={navigationRef} onReady={flushPendingNavigation}>
       <ImageBackground source={bgSource} style={{ flex: 1 }} resizeMode="cover">
+        <StatusBar barStyle={isLight ? "dark-content" : "light-content"} backgroundColor={isLight ? colors.background : "transparent"}/>
+        <SystemBars/>
+
         {token ? <AppNavigator /> : <AuthNavigator />}
         <LogoutToast />
 

@@ -6,8 +6,7 @@ import {
   Platform,
   Animated,
   TextInput as RNTextInput,
-  Pressable,
-} from "react-native";
+  Pressable, AnimatedText } from "../../../shared/theme/native";
 import { Text, TextInput, Button } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
@@ -66,11 +65,11 @@ const AnimatedFloatingLabel = ({
 
   return (
     <View style={s.inputContainer}>
-      <Animated.Text
+      <AnimatedText
         style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}
       >
         {label}
-      </Animated.Text>
+      </AnimatedText>
       <TextInput
         mode="flat"
         value={value}

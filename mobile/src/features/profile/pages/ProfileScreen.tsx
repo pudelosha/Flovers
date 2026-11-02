@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { View, ScrollView, Animated, Easing } from "react-native";
+import { View, ScrollView, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
 import type {
   LayoutChangeEvent,
   NativeScrollEvent,
@@ -70,7 +70,7 @@ export default function ProfileScreen() {
   const { user, logout } = useAuth();
   const accountLevel = useAccountLevel(user?.id ?? user?.email);
   const insets = useSafeAreaInsets();
-  const { settings, loading: settingsLoading, applyServerSettings } = useSettings();
+  const { settings, loading: settingsLoading, applyServerSettings, updateLocalSettings } = useSettings();
   const { changeLanguage: changeAppLanguage, currentLanguage } = useLanguage();
 
   const scrollRef = useRef<ScrollView | null>(null);
@@ -162,8 +162,8 @@ export default function ProfileScreen() {
 
   const [tileTransparency, setTileTransparency] = useState(settings.tileTransparency);
 
-  const [background, setBackground] = useState(settings.background);
-  const [bgOpen, setBgOpen] = useState(false);
+  const [theme, setTheme] = useState(settings.theme ?? "dark");
+  const [themeOpen, setThemeOpen] = useState(false);
 
   const [tileMotive, setTileMotive] = useState(settings.tileMotive);
   const [tileMotiveOpen, setTileMotiveOpen] = useState(false);
@@ -248,7 +248,7 @@ export default function ProfileScreen() {
     setTemperatureUnit(settings.temperatureUnit);
     setMeasureUnit(settings.measureUnit);
     setTileTransparency(settings.tileTransparency);
-    setBackground(settings.background);
+    setTheme(settings.theme ?? "dark");
     setFabPosition(settings.fabPosition);
     setTileMotive(settings.tileMotive);
 
@@ -293,14 +293,15 @@ export default function ProfileScreen() {
           temperature_unit: temperatureUnit,
           measure_unit: measureUnit,
           tile_transparency: tileTransparency,
-          background,
+          theme,
+          background: "bg5",
           fab_position: fabPosition,
           tile_motive: tileMotive,
         },
         { auth: true }
       );
 
-      applyServerSettings(res);
+      applyServerSettings({...res,theme:res.theme ?? theme});
 
       if (language && language !== currentLanguage) {
         await changeAppLanguage(language);
@@ -364,7 +365,7 @@ export default function ProfileScreen() {
       {isProfileLoading ? (
         <CenteredSpinner size={56} color="#FFFFFF" />
       ) : (
-      <Animated.View
+      <AnimatedView
         style={{
           flex: 1,
           opacity: contentOpacity,
@@ -442,10 +443,10 @@ export default function ProfileScreen() {
               setMeasureOpen={setMeasureOpen}
               tileTransparency={tileTransparency}
               setTileTransparency={setTileTransparency}
-              background={background}
-              setBackground={setBackground}
-              bgOpen={bgOpen}
-              setBgOpen={setBgOpen}
+              theme={theme}
+              setTheme={value=>{setTheme(value);updateLocalSettings({theme:value});}}
+              themeOpen={themeOpen}
+              setThemeOpen={setThemeOpen}
               tileMotive={tileMotive}
               setTileMotive={setTileMotive}
               tileMotiveOpen={tileMotiveOpen}
@@ -460,7 +461,7 @@ export default function ProfileScreen() {
 
           <SupportCard onContact={() => setPrompt("contact")} onBug={() => setPrompt("bug")} />
         </ScrollView>
-      </Animated.View>
+      </AnimatedView>
       )}
 
       {savingNotif && <CenteredSpinner overlay size={36} color="#FFFFFF" />}

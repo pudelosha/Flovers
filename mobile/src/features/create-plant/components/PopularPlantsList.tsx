@@ -1,6 +1,6 @@
-﻿import React, { useCallback } from "react";
-import { FlatList, Image, Pressable, Text, View } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import React, { useCallback } from "react";
+import { FlatList, Image, Pressable, Text, View } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import GlassCard from "../../profile/components/GlassCard";
 import { TRAIT_ICON_BY_KEY } from "../constants/create-plant.constants";
 import type { PlantOption } from "../types/create-plant.types";

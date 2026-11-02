@@ -1,6 +1,6 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+import { View, StyleSheet } from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { card } from "../../profile/styles/profile.styles";
 
 // Same green tones as PlantTile / AuthCard

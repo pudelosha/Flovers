@@ -1,9 +1,10 @@
+import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import React, { useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, View } from "../../../shared/theme/native";
 import type { ImageSourcePropType } from "react-native";
-import MaskedView from "@react-native-masked-view/masked-view";
-import LinearGradient from "react-native-linear-gradient";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaskedView from "../../../shared/theme/MaskedView";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 import type { ShareablePlant } from "../types/sharing.types";
@@ -68,7 +69,7 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
               ) : <ImageBackground testID="shared-plant-image" source={source} resizeMode="cover" style={StyleSheet.absoluteFill}
                 onError={() => setFailedSource(sourceKey)} />}
             </MaskedView>
-            <LinearGradient pointerEvents="none" colors={["rgba(0,0,0,0.18)", "rgba(0,0,0,0)"]}
+            <LinearGradient themeRole="photo" pointerEvents="none" colors={["rgba(0,0,0,0.18)", "rgba(0,0,0,0)"]}
               style={styles.topScrim} />
           </> : (plant.photo && photoLoading) || localPhotoLoading ? (
             <View style={StyleSheet.absoluteFill} testID="shared-plant-photo-loading"><CenteredSpinner size={26} /></View>
@@ -76,14 +77,14 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
             <MaterialCommunityIcons name="image-off-outline" size={27} color="rgba(255,255,255,0.8)" />
             <Text style={styles.noImageText}>{t("plantDetails.info.noImage", { defaultValue: "No image" })}</Text>
           </View>}
-          <View style={styles.text}>
+          <ThemeContrastScope kind={source ? "photo" : "surface"}><View style={styles.text}>
             <Text style={styles.name}>{plant.name}</Text>
             {!!plant.latin && <Text style={styles.latin}>{plant.latin}</Text>}
             {!!plant.location && <View style={styles.locationRow}>
               <MaterialCommunityIcons name="map-marker-outline" size={16} color="#FFFFFF" />
               <Text style={styles.location}>{plant.location}</Text>
             </View>}
-          </View>
+          </View></ThemeContrastScope>
           {!!action && <View style={styles.action}>{action}</View>}
         </View>
       </View>

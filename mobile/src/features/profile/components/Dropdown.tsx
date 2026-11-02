@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Text, Pressable } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { controls } from "../../profile/styles/profile.styles";
 
-export type DropdownItem = { key: string; text: string; selected: boolean; onPress: () => void };
+export type DropdownItem = { key: string; text: string; selected: boolean; disabled?: boolean; onPress: () => void };
 
 export default function Dropdown({
   open, valueText, onToggle, items,
@@ -21,7 +21,8 @@ export default function Dropdown({
       {open && (
         <View style={controls.dropdownList}>
           {items.map((it) => (
-            <Pressable key={it.key} style={controls.dropdownItem} onPress={it.onPress}>
+            <Pressable key={it.key} accessibilityRole="button" accessibilityState={{disabled:!!it.disabled}} disabled={it.disabled}
+              style={[controls.dropdownItem,it.disabled && {opacity:0.45}]} onPress={it.onPress}>
               <Text style={controls.dropdownItemText}>{it.text}</Text>
               {it.selected && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
             </Pressable>

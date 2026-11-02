@@ -1,8 +1,8 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { View, Text, Pressable, TextInput, ScrollView, Switch, StyleSheet } from 'react-native';
+import { View, Text, Pressable, TextInput, ScrollView, Switch, StyleSheet } from "../../../../shared/theme/native";
 
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import Clipboard from '@react-native-clipboard/clipboard';
 import { useTranslation } from 'react-i18next';
 
@@ -102,7 +102,7 @@ type Props = {
 
 let Slider: any = null;
 try {
-  Slider = require('@react-native-community/slider').default;
+  Slider = require('../../../../shared/theme/Slider').default;
 } catch {}
 
 export default function UpsertReadingDeviceModal({

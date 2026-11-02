@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Platform, Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
+import DateTimePicker from "../../../shared/theme/DateTimePicker";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from 'react-i18next';
 import { fetchPlantInstances } from '../../../api/services/plant-instances.service';
 import { controls, prompts as pr } from '../../profile/styles/profile.styles';

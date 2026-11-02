@@ -9,6 +9,7 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.flovers.mobile.sensors.LightSensorPackage
 import com.flovers.mobile.heading.HeadingPackage
+import com.flovers.mobile.appearance.SystemBarsPackage
 
 class MainApplication : Application(), ReactApplication {
 
@@ -20,6 +21,7 @@ class MainApplication : Application(), ReactApplication {
           // Manually linked packages
           add(LightSensorPackage())
           add(HeadingPackage())
+          add(SystemBarsPackage())
         }
 
       override fun getJSMainModuleName(): String = "index"

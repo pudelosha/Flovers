@@ -1,3 +1,6 @@
+import {ThemeContext} from "../../theme/ThemeContext";
+import {LIGHT_COLORS} from "../../theme/palette";
+import {Text as ThemeText} from "../../theme/native";
 import React from "react";
 import { act, fireEvent, render } from "@testing-library/react-native";
 import { Pressable, StyleSheet, Text, View } from "react-native";
@@ -10,11 +13,8 @@ let mockFocused = true;
 jest.mock("@react-navigation/native", () => ({ useIsFocused: () => mockFocused }));
 jest.mock("react-native-paper", () => ({
   Portal: ({ children }: any) =>
-    require("react").createElement(
-      require("react-native").View,
-      { testID: "paper-menu-portal" },
-      children
-    ),
+    require("react").createElement(require("../../theme/ThemeContext").ContrastContext.Provider,{value:"surface"},
+      require("react").createElement(require("react-native").View,{testID:"paper-menu-portal"},children)),
 }));
 const style = {
   position: "absolute" as const,
@@ -98,4 +98,12 @@ it("leaves the menu usable before native measurements arrive", () => {
   const view = render(ui(action));
   fireEvent.press(view.getByText("Plant details"));
   expect(action).toHaveBeenCalledTimes(1);
+});
+
+it("preserves black menus and white labels after the portal loses the caller colour scope in Light",()=>{
+ const view=render(<ThemeContext.Provider value={{isLight:true,colors:LIGHT_COLORS}}><FloatingTileMenuProvider><FloatingTileMenu style={style}><ThemeText style={{color:"#FFFFFF"}}>Edit plant</ThemeText></FloatingTileMenu></FloatingTileMenuProvider></ThemeContext.Provider>,{createNodeMock:nativeNode});
+ measure(view);
+ const menu=view.getByTestId("floating-tile-menu-layer").findAllByType(View).find(node=>StyleSheet.flatten(node.props.style)?.left===180);
+ expect(StyleSheet.flatten(menu?.props.style).backgroundColor).toBe("black");
+ expect(StyleSheet.flatten(view.getByText("Edit plant").props.style).color).toBe("#FFFFFF");
 });

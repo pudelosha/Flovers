@@ -1,5 +1,5 @@
 import React from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "../../../../shared/theme/native";
 import { useTranslation } from "react-i18next";
 import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
 import AppModalHost from "../../../../shared/ui/AppModalHost";

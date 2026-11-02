@@ -1,8 +1,8 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 // PlantInfoMenu.tsx
 import React, { useCallback } from "react";
-import { View, Pressable, Text, StyleSheet } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, Text, StyleSheet } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 

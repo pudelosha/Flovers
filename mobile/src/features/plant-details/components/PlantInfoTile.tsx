@@ -1,8 +1,9 @@
+import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import React, { useCallback, useMemo, useState, useEffect } from "react";
-import { View, Text, StyleSheet, ImageBackground, Pressable } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
-import MaskedView from "@react-native-masked-view/masked-view";
+import { View, Text, StyleSheet, ImageBackground, Pressable } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaskedView from "../../../shared/theme/MaskedView";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
@@ -303,14 +304,14 @@ export default function PlantInfoTile({
                   <CenteredSpinner size={32} />
                 </View>}
 
-                <LinearGradient
+                <LinearGradient themeRole="photo"
                   pointerEvents="none"
                   colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0.00)"]}
                   locations={[0, 1]}
                   style={styles.heroTopScrim}
                 />
 
-                <View style={styles.heroText}>
+                <ThemeContrastScope kind="photo"><View style={styles.heroText}>
                   <Text style={styles.h1} numberOfLines={1}>
                     {title}
                   </Text>
@@ -335,7 +336,7 @@ export default function PlantInfoTile({
                       </Text>
                     </View>
                   )}
-                </View>
+                </View></ThemeContrastScope>
               </View>
             ) : (
               <View style={[styles.heroImage, styles.heroPlaceholder]}>

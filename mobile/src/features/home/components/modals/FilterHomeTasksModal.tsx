@@ -1,8 +1,8 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { View, Text, Pressable, TextInput, Platform, ScrollView } from 'react-native';
+import { View, Text, Pressable, TextInput, Platform, ScrollView } from "../../../../shared/theme/native";
 
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import { s } from '../../styles/home.styles';
 import type { TaskType } from '../../types/home.types';
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../../constants/home.constants';
@@ -11,7 +11,7 @@ import { useSettings } from '../../../../app/providers/SettingsProvider';
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require('@react-native-community/datetimepicker').default;
+  DateTimePicker = require("../../../../shared/theme/DateTimePicker").default;
 } catch {}
 
 type PlantOption = { id: string; name: string };

@@ -1,8 +1,8 @@
 import { getDisplayTemperature } from "../../../shared/utils/temperature";
 import React, { useEffect, useMemo, useRef } from "react";
-import { View, Pressable, Text, StyleSheet, Switch, Animated, Easing } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import { View, Pressable, Text, StyleSheet, Switch, Animated, Easing } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { s } from "../styles/readings.styles";
 import { ReadingTileModel } from "../types/readings.types";

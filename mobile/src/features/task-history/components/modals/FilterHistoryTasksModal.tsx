@@ -1,6 +1,6 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { View, Text, Pressable, TextInput, Platform, ScrollView } from 'react-native';
+import { View, Text, Pressable, TextInput, Platform, ScrollView } from "../../../../shared/theme/native";
 
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../../../../app/providers/SettingsProvider';
@@ -8,11 +8,11 @@ import { useSettings } from '../../../../app/providers/SettingsProvider';
 import { s } from '../../styles/task-history.styles';
 import type { JournalFilterType } from '../../types/task-history.types';
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../../../home/constants/home.constants';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require('@react-native-community/datetimepicker').default;
+  DateTimePicker = require("../../../../shared/theme/DateTimePicker").default;
 } catch {}
 
 type PlantOption = { id: string; name: string };

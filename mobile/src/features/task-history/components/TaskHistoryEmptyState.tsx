@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "../../../shared/theme/native";
 import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 
 import { s } from "../styles/task-history.styles";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Pressable } from "react-native";
+import { Text, Pressable } from "../../../shared/theme/native";
 import { useTranslation } from "react-i18next";
 import GlassCard from "./../components/GlassCard";
 import Dropdown from "./../components/Dropdown";
@@ -7,13 +7,13 @@ import { card, controls } from "../styles/profile.styles";
 import {
   LANG_OPTIONS,
   DATE_OPTIONS,
-  BACKGROUND_OPTIONS,
   FAB_POSITION_OPTIONS,
 } from "../constants/profile.constants";
+import {THEME_OPTIONS} from "../../../app/settings/themes";
 import type {
   LangCode,
   FabPosition,
-  BackgroundKey,
+  ThemeMode,
   TileMotive,
 } from "../types/profile.types";
 
@@ -39,10 +39,10 @@ export default function SettingsCard({
   setMeasureOpen,
   tileTransparency: _tileTransparency,
   setTileTransparency: _setTileTransparency,
-  background,
-  setBackground,
-  bgOpen,
-  setBgOpen,
+  theme,
+  setTheme,
+  themeOpen,
+  setThemeOpen,
   tileMotive: _tileMotive,
   setTileMotive: _setTileMotive,
   tileMotiveOpen: _tileMotiveOpen,
@@ -77,10 +77,10 @@ export default function SettingsCard({
   tileTransparency: number;
   setTileTransparency: (v: number | ((v: number) => number)) => void;
 
-  background: BackgroundKey;
-  setBackground: (b: BackgroundKey) => void;
-  bgOpen: boolean;
-  setBgOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+  theme: ThemeMode;
+  setTheme: (theme: ThemeMode) => void;
+  themeOpen: boolean;
+  setThemeOpen: (o: boolean | ((o: boolean) => boolean)) => void;
 
   // kept intentionally so parent save logic remains unchanged
   tileMotive: TileMotive;
@@ -108,14 +108,6 @@ export default function SettingsCard({
     { key: "metric", label: t("profile.settings.measureOptions.metric") },
     { key: "imperial", label: t("profile.settings.measureOptions.imperial") },
   ];
-
-  const bgLabel = (k: BackgroundKey) => {
-    if (k === "bg1") return t("profile.settings.backgroundOptions.bg1");
-    if (k === "bg2") return t("profile.settings.backgroundOptions.bg2");
-    if (k === "bg3") return t("profile.settings.backgroundOptions.bg3");
-    if (k === "bg4") return t("profile.settings.backgroundOptions.bg4");
-    return t("profile.settings.backgroundOptions.bg5");
-  };
 
   const fabLabel = (k: "left" | "right") => {
     return k === "left"
@@ -225,25 +217,17 @@ export default function SettingsCard({
         }))}
       />
 
-      <Text style={controls.sectionTitle}>
-        {t("profile.settings.background")}
-      </Text>
-      <Dropdown
-        open={bgOpen}
-        valueText={
-          bgLabel(BACKGROUND_OPTIONS.find(b => b.key === background)?.key ?? "bg1")
-        }
-        onToggle={() => setBgOpen((o: boolean) => !o)}
-        items={BACKGROUND_OPTIONS.map(opt => ({
-          key: opt.key,
-          text: bgLabel(opt.key),
-          selected: background === opt.key,
-          onPress: () => {
-            setBackground(opt.key as BackgroundKey);
-            setBgOpen(false);
-          },
-        }))}
-      />
+      <Text style={controls.sectionTitle}>{t("profile.settings.theme",{defaultValue:"Theme"})}</Text>
+      <Dropdown open={themeOpen}
+        valueText={String(t(`profile.settings.themeOptions.${theme}`,{defaultValue:"Dark"}))}
+        onToggle={()=>setThemeOpen(open=>!open)}
+        items={THEME_OPTIONS.map(option=>({
+          key:option.key,
+          text:String(t(`profile.settings.themeOptions.${option.key}`,{defaultValue:option.key==="dark" ? "Dark" : "Light"}))
+            + (option.available ? "" : ` (${t("profile.settings.comingSoon",{defaultValue:"coming soon"})})`),
+          selected:theme===option.key,disabled:!option.available,
+          onPress:()=>{if(!option.available)return;setTheme(option.key);setThemeOpen(false);},
+        }))}/>
 
       <Pressable style={controls.saveBtn} onPress={onSave}>
         <Text style={controls.saveBtnText}>{t("profile.common.save")}</Text>

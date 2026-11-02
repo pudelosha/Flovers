@@ -1,6 +1,6 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React, { useEffect, useState } from 'react';
-import { View, Text, Pressable, TextInput, Keyboard, Platform, ScrollView } from 'react-native';
+import { View, Text, Pressable, TextInput, Keyboard, Platform, ScrollView } from "../../../../shared/theme/native";
 
 import { s } from '../../styles/home.styles';
 import { useTranslation } from 'react-i18next';
@@ -8,7 +8,7 @@ import { useSettings } from '../../../../app/providers/SettingsProvider';
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require('@react-native-community/datetimepicker').default;
+  DateTimePicker = require("../../../../shared/theme/DateTimePicker").default;
 } catch {}
 
 function isValidDateYYYYMMDD(v?: string) {

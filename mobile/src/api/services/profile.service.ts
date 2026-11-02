@@ -3,6 +3,7 @@ import type {
   LangCode,
   FabPosition,
   BackgroundKey,
+  ThemeMode,
   TileMotive,
 } from "../../features/profile/types/profile.types";
 
@@ -84,6 +85,7 @@ export async function updateProfileNotifications(
 
 /** ---- Settings ---- */
 export type ApiProfileSettings = {
+  theme?: ThemeMode; // optional while older backends are still supported
   language: LangCode;
   date_format: string;
 

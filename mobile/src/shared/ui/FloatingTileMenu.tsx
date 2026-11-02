@@ -1,5 +1,6 @@
+import { ThemeContrastScope } from "../theme/ThemeContext";
 import React, { createContext, useCallback, useContext, useRef, useState } from "react";
-import { StyleSheet, View, type ViewProps } from "react-native";
+import { StyleSheet, View, type ViewProps } from "../theme/native";
 import { useIsFocused } from "@react-navigation/native";
 import { Portal } from "react-native-paper";
 
@@ -15,7 +16,7 @@ type Box = { x: number; y: number; width: number; height: number };
 
 export default function FloatingTileMenu(props: ViewProps) {
   const enabled = useContext(Enabled);
-  return enabled ? <AnchoredMenu {...props} /> : <View {...props} />;
+  return <ThemeContrastScope kind="dark">{enabled ? <AnchoredMenu {...props} /> : <View {...props} />}</ThemeContrastScope>;
 }
 
 function AnchoredMenu({ children, style, onLayout, ...props }: ViewProps) {
@@ -61,7 +62,7 @@ function AnchoredMenu({ children, style, onLayout, ...props }: ViewProps) {
         {!ready && children}
       </View>
       <Portal>
-        <View
+        <ThemeContrastScope kind="dark"><View
           ref={overlayRef}
           collapsable={false}
           pointerEvents="box-none"
@@ -101,7 +102,7 @@ function AnchoredMenu({ children, style, onLayout, ...props }: ViewProps) {
               {children}
             </View>
           )}
-        </View>
+        </View></ThemeContrastScope>
       </Portal>
     </>
   );

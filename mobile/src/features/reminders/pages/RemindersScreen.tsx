@@ -6,15 +6,14 @@ import {
   RefreshControl,
   StyleSheet,
   Animated,
-  Easing,
-} from "react-native";
+  Easing, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
 import {
   useNavigation,
   useFocusEffect,
   useRoute,
 } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -743,7 +742,7 @@ export default function RemindersScreen() {
         />
       )}
 
-        <Animated.FlatList
+        <AnimatedFlatList
           data={derivedReminders}
           keyExtractor={(r) => r.id}
           renderItem={({ item }) => {
@@ -760,7 +759,7 @@ export default function RemindersScreen() {
             const isOpen = menuOpenId === item.id;
 
             return (
-              <Animated.View
+              <AnimatedView
                 style={[
                   { opacity, transform: [{ translateY }, { scale }] },
                   isOpen && { zIndex: 50 },
@@ -775,7 +774,7 @@ export default function RemindersScreen() {
                   onEdit={() => openEditModal(item)}
                   onDelete={() => askDelete(item)}
                 />
-              </Animated.View>
+              </AnimatedView>
             );
           }}
           ListHeaderComponent={<View style={{ height: 0 }} />}
@@ -789,7 +788,7 @@ export default function RemindersScreen() {
           }
           ListEmptyComponent={
             !loading ? (
-              <Animated.View
+              <AnimatedView
                 style={[
                   s.emptyWrap,
                   {
@@ -851,7 +850,7 @@ export default function RemindersScreen() {
                     </View>
                   </View>
                 </View>
-              </Animated.View>
+              </AnimatedView>
             ) : null
           }
         />

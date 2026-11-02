@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import GlassCard from "../../profile/components/GlassCard";
 import { card, controls } from "../../profile/styles/profile.styles";

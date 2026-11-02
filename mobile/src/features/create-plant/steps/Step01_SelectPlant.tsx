@@ -1,18 +1,17 @@
-﻿import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
+import React, { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import {
   View,
   Pressable,
   Text,
   Animated,
-  Easing,
-} from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+  Easing, AnimatedView } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useNavigation } from "@react-navigation/native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
@@ -323,7 +322,7 @@ export default function Step01_SelectPlant({
             accessibilityRole="button"
             accessibilityLabel={getTranslation("createPlant.step01.scanButton", "Scan plant")}
           >
-            <Animated.View
+            <AnimatedView
               pointerEvents="none"
               style={{
                 position: "absolute",
@@ -345,7 +344,7 @@ export default function Step01_SelectPlant({
               }}
             />
 
-            <Animated.View
+            <AnimatedView
               pointerEvents="none"
               style={{
                 position: "absolute",

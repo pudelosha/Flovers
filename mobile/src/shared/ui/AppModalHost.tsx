@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from "../theme/native";
 import { bottomNavigationHeight } from '../constants/layout';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 

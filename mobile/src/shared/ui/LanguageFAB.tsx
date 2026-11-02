@@ -1,6 +1,6 @@
 import AppModalFrame from './AppModalFrame';
 import React, { useCallback, useMemo, useState } from 'react';
-import { View, Text, Pressable, StyleSheet, Platform, ScrollView } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Platform, ScrollView } from "../theme/native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTranslation } from 'react-i18next';

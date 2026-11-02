@@ -1,8 +1,8 @@
-﻿import React, { useEffect, useRef, useState, useCallback } from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import React, { useEffect, useRef, useState, useCallback } from "react";
+import { View, Text, StyleSheet, Pressable } from "../../../shared/theme/native";
 import { useNavigation } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";

@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "../theme/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../theme/Icon";
 
 // gradient with safe fallback to View
 let LinearGradientView: any = View;
 try {
-  LinearGradientView = require("react-native-linear-gradient").default;
+  LinearGradientView = require("../theme/Gradient").default;
 } catch {}
 
 type Props = {

@@ -7,9 +7,9 @@ import {
   StyleSheet,
   ScrollView,
   ActivityIndicator,
-} from "react-native";
+} from "../../../../shared/theme/native";
 import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
 import ModalCloseButton from "../../../../shared/ui/ModalCloseButton";

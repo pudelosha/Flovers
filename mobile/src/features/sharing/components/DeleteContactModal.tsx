@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import { useTranslation } from "react-i18next";
 import type { SharingContact } from "../types/sharing.types";
 import { useContacts } from "../state/ContactsProvider";

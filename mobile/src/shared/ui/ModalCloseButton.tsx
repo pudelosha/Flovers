@@ -1,6 +1,6 @@
 import React from "react";
-import { Pressable, StyleProp, ViewStyle } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { Pressable, StyleProp, ViewStyle } from "../theme/native";
+import MaterialCommunityIcons from "../theme/Icon";
 
 type Props = {
   onPress: () => void;

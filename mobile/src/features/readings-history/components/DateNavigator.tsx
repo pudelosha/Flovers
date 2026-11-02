@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
-import { View, Pressable, Text } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, Text } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { s } from "../styles/readings-history.styles";
 import type { DateSpan, HistoryRange } from "../types/readings-history.types";
 import { useSettings } from "../../../app/providers/SettingsProvider";

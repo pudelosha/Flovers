@@ -1,8 +1,8 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { View, Text, Pressable, TextInput, Keyboard, Platform, ScrollView } from 'react-native';
+import { View, Text, Pressable, TextInput, Keyboard, Platform, ScrollView } from "../../../../shared/theme/native";
 
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import { s } from '../../styles/reminders.styles';
 
 import { useTranslation } from 'react-i18next';
@@ -14,7 +14,7 @@ export type ReminderType = 'watering' | 'moisture' | 'fertilising' | 'care' | 'r
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require('@react-native-community/datetimepicker').default;
+  DateTimePicker = require("../../../../shared/theme/DateTimePicker").default;
 } catch {}
 
 type PlantOption = { id: string; name: string; location?: string };

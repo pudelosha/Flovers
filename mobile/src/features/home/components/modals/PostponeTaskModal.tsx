@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Keyboard, Platform, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { Keyboard, Platform, Pressable, StyleSheet, Text, TextInput, View } from "../../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import AppModalFrame from "../../../../shared/ui/AppModalFrame";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
 import { postponeReminderTask } from "../../../../api/services/reminders.service";
 
 let DateTimePicker: any = null;
-try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
+try { DateTimePicker = require("../../../../shared/theme/DateTimePicker").default; } catch {}
 
 export type PostponeTaskTarget = { id: string; plant: string; dueDate: string | Date };
 const isoDate = (date: Date) => `${String(date.getFullYear()).padStart(4,"0")}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`;

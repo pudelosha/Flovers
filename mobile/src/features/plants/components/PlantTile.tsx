@@ -1,8 +1,10 @@
+import {useAppTheme} from "../../../shared/theme/ThemeContext";
+import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import React from "react";
-import { View, Pressable, Text, StyleSheet, ImageBackground } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import MaskedView from "@react-native-masked-view/masked-view";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, Text, StyleSheet, ImageBackground } from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaskedView from "../../../shared/theme/MaskedView";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 
 import { s } from "../styles/plants.styles";
 import { Plant } from "../types/plants.types";
@@ -43,6 +45,7 @@ export default function PlantTile({
   onDelete,
   onShowQr,
 }: Props) {
+  const {isLight}=useAppTheme();
   const { openSharePlant, shares } = useSharingPreview();
   const photoVariant = normalizePhotoFraming(plant.photo?.framing).zoom > 1 ? "display" : "thumbnail";
   const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(plant.photo, { variant: photoVariant, expiresAt: plant.access?.expires_at });
@@ -83,7 +86,7 @@ export default function PlantTile({
         <View pointerEvents="none" style={s.plantImageEdge}>
           <MaskedView
             style={StyleSheet.absoluteFill}
-            maskElement={
+            maskElement={isLight ? <LinearGradient testID="plant-image-light-fade" colors={["rgba(0,0,0,1)","rgba(0,0,0,0.85)","rgba(0,0,0,0.3)"]} locations={[0,0.4,1]} start={{x:0,y:0.5}} end={{x:1,y:0.5}} style={StyleSheet.absoluteFill}/> :
               <LinearGradient
                 colors={[
                   "rgba(0,0,0,1.00)",
@@ -112,7 +115,7 @@ export default function PlantTile({
               <ImageBackground
                 source={{ uri: imgUri }}
                 resizeMode="cover"
-                style={s.plantImageShifted}
+                style={isLight ? StyleSheet.absoluteFill : s.plantImageShifted}
               />
             ) : (
               <View style={s.plantImagePlaceholder}>
@@ -125,15 +128,15 @@ export default function PlantTile({
             )}
           </MaskedView>
 
-          <LinearGradient
+          {!isLight && <LinearGradient
             pointerEvents="none"
             colors={["rgba(0,0,0,0.20)", "rgba(0,0,0,0.00)"]}
             locations={[0, 1]}
             style={s.plantImageTopScrim}
-          />
+          />}
         </View>
 
-        <LinearGradient
+        {!isLight && <LinearGradient
           pointerEvents="none"
           colors={[
             "rgba(255,255,255,0.04)",
@@ -145,7 +148,7 @@ export default function PlantTile({
           start={{ x: 0, y: 0.5 }}
           end={{ x: 1, y: 0.5 }}
           style={s.cardImageTint}
-        />
+        />}
 
         <View
           pointerEvents="none"
@@ -167,7 +170,7 @@ export default function PlantTile({
             onPress={handleTilePress}
             android_ripple={{ color: "rgba(255,255,255,0.08)" }}
           >
-            <View style={s.plantTextCol}>
+            <ThemeContrastScope kind={imgUri ? "photo" : "surface"}><View style={s.plantTextCol}>
               <Text style={s.plantName} numberOfLines={1}>
                 {plant.name}
               </Text>
@@ -192,7 +195,7 @@ export default function PlantTile({
                   </Text>
                 </View>
               )}
-            </View>
+            </View></ThemeContrastScope>
           </Pressable>
         </View>
       </View>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Pressable, Text } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { Pressable, Text } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { controls } from "../../profile/styles/profile.styles";
 

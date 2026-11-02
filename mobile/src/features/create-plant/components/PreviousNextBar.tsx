@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
-import { View, Pressable } from "react-native";
+import { View, Pressable } from "../../../shared/theme/native";
 import { Text } from "react-native-paper";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";

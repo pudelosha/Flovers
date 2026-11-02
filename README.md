@@ -80,7 +80,7 @@ Device settings embedded in generated firmware require regenerating and uploadin
 - Reach early levels quickly, with increasing XP requirements for later levels.
 - Keep progression fair through daily limits, diminishing rewards and per-plant care checks.
 - See your current level and progress in Profile without XP pop-ups interrupting care.
-- Personalise language, temperature units, date format, background, tile appearance and FAB position.
+- Personalise language, temperature units, date format and FAB position. Dark is the default theme and uses background 5 after login; signed-out screens keep the floral background 1. Choose Light for mint surfaces, dark green text and teal accents. Theme changes preview immediately and can be saved to your account.
 
 ### Choose the notifications you need
 

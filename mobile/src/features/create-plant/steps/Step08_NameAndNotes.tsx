@@ -1,7 +1,7 @@
-﻿import React, { useMemo, useState, useCallback } from "react";
-import { View, Text, Pressable, TextInput, Platform, Alert, StyleSheet } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import React, { useMemo, useState, useCallback } from "react";
+import { View, Text, Pressable, TextInput, Platform, Alert, StyleSheet } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -11,7 +11,7 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require("@react-native-community/datetimepicker").default;
+  DateTimePicker = require("../../../shared/theme/DateTimePicker").default;
 } catch {}
 
 // EXACT SAME green tones as AuthCard / PlantTile

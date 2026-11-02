@@ -1,9 +1,9 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from "../../../../shared/theme/native";
 
 import { useTranslation } from 'react-i18next';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 
 import { ICON_BG } from '../../../readings/constants/readings.constants';
 import { s } from '../../styles/readings-history.styles';

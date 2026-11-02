@@ -1,3 +1,4 @@
+import {useAppTheme} from "../../../shared/theme/ThemeContext";
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useMemo } from "react";
 import {
@@ -5,9 +6,9 @@ import {
   Text,
   Pressable,
   StyleSheet,
-} from "react-native";
-import LinearGradient from "react-native-linear-gradient";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+} from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 
 import { s } from "../styles/task-history.styles";
@@ -88,6 +89,7 @@ export default function TaskHistoryTile({
   const { t } = useTranslation();
 
   const { settings } = useSettings();
+  const {isLight}=useAppTheme();
   const access = plantAccess(item.access);
   const dateFormat = settings.dateFormat || "DD.MM.YYYY";
 
@@ -157,7 +159,7 @@ export default function TaskHistoryTile({
         />
 
         {/* Accent wash: left (accent) -> right (AuthCard dark) */}
-        <LinearGradient
+        <LinearGradient taskAccent={accent}
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
@@ -184,7 +186,7 @@ export default function TaskHistoryTile({
         <View style={s.cardBodyPressable}>
           {/* Left: icon only */}
           <View style={s.leftCol}>
-            <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000000", 0.15) }]}>
+            <View style={[s.leftIconBubble, { backgroundColor: isLight ? hexToRgba(accent, 0.25) : hexToRgba("#000000", 0.15) }]}>
               <MaterialCommunityIcons name={icon} size={24} color={accent} />
             </View>
           </View>

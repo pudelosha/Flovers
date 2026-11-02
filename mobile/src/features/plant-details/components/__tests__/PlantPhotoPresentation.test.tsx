@@ -1,3 +1,6 @@
+import ThemeMaskedView from "../../../../shared/theme/MaskedView";
+import {ThemeContext} from "../../../../shared/theme/ThemeContext";
+import {LIGHT_COLORS} from "../../../../shared/theme/palette";
 import React from "react";
 import { ImageBackground, StyleSheet } from "react-native";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
@@ -143,4 +146,17 @@ it("waits for a private photo decode, and settles a plant with no image", () => 
   (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: null });
   view.rerender(<PlantInfoTile plant={{ ...plant, plant_definition: null, access } as any} onImageReadyChange={ready} />);
   expect(ready).toHaveBeenLastCalledWith(true);
+});
+
+it("keeps private plant images and framing while using light detail labels",()=>{
+ const ui=render(<ThemeContext.Provider value={{isLight:true,colors:LIGHT_COLORS}}><PlantInfoTile plant={{...plant,photo:metadata,access} as any}/></ThemeContext.Provider>);
+ expect(ui.UNSAFE_getByType(FramedPlantImage).props).toMatchObject({uri:"data:image/jpeg;base64,SYNCED",photo:metadata});
+ expect(StyleSheet.flatten(ui.getByText("Fern").props.style).color).toBe("#FFFFFF");
+});
+
+it("uses a simple horizontal photo fade without glare or offset in Light Plants tiles",()=>{
+ (usePlantPhoto as jest.Mock).mockReturnValue({uri:null,loading:false,error:null});
+ const ui=render(<ThemeContext.Provider value={{isLight:true,colors:LIGHT_COLORS}}><PlantTile plant={{id:"7",name:"Fern",notes:"",imageUrl:"https://example.test/catalogue.jpg",access}} isMenuOpen={false} {...callbacks}/></ThemeContext.Provider>);
+ expect(ui.UNSAFE_getByType(ThemeMaskedView).props.maskElement.props.testID).toBe("plant-image-light-fade");
+ expect(StyleSheet.flatten(ui.UNSAFE_getByType(ImageBackground).props.style)).toMatchObject({left:0,right:0,top:0,bottom:0});
 });

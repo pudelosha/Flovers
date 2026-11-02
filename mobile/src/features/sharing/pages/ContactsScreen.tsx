@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { BackHandler, Pressable, StyleSheet, Text, View } from "react-native";
+import { BackHandler, Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import Clipboard from "@react-native-clipboard/clipboard";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useIsFocused } from "@react-navigation/native";
 import { useSettings } from "../../../app/providers/SettingsProvider";

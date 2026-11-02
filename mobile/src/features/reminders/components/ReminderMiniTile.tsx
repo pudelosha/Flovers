@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
 import { s } from "../styles/reminders.styles";
 import type { Reminder as UIReminder } from "../types/reminders.types";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import Icon from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";

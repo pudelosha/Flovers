@@ -6,11 +6,10 @@ import {
   Animated,
   Easing,
   StyleSheet,
-  Text,
-} from "react-native";
+  Text, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -200,7 +199,7 @@ export default function ReadingsScreen() {
   }, []);
 
   // FlatList ref to force scroll-to-top on focus
-  const listRef = useRef<Animated.FlatList<any>>(null);
+  const listRef = useRef<AnimatedFlatList<any>>(null);
 
   // ===== Load devices and plant instances =====
   const load = useCallback(async () => {
@@ -1123,7 +1122,7 @@ export default function ReadingsScreen() {
         <Pressable onPress={closeFloatingMenus} style={s.backdrop} />
       )}
 
-      <Animated.FlatList
+      <AnimatedFlatList
         ref={listRef}
         style={{ flex: 1 }}
         data={derivedItems}
@@ -1144,7 +1143,7 @@ export default function ReadingsScreen() {
           const isOpen = menuOpenId === item.id;
 
           return (
-            <Animated.View
+            <AnimatedView
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
                 isOpen && { zIndex: 50 },
@@ -1196,7 +1195,7 @@ export default function ReadingsScreen() {
                   handleToggleAutoPump(item.id, enabled)
                 }
               />
-            </Animated.View>
+            </AnimatedView>
           );
         }}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -1210,7 +1209,7 @@ export default function ReadingsScreen() {
         }
         ListEmptyComponent={
           !loading ? (
-            <Animated.View
+            <AnimatedView
               style={[
                 s.emptyWrap,
                 {
@@ -1266,7 +1265,7 @@ export default function ReadingsScreen() {
                   </View>
                 </View>
               </View>
-            </Animated.View>
+            </AnimatedView>
           ) : null
         }
       />

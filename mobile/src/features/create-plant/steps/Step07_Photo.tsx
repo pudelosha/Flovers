@@ -1,4 +1,4 @@
-﻿import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import {
   View,
   Text,
@@ -7,8 +7,8 @@ import {
   PermissionsAndroid,
   Platform,
   StyleSheet,
-} from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+} from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import {
@@ -19,7 +19,7 @@ import {
 } from "react-native-image-picker";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 import PlantPhotoFramingEditor from "../../../shared/ui/PlantPhotoFramingEditor";
 import { DEFAULT_PHOTO_FRAMING } from "../../../shared/utils/photoFraming";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";

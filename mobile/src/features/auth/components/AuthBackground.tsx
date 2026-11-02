@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { View, StyleSheet, Platform } from "react-native";
+import { View, StyleSheet, Platform } from "../../../shared/theme/native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 

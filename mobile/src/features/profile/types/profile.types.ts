@@ -7,4 +7,6 @@ export type LangOption = { code: LangCode; label: string; flag: string };
 export type FabPosition = "left" | "right";
 export type BackgroundKey = "bg1" | "bg2" | "bg3" | "bg4" | "bg5";
 
+export type ThemeMode = "dark" | "light";
+
 export type TileMotive = "light" | "dark";

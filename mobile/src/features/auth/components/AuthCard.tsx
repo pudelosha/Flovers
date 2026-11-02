@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useEffect, useRef } from "react";
-import { View, StyleSheet, Animated } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+import { View, StyleSheet, Animated, AnimatedView } from "../../../shared/theme/native";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PanGestureHandler, State as GHState } from "react-native-gesture-handler";
 
@@ -105,7 +105,7 @@ export default function AuthCard({ children }: Props) {
         activeOffsetY={[-ACTIVATE, ACTIVATE]}
         hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
       >
-        <Animated.View
+        <AnimatedView
           style={[
             s.cardShadow,
             {
@@ -150,7 +150,7 @@ export default function AuthCard({ children }: Props) {
 
             <View style={s.content}>{children}</View>
           </View>
-        </Animated.View>
+        </AnimatedView>
       </PanGestureHandler>
     </View>
   );

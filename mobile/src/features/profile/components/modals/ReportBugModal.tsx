@@ -1,6 +1,6 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Pressable, ActivityIndicator, ScrollView } from 'react-native';
+import { View, Text, TextInput, Pressable, ActivityIndicator, ScrollView } from "../../../../shared/theme/native";
 
 import { Checkbox } from 'react-native-paper';
 import { useTranslation } from 'react-i18next';

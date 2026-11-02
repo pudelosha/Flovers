@@ -6,12 +6,11 @@ import {
   Pressable,
   Animated,
   Easing,
-  useWindowDimensions,
-} from "react-native";
+  useWindowDimensions, AnimatedView } from "../../../shared/theme/native";
 import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
-import { Text } from "react-native-paper";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import LinearGradient from "react-native-linear-gradient";
+import { Text } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import {
   Camera,
@@ -197,7 +196,7 @@ export default function ScannerScreen() {
         showSeparator={false}
       />
 
-      <Animated.View
+      <AnimatedView
         style={{ flex: 1, opacity, transform: [{ translateY }, { scale }] }}
         onLayout={(e) => setContentHeight(e.nativeEvent.layout.height)}
       >
@@ -380,7 +379,7 @@ export default function ScannerScreen() {
         </View>
 
         <View style={{ height: BOTTOM_SPACER }} />
-      </Animated.View>
+      </AnimatedView>
     </View>
   );
 }

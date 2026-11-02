@@ -36,6 +36,7 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
             "tile_transparency",
             "tile_motive",
             "background",
+            "theme",
             "fab_position",
         ]
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "../../../../shared/theme/native";
 import AppModalHost from "../../../../shared/ui/AppModalHost";
 import { useTranslation } from "react-i18next";
 import ContactModalFrame from "../../../sharing/components/ContactModalFrame";
@@ -9,7 +9,7 @@ import {
   type JournalPhotoPreview,
 } from "../../../../api/services/journal-photos.service";
 import { useSettings } from "../../../../app/providers/SettingsProvider";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import type { JournalPhotoItem } from "../../types/task-history.types";
 
 /** The authorized full photo, without the tile's crop or decorative gradient. */

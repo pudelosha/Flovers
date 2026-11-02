@@ -1,8 +1,8 @@
 import { TAB_CONTENT_HEIGHT, MIN_TAB_BOTTOM_PADDING } from "../../shared/constants/layout";
 import React from "react";
-import { BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "react-native";
+import { BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "../../shared/theme/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../shared/theme/Icon";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 // Use gradient (with safe fallback if the lib isn't installed)
 let LinearGradientView: any = View;
 try {
-  LinearGradientView = require("react-native-linear-gradient").default;
+  LinearGradientView = require("../../shared/theme/Gradient").default;
 } catch {}
 
 // Screens

@@ -7,6 +7,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
   measureUnit: "metric",
   tileTransparency: 0.12,
   tileMotive: "light",
+  theme: "dark",
   background: "bg5",
   fabPosition: "right",
 };

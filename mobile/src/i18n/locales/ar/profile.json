@@ -102,7 +102,13 @@
       "tileMotiveOptions": {
         "light": "فاتح",
         "dark": "داكن"
-      }
+      },
+      "theme": "المظهر",
+      "themeOptions": {
+        "dark": "داكن",
+        "light": "فاتح"
+      },
+      "comingSoon": "قريبًا"
     },
     "support": {
       "title": "الدعم",

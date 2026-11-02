@@ -9,10 +9,10 @@ import {
   Platform,
   Alert,
   ScrollView,
-} from 'react-native';
+} from "../../../../shared/theme/native";
 
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Slider from '@react-native-community/slider';
+import MaterialCommunityIcons from "../../../../shared/theme/Icon";
+import Slider from '../../../../shared/theme/Slider';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../../app/providers/LanguageProvider';
 
@@ -37,7 +37,7 @@ type LightLevel5 = 'very-low' | 'low' | 'medium' | 'bright-indirect' | 'bright-d
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require('@react-native-community/datetimepicker').default;
+  DateTimePicker = require("../../../../shared/theme/DateTimePicker").default;
 } catch {}
 
 function toISODate(d: Date) {

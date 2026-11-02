@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Text, Pressable } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { controls } from "../../profile/styles/profile.styles";
 
 export function HourStepper({

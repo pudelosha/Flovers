@@ -7,10 +7,9 @@ import {
   PermissionsAndroid,
   Platform,
   StyleSheet,
-  Animated,
-} from "react-native";
+  Animated, AnimatedView } from "../../../shared/theme/native";
 import { useNavigation, useRoute, useFocusEffect, useIsFocused } from "@react-navigation/native";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 
@@ -759,7 +758,7 @@ export default function PlantDetailsScreen() {
       />
 
       <View style={{ flex: 1 }}>
-      <Animated.View testID="plant-details-content"
+      <AnimatedView testID="plant-details-content"
         pointerEvents={isInitialLoading ? "none" : "auto"}
         accessibilityElementsHidden={isInitialLoading}
         importantForAccessibility={isInitialLoading ? "no-hide-descendants" : "auto"}
@@ -910,7 +909,7 @@ export default function PlantDetailsScreen() {
             <View style={{ height: 120 }} />
           </ScrollView>
         )}
-      </Animated.View>
+      </AnimatedView>
       {isInitialLoading && <CenteredSpinner overlay />}
       </View>
 

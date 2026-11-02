@@ -1,7 +1,7 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
-import { View, Pressable, Text } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, Text } from "../../../shared/theme/native";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 
 import { s } from "../styles/readings.styles";
 

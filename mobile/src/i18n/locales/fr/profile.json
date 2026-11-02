@@ -102,7 +102,13 @@
       "tileMotiveOptions": {
         "light": "Clair",
         "dark": "Sombre"
-      }
+      },
+      "theme": "Thème",
+      "themeOptions": {
+        "dark": "Sombre",
+        "light": "Clair"
+      },
+      "comingSoon": "bientôt"
     },
     "support": {
       "title": "Assistance",

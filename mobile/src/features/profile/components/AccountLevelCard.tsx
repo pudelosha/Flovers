@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "../../../shared/theme/native";
 import type { DimensionValue } from "react-native";
 import { useTranslation } from "react-i18next";
 import { accountRankForLevel } from "../constants/account-level.constants";

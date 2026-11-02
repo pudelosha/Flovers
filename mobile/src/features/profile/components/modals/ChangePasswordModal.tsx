@@ -1,6 +1,6 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Pressable, ScrollView } from 'react-native';
+import { View, Text, TextInput, Pressable, ScrollView } from "../../../../shared/theme/native";
 
 import { useTranslation } from 'react-i18next';
 import { changeMyPassword } from '../../../../api/services/profile.service';

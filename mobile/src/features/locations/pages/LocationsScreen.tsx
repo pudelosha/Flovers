@@ -7,12 +7,11 @@ import {
   Text,
   Pressable,
   Easing,
-  Alert,
-} from "react-native";
+  Alert, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
-import LinearGradient from "react-native-linear-gradient";
+import LinearGradient from "../../../shared/theme/Gradient";
 
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
@@ -422,7 +421,7 @@ export default function LocationsScreen() {
         <Pressable onPress={closeFloatingMenus} style={s.backdrop} />
       )}
 
-      <Animated.FlatList
+      <AnimatedFlatList
         style={{ flex: 1 }}
         data={derivedLocations}
         keyExtractor={(l) => l.id}
@@ -441,7 +440,7 @@ export default function LocationsScreen() {
           const isOpen = menuOpenId === item.id;
 
           return (
-            <Animated.View
+            <AnimatedView
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
                 isOpen && { zIndex: 50, elevation: 50 },
@@ -455,7 +454,7 @@ export default function LocationsScreen() {
                 onEdit={() => openEditLocation(item)}
                 onDelete={() => askDeleteLocation(item)}
               />
-            </Animated.View>
+            </AnimatedView>
           );
         }}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
@@ -468,7 +467,7 @@ export default function LocationsScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ListEmptyComponent={() => (
-          <Animated.View
+          <AnimatedView
             style={[
               s.emptyWrap,
               {
@@ -522,7 +521,7 @@ export default function LocationsScreen() {
                 </View>
               </View>
             </View>
-          </Animated.View>
+          </AnimatedView>
         )}
       />
 
