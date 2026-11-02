@@ -1,4 +1,4 @@
-import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
+import { ThemeContrastScope, useAppTheme } from "../../../shared/theme/ThemeContext";
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, Pressable } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
@@ -130,6 +130,7 @@ export default function PlantInfoTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const {isLight}=useAppTheme();
   const nav = useNavigation<any>();
   const { openSharePlant, shares } = useSharingPreview();
   const access = plantAccess(plant?.access);
@@ -285,10 +286,10 @@ export default function PlantInfoTile({
                     <LinearGradient
                       colors={[
                         "rgba(0,0,0,1.00)",
-                        "rgba(0,0,0,0.92)",
-                        "rgba(0,0,0,0.75)",
-                        "rgba(0,0,0,0.50)",
-                        "rgba(0,0,0,0.22)",
+                        isLight ? "rgba(0,0,0,0.98)" : "rgba(0,0,0,0.92)",
+                        isLight ? "rgba(0,0,0,0.94)" : "rgba(0,0,0,0.75)",
+                        isLight ? "rgba(0,0,0,0.82)" : "rgba(0,0,0,0.50)",
+                        isLight ? "rgba(0,0,0,0.55)" : "rgba(0,0,0,0.22)",
                         "rgba(0,0,0,0.00)",
                       ]}
                       locations={[0, 0.1, 0.45, 0.68, 0.88, 1]}

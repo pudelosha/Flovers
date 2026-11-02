@@ -6,8 +6,8 @@ const stamp=new Date(2026,10,1,10,30).toISOString();
 it("renders a compact read-only list with actor, care type and local timestamp",()=>{
  const view=render(<PlantActivityTile items={[{id:"1",type:"watering",actor:"Anna",completedAt:stamp}]}/>);
  expect(view.getByText("Activity")).toBeTruthy();
- expect(view.getByText("Anna \u00b7 watering")).toBeTruthy();
- expect(view.getByText("01.11.2026 10:30")).toBeTruthy();expect(view.queryAllByRole("button")).toHaveLength(0);
+ expect(view.getByText("WATERING")).toBeTruthy();
+ expect(view.getByText("01.11.2026 10:30 · Anna")).toBeTruthy();expect(view.queryAllByRole("button")).toHaveLength(0);
 });
 it("shows a clear empty state and caps the visible rows at five",()=>{
  const view=render(<PlantActivityTile items={[]}/>);expect(view.getByText("No completed tasks yet.")).toBeTruthy();

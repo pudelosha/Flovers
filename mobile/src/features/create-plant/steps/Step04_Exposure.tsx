@@ -1,3 +1,4 @@
+import {useAppTheme} from "../../../shared/theme/ThemeContext";
 import React, { useMemo, useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
@@ -37,6 +38,7 @@ export default function Step04_Exposure({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const {isLight}=useAppTheme();
   const { state, actions } = useCreatePlantWizard();
   const theme = useTheme();
 
@@ -193,7 +195,7 @@ export default function Step04_Exposure({
                 paddingVertical: 4,
                 marginHorizontal: 0,
               },
-              labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
+              labelStyle: { fontSize: 11, fontWeight: "800", color: isLight && state.orientation !== key ? "#000000" : "#FFFFFF" },
             }))}
             density="small"
             style={{

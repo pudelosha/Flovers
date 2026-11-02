@@ -70,3 +70,42 @@ def test_simultaneous_private_alias_updates_preserve_both_names(people):
                       lambda: rename(people.recipient.pk, people.owner.pk, "Son")) == ["Mom", "Son"]
     row = Connection.objects.get()
     assert {row.alias_low, row.alias_high} == {"Mom", "Son"}
+
+
+def test_concurrent_senders_cannot_exceed_recipient_queue_budget(people):
+    from contacts.models import InvitationEmailDelivery
+    from contacts.services import invite_by_email
+    # Leave one recipient slot; the two competing senders both see a new pair.
+    for i in range(2):
+        sender=get_user_model().objects.create_user(email=f"seed{i}@example.test",is_active=True)
+        invite_by_email(sender,"new@example.test","en")
+    def send(pk):
+        try:
+            invite_by_email(get_user_model().objects.get(pk=pk),"NEW@example.test","en")
+            return "queued"
+        except ContactError as error:return str(error.detail["code"])
+    assert sorted(concurrent(lambda:send(people.owner.pk),lambda:send(people.outsider.pk)))==["queued","throttled"]
+    assert InvitationEmailDelivery.objects.count()==3
+
+
+def test_concurrent_requests_cannot_exceed_sender_queue_budget(people):
+    from contacts.models import InvitationEmailDelivery
+    from contacts.services import invite_by_email
+    for i in range(19):invite_by_email(people.owner,f"seed{i}@example.test","en")
+    def send(email):
+        try:
+            invite_by_email(get_user_model().objects.get(pk=people.owner.pk),email,"en")
+            return "queued"
+        except ContactError as error:return str(error.detail["code"])
+    assert sorted(concurrent(lambda:send("first@example.test"),lambda:send("second@example.test")))==["queued","throttled"]
+    assert InvitationEmailDelivery.objects.count()==20
+
+
+def test_concurrent_workers_claim_one_invitation_delivery(people):
+    from contacts.models import InvitationEmailDelivery
+    from contacts.services import invite_by_email
+    from contacts.tasks import _claim
+    invite_by_email(people.owner,"new@example.test","en")
+    pk=InvitationEmailDelivery.objects.get().pk
+    assert sorted(concurrent(lambda:_claim(pk) is not None,lambda:_claim(pk) is not None))==[False,True]
+    assert InvitationEmailDelivery.objects.get().attempts==1

@@ -8,11 +8,11 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.db import transaction
-from django.db.models import Q
+from django.db.models import F, Q
 from django.utils import timezone
 from rest_framework.exceptions import APIException
 
-from .models import Connection, EmailInvitation
+from .models import Connection, EmailInvitation, InvitationEmailDelivery, InvitationRecipientLock
 
 User = get_user_model()
 logger = logging.getLogger(__name__)
@@ -220,40 +220,46 @@ def claim_email_invitations(user):
 @transaction.atomic
 def invite_by_email(actor, email, language):
     from datetime import timedelta
-    from django.conf import settings
-    from core.emailing import send_templated_email
+    from hashlib import sha256
     email = email.strip().lower()
-    # Include unverified accounts: this flow is for people who have not registered.
+    sender = User.objects.select_for_update().get(pk=actor.pk)
+    if not sender.is_active:
+        raise _missing()
+    # The row exists before counting even for a previously unseen recipient.
+    recipient_key = sha256(email.encode("utf-8")).hexdigest()
+    InvitationRecipientLock.objects.get_or_create(key=recipient_key)
+    InvitationRecipientLock.objects.select_for_update().get(key=recipient_key)
     if User.objects.filter(email__iexact=email).exists():
         raise ContactError("alreadyRegistered", "This email is already registered. Use Add contact instead.", 409)
-    User.objects.select_for_update().get(pk=actor.pk)
     now = timezone.now()
-    if EmailInvitation.objects.filter(email=email, sent_at__gt=now - timedelta(days=1)).count() >= 3:
+    day = now - timedelta(days=1)
+    # Undelivered jobs retain their reservation through an outage. Once sent,
+    # the budget window follows actual provider acceptance, not queue age.
+    live = Q(status="sending") | Q(status="pending", invitation__closed=False, invitation__expires_at__gt=now, generation=F("invitation__delivery_generation"))
+    jobs = InvitationEmailDelivery.objects.filter(Q(created_at__gt=day) | Q(sent_at__gt=day) | live)
+    # Preserve cooldowns from synchronous deliveries made before this migration.
+    legacy = EmailInvitation.objects.filter(deliveries__isnull=True, sent_at__gt=day)
+    if jobs.filter(invitation__email=email).count() + legacy.filter(email=email).count() >= 3:
         raise ContactError("throttled", "Too many invitations to this email today.", 429)
-    row = EmailInvitation.objects.select_for_update().filter(sender=actor, email=email).first()
+    sender_jobs = jobs.filter(invitation__sender=sender)
+    sender_legacy = legacy.filter(sender=sender)
+    if (sender_jobs.count() + sender_legacy.count() >= 100 or
+        sender_jobs.filter(Q(created_at__gt=now-timedelta(hours=1)) | Q(sent_at__gt=now-timedelta(hours=1)) | live).count() +
+        sender_legacy.filter(sent_at__gt=now-timedelta(hours=1)).count() >= 20):
+        raise ContactError("throttled", "Too many invitations sent. Please try again later.", 429)
+    row = EmailInvitation.objects.select_for_update().filter(sender=sender, email=email).first()
     if row and not row.closed and row.expires_at > now:
         raise ContactError("alreadyPending", "An invitation for this email is already pending.", 409)
-    # Keep delivery history after cancellation to prevent cancel/reinvite spam.
-    if row and row.sent_at and row.sent_at > now - timedelta(days=1):
+    if row and ((row.sent_at and row.sent_at > day) or row.deliveries.filter(created_at__gt=day).exists()):
         raise ContactError("throttled", "Please wait before inviting this email again.", 429)
     if not row:
-        row = EmailInvitation(sender=actor, email=email)
+        row = EmailInvitation(sender=sender, email=email)
+    row.delivery_generation = uuid.uuid4()
     row.language, row.expires_at, row.closed = language, now + timedelta(days=30), False
+    row.sent_at = None
     row.save()
-    try:
-        sent = send_templated_email(to_email=email, template_name="contacts/join", lang=language,
-            context={"inviter": actor.get_full_name().strip() or actor.email,
-                     "invite_email": email, "inviter_id": contact_identity(actor)["flovers_id"],
-                     "website_url": getattr(settings, "PUBLIC_WEB_BASE", "https://flovers.app").rstrip("/") + "/" + language,
-                     "google_play_url": getattr(settings, "INVITATION_GOOGLE_PLAY_URL", ""),
-                     "app_store_url": getattr(settings, "INVITATION_APP_STORE_URL", "")})
-        if not sent:
-            raise RuntimeError("Mail delivery did not succeed")
-    except Exception:
-        logger.exception("Contact invitation delivery failed for sender %s", actor.pk)
-        raise ContactError("unavailable", "Could not send the invitation. Please try again.", 503)
-    row.sent_at = now
-    row.save(update_fields=["sent_at"])
+    InvitationEmailDelivery.objects.create(invitation=row, generation=row.delivery_generation)
+    # Beat drains the committed outbox; no SMTP or broker I/O in the HTTP path.
     return contact_snapshot(actor)
 
 

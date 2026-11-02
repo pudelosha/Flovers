@@ -1,3 +1,4 @@
+import {useAppTheme,ThemeContrastScope} from "../../../shared/theme/ThemeContext";
 import React, { useRef, useState, useMemo, useEffect, useCallback } from "react";
 import { 
   View, 
@@ -58,6 +59,8 @@ export default function PlantSearchBox({
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage } = useLanguage();
 
+  const {isLight}=useAppTheme();
+  const ink=isLight?"#000000":"#FFFFFF";
   const safeValue = typeof value === "string" ? value : "";
 
   const data = useMemo(
@@ -159,7 +162,7 @@ export default function PlantSearchBox({
       <View style={containerStyle}>
         <MaterialCommunityIcons name="magnify" size={18} color="#FFFFFF" />
 
-        <AnimatedText
+        <ThemeContrastScope kind="dark"><AnimatedText
           style={{
             position: "absolute",
             left: labelLeft,
@@ -167,11 +170,11 @@ export default function PlantSearchBox({
             zIndex: 10,
             fontWeight: "500",
             fontSize: labelFontSize as any,
-            color: labelColor as any,
+            color: isLight ? "#000000" : labelColor as any,
           }}
         >
           {placeholderText}
-        </AnimatedText>
+        </AnimatedText></ThemeContrastScope>
 
         <TextInput
           mode="flat"
@@ -189,13 +192,13 @@ export default function PlantSearchBox({
             marginLeft: 0,
           }}
           contentStyle={{ paddingTop: 20, paddingBottom: 8, paddingLeft: 0 }}
-          selectionColor="#FFFFFF"
-          cursorColor="#FFFFFF"
-          textColor="#FFFFFF"
+          selectionColor={ink}
+          cursorColor={ink}
+          textColor={ink}
           theme={{
             colors: {
-              primary: "#FFFFFF",
-              onSurfaceVariant: "#FFFFFF",
+              primary: ink,
+              onSurfaceVariant: ink,
             },
           }}
           onSubmitEditing={() => setShowSuggestions(false)}

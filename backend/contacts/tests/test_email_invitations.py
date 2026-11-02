@@ -6,7 +6,8 @@ from django.contrib.auth import get_user_model
 from django.core import mail
 from django.utils import timezone
 
-from contacts.models import Connection, EmailInvitation
+from contacts.models import Connection, EmailInvitation, InvitationEmailDelivery
+from contacts.tasks import deliver_invitation_emails
 from contacts.services import claim_email_invitations
 
 pytestmark = pytest.mark.django_db
@@ -26,6 +27,9 @@ def test_delivery_pending_and_private_cancellation(people, settings):
     assert data["invitations"] == []
     assert data["email_invitations"][0]["email"] == "new@example.test"
     assert data["email_invitations"][0]["language"] == "pl"
+    assert len(mail.outbox) == 0
+    assert row.sent_at is None
+    deliver_invitation_emails()
     assert len(mail.outbox) == 1
     message = mail.outbox[0]
     assert message.to == ["new@example.test"]
@@ -64,11 +68,19 @@ def test_duplicate_case_insensitive_does_not_send_twice(people):
     assert EmailInvitation.objects.count() == 1
 
 
-def test_delivery_failure_rolls_back_and_retry_is_possible(people):
-    with patch("core.emailing.send_templated_email", side_effect=RuntimeError("SMTP failed")):
-        assert send(people).status_code == 503
-    assert not EmailInvitation.objects.exists()
+def test_delivery_failure_keeps_the_durable_job_and_retry_is_possible(people):
     assert send(people).status_code == 201
+    with patch("contacts.tasks.send_templated_email", side_effect=RuntimeError("SMTP failed")):
+        deliver_invitation_emails()
+    job = InvitationEmailDelivery.objects.get()
+    assert job.status == "pending" and job.attempts == 1
+    assert EmailInvitation.objects.get().sent_at is None
+    assert send(people).status_code == 409
+    InvitationEmailDelivery.objects.update(next_attempt_at=timezone.now()-timedelta(seconds=1))
+    deliver_invitation_emails()
+    job.refresh_from_db()
+    assert job.status == "sent" and job.attempts == 2
+    assert EmailInvitation.objects.get().sent_at is not None
 
 
 def test_verified_recipient_gets_request_not_automatic_access(people):
@@ -110,6 +122,7 @@ def test_localized_mail_and_optional_store_links(people, settings, language):
     settings.INVITATION_GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.flovers.mobile"
     settings.INVITATION_APP_STORE_URL = "https://apps.apple.com/app/example"
     assert send(people, language=language).status_code == 201
+    deliver_invitation_emails()
     message = mail.outbox[-1]
     assert "{{" not in message.body and "{{" not in message.alternatives[0].content
     assert "https://play.google.com/" in message.body

@@ -89,8 +89,9 @@ otherwise the server returns `alreadyRegistered` (409), directing the user to
 Add contact. Duplicates return `alreadyPending` (409). Invalid email/language
 returns `invalid` (400). The existing hourly/daily contact throttles also apply.
 An address can receive at most three invitations per day across senders; a sender
-cannot bypass a 24-hour resend limit by cancelling. SMTP failures return 503 and
-roll back the new invitation. Sending uses the existing configured mail service.
+cannot bypass a 24-hour resend limit by cancelling. A successful request returns
+201 with the existing snapshot and queues delivery; it does not wait for SMTP.
+The existing configured mail service is used by the background worker.
 
 Invitations expire after 30 days. Pending emails are visible only to the sender
 in `email_invitations`: `id`, `email`, `language`, `expires_at`. Existing API
@@ -115,3 +116,37 @@ emails):
 The website link is always available, based on `PUBLIC_WEB_BASE`. Configure the
 store links on the VPS when the listings are ready. Run migrations before using
 the new mobile build. Tests use local in-memory mail, not real recipients.
+
+
+## Reliable invitation delivery
+
+Migration `contacts.0003_invitationrecipientlock_and_more` adds a transactional
+outbox and recipient lock rows. Every accepted invitation and its delivery job
+commit together. The request makes no SMTP or broker calls, so neither outage
+causes invitation loss or HTTP latency. Celery Beat dispatches
+`contacts.tasks.deliver_invitation_emails` every minute; a running worker is required.
+The existing deployment must restart both worker and Beat after migrating.
+
+A sender row lock serializes reservations across different recipient addresses.
+A separate SHA-256 recipient-key row lock serializes reservations across different
+senders, including the first invitation to an address. PostgreSQL enforces these
+locks. Queue reservations count toward rolling limits immediately, even if mail
+is delayed, cancelled or fails: 20/hour and 100/24 hours per sender, three/24 hours
+per normalized recipient, and one per sender/recipient per 24 hours. Live jobs
+retain reservations throughout outages; delivered jobs count from actual send
+time, preventing catch-up bursts when mail resumes. Legacy sent
+records count too. Existing cache-based API throttles remain an additional layer.
+
+Workers use atomic claims, a 15-minute fenced lease and a generation ID. A live
+claim cannot be picked by another worker; expired claims can be recovered. Old
+workers cannot overwrite newer claim results. SMTP runs outside transactions;
+`sent_at` is recorded only after provider acceptance. Retries back off from 60
+seconds and stop after six attempts. Inspect pending/failed delivery rows for
+operational monitoring; failure details retain only the exception class.
+Cancelled, expired, claimed, obsolete-generation and inactive-sender invitations
+are skipped, as are addresses registered before delivery.
+
+Delivery is at least once: a worker crash after SMTP accepts the email but before
+the database records success may produce a duplicate after lease recovery. SMTP
+cannot provide exactly-once delivery. Cancellation cannot recall an email already
+in flight. Invitations never automatically grant contact or plant access.

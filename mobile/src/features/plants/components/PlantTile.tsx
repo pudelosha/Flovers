@@ -86,7 +86,7 @@ export default function PlantTile({
         <View pointerEvents="none" style={s.plantImageEdge}>
           <MaskedView
             style={StyleSheet.absoluteFill}
-            maskElement={isLight ? <LinearGradient testID="plant-image-light-fade" colors={["rgba(0,0,0,1)","rgba(0,0,0,0.85)","rgba(0,0,0,0.3)"]} locations={[0,0.4,1]} start={{x:0,y:0.5}} end={{x:1,y:0.5}} style={StyleSheet.absoluteFill}/> :
+            maskElement={isLight ? <LinearGradient testID="plant-image-light-fade" colors={["rgba(0,0,0,1)","rgba(0,0,0,0.94)","rgba(0,0,0,0.45)"]} locations={[0,0.4,1]} start={{x:0,y:0.5}} end={{x:1,y:0.5}} style={StyleSheet.absoluteFill}/> :
               <LinearGradient
                 colors={[
                   "rgba(0,0,0,1.00)",

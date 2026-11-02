@@ -1,4 +1,4 @@
-import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
+import { ThemeContrastScope, useAppTheme } from "../../../shared/theme/ThemeContext";
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React from "react";
 import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "../../../shared/theme/native";
@@ -21,6 +21,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
   onViewPhoto: () => void; onEdit: () => void; onPlantDetails: () => void; onDelete: () => void;
 }) {
   const { t } = useTranslation();
+  const {isLight}=useAppTheme();
   const window = useWindowDimensions();
   const { settings } = useSettings();
   const photo = usePlantPhoto(item.photo, { variant: "display", expiresAt: item.access?.expires_at });
@@ -45,7 +46,7 @@ export default function JournalPhotoTile({ item, isMenuOpen, onToggleMenu, onVie
         <View style={[styles.hero, { minHeight: Math.max(0, window.width - 32) / PHOTO_JOURNAL_ASPECT_RATIO }]}>
           <View pointerEvents="none" style={styles.photoSurface}>
             {photo.uri ? <MaskedView style={StyleSheet.absoluteFill} maskElement={
-            <LinearGradient colors={["rgba(0,0,0,1)", "rgba(0,0,0,0.92)", "rgba(0,0,0,0.75)", "rgba(0,0,0,0.50)", "rgba(0,0,0,0.22)", "rgba(0,0,0,0)"]}
+            <LinearGradient colors={["rgba(0,0,0,1)", isLight ? "rgba(0,0,0,0.98)" : "rgba(0,0,0,0.92)", isLight ? "rgba(0,0,0,0.94)" : "rgba(0,0,0,0.75)", isLight ? "rgba(0,0,0,0.82)" : "rgba(0,0,0,0.50)", isLight ? "rgba(0,0,0,0.55)" : "rgba(0,0,0,0.22)", "rgba(0,0,0,0)"]}
               locations={[0, 0.1, 0.45, 0.68, 0.88, 1]} style={StyleSheet.absoluteFill} />
           }>
             <FramedPlantImage uri={photo.uri} photo={item.photo} style={StyleSheet.absoluteFill} onError={photo.refresh} />

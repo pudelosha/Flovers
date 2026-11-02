@@ -201,6 +201,10 @@ IOT_TLS_CA_CERT = env("IOT_TLS_CA_CERT", default="")
 
 # --- Celery ---
 CELERY_BEAT_SCHEDULE = {
+    "deliver-contact-invitations-every-minute": {
+        "task": "contacts.tasks.deliver_invitation_emails",
+        "schedule": crontab(),
+    },
     "cleanup-private-plant-photos-every-hour": {
         "task": "plant_instances.tasks.cleanup_private_plant_photos",
         "schedule": crontab(minute=17),

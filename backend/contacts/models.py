@@ -1,6 +1,9 @@
+import uuid
+
 from django.conf import settings
 from django.db import models
 from django.db.models import F, Q
+from django.utils import timezone
 
 
 class Connection(models.Model):
@@ -50,9 +53,32 @@ class EmailInvitation(models.Model):
     email = models.EmailField(max_length=254, db_index=True)
     language = models.CharField(max_length=2)
     created_at = models.DateTimeField(auto_now_add=True)
+    delivery_generation = models.UUIDField(default=uuid.uuid4, editable=False)
     sent_at = models.DateTimeField(null=True)
     expires_at = models.DateTimeField()
     closed = models.BooleanField(default=False)
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=["sender", "email"], name="contacts_unique_email_invite")]
+
+
+class InvitationRecipientLock(models.Model):
+    """Serializes recipient-wide reservations, including across different senders."""
+    key = models.CharField(max_length=64, primary_key=True)
+
+
+class InvitationEmailDelivery(models.Model):
+    """Transactional outbox: one durable mail job per invitation generation."""
+    invitation = models.ForeignKey(EmailInvitation, on_delete=models.CASCADE, related_name="deliveries")
+    generation = models.UUIDField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    status = models.CharField(max_length=8, default="pending", choices=[(s,s) for s in ("pending","sending","sent","skipped","failed")])
+    attempts = models.PositiveSmallIntegerField(default=0)
+    next_attempt_at = models.DateTimeField(default=timezone.now)
+    lease_expires_at = models.DateTimeField(null=True)
+    claim_token = models.CharField(max_length=32, blank=True, default="")
+    sent_at = models.DateTimeField(null=True)
+    last_error = models.CharField(max_length=80, blank=True, default="")
+
+    class Meta:
+        indexes = [models.Index(fields=["status","next_attempt_at"], name="invite_delivery_due")]

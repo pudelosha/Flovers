@@ -1,3 +1,4 @@
+import {useAppTheme} from "../../../shared/theme/ThemeContext";
 import React, { useMemo, useState } from "react";
 import { View, Pressable } from "../../../shared/theme/native";
 import { Text } from "react-native-paper";
@@ -46,6 +47,7 @@ export default function PreviousNextBar({
   bottomOffset = 92,
 }: Props) {
   const insets = useSafeAreaInsets();
+  const {isLight}=useAppTheme();
   const { state, actions } = useCreatePlantWizard();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -122,7 +124,8 @@ export default function PreviousNextBar({
   const isPrevDisabled = !!prevDisabled || defaults.hidePrev;
   const isNextDisabled = !!nextDisabled || blockNextBecauseOfStep;
 
-  const prevBg = "#263238";
+  // Same source fill as AppTabs.focusPill; the shared palette resolves both identically.
+  const prevBg = isLight ? "rgba(255,255,255,0.12)" : "#263238";
   const nextBg = "#0B7285";
   const borderStyle = {
     borderWidth: 0,
@@ -162,7 +165,7 @@ export default function PreviousNextBar({
             >
               <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
                 <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-                <Text style={wiz.nextBtnText}>{prevLabel ?? defaults.prevLabel}</Text>
+                <Text style={[wiz.nextBtnText,isLight && {color:"#000000"}]}>{prevLabel ?? defaults.prevLabel}</Text>
               </View>
             </Pressable>
           )}

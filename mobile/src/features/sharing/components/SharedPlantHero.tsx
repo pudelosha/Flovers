@@ -1,4 +1,4 @@
-import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
+import { ThemeContrastScope, useAppTheme } from "../../../shared/theme/ThemeContext";
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, Text, View } from "../../../shared/theme/native";
 import type { ImageSourcePropType } from "react-native";
@@ -26,6 +26,7 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
   expiresAt?: string;
 }) {
   const { t } = useTranslation();
+  const {isLight}=useAppTheme();
   const [localPhoto, setLocalPhoto] = useState<{ plantId: string; uri: string | null } | null>(null);
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const photoVariant = normalizePhotoFraming(plant.photo?.framing).zoom > 1 ? "display" : "thumbnail";
@@ -60,7 +61,7 @@ export default function SharedPlantHero({ plant, preferLocalPhoto = false, actio
         <View style={styles.hero}>
           {source ? <>
             <MaskedView style={StyleSheet.absoluteFill} maskElement={
-              <LinearGradient colors={["rgba(0,0,0,1)", "rgba(0,0,0,0.92)", "rgba(0,0,0,0.68)", "rgba(0,0,0,0.28)", "rgba(0,0,0,0)"]}
+              <LinearGradient colors={["rgba(0,0,0,1)", isLight ? "rgba(0,0,0,0.98)" : "rgba(0,0,0,0.92)", isLight ? "rgba(0,0,0,0.94)" : "rgba(0,0,0,0.68)", isLight ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.28)", "rgba(0,0,0,0)"]}
                 locations={[0, 0.25, 0.55, 0.8, 1]} style={StyleSheet.absoluteFill} />
             }>
               {syncedPhotoUri && plant.photo ? (

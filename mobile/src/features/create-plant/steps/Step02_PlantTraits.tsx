@@ -1,3 +1,4 @@
+import {useAppTheme,ThemeContrastScope} from "../../../shared/theme/ThemeContext";
 import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Text, View, StyleSheet, ImageBackground } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
@@ -207,6 +208,7 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
   const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
   const { settings } = useSettings();
+  const {isLight}=useAppTheme();
 
   const preferredLang = normalizeLang((settings as any)?.language ?? (settings as any)?.lang ?? "en");
 
@@ -549,8 +551,8 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
                     colors={[
                       "rgba(0,0,0,1.00)",
                       "rgba(0,0,0,0.88)",
-                      "rgba(0,0,0,0.70)",
-                      "rgba(0,0,0,0.42)",
+                      isLight ? "rgba(0,0,0,0.96)" : "rgba(0,0,0,0.70)",
+                      isLight ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.42)",
                       "rgba(0,0,0,0.00)",
                     ]}
                     locations={[0, 0.10, 0.55, 0.80, 1]}
@@ -562,18 +564,18 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
               </MaskedView>
 
               {/* small top scrim for readability under the title */}
-              <LinearGradient
+              <LinearGradient themeRole="photo"
                 pointerEvents="none"
                 colors={["rgba(0,0,0,0.45)", "rgba(0,0,0,0.00)"]}
                 locations={[0, 1]}
                 style={heroStyles.topScrim}
               />
 
-              <View style={heroStyles.heroTitleBox}>
+              <ThemeContrastScope kind="photo"><View style={heroStyles.heroTitleBox}>
                 <Text style={heroStyles.heroTitle} numberOfLines={1}>
                   {heroTitle}
                 </Text>
-              </View>
+              </View></ThemeContrastScope>
             </View>
           </View>
         )}

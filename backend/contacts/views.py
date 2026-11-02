@@ -73,7 +73,7 @@ class EmailInvitationCreateView(InvitationCreateView):
     def post(self, request):
         data = validated(EmailInvitationSerializer, request.data)
         return ok(services.invite_by_email(request.user, data["email"], data["language"]),
-                  "Email invitation sent.", status.HTTP_201_CREATED)
+                  "Email invitation queued.", status.HTTP_201_CREATED)
 
 
 class EmailInvitationCancelView(ContactsBaseView):
