@@ -1,3 +1,4 @@
+import NotificationsScreen from "../../features/notifications/pages/NotificationsScreen";
 import { TAB_CONTENT_HEIGHT, MIN_TAB_BOTTOM_PADDING } from "../../shared/constants/layout";
 import React from "react";
 import { BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "../../shared/theme/native";
@@ -97,6 +98,7 @@ export type AppTabParamList = {
 
   // Task / Reminders history (from Home)
   TaskHistory: { plantId?: string } | undefined;
+  Notifications: undefined;
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
@@ -124,6 +126,7 @@ const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
 
   // Task history belongs visually under Home
   TaskHistory: "Home",
+  Notifications: "Home",
 };
 
 const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
@@ -154,6 +157,7 @@ function GlassTabBar({ state, navigation }: any) {
   };
 
   const HIDDEN = new Set([
+    "Notifications",
     "Contacts",
     "SharedPlants",
     "ConfirmEmail",
@@ -362,6 +366,7 @@ function AppTabsNavigator() {
         options={{ tabBarStyle: { display: "flex" } }}
       />
 
+      <Tab.Screen name="Notifications" component={NotificationsScreen} options={{tabBarButton:()=>null}}/>
       <Tab.Screen
         name="TaskHistory"
         component={TaskHistoryScreen}

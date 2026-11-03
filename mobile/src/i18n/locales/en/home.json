@@ -13,7 +13,8 @@
       "clearFilter": "Clear filter",
       "history": "Task Journal",
       "calendar": "Calendar",
-      "list": "List"
+      "list": "List",
+      "notifications": "Notifications"
     },
     "menu": {
       "markAsComplete": "Mark as complete",
@@ -124,6 +125,89 @@
         "october": "Oct",
         "november": "Nov",
         "december": "Dec"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Notifications",
+    "emptyTitle": "No notifications",
+    "emptyBody": "Invitations, shared-care updates and device alerts will appear here.",
+    "error": "Could not load notifications",
+    "errorBody": "Check your connection and try again.",
+    "retry": "Try again",
+    "deleted": "Notifications deleted.",
+    "deleteFailed": "Could not delete notifications.",
+    "sort": "Sort",
+    "filter": "Filter",
+    "delete": "Delete",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "apply": "Apply",
+    "all": "All",
+    "date": "Date",
+    "source": "Source",
+    "channel": "Type",
+    "order": "Order",
+    "newest": "Descending",
+    "oldest": "Ascending",
+    "sortTitle": "Sort notifications",
+    "filterTitle": "Filter notifications",
+    "deleteTitle": "Delete notifications",
+    "deleteDescription": "This only removes inbox entries. Emails, invitations and tasks remain unchanged.",
+    "deleteAll": "All notifications",
+    "deleteFiltered": "Matching notifications",
+    "from": "From",
+    "to": "To",
+    "clearFilters": "Clear filters",
+    "invalidDates": "The end date must be on or after the start date.",
+    "menu": "Notification options",
+    "generic": "A notification was recorded.",
+    "someone": "Someone",
+    "sharedPlant": "a shared plant",
+    "device": "This device",
+    "sources": {
+      "task": "Task",
+      "pump": "Pump",
+      "device": "Device",
+      "user": "User"
+    },
+    "channels": {
+      "email": "Email",
+      "push": "Push",
+      "in_app": "In-app"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Contact invitation",
+        "body": "{{actor}} invited you to connect."
+      },
+      "contact_accepted": {
+        "title": "Invitation accepted",
+        "body": "{{actor}} accepted your contact invitation."
+      },
+      "tasks_due": {
+        "title": "Tasks due",
+        "body": "Check your plant-care tasks for today."
+      },
+      "tasks_followup": {
+        "title": "Overdue tasks",
+        "body": "Some plant-care tasks still need your attention."
+      },
+      "shared_task_completed": {
+        "title": "Shared-care update",
+        "body": "{{actor}} completed a task for {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Missing readings",
+        "body": "{{device}} has not sent readings on time."
+      },
+      "moisture_alert": {
+        "title": "Soil moisture alert",
+        "body": "{{device}}: soil moisture is below the configured threshold."
+      },
+      "watering_completed": {
+        "title": "Watering completed",
+        "body": "Watering completed for {{device}}."
       }
     }
   }

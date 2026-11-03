@@ -640,6 +640,7 @@ export default function HomeScreen() {
         nav.navigate("TaskHistory" as never);
       },
     },
+    {key:"notifications",label:t("home.fab.notifications",{defaultValue:"Notifications"}),icon:"bell-outline",onPress:()=>{closeFloatingMenus();nav.navigate("Notifications" as never);}},
   ];
 
   const fabActions =

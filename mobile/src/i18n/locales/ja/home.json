@@ -13,7 +13,8 @@
       "clearFilter": "フィルターをクリア",
       "history": "お手入れ日誌",
       "calendar": "カレンダー",
-      "list": "リスト"
+      "list": "リスト",
+      "notifications": "通知"
     },
     "menu": {
       "markAsComplete": "完了としてマーク",
@@ -124,6 +125,89 @@
         "october": "10月",
         "november": "11月",
         "december": "12月"
+      }
+    }
+  },
+  "inbox": {
+    "title": "通知",
+    "emptyTitle": "通知はありません",
+    "emptyBody": "招待、共有ケアの更新、デバイスのアラートがここに表示されます。",
+    "error": "通知を読み込めませんでした",
+    "errorBody": "接続を確認してもう一度お試しください。",
+    "retry": "再試行",
+    "deleted": "通知を削除しました。",
+    "deleteFailed": "通知を削除できませんでした。",
+    "sort": "並べ替え",
+    "filter": "絞り込み",
+    "delete": "削除",
+    "reset": "リセット",
+    "cancel": "キャンセル",
+    "apply": "適用",
+    "all": "すべて",
+    "date": "日時",
+    "source": "通知元",
+    "channel": "種類",
+    "order": "順序",
+    "newest": "降順",
+    "oldest": "昇順",
+    "sortTitle": "通知の並べ替え",
+    "filterTitle": "通知の絞り込み",
+    "deleteTitle": "通知を削除",
+    "deleteDescription": "この一覧の記録だけを削除します。メール、招待、タスクは変更されません。",
+    "deleteAll": "すべての通知",
+    "deleteFiltered": "絞り込んだ通知",
+    "from": "開始",
+    "to": "終了",
+    "clearFilters": "絞り込みを解除",
+    "invalidDates": "終了日は開始日以降にしてください。",
+    "menu": "通知の操作",
+    "generic": "通知が記録されました。",
+    "someone": "誰か",
+    "sharedPlant": "共有中の植物",
+    "device": "このデバイス",
+    "sources": {
+      "task": "タスク",
+      "pump": "ポンプ",
+      "device": "デバイス",
+      "user": "ユーザー"
+    },
+    "channels": {
+      "email": "メール",
+      "push": "プッシュ",
+      "in_app": "アプリ内"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "連絡先への招待",
+        "body": "{{actor}} さんから連絡先への招待が届きました。"
+      },
+      "contact_accepted": {
+        "title": "招待が承認されました",
+        "body": "{{actor}} さんが連絡先への招待を承認しました。"
+      },
+      "tasks_due": {
+        "title": "今日のタスク",
+        "body": "今日の植物のケアタスクを確認しましょう。"
+      },
+      "tasks_followup": {
+        "title": "期限切れのタスク",
+        "body": "まだ完了していないケアタスクがあります。"
+      },
+      "shared_task_completed": {
+        "title": "共有ケアの更新",
+        "body": "{{actor}} さんが {{plant}} のタスクを完了しました。"
+      },
+      "missing_readings": {
+        "title": "測定値が届いていません",
+        "body": "{{device}} から予定どおりに測定値が届いていません。"
+      },
+      "moisture_alert": {
+        "title": "土壌の水分が不足しています",
+        "body": "{{device}}：土壌水分が設定したしきい値を下回っています。"
+      },
+      "watering_completed": {
+        "title": "水やりが完了しました",
+        "body": "{{device}} の水やりが完了しました。"
       }
     }
   }

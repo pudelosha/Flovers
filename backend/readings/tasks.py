@@ -1,3 +1,4 @@
+from django.db import transaction
 """Monitor silent devices and deliver one owner alert per outage and channel."""
 import logging
 from datetime import timedelta
@@ -45,14 +46,19 @@ def _claim(delivery_id):
         pk=delivery_id, claim_token=token).first()
 
 
-def _finish(delivery, status, error=""):
+def _finish(delivery, status, error="", inbox_payload=None):
     now = timezone.now()
     values = {"status": status, "claim_token": "", "lease_expires_at": None, "last_error": error[:1000]}
     if status == "sent":
         values["sent_at"] = now
     elif status == "pending":
         values["next_attempt_at"] = now + timedelta(seconds=min(60 * 2 ** min(delivery.attempts - 1, 6), 3600))
-    MissingReadingNotification.objects.filter(pk=delivery.pk, status="sending", claim_token=delivery.claim_token).update(**values)
+    with transaction.atomic():
+        changed = MissingReadingNotification.objects.filter(pk=delivery.pk, status="sending", claim_token=delivery.claim_token).update(**values)
+        if changed and status == "sent":
+            from profiles.inbox import record_notification
+            record_notification(user_id=delivery.device.user_id,event_key=f"missing:{delivery.pk}",channel=delivery.channel,
+                source="device",kind="missing_readings",payload=inbox_payload,created_at=now)
 
 
 def _deliver(delivery):
@@ -102,7 +108,7 @@ def _deliver(delivery):
         ) > 0
     if not accepted:
         raise RuntimeError("Notification provider did not accept the delivery.")
-    _finish(delivery, "sent")
+    _finish(delivery, "sent", inbox_payload={"device":values["device_name"],"interval":device.effective_interval_minutes})
 
 
 @shared_task(ignore_result=True)

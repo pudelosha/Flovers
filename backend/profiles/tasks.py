@@ -10,7 +10,7 @@ from core.i18n import t
 from celery import shared_task
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.db import models
+from django.db import models, transaction
 from django.utils import timezone
 
 try:
@@ -297,7 +297,7 @@ def _claim_delivery(delivery_id, now_utc):
     )
 
 
-def _finish_delivery(delivery, state, *, now_utc, error=""):
+def _finish_delivery(delivery, state, *, now_utc, error="", inbox_payload=None):
     # A recovered lease fences the previous worker from changing the new claim.
     values = {
         "status": state, "claim_token": "", "lease_expires_at": None,
@@ -308,9 +308,15 @@ def _finish_delivery(delivery, state, *, now_utc, error=""):
     if state == NotificationDeliveryLog.STATUS_PENDING:
         delay = min(60 * (2 ** min(delivery.attempts - 1, 6)), RETRY_MAX_SECONDS)
         values["next_attempt_at"] = now_utc + timedelta(seconds=delay)
-    NotificationDeliveryLog.objects.filter(
-        pk=delivery.pk, status=NotificationDeliveryLog.STATUS_SENDING, claim_token=delivery.claim_token
-    ).update(**values)
+    with transaction.atomic():
+        changed = NotificationDeliveryLog.objects.filter(
+            pk=delivery.pk, status=NotificationDeliveryLog.STATUS_SENDING, claim_token=delivery.claim_token
+        ).update(**values)
+        if changed and state == NotificationDeliveryLog.STATUS_SENT:
+            from .inbox import record_notification
+            record_notification(user_id=delivery.user_id,event_key=f"daily:{delivery.pk}",channel=delivery.channel,
+                source="task",kind="tasks_due" if delivery.kind==NotificationDeliveryLog.KIND_DUE_TODAY else "tasks_followup",
+                payload=inbox_payload,created_at=now_utc)
 
 
 def _deliver_claimed(delivery, now_utc):
@@ -343,7 +349,7 @@ def _deliver_claimed(delivery, now_utc):
         }) > 0
     if not sent:
         raise RuntimeError("Notification provider did not accept a delivery.")
-    _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SENT, now_utc=timezone.now())
+    _finish_delivery(delivery, NotificationDeliveryLog.STATUS_SENT, now_utc=timezone.now(), inbox_payload={"count":count})
 
 
 @shared_task(bind=True, ignore_result=True)

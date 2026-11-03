@@ -250,3 +250,21 @@ class TaskXPAward(models.Model):
             models.CheckConstraint(condition=models.Q(xp__lte=100), name="task_xp_at_most_first_reward"),
         ]
         indexes = [models.Index(fields=["user", "earned_on"], name="task_xp_user_day_idx")]
+
+
+class InboxNotification(models.Model):
+    """Private, durable notification history; soft deletion preserves deduplication."""
+    SOURCES = [(s, s.title()) for s in ("task", "pump", "device", "user")]
+    CHANNELS = [(s, s.title()) for s in ("email", "push", "in_app")]
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="inbox_notifications")
+    event_key = models.CharField(max_length=180)
+    source = models.CharField(max_length=8, choices=SOURCES)
+    channel = models.CharField(max_length=8, choices=CHANNELS)
+    kind = models.CharField(max_length=40)
+    payload = models.JSONField(default=dict)
+    created_at = models.DateTimeField(default=timezone.now)
+    deleted_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "event_key", "channel"], name="inbox_unique_event_channel")]
+        indexes = [models.Index(fields=["user", "deleted_at", "-created_at", "-id"], name="inbox_user_date")]

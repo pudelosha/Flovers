@@ -13,7 +13,8 @@
       "clearFilter": "Effacer le filtre",
       "history": "Journal des tâches",
       "calendar": "Calendrier",
-      "list": "Liste"
+      "list": "Liste",
+      "notifications": "Notifications"
     },
     "menu": {
       "markAsComplete": "Marquer comme terminé",
@@ -124,6 +125,89 @@
         "october": "Oct",
         "november": "Nov",
         "december": "Déc"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Notifications",
+    "emptyTitle": "Aucune notification",
+    "emptyBody": "Les invitations, activités de soins partagés et alertes des appareils apparaîtront ici.",
+    "error": "Impossible de charger les notifications",
+    "errorBody": "Vérifiez votre connexion et réessayez.",
+    "retry": "Réessayer",
+    "deleted": "Notifications supprimées.",
+    "deleteFailed": "Impossible de supprimer les notifications.",
+    "sort": "Trier",
+    "filter": "Filtrer",
+    "delete": "Supprimer",
+    "reset": "Réinitialiser",
+    "cancel": "Annuler",
+    "apply": "Appliquer",
+    "all": "Toutes",
+    "date": "Date",
+    "source": "Source",
+    "channel": "Type",
+    "order": "Ordre",
+    "newest": "Décroissant",
+    "oldest": "Croissant",
+    "sortTitle": "Trier les notifications",
+    "filterTitle": "Filtrer les notifications",
+    "deleteTitle": "Supprimer les notifications",
+    "deleteDescription": "Seules les entrées de cette liste seront supprimées. Les e-mails, invitations et tâches restent inchangés.",
+    "deleteAll": "Toutes les notifications",
+    "deleteFiltered": "Notifications filtrées",
+    "from": "Du",
+    "to": "Au",
+    "clearFilters": "Effacer les filtres",
+    "invalidDates": "La date de fin ne peut pas précéder la date de début.",
+    "menu": "Options de notification",
+    "generic": "Une notification a été enregistrée.",
+    "someone": "Quelqu’un",
+    "sharedPlant": "une plante partagée",
+    "device": "Cet appareil",
+    "sources": {
+      "task": "Tâche",
+      "pump": "Pompe",
+      "device": "Appareil",
+      "user": "Utilisateur"
+    },
+    "channels": {
+      "email": "E-mail",
+      "push": "Push",
+      "in_app": "Dans l’application"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Invitation de contact",
+        "body": "{{actor}} souhaite vous ajouter à ses contacts."
+      },
+      "contact_accepted": {
+        "title": "Invitation acceptée",
+        "body": "{{actor}} a accepté votre invitation de contact."
+      },
+      "tasks_due": {
+        "title": "Tâches du jour",
+        "body": "Consultez les tâches de soin prévues aujourd’hui."
+      },
+      "tasks_followup": {
+        "title": "Tâches en retard",
+        "body": "Certaines tâches de soin attendent encore votre attention."
+      },
+      "shared_task_completed": {
+        "title": "Soins partagés",
+        "body": "{{actor}} a effectué une tâche pour {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Relevés manquants",
+        "body": "{{device}} n’a pas envoyé de relevés dans le délai prévu."
+      },
+      "moisture_alert": {
+        "title": "Humidité du sol faible",
+        "body": "{{device}} : l’humidité du sol est sous le seuil défini."
+      },
+      "watering_completed": {
+        "title": "Arrosage terminé",
+        "body": "L’arrosage de {{device}} est terminé."
       }
     }
   }

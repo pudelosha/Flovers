@@ -16,6 +16,14 @@ from .utils import build_readings_link
 logger = logging.getLogger(__name__)
 
 
+def _record_device_inbox(device, channel, kind, payload):
+    from profiles.inbox import record_notification
+    timestamp = device.last_pump_run_at if kind=="watering_completed" else device.last_read_at
+    timestamp = timestamp or timezone.now()
+    record_notification(user_id=device.user_id,event_key=f"{kind}:{device.pk}:{timestamp.isoformat()}",
+        channel=channel,source="pump" if kind=="watering_completed" else "device",kind=kind,payload=payload)
+
+
 def _format_metric(value) -> str:
     try:
         value_f = float(value)
@@ -121,7 +129,7 @@ def _send_moisture_alert_email(device: ReadingDevice, moisture_value: float) -> 
         threshold=threshold,
     )
 
-    send_templated_email(
+    accepted = send_templated_email(
         to_email=user.email,
         subject_key="readings.moisture_alert.subject",
         template_name="readings/moisture_alert",
@@ -147,7 +155,9 @@ def _send_moisture_alert_email(device: ReadingDevice, moisture_value: float) -> 
             "link": link,
         },
     )
-    return True
+    if accepted:
+        _record_device_inbox(device,"email","moisture_alert",{"device":device_name,"value":value,"threshold":threshold})
+    return bool(accepted)
 
 
 def _send_moisture_alert_push(device: ReadingDevice, moisture_value: float) -> int:
@@ -181,7 +191,7 @@ def _send_moisture_alert_push(device: ReadingDevice, moisture_value: float) -> i
     if not tokens:
         return 0
 
-    return _send_push_and_deactivate_bad_tokens(
+    accepted = _send_push_and_deactivate_bad_tokens(
         tokens=tokens,
         title=title,
         body=body,
@@ -191,6 +201,10 @@ def _send_moisture_alert_push(device: ReadingDevice, moisture_value: float) -> i
             "deviceId": str(device.id),
         },
     )
+    if accepted:
+        _record_device_inbox(device,"push","moisture_alert",{"device":device_name,"value":value,"threshold":threshold})
+    return accepted
+
 
 
 def send_moisture_alert_notifications(*, device_id: int, moisture_value: float) -> None:
@@ -282,7 +296,7 @@ def _send_watering_completed_email(device: ReadingDevice, source: str | None = N
         completed_at=completed_at,
     )
 
-    send_templated_email(
+    accepted = send_templated_email(
         to_email=user.email,
         subject_key="readings.watering_completed.subject",
         template_name="readings/watering_completed",
@@ -311,7 +325,9 @@ def _send_watering_completed_email(device: ReadingDevice, source: str | None = N
             "link": link,
         },
     )
-    return True
+    if accepted:
+        _record_device_inbox(device,"email","watering_completed",{"device":device_name,"plant":plant_name})
+    return bool(accepted)
 
 
 def _send_watering_completed_push(device: ReadingDevice, source: str | None = None) -> int:
@@ -349,7 +365,7 @@ def _send_watering_completed_push(device: ReadingDevice, source: str | None = No
     if not tokens:
         return 0
 
-    return _send_push_and_deactivate_bad_tokens(
+    accepted = _send_push_and_deactivate_bad_tokens(
         tokens=tokens,
         title=title,
         body=body,
@@ -360,6 +376,10 @@ def _send_watering_completed_push(device: ReadingDevice, source: str | None = No
             "source": source_value,
         },
     )
+    if accepted:
+        _record_device_inbox(device,"push","watering_completed",{"device":device_name,"plant":device.plant_name or ""})
+    return accepted
+
 
 
 def send_watering_completed_notifications(*, device_id: int, source: str | None = None) -> None:

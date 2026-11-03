@@ -13,7 +13,8 @@
       "clearFilter": "Filter zurücksetzen",
       "history": "Pflegetagebuch",
       "calendar": "Kalender",
-      "list": "Liste"
+      "list": "Liste",
+      "notifications": "Benachrichtigungen"
     },
     "menu": {
       "markAsComplete": "Als erledigt markieren",
@@ -124,6 +125,89 @@
         "october": "Okt",
         "november": "Nov",
         "december": "Dez"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Benachrichtigungen",
+    "emptyTitle": "Keine Benachrichtigungen",
+    "emptyBody": "Hier erscheinen Einladungen, Pflegeaktivitäten und Gerätewarnungen.",
+    "error": "Benachrichtigungen konnten nicht geladen werden",
+    "errorBody": "Prüfe deine Verbindung und versuche es erneut.",
+    "retry": "Erneut versuchen",
+    "deleted": "Benachrichtigungen gelöscht.",
+    "deleteFailed": "Benachrichtigungen konnten nicht gelöscht werden.",
+    "sort": "Sortieren",
+    "filter": "Filtern",
+    "delete": "Löschen",
+    "reset": "Zurücksetzen",
+    "cancel": "Abbrechen",
+    "apply": "Anwenden",
+    "all": "Alle",
+    "date": "Datum",
+    "source": "Quelle",
+    "channel": "Typ",
+    "order": "Reihenfolge",
+    "newest": "Absteigend",
+    "oldest": "Aufsteigend",
+    "sortTitle": "Benachrichtigungen sortieren",
+    "filterTitle": "Benachrichtigungen filtern",
+    "deleteTitle": "Benachrichtigungen löschen",
+    "deleteDescription": "Nur Einträge in dieser Liste werden entfernt. E-Mails, Einladungen und Aufgaben bleiben erhalten.",
+    "deleteAll": "Alle Benachrichtigungen",
+    "deleteFiltered": "Gefilterte Benachrichtigungen",
+    "from": "Von",
+    "to": "Bis",
+    "clearFilters": "Filter entfernen",
+    "invalidDates": "Das Enddatum darf nicht vor dem Startdatum liegen.",
+    "menu": "Benachrichtigungsoptionen",
+    "generic": "Eine Benachrichtigung wurde gespeichert.",
+    "someone": "Jemand",
+    "sharedPlant": "eine geteilte Pflanze",
+    "device": "Dieses Gerät",
+    "sources": {
+      "task": "Aufgabe",
+      "pump": "Pumpe",
+      "device": "Gerät",
+      "user": "Nutzer"
+    },
+    "channels": {
+      "email": "E-Mail",
+      "push": "Push",
+      "in_app": "In der App"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Kontaktanfrage",
+        "body": "{{actor}} möchte dich als Kontakt hinzufügen."
+      },
+      "contact_accepted": {
+        "title": "Einladung angenommen",
+        "body": "{{actor}} hat deine Kontaktanfrage angenommen."
+      },
+      "tasks_due": {
+        "title": "Fällige Aufgaben",
+        "body": "Prüfe die heutigen Pflegeaufgaben."
+      },
+      "tasks_followup": {
+        "title": "Überfällige Aufgaben",
+        "body": "Einige Pflegeaufgaben warten noch auf dich."
+      },
+      "shared_task_completed": {
+        "title": "Gemeinsame Pflege",
+        "body": "{{actor}} hat eine Aufgabe für {{plant}} erledigt."
+      },
+      "missing_readings": {
+        "title": "Messwerte fehlen",
+        "body": "{{device}} hat nicht rechtzeitig Messwerte gesendet."
+      },
+      "moisture_alert": {
+        "title": "Bodenfeuchte zu niedrig",
+        "body": "{{device}}: Die Bodenfeuchte liegt unter dem eingestellten Grenzwert."
+      },
+      "watering_completed": {
+        "title": "Bewässerung abgeschlossen",
+        "body": "Die Bewässerung für {{device}} ist abgeschlossen."
       }
     }
   }

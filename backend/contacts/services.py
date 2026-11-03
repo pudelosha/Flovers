@@ -120,7 +120,9 @@ def invite_contact(actor, identifier):
         if existing.status == Connection.Status.ACCEPTED:
             raise ContactError("alreadyContact", "This person is already in your contacts.", 409)
         raise ContactError("alreadyPending", "An invitation for this person is already pending.", 409)
-    Connection.objects.create(user_low_id=low, user_high_id=high, initiator=actor)
+    row = Connection.objects.create(user_low_id=low, user_high_id=high, initiator=actor)
+    from profiles.inbox import record_contact_request
+    record_contact_request(row, actor, target)
     return contact_snapshot(actor)
 
 
@@ -145,6 +147,9 @@ def accept_invitation(actor, invitation_id):
         row.status = Connection.Status.ACCEPTED
         row.accepted_at = timezone.now()
         row.save(update_fields=["status", "accepted_at", "updated_at"])
+        from profiles.inbox import record_notification
+        record_notification(user_id=row.initiator_id,event_key=f"contact-accepted:{row.pk}",channel="in_app",
+            source="user",kind="contact_accepted",payload={"actor":actor.get_full_name().strip() or f"FL-{actor.flovers_id.hex.upper()}"})
     # Recipient retries are idempotent, including after a lost HTTP response.
     return contact_snapshot(actor)
 
@@ -211,8 +216,11 @@ def claim_email_invitations(user):
                   expires_at__gt=timezone.now()).first()
         if row is None:
             continue
-        Connection.objects.get_or_create(user_low_id=low, user_high_id=high,
+        connection, created = Connection.objects.get_or_create(user_low_id=low, user_high_id=high,
                                          defaults={"initiator_id": row.sender_id})
+        if created:
+            from profiles.inbox import record_contact_request
+            record_contact_request(connection, next(person for person in locked if person.pk==row.sender_id), user)
         row.closed = True
         row.save(update_fields=["closed"])
 

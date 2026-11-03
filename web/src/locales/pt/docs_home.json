@@ -89,6 +89,12 @@
         "body": [
           "Só o proprietário da planta pode adiar uma tarefa pendente. No Início ou nos detalhes da planta, escolha Adiar tarefa, logo abaixo de Marcar como concluída no menu. Amanhã, Daqui a 2 dias e Daqui a 3 dias preenchem a data a partir de hoje. Também pode escrever uma data no formato do perfil ou usar o calendário. A nova data deve ser posterior à atual e não estar no passado. Só o vencimento desta tarefa muda; o início e a frequência do lembrete mantêm-se. O próximo vencimento continua a ser calculado a partir da data de conclusão."
         ]
+      },
+      {
+        "heading": "Notificações",
+        "body": [
+          "Abra Notificações na última opção do menu + do ecrã inicial. Esta lista guarda convites de contacto e notificações registadas sobre tarefas, cuidados partilhados, bombas e dispositivos. Cada cartão mostra a data, a origem e o tipo: email, push ou na aplicação. O menu + permite ordenar, filtrar por origem, tipo e data ou eliminar entradas. A eliminação afeta apenas esta lista, não os convites, tarefas ou mensagens enviadas."
+        ]
       }
     ]
   }

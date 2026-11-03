@@ -13,7 +13,8 @@
       "clearFilter": "Cancella filtro",
       "history": "Diario delle attività",
       "calendar": "Calendario",
-      "list": "Elenco"
+      "list": "Elenco",
+      "notifications": "Notifiche"
     },
     "menu": {
       "markAsComplete": "Segna come completata",
@@ -124,6 +125,89 @@
         "october": "Ott",
         "november": "Nov",
         "december": "Dic"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Notifiche",
+    "emptyTitle": "Nessuna notifica",
+    "emptyBody": "Qui troverai inviti, aggiornamenti sulle cure condivise e avvisi dei dispositivi.",
+    "error": "Impossibile caricare le notifiche",
+    "errorBody": "Controlla la connessione e riprova.",
+    "retry": "Riprova",
+    "deleted": "Notifiche eliminate.",
+    "deleteFailed": "Impossibile eliminare le notifiche.",
+    "sort": "Ordina",
+    "filter": "Filtra",
+    "delete": "Elimina",
+    "reset": "Reimposta",
+    "cancel": "Annulla",
+    "apply": "Applica",
+    "all": "Tutte",
+    "date": "Data",
+    "source": "Origine",
+    "channel": "Tipo",
+    "order": "Ordine",
+    "newest": "Decrescente",
+    "oldest": "Crescente",
+    "sortTitle": "Ordina notifiche",
+    "filterTitle": "Filtra notifiche",
+    "deleteTitle": "Elimina notifiche",
+    "deleteDescription": "Verranno rimosse solo le voci da questa lista. Email, inviti e attività rimangono invariati.",
+    "deleteAll": "Tutte le notifiche",
+    "deleteFiltered": "Notifiche filtrate",
+    "from": "Da",
+    "to": "A",
+    "clearFilters": "Rimuovi filtri",
+    "invalidDates": "La data finale non può precedere quella iniziale.",
+    "menu": "Opzioni notifica",
+    "generic": "È stata registrata una notifica.",
+    "someone": "Qualcuno",
+    "sharedPlant": "una pianta condivisa",
+    "device": "Questo dispositivo",
+    "sources": {
+      "task": "Attività",
+      "pump": "Pompa",
+      "device": "Dispositivo",
+      "user": "Utente"
+    },
+    "channels": {
+      "email": "Email",
+      "push": "Push",
+      "in_app": "Nell’app"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Invito ai contatti",
+        "body": "{{actor}} ti ha invitato nei suoi contatti."
+      },
+      "contact_accepted": {
+        "title": "Invito accettato",
+        "body": "{{actor}} ha accettato il tuo invito ai contatti."
+      },
+      "tasks_due": {
+        "title": "Attività in scadenza",
+        "body": "Controlla le attività di cura previste per oggi."
+      },
+      "tasks_followup": {
+        "title": "Attività in ritardo",
+        "body": "Alcune attività di cura richiedono ancora la tua attenzione."
+      },
+      "shared_task_completed": {
+        "title": "Cure condivise",
+        "body": "{{actor}} ha completato un’attività per {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Letture mancanti",
+        "body": "{{device}} non ha inviato le letture in tempo."
+      },
+      "moisture_alert": {
+        "title": "Umidità del terreno bassa",
+        "body": "{{device}}: l’umidità del terreno è sotto la soglia impostata."
+      },
+      "watering_completed": {
+        "title": "Annaffiatura completata",
+        "body": "Annaffiatura completata per {{device}}."
       }
     }
   }

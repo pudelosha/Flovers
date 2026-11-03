@@ -89,6 +89,12 @@
         "body": [
           "Solo el propietario de la planta puede posponer una tarea pendiente. En Inicio o en los detalles de la planta, elige Posponer tarea justo debajo de Marcar como completada en el menú. Mañana, En 2 días y En 3 días rellenan la fecha a partir de hoy. También puedes escribir una fecha con el formato de tu perfil o usar el calendario. La nueva fecha debe ser posterior a la actual y no estar en el pasado. Solo cambia el vencimiento de esta tarea, no el inicio ni la frecuencia del recordatorio. El siguiente vencimiento sigue calculándose a partir de la fecha de realización."
         ]
+      },
+      {
+        "heading": "Notificaciones",
+        "body": [
+          "Abre Notificaciones desde la última opción del menú + de Inicio. Aquí se guardan las invitaciones de contacto y las notificaciones registradas sobre tareas, cuidados compartidos, bombas y dispositivos. Cada tarjeta muestra fecha, origen y tipo: correo, push o en la app. El menú + permite ordenar, filtrar por origen, tipo y fecha, o eliminar entradas. La eliminación solo afecta a esta lista, no a invitaciones, tareas ni mensajes enviados."
+        ]
       }
     ]
   }

@@ -54,6 +54,14 @@ describe("Home navigation from shared plants", () => {
     (fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
   });
 
+  it("opens Notifications from the final FAB action",async()=>{
+    const view=render(<HomeScreen/>);await view.findByText("Pilea task");
+    const actions=view.UNSAFE_getByType(FAB).props.actions;
+    expect(actions[actions.length-1].key).toBe("notifications");
+    act(()=>{actions[actions.length-1].onPress();});
+    expect(mockNavigation.navigate).toHaveBeenCalledWith("Notifications");
+  });
+
   it("filters the first load to the requested plant and consumes the navigation request", async () => {
     mockParams = { plantId: "1", filterRequestId: "first" };
     const view = render(<HomeScreen />); await view.findByText("Bird task");

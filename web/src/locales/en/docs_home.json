@@ -89,6 +89,12 @@
         "body": [
           "Only the plant owner can postpone a pending task. In Home or Plant details, choose Postpone task directly below Mark as complete in the task menu. Tomorrow, In 2 days and In 3 days fill the date field relative to today. You can also type a date in your profile’s date format or use the calendar. Choose a later due date, not a past date. Save changes only this task’s due date; the reminder’s start date and recurring interval are unchanged. Completing the task still schedules its next occurrence according to the existing completion-based rules."
         ]
+      },
+      {
+        "heading": "Notifications",
+        "body": [
+          "Open Notifications from the last option in the Home FAB. This inbox keeps contact invitations and recorded task, shared-care, pump and device notifications. Each tile shows the date, source and delivery type: Email, Push or In-app. Use the inbox FAB to sort, filter by source, type and date, or delete entries. Deleting entries only affects your inbox, not invitations, tasks or delivered messages."
+        ]
       }
     ]
   }

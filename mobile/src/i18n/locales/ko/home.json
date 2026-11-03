@@ -13,7 +13,8 @@
       "clearFilter": "필터 해제",
       "history": "작업 일지",
       "calendar": "캘린더",
-      "list": "목록"
+      "list": "목록",
+      "notifications": "알림"
     },
     "menu": {
       "markAsComplete": "완료로 표시",
@@ -124,6 +125,89 @@
         "october": "10월",
         "november": "11월",
         "december": "12월"
+      }
+    }
+  },
+  "inbox": {
+    "title": "알림",
+    "emptyTitle": "알림이 없습니다",
+    "emptyBody": "초대, 공동 관리 소식과 기기 경고가 여기에 표시됩니다.",
+    "error": "알림을 불러올 수 없습니다",
+    "errorBody": "연결을 확인하고 다시 시도하세요.",
+    "retry": "다시 시도",
+    "deleted": "알림을 삭제했습니다.",
+    "deleteFailed": "알림을 삭제할 수 없습니다.",
+    "sort": "정렬",
+    "filter": "필터",
+    "delete": "삭제",
+    "reset": "초기화",
+    "cancel": "취소",
+    "apply": "적용",
+    "all": "전체",
+    "date": "날짜",
+    "source": "출처",
+    "channel": "유형",
+    "order": "순서",
+    "newest": "내림차순",
+    "oldest": "오름차순",
+    "sortTitle": "알림 정렬",
+    "filterTitle": "알림 필터",
+    "deleteTitle": "알림 삭제",
+    "deleteDescription": "이 목록의 기록만 삭제합니다. 이메일, 초대와 작업은 변경되지 않습니다.",
+    "deleteAll": "모든 알림",
+    "deleteFiltered": "필터에 맞는 알림",
+    "from": "시작",
+    "to": "종료",
+    "clearFilters": "필터 지우기",
+    "invalidDates": "종료일은 시작일보다 빠를 수 없습니다.",
+    "menu": "알림 옵션",
+    "generic": "알림이 기록되었습니다.",
+    "someone": "누군가",
+    "sharedPlant": "공유 식물",
+    "device": "이 기기",
+    "sources": {
+      "task": "작업",
+      "pump": "펌프",
+      "device": "기기",
+      "user": "사용자"
+    },
+    "channels": {
+      "email": "이메일",
+      "push": "푸시",
+      "in_app": "앱 내"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "연락처 초대",
+        "body": "{{actor}} 님이 연락처 추가를 요청했습니다."
+      },
+      "contact_accepted": {
+        "title": "초대가 수락되었습니다",
+        "body": "{{actor}} 님이 연락처 초대를 수락했습니다."
+      },
+      "tasks_due": {
+        "title": "오늘의 작업",
+        "body": "오늘의 식물 관리 작업을 확인하세요."
+      },
+      "tasks_followup": {
+        "title": "기한이 지난 작업",
+        "body": "아직 완료하지 않은 관리 작업이 있습니다."
+      },
+      "shared_task_completed": {
+        "title": "공동 관리 소식",
+        "body": "{{actor}} 님이 {{plant}}의 작업을 완료했습니다."
+      },
+      "missing_readings": {
+        "title": "측정값이 오지 않습니다",
+        "body": "{{device}}에서 제시간에 측정값을 보내지 않았습니다."
+      },
+      "moisture_alert": {
+        "title": "토양 수분이 낮습니다",
+        "body": "{{device}}: 토양 수분이 설정한 기준보다 낮습니다."
+      },
+      "watering_completed": {
+        "title": "급수가 완료되었습니다",
+        "body": "{{device}}의 급수가 완료되었습니다."
       }
     }
   }

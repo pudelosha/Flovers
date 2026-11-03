@@ -1,3 +1,4 @@
+from django.db import transaction
 """Claim and deliver opted-in caregiver-completion notifications."""
 import logging
 from datetime import timedelta
@@ -40,14 +41,19 @@ def _claim(delivery_id):
     return SharedCareNotification.objects.select_related("owner", "plant").get(pk=delivery_id, claim_token=token)
 
 
-def _finish(delivery, status, error=""):
+def _finish(delivery, status, error="", inbox_payload=None):
     now = timezone.now()
     values = {"status": status, "claim_token": "", "lease_expires_at": None, "last_error": error[:1000]}
     if status == "sent":
         values["sent_at"] = now
     elif status == "pending":
         values["next_attempt_at"] = now + timedelta(seconds=min(60 * 2 ** min(delivery.attempts - 1, 6), 3600))
-    SharedCareNotification.objects.filter(pk=delivery.pk, status="sending", claim_token=delivery.claim_token).update(**values)
+    with transaction.atomic():
+        changed = SharedCareNotification.objects.filter(pk=delivery.pk, status="sending", claim_token=delivery.claim_token).update(**values)
+        if changed and status == "sent":
+            from profiles.inbox import record_notification
+            record_notification(user_id=delivery.owner_id,event_key=f"shared-care:{delivery.pk}",channel=delivery.channel,
+                source="task",kind="shared_task_completed",payload=inbox_payload,created_at=now)
 
 
 def _deliver(delivery):
@@ -101,7 +107,7 @@ def _deliver(delivery):
         ) > 0
     if not accepted:
         raise RuntimeError("Notification provider did not accept the delivery.")
-    _finish(delivery, "sent")
+    _finish(delivery, "sent", inbox_payload={"actor":actor_name,"plant":plant_name})
 
 
 @shared_task(ignore_result=True)

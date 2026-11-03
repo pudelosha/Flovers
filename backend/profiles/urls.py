@@ -1,9 +1,13 @@
+from .views_inbox import InboxView, InboxDeleteView, InboxBulkDeleteView
 from django.urls import path
 from .views import ProfileSettingsView, ProfileNotificationsView, PushDeviceRegisterView, ProfileProgressionView
 from .views_support import SupportContactView, SupportBugView, PublicSupportContactView
 from .views_open import open_home
 
 urlpatterns = [
+    path("inbox/", InboxView.as_view(), name="profile-inbox"),
+    path("inbox/delete/", InboxBulkDeleteView.as_view(), name="profile-inbox-delete"),
+    path("inbox/<int:pk>/", InboxDeleteView.as_view(), name="profile-inbox-detail"),
     path("progression/", ProfileProgressionView.as_view(), name="profile-progression"),
     path("settings/", ProfileSettingsView.as_view(), name="profile-settings"),
     path("notifications/", ProfileNotificationsView.as_view(), name="profile-notifications"),

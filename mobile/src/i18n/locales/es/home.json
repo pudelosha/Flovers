@@ -13,7 +13,8 @@
       "clearFilter": "Borrar filtro",
       "history": "Diario de tareas",
       "calendar": "Calendario",
-      "list": "Lista"
+      "list": "Lista",
+      "notifications": "Notificaciones"
     },
     "menu": {
       "markAsComplete": "Marcar como completada",
@@ -124,6 +125,89 @@
         "october": "Oct",
         "november": "Nov",
         "december": "Dic"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Notificaciones",
+    "emptyTitle": "No hay notificaciones",
+    "emptyBody": "Aquí aparecerán invitaciones, cuidados compartidos y alertas de dispositivos.",
+    "error": "No se pudieron cargar las notificaciones",
+    "errorBody": "Comprueba tu conexión e inténtalo de nuevo.",
+    "retry": "Reintentar",
+    "deleted": "Notificaciones eliminadas.",
+    "deleteFailed": "No se pudieron eliminar las notificaciones.",
+    "sort": "Ordenar",
+    "filter": "Filtrar",
+    "delete": "Eliminar",
+    "reset": "Restablecer",
+    "cancel": "Cancelar",
+    "apply": "Aplicar",
+    "all": "Todas",
+    "date": "Fecha",
+    "source": "Origen",
+    "channel": "Tipo",
+    "order": "Orden",
+    "newest": "Descendente",
+    "oldest": "Ascendente",
+    "sortTitle": "Ordenar notificaciones",
+    "filterTitle": "Filtrar notificaciones",
+    "deleteTitle": "Eliminar notificaciones",
+    "deleteDescription": "Solo se eliminan las entradas de esta lista. Los correos, invitaciones y tareas no cambian.",
+    "deleteAll": "Todas las notificaciones",
+    "deleteFiltered": "Notificaciones filtradas",
+    "from": "Desde",
+    "to": "Hasta",
+    "clearFilters": "Borrar filtros",
+    "invalidDates": "La fecha final no puede ser anterior a la inicial.",
+    "menu": "Opciones de notificación",
+    "generic": "Se ha registrado una notificación.",
+    "someone": "Alguien",
+    "sharedPlant": "una planta compartida",
+    "device": "Este dispositivo",
+    "sources": {
+      "task": "Tarea",
+      "pump": "Bomba",
+      "device": "Dispositivo",
+      "user": "Usuario"
+    },
+    "channels": {
+      "email": "Correo",
+      "push": "Push",
+      "in_app": "En la app"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Invitación de contacto",
+        "body": "{{actor}} quiere añadirte a sus contactos."
+      },
+      "contact_accepted": {
+        "title": "Invitación aceptada",
+        "body": "{{actor}} ha aceptado tu invitación de contacto."
+      },
+      "tasks_due": {
+        "title": "Tareas de hoy",
+        "body": "Revisa las tareas de cuidado previstas para hoy."
+      },
+      "tasks_followup": {
+        "title": "Tareas atrasadas",
+        "body": "Todavía tienes tareas de cuidado pendientes."
+      },
+      "shared_task_completed": {
+        "title": "Cuidados compartidos",
+        "body": "{{actor}} ha completado una tarea para {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Faltan lecturas",
+        "body": "{{device}} no ha enviado lecturas a tiempo."
+      },
+      "moisture_alert": {
+        "title": "Humedad del suelo baja",
+        "body": "{{device}}: la humedad del suelo está por debajo del umbral configurado."
+      },
+      "watering_completed": {
+        "title": "Riego completado",
+        "body": "Se ha completado el riego de {{device}}."
       }
     }
   }

@@ -13,7 +13,8 @@
       "clearFilter": "Limpar filtro",
       "history": "Diário de tarefas",
       "calendar": "Calendário",
-      "list": "Lista"
+      "list": "Lista",
+      "notifications": "Notificações"
     },
     "menu": {
       "markAsComplete": "Marcar como concluída",
@@ -124,6 +125,89 @@
         "october": "Out",
         "november": "Nov",
         "december": "Dez"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Notificações",
+    "emptyTitle": "Sem notificações",
+    "emptyBody": "Os convites, cuidados partilhados e alertas dos dispositivos aparecerão aqui.",
+    "error": "Não foi possível carregar as notificações",
+    "errorBody": "Verifique a ligação e tente novamente.",
+    "retry": "Tentar novamente",
+    "deleted": "Notificações eliminadas.",
+    "deleteFailed": "Não foi possível eliminar as notificações.",
+    "sort": "Ordenar",
+    "filter": "Filtrar",
+    "delete": "Eliminar",
+    "reset": "Repor",
+    "cancel": "Cancelar",
+    "apply": "Aplicar",
+    "all": "Todas",
+    "date": "Data",
+    "source": "Origem",
+    "channel": "Tipo",
+    "order": "Ordem",
+    "newest": "Decrescente",
+    "oldest": "Crescente",
+    "sortTitle": "Ordenar notificações",
+    "filterTitle": "Filtrar notificações",
+    "deleteTitle": "Eliminar notificações",
+    "deleteDescription": "Só serão removidas as entradas desta lista. Os emails, convites e tarefas mantêm-se.",
+    "deleteAll": "Todas as notificações",
+    "deleteFiltered": "Notificações filtradas",
+    "from": "De",
+    "to": "Até",
+    "clearFilters": "Limpar filtros",
+    "invalidDates": "A data final não pode ser anterior à inicial.",
+    "menu": "Opções da notificação",
+    "generic": "Foi registada uma notificação.",
+    "someone": "Alguém",
+    "sharedPlant": "uma planta partilhada",
+    "device": "Este dispositivo",
+    "sources": {
+      "task": "Tarefa",
+      "pump": "Bomba",
+      "device": "Dispositivo",
+      "user": "Utilizador"
+    },
+    "channels": {
+      "email": "Email",
+      "push": "Push",
+      "in_app": "Na aplicação"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Convite de contacto",
+        "body": "{{actor}} quer adicionar-te aos contactos."
+      },
+      "contact_accepted": {
+        "title": "Convite aceite",
+        "body": "{{actor}} aceitou o teu convite de contacto."
+      },
+      "tasks_due": {
+        "title": "Tarefas de hoje",
+        "body": "Consulta as tarefas de cuidado previstas para hoje."
+      },
+      "tasks_followup": {
+        "title": "Tarefas em atraso",
+        "body": "Ainda há tarefas de cuidado à tua espera."
+      },
+      "shared_task_completed": {
+        "title": "Cuidados partilhados",
+        "body": "{{actor}} concluiu uma tarefa para {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Leituras em falta",
+        "body": "{{device}} não enviou leituras no prazo esperado."
+      },
+      "moisture_alert": {
+        "title": "Humidade do solo baixa",
+        "body": "{{device}}: a humidade do solo está abaixo do limite definido."
+      },
+      "watering_completed": {
+        "title": "Rega concluída",
+        "body": "A rega de {{device}} foi concluída."
       }
     }
   }

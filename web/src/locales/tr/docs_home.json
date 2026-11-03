@@ -89,6 +89,12 @@
         "body": [
           "Bekleyen bir görevi yalnızca bitkinin sahibi erteleyebilir. Ana sayfada veya bitki ayrıntılarında görev menüsünü açıp Tamamlandı olarak işaretle seçeneğinin hemen altındaki Görevi ertele seçeneğini kullanın. Yarın, 2 gün sonra ve 3 gün sonra düğmeleri bugüne göre tarih alanını doldurur. Tarihi profilinizdeki biçimde yazabilir veya takvimden seçebilirsiniz. Yeni tarih mevcut son tarihten sonra olmalı ve geçmişte olmamalıdır. Yalnızca bu görevin son tarihi değişir; hatırlatıcının başlangıcı ve tekrar aralığı değişmez. Bir sonraki tarih eskisi gibi tamamlanma tarihine göre hesaplanır."
         ]
+      },
+      {
+        "heading": "Bildirimler",
+        "body": [
+          "Ana Sayfa’daki + menüsünün son seçeneğinden Bildirimler’i açın. Bu liste kişi davetlerini ve görev, ortak bakım, pompa ve cihaz bildirimlerini saklar. Her kart tarih, kaynak ve türü gösterir: E-posta, Push veya Uygulama içi. + menüsünden sıralama yapabilir, kaynak, tür ve tarihe göre filtreleyebilir veya kayıtları silebilirsiniz. Silme işlemi yalnızca bu listeyi etkiler; davetleri, görevleri ya da gönderilen mesajları değiştirmez."
+        ]
       }
     ]
   }

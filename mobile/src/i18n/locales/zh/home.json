@@ -13,7 +13,8 @@
       "clearFilter": "清除筛选",
       "history": "任务日志",
       "calendar": "日历",
-      "list": "列表"
+      "list": "列表",
+      "notifications": "通知"
     },
     "menu": {
       "markAsComplete": "标记为已完成",
@@ -124,6 +125,89 @@
         "october": "10月",
         "november": "11月",
         "december": "12月"
+      }
+    }
+  },
+  "inbox": {
+    "title": "通知",
+    "emptyTitle": "暂无通知",
+    "emptyBody": "邀请、共享养护动态和设备提醒将显示在这里。",
+    "error": "无法加载通知",
+    "errorBody": "请检查网络连接后重试。",
+    "retry": "重试",
+    "deleted": "通知已删除。",
+    "deleteFailed": "无法删除通知。",
+    "sort": "排序",
+    "filter": "筛选",
+    "delete": "删除",
+    "reset": "重置",
+    "cancel": "取消",
+    "apply": "应用",
+    "all": "全部",
+    "date": "日期",
+    "source": "来源",
+    "channel": "类型",
+    "order": "顺序",
+    "newest": "降序",
+    "oldest": "升序",
+    "sortTitle": "通知排序",
+    "filterTitle": "筛选通知",
+    "deleteTitle": "删除通知",
+    "deleteDescription": "仅删除此列表中的记录，不会影响邮件、邀请或任务。",
+    "deleteAll": "全部通知",
+    "deleteFiltered": "符合筛选条件的通知",
+    "from": "从",
+    "to": "至",
+    "clearFilters": "清除筛选",
+    "invalidDates": "结束日期不能早于开始日期。",
+    "menu": "通知选项",
+    "generic": "已记录一条通知。",
+    "someone": "有人",
+    "sharedPlant": "共享植物",
+    "device": "此设备",
+    "sources": {
+      "task": "任务",
+      "pump": "水泵",
+      "device": "设备",
+      "user": "用户"
+    },
+    "channels": {
+      "email": "邮件",
+      "push": "推送",
+      "in_app": "应用内"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "联系人邀请",
+        "body": "{{actor}} 邀请你添加为联系人。"
+      },
+      "contact_accepted": {
+        "title": "邀请已接受",
+        "body": "{{actor}} 接受了你的联系人邀请。"
+      },
+      "tasks_due": {
+        "title": "今日任务",
+        "body": "请查看今天的植物养护任务。"
+      },
+      "tasks_followup": {
+        "title": "逾期任务",
+        "body": "还有一些养护任务需要处理。"
+      },
+      "shared_task_completed": {
+        "title": "共享养护动态",
+        "body": "{{actor}} 完成了 {{plant}} 的一项任务。"
+      },
+      "missing_readings": {
+        "title": "未收到读数",
+        "body": "{{device}} 未按时发送读数。"
+      },
+      "moisture_alert": {
+        "title": "土壤湿度过低",
+        "body": "{{device}}：土壤湿度低于设定阈值。"
+      },
+      "watering_completed": {
+        "title": "浇水已完成",
+        "body": "{{device}} 已完成浇水。"
       }
     }
   }

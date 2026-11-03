@@ -13,7 +13,8 @@
       "clearFilter": "Wyczyść filtr",
       "history": "Dziennik zadań",
       "calendar": "Kalendarz",
-      "list": "Lista"
+      "list": "Lista",
+      "notifications": "Powiadomienia"
     },
     "menu": {
       "markAsComplete": "Oznacz jako ukończone",
@@ -124,6 +125,89 @@
         "october": "Paź",
         "november": "Lis",
         "december": "Gru"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Powiadomienia",
+    "emptyTitle": "Brak powiadomień",
+    "emptyBody": "Tutaj znajdziesz zaproszenia, informacje o wspólnej opiece i alerty urządzeń.",
+    "error": "Nie udało się wczytać powiadomień",
+    "errorBody": "Sprawdź połączenie i spróbuj ponownie.",
+    "retry": "Spróbuj ponownie",
+    "deleted": "Powiadomienia usunięte.",
+    "deleteFailed": "Nie udało się usunąć powiadomień.",
+    "sort": "Sortuj",
+    "filter": "Filtruj",
+    "delete": "Usuń",
+    "reset": "Resetuj",
+    "cancel": "Anuluj",
+    "apply": "Zastosuj",
+    "all": "Wszystkie",
+    "date": "Data",
+    "source": "Źródło",
+    "channel": "Typ",
+    "order": "Kolejność",
+    "newest": "Malejąco",
+    "oldest": "Rosnąco",
+    "sortTitle": "Sortuj powiadomienia",
+    "filterTitle": "Filtruj powiadomienia",
+    "deleteTitle": "Usuń powiadomienia",
+    "deleteDescription": "Usuniesz tylko wpisy z tej listy. E-maile, zaproszenia i zadania pozostaną bez zmian.",
+    "deleteAll": "Wszystkie powiadomienia",
+    "deleteFiltered": "Powiadomienia zgodne z filtrami",
+    "from": "Od",
+    "to": "Do",
+    "clearFilters": "Wyczyść filtry",
+    "invalidDates": "Data końcowa nie może być wcześniejsza niż początkowa.",
+    "menu": "Opcje powiadomienia",
+    "generic": "Zapisano powiadomienie.",
+    "someone": "Ktoś",
+    "sharedPlant": "udostępnionej rośliny",
+    "device": "To urządzenie",
+    "sources": {
+      "task": "Zadanie",
+      "pump": "Pompa",
+      "device": "Urządzenie",
+      "user": "Użytkownik"
+    },
+    "channels": {
+      "email": "E-mail",
+      "push": "Push",
+      "in_app": "W aplikacji"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Zaproszenie do kontaktów",
+        "body": "{{actor}} chce dodać Cię do kontaktów."
+      },
+      "contact_accepted": {
+        "title": "Zaproszenie przyjęte",
+        "body": "{{actor}} przyjmuje Twoje zaproszenie do kontaktów."
+      },
+      "tasks_due": {
+        "title": "Zadania na dziś",
+        "body": "Sprawdź dzisiejsze zadania dotyczące pielęgnacji roślin."
+      },
+      "tasks_followup": {
+        "title": "Zaległe zadania",
+        "body": "Niektóre zadania dotyczące roślin nadal czekają na wykonanie."
+      },
+      "shared_task_completed": {
+        "title": "Wspólna opieka",
+        "body": "{{actor}} potwierdza wykonanie zadania dla rośliny {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Brak odczytów",
+        "body": "{{device}} nie przesłało odczytów w oczekiwanym czasie."
+      },
+      "moisture_alert": {
+        "title": "Niska wilgotność gleby",
+        "body": "{{device}}: wilgotność gleby spadła poniżej ustawionego progu."
+      },
+      "watering_completed": {
+        "title": "Podlewanie zakończone",
+        "body": "Zakończono podlewanie: {{device}}."
       }
     }
   }

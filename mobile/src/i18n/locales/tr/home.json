@@ -13,7 +13,8 @@
       "clearFilter": "Filtreyi temizle",
       "history": "Görev günlüğü",
       "calendar": "Takvim",
-      "list": "Liste"
+      "list": "Liste",
+      "notifications": "Bildirimler"
     },
     "menu": {
       "markAsComplete": "Tamamlandı olarak işaretle",
@@ -124,6 +125,89 @@
         "october": "Ekim",
         "november": "Kasım",
         "december": "Aralık"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Bildirimler",
+    "emptyTitle": "Bildirim yok",
+    "emptyBody": "Davetler, ortak bakım güncellemeleri ve cihaz uyarıları burada görünür.",
+    "error": "Bildirimler yüklenemedi",
+    "errorBody": "Bağlantınızı kontrol edip tekrar deneyin.",
+    "retry": "Tekrar dene",
+    "deleted": "Bildirimler silindi.",
+    "deleteFailed": "Bildirimler silinemedi.",
+    "sort": "Sırala",
+    "filter": "Filtrele",
+    "delete": "Sil",
+    "reset": "Sıfırla",
+    "cancel": "İptal",
+    "apply": "Uygula",
+    "all": "Tümü",
+    "date": "Tarih",
+    "source": "Kaynak",
+    "channel": "Tür",
+    "order": "Sıralama",
+    "newest": "Azalan",
+    "oldest": "Artan",
+    "sortTitle": "Bildirimleri sırala",
+    "filterTitle": "Bildirimleri filtrele",
+    "deleteTitle": "Bildirimleri sil",
+    "deleteDescription": "Yalnızca bu listedeki kayıtlar kaldırılır. E-postalar, davetler ve görevler değişmez.",
+    "deleteAll": "Tüm bildirimler",
+    "deleteFiltered": "Filtreye uyan bildirimler",
+    "from": "Başlangıç",
+    "to": "Bitiş",
+    "clearFilters": "Filtreleri temizle",
+    "invalidDates": "Bitiş tarihi başlangıç tarihinden önce olamaz.",
+    "menu": "Bildirim seçenekleri",
+    "generic": "Bir bildirim kaydedildi.",
+    "someone": "Birisi",
+    "sharedPlant": "paylaşılan bir bitki",
+    "device": "Bu cihaz",
+    "sources": {
+      "task": "Görev",
+      "pump": "Pompa",
+      "device": "Cihaz",
+      "user": "Kullanıcı"
+    },
+    "channels": {
+      "email": "E-posta",
+      "push": "Push",
+      "in_app": "Uygulama içi"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Kişi daveti",
+        "body": "{{actor}} sizi kişilerine eklemek istiyor."
+      },
+      "contact_accepted": {
+        "title": "Davet kabul edildi",
+        "body": "{{actor}} kişi davetinizi kabul etti."
+      },
+      "tasks_due": {
+        "title": "Bugünün görevleri",
+        "body": "Bugünkü bitki bakım görevlerinizi kontrol edin."
+      },
+      "tasks_followup": {
+        "title": "Gecikmiş görevler",
+        "body": "Bazı bakım görevleri hâlâ tamamlanmayı bekliyor."
+      },
+      "shared_task_completed": {
+        "title": "Ortak bakım güncellemesi",
+        "body": "{{actor}}, {{plant}} için bir görevi tamamladı."
+      },
+      "missing_readings": {
+        "title": "Ölçümler gelmiyor",
+        "body": "{{device}} ölçümleri zamanında göndermedi."
+      },
+      "moisture_alert": {
+        "title": "Toprak nemi düşük",
+        "body": "{{device}}: toprak nemi belirlenen eşiğin altında."
+      },
+      "watering_completed": {
+        "title": "Sulama tamamlandı",
+        "body": "{{device}} için sulama tamamlandı."
       }
     }
   }

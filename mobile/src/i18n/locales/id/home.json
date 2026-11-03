@@ -13,7 +13,8 @@
       "clearFilter": "Hapus filter",
       "history": "Jurnal tugas",
       "calendar": "Kalender",
-      "list": "Daftar"
+      "list": "Daftar",
+      "notifications": "Notifikasi"
     },
     "menu": {
       "markAsComplete": "Tandai selesai",
@@ -124,6 +125,89 @@
         "october": "Oktober",
         "november": "November",
         "december": "Desember"
+      }
+    }
+  },
+  "inbox": {
+    "title": "Notifikasi",
+    "emptyTitle": "Belum ada notifikasi",
+    "emptyBody": "Undangan, kabar perawatan bersama, dan peringatan perangkat akan muncul di sini.",
+    "error": "Notifikasi tidak dapat dimuat",
+    "errorBody": "Periksa koneksi lalu coba lagi.",
+    "retry": "Coba lagi",
+    "deleted": "Notifikasi dihapus.",
+    "deleteFailed": "Notifikasi tidak dapat dihapus.",
+    "sort": "Urutkan",
+    "filter": "Filter",
+    "delete": "Hapus",
+    "reset": "Atur ulang",
+    "cancel": "Batal",
+    "apply": "Terapkan",
+    "all": "Semua",
+    "date": "Tanggal",
+    "source": "Sumber",
+    "channel": "Jenis",
+    "order": "Urutan",
+    "newest": "Menurun",
+    "oldest": "Menaik",
+    "sortTitle": "Urutkan notifikasi",
+    "filterTitle": "Filter notifikasi",
+    "deleteTitle": "Hapus notifikasi",
+    "deleteDescription": "Hanya entri di daftar ini yang dihapus. Email, undangan, dan tugas tidak berubah.",
+    "deleteAll": "Semua notifikasi",
+    "deleteFiltered": "Notifikasi sesuai filter",
+    "from": "Dari",
+    "to": "Sampai",
+    "clearFilters": "Hapus filter",
+    "invalidDates": "Tanggal akhir tidak boleh sebelum tanggal awal.",
+    "menu": "Opsi notifikasi",
+    "generic": "Notifikasi telah dicatat.",
+    "someone": "Seseorang",
+    "sharedPlant": "tanaman yang dibagikan",
+    "device": "Perangkat ini",
+    "sources": {
+      "task": "Tugas",
+      "pump": "Pompa",
+      "device": "Perangkat",
+      "user": "Pengguna"
+    },
+    "channels": {
+      "email": "Email",
+      "push": "Push",
+      "in_app": "Dalam aplikasi"
+    },
+    "events": {
+      "contact_invitation": {
+        "title": "Undangan kontak",
+        "body": "{{actor}} mengundang Anda menjadi kontak."
+      },
+      "contact_accepted": {
+        "title": "Undangan diterima",
+        "body": "{{actor}} menerima undangan kontak Anda."
+      },
+      "tasks_due": {
+        "title": "Tugas hari ini",
+        "body": "Periksa tugas perawatan tanaman untuk hari ini."
+      },
+      "tasks_followup": {
+        "title": "Tugas terlambat",
+        "body": "Masih ada tugas perawatan yang perlu diselesaikan."
+      },
+      "shared_task_completed": {
+        "title": "Perawatan bersama",
+        "body": "{{actor}} menyelesaikan tugas untuk {{plant}}."
+      },
+      "missing_readings": {
+        "title": "Data sensor belum diterima",
+        "body": "{{device}} belum mengirim data sensor tepat waktu."
+      },
+      "moisture_alert": {
+        "title": "Kelembapan tanah rendah",
+        "body": "{{device}}: kelembapan tanah di bawah ambang yang diatur."
+      },
+      "watering_completed": {
+        "title": "Penyiraman selesai",
+        "body": "Penyiraman untuk {{device}} selesai."
       }
     }
   }
