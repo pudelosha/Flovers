@@ -28,9 +28,9 @@ jobs:
 
   build:
     needs: quality
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -49,13 +49,13 @@ jobs:
             ghcr.io/pudelosha/flovers:${{ github.sha }}
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     env:
       DEPLOY_SHA: ${{ github.sha }}
       BACKEND_SERVICE: ${{ vars.BACKEND_SERVICE }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Prepare deployment script
         id: deployment-script

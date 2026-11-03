@@ -152,7 +152,9 @@ def test_completed_export_filters_and_cells_use_original_event(care, filters):
 
 def test_export_note_is_literal_text_and_invalid_xml_controls_are_removed(care):
     task = care.reminder.ensure_one_pending_task()
-    task.mark_complete_and_spawn_next(note="=1+1\x00")
+    # PostgreSQL accepts this XML-invalid control, but cannot store NUL.
+    # core.tests.test_spreadsheets covers NUL filtering without database storage.
+    task.mark_complete_and_spawn_next(note="=1+1\x01")
     with patch("reminders.views.send_templated_email") as send:
         response = care.client.post(reverse("reminder-task-export-email"), {}, format="json")
     assert response.status_code == 200
@@ -170,3 +172,12 @@ def test_completed_bulk_delete_filters_original_event(care, filters):
     assert response.status_code == 200 and response.json()["deleted"] == 1
     assert not ReminderTask.objects.filter(pk=task.pk).exists()
     assert care.reminder.tasks.filter(status="pending").count() == 1
+
+
+def test_completion_api_rejects_nul_before_writing_to_postgres(care):
+    task = care.reminder.ensure_one_pending_task()
+    response = care.client.post(reverse("reminder-task-complete", args=[task.pk]),
+                                {"note": "invalid\x00note"}, format="json")
+    assert response.status_code == 400
+    task.refresh_from_db()
+    assert task.status == "pending" and not task.completed_at

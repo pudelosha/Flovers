@@ -21,6 +21,9 @@ public:
     String(const std::string& text) : value(text) {}
     String(int number) : value(std::to_string(number)) {}
     String(long number) : value(std::to_string(number)) {}
+    // Arduino String supports unsigned integral values (e.g. pump milliseconds).
+    String(unsigned int number) : value(std::to_string(number)) {}
+    String(unsigned long number) : value(std::to_string(number)) {}
     size_t length() const { return value.size(); }
     char operator[](size_t index) const { return value[index]; }
     String substring(size_t start, size_t end) const { return value.substr(start, end - start); }

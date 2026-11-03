@@ -12,6 +12,9 @@ Play publication depends on the mobile job. Failures prevent downstream release
 jobs; test jobs have read-only repository access and do not inherit deployment,
 SSH or Play signing credentials. The Play workflow still has only a manual trigger.
 
+Checks pin Ubuntu 24.04 rather than following automatic runner-image migrations.
+Official checkout/setup/report actions use their Node 24 runtime releases.
+
 Backend uses Python 3.12 and CPU-only recognition dependencies, matching the
 production Docker approach. The actual checked-in model is loaded; prediction API
 tests mock inference results where appropriate. No global inference replacement
@@ -23,7 +26,7 @@ dotenv loading and reject external/non-test database URLs. Python socket traffic
 from tests is restricted to loopback. Cache state resets between tests so rate
 limits do not leak from one case into the next.
 
-JavaScript checks use Node 20 and lockfile-based `npm ci`. These checks exercise
+JavaScript checks use Node 24 and lockfile-based `npm ci`. These checks exercise
 application behavior; they do not build native APK/IPA files or publish a mobile
 release. Strict TypeScript/lint gates are separate follow-up work because the
 current repository has existing diagnostics; the workflows do not suppress or
