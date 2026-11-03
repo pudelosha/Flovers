@@ -8,6 +8,7 @@ on:
       - "docker-compose.yml"
       - "deployment/**"
       - ".github/workflows/deploy-backend.yml"
+      - ".github/workflows/test-backend.yml"
   workflow_dispatch:
 
 # Serialize builds and deployments, including manual runs on other branches.
@@ -20,13 +21,16 @@ permissions:
   packages: write
 
 jobs:
+  quality:
+    uses: ./.github/workflows/test-backend.yml
+    permissions:
+      contents: read
+
   build:
+    needs: quality
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Test deployment sequence and image retention
-        run: python3 -m unittest discover -s deployment -p 'test_deploy_backend.py'
 
       - name: Log in to GHCR
         uses: docker/login-action@v3

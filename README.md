@@ -182,10 +182,13 @@ Production uses a separate VPS Compose configuration. See the [deployment guide]
 
 ## Delivery and maintenance
 
-- **Backend:** relevant pushes to `main` build a commit-tagged image and deploy it to the VPS. The rollout applies migrations before starting the updated application services.
-- **Website:** relevant pushes publish the documentation site through GitHub Pages.
-- **Android testing builds:** the Google Play internal-test workflow is **manually triggered in GitHub Actions**, so routine commits do not create mobile releases.
+- **Backend:** relevant pushes to `main` must pass the full Django suite on PostgreSQL, migration checks and deployment tests before building an image or deploying to the VPS. The rollout applies migrations before starting the updated application services.
+- **Website:** content/translation tests and a production build must pass before publishing through GitHub Pages.
+- **Mobile checks:** mobile pushes and pull requests run Jest and release-metadata tests without signing or publishing.
+- **Android testing builds:** the Google Play internal-test workflow is **manually triggered in GitHub Actions** and requires mobile checks to pass, so routine commits do not create mobile releases.
 - **VPS storage:** CPU-only recognition dependencies and bounded backend-image retention reduce image accumulation while preserving the previous image for rollback.
 - **Private media:** uploaded photos use persistent private storage; backups must include the database and private media together.
 
 See the checked-in [workflows](.github/workflows/) for exact triggers and the [deployment documentation](deployment/README.md) for operational limits. An image rollback does not automatically reverse database migrations.
+
+Automated check details and local commands are documented in [CI checks](.github/QUALITY_CHECKS.md).

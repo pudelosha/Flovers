@@ -11,7 +11,13 @@ permissions:
   contents: read
 
 jobs:
+  quality:
+    uses: ./.github/workflows/test-mobile.yml
+    permissions:
+      contents: read
+
   build-and-publish-internal:
+    needs: quality
     runs-on: ubuntu-latest
 
     defaults:

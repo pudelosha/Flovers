@@ -1,0 +1,47 @@
+name: Mobile quality checks
+
+on:
+  push:
+    paths:
+      - "mobile/**"
+      - ".github/workflows/test-mobile.yml"
+      - ".github/workflows/mobile-android-play-internal.yml"
+  pull_request:
+    paths:
+      - "mobile/**"
+      - ".github/workflows/test-mobile.yml"
+      - ".github/workflows/mobile-android-play-internal.yml"
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run full mobile Jest suite
+        run: npm test -- --ci --maxWorkers=2 --json --outputFile=jest-results.json
+      - name: Test release metadata generation
+        run: npm run test:build-info
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mobile-test-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: mobile/jest-results.json
+          if-no-files-found: ignore
+          retention-days: 7

@@ -6,6 +6,7 @@ on:
     paths:
       - "web/**"
       - ".github/workflows/deploy-web.yml"
+      - ".github/workflows/test-web.yml"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +19,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  quality:
+    uses: ./.github/workflows/test-web.yml
+    permissions:
+      contents: read
+
   build:
+    needs: quality
     runs-on: ubuntu-latest
     defaults:
       run:
