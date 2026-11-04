@@ -107,7 +107,7 @@ export const wiz = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 14,
-    backgroundColor: "rgba(11,114,133,0.9)",
+    backgroundColor: "#0B7285",
     borderWidth: 0,
     position: "relative",
     overflow: "hidden",
@@ -145,10 +145,10 @@ export const wiz = StyleSheet.create({
     justifyContent: "center",
   },
   splitBtnSecondary: {
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: "#263238",
   },
   splitBtnPrimary: {
-    backgroundColor: "rgba(11,114,133,0.9)",
+    backgroundColor: "#0B7285",
   },
   splitBtnText: { color: "#FFFFFF", fontWeight: "800" },
 

@@ -18,11 +18,13 @@ const sharedAccess = {
   owner: { id: "1", name: "Owner" }, expires_at: null,
 };
 
-it("shows Completed, date and the actual actor in three separate single-line rows", () => {
+it("shows only the date and actual actor in two compact rows", () => {
   const view = render(<TaskHistoryTile item={item} isMenuOpen={false} onToggleMenu={jest.fn()} />);
   const column = view.UNSAFE_getByProps({ style: s.rightCol });
   const rows = within(column).UNSAFE_getAllByType(Text);
-  expect(rows.map((row) => row.props.children)).toEqual(["Completed", "2026-10-29", "Anna"]);
+  expect(rows.map((row) => row.props.children)).toEqual(["2026-10-29", "Anna"]);
+  expect(view.queryByText("Completed")).toBeNull();
+  expect(view.queryByText("WATERING")).toBeNull();
   rows.forEach((row) => expect(row.props.numberOfLines).toBe(1));
 });
 

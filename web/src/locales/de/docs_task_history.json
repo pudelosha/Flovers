@@ -11,7 +11,7 @@
       {
         "heading": "Erledigte Aufgaben",
         "body": [
-          "Aufgabenkacheln zeigen weiterhin die Tätigkeit, die Pflanze und den Standort. Rechts stehen auf drei Zeilen: Erledigt, das Datum und die Person, die die Aufgabe erledigt hat. Vorhandene Notizen sind immer sichtbar. Eigentümer können die zugehörige Erinnerung bearbeiten oder den Aufgabeneintrag löschen. Pflanzendetails öffnet die Pflanze."
+          "Kompakte Aufgabenkacheln zeigen links Symbol, Pflanze und Standort, rechts Abschlussdatum und ausführende Person. Notizen bleiben darunter sichtbar. Antippen öffnet die Aktionen einschließlich Pflanzendetails."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Fotokacheln und Bearbeitung",
         "body": [
-          "Fotokacheln stehen zwischen den erledigten Aufgaben. Sie zeigen ein sanft ausblendendes Bild, oben rechts Hinzugefügt mit Zeitstempel und unten die Notizen. Eine Aufgabenart wird nicht angezeigt. Tippe auf die Kachel für Foto ansehen, Foto bearbeiten, Pflanzendetails oder Foto löschen. Eigentümer können das Bild ersetzen, Datum und Notizen ändern und den Eintrag nach Bestätigung löschen. Foto ansehen öffnet das vollständige Bild in einem Dialog, ohne Zuschnitt oder den Farbverlauf der Kachel. Diese Ansicht steht dem Eigentümer und Personen mit aktiver Freigabe zur Verfügung.",
+          "Fotoeinträge verwenden dasselbe kompakte Farbverlaufsdesign ohne Bildvorschau. Das Symbol links öffnet das vollständige Foto. Die Kachel zeigt Pflanze, Standort, Upload-Datum, den Eigentümer als Verfasser und vorhandene Notizen. Das Menü bietet Foto anzeigen, bearbeiten, löschen und Pflanzendetails. Nur Eigentümer können Foto, optionales Fotodatum und Notizen ändern; Personen mit Freigabe können Foto und Pflanzendetails ansehen.",
           "In der Fotovorschau öffnet Vorheriges ein älteres Foto derselben Pflanze und Nächstes ein neueres, auch wenn es noch nicht in der Tagebuchliste geladen wurde. Unter dem Bild stehen Datum und Uhrzeit des Hochladens. Bei nur einem Foto werden die Schaltflächen ausgeblendet; nicht verfügbare Richtungen sind deaktiviert."
         ]
       },

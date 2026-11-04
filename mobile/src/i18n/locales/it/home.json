@@ -126,6 +126,17 @@
         "november": "Nov",
         "december": "Dic"
       }
+    },
+    "segments": {
+      "all": "Tutte",
+      "overdue": "Scadute",
+      "today": "Oggi",
+      "upcoming": "Prossime"
+    },
+    "groups": {
+      "tasks": "{{count}} attività",
+      "noUpcomingTitle": "Nessuna attività in arrivo",
+      "noUpcomingBody": "Non ci sono attività previste dopo oggi."
     }
   },
   "inbox": {

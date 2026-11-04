@@ -11,7 +11,7 @@
       {
         "heading": "Tarefas concluídas",
         "body": [
-          "Os cartões mantêm o tipo de tarefa, a planta e a localização. À direita aparecem três linhas: Concluída, a data e a pessoa que realizou a tarefa. As anotações ficam sempre visíveis quando existem. O proprietário pode editar o lembrete vinculado ou excluir o registro. Detalhes da planta abre a planta."
+          "Os cartões compactos mostram ícone, planta e localização à esquerda, e data de conclusão e pessoa à direita. As notas ficam visíveis por baixo. Toque para abrir as ações e os detalhes da planta."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Cartões de fotos e edição",
         "body": [
-          "As fotos aparecem entre as tarefas concluídas, com imagem em degradê, Adicionada e a data e hora no canto superior direito, e anotações na parte inferior. Não têm indicação de tipo de tarefa. Toque no cartão para Ver foto, Editar foto, Detalhes da planta ou Excluir foto. O proprietário pode substituir a imagem, alterar a data ou as anotações e excluir após confirmar. Ver foto abre a imagem inteira em uma janela, sem recorte nem o degradê do cartão. Essa visualização está disponível para o proprietário e as pessoas com acesso ativo à planta compartilhada.",
+          "As fotos usam o mesmo formato compacto com fundo em gradiente, sem pré-visualização. O ícone no círculo à esquerda abre a foto completa. O cartão mostra planta, localização, data de envio, proprietário que adicionou a foto e notas. O menu permite ver, editar ou eliminar a foto e abrir os detalhes da planta. Só o proprietário pode alterar foto, data opcional e notas; as pessoas com acesso podem ver a foto e os detalhes.",
           "Na pré-visualização, Anterior abre uma fotografia mais antiga da mesma planta e Seguinte uma mais recente, mesmo que ainda não tenha sido carregada na lista do diário. A data e a hora de carregamento aparecem por baixo da imagem. Os botões ficam ocultos quando há apenas uma fotografia; as direções indisponíveis ficam desativadas."
         ]
       },

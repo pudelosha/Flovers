@@ -15,7 +15,8 @@
         "body": [
           "Cada cartão corresponde a uma tarefa criada por um lembrete: regar, pulverizar, fertilizar, replantar ou realizar outros cuidados.",
           "Criar um lembrete gera logo uma tarefa pendente, mesmo para uma data futura. Ao concluí-la, a seguinte é imediatamente agendada.",
-          "O cartão costuma mostrar o tipo de tarefa, o nome da planta, a localização e a situação do prazo, como Para hoje ou Em atraso."
+          "O cartão costuma mostrar o tipo de tarefa, o nome da planta, a localização e a situação do prazo, como Para hoje ou Em atraso.",
+          "O seletor Todas, Em atraso, Hoje e Próximas fica fixo acima da lista. Próximas mostra tarefas posteriores a hoje. A lista agrupa as tarefas por dia, com a quantidade e a data à direita. Os cartões compactos mostram planta e localização à esquerda, e tipo e prazo relativo à direita. No calendário mostram a data de vencimento, sem grupos. A ordenação por planta ou localização aplica-se dentro de cada dia."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Botão de ações rápidas",
         "body": [
           "O botão flutuante de ações rápidas abre as opções para gerenciar a lista.",
-          "Mostrar em atraso: mostra apenas as tarefas atrasadas.",
-          "Mostrar para hoje: mostra as tarefas previstas para hoje.",
           "Ordenar: muda a ordem das tarefas na lista.",
           "Filtrar: mostra apenas as tarefas que atendem aos critérios escolhidos.",
           "Diário de tarefas abre o diário de tarefas concluídas e fotos das plantas, explicado em uma página própria."

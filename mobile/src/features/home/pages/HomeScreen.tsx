@@ -1,4 +1,10 @@
-import React, { useCallback, useMemo, useRef, useState, useEffect } from "react";
+import React, {
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+  useEffect,
+} from 'react';
 import {
   View,
   Pressable,
@@ -7,45 +13,60 @@ import {
   Animated,
   Easing,
   StyleSheet,
-  Text, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
-import { useNavigation, useFocusEffect, useIsFocused, useRoute } from "@react-navigation/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import LinearGradient from "../../../shared/theme/Gradient";
+  Text,
+  AnimatedView,
+  AnimatedFlatList,
+} from '../../../shared/theme/native';
+import {
+  useNavigation,
+  useFocusEffect,
+  useIsFocused,
+  useRoute,
+} from '@react-navigation/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import LinearGradient from '../../../shared/theme/Gradient';
 
-import GlassHeader from "../../../shared/ui/GlassHeader";
-import FAB from "../../../shared/ui/FAB";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import { plantAccess } from "../../../shared/utils/plantAccess";
-import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import GlassHeader from '../../../shared/ui/GlassHeader';
+import FAB from '../../../shared/ui/FAB';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { plantAccess } from '../../../shared/utils/plantAccess';
+import TopSnackbar from '../../../shared/ui/TopSnackbar';
 
-import { s } from "../styles/home.styles";
-import TaskTile from "../components/TaskTile";
-import TaskCalendar, {taskDateKey} from "../components/TaskCalendar";
-import PostponeTaskModal, { type PostponeTaskTarget } from "../components/modals/PostponeTaskModal";
-import CompleteTaskModal from "../components/modals/CompleteTaskModal";
-import type { Task, TaskType } from "../types/home.types";
+import { s } from '../styles/home.styles';
+import TaskTile from '../components/TaskTile';
+import {
+  groupTasksByDay,
+  relativeDueLabel,
+  formatDateWithPattern,
+} from '../utils/taskGrouping';
+import TaskCalendar, { taskDateKey } from '../components/TaskCalendar';
+import PostponeTaskModal, {
+  type PostponeTaskTarget,
+} from '../components/modals/PostponeTaskModal';
+import CompleteTaskModal from '../components/modals/CompleteTaskModal';
+import type { Task, TaskType } from '../types/home.types';
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
-} from "../constants/home.constants";
+} from '../constants/home.constants';
 
 import {
   fetchHomeTasks,
   markHomeTaskComplete,
   type HomeTask,
-} from "../../../api/services/home.service";
+} from '../../../api/services/home.service';
 
 import SortHomeTasksModal, {
   type HomeSortKey,
   type HomeSortDir,
-} from "../components/modals/SortHomeTasksModal";
+} from '../components/modals/SortHomeTasksModal';
 import FilterHomeTasksModal, {
   type HomeFilters,
-} from "../components/modals/FilterHomeTasksModal";
-import { useSettings } from "../../../app/providers/SettingsProvider";
+} from '../components/modals/FilterHomeTasksModal';
+import { useSettings } from '../../../app/providers/SettingsProvider';
 
-type ViewFilter = "all" | "overdue" | "today";
+type ViewFilter = 'all' | 'overdue' | 'today' | 'upcoming';
 
 type PlantOption = { id: string; name: string };
 
@@ -53,12 +74,12 @@ const INITIAL_FILTERS: HomeFilters = {
   plantId: undefined,
   location: undefined,
   types: [],
-  dueFrom: "",
-  dueTo: "",
+  dueFrom: '',
+  dueTo: '',
 };
 
 function normalizeStr(v?: string) {
-  return (v || "").toLowerCase().trim();
+  return (v || '').toLowerCase().trim();
 }
 
 function parseISODate(d?: string): Date | null {
@@ -71,14 +92,14 @@ function parseISODate(d?: string): Date | null {
 
 function toYYYYMMDD(d: Date = new Date()) {
   const Y = d.getFullYear();
-  const M = String(d.getMonth() + 1).padStart(2, "0");
-  const D = String(d.getDate()).padStart(2, "0");
+  const M = String(d.getMonth() + 1).padStart(2, '0');
+  const D = String(d.getDate()).padStart(2, '0');
   return `${Y}-${M}-${D}`;
 }
 
 // Empty-state gradient (matches the wizard gradient style)
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
@@ -86,8 +107,13 @@ export default function HomeScreen() {
   const nav = useNavigation<any>();
   const isFocused = useIsFocused();
   const route = useRoute();
-  const routeParams = route.params as { plantId?: string; filterRequestId?: string } | undefined;
-  const requestedPlantId = typeof routeParams?.plantId === "string" ? routeParams.plantId.trim() : undefined;
+  const routeParams = route.params as
+    | { plantId?: string; filterRequestId?: string }
+    | undefined;
+  const requestedPlantId =
+    typeof routeParams?.plantId === 'string'
+      ? routeParams.plantId.trim()
+      : undefined;
   const filterRequestId = routeParams?.filterRequestId;
   const handledFilterRequest = useRef<string | null>(null);
   const { settings } = useSettings();
@@ -95,8 +121,9 @@ export default function HomeScreen() {
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
-  const [viewMode,setViewMode]=useState<"list"|"calendar">("list");
-  const [selectedDate,setSelectedDate]=useState(()=>toYYYYMMDD());
+  const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');
+  const [segmentHeight, setSegmentHeight] = useState(38);
+  const [selectedDate, setSelectedDate] = useState(() => toYYYYMMDD());
 
   // Loading UX (match Plants behavior so entry/re-entry clears old list first)
   const [loading, setLoading] = useState(true);
@@ -107,55 +134,57 @@ export default function HomeScreen() {
   const loadInFlightRef = useRef<Promise<void> | null>(null);
 
   // Local view filter for FAB "Show overdue" / "Show due today"
-  const [viewFilter, setViewFilter] = useState<ViewFilter>("all");
+  const [viewFilter, setViewFilter] = useState<ViewFilter>('all');
 
   // Sort / Filter modals state
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
-  const [sortKey, setSortKey] = useState<HomeSortKey>("dueDate");
-  const [sortDir, setSortDir] = useState<HomeSortDir>("asc");
+  const [sortKey, setSortKey] = useState<HomeSortKey>('dueDate');
+  const [sortDir, setSortDir] = useState<HomeSortDir>('asc');
   const [filters, setFilters] = useState<HomeFilters>(INITIAL_FILTERS);
 
   // Toast
   const [toastVisible, setToastVisible] = useState(false);
-  const [toastMsg, setToastMsg] = useState("");
+  const [toastMsg, setToastMsg] = useState('');
   const [toastVariant, setToastVariant] = useState<
-    "default" | "success" | "error"
-  >("default");
+    'default' | 'success' | 'error'
+  >('default');
   const showToast = (
     message: string,
-    variant: "default" | "success" | "error" = "default"
+    variant: 'default' | 'success' | 'error' = 'default',
   ) => {
     setToastMsg(message);
     setToastVariant(variant);
     setToastVisible(true);
   };
 
-  const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(null);
+  const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(
+    null,
+  );
 
-  type CompleteMode = "single" | "bulk";
+  type CompleteMode = 'single' | 'bulk';
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
-  const [completeMode, setCompleteMode] = useState<CompleteMode>("single");
+  const [completeMode, setCompleteMode] = useState<CompleteMode>('single');
   const [completeTaskIds, setCompleteTaskIds] = useState<string[]>([]);
-  const [completeNote, setCompleteNote] = useState("");
+  const [completeNote, setCompleteNote] = useState('');
   const [completeDate, setCompleteDate] = useState(toYYYYMMDD());
 
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
-  const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
+  const [completeIntervalText, setCompleteIntervalText] = useState<string>('');
 
   const closeCompleteModal = useCallback(() => {
     setCompleteModalVisible(false);
-    setCompleteMode("single");
+    setCompleteMode('single');
     setCompleteTaskIds([]);
-    setCompleteNote("");
+    setCompleteNote('');
     setCompleteDate(toYYYYMMDD());
     setCompleteIsOverdue(false);
-    setCompleteIntervalText("");
+    setCompleteIntervalText('');
   }, []);
 
   const closeFloatingMenus = useCallback(() => {
     setMenuOpenId(null);
-    setFabCloseSignal((value) => value + 1);
+    setFabCloseSignal(value => value + 1);
   }, []);
 
   useEffect(() => {
@@ -164,19 +193,28 @@ export default function HomeScreen() {
       return;
     }
     if (!isFocused) return;
-    const request = `${requestedPlantId}:${filterRequestId ?? ""}`;
+    const request = `${requestedPlantId}:${filterRequestId ?? ''}`;
     if (handledFilterRequest.current === request) return;
     handledFilterRequest.current = request;
-    setViewMode("list");
+    setViewMode('list');
     setFilters({ ...INITIAL_FILTERS, types: [], plantId: requestedPlantId });
-    setViewFilter("all");
+    setViewFilter('all');
     setSortOpen(false);
     setFilterOpen(false);
     closeCompleteModal();
     closeFloatingMenus();
     nav.setParams({ plantId: undefined, filterRequestId: undefined });
-    requestAnimationFrame(() => listRef.current?.scrollToOffset?.({ offset: 0, animated: false }));
-  }, [requestedPlantId, filterRequestId, isFocused, nav, closeCompleteModal, closeFloatingMenus]);
+    requestAnimationFrame(() =>
+      listRef.current?.scrollToOffset?.({ offset: 0, animated: false }),
+    );
+  }, [
+    requestedPlantId,
+    filterRequestId,
+    isFocused,
+    nav,
+    closeCompleteModal,
+    closeFloatingMenus,
+  ]);
 
   const load = useCallback(async () => {
     if (loadInFlightRef.current) {
@@ -188,7 +226,7 @@ export default function HomeScreen() {
         const data = await fetchHomeTasks();
         setTasks(data);
       } catch (e: any) {
-        showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
+        showToast(e?.message || t('home.toasts.failedToLoadTasks'), 'error');
         setTasks([]);
       }
     })();
@@ -209,7 +247,7 @@ export default function HomeScreen() {
       let mounted = true;
 
       (async () => {
-        setViewFilter("all");
+        setViewFilter('all');
         setLoading(true);
         setTasks([]);
 
@@ -223,7 +261,7 @@ export default function HomeScreen() {
       return () => {
         mounted = false;
       };
-    }, [load])
+    }, [load]),
   );
 
   // On every focus — close any open menu/modals and scroll list to top
@@ -239,7 +277,7 @@ export default function HomeScreen() {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
       return undefined;
-    }, [closeCompleteModal, closeFloatingMenus])
+    }, [closeCompleteModal, closeFloatingMenus]),
   );
 
   const onRefresh = useCallback(async () => {
@@ -252,8 +290,8 @@ export default function HomeScreen() {
   }, [load]);
 
   const onToggleMenu = useCallback((id: string) => {
-    setFabCloseSignal((value) => value + 1);
-    setMenuOpenId((curr) => (curr === id ? null : id));
+    setFabCloseSignal(value => value + 1);
+    setMenuOpenId(curr => (curr === id ? null : id));
   }, []);
 
   // Helpers for date checks (local time)
@@ -280,7 +318,7 @@ export default function HomeScreen() {
       return Number.isFinite(ms) && ms < start;
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [],
   );
 
   // interval helper (best-effort; requires intervalValue/intervalUnit on task)
@@ -288,25 +326,28 @@ export default function HomeScreen() {
     (tsk: any) => {
       const v = tsk?.intervalValue;
       const u = tsk?.intervalUnit;
-      if (!v || !u) return "";
+      if (!v || !u) return '';
 
       // If homeModals.interval.days/months keys exist, this will be localized.
       // Otherwise it will just return the key string; we guard against that below.
       const maybe = t(`homeModals.interval.${u}`, { count: v });
-      if (typeof maybe === "string" && maybe.startsWith("homeModals.interval.")) {
+      if (
+        typeof maybe === 'string' &&
+        maybe.startsWith('homeModals.interval.')
+      ) {
         const unitLabel =
-          u === "days"
+          u === 'days'
             ? v === 1
-              ? "day"
-              : "days"
+              ? 'day'
+              : 'days'
             : v === 1
-              ? "month"
-              : "months";
+            ? 'month'
+            : 'months';
         return `+${v} ${unitLabel}`;
       }
       return maybe;
     },
-    [t]
+    [t],
   );
 
   // Derive plant + location options from current tasks
@@ -326,7 +367,7 @@ export default function HomeScreen() {
       if (tsk.location) set.add(tsk.location);
     }
     return Array.from(set).sort((a, b) =>
-      normalizeStr(a).localeCompare(normalizeStr(b))
+      normalizeStr(a).localeCompare(normalizeStr(b)),
     );
   }, [tasks]);
 
@@ -337,7 +378,7 @@ export default function HomeScreen() {
         filters.location ||
         (filters.types && filters.types.length > 0) ||
         (filters.dueFrom && filters.dueFrom.trim()) ||
-        (filters.dueTo && filters.dueTo.trim())
+        (filters.dueTo && filters.dueTo.trim()),
     );
   }, [filters]);
 
@@ -348,15 +389,17 @@ export default function HomeScreen() {
 
     // 1) coarse filter (overdue/today/all)
     const base = (() => {
-      if (viewFilter === "all") return tasks;
-      if (viewFilter === "overdue") {
-        return tasks.filter((tsk) => {
+      if (viewFilter === 'all') return tasks;
+      if (viewFilter === 'overdue') {
+        return tasks.filter(tsk => {
           const ms = normDateMs((tsk as any).dueDate);
           return Number.isFinite(ms) && ms < start;
         });
       }
+      if (viewFilter === 'upcoming')
+        return tasks.filter(tsk => normDateMs(tsk.dueDate) > end);
       // viewFilter === "today"
-      return tasks.filter((tsk) => {
+      return tasks.filter(tsk => {
         const ms = normDateMs((tsk as any).dueDate);
         return Number.isFinite(ms) && ms >= start && ms <= end;
       });
@@ -367,7 +410,7 @@ export default function HomeScreen() {
     const from = parseISODate(filters.dueFrom);
     const to = parseISODate(filters.dueTo);
 
-    const filtered = base.filter((tsk) => {
+    const filtered = base.filter(tsk => {
       if (filters.plantId && tsk.plantId !== filters.plantId) return false;
       if (
         filters.location &&
@@ -390,38 +433,67 @@ export default function HomeScreen() {
     const sorted = [...filtered].sort((a, b) => {
       let cmp = 0;
 
-      if (sortKey === "dueDate") {
+      if (sortKey === 'dueDate') {
         const ad = new Date(a.dueDate);
         const bd = new Date(b.dueDate);
         ad.setHours(0, 0, 0, 0);
         bd.setHours(0, 0, 0, 0);
         cmp = ad.getTime() - bd.getTime();
-      } else if (sortKey === "plant") {
+      } else if (sortKey === 'plant') {
         cmp = normalizeStr(a.plant).localeCompare(normalizeStr(b.plant));
-      } else if (sortKey === "location") {
+      } else if (sortKey === 'location') {
         cmp = normalizeStr(a.location).localeCompare(normalizeStr(b.location));
       }
 
-      return sortDir === "asc" ? cmp : -cmp;
+      return sortDir === 'asc' ? cmp : -cmp;
     });
 
     return sorted;
   }, [tasks, viewFilter, filters, sortKey, sortDir]);
 
-  const visibleTasks=useMemo(()=>viewMode==="calendar"
-    ? derivedTasks.filter(task=>taskDateKey(task.dueDate)===selectedDate) : derivedTasks,
-    [derivedTasks,viewMode,selectedDate]);
+  const visibleTasks = useMemo(
+    () =>
+      viewMode === 'calendar'
+        ? derivedTasks.filter(
+            task => taskDateKey(task.dueDate) === selectedDate,
+          )
+        : groupTasksByDay(
+            derivedTasks,
+            sortKey === 'dueDate' && sortDir === 'desc',
+          ),
+    [derivedTasks, viewMode, selectedDate, sortKey, sortDir],
+  );
+  const dayCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    visibleTasks.forEach(task => {
+      const key = taskDateKey(task.dueDate);
+      counts.set(key, (counts.get(key) || 0) + 1);
+    });
+    return counts;
+  }, [visibleTasks]);
 
-  const switchView=useCallback(()=>{
+  const switchView = useCallback(() => {
     closeFloatingMenus();
-    setViewMode(current=>current==="list" ? "calendar" : "list");
-    requestAnimationFrame(()=>listRef.current?.scrollToOffset({offset:0,animated:false}));
-  },[closeFloatingMenus]);
-  const gestureBlocked=sortOpen || filterOpen || !!postponeTask || completeModalVisible;
-  const panResponder=useMemo(()=>PanResponder.create({
-    onMoveShouldSetPanResponder:(_event,gesture)=>!gestureBlocked && Math.abs(gesture.dx)>24 && Math.abs(gesture.dx)>Math.abs(gesture.dy)*1.5,
-    onPanResponderRelease:(_event,gesture)=>{if(Math.abs(gesture.dx)>=40)switchView();},
-  }),[gestureBlocked,switchView]);
+    setViewMode(current => (current === 'list' ? 'calendar' : 'list'));
+    requestAnimationFrame(() =>
+      listRef.current?.scrollToOffset({ offset: 0, animated: false }),
+    );
+  }, [closeFloatingMenus]);
+  const gestureBlocked =
+    sortOpen || filterOpen || !!postponeTask || completeModalVisible;
+  const panResponder = useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: (_event, gesture) =>
+          !gestureBlocked &&
+          Math.abs(gesture.dx) > 24 &&
+          Math.abs(gesture.dx) > Math.abs(gesture.dy) * 1.5,
+        onPanResponderRelease: (_event, gesture) => {
+          if (Math.abs(gesture.dx) >= 40) switchView();
+        },
+      }),
+    [gestureBlocked, switchView],
+  );
 
   // ---------- ENTRANCE ANIMATION (per-task tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -432,7 +504,7 @@ export default function HomeScreen() {
   };
 
   const primeAnimations = useCallback((ids: string[]) => {
-    ids.forEach((id) => {
+    ids.forEach(id => {
       const v = getAnimForId(id);
       v.setValue(0);
     });
@@ -454,7 +526,7 @@ export default function HomeScreen() {
 
   useEffect(() => {
     if (loading) return;
-    const ids = visibleTasks.map((tsk) => tsk.id);
+    const ids = visibleTasks.map(tsk => tsk.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
@@ -487,12 +559,12 @@ export default function HomeScreen() {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title={t("home.header.title")}
+          title={t('home.header.title')}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
           rightIconName="qrcode-scan"
-          onPressRight={() => nav.navigate("Scanner" as never)}
+          onPressRight={() => nav.navigate('Scanner' as never)}
         />
         <CenteredSpinner size={56} color="#FFFFFF" />
       </View>
@@ -513,25 +585,27 @@ export default function HomeScreen() {
 
   // open / close / confirm handlers for complete-with-note (single + bulk)
   const openCompleteModal = (selectedTasks: HomeTask[], mode: CompleteMode) => {
-    selectedTasks = selectedTasks.filter((task) => plantAccess(task.access).canCompleteTasks);
+    selectedTasks = selectedTasks.filter(
+      task => plantAccess(task.access).canCompleteTasks,
+    );
     if (!selectedTasks.length) return;
     setCompleteMode(mode);
-    setCompleteTaskIds(selectedTasks.map((x) => x.id));
-    setCompleteNote("");
+    setCompleteTaskIds(selectedTasks.map(x => x.id));
+    setCompleteNote('');
     setCompleteDate(toYYYYMMDD());
 
     const anyOverdue = selectedTasks.some(isTaskOverdue);
     setCompleteIsOverdue(anyOverdue);
 
-    if (mode === "single") {
+    if (mode === 'single') {
       setCompleteIntervalText(buildIntervalText(selectedTasks[0]));
     } else {
       const first =
-        selectedTasks.length > 0 ? buildIntervalText(selectedTasks[0]) : "";
+        selectedTasks.length > 0 ? buildIntervalText(selectedTasks[0]) : '';
       const allSame =
         selectedTasks.length > 0 &&
-        selectedTasks.every((x) => buildIntervalText(x) === first);
-      setCompleteIntervalText(allSame ? first : "");
+        selectedTasks.every(x => buildIntervalText(x) === first);
+      setCompleteIntervalText(allSame ? first : '');
     }
 
     setCompleteModalVisible(true);
@@ -552,7 +626,7 @@ export default function HomeScreen() {
       setTasks([]);
 
       const results = await Promise.allSettled(
-        ids.map((id) => markHomeTaskComplete(id, completeNote, completionDate))
+        ids.map(id => markHomeTaskComplete(id, completeNote, completionDate)),
       );
 
       closeCompleteModal();
@@ -562,57 +636,62 @@ export default function HomeScreen() {
 
       setLoading(false);
 
-      const okCount = results.filter((r) => r.status === "fulfilled").length;
+      const okCount = results.filter(r => r.status === 'fulfilled').length;
       const failCount = results.length - okCount;
 
       if (failCount === 0) {
         showToast(
-          completeMode === "bulk"
-            ? t("home.toasts.tasksCompleted")
-            : t("home.toasts.taskCompleted"),
-          "success"
+          completeMode === 'bulk'
+            ? t('home.toasts.tasksCompleted')
+            : t('home.toasts.taskCompleted'),
+          'success',
         );
       } else if (okCount > 0) {
         showToast(
-          t("home.toasts.completeSomeFailed", {
+          t('home.toasts.completeSomeFailed', {
             ok: okCount,
             total: results.length,
           }),
-          "error"
+          'error',
         );
       } else {
-        showToast(t("home.toasts.completeFailed"), "error");
+        showToast(t('home.toasts.completeFailed'), 'error');
       }
     } catch (e: any) {
       closeCompleteModal();
       setLoading(false);
       showToast(
         e?.message
-          ? `${t("home.toasts.completeFailed")}: ${e.message}`
-          : t("home.toasts.completeFailed"),
-        "error"
+          ? `${t('home.toasts.completeFailed')}: ${e.message}`
+          : t('home.toasts.completeFailed'),
+        'error',
       );
     }
   };
 
   // FAB actions, mirroring Reminders
   const baseFabActions = [
-    {key:viewMode==="list" ? "calendar" : "list",
-      label:t(viewMode==="list" ? "home.fab.calendar" : "home.fab.list",{defaultValue:viewMode==="list" ? "Calendar" : "List"}),
-      icon:viewMode==="list" ? "calendar-month" : "view-list",onPress:switchView},
     {
-      key: "sort",
-      label: t("home.fab.sort"),
-      icon: "sort",
+      key: viewMode === 'list' ? 'calendar' : 'list',
+      label: t(viewMode === 'list' ? 'home.fab.calendar' : 'home.fab.list', {
+        defaultValue: viewMode === 'list' ? 'Calendar' : 'List',
+      }),
+      icon: viewMode === 'list' ? 'calendar-month' : 'view-list',
+      onPress: switchView,
+    },
+    {
+      key: 'sort',
+      label: t('home.fab.sort'),
+      icon: 'sort',
       onPress: () => {
         setMenuOpenId(null);
         setSortOpen(true);
       },
     },
     {
-      key: "filter",
-      label: t("home.fab.filter"),
-      icon: "filter-variant",
+      key: 'filter',
+      label: t('home.fab.filter'),
+      icon: 'filter-variant',
       onPress: () => {
         setMenuOpenId(null);
         setFilterOpen(true);
@@ -621,9 +700,9 @@ export default function HomeScreen() {
     ...(isFilterActive
       ? [
           {
-            key: "clearFilter",
-            label: t("home.fab.clearFilter"),
-            icon: "filter-remove",
+            key: 'clearFilter',
+            label: t('home.fab.clearFilter'),
+            icon: 'filter-remove',
             onPress: () => {
               setMenuOpenId(null);
               setFilters(INITIAL_FILTERS);
@@ -632,87 +711,56 @@ export default function HomeScreen() {
         ]
       : []),
     {
-      key: "history",
-      label: t("home.fab.history"),
-      icon: "history",
+      key: 'history',
+      label: t('home.fab.history'),
+      icon: 'history',
       onPress: () => {
         setMenuOpenId(null);
-        nav.navigate("TaskHistory" as never);
+        nav.navigate('TaskHistory' as never);
       },
     },
-    {key:"notifications",label:t("home.fab.notifications",{defaultValue:"Notifications"}),icon:"bell-outline",onPress:()=>{closeFloatingMenus();nav.navigate("Notifications" as never);}},
+    {
+      key: 'notifications',
+      label: t('home.fab.notifications', { defaultValue: 'Notifications' }),
+      icon: 'bell-outline',
+      onPress: () => {
+        closeFloatingMenus();
+        nav.navigate('Notifications' as never);
+      },
+    },
   ];
 
-  const fabActions =
-    viewFilter === "all"
+  const fabActions = [
+    ...(viewFilter !== 'all' &&
+    visibleTasks.some(task => plantAccess(task.access).canCompleteTasks)
       ? [
           {
-            key: "overdue",
-            label: t("home.fab.showOverdue"),
-            icon: "alert-circle-outline",
+            key: 'completeVisible',
+            label: t('home.fab.markVisibleAsComplete'),
+            icon: 'check-circle-outline',
             onPress: () => {
               setMenuOpenId(null);
-              setViewFilter("overdue");
-              requestAnimationFrame(() =>
-                listRef.current?.scrollToOffset({ offset: 0, animated: true })
-              );
+              openCompleteModal(visibleTasks as HomeTask[], 'bulk');
             },
           },
-          {
-            key: "dueToday",
-            label: t("home.fab.showDueToday"),
-            icon: "calendar-today",
-            onPress: () => {
-              setMenuOpenId(null);
-              setViewFilter("today");
-              setSelectedDate(toYYYYMMDD());
-              requestAnimationFrame(() =>
-                listRef.current?.scrollToOffset({ offset: 0, animated: true })
-              );
-            },
-          },
-          ...baseFabActions,
         ]
-      : [
-          // Put "Mark visible as complete" at the top when a view filter is active
-          ...(visibleTasks.some((task) => plantAccess(task.access).canCompleteTasks)
-            ? [
-                {
-                  key: "completeVisible",
-                  label: t("home.fab.markVisibleAsComplete"),
-                  icon: "check-circle-outline",
-                  onPress: () => {
-                    setMenuOpenId(null);
-                    openCompleteModal(visibleTasks as HomeTask[], "bulk");
-                  },
-                } as const,
-              ]
-            : []),
-          // Put "Show all tasks" at the top when a view filter is active
-          {
-            key: "clearViewFilter",
-            label: t("home.fab.showAllTasks"),
-            icon: "filter-remove",
-            onPress: () => {
-              setMenuOpenId(null);
-              setViewFilter("all");
-              requestAnimationFrame(() =>
-                listRef.current?.scrollToOffset({ offset: 0, animated: true })
-              );
-            },
-          },
-          ...baseFabActions,
-        ];
+      : []),
+    ...baseFabActions,
+  ];
 
   return (
-    <View testID="home-view-switch" style={{ flex: 1 }} {...panResponder.panHandlers}>
+    <View
+      testID="home-view-switch"
+      style={{ flex: 1 }}
+      {...panResponder.panHandlers}
+    >
       <GlassHeader
-        title={t("home.header.title")}
+        title={t('home.header.title')}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
         rightIconName="qrcode-scan"
-        onPressRight={() => nav.navigate("Scanner" as never)}
+        onPressRight={() => nav.navigate('Scanner' as never)}
       />
 
       {/* Backdrop to dismiss menus (keep no zIndex so menus sit above) */}
@@ -724,105 +772,304 @@ export default function HomeScreen() {
         />
       )}
 
-      <AnimatedFlatList
-        ref={listRef}
-        style={{ flex: 1 }}
-        data={visibleTasks}
-        keyExtractor={(tsk) => tsk.id}
-        renderItem={({ item }) => {
-          const v = getAnimForId(item.id);
-          const translateY = v.interpolate({
-            inputRange: [0, 1],
-            outputRange: [14, 0],
-          });
-          const scale = v.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0.98, 1],
-          });
-          const opacity = v;
+      <View style={{ flex: 1 }}>
+        {viewMode === 'list' && (
+          <View
+            style={s.segmentWrap}
+            onLayout={event =>
+              setSegmentHeight(event.nativeEvent.layout.height)
+            }
+          >
+            {(['all', 'overdue', 'today', 'upcoming'] as ViewFilter[]).map(
+              value => (
+                <Pressable
+                  key={value}
+                  accessibilityRole="tab"
+                  accessibilityState={{ selected: viewFilter === value }}
+                  accessibilityLabel={String(t('home.segments.' + value))}
+                  onPress={() => {
+                    closeFloatingMenus();
+                    setViewFilter(value);
+                    listRef.current?.scrollToOffset({
+                      offset: 0,
+                      animated: false,
+                    });
+                  }}
+                  style={[s.segment, viewFilter === value && s.segmentActive]}
+                >
+                  <Text
+                    style={s.segmentText}
+                    numberOfLines={1}
+                    adjustsFontSizeToFit
+                  >
+                    {t('home.segments.' + value)}
+                  </Text>
+                </Pressable>
+              ),
+            )}
+          </View>
+        )}
+        <AnimatedFlatList
+          ref={listRef}
+          style={{ flex: 1 }}
+          data={visibleTasks}
+          keyExtractor={tsk => tsk.id}
+          renderItem={({ item, index }) => {
+            const v = getAnimForId(item.id);
+            const translateY = v.interpolate({
+              inputRange: [0, 1],
+              outputRange: [14, 0],
+            });
+            const scale = v.interpolate({
+              inputRange: [0, 1],
+              outputRange: [0.98, 1],
+            });
+            const opacity = v;
 
-          const isOpen = menuOpenId === item.id;
+            const isOpen = menuOpenId === item.id;
 
-          return (
-            <AnimatedView
-              style={[
-                { opacity, transform: [{ translateY }, { scale }] },
-                isOpen && { zIndex: 50, elevation: 50 },
-              ]}
-            >
-              <TaskTile
-                task={item as Task}
-                isMenuOpen={isOpen}
-                onToggleMenu={() => onToggleMenu(item.id)}
-                onPressBody={() => onToggleMenu(item.id)}
-                onMarkComplete={() => {
-                  setMenuOpenId(null);
-                  openCompleteModal([item as HomeTask], "single");
-                }}
-                onPostpone={() => {
-                  if (!plantAccess(item.access).canEdit) return;
+            return (
+              <AnimatedView
+                style={[
+                  { opacity, transform: [{ translateY }, { scale }] },
+                  isOpen && { zIndex: 50, elevation: 50 },
+                ]}
+              >
+                {viewMode === 'list' &&
+                  (index === 0 ||
+                    taskDateKey(visibleTasks[index - 1].dueDate) !==
+                      taskDateKey(item.dueDate)) && (
+                    <View style={s.groupHeading}>
+                      <MaterialCommunityIcons
+                        name="calendar-blank-outline"
+                        size={15}
+                        color="#FFFFFF"
+                      />
+                      <Text style={s.groupLabel} numberOfLines={1}>
+                        {relativeDueLabel(item.dueDate, t)}
+                      </Text>
+                      <Text style={s.groupCount}>
+                        {t('home.groups.tasks', {
+                          count: dayCounts.get(taskDateKey(item.dueDate)) || 0,
+                        })}
+                      </Text>
+                      <Text style={s.groupDate}>
+                        {formatDateWithPattern(
+                          item.dueDate,
+                          settings.dateFormat,
+                        )}
+                      </Text>
+                    </View>
+                  )}
+                <TaskTile
+                  compact
+                  calendar={viewMode === 'calendar'}
+                  task={item as Task}
+                  isMenuOpen={isOpen}
+                  onToggleMenu={() => onToggleMenu(item.id)}
+                  onPressBody={() => onToggleMenu(item.id)}
+                  onMarkComplete={() => {
+                    setMenuOpenId(null);
+                    openCompleteModal([item as HomeTask], 'single');
+                  }}
+                  onPostpone={() => {
+                    if (!plantAccess(item.access).canEdit) return;
+                    closeFloatingMenus();
+                    setPostponeTask({
+                      id: item.id,
+                      plant: item.plant,
+                      dueDate: item.dueDate,
+                    });
+                  }}
+                  onEdit={() => {
+                    setMenuOpenId(null);
+                    const reminderId = (item as any).reminderId;
+                    if (reminderId != null) {
+                      nav.navigate(
+                        'Reminders' as never,
+                        { editReminderId: String(reminderId) } as never,
+                      );
+                    } else {
+                      nav.navigate('Reminders' as never);
+                    }
+                  }}
+                  onGoToPlant={() => {
+                    setMenuOpenId(null);
+
+                    const plantId = (item as HomeTask).plantId;
+
+                    if (!plantId) {
+                      console.warn('[HomeScreen] Task has no plantId:', item);
+                      showToast(t('home.toasts.taskNotLinkedToPlant'), 'error');
+                      return;
+                    }
+
+                    nav.navigate(
+                      'PlantDetails' as never,
+                      { id: plantId } as never,
+                    );
+                  }}
+                  onShowHistory={() => {
+                    setMenuOpenId(null);
+                    const plantId = (item as HomeTask).plantId;
+                    if (plantId) {
+                      nav.navigate(
+                        'TaskHistory' as never,
+                        { plantId: String(plantId) } as never,
+                      );
+                    } else {
+                      nav.navigate('TaskHistory' as never);
+                    }
+                  }}
+                />
+              </AnimatedView>
+            );
+          }}
+          ListHeaderComponent={
+            viewMode === 'calendar' ? (
+              <TaskCalendar
+                tasks={derivedTasks as Task[]}
+                selectedDate={selectedDate}
+                onSelectDate={date => {
                   closeFloatingMenus();
-                  setPostponeTask({ id: item.id, plant: item.plant, dueDate: item.dueDate });
-                }}
-                onEdit={() => {
-                  setMenuOpenId(null);
-                  const reminderId = (item as any).reminderId;
-                  if (reminderId != null) {
-                    nav.navigate(
-                      "Reminders" as never,
-                      { editReminderId: String(reminderId) } as never
-                    );
-                  } else {
-                    nav.navigate("Reminders" as never);
-                  }
-                }}
-                onGoToPlant={() => {
-                  setMenuOpenId(null);
-
-                  const plantId = (item as HomeTask).plantId;
-
-                  if (!plantId) {
-                    console.warn("[HomeScreen] Task has no plantId:", item);
-                    showToast(t("home.toasts.taskNotLinkedToPlant"), "error");
-                    return;
-                  }
-
-                  nav.navigate(
-                    "PlantDetails" as never,
-                    { id: plantId } as never
-                  );
-                }}
-                onShowHistory={() => {
-                  setMenuOpenId(null);
-                  const plantId = (item as HomeTask).plantId;
-                  if (plantId) {
-                    nav.navigate(
-                      "TaskHistory" as never,
-                      { plantId: String(plantId) } as never
-                    );
-                  } else {
-                    nav.navigate("TaskHistory" as never);
-                  }
+                  setSelectedDate(date);
                 }}
               />
-            </AnimatedView>
-          );
-        }}
-        ListHeaderComponent={viewMode==="calendar" ? <TaskCalendar tasks={derivedTasks as Task[]}
-          selectedDate={selectedDate} onSelectDate={date=>{closeFloatingMenus();setSelectedDate(date);}}/> : <View style={{height:0}}/>}
-        ListFooterComponent={<View style={{ height: 140 }} />}
-        contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
-        ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
-        showsVerticalScrollIndicator={false}
-        onScrollBeginDrag={closeFloatingMenus}
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
-        ListEmptyComponent={() => {
-          if(viewMode==="calendar") return <View style={[s.emptyGlass,{padding:22,marginTop:12}]}>
-            <Text style={[s.emptyTitle,{textAlign:"center"}]}>{t("home.calendar.noItems",{defaultValue:"No tasks for this day."})}</Text>
-          </View>;
-          if (viewFilter === "all") {
+            ) : (
+              <View style={{ height: 0 }} />
+            )
+          }
+          ListFooterComponent={<View style={{ height: 140 }} />}
+          contentContainerStyle={[
+            s.listContent,
+            { paddingBottom: 80 },
+            viewMode === 'list' && { paddingTop: segmentHeight + 24 },
+          ]}
+          ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
+          showsVerticalScrollIndicator={false}
+          onScrollBeginDrag={closeFloatingMenus}
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
+          ListEmptyComponent={() => {
+            if (viewMode === 'calendar')
+              return (
+                <View style={[s.emptyGlass, { padding: 22, marginTop: 12 }]}>
+                  <Text style={[s.emptyTitle, { textAlign: 'center' }]}>
+                    {t('home.calendar.noItems', {
+                      defaultValue: 'No tasks for this day.',
+                    })}
+                  </Text>
+                </View>
+              );
+            if (viewFilter === 'all') {
+              return (
+                <AnimatedView
+                  style={[
+                    s.emptyWrap,
+                    {
+                      opacity: emptyOpacity,
+                      transform: [
+                        { translateY: emptyTranslateY },
+                        { scale: emptyScale },
+                      ],
+                    },
+                  ]}
+                >
+                  <View style={s.emptyGlass}>
+                    <LinearGradient
+                      pointerEvents="none"
+                      start={{ x: 0, y: 0.5 }}
+                      end={{ x: 1, y: 0.5 }}
+                      colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                      locations={[0, 1]}
+                      style={StyleSheet.absoluteFill}
+                    />
+                    <LinearGradient
+                      pointerEvents="none"
+                      start={{ x: 0, y: 0 }}
+                      end={{ x: 1, y: 1 }}
+                      colors={[
+                        'rgba(255, 255, 255, 0.06)',
+                        'rgba(255, 255, 255, 0.02)',
+                        'rgba(255, 255, 255, 0.08)',
+                      ]}
+                      locations={[0, 0.5, 1]}
+                      style={StyleSheet.absoluteFill}
+                    />
+
+                    <View pointerEvents="none" style={s.emptyTint} />
+                    <View pointerEvents="none" style={s.emptyBorder} />
+
+                    <View style={s.emptyInner}>
+                      <MaterialCommunityIcons
+                        name="calendar-check-outline"
+                        size={26}
+                        color="#FFFFFF"
+                        style={{ marginBottom: 10 }}
+                      />
+                      <Text style={s.emptyTitle}>
+                        {t('home.empty.all.title')}
+                      </Text>
+                      <View style={s.emptyDescBox}>
+                        <Text style={s.emptyText}>
+                          {t('home.empty.all.introPrefix')}{' '}
+                          <Text style={s.inlineBold}>
+                            {t('home.empty.all.introBold')}
+                          </Text>{' '}
+                          {t('home.empty.all.introSuffix')}
+                          {'\n\n'}
+                          {t('home.empty.all.toGetStarted')}
+                          {'\n\n'}•{' '}
+                          <Text style={s.inlineBold}>
+                            {t('home.empty.all.bullets.createPlantsBold')}
+                          </Text>{' '}
+                          {t('home.empty.all.bullets.createPlantsSuffix')}{' '}
+                          <Text style={s.inlineBold}>
+                            {t('home.empty.all.bullets.plantsTabBold')}
+                          </Text>
+                          .{'\n'}•{' '}
+                          {t('home.empty.all.bullets.addRemindersPrefix')}{' '}
+                          <Text style={s.inlineBold}>
+                            {t('home.empty.all.bullets.remindersBold')}
+                          </Text>{' '}
+                          {t('home.empty.all.bullets.addRemindersSuffix')}
+                          {'\n'}•{' '}
+                          {t('home.empty.all.bullets.optionallyConnectPrefix')}{' '}
+                          <Text style={s.inlineBold}>
+                            {t('home.empty.all.bullets.iotBold')}
+                          </Text>{' '}
+                          {t('home.empty.all.bullets.optionallyConnectMiddle')}{' '}
+                          <Text style={s.inlineBold}>
+                            {t('home.empty.all.bullets.readingsTabBold')}
+                          </Text>{' '}
+                          {t('home.empty.all.bullets.optionallyConnectSuffix')}
+                          {'\n\n'}
+                          {t('home.empty.all.outro')}
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </AnimatedView>
+              );
+            }
+
+            const isOverdue = viewFilter === 'overdue';
+            const title = isOverdue
+              ? t('home.empty.overdue.title')
+              : viewFilter === 'upcoming'
+              ? t('home.groups.noUpcomingTitle')
+              : t('home.empty.today.title');
+            const iconName = isOverdue
+              ? 'calendar-remove-outline'
+              : 'calendar-today';
+
+            const bodyText = isOverdue
+              ? t('home.empty.overdue.body')
+              : viewFilter === 'upcoming'
+              ? t('home.groups.noUpcomingBody')
+              : t('home.empty.today.body');
+
             return (
               <AnimatedView
                 style={[
@@ -850,9 +1097,9 @@ export default function HomeScreen() {
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 1 }}
                     colors={[
-                      "rgba(255, 255, 255, 0.06)",
-                      "rgba(255, 255, 255, 0.02)",
-                      "rgba(255, 255, 255, 0.08)",
+                      'rgba(255, 255, 255, 0.06)',
+                      'rgba(255, 255, 255, 0.02)',
+                      'rgba(255, 255, 255, 0.08)',
                     ]}
                     locations={[0, 0.5, 1]}
                     style={StyleSheet.absoluteFill}
@@ -863,122 +1110,22 @@ export default function HomeScreen() {
 
                   <View style={s.emptyInner}>
                     <MaterialCommunityIcons
-                      name="calendar-check-outline"
+                      name={iconName}
                       size={26}
                       color="#FFFFFF"
                       style={{ marginBottom: 10 }}
                     />
-                    <Text style={s.emptyTitle}>{t("home.empty.all.title")}</Text>
+                    <Text style={s.emptyTitle}>{title}</Text>
                     <View style={s.emptyDescBox}>
-                      <Text style={s.emptyText}>
-                        {t("home.empty.all.introPrefix")}{" "}
-                        <Text style={s.inlineBold}>
-                          {t("home.empty.all.introBold")}
-                        </Text>{" "}
-                        {t("home.empty.all.introSuffix")}
-                        {"\n\n"}
-                        {t("home.empty.all.toGetStarted")}
-                        {"\n\n"}•{" "}
-                        <Text style={s.inlineBold}>
-                          {t("home.empty.all.bullets.createPlantsBold")}
-                        </Text>{" "}
-                        {t("home.empty.all.bullets.createPlantsSuffix")}{" "}
-                        <Text style={s.inlineBold}>
-                          {t("home.empty.all.bullets.plantsTabBold")}
-                        </Text>
-                        .
-                        {"\n"}• {t("home.empty.all.bullets.addRemindersPrefix")}{" "}
-                        <Text style={s.inlineBold}>
-                          {t("home.empty.all.bullets.remindersBold")}
-                        </Text>{" "}
-                        {t("home.empty.all.bullets.addRemindersSuffix")}
-                        {"\n"}•{" "}
-                        {t("home.empty.all.bullets.optionallyConnectPrefix")}{" "}
-                        <Text style={s.inlineBold}>
-                          {t("home.empty.all.bullets.iotBold")}
-                        </Text>{" "}
-                        {t("home.empty.all.bullets.optionallyConnectMiddle")}{" "}
-                        <Text style={s.inlineBold}>
-                          {t("home.empty.all.bullets.readingsTabBold")}
-                        </Text>{" "}
-                        {t("home.empty.all.bullets.optionallyConnectSuffix")}
-                        {"\n\n"}
-                        {t("home.empty.all.outro")}
-                      </Text>
+                      <Text style={s.emptyText}>{bodyText}</Text>
                     </View>
                   </View>
                 </View>
               </AnimatedView>
             );
-          }
-
-          const isOverdue = viewFilter === "overdue";
-          const title = isOverdue
-            ? t("home.empty.overdue.title")
-            : t("home.empty.today.title");
-          const iconName = isOverdue
-            ? "calendar-remove-outline"
-            : "calendar-today";
-
-          const bodyText = isOverdue
-            ? t("home.empty.overdue.body")
-            : t("home.empty.today.body");
-
-          return (
-            <AnimatedView
-              style={[
-                s.emptyWrap,
-                {
-                  opacity: emptyOpacity,
-                  transform: [
-                    { translateY: emptyTranslateY },
-                    { scale: emptyScale },
-                  ],
-                },
-              ]}
-            >
-              <View style={s.emptyGlass}>
-                <LinearGradient
-                  pointerEvents="none"
-                  start={{ x: 0, y: 0.5 }}
-                  end={{ x: 1, y: 0.5 }}
-                  colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
-                  locations={[0, 1]}
-                  style={StyleSheet.absoluteFill}
-                />
-                <LinearGradient
-                  pointerEvents="none"
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 1 }}
-                  colors={[
-                    "rgba(255, 255, 255, 0.06)",
-                    "rgba(255, 255, 255, 0.02)",
-                    "rgba(255, 255, 255, 0.08)",
-                  ]}
-                  locations={[0, 0.5, 1]}
-                  style={StyleSheet.absoluteFill}
-                />
-
-                <View pointerEvents="none" style={s.emptyTint} />
-                <View pointerEvents="none" style={s.emptyBorder} />
-
-                <View style={s.emptyInner}>
-                  <MaterialCommunityIcons
-                    name={iconName}
-                    size={26}
-                    color="#FFFFFF"
-                    style={{ marginBottom: 10 }}
-                  />
-                  <Text style={s.emptyTitle}>{title}</Text>
-                  <View style={s.emptyDescBox}>
-                    <Text style={s.emptyText}>{bodyText}</Text>
-                  </View>
-                </View>
-              </View>
-            </AnimatedView>
-          );
-        }}
-      />
+          }}
+        />
+      </View>
 
       {showFAB && (
         <View
@@ -1006,8 +1153,8 @@ export default function HomeScreen() {
           setSortOpen(false);
         }}
         onReset={() => {
-          setSortKey("dueDate");
-          setSortDir("asc");
+          setSortKey('dueDate');
+          setSortDir('asc');
           setSortOpen(false);
         }}
       />
@@ -1018,7 +1165,7 @@ export default function HomeScreen() {
         locations={locationOptions}
         filters={filters}
         onCancel={() => setFilterOpen(false)}
-        onApply={(f) => {
+        onApply={f => {
           setFilters(f);
           setFilterOpen(false);
         }}
@@ -1027,15 +1174,38 @@ export default function HomeScreen() {
         }}
       />
 
-      <PostponeTaskModal visible={isFocused && !!postponeTask} task={postponeTask}
+      <PostponeTaskModal
+        visible={isFocused && !!postponeTask}
+        task={postponeTask}
         onClose={() => setPostponeTask(null)}
         onSaved={() => {
-          showToast(String(t("homeModals.postpone.saved", { defaultValue: "Task postponed." })), "success");
-          void (async () => { if (loadInFlightRef.current) await loadInFlightRef.current; await load(); })();
+          showToast(
+            String(
+              t('homeModals.postpone.saved', {
+                defaultValue: 'Task postponed.',
+              }),
+            ),
+            'success',
+          );
+          void (async () => {
+            if (loadInFlightRef.current) await loadInFlightRef.current;
+            await load();
+          })();
         }}
         onConflict={() => {
-          showToast(String(t("homeModals.postpone.conflict", { defaultValue: "This task changed. Reloading its latest details." })), "error");
-          void (async () => { if (loadInFlightRef.current) await loadInFlightRef.current; await load(); })();
+          showToast(
+            String(
+              t('homeModals.postpone.conflict', {
+                defaultValue:
+                  'This task changed. Reloading its latest details.',
+              }),
+            ),
+            'error',
+          );
+          void (async () => {
+            if (loadInFlightRef.current) await loadInFlightRef.current;
+            await load();
+          })();
         }}
       />
 
@@ -1048,7 +1218,7 @@ export default function HomeScreen() {
         onCancel={closeCompleteModal}
         onConfirm={handleConfirmComplete}
         mode={completeMode}
-        count={completeMode === "bulk" ? completeTaskIds.length : undefined}
+        count={completeMode === 'bulk' ? completeTaskIds.length : undefined}
         isOverdue={completeIsOverdue}
         intervalText={completeIntervalText}
       />

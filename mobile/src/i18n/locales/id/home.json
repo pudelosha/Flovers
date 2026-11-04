@@ -126,6 +126,17 @@
         "november": "November",
         "december": "Desember"
       }
+    },
+    "segments": {
+      "all": "Semua",
+      "overdue": "Terlambat",
+      "today": "Hari ini",
+      "upcoming": "Mendatang"
+    },
+    "groups": {
+      "tasks": "{{count}} tugas",
+      "noUpcomingTitle": "Tidak ada tugas mendatang",
+      "noUpcomingBody": "Tidak ada tugas yang dijadwalkan setelah hari ini."
     }
   },
   "inbox": {

@@ -126,6 +126,17 @@
         "november": "Ноябрь",
         "december": "Декабрь"
       }
+    },
+    "segments": {
+      "all": "Все",
+      "overdue": "Просрочены",
+      "today": "Сегодня",
+      "upcoming": "Предстоящие"
+    },
+    "groups": {
+      "tasks": "Задач: {{count}}",
+      "noUpcomingTitle": "Нет предстоящих задач",
+      "noUpcomingBody": "На следующие дни задач нет."
     }
   },
   "inbox": {

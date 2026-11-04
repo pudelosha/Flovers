@@ -32,6 +32,7 @@ export default function GlassHeader({
 
   return (
     <LinearGradientView
+      themeRole="header"
       colors={gradientColors}
       locations={[0, 1]}
       start={{ x: 0, y: 0.5 }}

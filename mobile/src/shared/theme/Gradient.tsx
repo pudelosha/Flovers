@@ -14,7 +14,11 @@ const ThemedGradient = forwardRef<any, any>(
         ref={ref}
         style={resolveStyle(props.style, isLight, scope)}
         colors={
-          isLight && taskAccent
+          isLight && themeRole === 'header'
+            ? ['#F7FBF9', '#E3F1E9']
+            : isLight && themeRole === 'navigation'
+            ? ['#E8F5F0', '#F8FBF9']
+            : isLight && taskAccent
             ? taskSurfaceGradient(taskAccent)
             : isLight
             ? props.colors.map((color: any) =>
@@ -28,7 +32,7 @@ const ThemedGradient = forwardRef<any, any>(
 );
 export default ThemedGradient as React.ComponentType<
   React.ComponentProps<typeof Gradient> & {
-    themeRole?: 'photo';
+    themeRole?: 'photo' | 'header' | 'navigation';
     taskAccent?: string;
   }
 >;

@@ -22,7 +22,7 @@ export default function WizardFooter({
           <Text style={wiz.splitBtnText}>{prevLabel}</Text>
         </Pressable>
         <Pressable
-          style={[wiz.splitBtn, wiz.splitBtnPrimary, nextDisabled && { opacity: 0.6 }]}
+          style={[wiz.splitBtn, wiz.splitBtnPrimary, nextDisabled && { backgroundColor: "#607D80" }]}
           onPress={onNext}
           disabled={nextDisabled}
         >

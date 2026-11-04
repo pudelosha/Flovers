@@ -11,7 +11,7 @@
       {
         "heading": "Attività completate",
         "body": [
-          "Le schede mantengono tipo di attività, pianta e posizione. A destra compaiono tre righe: Completata, la data e la persona che l’ha svolta. Le note, se presenti, sono sempre visibili. Il proprietario può modificare il promemoria collegato o eliminare la voce dell’attività. Dettagli della pianta apre la pianta."
+          "Le tessere compatte mostrano icona, pianta e posizione a sinistra, data di completamento e persona a destra. Le note restano visibili sotto. Tocca per aprire le azioni, inclusi i dettagli della pianta."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Schede delle foto e modifiche",
         "body": [
-          "Le foto compaiono tra le attività completate, con un’immagine sfumata, Aggiunta e data in alto a destra, e note in basso. Non mostrano il tipo di attività. Tocca la scheda per Visualizza foto, Modifica foto, Dettagli della pianta o Elimina foto. Il proprietario può sostituire l’immagine, cambiare la data o le note ed eliminare la voce dopo conferma. Visualizza foto apre l’immagine intera in una finestra, senza ritaglio né sfumatura. Questa vista è disponibile al proprietario e alle persone che hanno accesso alla pianta condivisa.",
+          "Le foto usano lo stesso formato compatto con sfondo sfumato, senza anteprima. L’icona nel cerchio a sinistra apre la foto completa. La tessera mostra pianta, posizione, data di caricamento, proprietario che l’ha aggiunta ed eventuali note. Il menu permette di visualizzare, modificare o eliminare la foto e aprire i dettagli della pianta. Solo il proprietario può cambiare foto, data facoltativa e note; gli utenti con accesso possono visualizzare foto e dettagli.",
           "Nell’anteprima, Precedente apre una foto più vecchia della stessa pianta e Successiva una più recente, anche se non è ancora stata caricata nell’elenco del diario. Sotto l’immagine trovi la data e l’ora di caricamento. Se c’è una sola foto, i pulsanti non compaiono; le direzioni non disponibili sono disattivate."
         ]
       },

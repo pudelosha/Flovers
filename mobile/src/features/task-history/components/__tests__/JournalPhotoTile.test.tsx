@@ -27,18 +27,13 @@ beforeEach(() => {
   mockPhoto = { uri: "data:image/jpeg;base64,PRIVATE", loading: false, error: null, refresh: jest.fn() };
 });
 
-it("renders a fading authorised photo, Added date and full note without task-type labels", () => {
-  const view = render(<JournalPhotoTile {...props()} />);
-  expect(usePlantPhoto).toHaveBeenCalledWith(item.photo, { variant: "display", expiresAt: null });
-  expect(view.UNSAFE_getByType(FramedPlantImage).props.uri).toBe("data:image/jpeg;base64,PRIVATE");
-  expect(view.getByText("Added")).toBeTruthy();
-  expect(view.getByText("31.10.2026")).toBeTruthy();
-  expect(view.queryByText(/\d{2}:\d{2}/)).toBeNull();
-  expect(view.getByText("Photo date: 28.10.2026")).toBeTruthy();
-  expect(view.getByText("Note")).toBeTruthy();
-  expect(view.getByText(item.note!).props.numberOfLines).toBeUndefined();
-  expect(view.queryByText("watering")).toBeNull();
-  expect(view.queryByText("water")).toBeNull();
+it("shows compact photo metadata and full note without downloading a tile image", () => {
+ const view=render(<JournalPhotoTile {...props()}/>);
+ expect(usePlantPhoto).not.toHaveBeenCalled();
+ expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
+ expect(view.getByText('31.10.2026')).toBeTruthy();expect(view.getByText('Anna')).toBeTruthy();
+ expect(view.queryByText('Added')).toBeNull();expect(view.queryByText('Photo date: 28.10.2026')).toBeNull();
+ expect(view.getByText('Note')).toBeTruthy();expect(view.getByText(item.note!).props.numberOfLines).toBeUndefined();
 });
 
 it("opens the owner menu from the photo and closes it before editing", () => {
@@ -69,22 +64,15 @@ it("allows shared viewers to open the full photo and plant details without expos
   expect(view.queryByText("Delete photo")).toBeNull();
   fireEvent.press(view.getByText("View photo"));
   expect(handlers.onViewPhoto).toHaveBeenCalledTimes(1);
-  expect(usePlantPhoto).toHaveBeenCalledWith(item.photo, { variant: "display", expiresAt: shared.expires_at });
+  expect(usePlantPhoto).not.toHaveBeenCalled();
   fireEvent.press(view.getByText("Plant details"));
   expect(handlers.onPlantDetails).toHaveBeenCalledTimes(1);
 });
 
-it("shows a spinner or failure placeholder without falling back to another plant image", () => {
-  mockPhoto = { ...mockPhoto, uri: null, loading: true };
-  const view = render(<JournalPhotoTile {...props()} />);
-  expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
-  expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
-  mockPhoto = { ...mockPhoto, loading: false, error: new Error("Access expired") };
-  view.rerender(<JournalPhotoTile {...props()} />);
-  expect(view.getByText("image-off-outline")).toBeTruthy();
-  expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+it("uses a truthful fallback if author metadata is absent",()=>{
+ const view=render(<JournalPhotoTile {...props()} item={{...item,access:undefined}}/>);
+ expect(view.getByText('Unknown user')).toBeTruthy();
 });
-
 
 it("opens the full photo from the shortcut without expanding the tile menu", () => {
   const handlers = props();

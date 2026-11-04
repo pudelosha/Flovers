@@ -126,6 +126,17 @@
         "november": "نوف",
         "december": "ديس"
       }
+    },
+    "segments": {
+      "all": "الكل",
+      "overdue": "متأخرة",
+      "today": "اليوم",
+      "upcoming": "قادمة"
+    },
+    "groups": {
+      "tasks": "{{count}} مهام",
+      "noUpcomingTitle": "لا توجد مهام قادمة",
+      "noUpcomingBody": "لا توجد مهام مستحقة بعد اليوم."
     }
   },
   "inbox": {

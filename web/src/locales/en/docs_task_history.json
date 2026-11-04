@@ -11,7 +11,7 @@
       {
         "heading": "Completed tasks",
         "body": [
-          "Task tiles keep their type, plant and location. The completion column shows Completed, the date and the person who completed the task on three rows. Notes are always visible when present. Owners can edit the linked reminder or delete the task entry; Plant details opens the plant."
+          "Compact task tiles show the task icon, plant and location on the left, and completion date and person on the right. Notes remain visible below. Tap for task actions, including Plant details."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Photo tiles and editing",
         "body": [
-          "Photo tiles appear among completed tasks, with a fading image, Added and its timestamp at the top right, and notes at the bottom. They have no task-type badge. Tap a tile for View photo, Edit photo, Plant details or Delete photo. Owners can replace the image, change the optional date or notes, and delete after confirmation. View photo opens the full image in a modal, without cropping or the tile’s gradient. Owners and people with active sharing access can use this view.",
+          "Photo entries use the same compact gradient layout, without an image preview. The left circle opens the full photo; the tile shows plant, location, upload date and the owner who added it, plus any note. Tap the tile for View photo, Edit photo, Plant details or Delete photo. Owners can replace the photo and edit its optional photo date and notes. Shared viewers can view the full photo and plant details.",
           "In the photo preview, Previous opens an older photo of the same plant and Next opens a newer one, including photos not yet loaded in the journal list. The upload date and time appear beneath the image. Navigation is hidden for a single photo, and unavailable directions are disabled."
         ]
       },

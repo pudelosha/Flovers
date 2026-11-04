@@ -15,7 +15,8 @@
         "body": [
           "Ogni riquadro mostra un'attività creata da un promemoria, ad esempio annaffiatura, nebulizzazione, concimazione, rinvaso o cura generale.",
           "Quando crei un promemoria viene generata subito un’attività, anche se prevista più avanti. Al completamento viene pianificata subito quella successiva.",
-          "Il riquadro mostra di solito il tipo di attività, il nome della pianta, la posizione e la scadenza, ad esempio Oggi o In ritardo."
+          "Il riquadro mostra di solito il tipo di attività, il nome della pianta, la posizione e la scadenza, ad esempio Oggi o In ritardo.",
+          "Sopra l’elenco scorrevole resta visibile il selettore Tutte, Scadute, Oggi e Prossime. Prossime mostra le attività successive a oggi. L’elenco è raggruppato per giorno di scadenza, con numero di attività e data a destra. Le tessere compatte mostrano pianta e posizione a sinistra, tipo e scadenza relativa a destra. Nel calendario mostrano la data di scadenza, senza gruppi. L’ordinamento per pianta o posizione si applica all’interno di ciascun giorno."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Pulsante delle azioni rapide",
         "body": [
           "Il pulsante delle azioni rapide apre un menu per gestire l'elenco delle attività.",
-          "Mostra in ritardo: mostra solo le attività in ritardo.",
-          "Mostra oggi: mostra solo le attività previste per oggi.",
           "Ordina: cambia l'ordine delle attività nell'elenco.",
           "Filtra: mostra solo le attività che corrispondono ai criteri scelti.",
           "Diario delle attività apre il diario delle attività completate e delle foto delle piante, descritto in una pagina dedicata."

@@ -126,6 +126,19 @@
         "november": "Nov",
         "december": "Dec"
       }
+    },
+    "segments": {
+      "all": "All",
+      "overdue": "Overdue",
+      "today": "Today",
+      "upcoming": "Upcoming"
+    },
+    "groups": {
+      "tasks": "{{count}} tasks",
+      "noUpcomingTitle": "No upcoming tasks",
+      "noUpcomingBody": "There are no tasks due after today.",
+      "tasks_one": "{{count}} task",
+      "tasks_other": "{{count}} tasks"
     }
   },
   "inbox": {

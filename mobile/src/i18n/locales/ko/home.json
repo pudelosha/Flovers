@@ -126,6 +126,17 @@
         "november": "11월",
         "december": "12월"
       }
+    },
+    "segments": {
+      "all": "전체",
+      "overdue": "기한 지남",
+      "today": "오늘",
+      "upcoming": "예정"
+    },
+    "groups": {
+      "tasks": "작업 {{count}}개",
+      "noUpcomingTitle": "예정된 작업이 없어요",
+      "noUpcomingBody": "내일 이후로 예정된 작업이 없어요."
     }
   },
   "inbox": {

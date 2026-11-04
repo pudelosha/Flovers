@@ -224,18 +224,18 @@ it('lets an owned plant with no previous tasks or photos receive its first journ
   expect(view.UNSAFE_queryByType(FAB)).toBeNull();
 });
 
-it('keeps the journal hidden until its private photo bytes are ready', async () => {
+it('renders compact journal entries without waiting for private image downloads', async () => {
   mockPhotoLoading = true;
   const view = await renderScreen();
-  expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
-  expect(view.UNSAFE_queryByType(JournalPhotoTile)).toBeNull();
-  expect(view.UNSAFE_queryByType(FAB)).toBeNull();
+  expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+  expect(view.UNSAFE_getByType(JournalPhotoTile)).toBeTruthy();
+  expect(view.UNSAFE_getByType(FAB)).toBeTruthy();
   mockPhotoLoading = false;
   view.rerender(<TaskHistoryScreen />);
   expect(view.UNSAFE_getByType(JournalPhotoTile)).toBeTruthy();
 });
 
-it('preserves the camera selection when foreground photo revalidation shows the list spinner', async () => {
+it('preserves the camera selection when returning from the camera', async () => {
   (JournalPhotoModal as jest.Mock).mockImplementation(function Editor({
     visible,
   }: any) {
@@ -252,7 +252,7 @@ it('preserves the camera selection when foreground photo revalidation shows the 
   mockPhotoLoading = true;
   view.rerender(<TaskHistoryScreen />);
   expect(view.getByText('new camera photo')).toBeTruthy();
-  expect(view.UNSAFE_queryByType(JournalPhotoTile)).toBeNull();
+  expect(view.UNSAFE_getByType(JournalPhotoTile)).toBeTruthy();
   mockPhotoLoading = false;
   view.rerender(<TaskHistoryScreen />);
   expect(view.getByText('new camera photo')).toBeTruthy();

@@ -50,7 +50,13 @@ export default function NotificationTile({
   );
   return (
     <View style={[s.wrap, open && { zIndex: 30 }]}>
-      <View style={s.clip}>
+      <Pressable
+        style={s.clip}
+        onPress={onToggle}
+        accessibilityRole="button"
+        accessibilityLabel={title}
+        accessibilityState={{ expanded: open }}
+      >
         <Gradient
           pointerEvents="none"
           colors={['rgba(16,80,63,0.9)', 'rgba(5,31,24,0.9)']}
@@ -69,39 +75,32 @@ export default function NotificationTile({
                   user: 'account-outline',
                 }[item.source]
               }
-              size={21}
+              size={17}
               color="#FFFFFF"
             />
           </View>
           <View style={s.content}>
-            <Text style={s.title}>{title}</Text>
-            <Text style={s.body}>{body}</Text>
-            <Text style={s.date}>
-              {activityDateLabel(
-                item.createdAt,
-                settings.dateFormat || 'DD.MM.YYYY',
-              )}
+            <Text style={s.title} numberOfLines={1}>
+              {title}
+            </Text>
+            <Text style={s.body} numberOfLines={2}>
+              {body}
             </Text>
             <View style={s.meta}>
-              <Text style={s.small}>
-                {t('inbox.source')}: {t('inbox.sources.' + item.source)}
-              </Text>
-              <Text style={s.small}>
-                {t('inbox.channel')}: {t('inbox.channels.' + item.channel)}
+              <Text style={s.small} numberOfLines={1}>
+                {activityDateLabel(
+                  item.createdAt,
+                  settings.dateFormat || 'DD.MM.YYYY',
+                )}
+                {' � '}
+                {t('inbox.sources.' + item.source)}
+                {' � '}
+                {t('inbox.channels.' + item.channel)}
               </Text>
             </View>
           </View>
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel={String(t('inbox.menu'))}
-            hitSlop={8}
-            style={s.dots}
-            onPress={onToggle}
-          >
-            <Icon name="dots-horizontal" size={21} color="#FFFFFF" />
-          </Pressable>
         </View>
-      </View>
+      </Pressable>
       {open && (
         <FloatingTileMenu style={s.menu}>
           <Pressable
@@ -120,39 +119,25 @@ export default function NotificationTile({
 const s = StyleSheet.create({
   wrap: { borderRadius: 24, overflow: 'visible', position: 'relative' },
   clip: { borderRadius: 24, overflow: 'hidden' },
-  row: { padding: 14, flexDirection: 'row', gap: 10, alignItems: 'center' },
+  row: { padding: 9, flexDirection: 'row', gap: 8, alignItems: 'center' },
   circle: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 26,
+    height: 26,
+    borderRadius: 13,
     backgroundColor: 'rgba(0,0,0,0.15)',
     alignItems: 'center',
     justifyContent: 'center',
   },
   content: { flex: 1, minWidth: 0 },
-  title: { color: '#FFFFFF', fontSize: 15, fontWeight: '800' },
+  title: { color: '#FFFFFF', fontSize: 12, fontWeight: '800' },
   body: {
     color: 'rgba(255,255,255,0.92)',
-    fontSize: 13,
-    lineHeight: 18,
-    marginTop: 3,
+    fontSize: 11,
+    lineHeight: 14,
+    marginTop: 2,
   },
-  date: { color: 'rgba(255,255,255,0.8)', fontSize: 12, marginTop: 7 },
-  meta: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    columnGap: 14,
-    rowGap: 3,
-    marginTop: 4,
-  },
-  small: { color: 'rgba(255,255,255,0.8)', fontSize: 11, fontWeight: '600' },
-  dots: {
-    width: 30,
-    height: 34,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'flex-start',
-  },
+  meta: { marginTop: 3 },
+  small: { color: 'rgba(255,255,255,0.8)', fontSize: 9, fontWeight: '600' },
   menu: {
     position: 'absolute',
     right: 8,

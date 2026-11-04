@@ -1,43 +1,53 @@
-import {useAppTheme} from "../../../shared/theme/ThemeContext";
-import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
-import React, { useMemo } from "react";
+import { useAppTheme } from '../../../shared/theme/ThemeContext';
+import FloatingTileMenu from '../../../shared/ui/FloatingTileMenu';
+import React, { useMemo } from 'react';
 import {
   View,
   Text,
   Pressable,
   StyleSheet,
-} from "../../../shared/theme/native";
-import LinearGradient from "../../../shared/theme/Gradient";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
+} from '../../../shared/theme/native';
+import LinearGradient from '../../../shared/theme/Gradient';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
 
-import { s } from "../styles/task-history.styles";
-import type { TaskHistoryItem } from "../types/task-history.types";
-import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../home/constants/home.constants";
-import type { TaskType } from "../../home/types/home.types";
-import { useSettings } from "../../../app/providers/SettingsProvider";
-import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
-import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
+import { s } from '../styles/task-history.styles';
+import type { TaskHistoryItem } from '../types/task-history.types';
+import {
+  ACCENT_BY_TYPE,
+  ICON_BY_TYPE,
+} from '../../home/constants/home.constants';
+import type { TaskType } from '../../home/types/home.types';
+import { useSettings } from '../../../app/providers/SettingsProvider';
+import SharedPlantBadge from '../../../shared/ui/SharedPlantBadge';
+import {
+  plantAccess,
+  SHARED_PLANT_TINT,
+} from '../../../shared/utils/plantAccess';
 
 // --- helpers (mirrors ReminderTile) ---
 function toDisplayType(t?: string) {
-  const x = (t || "").toLowerCase();
-  if (x === "water" || x === "watering") return "watering";
-  if (x === "fertilize" || x === "fertilising" || x === "fertilizing")
-    return "fertilising";
-  if (x === "moisture" || x === "misting") return "moisture";
-  if (x === "care") return "care";
-  if (x === "repot" || x === "repotting") return "repot";
-  return "care";
+  const x = (t || '').toLowerCase();
+  if (x === 'water' || x === 'watering') return 'watering';
+  if (x === 'fertilize' || x === 'fertilising' || x === 'fertilizing')
+    return 'fertilising';
+  if (x === 'moisture' || x === 'misting') return 'moisture';
+  if (x === 'care') return 'care';
+  if (x === 'repot' || x === 'repotting') return 'repot';
+  return 'care';
 }
 
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(0,0,0,${alpha})`;
-  if (!hex || typeof hex !== "string") return fallback;
+  if (!hex || typeof hex !== 'string') return fallback;
   let h = hex.trim();
-  if (!h.startsWith("#")) h = `#${h}`;
-  h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+  if (!h.startsWith('#')) h = `#${h}`;
+  h = h.replace('#', '');
+  if (h.length === 3)
+    h = h
+      .split('')
+      .map(c => c + c)
+      .join('');
   if (h.length !== 6) return fallback;
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
@@ -49,20 +59,20 @@ function hexToRgba(hex?: string, alpha = 1) {
 
 function formatDateWithPattern(d: Date | string, pattern: string): string {
   const dt = d instanceof Date ? d : new Date(d);
-  if (Number.isNaN(+dt)) return "";
+  if (Number.isNaN(+dt)) return '';
 
-  const dd = String(dt.getDate()).padStart(2, "0");
-  const mm = String(dt.getMonth() + 1).padStart(2, "0");
+  const dd = String(dt.getDate()).padStart(2, '0');
+  const mm = String(dt.getMonth() + 1).padStart(2, '0');
   const yyyy = dt.getFullYear();
 
-  const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
+  const fmt = pattern && typeof pattern === 'string' ? pattern : 'DD.MM.YYYY';
 
-  return fmt.replace("YYYY", String(yyyy)).replace("MM", mm).replace("DD", dd);
+  return fmt.replace('YYYY', String(yyyy)).replace('MM', mm).replace('DD', dd);
 }
 
 // EXACT SAME green tones as AuthCard / Reminders / Plants
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 type Props = {
   item: TaskHistoryItem;
@@ -89,22 +99,24 @@ export default function TaskHistoryTile({
   const { t } = useTranslation();
 
   const { settings } = useSettings();
-  const {isLight}=useAppTheme();
+  const { isLight } = useAppTheme();
   const access = plantAccess(item.access);
-  const dateFormat = settings.dateFormat || "DD.MM.YYYY";
+  const dateFormat = settings.dateFormat || 'DD.MM.YYYY';
 
   const type = item.type as TaskType;
   const displayType = toDisplayType(type as any);
   const accent = ACCENT_BY_TYPE[displayType];
-  const icon = ICON_BY_TYPE[displayType] ?? "calendar-check";
+  const icon = ICON_BY_TYPE[displayType] ?? 'calendar-check';
 
   const completedLabel = useMemo(
     () => formatDateWithPattern(item.completedAt, dateFormat),
-    [item.completedAt, dateFormat]
+    [item.completedAt, dateFormat],
   );
 
   const hasNote = !!item.note && item.note.trim().length > 0;
-  const completedBy = item.completedBy?.name.trim() || t("taskHistory.tile.unknownUser", { defaultValue: "Unknown user" });
+  const completedBy =
+    item.completedBy?.name.trim() ||
+    t('taskHistory.tile.unknownUser', { defaultValue: 'Unknown user' });
 
   const onToggleBody = () => {
     onPressBody?.();
@@ -126,12 +138,14 @@ export default function TaskHistoryTile({
     if (onGoToPlant) onGoToPlant(item);
   };
 
-  const typeLabel = t(`taskHistory.types.${displayType}`, {
-    defaultValue: displayType,
-  });
-
   return (
-    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
+    <View
+      style={[
+        s.cardWrap,
+        { minHeight: access.isShared ? 78 : 66 },
+        isMenuOpen && s.cardWrapRaised,
+      ]}
+    >
       {/* Glass stack: AuthCard-matching gradients + tint + border */}
       <View style={s.cardGlass}>
         {/* Base green gradient: EXACT match to AuthCard */}
@@ -150,16 +164,17 @@ export default function TaskHistoryTile({
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
+            'rgba(255, 255, 255, 0.06)',
+            'rgba(255, 255, 255, 0.02)',
+            'rgba(255, 255, 255, 0.08)',
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
 
         {/* Accent wash: left (accent) -> right (AuthCard dark) */}
-        <LinearGradient taskAccent={accent}
+        <LinearGradient
+          taskAccent={accent}
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
@@ -175,89 +190,137 @@ export default function TaskHistoryTile({
 
         {/* Unified tint/border (same as other screens) */}
         <View pointerEvents="none" style={s.cardTint} />
-        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
+        {access.isShared && (
+          <View
+            pointerEvents="none"
+            style={[
+              StyleSheet.absoluteFill,
+              { backgroundColor: SHARED_PLANT_TINT },
+            ]}
+          />
+        )}
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <Pressable testID="task-history-tile-body" accessible={false}
-        style={styles.tileBody} onPress={onToggleBody}
-        android_ripple={{ color: "rgba(255,255,255,0.10)" }}>
-      <View style={s.cardRow}>
-        <View style={s.cardBodyPressable}>
-          {/* Left: icon only */}
-          <View style={s.leftCol}>
-            <View style={[s.leftIconBubble, { backgroundColor: isLight ? hexToRgba(accent, 0.25) : hexToRgba("#000000", 0.15) }]}>
-              <MaterialCommunityIcons name={icon} size={24} color={accent} />
+      <Pressable
+        testID="task-history-tile-body"
+        accessible={false}
+        style={styles.tileBody}
+        onPress={onToggleBody}
+        android_ripple={{ color: 'rgba(255,255,255,0.10)' }}
+      >
+        <View style={[s.cardRow, { minHeight: access.isShared ? 78 : 66 }]}>
+          <View style={s.cardBodyPressable}>
+            {/* Left: icon only */}
+            <View style={[s.leftCol, { width: 38 }]}>
+              <View
+                style={[
+                  s.leftIconBubble,
+                  { width: 32, height: 32, borderRadius: 16 },
+                  {
+                    backgroundColor: isLight
+                      ? hexToRgba(accent, 0.25)
+                      : hexToRgba('#000000', 0.15),
+                  },
+                ]}
+              >
+                <MaterialCommunityIcons name={icon} size={20} color={accent} />
+              </View>
+            </View>
+
+            {/* Center: type + plant + location */}
+            <View style={s.centerCol}>
+              <Text
+                style={[s.plantName, { fontSize: 14, marginTop: 0 }]}
+                numberOfLines={1}
+              >
+                {item.plant}
+              </Text>
+              <SharedPlantBadge access={item.access} compact />
+
+              {!!item.location && (
+                <View style={s.locationRow}>
+                  <MaterialCommunityIcons
+                    name="map-marker"
+                    size={12}
+                    color="#FFFFFF"
+                    style={s.locationIcon}
+                  />
+                  <Text
+                    style={[s.location, { fontSize: 11 }]}
+                    numberOfLines={1}
+                  >
+                    {item.location}
+                  </Text>
+                </View>
+              )}
+            </View>
+
+            <View style={s.rightCol}>
+              <Text
+                style={[s.completedDateText, { marginTop: 0 }]}
+                numberOfLines={1}
+              >
+                {completedLabel || '—'}
+              </Text>
+              <Text
+                style={s.completedByText}
+                numberOfLines={1}
+                ellipsizeMode="tail"
+              >
+                {completedBy}
+              </Text>
             </View>
           </View>
-
-          {/* Center: type + plant + location */}
-          <View style={s.centerCol}>
-            <Text style={[s.taskTypeLabel, { color: accent }]} numberOfLines={1}>
-              {typeLabel}
-            </Text>
-            <Text style={s.plantName} numberOfLines={1}>
-              {item.plant}
-            </Text>
-            <SharedPlantBadge access={item.access} compact />
-
-            {!!item.location && (
-              <View style={s.locationRow}>
-                <MaterialCommunityIcons
-                  name="map-marker"
-                  size={12}
-                  color="#FFFFFF"
-                  style={s.locationIcon}
-                />
-                <Text style={s.location} numberOfLines={1}>
-                  {item.location}
-                </Text>
-              </View>
-            )}
-
-          </View>
-
-          <View style={s.separator} />
-
-          <View style={s.rightCol}>
-            <Text style={s.completedLabel} numberOfLines={1}>
-              {t("taskHistory.tile.completed", { defaultValue: "Completed" })}
-            </Text>
-            <Text style={s.completedDateText} numberOfLines={1}>
-              {completedLabel || "—"}
-            </Text>
-            <Text style={s.completedByText} numberOfLines={1} ellipsizeMode="tail">
-              {completedBy}
-            </Text>
-          </View>
         </View>
-      </View>
 
-      {hasNote && <View style={[s.noteBox, styles.noteSection]}>
-        <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
-        <Text style={s.noteText}>{item.note}</Text>
-      </View>}
+        {hasNote && (
+          <View style={[s.noteBox, styles.noteSection]}>
+            <Text style={s.noteLabel}>{t('taskHistory.tile.noteLabel')}</Text>
+            <Text style={s.noteText}>{item.note}</Text>
+          </View>
+        )}
       </Pressable>
 
       {/* Inline menu */}
       {isMenuOpen && (
         <FloatingTileMenu style={s.menuSheet}>
-          {access.canEdit && item.undoCompletion && onUndo && <Pressable style={s.menuItem}
-            onPress={()=>{onToggleMenu();onUndo(item);}}>
-            <MaterialCommunityIcons name="undo-variant" size={18} color="#FFFFFF" style={{marginRight:8}}/>
-            <Text style={s.menuItemText}>{t("taskHistory.undo.title",{defaultValue:"Undo completion"})}</Text>
-          </Pressable>}
+          {access.canEdit && item.undoCompletion && onUndo && (
+            <Pressable
+              style={s.menuItem}
+              onPress={() => {
+                onToggleMenu();
+                onUndo(item);
+              }}
+            >
+              <MaterialCommunityIcons
+                name="undo-variant"
+                size={18}
+                color="#FFFFFF"
+                style={{ marginRight: 8 }}
+              />
+              <Text style={s.menuItemText}>
+                {t('taskHistory.undo.title', {
+                  defaultValue: 'Undo completion',
+                })}
+              </Text>
+            </Pressable>
+          )}
 
           {/* Edit reminder */}
-          {access.canEdit && <Pressable style={s.menuItem} onPress={handleEditReminder}>
-            <MaterialCommunityIcons
-              name="pencil-outline"
-              size={18}
-              color="#FFFFFF"
-              style={{ marginRight: 8 }}
-            />
-            <Text style={s.menuItemText}>{t("taskHistory.menu.editReminder")}</Text>
-          </Pressable>}
+          {access.canEdit && (
+            <Pressable style={s.menuItem} onPress={handleEditReminder}>
+              <MaterialCommunityIcons
+                name="pencil-outline"
+                size={18}
+                color="#FFFFFF"
+                style={{ marginRight: 8 }}
+              />
+              <Text style={s.menuItemText}>
+                {t('taskHistory.menu.editReminder')}
+              </Text>
+            </Pressable>
+          )}
 
           {/* Plant details */}
           <Pressable style={s.menuItem} onPress={handleGoToPlant}>
@@ -267,21 +330,30 @@ export default function TaskHistoryTile({
               color="#FFFFFF"
               style={{ marginRight: 8 }}
             />
-            <Text style={s.menuItemText}>{t("taskHistory.menu.goToPlant")}</Text>
+            <Text style={s.menuItemText}>
+              {t('taskHistory.menu.goToPlant')}
+            </Text>
           </Pressable>
 
           {/* Delete – last & red */}
-          {access.canEdit && <Pressable style={s.menuItem} onPress={handleDelete}>
-            <MaterialCommunityIcons
-              name="delete-outline"
-              size={18}
-              color="#FF6B6B"
-              style={{ marginRight: 8 }}
-            />
-            <Text style={[s.menuItemText, { color: "#FF6B6B", fontWeight: "800" }]}>
-              {t("taskHistory.menu.deleteTask")}
-            </Text>
-          </Pressable>}
+          {access.canEdit && (
+            <Pressable style={s.menuItem} onPress={handleDelete}>
+              <MaterialCommunityIcons
+                name="delete-outline"
+                size={18}
+                color="#FF6B6B"
+                style={{ marginRight: 8 }}
+              />
+              <Text
+                style={[
+                  s.menuItemText,
+                  { color: '#FF6B6B', fontWeight: '800' },
+                ]}
+              >
+                {t('taskHistory.menu.deleteTask')}
+              </Text>
+            </Pressable>
+          )}
         </FloatingTileMenu>
       )}
     </View>
@@ -289,7 +361,7 @@ export default function TaskHistoryTile({
 }
 
 const styles = StyleSheet.create({
-  tileBody: { borderRadius: 28, overflow: "hidden" },
+  tileBody: { borderRadius: 28, overflow: 'hidden' },
   noteSection: {
     marginHorizontal: 20,
     paddingTop: 0,

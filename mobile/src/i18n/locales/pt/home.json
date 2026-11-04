@@ -126,6 +126,17 @@
         "november": "Nov",
         "december": "Dez"
       }
+    },
+    "segments": {
+      "all": "Todas",
+      "overdue": "Em atraso",
+      "today": "Hoje",
+      "upcoming": "Próximas"
+    },
+    "groups": {
+      "tasks": "{{count}} tarefas",
+      "noUpcomingTitle": "Sem tarefas futuras",
+      "noUpcomingBody": "Não há tarefas previstas para depois de hoje."
     }
   },
   "inbox": {

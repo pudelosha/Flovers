@@ -15,7 +15,8 @@
         "body": [
           "Chaque carte correspond à une tâche créée à partir d’un rappel : arrosage, brumisation, fertilisation, rempotage ou entretien général.",
           "Créer un rappel génère immédiatement une tâche, même pour une date future. La suivante est planifiée dès que vous terminez celle-ci.",
-          "La carte indique généralement le type de soin, le nom de la plante, son emplacement et l’échéance, par exemple aujourd’hui ou en retard."
+          "La carte indique généralement le type de soin, le nom de la plante, son emplacement et l’échéance, par exemple aujourd’hui ou en retard.",
+          "Le sélecteur Toutes, En retard, Aujourd’hui et À venir reste fixe au-dessus de la liste défilante. À venir affiche les tâches prévues après aujourd’hui. La liste regroupe les tâches par jour, avec leur nombre et la date à droite. Les tuiles compactes affichent la plante et son emplacement à gauche, le type et le délai à droite. Dans le calendrier, elles affichent la date d’échéance sans regroupement. Le tri par plante ou emplacement s’applique au sein de chaque journée."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Les actions rapides",
         "body": [
           "Le bouton d’actions rapides de l’accueil ouvre un menu pour gérer tes tâches.",
-          "« Afficher les en retard » : affiche uniquement les tâches en retard.",
-          "« Afficher ceux d’aujourd’hui » : affiche uniquement les tâches prévues aujourd’hui.",
           "« Trier » : change l’ordre des tâches.",
           "« Filtrer » : limite la liste selon les critères choisis.",
           "Journal des tâches ouvre le journal des tâches terminées et des photos des plantes, présenté dans une page dédiée."

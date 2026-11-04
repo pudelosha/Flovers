@@ -58,6 +58,15 @@ export default function NotificationsCard({
         </View>
       </Pressable>
 
+      {(emailDaily || emailSharedDue || email24h) && (
+        <HourStepper
+          label={t("profile.notifications.sendAt")}
+          value={formatHour(emailHour)}
+          onDec={() => setEmailHour((h: number) => decHour(h))}
+          onInc={() => setEmailHour((h: number) => incHour(h))}
+        />
+      )}
+
       <Pressable style={controls.toggleRow} onPress={() => setEmailSharedDue((value: boolean) => !value)}
         accessibilityRole="checkbox" accessibilityState={{ checked: emailSharedDue }}
         accessibilityLabel={t("profile.notifications.emailSharedDueLabel", { defaultValue: "Email me about due tasks for plants shared with me" })}>
@@ -68,14 +77,6 @@ export default function NotificationsCard({
         })}</Text>
       </Pressable>
 
-      {(emailDaily || emailSharedDue || email24h) && (
-        <HourStepper
-          label={t("profile.notifications.sendAt")}
-          value={formatHour(emailHour)}
-          onDec={() => setEmailHour((h: number) => decHour(h))}
-          onInc={() => setEmailHour((h: number) => incHour(h))}
-        />
-      )}
 
       <Pressable
         style={controls.toggleRow}
@@ -126,6 +127,15 @@ export default function NotificationsCard({
         </View>
       </Pressable>
 
+      {(pushDaily || pushSharedDue || push24h) && (
+        <HourStepper
+          label={t("profile.notifications.notifyAt")}
+          value={formatHour(pushHour)}
+          onDec={() => setPushHour((h: number) => decHour(h))}
+          onInc={() => setPushHour((h: number) => incHour(h))}
+        />
+      )}
+
       <Pressable style={controls.toggleRow} onPress={() => setPushSharedDue((value: boolean) => !value)}
         accessibilityRole="checkbox" accessibilityState={{ checked: pushSharedDue }}
         accessibilityLabel={t("profile.notifications.pushSharedDueLabel", { defaultValue: "Notify me about due tasks for plants shared with me" })}>
@@ -136,14 +146,6 @@ export default function NotificationsCard({
         })}</Text>
       </Pressable>
 
-      {(pushDaily || pushSharedDue || push24h) && (
-        <HourStepper
-          label={t("profile.notifications.notifyAt")}
-          value={formatHour(pushHour)}
-          onDec={() => setPushHour((h: number) => decHour(h))}
-          onInc={() => setPushHour((h: number) => incHour(h))}
-        />
-      )}
 
       <Pressable
         style={controls.toggleRow}

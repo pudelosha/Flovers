@@ -126,6 +126,17 @@
         "november": "नवं",
         "december": "दिसं"
       }
+    },
+    "segments": {
+      "all": "सभी",
+      "overdue": "देरी से",
+      "today": "आज",
+      "upcoming": "आगामी"
+    },
+    "groups": {
+      "tasks": "{{count}} काम",
+      "noUpcomingTitle": "कोई आगामी काम नहीं",
+      "noUpcomingBody": "आज के बाद के लिए कोई काम तय नहीं है।"
     }
   },
   "inbox": {

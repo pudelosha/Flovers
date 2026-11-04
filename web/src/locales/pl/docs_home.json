@@ -15,7 +15,8 @@
         "body": [
           "Każdy kafelek to jedno zadanie wynikające z przypomnienia, na przykład podlewanie, zraszanie, nawożenie, przesadzanie lub inny zabieg pielęgnacyjny.",
           "Po dodaniu przypomnienia od razu powstaje oczekujące zadanie, nawet z późniejszym terminem. Po jego wykonaniu od razu planowane jest kolejne.",
-          "Na kafelku zobaczysz rodzaj zadania, nazwę rośliny, lokalizację i informację o terminie, na przykład „Na dziś” lub „Zaległe”."
+          "Na kafelku zobaczysz rodzaj zadania, nazwę rośliny, lokalizację i informację o terminie, na przykład „Na dziś” lub „Zaległe”.",
+          "Nad przewijaną listą znajduje się stały przełącznik: Wszystkie, Zaległe, Dzisiaj i Nadchodzące. Nadchodzące pokazuje zadania z terminem po dzisiejszym dniu. Lista jest podzielona na dni, z liczbą zadań i datą po prawej stronie nagłówka. Kompaktowe kafelki pokazują nazwę rośliny i lokalizację po lewej, a rodzaj zadania i czas do terminu po prawej. W kalendarzu te same kafelki pokazują datę wykonania zamiast opisu względnego i nie są grupowane. Sortowanie według rośliny lub lokalizacji działa w obrębie każdego dnia."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Przycisk szybkich akcji",
         "body": [
           "Przycisk szybkich akcji na ekranie głównym otwiera menu z opcjami zarządzania listą zadań.",
-          "Pokaż zaległe: wyświetla tylko zadania, których termin już minął.",
-          "Pokaż na dziś: wyświetla zadania zaplanowane na dzisiaj.",
           "Sortuj: zmienia kolejność zadań na liście.",
           "Filtruj: pokazuje zadania spełniające wybrane kryteria.",
           "Dziennik zadań otwiera dziennik wykonanych zadań i zdjęć roślin, opisany na osobnej stronie."

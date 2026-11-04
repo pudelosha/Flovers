@@ -1,5 +1,5 @@
 import React from "react";
-import { act, render, waitFor } from "@testing-library/react-native";
+import { act, render, waitFor, fireEvent } from "@testing-library/react-native";
 import HomeScreen from "../HomeScreen";
 import TaskTile from "../../components/TaskTile";
 import TaskCalendar from "../../components/TaskCalendar";
@@ -74,12 +74,12 @@ describe("Home navigation from shared plants", () => {
   it("replaces conflicting manual and due-today filters on an already mounted Home screen", async () => {
     const view = render(<HomeScreen />); await view.findByText("Pilea task");
     applyFilters(view, { plantId: "2", location: "Kitchen", types: ["watering"], dueFrom: "2000-01-01", dueTo: "2099-12-31" });
-    act(() => view.UNSAFE_getByType(FAB).props.actions.find((action: any) => action.key === "dueToday").onPress());
+    fireEvent.press(view.getByLabelText('home.segments.today'));
     expect(view.queryByText("Bird task")).toBeNull();
     requestPlant(view, "1", "second"); await view.findByText("Bird task");
     expect(view.queryByText("Pilea task")).toBeNull();
     expect(filterProps(view).filters).toEqual({ ...allFilters, plantId: "1" });
-    expect(view.UNSAFE_getByType(FAB).props.actions.some((action: any) => action.key === "dueToday")).toBe(true);
+    expect(view.getByLabelText("home.segments.all").props.accessibilityState.selected).toBe(true);
   });
 
   it("can apply the same plant again after an earlier request was consumed", async () => {
@@ -172,4 +172,38 @@ it("switches views on a horizontal swipe but rejects vertical scrolling",async()
   act(()=>{handlers.onPanResponderRelease!({} as any,{dx:80,dy:5} as any);});
   expect(view.UNSAFE_getByType(TaskCalendar)).toBeTruthy();
  }finally{spy.mockRestore();}
+});
+
+
+it("filters compact list tiles through the fixed segments and removes grouping in Calendar", async () => {
+  jest.clearAllMocks(); mockFocused=true; mockParams=undefined;
+  const samples=tasks();
+  const yesterday=new Date(); yesterday.setDate(yesterday.getDate()-1);
+  samples.push({...samples[0],id:'late',plant:'Late plant',dueDate:yesterday});
+  (fetchHomeTasks as jest.Mock).mockResolvedValue(samples);
+  const view=render(<HomeScreen/>); await view.findByText('Bird task');
+  expect(view.UNSAFE_getAllByType(TaskTile).every(tile=>tile.props.compact && !tile.props.calendar)).toBe(true);
+  fireEvent.press(view.getByLabelText('home.segments.upcoming'));
+  expect(view.getByText('Bird task')).toBeTruthy();
+  expect(view.queryByText('Pilea task')).toBeNull(); expect(view.queryByText('Late plant')).toBeNull();
+  fireEvent.press(view.getByLabelText('home.segments.overdue'));
+  expect(view.getByText('Late plant')).toBeTruthy(); expect(view.queryByText('Bird task')).toBeNull();
+  fireEvent.press(view.getByLabelText('home.segments.today'));
+  expect(view.getByText('Pilea task')).toBeTruthy(); expect(view.queryByText('Late plant')).toBeNull();
+  fireEvent.press(view.getByLabelText('home.segments.all'));
+  expect(view.getAllByText('home.groups.tasks')).toHaveLength(3);
+  act(()=>view.UNSAFE_getByType(FAB).props.actions.find((a:any)=>a.key==='calendar').onPress());
+  expect(view.queryByLabelText('home.segments.all')).toBeNull();
+  expect(view.queryByText('home.groups.tasks')).toBeNull();
+  expect(view.UNSAFE_getAllByType(TaskTile).every(tile=>tile.props.compact && tile.props.calendar)).toBe(true);
+});
+
+it('keeps the FAB free of duplicate date shortcuts while retaining detailed filter controls',async()=>{
+ jest.clearAllMocks();mockFocused=true;mockParams=undefined;(fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
+ const view=render(<HomeScreen/>);await view.findByText('Bird task');
+ const keys=()=>view.UNSAFE_getByType(FAB).props.actions.map((a:any)=>a.key);
+ expect(keys()).not.toEqual(expect.arrayContaining(['overdue','dueToday','clearViewFilter']));
+ fireEvent.press(view.getByLabelText('home.segments.today'));
+ expect(keys()).not.toEqual(expect.arrayContaining(['overdue','dueToday','clearViewFilter']));
+ expect(keys()).toContain('filter');
 });

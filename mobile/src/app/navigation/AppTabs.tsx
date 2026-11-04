@@ -228,6 +228,7 @@ function GlassTabBar({ state, navigation }: any) {
 
         {/* Gradient tint */}
         <LinearGradientView
+          themeRole="navigation"
           colors={TAB_GRADIENT_TINT}
           locations={[0, 1]}
           start={{ x: 0, y: 0.5 }}

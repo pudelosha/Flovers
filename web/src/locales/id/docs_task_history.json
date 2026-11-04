@@ -11,7 +11,7 @@
       {
         "heading": "Tugas yang selesai",
         "body": [
-          "Kartu tugas tetap menampilkan jenis tugas, tanaman, dan lokasi. Kolom kanan memiliki tiga baris: Selesai, tanggal, dan orang yang menyelesaikannya. Catatan selalu ditampilkan jika ada. Pemilik dapat mengedit pengingat terkait atau menghapus entri tugas. Detail tanaman membuka tanaman tersebut."
+          "Kartu tugas ringkas menampilkan ikon, tanaman, dan lokasi di kiri, serta tanggal selesai dan pelakunya di kanan. Catatan tetap terlihat di bawahnya. Ketuk untuk membuka tindakan dan detail tanaman."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Kartu foto dan pengeditan",
         "body": [
-          "Foto muncul di antara tugas selesai, dengan gambar yang memudar ke latar, waktu penambahan di kanan atas, dan catatan di bagian bawah. Kartu ini tidak memiliki label jenis tugas. Ketuk kartu untuk Lihat foto, Edit foto, Detail tanaman, atau Hapus foto. Pemilik dapat mengganti gambar, mengubah tanggal atau catatan, dan menghapus setelah konfirmasi. Lihat foto membuka gambar utuh di jendela terpisah, tanpa potongan atau gradasi pada kartu. Tampilan ini tersedia untuk pemilik dan orang yang masih memiliki akses berbagi ke tanaman tersebut.",
+          "Foto memakai kartu ringkas dengan latar gradien yang sama tanpa pratinjau gambar. Ikon dalam lingkaran di kiri membuka foto lengkap. Kartu menampilkan tanaman, lokasi, tanggal unggah, pemilik yang menambahkannya, dan catatan. Menu menyediakan lihat, edit, hapus foto serta detail tanaman. Hanya pemilik yang dapat mengganti foto, tanggal foto opsional, dan catatan; pengguna berbagi dapat melihat foto dan detail.",
           "Dalam pratinjau foto, Sebelumnya membuka foto yang lebih lama dari tanaman yang sama dan Berikutnya membuka foto yang lebih baru, termasuk foto yang belum dimuat dalam daftar jurnal. Tanggal dan waktu unggah ditampilkan di bawah gambar. Tombol tidak ditampilkan jika hanya ada satu foto; arah yang tidak tersedia dinonaktifkan."
         ]
       },

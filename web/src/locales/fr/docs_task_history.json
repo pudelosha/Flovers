@@ -11,7 +11,7 @@
       {
         "heading": "Les tâches terminées",
         "body": [
-          "Les tuiles conservent le type de tâche, la plante et l’emplacement. La colonne de droite affiche trois lignes : Terminée, la date et la personne qui s’en est occupée. Les notes sont toujours visibles lorsqu’il y en a. Le propriétaire peut modifier le rappel associé ou supprimer l’entrée. Détails de la plante ouvre sa fiche."
+          "Les tuiles compactes affichent à gauche l’icône, la plante et son emplacement, à droite la date de réalisation et la personne. Les notes restent visibles en dessous. Touchez pour ouvrir les actions, dont les détails de la plante."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Les tuiles photo et leur modification",
         "body": [
-          "Les photos apparaissent parmi les tâches terminées, avec une image en fondu, Ajoutée le et l’horodatage en haut à droite, puis les notes en bas. Elles n’ont pas de type de tâche. Touche une tuile pour Voir la photo, Modifier la photo, Détails de la plante ou Supprimer la photo. Le propriétaire peut remplacer l’image, modifier la date ou les notes et supprimer l’entrée après confirmation. Voir la photo ouvre l’image entière dans une fenêtre, sans recadrage ni dégradé. Cette vue est accessible au propriétaire et aux personnes qui ont un accès actif à la plante partagée.",
+          "Les photos utilisent le même format compact sur fond dégradé, sans aperçu. L’icône dans le cercle à gauche ouvre la photo complète. La tuile affiche plante, emplacement, date d’ajout, propriétaire ayant ajouté la photo et notes éventuelles. Le menu permet de voir, modifier ou supprimer la photo et d’ouvrir les détails de la plante. Seul le propriétaire peut modifier la photo, sa date facultative et ses notes ; les personnes autorisées peuvent consulter photo et détails.",
           "Dans l’aperçu, Précédente ouvre une photo plus ancienne de la même plante et Suivante une photo plus récente, même si elle n’est pas encore chargée dans la liste du journal. La date et l’heure d’ajout s’affichent sous l’image. Les boutons sont masqués s’il n’y a qu’une photo ; les directions indisponibles sont désactivées."
         ]
       },

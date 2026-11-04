@@ -15,7 +15,8 @@
         "body": [
           "Setiap ubin mewakili satu Tugas yang dihasilkan dari definisi Pengingat (misalnya: Penyiraman, Gerimis, Pemupukan, Repotting, atau Perawatan umum).",
           "Membuat pengingat langsung menghasilkan tugas tertunda, meski tenggatnya masih lama. Saat tugas diselesaikan, tugas berikutnya langsung dijadwalkan.",
-          "Setiap ubin biasanya menunjukkan jenis tugas, nama tanaman hias, lokasi, dan status jatuh tempo (seperti Jatuh Tempo hari ini atau Terlambat)."
+          "Setiap ubin biasanya menunjukkan jenis tugas, nama tanaman hias, lokasi, dan status jatuh tempo (seperti Jatuh Tempo hari ini atau Terlambat).",
+          "Pilihan Semua, Terlambat, Hari ini, dan Mendatang tetap terlihat di atas daftar yang dapat digulir. Mendatang menampilkan tugas setelah hari ini. Daftar dikelompokkan per tanggal jatuh tempo, dengan jumlah tugas dan tanggal di kanan. Kartu ringkas menampilkan tanaman dan lokasi di kiri, jenis tugas dan sisa waktu di kanan. Pada kalender, kartu menampilkan tanggal jatuh tempo tanpa pengelompokan. Urutan berdasarkan tanaman atau lokasi berlaku dalam setiap kelompok hari."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Pintasan Tombol Tindakan Mengambang (FAB).",
         "body": [
           "Layar Beranda menyertakan Tombol Tindakan Mengambang (FAB) yang membuka tindakan cepat untuk mengerjakan tugas.",
-          "Tampilkan terlambat: menerapkan filter pintasan yang hanya menampilkan tugas yang terlambat.",
-          "Tampilkan batas waktu hari ini: menerapkan filter pintasan yang menampilkan tugas yang harus diselesaikan hari ini.",
           "Sortir: mengubah urutan tugas dalam daftar.",
           "Filter: mempersempit daftar berdasarkan kriteria yang dipilih.",
           "Jurnal tugas membuka kumpulan tugas selesai dan foto tanaman, yang dijelaskan di halaman tersendiri."

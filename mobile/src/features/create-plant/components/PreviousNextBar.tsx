@@ -124,9 +124,9 @@ export default function PreviousNextBar({
   const isPrevDisabled = !!prevDisabled || defaults.hidePrev;
   const isNextDisabled = !!nextDisabled || blockNextBecauseOfStep;
 
-  // Same source fill as AppTabs.focusPill; the shared palette resolves both identically.
-  const prevBg = isLight ? "rgba(255,255,255,0.12)" : "#263238";
-  const nextBg = "#0B7285";
+  // Solid fills keep wizard navigation readable over every background.
+  const prevBg = isLight ? (isPrevDisabled ? "#E1E8E5" : "#CFEEE5") : (isPrevDisabled ? "#465452" : "#263238");
+  const nextBg = isNextDisabled ? "#607D80" : "#0B7285";
   const borderStyle = {
     borderWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
@@ -157,7 +157,7 @@ export default function PreviousNextBar({
                   flex: 1,
                   backgroundColor: prevBg,
                   paddingHorizontal: 14,
-                  opacity: isPrevDisabled ? 0.5 : 1,
+                  opacity: 1,
                 },
                 borderStyle,
               ]}
@@ -179,7 +179,7 @@ export default function PreviousNextBar({
                 flex: 1,
                 backgroundColor: nextBg,
                 paddingHorizontal: 14,
-                opacity: isNextDisabled ? 0.5 : 1,
+                opacity: 1,
               },
               borderStyle,
             ]}

@@ -11,7 +11,7 @@
       {
         "heading": "Tareas completadas",
         "body": [
-          "Las tarjetas mantienen el tipo de tarea, la planta y la ubicación. A la derecha aparecen tres filas: Completada, la fecha y la persona que la realizó. Las notas siempre son visibles cuando existen. El propietario puede editar el recordatorio vinculado o eliminar la entrada. Detalles de la planta abre su ficha."
+          "Las tarjetas compactas muestran icono, planta y ubicación a la izquierda, y fecha de finalización y persona a la derecha. Las notas siguen visibles debajo. Toca para abrir las acciones y los detalles de la planta."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Tarjetas de fotos y edición",
         "body": [
-          "Las fotos aparecen entre las tareas completadas, con una imagen difuminada, Añadida y su fecha y hora arriba a la derecha, y las notas abajo. No tienen una etiqueta de tipo de tarea. Toca la tarjeta para Ver foto, Editar foto, Detalles de la planta o Eliminar foto. El propietario puede sustituir la imagen, cambiar la fecha o las notas y eliminarla tras confirmar. Ver foto abre la imagen completa en una ventana, sin recorte ni degradado. Esta vista está disponible para el propietario y las personas con acceso activo a la planta compartida.",
+          "Las fotos usan el mismo formato compacto con fondo degradado y sin vista previa. El icono circular izquierdo abre la foto completa. La tarjeta muestra planta, ubicación, fecha de subida, propietario que la añadió y notas. El menú permite ver, editar o borrar la foto y abrir los detalles de la planta. Solo el propietario puede cambiar foto, fecha opcional y notas; las personas con acceso pueden ver la foto y los detalles.",
           "En la vista previa, Anterior abre una foto más antigua de la misma planta y Siguiente una más reciente, aunque aún no se haya cargado en la lista del diario. Debajo de la imagen se muestran la fecha y la hora de subida. Los botones se ocultan si solo hay una foto y las direcciones no disponibles se desactivan."
         ]
       },

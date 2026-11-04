@@ -126,6 +126,17 @@
         "november": "11月",
         "december": "12月"
       }
+    },
+    "segments": {
+      "all": "全部",
+      "overdue": "已逾期",
+      "today": "今天",
+      "upcoming": "即将到期"
+    },
+    "groups": {
+      "tasks": "{{count}} 项任务",
+      "noUpcomingTitle": "暂无后续任务",
+      "noUpcomingBody": "今天之后没有待完成的任务。"
     }
   },
   "inbox": {

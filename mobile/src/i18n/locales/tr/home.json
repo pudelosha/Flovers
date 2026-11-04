@@ -126,6 +126,17 @@
         "november": "Kasım",
         "december": "Aralık"
       }
+    },
+    "segments": {
+      "all": "Tümü",
+      "overdue": "Geciken",
+      "today": "Bugün",
+      "upcoming": "Yaklaşan"
+    },
+    "groups": {
+      "tasks": "{{count}} görev",
+      "noUpcomingTitle": "Yaklaşan görev yok",
+      "noUpcomingBody": "Bugünden sonrası için planlanmış görev yok."
     }
   },
   "inbox": {

@@ -209,7 +209,6 @@ export default function NotificationsScreen() {
             key: 'delete',
             icon: 'trash-can-outline',
             label: String(t('inbox.delete')),
-            danger: true,
             onPress: () => {
               setMenu(null);
               setSingle(null);
@@ -223,6 +222,7 @@ export default function NotificationsScreen() {
     <View style={{ flex: 1 }}>
       <GlassHeader
         title={String(t('inbox.title'))}
+        showSeparator={false}
         gradientColors={['rgba(5,31,24,0.70)', 'rgba(16,80,63,0.70)']}
         solidFallback="rgba(10,51,40,0.70)"
         rightIconName="qrcode-scan"

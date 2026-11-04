@@ -15,7 +15,8 @@
         "body": [
           "Cada tarjeta representa una tarea de un recordatorio: riego, pulverización, fertilización, trasplante o cuidado general.",
           "Crear un recordatorio genera de inmediato una tarea pendiente, aunque sea para más adelante. Al completarla, se programa la siguiente.",
-          "La tarjeta suele mostrar el tipo de cuidado, el nombre de la planta, la ubicación y si toca hoy o está atrasada."
+          "La tarjeta suele mostrar el tipo de cuidado, el nombre de la planta, la ubicación y si toca hoy o está atrasada.",
+          "El selector Todas, Atrasadas, Hoy y Próximas permanece fijo encima de la lista. Próximas muestra tareas posteriores a hoy. La lista agrupa las tareas por día de vencimiento, con el número de tareas y la fecha a la derecha. Las tarjetas compactas muestran planta y ubicación a la izquierda, y tipo y plazo relativo a la derecha. En el calendario muestran la fecha de vencimiento sin grupos. La ordenación por planta o ubicación se aplica dentro de cada día."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Acciones rápidas",
         "body": [
           "El botón de acciones rápidas de Inicio abre un menú para gestionar tus tareas.",
-          "«Mostrar atrasadas»: muestra solo las tareas atrasadas.",
-          "«Mostrar para hoy»: muestra solo las tareas previstas para hoy.",
           "«Ordenar»: cambia el orden de las tareas.",
           "«Filtrar»: limita la lista según los criterios elegidos.",
           "Diario de tareas abre el diario de tareas completadas y fotos de plantas, explicado en una página propia."

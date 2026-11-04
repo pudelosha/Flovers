@@ -126,6 +126,17 @@
         "november": "Lis",
         "december": "Gru"
       }
+    },
+    "segments": {
+      "all": "Wszystkie",
+      "overdue": "Zaległe",
+      "today": "Dzisiaj",
+      "upcoming": "Nadchodzące"
+    },
+    "groups": {
+      "tasks": "Zadania: {{count}}",
+      "noUpcomingTitle": "Brak nadchodzących zadań",
+      "noUpcomingBody": "Nie masz zadań z terminem po dzisiejszym dniu."
     }
   },
   "inbox": {

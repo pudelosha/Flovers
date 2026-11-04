@@ -15,7 +15,8 @@
         "body": [
           "Her kutucuk, bir Hatırlatma tanımından oluşturulan tek bir Görevi temsil eder (örneğin: Sulama, Sisleme, Gübreleme, Saksı Değiştirme veya genel Bakım).",
           "Hatırlatma oluşturulunca tarihi ileride olsa bile bekleyen görev hemen oluşur. Görev tamamlanınca sıradaki görev hemen planlanır.",
-          "Her kutucukta genellikle görev türü, ev bitkisi adı, konum ve vade durumu (Bugün Vadesi Gelmiş veya Vadesi Gecikmiş gibi) gösterilir."
+          "Her kutucukta genellikle görev türü, ev bitkisi adı, konum ve vade durumu (Bugün Vadesi Gelmiş veya Vadesi Gecikmiş gibi) gösterilir.",
+          "Kaydırılabilir listenin üzerinde Tümü, Geciken, Bugün ve Yaklaşan seçimi sabit kalır. Yaklaşan, bugünden sonraki görevleri gösterir. Liste son tarihe göre günlük gruplara ayrılır; görev sayısı ve tarih sağdadır. Kompakt kartlarda solda bitki ve konum, sağda görev türü ve kalan süre görünür. Takvimde aynı kartlar gruplama olmadan son tarihi gösterir. Bitki veya konuma göre sıralama her günün kendi içinde uygulanır."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Kayan Eylem Düğmesi (FAB) kısayolları",
         "body": [
           "Ana ekranda, görevlerle çalışmak için hızlı eylemleri açan bir Kayan Eylem Düğmesi (FAB) bulunur.",
-          "Gecikenleri göster: yalnızca süresi geçmiş görevleri görüntüleyen bir kısayol filtresi uygular.",
-          "Son tarihi bugün göster: Son tarihi bugün olan görevleri görüntüleyen bir kısayol filtresi uygular.",
           "Sırala: listedeki görevlerin sırasını değiştirir.",
           "Filtrele: Seçilen kriterlere göre listeyi daraltır.",
           "Görev günlüğü, tamamlanan görevleri ve bitki fotoğraflarını gösterir. Ayrıntılı bilgi ayrı bir belgede yer alır."

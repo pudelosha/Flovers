@@ -15,7 +15,8 @@
         "body": [
           "Each tile represents a single Task generated from a Reminder definition (for example: Watering, Misting, Fertilising, Repotting, or general Care).",
           "Creating a reminder immediately creates its pending task, even if it is due later. Completing it immediately schedules the next pending occurrence.",
-          "Each tile typically shows the task type, plant name, location, and due status (such as Due today or Overdue)."
+          "Each tile typically shows the task type, plant name, location, and due status (such as Due today or Overdue).",
+          "The fixed All, Overdue, Today and Upcoming selector sits above the scrolling list. Upcoming means tasks due after today. List tasks are grouped by due day, with a task count and the date on the right. Compact tiles show the plant and location on the left and task type with relative due time on the right. In Calendar view the same tiles show the due date instead, without day groups. Sorting by plant or location orders tasks within each day group."
         ]
       },
       {
@@ -38,8 +39,6 @@
         "heading": "Floating Action Button (FAB) shortcuts",
         "body": [
           "The Home screen includes a Floating Action Button (FAB) that opens quick actions for working with tasks.",
-          "Show overdue: applies a shortcut filter that displays only overdue tasks.",
-          "Show due today: applies a shortcut filter that displays tasks due today.",
           "Sort: changes the ordering of tasks in the list.",
           "Filter: narrows down the list based on selected criteria.",
           "Task Journal opens the journal of completed tasks and plant photos, documented on its own page."

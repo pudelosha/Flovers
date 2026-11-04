@@ -11,22 +11,24 @@ import {
   RefreshControl,
   Pressable,
   Animated,
-  StyleSheet, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
+  StyleSheet,
+  AnimatedView,
+  AnimatedFlatList,
+} from '../../../shared/theme/native';
 import {
   useNavigation,
   useRoute,
   useIsFocused,
 } from '@react-navigation/native';
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
-import LinearGradient from "../../../shared/theme/Gradient";
+import LinearGradient from '../../../shared/theme/Gradient';
 
 import GlassHeader from '../../../shared/ui/GlassHeader';
 import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
 import { plantAccess } from '../../../shared/utils/plantAccess';
 import TopSnackbar from '../../../shared/ui/TopSnackbar';
 import FAB from '../../../shared/ui/FAB';
-import { usePlantPhotoPreload } from '../../../shared/hooks/usePlantPhotoPreload';
 
 import { s } from '../styles/task-history.styles';
 import {
@@ -168,7 +170,7 @@ export default function TaskHistoryScreen() {
     null,
   );
   const [photoDeleting, setPhotoDeleting] = useState(false);
-  const [undoTask,setUndoTask]=useState<TaskHistoryItem|null>(null);
+  const [undoTask, setUndoTask] = useState<TaskHistoryItem | null>(null);
 
   const isFilterActive = useMemo(
     () =>
@@ -367,20 +369,7 @@ export default function TaskHistoryScreen() {
   // Filtering and ordering are authoritative across the whole server feed.
   const derivedItems = items;
 
-  const photoTargets = useMemo(
-    () =>
-      derivedItems
-        .slice(0, 30)
-        .filter(isJournalPhoto)
-        .map(item => ({
-          photo: item.photo,
-          variant: 'display' as const,
-          expiresAt: item.access?.expires_at,
-        })),
-    [derivedItems],
-  );
-  const photoPreload = usePlantPhotoPreload(photoTargets, !loading);
-  const contentLoading = loading || photoPreload.loading;
+  const contentLoading = loading;
 
   // ---------- ENTRANCE ANIMATION (tiles) ----------
   const animatedIds = useRef(new Set<string>());
@@ -445,7 +434,8 @@ export default function TaskHistoryScreen() {
     !filterOpen &&
     !deleteOpen &&
     !exportOpen &&
-    !undoTask && !photoOpen &&
+    !undoTask &&
+    !photoOpen &&
     !deletingPhoto &&
     !viewingPhoto;
 
@@ -764,7 +754,15 @@ export default function TaskHistoryScreen() {
                       isMenuOpen={isOpen}
                       onToggleMenu={() => onToggleMenu(entryKey)}
                       onPressBody={closeFabMenu}
-                      onUndo={target=>{if(!plantAccess(target.access).canEdit || !target.undoCompletion)return;closeFloatingMenus();setUndoTask(target);}}
+                      onUndo={target => {
+                        if (
+                          !plantAccess(target.access).canEdit ||
+                          !target.undoCompletion
+                        )
+                          return;
+                        closeFloatingMenus();
+                        setUndoTask(target);
+                      }}
                       onDelete={handleDeleteItem}
                       onEditReminder={handleEditHistoryReminder}
                       onGoToPlant={handleGoToPlant}
@@ -926,10 +924,34 @@ export default function TaskHistoryScreen() {
         onConfirm={handleConfirmDelete}
       />
 
-      <UndoTaskCompletionModal visible={isFocused && !!undoTask} item={undoTask}
-        onClose={()=>setUndoTask(null)}
-        onSaved={()=>{showToast(String(t('taskHistory.undo.saved',{defaultValue:'Completion undone. The task is back in Home.'})),'success');void load();}}
-        onConflict={()=>{showToast(String(t('taskHistory.undo.unavailable',{defaultValue:'This task changed and can no longer be undone. Reloading the journal.'})),'error');void load();}}/>
+      <UndoTaskCompletionModal
+        visible={isFocused && !!undoTask}
+        item={undoTask}
+        onClose={() => setUndoTask(null)}
+        onSaved={() => {
+          showToast(
+            String(
+              t('taskHistory.undo.saved', {
+                defaultValue: 'Completion undone. The task is back in Home.',
+              }),
+            ),
+            'success',
+          );
+          void load();
+        }}
+        onConflict={() => {
+          showToast(
+            String(
+              t('taskHistory.undo.unavailable', {
+                defaultValue:
+                  'This task changed and can no longer be undone. Reloading the journal.',
+              }),
+            ),
+            'error',
+          );
+          void load();
+        }}
+      />
 
       <JournalPhotoModal
         visible={photoOpen}

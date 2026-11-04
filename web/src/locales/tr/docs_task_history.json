@@ -11,7 +11,7 @@
       {
         "heading": "Tamamlanan görevler",
         "body": [
-          "Görev kartları görev türünü, bitkiyi ve konumu göstermeye devam eder. Sağ sütunda üç satır vardır: Tamamlandı, tarih ve görevi tamamlayan kişi. Eklenen notlar her zaman görünür. Sahibi, bağlı hatırlatıcıyı düzenleyebilir veya görev kaydını silebilir. Bitki ayrıntıları bitkiyi açar."
+          "Kompakt görev kartlarının solunda simge, bitki ve konum; sağında tamamlanma tarihi ve tamamlayan kişi görünür. Notlar altta kalır. İşlemleri ve bitki ayrıntılarını açmak için karta dokunun."
         ]
       },
       {
@@ -29,7 +29,7 @@
       {
         "heading": "Fotoğraf kartları ve düzenleme",
         "body": [
-          "Fotoğraflar tamamlanan görevlerin arasında görünür. Kartta arka plana doğru solan görsel, sağ üstte eklenme zamanı ve altta notlar bulunur; görev türü etiketi yoktur. Fotoğrafı görüntüle, Fotoğrafı düzenle, Bitki ayrıntıları veya Fotoğrafı sil seçenekleri için karta dokunun. Sahibi görseli değiştirebilir, tarih ve notları düzenleyebilir ve onayladıktan sonra kaydı silebilir. Fotoğrafı görüntüle seçeneği, görselin tamamını kırpma veya karttaki renk geçişi olmadan ayrı bir pencerede açar. Bitkinin sahibi ve paylaşım erişimi devam eden kişiler bu görünümü kullanabilir.",
+          "Fotoğraflar da önizleme olmadan aynı kompakt gradyan kartı kullanır. Soldaki yuvarlak simge tam fotoğrafı açar. Kart bitkiyi, konumu, yükleme tarihini, fotoğrafı ekleyen sahibi ve notu gösterir. Menüde fotoğrafı görüntüleme, düzenleme, silme ve bitki ayrıntıları bulunur. Yalnızca sahip fotoğrafı, isteğe bağlı çekim tarihini ve notları değiştirebilir; paylaşım erişimi olanlar fotoğrafı ve ayrıntıları görebilir.",
           "Fotoğraf önizlemesinde Önceki aynı bitkinin daha eski, Sonraki ise daha yeni fotoğrafını açar. Günlük listesine henüz yüklenmemiş fotoğraflar da gösterilebilir. Görselin altında yükleme tarihi ve saati yer alır. Yalnızca bir fotoğraf varsa düğmeler gizlenir; fotoğraf bulunmayan yöndeki düğme devre dışı kalır."
         ]
       },
