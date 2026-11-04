@@ -126,3 +126,15 @@ it("places Search second in Plants FAB and searches species while preserving the
  expect(view.getByTestId("plant-tile").props.children).toBe("Bird");
  fireEvent.press(view.getByLabelText("Clear search"));await waitFor(()=>expect(view.getAllByTestId("plant-tile")).toHaveLength(2));
 });
+
+it('keeps three plants in a two-column grid with a half-width final tile',async()=>{
+ mockPhotoLoading=false;
+ (fetchPlantInstances as jest.Mock).mockResolvedValue([plant,{...plant,id:8,display_name:'Aloe'},{...plant,id:9,display_name:'Pilea'}]);
+ const view=render(<PlantsScreen/>);await waitFor(()=>expect(view.getAllByTestId('plant-tile')).toHaveLength(3));
+ const list=view.UNSAFE_getByProps({numColumns:2});
+ const first=list.props.renderItem({item:list.props.data[0],index:0});
+ const last=list.props.renderItem({item:list.props.data[2],index:2});
+ expect(require('react-native').StyleSheet.flatten(first.props.style).width).toBe('48.5%');
+ expect(require('react-native').StyleSheet.flatten(last.props.style).width).toBe('48.5%');
+ expect(last.props.children.props.menuAlign).toBe('left');
+});

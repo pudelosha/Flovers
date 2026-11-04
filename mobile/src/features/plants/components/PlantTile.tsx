@@ -1,24 +1,27 @@
-import {useAppTheme} from "../../../shared/theme/ThemeContext";
-import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
-import React from "react";
-import { View, Pressable, Text, StyleSheet, ImageBackground } from "../../../shared/theme/native";
-import LinearGradient from "../../../shared/theme/Gradient";
-import MaskedView from "../../../shared/theme/MaskedView";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-
-import { s } from "../styles/plants.styles";
-import { Plant } from "../types/plants.types";
-import PlantMenu from "./PlantMenu";
-import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
-import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
-import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
-import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
-import { normalizePhotoFraming } from "../../../shared/utils/photoFraming";
-
+import React from 'react';
+import {
+  View,
+  Pressable,
+  Text,
+  StyleSheet,
+  ImageBackground,
+} from '../../../shared/theme/native';
+import { useAppTheme } from '../../../shared/theme/ThemeContext';
+import LinearGradient from '../../../shared/theme/Gradient';
+import MaskedView from '../../../shared/theme/MaskedView';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import type { Plant } from '../types/plants.types';
+import PlantMenu from './PlantMenu';
+import FramedPlantImage from '../../../shared/ui/FramedPlantImage';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { plantAccess } from '../../../shared/utils/plantAccess';
+import { useSharingPreview } from '../../sharing/state/SharingPreviewProvider';
+import { usePlantPhoto } from '../../../shared/hooks/usePlantPhoto';
+import { normalizePhotoFraming } from '../../../shared/utils/photoFraming';
 type Props = {
   plant: Plant;
+  menuAlign?: 'left' | 'right';
   isMenuOpen: boolean;
   onPressBody: () => void;
   onPressMenu: () => void;
@@ -29,9 +32,6 @@ type Props = {
   onDelete: () => void;
   onShowQr: () => void;
 };
-
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function PlantTile({
   plant,
@@ -44,178 +44,230 @@ export default function PlantTile({
   onJournal,
   onDelete,
   onShowQr,
+  menuAlign = 'right',
 }: Props) {
-  const {isLight}=useAppTheme();
+  const { isLight } = useAppTheme();
+  const { t } = useTranslation();
   const { openSharePlant, shares } = useSharingPreview();
-  const photoVariant = normalizePhotoFraming(plant.photo?.framing).zoom > 1 ? "display" : "thumbnail";
-  const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(plant.photo, { variant: photoVariant, expiresAt: plant.access?.expires_at });
-  // The presence of a custom photo is authoritative even before its bytes load.
+  const photoVariant =
+    normalizePhotoFraming(plant.photo?.framing).zoom > 1
+      ? 'display'
+      : 'thumbnail';
+  const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(
+    plant.photo,
+    { variant: photoVariant, expiresAt: plant.access?.expires_at },
+  );
   const imgUri = plant.photo ? syncedPhotoUri : plant.imageUrl;
   const access = plantAccess(plant.access);
-
-  const handleTilePress = () => {
-    onPressBody();
-    onPressMenu();
-  };
-
+  const label = [
+    plant.name,
+    plant.latin,
+    plant.location,
+    access.isShared
+      ? t('sharing.access.shared', { defaultValue: 'Shared' })
+      : null,
+  ]
+    .filter(Boolean)
+    .join(', ');
   return (
-    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      <View style={s.cardGlass}>
-        <LinearGradient
-          pointerEvents="none"
-          start={{ x: 0, y: 0.5 }}
-          end={{ x: 1, y: 0.5 }}
-          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
-          locations={[0, 1]}
-          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
-        />
-
-        <LinearGradient
-          pointerEvents="none"
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
-          colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
-          ]}
-          locations={[0, 0.5, 1]}
-          style={StyleSheet.absoluteFill}
-        />
-
-        <View pointerEvents="none" style={s.plantImageEdge}>
-          <MaskedView
-            style={StyleSheet.absoluteFill}
-            maskElement={isLight ? <LinearGradient testID="plant-image-light-fade" colors={["rgba(0,0,0,1)","rgba(0,0,0,0.94)","rgba(0,0,0,0.45)"]} locations={[0,0.4,1]} start={{x:0,y:0.5}} end={{x:1,y:0.5}} style={StyleSheet.absoluteFill}/> :
+    <View style={[grid.wrap, isMenuOpen && { zIndex: 50 }]}>
+      <Pressable
+        style={grid.body}
+        accessibilityRole="button"
+        accessibilityLabel={label}
+        accessibilityState={{ expanded: isMenuOpen }}
+        onPress={() => {
+          onPressBody();
+          onPressMenu();
+        }}
+      >
+        <View style={grid.photoBackground} pointerEvents="none">
+          {syncedPhotoUri && plant.photo ? (
+            <FramedPlantImage
+              uri={syncedPhotoUri}
+              photo={plant.photo}
+              style={StyleSheet.absoluteFillObject}
+              testID="plant-tile-photo"
+            />
+          ) : plant.photo && photoLoading ? (
+            <View style={grid.placeholder} testID="plant-tile-photo-loading">
+              <CenteredSpinner size={24} />
+            </View>
+          ) : imgUri ? (
+            <ImageBackground
+              source={{ uri: imgUri }}
+              resizeMode="cover"
+              style={StyleSheet.absoluteFill}
+            />
+          ) : (
+            <View style={grid.placeholder}>
+              <MaterialCommunityIcons
+                name="image-off-outline"
+                size={28}
+                color="#FFFFFF"
+              />
+            </View>
+          )}
+        </View>
+        <View style={grid.image} pointerEvents="none" />
+        <View style={grid.panel} testID="plant-tile-description">
+          {isLight ? (
+            <LinearGradient
+              themeRole="photo"
+              pointerEvents="none"
+              start={{ x: 0.5, y: 0 }}
+              end={{ x: 0.5, y: 1 }}
+              colors={[
+                'rgba(248,252,250,0.80)',
+                'rgba(248,252,250,0.92)',
+                '#F8FCFA',
+                '#F8FCFA',
+              ]}
+              locations={[0, 0.25, 0.5, 1]}
+              style={StyleSheet.absoluteFill}
+            />
+          ) : (
+            <MaskedView
+              pointerEvents="none"
+              style={StyleSheet.absoluteFill}
+              maskElement={
+                <LinearGradient
+                  start={{ x: 0.5, y: 0 }}
+                  end={{ x: 0.5, y: 1 }}
+                  colors={[
+                    'rgba(0,0,0,0.8)',
+                    'rgba(0,0,0,0.92)',
+                    '#000000',
+                    '#000000',
+                  ]}
+                  locations={[0, 0.25, 0.5, 1]}
+                  style={StyleSheet.absoluteFill}
+                />
+              }
+            >
               <LinearGradient
-                colors={[
-                  "rgba(0,0,0,1.00)",
-                  "rgba(0,0,0,0.82)",
-                  "rgba(0,0,0,0.64)",
-                  "rgba(0,0,0,0.42)",
-                  "rgba(0,0,0,0.18)",
-                  "rgba(0,0,0,0.00)",
-                  "rgba(0,0,0,0.00)",
-                ]}
-                locations={[0, 0.14, 0.28, 0.44, 0.58, 0.66, 1]}
+                pointerEvents="none"
+                colors={['#31695A', '#28443B']}
                 start={{ x: 0, y: 0.5 }}
                 end={{ x: 1, y: 0.5 }}
                 style={StyleSheet.absoluteFill}
               />
-            }
-          >
-            {syncedPhotoUri && plant.photo ? (
-              <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
-                style={StyleSheet.absoluteFillObject} testID="plant-tile-photo" />
-            ) : plant.photo && photoLoading ? (
-              <View style={s.plantImagePlaceholder} testID="plant-tile-photo-loading">
-                <CenteredSpinner size={24} />
-              </View>
-            ) : imgUri ? (
-              <ImageBackground
-                source={{ uri: imgUri }}
-                resizeMode="cover"
-                style={isLight ? StyleSheet.absoluteFill : s.plantImageShifted}
+            </MaskedView>
+          )}
+          <View style={grid.titleRow}>
+            <Text style={grid.name} numberOfLines={1}>
+              {plant.name}
+            </Text>
+            {access.isShared && (
+              <MaterialCommunityIcons
+                name="account-multiple-outline"
+                size={13}
+                color="#BDE4F6"
+                accessibilityLabel={String(
+                  t('sharing.access.shared', { defaultValue: 'Shared' }),
+                )}
               />
-            ) : (
-              <View style={s.plantImagePlaceholder}>
-                <MaterialCommunityIcons
-                  name="image-off-outline"
-                  size={26}
-                  color="rgba(255,255,255,0.92)"
-                />
-              </View>
             )}
-          </MaskedView>
-
-          {!isLight && <LinearGradient
-            pointerEvents="none"
-            colors={["rgba(0,0,0,0.20)", "rgba(0,0,0,0.00)"]}
-            locations={[0, 1]}
-            style={s.plantImageTopScrim}
-          />}
+          </View>
+          <Text style={grid.latin} numberOfLines={1}>
+            {plant.latin || ' '}
+          </Text>
+          <View style={grid.locationRow}>
+            {!!plant.location && (
+              <MaterialCommunityIcons
+                name="map-marker"
+                size={12}
+                color="#FFFFFF"
+              />
+            )}
+            <Text style={grid.location} numberOfLines={1}>
+              {plant.location || ' '}
+            </Text>
+          </View>
         </View>
-
-        {!isLight && <LinearGradient
-          pointerEvents="none"
-          colors={[
-            "rgba(255,255,255,0.04)",
-            "rgba(255,255,255,0.08)",
-            "rgba(255,255,255,0.14)",
-            "rgba(255,255,255,0.14)",
-          ]}
-          locations={[0, 0.42, 0.58, 1]}
-          start={{ x: 0, y: 0.5 }}
-          end={{ x: 1, y: 0.5 }}
-          style={s.cardImageTint}
-        />}
-
-        <View
-          pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFillObject,
-            {
-              borderRadius: 28,
-              borderWidth: 0,
-              borderColor: "rgba(255,255,255,0.08)",
-              zIndex: 2,
-            },
-          ]}
-        />
-
-        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
-        <View style={s.cardRow}>
-          <Pressable
-            style={s.cardBodyPressable}
-            onPress={handleTilePress}
-            android_ripple={{ color: "rgba(255,255,255,0.08)" }}
-          >
-            <ThemeContrastScope kind={imgUri ? "photo" : "surface"}><View style={s.plantTextCol}>
-              <Text style={s.plantName} numberOfLines={1}>
-                {plant.name}
-              </Text>
-              <SharedPlantBadge access={plant.access} compact />
-
-              {!!plant.latin && (
-                <Text style={s.latin} numberOfLines={1}>
-                  {plant.latin}
-                </Text>
-              )}
-
-              {!!plant.location && (
-                <View style={s.locationRow}>
-                  <MaterialCommunityIcons
-                    name="map-marker"
-                    size={12}
-                    color="#FFFFFF"
-                    style={s.locationIcon}
-                  />
-                  <Text style={s.location} numberOfLines={1}>
-                    {plant.location}
-                  </Text>
-                </View>
-              )}
-            </View></ThemeContrastScope>
-          </Pressable>
-        </View>
-      </View>
-
+      </Pressable>
       {isMenuOpen && (
         <PlantMenu
           canEdit={access.canEdit}
+          align={menuAlign}
           onDetails={onDetails}
           onEdit={onEdit}
           onReminders={onReminders}
           onJournal={onJournal}
           onDelete={onDelete}
           onShowQr={onShowQr}
-          sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
+          sharingActive={shares.some(
+            share =>
+              share.direction === 'outgoing' &&
+              share.plant.id === String(plant.id),
+          )}
           onShare={() => {
             onPressMenu();
-            openSharePlant({ id: String(plant.id), name: plant.name, location: plant.location, latin: plant.latin, imageUrl: plant.imageUrl, photo: plant.photo });
+            openSharePlant({
+              id: String(plant.id),
+              name: plant.name,
+              location: plant.location,
+              latin: plant.latin,
+              imageUrl: plant.imageUrl,
+              photo: plant.photo,
+            });
           }}
         />
       )}
     </View>
   );
 }
+
+const grid = StyleSheet.create({
+  wrap: { position: 'relative', overflow: 'visible', borderRadius: 22 },
+  body: { borderRadius: 22, overflow: 'hidden' },
+  photoBackground: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#244C40',
+  },
+  image: { width: '100%', aspectRatio: 1.2 },
+  placeholder: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  panel: {
+    marginTop: -26,
+    paddingHorizontal: 11,
+    paddingTop: 13,
+    paddingBottom: 12,
+    minHeight: 89,
+    borderRadius: 19,
+    overflow: 'hidden',
+  },
+  titleRow: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  name: {
+    flex: 1,
+    minWidth: 0,
+    fontSize: 14,
+    lineHeight: 18,
+    fontWeight: '800',
+    color: '#FFFFFF',
+  },
+  latin: {
+    fontSize: 11,
+    lineHeight: 15,
+    fontStyle: 'italic',
+    color: 'rgba(255,255,255,0.9)',
+    marginTop: 2,
+  },
+  locationRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    marginTop: 4,
+  },
+  location: {
+    flex: 1,
+    minWidth: 0,
+    fontSize: 11,
+    lineHeight: 15,
+    fontWeight: '600',
+    color: 'rgba(255,255,255,0.9)',
+  },
+});

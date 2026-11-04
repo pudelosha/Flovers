@@ -107,3 +107,17 @@ it("preserves black menus and white labels after the portal loses the caller col
  expect(StyleSheet.flatten(menu?.props.style).backgroundColor).toBe("black");
  expect(StyleSheet.flatten(view.getByText("Edit plant").props.style).color).toBe("#FFFFFF");
 });
+
+it("keeps transparent menu sizing space touch-through before and after moving to the portal",()=>{
+ const action=jest.fn();
+ const view=render(<FloatingTileMenuProvider><FloatingTileMenu pointerEvents="box-none" style={{...style,width:360,backgroundColor:'transparent'}}>
+  <View style={{alignSelf:'flex-start',backgroundColor:'black'}}><Pressable onPress={action}><Text>Edit plant</Text></Pressable></View>
+ </FloatingTileMenu></FloatingTileMenuProvider>,{createNodeMock:nativeNode});
+ expect(view.getByTestId('floating-tile-menu-anchor').props.pointerEvents).toBe('box-none');
+ measure(view);
+ const layer=view.getByTestId('floating-tile-menu-layer');
+ const wrapper=layer.findAllByType(View).find(node=>StyleSheet.flatten(node.props.style)?.left===180);
+ expect(wrapper?.props.pointerEvents).toBe('box-none');
+ expect(view.getByTestId('floating-tile-menu-anchor').props.pointerEvents).toBe('none');
+ fireEvent.press(view.getByText('Edit plant'));expect(action).toHaveBeenCalledTimes(1);
+});

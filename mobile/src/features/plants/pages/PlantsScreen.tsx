@@ -4,7 +4,7 @@ import React, {
   useState,
   useRef,
   useEffect,
-} from "react";
+} from 'react';
 import {
   View,
   Pressable,
@@ -15,63 +15,73 @@ import {
   Animated,
   Easing,
   PermissionsAndroid,
-  Platform, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
-import { PUBLIC_BASE_URL_NORM } from "../../../config";
-import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import LinearGradient from "../../../shared/theme/Gradient";
+  Platform,
+  AnimatedView,
+  AnimatedFlatList,
+} from '../../../shared/theme/native';
+import { PUBLIC_BASE_URL_NORM } from '../../../config';
+import {
+  useNavigation,
+  useFocusEffect,
+  useRoute,
+} from '@react-navigation/native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import LinearGradient from '../../../shared/theme/Gradient';
 
-import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider";
+import { useLanguage } from '../../../app/providers/LanguageProvider';
+import { useSettings } from '../../../app/providers/SettingsProvider';
 
-import GlassHeader from "../../../shared/ui/GlassHeader";
-import FAB from "../../../shared/ui/FAB";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
-import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import { s } from "../styles/plants.styles";
-import PlantTile from "../components/PlantTile";
-import EditPlantModal from "../components/modals/EditPlantModal";
-import ConfirmDeleteModal from "../components/modals/ConfirmDeleteModal";
-import PlantQrModal from "../components/modals/PlantQrModal";
+import GlassHeader from '../../../shared/ui/GlassHeader';
+import FAB from '../../../shared/ui/FAB';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { usePlantPhotoPreload } from '../../../shared/hooks/usePlantPhotoPreload';
+import TopSnackbar from '../../../shared/ui/TopSnackbar';
+import { s } from '../styles/plants.styles';
+import PlantTile from '../components/PlantTile';
+import EditPlantModal from '../components/modals/EditPlantModal';
+import ConfirmDeleteModal from '../components/modals/ConfirmDeleteModal';
+import PlantQrModal from '../components/modals/PlantQrModal';
 
-import SortPlantsModal, { SortDir, SortKey } from "../components/modals/SortPlantsModal";
-import FilterPlantsModal from "../components/modals/FilterPlantsModal";
-import SearchPlantsModal from "../components/modals/SearchPlantsModal";
-import {matchesPlantSearch} from "../utils/plantSearch";
+import SortPlantsModal, {
+  SortDir,
+  SortKey,
+} from '../components/modals/SortPlantsModal';
+import FilterPlantsModal from '../components/modals/FilterPlantsModal';
+import SearchPlantsModal from '../components/modals/SearchPlantsModal';
+import { matchesPlantSearch } from '../utils/plantSearch';
 
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
-} from "../constants/plants.constants";
+} from '../constants/plants.constants';
 
-import type { Plant } from "../types/plants.types";
+import type { Plant } from '../types/plants.types';
 import {
   fetchPlantInstances,
   deletePlantInstance,
   ApiPlantInstanceListItem,
   fetchPlantInstanceForEdit,
   updatePlantInstanceFromForm,
-} from "../../../api/services/plant-instances.service";
+} from '../../../api/services/plant-instances.service';
 
-import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
-import RNFS from "react-native-fs";
-import { plantAccess } from "../../../shared/utils/plantAccess";
-import { CameraRoll } from "@react-native-camera-roll/camera-roll";
-import { sendQrCodeByEmail } from "../../../api/services/qr-code.service";
+import { getPlantPhotoUri } from '../../../shared/utils/photoStorage';
+import RNFS from 'react-native-fs';
+import { plantAccess } from '../../../shared/utils/plantAccess';
+import { CameraRoll } from '@react-native-camera-roll/camera-roll';
+import { sendQrCodeByEmail } from '../../../api/services/qr-code.service';
 
 type LightLevel5 =
-  | "very-low"
-  | "low"
-  | "medium"
-  | "bright-indirect"
-  | "bright-direct";
+  | 'very-low'
+  | 'low'
+  | 'medium'
+  | 'bright-indirect'
+  | 'bright-direct';
 
 function mapApiToPlant(
   item: ApiPlantInstanceListItem,
-  unnamedFallback: string
+  unnamedFallback: string,
 ): Plant {
   const name =
     item.display_name?.trim() ||
@@ -93,7 +103,7 @@ function mapApiToPlant(
     latin,
     species: item.plant_definition?.name || undefined,
     location,
-    notes: item.notes || "",
+    notes: item.notes || '',
     imageUrl,
     photo: item.photo,
     qrCode: item.qr_code ?? undefined,
@@ -101,11 +111,11 @@ function mapApiToPlant(
 }
 
 function norm(v?: string) {
-  return (v || "").toLowerCase().trim();
+  return (v || '').toLowerCase().trim();
 }
 
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function PlantsScreen() {
   const nav = useNavigation<any>();
@@ -125,12 +135,13 @@ export default function PlantsScreen() {
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
 
   const [toastVisible, setToastVisible] = useState(false);
-  const [toastMsg, setToastMsg] = useState("");
-  const [toastVariant, setToastVariant] =
-    useState<"default" | "success" | "error">("default");
+  const [toastMsg, setToastMsg] = useState('');
+  const [toastVariant, setToastVariant] = useState<
+    'default' | 'success' | 'error'
+  >('default');
   const showToast = (
     message: string,
-    variant: "default" | "success" | "error" = "default"
+    variant: 'default' | 'success' | 'error' = 'default',
   ) => {
     setToastMsg(message);
     setToastVariant(variant);
@@ -140,22 +151,22 @@ export default function PlantsScreen() {
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  const [fName, setFName] = useState("");
-  const [fLatinQuery, setFLatinQuery] = useState("");
+  const [fName, setFName] = useState('');
+  const [fLatinQuery, setFLatinQuery] = useState('');
   const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(
-    undefined
+    undefined,
   );
   const [fLocation, setFLocation] = useState<string | undefined>(undefined);
-  const [fNotes, setFNotes] = useState("");
+  const [fNotes, setFNotes] = useState('');
 
   const [fPurchaseDateISO, setFPurchaseDateISO] = useState<
     string | null | undefined
   >(null);
-  const [fLightLevel, setFLightLevel] = useState<LightLevel5>("medium");
-  const [fOrientation, setFOrientation] = useState<"N" | "E" | "S" | "W">("S");
+  const [fLightLevel, setFLightLevel] = useState<LightLevel5>('medium');
+  const [fOrientation, setFOrientation] = useState<'N' | 'E' | 'S' | 'W'>('S');
   const [fDistanceCm, setFDistanceCm] = useState<number>(0);
   const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(
-    undefined
+    undefined,
   );
   const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
 
@@ -165,89 +176,107 @@ export default function PlantsScreen() {
 
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
-  const searchListRef=useRef<any>(null);
-  const [searchOpen,setSearchOpen]=useState(false);
-  const [searchQuery,setSearchQuery]=useState("");
-  const [sortKey, setSortKey] = useState<SortKey>("plant");
-  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const searchListRef = useRef<any>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortKey, setSortKey] = useState<SortKey>('plant');
+  const [sortDir, setSortDir] = useState<SortDir>('asc');
 
-  const [activeFilters, setActiveFilters] = useState<{ location?: string; latin?: string }>(
-    {}
-  );
+  const [activeFilters, setActiveFilters] = useState<{
+    location?: string;
+    latin?: string;
+  }>({});
 
   const [qrVisible, setQrVisible] = useState(false);
-  const [qrValue, setQrValue] = useState("");
-  const [qrPlantName, setQrPlantName] = useState("");
-  const [qrPlantId, setQrPlantId] = useState<string>("");
+  const [qrValue, setQrValue] = useState('');
+  const [qrPlantName, setQrPlantName] = useState('');
+  const [qrPlantId, setQrPlantId] = useState<string>('');
   const qrModalRef = useRef<any>(null);
 
-
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
-  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
+  const [confirmDeleteName, setConfirmDeleteName] = useState<string>('');
 
   const closeFloatingMenus = useCallback(() => {
     setMenuOpenId(null);
-    setFabCloseSignal((value) => value + 1);
+    setFabCloseSignal(value => value + 1);
   }, []);
 
-  const applySearch=useCallback((value:string)=>{
-    closeFloatingMenus();setSearchQuery(value);setSearchOpen(false);
-    requestAnimationFrame(()=>searchListRef.current?.scrollToOffset({offset:0,animated:false}));
-  },[closeFloatingMenus]);
+  const applySearch = useCallback(
+    (value: string) => {
+      closeFloatingMenus();
+      setSearchQuery(value);
+      setSearchOpen(false);
+      requestAnimationFrame(() =>
+        searchListRef.current?.scrollToOffset({ offset: 0, animated: false }),
+      );
+    },
+    [closeFloatingMenus],
+  );
 
   const closeFabMenu = useCallback(() => {
-    setFabCloseSignal((value) => value + 1);
+    setFabCloseSignal(value => value + 1);
   }, []);
 
   const onToggleMenu = useCallback((id: string) => {
-    setFabCloseSignal((value) => value + 1);
-    setMenuOpenId((curr) => (curr === id ? null : id));
+    setFabCloseSignal(value => value + 1);
+    setMenuOpenId(curr => (curr === id ? null : id));
   }, []);
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      return (
+        (isMissing ? undefined : txt) || fallback || key.split('.').pop() || key
+      );
     },
-    [t]
+    [t],
   );
 
   const onSaveQr = useCallback(
     async (svgRef: any) => {
       if (!svgRef?.toDataURL) {
-        throw new Error(tr("plants.qrErrors.rendererNotReady", "QR renderer not ready."));
+        throw new Error(
+          tr('plants.qrErrors.rendererNotReady', 'QR renderer not ready.'),
+        );
       }
 
       const dataUrl: string = await new Promise((res, rej) =>
-        svgRef.toDataURL((d: string) => (d ? res(d) : rej(new Error("No dataURL"))))
+        svgRef.toDataURL((d: string) =>
+          d ? res(d) : rej(new Error('No dataURL')),
+        ),
       );
 
-      const base64 = dataUrl.replace(/^data:image\/png;base64,/, "");
+      const base64 = dataUrl.replace(/^data:image\/png;base64,/, '');
       const filePath = `${RNFS.CachesDirectoryPath}/plant_qr_${Date.now()}.png`;
-      await RNFS.writeFile(filePath, base64, "base64");
+      await RNFS.writeFile(filePath, base64, 'base64');
 
-      if (Platform.OS === "android" && Platform.Version <= 29) {
+      if (Platform.OS === 'android' && Platform.Version <= 29) {
         const granted = await PermissionsAndroid.request(
           PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
           {
-            title: tr("plants.permissions.storage.title", "Storage permission"),
+            title: tr('plants.permissions.storage.title', 'Storage permission'),
             message: tr(
-              "plants.permissions.storage.message",
-              "We need access to save the QR code to your gallery."
+              'plants.permissions.storage.message',
+              'We need access to save the QR code to your gallery.',
             ),
-            buttonPositive: tr("plants.permissions.storage.ok", "OK"),
-          }
+            buttonPositive: tr('plants.permissions.storage.ok', 'OK'),
+          },
         );
 
         if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
-          throw new Error(tr("plants.permissions.storage.denied", "Storage permission denied."));
+          throw new Error(
+            tr(
+              'plants.permissions.storage.denied',
+              'Storage permission denied.',
+            ),
+          );
         }
       }
 
-      await CameraRoll.save(filePath, { type: "photo" });
+      await CameraRoll.save(filePath, { type: 'photo' });
     },
-    [tr]
+    [tr],
   );
 
   useFocusEffect(
@@ -260,24 +289,25 @@ export default function PlantsScreen() {
       setSortOpen(false);
       setFilterOpen(false);
       setConfirmDeleteId(null);
-      setConfirmDeleteName("");
+      setConfirmDeleteName('');
       setQrVisible(false);
-      setQrPlantId("");
+      setQrPlantId('');
       qrModalRef.current = null;
 
-
-      return () => { editRequestRef.current += 1; };
-    }, [closeFloatingMenus])
+      return () => {
+        editRequestRef.current += 1;
+      };
+    }, [closeFloatingMenus]),
   );
 
   const unnamedFallback = useMemo(
-    () => t("plants.list.unnamed", { defaultValue: "Unnamed plant" }),
-    [t]
+    () => t('plants.list.unnamed', { defaultValue: 'Unnamed plant' }),
+    [t],
   );
 
   const attachLocalPhotos = useCallback(async (list: Plant[]) => {
     const results = await Promise.all(
-      list.map(async (p) => {
+      list.map(async p => {
         if (!plantAccess(p.access).isOwner || p.photo) return p;
         try {
           const local = await getPlantPhotoUri(p.id);
@@ -288,7 +318,7 @@ export default function PlantsScreen() {
           // ignore
         }
         return p;
-      })
+      }),
     );
     return results;
   }, []);
@@ -297,17 +327,17 @@ export default function PlantsScreen() {
     try {
       const data = await fetchPlantInstances({ auth: true });
 
-      const mapped = data.map((it) => mapApiToPlant(it, unnamedFallback));
+      const mapped = data.map(it => mapApiToPlant(it, unnamedFallback));
       const withLocal = await attachLocalPhotos(mapped);
 
       setPlants(withLocal);
     } catch (e: any) {
       showToast(
         e?.message ||
-          t("plants.toast.loadFailed", {
-            defaultValue: "Failed to load plants",
+          t('plants.toast.loadFailed', {
+            defaultValue: 'Failed to load plants',
           }),
-        "error"
+        'error',
       );
       setPlants([]);
     }
@@ -325,12 +355,12 @@ export default function PlantsScreen() {
 
   const openCreatePlantWizard = () => {
     closeFloatingMenus();
-    nav.navigate("CreatePlantWizard");
+    nav.navigate('CreatePlantWizard');
   };
 
   const openJournal = (p: Plant) => {
     closeFloatingMenus();
-    nav.navigate("TaskHistory", { plantId: String(p.id) });
+    nav.navigate('TaskHistory', { plantId: String(p.id) });
   };
 
   const openEditModal = useCallback(
@@ -342,10 +372,10 @@ export default function PlantsScreen() {
 
       try {
         setFName(p.name);
-        setFLatinQuery(p.latin || "");
+        setFLatinQuery(p.latin || '');
         setFLatinSelected(p.latin);
         setFLocation(p.location);
-        setFNotes(p.notes || "");
+        setFNotes(p.notes || '');
 
         const detail = await fetchPlantInstanceForEdit(Number(p.id), {
           auth: true,
@@ -354,55 +384,57 @@ export default function PlantsScreen() {
         if (!plantAccess(detail.access).canEdit) return;
 
         if (detail.display_name !== undefined && detail.display_name !== null)
-          setFName(detail.display_name || "");
+          setFName(detail.display_name || '');
         if (detail.notes !== undefined && detail.notes !== null)
-          setFNotes(detail.notes || "");
+          setFNotes(detail.notes || '');
         setFPurchaseDateISO(
-          detail.purchase_date === undefined ? null : detail.purchase_date
+          detail.purchase_date === undefined ? null : detail.purchase_date,
         );
 
-        setFLightLevel((detail.light_level as LightLevel5) || "medium");
-        setFOrientation((detail.orientation as any) || "S");
+        setFLightLevel((detail.light_level as LightLevel5) || 'medium');
+        setFOrientation((detail.orientation as any) || 'S');
         setFDistanceCm(detail.distance_cm ?? 0);
 
         setFPotMaterial(detail.pot_material ?? undefined);
         setFSoilMix(detail.soil_mix ?? undefined);
 
-        setFLatinQuery(detail.plant_definition?.name || p.latin || "");
-        setFLatinSelected(detail.plant_definition?.name || p.latin || undefined);
+        setFLatinQuery(detail.plant_definition?.name || p.latin || '');
+        setFLatinSelected(
+          detail.plant_definition?.name || p.latin || undefined,
+        );
         setFLocation(detail.location?.name || p.location);
 
         setEditOpen(true);
       } catch (e: any) {
         if (request !== editRequestRef.current) return;
         Alert.alert(
-          t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
+          t('plants.alert.loadFailedTitle', { defaultValue: 'Load failed' }),
           e?.message ||
-            t("plants.alert.loadFailedMsg", {
-              defaultValue: "Could not load plant details.",
-            })
+            t('plants.alert.loadFailedMsg', {
+              defaultValue: 'Could not load plant details.',
+            }),
         );
       } finally {
         if (request === editRequestRef.current) setEditLoading(false);
       }
     },
-    [closeFloatingMenus, t]
+    [closeFloatingMenus, t],
   );
 
   const openEditModalById = useCallback(
     async (id: string) => {
       const stub: Plant = {
         id: String(id),
-        name: "",
+        name: '',
         latin: undefined,
         location: undefined,
-        notes: "",
+        notes: '',
         imageUrl: undefined,
         qrCode: undefined,
       };
       await openEditModal(stub);
     },
-    [openEditModal]
+    [openEditModal],
   );
 
   useFocusEffect(
@@ -447,7 +479,7 @@ export default function PlantsScreen() {
       return () => {
         mounted = false;
       };
-    }, [load, route, nav, openEditModalById])
+    }, [load, route, nav, openEditModalById]),
   );
 
   const closeEdit = () => {
@@ -465,40 +497,38 @@ export default function PlantsScreen() {
     try {
       const form = {
         display_name: fName.trim(),
-        notes: fNotes ?? "",
+        notes: fNotes ?? '',
         purchase_date: fPurchaseDateISO ?? null,
         light_level: fLightLevel,
         orientation: fOrientation,
         distance_cm: fDistanceCm,
-        pot_material: fPotMaterial ?? "",
-        soil_mix: fSoilMix ?? "",
+        pot_material: fPotMaterial ?? '',
+        soil_mix: fSoilMix ?? '',
       } as const;
 
       const updatedListItem = await updatePlantInstanceFromForm(
         Number(editingId),
         form,
-        { auth: true }
+        { auth: true },
       );
 
       const mapped = mapApiToPlant(updatedListItem, unnamedFallback);
       const withLocal = await attachLocalPhotos([mapped]);
 
-      setPlants((prev) =>
-        prev.map((p) => (p.id === editingId ? withLocal[0] : p))
-      );
+      setPlants(prev => prev.map(p => (p.id === editingId ? withLocal[0] : p)));
 
       closeEdit();
       showToast(
-        t("plants.toast.updated", { defaultValue: "Plant updated" }),
-        "success"
+        t('plants.toast.updated', { defaultValue: 'Plant updated' }),
+        'success',
       );
     } catch (e: any) {
       Alert.alert(
-        t("plants.alert.updateFailedTitle", { defaultValue: "Update failed" }),
+        t('plants.alert.updateFailedTitle', { defaultValue: 'Update failed' }),
         e?.message ||
-          t("plants.alert.updateFailedMsg", {
-            defaultValue: "Could not update this plant.",
-          })
+          t('plants.alert.updateFailedMsg', {
+            defaultValue: 'Could not update this plant.',
+          }),
       );
     } finally {
       setSaving(false);
@@ -515,22 +545,22 @@ export default function PlantsScreen() {
     if (!confirmDeleteId) return;
     try {
       await deletePlantInstance(Number(confirmDeleteId), { auth: true });
-      setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
+      setPlants(prev => prev.filter(p => p.id !== confirmDeleteId));
       showToast(
-        t("plants.toast.deleted", { defaultValue: "Plant deleted" }),
-        "success"
+        t('plants.toast.deleted', { defaultValue: 'Plant deleted' }),
+        'success',
       );
     } catch (e: any) {
       Alert.alert(
-        t("plants.alert.deleteFailedTitle", { defaultValue: "Delete failed" }),
+        t('plants.alert.deleteFailedTitle', { defaultValue: 'Delete failed' }),
         e?.message ||
-          t("plants.alert.deleteFailedMsg", {
-            defaultValue: "Could not delete this plant.",
-          })
+          t('plants.alert.deleteFailedMsg', {
+            defaultValue: 'Could not delete this plant.',
+          }),
       );
     } finally {
       setConfirmDeleteId(null);
-      setConfirmDeleteName("");
+      setConfirmDeleteName('');
     }
   };
 
@@ -538,8 +568,8 @@ export default function PlantsScreen() {
     closeFloatingMenus();
 
     const code = p.qrCode || p.id;
-        const value = `${PUBLIC_BASE_URL_NORM}/plant-instances/by-qr/?code=${encodeURIComponent(
-      code
+    const value = `${PUBLIC_BASE_URL_NORM}/plant-instances/by-qr/?code=${encodeURIComponent(
+      code,
     )}`;
 
     setQrPlantId(p.id);
@@ -551,49 +581,60 @@ export default function PlantsScreen() {
 
   const locationOptions = useMemo(() => {
     const set = new Set<string>();
-    plants.forEach((p) => p.location && set.add(p.location));
+    plants.forEach(p => p.location && set.add(p.location));
     return Array.from(set).sort((a, b) => norm(a).localeCompare(norm(b)));
   }, [plants]);
 
   const latinOptions = useMemo(() => {
     const set = new Set<string>();
-    plants.forEach((p) => p.latin && set.add(p.latin));
+    plants.forEach(p => p.latin && set.add(p.latin));
     return Array.from(set).sort((a, b) => norm(a).localeCompare(norm(b)));
   }, [plants]);
 
   const derivedPlants = useMemo(() => {
-    const filtered = plants.filter((p) => {
-      if(!matchesPlantSearch(p,searchQuery))return false;
-      if (activeFilters.location && norm(p.location) !== norm(activeFilters.location))
+    const filtered = plants.filter(p => {
+      if (!matchesPlantSearch(p, searchQuery)) return false;
+      if (
+        activeFilters.location &&
+        norm(p.location) !== norm(activeFilters.location)
+      )
         return false;
-      if (activeFilters.latin && norm(p.latin) !== norm(activeFilters.latin)) return false;
+      if (activeFilters.latin && norm(p.latin) !== norm(activeFilters.latin))
+        return false;
       return true;
     });
 
     const sorted = [...filtered].sort((a, b) => {
       let cmp = 0;
-      if (sortKey === "plant") {
+      if (sortKey === 'plant') {
         cmp = norm(a.name).localeCompare(norm(b.name));
       } else {
         cmp = norm(a.location).localeCompare(norm(b.location));
       }
-      return sortDir === "asc" ? cmp : -cmp;
+      return sortDir === 'asc' ? cmp : -cmp;
     });
 
     return sorted;
   }, [plants, activeFilters, sortKey, sortDir, searchQuery]);
 
-  const photoTargets = useMemo(() => derivedPlants.map((plant) => ({
-    photo: plant.photo,
-    variant: (plant.photo?.framing?.zoom ?? 1) > 1 ? "display" as const : "thumbnail" as const,
-    expiresAt: plant.access?.expires_at,
-  })), [derivedPlants]);
+  const photoTargets = useMemo(
+    () =>
+      derivedPlants.map(plant => ({
+        photo: plant.photo,
+        variant:
+          (plant.photo?.framing?.zoom ?? 1) > 1
+            ? ('display' as const)
+            : ('thumbnail' as const),
+        expiresAt: plant.access?.expires_at,
+      })),
+    [derivedPlants],
+  );
   const photoPreload = usePlantPhotoPreload(photoTargets, !loading);
   const contentLoading = loading || photoPreload.loading;
 
   const isFilterActive = useMemo(
     () => Boolean(activeFilters.location || activeFilters.latin),
-    [activeFilters.location, activeFilters.latin]
+    [activeFilters.location, activeFilters.latin],
   );
 
   const showFAB =
@@ -612,7 +653,7 @@ export default function PlantsScreen() {
   };
 
   const primeAnimations = useCallback((ids: string[]) => {
-    ids.forEach((id) => {
+    ids.forEach(id => {
       const v = getAnimForId(id);
       v.setValue(0);
     });
@@ -634,11 +675,17 @@ export default function PlantsScreen() {
 
   useEffect(() => {
     if (contentLoading) return;
-    const ids = derivedPlants.map((p) => p.id);
+    const ids = derivedPlants.map(p => p.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
-  }, [contentLoading, derivedPlants.length, primeAnimations, runStaggerIn, derivedPlants]);
+  }, [
+    contentLoading,
+    derivedPlants.length,
+    primeAnimations,
+    runStaggerIn,
+    derivedPlants,
+  ]);
 
   const emptyAnim = useRef(new Animated.Value(0)).current;
   useEffect(() => {
@@ -673,11 +720,11 @@ export default function PlantsScreen() {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title={t("plants.header.title", { defaultValue: "Plants" })}
+          title={t('plants.header.title', { defaultValue: 'Plants' })}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           rightIconName="qrcode-scan"
-          onPressRight={() => nav.navigate("Scanner")}
+          onPressRight={() => nav.navigate('Scanner')}
           showSeparator={false}
         />
         <CenteredSpinner size={56} color="#FFFFFF" />
@@ -688,11 +735,11 @@ export default function PlantsScreen() {
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title={t("plants.header.title", { defaultValue: "Plants" })}
+        title={t('plants.header.title', { defaultValue: 'Plants' })}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         rightIconName="qrcode-scan"
-        onPressRight={() => nav.navigate("Scanner")}
+        onPressRight={() => nav.navigate('Scanner')}
         showSeparator={false}
       />
 
@@ -704,8 +751,10 @@ export default function PlantsScreen() {
         ref={searchListRef}
         style={{ flex: 1 }}
         data={derivedPlants}
-        keyExtractor={(p) => p.id}
-        renderItem={({ item }) => {
+        numColumns={2}
+        columnWrapperStyle={{ justifyContent: 'space-between' }}
+        keyExtractor={p => p.id}
+        renderItem={({ item, index }) => {
           const v = getAnimForId(item.id);
           const translateY = v.interpolate({
             inputRange: [0, 1],
@@ -722,23 +771,28 @@ export default function PlantsScreen() {
           return (
             <AnimatedView
               style={[
-                { opacity, transform: [{ translateY }, { scale }] },
+                {
+                  width: '48.5%',
+                  opacity,
+                  transform: [{ translateY }, { scale }],
+                },
                 isOpen && { zIndex: 50 },
               ]}
             >
               <PlantTile
                 plant={item}
+                menuAlign={index % 2 === 0 ? 'left' : 'right'}
                 isMenuOpen={isOpen}
                 onPressBody={closeFabMenu}
                 onPressMenu={() => onToggleMenu(item.id)}
                 onDetails={() => {
                   closeFloatingMenus();
-                  nav.navigate("PlantDetails", { id: item.id });
+                  nav.navigate('PlantDetails', { id: item.id });
                 }}
                 onEdit={() => openEditModal(item)}
                 onReminders={() => {
                   closeFloatingMenus();
-                  nav.navigate("Reminders", {
+                  nav.navigate('Reminders', {
                     plantId: item.id,
                     plantName: item.name,
                   });
@@ -750,14 +804,48 @@ export default function PlantsScreen() {
             </AnimatedView>
           );
         }}
-        ListHeaderComponent={searchQuery ? <View style={{flexDirection:"row",alignItems:"center",gap:10,marginBottom:14}}>
-          <MaterialCommunityIcons name="magnify" size={20} color="#FFFFFF"/>
-          <Text style={{flex:1,minWidth:0,color:"#FFFFFF",fontSize:14}}>{t("plants.search.active",{defaultValue:"Search: {{query}}",query:searchQuery})}</Text>
-          <Pressable accessibilityRole="button" hitSlop={8} onPress={()=>applySearch("")}
-            accessibilityLabel={String(t("plants.search.clear",{defaultValue:"Clear search"}))}>
-            <MaterialCommunityIcons name="close" size={22} color="#FFFFFF"/>
-          </Pressable>
-        </View> : <View style={{height:0}}/>}
+        ListHeaderComponent={
+          searchQuery ? (
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: 10,
+                marginBottom: 14,
+              }}
+            >
+              <MaterialCommunityIcons
+                name="magnify"
+                size={20}
+                color="#FFFFFF"
+              />
+              <Text
+                style={{ flex: 1, minWidth: 0, color: '#FFFFFF', fontSize: 14 }}
+              >
+                {t('plants.search.active', {
+                  defaultValue: 'Search: {{query}}',
+                  query: searchQuery,
+                })}
+              </Text>
+              <Pressable
+                accessibilityRole="button"
+                hitSlop={8}
+                onPress={() => applySearch('')}
+                accessibilityLabel={String(
+                  t('plants.search.clear', { defaultValue: 'Clear search' }),
+                )}
+              >
+                <MaterialCommunityIcons
+                  name="close"
+                  size={22}
+                  color="#FFFFFF"
+                />
+              </Pressable>
+            </View>
+          ) : (
+            <View style={{ height: 0 }} />
+          )
+        }
         ListFooterComponent={<View style={{ height: listFooterHeight }} />}
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -773,7 +861,10 @@ export default function PlantsScreen() {
               s.emptyWrap,
               {
                 opacity: emptyOpacity,
-                transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                transform: [
+                  { translateY: emptyTranslateY },
+                  { scale: emptyScale },
+                ],
               },
             ]}
           >
@@ -791,9 +882,9 @@ export default function PlantsScreen() {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 colors={[
-                  "rgba(255, 255, 255, 0.06)",
-                  "rgba(255, 255, 255, 0.02)",
-                  "rgba(255, 255, 255, 0.08)",
+                  'rgba(255, 255, 255, 0.06)',
+                  'rgba(255, 255, 255, 0.02)',
+                  'rgba(255, 255, 255, 0.08)',
                 ]}
                 locations={[0, 0.5, 1]}
                 style={StyleSheet.absoluteFill}
@@ -810,21 +901,34 @@ export default function PlantsScreen() {
                   style={{ marginBottom: 10 }}
                 />
                 <Text style={s.emptyTitle}>
-                  {searchQuery || isFilterActive ? t("plants.search.noResults",{defaultValue:"No matching plants"}) : t("plants.empty.title", { defaultValue: "No plants yet" })}
+                  {searchQuery || isFilterActive
+                    ? t('plants.search.noResults', {
+                        defaultValue: 'No matching plants',
+                      })
+                    : t('plants.empty.title', {
+                        defaultValue: 'No plants yet',
+                      })}
                 </Text>
                 <View style={s.emptyDescBox}>
                   <Text style={s.emptyText}>
-                    {searchQuery || isFilterActive ? t("plants.search.noResultsDescription",{defaultValue:"Try another search or change your filters."}) : <>
-                    {t("plants.empty.desc1", {
-                      defaultValue:
-                        'Tap the “+” button in the bottom-right corner to add your first plant.',
-                    })}{" "}
-                    {t("plants.empty.desc2", {
-                      defaultValue:
-                        "The Create Plant Wizard will help you set up your plant and specify its parameters, as well as schedule reminders.",
-                    })}
-                    {"\n\n"}
-                    </>}
+                    {searchQuery || isFilterActive ? (
+                      t('plants.search.noResultsDescription', {
+                        defaultValue:
+                          'Try another search or change your filters.',
+                      })
+                    ) : (
+                      <>
+                        {t('plants.empty.desc1', {
+                          defaultValue:
+                            'Tap the “+” button in the bottom-right corner to add your first plant.',
+                        })}{' '}
+                        {t('plants.empty.desc2', {
+                          defaultValue:
+                            'The Create Plant Wizard will help you set up your plant and specify its parameters, as well as schedule reminders.',
+                        })}
+                        {'\n\n'}
+                      </>
+                    )}
                   </Text>
                 </View>
               </View>
@@ -847,48 +951,53 @@ export default function PlantsScreen() {
             onInteraction={() => setMenuOpenId(null)}
             actions={[
               {
-                key: "create",
-                icon: "plus",
-                label: t("plants.fab.create", { defaultValue: "Create plant" }),
+                key: 'create',
+                icon: 'plus',
+                label: t('plants.fab.create', { defaultValue: 'Create plant' }),
                 onPress: openCreatePlantWizard,
               },
               {
-                key:"search",icon:"magnify",label:t("plants.search.apply",{defaultValue:"Search"}),
-                onPress:()=>{closeFloatingMenus();setSearchOpen(true);},
+                key: 'search',
+                icon: 'magnify',
+                label: t('plants.search.apply', { defaultValue: 'Search' }),
+                onPress: () => {
+                  closeFloatingMenus();
+                  setSearchOpen(true);
+                },
               },
               {
-                key: "sort",
-                icon: "sort",
-                label: t("plants.fab.sort", { defaultValue: "Sort" }),
+                key: 'sort',
+                icon: 'sort',
+                label: t('plants.fab.sort', { defaultValue: 'Sort' }),
                 onPress: () => setSortOpen(true),
               },
               {
-                key: "filter",
-                icon: "filter-variant",
-                label: t("plants.fab.filter", { defaultValue: "Filter" }),
+                key: 'filter',
+                icon: 'filter-variant',
+                label: t('plants.fab.filter', { defaultValue: 'Filter' }),
                 onPress: () => setFilterOpen(true),
               },
               ...(isFilterActive
                 ? [
                     {
-                      key: "clearFilter",
-                      label: t("plants.fab.clearFilter", {
-                        defaultValue: "Clear filter",
+                      key: 'clearFilter',
+                      label: t('plants.fab.clearFilter', {
+                        defaultValue: 'Clear filter',
                       }),
-                      icon: "filter-remove",
+                      icon: 'filter-remove',
                       onPress: () => setActiveFilters({}),
                     } as const,
                   ]
                 : []),
               {
-                key: "locations",
-                icon: "map-marker-outline",
-                label: t("plants.fab.locations", {
-                  defaultValue: "Locations",
+                key: 'locations',
+                icon: 'map-marker-outline',
+                label: t('plants.fab.locations', {
+                  defaultValue: 'Locations',
                 }),
                 onPress: () => {
                   closeFloatingMenus();
-                  nav.navigate("PlantLocations");
+                  nav.navigate('PlantLocations');
                 },
               },
             ]}
@@ -896,8 +1005,12 @@ export default function PlantsScreen() {
         </View>
       )}
 
-      <SearchPlantsModal visible={searchOpen} query={searchQuery} onCancel={()=>setSearchOpen(false)}
-        onApply={applySearch}/>
+      <SearchPlantsModal
+        visible={searchOpen}
+        query={searchQuery}
+        onCancel={() => setSearchOpen(false)}
+        onApply={applySearch}
+      />
 
       <EditPlantModal
         visible={editOpen}
@@ -947,8 +1060,8 @@ export default function PlantsScreen() {
           setSortOpen(false);
         }}
         onReset={() => {
-          setSortKey("plant");
-          setSortDir("asc");
+          setSortKey('plant');
+          setSortDir('asc');
           setSortOpen(false);
         }}
       />
@@ -959,7 +1072,7 @@ export default function PlantsScreen() {
         latinOptions={latinOptions}
         filters={activeFilters}
         onCancel={() => setFilterOpen(false)}
-        onApply={(f) => {
+        onApply={f => {
           setActiveFilters(f);
           setFilterOpen(false);
         }}
@@ -970,7 +1083,7 @@ export default function PlantsScreen() {
         <View
           style={[
             StyleSheet.absoluteFill,
-            { justifyContent: "center", alignItems: "center" },
+            { justifyContent: 'center', alignItems: 'center' },
           ]}
         >
           <CenteredSpinner size={46} color="#FFFFFF" />
@@ -981,30 +1094,30 @@ export default function PlantsScreen() {
         visible={qrVisible}
         plantName={qrPlantName}
         qrValue={qrValue}
-        onQrRef={(ref) => {
+        onQrRef={ref => {
           qrModalRef.current = ref;
         }}
         onClose={() => {
           setQrVisible(false);
-          setQrPlantId("");
+          setQrPlantId('');
           qrModalRef.current = null;
         }}
         onPressSave={async () => {
           try {
             await onSaveQr(qrModalRef.current);
             showToast(
-              t("plants.toast.qrSaved", {
-                defaultValue: "QR code saved to your gallery.",
+              t('plants.toast.qrSaved', {
+                defaultValue: 'QR code saved to your gallery.',
               }),
-              "success"
+              'success',
             );
           } catch (err: any) {
-            console.warn("[Plants] save QR failed:", err);
+            console.warn('[Plants] save QR failed:', err);
             showToast(
-              t("plants.toast.qrSaveFailed", {
-                defaultValue: "Failed to save QR code.",
+              t('plants.toast.qrSaveFailed', {
+                defaultValue: 'Failed to save QR code.',
               }),
-              "error"
+              'error',
             );
           }
         }}
@@ -1012,18 +1125,18 @@ export default function PlantsScreen() {
           try {
             await sendQrCodeByEmail(Number(qrPlantId), currentLanguage);
             showToast(
-              t("plants.toast.qrEmailed", {
-                defaultValue: "QR code email sent.",
+              t('plants.toast.qrEmailed', {
+                defaultValue: 'QR code email sent.',
               }),
-              "success"
+              'success',
             );
           } catch (err: any) {
-            console.warn("[Plants] send QR email failed:", err);
+            console.warn('[Plants] send QR email failed:', err);
             showToast(
-              t("plants.toast.qrEmailFailed", {
-                defaultValue: "Failed to send QR code email.",
+              t('plants.toast.qrEmailFailed', {
+                defaultValue: 'Failed to send QR code email.',
               }),
-              "error"
+              'error',
             );
           }
         }}
