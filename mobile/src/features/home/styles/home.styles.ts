@@ -23,7 +23,7 @@ export const s = StyleSheet.create({
     alignItems: 'center',
   },
   segmentActive: { backgroundColor: 'rgba(11,114,133,1)' },
-  segmentText: { color: '#FFFFFF', fontSize: 11, fontWeight: '700' },
+  segmentText: { color: '#FFFFFF', fontSize: 10, fontWeight: '700' },
   groupHeading: {
     marginHorizontal: 10,
     flexDirection: 'row',

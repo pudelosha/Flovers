@@ -1,3 +1,4 @@
+import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { BackHandler, Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import Clipboard from "@react-native-clipboard/clipboard";
@@ -280,7 +281,7 @@ export default function ContactsScreen() {
         />
       )}
       {isFocused && menuContact && menuAnchor && (
-        <View style={local.menuOverlay} accessibilityViewIsModal>
+        <ThemeContrastScope kind="dark"><View style={local.menuOverlay} accessibilityViewIsModal>
           <Pressable style={StyleSheet.absoluteFill} accessibilityRole="button"
             accessibilityLabel={t("sharing.common.close", { defaultValue: "Close" })} onPress={closeMenu} />
           <View testID="contact-actions-menu" style={[plantDetailStyles.menuSheet, { right: menuAnchor.right, top: menuTop, maxWidth: menuAnchor.maxWidth }]}
@@ -301,7 +302,7 @@ export default function ContactsScreen() {
               <Text style={[plantDetailStyles.menuItemText, local.dangerText]}>{t("sharing.contacts.delete", { defaultValue: "Delete" })}</Text>
             </Pressable>
           </View>
-        </View>
+        </View></ThemeContrastScope>
       )}
       <AppModalHost>
       <InviteByEmailModal visible={isFocused && emailInviteVisible} onClose={() => setEmailInviteVisible(false)} />

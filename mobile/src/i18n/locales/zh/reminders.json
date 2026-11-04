@@ -3,7 +3,11 @@
     "headerTitle": "提醒",
     "common": {
       "unnamedPlant": "没有名字的植物",
-      "everyN": "每 {{count}} {{unit}}"
+      "everyN": "每 {{count}} {{unit}}",
+      "everyDays_one": "每 {{count}} 天",
+      "everyDays_other": "每 {{count}} 天",
+      "everyMonths_one": "每 {{count}} 个月",
+      "everyMonths_other": "每 {{count}} 个月"
     },
     "units": {
       "days": "天",
@@ -40,7 +44,11 @@
       "dueInOneDay": "1天后到期",
       "dueInDays": "{{count}}天后到期",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "已暂停"
+      "paused": "已暂停",
+      "repeatsEveryDays_one": "每 {{count}} 天重复",
+      "repeatsEveryDays_other": "每 {{count}} 天重复",
+      "repeatsEveryMonths_one": "每 {{count}} 个月重复",
+      "repeatsEveryMonths_other": "每 {{count}} 个月重复"
     },
     "calendar": {
       "scheduledOn": "计划在 {{date}}",

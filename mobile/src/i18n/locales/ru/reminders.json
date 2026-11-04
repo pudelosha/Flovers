@@ -3,7 +3,15 @@
     "headerTitle": "Напоминания",
     "common": {
       "unnamedPlant": "Безымянное комнатное растение",
-      "everyN": "каждый {{count}} {{unit}}"
+      "everyN": "каждый {{count}} {{unit}}",
+      "everyDays_one": "каждый {{count}} день",
+      "everyDays_other": "каждые {{count}} дней",
+      "everyDays_few": "каждые {{count}} дня",
+      "everyDays_many": "каждые {{count}} дней",
+      "everyMonths_one": "каждый {{count}} месяц",
+      "everyMonths_other": "каждые {{count}} месяцев",
+      "everyMonths_few": "каждые {{count}} месяца",
+      "everyMonths_many": "каждые {{count}} месяцев"
     },
     "units": {
       "days": "дни",
@@ -40,7 +48,15 @@
       "dueInOneDay": "Срок оплаты 1 день",
       "dueInDays": "Срок оплаты: {{count}} дней.",
       "dueLine": "{{prefix}} на {{date}}",
-      "paused": "Приостановлено"
+      "paused": "Приостановлено",
+      "repeatsEveryDays_one": "Повторяется каждый {{count}} день",
+      "repeatsEveryDays_other": "Повторяется каждые {{count}} дней",
+      "repeatsEveryDays_few": "Повторяется каждые {{count}} дня",
+      "repeatsEveryDays_many": "Повторяется каждые {{count}} дней",
+      "repeatsEveryMonths_one": "Повторяется каждый {{count}} месяц",
+      "repeatsEveryMonths_other": "Повторяется каждые {{count}} месяцев",
+      "repeatsEveryMonths_few": "Повторяется каждые {{count}} месяца",
+      "repeatsEveryMonths_many": "Повторяется каждые {{count}} месяцев"
     },
     "calendar": {
       "scheduledOn": "Запланировано на {{date}}",

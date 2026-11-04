@@ -1,13 +1,19 @@
-import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
-import React, { useCallback } from "react";
-import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
-import LinearGradient from "../../../shared/theme/Gradient";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
+import FloatingTileMenu from '../../../shared/ui/FloatingTileMenu';
+import React, { useCallback } from 'react';
+import { useAppTheme } from '../../../shared/theme/ThemeContext';
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+} from '../../../shared/theme/native';
+import LinearGradient from '../../../shared/theme/Gradient';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
 
-import { locStyles as s } from "../styles/locations.styles";
-import type { PlantLocation } from "../types/locations.types";
+import { locStyles as s } from '../styles/locations.styles';
+import type { PlantLocation } from '../types/locations.types';
 
 type Props = {
   location: PlantLocation;
@@ -19,8 +25,8 @@ type Props = {
 };
 
 // EXACT SAME green tones as AuthCard / Plants / Reminders / Home
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function LocationTile({
   location,
@@ -31,6 +37,7 @@ export default function LocationTile({
   onDelete,
 }: Props) {
   const { t } = useTranslation();
+  const { isLight } = useAppTheme();
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
@@ -41,25 +48,28 @@ export default function LocationTile({
 
       if (!isMissing) return txt;
 
-      let result = fallback ?? key.split(".").pop() ?? key;
+      let result = fallback ?? key.split('.').pop() ?? key;
 
       if (values) {
         Object.entries(values).forEach(([k, v]) => {
-          result = result.replace(new RegExp(`{{\\s*${k}\\s*}}`, "g"), String(v));
+          result = result.replace(
+            new RegExp(`{{\\s*${k}\\s*}}`, 'g'),
+            String(v),
+          );
         });
       }
 
       return result;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const plantLabel =
-    currentLanguage === "pl"
-      ? tr("locations.plantCount.label", "Liczba roślin: {{count}}", {
+    currentLanguage === 'pl'
+      ? tr('locations.plantCount.label', 'Liczba roślin: {{count}}', {
           count: location.plantCount,
         })
-      : tr("locations.plantCount.label", "Plant count: {{count}}", {
+      : tr('locations.plantCount.label', 'Plant count: {{count}}', {
           count: location.plantCount,
         });
 
@@ -83,9 +93,9 @@ export default function LocationTile({
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
+            'rgba(255, 255, 255, 0.06)',
+            'rgba(255, 255, 255, 0.02)',
+            'rgba(255, 255, 255, 0.08)',
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
@@ -102,10 +112,14 @@ export default function LocationTile({
           onPressBody();
           onPressMenu();
         }}
-        android_ripple={{ color: "rgba(255,255,255,0.08)" }}
+        android_ripple={{ color: 'rgba(255,255,255,0.08)' }}
       >
-        <View style={s.iconCircle}>
-          <MaterialCommunityIcons name="map-marker-outline" size={18} color="#FFFFFF" />
+        <View style={[s.iconCircle, isLight && { backgroundColor: '#C5E8DD' }]}>
+          <MaterialCommunityIcons
+            name="map-marker-outline"
+            size={20}
+            color="#FFFFFF"
+          />
         </View>
 
         <View style={{ flex: 1, paddingRight: 8 }}>
@@ -123,7 +137,7 @@ export default function LocationTile({
           <Pressable
             style={s.menuItem}
             onPress={onEdit}
-            android_ripple={{ color: "rgba(255,255,255,0.16)" }}
+            android_ripple={{ color: 'rgba(255,255,255,0.16)' }}
           >
             <MaterialCommunityIcons
               name="pencil-outline"
@@ -131,13 +145,15 @@ export default function LocationTile({
               color="#FFFFFF"
               style={{ marginRight: 6 }}
             />
-            <Text style={s.menuItemText}>{tr("locations.menu.edit", "Edit location")}</Text>
+            <Text style={s.menuItemText}>
+              {tr('locations.menu.edit', 'Edit location')}
+            </Text>
           </Pressable>
 
           <Pressable
             style={s.menuItem}
             onPress={onDelete}
-            android_ripple={{ color: "rgba(255,107,107,0.18)" }}
+            android_ripple={{ color: 'rgba(255,107,107,0.18)' }}
           >
             <MaterialCommunityIcons
               name="delete-outline"
@@ -146,7 +162,7 @@ export default function LocationTile({
               style={{ marginRight: 6 }}
             />
             <Text style={[s.menuItemText, s.menuItemDangerText]}>
-              {tr("locations.menu.delete", "Delete location")}
+              {tr('locations.menu.delete', 'Delete location')}
             </Text>
           </Pressable>
         </FloatingTileMenu>

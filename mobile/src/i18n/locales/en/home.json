@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "No overdue tasks",
-        "body": "You don't have any overdue tasks right now.\n\nYou're all caught up — use \"Show all tasks\" from the FAB to see everything, or switch filters to explore upcoming tasks."
+        "body": "No tasks match the current selection. Choose another option in the bar above or adjust your filters."
       },
       "today": {
         "title": "No tasks due today",
-        "body": "You don't have any tasks due today.\n\nUse \"Show all tasks\" from the FAB to see upcoming reminders, or adjust your reminder schedules on your plants."
+        "body": "No tasks match the current selection. Choose another option in the bar above or adjust your filters."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} tasks",
       "noUpcomingTitle": "No upcoming tasks",
-      "noUpcomingBody": "There are no tasks due after today.",
+      "noUpcomingBody": "No tasks match the current selection. Choose another option in the bar above or adjust your filters.",
       "tasks_one": "{{count}} task",
       "tasks_other": "{{count}} tasks"
     }

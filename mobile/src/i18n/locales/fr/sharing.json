@@ -178,7 +178,7 @@
       "alreadyPending": "Une invitation est déjà en attente pour cette personne.",
       "throttled": "Trop de demandes. Patientez un instant, puis réessayez.",
       "unavailable": "Connexion impossible. Veuillez réessayer.",
-      "alreadyRegistered": "Cette adresse e-mail est d?j? inscrite. Utilisez Ajouter un contact."
+      "alreadyRegistered": "Cette adresse e-mail est déjà inscrite. Utilisez Ajouter un contact."
     },
     "access": {
       "sharedBy": "Partagée par {{name}}",
@@ -200,10 +200,10 @@
     },
     "emailInvite": {
       "title": "Inviter par e-mail",
-      "description": "Invitez une personne qui n?a pas encore de compte Flovers. Nous lui enverrons les instructions dans la langue choisie. L?invitation expire apr?s 30 jours.",
-      "pending": "En attente d?inscription",
-      "alreadyRegistered": "Cette adresse e-mail est d?j? inscrite. Utilisez Ajouter un contact.",
-      "language": "Langue de l?invitation",
+      "description": "Invitez une personne qui n’a pas encore de compte Flovers. Nous lui enverrons les instructions dans la langue choisie. L’invitation expire après 30 jours.",
+      "pending": "En attente d’inscription",
+      "alreadyRegistered": "Cette adresse e-mail est déjà inscrite. Utilisez Ajouter un contact.",
+      "language": "Langue de l’invitation",
       "email": "Adresse e-mail"
     }
   }

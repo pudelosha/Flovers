@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "Gecikmiş görev yok",
-        "body": "Şu anda gecikmiş göreviniz yok.\n\n+ düğmesinden \"Tüm görevleri göster\" seçeneğini kullanın veya yaklaşan görevleri görmek için filtreleri değiştirin."
+        "body": "Geçerli seçime uyan görev yok. Üstteki çubuktan başka bir seçenek seçin veya filtreleri değiştirin."
       },
       "today": {
         "title": "Bugün teslim edilmesi gereken görev yok",
-        "body": "Bugün yapılacak göreviniz yok.\n\nYaklaşan görevleri görmek için + düğmesinden \"Tüm görevleri göster\" seçeneğini kullanın veya bitkilerinizin hatırlatma takvimini düzenleyin."
+        "body": "Geçerli seçime uyan görev yok. Üstteki çubuktan başka bir seçenek seçin veya filtreleri değiştirin."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} görev",
       "noUpcomingTitle": "Yaklaşan görev yok",
-      "noUpcomingBody": "Bugünden sonrası için planlanmış görev yok."
+      "noUpcomingBody": "Geçerli seçime uyan görev yok. Üstteki çubuktan başka bir seçenek seçin veya filtreleri değiştirin."
     }
   },
   "inbox": {

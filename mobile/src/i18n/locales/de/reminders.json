@@ -3,7 +3,11 @@
     "headerTitle": "Erinnerungen",
     "common": {
       "unnamedPlant": "Pflanze ohne Namen",
-      "everyN": "alle {{count}} {{unit}}"
+      "everyN": "alle {{count}} {{unit}}",
+      "everyDays_one": "jeden Tag",
+      "everyDays_other": "alle {{count}} Tage",
+      "everyMonths_one": "jeden Monat",
+      "everyMonths_other": "alle {{count}} Monate"
     },
     "units": {
       "days": "Tage",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Fällig in 1 Tag",
       "dueInDays": "Fällig in {{count}} Tagen",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "Pausiert"
+      "paused": "Pausiert",
+      "repeatsEveryDays_one": "Wiederholt sich jeden Tag",
+      "repeatsEveryDays_other": "Wiederholt sich alle {{count}} Tage",
+      "repeatsEveryMonths_one": "Wiederholt sich jeden Monat",
+      "repeatsEveryMonths_other": "Wiederholt sich alle {{count}} Monate"
     },
     "calendar": {
       "scheduledOn": "Geplant für {{date}}",

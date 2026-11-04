@@ -3,7 +3,11 @@
     "headerTitle": "Hatırlatıcılar",
     "common": {
       "unnamedPlant": "İsimsiz ev bitkisi",
-      "everyN": "her {{count}} {{unit}}"
+      "everyN": "her {{count}} {{unit}}",
+      "everyDays_one": "{{count}} günde bir",
+      "everyDays_other": "{{count}} günde bir",
+      "everyMonths_one": "{{count}} ayda bir",
+      "everyMonths_other": "{{count}} ayda bir"
     },
     "units": {
       "days": "günler",
@@ -40,7 +44,11 @@
       "dueInOneDay": "1 gün içinde vadesi dolacak",
       "dueInDays": "{{count}} gün içinde vadesi gelecek",
       "dueLine": "{{date}} üzerinde {{prefix}}",
-      "paused": "Duraklatıldı"
+      "paused": "Duraklatıldı",
+      "repeatsEveryDays_one": "{{count}} günde bir tekrarlanır",
+      "repeatsEveryDays_other": "{{count}} günde bir tekrarlanır",
+      "repeatsEveryMonths_one": "{{count}} ayda bir tekrarlanır",
+      "repeatsEveryMonths_other": "{{count}} ayda bir tekrarlanır"
     },
     "calendar": {
       "scheduledOn": "{{date}} tarihinde planlandı",

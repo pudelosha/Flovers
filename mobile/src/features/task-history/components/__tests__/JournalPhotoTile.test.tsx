@@ -33,7 +33,7 @@ it("shows compact photo metadata and full note without downloading a tile image"
  expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
  expect(view.getByText('31.10.2026')).toBeTruthy();expect(view.getByText('Anna')).toBeTruthy();
  expect(view.queryByText('Added')).toBeNull();expect(view.queryByText('Photo date: 28.10.2026')).toBeNull();
- expect(view.getByText('Note')).toBeTruthy();expect(view.getByText(item.note!).props.numberOfLines).toBeUndefined();
+ expect(view.queryByText('Note')).toBeNull();expect(view.getByText(item.note!).props.numberOfLines).toBeUndefined();
 });
 
 it("opens the owner menu from the photo and closes it before editing", () => {

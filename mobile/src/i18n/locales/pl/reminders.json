@@ -3,7 +3,15 @@
     "headerTitle": "Przypomnienia",
     "common": {
       "unnamedPlant": "Roślina bez nazwy",
-      "everyN": "co {{count}} {{unit}}"
+      "everyN": "co {{count}} {{unit}}",
+      "everyDays_one": "co {{count}} dzień",
+      "everyDays_other": "co {{count}} dni",
+      "everyDays_few": "co {{count}} dni",
+      "everyDays_many": "co {{count}} dni",
+      "everyMonths_one": "co {{count}} miesiąc",
+      "everyMonths_other": "co {{count}} miesięcy",
+      "everyMonths_few": "co {{count}} miesiące",
+      "everyMonths_many": "co {{count}} miesięcy"
     },
     "units": {
       "days": "dni",
@@ -32,15 +40,23 @@
       "edit": "Edytuj przypomnienie",
       "delete": "Usuń przypomnienie",
       "pause": "Wstrzymaj przypomnienie",
-      "resume": "Wzn\u00f3w przypomnienie"
+      "resume": "Wznów przypomnienie"
     },
     "tile": {
-      "repeatsEvery": "Powtarza się {{count}} {{unit}}",
+      "repeatsEvery": "Powtarza się co {{count}} {{unit}}",
       "dueToday": "Dziś termin",
       "dueInOneDay": "Termin za 1 dzień",
       "dueInDays": "Termin za {{count}} dni",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "Wstrzymane"
+      "paused": "Wstrzymane",
+      "repeatsEveryDays_one": "Powtarza się co {{count}} dzień",
+      "repeatsEveryDays_other": "Powtarza się co {{count}} dni",
+      "repeatsEveryDays_few": "Powtarza się co {{count}} dni",
+      "repeatsEveryDays_many": "Powtarza się co {{count}} dni",
+      "repeatsEveryMonths_one": "Powtarza się co {{count}} miesiąc",
+      "repeatsEveryMonths_other": "Powtarza się co {{count}} miesięcy",
+      "repeatsEveryMonths_few": "Powtarza się co {{count}} miesiące",
+      "repeatsEveryMonths_many": "Powtarza się co {{count}} miesięcy"
     },
     "calendar": {
       "scheduledOn": "Zaplanowane na {{date}}",
@@ -107,8 +123,8 @@
       "updateFailedWithReason": "Nie udało się zaktualizować: {{reason}}",
       "paused": "Wstrzymano przypomnienie",
       "resumed": "Wznowiono przypomnienie",
-      "toggleFailed": "Nie uda\u0142o si\u0119 zaktualizowa\u0107",
-      "toggleFailedWithReason": "Nie uda\u0142o si\u0119 zaktualizowa\u0107: {{reason}}"
+      "toggleFailed": "Nie udało się zaktualizować",
+      "toggleFailedWithReason": "Nie udało się zaktualizować: {{reason}}"
     }
   }
 }

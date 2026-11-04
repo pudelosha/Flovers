@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "No hay tareas atrasadas",
-        "body": "No tienes tareas atrasadas en este momento.\n\nEstás al día — usa \"Mostrar todas las tareas\" desde el FAB para ver todo, o cambia los filtros para explorar las próximas tareas."
+        "body": "No hay tareas que coincidan con la selección actual. Elige otra opción en la barra superior o cambia los filtros."
       },
       "today": {
         "title": "No hay tareas para hoy",
-        "body": "No tienes tareas programadas para hoy.\n\nUsa \"Mostrar todas las tareas\" desde el FAB para ver los próximos recordatorios, o ajusta los horarios de tus recordatorios en tus plantas."
+        "body": "No hay tareas que coincidan con la selección actual. Elige otra opción en la barra superior o cambia los filtros."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} tareas",
       "noUpcomingTitle": "No hay tareas próximas",
-      "noUpcomingBody": "No hay tareas programadas para después de hoy."
+      "noUpcomingBody": "No hay tareas que coincidan con la selección actual. Elige otra opción en la barra superior o cambia los filtros."
     }
   },
   "inbox": {

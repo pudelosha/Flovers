@@ -3,7 +3,11 @@
     "headerTitle": "Rappels",
     "common": {
       "unnamedPlant": "Plante sans nom",
-      "everyN": "tous les {{count}} {{unit}}"
+      "everyN": "tous les {{count}} {{unit}}",
+      "everyDays_one": "chaque jour",
+      "everyDays_other": "tous les {{count}} jours",
+      "everyMonths_one": "chaque mois",
+      "everyMonths_other": "tous les {{count}} mois"
     },
     "units": {
       "days": "jours",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Échéance dans 1 jour",
       "dueInDays": "Échéance dans {{count}} jours",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "En pause"
+      "paused": "En pause",
+      "repeatsEveryDays_one": "Se répète chaque jour",
+      "repeatsEveryDays_other": "Se répète tous les {{count}} jours",
+      "repeatsEveryMonths_one": "Se répète chaque mois",
+      "repeatsEveryMonths_other": "Se répète tous les {{count}} mois"
     },
     "calendar": {
       "scheduledOn": "Planifié pour le {{date}}",
@@ -107,8 +115,8 @@
       "updateFailedWithReason": "Impossible de mettre à jour : {{reason}}",
       "paused": "Rappel mis en pause",
       "resumed": "Rappel repris",
-      "toggleFailed": "\u00c9chec de la mise \u00e0 jour",
-      "toggleFailedWithReason": "\u00c9chec de la mise \u00e0 jour : {{reason}}"
+      "toggleFailed": "Échec de la mise à jour",
+      "toggleFailedWithReason": "Échec de la mise à jour : {{reason}}"
     }
   }
 }

@@ -229,7 +229,7 @@ export default function TaskHistoryTile({
             </View>
 
             {/* Center: type + plant + location */}
-            <View style={s.centerCol}>
+            <View style={[s.centerCol, { marginLeft: 10 }]}>
               <Text
                 style={[s.plantName, { fontSize: 14, marginTop: 0 }]}
                 numberOfLines={1}
@@ -276,7 +276,6 @@ export default function TaskHistoryTile({
 
         {hasNote && (
           <View style={[s.noteBox, styles.noteSection]}>
-            <Text style={s.noteLabel}>{t('taskHistory.tile.noteLabel')}</Text>
             <Text style={s.noteText}>{item.note}</Text>
           </View>
         )}

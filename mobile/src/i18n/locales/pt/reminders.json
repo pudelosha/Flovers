@@ -3,7 +3,11 @@
     "headerTitle": "Lembretes",
     "common": {
       "unnamedPlant": "Planta sem nome",
-      "everyN": "a cada {{count}} {{unit}}"
+      "everyN": "a cada {{count}} {{unit}}",
+      "everyDays_one": "a cada {{count}} dia",
+      "everyDays_other": "a cada {{count}} dias",
+      "everyMonths_one": "a cada {{count}} mês",
+      "everyMonths_other": "a cada {{count}} meses"
     },
     "units": {
       "days": "dias",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Vencimento em 1 dia",
       "dueInDays": "Vencimento em {{count}} dias",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "Pausado"
+      "paused": "Pausado",
+      "repeatsEveryDays_one": "Repete-se a cada {{count}} dia",
+      "repeatsEveryDays_other": "Repete-se a cada {{count}} dias",
+      "repeatsEveryMonths_one": "Repete-se a cada {{count}} mês",
+      "repeatsEveryMonths_other": "Repete-se a cada {{count}} meses"
     },
     "calendar": {
       "scheduledOn": "Agendado para {{date}}",

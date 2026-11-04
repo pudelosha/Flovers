@@ -3,7 +3,11 @@
     "headerTitle": "Promemoria",
     "common": {
       "unnamedPlant": "Pianta senza nome",
-      "everyN": "ogni {{count}} {{unit}}"
+      "everyN": "ogni {{count}} {{unit}}",
+      "everyDays_one": "ogni {{count}} giorno",
+      "everyDays_other": "ogni {{count}} giorni",
+      "everyMonths_one": "ogni {{count}} mese",
+      "everyMonths_other": "ogni {{count}} mesi"
     },
     "units": {
       "days": "giorni",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Scade tra 1 giorno",
       "dueInDays": "Scade tra {{count}} giorni",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "In pausa"
+      "paused": "In pausa",
+      "repeatsEveryDays_one": "Si ripete ogni {{count}} giorno",
+      "repeatsEveryDays_other": "Si ripete ogni {{count}} giorni",
+      "repeatsEveryMonths_one": "Si ripete ogni {{count}} mese",
+      "repeatsEveryMonths_other": "Si ripete ogni {{count}} mesi"
     },
     "calendar": {
       "scheduledOn": "Programmato per {{date}}",

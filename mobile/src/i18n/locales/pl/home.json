@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "Brak zaległych zadań",
-        "body": "Nie masz obecnie żadnych zaległych zadań.\n\nWszystko jest na bieżąco — użyj „Pokaż wszystkie zadania” z FAB, aby zobaczyć wszystko, lub zmień filtry, aby przejrzeć nadchodzące zadania."
+        "body": "Brak zadań pasujących do wybranych kryteriów. Wybierz inną opcję na pasku u góry lub zmień filtry."
       },
       "today": {
         "title": "Brak zadań na dziś",
-        "body": "Nie masz dziś żadnych zadań.\n\nUżyj „Pokaż wszystkie zadania” z FAB, aby zobaczyć nadchodzące przypomnienia, lub dostosuj harmonogramy przypomnień dla swoich roślin."
+        "body": "Brak zadań pasujących do wybranych kryteriów. Wybierz inną opcję na pasku u góry lub zmień filtry."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "Zadania: {{count}}",
       "noUpcomingTitle": "Brak nadchodzących zadań",
-      "noUpcomingBody": "Nie masz zadań z terminem po dzisiejszym dniu."
+      "noUpcomingBody": "Brak zadań pasujących do wybranych kryteriów. Wybierz inną opcję na pasku u góry lub zmień filtry."
     }
   },
   "inbox": {

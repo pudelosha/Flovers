@@ -3,7 +3,11 @@
     "headerTitle": "Pengingat",
     "common": {
       "unnamedPlant": "Tanaman hias tanpa nama",
-      "everyN": "setiap {{count}} {{unit}}"
+      "everyN": "setiap {{count}} {{unit}}",
+      "everyDays_one": "setiap {{count}} hari",
+      "everyDays_other": "setiap {{count}} hari",
+      "everyMonths_one": "setiap {{count}} bulan",
+      "everyMonths_other": "setiap {{count}} bulan"
     },
     "units": {
       "days": "hari",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Jatuh tempo dalam 1 hari",
       "dueInDays": "Jatuh tempo dalam {{count}} hari",
       "dueLine": "{{prefix}} dan {{date}}",
-      "paused": "Dijeda"
+      "paused": "Dijeda",
+      "repeatsEveryDays_one": "Berulang setiap {{count}} hari",
+      "repeatsEveryDays_other": "Berulang setiap {{count}} hari",
+      "repeatsEveryMonths_one": "Berulang setiap {{count}} bulan",
+      "repeatsEveryMonths_other": "Berulang setiap {{count}} bulan"
     },
     "calendar": {
       "scheduledOn": "Dijadwalkan pada {{date}}",

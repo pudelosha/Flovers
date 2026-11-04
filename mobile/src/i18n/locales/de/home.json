@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "Keine überfälligen Aufgaben",
-        "body": "Du hast derzeit keine überfälligen Aufgaben.\n\nDu bist auf dem neuesten Stand — nutze „Alle Aufgaben anzeigen“ im FAB, um alles zu sehen, oder wechsle die Filter, um kommende Aufgaben zu erkunden."
+        "body": "Keine Aufgaben entsprechen der aktuellen Auswahl. Wähle oben in der Leiste eine andere Option oder passe die Filter an."
       },
       "today": {
         "title": "Heute keine fälligen Aufgaben",
-        "body": "Du hast heute keine fälligen Aufgaben.\n\nNutze „Alle Aufgaben anzeigen“ im FAB, um kommende Erinnerungen zu sehen, oder passe die Erinnerungspläne deiner Pflanzen an."
+        "body": "Keine Aufgaben entsprechen der aktuellen Auswahl. Wähle oben in der Leiste eine andere Option oder passe die Filter an."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} Aufgaben",
       "noUpcomingTitle": "Keine anstehenden Aufgaben",
-      "noUpcomingBody": "Für die kommenden Tage stehen keine Aufgaben an."
+      "noUpcomingBody": "Keine Aufgaben entsprechen der aktuellen Auswahl. Wähle oben in der Leiste eine andere Option oder passe die Filter an."
     }
   },
   "inbox": {

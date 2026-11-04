@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "Aucune tâche en retard",
-        "body": "Vous n’avez aucune tâche en retard pour le moment.\n\nVous êtes à jour — utilisez \"Afficher toutes les tâches\" depuis le FAB pour tout voir, ou changez les filtres pour explorer les tâches à venir."
+        "body": "Aucune tâche ne correspond à la sélection actuelle. Choisissez une autre option dans la barre du haut ou modifiez les filtres."
       },
       "today": {
         "title": "Aucune tâche prévue aujourd’hui",
-        "body": "Vous n’avez aucune tâche prévue aujourd’hui.\n\nUtilisez \"Afficher toutes les tâches\" depuis le FAB pour voir les rappels à venir, ou ajustez les plannings de rappel de vos plantes."
+        "body": "Aucune tâche ne correspond à la sélection actuelle. Choisissez une autre option dans la barre du haut ou modifiez les filtres."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} tâches",
       "noUpcomingTitle": "Aucune tâche à venir",
-      "noUpcomingBody": "Aucune tâche n’est prévue après aujourd’hui."
+      "noUpcomingBody": "Aucune tâche ne correspond à la sélection actuelle. Choisissez une autre option dans la barre du haut ou modifiez les filtres."
     }
   },
   "inbox": {

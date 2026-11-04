@@ -230,7 +230,7 @@ export default function TaskTile({
         </View>
 
         {/* Center: task type label, plant name, location */}
-        <View style={s.centerCol}>
+        <View style={[s.centerCol, compact && { marginLeft: 10 }]}>
           {!compact && (
             <Text style={[s.taskTypeLabel, { color: accent }]}>
               {t(`home.taskTypes.${task.type}`)}

@@ -1,38 +1,49 @@
-import {useAppTheme} from "../../../shared/theme/ThemeContext";
-import React, { useCallback, useMemo } from "react";
-import { Pressable, Text, View, StyleSheet } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import LinearGradient from "../../../shared/theme/Gradient";
+import { useAppTheme } from '../../../shared/theme/ThemeContext';
+import React, { useCallback, useMemo } from 'react';
+import {
+  Pressable,
+  Text,
+  View,
+  StyleSheet,
+} from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import LinearGradient from '../../../shared/theme/Gradient';
 
-import { s } from "../styles/reminders.styles";
-import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
-import type { Reminder } from "../types/reminders.types";
-import ReminderMenu from "./ReminderMenu";
-import { useNavigation } from "@react-navigation/native";
-import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
+import { s } from '../styles/reminders.styles';
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../constants/reminders.constants';
+import type { Reminder } from '../types/reminders.types';
+import ReminderMenu from './ReminderMenu';
+import { useNavigation } from '@react-navigation/native';
+import {
+  plantAccess,
+  SHARED_PLANT_TINT,
+} from '../../../shared/utils/plantAccess';
 
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
 
 function toDisplayType(t?: string) {
-  const x = (t || "").toLowerCase();
-  if (x === "water" || x === "watering") return "watering";
-  if (x === "fertilize" || x === "fertilising" || x === "fertilizing")
-    return "fertilising";
-  if (x === "moisture" || x === "misting") return "moisture";
-  if (x === "care") return "care";
-  if (x === "repot" || x === "repotting") return "repot";
-  return "care";
+  const x = (t || '').toLowerCase();
+  if (x === 'water' || x === 'watering') return 'watering';
+  if (x === 'fertilize' || x === 'fertilising' || x === 'fertilizing')
+    return 'fertilising';
+  if (x === 'moisture' || x === 'misting') return 'moisture';
+  if (x === 'care') return 'care';
+  if (x === 'repot' || x === 'repotting') return 'repot';
+  return 'care';
 }
 
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(0,0,0,${alpha})`;
-  if (!hex || typeof hex !== "string") return fallback;
+  if (!hex || typeof hex !== 'string') return fallback;
   let h = hex.trim();
-  if (!h.startsWith("#")) h = `#${h}`;
-  h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+  if (!h.startsWith('#')) h = `#${h}`;
+  h = h.replace('#', '');
+  if (h.length === 3)
+    h = h
+      .split('')
+      .map(c => c + c)
+      .join('');
   if (h.length !== 6) return fallback;
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
@@ -40,46 +51,6 @@ function hexToRgba(hex?: string, alpha = 1) {
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
   return `rgba(${r},${g},${b},${alpha})`;
-}
-
-function formatDateWithSettings(d: Date, settings: any) {
-  const dd = String(d.getDate()).padStart(2, "0");
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
-  const yyyy = d.getFullYear();
-
-  const fmt = settings?.dateFormat;
-
-  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
-    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
-    return `${mm}${sep}${dd}${sep}${yyyy}`;
-  }
-  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
-    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
-    return `${yyyy}${sep}${mm}${sep}${dd}`;
-  }
-
-  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
-  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
-  return `${dd}.${mm}.${yyyy}`;
-}
-
-function formatDate(d?: Date | string, settings?: any) {
-  if (!d) return "";
-  const date = typeof d === "string" ? new Date(d) : d;
-  if (!(date instanceof Date) || isNaN(+date)) return "";
-  return formatDateWithSettings(date, settings);
-}
-
-function daysUntil(d?: Date | string): number | null {
-  if (!d) return null;
-  const date = typeof d === "string" ? new Date(d) : d;
-  if (!(date instanceof Date) || isNaN(+date)) return null;
-  const start = new Date();
-  start.setHours(0, 0, 0, 0);
-  const end = new Date(date);
-  end.setHours(0, 0, 0, 0);
-  const diffMs = end.getTime() - start.getTime();
-  return Math.round(diffMs / (1000 * 60 * 60 * 24));
 }
 
 type Props = {
@@ -93,8 +64,8 @@ type Props = {
 };
 
 // EXACT SAME green tones as AuthCard / PlantTile
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function ReminderTile({
   reminder,
@@ -107,8 +78,7 @@ export default function ReminderTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings();
-  const {isLight}=useAppTheme();
+  const { isLight } = useAppTheme();
   const nav = useNavigation<any>();
   const access = plantAccess(reminder.access);
 
@@ -117,51 +87,38 @@ export default function ReminderTile({
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
-      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+      return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const displayType = toDisplayType(reminder.type as any);
   const accent = ACCENT_BY_TYPE[displayType as any];
-  const icon = ICON_BY_TYPE[displayType as any] ?? "calendar";
+  const icon = ICON_BY_TYPE[displayType as any] ?? 'calendar';
 
   const typeLabel = tr(
     `reminders.types.${displayType}`,
-    displayType === "fertilising"
-      ? "Fertilising"
-      : displayType.charAt(0).toUpperCase() + displayType.slice(1)
+    displayType === 'fertilising'
+      ? 'Fertilising'
+      : displayType.charAt(0).toUpperCase() + displayType.slice(1),
   );
 
-  const unitKey = reminder.intervalUnit === "months" ? "months" : "days";
-  const unitLabel = tr(`reminders.units.${unitKey}`, unitKey);
+  const unitKey = reminder.intervalUnit === 'months' ? 'months' : 'days';
 
   const everyStr = useMemo(() => {
-    if (!reminder.intervalValue || !reminder.intervalUnit) return "";
-    return tr("reminders.tile.repeatsEvery", "Repeats every {{count}} {{unit}}", {
-      count: reminder.intervalValue,
-      unit: unitLabel,
-    });
-  }, [reminder.intervalValue, reminder.intervalUnit, tr, unitLabel]);
-
-  const dueDateText = useMemo(
-    () => (reminder.dueDate ? formatDate(reminder.dueDate, settings) : ""),
-    [reminder.dueDate, settings]
-  );
-
-  const dueText = useMemo(() => {
-    const dueDays = daysUntil(reminder.dueDate);
-    if (dueDays === null || !dueDateText) return "";
-
-    if (dueDays === 0) return tr("reminders.tile.dueToday", "Due today");
-    if (dueDays === 1) return tr("reminders.tile.dueInOneDay", "Due in 1 day");
-    return tr("reminders.tile.dueInDays", "Due in {{count}} days", {
-      count: dueDays,
-    });
-  }, [reminder.dueDate, dueDateText, tr]);
+    if (!reminder.intervalValue || !reminder.intervalUnit) return '';
+    return tr(
+      `reminders.tile.repeatsEvery${unitKey === 'months' ? 'Months' : 'Days'}`,
+      'Repeats every {{count}} {{unit}}',
+      {
+        count: reminder.intervalValue,
+        unit: unitKey,
+      },
+    );
+  }, [reminder.intervalValue, reminder.intervalUnit, tr, unitKey]);
 
   return (
-    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
+    <View style={[s.cardWrap, { height: 66 }, isMenuOpen && s.cardWrapRaised]}>
       {/* CLIPPED SURFACE: gradients/tint/border/content */}
       <View style={s.cardGlass}>
         {/* Base green gradient: EXACT match to AuthCard */}
@@ -180,16 +137,17 @@ export default function ReminderTile({
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
+            'rgba(255, 255, 255, 0.06)',
+            'rgba(255, 255, 255, 0.02)',
+            'rgba(255, 255, 255, 0.08)',
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
 
         {/* Accent wash: task-type color (left) -> AuthCard dark (right) */}
-        <LinearGradient taskAccent={accent}
+        <LinearGradient
+          taskAccent={accent}
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
@@ -205,7 +163,15 @@ export default function ReminderTile({
 
         {/* MATCH Plant/Auth tint + thinner border (prevents inner shade) */}
         <View pointerEvents="none" style={s.cardTint} />
-        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
+        {access.isShared && (
+          <View
+            pointerEvents="none"
+            style={[
+              StyleSheet.absoluteFill,
+              { backgroundColor: SHARED_PLANT_TINT },
+            ]}
+          />
+        )}
         <View pointerEvents="none" style={s.cardBorder} />
 
         {/* Content */}
@@ -218,17 +184,27 @@ export default function ReminderTile({
               onToggleMenu();
             }}
           >
-            <View style={s.leftCol}>
-              <View style={[s.leftIconBubble, { backgroundColor: isLight ? hexToRgba(accent, 0.25) : hexToRgba("#000000", 0.15) }]}>
-                <MaterialCommunityIcons name={icon} size={24} color={accent} />
+            <View style={[s.leftCol, { width: 38 }]}>
+              <View
+                style={[
+                  s.leftIconBubble,
+                  { width: 32, height: 32, borderRadius: 16 },
+                  {
+                    backgroundColor: isLight
+                      ? hexToRgba(accent, 0.25)
+                      : hexToRgba('#000000', 0.15),
+                  },
+                ]}
+              >
+                <MaterialCommunityIcons name={icon} size={20} color={accent} />
               </View>
             </View>
 
-            <View style={s.centerCol}>
-              <Text style={[s.taskTypeLabel, { color: accent }]} numberOfLines={1}>
-                {typeLabel}
-              </Text>
-              <Text style={s.plantName} numberOfLines={1}>
+            <View style={[s.centerCol, { marginLeft: 10 }]}>
+              <Text
+                style={[s.plantName, { fontSize: 14, marginTop: 0 }]}
+                numberOfLines={1}
+              >
                 {reminder.plant}
               </Text>
 
@@ -241,32 +217,44 @@ export default function ReminderTile({
                     color="#FFFFFF"
                     style={s.locationIcon}
                   />
-                  <Text style={s.location} numberOfLines={1}>
+                  <Text
+                    style={[s.location, { fontSize: 11 }]}
+                    numberOfLines={1}
+                  >
                     {reminder.location}
                   </Text>
                 </View>
               )}
-
             </View>
 
-            <View style={s.separator} />
-
-            <View style={s.rightCol}>
-              {!!everyStr && (
-                <Text style={s.recurrenceText} numberOfLines={2}>
-                  {everyStr}
-                </Text>
-              )}
+            <View style={[s.rightCol, { width: '46%', minWidth: 136 }]}>
+              <Text
+                style={[
+                  s.taskTypeLabel,
+                  {
+                    color: accent,
+                    fontSize: 9,
+                    textAlign: 'right',
+                    marginBottom: 4,
+                  },
+                ]}
+                numberOfLines={1}
+              >
+                {typeLabel}
+              </Text>
               {reminder.isActive ? (
                 <>
-                  {!!dueText && (
-                    <Text style={s.dueWhen} numberOfLines={2}>
-                      {dueText}
-                    </Text>
-                  )}
-                  {!!dueDateText && (
-                    <Text style={s.dueDateText} numberOfLines={1}>
-                      {dueDateText}
+                  {!!everyStr && (
+                    <Text
+                      style={[
+                        s.recurrenceText,
+                        { fontSize: 11, lineHeight: 13, marginBottom: 0 },
+                      ]}
+                      numberOfLines={1}
+                      adjustsFontSizeToFit
+                      minimumFontScale={0.85}
+                    >
+                      {everyStr}
                     </Text>
                   )}
                 </>
@@ -278,7 +266,7 @@ export default function ReminderTile({
                     color="#F2C94C"
                   />
                   <Text style={s.pausedText} numberOfLines={1}>
-                    {tr("reminders.tile.paused", "Paused")}
+                    {tr('reminders.tile.paused', 'Paused')}
                   </Text>
                 </View>
               )}
@@ -293,7 +281,7 @@ export default function ReminderTile({
           canEdit={access.canEdit}
           onPlantDetails={() => {
             onToggleMenu();
-            nav.navigate("PlantDetails", { id: reminder.plantId });
+            nav.navigate('PlantDetails', { id: reminder.plantId });
           }}
           isActive={reminder.isActive}
           onToggleActive={onToggleActive}
@@ -304,4 +292,3 @@ export default function ReminderTile({
     </View>
   );
 }
-

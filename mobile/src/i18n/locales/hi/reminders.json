@@ -3,7 +3,11 @@
     "headerTitle": "स्मरणपत्र",
     "common": {
       "unnamedPlant": "बिना नाम वाला पौधा",
-      "everyN": "हर {{count}} {{unit}}"
+      "everyN": "हर {{count}} {{unit}}",
+      "everyDays_one": "हर {{count}} दिन",
+      "everyDays_other": "हर {{count}} दिन",
+      "everyMonths_one": "हर {{count}} महीने",
+      "everyMonths_other": "हर {{count}} महीने"
     },
     "units": {
       "days": "दिन",
@@ -40,7 +44,11 @@
       "dueInOneDay": "1 दिन में समय सीमा",
       "dueInDays": "{{count}} दिनों में समय सीमा",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "रुका हुआ"
+      "paused": "रुका हुआ",
+      "repeatsEveryDays_one": "हर {{count}} दिन दोहराता है",
+      "repeatsEveryDays_other": "हर {{count}} दिन दोहराता है",
+      "repeatsEveryMonths_one": "हर {{count}} महीने दोहराता है",
+      "repeatsEveryMonths_other": "हर {{count}} महीने दोहराता है"
     },
     "calendar": {
       "scheduledOn": "{{date}} पर निर्धारित",

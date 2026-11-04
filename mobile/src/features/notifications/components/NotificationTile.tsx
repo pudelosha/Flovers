@@ -54,7 +54,7 @@ export default function NotificationTile({
         style={s.clip}
         onPress={onToggle}
         accessibilityRole="button"
-        accessibilityLabel={title}
+        accessibilityLabel={`${title}. ${body}`}
         accessibilityState={{ expanded: open }}
       >
         <Gradient
@@ -87,14 +87,15 @@ export default function NotificationTile({
               {body}
             </Text>
             <View style={s.meta}>
-              <Text style={s.small} numberOfLines={1}>
+              <Text style={s.date} numberOfLines={1}>
                 {activityDateLabel(
                   item.createdAt,
                   settings.dateFormat || 'DD.MM.YYYY',
                 )}
-                {' � '}
+              </Text>
+              <Text style={s.details} numberOfLines={1}>
                 {t('inbox.sources.' + item.source)}
-                {' � '}
+                {' \u00b7 '}
                 {t('inbox.channels.' + item.channel)}
               </Text>
             </View>
@@ -117,9 +118,15 @@ export default function NotificationTile({
   );
 }
 const s = StyleSheet.create({
-  wrap: { borderRadius: 24, overflow: 'visible', position: 'relative' },
-  clip: { borderRadius: 24, overflow: 'hidden' },
-  row: { padding: 9, flexDirection: 'row', gap: 8, alignItems: 'center' },
+  wrap: { borderRadius: 20, overflow: 'visible', position: 'relative' },
+  clip: { borderRadius: 20, overflow: 'hidden' },
+  row: {
+    paddingHorizontal: 11,
+    paddingVertical: 8,
+    flexDirection: 'row',
+    gap: 18,
+    alignItems: 'center',
+  },
   circle: {
     width: 26,
     height: 26,
@@ -129,15 +136,22 @@ const s = StyleSheet.create({
     justifyContent: 'center',
   },
   content: { flex: 1, minWidth: 0 },
-  title: { color: '#FFFFFF', fontSize: 12, fontWeight: '800' },
+  title: { color: '#FFFFFF', fontSize: 11, lineHeight: 14, fontWeight: '700' },
   body: {
     color: 'rgba(255,255,255,0.92)',
-    fontSize: 11,
-    lineHeight: 14,
-    marginTop: 2,
+    fontSize: 10,
+    lineHeight: 13,
+    marginTop: 1,
   },
-  meta: { marginTop: 3 },
-  small: { color: 'rgba(255,255,255,0.8)', fontSize: 9, fontWeight: '600' },
+  meta: { marginTop: 4, flexDirection: 'row', alignItems: 'center', gap: 8 },
+  date: { color: 'rgba(255,255,255,0.8)', fontSize: 9, lineHeight: 12 },
+  details: {
+    color: 'rgba(255,255,255,0.8)',
+    fontSize: 9,
+    lineHeight: 12,
+    flex: 1,
+    textAlign: 'left',
+  },
   menu: {
     position: 'absolute',
     right: 8,

@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "Nessuna attività in ritardo",
-        "body": "Non hai attività in ritardo al momento.\n\nSei in pari — usa \"Mostra tutte le attività\" dal FAB per vedere tutto, oppure cambia i filtri per esplorare le attività in arrivo."
+        "body": "Nessuna attività corrisponde alla selezione attuale. Scegli un’altra opzione nella barra in alto o modifica i filtri."
       },
       "today": {
         "title": "Nessuna attività in scadenza oggi",
-        "body": "Non hai attività in scadenza oggi.\n\nUsa \"Mostra tutte le attività\" dal FAB per vedere i promemoria futuri, oppure modifica le pianificazioni dei promemoria nelle tue piante."
+        "body": "Nessuna attività corrisponde alla selezione attuale. Scegli un’altra opzione nella barra in alto o modifica i filtri."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} attività",
       "noUpcomingTitle": "Nessuna attività in arrivo",
-      "noUpcomingBody": "Non ci sono attività previste dopo oggi."
+      "noUpcomingBody": "Nessuna attività corrisponde alla selezione attuale. Scegli un’altra opzione nella barra in alto o modifica i filtri."
     }
   },
   "inbox": {

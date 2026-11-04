@@ -3,7 +3,11 @@
     "headerTitle": "リマインダー",
     "common": {
       "unnamedPlant": "名前のない植物",
-      "everyN": "毎{{count}}{{unit}}"
+      "everyN": "毎{{count}}{{unit}}",
+      "everyDays_one": "{{count}}日ごと",
+      "everyDays_other": "{{count}}日ごと",
+      "everyMonths_one": "{{count}}か月ごと",
+      "everyMonths_other": "{{count}}か月ごと"
     },
     "units": {
       "days": "日",
@@ -40,7 +44,11 @@
       "dueInOneDay": "1日後が期限",
       "dueInDays": "{{count}}日後が期限",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "一時停止中"
+      "paused": "一時停止中",
+      "repeatsEveryDays_one": "{{count}}日ごとに繰り返す",
+      "repeatsEveryDays_other": "{{count}}日ごとに繰り返す",
+      "repeatsEveryMonths_one": "{{count}}か月ごとに繰り返す",
+      "repeatsEveryMonths_other": "{{count}}か月ごとに繰り返す"
     },
     "calendar": {
       "scheduledOn": "{{date}} に予定されています",

@@ -97,7 +97,7 @@ export default function JournalPhotoTile({
                     width: 32,
                     height: 32,
                     borderRadius: 16,
-                    backgroundColor: isLight ? '#D2EBE5' : '#244C40',
+                    backgroundColor: isLight ? '#C5E8DD' : '#244C40',
                   },
                 ]}
                 onPress={event => {
@@ -113,7 +113,7 @@ export default function JournalPhotoTile({
                 />
               </Pressable>
             </View>
-            <View style={s.centerCol}>
+            <View style={[s.centerCol, { marginLeft: 10 }]}>
               <Text
                 style={[s.plantName, { fontSize: 14, marginTop: 0 }]}
                 numberOfLines={1}
@@ -153,9 +153,6 @@ export default function JournalPhotoTile({
         </View>
         {!!item.note?.trim() && (
           <View style={styles.notes}>
-            <Text style={s.noteLabel}>
-              {t('taskHistory.tile.noteLabel', { defaultValue: 'Note' })}
-            </Text>
             <Text style={s.noteText}>{item.note}</Text>
           </View>
         )}

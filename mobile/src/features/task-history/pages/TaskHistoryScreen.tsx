@@ -1,3 +1,4 @@
+import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, {
   useCallback,
   useState,
@@ -372,30 +373,11 @@ export default function TaskHistoryScreen() {
   const contentLoading = loading;
 
   // ---------- ENTRANCE ANIMATION (tiles) ----------
-  const animatedIds = useRef(new Set<string>());
-  const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
-  const getAnimForId = (id: string) => {
-    const m = animMapRef.current;
-    if (!m.has(id)) m.set(id, new Animated.Value(0));
-    return m.get(id)!;
-  };
-
-  useEffect(() => {
-    if (contentLoading) return;
-    const ids = derivedItems.map(journalEntryKey);
-    const freshIds = ids.filter(id => !animatedIds.current.has(id));
-    freshIds.forEach(id => animatedIds.current.add(id));
-
-    const seq = freshIds.map((id, i) =>
-      Animated.timing(getAnimForId(id), {
-        toValue: 1,
-        duration: 280,
-        useNativeDriver: true,
-        delay: Math.min(i, 5) * 50,
-      }),
-    );
-    Animated.stagger(50, seq).start();
-  }, [contentLoading, derivedItems]);
+  const { valueFor: getAnimForId } = useTileEntryAnimations(
+    derivedItems.map(journalEntryKey),
+    !contentLoading,
+    isFocused,
+  );
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;

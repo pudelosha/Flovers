@@ -178,7 +178,7 @@
       "alreadyPending": "Já existe um convite pendente para esta pessoa.",
       "throttled": "Muitas solicitações. Espere um pouco e tente novamente.",
       "unavailable": "Não foi possível conectar. Tente novamente.",
-      "alreadyRegistered": "Este email j? est? registado. Usa Adicionar contacto."
+      "alreadyRegistered": "Este email já está registado. Usa Adicionar contacto."
     },
     "access": {
       "sharedBy": "Partilhada por {{name}}",
@@ -200,11 +200,11 @@
     },
     "emailInvite": {
       "title": "Convidar por email",
-      "description": "Convida algu?m que ainda n?o tenha conta no Flovers. Enviaremos as instru??es no idioma escolhido. O convite expira ap?s 30 dias.",
+      "description": "Convida alguém que ainda não tenha conta no Flovers. Enviaremos as instruções no idioma escolhido. O convite expira após 30 dias.",
       "pending": "A aguardar registo",
-      "alreadyRegistered": "Este email j? est? registado. Usa Adicionar contacto.",
+      "alreadyRegistered": "Este email já está registado. Usa Adicionar contacto.",
       "language": "Idioma do convite",
-      "email": "Endere?o de email"
+      "email": "Endereço de email"
     }
   }
 }

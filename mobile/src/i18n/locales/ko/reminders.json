@@ -3,7 +3,11 @@
     "headerTitle": "알림",
     "common": {
       "unnamedPlant": "이름 없는 식물",
-      "everyN": "{{count}} {{unit}}마다"
+      "everyN": "{{count}} {{unit}}마다",
+      "everyDays_one": "{{count}}일마다",
+      "everyDays_other": "{{count}}일마다",
+      "everyMonths_one": "{{count}}개월마다",
+      "everyMonths_other": "{{count}}개월마다"
     },
     "units": {
       "days": "일",
@@ -40,7 +44,11 @@
       "dueInOneDay": "1일 후 기한",
       "dueInDays": "{{count}}일 후 기한",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "일시 중지됨"
+      "paused": "일시 중지됨",
+      "repeatsEveryDays_one": "{{count}}일마다 반복",
+      "repeatsEveryDays_other": "{{count}}일마다 반복",
+      "repeatsEveryMonths_one": "{{count}}개월마다 반복",
+      "repeatsEveryMonths_other": "{{count}}개월마다 반복"
     },
     "calendar": {
       "scheduledOn": "{{date}}에 예정됨",

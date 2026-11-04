@@ -3,7 +3,11 @@
     "headerTitle": "Recordatorios",
     "common": {
       "unnamedPlant": "Planta sin nombre",
-      "everyN": "cada {{count}} {{unit}}"
+      "everyN": "cada {{count}} {{unit}}",
+      "everyDays_one": "cada {{count}} día",
+      "everyDays_other": "cada {{count}} días",
+      "everyMonths_one": "cada {{count}} mes",
+      "everyMonths_other": "cada {{count}} meses"
     },
     "units": {
       "days": "días",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Vence en 1 día",
       "dueInDays": "Vence en {{count}} días",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "Pausado"
+      "paused": "Pausado",
+      "repeatsEveryDays_one": "Se repite cada {{count}} día",
+      "repeatsEveryDays_other": "Se repite cada {{count}} días",
+      "repeatsEveryMonths_one": "Se repite cada {{count}} mes",
+      "repeatsEveryMonths_other": "Se repite cada {{count}} meses"
     },
     "calendar": {
       "scheduledOn": "Programado para {{date}}",

@@ -49,7 +49,10 @@ async function renderScreen() {
 function fabLabels(view: ReturnType<typeof render>) {
   return view.UNSAFE_getByType(FAB).props.actions.map((action: any) => action.label);
 }
-function selectFabAction(view: ReturnType<typeof render>, label: string) {
+function selectAction(view: ReturnType<typeof render>, label: string) {
+  if (['Shared by me','Shared with me','Show all'].includes(label)) {
+    fireEvent.press(view.UNSAFE_getByProps({accessibilityRole:'tab',accessibilityLabel:label==='Show all' ? 'All' : label}));return;
+  }
   const action = view.UNSAFE_getByType(FAB).props.actions.find((item: any) => item.label === label);
   act(() => action.onPress());
 }
@@ -150,7 +153,7 @@ describe("SharedPlantsScreen", () => {
     act(() => expect(onBack()).toBe(true));
     expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
     fireEvent.press(view.getByRole("button", { name: "Actions for Bird" }));
-    selectFabAction(view, "Shared with me");
+    selectAction(view, "Shared with me");
     expect(view.queryByTestId("shared-plant-actions-menu")).toBeNull();
     expect(mockNavigate).not.toHaveBeenCalled();
   });
@@ -167,7 +170,7 @@ describe("SharedPlantsScreen", () => {
     expect(view.queryByText("All shared plants")).toBeNull();
     expect(view.queryByText("Back")).toBeNull();
     expect(view.queryByText("Share plants")).toBeNull();
-    expect(view.queryAllByRole("tab")).toHaveLength(0);
+    expect(view.queryAllByRole("tab")).toHaveLength(3);
     expect(view.queryByText("Shared with Anna, Bruno")).toBeNull();
     expect(view.getAllByText("Anna")).toHaveLength(2);
     expect(view.getByText("Bruno")).toBeTruthy();
@@ -184,24 +187,18 @@ describe("SharedPlantsScreen", () => {
     expect(StyleSheet.flatten(scroll.props.contentContainerStyle).paddingBottom).toBe(200);
   });
 
-  it("puts Share plants first and replaces only the active FAB filter with Show all", async () => {
+  it("filters through the fixed selector and keeps only Share plants in the FAB", async () => {
     const view = await renderScreen();
-    expect(fabLabels(view)).toEqual(["Share plants", "Shared by me", "Shared with me"]);
-    selectFabAction(view, "Shared by me");
-    expect(fabLabels(view)).toEqual(["Share plants", "Show all", "Shared with me"]);
-    expect(view.queryByText("Peace lily")).toBeNull();
-    expect(view.getByText("Bird")).toBeTruthy();
-    selectFabAction(view, "Shared with me");
-    expect(fabLabels(view)).toEqual(["Share plants", "Shared by me", "Show all"]);
-    expect(view.queryByText("Bird")).toBeNull();
-    expect(view.getByText("Peace lily")).toBeTruthy();
-    selectFabAction(view, "Show all");
-    expect(fabLabels(view)).toEqual(["Share plants", "Shared by me", "Shared with me"]);
-    expect(view.getByText("Bird")).toBeTruthy();
-    expect(view.getByText("Peace lily")).toBeTruthy();
-    expect(view.queryByText("All shared plants")).toBeNull();
-    selectFabAction(view, "Share plants");
-    expect(mockSharing.openSharePlant).toHaveBeenCalledWith();
+    expect(fabLabels(view)).toEqual(["Share plants"]);
+    fireEvent.press(view.getByRole('tab',{name:'Shared by me'}));
+    expect(view.queryByText('Peace lily')).toBeNull();expect(view.getByText('Bird')).toBeTruthy();
+    expect(fabLabels(view)).toEqual(['Share plants']);
+    fireEvent.press(view.getByRole('tab',{name:'Shared with me'}));
+    expect(view.queryByText('Bird')).toBeNull();expect(view.getByText('Peace lily')).toBeTruthy();
+    fireEvent.press(view.getByRole('tab',{name:'All'}));
+    expect(view.getByText('Bird')).toBeTruthy();expect(view.getByText('Peace lily')).toBeTruthy();
+    expect(view.queryByText('All shared plants')).toBeNull();
+    selectAction(view,'Share plants');expect(mockSharing.openSharePlant).toHaveBeenCalledWith();
   });
 
   it("honors FAB position and closes its actions when sharing opens or the screen blurs", async () => {
@@ -314,7 +311,7 @@ describe("SharedPlantsScreen", () => {
 
   it("leaves an incoming share without exposing owner management under its filter", async () => {
     const view = await renderScreen();
-    selectFabAction(view, "Shared with me");
+    selectAction(view, "Shared with me");
     expect(view.getByText("Anna")).toBeTruthy();
     expect(view.queryByText("Manage sharing")).toBeNull();
     fireEvent.press(view.getByLabelText("Leave shared plant: Peace lily"));
@@ -339,9 +336,9 @@ describe("SharedPlantsScreen", () => {
     const view = await renderScreen();
     expect(view.getByText("No shared plants yet")).toBeTruthy();
     expect(view.getByTestId("shared-plants-empty")).toBeTruthy();
-    selectFabAction(view, "Shared by me");
+    selectAction(view, "Shared by me");
     expect(view.getByText("No plants shared yet")).toBeTruthy();
-    selectFabAction(view, "Shared with me");
+    selectAction(view, "Shared with me");
     expect(view.getByText("No plants shared with you")).toBeTruthy();
   });
 

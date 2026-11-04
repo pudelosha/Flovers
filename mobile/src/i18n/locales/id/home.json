@@ -69,11 +69,11 @@
       },
       "overdue": {
         "title": "Tidak ada tugas yang terlambat",
-        "body": "Tidak ada tugas yang terlambat saat ini.\n\nKetuk tombol + lalu pilih \"Tampilkan semua tugas\" untuk melihat seluruh tugas, atau ubah filter untuk melihat tugas mendatang."
+        "body": "Tidak ada tugas yang sesuai dengan pilihan saat ini. Pilih opsi lain pada bilah di atas atau ubah filter."
       },
       "today": {
         "title": "Tidak ada tugas yang harus diselesaikan hari ini",
-        "body": "Tidak ada tugas untuk hari ini.\n\nKetuk tombol + lalu pilih \"Tampilkan semua tugas\" untuk melihat tugas mendatang, atau sesuaikan jadwal pengingat tanaman."
+        "body": "Tidak ada tugas yang sesuai dengan pilihan saat ini. Pilih opsi lain pada bilah di atas atau ubah filter."
       }
     },
     "calendar": {
@@ -136,7 +136,7 @@
     "groups": {
       "tasks": "{{count}} tugas",
       "noUpcomingTitle": "Tidak ada tugas mendatang",
-      "noUpcomingBody": "Tidak ada tugas yang dijadwalkan setelah hari ini."
+      "noUpcomingBody": "Tidak ada tugas yang sesuai dengan pilihan saat ini. Pilih opsi lain pada bilah di atas atau ubah filter."
     }
   },
   "inbox": {

@@ -1,3 +1,4 @@
+import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   View,
@@ -6,7 +7,6 @@ import {
   FlatList,
   RefreshControl,
   StyleSheet,
-  Animated,
   AnimatedView,
 } from '../../../shared/theme/native';
 import { useIsFocused, useNavigation } from '@react-navigation/native';
@@ -60,7 +60,11 @@ export default function NotificationsScreen() {
   const request = useRef(0);
   const moreBusy = useRef(false);
   const list = useRef<FlatList<InboxItem>>(null);
-  const entry = useRef(new Animated.Value(0)).current;
+  const { styleFor } = useTileEntryAnimations(
+    items.length ? items.map(item => item.id) : ['empty'],
+    !loading,
+    focused,
+  );
   const load = useCallback(
     async (refresh = false) => {
       const generation = ++request.current;
@@ -80,12 +84,6 @@ export default function NotificationsScreen() {
         setItems(page.items);
         setCursor(page.nextCursor);
         setSnapshot(page.snapshot);
-        entry.setValue(0);
-        Animated.timing(entry, {
-          toValue: 1,
-          duration: 280,
-          useNativeDriver: true,
-        }).start();
       } catch {
         if (generation === request.current && active.current) {
           setError(true);
@@ -99,7 +97,7 @@ export default function NotificationsScreen() {
         }
       }
     },
-    [query, entry],
+    [query],
   );
   useEffect(() => {
     if (!focused) {
@@ -252,19 +250,10 @@ export default function NotificationsScreen() {
           onEndReachedThreshold={0.4}
           renderItem={({ item }) => (
             <AnimatedView
-              style={{
-                opacity: entry,
-                transform: [
-                  {
-                    translateY: entry.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [10, 0],
-                    }),
-                  },
-                ],
-                marginBottom: 12,
-                zIndex: menu === item.id ? 30 : 0,
-              }}
+              style={[
+                styleFor(item.id),
+                { marginBottom: 12, zIndex: menu === item.id ? 30 : 0 },
+              ]}
             >
               <NotificationTile
                 item={item}
@@ -279,7 +268,7 @@ export default function NotificationsScreen() {
             </AnimatedView>
           )}
           ListEmptyComponent={
-            <View style={s.empty}>
+            <AnimatedView style={[s.empty, styleFor('empty')]}>
               <Gradient
                 colors={['rgba(16,80,63,0.9)', 'rgba(5,31,24,0.9)']}
                 style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
@@ -304,7 +293,7 @@ export default function NotificationsScreen() {
                   <Text style={s.emptyTitle}>{t('inbox.retry')}</Text>
                 </Pressable>
               )}
-            </View>
+            </AnimatedView>
           }
           ListFooterComponent={
             loadingMore ? (

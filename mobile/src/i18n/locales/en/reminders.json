@@ -3,7 +3,11 @@
     "headerTitle": "Reminders",
     "common": {
       "unnamedPlant": "Unnamed plant",
-      "everyN": "every {{count}} {{unit}}"
+      "everyN": "every {{count}} {{unit}}",
+      "everyDays_one": "every {{count}} day",
+      "everyDays_other": "every {{count}} days",
+      "everyMonths_one": "every {{count}} month",
+      "everyMonths_other": "every {{count}} months"
     },
     "units": {
       "days": "days",
@@ -40,7 +44,11 @@
       "dueInOneDay": "Due in 1 day",
       "dueInDays": "Due in {{count}} days",
       "dueLine": "{{prefix}} on {{date}}",
-      "paused": "Paused"
+      "paused": "Paused",
+      "repeatsEveryDays_one": "Repeats every {{count}} day",
+      "repeatsEveryDays_other": "Repeats every {{count}} days",
+      "repeatsEveryMonths_one": "Repeats every {{count}} month",
+      "repeatsEveryMonths_other": "Repeats every {{count}} months"
     },
     "calendar": {
       "scheduledOn": "Scheduled on {{date}}",

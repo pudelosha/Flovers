@@ -3,7 +3,19 @@
     "headerTitle": "التذكيرات",
     "common": {
       "unnamedPlant": "نبتة بدون اسم",
-      "everyN": "كل {{count}} {{unit}}"
+      "everyN": "كل {{count}} {{unit}}",
+      "everyDays_one": "كل يوم",
+      "everyDays_other": "كل {{count}} يوم",
+      "everyDays_zero": "كل {{count}} يوم",
+      "everyDays_two": "كل يومين",
+      "everyDays_few": "كل {{count}} أيام",
+      "everyDays_many": "كل {{count}} يومًا",
+      "everyMonths_one": "كل شهر",
+      "everyMonths_other": "كل {{count}} شهر",
+      "everyMonths_zero": "كل {{count}} شهر",
+      "everyMonths_two": "كل شهرين",
+      "everyMonths_few": "كل {{count}} أشهر",
+      "everyMonths_many": "كل {{count}} شهرًا"
     },
     "units": {
       "days": "أيام",
@@ -40,7 +52,19 @@
       "dueInOneDay": "الموعد في يوم واحد",
       "dueInDays": "الموعد في {{count}} أيام",
       "dueLine": "{{prefix}} ({{date}})",
-      "paused": "متوقف مؤقتًا"
+      "paused": "متوقف مؤقتًا",
+      "repeatsEveryDays_one": "يتكرر كل يوم",
+      "repeatsEveryDays_other": "يتكرر كل {{count}} يوم",
+      "repeatsEveryDays_zero": "يتكرر كل {{count}} يوم",
+      "repeatsEveryDays_two": "يتكرر كل يومين",
+      "repeatsEveryDays_few": "يتكرر كل {{count}} أيام",
+      "repeatsEveryDays_many": "يتكرر كل {{count}} يومًا",
+      "repeatsEveryMonths_one": "يتكرر كل شهر",
+      "repeatsEveryMonths_other": "يتكرر كل {{count}} شهر",
+      "repeatsEveryMonths_zero": "يتكرر كل {{count}} شهر",
+      "repeatsEveryMonths_two": "يتكرر كل شهرين",
+      "repeatsEveryMonths_few": "يتكرر كل {{count}} أشهر",
+      "repeatsEveryMonths_many": "يتكرر كل {{count}} شهرًا"
     },
     "calendar": {
       "scheduledOn": "مجدول في {{date}}",
