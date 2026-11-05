@@ -1,26 +1,32 @@
-import { getDisplayTemperature } from "../../../shared/utils/temperature";
-import React, { useCallback, useMemo } from "react";
-import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
-import LinearGradient from "../../../shared/theme/Gradient";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider";
+import { getDisplayTemperature } from '../../../shared/utils/temperature';
+import React, { useCallback, useMemo } from 'react';
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+} from '../../../shared/theme/native';
+import LinearGradient from '../../../shared/theme/Gradient';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
+import { useSettings } from '../../../app/providers/SettingsProvider';
 
-import { s } from "../styles/plant-details.styles";
+import { s } from '../styles/plant-details.styles';
 
 import type {
   LatestReadings,
   PlantMetricKey,
   PlantSensorsConfig,
-} from "../types/plant-details.types";
+} from '../types/plant-details.types';
 
 import {
   ICON_BG,
   METRIC_UNITS,
-} from "../../readings/constants/readings.constants";
+} from '../../readings/constants/readings.constants';
 
 type Props = {
+  embedded?: boolean;
   latestReadings: LatestReadings;
   sensors?: PlantSensorsConfig;
   onTileTouch?: () => void;
@@ -36,29 +42,29 @@ type Props = {
   isSchedulingWatering?: boolean;
 };
 
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
-const PUMP_BLUE = "rgba(11,114,133,0.92)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
+const PUMP_BLUE = 'rgba(11,114,133,0.92)';
 
 function formatDateBySettings(d: Date, settings?: any) {
-  const dd = String(d.getDate()).padStart(2, "0");
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
   const yyyy = String(d.getFullYear());
 
   const fmt = settings?.dateFormat;
 
-  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
-    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+  if (fmt === 'mdy' || fmt === 'MM/DD/YYYY' || fmt === 'MM-DD-YYYY') {
+    const sep = fmt === 'MM-DD-YYYY' ? '-' : '/';
     return `${mm}${sep}${dd}${sep}${yyyy}`;
   }
 
-  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
-    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+  if (fmt === 'ymd' || fmt === 'YYYY-MM-DD' || fmt === 'YYYY/MM/DD') {
+    const sep = fmt === 'YYYY/MM/DD' ? '/' : '-';
     return `${yyyy}${sep}${mm}${sep}${dd}`;
   }
 
-  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
-  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+  if (fmt === 'DD/MM/YYYY') return `${dd}/${mm}/${yyyy}`;
+  if (fmt === 'DD-MM-YYYY') return `${dd}-${mm}-${yyyy}`;
 
   return `${dd}.${mm}.${yyyy}`;
 }
@@ -82,7 +88,7 @@ function MetricColPressable({
     <Pressable
       style={styles.col}
       onPress={onPress}
-      android_ripple={{ color: "rgba(255,255,255,0.10)" }}
+      android_ripple={{ color: 'rgba(255,255,255,0.10)' }}
     >
       <View style={[styles.iconCircle, { backgroundColor: color }]}>
         <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
@@ -90,8 +96,10 @@ function MetricColPressable({
 
       <Text style={styles.metricValue}>
         {value === null || value === undefined
-          ? "—"
-          : `${typeof decimals === "number" ? value.toFixed(decimals) : value}${unit}`}
+          ? '—'
+          : `${
+              typeof decimals === 'number' ? value.toFixed(decimals) : value
+            }${unit}`}
       </Text>
     </Pressable>
   );
@@ -99,6 +107,7 @@ function MetricColPressable({
 
 export default function PlantLatestReadingsTile({
   latestReadings,
+  embedded = false,
   sensors,
   onTileTouch,
   onMetricPress,
@@ -118,12 +127,12 @@ export default function PlantLatestReadingsTile({
 
       const txt = t(key, {
         ...(values || {}),
-        defaultValue: fallback ?? key.split(".").pop() ?? key,
+        defaultValue: fallback ?? key.split('.').pop() ?? key,
       });
 
-      return txt || fallback || key.split(".").pop() || key;
+      return txt || fallback || key.split('.').pop() || key;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const { temperature, humidity, light, moisture, tsISO } = latestReadings;
@@ -139,67 +148,84 @@ export default function PlantLatestReadingsTile({
 
   const lastText = useMemo(() => {
     if (!tsISO) {
-      return `${tr("plantDetails.latestReadings.lastReadPrefix", "Last read")}: —`;
+      return `${tr(
+        'plantDetails.latestReadings.lastReadPrefix',
+        'Last read',
+      )}: —`;
     }
 
     const dt = new Date(tsISO);
     const date = formatDateBySettings(dt, settings);
     const time = dt.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
+      hour: '2-digit',
+      minute: '2-digit',
     });
 
-    return `${tr("plantDetails.latestReadings.lastReadPrefix", "Last read")}: ${date} ${time}`;
+    return `${tr(
+      'plantDetails.latestReadings.lastReadPrefix',
+      'Last read',
+    )}: ${date} ${time}`;
   }, [tsISO, settings, tr]);
 
   const lastPumpText = useMemo(() => {
     if (!lastPumpLaunchDate) {
-      return `${tr("plantDetails.latestReadings.lastPumpRunPrefix", "Last pump run")}: —`;
+      return `${tr(
+        'plantDetails.latestReadings.lastPumpRunPrefix',
+        'Last pump run',
+      )}: —`;
     }
 
     const dt = new Date(lastPumpLaunchDate);
     const date = formatDateBySettings(dt, settings);
     const time = dt.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
+      hour: '2-digit',
+      minute: '2-digit',
     });
 
-    return `${tr("plantDetails.latestReadings.lastPumpRunPrefix", "Last pump run")}: ${date} ${time}`;
+    return `${tr(
+      'plantDetails.latestReadings.lastPumpRunPrefix',
+      'Last pump run',
+    )}: ${date} ${time}`;
   }, [lastPumpLaunchDate, settings, tr]);
 
   return (
-    <View style={styles.cardWrap} onTouchStart={onTileTouch}>
-      <View style={s.cardGlass}>
-        <LinearGradient
-          pointerEvents="none"
-          start={{ x: 0, y: 0.5 }}
-          end={{ x: 1, y: 0.5 }}
-          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
-          locations={[0, 1]}
-          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
-        />
+    <View
+      style={[styles.cardWrap, embedded && styles.embedded]}
+      onTouchStart={onTileTouch}
+    >
+      {!embedded && (
+        <View style={s.cardGlass}>
+          <LinearGradient
+            pointerEvents="none"
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
+            colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+            locations={[0, 1]}
+            style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
+          />
 
-        <LinearGradient
-          pointerEvents="none"
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
-          colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
-          ]}
-          locations={[0, 0.5, 1]}
-          style={StyleSheet.absoluteFill}
-        />
+          <LinearGradient
+            pointerEvents="none"
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            colors={[
+              'rgba(255, 255, 255, 0.06)',
+              'rgba(255, 255, 255, 0.02)',
+              'rgba(255, 255, 255, 0.08)',
+            ]}
+            locations={[0, 0.5, 1]}
+            style={StyleSheet.absoluteFill}
+          />
 
-        <View pointerEvents="none" style={s.cardTint} />
-        <View pointerEvents="none" style={s.cardBorder} />
-      </View>
+          <View pointerEvents="none" style={s.cardTint} />
+          <View pointerEvents="none" style={s.cardBorder} />
+        </View>
+      )}
 
-      <View style={styles.body}>
+      <View style={[styles.body, embedded && { paddingTop: 0 }]}>
         <View style={styles.topRow}>
           <Text style={styles.title}>
-            {tr("plantDetails.latestReadings.title", "Latest readings")}
+            {tr('plantDetails.latestReadings.title', 'Latest readings')}
           </Text>
         </View>
 
@@ -211,7 +237,7 @@ export default function PlantLatestReadingsTile({
               value={displayTemperature.value}
               unit={displayTemperature.unit}
               decimals={displayTemperature.decimals}
-              onPress={() => onMetricPress("temperature")}
+              onPress={() => onMetricPress('temperature')}
             />
           )}
 
@@ -222,7 +248,7 @@ export default function PlantLatestReadingsTile({
               value={humidity}
               unit={METRIC_UNITS.humidity}
               decimals={1}
-              onPress={() => onMetricPress("humidity")}
+              onPress={() => onMetricPress('humidity')}
             />
           )}
 
@@ -232,7 +258,7 @@ export default function PlantLatestReadingsTile({
               color={ICON_BG.light}
               value={light}
               unit={METRIC_UNITS.light}
-              onPress={() => onMetricPress("light")}
+              onPress={() => onMetricPress('light')}
             />
           )}
 
@@ -242,7 +268,7 @@ export default function PlantLatestReadingsTile({
               color={ICON_BG.moisture}
               value={moisture}
               unit={METRIC_UNITS.moisture}
-              onPress={() => onMetricPress("moisture")}
+              onPress={() => onMetricPress('moisture')}
             />
           )}
         </View>
@@ -283,16 +309,16 @@ export default function PlantLatestReadingsTile({
           >
             <Text style={styles.launchButtonText}>
               {isSchedulingWatering
-                ? tr("plantDetails.latestReadings.opening", "Opening...")
+                ? tr('plantDetails.latestReadings.opening', 'Opening...')
                 : hasPendingWatering
-                  ? tr(
-                      "plantDetails.latestReadings.unscheduleWatering",
-                      "Unschedule watering"
-                    )
-                  : tr(
-                      "plantDetails.latestReadings.scheduleWatering",
-                      "Schedule watering"
-                    )}
+                ? tr(
+                    'plantDetails.latestReadings.unscheduleWatering',
+                    'Unschedule watering',
+                  )
+                : tr(
+                    'plantDetails.latestReadings.scheduleWatering',
+                    'Schedule watering',
+                  )}
             </Text>
           </Pressable>
         </>
@@ -304,33 +330,40 @@ export default function PlantLatestReadingsTile({
 const styles = StyleSheet.create({
   cardWrap: {
     borderRadius: 28,
-    overflow: "hidden",
-    position: "relative",
+    overflow: 'hidden',
+    position: 'relative',
     elevation: 8,
     marginBottom: 14,
   },
 
+  embedded: {
+    marginHorizontal: -16,
+    marginBottom: 0,
+    borderRadius: 0,
+    elevation: 0,
+    overflow: 'visible',
+  },
   body: {
     paddingTop: 16,
   },
 
   topRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 16,
     marginBottom: 8,
   },
 
   title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 16,
   },
 
   metricsRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     gap: 10,
     paddingHorizontal: 16,
     marginTop: 4,
@@ -339,27 +372,27 @@ const styles = StyleSheet.create({
 
   col: {
     flex: 1,
-    alignItems: "center",
+    alignItems: 'center',
   },
 
   iconCircle: {
     width: 38,
     height: 38,
     borderRadius: 19,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   metricValue: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 14,
     marginTop: 6,
   },
 
   lastReadRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 18,
     paddingTop: 8,
     paddingBottom: 12,
@@ -370,28 +403,28 @@ const styles = StyleSheet.create({
   },
 
   lastText: {
-    color: "rgba(255,255,255,0.88)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.88)',
+    fontWeight: '600',
     fontSize: 12,
   },
 
   line: {
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.2)",
+    borderBottomColor: 'rgba(255,255,255,0.2)',
     marginHorizontal: 18,
     marginVertical: 6,
   },
 
   lastPumpRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 18,
     paddingVertical: 6,
   },
 
   lastPumpText: {
-    color: "rgba(255,255,255,0.88)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.88)',
+    fontWeight: '600',
     fontSize: 12,
   },
 
@@ -402,11 +435,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
     marginTop: 10,
     marginBottom: 14,
-    alignItems: "center",
+    alignItems: 'center',
   },
 
   unscheduleButton: {
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
 
   launchButtonPressed: {
@@ -414,8 +447,8 @@ const styles = StyleSheet.create({
   },
 
   launchButtonText: {
-    color: "#FFFFFF",
-    fontWeight: "700",
+    color: '#FFFFFF',
+    fontWeight: '700',
     fontSize: 14,
     letterSpacing: 0.5,
   },

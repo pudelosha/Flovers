@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Aufgabenoptionen", "empty": "Für diese Pflanze sind noch keine Aufgaben vorhanden."},
+    "tabsEmpty": {"reminders": "Für diese Pflanze sind keine Erinnerungen verfügbar.", "device": "Mit dieser Pflanze ist kein Gerät verknüpft."},
+    "segments": {"info": "Info", "reminders": "Aufgaben", "readings": "Messwerte"},
     "headerTitle": "Pflanzendetails",
     "common": {
       "dash": "—",

@@ -1,15 +1,20 @@
-import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
+import FloatingTileMenu from '../../../shared/ui/FloatingTileMenu';
 // PlantInfoMenu.tsx
-import React, { useCallback } from "react";
-import { View, Pressable, Text, StyleSheet } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
+import React, { useCallback } from 'react';
+import {
+  View,
+  Pressable,
+  Text,
+  StyleSheet,
+} from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
 
-import { s } from "../styles/plant-details.styles";
+import { s } from '../styles/plant-details.styles';
 
 type Props = {
-  onPlantDefinition: () => void;
+  onShowQr?: () => void;
   onEditPlant: () => void;
   onChangeImage: () => void;
   onShowReminders: () => void;
@@ -19,7 +24,16 @@ type Props = {
   canEdit?: boolean;
 };
 
-export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChangeImage, onShowReminders, onJournal, onShare, sharingActive, canEdit = true }: Props) {
+export default function PlantInfoMenu({
+  onShowQr,
+  onEditPlant,
+  onChangeImage,
+  onShowReminders,
+  onJournal,
+  onShare,
+  sharingActive,
+  canEdit = true,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -27,42 +41,122 @@ export default function PlantInfoMenu({ onPlantDefinition, onEditPlant, onChange
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      if (typeof txt === "string" && txt && txt !== key) return txt;
-      return fallback || key.split(".").pop() || key;
+      if (typeof txt === 'string' && txt && txt !== key) return txt;
+      return fallback || key.split('.').pop() || key;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   return (
     <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
-      <Pressable style={s.menuItem} onPress={onPlantDefinition} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="book-open-variant" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.plantDefinition", "Plant definition")}</Text>
-      </Pressable>
+      {canEdit && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onEditPlant}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <MaterialCommunityIcons
+            name="pencil-outline"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>
+            {tr('plantDetails.infoMenu.items.editPlant', 'Edit plant')}
+          </Text>
+        </Pressable>
+      )}
 
-      {canEdit && <Pressable style={s.menuItem} onPress={onEditPlant} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="pencil-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.editPlant", "Edit plant")}</Text>
-      </Pressable>}
+      {canEdit && onShare && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onShare}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <MaterialCommunityIcons
+            name="share-variant-outline"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>
+            {sharingActive
+              ? tr('sharing.plants.manage', 'Manage sharing')
+              : tr('sharing.plants.shareSinglePlant', 'Share plant')}
+          </Text>
+        </Pressable>
+      )}
 
-      {canEdit && onShare && <Pressable style={s.menuItem} onPress={onShare} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="share-variant-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{sharingActive ? tr("sharing.plants.manage", "Manage sharing") : tr("sharing.plants.shareSinglePlant", "Share plant")}</Text>
-      </Pressable>}
+      {canEdit && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onChangeImage}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <MaterialCommunityIcons
+            name="image-edit-outline"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>
+            {tr('plantDetails.infoMenu.items.changeImage', 'Change image')}
+          </Text>
+        </Pressable>
+      )}
 
-      {canEdit && <Pressable style={s.menuItem} onPress={onChangeImage} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="image-edit-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.changeImage", "Change image")}</Text>
-      </Pressable>}
+      {onShowQr && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onShowQr}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <MaterialCommunityIcons
+            name="qrcode"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>
+            {tr('plantDetails.qr.title', 'QR Code')}
+          </Text>
+        </Pressable>
+      )}
 
-      {canEdit && <Pressable style={s.menuItem} onPress={onShowReminders} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="calendar" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{tr("plantDetails.infoMenu.items.showReminders", "Show reminders")}</Text>
-      </Pressable>}
-      {onJournal && <Pressable style={s.menuItem} onPress={onJournal} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-        <MaterialCommunityIcons name="notebook-outline" size={18} color="#FFFFFF" style={{ marginRight: 8 }} />
-        <Text style={s.menuItemText}>{tr("plants.menu.journal", "Task Journal")}</Text>
-      </Pressable>}
+      {canEdit && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onShowReminders}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <MaterialCommunityIcons
+            name="calendar"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>
+            {tr('plantDetails.infoMenu.items.showReminders', 'Show reminders')}
+          </Text>
+        </Pressable>
+      )}
+      {onJournal && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onJournal}
+          android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
+        >
+          <MaterialCommunityIcons
+            name="notebook-outline"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>
+            {tr('plants.menu.journal', 'Task Journal')}
+          </Text>
+        </Pressable>
+      )}
     </FloatingTileMenu>
   );
 }
@@ -92,14 +186,21 @@ export function PlantInfoPromptSheet({
     <View style={ps.confirmOverlay} pointerEvents="box-none">
       <View style={ps.confirmCard}>
         <View style={ps.confirmHeader}>
-          <MaterialCommunityIcons name={icon as any} size={20} color="#FFFFFF" />
+          <MaterialCommunityIcons
+            name={icon as any}
+            size={20}
+            color="#FFFFFF"
+          />
           <Text style={ps.confirmTitle}>{title}</Text>
         </View>
 
         {!!body && <Text style={ps.confirmBody}>{body}</Text>}
 
         <View style={ps.confirmRow}>
-          <Pressable style={[ps.confirmBtn, ps.confirmBtnPrimary]} onPress={onPrimary}>
+          <Pressable
+            style={[ps.confirmBtn, ps.confirmBtnPrimary]}
+            onPress={onPrimary}
+          >
             <Text style={ps.confirmBtnText}>{primaryText}</Text>
           </Pressable>
         </View>
@@ -113,30 +214,40 @@ const ps = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     zIndex: 1200,
     elevation: 1200,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   },
   confirmCard: {
     margin: 12,
     borderRadius: 18,
     padding: 14,
-    backgroundColor: "rgba(0,0,0,0.55)",
+    backgroundColor: 'rgba(0,0,0,0.55)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.16)",
-    overflow: "hidden",
+    borderColor: 'rgba(255,255,255,0.16)',
+    overflow: 'hidden',
   },
-  confirmHeader: { flexDirection: "row", alignItems: "center", gap: 10, marginBottom: 8 },
-  confirmTitle: { color: "#FFFFFF", fontWeight: "900", fontSize: 14, flex: 1 },
-  confirmBody: { color: "rgba(255,255,255,0.92)", fontWeight: "500", lineHeight: 18, marginBottom: 12 },
-  confirmRow: { flexDirection: "row", gap: 10 },
+  confirmHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 8,
+  },
+  confirmTitle: { color: '#FFFFFF', fontWeight: '900', fontSize: 14, flex: 1 },
+  confirmBody: {
+    color: 'rgba(255,255,255,0.92)',
+    fontWeight: '500',
+    lineHeight: 18,
+    marginBottom: 12,
+  },
+  confirmRow: { flexDirection: 'row', gap: 10 },
 
   confirmBtn: {
     flex: 1,
     height: 42,
     borderRadius: 14,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.12)",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
-  confirmBtnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  confirmBtnText: { color: "#FFFFFF", fontWeight: "900" },
+  confirmBtnPrimary: { backgroundColor: 'rgba(11,114,133,0.92)' },
+  confirmBtnText: { color: '#FFFFFF', fontWeight: '900' },
 });

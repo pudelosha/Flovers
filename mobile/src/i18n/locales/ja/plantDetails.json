@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "タスクのオプション", "empty": "この植物にはまだ表示できるタスクがありません。"},
+    "tabsEmpty": {"reminders": "この植物に表示できるリマインダーはありません。", "device": "この植物にはデバイスが接続されていません。"},
+    "segments": {"info": "情報", "reminders": "タスク", "readings": "測定値"},
     "headerTitle": "植物の詳細",
     "common": {
       "dash": "—",

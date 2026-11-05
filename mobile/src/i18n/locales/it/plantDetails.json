@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Opzioni attività", "empty": "Non ci sono ancora attività per questa pianta."},
+    "tabsEmpty": {"reminders": "Non ci sono promemoria disponibili per questa pianta.", "device": "Nessun dispositivo è collegato a questa pianta."},
+    "segments": {"info": "Info", "reminders": "Attività", "readings": "Letture"},
     "headerTitle": "Dettagli della pianta",
     "common": {
       "dash": "—",

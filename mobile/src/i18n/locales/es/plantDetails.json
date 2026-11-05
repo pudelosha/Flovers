@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Opciones de la tarea", "empty": "Todavía no hay tareas para esta planta."},
+    "tabsEmpty": {"reminders": "No hay recordatorios disponibles para esta planta.", "device": "No hay ningún dispositivo vinculado a esta planta."},
+    "segments": {"info": "Info", "reminders": "Tareas", "readings": "Lecturas"},
     "headerTitle": "Detalles de la planta",
     "common": {
       "dash": "—",

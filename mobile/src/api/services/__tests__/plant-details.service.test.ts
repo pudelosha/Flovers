@@ -123,10 +123,10 @@ describe("plant-details.service", () => {
 
 it("maps the bounded activity returned with detail without an extra activity request",async()=>{
  jest.clearAllMocks();
- const entries=Array.from({length:7},(_,i)=>({id:i+1,type:i===0?"water":"fertilize",completed_at:"2026-11-01T10:30:00Z",completed_by:i===1?null:{id:"2",name:"Anna"}}));
+ const entries=Array.from({length:12},(_,i)=>({id:i+1,type:i===0?"water":"fertilize",completed_at:"2026-11-01T10:30:00Z",completed_by:i===1?null:{id:"2",name:"Anna"}}));
  mockedFetchPlant.mockResolvedValue({id:4,recent_activity:entries});mockedRequest.mockResolvedValue([]);mockedFetchHomeTasks.mockResolvedValue([]);
  const result=await fetchPlantDetailsById(4);
- expect(result.activity).toHaveLength(5);expect(result.activity[0]).toMatchObject({id:"1",type:"watering",actor:"Anna"});
+ expect(result.activity).toHaveLength(10);expect(result.activity[0]).toMatchObject({id:"1",type:"watering",actor:"Anna"});
  expect(result.activity[1]).toMatchObject({type:"fertilising",actor:null});
  expect(mockedRequest).toHaveBeenCalledTimes(1);expect(mockedRequest.mock.calls[0][0]).toBe("/readings/devices/");
 });

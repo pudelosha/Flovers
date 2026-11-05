@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "작업 옵션", "empty": "이 식물에 표시할 작업이 아직 없습니다."},
+    "tabsEmpty": {"reminders": "이 식물에 표시할 알림이 없습니다.", "device": "이 식물에 연결된 기기가 없습니다."},
+    "segments": {"info": "정보", "reminders": "작업", "readings": "측정값"},
     "headerTitle": "식물 상세 정보",
     "common": {
       "dash": "—",

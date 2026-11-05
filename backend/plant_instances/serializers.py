@@ -286,7 +286,7 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
         # A reminder moved elsewhere must not expose either plant's history.
         tasks = _visible_tasks(user).filter(
             status="completed", completed_at__isnull=False, _event_plant_id=obj.pk,
-        ).select_related("completed_by", "reminder__plant__user").order_by("-completed_at", "-pk")[:5]
+        ).select_related("completed_by", "reminder__plant__user").order_by("-completed_at", "-pk")[:10]
         context = {**self.context, "event_plants": {obj.pk: obj}}
         rows = ReminderTaskJournalSerializer(tasks, many=True, context=context).data
         return [{key: row[key] for key in ("id", "type", "completed_at", "completed_by")} for row in rows]

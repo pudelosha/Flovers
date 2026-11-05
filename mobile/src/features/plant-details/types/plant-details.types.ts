@@ -83,7 +83,7 @@ export type PlantReminderSummary = {
  * - deviceName: optional device name for UI
  * - sensors: which metrics are enabled on the device
  * - readingDevice: linked ReadingDevice summary, including pump fields
- * - activity: up to five completed care tasks from the plant detail response
+ * - activity: up to ten completed care tasks from the plant detail response
  * - reminders: upcoming reminder tasks for this plant
  */
 export type PlantActivity = {

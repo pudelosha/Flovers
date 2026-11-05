@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "कार्य के विकल्प", "empty": "इस पौधे के लिए अभी कोई कार्य नहीं है।"},
+    "tabsEmpty": {"reminders": "इस पौधे के लिए कोई रिमाइंडर उपलब्ध नहीं है।", "device": "इस पौधे से कोई डिवाइस जुड़ा नहीं है।"},
+    "segments": {"info": "जानकारी", "reminders": "कार्य", "readings": "रीडिंग"},
     "headerTitle": "पौधे का विवरण",
     "common": {
       "dash": "—",

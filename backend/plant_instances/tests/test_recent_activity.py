@@ -15,15 +15,15 @@ def detail(scene):
     return scene.client.get(f"/api/plant-instances/{scene.plant.pk}/")
 
 
-def test_detail_contains_only_five_latest_completions_newest_first(scene):
+def test_detail_contains_only_ten_latest_completions_newest_first(scene):
     now=timezone.now();rows=[]
-    for i in range(7):
+    for i in range(12):
         rows.append(ReminderTask.objects.create(user=scene.owner,reminder=scene.reminder,status="completed",
             due_date=timezone.localdate(),completed_at=now-timedelta(days=i),completed_by=scene.owner,note="Private completion note"))
     response=detail(scene)
     assert response.status_code==200,response.data
     activity=response.data["recent_activity"]
-    assert [row["id"] for row in activity]==[row.pk for row in rows[:5]]
+    assert [row["id"] for row in activity]==[row.pk for row in rows[:10]]
     assert all(set(row)=={"id","type","completed_at","completed_by"} for row in activity)
     assert activity[0]["type"]=="water"
     assert activity[0]["completed_by"]["id"]==str(scene.owner.pk)

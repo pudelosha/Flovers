@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Görev seçenekleri", "empty": "Bu bitki için henüz gösterilecek görev yok."},
+    "tabsEmpty": {"reminders": "Bu bitki için gösterilecek hatırlatma yok.", "device": "Bu bitkiye bağlı bir cihaz yok."},
+    "segments": {"info": "Bilgi", "reminders": "Görevler", "readings": "Okumalar"},
     "headerTitle": "Bitki ayrıntıları",
     "common": {
       "dash": "—",

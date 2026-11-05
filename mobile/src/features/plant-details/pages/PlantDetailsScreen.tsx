@@ -1,4 +1,5 @@
-import React, { useMemo, useState, useRef, useCallback } from "react";
+import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
+import React, { useMemo, useState, useRef, useCallback } from 'react';
 import {
   View,
   Text,
@@ -7,84 +8,93 @@ import {
   PermissionsAndroid,
   Platform,
   StyleSheet,
-  Animated, AnimatedView } from "../../../shared/theme/native";
-import { useNavigation, useRoute, useFocusEffect, useIsFocused } from "@react-navigation/native";
-import LinearGradient from "../../../shared/theme/Gradient";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
+  Animated,
+  AnimatedView,
+} from '../../../shared/theme/native';
+import {
+  useNavigation,
+  useRoute,
+  useFocusEffect,
+  useIsFocused,
+} from '@react-navigation/native';
+import LinearGradient from '../../../shared/theme/Gradient';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
 
-import GlassHeader from "../../../shared/ui/GlassHeader";
+import GlassHeader from '../../../shared/ui/GlassHeader';
 
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
-} from "../constants/plant-details.constants";
-import { s } from "../styles/plant-details.styles";
+} from '../constants/plant-details.constants';
+import { s } from '../styles/plant-details.styles';
 
 import {
   fetchPlantDetailsById,
   fetchPlantDetailsByQr,
-} from "../../../api/services/plant-details.service";
-import { sendQrCodeByEmail } from "../../../api/services/qr-code.service";
+} from '../../../api/services/plant-details.service';
+import { sendQrCodeByEmail } from '../../../api/services/qr-code.service';
 
 import type {
   PlantMetricKey,
   PlantDetailsComposite,
   LatestReadings,
-} from "../types/plant-details.types";
+} from '../types/plant-details.types';
 
-import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
-import PlantRemindersTile from "../components/PlantRemindersTile";
-import PlantQrTile from "../components/PlantQrTile";
-import PlantInfoTile from "../components/PlantInfoTile";
-import PlantActivityTile from "../components/PlantActivityTile";
-import { plantAccess } from "../../../shared/utils/plantAccess";
+import PlantLatestReadingsTile from '../components/PlantLatestReadingsTile';
+import PlantTasksTile from '../components/PlantTasksTile';
+import PlantQrModal from '../../plants/components/modals/PlantQrModal';
+import PlantInfoTile from '../components/PlantInfoTile';
+import PlantActivityTile from '../components/PlantActivityTile';
+import { plantAccess } from '../../../shared/utils/plantAccess';
 
-import PostponeTaskModal, { type PostponeTaskTarget } from "../../home/components/modals/PostponeTaskModal";
-import CompleteTaskModal from "../../home/components/modals/CompleteTaskModal";
-import { markHomeTaskComplete } from "../../../api/services/home.service";
+import PostponeTaskModal, {
+  type PostponeTaskTarget,
+} from '../../home/components/modals/PostponeTaskModal';
+import CompleteTaskModal from '../../home/components/modals/CompleteTaskModal';
+import { markHomeTaskComplete } from '../../../api/services/home.service';
 
-import RNFS from "react-native-fs";
-import { CameraRoll } from "@react-native-camera-roll/camera-roll";
+import RNFS from 'react-native-fs';
+import { CameraRoll } from '@react-native-camera-roll/camera-roll';
 
-import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import { usePlantPhotoPreload } from "../../../shared/hooks/usePlantPhotoPreload";
-import { useScreenEntryAnimation } from "../../../shared/hooks/useScreenEntryAnimation";
+import TopSnackbar from '../../../shared/ui/TopSnackbar';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { usePlantPhotoPreload } from '../../../shared/hooks/usePlantPhotoPreload';
+import { useScreenEntryAnimation } from '../../../shared/hooks/useScreenEntryAnimation';
 
-import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
-import ChangePlantImageModal from "../components/modals/ChangePlantImageModal";
-import EditPlantModal from "../../plants/components/modals/EditPlantModal";
+import PlantDefinitionModal from '../components/modals/PlantDefinitionModal';
+import ChangePlantImageModal from '../components/modals/ChangePlantImageModal';
+import EditPlantModal from '../../plants/components/modals/EditPlantModal';
 
 import {
   fetchPlantInstanceForEdit,
   updatePlantInstanceFromForm,
-} from "../../../api/services/plant-instances.service";
+} from '../../../api/services/plant-instances.service';
 
-import WateringScheduleModal from "../../readings/components/modals/WateringScheduleModal";
+import WateringScheduleModal from '../../readings/components/modals/WateringScheduleModal';
 import {
   fetchPumpStatus,
   schedulePumpWatering,
   recallPumpWatering,
-} from "../../../api/services/readings.service";
-import type { ApiPumpTask } from "../../readings/types/readings.types";
+} from '../../../api/services/readings.service';
+import type { ApiPumpTask } from '../../readings/types/readings.types';
 
-import { PUBLIC_BASE_URL_NORM } from "../../../config";
+import { PUBLIC_BASE_URL_NORM } from '../../../config';
 
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 type LightLevel5 =
-  | "very-low"
-  | "low"
-  | "medium"
-  | "bright-indirect"
-  | "bright-direct";
+  | 'very-low'
+  | 'low'
+  | 'medium'
+  | 'bright-indirect'
+  | 'bright-direct';
 
 function toYYYYMMDD(d: Date = new Date()) {
   const Y = d.getFullYear();
-  const M = String(d.getMonth() + 1).padStart(2, "0");
-  const D = String(d.getDate()).padStart(2, "0");
+  const M = String(d.getMonth() + 1).padStart(2, '0');
+  const D = String(d.getDate()).padStart(2, '0');
   return `${Y}-${M}-${D}`;
 }
 
@@ -96,10 +106,12 @@ export default function PlantDetailsScreen() {
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      const isMissing = typeof txt !== 'string' || !txt || txt === key;
+      return (
+        (isMissing ? undefined : txt) || fallback || key.split('.').pop() || key
+      );
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const nav = useNavigation<any>();
@@ -107,40 +119,55 @@ export default function PlantDetailsScreen() {
   const isFocused = useIsFocused();
 
   const qrFromNav: string | undefined = route.params?.qrCode;
-  const idFromNav: number | undefined = route.params?.plantId ?? route.params?.id;
+  const idFromNav: number | undefined =
+    route.params?.plantId ?? route.params?.id;
 
+  const stableScroll = useStableScrollHeight(
+    String(idFromNav ?? qrFromNav ?? 'plant'),
+  );
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'info' | 'reminders' | 'readings'>(
+    'info',
+  );
+  const [qrModalVisible, setQrModalVisible] = useState(false);
   const [detailsRevision, setDetailsRevision] = useState(0);
   const [readyImageKey, setReadyImageKey] = useState<string | null>(null);
   const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
-  const [error, setError] = useState<string>("");
+  const [error, setError] = useState<string>('');
 
-  const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(null);
+  const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(
+    null,
+  );
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
-  const [completeReminderId, setCompleteReminderId] = useState<string | null>(null);
-  const [completeNote, setCompleteNote] = useState("");
+  const [completeReminderId, setCompleteReminderId] = useState<string | null>(
+    null,
+  );
+  const [completeNote, setCompleteNote] = useState('');
   const [completeDate, setCompleteDate] = useState(toYYYYMMDD());
 
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
-  const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
+  const [completeIntervalText, setCompleteIntervalText] = useState<string>('');
 
   const [toastVisible, setToastVisible] = useState(false);
-  const [toastMsg, setToastMsg] = useState("");
-  const [toastVariant, setToastVariant] =
-    useState<"default" | "success" | "error">("default");
+  const [toastMsg, setToastMsg] = useState('');
+  const [toastVariant, setToastVariant] = useState<
+    'default' | 'success' | 'error'
+  >('default');
 
   const [refreshCounter, setRefreshCounter] = useState(0);
   const [dismissMenusTick, setDismissMenusTick] = useState(0);
 
   const dismissMenus = useCallback(() => {
-    setDismissMenusTick((t) => t + 1);
+    setDismissMenusTick(t => t + 1);
   }, []);
 
   const scrollRef = useRef<ScrollView | null>(null);
   const plantQrRef = useRef<any>(null);
 
   const [defModalVisible, setDefModalVisible] = useState(false);
-  const [defPlantDefinitionId, setDefPlantDefinitionId] = useState<number | null>(null);
+  const [defPlantDefinitionId, setDefPlantDefinitionId] = useState<
+    number | null
+  >(null);
 
   const openDefinition = useCallback((plantDefinitionId: number) => {
     setDefPlantDefinitionId(plantDefinitionId);
@@ -157,11 +184,14 @@ export default function PlantDetailsScreen() {
 
   const [photoReloadSignal, setPhotoReloadSignal] = useState(0);
 
-  const openChangeImage = useCallback((plantId: string) => {
-    if (!details || !plantAccess(details.plant.access).canEdit) return;
-    setChangeImgPlantId(plantId);
-    setChangeImgVisible(true);
-  }, [details]);
+  const openChangeImage = useCallback(
+    (plantId: string) => {
+      if (!details || !plantAccess(details.plant.access).canEdit) return;
+      setChangeImgPlantId(plantId);
+      setChangeImgVisible(true);
+    },
+    [details],
+  );
 
   const closeChangeImage = useCallback(() => {
     setChangeImgVisible(false);
@@ -171,18 +201,23 @@ export default function PlantDetailsScreen() {
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  const [fName, setFName] = useState("");
-  const [fLatinQuery, setFLatinQuery] = useState("");
-  const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(undefined);
+  const [fName, setFName] = useState('');
+  const [fLatinQuery, setFLatinQuery] = useState('');
+  const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(
+    undefined,
+  );
   const [fLocation, setFLocation] = useState<string | undefined>(undefined);
-  const [fNotes, setFNotes] = useState("");
+  const [fNotes, setFNotes] = useState('');
 
-  const [fPurchaseDateISO, setFPurchaseDateISO] =
-    useState<string | null | undefined>(null);
-  const [fLightLevel, setFLightLevel] = useState<LightLevel5>("medium");
-  const [fOrientation, setFOrientation] = useState<"N" | "E" | "S" | "W">("S");
+  const [fPurchaseDateISO, setFPurchaseDateISO] = useState<
+    string | null | undefined
+  >(null);
+  const [fLightLevel, setFLightLevel] = useState<LightLevel5>('medium');
+  const [fOrientation, setFOrientation] = useState<'N' | 'E' | 'S' | 'W'>('S');
   const [fDistanceCm, setFDistanceCm] = useState<number>(0);
-  const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(undefined);
+  const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(
+    undefined,
+  );
   const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
 
   const [editLoading, setEditLoading] = useState(false);
@@ -190,9 +225,12 @@ export default function PlantDetailsScreen() {
   const [saving, setSaving] = useState(false);
 
   const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
-  const [wateringDurationSupported, setWateringDurationSupported] = useState(false);
-  const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
-  const [wateringScheduleName, setWateringScheduleName] = useState("");
+  const [wateringDurationSupported, setWateringDurationSupported] =
+    useState(false);
+  const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(
+    null,
+  );
+  const [wateringScheduleName, setWateringScheduleName] = useState('');
   const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
   const [wateringScheduleWorking, setWateringScheduleWorking] = useState(false);
   const [wateringSchedulePendingTask, setWateringSchedulePendingTask] =
@@ -202,7 +240,7 @@ export default function PlantDetailsScreen() {
 
   const showToast = (
     message: string,
-    variant: "default" | "success" | "error" = "default"
+    variant: 'default' | 'success' | 'error' = 'default',
   ) => {
     setToastMsg(message);
     setToastVariant(variant);
@@ -227,35 +265,40 @@ export default function PlantDetailsScreen() {
       const ms = normDateMs(due);
       return Number.isFinite(ms) && ms < startOfTodayMs();
     },
-    [normDateMs, startOfTodayMs]
+    [normDateMs, startOfTodayMs],
   );
 
   const buildIntervalText = useCallback(
     (r: any) => {
       const v = r?.intervalValue;
       const u = r?.intervalUnit;
-      if (!v || !u) return "";
+      if (!v || !u) return '';
 
       const maybe = t(`homeModals.interval.${u}`, { count: v });
-      if (typeof maybe === "string" && maybe.startsWith("homeModals.interval.")) {
+      if (
+        typeof maybe === 'string' &&
+        maybe.startsWith('homeModals.interval.')
+      ) {
         const unitLabel =
-          u === "days"
+          u === 'days'
             ? v === 1
-              ? "day"
-              : "days"
+              ? 'day'
+              : 'days'
             : v === 1
-              ? "month"
-              : "months";
+            ? 'month'
+            : 'months';
         return `+${v} ${unitLabel}`;
       }
       return maybe;
     },
-    [t]
+    [t],
   );
 
   const loadDetails = useCallback(async () => {
     if (!qrFromNav && !idFromNav) {
-      throw new Error(tr("plantDetails.errors.noId", "No plant id or QR code provided."));
+      throw new Error(
+        tr('plantDetails.errors.noId', 'No plant id or QR code provided.'),
+      );
     }
 
     if (qrFromNav) {
@@ -270,65 +313,77 @@ export default function PlantDetailsScreen() {
   }, [qrFromNav, idFromNav, tr]);
 
   const qrCodeValue = useMemo(() => {
-    const code = details?.plant.qr_code || qrFromNav || "";
-    if (!code) return "";
+    const code = details?.plant.qr_code || qrFromNav || '';
+    if (!code) return '';
     return `${PUBLIC_BASE_URL_NORM}/plant-instances/by-qr/?code=${encodeURIComponent(
-      code
+      code,
     )}`;
   }, [details, qrFromNav]);
 
   const onSaveQr = async (svgRef: any) => {
     if (!svgRef?.toDataURL) {
-      throw new Error(tr("plantDetails.qrErrors.rendererNotReady", "QR renderer not ready."));
+      throw new Error(
+        tr('plantDetails.qrErrors.rendererNotReady', 'QR renderer not ready.'),
+      );
     }
 
     const dataUrl: string = await new Promise((res, rej) =>
-      svgRef.toDataURL((d: string) => (d ? res(d) : rej(new Error("No dataURL"))))
+      svgRef.toDataURL((d: string) =>
+        d ? res(d) : rej(new Error('No dataURL')),
+      ),
     );
 
-    const base64 = dataUrl.replace(/^data:image\/png;base64,/, "");
+    const base64 = dataUrl.replace(/^data:image\/png;base64,/, '');
     const filePath = `${RNFS.CachesDirectoryPath}/plant_qr_${Date.now()}.png`;
-    await RNFS.writeFile(filePath, base64, "base64");
+    await RNFS.writeFile(filePath, base64, 'base64');
 
-    if (Platform.OS === "android" && Platform.Version <= 29) {
+    if (Platform.OS === 'android' && Platform.Version <= 29) {
       const granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
         {
-          title: tr("plantDetails.permissions.storage.title", "Storage permission"),
-          message: tr(
-            "plantDetails.permissions.storage.message",
-            "We need access to save the QR code to your gallery."
+          title: tr(
+            'plantDetails.permissions.storage.title',
+            'Storage permission',
           ),
-          buttonPositive: tr("plantDetails.permissions.storage.ok", "OK"),
-        }
+          message: tr(
+            'plantDetails.permissions.storage.message',
+            'We need access to save the QR code to your gallery.',
+          ),
+          buttonPositive: tr('plantDetails.permissions.storage.ok', 'OK'),
+        },
       );
 
       if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
-        throw new Error(tr("plantDetails.permissions.storage.denied", "Storage permission denied."));
+        throw new Error(
+          tr(
+            'plantDetails.permissions.storage.denied',
+            'Storage permission denied.',
+          ),
+        );
       }
     }
 
-    await CameraRoll.save(filePath, { type: "photo" });
+    await CameraRoll.save(filePath, { type: 'photo' });
   };
 
   const goHistory = (metric?: PlantMetricKey) => {
     const deviceId = details?.readingDevice?.id;
 
-    nav.navigate("ReadingsHistory", {
-      metric: metric || "temperature",
-      range: "day",
+    nav.navigate('ReadingsHistory', {
+      metric: metric || 'temperature',
+      range: 'day',
       id: deviceId ? String(deviceId) : undefined,
       name:
         details?.plant.display_name ||
         details?.plant.plant_definition?.name ||
-        tr("plantDetails.common.plant", "Plant"),
+        tr('plantDetails.common.plant', 'Plant'),
     });
   };
 
   const openEditModal = useCallback(
     async (plantId: string) => {
       const request = ++editRequestRef.current;
-      setDismissMenusTick((t) => t + 1);
+      setDismissMenusTick(t => t + 1);
       setEditingId(plantId);
       setEditLoading(true);
 
@@ -342,20 +397,20 @@ export default function PlantDetailsScreen() {
         const resolvedName =
           detail.display_name?.trim() ||
           detail.plant_definition?.name?.trim() ||
-          tr("plants.list.unnamed", "Unnamed plant");
+          tr('plants.list.unnamed', 'Unnamed plant');
 
         setFName(resolvedName);
-        setFLatinQuery(detail.plant_definition?.name || "");
+        setFLatinQuery(detail.plant_definition?.name || '');
         setFLatinSelected(detail.plant_definition?.name || undefined);
         setFLocation(detail.location?.name || undefined);
-        setFNotes(detail.notes || "");
+        setFNotes(detail.notes || '');
 
         setFPurchaseDateISO(
-          detail.purchase_date === undefined ? null : detail.purchase_date
+          detail.purchase_date === undefined ? null : detail.purchase_date,
         );
 
-        setFLightLevel((detail.light_level as LightLevel5) || "medium");
-        setFOrientation((detail.orientation as any) || "S");
+        setFLightLevel((detail.light_level as LightLevel5) || 'medium');
+        setFOrientation((detail.orientation as any) || 'S');
         setFDistanceCm(detail.distance_cm ?? 0);
 
         setFPotMaterial(detail.pot_material ?? undefined);
@@ -365,17 +420,17 @@ export default function PlantDetailsScreen() {
       } catch (e: any) {
         if (request !== editRequestRef.current) return;
         Alert.alert(
-          t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
+          t('plants.alert.loadFailedTitle', { defaultValue: 'Load failed' }),
           e?.message ||
-            t("plants.alert.loadFailedMsg", {
-              defaultValue: "Could not load plant details.",
-            })
+            t('plants.alert.loadFailedMsg', {
+              defaultValue: 'Could not load plant details.',
+            }),
         );
       } finally {
         if (request === editRequestRef.current) setEditLoading(false);
       }
     },
-    [t, tr]
+    [t, tr],
   );
 
   const closeEdit = useCallback(() => {
@@ -393,29 +448,34 @@ export default function PlantDetailsScreen() {
     try {
       const form = {
         display_name: fName.trim(),
-        notes: fNotes ?? "",
+        notes: fNotes ?? '',
         purchase_date: fPurchaseDateISO ?? null,
         light_level: fLightLevel,
         orientation: fOrientation,
         distance_cm: fDistanceCm,
-        pot_material: fPotMaterial ?? "",
-        soil_mix: fSoilMix ?? "",
+        pot_material: fPotMaterial ?? '',
+        soil_mix: fSoilMix ?? '',
       } as const;
 
-      await updatePlantInstanceFromForm(Number(editingId), form, { auth: true });
+      await updatePlantInstanceFromForm(Number(editingId), form, {
+        auth: true,
+      });
 
       closeEdit();
       await loadDetails();
-      setRefreshCounter((c) => c + 1);
+      setRefreshCounter(c => c + 1);
 
-      showToast(t("plants.toast.updated", { defaultValue: "Plant updated" }), "success");
+      showToast(
+        t('plants.toast.updated', { defaultValue: 'Plant updated' }),
+        'success',
+      );
     } catch (e: any) {
       Alert.alert(
-        t("plants.alert.updateFailedTitle", { defaultValue: "Update failed" }),
+        t('plants.alert.updateFailedTitle', { defaultValue: 'Update failed' }),
         e?.message ||
-          t("plants.alert.updateFailedMsg", {
-            defaultValue: "Could not update this plant.",
-          })
+          t('plants.alert.updateFailedMsg', {
+            defaultValue: 'Could not update this plant.',
+          }),
       );
     } finally {
       setSaving(false);
@@ -441,17 +501,23 @@ export default function PlantDetailsScreen() {
 
       if (!resolvedDeviceId) {
         showToast(
-          tr("plantDetails.toasts.missingDeviceId", "Missing reading device."),
-          "error"
+          tr('plantDetails.toasts.missingDeviceId', 'Missing reading device.'),
+          'error',
         );
         return;
       }
 
-      setDismissMenusTick((x) => x + 1);
+      setDismissMenusTick(x => x + 1);
       setWateringScheduleId(String(resolvedDeviceId));
-      setWateringScheduleName(details?.readingDevice?.deviceName ?? details?.deviceName ?? "");
-      setWateringSchedulePendingTask(details?.readingDevice?.pendingPumpTask ?? null);
-      setWateringScheduleLastPumpRunAt(details?.readingDevice?.lastPumpRunAt ?? null);
+      setWateringScheduleName(
+        details?.readingDevice?.deviceName ?? details?.deviceName ?? '',
+      );
+      setWateringSchedulePendingTask(
+        details?.readingDevice?.pendingPumpTask ?? null,
+      );
+      setWateringScheduleLastPumpRunAt(
+        details?.readingDevice?.lastPumpRunAt ?? null,
+      );
       setWateringScheduleLoading(true);
       setWateringScheduleWorking(false);
 
@@ -462,7 +528,7 @@ export default function PlantDetailsScreen() {
         setWateringSchedulePendingTask(res.pending_pump_task ?? null);
         setWateringScheduleLastPumpRunAt(res.last_pump_run_at ?? null);
 
-        setDetails((curr) => {
+        setDetails(curr => {
           if (!curr?.readingDevice) return curr;
 
           return {
@@ -480,64 +546,75 @@ export default function PlantDetailsScreen() {
         setWateringScheduleVisible(true);
       } catch {
         showToast(
-          tr("plantDetails.toasts.pumpStatusLoadFailed", "Failed to load watering schedule."),
-          "error"
+          tr(
+            'plantDetails.toasts.pumpStatusLoadFailed',
+            'Failed to load watering schedule.',
+          ),
+          'error',
         );
       } finally {
         setWateringScheduleLoading(false);
       }
     },
-    [details, tr]
+    [details, tr],
   );
 
-  const handleScheduleWatering = useCallback(async (durationSeconds?: number) => {
-    if (!wateringScheduleId) {
-      showToast(
-        tr("plantDetails.toasts.missingDeviceId", "Missing reading device."),
-        "error"
-      );
-      return;
-    }
+  const handleScheduleWatering = useCallback(
+    async (durationSeconds?: number) => {
+      if (!wateringScheduleId) {
+        showToast(
+          tr('plantDetails.toasts.missingDeviceId', 'Missing reading device.'),
+          'error',
+        );
+        return;
+      }
 
-    try {
-      setWateringScheduleWorking(true);
+      try {
+        setWateringScheduleWorking(true);
 
-      const res = await schedulePumpWatering(Number(wateringScheduleId), { durationSeconds });
-      const pendingTask = res.pending_pump_task ?? null;
+        const res = await schedulePumpWatering(Number(wateringScheduleId), {
+          durationSeconds,
+        });
+        const pendingTask = res.pending_pump_task ?? null;
 
-      setWateringSchedulePendingTask(pendingTask);
+        setWateringSchedulePendingTask(pendingTask);
 
-      setDetails((curr) => {
-        if (!curr?.readingDevice) return curr;
+        setDetails(curr => {
+          if (!curr?.readingDevice) return curr;
 
-        return {
-          ...curr,
-          readingDevice: {
-            ...curr.readingDevice,
-            pendingPumpTask: pendingTask,
-          },
-        };
-      });
+          return {
+            ...curr,
+            readingDevice: {
+              ...curr.readingDevice,
+              pendingPumpTask: pendingTask,
+            },
+          };
+        });
 
-      showToast(
-        tr("plantDetails.toasts.wateringScheduled", "Watering scheduled."),
-        "success"
-      );
-    } catch {
-      showToast(
-        tr("plantDetails.toasts.wateringScheduleFailed", "Failed to schedule watering."),
-        "error"
-      );
-    } finally {
-      setWateringScheduleWorking(false);
-    }
-  }, [wateringScheduleId, tr]);
+        showToast(
+          tr('plantDetails.toasts.wateringScheduled', 'Watering scheduled.'),
+          'success',
+        );
+      } catch {
+        showToast(
+          tr(
+            'plantDetails.toasts.wateringScheduleFailed',
+            'Failed to schedule watering.',
+          ),
+          'error',
+        );
+      } finally {
+        setWateringScheduleWorking(false);
+      }
+    },
+    [wateringScheduleId, tr],
+  );
 
   const handleRecallWatering = useCallback(async () => {
     if (!wateringScheduleId) {
       showToast(
-        tr("plantDetails.toasts.missingDeviceId", "Missing reading device."),
-        "error"
+        tr('plantDetails.toasts.missingDeviceId', 'Missing reading device.'),
+        'error',
       );
       return;
     }
@@ -549,7 +626,7 @@ export default function PlantDetailsScreen() {
 
       setWateringSchedulePendingTask(null);
 
-      setDetails((curr) => {
+      setDetails(curr => {
         if (!curr?.readingDevice) return curr;
 
         return {
@@ -562,13 +639,19 @@ export default function PlantDetailsScreen() {
       });
 
       showToast(
-        tr("plantDetails.toasts.wateringRecalled", "Scheduled watering recalled."),
-        "success"
+        tr(
+          'plantDetails.toasts.wateringRecalled',
+          'Scheduled watering recalled.',
+        ),
+        'success',
       );
     } catch {
       showToast(
-        tr("plantDetails.toasts.wateringRecallFailed", "Failed to recall watering."),
-        "error"
+        tr(
+          'plantDetails.toasts.wateringRecallFailed',
+          'Failed to recall watering.',
+        ),
+        'error',
       );
     } finally {
       setWateringScheduleWorking(false);
@@ -578,7 +661,7 @@ export default function PlantDetailsScreen() {
   const closeWateringSchedule = useCallback(() => {
     setWateringScheduleVisible(false);
     setWateringScheduleId(null);
-    setWateringScheduleName("");
+    setWateringScheduleName('');
     setWateringScheduleLoading(false);
     setWateringScheduleWorking(false);
     setWateringSchedulePendingTask(null);
@@ -591,22 +674,25 @@ export default function PlantDetailsScreen() {
 
       const run = async () => {
         try {
-          setDismissMenusTick((t) => t + 1);
+          setDismissMenusTick(t => t + 1);
           setDetails(null);
 
           setLoading(true);
-          setError("");
+          setError('');
 
           await loadDetails();
           if (isActive) {
-            setRefreshCounter((c) => c + 1);
+            setRefreshCounter(c => c + 1);
             requestAnimationFrame(() => {
               scrollRef.current?.scrollTo({ y: 0, animated: false });
             });
           }
         } catch (e: any) {
           if (!isActive) return;
-          setError(e?.message || tr("plantDetails.errors.failedToLoad", "Failed to load plant."));
+          setError(
+            e?.message ||
+              tr('plantDetails.errors.failedToLoad', 'Failed to load plant.'),
+          );
           setDetails(null);
         } finally {
           if (isActive) setLoading(false);
@@ -618,16 +704,16 @@ export default function PlantDetailsScreen() {
       return () => {
         isActive = false;
 
-        setDismissMenusTick((t) => t + 1);
+        setDismissMenusTick(t => t + 1);
 
         setToastVisible(false);
         setCompleteModalVisible(false);
         setPostponeTask(null);
         setCompleteReminderId(null);
-        setCompleteNote("");
+        setCompleteNote('');
 
         setCompleteIsOverdue(false);
-        setCompleteIntervalText("");
+        setCompleteIntervalText('');
 
         closeDefinition();
         closeChangeImage();
@@ -635,6 +721,7 @@ export default function PlantDetailsScreen() {
         closeWateringSchedule();
 
         plantQrRef.current = null;
+        setQrModalVisible(false);
       };
     }, [
       loadDetails,
@@ -643,7 +730,7 @@ export default function PlantDetailsScreen() {
       closeChangeImage,
       closeEdit,
       closeWateringSchedule,
-    ])
+    ]),
   );
 
   const latestRead = details?.latestReadings ?? null;
@@ -676,13 +763,13 @@ export default function PlantDetailsScreen() {
   const openCompleteModal = (reminderId: string) => {
     if (!details || !plantAccess(details.plant.access).canCompleteTasks) return;
     setCompleteReminderId(reminderId);
-    setCompleteNote("");
+    setCompleteNote('');
     setCompleteDate(toYYYYMMDD());
 
-    const r = details?.reminders?.find((x) => x.id === reminderId);
+    const r = details?.reminders?.find(x => x.taskId === reminderId);
     const overdue = r ? isReminderOverdue(r) : false;
     setCompleteIsOverdue(overdue);
-    setCompleteIntervalText(r ? buildIntervalText(r) : "");
+    setCompleteIntervalText(r ? buildIntervalText(r) : '');
 
     setCompleteModalVisible(true);
   };
@@ -690,11 +777,11 @@ export default function PlantDetailsScreen() {
   const closeCompleteModal = () => {
     setCompleteModalVisible(false);
     setCompleteReminderId(null);
-    setCompleteNote("");
+    setCompleteNote('');
     setCompleteDate(toYYYYMMDD());
 
     setCompleteIsOverdue(false);
-    setCompleteIntervalText("");
+    setCompleteIntervalText('');
   };
 
   const handleConfirmComplete = async () => {
@@ -706,7 +793,7 @@ export default function PlantDetailsScreen() {
     try {
       setLoading(true);
 
-      const r = details.reminders.find((x) => x.id === completeReminderId);
+      const r = details.reminders.find(x => x.taskId === completeReminderId);
       if (r?.taskId) {
         await markHomeTaskComplete(r.taskId, completeNote, completeDate);
       }
@@ -714,215 +801,321 @@ export default function PlantDetailsScreen() {
       closeCompleteModal();
 
       await loadDetails();
-      setRefreshCounter((c) => c + 1);
+      setRefreshCounter(c => c + 1);
 
       showToast(
-        tr("plantDetails.toasts.reminderCompleted", "Reminder marked as complete."),
-        "success"
+        tr(
+          'plantDetails.toasts.reminderCompleted',
+          'Reminder marked as complete.',
+        ),
+        'success',
       );
     } catch (e: any) {
       closeCompleteModal();
       Alert.alert(
-        tr("plantDetails.alerts.completeFailed.title", "Complete failed"),
+        tr('plantDetails.alerts.completeFailed.title', 'Complete failed'),
         e?.message
           ? String(e.message)
-          : tr("plantDetails.alerts.completeFailed.msg", "Could not complete this reminder.")
+          : tr(
+              'plantDetails.alerts.completeFailed.msg',
+              'Could not complete this reminder.',
+            ),
       );
     } finally {
       setLoading(false);
     }
   };
 
-  const photoTargets = useMemo(() => [{
-    photo: details?.plant.photo,
-    variant: "display" as const,
-    expiresAt: details?.plant.access?.expires_at,
-  }], [details?.plant.photo, details?.plant.access?.expires_at]);
-  const photoPreload = usePlantPhotoPreload(photoTargets, !loading && !error, photoReloadSignal);
-  const imageReadyKey = `${details?.plant.id ?? ""}:${detailsRevision}:${photoReloadSignal}`;
-  const onImageReadyChange = useCallback((ready: boolean) => {
-    setReadyImageKey(ready ? imageReadyKey : null);
-  }, [imageReadyKey]);
-  const isInitialLoading = !error && (loading || photoPreload.loading || (!!details && readyImageKey !== imageReadyKey));
+  const photoTargets = useMemo(
+    () => [
+      {
+        photo: details?.plant.photo,
+        variant: 'display' as const,
+        expiresAt: details?.plant.access?.expires_at,
+      },
+    ],
+    [details?.plant.photo, details?.plant.access?.expires_at],
+  );
+  const photoPreload = usePlantPhotoPreload(
+    photoTargets,
+    !loading && !error,
+    photoReloadSignal,
+  );
+  const imageReadyKey = `${
+    details?.plant.id ?? ''
+  }:${detailsRevision}:${photoReloadSignal}`;
+  const onImageReadyChange = useCallback(
+    (ready: boolean) => {
+      setReadyImageKey(ready ? imageReadyKey : null);
+    },
+    [imageReadyKey],
+  );
+  const isInitialLoading =
+    !error &&
+    (loading ||
+      photoPreload.loading ||
+      (!!details && readyImageKey !== imageReadyKey));
   const entryStyle = useScreenEntryAnimation(!isInitialLoading, isFocused);
 
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title={tr("plantDetails.headerTitle", "Plant details")}
+        title={tr('plantDetails.headerTitle', 'Plant details')}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         rightIconName="qrcode-scan"
-        onPressRight={() => nav.navigate("Scanner")}
+        onPressRight={() => nav.navigate('Scanner')}
         showSeparator={false}
       />
 
       <View style={{ flex: 1 }}>
-      <AnimatedView testID="plant-details-content"
-        pointerEvents={isInitialLoading ? "none" : "auto"}
-        accessibilityElementsHidden={isInitialLoading}
-        importantForAccessibility={isInitialLoading ? "no-hide-descendants" : "auto"}
-        style={[{ flex: 1 }, entryStyle, isInitialLoading && { opacity: 0 }]}>
-        {error ? (
-          <View style={styles.centerBox}>
-            <Text style={styles.title}>
-              {tr("plantDetails.states.error.title", "Error")}
-            </Text>
-            <Text style={styles.dim}>{error}</Text>
-          </View>
-        ) : !details ? (
-          <View style={styles.centerBox}>
-            <Text style={styles.title}>
-              {tr("plantDetails.states.notFound.title", "Not found")}
-            </Text>
-            <Text style={styles.dim}>
-              {tr("plantDetails.states.notFound.msg", "We couldn’t load this plant.")}
-            </Text>
-          </View>
-        ) : (
-          <ScrollView
-            ref={scrollRef}
-            contentContainerStyle={{
-              paddingBottom: 24,
-              paddingHorizontal: 16,
-              paddingTop: 21,
-            }}
-            showsVerticalScrollIndicator={false}
-            onScrollBeginDrag={() => setDismissMenusTick((t) => t + 1)}
-          >
-            <GlassFrame>
-              {details?.plant ? (
-                <PlantInfoTile
-                  plant={details.plant}
-                  collapseMenusSignal={dismissMenusTick}
-                  onTileTouch={dismissMenus}
-                  photoReloadSignal={photoReloadSignal}
-                  onImageReadyChange={onImageReadyChange}
-                  onOpenDefinition={(plantDefinitionId) => {
-                    setDismissMenusTick((t) => t + 1);
-                    openDefinition(plantDefinitionId);
-                  }}
-                  onOpenEditPlant={(plantId) => {
-                    setDismissMenusTick((t) => t + 1);
-                    openEditModal(plantId);
-                  }}
-                  onOpenChangeImage={(plantId) => {
-                    setDismissMenusTick((t) => t + 1);
-                    openChangeImage(plantId);
-                  }}
-                />
-              ) : (
-                <View>
-                  <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
-                    {tr("plantDetails.info.loading", "Loading…")}
-                  </Text>
-                </View>
-              )}
-            </GlassFrame>
-
-            <GlassFrame>
-              <PlantActivityTile items={details.activity ?? []}/>
-            </GlassFrame>
-
-            {plantAccess(details.plant.access).isOwner && reminders.length > 0 && (
-              <PlantRemindersTile
-                access={details.plant.access}
-                key={refreshCounter}
-                collapseMenusSignal={dismissMenusTick}
-                reminders={reminders}
-                onTileTouch={dismissMenus}
-                onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
-                onPostpone={(reminderId) => {
-                  const reminder = details.reminders.find(item => item.id === reminderId);
-                  if (!plantAccess(details.plant.access).canEdit || !reminder?.taskId || !reminder.dueDate) return;
-                  dismissMenus();
-                  setPostponeTask({ id: reminder.taskId, dueDate: reminder.dueDate,
-                    plant: details.plant.display_name || details.plant.plant_definition?.name || "" });
-                }}
-                onEditReminder={(reminderId) => {
-                  nav.navigate("Reminders", { editReminderId: String(reminderId) });
-                }}
-                onShowHistory={() => {
-                  nav.navigate("TaskHistory", { plantId: String(details.plant.id) });
-                }}
-              />
-            )}
-
-            {showLatestReadingsTile && (
-              <PlantLatestReadingsTile
-                latestReadings={latestReadSafe}
-                sensors={details.sensors}
-                onTileTouch={dismissMenus}
-                onMetricPress={(metric) => goHistory(metric)}
-                pumpIncluded={Boolean(details.readingDevice?.pumpIncluded) && plantAccess(details.plant.access).isOwner}
-                lastPumpLaunchDate={details.readingDevice?.lastPumpRunAt ?? null}
-                hasPendingWatering={Boolean(details.readingDevice?.pendingPumpTask)}
-                onScheduleWatering={() =>
-                  openWateringSchedule(details.readingDevice?.id ?? null)
-                }
-                isSchedulingWatering={wateringScheduleLoading}
-              />
-            )}
-
-            {!!qrCodeValue && plantAccess(details.plant.access).isOwner && (
+        <AnimatedView
+          testID="plant-details-content"
+          pointerEvents={isInitialLoading ? 'none' : 'auto'}
+          accessibilityElementsHidden={isInitialLoading}
+          importantForAccessibility={
+            isInitialLoading ? 'no-hide-descendants' : 'auto'
+          }
+          style={[{ flex: 1 }, entryStyle, isInitialLoading && { opacity: 0 }]}
+        >
+          {error ? (
+            <View style={styles.centerBox}>
+              <Text style={styles.title}>
+                {tr('plantDetails.states.error.title', 'Error')}
+              </Text>
+              <Text style={styles.dim}>{error}</Text>
+            </View>
+          ) : !details ? (
+            <View style={styles.centerBox}>
+              <Text style={styles.title}>
+                {tr('plantDetails.states.notFound.title', 'Not found')}
+              </Text>
+              <Text style={styles.dim}>
+                {tr(
+                  'plantDetails.states.notFound.msg',
+                  'We couldn’t load this plant.',
+                )}
+              </Text>
+            </View>
+          ) : (
+            <ScrollView
+              ref={scrollRef}
+              onContentSizeChange={stableScroll.onContentSizeChange}
+              contentContainerStyle={{
+                minHeight: stableScroll.minHeight,
+                paddingBottom: 24,
+                paddingHorizontal: 16,
+                paddingTop: 21,
+              }}
+              showsVerticalScrollIndicator={false}
+              onScrollBeginDrag={() => setDismissMenusTick(t => t + 1)}
+            >
               <GlassFrame>
-                <PlantQrTile
-                  qrCodeValue={qrCodeValue}
-                  onQrRef={(ref) => {
-                    plantQrRef.current = ref;
-                  }}
-                  onTileTouch={dismissMenus}
-                  onPressSave={async () => {
-                    try {
-                      await onSaveQr(plantQrRef.current);
-                      showToast(
-                        tr("plantDetails.toasts.qrSaved", "QR code saved to your gallery."),
-                        "success"
-                      );
-                    } catch (err: any) {
-                      console.warn("[PlantDetails] save QR failed:", err);
-                      showToast(
-                        tr("plantDetails.toasts.qrSaveFailed", "Failed to save QR code."),
-                        "error"
-                      );
+                {details?.plant ? (
+                  <PlantInfoTile
+                    plant={details.plant}
+                    activeTab={activeTab}
+                    tabContent={
+                      activeTab === 'reminders' ? (
+                        <PlantTasksTile
+                          access={details.plant.access}
+                          key={refreshCounter}
+                          collapseMenusSignal={dismissMenusTick}
+                          reminders={reminders}
+                          activity={details.activity ?? []}
+                          onMarkComplete={reminderId =>
+                            openCompleteModal(reminderId)
+                          }
+                          onPostpone={reminderId => {
+                            const reminder = details.reminders.find(
+                              item => item.taskId === reminderId,
+                            );
+                            if (
+                              !plantAccess(details.plant.access).canEdit ||
+                              !reminder?.taskId ||
+                              !reminder.dueDate
+                            )
+                              return;
+                            dismissMenus();
+                            setPostponeTask({
+                              id: reminder.taskId,
+                              dueDate: reminder.dueDate,
+                              plant:
+                                details.plant.display_name ||
+                                details.plant.plant_definition?.name ||
+                                '',
+                            });
+                          }}
+                          onEditReminder={reminderId => {
+                            nav.navigate('Reminders', {
+                              editReminderId: String(reminderId),
+                            });
+                          }}
+                          onShowHistory={() => {
+                            nav.navigate('TaskHistory', {
+                              plantId: String(details.plant.id),
+                            });
+                          }}
+                        />
+                      ) : activeTab === 'readings' ? (
+                        showLatestReadingsTile ? (
+                          <PlantLatestReadingsTile
+                            embedded
+                            latestReadings={latestReadSafe}
+                            sensors={details.sensors}
+                            onTileTouch={dismissMenus}
+                            onMetricPress={metric => goHistory(metric)}
+                            pumpIncluded={
+                              Boolean(details.readingDevice?.pumpIncluded) &&
+                              plantAccess(details.plant.access).isOwner
+                            }
+                            lastPumpLaunchDate={
+                              details.readingDevice?.lastPumpRunAt ?? null
+                            }
+                            hasPendingWatering={Boolean(
+                              details.readingDevice?.pendingPumpTask,
+                            )}
+                            onScheduleWatering={() =>
+                              openWateringSchedule(
+                                details.readingDevice?.id ?? null,
+                              )
+                            }
+                            isSchedulingWatering={wateringScheduleLoading}
+                          />
+                        ) : (
+                          <View>
+                            <Text style={styles.title}>
+                              {tr('plantDetails.segments.readings', 'Readings')}
+                            </Text>
+                            <Text style={styles.dim}>
+                              {tr(
+                                'plantDetails.tabsEmpty.device',
+                                'No device is linked to this plant.',
+                              )}
+                            </Text>
+                          </View>
+                        )
+                      ) : undefined
                     }
-                  }}
-                  onPressEmail={async () => {
-                    try {
-                      await sendQrCodeByEmail(Number(details.plant.id), currentLanguage);
-                      showToast(
-                        tr("plantDetails.toasts.qrEmailed", "QR code email sent."),
-                        "success"
-                      );
-                    } catch (err: any) {
-                      console.warn("[PlantDetails] send QR email failed:", err);
-                      showToast(
-                        tr("plantDetails.toasts.qrEmailFailed", "Failed to send QR code email."),
-                        "error"
-                      );
-                    }
-                  }}
-                />
+                    onTabChange={tab => {
+                      dismissMenus();
+                      setActiveTab(tab);
+                    }}
+                    onShowQr={() => setQrModalVisible(true)}
+                    collapseMenusSignal={dismissMenusTick}
+                    onTileTouch={dismissMenus}
+                    photoReloadSignal={photoReloadSignal}
+                    onImageReadyChange={onImageReadyChange}
+                    onOpenDefinition={plantDefinitionId => {
+                      setDismissMenusTick(t => t + 1);
+                      openDefinition(plantDefinitionId);
+                    }}
+                    onOpenEditPlant={plantId => {
+                      setDismissMenusTick(t => t + 1);
+                      openEditModal(plantId);
+                    }}
+                    onOpenChangeImage={plantId => {
+                      setDismissMenusTick(t => t + 1);
+                      openChangeImage(plantId);
+                    }}
+                  />
+                ) : (
+                  <View>
+                    <Text style={{ color: '#FFFFFF', fontWeight: '800' }}>
+                      {tr('plantDetails.info.loading', 'Loading…')}
+                    </Text>
+                  </View>
+                )}
               </GlassFrame>
-            )}
 
-            <View style={{ height: 120 }} />
-          </ScrollView>
-        )}
-      </AnimatedView>
-      {isInitialLoading && <CenteredSpinner overlay />}
+              {activeTab === 'info' && details.plant.plant_definition?.id && (
+                <GlassFrame>
+                  <PlantDefinitionModal
+                    visible
+                    embedded
+                    onClose={() => {}}
+                    plantDefinitionId={details.plant.plant_definition.id}
+                  />
+                </GlassFrame>
+              )}
+
+              <View style={{ height: 120 }} />
+            </ScrollView>
+          )}
+        </AnimatedView>
+        {isInitialLoading && <CenteredSpinner overlay />}
       </View>
 
       {(editLoading || saving) && (
         <View
           style={[
             StyleSheet.absoluteFill,
-            { justifyContent: "center", alignItems: "center" },
+            { justifyContent: 'center', alignItems: 'center' },
           ]}
         >
           <CenteredSpinner size={46} color="#FFFFFF" />
         </View>
       )}
+
+      {!!qrCodeValue &&
+        details &&
+        plantAccess(details.plant.access).isOwner && (
+          <PlantQrModal
+            visible={qrModalVisible}
+            onClose={() => setQrModalVisible(false)}
+            plantName={
+              details.plant.display_name ||
+              details.plant.plant_definition?.name ||
+              ''
+            }
+            qrValue={qrCodeValue}
+            onQrRef={ref => {
+              plantQrRef.current = ref;
+            }}
+            onPressSave={async () => {
+              try {
+                await onSaveQr(plantQrRef.current);
+                showToast(
+                  tr(
+                    'plantDetails.toasts.qrSaved',
+                    'QR code saved to your gallery.',
+                  ),
+                  'success',
+                );
+              } catch (err: any) {
+                console.warn('[PlantDetails] save QR failed:', err);
+                showToast(
+                  tr(
+                    'plantDetails.toasts.qrSaveFailed',
+                    'Failed to save QR code.',
+                  ),
+                  'error',
+                );
+              }
+            }}
+            onPressEmail={async () => {
+              try {
+                await sendQrCodeByEmail(
+                  Number(details.plant.id),
+                  currentLanguage,
+                );
+                showToast(
+                  tr('plantDetails.toasts.qrEmailed', 'QR code email sent.'),
+                  'success',
+                );
+              } catch (err: any) {
+                console.warn('[PlantDetails] send QR email failed:', err);
+                showToast(
+                  tr(
+                    'plantDetails.toasts.qrEmailFailed',
+                    'Failed to send QR code email.',
+                  ),
+                  'error',
+                );
+              }
+            }}
+          />
+        )}
 
       <PlantDefinitionModal
         visible={defModalVisible}
@@ -934,15 +1127,22 @@ export default function PlantDetailsScreen() {
         visible={changeImgVisible}
         onClose={closeChangeImage}
         plantId={changeImgPlantId}
-        onChanged={(photo) => {
-          setDetails((current) => current && String(current.plant.id) === String(changeImgPlantId)
-            ? { ...current, plant: { ...current.plant, photo } } : current);
-          setPhotoReloadSignal((v) => v + 1);
+        onChanged={photo => {
+          setDetails(current =>
+            current && String(current.plant.id) === String(changeImgPlantId)
+              ? { ...current, plant: { ...current.plant, photo } }
+              : current,
+          );
+          setPhotoReloadSignal(v => v + 1);
           showToast(
             photo
-              ? t("plantDetails.toasts.photoUpdated", { defaultValue: "Plant photo updated." })
-              : t("plantDetails.toasts.photoRemoved", { defaultValue: "Plant photo removed." }),
-            "success"
+              ? t('plantDetails.toasts.photoUpdated', {
+                  defaultValue: 'Plant photo updated.',
+                })
+              : t('plantDetails.toasts.photoRemoved', {
+                  defaultValue: 'Plant photo removed.',
+                }),
+            'success',
           );
         }}
       />
@@ -977,19 +1177,54 @@ export default function PlantDetailsScreen() {
         onSave={onUpdate}
       />
 
-      <PostponeTaskModal visible={isFocused && !!postponeTask} task={postponeTask}
+      <PostponeTaskModal
+        visible={isFocused && !!postponeTask}
+        task={postponeTask}
         onClose={() => setPostponeTask(null)}
         onSaved={() => {
-          showToast(String(t("homeModals.postpone.saved", { defaultValue: "Task postponed." })), "success");
-          void loadDetails().then(() => setRefreshCounter(value => value + 1)).catch(() => {
-            showToast(String(t("plantDetails.errors.failedToLoad", { defaultValue: "Could not reload plant details." })), "error");
-          });
+          showToast(
+            String(
+              t('homeModals.postpone.saved', {
+                defaultValue: 'Task postponed.',
+              }),
+            ),
+            'success',
+          );
+          void loadDetails()
+            .then(() => setRefreshCounter(value => value + 1))
+            .catch(() => {
+              showToast(
+                String(
+                  t('plantDetails.errors.failedToLoad', {
+                    defaultValue: 'Could not reload plant details.',
+                  }),
+                ),
+                'error',
+              );
+            });
         }}
         onConflict={() => {
-          showToast(String(t("homeModals.postpone.conflict", { defaultValue: "This task changed. Reloading its latest details." })), "error");
-          void loadDetails().then(() => setRefreshCounter(value => value + 1)).catch(() => {
-            showToast(String(t("plantDetails.errors.failedToLoad", { defaultValue: "Could not reload plant details." })), "error");
-          });
+          showToast(
+            String(
+              t('homeModals.postpone.conflict', {
+                defaultValue:
+                  'This task changed. Reloading its latest details.',
+              }),
+            ),
+            'error',
+          );
+          void loadDetails()
+            .then(() => setRefreshCounter(value => value + 1))
+            .catch(() => {
+              showToast(
+                String(
+                  t('plantDetails.errors.failedToLoad', {
+                    defaultValue: 'Could not reload plant details.',
+                  }),
+                ),
+                'error',
+              );
+            });
         }}
       />
 
@@ -1015,24 +1250,26 @@ export default function PlantDetailsScreen() {
           wateringScheduleName ||
           details?.readingDevice?.deviceName ||
           details?.deviceName ||
-          "—"
+          '—'
         }
         plantName={
           details?.plant?.display_name ||
           details?.plant?.plant_definition?.name ||
-          "—"
+          '—'
         }
-        location={details?.plant?.location?.name ?? "—"}
+        location={details?.plant?.location?.name ?? '—'}
         pumpIncluded={Boolean(details?.readingDevice?.pumpIncluded)}
         lastPumpRunAt={
           wateringScheduleLastPumpRunAt ??
           details?.readingDevice?.lastPumpRunAt ??
-          "—"
+          '—'
         }
         pendingPumpTask={wateringSchedulePendingTask}
         durationSupported={wateringDurationSupported}
         scheduledJobExists={Boolean(wateringSchedulePendingTask)}
-        scheduledJobCreatedAt={wateringSchedulePendingTask?.requested_at ?? null}
+        scheduledJobCreatedAt={
+          wateringSchedulePendingTask?.requested_at ?? null
+        }
         onScheduleWatering={handleScheduleWatering}
         onRecallWatering={handleRecallWatering}
         onClose={closeWateringSchedule}
@@ -1072,9 +1309,9 @@ function GlassFrame({
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
+            'rgba(255, 255, 255, 0.06)',
+            'rgba(255, 255, 255, 0.02)',
+            'rgba(255, 255, 255, 0.08)',
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
@@ -1084,7 +1321,7 @@ function GlassFrame({
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <View style={[styles.frameInner, center && { alignItems: "center" }]}>
+      <View style={[styles.frameInner, center && { alignItems: 'center' }]}>
         {children}
       </View>
     </View>
@@ -1094,20 +1331,20 @@ function GlassFrame({
 const styles = StyleSheet.create({
   centerBox: {
     padding: 16,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 18,
     marginBottom: 6,
   },
 
   frameWrap: {
     borderRadius: 28,
-    overflow: "visible",
-    position: "relative",
+    overflow: 'visible',
+    position: 'relative',
     elevation: 8,
     marginBottom: 14,
   },
@@ -1116,7 +1353,7 @@ const styles = StyleSheet.create({
   },
 
   dim: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.92)',
+    fontWeight: '600',
   },
 });

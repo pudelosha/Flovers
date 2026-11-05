@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "خيارات المهمة", "empty": "لا توجد مهام لعرضها لهذه النبتة بعد."},
+    "tabsEmpty": {"reminders": "لا توجد تذكيرات متاحة لهذه النبتة.", "device": "لا يوجد جهاز مرتبط بهذه النبتة."},
+    "segments": {"info": "معلومات", "reminders": "المهام", "readings": "القراءات"},
     "headerTitle": "تفاصيل النبات",
     "common": {
       "dash": "—",

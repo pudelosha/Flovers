@@ -63,3 +63,14 @@ it("bounds zoom and invalid saved values and compares defaults with old metadata
   expect(samePhotoFraming(undefined, DEFAULT_PHOTO_FRAMING)).toBe(true);
   expect(samePhotoFraming(DEFAULT_PHOTO_FRAMING, { ...DEFAULT_PHOTO_FRAMING, zoom: 1.5 })).toBe(false);
 });
+
+
+it.each([{width:960,height:1280},{width:1600,height:600}])('matches the new grid square photo canvas to details across screen sizes: %j',source=>{
+ const framing={focal_x:0.35,focal_y:0.7,zoom:2};
+ const details=photoImageLayout(source,{width:320,height:320},framing);
+ const grid=photoImageLayout(source,{width:160,height:160},framing);
+ expect(grid.width*2).toBeCloseTo(details.width);
+ expect(grid.height*2).toBeCloseTo(details.height);
+ expect(grid.left*2).toBeCloseTo(details.left);
+ expect(grid.top*2).toBeCloseTo(details.top);
+});

@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Task options", "empty": "No tasks to display for this plant yet."},
+    "tabsEmpty": {"reminders": "No reminders are available for this plant.", "device": "No device is linked to this plant."},
+    "segments": {"info": "Info", "reminders": "Tasks", "readings": "Readings"},
     "headerTitle": "Plant details",
     "common": {
       "dash": "—",

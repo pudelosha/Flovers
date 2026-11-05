@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Options de la tâche", "empty": "Aucune tâche à afficher pour cette plante."},
+    "tabsEmpty": {"reminders": "Aucun rappel disponible pour cette plante.", "device": "Aucun appareil n’est associé à cette plante."},
+    "segments": {"info": "Infos", "reminders": "Tâches", "readings": "Relevés"},
     "headerTitle": "Détails de la plante",
     "common": {
       "dash": "—",

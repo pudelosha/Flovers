@@ -5,6 +5,7 @@ import React from "react";
 import { ImageBackground, StyleSheet } from "react-native";
 import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
 import PlantInfoTile from "../PlantInfoTile";
+import PlantInfoMenu from "../PlantInfoMenu";
 import PlantTile from "../../../plants/components/PlantTile";
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
 import { getPlantPhotoUri } from "../../../../shared/utils/photoStorage";
@@ -185,4 +186,58 @@ it('keeps the full details photo above a separate overlapping information panel'
     expect(ancestor.type).not.toBe(ThemeMaskedView);
     ancestor = ancestor.parent;
   }
+});
+
+
+it('switches the selected details tab and hides user info outside Info', () => {
+  const onTabChange = jest.fn();
+  const view = render(<PlantInfoTile plant={plant as any} activeTab="info" onTabChange={onTabChange} />);
+  expect(view.getByTestId('plant-detail-description')).toBeTruthy();
+  const tabs = view.getAllByRole('tab');
+  fireEvent.press(tabs[1]);
+  expect(onTabChange).toHaveBeenCalledWith('reminders');
+  view.rerender(<PlantInfoTile plant={plant as any} activeTab="reminders" onTabChange={onTabChange} />);
+  expect(view.queryByTestId('plant-detail-description')).toBeNull();
+  expect(view.getAllByRole('tab')[1].props.accessibilityState.selected).toBe(true);
+  fireEvent.press(view.getAllByRole('tab')[2]);
+  expect(onTabChange).toHaveBeenLastCalledWith('readings');
+});
+
+
+it('replaces the definition menu option with the owner QR action', () => {
+  const onShowQr = jest.fn();
+  const props = { onEditPlant: jest.fn(), onChangeImage: jest.fn(), onShowReminders: jest.fn() };
+  const view = render(<PlantInfoMenu {...props} onShowQr={onShowQr} />);
+  expect(view.queryByText('Plant definition')).toBeNull();
+  fireEvent.press(view.getByText('QR Code'));
+  expect(onShowQr).toHaveBeenCalledTimes(1);
+  view.rerender(<PlantInfoMenu {...props} canEdit={false} />);
+  expect(view.queryByText('QR Code')).toBeNull();
+});
+
+
+it('positions Tasks content inside the same overlap as Info without moving the selector',()=>{
+ const ui=render(<PlantInfoTile plant={plant as any} activeTab="info"/>);
+ const initial=StyleSheet.flatten(ui.getByTestId('plant-detail-description').props.style).marginTop;
+ const bar=StyleSheet.flatten(ui.getByTestId('plant-detail-segments').props.style).bottom;
+ ui.rerender(<PlantInfoTile plant={plant as any} activeTab="reminders" tabContent={<React.Fragment>Task content</React.Fragment>}/>);
+ expect(StyleSheet.flatten(ui.getByTestId('plant-detail-description').props.style).marginTop).toBe(initial);
+ expect(StyleSheet.flatten(ui.getByTestId('plant-detail-segments').props.style).bottom).toBe(bar);
+});
+
+
+it('keeps Readings and the no-device message in the same translucent overlapping panel',()=>{
+ const ui=render(<PlantInfoTile plant={plant as any} activeTab="info"/>);
+ const top=StyleSheet.flatten(ui.getByTestId('plant-detail-description').props.style).marginTop;
+ ui.rerender(<PlantInfoTile plant={plant as any} activeTab="readings" tabContent={<React.Fragment>No device</React.Fragment>}/>);
+ expect(StyleSheet.flatten(ui.getByTestId('plant-detail-description').props.style).marginTop).toBe(top);
+ expect(ui.getByTestId('plant-detail-description')).toBeTruthy();
+});
+
+
+it('puts the owner QR action fourth, after edit, sharing and image actions',()=>{
+ const onShowQr=jest.fn();
+ const ui=render(<PlantInfoMenu onEditPlant={jest.fn()} onShare={jest.fn()} onChangeImage={jest.fn()} onShowReminders={jest.fn()} onShowQr={onShowQr}/>);
+ const options=ui.getAllByText(/^(Edit plant|Share plant|Change image|QR Code|Show reminders)$/);
+ expect(options[3].props.children).toBe('QR Code');
 });

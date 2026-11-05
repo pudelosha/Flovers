@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "Opsi tugas", "empty": "Belum ada tugas untuk tanaman ini."},
+    "tabsEmpty": {"reminders": "Tidak ada pengingat yang tersedia untuk tanaman ini.", "device": "Belum ada perangkat yang terhubung ke tanaman ini."},
+    "segments": {"info": "Info", "reminders": "Tugas", "readings": "Pembacaan"},
     "headerTitle": "Detail tanaman",
     "common": {
       "dash": "—",

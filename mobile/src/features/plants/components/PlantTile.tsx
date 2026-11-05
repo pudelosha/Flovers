@@ -16,7 +16,11 @@ import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
 import { plantAccess } from '../../../shared/utils/plantAccess';
 import { useSharingPreview } from '../../sharing/state/SharingPreviewProvider';
 import { usePlantPhoto } from '../../../shared/hooks/usePlantPhoto';
-import { normalizePhotoFraming } from '../../../shared/utils/photoFraming';
+import {
+  PHOTO_DETAILS_ASPECT_RATIO,
+  PHOTO_PLANTS_GRID_ASPECT_RATIO,
+  normalizePhotoFraming,
+} from '../../../shared/utils/photoFraming';
 type Props = {
   plant: Plant;
   menuAlign?: 'left' | 'right';
@@ -177,10 +181,14 @@ const grid = StyleSheet.create({
   wrap: { position: 'relative', overflow: 'visible', borderRadius: 22 },
   body: { borderRadius: 22, overflow: 'hidden' },
   photoBackground: {
-    ...StyleSheet.absoluteFillObject,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    aspectRatio: PHOTO_DETAILS_ASPECT_RATIO,
     backgroundColor: '#244C40',
   },
-  image: { width: '100%', aspectRatio: 1.2 },
+  image: { width: '100%', aspectRatio: PHOTO_PLANTS_GRID_ASPECT_RATIO },
   placeholder: {
     ...StyleSheet.absoluteFillObject,
     alignItems: 'center',

@@ -110,3 +110,12 @@ it("matches the journal crop guide to the compact tile after moving and zooming 
   expect(actual.left).toBeCloseTo(preview.left);
   expect(actual.top).toBeCloseTo(preview.top - guide.top);
 });
+
+
+it('uses the square details canvas and a top-aligned grid photo guide',()=>{
+ const {view}=open();
+ fireEvent(view.getByTestId('photo-framing-viewport'),'layout',{nativeEvent:{layout:{width:320,height:320}}});
+ expect(StyleSheet.flatten(view.getByTestId('photo-framing-viewport').props.style).aspectRatio).toBe(1);
+ expect(StyleSheet.flatten(view.getByTestId('photo-details-guide').props.style)).toMatchObject({top:0,bottom:0,left:0,right:0});
+ expect(StyleSheet.flatten(view.getByTestId('photo-tiles-guide').props.style)).toMatchObject({top:0,height:320/1.2});
+});

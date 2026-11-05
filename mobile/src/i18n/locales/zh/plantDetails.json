@@ -1,5 +1,8 @@
 {
   "plantDetails": {
+    "tasks": {"menu": "任务选项", "empty": "此植物暂无可显示的任务。"},
+    "tabsEmpty": {"reminders": "此植物暂无可显示的提醒。", "device": "此植物尚未关联设备。"},
+    "segments": {"info": "信息", "reminders": "任务", "readings": "读数"},
     "headerTitle": "植物详情",
     "common": {
       "dash": "—",

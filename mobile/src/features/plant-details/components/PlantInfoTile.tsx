@@ -25,9 +25,16 @@ import { usePlantPhoto } from '../../../shared/hooks/usePlantPhoto';
 import SharedPlantBadge from '../../../shared/ui/SharedPlantBadge';
 import FramedPlantImage from '../../../shared/ui/FramedPlantImage';
 import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { PHOTO_DETAILS_ASPECT_RATIO } from '../../../shared/utils/photoFraming';
 import { plantAccess } from '../../../shared/utils/plantAccess';
 
+export type PlantDetailsTab = 'info' | 'reminders' | 'readings';
+
 type Props = {
+  activeTab?: PlantDetailsTab;
+  tabContent?: React.ReactNode;
+  onTabChange?: (tab: PlantDetailsTab) => void;
+  onShowQr?: () => void;
   plant?: ApiPlantInstanceDetailFull | null;
   collapseMenusSignal?: number;
   onTileTouch?: () => void;
@@ -149,6 +156,10 @@ function normalizeLightLevelKey(
 
 export default function PlantInfoTile({
   plant,
+  activeTab = 'info',
+  tabContent,
+  onTabChange,
+  onShowQr,
   collapseMenusSignal,
   onTileTouch,
   onOpenDefinition,
@@ -360,9 +371,23 @@ export default function PlantInfoTile({
 
   return (
     <View style={[styles.root, menuOpen && styles.rootRaised]}>
-      <View style={styles.heroOuter}>
+      <View
+        style={[
+          styles.heroOuter,
+          activeTab !== 'info' && tabContent == null && { marginBottom: -16 },
+        ]}
+      >
         <Pressable onPressIn={handleTileTouch} accessible={false}>
-          <View style={styles.heroClip}>
+          <View
+            style={[
+              styles.heroClip,
+              activeTab !== 'info' &&
+                tabContent == null && {
+                  borderBottomLeftRadius: 28,
+                  borderBottomRightRadius: 28,
+                },
+            ]}
+          >
             {(imageUrl && !imageFailed) ||
             (plant.photo && photoLoading) ||
             localPhotoLoading ? (
@@ -407,7 +432,7 @@ export default function PlantInfoTile({
                   <View
                     style={[
                       styles.heroText,
-                      { paddingBottom: infoFadeHeight + 14 },
+                      { paddingBottom: infoFadeHeight + 60 },
                     ]}
                   >
                     <Text style={styles.h1} numberOfLines={1}>
@@ -453,6 +478,43 @@ export default function PlantInfoTile({
           </View>
         </Pressable>
 
+        <View
+          testID="plant-detail-segments"
+          style={[styles.segmentBar, { bottom: infoFadeHeight + 5 }]}
+        >
+          {(['info', 'reminders', 'readings'] as const).map(key => (
+            <Pressable
+              key={key}
+              accessibilityRole="tab"
+              accessibilityState={{ selected: activeTab === key }}
+              onPress={() => {
+                closeMenu();
+                onTabChange?.(key);
+              }}
+              style={[
+                styles.segment,
+                activeTab === key && styles.segmentActive,
+              ]}
+            >
+              <Text
+                style={styles.segmentText}
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                minimumFontScale={0.8}
+              >
+                {tr(
+                  `plantDetails.segments.${key}`,
+                  key === 'info'
+                    ? 'Info'
+                    : key === 'reminders'
+                    ? 'Reminders'
+                    : 'Readings',
+                )}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
         {menuOpen && (
           <View style={styles.menuOverlay} pointerEvents="box-none">
             <Pressable style={StyleSheet.absoluteFill} onPress={closeMenu} />
@@ -482,15 +544,14 @@ export default function PlantInfoTile({
                     photo: plant.photo,
                   });
                 }}
-                onPlantDefinition={() => {
-                  closeMenu();
-                  if (plantDefinitionIdSafe != null) {
-                    onOpenDefinition?.(plantDefinitionIdSafe);
-                  } else {
-                    // Replace native Alert with in-app sheet (no dimming backdrop)
-                    setNoDefinitionPromptVisible(true);
-                  }
-                }}
+                onShowQr={
+                  access.isOwner && onShowQr
+                    ? () => {
+                        closeMenu();
+                        onShowQr();
+                      }
+                    : undefined
+                }
                 onEditPlant={() => {
                   closeMenu();
                   if (onOpenEditPlant) {
@@ -533,88 +594,99 @@ export default function PlantInfoTile({
               }}
               hitSlop={10}
             >
-              <MaterialCommunityIcons
-                name="dots-horizontal"
-                size={20}
-                color="#FFFFFF"
-              />
+              <ThemeContrastScope kind="photo">
+                {' '}
+                <MaterialCommunityIcons
+                  name="dots-horizontal"
+                  size={20}
+                  color="#FFFFFF"
+                />
+              </ThemeContrastScope>
             </Pressable>
           </View>
         )}
       </View>
 
-      <Pressable
-        testID="plant-detail-description"
-        style={[styles.infoBody, { marginTop: -infoFadeHeight }]}
-        onLayout={event => {
-          const height = Math.round(event.nativeEvent.layout.height);
-          if (height > 0) setInfoPanelHeight(height);
-        }}
-        onPressIn={handleTileTouch}
-        accessible={false}
-      >
-        <PlantDescriptionSurface fadeHeight={infoFadeHeight} />
-        <View style={styles.infoGrid}>
-          {[
-            {
-              icon: 'calendar',
-              label: tr('plantDetails.info.purchased', 'Purchased'),
-              value: purchaseValue,
-            },
-            {
-              icon: 'note-edit-outline',
-              label: tr('plantDetails.info.notes', 'Notes'),
-              value: notesValue,
-              multiline: true,
-            },
-            {
-              icon: 'white-balance-sunny',
-              label: tr('plantDetails.info.light', 'Light'),
-              value: lightValue,
-            },
-            {
-              icon: 'compass-outline',
-              label: tr('plantDetails.info.orientation', 'Orientation'),
-              value: orientationValue,
-            },
-            {
-              icon: 'tape-measure',
-              label: tr('plantDetails.info.distance', 'Distance'),
-              value: distanceValue,
-            },
-            {
-              icon: 'pot-outline',
-              label: tr('plantDetails.info.pot', 'Pot'),
-              value: potValue,
-            },
-            {
-              icon: 'shovel',
-              label: tr('plantDetails.info.soil', 'Soil'),
-              value: soilValue,
-            },
-          ].map((it, i) => (
-            <View
-              key={i}
-              style={[styles.infoRow, it.multiline && styles.infoRowTopAligned]}
-            >
-              <MaterialCommunityIcons
-                name={it.icon as any}
-                size={16}
-                color="#FFFFFF"
-                style={{ marginRight: 8 }}
-              />
-              <Text style={styles.infoLabel}>{it.label}:</Text>
-              <Text
-                style={styles.infoValue}
-                numberOfLines={it.multiline ? undefined : 2}
-              >
-                {it.value}
-              </Text>
+      {(activeTab === 'info' || tabContent != null) && (
+        <Pressable
+          testID="plant-detail-description"
+          style={[styles.infoBody, { marginTop: -infoFadeHeight }]}
+          onLayout={event => {
+            const height = Math.round(event.nativeEvent.layout.height);
+            if (height > 0 && activeTab === 'info') setInfoPanelHeight(height);
+          }}
+          onPressIn={handleTileTouch}
+          accessible={false}
+        >
+          <PlantDescriptionSurface fadeHeight={infoFadeHeight} />
+          {activeTab === 'info' ? (
+            <View style={styles.infoGrid}>
+              {[
+                {
+                  icon: 'calendar',
+                  label: tr('plantDetails.info.purchased', 'Purchased'),
+                  value: purchaseValue,
+                },
+                {
+                  icon: 'note-edit-outline',
+                  label: tr('plantDetails.info.notes', 'Notes'),
+                  value: notesValue,
+                  multiline: true,
+                },
+                {
+                  icon: 'white-balance-sunny',
+                  label: tr('plantDetails.info.light', 'Light'),
+                  value: lightValue,
+                },
+                {
+                  icon: 'compass-outline',
+                  label: tr('plantDetails.info.orientation', 'Orientation'),
+                  value: orientationValue,
+                },
+                {
+                  icon: 'tape-measure',
+                  label: tr('plantDetails.info.distance', 'Distance'),
+                  value: distanceValue,
+                },
+                {
+                  icon: 'pot-outline',
+                  label: tr('plantDetails.info.pot', 'Pot'),
+                  value: potValue,
+                },
+                {
+                  icon: 'shovel',
+                  label: tr('plantDetails.info.soil', 'Soil'),
+                  value: soilValue,
+                },
+              ].map((it, i) => (
+                <View
+                  key={i}
+                  style={[
+                    styles.infoRow,
+                    it.multiline && styles.infoRowTopAligned,
+                  ]}
+                >
+                  <MaterialCommunityIcons
+                    name={it.icon as any}
+                    size={16}
+                    color="#FFFFFF"
+                    style={{ marginRight: 8 }}
+                  />
+                  <Text style={styles.infoLabel}>{it.label}:</Text>
+                  <Text
+                    style={styles.infoValue}
+                    numberOfLines={it.multiline ? undefined : 2}
+                  >
+                    {it.value}
+                  </Text>
+                </View>
+              ))}
             </View>
-          ))}
-        </View>
-      </Pressable>
-
+          ) : (
+            tabContent
+          )}
+        </Pressable>
+      )}
       {/* In-app prompt: No plant definition (NO dimming backdrop, full black card) */}
       {noDefinitionPromptVisible && (
         <View style={styles.confirmOverlay} pointerEvents="box-none">
@@ -675,7 +747,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
 
-  heroImage: { width: '100%', aspectRatio: 1.6, justifyContent: 'flex-end' },
+  heroImage: {
+    width: '100%',
+    aspectRatio: PHOTO_DETAILS_ASPECT_RATIO,
+    justifyContent: 'flex-end',
+  },
 
   heroTopScrim: {
     position: 'absolute',
@@ -685,6 +761,24 @@ const styles = StyleSheet.create({
     height: 70,
   },
 
+  segmentBar: {
+    position: 'absolute',
+    left: 16,
+    right: 16,
+    flexDirection: 'row',
+    backgroundColor: '#051F18',
+    borderRadius: 20,
+    padding: 3,
+  },
+  segment: {
+    flex: 1,
+    paddingVertical: 8,
+    paddingHorizontal: 4,
+    borderRadius: 17,
+    alignItems: 'center',
+  },
+  segmentActive: { backgroundColor: 'rgba(11,114,133,1)' },
+  segmentText: { color: '#FFFFFF', fontSize: 10, fontWeight: '700' },
   heroText: { paddingHorizontal: 16, paddingBottom: 54 },
 
   dotsAnchor: {

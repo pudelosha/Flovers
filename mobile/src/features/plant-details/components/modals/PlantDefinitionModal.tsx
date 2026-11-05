@@ -1,8 +1,18 @@
-import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import AppModalFrame, {
+  appModalStyles,
+} from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { View, Text, Pressable, ScrollView, StyleSheet, Keyboard } from "../../../../shared/theme/native";
+import CenteredSpinner from '../../../../shared/ui/CenteredSpinner';
+import {
+  View,
+  Text,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Keyboard,
+} from '../../../../shared/theme/native';
 
-import MaterialCommunityIcons from "../../../../shared/theme/Icon";
+import MaterialCommunityIcons from '../../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../../app/providers/LanguageProvider';
 import { useSettings } from '../../../../app/providers/SettingsProvider';
@@ -11,6 +21,7 @@ import { fetchPlantProfile } from '../../../../api/services/plant-definitions.se
 import { TRAIT_ICON_BY_KEY } from '../../../create-plant/constants/create-plant.constants';
 
 type Props = {
+  embedded?: boolean;
   visible: boolean;
   onClose: () => void;
   plantDefinitionId: number | null;
@@ -26,8 +37,13 @@ function pickText(value: any, lang: string): string {
   if (value == null) return '';
   if (typeof value === 'string') return value.trim();
 
-  if (typeof value === 'object' && value.text && typeof value.text === 'object') {
-    const v = value.text[lang] ?? value.text.en ?? value.text.pl ?? value.text.de;
+  if (
+    typeof value === 'object' &&
+    value.text &&
+    typeof value.text === 'object'
+  ) {
+    const v =
+      value.text[lang] ?? value.text.en ?? value.text.pl ?? value.text.de;
     if (typeof v === 'string') return v.trim();
   }
 
@@ -64,11 +80,18 @@ function titleCaseKey(key: string): string {
 
 function getTemperatureUnitFromSettings(settings?: any): 'C' | 'F' | 'K' {
   const raw =
-    settings?.temperatureUnit ?? settings?.tempUnit ?? settings?.units?.temperature ?? 'C';
+    settings?.temperatureUnit ??
+    settings?.tempUnit ??
+    settings?.units?.temperature ??
+    'C';
 
   const normalized = String(raw).trim().toLowerCase();
 
-  if (normalized === 'f' || normalized === '°f' || normalized === 'fahrenheit') {
+  if (
+    normalized === 'f' ||
+    normalized === '°f' ||
+    normalized === 'fahrenheit'
+  ) {
     return 'F';
   }
 
@@ -92,7 +115,10 @@ function formatConvertedTemp(n: number) {
   return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
 }
 
-function convertSingleCelsiusValue(celsius: number, targetUnit: 'C' | 'F' | 'K') {
+function convertSingleCelsiusValue(
+  celsius: number,
+  targetUnit: 'C' | 'F' | 'K',
+) {
   if (targetUnit === 'F') return `${formatConvertedTemp(cToF(celsius))}°F`;
   if (targetUnit === 'K') return `${formatConvertedTemp(cToK(celsius))} K`;
   return `${formatConvertedTemp(celsius)}°C`;
@@ -135,14 +161,19 @@ function convertTemperatureText(value: string, settings?: any) {
   return out;
 }
 
-export default function PlantDefinitionModal({ visible, onClose, plantDefinitionId }: Props) {
+export default function PlantDefinitionModal({
+  visible,
+  onClose,
+  plantDefinitionId,
+  embedded = false,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
 
   const preferredLang = normalizeLang(currentLanguage);
 
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const [profile, setProfile] = React.useState<any | null>(null);
 
@@ -150,8 +181,10 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
-      return (isMissing ? undefined : txt) || fallback || key.split('.').pop() || key;
+      const isMissing = typeof txt !== 'string' || !txt || txt === key;
+      return (
+        (isMissing ? undefined : txt) || fallback || key.split('.').pop() || key
+      );
     },
     [t, currentLanguage],
   );
@@ -172,7 +205,12 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
       if (!plantDefinitionId || !Number.isFinite(plantDefinitionId)) {
         setLoading(false);
-        setError(tr('plantDetailsModals.definition.noId', 'No plant definition id found.'));
+        setError(
+          tr(
+            'plantDetailsModals.definition.noId',
+            'No plant definition id found.',
+          ),
+        );
         return;
       }
 
@@ -189,7 +227,10 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
           setProfile(null);
           setError(
             e?.message ||
-              tr('plantDetailsModals.definition.loadFailed', 'Failed to load plant definition.'),
+              tr(
+                'plantDetailsModals.definition.loadFailed',
+                'Failed to load plant definition.',
+              ),
           );
         }
       } finally {
@@ -208,7 +249,12 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
   const description = pickText(profile?.description, preferredLang);
 
   const preferences = React.useMemo(() => {
-    const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
+    const out: Array<{
+      key: string;
+      label: string;
+      icon: string;
+      value: string;
+    }> = [];
     const p: any = profile;
     const seen = new Set<string>();
 
@@ -240,6 +286,65 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
   const showOnlySpinner = loading && !profile && !error;
 
+  if (embedded) {
+    return (
+      <View testID="plant-definition-tile">
+        <Text style={[styles.title, { paddingHorizontal: 0 }]}>
+          {tr('plantDetailsModals.definition.title', 'Plant definition')}
+        </Text>
+        {showOnlySpinner ? (
+          <View style={{ minHeight: 120, justifyContent: 'center' }}>
+            <CenteredSpinner />
+          </View>
+        ) : error ? (
+          <Text style={styles.stateText}>{error}</Text>
+        ) : !profile ? (
+          <Text style={styles.stateText}>
+            {tr(
+              'plantDetailsModals.definition.empty',
+              'No definition data available.',
+            )}
+          </Text>
+        ) : (
+          <>
+            {!!name && (
+              <Text style={[styles.sectionTitle, { marginHorizontal: 0 }]}>
+                {name}
+              </Text>
+            )}
+            {!!latin && (
+              <Text style={[styles.latin, { marginHorizontal: 0 }]}>
+                {latin}
+              </Text>
+            )}
+            {!!description && (
+              <Text style={[styles.desc, { marginHorizontal: 0 }]}>
+                {description}
+              </Text>
+            )}
+            {preferences.map(row => (
+              <View
+                key={row.key}
+                style={[
+                  styles.prefRow,
+                  { marginTop: 10, alignItems: 'flex-start' },
+                ]}
+              >
+                <MaterialCommunityIcons
+                  name={row.icon as any}
+                  size={18}
+                  color="#FFFFFF"
+                />
+                <Text style={styles.prefLabel}>{row.label}</Text>
+                <Text style={styles.prefValue}>{row.value}</Text>
+              </View>
+            ))}
+          </>
+        )}
+      </View>
+    );
+  }
+
   return (
     <>
       <AppModalFrame
@@ -256,11 +361,17 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
             style={[styles.scroll, appModalStyles.scroll]}
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+            contentContainerStyle={[
+              styles.scrollContent,
+              appModalStyles.scrollContent,
+            ]}
           >
             <View style={styles.stateBox}>
               <Text style={styles.stateText}>
-                {tr('plantDetailsModals.definition.error', 'Something went wrong.')}
+                {tr(
+                  'plantDetailsModals.definition.error',
+                  'Something went wrong.',
+                )}
               </Text>
               <Text
                 style={[
@@ -287,11 +398,17 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
             style={[styles.scroll, appModalStyles.scroll]}
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+            contentContainerStyle={[
+              styles.scrollContent,
+              appModalStyles.scrollContent,
+            ]}
           >
             <View style={styles.stateBox}>
               <Text style={styles.stateText}>
-                {tr('plantDetailsModals.definition.empty', 'No definition data available.')}
+                {tr(
+                  'plantDetailsModals.definition.empty',
+                  'No definition data available.',
+                )}
               </Text>
             </View>
 
@@ -308,10 +425,14 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
             style={[styles.scroll, appModalStyles.scroll]}
             keyboardShouldPersistTaps="handled"
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={[styles.scrollContent, appModalStyles.scrollContent]}
+            contentContainerStyle={[
+              styles.scrollContent,
+              appModalStyles.scrollContent,
+            ]}
           >
             <Text style={styles.title} numberOfLines={2}>
-              {name || tr('plantDetailsModals.definition.title', 'Plant definition')}
+              {name ||
+                tr('plantDetailsModals.definition.title', 'Plant definition')}
             </Text>
 
             {!!latin && (
@@ -331,7 +452,11 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
                 <View style={styles.prefsGrid}>
                   {preferences.map(row => (
                     <View key={row.key} style={styles.prefRow}>
-                      <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
+                      <MaterialCommunityIcons
+                        name={row.icon as any}
+                        size={18}
+                        color="#FFFFFF"
+                      />
                       <Text style={styles.prefLabel}>{row.label}</Text>
                       <Text style={styles.prefValue}>{row.value}</Text>
                     </View>
