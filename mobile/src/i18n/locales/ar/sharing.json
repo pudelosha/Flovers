@@ -112,7 +112,12 @@
       "deleteSharing": "إلغاء المشاركة",
       "deleteSharingTitle": "إلغاء المشاركة؟",
       "deleteSharingBody": "سيفقد جميع من شاركت {{plant}} معهم إمكانية الوصول إليها. ستبقى النبتة وبياناتها محفوظة في حسابك.",
-      "shareSinglePlant": "مشاركة النبتة"
+      "shareSinglePlant": "مشاركة النبتة",
+      "filters": {
+        "all": "الكل",
+        "outgoing": "أشاركها",
+        "incoming": "مشتركة معي"
+      }
     },
     "form": {
       "title": "مشاركة نباتات",

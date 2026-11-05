@@ -137,3 +137,11 @@ describe("SharedPlantHero", () => {
     expect(view.UNSAFE_queryByType(FramedPlantImage)).toBeNull();
   });
 });
+
+it('places a description panel over the photo without fading the image itself',()=>{
+ const view=render(<SharedPlantHero plant={plant}/>);
+ const panel=view.getByTestId('shared-plant-description');
+ expect(StyleSheet.flatten(panel.props.style).marginTop).toBeLessThan(0);
+ expect(view.UNSAFE_getByType(ImageBackground).props.blurRadius).toBeUndefined();
+ expect(view.getByText('Bird')).toBeTruthy();expect(view.getByText('Living room')).toBeTruthy();
+});

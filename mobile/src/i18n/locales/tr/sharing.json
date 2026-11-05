@@ -112,7 +112,12 @@
       "deleteSharing": "Paylaşımı kaldır",
       "deleteSharingTitle": "Paylaşım kaldırılsın mı?",
       "deleteSharingBody": "{{plant}} bitkisini paylaştığınız herkes erişimini kaybedecek. Bitkiniz ve verileri korunacak.",
-      "shareSinglePlant": "Bitkiyi paylaş"
+      "shareSinglePlant": "Bitkiyi paylaş",
+      "filters": {
+        "all": "Tümü",
+        "outgoing": "Paylaştıklarım",
+        "incoming": "Benimle paylaşılan"
+      }
     },
     "form": {
       "title": "Bitkileri paylaş",

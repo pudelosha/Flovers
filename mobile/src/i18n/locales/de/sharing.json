@@ -112,7 +112,12 @@
       "deleteSharing": "Freigabe löschen",
       "deleteSharingTitle": "Freigabe löschen?",
       "deleteSharingBody": "Alle Personen, mit denen du {{plant}} geteilt hast, verlieren den Zugriff. Deine Pflanze und ihre Daten bleiben erhalten.",
-      "shareSinglePlant": "Pflanze teilen"
+      "shareSinglePlant": "Pflanze teilen",
+      "filters": {
+        "all": "Alle",
+        "outgoing": "Von mir",
+        "incoming": "Mit mir"
+      }
     },
     "form": {
       "title": "Pflanzen teilen",

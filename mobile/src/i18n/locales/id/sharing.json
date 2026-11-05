@@ -112,7 +112,12 @@
       "deleteSharing": "Hentikan berbagi",
       "deleteSharingTitle": "Hentikan berbagi?",
       "deleteSharingBody": "Semua orang yang Anda beri akses ke {{plant}} akan kehilangan aksesnya. Tanaman dan datanya tetap tersimpan.",
-      "shareSinglePlant": "Bagikan tanaman"
+      "shareSinglePlant": "Bagikan tanaman",
+      "filters": {
+        "all": "Semua",
+        "outgoing": "Saya bagikan",
+        "incoming": "Dibagikan ke saya"
+      }
     },
     "form": {
       "title": "Bagikan tanaman",

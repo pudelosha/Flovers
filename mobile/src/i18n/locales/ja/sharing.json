@@ -112,7 +112,12 @@
       "deleteSharing": "共有を解除",
       "deleteSharingTitle": "共有を解除しますか？",
       "deleteSharingBody": "{{plant}} を共有しているすべてのユーザーがアクセスできなくなります。植物とそのデータは保持されます。",
-      "shareSinglePlant": "植物を共有"
+      "shareSinglePlant": "植物を共有",
+      "filters": {
+        "all": "すべて",
+        "outgoing": "自分から",
+        "incoming": "自分へ"
+      }
     },
     "form": {
       "title": "植物を共有",

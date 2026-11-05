@@ -23,6 +23,7 @@ import { usePlantPhotoPreload } from '../../../shared/hooks/usePlantPhotoPreload
 import type { FabAction } from '../../../shared/ui/FAB';
 import { useSettings } from '../../../app/providers/SettingsProvider';
 import GlassCard from '../../profile/components/GlassCard';
+import PlantDescriptionSurface from '../../../shared/ui/PlantDescriptionSurface';
 import { prompts as pr } from '../../profile/styles/profile.styles';
 import ContactModalFrame from '../components/ContactModalFrame';
 import SharedPlantHero from '../components/SharedPlantHero';
@@ -221,10 +222,10 @@ export default function SharedPlantsScreen() {
           defaultValue: 'Can complete tasks',
         })
       : t('sharing.common.viewOnly', { defaultValue: 'View only' });
-  const outgoingLabel = t('sharing.plants.outgoing', {
+  const outgoingLabel = t('sharing.plants.filters.outgoing', {
     defaultValue: 'Shared by me',
   });
-  const incomingLabel = t('sharing.plants.incoming', {
+  const incomingLabel = t('sharing.plants.filters.incoming', {
     defaultValue: 'Shared with me',
   });
   const actions: FabAction[] = [
@@ -244,7 +245,7 @@ export default function SharedPlantsScreen() {
         [
           {
             key: 'all',
-            label: t('home.segments.all', { defaultValue: 'All' }),
+            label: t('sharing.plants.filters.all', { defaultValue: 'All' }),
           },
           { key: 'outgoing', label: outgoingLabel },
           { key: 'incoming', label: incomingLabel },
@@ -268,6 +269,7 @@ export default function SharedPlantsScreen() {
             style={styles.segmentText}
             numberOfLines={1}
             adjustsFontSizeToFit
+            minimumFontScale={0.8}
           >
             {option.label}
           </Text>
@@ -373,7 +375,10 @@ export default function SharedPlantsScreen() {
                 const outgoing = first.direction === 'outgoing';
                 const groupId = `${first.direction}:${plant.id}`;
                 return (
-                  <GlassCard key={first.direction + ':' + plant.id}>
+                  <GlassCard
+                    key={first.direction + ':' + plant.id}
+                    background={<PlantDescriptionSurface solid />}
+                  >
                     <SharedPlantHero
                       plant={plant}
                       preferLocalPhoto={outgoing}
@@ -784,7 +789,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   selectedSegment: { backgroundColor: '#0B7285' },
-  segmentText: { color: '#FFFFFF', fontSize: 10, fontWeight: '700' },
+  segmentText: {
+    color: '#FFFFFF',
+    fontSize: 10,
+    fontWeight: '700',
+    flexShrink: 1,
+    maxWidth: '100%',
+    textAlign: 'center',
+  },
   page: { flex: 1 },
   manageButton: { marginTop: 12 },
   loading: { height: 300, justifyContent: 'center' },

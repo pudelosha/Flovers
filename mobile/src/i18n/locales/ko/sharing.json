@@ -112,7 +112,12 @@
       "deleteSharing": "공유 해제",
       "deleteSharingTitle": "공유를 해제할까요?",
       "deleteSharingBody": "{{plant}} 식물을 공유받은 모든 사용자의 접근 권한이 해제됩니다. 식물과 해당 데이터는 그대로 유지됩니다.",
-      "shareSinglePlant": "식물 공유"
+      "shareSinglePlant": "식물 공유",
+      "filters": {
+        "all": "전체",
+        "outgoing": "내가 공유",
+        "incoming": "받은 공유"
+      }
     },
     "form": {
       "title": "식물 공유하기",

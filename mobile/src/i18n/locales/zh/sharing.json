@@ -112,7 +112,12 @@
       "deleteSharing": "取消共享",
       "deleteSharingTitle": "取消共享？",
       "deleteSharingBody": "所有获得 {{plant}} 共享权限的人都将失去访问权限。你的植物及其数据会保留。",
-      "shareSinglePlant": "分享植物"
+      "shareSinglePlant": "分享植物",
+      "filters": {
+        "all": "全部",
+        "outgoing": "我共享的",
+        "incoming": "共享给我的"
+      }
     },
     "form": {
       "title": "共享植物",

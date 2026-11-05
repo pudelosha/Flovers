@@ -112,7 +112,12 @@
       "deleteSharing": "Delete sharing",
       "deleteSharingTitle": "Delete sharing?",
       "deleteSharingBody": "Everyone you shared {{plant}} with will lose access. Your plant and its data will be kept.",
-      "shareSinglePlant": "Share plant"
+      "shareSinglePlant": "Share plant",
+      "filters": {
+        "all": "All",
+        "outgoing": "I share",
+        "incoming": "Shared with me"
+      }
     },
     "form": {
       "title": "Share plants",

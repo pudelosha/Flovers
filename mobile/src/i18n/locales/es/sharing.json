@@ -112,7 +112,12 @@
       "deleteSharing": "Dejar de compartir",
       "deleteSharingTitle": "¿Dejar de compartir?",
       "deleteSharingBody": "Todas las personas con las que has compartido {{plant}} perderán el acceso. Tu planta y sus datos se conservarán.",
-      "shareSinglePlant": "Compartir planta"
+      "shareSinglePlant": "Compartir planta",
+      "filters": {
+        "all": "Todas",
+        "outgoing": "Comparto",
+        "incoming": "Conmigo"
+      }
     },
     "form": {
       "title": "Compartir plantas",

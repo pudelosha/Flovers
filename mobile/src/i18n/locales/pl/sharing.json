@@ -112,7 +112,12 @@
       "deleteSharing": "Usuń udostępnianie",
       "deleteSharingTitle": "Usunąć udostępnianie?",
       "deleteSharingBody": "Wszystkie osoby, którym udostępniasz roślinę {{plant}}, stracą do niej dostęp. Roślina i jej dane pozostaną na Twoim koncie.",
-      "shareSinglePlant": "Udostępnij roślinę"
+      "shareSinglePlant": "Udostępnij roślinę",
+      "filters": {
+        "all": "Wszystkie",
+        "outgoing": "Udostępniam",
+        "incoming": "Udostępnione"
+      }
     },
     "form": {
       "title": "Udostępnij rośliny",

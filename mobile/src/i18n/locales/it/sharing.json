@@ -112,7 +112,12 @@
       "deleteSharing": "Rimuovi condivisione",
       "deleteSharingTitle": "Rimuovere la condivisione?",
       "deleteSharingBody": "Tutte le persone con cui hai condiviso {{plant}} perderanno l’accesso. La pianta e i suoi dati verranno conservati.",
-      "shareSinglePlant": "Condividi pianta"
+      "shareSinglePlant": "Condividi pianta",
+      "filters": {
+        "all": "Tutte",
+        "outgoing": "Condivido",
+        "incoming": "Con me"
+      }
     },
     "form": {
       "title": "Condividi piante",

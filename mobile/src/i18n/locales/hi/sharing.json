@@ -112,7 +112,12 @@
       "deleteSharing": "साझा करना बंद करें",
       "deleteSharingTitle": "साझा करना बंद करें?",
       "deleteSharingBody": "जिन लोगों के साथ आपने {{plant}} साझा किया है, वे अब इसे नहीं देख सकेंगे। आपका पौधा और उसका डेटा सुरक्षित रहेगा।",
-      "shareSinglePlant": "पौधा साझा करें"
+      "shareSinglePlant": "पौधा साझा करें",
+      "filters": {
+        "all": "सभी",
+        "outgoing": "मेरे द्वारा",
+        "incoming": "मेरे साथ"
+      }
     },
     "form": {
       "title": "पौधे शेयर करें",

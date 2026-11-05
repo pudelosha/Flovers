@@ -6,9 +6,7 @@ import {
   StyleSheet,
   ImageBackground,
 } from '../../../shared/theme/native';
-import { useAppTheme } from '../../../shared/theme/ThemeContext';
-import LinearGradient from '../../../shared/theme/Gradient';
-import MaskedView from '../../../shared/theme/MaskedView';
+import PlantDescriptionSurface from '../../../shared/ui/PlantDescriptionSurface';
 import MaterialCommunityIcons from '../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
 import type { Plant } from '../types/plants.types';
@@ -46,7 +44,6 @@ export default function PlantTile({
   onShowQr,
   menuAlign = 'right',
 }: Props) {
-  const { isLight } = useAppTheme();
   const { t } = useTranslation();
   const { openSharePlant, shares } = useSharingPreview();
   const photoVariant =
@@ -111,49 +108,7 @@ export default function PlantTile({
         </View>
         <View style={grid.image} pointerEvents="none" />
         <View style={grid.panel} testID="plant-tile-description">
-          {isLight ? (
-            <LinearGradient
-              themeRole="photo"
-              pointerEvents="none"
-              start={{ x: 0.5, y: 0 }}
-              end={{ x: 0.5, y: 1 }}
-              colors={[
-                'rgba(248,252,250,0.80)',
-                'rgba(248,252,250,0.92)',
-                '#F8FCFA',
-                '#F8FCFA',
-              ]}
-              locations={[0, 0.25, 0.5, 1]}
-              style={StyleSheet.absoluteFill}
-            />
-          ) : (
-            <MaskedView
-              pointerEvents="none"
-              style={StyleSheet.absoluteFill}
-              maskElement={
-                <LinearGradient
-                  start={{ x: 0.5, y: 0 }}
-                  end={{ x: 0.5, y: 1 }}
-                  colors={[
-                    'rgba(0,0,0,0.8)',
-                    'rgba(0,0,0,0.92)',
-                    '#000000',
-                    '#000000',
-                  ]}
-                  locations={[0, 0.25, 0.5, 1]}
-                  style={StyleSheet.absoluteFill}
-                />
-              }
-            >
-              <LinearGradient
-                pointerEvents="none"
-                colors={['#31695A', '#28443B']}
-                start={{ x: 0, y: 0.5 }}
-                end={{ x: 1, y: 0.5 }}
-                style={StyleSheet.absoluteFill}
-              />
-            </MaskedView>
-          )}
+          <PlantDescriptionSurface />
           <View style={grid.titleRow}>
             <Text style={grid.name} numberOfLines={1}>
               {plant.name}
