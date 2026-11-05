@@ -211,7 +211,7 @@
         "heading": "Missing readings",
         "body": [
           "An active device tile pulses red once one configured reading interval has elapsed since its last reading. For a device that has never sent a reading, the interval starts when the device is created. Disabled devices do not trigger this warning.",
-          "In Add/Edit device → Notifications, the owner can enable missing-reading email and push alerts separately. Both start off and are independent of daily summaries, soil moisture and watering alerts. The server checks once per minute and sends one alert per channel for an outage; a new reading allows a later outage to trigger another alert."
+          "In Add/Edit device → Notifications, the owner can enable missing-reading email and push alerts separately. Both start off and are independent of daily summaries, soil moisture and watering alerts. The server checks once per minute and sends one alert per channel for an outage; a new reading allows a later outage to trigger another alert. Missing-reading email and push alerts are sent only after two configured reading intervals have elapsed without a reading (for example, 120 minutes for a 60-minute interval)."
         ]
       }
     ]

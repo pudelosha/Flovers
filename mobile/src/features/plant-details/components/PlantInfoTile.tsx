@@ -1,25 +1,31 @@
-import { ThemeContrastScope, useAppTheme } from "../../../shared/theme/ThemeContext";
-import React, { useCallback, useMemo, useState, useEffect } from "react";
-import { View, Text, StyleSheet, ImageBackground, Pressable } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import LinearGradient from "../../../shared/theme/Gradient";
-import MaskedView from "../../../shared/theme/MaskedView";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider";
-import { useNavigation } from "@react-navigation/native";
+import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
+import React, { useCallback, useMemo, useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Pressable,
+} from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import LinearGradient from '../../../shared/theme/Gradient';
+import PlantDescriptionSurface from '../../../shared/ui/PlantDescriptionSurface';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
+import { useSettings } from '../../../app/providers/SettingsProvider';
+import { useNavigation } from '@react-navigation/native';
 
-import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
+import type { ApiPlantInstanceDetailFull } from '../../plants/types/plants.types';
 
-import PlantInfoMenu from "./PlantInfoMenu";
-import { useSharingPreview } from "../../sharing/state/SharingPreviewProvider";
+import PlantInfoMenu from './PlantInfoMenu';
+import { useSharingPreview } from '../../sharing/state/SharingPreviewProvider';
 
-import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
-import { usePlantPhoto } from "../../../shared/hooks/usePlantPhoto";
-import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
-import FramedPlantImage from "../../../shared/ui/FramedPlantImage";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import { plantAccess } from "../../../shared/utils/plantAccess";
+import { getPlantPhotoUri } from '../../../shared/utils/photoStorage';
+import { usePlantPhoto } from '../../../shared/hooks/usePlantPhoto';
+import SharedPlantBadge from '../../../shared/ui/SharedPlantBadge';
+import FramedPlantImage from '../../../shared/ui/FramedPlantImage';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { plantAccess } from '../../../shared/utils/plantAccess';
 
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
@@ -43,24 +49,40 @@ type Props = {
   onImageReadyChange?: (ready: boolean) => void;
 };
 
-function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
+function normalizeOrientationKey(v: any): 'N' | 'E' | 'S' | 'W' | null {
   if (!v) return null;
   const raw = String(v).trim().toUpperCase();
-  if (raw === "N" || raw === "NORTH") return "N";
-  if (raw === "E" || raw === "EAST") return "E";
-  if (raw === "S" || raw === "SOUTH") return "S";
-  if (raw === "W" || raw === "WEST") return "W";
+  if (raw === 'N' || raw === 'NORTH') return 'N';
+  if (raw === 'E' || raw === 'EAST') return 'E';
+  if (raw === 'S' || raw === 'SOUTH') return 'S';
+  if (raw === 'W' || raw === 'WEST') return 'W';
   return null;
 }
 
-function ImageMasked({ uri, onLoad, onError }: { uri: string; onLoad: () => void; onError: () => void }) {
-  return <ImageBackground source={{ uri }} onLoad={onLoad} onError={onError} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
+function ImageMasked({
+  uri,
+  onLoad,
+  onError,
+}: {
+  uri: string;
+  onLoad: () => void;
+  onError: () => void;
+}) {
+  return (
+    <ImageBackground
+      source={{ uri }}
+      onLoad={onLoad}
+      onError={onError}
+      resizeMode="cover"
+      style={StyleSheet.absoluteFillObject}
+    />
+  );
 }
 
 /** RN Image cache-buster for local file URIs */
 function withCacheBuster(uri: string | null | undefined): string | null {
   if (!uri) return null;
-  const sep = uri.includes("?") ? "&" : "?";
+  const sep = uri.includes('?') ? '&' : '?';
   return `${uri}${sep}t=${Date.now()}`;
 }
 
@@ -70,16 +92,16 @@ function cmToInches(cm: number) {
 
 function formatDistanceBySettings(
   cm: number | null | undefined,
-  measureUnit: "metric" | "imperial" | undefined,
-  tr: (key: string, fallback?: string, values?: any) => string
+  measureUnit: 'metric' | 'imperial' | undefined,
+  tr: (key: string, fallback?: string, values?: any) => string,
 ) {
-  if (cm == null) return tr("plantDetails.common.dash", "—");
+  if (cm == null) return tr('plantDetails.common.dash', '—');
 
-  if (measureUnit === "imperial") {
-    return `${Math.round(cmToInches(cm))} ${tr("plantDetails.info.in", "in")}`;
+  if (measureUnit === 'imperial') {
+    return `${Math.round(cmToInches(cm))} ${tr('plantDetails.info.in', 'in')}`;
   }
 
-  return `${cm} ${tr("plantDetails.info.cm", "cm")}`;
+  return `${cm} ${tr('plantDetails.info.cm', 'cm')}`;
 }
 
 /**
@@ -94,25 +116,33 @@ function formatDistanceBySettings(
  * - createPlant.step04.modal.levels.low
  * - createPlant.step04.modal.levels.veryLow
  */
-function normalizeLightLevelKey(v: any):
-  | "low"
-  | "high"
-  | "medium"
-  | "brightDirect"
-  | "brightIndirect"
-  | "veryLow"
+function normalizeLightLevelKey(
+  v: any,
+):
+  | 'low'
+  | 'high'
+  | 'medium'
+  | 'brightDirect'
+  | 'brightIndirect'
+  | 'veryLow'
   | null {
   if (!v) return null;
 
   const raw = String(v).trim();
-  const x = raw.toLowerCase().replace(/[\s_-]+/g, "");
+  const x = raw.toLowerCase().replace(/[\s_-]+/g, '');
 
-  if (x === "low" || x === "lowlight") return "low";
-  if (x === "high" || x === "highlight") return "high";
-  if (x === "medium" || x === "mid" || x === "mediumlight" || x === "partialshade") return "medium";
-  if (x === "brightdirect" || x === "direct") return "brightDirect";
-  if (x === "brightindirect" || x === "indirect") return "brightIndirect";
-  if (x === "verylow" || x === "verylowlight") return "veryLow";
+  if (x === 'low' || x === 'lowlight') return 'low';
+  if (x === 'high' || x === 'highlight') return 'high';
+  if (
+    x === 'medium' ||
+    x === 'mid' ||
+    x === 'mediumlight' ||
+    x === 'partialshade'
+  )
+    return 'medium';
+  if (x === 'brightdirect' || x === 'direct') return 'brightDirect';
+  if (x === 'brightindirect' || x === 'indirect') return 'brightIndirect';
+  if (x === 'verylow' || x === 'verylowlight') return 'veryLow';
 
   return null;
 }
@@ -130,7 +160,7 @@ export default function PlantInfoTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
-  const {isLight}=useAppTheme();
+
   const nav = useNavigation<any>();
   const { openSharePlant, shares } = useSharingPreview();
   const access = plantAccess(plant?.access);
@@ -139,28 +169,43 @@ export default function PlantInfoTile({
     (key: string, fallback?: string, values?: any) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      if (typeof txt === "string" && txt && txt !== key) return txt;
-      return fallback || key.split(".").pop() || key;
+      if (typeof txt === 'string' && txt && txt !== key) return txt;
+      return fallback || key.split('.').pop() || key;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [infoPanelHeight, setInfoPanelHeight] = useState(120);
+  const infoFadeHeight = Math.ceil(infoPanelHeight / 3);
 
   // in-app prompt when plant has no definition link (matches ChangePlantImageModal confirm style)
-  const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] = useState(false);
+  const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] =
+    useState(false);
 
   // local photo uri for THIS plant id
-  const [loadedImageKey, setLoadedImageKey] = useState("");
-  const [failedImageKey, setFailedImageKey] = useState("");
-  const [localPlantPhoto, setLocalPlantPhoto] = useState<{ key: string; uri: string | null } | null>(null);
-  const localLookupKey = plant?.id && access.isOwner && !plant.photo ? `${plant.id}:${photoReloadSignal ?? 0}` : null;
-  const localPhotoLoading = !!localLookupKey && localPlantPhoto?.key !== localLookupKey;
-  const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(plant?.photo, {
-    variant: "display", reloadSignal: photoReloadSignal, expiresAt: plant?.access?.expires_at,
-  });
+  const [loadedImageKey, setLoadedImageKey] = useState('');
+  const [failedImageKey, setFailedImageKey] = useState('');
+  const [localPlantPhoto, setLocalPlantPhoto] = useState<{
+    key: string;
+    uri: string | null;
+  } | null>(null);
+  const localLookupKey =
+    plant?.id && access.isOwner && !plant.photo
+      ? `${plant.id}:${photoReloadSignal ?? 0}`
+      : null;
+  const localPhotoLoading =
+    !!localLookupKey && localPlantPhoto?.key !== localLookupKey;
+  const { uri: syncedPhotoUri, loading: photoLoading } = usePlantPhoto(
+    plant?.photo,
+    {
+      variant: 'display',
+      reloadSignal: photoReloadSignal,
+      expiresAt: plant?.access?.expires_at,
+    },
+  );
 
-  const toggleMenu = () => setMenuOpen((v) => !v);
+  const toggleMenu = () => setMenuOpen(v => !v);
   const closeMenu = () => setMenuOpen(false);
   const handleTileTouch = useCallback(() => {
     setMenuOpen(false);
@@ -183,7 +228,11 @@ export default function PlantInfoTile({
       }
       try {
         const uri = await getPlantPhotoUri(String(plant.id));
-        if (!cancelled) setLocalPlantPhoto({ key: localLookupKey, uri: withCacheBuster(uri) });
+        if (!cancelled)
+          setLocalPlantPhoto({
+            key: localLookupKey,
+            uri: withCacheBuster(uri),
+          });
       } catch {
         if (!cancelled) setLocalPlantPhoto({ key: localLookupKey, uri: null });
       }
@@ -201,24 +250,43 @@ export default function PlantInfoTile({
     if (!plant) return null;
     if (plant.photo) return syncedPhotoUri;
     if (localPhotoLoading) return null;
-    if (localLookupKey && localPlantPhoto?.key === localLookupKey && localPlantPhoto.uri) return localPlantPhoto.uri;
+    if (
+      localLookupKey &&
+      localPlantPhoto?.key === localLookupKey &&
+      localPlantPhoto.uri
+    )
+      return localPlantPhoto.uri;
 
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
-  }, [localPlantPhoto, syncedPhotoUri, plant, localLookupKey, localPhotoLoading]);
+  }, [
+    localPlantPhoto,
+    syncedPhotoUri,
+    plant,
+    localLookupKey,
+    localPhotoLoading,
+  ]);
 
-  const imageKey = imageUrl ? `${plant?.id}:${photoReloadSignal ?? 0}:${imageUrl}` : "";
+  const imageKey = imageUrl
+    ? `${plant?.id}:${photoReloadSignal ?? 0}:${imageUrl}`
+    : '';
   const imageFailed = !!imageKey && failedImageKey === imageKey;
-  const imageReady = !localPhotoLoading && !(plant?.photo && photoLoading) &&
+  const imageReady =
+    !localPhotoLoading &&
+    !(plant?.photo && photoLoading) &&
     (!imageUrl || imageFailed || loadedImageKey === imageKey);
-  useEffect(() => { onImageReadyChange?.(imageReady); }, [imageReady, onImageReadyChange]);
+  useEffect(() => {
+    onImageReadyChange?.(imageReady);
+  }, [imageReady, onImageReadyChange]);
   const onImageLoad = () => setLoadedImageKey(imageKey);
   const onImageError = () => setFailedImageKey(imageKey);
 
   if (!plant) {
     return (
       <View>
-        <Text style={styles.h1}>{tr("plantDetails.info.loading", "Loading…")}</Text>
+        <Text style={styles.h1}>
+          {tr('plantDetails.info.loading', 'Loading…')}
+        </Text>
       </View>
     );
   }
@@ -226,40 +294,55 @@ export default function PlantInfoTile({
   const title =
     plant.display_name ||
     plant.plant_definition?.name ||
-    tr("plantDetails.info.fallbackTitle", `Plant #${plant.id}`, { id: plant.id });
+    tr('plantDetails.info.fallbackTitle', `Plant #${plant.id}`, {
+      id: plant.id,
+    });
 
-  const latin = plant.plant_definition?.latin || "";
-  const locationName = plant.location?.name || "";
+  const latin = plant.plant_definition?.latin || '';
+  const locationName = plant.location?.name || '';
 
   const lightKey = normalizeLightLevelKey(plant.light_level);
   const lightValue = lightKey
-    ? lightKey === "low" || lightKey === "high"
+    ? lightKey === 'low' || lightKey === 'high'
       ? tr(`createPlant.step04.${lightKey}`, String(plant.light_level))
-      : tr(`createPlant.step04.modal.levels.${lightKey}`, String(plant.light_level))
+      : tr(
+          `createPlant.step04.modal.levels.${lightKey}`,
+          String(plant.light_level),
+        )
     : plant.light_level
-      ? String(plant.light_level)
-      : tr("plantDetails.common.dash", "—");
+    ? String(plant.light_level)
+    : tr('plantDetails.common.dash', '—');
 
   const oKey = normalizeOrientationKey(plant.orientation);
   const orientationValue = oKey
-    ? tr(`plantDetails.info.orientations.${oKey}`, tr(`createPlant.step04.orientations.${oKey}`, oKey))
-    : tr("plantDetails.common.dash", "—");
+    ? tr(
+        `plantDetails.info.orientations.${oKey}`,
+        tr(`createPlant.step04.orientations.${oKey}`, oKey),
+      )
+    : tr('plantDetails.common.dash', '—');
 
   const potValue = plant.pot_material
-    ? tr(`createPlant.step05.potMaterials.${String(plant.pot_material)}.label`, String(plant.pot_material))
-    : tr("plantDetails.common.dash", "—");
+    ? tr(
+        `createPlant.step05.potMaterials.${String(plant.pot_material)}.label`,
+        String(plant.pot_material),
+      )
+    : tr('plantDetails.common.dash', '—');
 
   const soilValue = plant.soil_mix
-    ? tr(`createPlant.step05.soilMixes.${String(plant.soil_mix)}.label`, String(plant.soil_mix))
-    : tr("plantDetails.common.dash", "—");
+    ? tr(
+        `createPlant.step05.soilMixes.${String(plant.soil_mix)}.label`,
+        String(plant.soil_mix),
+      )
+    : tr('plantDetails.common.dash', '—');
 
-  const purchaseValue = plant.purchase_date || tr("plantDetails.common.dash", "—");
-  const notesValue = plant.notes || tr("plantDetails.common.dash", "—");
+  const purchaseValue =
+    plant.purchase_date || tr('plantDetails.common.dash', '—');
+  const notesValue = plant.notes || tr('plantDetails.common.dash', '—');
 
   const distanceValue = formatDistanceBySettings(
     plant.distance_cm ?? null,
     settings?.measureUnit,
-    tr
+    tr,
   );
 
   const plantDefinitionId =
@@ -267,7 +350,9 @@ export default function PlantInfoTile({
       ? Number(plant.plant_definition?.id ?? (plant as any).plant_definition_id)
       : null;
 
-  const plantDefinitionIdSafe = Number.isFinite(plantDefinitionId as any) ? (plantDefinitionId as number) : null;
+  const plantDefinitionIdSafe = Number.isFinite(plantDefinitionId as any)
+    ? (plantDefinitionId as number)
+    : null;
 
   const DOTS_TOP = 10;
   const DOTS_RIGHT = 10;
@@ -278,71 +363,90 @@ export default function PlantInfoTile({
       <View style={styles.heroOuter}>
         <Pressable onPressIn={handleTileTouch} accessible={false}>
           <View style={styles.heroClip}>
-            {(imageUrl && !imageFailed) || (plant.photo && photoLoading) || localPhotoLoading ? (
+            {(imageUrl && !imageFailed) ||
+            (plant.photo && photoLoading) ||
+            localPhotoLoading ? (
               <View style={styles.heroImage}>
-                {imageUrl ? <MaskedView
-                  style={StyleSheet.absoluteFill}
-                  maskElement={
-                    <LinearGradient
-                      colors={[
-                        "rgba(0,0,0,1.00)",
-                        isLight ? "rgba(0,0,0,0.98)" : "rgba(0,0,0,0.92)",
-                        isLight ? "rgba(0,0,0,0.94)" : "rgba(0,0,0,0.75)",
-                        isLight ? "rgba(0,0,0,0.82)" : "rgba(0,0,0,0.50)",
-                        isLight ? "rgba(0,0,0,0.55)" : "rgba(0,0,0,0.22)",
-                        "rgba(0,0,0,0.00)",
-                      ]}
-                      locations={[0, 0.1, 0.45, 0.68, 0.88, 1]}
-                      style={StyleSheet.absoluteFill}
-                    />
-                  }
-                >
-                  {syncedPhotoUri && plant.photo ? (
-                    <FramedPlantImage uri={syncedPhotoUri} photo={plant.photo}
-                      style={StyleSheet.absoluteFillObject} testID="plant-detail-photo" onLoad={onImageLoad} onError={onImageError} />
-                  ) : <ImageMasked uri={imageUrl} onLoad={onImageLoad} onError={onImageError} />}
-                </MaskedView> : <View style={StyleSheet.absoluteFill} testID="plant-detail-photo-loading">
-                  <CenteredSpinner size={32} />
-                </View>}
+                {imageUrl ? (
+                  <View style={StyleSheet.absoluteFill}>
+                    {syncedPhotoUri && plant.photo ? (
+                      <FramedPlantImage
+                        uri={syncedPhotoUri}
+                        photo={plant.photo}
+                        style={StyleSheet.absoluteFillObject}
+                        testID="plant-detail-photo"
+                        onLoad={onImageLoad}
+                        onError={onImageError}
+                      />
+                    ) : (
+                      <ImageMasked
+                        uri={imageUrl}
+                        onLoad={onImageLoad}
+                        onError={onImageError}
+                      />
+                    )}
+                  </View>
+                ) : (
+                  <View
+                    style={StyleSheet.absoluteFill}
+                    testID="plant-detail-photo-loading"
+                  >
+                    <CenteredSpinner size={32} />
+                  </View>
+                )}
 
-                <LinearGradient themeRole="photo"
+                <LinearGradient
+                  themeRole="photo"
                   pointerEvents="none"
-                  colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0.00)"]}
+                  colors={['rgba(0,0,0,0.22)', 'rgba(0,0,0,0.00)']}
                   locations={[0, 1]}
                   style={styles.heroTopScrim}
                 />
 
-                <ThemeContrastScope kind="photo"><View style={styles.heroText}>
-                  <Text style={styles.h1} numberOfLines={1}>
-                    {title}
-                  </Text>
-                  <SharedPlantBadge access={plant.access} compact />
-
-                  {!!latin && (
-                    <Text style={styles.latin} numberOfLines={1}>
-                      {latin}
+                <ThemeContrastScope kind="photo">
+                  <View
+                    style={[
+                      styles.heroText,
+                      { paddingBottom: infoFadeHeight + 14 },
+                    ]}
+                  >
+                    <Text style={styles.h1} numberOfLines={1}>
+                      {title}
                     </Text>
-                  )}
+                    <SharedPlantBadge access={plant.access} compact />
 
-                  {!!locationName && (
-                    <View style={styles.locRow}>
-                      <MaterialCommunityIcons
-                        name="map-marker-outline"
-                        size={16}
-                        color="#FFFFFF"
-                        style={{ marginRight: 8, opacity: 0.95 }}
-                      />
-                      <Text style={styles.sub} numberOfLines={1}>
-                        {locationName}
+                    {!!latin && (
+                      <Text style={styles.latin} numberOfLines={1}>
+                        {latin}
                       </Text>
-                    </View>
-                  )}
-                </View></ThemeContrastScope>
+                    )}
+
+                    {!!locationName && (
+                      <View style={styles.locRow}>
+                        <MaterialCommunityIcons
+                          name="map-marker-outline"
+                          size={16}
+                          color="#FFFFFF"
+                          style={{ marginRight: 8, opacity: 0.95 }}
+                        />
+                        <Text style={styles.sub} numberOfLines={1}>
+                          {locationName}
+                        </Text>
+                      </View>
+                    )}
+                  </View>
+                </ThemeContrastScope>
               </View>
             ) : (
               <View style={[styles.heroImage, styles.heroPlaceholder]}>
-                <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
-                <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
+                <MaterialCommunityIcons
+                  name="image-off-outline"
+                  size={24}
+                  color="rgba(255,255,255,0.9)"
+                />
+                <Text style={styles.noImageText}>
+                  {tr('plantDetails.info.noImage', 'No image')}
+                </Text>
                 <SharedPlantBadge access={plant.access} compact />
               </View>
             )}
@@ -353,13 +457,30 @@ export default function PlantInfoTile({
           <View style={styles.menuOverlay} pointerEvents="box-none">
             <Pressable style={StyleSheet.absoluteFill} onPress={closeMenu} />
 
-            <View style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]} pointerEvents="box-none">
+            <View
+              style={[
+                styles.menuSheetPos,
+                { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT },
+              ]}
+              pointerEvents="box-none"
+            >
               <PlantInfoMenu
                 canEdit={access.canEdit}
-                sharingActive={shares.some((share) => share.direction === "outgoing" && share.plant.id === String(plant.id))}
+                sharingActive={shares.some(
+                  share =>
+                    share.direction === 'outgoing' &&
+                    share.plant.id === String(plant.id),
+                )}
                 onShare={() => {
                   closeMenu();
-                  openSharePlant({ id: String(plant.id), name: title, location: locationName, latin, imageUrl: plant.plant_definition?.image || undefined, photo: plant.photo });
+                  openSharePlant({
+                    id: String(plant.id),
+                    name: title,
+                    location: locationName,
+                    latin,
+                    imageUrl: plant.plant_definition?.image || undefined,
+                    photo: plant.photo,
+                  });
                 }}
                 onPlantDefinition={() => {
                   closeMenu();
@@ -375,7 +496,7 @@ export default function PlantInfoTile({
                   if (onOpenEditPlant) {
                     onOpenEditPlant(String(plant.id));
                   } else {
-                    nav.navigate("Plants", { editPlantId: String(plant.id) });
+                    nav.navigate('Plants', { editPlantId: String(plant.id) });
                   }
                 }}
                 onChangeImage={() => {
@@ -384,11 +505,14 @@ export default function PlantInfoTile({
                 }}
                 onJournal={() => {
                   closeMenu();
-                  nav.navigate("TaskHistory", { plantId: String(plant.id) });
+                  nav.navigate('TaskHistory', { plantId: String(plant.id) });
                 }}
                 onShowReminders={() => {
                   closeMenu();
-                  nav.navigate("Reminders" as never, { plantId: String(plant.id) } as never);
+                  nav.navigate(
+                    'Reminders' as never,
+                    { plantId: String(plant.id) } as never,
+                  );
                 }}
               />
             </View>
@@ -396,34 +520,94 @@ export default function PlantInfoTile({
         )}
 
         {!menuOpen && (
-          <View style={[styles.dotsAnchor, { top: DOTS_TOP, right: DOTS_RIGHT }]} pointerEvents="box-none">
+          <View
+            style={[styles.dotsAnchor, { top: DOTS_TOP, right: DOTS_RIGHT }]}
+            pointerEvents="box-none"
+          >
             <Pressable
               onPress={toggleMenu}
               style={styles.menuBtn}
-              android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+              android_ripple={{
+                color: 'rgba(255,255,255,0.16)',
+                borderless: true,
+              }}
               hitSlop={10}
             >
-              <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
+              <MaterialCommunityIcons
+                name="dots-horizontal"
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
           </View>
         )}
       </View>
 
-      <Pressable style={styles.infoBody} onPressIn={handleTileTouch} accessible={false}>
+      <Pressable
+        testID="plant-detail-description"
+        style={[styles.infoBody, { marginTop: -infoFadeHeight }]}
+        onLayout={event => {
+          const height = Math.round(event.nativeEvent.layout.height);
+          if (height > 0) setInfoPanelHeight(height);
+        }}
+        onPressIn={handleTileTouch}
+        accessible={false}
+      >
+        <PlantDescriptionSurface fadeHeight={infoFadeHeight} />
         <View style={styles.infoGrid}>
           {[
-            { icon: "calendar", label: tr("plantDetails.info.purchased", "Purchased"), value: purchaseValue },
-            { icon: "note-edit-outline", label: tr("plantDetails.info.notes", "Notes"), value: notesValue, multiline: true },
-            { icon: "white-balance-sunny", label: tr("plantDetails.info.light", "Light"), value: lightValue },
-            { icon: "compass-outline", label: tr("plantDetails.info.orientation", "Orientation"), value: orientationValue },
-            { icon: "tape-measure", label: tr("plantDetails.info.distance", "Distance"), value: distanceValue },
-            { icon: "pot-outline", label: tr("plantDetails.info.pot", "Pot"), value: potValue },
-            { icon: "shovel", label: tr("plantDetails.info.soil", "Soil"), value: soilValue },
+            {
+              icon: 'calendar',
+              label: tr('plantDetails.info.purchased', 'Purchased'),
+              value: purchaseValue,
+            },
+            {
+              icon: 'note-edit-outline',
+              label: tr('plantDetails.info.notes', 'Notes'),
+              value: notesValue,
+              multiline: true,
+            },
+            {
+              icon: 'white-balance-sunny',
+              label: tr('plantDetails.info.light', 'Light'),
+              value: lightValue,
+            },
+            {
+              icon: 'compass-outline',
+              label: tr('plantDetails.info.orientation', 'Orientation'),
+              value: orientationValue,
+            },
+            {
+              icon: 'tape-measure',
+              label: tr('plantDetails.info.distance', 'Distance'),
+              value: distanceValue,
+            },
+            {
+              icon: 'pot-outline',
+              label: tr('plantDetails.info.pot', 'Pot'),
+              value: potValue,
+            },
+            {
+              icon: 'shovel',
+              label: tr('plantDetails.info.soil', 'Soil'),
+              value: soilValue,
+            },
           ].map((it, i) => (
-            <View key={i} style={[styles.infoRow, it.multiline && styles.infoRowTopAligned]}>
-              <MaterialCommunityIcons name={it.icon as any} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
+            <View
+              key={i}
+              style={[styles.infoRow, it.multiline && styles.infoRowTopAligned]}
+            >
+              <MaterialCommunityIcons
+                name={it.icon as any}
+                size={16}
+                color="#FFFFFF"
+                style={{ marginRight: 8 }}
+              />
               <Text style={styles.infoLabel}>{it.label}:</Text>
-              <Text style={styles.infoValue} numberOfLines={it.multiline ? undefined : 2}>
+              <Text
+                style={styles.infoValue}
+                numberOfLines={it.multiline ? undefined : 2}
+              >
                 {it.value}
               </Text>
             </View>
@@ -436,19 +620,34 @@ export default function PlantInfoTile({
         <View style={styles.confirmOverlay} pointerEvents="box-none">
           <View style={styles.confirmCard}>
             <View style={styles.confirmHeader}>
-              <MaterialCommunityIcons name="book-open-variant" size={20} color="#FFFFFF" />
+              <MaterialCommunityIcons
+                name="book-open-variant"
+                size={20}
+                color="#FFFFFF"
+              />
               <Text style={styles.confirmTitle}>
-                {tr("plantDetails.infoMenu.noDefinitionTitle", "Plant definition unavailable")}
+                {tr(
+                  'plantDetails.infoMenu.noDefinitionTitle',
+                  'Plant definition unavailable',
+                )}
               </Text>
             </View>
 
             <Text style={styles.confirmBody}>
-              {tr("plantDetails.infoMenu.noDefinitionBody", "This plant is not linked to a plant definition yet.")}
+              {tr(
+                'plantDetails.infoMenu.noDefinitionBody',
+                'This plant is not linked to a plant definition yet.',
+              )}
             </Text>
 
             <View style={styles.confirmRow}>
-              <Pressable style={[styles.confirmBtn, styles.confirmBtnPrimary]} onPress={() => setNoDefinitionPromptVisible(false)}>
-                <Text style={styles.confirmBtnText}>{tr("plantDetailsModals.common.close", "Close")}</Text>
+              <Pressable
+                style={[styles.confirmBtn, styles.confirmBtnPrimary]}
+                onPress={() => setNoDefinitionPromptVisible(false)}
+              >
+                <Text style={styles.confirmBtnText}>
+                  {tr('plantDetailsModals.common.close', 'Close')}
+                </Text>
               </Pressable>
             </View>
           </View>
@@ -459,119 +658,145 @@ export default function PlantInfoTile({
 }
 
 const styles = StyleSheet.create({
-  root: { position: "relative", zIndex: 1, elevation: 1 },
+  root: { position: 'relative', zIndex: 1, elevation: 1 },
   rootRaised: { zIndex: 60, elevation: 60 },
 
   heroOuter: {
     marginLeft: -16,
     marginRight: -16,
     marginTop: -16,
-    position: "relative",
-    overflow: "visible",
+    position: 'relative',
+    overflow: 'visible',
   },
 
   heroClip: {
     borderTopLeftRadius: 28,
     borderTopRightRadius: 28,
-    overflow: "hidden",
+    overflow: 'hidden',
   },
 
-  heroImage: { width: "100%", aspectRatio: 1.6, justifyContent: "flex-end" },
+  heroImage: { width: '100%', aspectRatio: 1.6, justifyContent: 'flex-end' },
 
   heroTopScrim: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
     right: 0,
     top: 0,
     height: 70,
   },
 
-  heroText: { paddingHorizontal: 16, paddingBottom: 14 },
+  heroText: { paddingHorizontal: 16, paddingBottom: 54 },
 
   dotsAnchor: {
-    position: "absolute",
+    position: 'absolute',
     zIndex: 220,
     elevation: 220,
-    overflow: "visible",
+    overflow: 'visible',
   },
   menuBtn: {
     width: 34,
     height: 34,
     borderRadius: 17,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(0,0,0,0.20)",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.20)',
   },
 
   menuOverlay: {
     ...StyleSheet.absoluteFillObject,
     zIndex: 200,
     elevation: 200,
-    overflow: "visible",
+    overflow: 'visible',
   },
   menuSheetPos: {
-    position: "absolute",
-    alignItems: "flex-end",
-    overflow: "visible",
+    position: 'absolute',
+    alignItems: 'flex-end',
+    overflow: 'visible',
     zIndex: 210,
     elevation: 210,
   },
 
-  infoBody: { marginTop: 10 },
-  h1: { color: "#FFFFFF", fontWeight: "800", fontSize: 22, marginBottom: 6 },
+  infoBody: {
+    marginTop: -40,
+    marginHorizontal: -16,
+    marginBottom: -16,
+    paddingHorizontal: 16,
+    paddingTop: 20,
+    paddingBottom: 20,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    borderBottomLeftRadius: 28,
+    borderBottomRightRadius: 28,
+    overflow: 'hidden',
+  },
+  h1: { color: '#FFFFFF', fontWeight: '800', fontSize: 22, marginBottom: 6 },
   latin: {
-    color: "rgba(255,255,255,0.92)",
-    fontStyle: "italic",
-    fontWeight: "700",
+    color: 'rgba(255,255,255,0.92)',
+    fontStyle: 'italic',
+    fontWeight: '700',
     fontSize: 13,
     marginBottom: 8,
   },
-  locRow: { flexDirection: "row", alignItems: "center" },
-  sub: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 13 },
+  locRow: { flexDirection: 'row', alignItems: 'center' },
+  sub: { color: 'rgba(255,255,255,0.92)', fontWeight: '700', fontSize: 13 },
 
   heroPlaceholder: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     paddingBottom: 10,
-    backgroundColor: "rgba(255,255,255,0.10)",
+    backgroundColor: 'rgba(255,255,255,0.10)',
   },
-  noImageText: { color: "rgba(255,255,255,0.9)", fontWeight: "700", marginTop: 8 },
+  noImageText: {
+    color: 'rgba(255,255,255,0.9)',
+    fontWeight: '700',
+    marginTop: 8,
+  },
 
   infoGrid: { gap: 8, marginTop: 6 },
-  infoRow: { flexDirection: "row", alignItems: "center" },
-  infoRowTopAligned: { alignItems: "flex-start" },
-  infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
-  infoValue: { color: "rgba(255,255,255,0.95)", fontWeight: "600", flex: 1 },
+  infoRow: { flexDirection: 'row', alignItems: 'center' },
+  infoRowTopAligned: { alignItems: 'flex-start' },
+  infoLabel: { color: '#FFFFFF', fontWeight: '800', marginRight: 6 },
+  infoValue: { color: 'rgba(255,255,255,0.95)', fontWeight: '600', flex: 1 },
 
   // prompt sheet styles (copied from your ChangePlantImageModal approach)
   confirmOverlay: {
     ...StyleSheet.absoluteFillObject,
     zIndex: 1200,
     elevation: 1200,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
   },
   confirmCard: {
     margin: 12,
     borderRadius: 18,
     padding: 14,
-    backgroundColor: "rgba(0,0,0,1)",
+    backgroundColor: 'rgba(0,0,0,1)',
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.16)",
-    overflow: "hidden",
+    borderColor: 'rgba(255,255,255,0.16)',
+    overflow: 'hidden',
   },
-  confirmHeader: { flexDirection: "row", alignItems: "center", gap: 10, marginBottom: 8 },
-  confirmTitle: { color: "#FFFFFF", fontWeight: "900", fontSize: 14, flex: 1 },
-  confirmBody: { color: "rgba(255,255,255,0.92)", fontWeight: "500", lineHeight: 18, marginBottom: 12 },
-  confirmRow: { flexDirection: "row", gap: 10 },
+  confirmHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 8,
+  },
+  confirmTitle: { color: '#FFFFFF', fontWeight: '900', fontSize: 14, flex: 1 },
+  confirmBody: {
+    color: 'rgba(255,255,255,0.92)',
+    fontWeight: '500',
+    lineHeight: 18,
+    marginBottom: 12,
+  },
+  confirmRow: { flexDirection: 'row', gap: 10 },
 
   confirmBtn: {
     flex: 1,
     height: 42,
     borderRadius: 14,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.12)",
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
-  confirmBtnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  confirmBtnText: { color: "#FFFFFF", fontWeight: "900" },
+  confirmBtnPrimary: { backgroundColor: 'rgba(11,114,133,0.92)' },
+  confirmBtnText: { color: '#FFFFFF', fontWeight: '900' },
 });

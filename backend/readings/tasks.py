@@ -25,10 +25,15 @@ def reading_baseline(device):
     return device.last_read_at or device.created_at
 
 
+def missing_reading_alert_minutes(device):
+    """Allow two reporting intervals before notifying the owner."""
+    return 2 * device.effective_interval_minutes
+
+
 def readings_overdue(device, now=None):
     now = now or timezone.now()
     return bool(device.is_active and now >= reading_baseline(device) + timedelta(
-        minutes=device.effective_interval_minutes))
+        minutes=missing_reading_alert_minutes(device)))
 
 
 def _eligible(now):
@@ -83,7 +88,7 @@ def _deliver(delivery):
     else:
         last_read = t(f"{scope}.last_read_never", lang=lang, default="No readings received yet")
     values = {"device_name": device.device_name or device.plant_name or f"Device #{device.pk}",
-              "interval_minutes": device.effective_interval_minutes, "last_read": last_read}
+              "interval_minutes": missing_reading_alert_minutes(device), "last_read": last_read}
     if delivery.channel == "email":
         if not owner.email:
             _finish(delivery, "skipped")
@@ -108,7 +113,7 @@ def _deliver(delivery):
         ) > 0
     if not accepted:
         raise RuntimeError("Notification provider did not accept the delivery.")
-    _finish(delivery, "sent", inbox_payload={"device":values["device_name"],"interval":device.effective_interval_minutes})
+    _finish(delivery, "sent", inbox_payload={"device":values["device_name"],"interval":missing_reading_alert_minutes(device)})
 
 
 @shared_task(ignore_result=True)

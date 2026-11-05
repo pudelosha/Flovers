@@ -211,7 +211,7 @@
         "heading": "Relevés manquants",
         "body": [
           "La tuile d’un appareil actif pulse en rouge dès qu’un intervalle complet s’est écoulé depuis son dernier relevé. Si l’appareil n’a encore rien envoyé, le délai commence à sa création. Les appareils désactivés ne déclenchent pas cet avertissement.",
-          "Dans Ajouter/Modifier un appareil → Notifications, le propriétaire peut activer séparément les alertes par e-mail et push en cas de relevés manquants. Désactivées par défaut, elles sont indépendantes des récapitulatifs quotidiens et des alertes d’humidité ou d’arrosage. Le serveur vérifie chaque minute et envoie une alerte par canal pour chaque interruption. Un nouveau relevé permet de signaler une interruption ultérieure."
+          "Dans Ajouter/Modifier un appareil → Notifications, le propriétaire peut activer séparément les alertes par e-mail et push en cas de relevés manquants. Désactivées par défaut, elles sont indépendantes des récapitulatifs quotidiens et des alertes d’humidité ou d’arrosage. Le serveur vérifie chaque minute et envoie une alerte par canal pour chaque interruption. Un nouveau relevé permet de signaler une interruption ultérieure. Les alertes par e-mail et push pour les relevés manquants sont envoyées après deux intervalles configurés sans relevé (par exemple, après 120 minutes pour un intervalle de 60 minutes)."
         ]
       }
     ]

@@ -168,3 +168,21 @@ it('opens the plant menu by touching the description without adding a dots butto
  expect(callbacks.onPressBody).toHaveBeenCalledTimes(1);expect(callbacks.onPressMenu).toHaveBeenCalledTimes(1);
  expect(view.queryByText('dots-horizontal')).toBeNull();expect(view.getByText('Nephrolepis exaltata')).toBeTruthy();expect(view.getByText('Kitchen')).toBeTruthy();
 });
+
+
+it('keeps the full details photo above a separate overlapping information panel', () => {
+  const view = render(<PlantInfoTile plant={{ ...plant, photo: metadata, access } as any} />);
+  const panel = view.getByTestId('plant-detail-description');
+  expect(StyleSheet.flatten(panel.props.style)).toMatchObject({
+    marginTop: -40, borderTopLeftRadius: 24, borderBottomLeftRadius: 28,
+  });
+  expect(view.getByText('Fern')).toBeTruthy();
+  expect(view.UNSAFE_getByType(FramedPlantImage).props.photo).toBe(metadata);
+  // The image is no longer masked: only the separate surface supplies its fade.
+  const image = view.UNSAFE_getByType(FramedPlantImage);
+  let ancestor = image.parent;
+  while (ancestor) {
+    expect(ancestor.type).not.toBe(ThemeMaskedView);
+    ancestor = ancestor.parent;
+  }
+});

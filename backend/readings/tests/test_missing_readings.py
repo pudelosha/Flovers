@@ -32,7 +32,7 @@ def context():
     plant = PlantInstance.objects.create(user=owner, location=room, display_name="Fern")
     device = ReadingDevice.objects.create(
         user=owner, plant=plant, device_name="Fern sensor", interval_minutes=60,
-        created_at=now - timedelta(hours=2), last_read_at=now - timedelta(hours=1),
+        created_at=now - timedelta(hours=2), last_read_at=now - timedelta(hours=2),
         send_email_missing_readings=True, send_push_missing_readings=True,
     )
     PushDevice.objects.create(user=owner, token="owner-android", platform="android")
@@ -132,13 +132,13 @@ def test_shared_readonly_device_exposes_interval_but_not_owners_notification_set
     }, format="json").status_code == 404
 
 
-def test_deadline_matches_interval_and_never_received_uses_creation(context):
+def test_deadline_is_twice_interval_and_never_received_uses_creation(context):
     assert not readings_overdue(context.device, context.now - timedelta(microseconds=1))
     assert readings_overdue(context.device, context.now)
     context.device.last_read_at = None
     context.device.created_at = context.now
-    assert not readings_overdue(context.device, context.now + timedelta(minutes=59, seconds=59))
-    assert readings_overdue(context.device, context.now + timedelta(minutes=60))
+    assert not readings_overdue(context.device, context.now + timedelta(minutes=119, seconds=59))
+    assert readings_overdue(context.device, context.now + timedelta(minutes=120))
 
 
 def test_missing_alert_is_once_per_outage_per_channel_and_rearms_after_recovery(context):
@@ -157,7 +157,7 @@ def test_missing_alert_is_once_per_outage_per_channel_and_rearms_after_recovery(
         context.device.save(update_fields=["last_read_at"])
         check_missing_readings()
         assert email.call_count == push.call_count == 1
-    with patch("readings.tasks.timezone.now", return_value=context.now + timedelta(minutes=60)), \
+    with patch("readings.tasks.timezone.now", return_value=context.now + timedelta(minutes=120)), \
             patch("readings.tasks.send_templated_email", return_value=1) as email, \
             patch("readings.tasks._send_push_and_deactivate_bad_tokens", return_value=1) as push:
         check_missing_readings()
@@ -259,7 +259,7 @@ def test_real_email_template_renders_localized_content_without_raw_placeholders(
     assert message.to == [context.owner.email]
     assert "[Flovers]" not in message.subject
     assert context.device.device_name in message.body
-    assert "60" in message.body
+    assert "120" in message.body
     expected_time = timezone.localtime(context.device.last_read_at, ZoneInfo("Europe/Warsaw")).strftime("%d.%m.%Y %H:%M %Z")
     assert expected_time in message.body
     for placeholder in ("{device_name}", "{interval_minutes}", "{last_read}"):
@@ -311,3 +311,23 @@ def test_code_download_and_email_use_the_same_saved_minute_interval(context):
         response = context.client.post(reverse("reading-device-send-code-email", args=[context.device.pk]), format="json")
     assert response.status_code == 200
     assert "SEND_INTERVAL_MS = 17UL * 60UL * 1000UL;" in send.call_args.kwargs["code_text"]
+
+
+@pytest.mark.parametrize("minutes", [1, 17, 60, 90, 1440])
+def test_both_channels_wait_two_intervals_and_report_actual_timeout(context, minutes):
+    context.device.interval_minutes = minutes
+    context.device.last_read_at = context.now
+    context.device.save(update_fields=["interval_minutes", "last_read_at"])
+    deadline = context.now + timedelta(minutes=2 * minutes)
+    with patch("readings.tasks.send_templated_email", return_value=1) as email, \
+            patch("readings.tasks._send_push_and_deactivate_bad_tokens", return_value=1) as push:
+        with patch("readings.tasks.timezone.now", return_value=deadline - timedelta(microseconds=1)):
+            check_missing_readings()
+        email.assert_not_called()
+        push.assert_not_called()
+        assert not MissingReadingNotification.objects.exists()
+        with patch("readings.tasks.timezone.now", return_value=deadline):
+            check_missing_readings()
+        assert email.call_count == push.call_count == 1
+        assert str(2 * minutes) in email.call_args.kwargs["context"]["line1"]
+        assert str(2 * minutes) in push.call_args.args[2]

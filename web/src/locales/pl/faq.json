@@ -91,7 +91,7 @@
     },
     {
       "q": "Czy dowiem się, że urządzenie przestało wysyłać odczyty?",
-      "a": "Kafelek aktywnego urządzenia pulsuje na czerwono, gdy od ostatniego odczytu minie ustawiony odstęp. Jeśli urządzenie nie przesłało jeszcze żadnego odczytu, czas liczymy od jego dodania. Wyłączone urządzenia nie wywołują tego ostrzeżenia. W formularzu dodawania lub edycji urządzenia, w sekcji Powiadomienia, właściciel może osobno włączyć e-mail i push o braku odczytów. Obie opcje są domyślnie wyłączone i niezależne od podsumowań dnia oraz alertów wilgotności i podlewania. Serwer sprawdza urządzenia co minutę i wysyła po jednym alercie na kanał podczas danej przerwy. Po otrzymaniu nowego odczytu kolejna przerwa może wywołać nowy alert."
+      "a": "Kafelek aktywnego urządzenia pulsuje na czerwono, gdy od ostatniego odczytu minie ustawiony odstęp. Jeśli urządzenie nie przesłało jeszcze żadnego odczytu, czas liczymy od jego dodania. Wyłączone urządzenia nie wywołują tego ostrzeżenia. W formularzu dodawania lub edycji urządzenia, w sekcji Powiadomienia, właściciel może osobno włączyć e-mail i push o braku odczytów. Obie opcje są domyślnie wyłączone i niezależne od podsumowań dnia oraz alertów wilgotności i podlewania. Serwer sprawdza urządzenia co minutę i wysyła po jednym alercie na kanał podczas danej przerwy. Po otrzymaniu nowego odczytu kolejna przerwa może wywołać nowy alert. Alerty e-mail i push o braku odczytów są wysyłane dopiero po upływie dwóch ustawionych interwałów bez odczytu (np. po 120 minutach przy interwale 60 minut)."
     },
     {
       "q": "Czy dane z czujników są przechowywane w chmurze?",

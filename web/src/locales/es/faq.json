@@ -91,7 +91,7 @@
     },
     {
       "q": "¿Qué pasa si mi dispositivo deja de enviar datos?",
-      "a": "La tarjeta de un dispositivo activo pulsa en rojo cuando ha transcurrido el intervalo configurado desde su última lectura. Si nunca ha enviado ninguna, el plazo empieza al crear el dispositivo. Los dispositivos desactivados no generan este aviso. En Añadir/Editar dispositivo → Notificaciones, el propietario puede activar por separado correo y push cuando faltan lecturas. Ambas opciones están desactivadas por defecto y son independientes de los resúmenes diarios y los avisos de humedad o riego. El servidor comprueba cada minuto y envía un aviso por canal para cada interrupción. Una nueva lectura permite avisar de otra interrupción posterior."
+      "a": "La tarjeta de un dispositivo activo pulsa en rojo cuando ha transcurrido el intervalo configurado desde su última lectura. Si nunca ha enviado ninguna, el plazo empieza al crear el dispositivo. Los dispositivos desactivados no generan este aviso. En Añadir/Editar dispositivo → Notificaciones, el propietario puede activar por separado correo y push cuando faltan lecturas. Ambas opciones están desactivadas por defecto y son independientes de los resúmenes diarios y los avisos de humedad o riego. El servidor comprueba cada minuto y envía un aviso por canal para cada interrupción. Una nueva lectura permite avisar de otra interrupción posterior. Las alertas por correo y push por falta de lecturas se envían tras dos intervalos configurados sin lecturas (por ejemplo, tras 120 minutos si el intervalo es de 60 minutos)."
     },
     {
       "q": "¿Se guardan las lecturas en la nube?",

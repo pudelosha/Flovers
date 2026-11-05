@@ -211,7 +211,7 @@
         "heading": "Leituras em falta",
         "body": [
           "O cartão de um dispositivo ativo pulsa a vermelho quando passa o intervalo definido desde a última leitura. Se nunca tiver enviado leituras, o prazo começa na criação do dispositivo. Os dispositivos desativados não geram este aviso.",
-          "Em Adicionar/Editar dispositivo → Notificações, o proprietário pode ativar separadamente email e push para leituras em falta. Ambas as opções começam desativadas e são independentes dos resumos diários e dos alertas de humidade ou rega. O servidor verifica a cada minuto e envia um alerta por canal em cada interrupção. Uma nova leitura permite alertar para outra interrupção posterior."
+          "Em Adicionar/Editar dispositivo → Notificações, o proprietário pode ativar separadamente email e push para leituras em falta. Ambas as opções começam desativadas e são independentes dos resumos diários e dos alertas de humidade ou rega. O servidor verifica a cada minuto e envia um alerta por canal em cada interrupção. Uma nova leitura permite alertar para outra interrupção posterior. Os alertas por email e push por falta de leituras são enviados após dois intervalos configurados sem leituras (por exemplo, após 120 minutos para um intervalo de 60 minutos)."
         ]
       }
     ]

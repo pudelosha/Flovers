@@ -211,7 +211,7 @@
         "heading": "Ausbleibende Messwerte",
         "body": [
           "Die Kachel eines aktiven Geräts pulsiert rot, sobald seit der letzten Messung ein eingestelltes Intervall vergangen ist. Hat das Gerät noch nie gesendet, zählt die Zeit ab dem Anlegen. Deaktivierte Geräte lösen diese Warnung nicht aus.",
-          "Unter Gerät hinzufügen/bearbeiten → Mitteilungen kann der Eigentümer E-Mail und Push bei ausbleibenden Messwerten getrennt aktivieren. Beide Optionen sind anfangs aus und unabhängig von Tagesübersichten, Bodenfeuchte- und Bewässerungswarnungen. Der Server prüft jede Minute und sendet pro Ausfall eine Warnung je Kanal. Nach einem neuen Messwert kann ein weiterer Ausfall erneut eine Warnung auslösen."
+          "Unter Gerät hinzufügen/bearbeiten → Mitteilungen kann der Eigentümer E-Mail und Push bei ausbleibenden Messwerten getrennt aktivieren. Beide Optionen sind anfangs aus und unabhängig von Tagesübersichten, Bodenfeuchte- und Bewässerungswarnungen. Der Server prüft jede Minute und sendet pro Ausfall eine Warnung je Kanal. Nach einem neuen Messwert kann ein weiterer Ausfall erneut eine Warnung auslösen. E-Mail- und Push-Warnungen bei fehlenden Messwerten werden erst nach zwei eingestellten Messintervallen ohne Messwert gesendet (z. B. nach 120 Minuten bei einem Intervall von 60 Minuten)."
         ]
       }
     ]

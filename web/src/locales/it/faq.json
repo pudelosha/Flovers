@@ -91,7 +91,7 @@
     },
     {
       "q": "Cosa succede se il dispositivo di misurazione non è più connesso?",
-      "a": "Il riquadro di un dispositivo attivo pulsa in rosso quando dall’ultima lettura è trascorso l’intervallo impostato. Se non è mai arrivata una lettura, il tempo parte dalla creazione del dispositivo. I dispositivi disattivati non generano questo avviso. In Aggiungi/Modifica dispositivo → Notifiche, il proprietario può attivare separatamente email e push per le letture mancanti. Entrambe le opzioni sono inizialmente disattivate e indipendenti dai riepiloghi giornalieri e dagli avvisi di umidità o irrigazione. Il server controlla ogni minuto e invia un avviso per canale per ogni interruzione. Dopo una nuova lettura, un’ulteriore interruzione può generare un altro avviso."
+      "a": "Il riquadro di un dispositivo attivo pulsa in rosso quando dall’ultima lettura è trascorso l’intervallo impostato. Se non è mai arrivata una lettura, il tempo parte dalla creazione del dispositivo. I dispositivi disattivati non generano questo avviso. In Aggiungi/Modifica dispositivo → Notifiche, il proprietario può attivare separatamente email e push per le letture mancanti. Entrambe le opzioni sono inizialmente disattivate e indipendenti dai riepiloghi giornalieri e dagli avvisi di umidità o irrigazione. Il server controlla ogni minuto e invia un avviso per canale per ogni interruzione. Dopo una nuova lettura, un’ulteriore interruzione può generare un altro avviso. Gli avvisi email e push per letture mancanti vengono inviati solo dopo due intervalli configurati senza letture (ad esempio, dopo 120 minuti con un intervallo di 60 minuti)."
     },
     {
       "q": "I dati dei sensori sono archiviati nel cloud?",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from '../theme/native';
+import { View, StyleSheet } from '../theme/native';
 import { useAppTheme } from '../theme/ThemeContext';
 import LinearGradient from '../theme/Gradient';
 import MaskedView from '../theme/MaskedView';
@@ -7,10 +7,34 @@ import MaskedView from '../theme/MaskedView';
 /** Translucent panel top, solid halfway down, with the dark glass colour gradient. */
 export default function PlantDescriptionSurface({
   solid = false,
+  fadeHeight,
+  opaqueAt = 0.5,
 }: {
   solid?: boolean;
+  fadeHeight?: number;
+  opaqueAt?: number;
 }) {
   const { isLight } = useAppTheme();
+  if (fadeHeight != null && !solid) {
+    return (
+      <View pointerEvents="none" style={StyleSheet.absoluteFill}>
+        <View
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            height: fadeHeight,
+          }}
+        >
+          <PlantDescriptionSurface opaqueAt={1} />
+        </View>
+        <View style={[StyleSheet.absoluteFill, { top: fadeHeight }]}>
+          <PlantDescriptionSurface solid />
+        </View>
+      </View>
+    );
+  }
   if (solid) {
     return (
       <LinearGradient
@@ -35,7 +59,7 @@ export default function PlantDescriptionSurface({
         '#F8FCFA',
         '#F8FCFA',
       ]}
-      locations={[0, 0.25, 0.5, 1]}
+      locations={[0, opaqueAt / 2, opaqueAt, 1]}
       style={StyleSheet.absoluteFill}
     />
   ) : (
@@ -47,7 +71,7 @@ export default function PlantDescriptionSurface({
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
           colors={['rgba(0,0,0,0.8)', 'rgba(0,0,0,0.92)', '#000000', '#000000']}
-          locations={[0, 0.25, 0.5, 1]}
+          locations={[0, opaqueAt / 2, opaqueAt, 1]}
           style={StyleSheet.absoluteFill}
         />
       }

@@ -211,7 +211,7 @@
         "heading": "Alınamayan okumalar",
         "body": [
           "Etkin bir cihazın son okumasından itibaren belirlenen aralık geçtiğinde kart kırmızı renkte yanıp söner. Hiç okuma göndermemiş cihazlarda süre, cihaz oluşturulduğunda başlar. Devre dışı cihazlar bu uyarıyı tetiklemez.",
-          "Cihaz ekle/düzenle → Bildirimler bölümünde cihaz sahibi, eksik okumalar için e-posta ve anlık bildirimleri ayrı ayrı açabilir. İkisi de başlangıçta kapalıdır; günlük özetlerden, nem ve sulama uyarılarından bağımsızdır. Sunucu dakikada bir kontrol eder ve her kesintide kanal başına bir uyarı gönderir. Yeni bir okuma geldikten sonra sonraki kesinti yeniden uyarı oluşturabilir."
+          "Cihaz ekle/düzenle → Bildirimler bölümünde cihaz sahibi, eksik okumalar için e-posta ve anlık bildirimleri ayrı ayrı açabilir. İkisi de başlangıçta kapalıdır; günlük özetlerden, nem ve sulama uyarılarından bağımsızdır. Sunucu dakikada bir kontrol eder ve her kesintide kanal başına bir uyarı gönderir. Yeni bir okuma geldikten sonra sonraki kesinti yeniden uyarı oluşturabilir. Eksik okuma e-posta ve anlık bildirimleri, ayarlanan okuma aralığının iki katı boyunca okuma alınmadığında gönderilir (örneğin 60 dakikalık aralık için 120 dakika sonra)."
         ]
       }
     ]
