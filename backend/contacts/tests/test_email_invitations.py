@@ -33,7 +33,7 @@ def test_delivery_pending_and_private_cancellation(people, settings):
     assert len(mail.outbox) == 1
     message = mail.outbox[0]
     assert message.to == ["new@example.test"]
-    assert message.subject == "Zapro? przez e-mail"
+    assert message.subject == "Zapro\u015b przez e-mail"
     assert "Alice Owner" in message.body
     assert "30 dni" in message.body and "new@example.test" in message.body
     assert "[Flovers]" not in message.subject
