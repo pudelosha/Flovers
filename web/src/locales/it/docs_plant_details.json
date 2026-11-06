@@ -6,7 +6,8 @@
         "heading": "Tutte le informazioni su una pianta",
         "body": [
           "Nei Dettagli della pianta puoi consultare e gestire tutto ciò che riguarda una pianta del tuo account.",
-          "Qui trovi i suoi dati, i promemoria, le azioni per le attività, le misurazioni dei sensori se disponibili e i collegamenti rapidi alle altre schermate."
+          "Qui trovi i suoi dati, i promemoria, le azioni per le attività, le misurazioni dei sensori se disponibili e i collegamenti rapidi alle altre schermate.",
+          "Sopra il pannello trovi Info, Attività e Letture. Info mostra i dati della tua pianta e, se collegata, una scheda separata della definizione. Letture mostra i valori del dispositivo o un messaggio se manca."
         ]
       },
       {
@@ -20,14 +21,14 @@
       {
         "heading": "Attività",
         "body": [
-          "Attività è la seconda scheda, subito sotto le informazioni principali della pianta. Mostra fino a cinque attività di cura completate, dalla più recente, con chi le ha eseguite e data e ora locali nel formato del profilo. Include il proprietario e i contatti che si occupano della pianta condivisa ed è visibile solo a chi ha ancora accesso. È un riepilogo di sola lettura, senza foto; i completamenti annullati scompaiono."
+          "Attività unisce prima le attività da svolgere e poi gli ultimi 10 completamenti, senza titoli separati. Le attività in sospeso hanno un menu. Quelle completate mostrano spunta, data e persona; una linea verticale collega solo le loro icone. Le foto non sono incluse e i completamenti annullati scompaiono."
         ]
       },
       {
         "heading": "Menu della pianta (tre puntini)",
         "body": [
           "Il menu con tre puntini accanto al nome raccoglie le azioni relative alla pianta.",
-          "Puoi aprire la scheda della specie, se collegata, modificare i dati o l'immagine e aprire Promemoria con un filtro per questa pianta.",
+          "Modifica pianta → Condividi pianta / Gestisci condivisione → Cambia immagine → Codice QR → Mostra promemoria → Diario delle attività.",
           "Dopo il salvataggio della nuova foto, la copia precedente viene rimossa dal server. Rimuovendo la foto personale, riappare l’immagine del catalogo, se disponibile.",
           "Trascina la foto per spostarla e usa due dita o i pulsanti dello zoom per regolarne le dimensioni. Il riquadro rosso fisso indica l’area approssimativa visibile nei dettagli della pianta, quello blu nei riquadri dell’elenco piante. L’inquadratura viene salvata con la foto e usata anche per le piante condivise.",
           "Gli stessi comandi sono disponibili in Cambia immagine. Premi Salva per regolare l’inquadratura di una foto esistente senza caricarne un’altra copia."
@@ -36,16 +37,16 @@
       {
         "heading": "Scheda della specie",
         "body": [
-          "Se hai collegato la pianta a una scheda della specie nel catalogo di Flovers, puoi aprirla da qui.",
+          "Info → Definizione pianta. Sopra il pannello trovi Info, Attività e Letture. Info mostra i dati della tua pianta e, se collegata, una scheda separata della definizione. Letture mostra i valori del dispositivo o un messaggio se manca.",
           "La scheda riporta la descrizione della specie, le esigenze di cura, le caratteristiche, il livello di difficoltà, l'intervallo di temperatura, l'umidità, la tossicità e il modo in cui cresce.",
           "Le indicazioni della scheda sono generali: valuta sempre se sono adatte alle condizioni in cui tieni la tua pianta."
         ]
       },
       {
-        "heading": "Promemoria e attività",
+        "heading": "Attività",
         "body": [
-          "La sezione Promemoria mostra tutti i promemoria attivi della pianta.",
-          "Dal menu con tre puntini di un promemoria puoi completare l’attività, modificare il promemoria o aprire il Diario delle attività.",
+          "Segna come completata: completa l'attività e ti permette di aggiungere una nota, che resterà nello storico delle cure.",
+          "Segna come completato / Modifica promemoria / Diario delle attività.",
           "Quando completi un'attività, puoi aggiungere una nota che resterà nello storico delle cure della pianta."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "Codice QR e accesso rapido",
         "body": [
-          "Ogni pianta ha un codice QR univoco, visibile in fondo alla schermata.",
+          "Dettagli della pianta → ⋯ → Codice QR.",
           "Scansionalo con lo Scanner dell'app per aprire direttamente i Dettagli della pianta.",
           "Puoi salvare il codice sul telefono o inviarlo via e-mail per stamparlo e attaccarlo al vaso.",
           "Un codice QR di Flovers contiene un riferimento univoco alla pianta, non il suo identificativo numerico nel database."
@@ -78,7 +79,7 @@
       {
         "heading": "Dettagli di una pianta d'appartamento condivisa",
         "body": [
-          "Una pianta d'appartamento ricevuta è contrassegnata come Condivisa. È possibile visualizzarne le informazioni, la cronologia delle cure e le letture del sensore del sensore collegato. Il riquadro di definizione del promemoria e i controlli di modifica rimangono riservati al solo proprietario. Completa le attività condivise consentite sulla Home."
+          "Solo il proprietario può modificare i dettagli della pianta d'appartamento, le definizioni dei promemoria, i dispositivi, le impostazioni della pompa o le autorizzazioni di condivisione. Le definizioni di promemoria condivise non vengono visualizzate nella schermata Promemoria del destinatario. L'accesso di sola visualizzazione non consente mai il completamento delle attività."
         ]
       },
       {

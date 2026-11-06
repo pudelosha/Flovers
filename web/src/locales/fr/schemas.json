@@ -127,7 +127,7 @@
       "Déclarez supports_manual_duration à true uniquement si le firmware lit duration_seconds pour l’arrosage manuel. L’exemple généré le prend en charge. L’arrosage automatique conserve PUMP_RUN_MS du sketch.",
       "Le programme généré envoie les relevés toutes les 60 minutes par défaut. Le formulaire de l’appareil permet de choisir de 1 à 1440 minutes entières. Générez puis téléversez le nouveau code après toute modification. Les demandes d’arrosage manuel sont vérifiées séparément, chaque minute par défaut."
     ],
-    "adjustIntro": "Avant le téléversement, vérifiez le Wi-Fi, les broches, l’étalonnage d’humidité, PUMP_RUN_MS et les intervalles de requête. Réglez la pause automatique en ligne dans le formulaire de l’appareil.",
+    "adjustIntro": "Avant le téléversement, vérifiez le Wi-Fi, les broches, l’étalonnage d’humidité, PUMP_RUN_MS et les intervalles de requête. Réglez la pause automatique en ligne dans le formulaire de l’appareil. La pompe fonctionne par défaut pendant 20 secondes en mode automatique ou manuel, avec une durée autorisée de 1 à 300 secondes. Réglez la durée automatique dans le formulaire de l’appareil, puis générez et téléversez le nouveau code. La durée manuelle se choisit pour chaque demande.",
     "adjustItems": [
       "SSID et mot de passe Wi-Fi",
       "SDA_PIN et SCL_PIN",

@@ -13,7 +13,7 @@
         "heading": "Reminder list view",
         "body": [
           "In the list view, each tile represents a single reminder created by the user.",
-          "The tile shows the task type (icon and name), the plant name, the location (if assigned), how often it repeats, and when it is due next.",
+          "Compact reminder tiles show the plant and location on the left, and care type with recurrence on the right. When paused, the pause status replaces recurrence. The next due date is not shown on these tiles.",
           "This view is the fastest way to review all recurring rules currently active in your account."
         ]
       },

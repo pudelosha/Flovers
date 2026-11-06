@@ -128,7 +128,7 @@
       "supports_manual_duration değerini yalnızca firmware elle sulama için duration_seconds okuyorsa true yapın. Oluşturulan örnek bunu destekler. Otomatik sulama sketch içindeki PUMP_RUN_MS değerini korur.",
       "Oluşturulan kod varsayılan olarak 60 dakikada bir okuma gönderir. Cihaz formunda 1–1440 tam dakika seçin, ardından güncel kodu oluşturup yükleyin. Elle sulama istekleri ayrı olarak, varsayılan olarak dakikada bir kontrol edilir."
     ],
-    "adjustIntro": "Yüklemeden önce Wi-Fi, pinler, nem kalibrasyonu, PUMP_RUN_MS ve sorgu aralıklarını kontrol edin. Çevrimiçi otomatik sulama beklemesini cihaz formundan ayarlayın.",
+    "adjustIntro": "Yüklemeden önce Wi-Fi, pinler, nem kalibrasyonu, PUMP_RUN_MS ve sorgu aralıklarını kontrol edin. Çevrimiçi otomatik sulama beklemesini cihaz formundan ayarlayın. Otomatik ve manuel pompa süresi varsayılan olarak 20 saniyedir ve 1–300 saniye olabilir. Otomatik süreyi cihaz formunda ayarlayıp yeni kodu üretin ve karta yükleyin. Manuel süre her sulama isteği için ayrı seçilir.",
     "adjustItems": [
       "Wi-Fi SSID ve şifre",
       "SDA_PIN ve SCL_PIN",

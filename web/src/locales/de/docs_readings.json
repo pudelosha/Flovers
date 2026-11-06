@@ -139,7 +139,8 @@
           "Ist automatisches Gießen eingeschaltet und die Bodenfeuchte niedriger als der Grenzwert, kann die Platine die Pumpe starten, nachdem der Server den automatischen Gießauftrag freigegeben hat.",
           "Dafür müssen das Gerät aktiv, die Pumpenfunktion und der Bodenfeuchtesensor eingeschaltet sowie der automatische Pumpenstart aktiviert sein. Außerdem braucht es einen gültigen Grenzwert und die Bestätigung der aktuellen Pumpeneinstellungen durch den Server.",
           "Stelle die automatische Gießpause im Geräteformular auf 1–32767 Minuten ein; Standard sind 60. Das Board übernimmt sie bei einer späteren Abfrage, und auch der Server prüft sie. AUTO_PUMP_MIN_INTERVAL_MS dient nur als lokaler Ersatzwert.",
-          "Manuelles Gießen hat Vorrang. Führt das Gerät in einem Zyklus einen manuellen Gießauftrag aus, überspringt es das automatische Gießen in diesem Zyklus."
+          "Manuelles Gießen hat Vorrang. Führt das Gerät in einem Zyklus einen manuellen Gießauftrag aus, überspringt es das automatische Gießen in diesem Zyklus.",
+          "Automatische und manuelle Pumpenläufe dauern standardmäßig 20 Sekunden, zulässig sind 1–300 Sekunden. Stelle die automatische Dauer im Geräteformular ein und lade neu erzeugten Code auf die Platine. Die manuelle Dauer wird je Bewässerungsauftrag gewählt."
         ]
       },
       {

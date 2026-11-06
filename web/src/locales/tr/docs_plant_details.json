@@ -6,7 +6,8 @@
         "heading": "Bu ekranın amacı",
         "body": [
           "Ev bitkisi Ayrıntıları ekranı, kullanıcı tarafından oluşturulan tek bir ev bitkisi örneğinin görüntüleneceği ve yönetileceği merkezi yerdir.",
-          "Ev bitkisine özgü bilgileri, hatırlatıcıları, görev eylemlerini, sensör okumalarını (varsa) ve o ev bitkisine ilişkin hızlı gezinme araçlarını birleştirir."
+          "Ev bitkisine özgü bilgileri, hatırlatıcıları, görev eylemlerini, sensör okumalarını (varsa) ve o ev bitkisine ilişkin hızlı gezinme araçlarını birleştirir.",
+          "Panelin üzerinde Bilgi, Görevler ve Okumalar bulunur. Bilgi, bitki verilerinizi ve bağlıysa ayrı bitki tanımı kartını gösterir. Okumalar, cihaz değerlerini veya bağlı cihaz olmadığı bilgisini gösterir."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Etkinlik",
+        "heading": "Görevler",
         "body": [
-          "Etkinlik, bitkinin ana bilgilerinin hemen altındaki ikinci karttır. En yeniden başlayarak son beş tamamlanmış bakım görevini, tamamlayan kişiyle ve profilinizdeki tarih biçiminde yerel tarih ve saatle gösterir. Bitki sahibinin ve paylaşılan bakım verenlerin işlemlerini içerir; yalnızca bitkiye güncel erişimi olanlar görebilir. Salt okunur bir özettir, fotoğraflar dahil değildir ve geri alınan tamamlamalar listeden kaybolur."
+          "Görevler, bekleyen işleri önce, son 10 tamamlamayı altta ayrı başlıklar olmadan gösterir. Bekleyen satırlarda menü bulunur. Tamamlananlarda onay işareti, tarih ve kişi görünür; dikey çizgi yalnızca tamamlanan simgeleri bağlar. Fotoğraflar dahil değildir; geri alınan tamamlamalar kaybolur."
         ]
       },
       {
         "heading": "Ev bitkisi düzeyinde eylemler (3 noktalı menü)",
         "body": [
           "Ev bitkisi başlığıyla ilişkili 3 noktalı menü, ev bitkisinin kendisiyle ilgili ek eylemler sağlar.",
-          "Mevcut eylemler arasında ev bitkisi Tanımını görüntüleme (ev bitkisi bir bitkiye bağlıysa), ev bitkisi ayrıntılarını düzenleme, ev bitkisi görüntüsünü değiştirme ve bu ev bitkisi için filtrelenen Hatırlatıcılara gitme yer alır.",
+          "Bitkiyi düzenle → Bitkiyi paylaş / Paylaşımı yönet → Resmi değiştir → QR Kodu → Hatırlatıcıları göster → Görev günlüğü.",
           "Yeni fotoğraf kaydedildikten sonra sunucudaki önceki kopya silinir. Kendi fotoğrafınızı kaldırdığınızda, varsa katalog görseli yeniden gösterilir.",
           "Fotoğrafı sürükleyerek konumunu değiştirin ve iki parmağınızla veya yakınlaştırma düğmeleriyle boyutunu ayarlayın. Sabit kırmızı çerçeve bitki ayrıntılarında, mavi çerçeve ise bitki listesi kartlarında görünecek yaklaşık alanı gösterir. Kadraj fotoğrafla birlikte kaydedilir ve paylaşılan bitkiler için de kullanılır.",
           "Aynı kontroller Görseli değiştir bölümünde de bulunur. Mevcut fotoğrafın kadrajını yeni bir kopya yüklemeden değiştirmek için Kaydet düğmesine dokunun."
@@ -36,16 +37,16 @@
       {
         "heading": "Ev bitkisi Tanımı",
         "body": [
-          "Ev bitkisi Flovers veritabanındaki bir ev bitkisi Tanımına bağlıysa, kullanıcı özel bir ev bitkisi Tanım görünümünü açabilir.",
+          "Bilgi → Ev bitkisi tanımı. Panelin üzerinde Bilgi, Görevler ve Okumalar bulunur. Bilgi, bitki verilerinizi ve bağlıysa ayrı bitki tanımı kartını gösterir. Okumalar, cihaz değerlerini veya bağlı cihaz olmadığı bilgisini gösterir.",
           "Bu görünüm, ev bitkisinin tanımı, bakım tercihleri, özellikler, zorluk düzeyi, sıcaklık aralığı, nem, toksisite ve büyüme özellikleri gibi tür düzeyindeki bilgileri görüntüler.",
           "Houseplant Tanımlar genel rehberlik sağlar ve kullanıcının gerçek ortamı bağlamında yorumlanmalıdır."
         ]
       },
       {
-        "heading": "Hatırlatıcılar ve görevler",
+        "heading": "Görevler",
         "body": [
-          "Hatırlatıcılar bölümü, bu ev bitkisiyle ilişkili tüm aktif hatırlatıcıları gösterir.",
-          "Hatırlatıcının üç nokta menüsünden görevi tamamlayabilir, hatırlatıcıyı düzenleyebilir veya Görev günlüğünü açabilirsiniz.",
+          "Tamamlandı olarak işaretle: görevi kapatır ve isteğe bağlı olarak bir not eklemenize olanak tanıyarak ayrıntılı bir bakım geçmişi oluşturmanıza yardımcı olur.",
+          "Tamamlandı olarak işaretle / Hatırlatıcıyı düzenle / Görev günlüğü.",
           "Bir görevi tamamlamak, ev bitkisinin bakım geçmişinin bir parçası haline gelen bir not eklemeyi içerebilir."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "QR kodu ve hızlı erişim",
         "body": [
-          "Her ev bitkisinin ekranın alt kısmında görüntülenen benzersiz bir QR kodu vardır.",
+          "Bitki ayrıntıları → ⋯ → QR Kodu.",
           "Bu kodun Tarayıcı görünümünü kullanarak taranması, kullanıcıyı doğrudan bu ev bitkisinin Ayrıntılar ekranına yönlendirir.",
           "QR kodu cihaza kaydedilebilir veya e-postayla gönderilebilir; bu sayede yazdırılması ve ev bitkisi saksısına hızlı erişim için eklenmesi kolaydır.",
           "Flovers QR kodu sayısal veritabanı kimliği yerine bitkiye ait benzersiz, kapalı bir referans içerir."
@@ -78,7 +79,7 @@
       {
         "heading": "Paylaşılan bir bitkisinin ayrıntıları",
         "body": [
-          "Alınan bir bitkisi Paylaşılan olarak işaretlenir. Bilgilerini, bakım geçmişini ve bağlantılı sensör okumalarını görüntüleyebilirsiniz. Hatırlatıcı tanımı kutucuğu ve düzenleme kontrolleri yalnızca sahiplere ait kalır. Ana Sayfada izin verilen paylaşılan görevleri tamamlayın."
+          "Bitkisi ayrıntılarını, hatırlatma tanımlarını, cihazları, pompa ayarlarını veya paylaşım izinlerini yalnızca sahibi değiştirebilir. Paylaşılan hatırlatıcı tanımları alıcının Hatırlatıcılar ekranında görünmez. Salt görüntüleme erişimi hiçbir zaman görevin tamamlanmasına izin vermez."
         ]
       },
       {

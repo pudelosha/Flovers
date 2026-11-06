@@ -6,21 +6,22 @@
         "heading": "Le tue piante",
         "body": [
           "piante d'appartamento mostra le piante d'appartamento che possiedi e le piante d'appartamento che i contatti hanno condiviso con te.",
-          "Ogni tessera apre i dettagli della pianta d'appartamento. Il menu a tre punti mostra le azioni consentite dal tuo accesso: i proprietari gestiscono le loro piante d'appartamento e la condivisione; i destinatari visualizzano la pianta d'appartamento e la sua cronologia delle cure."
+          "Tocca una scheda per aprire il menu nero e scegli Dettagli pianta. Queste schede non hanno un pulsante separato con tre puntini."
         ]
       },
       {
         "heading": "Informazioni nell'elenco",
         "body": [
-          "Ogni riquadro mostra il nome della pianta, la specie se hai collegato una scheda del catalogo, e la posizione assegnata.",
-          "Tocca il riquadro al di fuori del menu con tre puntini per aprire i Dettagli della pianta."
+          "Le piante sono disposte in due schede fotografiche per riga. Un pannello sovrapposto mostra nome, nome latino e posizione.",
+          "Tocca una scheda per aprire il menu nero e scegli Dettagli pianta. Queste schede non hanno un pulsante separato con tre puntini."
         ]
       },
       {
-        "heading": "Menu a tre puntini (azioni della pianta)",
+        "heading": "Azioni sulla pianta",
         "body": [
-          "Il menu con tre puntini di ogni riquadro contiene le azioni per quella pianta:",
+          "Tocca una scheda per aprire il menu nero e scegli Dettagli pianta. Queste schede non hanno un pulsante separato con tre puntini.",
           "Modifica pianta: apre la schermata in cui puoi aggiornare i dati e i parametri della pianta.",
+          "Condividi pianta / Gestisci condivisione.",
           "Mostra promemoria: apre Promemoria con un filtro che mostra solo quelli della pianta selezionata.",
           "Diario delle attività apre una schermata dedicata alle voci di questa pianta. Sostituisce la vecchia finestra del diario della pianta.",
           "Mostra codice QR: apre una finestra con il codice QR della pianta, una breve spiegazione e le opzioni per scaricarlo o inviarlo al tuo indirizzo e-mail.",
@@ -60,7 +61,7 @@
       {
         "heading": "Piante d'appartamento possedute e condivise",
         "body": [
-          "piante d'appartamento include le tue piante d'appartamento e quelle condivise con te. Le piante d'appartamento ricevute portano un'etichetta condivisa. I loro menu ti consentono di visualizzare i dettagli e la cronologia delle cure, mentre la modifica, la gestione dei promemoria, l'esportazione e l'eliminazione QR rimangono riservate al proprietario.",
+          "Un’icona di condivisione identifica le piante condivise con te. Solo il proprietario può modificare i dettagli della pianta d'appartamento, le definizioni dei promemoria, i dispositivi, le impostazioni della pompa o le autorizzazioni di condivisione. Le definizioni di promemoria condivise non vengono visualizzate nella schermata Promemoria del destinatario. L'accesso di sola visualizzazione non consente mai il completamento delle attività.",
           "Per una pianta d'appartamento di proprietà, scegli Condividi pianta d'appartamento o Gestisci condivisione dal suo menu. La modalità Aggiungi consente più piante d'appartamento; la gestione della condivisione esistente mantiene chiusa la sua pianta d'appartamento."
         ]
       }

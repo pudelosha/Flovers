@@ -6,7 +6,8 @@
         "heading": "Tudo sobre uma planta",
         "body": [
           "Nos Detalhes da planta, você consulta e gerencia uma planta da sua conta.",
-          "Essa tela reúne os dados, os lembretes, as ações das tarefas, as leituras de sensores disponíveis e os atalhos para outras telas relacionadas."
+          "Essa tela reúne os dados, os lembretes, as ações das tarefas, as leituras de sensores disponíveis e os atalhos para outras telas relacionadas.",
+          "Acima do painel estão Info, Tarefas e Leituras. Info mostra os teus dados da planta e um cartão separado da definição, se associada. Leituras mostra os valores do dispositivo ou informa que não há nenhum associado."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Atividade",
+        "heading": "Tarefas",
         "body": [
-          "Atividade é o segundo cartão, logo abaixo das informações principais da planta. Mostra até cinco tarefas de cuidados concluídas, da mais recente para a mais antiga, com a pessoa que as realizou e a data e hora locais no formato do perfil. Inclui o proprietário e os contactos que cuidam da planta partilhada e só é visível com acesso atual à planta. É um resumo só de leitura, sem fotografias; as conclusões anuladas desaparecem."
+          "Tarefas mostra primeiro as pendentes e depois as últimas 10 concluídas, sem títulos separados. As pendentes têm menu. As concluídas mostram um visto, data e pessoa; uma linha vertical liga apenas os seus ícones. As fotografias não são incluídas e as conclusões anuladas desaparecem."
         ]
       },
       {
         "heading": "Menu da planta",
         "body": [
           "Abra os três pontos ao lado do nome para ver as ações da planta.",
-          "Você pode consultar a ficha da espécie, se houver uma associada, editar os dados, mudar a imagem e abrir os lembretes filtrados para essa planta.",
+          "Editar planta → Partilhar planta / Gerenciar compartilhamento → Alterar imagem → Código QR → Mostrar lembretes → Diário de tarefas.",
           "Depois de guardar a nova fotografia, a cópia anterior é removida do servidor. Ao remover a tua fotografia, volta a aparecer a imagem do catálogo, se existir.",
           "Arrasta a fotografia para a mover e ajusta o zoom com dois dedos ou com os botões. A moldura vermelha fixa indica a área aproximada visível nos detalhes da planta e a azul nos cartões da lista de plantas. O enquadramento é guardado com a fotografia e também é usado nas plantas partilhadas.",
           "Os mesmos controlos estão disponíveis em Alterar imagem. Toca em Guardar para ajustar o enquadramento de uma fotografia existente sem carregar outra cópia."
@@ -36,16 +37,16 @@
       {
         "heading": "Ficha da espécie",
         "body": [
-          "Se você associou uma ficha do catálogo do Flovers à planta, pode abri-la por aqui.",
+          "Info → Definição da planta. Acima do painel estão Info, Tarefas e Leituras. Info mostra os teus dados da planta e um cartão separado da definição, se associada. Leituras mostra os valores do dispositivo ou informa que não há nenhum associado.",
           "A ficha traz descrição, necessidades de cuidado, características, dificuldade, faixa de temperatura, umidade, toxicidade e forma de crescimento da espécie.",
           "As orientações são gerais. Avalie se são adequadas às condições em que sua planta vive."
         ]
       },
       {
-        "heading": "Lembretes e tarefas",
+        "heading": "Tarefas",
         "body": [
-          "A seção Lembretes mostra todos os lembretes ativos dessa planta.",
-          "Nos três pontos de um lembrete, você pode concluir a tarefa, editar o lembrete ou abrir o Diário de tarefas.",
+          "Marcar como concluída: conclui a tarefa e permite adicionar uma anotação ao histórico de cuidados.",
+          "Marcar como concluído / Editar lembrete / Diário de tarefas.",
           "Ao concluir uma tarefa, você pode adicionar uma anotação ao histórico de cuidados da planta."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "Código QR e acesso rápido",
         "body": [
-          "Cada planta tem um código QR próprio, exibido no fim da tela.",
+          "Detalhes da planta → ⋯ → Código QR.",
           "Escaneie esse código pelo Scanner do aplicativo para abrir diretamente os Detalhes da planta.",
           "Salve o código no celular ou envie por e-mail para imprimir e colar no vaso.",
           "Um QR do Flovers contém uma referência única e opaca à planta, em vez do seu identificador numérico na base de dados."
@@ -78,7 +79,7 @@
       {
         "heading": "Detalhes de uma planta de casa compartilhada",
         "body": [
-          "Uma planta de casa recebida é marcada como Compartilhada. Você pode visualizar suas informações, histórico de cuidados e leituras de sensores vinculados. O bloco de definição de lembrete e os controles de edição permanecem apenas para o proprietário. Conclua as tarefas compartilhadas permitidas na página inicial."
+          "Somente o proprietário pode alterar detalhes da planta de casa, definições de lembretes, dispositivos, configurações da bomba ou permissões de compartilhamento. As definições de lembretes compartilhados não aparecem na tela Lembretes do destinatário. O acesso somente visualização nunca permite a conclusão de tarefas."
         ]
       },
       {

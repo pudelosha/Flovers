@@ -6,21 +6,22 @@
         "heading": "Veja suas plantas",
         "body": [
           "plantas de casa mostra as plantas de casa que você possui e as plantas de casa que os contatos compartilharam com você.",
-          "Cada bloco abre detalhes da planta de casa. O menu de três pontos mostra as ações permitidas pelo seu acesso: os proprietários gerenciam suas plantas e compartilhamentos; os destinatários visualizam a planta de casa e seu histórico de cuidados."
+          "Toca num cartão para abrir o menu preto e escolhe Detalhes da planta. Estes cartões não têm um botão separado de três pontos."
         ]
       },
       {
         "heading": "Informações nos cartões",
         "body": [
-          "O cartão mostra o nome da planta, a espécie quando há uma ficha associada e a Localização escolhida.",
-          "Toque no cartão, fora dos três pontos, para abrir os Detalhes da planta."
+          "As plantas aparecem em dois cartões com fotografia por linha. Um painel sobreposto mostra o nome, o nome latino e a localização.",
+          "Toca num cartão para abrir o menu preto e escolhe Detalhes da planta. Estes cartões não têm um botão separado de três pontos."
         ]
       },
       {
-        "heading": "Menu da planta",
+        "heading": "Ações da planta",
         "body": [
-          "O menu de três pontos oferece estas ações para a planta:",
+          "Toca num cartão para abrir o menu preto e escolhe Detalhes da planta. Estes cartões não têm um botão separado de três pontos.",
           "Editar planta: abre a tela para atualizar seus dados e parâmetros.",
+          "Partilhar planta / Gerenciar compartilhamento.",
           "Mostrar lembretes: abre Lembretes com um filtro para essa planta.",
           "Diário de tarefas abre uma tela com os registros desta planta. Ela substitui a antiga janela do diário da planta.",
           "Mostrar código QR: abre o código da planta, uma breve explicação e as opções para baixar ou enviar ao seu e-mail.",
@@ -60,7 +61,7 @@
       {
         "heading": "Plantas de casa próprias e compartilhadas",
         "body": [
-          "plantas de casa incluem suas próprias plantas de casa e plantas de casa compartilhadas com você. As plantas de casa recebidas possuem um rótulo Compartilhado. Seus menus permitem visualizar detalhes e histórico de cuidados, enquanto a edição, gerenciamento de lembretes, exportação e exclusão do QR permanecem apenas para o proprietário.",
+          "Um ícone de partilha identifica as plantas partilhadas contigo. Somente o proprietário pode alterar detalhes da planta de casa, definições de lembretes, dispositivos, configurações da bomba ou permissões de compartilhamento. As definições de lembretes compartilhados não aparecem na tela Lembretes do destinatário. O acesso somente visualização nunca permite a conclusão de tarefas.",
           "Para uma planta de casa própria, escolha Compartilhar planta de casa ou Gerenciar compartilhamento no menu. O modo Adicionar permite várias plantas; gerenciar o compartilhamento existente mantém sua planta de casa bloqueada."
         ]
       }

@@ -6,21 +6,22 @@
         "heading": "Twoje rośliny w jednym miejscu",
         "body": [
           "Na ekranie Rośliny zobaczysz swoje rośliny oraz te, które udostępnili Ci inni użytkownicy.",
-          "Dotknięcie kafelka otwiera szczegóły rośliny. Menu z trzema kropkami pokazuje dostępne działania: właściciel zarządza rośliną i udostępnianiem, a odbiorca przegląda dane i historię pielęgnacji."
+          "Dotknij kafelka rośliny, aby otworzyć czarne menu, a następnie wybierz Szczegóły rośliny. W tym układzie nie ma osobnego przycisku z trzema kropkami."
         ]
       },
       {
         "heading": "Co widać na liście",
         "body": [
-          "Na kafelku zobaczysz nazwę rośliny, jej lokalizację i gatunek, jeśli roślina jest powiązana z jego opisem.",
-          "Dotknij kafelka poza menu trzech kropek, aby otworzyć Szczegóły rośliny."
+          "Rośliny są wyświetlane po dwa kafelki w rzędzie. Na zdjęcie nachodzi panel z nazwą rośliny, nazwą łacińską i lokalizacją.",
+          "Dotknij kafelka rośliny, aby otworzyć czarne menu, a następnie wybierz Szczegóły rośliny. W tym układzie nie ma osobnego przycisku z trzema kropkami."
         ]
       },
       {
-        "heading": "Menu rośliny",
+        "heading": "Działania na roślinie",
         "body": [
-          "Dotknij trzech kropek na kafelku, aby zobaczyć opcje dla tej rośliny:",
+          "Dotknij kafelka rośliny, aby otworzyć czarne menu, a następnie wybierz Szczegóły rośliny. W tym układzie nie ma osobnego przycisku z trzema kropkami.",
           "Edytuj roślinę: pozwala zmienić jej dane i ustawienia.",
+          "Udostępnij roślinę / Zarządzaj udostępnianiem.",
           "Pokaż przypomnienia: otwiera Przypomnienia i pokazuje tylko te, które dotyczą wybranej rośliny.",
           "Dziennik zadań otwiera osobny ekran z wpisami tylko dla tej rośliny. Zastępuje dawne okno dziennika rośliny.",
           "Pokaż kod QR: otwiera okno z kodem rośliny i krótkim opisem. Możesz zapisać kod na urządzeniu lub wysłać go na swój adres e-mail.",
@@ -60,7 +61,7 @@
       {
         "heading": "Własne i udostępnione rośliny",
         "body": [
-          "Na liście znajdziesz swoje rośliny oraz te, które udostępniono Tobie. Udostępnione rośliny mają osobne oznaczenie. Możesz przeglądać ich szczegóły i historię pielęgnacji, ale edycja, zarządzanie przypomnieniami, eksport kodu QR i usuwanie pozostają dostępne wyłącznie dla właściciela.",
+          "Ikona udostępniania oznacza rośliny udostępnione Tobie. Dane rośliny, przypomnienia, urządzenia, ustawienia pompy i zasady udostępniania zmienia wyłącznie właściciel. Twoje przypomnienia nie pojawiają się na ekranie Przypomnienia drugiej osoby. Przy dostępie tylko do podglądu nie można oznaczać zadań jako wykonane.",
           "W menu własnej rośliny wybierz Udostępnij rośliny lub Zarządzaj udostępnianiem. Przy dodawaniu można zaznaczyć kilka roślin, a przy edycji wybór rośliny jest zablokowany."
         ]
       }

@@ -5,7 +5,7 @@
       {
         "heading": "Partager des plantes avec un contact",
         "body": [
-          "Ouvrez Profil, Partage, puis Plantes partagées. La barre fixe au-dessus de la liste permet de voir toutes les plantes, celles partagées par vous ou avec vous. Le menu + ouvre le partage de plantes. Vous pouvez aussi passer par le menu d’une de vos plantes ou les détails d’un contact.",
+          "Profil → Compte → Partage → Plantes partagées. Toutes / Par moi / Avec moi. + → Partager des plantes.",
           "Lors de l'ajout du partage, sélectionnez une ou plusieurs plantes et les contacts qui doivent y avoir accès. Chaque contact peut disposer d'un accès en lecture seule ou d'une autorisation pour effectuer des tâches, avec une date de fin facultative. Les autorisations existantes sont affichées avant l'enregistrement.",
           "Modifier ou effacer la date de fin l’applique à tous les contacts cochés de toutes les plantes choisies. Les dates différentes restent inchangées tant que vous ne les modifiez pas. Décocher un contact existant lui retire l’accès à l’enregistrement."
         ]
@@ -38,7 +38,7 @@
         "body": [
           "E-mail et Téléphone proposent aussi une case pour les tâches prévues aujourd’hui sur les plantes partagées avec vous. Ces options sont désactivées au départ, indépendantes des récapitulatifs de vos plantes et utilisent la même heure d’envoi que le canal concerné. Si les deux options sont activées, les tâches de vos plantes et des plantes partagées avec vous sont réunies dans un seul message quotidien par canal.",
           "Ces rappels concernent les partages actifs, en lecture seule comme avec autorisation de terminer des tâches. L’accès est revérifié avant l’envoi. L’expiration du partage, le retrait de l’accès ou la suppression du contact mettent fin aux rappels.",
-          "La section Partage concerne un autre événement : quelqu’un termine une tâche pour une plante qui vous appartient. Ses cases e-mail et push sont désactivées au départ et s’appliquent à toutes les plantes que vous partagez. Ces notifications suivent la réalisation de la tâche, sans attendre le récapitulatif quotidien. Il s’agit d’un réglage du compte, pas d’une option propre à chaque partage."
+          "En bas des sections Email et Téléphone, vous pouvez activer les alertes lorsqu’une autre personne termine une tâche pour une plante qui vous appartient. Ces options générales sont désactivées par défaut et les alertes sont envoyées après la réalisation, indépendamment du récapitulatif quotidien."
         ]
       }
     ]

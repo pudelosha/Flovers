@@ -34,6 +34,7 @@ import {
   fetchPlantDetailsByQr,
 } from '../../../api/services/plant-details.service';
 import { sendQrCodeByEmail } from '../../../api/services/qr-code.service';
+import { fetchPlantProfile } from '../../../api/services/plant-definitions.service';
 
 import type {
   PlantMetricKey,
@@ -133,6 +134,10 @@ export default function PlantDetailsScreen() {
   const [detailsRevision, setDetailsRevision] = useState(0);
   const [readyImageKey, setReadyImageKey] = useState<string | null>(null);
   const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
+  const [definitionData, setDefinitionData] = useState<{
+    profile: Awaited<ReturnType<typeof fetchPlantProfile>> | null;
+    error: string | null;
+  }>({ profile: null, error: null });
   const [error, setError] = useState<string>('');
 
   const [postponeTask, setPostponeTask] = useState<PostponeTaskTarget | null>(
@@ -301,16 +306,28 @@ export default function PlantDetailsScreen() {
       );
     }
 
-    if (qrFromNav) {
-      const full = await fetchPlantDetailsByQr(qrFromNav);
-      setDetails(full);
-      setDetailsRevision(value => value + 1);
-    } else if (idFromNav) {
-      const full = await fetchPlantDetailsById(Number(idFromNav));
-      setDetails(full);
-      setDetailsRevision(value => value + 1);
+    const full = qrFromNav
+      ? await fetchPlantDetailsByQr(qrFromNav)
+      : await fetchPlantDetailsById(Number(idFromNav));
+    let definition: typeof definitionData = { profile: null, error: null };
+    const definitionId = full.plant.plant_definition?.id;
+    if (definitionId) {
+      try {
+        definition.profile = await fetchPlantProfile(definitionId, {
+          auth: true,
+          lang: String(currentLanguage || 'en').trim().toLowerCase().split('-')[0],
+        });
+      } catch (e: any) {
+        definition.error = e?.message || tr(
+          'plantDetailsModals.definition.loadFailed',
+          'Failed to load plant definition.',
+        );
+      }
     }
-  }, [qrFromNav, idFromNav, tr]);
+    setDefinitionData(definition);
+    setDetails(full);
+    setDetailsRevision(value => value + 1);
+  }, [qrFromNav, idFromNav, tr, currentLanguage]);
 
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || '';
@@ -1033,6 +1050,7 @@ export default function PlantDetailsScreen() {
                   <PlantDefinitionModal
                     visible
                     embedded
+                    definitionData={definitionData}
                     onClose={() => {}}
                     plantDefinitionId={details.plant.plant_definition.id}
                   />

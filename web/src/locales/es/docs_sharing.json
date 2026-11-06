@@ -5,7 +5,7 @@
       {
         "heading": "Compartir plantas con un contacto",
         "body": [
-          "Abre Perfil, Compartir y Plantas compartidas. La barra fija sobre la lista muestra todas las plantas, las compartidas por ti o contigo. El menú + abre Compartir plantas. También puedes empezar desde el menú de una planta tuya o los detalles de un contacto.",
+          "Perfil → Cuenta → Compartir → Plantas compartidas. Todas / Comparto / Conmigo. + → Compartir plantas.",
           "Al agregar compartir, seleccione una o más plantas y los contactos que deberían tener acceso. Cada contacto puede tener acceso de solo visualización o permiso para completar tareas, con una fecha de finalización opcional. Los permisos existentes se muestran antes de guardar.",
           "Cambiar o borrar la fecha final afecta a todos los contactos marcados de todas las plantas elegidas. Las fechas distintas se conservan si no las modificas. Desmarcar un contacto existente le retira el acceso al guardar."
         ]
@@ -38,7 +38,7 @@
         "body": [
           "Correo electrónico y Teléfono incluyen además una casilla para las tareas previstas para hoy en plantas compartidas contigo. Estas opciones están desactivadas inicialmente, funcionan independientemente de los resúmenes de tus plantas y usan la misma hora del canal correspondiente. Si activas ambas opciones, las tareas de tus plantas y de las compartidas contigo se reúnen en un único mensaje diario por canal.",
           "Los avisos incluyen los accesos activos de solo lectura y los que permiten completar tareas. El acceso se comprueba de nuevo antes del envío. Si el acceso caduca, se revoca o se elimina el contacto, dejan de enviarse estos avisos.",
-          "La sección Plantas compartidas cubre otro caso: alguien completa una tarea de una planta que te pertenece. Sus casillas de correo y push están desactivadas inicialmente y se aplican a todas las plantas que compartes. El aviso se envía después de completar la tarea, sin esperar al resumen diario. Es una preferencia de la cuenta, no de cada planta compartida."
+          "Al final de Email y Teléfono puedes activar avisos cuando otra persona complete una tarea de una planta tuya. Estas opciones afectan a toda la cuenta, están desactivadas por defecto y envían avisos tras completar la tarea, independientemente del resumen diario."
         ]
       }
     ]

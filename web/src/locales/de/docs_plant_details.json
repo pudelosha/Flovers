@@ -6,7 +6,8 @@
         "heading": "Alles zu einer Pflanze an einem Ort",
         "body": [
           "In den Pflanzendetails kannst du eine einzelne deiner Pflanzen ansehen und verwalten.",
-          "Hier findest du ihre Angaben, Erinnerungen, Aufgaben und, falls vorhanden, Sensormesswerte. Schnellaktionen führen dich zu weiteren Ansichten dieser Pflanze."
+          "Hier findest du ihre Angaben, Erinnerungen, Aufgaben und, falls vorhanden, Sensormesswerte. Schnellaktionen führen dich zu weiteren Ansichten dieser Pflanze.",
+          "Über dem überlappenden Feld stehen Info, Aufgaben und Messwerte. Info zeigt deine Pflanzendaten und gegebenenfalls eine eigene Kachel zur Pflanzendefinition. Messwerte zeigt Gerätedaten oder einen Hinweis, dass kein Gerät verbunden ist."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Aktivität",
+        "heading": "Aufgaben",
         "body": [
-          "Aktivität ist die zweite Kachel direkt unter den Pflanzeninformationen. Sie zeigt bis zu fünf zuletzt erledigte Pflegeaufgaben, die neueste zuerst, mit ausführender Person sowie lokalem Datum und Uhrzeit im Datumsformat deines Profils. Die Liste umfasst Besitzer und betreuende Kontakte und ist nur mit aktuellem Pflanzenzugriff sichtbar. Sie ist schreibgeschützt, enthält keine Fotos und zeigt rückgängig gemachte Abschlüsse nicht mehr an."
+          "Aufgaben zeigt zuerst offene Aufgaben und darunter die 10 neuesten Abschlüsse, ohne eigene Überschriften. Offene Aufgaben haben Aktionsmenüs. Erledigte zeigen Häkchen, Datum und Person; nur ihre Symbole sind durch eine senkrechte Linie verbunden. Fotos fehlen hier, rückgängig gemachte Abschlüsse verschwinden."
         ]
       },
       {
         "heading": "Aktionen im Drei-Punkte-Menü",
         "body": [
           "Das Drei-Punkte-Menü neben der Pflanzenüberschrift bietet weitere Aktionen für deine Pflanze.",
-          "Du kannst das zugeordnete Pflanzenprofil ansehen, Pflanzenangaben bearbeiten, das Bild ändern oder die Erinnerungen für diese Pflanze öffnen.",
+          "Pflanze bearbeiten → Pflanze teilen / Freigaben verwalten → Bild ändern → QR-Code → Erinnerungen anzeigen → Pflegetagebuch.",
           "Nach dem Speichern eines neuen Fotos wird die bisherige Serverkopie gelöscht. Wenn du dein eigenes Foto entfernst, erscheint wieder das Katalogbild, sofern eines vorhanden ist.",
           "Verschiebe das Foto mit dem Finger und passe die Vergrößerung mit zwei Fingern oder den Zoomtasten an. Der feste rote Rahmen zeigt den ungefähren Ausschnitt in den Pflanzendetails, der blaue den Ausschnitt auf den Pflanzenkacheln. Der Ausschnitt wird mit dem Foto gespeichert und auch für geteilte Pflanzen verwendet.",
           "Dieselben Einstellungen findest du unter Bild ändern. Tippe auf Speichern, um den Ausschnitt eines vorhandenen Fotos anzupassen, ohne eine weitere Kopie hochzuladen."
@@ -36,16 +37,16 @@
       {
         "heading": "Das Pflanzenprofil",
         "body": [
-          "Wenn du ein Pflanzenprofil aus der Flovers-Datenbank ausgewählt hast, kannst du es in einer eigenen Ansicht öffnen.",
+          "Info → Pflanzendefinition. Über dem überlappenden Feld stehen Info, Aufgaben und Messwerte. Info zeigt deine Pflanzendaten und gegebenenfalls eine eigene Kachel zur Pflanzendefinition. Messwerte zeigt Gerätedaten oder einen Hinweis, dass kein Gerät verbunden ist.",
           "Dort findest du Informationen zur Art: Beschreibung, Pflegeanforderungen, Merkmale, Pflegeaufwand, Temperaturbereich, Luftfeuchtigkeit, Giftigkeit und Wuchsform.",
           "Die Hinweise im Pflanzenprofil sind allgemein. Berücksichtige bei der Pflege immer auch die tatsächlichen Bedingungen bei dir."
         ]
       },
       {
-        "heading": "Erinnerungen und Aufgaben",
+        "heading": "Aufgaben",
         "body": [
-          "Im Bereich „Erinnerungen“ siehst du alle aktiven Erinnerungen für diese Pflanze.",
-          "Im Drei-Punkte-Menü einer Erinnerung kannst du die Aufgabe erledigen, die Erinnerung bearbeiten oder das Pflegetagebuch öffnen.",
+          "„Als erledigt markieren“: Schließt die Aufgabe ab. Auf Wunsch kannst du eine Notiz zum Pflegeverlauf hinzufügen.",
+          "Als abgeschlossen markieren / Erinnerung bearbeiten / Pflegetagebuch.",
           "Beim Erledigen einer Aufgabe kannst du eine Notiz hinzufügen. Sie wird Teil des Pflegeverlaufs deiner Pflanze."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "Schnellzugriff per QR-Code",
         "body": [
-          "Jede Pflanze hat einen eigenen QR-Code, der unten in den Pflanzendetails angezeigt wird.",
+          "Pflanzendetails → ⋯ → QR-Code.",
           "Wenn du ihn mit dem Scanner in der App einliest, öffnen sich direkt die Details dieser Pflanze.",
           "Du kannst den Code auf deinem Gerät speichern oder per E-Mail versenden, anschließend ausdrucken und am Topf anbringen.",
           "Ein Flovers-QR-Code enthält einen eindeutigen, nicht lesbaren Pflanzenverweis statt der numerischen Datenbank-ID."
@@ -78,7 +79,7 @@
       {
         "heading": "Details einer gemeinsamen Pflanze",
         "body": [
-          "Eine erhaltene Pflanze ist mit „Geteilt“ gekennzeichnet. Sie können dessen Informationen, den Pflegeverlauf und die verknüpften Sensormesswerte anzeigen. Die Erinnerungsdefinitionskachel und die Bearbeitungssteuerelemente bleiben nur dem Besitzer vorbehalten. Erledigen Sie zulässige gemeinsame Aufgaben auf der Startseite."
+          "Nur der Eigentümer kann Pflanzendetails, Erinnerungsdefinitionen, Geräte, Pumpeneinstellungen oder Freigabeberechtigungen ändern. Geteilte Erinnerungsdefinitionen werden nicht auf dem Erinnerungsbildschirm des Empfängers angezeigt. Der Nur-Lese-Zugriff ermöglicht niemals den Abschluss einer Aufgabe."
         ]
       },
       {

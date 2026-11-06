@@ -6,7 +6,8 @@
         "heading": "Wszystko o wybranej roślinie",
         "body": [
           "W Szczegółach rośliny znajdziesz informacje o wybranej roślinie i opcje jej edycji.",
-          "W jednym miejscu zobaczysz jej dane, przypomnienia, zadania i dostępne odczyty z czujników oraz skróty do powiązanych ekranów."
+          "W jednym miejscu zobaczysz jej dane, przypomnienia, zadania i dostępne odczyty z czujników oraz skróty do powiązanych ekranów.",
+          "Nad panelem znajdują się zakładki Info, Zadania i Odczyty. Info pokazuje Twoje dane rośliny oraz osobny kafelek definicji, jeśli ją przypisano. Odczyty pokazują wartości z urządzenia albo informację o braku urządzenia."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Aktywność",
+        "heading": "Zadania",
         "body": [
-          "Aktywność to drugi kafelek, tuż pod głównymi informacjami o roślinie. Pokazuje do pięciu ostatnio wykonanych zadań pielęgnacyjnych — od najnowszego — wraz z osobą, która je wykonała, oraz lokalną datą i godziną. Format daty odpowiada ustawieniom profilu. Lista obejmuje właściciela i osoby opiekujące się udostępnioną rośliną; widzą ją tylko osoby mające obecnie dostęp do rośliny. To prosty podgląd bez dodatkowych akcji i zdjęć. Cofnięte wykonania znikają z listy."
+          "W Zadaniach najpierw widać oczekujące zadania, a poniżej 10 ostatnio wykonanych, bez osobnych nagłówków. Oczekujące mają menu działań. Wykonane pokazują znacznik, datę i osobę; pionowa linia łączy tylko ikony wykonanych zadań. Zdjęcia nie są tu uwzględniane, a cofnięte wykonania znikają."
         ]
       },
       {
         "heading": "Menu rośliny",
         "body": [
           "Dotknij trzech kropek przy nagłówku rośliny, aby otworzyć jej menu.",
-          "Możesz tu otworzyć opis gatunku, jeśli jest przypisany, edytować dane rośliny, zmienić zdjęcie lub przejść do Przypomnień dotyczących tej rośliny.",
+          "Edytuj roślinę → Udostępnij roślinę / Zarządzaj udostępnianiem → Zmień obraz → Kod QR → Pokaż przypomnienia → Dziennik zadań.",
           "Po zapisaniu nowego zdjęcia poprzednia kopia jest usuwana z serwera. Usunięcie własnego zdjęcia przywraca zdjęcie z katalogu, jeśli roślina je ma.",
           "Przesuń zdjęcie palcem i dopasuj powiększenie dwoma palcami lub przyciskami. Czerwona ramka pokazuje przybliżony kadr w szczegółach rośliny, a niebieska — na kafelkach listy roślin. Wybrany kadr zapisuje się razem ze zdjęciem i jest widoczny także przy udostępnionych roślinach.",
           "Te same opcje kadrowania są dostępne w oknie Zmień zdjęcie. Naciśnij Zapisz, aby dopasować kadr istniejącego zdjęcia bez przesyłania kolejnej kopii."
@@ -36,16 +37,16 @@
       {
         "heading": "Opis gatunku",
         "body": [
-          "Jeśli roślina jest powiązana z gatunkiem z bazy Flovers, możesz otworzyć jego opis.",
+          "Info → Definicja rośliny. Nad panelem znajdują się zakładki Info, Zadania i Odczyty. Info pokazuje Twoje dane rośliny oraz osobny kafelek definicji, jeśli ją przypisano. Odczyty pokazują wartości z urządzenia albo informację o braku urządzenia.",
           "Znajdziesz tam cechy gatunku, wymagania pielęgnacyjne, poziom trudności uprawy, zalecane temperatury i wilgotność, a także informacje o toksyczności i sposobie wzrostu.",
           "To ogólne wskazówki — dopasuj je do warunków, w których rośnie twoja roślina."
         ]
       },
       {
-        "heading": "Przypomnienia i zadania",
+        "heading": "Zadania",
         "body": [
-          "W sekcji Przypomnienia zobaczysz wszystkie aktywne przypomnienia dla tej rośliny.",
-          "Menu trzech kropek przy przypomnieniu pozwala wykonać zadanie, edytować przypomnienie lub otworzyć Dziennik zadań.",
+          "Oznacz jako wykonane: kończy zadanie i pozwala dodać notatkę do historii pielęgnacji.",
+          "Oznacz jako ukończone / Edytuj przypomnienie / Dziennik zadań.",
           "Oznaczając zadanie jako wykonane, możesz dodać notatkę. Zostanie ona zapisana w historii pielęgnacji."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "Kod QR i szybki dostęp",
         "body": [
-          "Na dole ekranu znajdziesz indywidualny kod QR rośliny.",
+          "Szczegóły rośliny → ⋯ → Kod QR.",
           "Zeskanuj go w Skanerze, aby od razu otworzyć Szczegóły tej rośliny.",
           "Kod możesz zapisać na urządzeniu lub wysłać e-mailem, a następnie wydrukować i przykleić do doniczki.",
           "Kod QR zawiera unikalne odwołanie do rośliny, a nie jej liczbowy identyfikator w bazie danych."
@@ -78,7 +79,7 @@
       {
         "heading": "Szczegóły udostępnionej rośliny",
         "body": [
-          "Roślina udostępniona Tobie ma odpowiednie oznaczenie. Możesz przeglądać jej dane, historię pielęgnacji i odczyty z czujników. Kafelek przypomnień i opcje edycji są dostępne tylko dla właściciela. Zadania, na które masz uprawnienia, oznaczysz jako wykonane na ekranie Start."
+          "Dane rośliny, przypomnienia, urządzenia, ustawienia pompy i zasady udostępniania zmienia wyłącznie właściciel. Twoje przypomnienia nie pojawiają się na ekranie Przypomnienia drugiej osoby. Przy dostępie tylko do podglądu nie można oznaczać zadań jako wykonane."
         ]
       },
       {

@@ -127,7 +127,7 @@
       "Imposta supports_manual_duration su true solo se il firmware legge duration_seconds e lo usa per l’irrigazione manuale. L’esempio generato lo supporta. L’irrigazione automatica mantiene la durata PUMP_RUN_MS dello sketch.",
       "Il firmware generato invia letture ogni 60 minuti per impostazione predefinita. Nel modulo del dispositivo puoi scegliere da 1 a 1440 minuti interi, poi generare e caricare il codice aggiornato. Le richieste di irrigazione manuale vengono controllate separatamente, di norma ogni minuto."
     ],
-    "adjustIntro": "Prima del caricamento controlla Wi-Fi, pin, calibrazione dell’umidità, PUMP_RUN_MS e intervalli di controllo. Configura la pausa automatica online nel modulo del dispositivo.",
+    "adjustIntro": "Prima del caricamento controlla Wi-Fi, pin, calibrazione dell’umidità, PUMP_RUN_MS e intervalli di controllo. Configura la pausa automatica online nel modulo del dispositivo. La durata automatica e manuale della pompa è di 20 secondi per impostazione iniziale, con un intervallo di 1–300 secondi. Imposta la durata automatica nel modulo del dispositivo, poi genera e carica il nuovo codice sulla scheda. Quella manuale si sceglie per ogni richiesta.",
     "adjustItems": [
       "nome della rete (SSID) e password Wi-Fi",
       "SDA_PIN e SCL_PIN",

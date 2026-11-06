@@ -127,7 +127,7 @@
       "Indica supports_manual_duration: true solo si el firmware lee duration_seconds para el riego manual. El ejemplo generado lo admite. El riego automático mantiene PUMP_RUN_MS del sketch.",
       "El código generado envía lecturas cada 60 minutos por defecto. En el formulario del dispositivo puedes elegir de 1 a 1440 minutos enteros y luego generar y subir el código actualizado. Las solicitudes de riego manual se comprueban por separado, una vez por minuto por defecto."
     ],
-    "adjustIntro": "Antes de subir el programa revisa Wi-Fi, pines, calibración de humedad, PUMP_RUN_MS e intervalos de consulta. Configura la pausa automática en línea en el formulario del dispositivo.",
+    "adjustIntro": "Antes de subir el programa revisa Wi-Fi, pines, calibración de humedad, PUMP_RUN_MS e intervalos de consulta. Configura la pausa automática en línea en el formulario del dispositivo. La duración automática y manual de la bomba es de 20 segundos por defecto, ajustable entre 1 y 300 segundos. Configura la duración automática en el formulario del dispositivo y después genera y carga el nuevo código. La duración manual se elige en cada solicitud.",
     "adjustItems": [
       "SSID y contraseña de Wi-Fi",
       "SDA_PIN y SCL_PIN",

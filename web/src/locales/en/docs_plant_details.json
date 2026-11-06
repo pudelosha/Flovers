@@ -6,7 +6,8 @@
         "heading": "Purpose of this screen",
         "body": [
           "The Plant Details screen is the central place to view and manage a single plant instance created by the user.",
-          "It combines plant-specific information, reminders, task actions, sensor readings (if available), and quick navigation tools related to that plant."
+          "It combines plant-specific information, reminders, task actions, sensor readings (if available), and quick navigation tools related to that plant.",
+          "Use Info, Tasks and Readings above the overlapping panel. Info shows your plant details and, when linked, a separate Plant Definition tile. Readings shows the linked device values or a no-device message."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Activity",
+        "heading": "Tasks",
         "body": [
-          "Activity is the second tile, directly below the main plant information. It shows up to five recent completed care tasks, newest first, with the person who completed them and the local date and time in your profile’s date format. It includes the owner and shared caregivers and is visible only to users with current access to the plant. This is a read-only summary; photos are not included, and undone completions disappear."
+          "Tasks combines pending tasks first and the 10 latest completions below, without separate headings. Pending rows have action menus. Completed rows show a check, completion date and person; a vertical line connects only completed-task icons. Photos are not included, and undone completions disappear."
         ]
       },
       {
         "heading": "Plant-level actions (3-dot menu)",
         "body": [
           "The 3-dot menu associated with the plant header provides additional actions related to the plant itself.",
-          "Available actions include viewing the Plant Definition (if the plant is linked to one), editing plant details, changing the plant image, and navigating to Reminders filtered for this plant.",
+          "Edit plant → Share plant / Manage sharing → Change image → QR Code → Show reminders → Task Journal.",
           "Replacing a photo removes the previous server copy after the new photo is saved. Removing the custom photo restores the catalogue image when one is available.",
           "Drag the photo to reposition it and pinch or use the zoom buttons to change its scale. The fixed red frame approximates Plant Details, and the blue frame approximates Plants list tiles. Your framing is saved with the photo and is also used for shared plants.",
           "The same framing controls are available in Change image. Press Save to adjust an existing photo without uploading another copy."
@@ -36,16 +37,16 @@
       {
         "heading": "Plant Definition",
         "body": [
-          "If the plant is linked to a Plant Definition from the Flovers database, the user can open a dedicated Plant Definition view.",
+          "Info → Plant definition. Use Info, Tasks and Readings above the overlapping panel. Info shows your plant details and, when linked, a separate Plant Definition tile. Readings shows the linked device values or a no-device message.",
           "This view displays species-level information such as plant description, care preferences, traits, difficulty level, temperature range, humidity, toxicity, and growth characteristics.",
           "Plant Definitions provide general guidance and should be interpreted in the context of the user’s actual environment."
         ]
       },
       {
-        "heading": "Reminders and tasks",
+        "heading": "Tasks",
         "body": [
-          "The Reminders section shows all active reminders associated with this plant.",
-          "A reminder’s three-dot menu lets you complete its task, edit the reminder or open Task Journal.",
+          "Mark as complete: closes the task and allows you to optionally add a note, helping you build a detailed care history.",
+          "Mark as complete / Edit reminder / Task Journal.",
           "Completing a task may include adding a note, which becomes part of the plant’s care history."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "QR code and quick access",
         "body": [
-          "Each plant has a unique QR code displayed at the bottom of the screen.",
+          "Plant details → ⋯ → QR Code.",
           "Scanning this code using the Scanner view redirects the user directly to this Plant Details screen.",
           "The QR code can be saved to the device or emailed, making it easy to print and attach to a plant pot for quick access.",
           "A Flovers QR code contains a unique, opaque reference to a plant, rather than its numeric database ID."
@@ -78,7 +79,7 @@
       {
         "heading": "Details of a shared plant",
         "body": [
-          "A received plant is marked Shared. You can view its information, care history and linked sensor readings. The reminder-definition tile and editing controls remain owner-only. Complete permitted shared tasks on Home."
+          "Only the owner can change plant details, reminder definitions, devices, pump settings or sharing permissions. Shared reminder definitions do not appear on the recipient’s Reminders screen. View-only access never allows task completion."
         ]
       },
       {

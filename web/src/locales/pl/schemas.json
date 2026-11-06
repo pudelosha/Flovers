@@ -127,7 +127,7 @@
       "Ustaw supports_manual_duration na true tylko wtedy, gdy program odczytuje duration_seconds i stosuje ten czas do ręcznego podlewania. Wygenerowany przykład to obsługuje. Automatyczne podlewanie nadal używa PUMP_RUN_MS ze szkicu.",
       "Wygenerowany program domyślnie przesyła odczyty co 60 minut. W formularzu urządzenia ustaw od 1 do 1440 pełnych minut, a następnie wygeneruj i wgraj nowy kod. Zaplanowane ręczne podlewanie jest sprawdzane osobno, domyślnie co minutę."
     ],
-    "adjustIntro": "Przed wgraniem sprawdź dane Wi-Fi, piny, kalibrację wilgotności, PUMP_RUN_MS i odstępy sprawdzania. Przerwę między automatycznymi podlewaniami ustaw w formularzu urządzenia.",
+    "adjustIntro": "Przed wgraniem sprawdź dane Wi-Fi, piny, kalibrację wilgotności, PUMP_RUN_MS i odstępy sprawdzania. Przerwę między automatycznymi podlewaniami ustaw w formularzu urządzenia. Czas automatycznego i ręcznego podlewania domyślnie wynosi 20 sekund; zakres to 1–300 sekund. Czas automatyczny ustaw w formularzu urządzenia, a potem wygeneruj i wgraj nowy kod na płytkę. Czas ręczny wybierasz osobno dla każdego zlecenia podlewania.",
     "adjustItems": [
       "nazwa sieci (SSID) i hasło Wi-Fi",
       "SDA_PIN i SCL_PIN",

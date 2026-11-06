@@ -128,7 +128,7 @@
       "Setel supports_manual_duration ke true hanya jika firmware membaca duration_seconds untuk penyiraman manual. Contoh hasil generasi mendukungnya. Penyiraman otomatis tetap menggunakan PUMP_RUN_MS dari sketch.",
       "Kode yang dibuat mengirim pembacaan setiap 60 menit secara bawaan. Atur 1–1440 menit penuh di formulir perangkat, lalu buat dan unggah kode terbaru. Permintaan penyiraman manual diperiksa secara terpisah, setiap satu menit secara bawaan."
     ],
-    "adjustIntro": "Sebelum mengunggah, periksa Wi-Fi, pin, kalibrasi kelembapan, PUMP_RUN_MS, dan interval pemeriksaan. Atur jeda otomatis daring di formulir perangkat.",
+    "adjustIntro": "Sebelum mengunggah, periksa Wi-Fi, pin, kalibrasi kelembapan, PUMP_RUN_MS, dan interval pemeriksaan. Atur jeda otomatis daring di formulir perangkat. Durasi pompa otomatis dan manual awalnya 20 detik, dengan rentang 1–300 detik. Atur durasi otomatis di formulir perangkat, lalu buat dan unggah kode baru ke papan. Durasi manual dipilih untuk setiap permintaan penyiraman.",
     "adjustItems": [
       "Wi-Fi SSID dan kata sandi",
       "SDA_PIN dan SCL_PIN",

@@ -139,7 +139,8 @@
           "Si l’humidité est sous le seuil et que l’arrosage automatique est activé, la carte peut démarrer la pompe après accord du serveur.",
           "Cela demande une pompe et un capteur d’humidité activés, le démarrage automatique autorisé, un seuil valide, un appareil actif et la confirmation du serveur.",
           "Réglez la pause d’arrosage automatique dans le formulaire de l’appareil : 1–32767 minutes, 60 par défaut. La carte la récupère lors d’une prochaine requête et le serveur la contrôle aussi. AUTO_PUMP_MIN_INTERVAL_MS est uniquement une valeur locale de secours.",
-          "Une demande manuelle est prioritaire. Si elle est exécutée, l’arrosage automatique n’est pas effectué pendant ce même cycle."
+          "Une demande manuelle est prioritaire. Si elle est exécutée, l’arrosage automatique n’est pas effectué pendant ce même cycle.",
+          "La pompe fonctionne par défaut pendant 20 secondes en mode automatique ou manuel, avec une durée autorisée de 1 à 300 secondes. Réglez la durée automatique dans le formulaire de l’appareil, puis générez et téléversez le nouveau code. La durée manuelle se choisit pour chaque demande."
         ]
       },
       {

@@ -6,7 +6,8 @@
         "heading": "Todo lo relacionado con una planta",
         "body": [
           "Esta pantalla reúne la información y las acciones para una de tus plantas.",
-          "Aquí encontrarás sus datos, recordatorios, tareas y lecturas de sensores, si tiene un dispositivo asociado, además de accesos a otras pantallas relacionadas."
+          "Aquí encontrarás sus datos, recordatorios, tareas y lecturas de sensores, si tiene un dispositivo asociado, además de accesos a otras pantallas relacionadas.",
+          "Sobre el panel están Info, Tareas y Lecturas. Info muestra tus datos de la planta y una ficha de definición separada si está vinculada. Lecturas muestra los valores del dispositivo o indica que no hay uno vinculado."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Actividad",
+        "heading": "Tareas",
         "body": [
-          "Actividad es la segunda tarjeta, justo debajo de la información principal de la planta. Muestra hasta cinco tareas de cuidado completadas, de la más reciente a la más antigua, con quién las realizó y la fecha y hora locales en el formato del perfil. Incluye al propietario y a los cuidadores compartidos y solo es visible con acceso actual a la planta. Es un resumen de solo lectura, sin fotos; las finalizaciones deshechas desaparecen."
+          "Tareas muestra primero las pendientes y después las últimas 10 completadas, sin encabezados separados. Las pendientes tienen menú. Las completadas muestran marca, fecha y persona; una línea vertical conecta solo sus iconos. No incluye fotos y las finalizaciones deshechas desaparecen."
         ]
       },
       {
         "heading": "Acciones del menú de tres puntos",
         "body": [
           "El menú junto al título ofrece más acciones para esa planta.",
-          "Puedes consultar la ficha de especie asociada, editar los datos, cambiar la imagen o abrir sus recordatorios.",
+          "Editar planta → Compartir planta / Gestionar acceso → Cambiar imagen → Código QR → Mostrar recordatorios → Diario de tareas.",
           "Al guardar la nueva foto, se elimina del servidor la copia anterior. Al quitar tu foto, vuelve a mostrarse la imagen del catálogo, si la hay.",
           "Arrastra la foto para moverla y ajusta el zoom con dos dedos o con los botones. El marco rojo fijo indica el área aproximada que se verá en los detalles de la planta, y el azul en las tarjetas de la lista de plantas. El encuadre se guarda con la foto y también se aplica a las plantas compartidas.",
           "Los mismos controles están disponibles en Cambiar imagen. Pulsa Guardar para ajustar el encuadre de una foto existente sin subir otra copia."
@@ -36,16 +37,16 @@
       {
         "heading": "La ficha de especie",
         "body": [
-          "Si has elegido una ficha de la base Flovers, puedes abrirla en una pantalla propia.",
+          "Info → Definición de la planta. Sobre el panel están Info, Tareas y Lecturas. Info muestra tus datos de la planta y una ficha de definición separada si está vinculada. Lecturas muestra los valores del dispositivo o indica que no hay uno vinculado.",
           "La ficha describe la especie y sus necesidades: características, dificultad de cuidado, temperaturas, humedad del aire, toxicidad y crecimiento.",
           "Sus recomendaciones son generales. Ten siempre en cuenta las condiciones reales de tu planta."
         ]
       },
       {
-        "heading": "Recordatorios y tareas",
+        "heading": "Tareas",
         "body": [
-          "La sección «Recordatorios» muestra los recordatorios activos de esa planta.",
-          "El menú de tres puntos de un recordatorio permite completar la tarea, editar el recordatorio o abrir el Diario de tareas.",
+          "«Marcar como completada»: termina la tarea y te permite añadir una nota al historial de cuidados.",
+          "Marcar como completado / Editar recordatorio / Diario de tareas.",
           "Cuando completas una tarea, puedes añadir una nota que quedará en el historial de cuidados de la planta."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "Acceso rápido con el código QR",
         "body": [
-          "Cada planta tiene un código QR único que aparece al final de esta pantalla.",
+          "Detalles de la planta → ⋯ → Código QR.",
           "Si lo escaneas con el escáner de la aplicación, se abren directamente los detalles de esa planta.",
           "Puedes guardar el código en el teléfono o enviártelo por correo para imprimirlo y pegarlo en la maceta.",
           "Un QR de Flovers contiene una referencia única y opaca a la planta, no su identificador numérico en la base de datos."
@@ -78,7 +79,7 @@
       {
         "heading": "Detalles de una planta compartida",
         "body": [
-          "Una planta recibida está marcada como Compartida. Puede ver su información, historial de atención y lecturas de sensores vinculados. El mosaico de definición de recordatorio y los controles de edición siguen siendo propiedad exclusiva del propietario. Complete las tareas compartidas permitidas en Inicio."
+          "Solo el propietario puede cambiar los detalles de las plantas, las definiciones de recordatorios, los dispositivos, la configuración de la bomba o los permisos para compartir. Las definiciones de recordatorios compartidos no aparecen en la pantalla Recordatorios del destinatario. El acceso de solo lectura nunca permite completar la tarea."
         ]
       },
       {

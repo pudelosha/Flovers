@@ -21,6 +21,10 @@ import { fetchPlantProfile } from '../../../../api/services/plant-definitions.se
 import { TRAIT_ICON_BY_KEY } from '../../../create-plant/constants/create-plant.constants';
 
 type Props = {
+  definitionData?: {
+    profile: Awaited<ReturnType<typeof fetchPlantProfile>> | null;
+    error: string | null;
+  };
   embedded?: boolean;
   visible: boolean;
   onClose: () => void;
@@ -166,6 +170,7 @@ export default function PlantDefinitionModal({
   onClose,
   plantDefinitionId,
   embedded = false,
+  definitionData,
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -173,9 +178,9 @@ export default function PlantDefinitionModal({
 
   const preferredLang = normalizeLang(currentLanguage);
 
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState<string | null>(null);
-  const [profile, setProfile] = React.useState<any | null>(null);
+  const [loading, setLoading] = React.useState(!definitionData);
+  const [error, setError] = React.useState<string | null>(definitionData?.error ?? null);
+  const [profile, setProfile] = React.useState<any | null>(definitionData?.profile ?? null);
 
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -199,6 +204,13 @@ export default function PlantDefinitionModal({
 
     async function run() {
       if (!visible) return;
+
+      if (definitionData) {
+        setProfile(definitionData.profile);
+        setError(definitionData.error);
+        setLoading(false);
+        return;
+      }
 
       setProfile(null);
       setError(null);
@@ -242,7 +254,7 @@ export default function PlantDefinitionModal({
     return () => {
       cancelled = true;
     };
-  }, [visible, plantDefinitionId, tr, preferredLang]);
+  }, [visible, plantDefinitionId, tr, preferredLang, definitionData]);
 
   const name = (profile?.name ? String(profile.name) : '').trim();
   const latin = (profile?.latin ? String(profile.latin) : '').trim();

@@ -128,7 +128,7 @@
       "Set supports_manual_duration to true only if the firmware reads duration_seconds and uses it for manual watering. The generated example supports this. Automatic watering keeps the sketch’s PUMP_RUN_MS duration.",
       "Generated firmware sends readings every 60 minutes by default. Set an interval of 1–1440 whole minutes in the device form, then generate and upload the updated code. Manual watering checks run separately, once per minute by default."
     ],
-    "adjustIntro": "Review Wi-Fi credentials, pins, soil calibration, PUMP_RUN_MS and polling intervals before upload. Configure the online automatic-watering cooldown in the device form.",
+    "adjustIntro": "Review Wi-Fi credentials, pins, soil calibration, PUMP_RUN_MS and polling intervals before upload. Configure the online automatic-watering cooldown in the device form. Automatic and manual pump durations default to 20 seconds and allow 1–300 seconds. Set automatic runtime in Add/Edit device, then generate and upload new board code. Manual duration is chosen separately for each scheduled watering request.",
     "adjustItems": [
       "Wi-Fi SSID and password",
       "SDA_PIN and SCL_PIN",

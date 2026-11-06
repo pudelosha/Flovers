@@ -6,21 +6,22 @@
         "heading": "Toutes tes plantes au même endroit",
         "body": [
           "plantes affiche les plantes que vous possédez et les plantes que vos contacts ont partagées avec vous.",
-          "Chaque tuile ouvre les détails de la plante. Le menu à trois points affiche les actions autorisées par votre accès : les propriétaires gèrent leurs plantes et leur partage ; les destinataires voient la plante et son historique d’entretien."
+          "Touchez une carte pour ouvrir son menu noir, puis choisissez Détails de la plante. Ces cartes n’ont pas de bouton à trois points séparé."
         ]
       },
       {
         "heading": "Les informations sur les cartes",
         "body": [
-          "Chaque carte affiche le nom de ta plante, son emplacement et, si tu en as choisi une, le nom de la fiche d’espèce associée.",
-          "Touche la carte en dehors du menu à trois points pour ouvrir les détails de la plante."
+          "Les plantes s’affichent sur deux cartes photo par ligne. Un panneau superposé indique le nom, le nom latin et l’emplacement.",
+          "Touchez une carte pour ouvrir son menu noir, puis choisissez Détails de la plante. Ces cartes n’ont pas de bouton à trois points séparé."
         ]
       },
       {
-        "heading": "Les actions du menu à trois points",
+        "heading": "Actions sur la plante",
         "body": [
-          "Le menu de chaque carte propose des actions pour la plante correspondante :",
+          "Touchez une carte pour ouvrir son menu noir, puis choisissez Détails de la plante. Ces cartes n’ont pas de bouton à trois points séparé.",
           "« Modifier la plante » : ouvre l’écran de modification de ses informations et paramètres.",
+          "Partager une plante / Gérer le partage.",
           "« Afficher les rappels » : ouvre les rappels avec un filtre pour cette plante.",
           "Journal des tâches ouvre un écran consacré aux entrées de cette plante. Il remplace l’ancienne fenêtre du journal de la plante.",
           "« Afficher le code QR » : ouvre le code QR avec une courte explication. Tu peux l’enregistrer ou te l’envoyer par e-mail.",
@@ -60,7 +61,7 @@
       {
         "heading": "Plantes d'intérieur possédées et partagées",
         "body": [
-          "Les plantes incluent vos propres plantes et les plantes partagées avec vous. Les plantes reçues portent une étiquette Partagée. Leurs menus vous permettent d'afficher les détails et l'historique des soins, tandis que l'édition, la gestion des rappels, l'exportation et la suppression de QR restent réservées au propriétaire.",
+          "Une icône de partage identifie les plantes partagées avec vous. Seul le propriétaire peut modifier les détails des plantes, les définitions de rappel, les appareils, les paramètres de la pompe ou les autorisations de partage. Les définitions de rappels partagés n’apparaissent pas sur l’écran Rappels du destinataire. L'accès en visualisation seule ne permet jamais l'achèvement d'une tâche.",
           "Pour une plante possédée, choisissez Partager la plante ou Gérer le partage dans son menu. Le mode Ajouter permet plusieurs plantes ; la gestion du partage existant maintient sa plante verrouillée."
         ]
       }

@@ -127,7 +127,7 @@
       "Setze supports_manual_duration nur auf true, wenn die Firmware duration_seconds für manuelles Gießen auswertet. Das generierte Beispiel unterstützt dies. Automatisches Gießen nutzt weiterhin PUMP_RUN_MS aus dem Sketch.",
       "Die erzeugte Firmware sendet standardmäßig alle 60 Minuten. Im Geräteformular sind 1–1440 ganze Minuten möglich. Erzeuge nach einer Änderung neuen Code und lade ihn auf das Board. Manuelle Bewässerungsaufträge werden unabhängig davon standardmäßig jede Minute geprüft."
     ],
-    "adjustIntro": "Prüfe vor dem Hochladen WLAN-Zugang, Pins, Feuchtekalibrierung, PUMP_RUN_MS und Abfrageintervalle. Die Online-Gießpause wird im Geräteformular eingestellt.",
+    "adjustIntro": "Prüfe vor dem Hochladen WLAN-Zugang, Pins, Feuchtekalibrierung, PUMP_RUN_MS und Abfrageintervalle. Die Online-Gießpause wird im Geräteformular eingestellt. Automatische und manuelle Pumpenläufe dauern standardmäßig 20 Sekunden, zulässig sind 1–300 Sekunden. Stelle die automatische Dauer im Geräteformular ein und lade neu erzeugten Code auf die Platine. Die manuelle Dauer wird je Bewässerungsauftrag gewählt.",
     "adjustItems": [
       "WLAN-Name (SSID) und Passwort",
       "SDA_PIN und SCL_PIN",

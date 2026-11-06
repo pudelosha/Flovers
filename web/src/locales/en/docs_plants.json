@@ -6,21 +6,22 @@
         "heading": "Purpose of this screen",
         "body": [
           "Plants shows plants you own and plants that contacts have shared with you.",
-          "Each tile opens Plant Details. The three-dot menu shows actions allowed by your access: owners manage their plants and sharing; recipients view the plant and its care history."
+          "Tap a plant tile to open its black action menu, then choose Plant details. There is no separate three-dot button on these grid tiles."
         ]
       },
       {
         "heading": "Plant tiles (what you see on the list)",
         "body": [
-          "Each plant tile displays the plant name and (when available) the linked plant definition name (species) and the assigned Location.",
-          "Tapping the tile body (not the three-dot menu) navigates to the Plant Details screen."
+          "Plants uses two photo tiles per row. An overlapping panel shows the nickname, Latin name and location.",
+          "Tap a plant tile to open its black action menu, then choose Plant details. There is no separate three-dot button on these grid tiles."
         ]
       },
       {
-        "heading": "Three-dot menu (plant actions)",
+        "heading": "Plant actions",
         "body": [
-          "Each tile has a three-dot menu with actions for the selected plant:",
+          "Tap a plant tile to open its black action menu, then choose Plant details. There is no separate three-dot button on these grid tiles.",
           "Edit plant: opens the plant editor to update plant details and parameters.",
+          "Share plant / Manage sharing.",
           "Show reminders: navigates to the Reminders screen with a filter applied to show only reminders for the selected plant.",
           "Task Journal opens the Task Journal screen filtered to this plant. It replaces the old Plant Journal modal.",
           "Show QR code: opens a modal with the plant’s QR code, a short explanation, and options to save (download) or send it to your email.",
@@ -60,7 +61,7 @@
       {
         "heading": "Owned and shared plants",
         "body": [
-          "Plants includes your own plants and plants shared with you. Received plants carry a Shared label. Their menus let you view details and care history, while editing, reminder management, QR export and deletion remain owner-only.",
+          "A sharing icon identifies plants shared with you. Only the owner can change plant details, reminder definitions, devices, pump settings or sharing permissions. Shared reminder definitions do not appear on the recipient’s Reminders screen. View-only access never allows task completion.",
           "For an owned plant, choose Share plant or Manage sharing from its menu. Add mode allows multiple plants; managing existing sharing keeps its plant locked."
         ]
       }

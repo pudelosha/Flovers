@@ -6,21 +6,22 @@
         "heading": "Tujuan dari layar ini",
         "body": [
           "tanaman menunjukkan tanaman yang Anda miliki dan tanaman yang telah dibagikan oleh kontak kepada Anda.",
-          "Setiap ubin membuka Detail tanaman. Menu tiga titik menunjukkan tindakan yang diizinkan oleh akses Anda: pemilik mengelola tanamannya dan berbagi; penerima melihat tanaman dan riwayat perawatannya."
+          "Ketuk kartu tanaman untuk membuka menu hitam, lalu pilih Detail tanaman. Kartu kisi ini tidak memiliki tombol tiga titik terpisah."
         ]
       },
       {
         "heading": "Ubin tanaman hias (apa yang Anda lihat di daftar)",
         "body": [
-          "Setiap ubin tanaman hias menampilkan nama tanaman hias dan (jika tersedia) nama definisi tanaman hias (spesies) yang tertaut serta Lokasi yang ditetapkan.",
-          "Mengetuk badan ubin (bukan menu tiga titik) akan menavigasi ke layar Detail tanaman hias."
+          "Tanaman ditampilkan dalam dua kartu foto per baris. Panel yang menumpang menampilkan nama, nama Latin, dan lokasi.",
+          "Ketuk kartu tanaman untuk membuka menu hitam, lalu pilih Detail tanaman. Kartu kisi ini tidak memiliki tombol tiga titik terpisah."
         ]
       },
       {
-        "heading": "Menu tiga titik (tindakan tanaman hias)",
+        "heading": "Tindakan tanaman",
         "body": [
-          "Setiap ubin memiliki menu tiga titik dengan tindakan untuk tanaman hias yang dipilih:",
+          "Ketuk kartu tanaman untuk membuka menu hitam, lalu pilih Detail tanaman. Kartu kisi ini tidak memiliki tombol tiga titik terpisah.",
           "Edit tanaman hias: membuka editor tanaman hias untuk memperbarui detail dan parameter tanaman hias.",
+          "Bagikan tanaman / Kelola berbagi.",
           "Tampilkan pengingat: menavigasi ke layar Pengingat dengan filter yang diterapkan untuk hanya menampilkan pengingat untuk tanaman hias yang dipilih.",
           "Jurnal tugas membuka layar berisi entri tanaman ini saja, menggantikan jendela jurnal tanaman lama.",
           "Tampilkan kode QR: membuka modal dengan kode QR tanaman hias, penjelasan singkat, dan opsi untuk menyimpan (mengunduh) atau mengirimkannya ke email Anda.",
@@ -60,7 +61,7 @@
       {
         "heading": "Tanaman yang dimiliki dan dibagikan",
         "body": [
-          "tanaman termasuk tanaman Anda sendiri dan tanaman yang dibagikan kepada Anda. Tanaman yang diterima memiliki label Bersama. Menunya memungkinkan Anda melihat detail dan riwayat perawatan, sementara pengeditan, manajemen pengingat, ekspor dan penghapusan QR tetap menjadi milik pemilik.",
+          "Ikon berbagi menandai tanaman yang dibagikan kepada Anda. Hanya pemilik yang dapat mengubah detail tanaman, definisi pengingat, perangkat, pengaturan pompa, atau izin berbagi. Definisi pengingat bersama tidak muncul di layar Pengingat penerima. Akses hanya lihat tidak pernah mengizinkan penyelesaian tugas.",
           "Untuk tanaman milik, pilih Bagikan tanaman atau Kelola berbagi dari menunya. Mode Tambah memungkinkan banyak tanaman; mengelola pembagian yang ada membuat tanamannya tetap terkunci."
         ]
       }

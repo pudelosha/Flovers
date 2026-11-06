@@ -139,7 +139,8 @@
           "Se l’annaffiatura automatica è attiva e l’umidità è inferiore alla soglia, la scheda può avviare la pompa dopo che il server ha autorizzato la richiesta automatica.",
           "Per funzionare servono un dispositivo attivo, il supporto per la pompa, il sensore di umidità del terreno e l’avvio automatico attivati, una soglia valida e la conferma del server sulle impostazioni attuali della pompa.",
           "Imposta la pausa tra irrigazioni automatiche nel modulo del dispositivo: 1–32767 minuti, con 60 come valore predefinito. La scheda la riceve a una successiva richiesta e anche il server la controlla. AUTO_PUMP_MIN_INTERVAL_MS è solo un valore locale di ripiego.",
-          "L’annaffiatura manuale ha la precedenza. Se viene eseguita durante un ciclo, quella automatica viene saltata per quel ciclo."
+          "L’annaffiatura manuale ha la precedenza. Se viene eseguita durante un ciclo, quella automatica viene saltata per quel ciclo.",
+          "La durata automatica e manuale della pompa è di 20 secondi per impostazione iniziale, con un intervallo di 1–300 secondi. Imposta la durata automatica nel modulo del dispositivo, poi genera e carica il nuovo codice sulla scheda. Quella manuale si sceglie per ogni richiesta."
         ]
       },
       {

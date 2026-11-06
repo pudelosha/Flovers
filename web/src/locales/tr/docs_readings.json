@@ -139,7 +139,8 @@
           "Otomatik sulama etkinleştirilirse ve mevcut toprak nemi yapılandırılan eşiğin altındaysa kart, pompayı çalıştırabilir.",
           "Otomatik sulama, su pompası desteğinin etkinleştirilmesine, toprak nemi sensörünün etkinleştirilmesine, otomatik pompa başlatmanın etkinleştirilmesine, geçerli bir toprak nemi eşiğine, cihazın etkin olmasına ve mevcut pompa ayarlarının arka uç onayına bağlıdır.",
           "Otomatik sulama beklemesini cihaz formunda 1–32767 dakika olarak ayarlayın; varsayılan 60’tır. Kart bunu sonraki sorguda alır ve sunucu da uygular. AUTO_PUMP_MIN_INTERVAL_MS yalnızca yerel yedek değerdir.",
-          "Aynı döngüde manuel sulamanın otomatik sulamaya göre önceliği vardır. Manuel sulama çalışıyorsa, o döngü için otomatik sulama atlanır."
+          "Aynı döngüde manuel sulamanın otomatik sulamaya göre önceliği vardır. Manuel sulama çalışıyorsa, o döngü için otomatik sulama atlanır.",
+          "Otomatik ve manuel pompa süresi varsayılan olarak 20 saniyedir ve 1–300 saniye olabilir. Otomatik süreyi cihaz formunda ayarlayıp yeni kodu üretin ve karta yükleyin. Manuel süre her sulama isteği için ayrı seçilir."
         ]
       },
       {

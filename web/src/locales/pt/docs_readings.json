@@ -139,7 +139,8 @@
           "Se estiver ativa e a umidade estiver abaixo do limite, a placa pede autorização ao servidor antes de ligar a bomba.",
           "Para funcionar, a bomba, o sensor de umidade e a rega automática precisam estar ativados. Também são necessários um limite válido, um dispositivo ativo e a confirmação das configurações pelo servidor.",
           "Define a pausa da rega automática no formulário do dispositivo: 1–32767 minutos, com 60 por predefinição. A placa recebe-a numa consulta posterior e o servidor também a aplica. AUTO_PUMP_MIN_INTERVAL_MS é apenas um valor local de recurso.",
-          "A rega manual tem prioridade. Se ela acontecer, a placa não faz uma rega automática no mesmo ciclo."
+          "A rega manual tem prioridade. Se ela acontecer, a placa não faz uma rega automática no mesmo ciclo.",
+          "A duração automática e manual da bomba é de 20 segundos por predefinição, entre 1 e 300 segundos. Define a duração automática no formulário do dispositivo e depois gera e carrega o novo código. A duração manual é escolhida em cada pedido."
         ]
       },
       {

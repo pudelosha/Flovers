@@ -6,21 +6,22 @@
         "heading": "Todas tus plantas en un mismo lugar",
         "body": [
           "Plantas de interior muestra las plantas que posee y las plantas que sus contactos han compartido con usted.",
-          "Cada mosaico abre los detalles de la planta. El menú de tres puntos muestra las acciones permitidas por su acceso: los propietarios administran sus plantas y las comparten; Los destinatarios ven la planta y su historial de cuidados."
+          "Toca una tarjeta para abrir su menú negro y elige Detalles de la planta. Estas tarjetas no tienen un botón de tres puntos separado."
         ]
       },
       {
         "heading": "La información de las tarjetas",
         "body": [
-          "Cada tarjeta muestra el nombre de tu planta, su ubicación y, si has elegido una, el nombre de la ficha de especie asociada.",
-          "Toca la tarjeta fuera del menú de tres puntos para abrir los detalles de la planta."
+          "Las plantas aparecen en dos tarjetas con foto por fila. Un panel superpuesto muestra el nombre, el nombre latino y la ubicación.",
+          "Toca una tarjeta para abrir su menú negro y elige Detalles de la planta. Estas tarjetas no tienen un botón de tres puntos separado."
         ]
       },
       {
-        "heading": "Acciones del menú de tres puntos",
+        "heading": "Acciones de la planta",
         "body": [
-          "El menú de cada tarjeta ofrece estas acciones para la planta:",
+          "Toca una tarjeta para abrir su menú negro y elige Detalles de la planta. Estas tarjetas no tienen un botón de tres puntos separado.",
           "«Editar planta»: abre la edición de sus datos y ajustes.",
+          "Compartir planta / Gestionar acceso.",
           "«Mostrar recordatorios»: abre los recordatorios filtrados para esa planta.",
           "Diario de tareas abre una pantalla con las entradas de esta planta. Sustituye la antigua ventana del diario de la planta.",
           "«Mostrar código QR»: abre el código de la planta con una breve explicación. Puedes guardarlo o enviártelo por correo.",
@@ -60,7 +61,7 @@
       {
         "heading": "Plantas de interior propias y compartidas.",
         "body": [
-          "plantas incluye sus propias plantas y las plantas compartidas con usted. Las plantas recibidas llevan una etiqueta Compartida. Sus menús le permiten ver los detalles y el historial de atención, mientras que la edición, la gestión de recordatorios, la exportación y la eliminación del QR siguen siendo propiedad exclusiva del propietario.",
+          "Un icono indica las plantas compartidas contigo. Solo el propietario puede cambiar los detalles de las plantas, las definiciones de recordatorios, los dispositivos, la configuración de la bomba o los permisos para compartir. Las definiciones de recordatorios compartidos no aparecen en la pantalla Recordatorios del destinatario. El acceso de solo lectura nunca permite completar la tarea.",
           "Para una planta propia, elija Compartir planta o Administrar el uso compartido en su menú. El modo Agregar permite múltiples plantas; La gestión del uso compartido existente mantiene su planta bloqueada."
         ]
       }

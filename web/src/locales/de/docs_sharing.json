@@ -5,7 +5,7 @@
       {
         "heading": "Teilen Sie Pflanzen mit einem Kontakt",
         "body": [
-          "Öffne Profil, Freigaben und Geteilte Pflanzen. Die feste Leiste über der Liste zeigt alle, von dir geteilte oder mit dir geteilte Pflanzen. Das + Menü öffnet Pflanzen teilen. Auch das Menü einer eigenen Pflanze oder die Kontaktdetails führen zur Freigabe.",
+          "Profil → Konto → Teilen → Geteilte Pflanzen. Alle / Von mir / Mit mir. + → Pflanzen teilen.",
           "Wählen Sie beim Hinzufügen der Freigabe eine oder mehrere Pflanzen und die Kontakte aus, die Zugriff haben sollen. Jeder Kontakt kann nur Anzeigezugriff oder die Berechtigung zum Abschließen von Aufgaben haben, mit einem optionalen Enddatum. Vorhandene Berechtigungen werden vor dem Speichern angezeigt.",
           "Ein geändertes oder gelöschtes Enddatum gilt für alle markierten Kontakte aller ausgewählten Pflanzen. Unterschiedliche Daten bleiben ohne Änderung erhalten. Entfernst du die Markierung eines bestehenden Kontakts, verliert er beim Speichern den Zugriff."
         ]
@@ -38,7 +38,7 @@
         "body": [
           "Unter E-Mail und Telefon gibt es jeweils ein zusätzliches Kontrollkästchen für heute fällige Aufgaben an Pflanzen, die mit dir geteilt wurden. Diese Optionen sind zunächst ausgeschaltet, funktionieren unabhängig von den Übersichten für eigene Pflanzen und nutzen dieselbe Versandzeit des jeweiligen Kanals. Sind beide Optionen aktiv, werden eigene und geteilte Aufgaben in einer Tagesnachricht pro Kanal zusammengefasst.",
           "Die Erinnerungen berücksichtigen aktive Freigaben mit Lesezugriff und mit Berechtigung zum Erledigen von Aufgaben. Vor dem Versand wird der Zugriff erneut geprüft. Läuft eine Freigabe ab oder wird der Zugriff beziehungsweise der Kontakt entfernt, enden diese Erinnerungen.",
-          "Geteilte Pflanzen betrifft einen anderen Fall: Jemand erledigt eine Aufgabe für eine Pflanze, die dir gehört. E-Mail und Push sind hier zunächst ausgeschaltet und gelten nach dem Einschalten für alle Pflanzen, die du teilst. Die Nachricht folgt auf die Erledigung, unabhängig von der Tagesübersicht. Diese Einstellung gehört zum Konto, nicht zur einzelnen Pflanzenfreigabe."
+          "Unten in E-Mail und Telefon kannst du Benachrichtigungen über Aufgaben aktivieren, die andere Personen für deine Pflanzen erledigen. Diese kontoweiten Optionen sind zunächst deaktiviert und werden unabhängig von der täglichen Zusammenfassung nach der Erledigung versendet."
         ]
       }
     ]

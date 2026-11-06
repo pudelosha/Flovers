@@ -139,7 +139,8 @@
           "Jika penyiraman otomatis diaktifkan dan kelembaban tanah saat ini berada di bawah ambang batas yang dikonfigurasi, papan dapat menjalankan pompa.",
           "Penyiraman otomatis bergantung pada dukungan pompa air yang diaktifkan, sensor kelembaban tanah yang diaktifkan, peluncuran pompa otomatis yang diaktifkan, ambang batas kelembaban tanah yang valid, perangkat yang aktif, dan konfirmasi backend dari pengaturan pompa saat ini.",
           "Atur jeda penyiraman otomatis di formulir perangkat: 1–32767 menit, bawaan 60. Papan menerima nilainya pada pemeriksaan berikutnya, dan server juga menerapkannya. AUTO_PUMP_MIN_INTERVAL_MS hanya nilai cadangan lokal.",
-          "Penyiraman manual memiliki prioritas dibandingkan penyiraman otomatis dalam siklus yang sama. Jika penyiraman manual dilakukan, penyiraman otomatis dilewati untuk siklus tersebut."
+          "Penyiraman manual memiliki prioritas dibandingkan penyiraman otomatis dalam siklus yang sama. Jika penyiraman manual dilakukan, penyiraman otomatis dilewati untuk siklus tersebut.",
+          "Durasi pompa otomatis dan manual awalnya 20 detik, dengan rentang 1–300 detik. Atur durasi otomatis di formulir perangkat, lalu buat dan unggah kode baru ke papan. Durasi manual dipilih untuk setiap permintaan penyiraman."
         ]
       },
       {

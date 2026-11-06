@@ -6,7 +6,8 @@
         "heading": "Tujuan dari layar ini",
         "body": [
           "Layar Detail tanaman hias adalah tempat sentral untuk melihat dan mengelola satu tanaman hias yang dibuat oleh pengguna.",
-          "Ini menggabungkan informasi khusus tanaman hias, pengingat, tindakan tugas, pembacaan sensor (jika tersedia), dan alat navigasi cepat yang terkait dengan tanaman hias tersebut."
+          "Ini menggabungkan informasi khusus tanaman hias, pengingat, tindakan tugas, pembacaan sensor (jika tersedia), dan alat navigasi cepat yang terkait dengan tanaman hias tersebut.",
+          "Di atas panel ada Info, Tugas, dan Pembacaan. Info menampilkan data tanaman Anda dan kartu definisi terpisah jika tertaut. Pembacaan menampilkan nilai perangkat atau pesan bahwa belum ada perangkat tertaut."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Aktivitas",
+        "heading": "Tugas",
         "body": [
-          "Aktivitas adalah kartu kedua, tepat di bawah informasi utama tanaman. Kartu ini menampilkan hingga lima tugas perawatan yang selesai, dari yang terbaru, beserta orang yang menyelesaikan serta tanggal dan waktu lokal dalam format tanggal profil. Aktivitas pemilik dan perawat bersama disertakan dan hanya dapat dilihat oleh pengguna yang masih memiliki akses ke tanaman. Ringkasan ini hanya untuk dilihat, tidak mencakup foto, dan penyelesaian yang dibatalkan akan hilang."
+          "Tugas menampilkan yang tertunda di atas dan 10 penyelesaian terbaru di bawah, tanpa judul terpisah. Baris tertunda memiliki menu. Baris selesai menampilkan centang, tanggal, dan pelaksana; garis vertikal hanya menghubungkan ikon tugas selesai. Foto tidak disertakan dan penyelesaian yang dibatalkan menghilang."
         ]
       },
       {
         "heading": "Tindakan tingkat tanaman hias (menu 3 titik)",
         "body": [
           "Menu 3 titik yang terkait dengan header tanaman hias memberikan tindakan tambahan terkait tanaman hias itu sendiri.",
-          "Tindakan yang tersedia termasuk melihat Definisi tanaman hias (jika tanaman hias tertaut ke salah satunya), mengedit detail tanaman hias, mengubah gambar tanaman hias, dan menavigasi ke Pengingat yang difilter untuk tanaman hias ini.",
+          "Edit tanaman → Bagikan tanaman / Kelola berbagi → Ubah gambar → Kode QR → Tampilkan pengingat → Jurnal tugas.",
           "Setelah foto baru tersimpan, salinan foto sebelumnya dihapus dari server. Jika foto pribadi dihapus, gambar katalog akan ditampilkan kembali bila tersedia.",
           "Geser foto untuk mengubah posisinya dan gunakan dua jari atau tombol zoom untuk menyesuaikan ukurannya. Bingkai merah yang tetap menunjukkan perkiraan area pada detail tanaman, sedangkan bingkai biru menunjukkan area pada kartu daftar tanaman. Pengaturan bingkai disimpan bersama foto dan juga digunakan untuk tanaman yang dibagikan.",
           "Kontrol yang sama tersedia di Ubah gambar. Ketuk Simpan untuk menyesuaikan bingkai foto yang sudah ada tanpa mengunggah salinan baru."
@@ -36,16 +37,16 @@
       {
         "heading": "Definisi tanaman hias",
         "body": [
-          "Jika tanaman hias ditautkan ke Definisi tanaman hias dari database Flovers, pengguna dapat membuka tampilan Definisi tanaman hias khusus.",
+          "Info → Definisi tanaman hias. Di atas panel ada Info, Tugas, dan Pembacaan. Info menampilkan data tanaman Anda dan kartu definisi terpisah jika tertaut. Pembacaan menampilkan nilai perangkat atau pesan bahwa belum ada perangkat tertaut.",
           "Tampilan ini menampilkan informasi tingkat spesies seperti deskripsi tanaman hias, preferensi perawatan, sifat, tingkat kesulitan, kisaran suhu, kelembapan, toksisitas, dan karakteristik pertumbuhan.",
           "Definisi tanaman hias memberikan panduan umum dan harus ditafsirkan dalam konteks lingkungan aktual pengguna."
         ]
       },
       {
-        "heading": "Pengingat dan tugas",
+        "heading": "Tugas",
         "body": [
-          "Bagian Pengingat menampilkan semua pengingat aktif yang terkait dengan tanaman hias ini.",
-          "Menu tiga titik pengingat memungkinkan Anda menyelesaikan tugas, mengedit pengingat, atau membuka Jurnal tugas.",
+          "Tandai sebagai selesai: menutup tugas dan memungkinkan Anda menambahkan catatan secara opsional, membantu Anda membuat riwayat perawatan terperinci.",
+          "Tandai selesai / Sunting pengingat / Jurnal tugas.",
           "Menyelesaikan tugas mungkin termasuk menambahkan catatan, yang menjadi bagian dari riwayat perawatan tanaman hias."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "Kode QR dan akses cepat",
         "body": [
-          "Setiap tanaman hias memiliki kode unik QR yang ditampilkan di bagian bawah layar.",
+          "Detail tanaman → ⋯ → Kode QR.",
           "Memindai kode ini menggunakan tampilan Pemindai akan mengarahkan pengguna langsung ke layar Detail tanaman hias ini.",
           "Kode QR dapat disimpan ke perangkat atau dikirim melalui email, sehingga mudah untuk dicetak dan dilampirkan ke pot bunga tanaman hias untuk akses cepat.",
           "QR Flovers berisi referensi unik dan tidak transparan ke tanaman, bukan ID angka dalam database."
@@ -78,7 +79,7 @@
       {
         "heading": "Detail tanaman bersama",
         "body": [
-          "Tanaman yang diterima ditandai Dibagikan. Anda dapat melihat informasinya, riwayat perawatan dan pembacaan sensor terkait. Ubin definisi pengingat dan kontrol pengeditan tetap menjadi milik pemilik saja. Selesaikan tugas bersama yang diizinkan di Beranda."
+          "Hanya pemilik yang dapat mengubah detail tanaman, definisi pengingat, perangkat, pengaturan pompa, atau izin berbagi. Definisi pengingat bersama tidak muncul di layar Pengingat penerima. Akses hanya lihat tidak pernah mengizinkan penyelesaian tugas."
         ]
       },
       {

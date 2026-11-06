@@ -6,21 +6,22 @@
         "heading": "Bu ekranın amacı",
         "body": [
           "bitkileri, sahip olduğunuz bitkilerini ve kişilerin sizinle paylaştığı bitkilerini gösterir.",
-          "Her karo houseplant ayrıntılarını açar. Üç noktalı menü, erişiminizin izin verdiği eylemleri gösterir: Sahipler, bitkilerini ve paylaşımlarını yönetir; alıcılar bitkisini ve bakım geçmişini görebilir."
+          "Siyah işlem menüsünü açmak için bitki kartına dokunun, ardından Bitki ayrıntıları seçeneğini seçin. Bu kartlarda ayrı bir üç nokta düğmesi yoktur."
         ]
       },
       {
         "heading": "Ev bitkisi fayansları (listede gördükleriniz)",
         "body": [
-          "Her ev bitkisi kutucuğu, ev bitkisinin adını ve (varsa) bağlantılı ev bitkisi tanım adını (türlerini) ve atanan Konumu görüntüler.",
-          "Döşeme gövdesine (üç noktalı menüye değil) dokunduğunuzda ev bitkisi Ayrıntıları ekranına yönlendirilirsiniz."
+          "Bitkiler her satırda iki fotoğraf kartıyla gösterilir. Fotoğrafın üzerine gelen panelde ad, Latince ad ve konum yer alır.",
+          "Siyah işlem menüsünü açmak için bitki kartına dokunun, ardından Bitki ayrıntıları seçeneğini seçin. Bu kartlarda ayrı bir üç nokta düğmesi yoktur."
         ]
       },
       {
-        "heading": "Üç noktalı menü (ev bitkisi eylemleri)",
+        "heading": "Bitki işlemleri",
         "body": [
-          "Her kutucukta, seçilen ev bitkisine yönelik eylemlerin yer aldığı üç noktalı bir menü bulunur:",
+          "Siyah işlem menüsünü açmak için bitki kartına dokunun, ardından Bitki ayrıntıları seçeneğini seçin. Bu kartlarda ayrı bir üç nokta düğmesi yoktur.",
           "Ev bitkisini düzenle: Ev bitkisi ayrıntılarını ve parametrelerini güncellemek için ev bitkisi düzenleyicisini açar.",
+          "Bitkiyi paylaş / Paylaşımı yönet.",
           "Hatırlatıcıları göster: yalnızca seçilen ev bitkisine ilişkin hatırlatıcıları gösterecek bir filtrenin uygulandığı Hatırlatıcılar ekranına gider.",
           "Görev günlüğü yalnızca bu bitkinin kayıtlarını içeren ayrı bir ekran açar. Eski bitki günlüğü penceresinin yerini alır.",
           "QR kodunu göster: ev bitkisinin QR kodunu, kısa bir açıklamayı ve kaydetme (indirme) veya e-postanıza gönderme seçeneklerini içeren bir model açar.",
@@ -60,7 +61,7 @@
       {
         "heading": "Sahip olunan ve paylaşılan bitkileri",
         "body": [
-          "bitkileri, kendi bitkilerinizi ve sizinle paylaşılan bitkilerini içerir. Alınan bitkileri Paylaşılan bir etiket taşır. Menüleri ayrıntıları ve bakım geçmişini görüntülemenizi sağlarken düzenleme, hatırlatma yönetimi, QR dışa aktarma ve silme işlemleri yalnızca sahiplere ait kalır.",
+          "Paylaşım simgesi, sizinle paylaşılan bitkileri gösterir. Bitkisi ayrıntılarını, hatırlatma tanımlarını, cihazları, pompa ayarlarını veya paylaşım izinlerini yalnızca sahibi değiştirebilir. Paylaşılan hatırlatıcı tanımları alıcının Hatırlatıcılar ekranında görünmez. Salt görüntüleme erişimi hiçbir zaman görevin tamamlanmasına izin vermez.",
           "Sahip olunan bir bitkisi için menüsünden Bitkisini paylaş veya Paylaşımı yönet seçeneğini seçin. Ekleme modu birden fazla bitkisine izin verir; Mevcut paylaşımın yönetilmesi, bitkisinin kilitli kalmasını sağlar."
         ]
       }

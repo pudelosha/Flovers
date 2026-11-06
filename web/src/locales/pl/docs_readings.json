@@ -139,7 +139,8 @@
           "Jeśli automatyczne podlewanie jest włączone, a wilgotność gleby spadnie poniżej progu, płytka może uruchomić pompę.",
           "Do działania potrzebne są: aktywne urządzenie, włączona obsługa pompy, włączony czujnik wilgotności gleby, włączone automatyczne podlewanie, poprawny próg wilgotności i potwierdzenie bieżących ustawień przez serwer.",
           "Przerwę między automatycznymi podlewaniami ustawisz w formularzu urządzenia: od 1 do 32767 minut, domyślnie 60. Płytka pobiera ją przy kolejnym sprawdzeniu, a serwer również jej pilnuje. AUTO_PUMP_MIN_INTERVAL_MS to tylko wartość awaryjna w programie.",
-          "Ręczne podlewanie ma pierwszeństwo. Jeśli urządzenie wykona je w danym cyklu, pominie w nim podlewanie automatyczne."
+          "Ręczne podlewanie ma pierwszeństwo. Jeśli urządzenie wykona je w danym cyklu, pominie w nim podlewanie automatyczne.",
+          "Czas automatycznego i ręcznego podlewania domyślnie wynosi 20 sekund; zakres to 1–300 sekund. Czas automatyczny ustaw w formularzu urządzenia, a potem wygeneruj i wgraj nowy kod na płytkę. Czas ręczny wybierasz osobno dla każdego zlecenia podlewania."
         ]
       },
       {

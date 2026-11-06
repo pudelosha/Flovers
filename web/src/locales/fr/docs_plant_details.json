@@ -6,7 +6,8 @@
         "heading": "Tout retrouver pour une plante",
         "body": [
           "Cet écran rassemble les informations et les actions pour l’une de tes plantes.",
-          "Tu y retrouves ses renseignements, ses rappels, ses tâches et, si un appareil est associé, ses relevés de capteurs. Des raccourcis donnent accès aux autres écrans liés à cette plante."
+          "Tu y retrouves ses renseignements, ses rappels, ses tâches et, si un appareil est associé, ses relevés de capteurs. Des raccourcis donnent accès aux autres écrans liés à cette plante.",
+          "Au-dessus du panneau figurent Infos, Tâches et Relevés. Infos affiche vos données et une carte distincte de la fiche botanique si elle est associée. Relevés affiche les mesures de l’appareil ou indique qu’aucun appareil n’est lié."
         ]
       },
       {
@@ -18,16 +19,16 @@
         ]
       },
       {
-        "heading": "Activité",
+        "heading": "Tâches",
         "body": [
-          "Activité est la deuxième carte, juste sous les informations principales de la plante. Elle affiche jusqu’à cinq tâches de soin terminées, de la plus récente à la plus ancienne, avec la personne qui les a réalisées et la date et l’heure locales au format du profil. Elle inclut le propriétaire et les contacts aidants et n’est visible qu’avec un accès actuel à la plante. Ce résumé est en lecture seule, sans photos ; les réalisations annulées disparaissent."
+          "Tâches affiche d’abord les tâches en attente, puis les 10 dernières réalisées, sans titres séparés. Les tâches en attente ont un menu. Les tâches réalisées indiquent une coche, la date et la personne ; seules leurs icônes sont reliées par une ligne verticale. Les photos sont exclues et les réalisations annulées disparaissent."
         ]
       },
       {
         "heading": "Les actions du menu à trois points",
         "body": [
           "Le menu à trois points près du titre propose d’autres actions pour cette plante.",
-          "Tu peux consulter sa fiche d’espèce si elle en a une, modifier ses informations, changer sa photo ou ouvrir les rappels filtrés pour cette plante.",
+          "Modifier la plante → Partager une plante / Gérer le partage → Changer l’image → Code QR → Afficher les rappels → Journal des tâches.",
           "Une fois la nouvelle photo enregistrée, l’ancienne copie est supprimée du serveur. Supprimer votre photo rétablit l’image du catalogue, lorsqu’elle existe.",
           "Faites glisser la photo pour la déplacer et ajustez le zoom avec deux doigts ou les boutons. Le cadre rouge fixe indique la zone approximative visible dans les détails de la plante, le bleu celle des cartes de la liste des plantes. Le cadrage est enregistré avec la photo et s’applique aussi aux plantes partagées.",
           "Les mêmes réglages sont disponibles dans Changer l’image. Appuyez sur Enregistrer pour ajuster le cadrage d’une photo existante sans en envoyer une nouvelle copie."
@@ -36,16 +37,16 @@
       {
         "heading": "La fiche d’espèce",
         "body": [
-          "Si tu as choisi une fiche dans la base Flovers, tu peux l’ouvrir dans un écran dédié.",
+          "Infos → Définition de la plante. Au-dessus du panneau figurent Infos, Tâches et Relevés. Infos affiche vos données et une carte distincte de la fiche botanique si elle est associée. Relevés affiche les mesures de l’appareil ou indique qu’aucun appareil n’est lié.",
           "Elle décrit l’espèce et ses besoins : caractéristiques, difficulté d’entretien, températures, humidité de l’air, toxicité et croissance.",
           "Ces conseils sont généraux. Tiens toujours compte des conditions réelles de ta plante."
         ]
       },
       {
-        "heading": "Les rappels et les tâches",
+        "heading": "Tâches",
         "body": [
-          "La section « Rappels » présente les rappels actifs associés à cette plante.",
-          "Le menu à trois points d’un rappel permet de terminer la tâche, de modifier le rappel ou d’ouvrir le Journal des tâches.",
+          "« Marquer comme terminé » : termine la tâche et te permet d’ajouter une note pour enrichir le suivi des soins.",
+          "Marquer comme terminé / Modifier le rappel / Journal des tâches.",
           "Quand tu termines une tâche, tu peux ajouter une note qui fera partie du suivi des soins."
         ]
       },
@@ -61,7 +62,7 @@
       {
         "heading": "L’accès rapide par code QR",
         "body": [
-          "Chaque plante possède un code QR unique, affiché en bas de cet écran.",
+          "Détails de la plante → ⋯ → Code QR.",
           "En le scannant avec le scanner de l’application, tu ouvres directement les détails de cette plante.",
           "Tu peux enregistrer le code sur ton téléphone ou l’envoyer par e-mail, puis l’imprimer et le coller sur le pot.",
           "Un QR code Flovers contient une référence unique et opaque à la plante, plutôt que son identifiant numérique dans la base."
@@ -78,7 +79,7 @@
       {
         "heading": "Détails d'une plante partagée",
         "body": [
-          "Une plante reçue est marquée Partagée. Vous pouvez afficher ses informations, son historique de soins et les lectures des capteurs liés. La vignette de définition de rappel et les contrôles d’édition restent réservés au propriétaire. Effectuez les tâches partagées autorisées sur Accueil."
+          "Seul le propriétaire peut modifier les détails des plantes, les définitions de rappel, les appareils, les paramètres de la pompe ou les autorisations de partage. Les définitions de rappels partagés n’apparaissent pas sur l’écran Rappels du destinataire. L'accès en visualisation seule ne permet jamais l'achèvement d'une tâche."
         ]
       },
       {

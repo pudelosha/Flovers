@@ -139,7 +139,8 @@
           "Si está activado y la humedad está por debajo del umbral, puede arrancar la bomba con autorización del servidor.",
           "Requiere una bomba y un sensor de humedad habilitados, arranque automático activado, un umbral válido, un dispositivo activo y confirmación del servidor.",
           "Configura la pausa del riego automático en el formulario del dispositivo: 1–32767 minutos, 60 por defecto. La placa la recibe en una consulta posterior y el servidor también la aplica. AUTO_PUMP_MIN_INTERVAL_MS es solo un valor local de respaldo.",
-          "El riego manual tiene prioridad. Si se ejecuta, se omite el automático durante ese ciclo."
+          "El riego manual tiene prioridad. Si se ejecuta, se omite el automático durante ese ciclo.",
+          "La duración automática y manual de la bomba es de 20 segundos por defecto, ajustable entre 1 y 300 segundos. Configura la duración automática en el formulario del dispositivo y después genera y carga el nuevo código. La duración manual se elige en cada solicitud."
         ]
       },
       {

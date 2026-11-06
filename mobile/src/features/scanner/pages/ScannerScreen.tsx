@@ -278,7 +278,7 @@ export default function ScannerScreen() {
                 {"\n"}•{" "}
                 <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
                   {t("scanner.qrPath1", {
-                    defaultValue: "Plants → tap a plant → Plant Details",
+                    defaultValue: "Plant details → ⋯ → QR Code",
                   })}
                 </Text>
                 {"\n"}•{" "}

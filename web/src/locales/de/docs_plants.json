@@ -6,21 +6,22 @@
         "heading": "Deine Pflanzen im Überblick",
         "body": [
           "Pflanzen zeigt Pflanzen, die Sie besitzen, und Pflanzen, die Kontakte mit Ihnen geteilt haben.",
-          "Jede Kachel öffnet Details zur Pflanze. Das Drei-Punkte-Menü zeigt die durch Ihren Zugriff erlaubten Aktionen an: Eigentümer verwalten ihre Pflanzen und teilen sie; Empfänger sehen sich die Pflanze und ihre Pflegegeschichte an."
+          "Tippe auf eine Pflanzenkachel, um das schwarze Aktionsmenü zu öffnen, und wähle Pflanzendetails. Diese Kacheln haben keine separate Drei-Punkte-Schaltfläche."
         ]
       },
       {
         "heading": "Was die Pflanzenkacheln zeigen",
         "body": [
-          "Die Kachel zeigt den Namen deiner Pflanze, den zugeordneten Standort und, falls vorhanden, den Namen des ausgewählten Pflanzenprofils beziehungsweise der Art.",
-          "Tippe auf die Kachel außerhalb des Drei-Punkte-Menüs, um die Pflanzendetails zu öffnen."
+          "Pflanzen erscheinen als zwei Fotokacheln pro Reihe. Ein überlappendes Feld zeigt Namen, lateinischen Namen und Standort.",
+          "Tippe auf eine Pflanzenkachel, um das schwarze Aktionsmenü zu öffnen, und wähle Pflanzendetails. Diese Kacheln haben keine separate Drei-Punkte-Schaltfläche."
         ]
       },
       {
-        "heading": "Aktionen im Drei-Punkte-Menü",
+        "heading": "Pflanzenaktionen",
         "body": [
-          "Im Drei-Punkte-Menü jeder Kachel findest du Aktionen für die jeweilige Pflanze:",
+          "Tippe auf eine Pflanzenkachel, um das schwarze Aktionsmenü zu öffnen, und wähle Pflanzendetails. Diese Kacheln haben keine separate Drei-Punkte-Schaltfläche.",
           "„Pflanze bearbeiten“: Öffnet die Bearbeitung der Angaben und Einstellungen deiner Pflanze.",
+          "Pflanze teilen / Freigaben verwalten.",
           "„Erinnerungen anzeigen“: Öffnet die Erinnerungen mit einem Filter für diese Pflanze.",
           "Pflegetagebuch öffnet einen eigenen Bildschirm mit den Einträgen dieser Pflanze. Er ersetzt das bisherige Pflanzentagebuch-Fenster.",
           "„QR-Code anzeigen“: Öffnet den QR-Code mit einer kurzen Erklärung. Du kannst ihn herunterladen oder an deine E-Mail-Adresse senden lassen.",
@@ -60,7 +61,7 @@
       {
         "heading": "Eigene und geteilte Pflanzen",
         "body": [
-          "Pflanzen umfasst Ihre eigenen Pflanzen und Pflanzen, die Sie mit uns teilen. Erhaltene Pflanzen tragen ein Shared-Label. Über die Menüs können Sie Details und den Pflegeverlauf anzeigen, während Bearbeitung, Erinnerungsverwaltung, QR-Export und Löschung nur dem Eigentümer vorbehalten bleiben.",
+          "Ein Freigabesymbol kennzeichnet Pflanzen, die mit dir geteilt wurden. Nur der Eigentümer kann Pflanzendetails, Erinnerungsdefinitionen, Geräte, Pumpeneinstellungen oder Freigabeberechtigungen ändern. Geteilte Erinnerungsdefinitionen werden nicht auf dem Erinnerungsbildschirm des Empfängers angezeigt. Der Nur-Lese-Zugriff ermöglicht niemals den Abschluss einer Aufgabe.",
           "Wählen Sie für eine eigene Pflanze im Menü „Pflanze teilen“ oder „Freigabe verwalten“ aus. Der Add-Modus ermöglicht mehrere Pflanzen; Durch die Verwaltung bestehender Freigaben bleibt die Pflanze gesperrt."
         ]
       }
