@@ -1,5 +1,7 @@
 import NotificationsScreen from "../../features/notifications/pages/NotificationsScreen";
-import { TAB_CONTENT_HEIGHT, MIN_TAB_BOTTOM_PADDING } from "../../shared/constants/layout";
+import { TAB_CONTENT_HEIGHT, MIN_TAB_BOTTOM_PADDING, bottomNavigationHeight } from "../../shared/constants/layout";
+import { useAppTheme } from '../../shared/theme/ThemeContext';
+import { DARK_MODAL_BACKGROUND, useModalNavigationBackdropVisible } from '../../shared/ui/modalNavigationBackdrop';
 import React from "react";
 import { Animated, AnimatedView, Easing, BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "../../shared/theme/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -134,6 +136,8 @@ const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
 function GlassTabBar({ state, navigation }: any) {
   const insets = useSafeAreaInsets();
+  const { isLight, colors } = useAppTheme();
+  const modalBackdropVisible = useModalNavigationBackdropVisible();
   const { t } = useTranslation();
   const { shareDraft, closeSharePlant } = useSharingPreview();
 
@@ -232,6 +236,20 @@ function GlassTabBar({ state, navigation }: any) {
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
+      {modalBackdropVisible && (
+        <View
+          testID="navigation-modal-background"
+          pointerEvents="none"
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: bottomNavigationHeight(insets.bottom) - TAB_CONTENT_HEIGHT / 2,
+            height: TAB_CONTENT_HEIGHT / 2 + 1,
+            backgroundColor: isLight ? colors.modal : DARK_MODAL_BACKGROUND,
+          }}
+        />
+      )}
       <View style={[s.tabWrap, { paddingBottom: Math.max(insets.bottom, MIN_TAB_BOTTOM_PADDING) }]}>
         {/* Blur behind gradient */}
         <BlurView

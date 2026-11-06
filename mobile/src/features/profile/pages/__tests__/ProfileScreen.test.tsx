@@ -5,13 +5,14 @@ import { DEFAULT_SETTINGS } from "../../../../app/settings/settings.defaults";
 import { fetchProfileNotifications, updateProfileNotifications } from "../../../../api/services/profile.service";
 
 const mockT = (key: string) => key;
+let mockFocused = true;
 let mockSettings = { settings: DEFAULT_SETTINGS, loading: false, applyServerSettings: jest.fn() };
 let mockAccountLevel: any = { progress: null, loading: true };
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
 jest.mock("@react-navigation/native", () => ({
   useNavigation: () => ({ navigate: jest.fn() }),
   useFocusEffect: (callback: () => void | (() => void)) => {
-    require("react").useEffect(callback, [callback]);
+    require("react").useEffect(() => mockFocused ? callback() : undefined, [callback, mockFocused]);
   },
 }));
 jest.mock("react-native-safe-area-context", () => ({
@@ -86,10 +87,27 @@ function readyLevel(level = 2) {
 
 describe("Profile loading screen", () => {
   beforeEach(() => {
+    mockFocused = true;
     jest.clearAllMocks();
     mockNotifications.mockReset();
     mockSettings = { settings: DEFAULT_SETTINGS, loading: false, applyServerSettings: jest.fn() };
     mockAccountLevel = { progress: null, loading: true };
+  });
+
+  it('returns to Account after navigating away without blocking segment changes', async () => {
+    readyLevel();
+    mockNotifications.mockResolvedValue(notifications);
+    const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId('profile-tab-notifications')).toBeTruthy());
+    fireEvent.press(view.getByTestId('profile-tab-notifications'));
+    expect(view.getByTestId('profile-tab-notifications').props.accessibilityState.selected).toBe(true);
+    mockFocused = false;
+    view.rerender(<ProfileScreen />);
+    mockFocused = true;
+    view.rerender(<ProfileScreen />);
+    expect(view.getByTestId('profile-tab-account').props.accessibilityState.selected).toBe(true);
+    fireEvent.press(view.getByTestId('profile-tab-settings'));
+    expect(view.getByTestId('profile-tab-settings').props.accessibilityState.selected).toBe(true);
   });
 
   it("loads and saves account-wide shared-care consent through Profile notifications", async () => {

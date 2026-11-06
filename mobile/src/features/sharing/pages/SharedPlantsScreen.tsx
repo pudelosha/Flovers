@@ -14,7 +14,7 @@ import {
   View,
 } from '../../../shared/theme/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useIsFocused, useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useIsFocused, useNavigation } from '@react-navigation/native';
 import MaterialCommunityIcons from '../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
 import FAB from '../../../shared/ui/FAB';
@@ -63,6 +63,9 @@ export default function SharedPlantsScreen() {
   } = useSharingPreview();
   const [selectorHeight, setSelectorHeight] = useState(36);
   const [filter, setFilter] = useState<ShareFilter>('all');
+  useFocusEffect(useCallback(() => {
+    setFilter('all');
+  }, []));
   const [removing, setRemoving] = useState<PlantShare | null>(null);
   const [deleting, setDeleting] = useState<{
     plant: ShareablePlant;

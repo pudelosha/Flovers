@@ -357,6 +357,11 @@ export default function ProfileScreen() {
     }
   };
 
+  // Reset only on navigation focus, not when the selected segment changes.
+  useFocusEffect(useCallback(() => {
+    setActiveSection('account');
+  }, []));
+
   // enter/exit animation
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;

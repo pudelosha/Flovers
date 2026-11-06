@@ -685,6 +685,10 @@ export default function PlantDetailsScreen() {
     setWateringScheduleLastPumpRunAt(null);
   }, []);
 
+  useFocusEffect(useCallback(() => {
+    setActiveTab('info');
+  }, []));
+
   useFocusEffect(
     useCallback(() => {
       let isActive = true;

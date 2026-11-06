@@ -19,6 +19,9 @@ const mockNavigate = jest.fn();
 jest.mock("react-i18next", () => ({ useTranslation: () => ({ t: mockT }) }));
 jest.mock("@react-navigation/native", () => ({
   useIsFocused: () => mockFocused,
+  useFocusEffect: (callback: () => void | (() => void)) => {
+    require('react').useEffect(() => mockFocused ? callback() : undefined, [callback, mockFocused]);
+  },
   useNavigation: () => ({ navigate: mockNavigate, canGoBack: () => false, goBack: jest.fn() }),
 }));
 jest.mock("react-native-safe-area-context", () => ({

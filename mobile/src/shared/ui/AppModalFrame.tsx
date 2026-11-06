@@ -16,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import AppModalHost from './AppModalHost';
 import CenteredSpinner from './CenteredSpinner';
 import ModalCloseButton from './ModalCloseButton';
+import { DARK_MODAL_BACKGROUND, useModalNavigationBackdrop } from './modalNavigationBackdrop';
 import { prompts as pr } from '../../features/profile/styles/profile.styles';
 
 /** Shared full-area dialog with the standard title, close button and control insets. */
@@ -52,6 +53,7 @@ export default function AppModalFrame({
 }) {
   const { t } = useTranslation();
   const {isLight,colors}=useAppTheme();
+  useModalNavigationBackdrop(visible && reserveBottomBar && fullScreen);
   useEffect(() => {
     if (!visible) return;
     const handler = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -111,7 +113,7 @@ export default function AppModalFrame({
                 style={[
                   StyleSheet.absoluteFill,
                   {
-                    backgroundColor: isLight ? colors.modal : 'rgba(0,0,0,0.35)',
+                    backgroundColor: isLight ? colors.modal : DARK_MODAL_BACKGROUND,
                   },
                 ]}
               />
