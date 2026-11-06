@@ -10,7 +10,7 @@ it('retains enough scroll space when switching from a long tab to a shorter one'
  expect(result.current.minHeight).toBe(1700);
 });
 it('resets retained space when navigating to another plant',()=>{
- const {result,rerender}=renderHook(({id})=>useStableScrollHeight(id),{initialProps:{id:'one'}});
+ const {result,rerender}=renderHook(({id}: {id: string})=>useStableScrollHeight(id),{initialProps:{id:'one'}});
  act(()=>result.current.onContentSizeChange(350,1500));
  rerender({id:'two'});
  expect(result.current.minHeight).toBe(0);

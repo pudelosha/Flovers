@@ -119,7 +119,7 @@ it('retains image-mask alpha and photo scrims while lightening card gradients', 
   expect(gradients[0].props.colors).toEqual(original);
   expect(ui.getByTestId('scrim').props.colors).toEqual(original);
   expect(ui.getByTestId('card-gradient').props.colors[0]).toBe(
-    '#FFFFFF',
+    '#F8FCFA',
   );
 });
 

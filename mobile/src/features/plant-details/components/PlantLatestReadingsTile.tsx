@@ -222,12 +222,14 @@ export default function PlantLatestReadingsTile({
         </View>
       )}
 
-      <View style={[styles.body, embedded && { paddingTop: 0 }]}>
-        <View style={styles.topRow}>
-          <Text style={styles.title}>
-            {tr('plantDetails.latestReadings.title', 'Latest readings')}
-          </Text>
-        </View>
+      <View style={[styles.body, embedded && { paddingTop: 8 }]}>
+        {!embedded && (
+          <View style={styles.topRow}>
+            <Text style={styles.title}>
+              {tr('plantDetails.latestReadings.title', 'Latest readings')}
+            </Text>
+          </View>
+        )}
 
         <View style={styles.metricsRow}>
           {showTemp && (

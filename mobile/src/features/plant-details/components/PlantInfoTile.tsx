@@ -540,7 +540,7 @@ export default function PlantInfoTile({
                     name: title,
                     location: locationName,
                     latin,
-                    imageUrl: plant.plant_definition?.image || undefined,
+                    imageUrl: plant.plant_definition?.image_thumb || plant.plant_definition?.image || undefined,
                     photo: plant.photo,
                   });
                 }}

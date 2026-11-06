@@ -241,3 +241,10 @@ it('puts the owner QR action fourth, after edit, sharing and image actions',()=>
  const options=ui.getAllByText(/^(Edit plant|Share plant|Change image|QR Code|Show reminders)$/);
  expect(options[3].props.children).toBe('QR Code');
 });
+
+
+it('prefers the catalogue hero over the thumbnail in Plant Details',()=>{
+ (usePlantPhoto as jest.Mock).mockReturnValue({uri:null,loading:false,error:null});
+ const ui=render(<PlantInfoTile plant={{...plant,photo:null,access,plant_definition:{...plant.plant_definition,image_thumb:'https://example.test/thumb.jpg'}} as any}/>);
+ expect(ui.UNSAFE_getByType(ImageBackground).props.source).toEqual({uri:plant.plant_definition.image});
+});

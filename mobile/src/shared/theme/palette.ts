@@ -2,7 +2,7 @@ export type ThemeContrast = 'surface' | 'photo' | 'accent' | 'dark' | 'mask';
 export type ColorRole = 'foreground' | 'background' | 'border' | 'gradient';
 export const LIGHT_COLORS = {
   background: '#E5F2EC',
-  surface: '#FFFFFF',
+  surface: '#F8FCFA',
   surfaceAlt: '#EEF8F2',
   text: '#103D32',
   secondary: '#42675C',
@@ -112,9 +112,10 @@ export function themeColor(
       ? rgba({ r: 32, g: 105, b: 80, a: Math.min(0.3, c.a) })
       : value;
   if (role === 'gradient') {
-    if (white) return value; // preserve the soft white sheen
+    if (white) return c.a === 1 && c.r === 255 && c.g === 255 && c.b === 255
+      ? LIGHT_COLORS.surface : value; // Keep existing translucent highlights.
     if (black || greenDark)
-      return c.a < 0.05 ? value : c.a >= 0.65 ? '#FFFFFF' : `rgba(255,255,255,${c.a})`;
+      return c.a < 0.05 ? value : c.a >= 0.65 ? LIGHT_COLORS.surface : `rgba(255,255,255,${c.a})`;
     return rgba({
       r: 230 + c.r * 0.08,
       g: 237 + c.g * 0.06,

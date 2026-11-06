@@ -1,6 +1,6 @@
 import React from "react";
-import { ImageBackground } from "react-native";
-import { act, render, waitFor } from "@testing-library/react-native";
+import { ImageBackground, StyleSheet } from "react-native";
+import { act, render, waitFor, fireEvent } from "@testing-library/react-native";
 import Step02_PlantTraits from "../Step02_PlantTraits";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import { request } from "../../../../api/client";
@@ -86,4 +86,27 @@ it("conceals a previous profile immediately when the selection changes", async (
   expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
   await act(async () => { next.resolve({ ...profile, id: 2, description: "Fern details" }); });
   expect(view.getByText("Fern details")).toBeTruthy();
+});
+
+
+it('places plant traits in a rounded panel overlapping the large photo',async()=>{
+ mockImageLoading=false;
+ const ui=render(<Step02_PlantTraits/>);
+ await ui.findByText(profile.description);
+ const panel=ui.getByTestId('wizard-traits-description');
+ expect(StyleSheet.flatten(panel.props.style)).toMatchObject({marginTop:-80,borderTopLeftRadius:24,borderBottomLeftRadius:28});
+ fireEvent(panel,'layout',{nativeEvent:{layout:{height:300,width:350}}});
+ expect(StyleSheet.flatten(ui.getByTestId('wizard-traits-description').props.style).marginTop).toBe(-100);
+ expect(ui.getByText(profile.latin)).toBeTruthy();
+ expect(ui.UNSAFE_getByType(ImageBackground).props.source).toEqual({uri:profile.image});
+});
+
+
+it('preloads and displays the catalogue hero even when a thumbnail is available',async()=>{
+ mockImageLoading=false;
+ (request as jest.Mock).mockResolvedValue({...profile,image_thumb:'https://example.test/thumb.jpg'});
+ const ui=render(<Step02_PlantTraits/>);
+ await ui.findByText(profile.description);
+ expect(useWizardImagePreload).toHaveBeenLastCalledWith([profile.image],true);
+ expect(ui.UNSAFE_getByType(ImageBackground).props.source).toEqual({uri:profile.image});
 });

@@ -34,19 +34,22 @@ export const s = StyleSheet.create({
   segRow: {
     flexDirection: "row",
     marginBottom: 10,
-    borderRadius: 14,
-    backgroundColor: "rgba(255,255,255,0.13)",
+    borderRadius: 20,
+    backgroundColor: "#051F18",
+    padding: 3,
     overflow: "hidden",
   },
   segBtn: {
     flex: 1,
-    height: 40,
+    height: 34,
+    borderRadius: 17,
+    paddingHorizontal: 4,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "transparent",
   },
-  segBtnActive: { backgroundColor: "rgba(11,114,133,0.92)" },
-  segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 13, letterSpacing: 0.3 },
+  segBtnActive: { backgroundColor: "rgba(11,114,133,1)" },
+  segText: { color: "#FFFFFF", fontWeight: "700", fontSize: 10, textAlign: "center" },
 
   plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17, marginBottom: 8 },
 

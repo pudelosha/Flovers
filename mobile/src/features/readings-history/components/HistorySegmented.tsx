@@ -19,6 +19,8 @@ export default function HistorySegmented({ value, onChange }: Props) {
         return (
           <Pressable
             key={v}
+            accessibilityRole="tab"
+            accessibilityState={{ selected: active }}
             // Use style callback instead of android_ripple (prevents stuck overlay)
             style={({ pressed }) => [
               s.segBtn,
@@ -28,7 +30,7 @@ export default function HistorySegmented({ value, onChange }: Props) {
             onPress={() => onChange(v)}
             // no android_ripple here
           >
-            <Text style={s.segText}>
+            <Text style={s.segText} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8}>
               {v === "day"
                 ? t("readingsHistory.segment.day")
                 : v === "week"

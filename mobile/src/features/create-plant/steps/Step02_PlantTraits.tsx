@@ -1,47 +1,62 @@
-import {useAppTheme,ThemeContrastScope} from "../../../shared/theme/ThemeContext";
-import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { Text, View, StyleSheet, ImageBackground } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
-import MaskedView from "../../../shared/theme/MaskedView";
-import LinearGradient from "../../../shared/theme/Gradient";
+import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
+import React, {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useCallback,
+} from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  ImageBackground,
+} from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
+import PlantDescriptionSurface from '../../../shared/ui/PlantDescriptionSurface';
+import { PHOTO_DETAILS_ASPECT_RATIO } from '../../../shared/utils/photoFraming';
+import LinearGradient from '../../../shared/theme/Gradient';
 
-import { wiz } from "../styles/wizard.styles";
-import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { TRAIT_ICON_BY_KEY, TRAIT_LABEL_BY_KEY } from "../constants/create-plant.constants";
+import { wiz } from '../styles/wizard.styles';
+import { useCreatePlantWizard } from '../hooks/useCreatePlantWizard';
+import {
+  TRAIT_ICON_BY_KEY,
+  TRAIT_LABEL_BY_KEY,
+} from '../constants/create-plant.constants';
 
 // Read global settings (same provider used in HomeScreen)
-import { useSettings } from "../../../app/providers/SettingsProvider";
+import { useSettings } from '../../../app/providers/SettingsProvider';
 
 // Call API with explicit lang param (so we don't depend on device Accept-Language yet)
-import { request } from "../../../api/client";
+import { request } from '../../../api/client';
 import {
   serializePlantProfile,
   serializePlantSuggestion,
   type ApiPlantProfile,
   type ApiPlantSuggestion,
-} from "../../../api/serializers/plant-definitions.serializer";
+} from '../../../api/serializers/plant-definitions.serializer';
 
-import type { PlantProfile, Suggestion } from "../types/create-plant.types";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import { useWizardImagePreload } from "../hooks/useWizardImagePreload";
+import type { PlantProfile, Suggestion } from '../types/create-plant.types';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import { useWizardImagePreload } from '../hooks/useWizardImagePreload';
 
 const ENDPOINTS = {
-  searchIndex: "/plant-definitions/search-index/",
+  searchIndex: '/plant-definitions/search-index/',
   profile: (idOrKey: string | number) =>
-    typeof idOrKey === "number"
+    typeof idOrKey === 'number'
       ? `/plant-definitions/${idOrKey}/profile/`
       : `/plant-definitions/by-key/${idOrKey}/profile/`,
 };
 
 // EXACT SAME green tones as AuthCard / PlantTile
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 function toNumericIdOrNull(id: unknown): number | null {
-  if (typeof id === "number" && Number.isFinite(id)) return id;
-  if (typeof id === "string") {
+  if (typeof id === 'number' && Number.isFinite(id)) return id;
+  if (typeof id === 'string') {
     const trimmed = id.trim();
     if (!trimmed) return null;
     if (/^\d+$/.test(trimmed)) return Number(trimmed);
@@ -49,19 +64,23 @@ function toNumericIdOrNull(id: unknown): number | null {
   return null;
 }
 
-function pickTextValue(value: any, lang: string = "en"): string {
-  if (value == null) return "";
+function pickTextValue(value: any, lang: string = 'en'): string {
+  if (value == null) return '';
 
-  if (typeof value === "string") return value.trim();
+  if (typeof value === 'string') return value.trim();
 
-  if (typeof value === "object" && value.text && typeof value.text === "object") {
+  if (
+    typeof value === 'object' &&
+    value.text &&
+    typeof value.text === 'object'
+  ) {
     const v = value.text[lang] ?? value.text.en ?? value.text.pl;
-    if (typeof v === "string") return v.trim();
+    if (typeof v === 'string') return v.trim();
   }
 
-  if (typeof value === "object") {
+  if (typeof value === 'object') {
     const v = value[lang] ?? value.en ?? value.pl;
-    if (typeof v === "string") return v.trim();
+    if (typeof v === 'string') return v.trim();
   }
 
   try {
@@ -72,48 +91,52 @@ function pickTextValue(value: any, lang: string = "en"): string {
 }
 
 function normalizeLang(input: any): string {
-  const raw = typeof input === "string" ? input.trim().toLowerCase() : "";
-  if (!raw) return "en";
-  return raw.split("-")[0] || "en";
+  const raw = typeof input === 'string' ? input.trim().toLowerCase() : '';
+  if (!raw) return 'en';
+  return raw.split('-')[0] || 'en';
 }
 
 function titleCaseKey(key: string): string {
-  const s = (key || "").replace(/[_-]+/g, " ").trim();
-  if (!s) return "";
+  const s = (key || '').replace(/[_-]+/g, ' ').trim();
+  if (!s) return '';
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 function normalizeTraitKey(raw: string): string {
-  const k = (raw || "").trim().toLowerCase();
-  if (!k) return "";
+  const k = (raw || '').trim().toLowerCase();
+  if (!k) return '';
 
   const map: Record<string, string> = {
-    watering: "water",
-    temp: "temperature",
-    light: "sun",
+    watering: 'water',
+    temp: 'temperature',
+    light: 'sun',
   };
 
   return map[k] ?? k;
 }
 
-function getTemperatureUnitFromSettings(settings?: any): "C" | "F" | "K" {
+function getTemperatureUnitFromSettings(settings?: any): 'C' | 'F' | 'K' {
   const raw =
     settings?.temperatureUnit ??
     settings?.tempUnit ??
     settings?.units?.temperature ??
-    "C";
+    'C';
 
   const normalized = String(raw).trim().toLowerCase();
 
-  if (normalized === "f" || normalized === "°f" || normalized === "fahrenheit") {
-    return "F";
+  if (
+    normalized === 'f' ||
+    normalized === '°f' ||
+    normalized === 'fahrenheit'
+  ) {
+    return 'F';
   }
 
-  if (normalized === "k" || normalized === "kelvin") {
-    return "K";
+  if (normalized === 'k' || normalized === 'kelvin') {
+    return 'K';
   }
 
-  return "C";
+  return 'C';
 }
 
 function cToF(c: number) {
@@ -129,15 +152,18 @@ function formatConvertedTemp(n: number) {
   return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
 }
 
-function convertSingleCelsiusValue(celsius: number, targetUnit: "C" | "F" | "K") {
-  if (targetUnit === "F") return `${formatConvertedTemp(cToF(celsius))}°F`;
-  if (targetUnit === "K") return `${formatConvertedTemp(cToK(celsius))} K`;
+function convertSingleCelsiusValue(
+  celsius: number,
+  targetUnit: 'C' | 'F' | 'K',
+) {
+  if (targetUnit === 'F') return `${formatConvertedTemp(cToF(celsius))}°F`;
+  if (targetUnit === 'K') return `${formatConvertedTemp(cToK(celsius))} K`;
   return `${formatConvertedTemp(celsius)}°C`;
 }
 
 function convertTemperatureText(value: string, settings?: any) {
   const targetUnit = getTemperatureUnitFromSettings(settings);
-  if (targetUnit === "C") return value;
+  if (targetUnit === 'C') return value;
 
   let out = value;
 
@@ -145,26 +171,26 @@ function convertTemperatureText(value: string, settings?: any) {
   out = out.replace(
     /(-?\d+(?:[.,]\d+)?)\s*(?:-|–|—|to)\s*(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi,
     (_, a, b) => {
-      const n1 = Number(String(a).replace(",", "."));
-      const n2 = Number(String(b).replace(",", "."));
+      const n1 = Number(String(a).replace(',', '.'));
+      const n2 = Number(String(b).replace(',', '.'));
       if (!Number.isFinite(n1) || !Number.isFinite(n2)) return _;
-      const v1 = targetUnit === "F" ? cToF(n1) : cToK(n1);
-      const v2 = targetUnit === "F" ? cToF(n2) : cToK(n2);
-      const unit = targetUnit === "F" ? "°F" : " K";
+      const v1 = targetUnit === 'F' ? cToF(n1) : cToK(n1);
+      const v2 = targetUnit === 'F' ? cToF(n2) : cToK(n2);
+      const unit = targetUnit === 'F' ? '°F' : ' K';
       return `${formatConvertedTemp(v1)}-${formatConvertedTemp(v2)}${unit}`;
-    }
+    },
   );
 
   // single values like 22°C or 22 C
   out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*°?\s*C\b/gi, (_, a) => {
-    const n = Number(String(a).replace(",", "."));
+    const n = Number(String(a).replace(',', '.'));
     if (!Number.isFinite(n)) return _;
     return convertSingleCelsiusValue(n, targetUnit);
   });
 
   // word forms like 22 Celsius
   out = out.replace(/(-?\d+(?:[.,]\d+)?)\s*Celsius\b/gi, (_, a) => {
-    const n = Number(String(a).replace(",", "."));
+    const n = Number(String(a).replace(',', '.'));
     if (!Number.isFinite(n)) return _;
     return convertSingleCelsiusValue(n, targetUnit);
   });
@@ -188,7 +214,7 @@ const TranslatedText = ({
     const text = values ? t(tKey, values) : t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch {
-    const fallbackText = tKey.split(".").pop() || tKey;
+    const fallbackText = tKey.split('.').pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
 };
@@ -203,14 +229,17 @@ function ImageMasked({ uri }: { uri: string }) {
   );
 }
 
-export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: (ready: boolean) => void } = {}) {
+export default function Step02_PlantTraits({
+  onReadyChange,
+}: { onReadyChange?: (ready: boolean) => void } = {}) {
   const { t, i18n } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
   const { settings } = useSettings();
-  const {isLight}=useAppTheme();
 
-  const preferredLang = normalizeLang((settings as any)?.language ?? (settings as any)?.lang ?? "en");
+  const preferredLang = normalizeLang(
+    (settings as any)?.language ?? (settings as any)?.lang ?? 'en',
+  );
 
   useEffect(() => {
     if (preferredLang && i18n.language !== preferredLang) {
@@ -225,7 +254,7 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
 
   const selected = state.selectedPlant;
   const selectedId = selected?.id;
-  const selectedName = selected?.name?.trim() || "";
+  const selectedName = selected?.name?.trim() || '';
   const selectedRef = useRef(selected);
 
   useEffect(() => {
@@ -235,34 +264,41 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
   const [profile, setProfile] = useState<PlantProfile | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [settledProfileKey, setSettledProfileKey] = useState("");
-  const profileKey = JSON.stringify([selectedId, selectedName, selected?.latin, preferredLang]);
+  const [settledProfileKey, setSettledProfileKey] = useState('');
+  const profileKey = JSON.stringify([
+    selectedId,
+    selectedName,
+    selected?.latin,
+    preferredLang,
+  ]);
 
   const getTranslation = useCallback(
     (key: string, fallback?: string, values?: any): string => {
       try {
         const translation = t(
           key,
-          values ? { ...values, lng: currentLanguage } : { lng: currentLanguage }
+          values
+            ? { ...values, lng: currentLanguage }
+            : { lng: currentLanguage },
         );
-        return translation || fallback || key.split(".").pop() || key;
+        return translation || fallback || key.split('.').pop() || key;
       } catch {
-        return fallback || key.split(".").pop() || key;
+        return fallback || key.split('.').pop() || key;
       }
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const persistProfile = useCallback((p: PlantProfile) => {
     const a: any = actionsRef.current;
     const currentSelected = selectedRef.current;
 
-    if (typeof a?.setSelectedPlantDefinition === "function") {
+    if (typeof a?.setSelectedPlantDefinition === 'function') {
       a.setSelectedPlantDefinition(p);
       return;
     }
 
-    if (typeof a?.setSelectedPlant === "function") {
+    if (typeof a?.setSelectedPlant === 'function') {
       a.setSelectedPlant({
         ...(currentSelected ?? {}),
         id: (p as any)?.id ?? currentSelected?.id,
@@ -276,18 +312,29 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
     }
   }, []);
 
-  const fetchSearchIndexWithLang = useCallback(async (): Promise<Suggestion[]> => {
-    const url = `${ENDPOINTS.searchIndex}?lang=${encodeURIComponent(preferredLang)}`;
-    const data = await request<ApiPlantSuggestion[]>(url, "GET", undefined, { auth: true });
+  const fetchSearchIndexWithLang = useCallback(async (): Promise<
+    Suggestion[]
+  > => {
+    const url = `${ENDPOINTS.searchIndex}?lang=${encodeURIComponent(
+      preferredLang,
+    )}`;
+    const data = await request<ApiPlantSuggestion[]>(url, 'GET', undefined, {
+      auth: true,
+    });
     return (data ?? []).map(serializePlantSuggestion);
   }, [preferredLang]);
 
-  const fetchProfileWithLang = useCallback(async (idOrExternalId: string | number): Promise<PlantProfile> => {
-    const base = ENDPOINTS.profile(idOrExternalId);
-    const url = `${base}?lang=${encodeURIComponent(preferredLang)}`;
-    const data = await request<ApiPlantProfile>(url, "GET", undefined, { auth: true });
-    return serializePlantProfile(data);
-  }, [preferredLang]);
+  const fetchProfileWithLang = useCallback(
+    async (idOrExternalId: string | number): Promise<PlantProfile> => {
+      const base = ENDPOINTS.profile(idOrExternalId);
+      const url = `${base}?lang=${encodeURIComponent(preferredLang)}`;
+      const data = await request<ApiPlantProfile>(url, 'GET', undefined, {
+        auth: true,
+      });
+      return serializePlantProfile(data);
+    },
+    [preferredLang],
+  );
 
   useEffect(() => {
     let alive = true;
@@ -300,7 +347,9 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
       try {
         if (selectedId) {
           const numericId = toNumericIdOrNull(selectedId);
-          const p = await fetchProfileWithLang(numericId !== null ? numericId : String(selectedId));
+          const p = await fetchProfileWithLang(
+            numericId !== null ? numericId : String(selectedId),
+          );
           if (!alive) return;
 
           setProfile(p);
@@ -313,13 +362,19 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
           const q = selectedName.toLowerCase();
 
           const hit =
-            all.find((s) => s.name.toLowerCase() === q) ||
-            all.find((s) => s.latin.toLowerCase() === q) ||
-            all.find((s) => s.name.toLowerCase().includes(q) || s.latin.toLowerCase().includes(q));
+            all.find(s => s.name.toLowerCase() === q) ||
+            all.find(s => s.latin.toLowerCase() === q) ||
+            all.find(
+              s =>
+                s.name.toLowerCase().includes(q) ||
+                s.latin.toLowerCase().includes(q),
+            );
 
           if (hit?.id) {
             const hitNumeric = toNumericIdOrNull(hit.id);
-            const p = await fetchProfileWithLang(hitNumeric !== null ? hitNumeric : String(hit.id));
+            const p = await fetchProfileWithLang(
+              hitNumeric !== null ? hitNumeric : String(hit.id),
+            );
             if (!alive) return;
 
             setProfile(p);
@@ -332,7 +387,13 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
         setProfile(null);
       } catch (e: any) {
         if (!alive) return;
-        setError(e?.message ?? getTranslation("createPlant.step02.errorProfile", "Failed to load plant profile"));
+        setError(
+          e?.message ??
+            getTranslation(
+              'createPlant.step02.errorProfile',
+              'Failed to load plant profile',
+            ),
+        );
       } finally {
         if (alive) {
           setSettledProfileKey(profileKey);
@@ -357,30 +418,39 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
     profileKey,
   ]);
 
-  const getLabelForKey = useCallback((key: string) => {
-    const i18nKey = `createPlant.step02.traits.${key}`;
-    const localized = getTranslation(i18nKey);
-    if (localized && localized !== i18nKey) return localized;
+  const getLabelForKey = useCallback(
+    (key: string) => {
+      const i18nKey = `createPlant.step02.traits.${key}`;
+      const localized = getTranslation(i18nKey);
+      if (localized && localized !== i18nKey) return localized;
 
-    const constant = (TRAIT_LABEL_BY_KEY as any)[key];
-    if (typeof constant === "string" && constant.trim()) return constant.trim();
+      const constant = (TRAIT_LABEL_BY_KEY as any)[key];
+      if (typeof constant === 'string' && constant.trim())
+        return constant.trim();
 
-    return titleCaseKey(key) || key;
-  }, [getTranslation]);
+      return titleCaseKey(key) || key;
+    },
+    [getTranslation],
+  );
 
   const preferences = useMemo(() => {
-    const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
+    const out: Array<{
+      key: string;
+      label: string;
+      icon: string;
+      value: string;
+    }> = [];
     const p: any = profile;
     const seen = new Set<string>();
 
     const traits = Array.isArray(p?.traits) ? p.traits : [];
     for (const tr of traits) {
-      const rawKey = String(tr?.key ?? "").trim();
+      const rawKey = String(tr?.key ?? '').trim();
       const key = normalizeTraitKey(rawKey);
       let value = pickTextValue(tr?.value, preferredLang);
       if (!key || !value) continue;
 
-      if (key === "temperature") {
+      if (key === 'temperature') {
         value = convertTemperatureText(value, settings);
       }
 
@@ -390,7 +460,7 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
       out.push({
         key,
         label: getLabelForKey(key),
-        icon: (TRAIT_ICON_BY_KEY as any)[key] ?? "leaf",
+        icon: (TRAIT_ICON_BY_KEY as any)[key] ?? 'leaf',
         value,
       });
     }
@@ -398,7 +468,7 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
     const addCore = (key: string, rawValue: any, fallbackIcon: string) => {
       let value = pickTextValue(rawValue, preferredLang);
       if (!value) return;
-      if (key === "temperature") {
+      if (key === 'temperature') {
         value = convertTemperatureText(value, settings);
       }
       if (seen.has(key)) return;
@@ -412,78 +482,121 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
       });
     };
 
-    if (p?.sun != null) addCore("sun", p.sun, "white-balance-sunny");
-    if (p?.water != null) addCore("water", p.water, "watering-can-outline");
-    if (p?.difficulty != null) addCore("difficulty", p.difficulty, "arm-flex");
-    if (p?.temperature != null) addCore("temperature", p.temperature, "thermometer");
+    if (p?.sun != null) addCore('sun', p.sun, 'white-balance-sunny');
+    if (p?.water != null) addCore('water', p.water, 'watering-can-outline');
+    if (p?.difficulty != null) addCore('difficulty', p.difficulty, 'arm-flex');
+    if (p?.temperature != null)
+      addCore('temperature', p.temperature, 'thermometer');
 
-    const pots = Array.isArray(p?.recommended_pot_materials) ? p.recommended_pot_materials : [];
+    const pots = Array.isArray(p?.recommended_pot_materials)
+      ? p.recommended_pot_materials
+      : [];
     if (pots.length) {
-      const v = pots.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
+      const v = pots
+        .map((x: any) => pickTextValue(x, preferredLang))
+        .filter(Boolean);
       if (v.length) {
         out.push({
-          key: "recommended_pot_materials",
-          label: getTranslation("createPlant.step02.labels.potMaterials", "Recommended Pot Materials"),
-          icon: "cup-outline",
-          value: v.join(", "),
+          key: 'recommended_pot_materials',
+          label: getTranslation(
+            'createPlant.step02.labels.potMaterials',
+            'Recommended Pot Materials',
+          ),
+          icon: 'cup-outline',
+          value: v.join(', '),
         });
       }
     }
 
-    const soils = Array.isArray(p?.recommended_soil_mixes) ? p.recommended_soil_mixes : [];
+    const soils = Array.isArray(p?.recommended_soil_mixes)
+      ? p.recommended_soil_mixes
+      : [];
     if (soils.length) {
-      const v = soils.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
+      const v = soils
+        .map((x: any) => pickTextValue(x, preferredLang))
+        .filter(Boolean);
       if (v.length) {
         out.push({
-          key: "recommended_soil_mixes",
-          label: getTranslation("createPlant.step02.labels.soilMixes", "Recommended Soil Mixes"),
-          icon: "shovel",
-          value: v.join(", "),
+          key: 'recommended_soil_mixes',
+          label: getTranslation(
+            'createPlant.step02.labels.soilMixes',
+            'Recommended Soil Mixes',
+          ),
+          icon: 'shovel',
+          value: v.join(', '),
         });
       }
     }
 
     if (p?.water_required && p?.water_interval_days != null) {
       out.push({
-        key: "water_interval_days",
-        label: getTranslation("createPlant.step02.labels.wateringInterval", "Watering"),
-        icon: "watering-can",
-        value: getTranslation("createPlant.step02.values.everyDays", "Every {{count}} days", {
-          count: p.water_interval_days,
-        }),
+        key: 'water_interval_days',
+        label: getTranslation(
+          'createPlant.step02.labels.wateringInterval',
+          'Watering',
+        ),
+        icon: 'watering-can',
+        value: getTranslation(
+          'createPlant.step02.values.everyDays',
+          'Every {{count}} days',
+          {
+            count: p.water_interval_days,
+          },
+        ),
       });
     }
 
     if (p?.moisture_required && p?.moisture_interval_days != null) {
       out.push({
-        key: "moisture_interval_days",
-        label: getTranslation("createPlant.step02.labels.moistureInterval", "Moisture Check"),
-        icon: "water-percent",
-        value: getTranslation("createPlant.step02.values.everyDays", "Every {{count}} days", {
-          count: p.moisture_interval_days,
-        }),
+        key: 'moisture_interval_days',
+        label: getTranslation(
+          'createPlant.step02.labels.moistureInterval',
+          'Moisture Check',
+        ),
+        icon: 'water-percent',
+        value: getTranslation(
+          'createPlant.step02.values.everyDays',
+          'Every {{count}} days',
+          {
+            count: p.moisture_interval_days,
+          },
+        ),
       });
     }
 
     if (p?.fertilize_required && p?.fertilize_interval_days != null) {
       out.push({
-        key: "fertilize_interval_days",
-        label: getTranslation("createPlant.step02.labels.fertilizeInterval", "Fertilizing"),
-        icon: "sprout",
-        value: getTranslation("createPlant.step02.values.everyDays", "Every {{count}} days", {
-          count: p.fertilize_interval_days,
-        }),
+        key: 'fertilize_interval_days',
+        label: getTranslation(
+          'createPlant.step02.labels.fertilizeInterval',
+          'Fertilizing',
+        ),
+        icon: 'sprout',
+        value: getTranslation(
+          'createPlant.step02.values.everyDays',
+          'Every {{count}} days',
+          {
+            count: p.fertilize_interval_days,
+          },
+        ),
       });
     }
 
     if (p?.repot_required && p?.repot_interval_months != null) {
       out.push({
-        key: "repot_interval_months",
-        label: getTranslation("createPlant.step02.labels.repotInterval", "Repotting"),
-        icon: "pot",
-        value: getTranslation("createPlant.step02.values.everyMonths", "Every {{count}} months", {
-          count: p.repot_interval_months,
-        }),
+        key: 'repot_interval_months',
+        label: getTranslation(
+          'createPlant.step02.labels.repotInterval',
+          'Repotting',
+        ),
+        icon: 'pot',
+        value: getTranslation(
+          'createPlant.step02.values.everyMonths',
+          'Every {{count}} months',
+          {
+            count: p.repot_interval_months,
+          },
+        ),
       });
     }
 
@@ -497,12 +610,18 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
   const profileReady = !loading && settledProfileKey === profileKey;
   const heroPreload = useWizardImagePreload([heroImageUrl], profileReady);
   const ready = profileReady && !heroPreload.loading;
-  useEffect(() => { onReadyChange?.(ready); }, [onReadyChange, ready]);
+  useEffect(() => {
+    onReadyChange?.(ready);
+  }, [onReadyChange, ready]);
 
   const heroTitle =
     selectedName ||
     (profile as any)?.name ||
-    getTranslation("createPlant.step02.title", "Plant Traits");
+    getTranslation('createPlant.step02.title', 'Plant Traits');
+
+  const [panelHeight, setPanelHeight] = useState(240);
+  const hasHero = !!profile && !!heroImageUrl;
+  const overlap = hasHero ? Math.ceil(panelHeight / 3) : 0;
 
   if (!ready) return <CenteredSpinner size={56} color="#FFFFFF" />;
 
@@ -526,9 +645,9 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
+            'rgba(255, 255, 255, 0.06)',
+            'rgba(255, 255, 255, 0.02)',
+            'rgba(255, 255, 255, 0.08)',
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
@@ -544,71 +663,82 @@ export default function Step02_PlantTraits({ onReadyChange }: { onReadyChange?: 
         {!!profile && !!heroImageUrl && (
           <View style={heroStyles.heroWrap}>
             <View style={heroStyles.heroImage}>
-              <MaskedView
-                style={StyleSheet.absoluteFill}
-                maskElement={
-                  <LinearGradient
-                    colors={[
-                      "rgba(0,0,0,1.00)",
-                      "rgba(0,0,0,0.88)",
-                      isLight ? "rgba(0,0,0,0.96)" : "rgba(0,0,0,0.70)",
-                      isLight ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.42)",
-                      "rgba(0,0,0,0.00)",
-                    ]}
-                    locations={[0, 0.10, 0.55, 0.80, 1]}
-                    style={StyleSheet.absoluteFill}
-                  />
-                }
-              >
-                <ImageMasked uri={heroImageUrl} />
-              </MaskedView>
+              <ImageMasked uri={heroImageUrl} />
 
               {/* small top scrim for readability under the title */}
-              <LinearGradient themeRole="photo"
+              <LinearGradient
+                themeRole="photo"
                 pointerEvents="none"
-                colors={["rgba(0,0,0,0.45)", "rgba(0,0,0,0.00)"]}
+                colors={['rgba(0,0,0,0.45)', 'rgba(0,0,0,0.00)']}
                 locations={[0, 1]}
                 style={heroStyles.topScrim}
               />
 
-              <ThemeContrastScope kind="photo"><View style={heroStyles.heroTitleBox}>
-                <Text style={heroStyles.heroTitle} numberOfLines={1}>
-                  {heroTitle}
-                </Text>
-              </View></ThemeContrastScope>
+              <ThemeContrastScope kind="photo">
+                <View
+                  style={[heroStyles.heroTitleBox, { bottom: overlap + 16 }]}
+                >
+                  <Text style={heroStyles.heroTitle} numberOfLines={1}>
+                    {heroTitle}
+                  </Text>
+                  {!!profile?.latin && (
+                    <Text style={heroStyles.heroLatin}>{profile.latin}</Text>
+                  )}
+                </View>
+              </ThemeContrastScope>
             </View>
           </View>
         )}
 
-        {/* If no image yet, keep the title as before */}
-        {(!profile || !heroImageUrl) && (
-          <Text style={[wiz.title, { marginBottom: 6 }]}>
-            {selectedName ? `${selectedName}` : getTranslation("createPlant.step02.title", "Plant Traits")}
-          </Text>
-        )}
-
-        {!!error && (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>{error}</Text>
-        )}
-
-        {!!(profile as any)?.description && (
-          <Text style={wiz.desc}>{(profile as any).description}</Text>
-        )}
-
-        {!!profile && (
-          <>
-            <TranslatedText tKey="createPlant.step02.preferences" style={wiz.sectionTitle} />
-            <View style={wiz.prefsGrid}>
-              {preferences.map((row) => (
-                <View key={row.key} style={wiz.prefRow}>
-                  <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
-                  <Text style={wiz.prefLabel}>{row.label}</Text>
-                  <Text style={wiz.prefValue}>{row.value}</Text>
-                </View>
-              ))}
-            </View>
-          </>
-        )}
+        <View
+          testID="wizard-traits-description"
+          style={[heroStyles.infoPanel, { marginTop: -overlap }]}
+          onLayout={event => {
+            const height = Math.round(event.nativeEvent.layout.height);
+            if (height > 0) setPanelHeight(height);
+          }}
+        >
+          {hasHero && <PlantDescriptionSurface fadeHeight={overlap} />}
+          {/* If no image yet, keep the title as before */}
+          {(!profile || !heroImageUrl) && (
+            <Text style={[wiz.title, { marginBottom: 6 }]}>
+              {selectedName
+                ? `${selectedName}`
+                : getTranslation('createPlant.step02.title', 'Plant Traits')}
+            </Text>
+          )}
+          {!!error && (
+            <Text
+              style={[wiz.subtitle, { color: '#ffdddd', marginBottom: 10 }]}
+            >
+              {error}
+            </Text>
+          )}
+          {!!(profile as any)?.description && (
+            <Text style={wiz.desc}>{(profile as any).description}</Text>
+          )}
+          {!!profile && (
+            <>
+              <TranslatedText
+                tKey="createPlant.step02.preferences"
+                style={wiz.sectionTitle}
+              />
+              <View style={wiz.prefsGrid}>
+                {preferences.map(row => (
+                  <View key={row.key} style={wiz.prefRow}>
+                    <MaterialCommunityIcons
+                      name={row.icon as any}
+                      size={18}
+                      color="#FFFFFF"
+                    />
+                    <Text style={wiz.prefLabel}>{row.label}</Text>
+                    <Text style={wiz.prefValue}>{row.value}</Text>
+                  </View>
+                ))}
+              </View>
+            </>
+          )}{' '}
+        </View>
       </View>
     </View>
   );
@@ -619,32 +749,50 @@ const heroStyles = StyleSheet.create({
     marginLeft: -16,
     marginRight: -16,
     marginTop: -16,
-    marginBottom: 10,
+    marginBottom: 0,
     borderTopLeftRadius: 28,
     borderTopRightRadius: 28,
-    overflow: "hidden",
+    overflow: 'hidden',
   },
   heroImage: {
-    width: "100%",
-    height: 200,
-    justifyContent: "flex-start",
+    width: '100%',
+    aspectRatio: PHOTO_DETAILS_ASPECT_RATIO * 0.85,
+    justifyContent: 'flex-end',
   },
   topScrim: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
     right: 0,
     top: 0,
     height: 70,
   },
   heroTitleBox: {
-    position: "absolute",
+    position: 'absolute',
     left: 16,
-    top: 14,
     right: 16,
   },
+  infoPanel: {
+    marginHorizontal: -16,
+    marginBottom: -16,
+    paddingHorizontal: 16,
+    paddingTop: 20,
+    paddingBottom: 20,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    borderBottomLeftRadius: 28,
+    borderBottomRightRadius: 28,
+    overflow: 'hidden',
+  },
+  heroLatin: {
+    color: 'rgba(255,255,255,0.92)',
+    fontSize: 13,
+    fontStyle: 'italic',
+    fontWeight: '700',
+    marginTop: 6,
+  },
   heroTitle: {
-    color: "#FFFFFF",
-    fontWeight: "800",
+    color: '#FFFFFF',
+    fontWeight: '800',
     fontSize: 18,
   },
 });
