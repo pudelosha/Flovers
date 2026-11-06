@@ -1,58 +1,70 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
-import { View, ScrollView, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
+import React, { useEffect, useState, useRef, useCallback } from 'react';
+import {
+  View,
+  ScrollView,
+  Pressable,
+  Text,
+  StyleSheet,
+  Animated,
+  Easing,
+  AnimatedView,
+} from '../../../shared/theme/native';
 import type {
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
-} from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useFocusEffect, useNavigation } from "@react-navigation/native";
-import { useTranslation } from "react-i18next";
+} from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 
-import GlassHeader from "../../../shared/ui/GlassHeader";
-import { useAuth } from "../../../app/providers/useAuth";
-import { useSettings } from "../../../app/providers/SettingsProvider";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
+import GlassHeader from '../../../shared/ui/GlassHeader';
+import { useAuth } from '../../../app/providers/useAuth';
+import { useSettings } from '../../../app/providers/SettingsProvider';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
 
-import { layout as ly } from "../styles/profile.styles";
-import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
-import type { LangCode, PromptKey } from "../types/profile.types";
+import { layout as ly } from '../styles/profile.styles';
+import {
+  HEADER_GRADIENT_TINT,
+  HEADER_SOLID_FALLBACK,
+} from '../constants/profile.constants';
+import type { LangCode, PromptKey } from '../types/profile.types';
 
-import AccountCard from "../components/AccountCard";
-import NotificationsCard from "../components/NotificationsCard";
-import SettingsCard from "../components/SettingsCard";
-import SupportCard from "../components/SupportCard";
-import SharingCard from "../../sharing/components/SharingCard";
-import { useAccountLevel } from "../hooks/useAccountLevel";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
-import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import AccountCard from '../components/AccountCard';
+import NotificationsCard from '../components/NotificationsCard';
+import SettingsCard from '../components/SettingsCard';
+import SupportCard from '../components/SupportCard';
+import SharingCard from '../../sharing/components/SharingCard';
+import { useAccountLevel } from '../hooks/useAccountLevel';
+import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
+import TopSnackbar from '../../../shared/ui/TopSnackbar';
 
 import {
   fetchProfileNotifications,
   updateProfileNotifications,
   updateProfileSettings,
-} from "../../../api/services/profile.service";
+} from '../../../api/services/profile.service';
 
 // Modals
-import ChangeEmailModal from "../components/modals/ChangeEmailModal";
-import ChangePasswordModal from "../components/modals/ChangePasswordModal";
-import DeleteAccountModal from "../components/modals/DeleteAccountModal";
-import ContactUsModal from "../components/modals/ContactUsModal";
-import ReportBugModal from "../components/modals/ReportBugModal";
+import ChangeEmailModal from '../components/modals/ChangeEmailModal';
+import ChangePasswordModal from '../components/modals/ChangePasswordModal';
+import DeleteAccountModal from '../components/modals/DeleteAccountModal';
+import ContactUsModal from '../components/modals/ContactUsModal';
+import ReportBugModal from '../components/modals/ReportBugModal';
 
 function isUnauthorizedError(e: any): boolean {
   const status = (e?.response?.status ?? e?.status) as number | undefined;
-  const msg = String(e?.message ?? "").toLowerCase();
+  const msg = String(e?.message ?? '').toLowerCase();
   return (
     status === 401 ||
-    msg.includes("401") ||
-    msg.includes("unauthorized") ||
-    msg.includes("unauthorised")
+    msg.includes('401') ||
+    msg.includes('unauthorized') ||
+    msg.includes('unauthorised')
   );
 }
 
 function waitForNextFrame() {
-  return new Promise<void>((resolve) => {
+  return new Promise<void>(resolve => {
     requestAnimationFrame(() => resolve());
   });
 }
@@ -70,9 +82,18 @@ export default function ProfileScreen() {
   const { user, logout } = useAuth();
   const accountLevel = useAccountLevel(user?.id ?? user?.email);
   const insets = useSafeAreaInsets();
-  const { settings, loading: settingsLoading, applyServerSettings, updateLocalSettings } = useSettings();
+  const {
+    settings,
+    loading: settingsLoading,
+    applyServerSettings,
+    updateLocalSettings,
+  } = useSettings();
   const { changeLanguage: changeAppLanguage, currentLanguage } = useLanguage();
 
+  const [activeSection, setActiveSection] = useState<
+    'account' | 'notifications' | 'settings'
+  >('account');
+  const [segmentHeight, setSegmentHeight] = useState(38);
   const scrollRef = useRef<ScrollView | null>(null);
   const scrollToTop = useCallback(() => {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
@@ -81,10 +102,13 @@ export default function ProfileScreen() {
   const settingsTileYRef = useRef(0);
   const settingsTileViewportYRef = useRef<number | null>(null);
   const restoreScrollYRef = useRef<number | null>(null);
-  const handleScroll = useCallback((event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (restoreScrollYRef.current !== null) return;
-    scrollYRef.current = event.nativeEvent.contentOffset.y;
-  }, []);
+  const handleScroll = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      if (restoreScrollYRef.current !== null) return;
+      scrollYRef.current = event.nativeEvent.contentOffset.y;
+    },
+    [],
+  );
   const restoreSettingsScrollPosition = useCallback(() => {
     const settingsTileViewportY = settingsTileViewportYRef.current;
     const fallbackScrollY = restoreScrollYRef.current;
@@ -104,11 +128,13 @@ export default function ProfileScreen() {
       settingsTileYRef.current = event.nativeEvent.layout.y;
       restoreSettingsScrollPosition();
     },
-    [restoreSettingsScrollPosition]
+    [restoreSettingsScrollPosition],
   );
 
   // PROMPTS (modal selector)
-  const [prompt, setPrompt] = useState<PromptKey | "contact" | "bug" | null>(null);
+  const [prompt, setPrompt] = useState<PromptKey | 'contact' | 'bug' | null>(
+    null,
+  );
 
   // Notifications load alongside settings and account progression.
   const [loading, setLoading] = useState<boolean>(true);
@@ -120,10 +146,15 @@ export default function ProfileScreen() {
 
   // Toast
   const [toastVisible, setToastVisible] = useState(false);
-  const [toastMsg, setToastMsg] = useState("");
-  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
+  const [toastMsg, setToastMsg] = useState('');
+  const [toastVariant, setToastVariant] = useState<
+    'default' | 'success' | 'error'
+  >('default');
 
-  const showToast = (msg: string, variant: "default" | "success" | "error" = "default") => {
+  const showToast = (
+    msg: string,
+    variant: 'default' | 'success' | 'error' = 'default',
+  ) => {
     setToastMsg(msg);
     setToastVariant(variant);
     setToastVisible(true);
@@ -142,7 +173,7 @@ export default function ProfileScreen() {
   const [sharedTaskEmail, setSharedTaskEmail] = useState(false);
   const [sharedTaskPush, setSharedTaskPush] = useState(false);
 
-  const formatHour = (h: number) => `${String(h).padStart(2, "0")}:00`;
+  const formatHour = (h: number) => `${String(h).padStart(2, '0')}:00`;
   const incHour = (h: number) => (h + 1) % 24;
   const decHour = (h: number) => (h + 23) % 24;
 
@@ -155,14 +186,18 @@ export default function ProfileScreen() {
   const [dateFormat, setDateFormat] = useState(settings.dateFormat);
   const [dateOpen, setDateOpen] = useState(false);
 
-  const [temperatureUnit, setTemperatureUnit] = useState(settings.temperatureUnit);
+  const [temperatureUnit, setTemperatureUnit] = useState(
+    settings.temperatureUnit,
+  );
   const [measureUnit, setMeasureUnit] = useState(settings.measureUnit);
   const [tempOpen, setTempOpen] = useState(false);
   const [measureOpen, setMeasureOpen] = useState(false);
 
-  const [tileTransparency, setTileTransparency] = useState(settings.tileTransparency);
+  const [tileTransparency, setTileTransparency] = useState(
+    settings.tileTransparency,
+  );
 
-  const [theme, setTheme] = useState(settings.theme ?? "dark");
+  const [theme, setTheme] = useState(settings.theme ?? 'dark');
   const [themeOpen, setThemeOpen] = useState(false);
 
   const [tileMotive, setTileMotive] = useState(settings.tileMotive);
@@ -178,7 +213,7 @@ export default function ProfileScreen() {
       restoreScrollYRef.current = scrollY;
       setLanguage(nextLanguage);
 
-      if (nextLanguage === currentLanguage?.split("-")?.[0]) {
+      if (nextLanguage === currentLanguage?.split('-')?.[0]) {
         settingsTileViewportYRef.current = null;
         restoreScrollYRef.current = null;
         return;
@@ -189,8 +224,8 @@ export default function ProfileScreen() {
 
       const changed = await changeAppLanguage(nextLanguage);
       if (!changed) {
-        console.warn("ProfileScreen: failed to apply language", nextLanguage);
-        showToast(t("profile.toasts.couldNotSaveSettings"), "error");
+        console.warn('ProfileScreen: failed to apply language', nextLanguage);
+        showToast(t('profile.toasts.couldNotSaveSettings'), 'error');
         settingsTileViewportYRef.current = null;
         restoreScrollYRef.current = null;
         setSwitchingLanguage(false);
@@ -204,7 +239,7 @@ export default function ProfileScreen() {
       await waitForNextFrame();
       setSwitchingLanguage(false);
     },
-    [changeAppLanguage, currentLanguage, restoreSettingsScrollPosition, t]
+    [changeAppLanguage, currentLanguage, restoreSettingsScrollPosition, t],
   );
 
   // Initial fetch: notifications
@@ -216,19 +251,22 @@ export default function ProfileScreen() {
         if (!isMounted) return;
 
         setEmailDaily(!!notif.email_daily);
-        setEmailHour(typeof notif.email_hour === "number" ? notif.email_hour : 12);
+        setEmailHour(
+          typeof notif.email_hour === 'number' ? notif.email_hour : 12,
+        );
         setEmail24h(!!notif.email_24h);
         setPushDaily(!!notif.push_daily);
-        setPushHour(typeof notif.push_hour === "number" ? notif.push_hour : 12);
+        setPushHour(typeof notif.push_hour === 'number' ? notif.push_hour : 12);
         setPush24h(!!notif.push_24h);
         setEmailSharedDue(!!notif.email_shared_due);
         setPushSharedDue(!!notif.push_shared_due);
         setSharedTaskEmail(!!notif.shared_task_email);
         setSharedTaskPush(!!notif.shared_task_push);
       } catch (e: any) {
-        console.warn("Failed to load profile notifications", e);
-        if (isUnauthorizedError(e)) showToast(t("profile.toasts.unauthorized"), "error");
-        else showToast(t("profile.toasts.failedToLoadPreferences"), "error");
+        console.warn('Failed to load profile notifications', e);
+        if (isUnauthorizedError(e))
+          showToast(t('profile.toasts.unauthorized'), 'error');
+        else showToast(t('profile.toasts.failedToLoadPreferences'), 'error');
       } finally {
         if (isMounted) setLoading(false);
       }
@@ -248,7 +286,7 @@ export default function ProfileScreen() {
     setTemperatureUnit(settings.temperatureUnit);
     setMeasureUnit(settings.measureUnit);
     setTileTransparency(settings.tileTransparency);
-    setTheme(settings.theme ?? "dark");
+    setTheme(settings.theme ?? 'dark');
     setFabPosition(settings.fabPosition);
     setTileMotive(settings.tileMotive);
 
@@ -271,13 +309,14 @@ export default function ProfileScreen() {
           shared_task_email: sharedTaskEmail,
           shared_task_push: sharedTaskPush,
         },
-        { auth: true }
+        { auth: true },
       );
-      showToast(t("profile.toasts.notificationsUpdated"), "success");
+      showToast(t('profile.toasts.notificationsUpdated'), 'success');
     } catch (e: any) {
-      console.warn("Failed to save notifications", e);
-      if (isUnauthorizedError(e)) showToast(t("profile.toasts.unauthorized"), "error");
-      else showToast(t("profile.toasts.couldNotSaveNotifications"), "error");
+      console.warn('Failed to save notifications', e);
+      if (isUnauthorizedError(e))
+        showToast(t('profile.toasts.unauthorized'), 'error');
+      else showToast(t('profile.toasts.couldNotSaveNotifications'), 'error');
     } finally {
       setSavingNotif(false);
     }
@@ -294,24 +333,25 @@ export default function ProfileScreen() {
           measure_unit: measureUnit,
           tile_transparency: tileTransparency,
           theme,
-          background: "bg5",
+          background: 'bg5',
           fab_position: fabPosition,
           tile_motive: tileMotive,
         },
-        { auth: true }
+        { auth: true },
       );
 
-      applyServerSettings({...res,theme:res.theme ?? theme});
+      applyServerSettings({ ...res, theme: res.theme ?? theme });
 
       if (language && language !== currentLanguage) {
         await changeAppLanguage(language);
       }
 
-      showToast(t("profile.toasts.settingsUpdated"), "success");
+      showToast(t('profile.toasts.settingsUpdated'), 'success');
     } catch (e: any) {
-      console.warn("Failed to save settings", e);
-      if (isUnauthorizedError(e)) showToast(t("profile.toasts.unauthorized"), "error");
-      else showToast(t("profile.toasts.couldNotSaveSettings"), "error");
+      console.warn('Failed to save settings', e);
+      if (isUnauthorizedError(e))
+        showToast(t('profile.toasts.unauthorized'), 'error');
+      else showToast(t('profile.toasts.couldNotSaveSettings'), 'error');
     } finally {
       setSavingSettings(false);
     }
@@ -320,9 +360,16 @@ export default function ProfileScreen() {
   // enter/exit animation
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
-  const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
-  const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
-  const isProfileLoading = loading || settingsLoading || !formInitialized || accountLevel.loading;
+  const contentTranslateY = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const contentScale = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const isProfileLoading =
+    loading || settingsLoading || !formInitialized || accountLevel.loading;
 
   useFocusEffect(
     useCallback(() => {
@@ -332,6 +379,8 @@ export default function ProfileScreen() {
         return;
       }
       scrollToTop();
+      entry.stopAnimation();
+      entry.setValue(0);
 
       Animated.timing(entry, {
         toValue: 1,
@@ -348,149 +397,223 @@ export default function ProfileScreen() {
           useNativeDriver: true,
         }).start();
       };
-    }, [entry, scrollToTop, isProfileLoading])
+    }, [entry, scrollToTop, isProfileLoading, activeSection]),
   );
 
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title={t("profile.header.title")}
+        title={t('profile.header.title')}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         rightIconName="qrcode-scan"
-        onPressRight={() => nav.navigate("Scanner")}
+        onPressRight={() => nav.navigate('Scanner')}
         showSeparator={false}
       />
 
       {isProfileLoading ? (
         <CenteredSpinner size={56} color="#FFFFFF" />
       ) : (
-      <AnimatedView
-        style={{
-          flex: 1,
-          opacity: contentOpacity,
-          transform: [{ translateY: contentTranslateY }, { scale: contentScale }],
-        }}
-      >
-        <ScrollView
-          ref={scrollRef}
-          contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}
-          onContentSizeChange={restoreSettingsScrollPosition}
-          onScroll={handleScroll}
-          scrollEventThrottle={16}
-          showsVerticalScrollIndicator={false}
-        >
-          <AccountCard
-            levelProgress={accountLevel.progress}
-            levelLoading={accountLevel.loading}
-            email={user?.email}
-            createdAt={
-              (user as any)?.date_joined ??
-              (user as any)?.created_at ??
-              (user as any)?.created ??
-              null
+        <View style={{ flex: 1 }}>
+          <View
+            testID="profile-segments"
+            style={segmentStyles.bar}
+            onLayout={event =>
+              setSegmentHeight(Math.ceil(event.nativeEvent.layout.height))
             }
-            onPrompt={setPrompt}
-            onLogout={logout}
-          />
-
-          <SharingCard />
-
-          <NotificationsCard
-            emailDaily={emailDaily}
-            setEmailDaily={setEmailDaily}
-            emailHour={emailHour}
-            setEmailHour={setEmailHour}
-            email24h={email24h}
-            setEmail24h={setEmail24h}
-            pushDaily={pushDaily}
-            setPushDaily={setPushDaily}
-            pushHour={pushHour}
-            setPushHour={setPushHour}
-            push24h={push24h}
-            setPush24h={setPush24h}
-            emailSharedDue={emailSharedDue}
-            setEmailSharedDue={setEmailSharedDue}
-            pushSharedDue={pushSharedDue}
-            setPushSharedDue={setPushSharedDue}
-            sharedTaskEmail={sharedTaskEmail}
-            setSharedTaskEmail={setSharedTaskEmail}
-            sharedTaskPush={sharedTaskPush}
-            setSharedTaskPush={setSharedTaskPush}
-            formatHour={formatHour}
-            incHour={incHour}
-            decHour={decHour}
-            onSave={handleSaveNotifications}
-          />
-
-          <View onLayout={handleSettingsLayout}>
-            <SettingsCard
-              language={language}
-              setLanguage={handleLanguageChange}
-              langOpen={langOpen}
-              setLangOpen={setLangOpen}
-              dateFormat={dateFormat}
-              setDateFormat={setDateFormat}
-              dateOpen={dateOpen}
-              setDateOpen={setDateOpen}
-              temperatureUnit={temperatureUnit}
-              setTemperatureUnit={setTemperatureUnit}
-              tempOpen={tempOpen}
-              setTempOpen={setTempOpen}
-              measureUnit={measureUnit}
-              setMeasureUnit={setMeasureUnit}
-              measureOpen={measureOpen}
-              setMeasureOpen={setMeasureOpen}
-              tileTransparency={tileTransparency}
-              setTileTransparency={setTileTransparency}
-              theme={theme}
-              setTheme={value=>{setTheme(value);updateLocalSettings({theme:value});}}
-              themeOpen={themeOpen}
-              setThemeOpen={setThemeOpen}
-              tileMotive={tileMotive}
-              setTileMotive={setTileMotive}
-              tileMotiveOpen={tileMotiveOpen}
-              setTileMotiveOpen={setTileMotiveOpen}
-              fabPosition={fabPosition}
-              setFabPosition={setFabPosition}
-              fabOpen={fabOpen}
-              setFabOpen={setFabOpen}
-              onSave={handleSaveSettings}
-            />
+          >
+            {(['account', 'notifications', 'settings'] as const).map(
+              section => (
+                <Pressable
+                  key={section}
+                  accessibilityRole="tab"
+                  accessibilityState={{ selected: activeSection === section }}
+                  testID={`profile-tab-${section}`}
+                  style={[
+                    segmentStyles.option,
+                    activeSection === section && segmentStyles.active,
+                  ]}
+                  onPress={() => {
+                    if (activeSection === section) return;
+                    restoreScrollYRef.current = null;
+                    settingsTileViewportYRef.current = null;
+                    scrollYRef.current = 0;
+                    setLangOpen(false);
+                    setDateOpen(false);
+                    setTempOpen(false);
+                    setMeasureOpen(false);
+                    setThemeOpen(false);
+                    setTileMotiveOpen(false);
+                    setFabOpen(false);
+                    setActiveSection(section);
+                    scrollToTop();
+                  }}
+                >
+                  <Text
+                    style={segmentStyles.label}
+                    numberOfLines={1}
+                    adjustsFontSizeToFit
+                    minimumFontScale={0.75}
+                  >
+                    {t(`profile.segments.${section}`)}
+                  </Text>
+                </Pressable>
+              ),
+            )}
           </View>
+          <ScrollView
+            ref={scrollRef}
+            contentContainerStyle={[
+              ly.content,
+              {
+                paddingTop: segmentHeight + 24,
+                paddingBottom: insets.bottom + 120,
+              },
+            ]}
+            onContentSizeChange={restoreSettingsScrollPosition}
+            onScroll={handleScroll}
+            scrollEventThrottle={16}
+            showsVerticalScrollIndicator={false}
+          >
+            <AnimatedView
+              testID="profile-animated-tiles"
+              style={{
+                gap: 16,
+                opacity: contentOpacity,
+                transform: [
+                  { translateY: contentTranslateY },
+                  { scale: contentScale },
+                ],
+              }}
+            >
+              {activeSection === 'account' && (
+                <>
+                  <AccountCard
+                    levelProgress={accountLevel.progress}
+                    levelLoading={accountLevel.loading}
+                    email={user?.email}
+                    createdAt={
+                      (user as any)?.date_joined ??
+                      (user as any)?.created_at ??
+                      (user as any)?.created ??
+                      null
+                    }
+                    onPrompt={setPrompt}
+                    onLogout={logout}
+                  />
 
-          <SupportCard onContact={() => setPrompt("contact")} onBug={() => setPrompt("bug")} />
-        </ScrollView>
-      </AnimatedView>
+                  <SharingCard />
+
+                  <SupportCard
+                    onContact={() => setPrompt('contact')}
+                    onBug={() => setPrompt('bug')}
+                  />
+                </>
+              )}
+
+              {activeSection === 'notifications' && (
+                <NotificationsCard
+                  emailDaily={emailDaily}
+                  setEmailDaily={setEmailDaily}
+                  emailHour={emailHour}
+                  setEmailHour={setEmailHour}
+                  email24h={email24h}
+                  setEmail24h={setEmail24h}
+                  pushDaily={pushDaily}
+                  setPushDaily={setPushDaily}
+                  pushHour={pushHour}
+                  setPushHour={setPushHour}
+                  push24h={push24h}
+                  setPush24h={setPush24h}
+                  emailSharedDue={emailSharedDue}
+                  setEmailSharedDue={setEmailSharedDue}
+                  pushSharedDue={pushSharedDue}
+                  setPushSharedDue={setPushSharedDue}
+                  sharedTaskEmail={sharedTaskEmail}
+                  setSharedTaskEmail={setSharedTaskEmail}
+                  sharedTaskPush={sharedTaskPush}
+                  setSharedTaskPush={setSharedTaskPush}
+                  formatHour={formatHour}
+                  incHour={incHour}
+                  decHour={decHour}
+                  onSave={handleSaveNotifications}
+                />
+              )}
+
+              {activeSection === 'settings' && (
+                <View onLayout={handleSettingsLayout}>
+                  <SettingsCard
+                    language={language}
+                    setLanguage={handleLanguageChange}
+                    langOpen={langOpen}
+                    setLangOpen={setLangOpen}
+                    dateFormat={dateFormat}
+                    setDateFormat={setDateFormat}
+                    dateOpen={dateOpen}
+                    setDateOpen={setDateOpen}
+                    temperatureUnit={temperatureUnit}
+                    setTemperatureUnit={setTemperatureUnit}
+                    tempOpen={tempOpen}
+                    setTempOpen={setTempOpen}
+                    measureUnit={measureUnit}
+                    setMeasureUnit={setMeasureUnit}
+                    measureOpen={measureOpen}
+                    setMeasureOpen={setMeasureOpen}
+                    tileTransparency={tileTransparency}
+                    setTileTransparency={setTileTransparency}
+                    theme={theme}
+                    setTheme={value => {
+                      setTheme(value);
+                      updateLocalSettings({ theme: value });
+                    }}
+                    themeOpen={themeOpen}
+                    setThemeOpen={setThemeOpen}
+                    tileMotive={tileMotive}
+                    setTileMotive={setTileMotive}
+                    tileMotiveOpen={tileMotiveOpen}
+                    setTileMotiveOpen={setTileMotiveOpen}
+                    fabPosition={fabPosition}
+                    setFabPosition={setFabPosition}
+                    fabOpen={fabOpen}
+                    setFabOpen={setFabOpen}
+                    onSave={handleSaveSettings}
+                  />
+                </View>
+              )}
+            </AnimatedView>
+          </ScrollView>
+        </View>
       )}
 
       {savingNotif && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
       {savingSettings && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
-      {switchingLanguage && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
+      {switchingLanguage && (
+        <CenteredSpinner overlay size={36} color="#FFFFFF" />
+      )}
 
       {/* MODALS */}
       <ChangeEmailModal
-        visible={prompt === "email"}
+        visible={prompt === 'email'}
         onClose={() => setPrompt(null)}
         showToast={showToast}
       />
       <ChangePasswordModal
-        visible={prompt === "password"}
+        visible={prompt === 'password'}
         onClose={() => setPrompt(null)}
         showToast={showToast}
       />
       <DeleteAccountModal
-        visible={prompt === "delete"}
+        visible={prompt === 'delete'}
         onClose={() => setPrompt(null)}
         showToast={showToast}
       />
       <ContactUsModal
-        visible={prompt === "contact"}
+        visible={prompt === 'contact'}
         onClose={() => setPrompt(null)}
         showToast={showToast}
       />
       <ReportBugModal
-        visible={prompt === "bug"}
+        visible={prompt === 'bug'}
         onClose={() => setPrompt(null)}
         showToast={showToast}
       />
@@ -504,3 +627,33 @@ export default function ProfileScreen() {
     </View>
   );
 }
+
+const segmentStyles = StyleSheet.create({
+  bar: {
+    position: 'absolute',
+    top: 12,
+    left: 16,
+    right: 16,
+    zIndex: 60,
+    elevation: 60,
+    flexDirection: 'row',
+    backgroundColor: '#051F18',
+    borderRadius: 20,
+    padding: 3,
+  },
+  option: {
+    flex: 1,
+    paddingVertical: 8,
+    paddingHorizontal: 4,
+    borderRadius: 17,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  active: { backgroundColor: 'rgba(11,114,133,1)' },
+  label: {
+    color: '#FFFFFF',
+    fontSize: 10,
+    fontWeight: '700',
+    textAlign: 'center',
+  },
+});

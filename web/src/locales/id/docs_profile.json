@@ -6,7 +6,8 @@
         "heading": "Tujuan dari layar ini",
         "body": [
           "Profil menyatukan tingkat akun dan XP Anda, kontak dan berbagi tanaman, preferensi pemberitahuan, pengaturan tampilan dan dukungan.",
-          "Hal ini memungkinkan pengguna untuk mengontrol data pribadi dan bagaimana aplikasi Flovers berperilaku setiap hari."
+          "Hal ini memungkinkan pengguna untuk mengontrol data pribadi dan bagaimana aplikasi Flovers berperilaku setiap hari.",
+          "Pemilih Akun / Notifikasi / Pengaturan di bawah judul Profil tetap terlihat saat menggulir. Akun menampilkan kartu Akun, Berbagi, dan Bantuan. Tab lainnya menampilkan preferensi masing-masing. Perubahan notifikasi dan pengaturan yang belum disimpan tetap tersimpan saat berpindah tab."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Pemberitahuan",
         "body": [
-          "Notifikasi terbagi menjadi Email, Seluler, dan Berbagi. Ringkasan harian untuk tanaman milik sendiri dapat diaktifkan secara terpisah melalui email dan push, dengan satu waktu pengiriman per saluran dalam zona waktu notifikasi akun.",
+          "Tab Notifikasi berisi bagian Email dan Telepon. Setiap saluran memiliki persetujuan terpisah dan waktu pengiriman harian sesuai zona waktu notifikasi.",
           "Email dan Seluler juga memiliki kotak centang untuk tugas hari ini pada tanaman yang dibagikan kepada Anda. Opsi ini awalnya nonaktif, terpisah dari ringkasan tanaman sendiri, dan memakai waktu pengiriman yang sama dengan saluran terkait. Jika keduanya diaktifkan, tugas tanaman sendiri dan tanaman yang dibagikan kepada Anda digabungkan dalam satu pesan harian per saluran.",
           "Pengingat mencakup akses berbagi yang aktif, baik hanya lihat maupun dengan izin menyelesaikan tugas. Akses diperiksa lagi sebelum pengiriman. Pengingat berhenti jika akses kedaluwarsa, dicabut, atau kontak dihapus.",
           "Pengingat hari berikutnya hanya mencakup tugas tanaman milik sendiri yang belum selesai sejak kemarin. Pengiriman mengikuti waktu saluran yang dipilih, bukan tepat 24 jam setelah notifikasi pertama.",
-          "Bagian Berbagi menangani kejadian lain: seseorang menyelesaikan tugas untuk tanaman milik Anda. Kotak email dan push awalnya nonaktif dan berlaku untuk semua tanaman yang Anda bagikan. Notifikasi dikirim setelah tugas selesai, tanpa menunggu ringkasan harian. Ini adalah preferensi akun, bukan pengaturan untuk setiap tanaman yang dibagikan."
+          "Di bagian bawah Email dan Telepon, Anda dapat mengaktifkan peringatan saat orang lain menyelesaikan tugas untuk tanaman milik Anda. Opsi ini berlaku untuk seluruh akun, awalnya nonaktif, dan mengirim peringatan setelah tugas selesai, terpisah dari waktu ringkasan harian."
         ]
       },
       {

@@ -6,7 +6,8 @@
         "heading": "O que você encontra no Perfil",
         "body": [
           "O perfil reúne seu nível de conta e XP, compartilhamento de contatos e plantas de casa, preferências de notificação, configurações de aparência e suporte.",
-          "Use essa tela para cuidar dos seus dados e deixar o Flovers do seu jeito."
+          "Use essa tela para cuidar dos seus dados e deixar o Flovers do seu jeito.",
+          "Por baixo do título Perfil, o seletor Conta / Notificações / Definições permanece visível ao percorrer a página. Conta mostra os cartões Conta, Partilha e Apoio. Os outros separadores mostram as respetivas preferências. As alterações não guardadas são mantidas ao mudar de separador."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Notificações",
         "body": [
-          "As notificações têm as secções Email, Telefone e Partilha. Podes ativar separadamente os resumos diários das tuas plantas por email e por notificações push, com uma hora de envio por canal no fuso horário de notificações da tua conta.",
+          "O separador Notificações contém Email e Telefone. Cada canal tem consentimentos separados e um horário diário no fuso horário das notificações.",
           "Email e Telefone têm também uma caixa para as tarefas previstas para hoje nas plantas partilhadas contigo. Estas opções estão inicialmente desativadas, funcionam independentemente dos resumos das tuas plantas e usam a mesma hora do respetivo canal. Se ativares ambas as opções, as tarefas das tuas plantas e das partilhadas contigo são reunidas numa única mensagem diária por canal.",
           "Os lembretes incluem partilhas ativas só de leitura e com permissão para concluir tarefas. O acesso é verificado novamente antes do envio. Se a partilha expirar, o acesso for retirado ou o contacto for removido, os lembretes deixam de ser enviados.",
           "O lembrete do dia seguinte abrange apenas tarefas das tuas próprias plantas que continuam por concluir desde ontem. É enviado à hora configurada para o canal, não exatamente 24 horas depois da primeira notificação.",
-          "A secção Partilha diz respeito a outro evento: alguém conclui uma tarefa de uma planta que te pertence. As opções de email e push estão inicialmente desativadas e aplicam-se a todas as plantas que partilhas. Estas notificações são enviadas após a conclusão, sem esperar pelo resumo diário. É uma preferência da conta, não uma definição de cada partilha."
+          "No fim de Email e Telefone podes ativar alertas quando outra pessoa conclui uma tarefa de uma planta tua. Estas opções abrangem toda a conta, começam desativadas e enviam alertas após a conclusão, independentemente do resumo diário."
         ]
       },
       {

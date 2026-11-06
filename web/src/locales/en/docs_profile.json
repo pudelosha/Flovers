@@ -6,7 +6,8 @@
         "heading": "Purpose of this screen",
         "body": [
           "Profile brings together your account level and XP, contacts and plant sharing, notification preferences, appearance settings and support.",
-          "It allows the user to control both personal data and how the Flovers app behaves on a daily basis."
+          "It allows the user to control both personal data and how the Flovers app behaves on a daily basis.",
+          "Use the fixed Account / Notifications / Settings selector below the Profile header. Account shows the Account, Sharing and Support tiles. Notifications and Settings show their respective tiles. The selector stays visible while scrolling. Switching tabs preserves unsaved notification and settings changes."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Notifications",
         "body": [
-          "Notifications has Email, Phone and Shared sections. Daily summaries for your own plants can be enabled separately for email and push, with one delivery time per channel in your account’s notification timezone.",
+          "The Notifications tab contains Email and Phone sections. Each channel has its own consent choices and daily delivery time in your notification timezone.",
           "Email and Phone each have an additional checkbox for tasks due today on plants shared with you. These options start off, work independently of summaries for your own plants, and use the same delivery time as the corresponding channel. When both are enabled, your own and shared due tasks are combined into one daily message per channel.",
           "Shared-task reminders include active view-only shares as well as shares that allow task completion. Access is checked again before delivery. Expiry, removal of access or removal of the contact stops these reminders.",
           "The next-day follow-up option covers only your own plants’ unfinished tasks from yesterday. It uses the channel’s configured time; it is not a timer set for exactly 24 hours after the first notification.",
-          "The Shared section controls a different event: someone else completing a task for a plant you own. Its email and push checkboxes start off and apply to all plants you share. These notifications are sent after completion rather than at the daily summary time; they are account preferences, not settings in the plant-sharing form."
+          "At the bottom of Email and Phone, separate checkboxes let you receive an email or push notification when another person completes a task for a plant you own. These account-wide options start off and send notifications after completion, independently of the daily summary time."
         ]
       },
       {

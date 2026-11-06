@@ -68,10 +68,12 @@ function normalizeOrientationKey(v: any): 'N' | 'E' | 'S' | 'W' | null {
 
 function ImageMasked({
   uri,
+  shiftUp = false,
   onLoad,
   onError,
 }: {
   uri: string;
+  shiftUp?: boolean;
   onLoad: () => void;
   onError: () => void;
 }) {
@@ -81,7 +83,7 @@ function ImageMasked({
       onLoad={onLoad}
       onError={onError}
       resizeMode="cover"
-      style={StyleSheet.absoluteFillObject}
+      style={[StyleSheet.absoluteFillObject, shiftUp && { top: '-12%' }]}
     />
   );
 }
@@ -406,6 +408,7 @@ export default function PlantInfoTile({
                     ) : (
                       <ImageMasked
                         uri={imageUrl}
+                        shiftUp={!plant.photo && (imageUrl === plant.plant_definition?.image || imageUrl === plant.plant_definition?.image_thumb)}
                         onLoad={onImageLoad}
                         onError={onImageError}
                       />

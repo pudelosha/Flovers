@@ -224,7 +224,7 @@ function ImageMasked({ uri }: { uri: string }) {
     <ImageBackground
       source={{ uri }}
       resizeMode="cover"
-      style={StyleSheet.absoluteFillObject}
+      style={[StyleSheet.absoluteFillObject, { top: '-12%' }]}
     />
   );
 }

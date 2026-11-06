@@ -35,8 +35,12 @@ jest.mock("../../../../shared/ui/CenteredSpinner", () => (props: any) =>
   require("react").createElement(require("react-native").Text, { testID: "shared-spinner" }, "Loading"));
 jest.mock("../../../../shared/ui/GlassHeader", () => (props: any) =>
   require("react").createElement(require("react-native").Text, null, props.title));
-jest.mock("../../components/AccountCard", () => (props: any) =>
-  require("react").createElement(require("react-native").Text, null, "Account level " + (props.levelProgress?.level ?? "unavailable")));
+jest.mock("../../components/AccountCard", () => (props: any) => {
+ const {View,Text,Pressable}=require('react-native');
+ return <View><Text>{"Account level " + (props.levelProgress?.level ?? "unavailable")}</Text>
+ {['email','password','delete'].map(key=><Pressable key={key} onPress={()=>props.onPrompt(key)}><Text>{'open-'+key}</Text></Pressable>)}
+ </View>;
+});
 jest.mock("../../components/NotificationsCard", () => (props: any) => {
   const React = require("react"), { View, Text, Pressable } = require("react-native");
   return <View><Text>{"Notifications " + props.emailDaily}</Text>
@@ -48,18 +52,22 @@ jest.mock("../../components/NotificationsCard", () => (props: any) => {
     <Pressable onPress={() => props.setPushSharedDue((value: boolean) => !value)}><Text>toggle-shared-due-push</Text></Pressable>
     <Pressable onPress={props.onSave}><Text>save-notifications</Text></Pressable></View>;
 });
-jest.mock("../../components/SettingsCard", () => (props: any) =>
-  require("react").createElement(require("react-native").Text, null, "Settings " + props.dateFormat));
-jest.mock("../../components/SupportCard", () => () =>
-  require("react").createElement(require("react-native").Text, null, "Support"));
+jest.mock("../../components/SettingsCard", () => (props: any) => {
+ const {View,Text,Pressable}=require('react-native');
+ return <View><Text>{"Settings " + props.dateFormat}</Text><Pressable onPress={()=>props.setDateFormat('YYYY-MM-DD')}><Text>change-date-format</Text></Pressable></View>;
+});
+jest.mock("../../components/SupportCard", () => (props: any) => {
+ const {View,Text,Pressable}=require('react-native');
+ return <View><Text>Support</Text><Pressable onPress={props.onContact}><Text>open-contact</Text></Pressable><Pressable onPress={props.onBug}><Text>open-bug</Text></Pressable></View>;
+});
 jest.mock("../../../sharing/components/SharingCard", () => () =>
   require("react").createElement(require("react-native").Text, null, "Sharing"));
 jest.mock("../../../../shared/ui/TopSnackbar", () => () => null);
-jest.mock("../../components/modals/ChangeEmailModal", () => () => null);
-jest.mock("../../components/modals/ChangePasswordModal", () => () => null);
-jest.mock("../../components/modals/DeleteAccountModal", () => () => null);
-jest.mock("../../components/modals/ContactUsModal", () => () => null);
-jest.mock("../../components/modals/ReportBugModal", () => () => null);
+jest.mock("../../components/modals/ChangeEmailModal", () => (props: any) => props.visible ? require('react').createElement(require('react-native').Text, {testID: 'modal-email', onPress: props.onClose}, 'Close email') : null);
+jest.mock("../../components/modals/ChangePasswordModal", () => (props: any) => props.visible ? require('react').createElement(require('react-native').Text, {testID: 'modal-password', onPress: props.onClose}, 'Close password') : null);
+jest.mock("../../components/modals/DeleteAccountModal", () => (props: any) => props.visible ? require('react').createElement(require('react-native').Text, {testID: 'modal-delete', onPress: props.onClose}, 'Close delete') : null);
+jest.mock("../../components/modals/ContactUsModal", () => (props: any) => props.visible ? require('react').createElement(require('react-native').Text, {testID: 'modal-contact', onPress: props.onClose}, 'Close contact') : null);
+jest.mock("../../components/modals/ReportBugModal", () => (props: any) => props.visible ? require('react').createElement(require('react-native').Text, {testID: 'modal-bug', onPress: props.onClose}, 'Close bug') : null);
 
 const mockNotifications = fetchProfileNotifications as jest.Mock;
 const notifications = {
@@ -88,6 +96,8 @@ describe("Profile loading screen", () => {
     readyLevel();
     mockNotifications.mockResolvedValue({ ...notifications, shared_task_email: true, shared_task_push: false });
     const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId("profile-tab-notifications")).toBeTruthy());
+    fireEvent.press(view.getByTestId("profile-tab-notifications"));
     await waitFor(() => expect(view.getByTestId("shared-consent").props.children).toBe("true:false"));
     fireEvent.press(view.getByText("toggle-shared-email"));
     fireEvent.press(view.getByText("toggle-shared-push"));
@@ -102,6 +112,8 @@ describe("Profile loading screen", () => {
     mockNotifications.mockResolvedValue({ ...notifications, email_shared_due: true, push_shared_due: false,
       shared_task_email: true, shared_task_push: false });
     const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId("profile-tab-notifications")).toBeTruthy());
+    fireEvent.press(view.getByTestId("profile-tab-notifications"));
     await waitFor(() => expect(view.getByTestId("shared-due-consent").props.children).toBe("true:false"));
     fireEvent.press(view.getByText("toggle-shared-due-email"));
     fireEvent.press(view.getByText("toggle-shared-due-push"));
@@ -116,6 +128,8 @@ describe("Profile loading screen", () => {
     readyLevel();
     mockNotifications.mockResolvedValue(notifications);
     const view = render(<ProfileScreen />);
+    await waitFor(() => expect(view.getByTestId("profile-tab-notifications")).toBeTruthy());
+    fireEvent.press(view.getByTestId("profile-tab-notifications"));
     await waitFor(() => expect(view.getByTestId("shared-due-consent").props.children).toBe("false:false"));
   });
 
@@ -135,13 +149,17 @@ describe("Profile loading screen", () => {
     view.rerender(<ProfileScreen />);
     await waitFor(() => expect(view.queryByTestId("shared-spinner")).toBeNull());
     expect(view.getByText("Account level 2")).toBeTruthy();
-    expect(view.getByText("Notifications false")).toBeTruthy();
-    expect(view.getByText("Settings DD.MM.YYYY")).toBeTruthy();
-    expect(view.getByText("Support")).toBeTruthy();
-    const tiles = view.getAllByText(/^(Account level 2|Sharing|Notifications false|Settings DD.MM.YYYY|Support)$/);
-    expect(tiles.map((tile) => tile.props.children)).toEqual([
-      "Account level 2", "Sharing", "Notifications false", "Settings DD.MM.YYYY", "Support",
-    ]);
+    expect(view.queryByText("Notifications false")).toBeNull();
+    expect(view.queryByText("Settings DD.MM.YYYY")).toBeNull();
+    const tiles = view.getAllByText(/^(Account level 2|Sharing|Support)$/);
+    expect(tiles.map(tile => tile.props.children)).toEqual(["Account level 2", "Sharing", "Support"]);
+    fireEvent.press(view.getByTestId('profile-tab-notifications'));
+    expect(view.getByText('Notifications false')).toBeTruthy();
+    expect(view.queryByText('Account level 2')).toBeNull();
+    fireEvent.press(view.getByTestId('profile-tab-settings'));
+    expect(view.getByText('Settings DD.MM.YYYY')).toBeTruthy();
+    expect(view.queryByText('Notifications false')).toBeNull();
+
   });
 
   it("waits for notifications even if account XP is already available", async () => {
@@ -153,6 +171,7 @@ describe("Profile loading screen", () => {
     expect(view.queryByText(/Account level/)).toBeNull();
     await act(async () => request.resolve(notifications));
     expect(view.queryByTestId("shared-spinner")).toBeNull();
+    fireEvent.press(view.getByTestId('profile-tab-notifications'));
     expect(view.getByText("Notifications false")).toBeTruthy();
   });
 
@@ -166,6 +185,7 @@ describe("Profile loading screen", () => {
     mockSettings = { ...mockSettings, loading: false, settings: { ...DEFAULT_SETTINGS, dateFormat: "YYYY-MM-DD" } };
     view.rerender(<ProfileScreen />);
     await waitFor(() => expect(view.queryByTestId("shared-spinner")).toBeNull());
+    fireEvent.press(view.getByTestId('profile-tab-settings'));
     expect(view.getByText("Settings YYYY-MM-DD")).toBeTruthy();
   });
 
@@ -199,4 +219,39 @@ describe("Profile loading screen", () => {
       warning.mockRestore();
     }
   });
+});
+
+
+it('preserves unsaved notification choices across tab switches',async()=>{
+ readyLevel();mockNotifications.mockResolvedValue(notifications);
+ const view=render(<ProfileScreen/>);
+ await waitFor(()=>expect(view.getByTestId('profile-tab-notifications')).toBeTruthy());
+ fireEvent.press(view.getByTestId('profile-tab-notifications'));
+ fireEvent.press(view.getByText('toggle-shared-email'));
+ expect(view.getByTestId('shared-consent').props.children).toBe('true:false');
+ fireEvent.press(view.getByTestId('profile-tab-account'));
+ expect(view.queryByTestId('shared-consent')).toBeNull();
+ fireEvent.press(view.getByTestId('profile-tab-notifications'));
+ expect(view.getByTestId('shared-consent').props.children).toBe('true:false');
+});
+
+
+it.each(['email','password','delete','contact','bug'])('keeps the %s modal accessible from Account',async key=>{
+ readyLevel();mockNotifications.mockResolvedValue(notifications);
+ const view=render(<ProfileScreen/>);
+ await waitFor(()=>expect(view.getByTestId('profile-tab-account')).toBeTruthy());
+ fireEvent.press(view.getByText('open-'+key));
+ expect(view.getByTestId('modal-'+key)).toBeTruthy();
+ fireEvent.press(view.getByTestId('modal-'+key));
+ expect(view.queryByTestId('modal-'+key)).toBeNull();
+});
+it('preserves unsaved settings across tab switches',async()=>{
+ readyLevel();mockNotifications.mockResolvedValue(notifications);
+ const view=render(<ProfileScreen/>);
+ await waitFor(()=>expect(view.getByTestId('profile-tab-settings')).toBeTruthy());
+ fireEvent.press(view.getByTestId('profile-tab-settings'));
+ fireEvent.press(view.getByText('change-date-format'));
+ fireEvent.press(view.getByTestId('profile-tab-account'));
+ fireEvent.press(view.getByTestId('profile-tab-settings'));
+ expect(view.getByText('Settings YYYY-MM-DD')).toBeTruthy();
 });

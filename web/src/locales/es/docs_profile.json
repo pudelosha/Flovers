@@ -6,7 +6,8 @@
         "heading": "Gestionar tu cuenta y preferencias",
         "body": [
           "Perfil reúne su nivel de cuenta y XP, contactos y uso compartido de plantas, preferencias de notificación, configuración de apariencia y soporte.",
-          "Aquí puedes gestionar tus datos personales y adaptar Flovers a tu día a día."
+          "Aquí puedes gestionar tus datos personales y adaptar Flovers a tu día a día.",
+          "Debajo del título Perfil, el selector Cuenta / Notificaciones / Ajustes permanece visible al desplazarte. Cuenta muestra las tarjetas Cuenta, Compartir y Ayuda. Las otras pestañas muestran sus preferencias correspondientes. Los cambios sin guardar se conservan al cambiar de pestaña."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Tus notificaciones",
         "body": [
-          "Las notificaciones se dividen en Correo electrónico, Teléfono y Plantas compartidas. Puedes activar por separado los resúmenes diarios de tus propias plantas por correo y mediante notificaciones push, con una hora por canal en la zona horaria de notificaciones de tu cuenta.",
+          "La pestaña Notificaciones contiene Email y Teléfono. Cada canal tiene permisos separados y una hora diaria en tu zona horaria de notificaciones.",
           "Correo electrónico y Teléfono incluyen además una casilla para las tareas previstas para hoy en plantas compartidas contigo. Estas opciones están desactivadas inicialmente, funcionan independientemente de los resúmenes de tus plantas y usan la misma hora del canal correspondiente. Si activas ambas opciones, las tareas de tus plantas y de las compartidas contigo se reúnen en un único mensaje diario por canal.",
           "Los avisos incluyen los accesos activos de solo lectura y los que permiten completar tareas. El acceso se comprueba de nuevo antes del envío. Si el acceso caduca, se revoca o se elimina el contacto, dejan de enviarse estos avisos.",
           "El recordatorio del día siguiente solo incluye tareas de tus propias plantas que siguen pendientes desde ayer. Se envía a la hora del canal correspondiente, no exactamente 24 horas después de la primera notificación.",
-          "La sección Plantas compartidas cubre otro caso: alguien completa una tarea de una planta que te pertenece. Sus casillas de correo y push están desactivadas inicialmente y se aplican a todas las plantas que compartes. El aviso se envía después de completar la tarea, sin esperar al resumen diario. Es una preferencia de la cuenta, no de cada planta compartida."
+          "Al final de Email y Teléfono puedes activar avisos cuando otra persona complete una tarea de una planta tuya. Estas opciones afectan a toda la cuenta, están desactivadas por defecto y envían avisos tras completar la tarea, independientemente del resumen diario."
         ]
       },
       {

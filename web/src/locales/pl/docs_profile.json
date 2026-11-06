@@ -6,7 +6,8 @@
         "heading": "Co znajdziesz w Profilu",
         "body": [
           "W Profilu sprawdzisz poziom konta i XP, przejdziesz do kontaktów i udostępnionych roślin oraz zmienisz powiadomienia, wygląd aplikacji i ustawienia konta. Znajdziesz tam też pomoc.",
-          "Tutaj zmienisz swoje dane i dostosujesz aplikację do codziennego korzystania."
+          "Tutaj zmienisz swoje dane i dostosujesz aplikację do codziennego korzystania.",
+          "Pod nagłówkiem Profil znajdziesz stały pasek Konto / Powiadomienia / Ustawienia. W zakładce Konto są kafelki Konto, Udostępnianie i Pomoc. Pozostałe zakładki pokazują odpowiednio powiadomienia i ustawienia. Pasek pozostaje widoczny podczas przewijania. Zmiana zakładki nie usuwa niezapisanych zmian powiadomień ani ustawień."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Powiadomienia",
         "body": [
-          "W Powiadomieniach znajdziesz sekcje Email, Telefon i Udostępnione. Dzienne podsumowania zadań dla własnych roślin możesz włączyć osobno dla e-maili i powiadomień push. Każdy z tych kanałów ma jedną godzinę wysyłki, zgodną ze strefą czasową ustawioną na koncie.",
+          "Zakładka Powiadomienia zawiera sekcje E-mail i Telefon. Każdy kanał ma osobne zgody i godzinę dziennej wysyłki w strefie czasowej powiadomień.",
           "W sekcjach Email i Telefon jest też osobna opcja przypominania o zadaniach na dziś przy roślinach udostępnionych Tobie. Domyślnie jest wyłączona. Działa niezależnie od podsumowań dla Twoich roślin i korzysta z tej samej godziny wysyłki co dany kanał. Gdy włączysz obie opcje, zadania dla Twoich roślin i tych udostępnionych Tobie trafią do jednej dziennej wiadomości w danym kanale.",
           "Przypomnienia obejmują aktywnie udostępnione rośliny, także te dostępne tylko do podglądu. Przed wysłaniem aplikacja ponownie sprawdza dostęp. Gdy udostępnienie wygaśnie, właściciel cofnie dostęp albo usuniesz kontakt, przypomnienia przestają przychodzić.",
           "Opcja ponownego przypomnienia następnego dnia dotyczy wyłącznie niewykonanych zadań z wczoraj przy Twoich własnych roślinach. Wiadomość trafia do Ciebie o godzinie ustawionej dla danego kanału, a nie dokładnie 24 godziny po pierwszej.",
-          "Sekcja Udostępnione dotyczy innej sytuacji: ktoś wykonuje zadanie przy roślinie, której jesteś właścicielem. Możesz włączyć e-mail, powiadomienie push lub oba. Domyślnie są wyłączone. Ustawienie obejmuje wszystkie rośliny, które udostępniasz, a wiadomość jest wysyłana po wykonaniu zadania. Nie ustawia się tego osobno przy udostępnianiu każdej rośliny."
+          "Na dole sekcji E-mail i Telefon możesz osobno włączyć wiadomości o zadaniach wykonanych przez inne osoby przy Twoich roślinach. Te zgody dotyczą całego konta i domyślnie są wyłączone. Wiadomości są wysyłane po wykonaniu zadania, niezależnie od godziny dziennego podsumowania."
         ]
       },
       {

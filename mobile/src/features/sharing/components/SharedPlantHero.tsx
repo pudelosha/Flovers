@@ -1,3 +1,4 @@
+import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
 import React, { useEffect, useState } from 'react';
 import {
   ImageBackground,
@@ -144,8 +145,14 @@ export default function SharedPlantHero({
               </View>
             )}
           </View>
-          {!!action && <View style={styles.action}>{action}</View>}
         </View>
+        {!!action && (
+          <ThemeContrastScope kind="photo">
+            <View testID="shared-plant-image-actions" style={styles.action}>
+              {action}
+            </View>
+          </ThemeContrastScope>
+        )}
       </View>
     </View>
   );
@@ -169,7 +176,7 @@ const styles = StyleSheet.create({
   action: { position: 'absolute', top: 12, right: 12 },
   text: {
     paddingLeft: 18,
-    paddingRight: 58,
+    paddingRight: 18,
     paddingTop: 14,
     paddingBottom: 12,
   },

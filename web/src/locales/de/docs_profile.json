@@ -6,7 +6,8 @@
         "heading": "Was du im Profil findest",
         "body": [
           "Das Profil vereint Ihre Kontoebene und XP, das Teilen von Kontakten und Pflanzen, Benachrichtigungseinstellungen, Darstellungseinstellungen und Support.",
-          "Hier kannst du deine persönlichen Daten ändern und Flovers so einstellen, wie es zu deinem Alltag passt."
+          "Hier kannst du deine persönlichen Daten ändern und Flovers so einstellen, wie es zu deinem Alltag passt.",
+          "Unter der Profilüberschrift bleibt die Auswahl Konto / Benachrichtigungen / Einstellungen beim Scrollen sichtbar. Konto zeigt die Kacheln Konto, Teilen und Support. Die anderen Bereiche zeigen die jeweiligen Benachrichtigungen und Einstellungen. Nicht gespeicherte Änderungen bleiben beim Wechsel erhalten."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Benachrichtigungen",
         "body": [
-          "Die Benachrichtigungen sind in E-Mail, Telefon und Geteilte Pflanzen unterteilt. Tagesübersichten für eigene Pflanzen lassen sich für E-Mail und Push getrennt einschalten. Für jeden Kanal gibt es eine Versandzeit in der Benachrichtigungszeitzone deines Kontos.",
+          "Der Bereich Benachrichtigungen enthält E-Mail und Telefon. Jeder Kanal hat eigene Zustimmungen und eine tägliche Versandzeit in deiner Benachrichtigungszeitzone.",
           "Unter E-Mail und Telefon gibt es jeweils ein zusätzliches Kontrollkästchen für heute fällige Aufgaben an Pflanzen, die mit dir geteilt wurden. Diese Optionen sind zunächst ausgeschaltet, funktionieren unabhängig von den Übersichten für eigene Pflanzen und nutzen dieselbe Versandzeit des jeweiligen Kanals. Sind beide Optionen aktiv, werden eigene und geteilte Aufgaben in einer Tagesnachricht pro Kanal zusammengefasst.",
           "Die Erinnerungen berücksichtigen aktive Freigaben mit Lesezugriff und mit Berechtigung zum Erledigen von Aufgaben. Vor dem Versand wird der Zugriff erneut geprüft. Läuft eine Freigabe ab oder wird der Zugriff beziehungsweise der Kontakt entfernt, enden diese Erinnerungen.",
           "Die Erinnerung am Folgetag betrifft nur gestern fällige, noch offene Aufgaben für eigene Pflanzen. Sie wird zur eingestellten Zeit des Kanals versendet und nicht genau 24 Stunden nach der ersten Nachricht.",
-          "Geteilte Pflanzen betrifft einen anderen Fall: Jemand erledigt eine Aufgabe für eine Pflanze, die dir gehört. E-Mail und Push sind hier zunächst ausgeschaltet und gelten nach dem Einschalten für alle Pflanzen, die du teilst. Die Nachricht folgt auf die Erledigung, unabhängig von der Tagesübersicht. Diese Einstellung gehört zum Konto, nicht zur einzelnen Pflanzenfreigabe."
+          "Unten in E-Mail und Telefon kannst du Benachrichtigungen über Aufgaben aktivieren, die andere Personen für deine Pflanzen erledigen. Diese kontoweiten Optionen sind zunächst deaktiviert und werden unabhängig von der täglichen Zusammenfassung nach der Erledigung versendet."
         ]
       },
       {

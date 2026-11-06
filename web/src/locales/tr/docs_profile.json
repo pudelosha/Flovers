@@ -6,7 +6,8 @@
         "heading": "Bu ekranın amacı",
         "body": [
           "Profil, hesap seviyenizi ve XP'nizi, kişileri ve bitkisi paylaşımını, bildirim tercihlerini, görünüm ayarlarını ve desteği bir araya getirir.",
-          "Kullanıcının hem kişisel verileri hem de Flovers uygulamasının günlük olarak nasıl davrandığını kontrol etmesine olanak tanır."
+          "Kullanıcının hem kişisel verileri hem de Flovers uygulamasının günlük olarak nasıl davrandığını kontrol etmesine olanak tanır.",
+          "Profil başlığının altındaki Hesap / Bildirimler / Ayarlar seçicisi kaydırma sırasında görünür kalır. Hesap bölümünde Hesap, Paylaşım ve Destek kartları bulunur. Diğer sekmeler ilgili tercihleri gösterir. Sekme değiştirildiğinde kaydedilmemiş bildirim ve ayar değişiklikleri korunur."
         ]
       },
       {
@@ -55,11 +56,11 @@
       {
         "heading": "Bildirimler",
         "body": [
-          "Bildirimler E-posta, Mobil ve Paylaşım bölümlerinden oluşur. Kendi bitkilerinize ait günlük özetleri e-posta ve anlık bildirim için ayrı ayrı açabilir, hesabın bildirim saat diliminde her kanal için bir gönderim saati seçebilirsiniz.",
+          "Bildirimler sekmesinde E-posta ve Telefon bölümleri bulunur. Her kanalın ayrı izinleri ve bildirim saat dilimine göre günlük gönderim saati vardır.",
           "E-posta ve Mobil bölümlerinde, sizinle paylaşılan bitkilerin bugün yapılması gereken görevleri için ek bir onay kutusu bulunur. Bu seçenekler başlangıçta kapalıdır, kendi bitkilerinizin özetlerinden bağımsız çalışır ve ilgili kanalın gönderim saatini kullanır. İki seçenek de açıksa kendi bitkilerinizin ve sizinle paylaşılan bitkilerin görevleri her kanal için tek günlük mesajda birleştirilir.",
           "Hatırlatmalar hem yalnızca görüntüleme hem de görev tamamlama izni bulunan etkin paylaşımları kapsar. Gönderimden önce erişim yeniden kontrol edilir. Paylaşımın süresi dolduğunda, erişim kaldırıldığında veya kişi silindiğinde hatırlatmalar durur.",
           "Ertesi gün hatırlatması yalnızca kendi bitkilerinizin dünden kalan tamamlanmamış görevlerini kapsar. İlk bildirimden tam 24 saat sonra değil, kanal için ayarladığınız saatte gönderilir.",
-          "Paylaşım bölümü farklı bir olayı kapsar: başka biri size ait bir bitkinin görevini tamamlar. Buradaki e-posta ve anlık bildirim seçenekleri başlangıçta kapalıdır ve paylaştığınız tüm bitkiler için geçerlidir. Bildirimler günlük özeti beklemeden görev tamamlandıktan sonra gönderilir. Bu, her bitki paylaşımına özel değil, hesabın genel ayarıdır."
+          "E-posta ve Telefon bölümlerinin altında, başka biri size ait bir bitkinin görevini tamamladığında uyarı almayı açabilirsiniz. Hesap genelindeki bu seçenekler başlangıçta kapalıdır ve günlük özet saatinden bağımsız olarak görev tamamlandıktan sonra gönderilir."
         ]
       },
       {

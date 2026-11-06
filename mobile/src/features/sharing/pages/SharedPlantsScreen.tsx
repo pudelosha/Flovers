@@ -1,3 +1,4 @@
+import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
 import React, {
   useCallback,
   useEffect,
@@ -528,89 +529,91 @@ export default function SharedPlantsScreen() {
             })}
             onPress={closeMenu}
           />
-          <View
-            testID="shared-plant-actions-menu"
-            style={[
-              menuStyles.menuSheet,
-              {
-                right: menuAnchor.right,
-                top: menuTop,
-                maxWidth: menuAnchor.maxWidth,
-              },
-            ]}
-            onLayout={event => {
-              const height = event.nativeEvent.layout.height;
-              if (height > 0 && height !== menuHeight) setMenuHeight(height);
-            }}
-          >
-            <Pressable
-              accessibilityRole="button"
-              style={menuStyles.menuItem}
-              onPress={() => {
-                const id = menuPlant.id;
-                closeMenu();
-                nav.navigate('PlantDetails', { id });
+          <ThemeContrastScope kind="dark">
+            <View
+              testID="shared-plant-actions-menu"
+              style={[
+                menuStyles.menuSheet,
+                {
+                  right: menuAnchor.right,
+                  top: menuTop,
+                  maxWidth: menuAnchor.maxWidth,
+                },
+              ]}
+              onLayout={event => {
+                const height = event.nativeEvent.layout.height;
+                if (height > 0 && height !== menuHeight) setMenuHeight(height);
               }}
             >
-              <MaterialCommunityIcons
-                name="flower-tulip-outline"
-                size={18}
-                color="#FFFFFF"
-                style={{ marginRight: 8 }}
-              />
-              <Text style={menuStyles.menuItemText}>
-                {t('home.menu.goToPlant', { defaultValue: 'Plant details' })}
-              </Text>
-            </Pressable>
-            <Pressable
-              accessibilityRole="button"
-              style={menuStyles.menuItem}
-              onPress={() => {
-                const plantId = menuPlant.id;
-                closeMenu();
-                nav.navigate('Home', {
-                  plantId,
-                  filterRequestId: `${Date.now()}-${menuRequest.current}`,
-                });
-              }}
-            >
-              <MaterialCommunityIcons
-                name="format-list-checks"
-                size={18}
-                color="#FFFFFF"
-                style={{ marginRight: 8 }}
-              />
-              <Text style={menuStyles.menuItemText}>
-                {t('sharing.plants.displayTasks', {
-                  defaultValue: 'Display tasks',
-                })}
-              </Text>
-            </Pressable>
-            {menuGroup?.[0].direction === 'outgoing' && (
               <Pressable
                 accessibilityRole="button"
                 style={menuStyles.menuItem}
                 onPress={() => {
-                  const plant = menuPlant;
-                  const expectedRevision = versions[plant.id] ?? 0;
+                  const id = menuPlant.id;
                   closeMenu();
-                  setDeleting({ plant, expectedRevision });
+                  nav.navigate('PlantDetails', { id });
                 }}
               >
                 <MaterialCommunityIcons
-                  name="delete-outline"
+                  name="flower-tulip-outline"
                   size={18}
-                  color="#FF9090"
+                  color="#FFFFFF"
                   style={{ marginRight: 8 }}
                 />
-                <Text style={[menuStyles.menuItemText, pr.promptDangerText]}>
-                  {t('sharing.plants.deleteSharing', {
-                    defaultValue: 'Delete sharing',
+                <Text style={menuStyles.menuItemText}>
+                  {t('home.menu.goToPlant', { defaultValue: 'Plant details' })}
+                </Text>
+              </Pressable>
+              <Pressable
+                accessibilityRole="button"
+                style={menuStyles.menuItem}
+                onPress={() => {
+                  const plantId = menuPlant.id;
+                  closeMenu();
+                  nav.navigate('Home', {
+                    plantId,
+                    filterRequestId: `${Date.now()}-${menuRequest.current}`,
+                  });
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="format-list-checks"
+                  size={18}
+                  color="#FFFFFF"
+                  style={{ marginRight: 8 }}
+                />
+                <Text style={menuStyles.menuItemText}>
+                  {t('sharing.plants.displayTasks', {
+                    defaultValue: 'Display tasks',
                   })}
                 </Text>
               </Pressable>
-            )}
-          </View>
+              {menuGroup?.[0].direction === 'outgoing' && (
+                <Pressable
+                  accessibilityRole="button"
+                  style={menuStyles.menuItem}
+                  onPress={() => {
+                    const plant = menuPlant;
+                    const expectedRevision = versions[plant.id] ?? 0;
+                    closeMenu();
+                    setDeleting({ plant, expectedRevision });
+                  }}
+                >
+                  <MaterialCommunityIcons
+                    name="delete-outline"
+                    size={18}
+                    color="#FF9090"
+                    style={{ marginRight: 8 }}
+                  />
+                  <Text style={[menuStyles.menuItemText, pr.promptDangerText]}>
+                    {t('sharing.plants.deleteSharing', {
+                      defaultValue: 'Delete sharing',
+                    })}
+                  </Text>
+                </Pressable>
+              )}
+            </View>
+          </ThemeContrastScope>
         </View>
       )}
       <AppModalHost>
