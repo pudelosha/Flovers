@@ -18,6 +18,7 @@ import { useLanguage } from '../../../../app/providers/LanguageProvider';
 import { wiz } from '../../styles/wizard.styles';
 import type { LightLevel, Orientation } from '../../types/create-plant.types';
 import { Sensors } from '../../services/Sensors';
+import { ThemeContrastScope } from '../../../../shared/theme/ThemeContext';
 import { s as remindersStyles } from '../../../reminders/styles/reminders.styles';
 
 const MEASURE_GREEN = 'rgba(16,80,63,0.92)';
@@ -443,6 +444,7 @@ export default function MeasureExposureModal({
               <Text style={wiz.btnText}>{tr('createPlant.step04.modal.close', 'Close')}</Text>
             </Pressable>
 
+            <ThemeContrastScope kind="accent">
             <Pressable
               style={[
                 wiz.btn,
@@ -458,6 +460,7 @@ export default function MeasureExposureModal({
                   : tr('createPlant.step04.modal.measure5s', 'Measure (5s)')}
               </Text>
             </Pressable>
+            </ThemeContrastScope>
 
             <Pressable
               style={[

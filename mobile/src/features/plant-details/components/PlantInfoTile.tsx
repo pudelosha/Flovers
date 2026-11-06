@@ -173,6 +173,13 @@ export default function PlantInfoTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
+  const [parameterTextHeights, setParameterTextHeights] = useState<Record<string, { label?: number; value?: number }>>({});
+  const parameterHeight = Math.max(58, ...Object.values(parameterTextHeights).map(height => (height.label ?? 14) + (height.value ?? 17) + 20));
+  const measureParameterText = (key: string, part: 'label' | 'value', height: number) => {
+    const rounded = Math.ceil(height);
+    setParameterTextHeights(previous => previous[key]?.[part] === rounded
+      ? previous : { ...previous, [key]: { ...previous[key], [part]: rounded } });
+  };
 
   const nav = useNavigation<any>();
   const { openSharePlant, shares } = useSharingPreview();
@@ -613,7 +620,12 @@ export default function PlantInfoTile({
       {(activeTab === 'info' || tabContent != null) && (
         <Pressable
           testID="plant-detail-description"
-          style={[styles.infoBody, { marginTop: -infoFadeHeight }]}
+          style={[
+            styles.infoBody,
+            activeTab === 'info' && styles.infoBodyParameters,
+            activeTab === 'readings' && { minHeight: infoFadeHeight + 56 },
+            { marginTop: -infoFadeHeight },
+          ]}
           onLayout={event => {
             const height = Math.round(event.nativeEvent.layout.height);
             if (height > 0 && activeTab === 'info') setInfoPanelHeight(height);
@@ -626,62 +638,73 @@ export default function PlantInfoTile({
             <View style={styles.infoGrid}>
               {[
                 {
-                  icon: 'calendar',
-                  label: tr('plantDetails.info.purchased', 'Purchased'),
-                  value: purchaseValue,
-                },
-                {
-                  icon: 'note-edit-outline',
-                  label: tr('plantDetails.info.notes', 'Notes'),
-                  value: notesValue,
-                  multiline: true,
-                },
-                {
                   icon: 'white-balance-sunny',
                   label: tr('plantDetails.info.light', 'Light'),
                   value: lightValue,
+                  fullWidth: false,
                 },
                 {
                   icon: 'compass-outline',
                   label: tr('plantDetails.info.orientation', 'Orientation'),
                   value: orientationValue,
-                },
-                {
-                  icon: 'tape-measure',
-                  label: tr('plantDetails.info.distance', 'Distance'),
-                  value: distanceValue,
-                },
-                {
-                  icon: 'pot-outline',
-                  label: tr('plantDetails.info.pot', 'Pot'),
-                  value: potValue,
+                  fullWidth: false,
                 },
                 {
                   icon: 'shovel',
                   label: tr('plantDetails.info.soil', 'Soil'),
                   value: soilValue,
+                  fullWidth: false,
                 },
-              ].map((it, i) => (
+                {
+                  icon: 'pot-outline',
+                  label: tr('plantDetails.info.pot', 'Pot'),
+                  value: potValue,
+                  fullWidth: false,
+                },
+                {
+                  icon: 'tape-measure',
+                  label: tr('plantDetails.info.distance', 'Distance'),
+                  value: distanceValue,
+                  fullWidth: false,
+                },
+                {
+                  icon: 'calendar',
+                  label: tr('plantDetails.info.purchased', 'Purchased'),
+                  value: purchaseValue,
+                  fullWidth: false,
+                },
+                {
+                  icon: 'note-edit-outline',
+                  label: tr('plantDetails.info.notes', 'Notes'),
+                  value: notesValue,
+                  fullWidth: true,
+                },
+              ].map(it => (
                 <View
-                  key={i}
-                  style={[
-                    styles.infoRow,
-                    it.multiline && styles.infoRowTopAligned,
-                  ]}
+                  key={it.icon}
+                  testID={`plant-info-field-${it.icon}`}
+                  style={[styles.infoField, { minHeight: parameterHeight }, it.fullWidth && styles.infoFieldFull]}
                 >
-                  <MaterialCommunityIcons
-                    name={it.icon as any}
-                    size={16}
-                    color="#FFFFFF"
-                    style={{ marginRight: 8 }}
-                  />
-                  <Text style={styles.infoLabel}>{it.label}:</Text>
-                  <Text
-                    style={styles.infoValue}
-                    numberOfLines={it.multiline ? undefined : 2}
+                  <View style={styles.infoIcon}>
+                    <MaterialCommunityIcons name={it.icon as any} size={20} color="#FFFFFF" />
+                  </View>
+                  <View
+                    style={styles.infoText}
+                    testID={`plant-info-text-${it.icon}`}
                   >
-                    {it.value}
-                  </Text>
+                    <Text
+                      style={styles.infoLabel}
+                      testID={`plant-info-label-${it.icon}`}
+                      onLayout={it.fullWidth ? undefined : event => measureParameterText(it.icon, 'label', event.nativeEvent.layout.height)}
+                    >{it.label}</Text>
+                    <View style={styles.infoValueArea}>
+                      <Text
+                        style={styles.infoValue}
+                        testID={`plant-info-value-${it.icon}`}
+                        onLayout={it.fullWidth ? undefined : event => measureParameterText(it.icon, 'value', event.nativeEvent.layout.height)}
+                      >{it.value}</Text>
+                    </View>
+                  </View>
                 </View>
               ))}
             </View>
@@ -849,11 +872,39 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 
-  infoGrid: { gap: 8, marginTop: 6 },
-  infoRow: { flexDirection: 'row', alignItems: 'center' },
-  infoRowTopAligned: { alignItems: 'flex-start' },
-  infoLabel: { color: '#FFFFFF', fontWeight: '800', marginRight: 6 },
-  infoValue: { color: 'rgba(255,255,255,0.95)', fontWeight: '600', flex: 1 },
+  infoGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+    rowGap: 8,
+    marginTop: 0,
+  },
+  infoBodyParameters: { paddingTop: 16, paddingBottom: 16 },
+  infoField: {
+    width: '48.8%',
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    backgroundColor: 'rgba(255,255,255,0.10)',
+    borderRadius: 14,
+    padding: 10,
+    gap: 8,
+    minHeight: 58,
+  },
+  infoFieldFull: { width: '100%' },
+  infoIcon: {
+    alignSelf: 'center',
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: 'rgba(255,255,255,0.14)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  infoText: { flex: 1, minWidth: 0, alignSelf: 'stretch' },
+  infoValueArea: { flexGrow: 1, justifyContent: 'center' },
+  infoLabel: { color: 'rgba(255,255,255,0.85)', fontSize: 10, lineHeight: 14 },
+  infoValue: { color: '#FFFFFF', fontSize: 12, lineHeight: 17, fontWeight: '700', flexShrink: 1 },
 
   // prompt sheet styles (copied from your ChangePlantImageModal approach)
   confirmOverlay: {

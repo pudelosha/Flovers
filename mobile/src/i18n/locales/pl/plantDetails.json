@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Opcje zadania", "empty": "Brak zadań do wyświetlenia dla tej rośliny."},
-    "tabsEmpty": {"reminders": "Brak przypomnień do wyświetlenia dla tej rośliny.", "device": "Do tej rośliny nie przypisano urządzenia."},
-    "segments": {"info": "Info", "reminders": "Zadania", "readings": "Odczyty"},
+    "tasks": {
+      "menu": "Opcje zadania",
+      "empty": "Brak zadań do wyświetlenia dla tej rośliny."
+    },
+    "tabsEmpty": {
+      "reminders": "Brak przypomnień do wyświetlenia dla tej rośliny.",
+      "device": "Do tej rośliny nie przypisano urządzenia."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Zadania",
+      "readings": "Odczyty"
+    },
     "headerTitle": "Szczegóły rośliny",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Aktywność",
       "empty": "Nie wykonano jeszcze żadnych zadań.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "W Odczytach właściciel rośliny może przypisać płytkę Arduino lub ESP i wybrać czujniki. Aby otrzymać dopasowany przykładowy kod, otwórz menu urządzenia, wybierz Szczegóły urządzenia, a potem Wyślij kod e-mailem.",
+      "charts": "Gdy pojawią się odczyty, dotknij ikony lub wartości pomiaru, aby zobaczyć wykres dzienny, tygodniowy lub miesięczny.",
+      "pump": "Po podłączeniu pompy i przekaźnika właściciel może zaplanować podlewanie na wybrany czas albo włączyć automatyczne podlewanie, gdy wilgotność gleby spadnie poniżej progu. Obsługę pompy, czas jej pracy i przerwę między automatycznymi podlewaniami ustawia się w ustawieniach urządzenia."
     }
   }
 }

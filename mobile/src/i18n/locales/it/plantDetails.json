@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Opzioni attività", "empty": "Non ci sono ancora attività per questa pianta."},
-    "tabsEmpty": {"reminders": "Non ci sono promemoria disponibili per questa pianta.", "device": "Nessun dispositivo è collegato a questa pianta."},
-    "segments": {"info": "Info", "reminders": "Attività", "readings": "Letture"},
+    "tasks": {
+      "menu": "Opzioni attività",
+      "empty": "Non ci sono ancora attività per questa pianta."
+    },
+    "tabsEmpty": {
+      "reminders": "Non ci sono promemoria disponibili per questa pianta.",
+      "device": "Nessun dispositivo è collegato a questa pianta."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Attività",
+      "readings": "Letture"
+    },
     "headerTitle": "Dettagli della pianta",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Attività",
       "empty": "Nessuna attività completata finora.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "In Letture, il proprietario può collegare una scheda Arduino o ESP e scegliere i sensori. Apri il menu del dispositivo, scegli Dettagli dispositivo e poi Invia codice via email per richiedere un esempio configurato per quel dispositivo.",
+      "charts": "Quando arrivano le letture, tocca l’icona o il valore di una misura per aprire il grafico giornaliero, settimanale o mensile.",
+      "pump": "Con una pompa e un relè collegati, il proprietario può programmare l’irrigazione per una durata scelta o attivarla automaticamente sotto una soglia di umidità del terreno. Supporto della pompa, durata e pausa tra irrigazioni automatiche si configurano nelle impostazioni del dispositivo."
     }
   }
 }

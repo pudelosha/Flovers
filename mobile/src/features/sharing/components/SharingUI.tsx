@@ -48,7 +48,7 @@ export function SharingPage({
   const focused = useIsFocused();
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
-  const entryStyle = useScreenEntryAnimation(contentReady, focused);
+  const entryStyle = useScreenEntryAnimation(contentReady, focused, scrollResetKey);
   const scrollRef = React.useRef<ScrollView>(null);
   useEffect(() => {
     if (scrollResetKey !== undefined)
@@ -83,10 +83,7 @@ export function SharingPage({
           </Pressable>
         )}
       </GlassHeader>
-      <AnimatedView
-        testID="sharing-page-content"
-        style={[s.body, contentReady && entryStyle]}
-      >
+      <View style={s.body}>
         <ScrollView
           ref={scrollRef}
           keyboardShouldPersistTaps="handled"
@@ -99,10 +96,15 @@ export function SharingPage({
             },
           ]}
         >
-          {children}
+          <AnimatedView
+            testID="sharing-page-content"
+            style={[{ gap: 16 }, contentReady && entryStyle]}
+          >
+            {children}
+          </AnimatedView>
         </ScrollView>
         {fixedTopContent}
-      </AnimatedView>
+      </View>
     </View>
   );
 }

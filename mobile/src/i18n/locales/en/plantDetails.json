@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Task options", "empty": "No tasks to display for this plant yet."},
-    "tabsEmpty": {"reminders": "No reminders are available for this plant.", "device": "No device is linked to this plant."},
-    "segments": {"info": "Info", "reminders": "Tasks", "readings": "Readings"},
+    "tasks": {
+      "menu": "Task options",
+      "empty": "No tasks to display for this plant yet."
+    },
+    "tabsEmpty": {
+      "reminders": "No reminders are available for this plant.",
+      "device": "No device is linked to this plant."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Tasks",
+      "readings": "Readings"
+    },
     "headerTitle": "Plant details",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Activity",
       "empty": "No completed tasks yet.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device details, then Email code to request sample code configured for that device.",
+      "charts": "Once readings arrive, tap a measurement icon or value to open its day, week or month chart.",
+      "pump": "With a connected pump and relay, the owner can schedule watering for a chosen duration or enable automatic watering below a soil-moisture threshold. Pump support, runtime and the automatic-watering cooldown are configured in the device settings."
     }
   }
 }

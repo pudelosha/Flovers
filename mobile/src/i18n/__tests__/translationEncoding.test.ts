@@ -27,6 +27,17 @@ function values(value: any): string[] {
 function read(file: string) {
   return JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 }
+it.each(languages)('%s pot and soil labels fit the 25-character limit', language => {
+  const step = read(path.join(__dirname, '../locales', language, 'createPlantStep05.json')).createPlant.step05;
+  for (const category of ['potMaterials', 'soilMixes']) {
+    for (const [key, option] of Object.entries(step[category])) {
+      const label = (option as { label: string }).label;
+      if (Array.from(label).length > 25) {
+        throw new Error(`${language} ${category}.${key} exceeds 25 characters: ${label}`);
+      }
+    }
+  }
+});
 it.each(languages)(
   '%s translations preserve letters and valid Unicode',
   language => {

@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Options de la tâche", "empty": "Aucune tâche à afficher pour cette plante."},
-    "tabsEmpty": {"reminders": "Aucun rappel disponible pour cette plante.", "device": "Aucun appareil n’est associé à cette plante."},
-    "segments": {"info": "Infos", "reminders": "Tâches", "readings": "Relevés"},
+    "tasks": {
+      "menu": "Options de la tâche",
+      "empty": "Aucune tâche à afficher pour cette plante."
+    },
+    "tabsEmpty": {
+      "reminders": "Aucun rappel disponible pour cette plante.",
+      "device": "Aucun appareil n’est associé à cette plante."
+    },
+    "segments": {
+      "info": "Infos",
+      "reminders": "Tâches",
+      "readings": "Relevés"
+    },
     "headerTitle": "Détails de la plante",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Activité",
       "empty": "Aucune tâche terminée pour le moment.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "Dans Relevés, le propriétaire peut associer une carte Arduino ou ESP et choisir les capteurs. Ouvrez le menu de l’appareil, puis Détails de l’appareil et Envoyer le code par e-mail pour recevoir un exemple adapté.",
+      "charts": "Une fois les relevés reçus, touchez l’icône ou la valeur d’une mesure pour ouvrir son graphique par jour, semaine ou mois.",
+      "pump": "Avec une pompe et un relais raccordés, le propriétaire peut programmer un arrosage pour la durée souhaitée ou l’activer automatiquement sous un seuil d’humidité du sol. La prise en charge de la pompe, sa durée de fonctionnement et le délai entre arrosages automatiques se règlent dans les paramètres de l’appareil."
     }
   }
 }

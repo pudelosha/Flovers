@@ -1,4 +1,4 @@
-import {useAppTheme} from "../../../shared/theme/ThemeContext";
+import {useAppTheme, ThemeContrastScope} from "../../../shared/theme/ThemeContext";
 import React, { useMemo, useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
@@ -216,6 +216,7 @@ export default function Step04_Exposure({
           />
         </View>
 
+        <ThemeContrastScope kind="accent">
         <Pressable
           style={[wiz.actionFull, localStyles.measureButton]}
           onPress={onOpenMeasureModal}
@@ -226,6 +227,7 @@ export default function Step04_Exposure({
             {tr("createPlant.step04.measureLightDirection", "Measure light & direction")}
           </Text>
         </Pressable>
+        </ThemeContrastScope>
 
         <Text style={wiz.sectionTitle}>
           {tr("createPlant.step04.distanceFromWindow", "Distance from window")}

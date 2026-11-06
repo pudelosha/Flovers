@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "任务选项", "empty": "此植物暂无可显示的任务。"},
-    "tabsEmpty": {"reminders": "此植物暂无可显示的提醒。", "device": "此植物尚未关联设备。"},
-    "segments": {"info": "信息", "reminders": "任务", "readings": "读数"},
+    "tasks": {
+      "menu": "任务选项",
+      "empty": "此植物暂无可显示的任务。"
+    },
+    "tabsEmpty": {
+      "reminders": "此植物暂无可显示的提醒。",
+      "device": "此植物尚未关联设备。"
+    },
+    "segments": {
+      "info": "信息",
+      "reminders": "任务",
+      "readings": "读数"
+    },
     "headerTitle": "植物详情",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "动态",
       "empty": "尚无已完成的任务。",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "植物所有者可在“读数”页面关联 Arduino 或 ESP 开发板并选择传感器。打开设备菜单，选择“设备详情”，再点击“通过邮件发送代码”，即可申请为该设备配置的示例代码。",
+      "charts": "收到读数后，点击测量图标或数值，即可查看按日、周或月显示的图表。",
+      "pump": "连接水泵和继电器后，所有者可安排指定时长的浇水，或在土壤湿度低于阈值时自动浇水。水泵支持、运行时长和自动浇水间隔均在设备设置中配置。"
     }
   }
 }

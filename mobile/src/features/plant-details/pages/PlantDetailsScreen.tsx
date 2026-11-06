@@ -975,6 +975,8 @@ export default function PlantDetailsScreen() {
                           }}
                         />
                       ) : activeTab === 'readings' ? (
+                        <View style={{ gap: 16 }}>
+                        {(
                         showLatestReadingsTile ? (
                           <PlantLatestReadingsTile
                             embedded
@@ -1001,9 +1003,6 @@ export default function PlantDetailsScreen() {
                           />
                         ) : (
                           <View>
-                            <Text style={styles.title}>
-                              {tr('plantDetails.segments.readings', 'Readings')}
-                            </Text>
                             <Text style={styles.dim}>
                               {tr(
                                 'plantDetails.tabsEmpty.device',
@@ -1011,7 +1010,13 @@ export default function PlantDetailsScreen() {
                               )}
                             </Text>
                           </View>
-                        )
+                        ))}
+                          {!showLatestReadingsTile && <View style={{ gap: 12 }}>
+                            <Text style={styles.readingsHelp}>{tr('plantDetails.readingsHelp.device', 'In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device details, then Email code to request sample code configured for that device.')}</Text>
+                            <Text style={styles.readingsHelp}>{tr('plantDetails.readingsHelp.charts', 'Once readings arrive, tap a measurement icon or value to open its day, week or month chart.')}</Text>
+                            <Text style={styles.readingsHelp}>{tr('plantDetails.readingsHelp.pump', 'With a connected pump and relay, the owner can schedule watering for a chosen duration or enable automatic watering below a soil-moisture threshold. Pump support, runtime and the automatic-watering cooldown are configured in the device settings.')}</Text>
+                          </View>}
+                        </View>
                       ) : undefined
                     }
                     onTabChange={tab => {
@@ -1347,6 +1352,7 @@ function GlassFrame({
 }
 
 const styles = StyleSheet.create({
+  readingsHelp: { color: 'rgba(255,255,255,0.9)', fontSize: 12, lineHeight: 18 },
   centerBox: {
     padding: 16,
     alignItems: 'center',

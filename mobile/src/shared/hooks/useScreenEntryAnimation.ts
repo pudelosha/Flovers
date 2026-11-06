@@ -2,11 +2,12 @@ import { useEffect, useMemo, useRef } from "react";
 import { Animated, Easing } from "react-native";
 
 /** The Profile fade/slide/scale transition, started only after content is ready. */
-export function useScreenEntryAnimation(ready: boolean, focused: boolean) {
+export function useScreenEntryAnimation(ready: boolean, focused: boolean, replayKey?: string) {
   const entry = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     entry.stopAnimation();
     if (!ready) { entry.setValue(0); return; }
+    if (focused) entry.setValue(0);
     const animation = Animated.timing(entry, {
       toValue: focused ? 1 : 0,
       duration: focused ? 220 : 160,
@@ -15,7 +16,7 @@ export function useScreenEntryAnimation(ready: boolean, focused: boolean) {
     });
     animation.start();
     return () => animation.stop();
-  }, [entry, ready, focused]);
+  }, [entry, ready, focused, replayKey]);
 
   return useMemo(() => ({
     opacity: entry,

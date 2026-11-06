@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Opciones de la tarea", "empty": "Todavía no hay tareas para esta planta."},
-    "tabsEmpty": {"reminders": "No hay recordatorios disponibles para esta planta.", "device": "No hay ningún dispositivo vinculado a esta planta."},
-    "segments": {"info": "Info", "reminders": "Tareas", "readings": "Lecturas"},
+    "tasks": {
+      "menu": "Opciones de la tarea",
+      "empty": "Todavía no hay tareas para esta planta."
+    },
+    "tabsEmpty": {
+      "reminders": "No hay recordatorios disponibles para esta planta.",
+      "device": "No hay ningún dispositivo vinculado a esta planta."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Tareas",
+      "readings": "Lecturas"
+    },
     "headerTitle": "Detalles de la planta",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Actividad",
       "empty": "Todavía no hay tareas completadas.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "En Lecturas, el propietario puede vincular una placa Arduino o ESP y elegir los sensores. Abre el menú del dispositivo, selecciona Detalles del dispositivo y después Enviar código por correo para solicitar un ejemplo configurado para ese dispositivo.",
+      "charts": "Cuando lleguen las lecturas, toca el icono o el valor de una medición para abrir su gráfico diario, semanal o mensual.",
+      "pump": "Con una bomba y un relé conectados, el propietario puede programar el riego durante el tiempo elegido o activarlo automáticamente por debajo de un umbral de humedad del suelo. La compatibilidad con la bomba, su duración y la pausa entre riegos automáticos se configuran en los ajustes del dispositivo."
     }
   }
 }

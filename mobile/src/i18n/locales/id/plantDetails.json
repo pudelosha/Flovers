@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Opsi tugas", "empty": "Belum ada tugas untuk tanaman ini."},
-    "tabsEmpty": {"reminders": "Tidak ada pengingat yang tersedia untuk tanaman ini.", "device": "Belum ada perangkat yang terhubung ke tanaman ini."},
-    "segments": {"info": "Info", "reminders": "Tugas", "readings": "Pembacaan"},
+    "tasks": {
+      "menu": "Opsi tugas",
+      "empty": "Belum ada tugas untuk tanaman ini."
+    },
+    "tabsEmpty": {
+      "reminders": "Tidak ada pengingat yang tersedia untuk tanaman ini.",
+      "device": "Belum ada perangkat yang terhubung ke tanaman ini."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Tugas",
+      "readings": "Pembacaan"
+    },
     "headerTitle": "Detail tanaman",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Aktivitas",
       "empty": "Belum ada tugas yang selesai.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "Di Bacaan, pemilik tanaman dapat menautkan papan Arduino atau ESP dan memilih sensor. Buka menu perangkat, pilih Detail perangkat, lalu Kirim kode lewat email untuk meminta contoh kode yang disesuaikan dengan perangkat tersebut.",
+      "charts": "Setelah bacaan diterima, ketuk ikon atau nilai pengukuran untuk membuka grafik harian, mingguan, atau bulanan.",
+      "pump": "Dengan pompa dan relai yang terhubung, pemilik dapat menjadwalkan penyiraman selama durasi pilihan atau mengaktifkan penyiraman otomatis saat kelembapan tanah di bawah ambang batas. Dukungan pompa, durasi kerja, dan jeda penyiraman otomatis diatur di pengaturan perangkat."
     }
   }
 }

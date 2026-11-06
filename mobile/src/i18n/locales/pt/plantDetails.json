@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Opções da tarefa", "empty": "Ainda não há tarefas para esta planta."},
-    "tabsEmpty": {"reminders": "Não há lembretes disponíveis para esta planta.", "device": "Não há nenhum dispositivo associado a esta planta."},
-    "segments": {"info": "Info", "reminders": "Tarefas", "readings": "Leituras"},
+    "tasks": {
+      "menu": "Opções da tarefa",
+      "empty": "Ainda não há tarefas para esta planta."
+    },
+    "tabsEmpty": {
+      "reminders": "Não há lembretes disponíveis para esta planta.",
+      "device": "Não há nenhum dispositivo associado a esta planta."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Tarefas",
+      "readings": "Leituras"
+    },
     "headerTitle": "Detalhes da planta",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Atividade",
       "empty": "Ainda não há tarefas concluídas.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "Em Leituras, o proprietário pode associar uma placa Arduino ou ESP e escolher os sensores. Abre o menu do dispositivo, seleciona Detalhes do dispositivo e depois Enviar código por e-mail para pedir um exemplo configurado para esse dispositivo.",
+      "charts": "Quando chegarem leituras, toca no ícone ou no valor de uma medição para abrir o gráfico diário, semanal ou mensal.",
+      "pump": "Com uma bomba e um relé ligados, o proprietário pode agendar a rega com a duração pretendida ou ativá-la automaticamente abaixo de um limite de humidade do solo. O suporte da bomba, a duração e a pausa entre regas automáticas são definidos nas configurações do dispositivo."
     }
   }
 }

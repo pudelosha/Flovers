@@ -31,6 +31,22 @@ beforeEach(() => {
   (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
 });
 
+it('sizes every parameter from the tallest text, while Notes can grow independently', () => {
+  const view = render(<PlantInfoTile plant={{ ...plant, access, notes: 'A long note' } as any} />);
+  const soil = view.getByTestId('plant-info-value-shovel');
+  fireEvent(view.getByTestId('plant-info-label-shovel'), 'layout', { nativeEvent: { layout: { height: 14, width: 90 } } });
+  fireEvent(soil, 'layout', { nativeEvent: { layout: { height: 51, width: 90 } } });
+  const fields = ['white-balance-sunny', 'compass-outline', 'shovel', 'pot-outline', 'tape-measure', 'calendar', 'note-edit-outline'];
+  for (const field of fields) {
+    const style = StyleSheet.flatten(view.getByTestId(`plant-info-field-${field}`).props.style);
+    expect(style.minHeight).toBe(85);
+    expect(style.height).toBeUndefined();
+  }
+  expect(view.getByTestId('plant-info-text-note-edit-outline').props.onLayout).toBeUndefined();
+  fireEvent(soil, 'layout', { nativeEvent: { layout: { height: 17, width: 90 } } });
+  expect(StyleSheet.flatten(view.getByTestId('plant-info-field-calendar').props.style).minHeight).toBe(58);
+});
+
 it("uses the private display photo on received Plant Details and never reads owner-local files", () => {
   const view = render(<PlantInfoTile plant={{ ...plant, photo: metadata, access } as any} />);
   expect(view.UNSAFE_getByType(FramedPlantImage).props).toMatchObject({ uri: "data:image/jpeg;base64,SYNCED", photo: metadata });

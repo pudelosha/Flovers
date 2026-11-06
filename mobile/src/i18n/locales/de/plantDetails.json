@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Aufgabenoptionen", "empty": "Für diese Pflanze sind noch keine Aufgaben vorhanden."},
-    "tabsEmpty": {"reminders": "Für diese Pflanze sind keine Erinnerungen verfügbar.", "device": "Mit dieser Pflanze ist kein Gerät verknüpft."},
-    "segments": {"info": "Info", "reminders": "Aufgaben", "readings": "Messwerte"},
+    "tasks": {
+      "menu": "Aufgabenoptionen",
+      "empty": "Für diese Pflanze sind noch keine Aufgaben vorhanden."
+    },
+    "tabsEmpty": {
+      "reminders": "Für diese Pflanze sind keine Erinnerungen verfügbar.",
+      "device": "Mit dieser Pflanze ist kein Gerät verknüpft."
+    },
+    "segments": {
+      "info": "Info",
+      "reminders": "Aufgaben",
+      "readings": "Messwerte"
+    },
     "headerTitle": "Pflanzendetails",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Aktivität",
       "empty": "Noch keine erledigten Aufgaben.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "Unter Messwerte kann der Pflanzenbesitzer ein Arduino- oder ESP-Board verknüpfen und die Sensoren auswählen. Öffne das Gerätemenü, wähle Gerätedetails und dann Code per E-Mail, um passenden Beispielcode anzufordern.",
+      "charts": "Sobald Messwerte vorliegen, tippe auf ein Messsymbol oder einen Wert, um das Tages-, Wochen- oder Monatsdiagramm zu öffnen.",
+      "pump": "Mit angeschlossener Pumpe und Relais kann der Besitzer eine Bewässerung mit gewünschter Laufzeit planen oder sie automatisch bei Unterschreiten einer Bodenfeuchtegrenze starten lassen. Pumpenunterstützung, Laufzeit und Pause zwischen automatischen Bewässerungen werden in den Geräteeinstellungen festgelegt."
     }
   }
 }

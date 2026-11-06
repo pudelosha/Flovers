@@ -1,8 +1,18 @@
 {
   "plantDetails": {
-    "tasks": {"menu": "Görev seçenekleri", "empty": "Bu bitki için henüz gösterilecek görev yok."},
-    "tabsEmpty": {"reminders": "Bu bitki için gösterilecek hatırlatma yok.", "device": "Bu bitkiye bağlı bir cihaz yok."},
-    "segments": {"info": "Bilgi", "reminders": "Görevler", "readings": "Okumalar"},
+    "tasks": {
+      "menu": "Görev seçenekleri",
+      "empty": "Bu bitki için henüz gösterilecek görev yok."
+    },
+    "tabsEmpty": {
+      "reminders": "Bu bitki için gösterilecek hatırlatma yok.",
+      "device": "Bu bitkiye bağlı bir cihaz yok."
+    },
+    "segments": {
+      "info": "Bilgi",
+      "reminders": "Görevler",
+      "readings": "Okumalar"
+    },
     "headerTitle": "Bitki ayrıntıları",
     "common": {
       "dash": "—",
@@ -130,6 +140,11 @@
       "title": "Etkinlik",
       "empty": "Henüz tamamlanmış görev yok.",
       "line": "{{actor}} · {{task}}"
+    },
+    "readingsHelp": {
+      "device": "Bitki sahibi, Okumalar ekranında bir Arduino veya ESP kartı bağlayıp sensörleri seçebilir. Cihaza göre hazırlanmış örnek kodu istemek için cihaz menüsünden Cihaz ayrıntıları, ardından Kodu e-postayla gönder seçeneğini açın.",
+      "charts": "Okumalar geldiğinde ölçüm simgesine veya değerine dokunarak günlük, haftalık ya da aylık grafiği açabilirsiniz.",
+      "pump": "Pompa ve röle bağlıysa bitki sahibi istediği süre için sulama planlayabilir veya toprak nemi eşiğin altına düştüğünde otomatik sulamayı etkinleştirebilir. Pompa desteği, çalışma süresi ve otomatik sulamalar arasındaki bekleme süresi cihaz ayarlarında belirlenir."
     }
   }
 }

@@ -22,12 +22,12 @@ beforeEach(() => { jest.clearAllMocks(); mockFocused = true; });
 
 it("keeps the loading spinner visible and starts the content animation only after readiness", () => {
   const view = render(<SharingPage title="Shared plants" contentReady={false}><CenteredSpinner /></SharingPage>);
-  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(false, true);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(false, true, undefined);
   expect(StyleSheet.flatten(view.getByTestId("sharing-page-content").props.style).opacity).toBeUndefined();
   expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
   expect(view.getByTestId("sharing-page-content")).toBeVisible();
   view.rerender(<SharingPage title="Shared plants" contentReady><Text>Plant tile</Text></SharingPage>);
-  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true, undefined);
   expect(StyleSheet.flatten(view.getByTestId("sharing-page-content").props.style).opacity).toBe(0);
   expect(within(view.getByTestId("sharing-page-content")).getByText("Plant tile")).toBeTruthy();
   expect(within(view.getByTestId("sharing-page-content")).queryByText("Shared plants")).toBeNull();
@@ -36,12 +36,21 @@ it("keeps the loading spinner visible and starts the content animation only afte
 
 it("passes focus changes to the shared animation while leaving the header outside it", () => {
   const view = render(<SharingPage title="Contacts" contentReady><Text>Contact tile</Text></SharingPage>);
-  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true, undefined);
   mockFocused = false;
   view.rerender(<SharingPage title="Contacts" contentReady><Text>Contact tile</Text></SharingPage>);
-  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, false);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, false, undefined);
   mockFocused = true;
   view.rerender(<SharingPage title="Contacts" contentReady><Text>Contact tile</Text></SharingPage>);
-  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true, undefined);
   expect(view.getByTestId("sharing-header")).toBeVisible();
+});
+
+ it("replays for sharing segments and keeps the selector outside animated content", () => {
+  const view = render(<SharingPage title="Shared plants" scrollResetKey="all" fixedTopContent={<Text>Selector</Text>}><Text>Tile</Text></SharingPage>);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true, "all");
+  view.rerender(<SharingPage title="Shared plants" scrollResetKey="incoming" fixedTopContent={<Text>Selector</Text>}><Text>Tile</Text></SharingPage>);
+  expect(useScreenEntryAnimation).toHaveBeenLastCalledWith(true, true, "incoming");
+  expect(within(view.getByTestId("sharing-page-content")).queryByText("Selector")).toBeNull();
+  expect(view.getByText("Selector")).toBeVisible();
 });
