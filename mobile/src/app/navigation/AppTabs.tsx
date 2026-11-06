@@ -1,7 +1,7 @@
 import NotificationsScreen from "../../features/notifications/pages/NotificationsScreen";
 import { TAB_CONTENT_HEIGHT, MIN_TAB_BOTTOM_PADDING } from "../../shared/constants/layout";
 import React from "react";
-import { BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "../../shared/theme/native";
+import { Animated, AnimatedView, Easing, BackHandler, Keyboard, View, Pressable, StyleSheet, Text } from "../../shared/theme/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "../../shared/theme/Icon";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -187,6 +187,21 @@ function GlassTabBar({ state, navigation }: any) {
     activeRouteName ||
     "Home";
 
+  const activeIndex = Math.max(0, visibleRoutes.findIndex((route: any) => route.name === parentTabName));
+  const [barWidth, setBarWidth] = React.useState(0);
+  const selectionPosition = React.useRef(new Animated.Value(activeIndex)).current;
+  const slotWidth = barWidth / Math.max(1, visibleRoutes.length);
+  React.useEffect(() => {
+    const animation = Animated.timing(selectionPosition, {
+      toValue: activeIndex,
+      duration: 220,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: true,
+    });
+    animation.start();
+    return () => animation.stop();
+  }, [activeIndex, selectionPosition]);
+
   React.useEffect(() => {
     const sub = BackHandler.addEventListener("hardwareBackPress", () => {
       const currentRouteName: string | undefined = state.routes[state.index]?.name;
@@ -236,7 +251,16 @@ function GlassTabBar({ state, navigation }: any) {
           style={[StyleSheet.absoluteFill, { backgroundColor: TAB_SOLID_FALLBACK }]}
         />
 
-        <View style={s.tabInner}>
+        <View style={s.tabInner} onLayout={event => setBarWidth(event.nativeEvent.layout.width)}>
+          {slotWidth > 0 && (
+            <AnimatedView
+              pointerEvents="none"
+              style={[
+                s.focusPill,
+                { width: Math.max(0, slotWidth - 8), transform: [{ translateX: Animated.multiply(selectionPosition, slotWidth) }] },
+              ]}
+            />
+          )}
           {visibleRoutes.map((route: any) => {
             const isFocused = route.name === parentTabName;
 
@@ -271,7 +295,6 @@ function GlassTabBar({ state, navigation }: any) {
                 accessibilityState={isFocused ? { selected: true } : {}}
                 style={s.tabItem}
               >
-                {isFocused && <View style={s.focusPill} />}
                 <MaterialCommunityIcons
                   name={iconName}
                   size={26}
@@ -405,7 +428,10 @@ const s = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    borderRadius: 0,
+    borderTopLeftRadius: 28,
+    borderTopRightRadius: 28,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
     overflow: "hidden",
     borderTopWidth: 0,
     borderColor: "rgba(255,255,255,0.20)",
@@ -417,18 +443,18 @@ const s = StyleSheet.create({
     justifyContent: "space-around",
   },
   tabItem: {
-    width: 72,
+    flex: 1,
+    minWidth: 0,
     height: 56,
     alignItems: "center",
     justifyContent: "center",
   },
   focusPill: {
     position: "absolute",
-    top: 4,
-    bottom: 4,
-    left: 2,
-    right: 2,
-    borderRadius: 16,
+    top: 6,
+    bottom: 6,
+    left: 4,
+    borderRadius: 26,
     backgroundColor: "rgba(255,255,255,0.12)",
   },
   icon: {
