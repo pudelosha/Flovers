@@ -643,7 +643,7 @@ export default function SharePlantModal() {
               <Text style={[pr.promptBtnText, pr.promptPrimaryText, styles.footerText]}>
                 {managing
                   ? t('sharing.form.save', { defaultValue: 'Save sharing' })
-                  : t('sharing.form.shareSelected', { defaultValue: 'Share selected plants' })}
+                  : t('sharing.form.shareSelected', { defaultValue: 'Share' })}
               </Text>
             </Pressable>
           </View>

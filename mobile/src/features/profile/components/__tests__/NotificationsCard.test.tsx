@@ -57,6 +57,8 @@ describe("NotificationsCard", () => {
     expect(view.queryByText("profile.notifications.sharedHint")).toBeNull();
     const switches = view.getAllByRole("checkbox");
     expect(switches).toHaveLength(8);
+    expect(switches[1].findAllByType(require("react-native").Text).some(node => node.props.children === "profile.notifications.email24hLabel")).toBe(true);
+    expect(switches[5].findAllByType(require("react-native").Text).some(node => node.props.children === "profile.notifications.push24hLabel")).toBe(true);
     expect(switches[3].props.accessibilityLabel).toBe("profile.notifications.sharedEmailLabel");
     expect(switches[7].props.accessibilityLabel).toBe("profile.notifications.sharedPushLabel");
     const email = view.getByRole("checkbox", { name: "profile.notifications.sharedEmailLabel" });
@@ -74,8 +76,8 @@ describe("NotificationsCard", () => {
 
   it("toggles caregiver due reminders independently of owned and completion notifications", () => {
     const view = render(<NotificationsCard {...baseProps} />);
-    const email = view.getByRole("checkbox", { name: "Email me about due tasks for plants shared with me" });
-    const push = view.getByRole("checkbox", { name: "Notify me about due tasks for plants shared with me" });
+    const email = view.getByRole("checkbox", { name: "Email me about due tasks for plants other users have shared with me" });
+    const push = view.getByRole("checkbox", { name: "Send push reminders about due tasks for plants other users have shared with me" });
     expect(email.props.accessibilityState.checked).toBe(false);
     expect(push.props.accessibilityState.checked).toBe(false);
     fireEvent.press(email);

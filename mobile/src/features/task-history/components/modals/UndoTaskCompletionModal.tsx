@@ -46,5 +46,5 @@ export default function UndoTaskCompletionModal({visible,item,onClose,onSaved,on
 }
 const s=StyleSheet.create({content:{marginHorizontal:16,gap:18},plant:{color:"#FFFFFF",fontSize:16,fontWeight:"800"},
  text:{color:"#FFFFFF",fontSize:14,lineHeight:21},error:{color:"#FFAAAA",fontSize:14},row:{flexDirection:"row",gap:10},
- button:{flex:1,minWidth:0,minHeight:44,borderRadius:20,paddingVertical:12,paddingHorizontal:14,backgroundColor:"rgba(255,255,255,0.14)",alignItems:"center",justifyContent:"center"},
+ button:{flex:1,minWidth:0,minHeight:44,borderRadius:16,paddingVertical:12,paddingHorizontal:14,backgroundColor:"rgba(255,255,255,0.14)",alignItems:"center",justifyContent:"center"},
  primary:{backgroundColor:"#0B7285"},disabled:{opacity:0.4},buttonText:{color:"#FFFFFF",fontSize:14,fontWeight:"800",textAlign:"center",flexShrink:1}});

@@ -179,6 +179,7 @@ export default function WateringScheduleModal({
         visible
         onClose={onClose}
         closeLabel={tr('readingsModals.common.close', 'Close')}
+        closeButtonRight={8}
         scrollable={false}
       >
         <ScrollView

@@ -7,7 +7,8 @@
         "body": [
           "Profile brings together your account level and XP, contacts and plant sharing, notification preferences, appearance settings and support.",
           "It allows the user to control both personal data and how the Flovers app behaves on a daily basis.",
-          "The selector is inside the rounded header and stays visible while the page scrolls. The header expands to show the selector and contracts on screens without one. Account shows the Account, Sharing and Support tiles. Notifications and Settings show their respective tiles. The selector stays visible while scrolling. Switching tabs preserves unsaved notification and settings changes."
+          "The selector is inside the rounded header and stays visible while the page scrolls. The header expands to show the selector and contracts on screens without one. Account shows the Account, Sharing and Support tiles. Notifications and Settings show their respective tiles. The selector stays visible while scrolling. Switching tabs preserves unsaved notification and settings changes.",
+          "Returning from another screen opens Account. Switching between Profile tabs keeps unsaved notification and settings changes until you save them or leave the screen."
         ]
       },
       {
@@ -60,7 +61,8 @@
           "Email and Phone each have an additional checkbox for tasks due today on plants shared with you. These options start off, work independently of summaries for your own plants, and use the same delivery time as the corresponding channel. When both are enabled, your own and shared due tasks are combined into one daily message per channel.",
           "Shared-task reminders include active view-only shares as well as shares that allow task completion. Access is checked again before delivery. Expiry, removal of access or removal of the contact stops these reminders.",
           "The next-day follow-up option covers only your own plants’ unfinished tasks from yesterday. It uses the channel’s configured time; it is not a timer set for exactly 24 hours after the first notification.",
-          "At the bottom of Email and Phone, separate checkboxes let you receive an email or push notification when another person completes a task for a plant you own. These account-wide options start off and send notifications after completion, independently of the daily summary time."
+          "At the bottom of Email and Phone, separate checkboxes let you receive an email or push notification when another person completes a task for a plant you own. These account-wide options start off and send notifications after completion, independently of the daily summary time.",
+          "In both Email and Phone, the order is: daily reminders for your own plants, delivery time, next-day reminders for your own unfinished tasks, reminders for tasks on plants other users shared with you, and notifications when someone completes a task on a plant you own. Save applies your preferences."
         ]
       },
       {

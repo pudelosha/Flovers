@@ -548,16 +548,20 @@ export default function EditPlantModal(props: Props) {
           >
             {ORIENTATIONS.map(({ key, label }) => {
               const active = fOrientation === key;
-              const translated = tr(`plantsModals.edit.orientations.${key}`, label);
+              const translated = tr(`createPlant.step04.orientationsShort.${key}`, label);
 
               return (
                 <Pressable
                   key={key}
+                  accessibilityRole="button"
+                  accessibilityLabel={tr(`plantsModals.edit.orientations.${key}`, label)}
+                  accessibilityState={{ selected: active }}
                   onPress={() => setFOrientation?.(key as any)}
                   style={[
                     {
                       flex: 1,
-                      paddingHorizontal: 12,
+                      paddingHorizontal: 4,
+                      minWidth: 0,
                       paddingVertical: 10,
                       borderRadius: 12,
                       alignItems: 'center',
@@ -569,10 +573,11 @@ export default function EditPlantModal(props: Props) {
                   ]}
                 >
                   <Text
+                    numberOfLines={1}
                     style={{
                       color: '#FFFFFF',
                       fontWeight: '800',
-                      fontSize: 12,
+                      fontSize: 14,
                     }}
                   >
                     {translated}

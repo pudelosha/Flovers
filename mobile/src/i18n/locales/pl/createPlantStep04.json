@@ -9,6 +9,12 @@
       "windowDirection": "Kierunek okna",
       "measureLightDirection": "Zmierz światło i kierunek",
       "distanceFromWindow": "Odległość od okna",
+      "orientationsShort": {
+        "S": "Płd",
+        "E": "Wsch",
+        "W": "Zach",
+        "N": "Płn"
+      },
       "orientations": {
         "S": "Płd",
         "E": "Wsch",

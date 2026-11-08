@@ -36,5 +36,5 @@ export default function SearchPlantsModal({visible,query,onCancel,onApply}:{
 }
 const s=StyleSheet.create({content:{marginHorizontal:16,gap:16},description:{color:"rgba(255,255,255,0.9)",fontSize:14,lineHeight:21},
  input:{minWidth:0,minHeight:46,borderRadius:16,backgroundColor:"rgba(255,255,255,0.12)",color:"#FFFFFF",fontSize:15,paddingHorizontal:14,paddingVertical:12},
- row:{flexDirection:"row",gap:10},button:{minHeight:44,borderRadius:20,paddingHorizontal:14,paddingVertical:12,backgroundColor:"rgba(255,255,255,0.14)",alignItems:"center",justifyContent:"center"},
+ row:{flexDirection:"row",gap:10},button:{minHeight:44,borderRadius:16,paddingHorizontal:14,paddingVertical:12,backgroundColor:"rgba(255,255,255,0.14)",alignItems:"center",justifyContent:"center"},
  half:{flex:1,minWidth:0},primary:{backgroundColor:"#0B7285"},buttonText:{color:"#FFFFFF",fontSize:14,fontWeight:"800",textAlign:"center",flexShrink:1}});

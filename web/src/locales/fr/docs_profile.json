@@ -7,7 +7,8 @@
         "body": [
           "Le profil rassemble votre niveau de compte et XP, vos contacts et le partage de plantes, vos préférences de notification, vos paramètres d'apparence et votre assistance.",
           "Tu peux y gérer tes données personnelles et adapter Flovers à ton quotidien.",
-          "Le sélecteur se trouve dans l’en-tête aux coins inférieurs arrondis et reste visible pendant le défilement. L’en-tête s’agrandit pour l’accueillir et se réduit sur les écrans sans sélecteur. Compte affiche les cartes Compte, Partage et Assistance. Les autres onglets affichent leurs préférences respectives. Les modifications non enregistrées sont conservées lorsque vous changez d’onglet."
+          "Le sélecteur se trouve dans l’en-tête aux coins inférieurs arrondis et reste visible pendant le défilement. L’en-tête s’agrandit pour l’accueillir et se réduit sur les écrans sans sélecteur. Compte affiche les cartes Compte, Partage et Assistance. Les autres onglets affichent leurs préférences respectives. Les modifications non enregistrées sont conservées lorsque vous changez d’onglet.",
+          "Au retour d’un autre écran, Compte s’ouvre. Changer d’onglet dans Profil conserve les modifications non enregistrées des notifications et réglages jusqu’à leur enregistrement ou à la sortie de l’écran."
         ]
       },
       {
@@ -60,7 +61,8 @@
           "E-mail et Téléphone proposent aussi une case pour les tâches prévues aujourd’hui sur les plantes partagées avec vous. Ces options sont désactivées au départ, indépendantes des récapitulatifs de vos plantes et utilisent la même heure d’envoi que le canal concerné. Si les deux options sont activées, les tâches de vos plantes et des plantes partagées avec vous sont réunies dans un seul message quotidien par canal.",
           "Ces rappels concernent les partages actifs, en lecture seule comme avec autorisation de terminer des tâches. L’accès est revérifié avant l’envoi. L’expiration du partage, le retrait de l’accès ou la suppression du contact mettent fin aux rappels.",
           "Le rappel du lendemain concerne uniquement les tâches de vos propres plantes encore inachevées depuis hier. Il suit l’heure du canal concerné, sans attendre exactement 24 heures après la première notification.",
-          "En bas des sections Email et Téléphone, vous pouvez activer les alertes lorsqu’une autre personne termine une tâche pour une plante qui vous appartient. Ces options générales sont désactivées par défaut et les alertes sont envoyées après la réalisation, indépendamment du récapitulatif quotidien."
+          "En bas des sections Email et Téléphone, vous pouvez activer les alertes lorsqu’une autre personne termine une tâche pour une plante qui vous appartient. Ces options générales sont désactivées par défaut et les alertes sont envoyées après la réalisation, indépendamment du récapitulatif quotidien.",
+          "Les sections E-mail et Téléphone suivent le même ordre : rappels quotidiens pour vos plantes, heure d’envoi, rappels des tâches non terminées de la veille, tâches des plantes que d’autres ont partagées avec vous, puis notifications lorsqu’une autre personne termine une tâche pour une de vos plantes. Validez avec Enregistrer."
         ]
       },
       {

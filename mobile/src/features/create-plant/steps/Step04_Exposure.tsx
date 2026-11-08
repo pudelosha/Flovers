@@ -187,7 +187,8 @@ export default function Step04_Exposure({
             onValueChange={(v) => actions.setOrientation(v as any)}
             buttons={ORIENTATION_KEYS.map((key) => ({
               value: key,
-              label: tr(`createPlant.step04.orientations.${key}`, key),
+              label: tr(`createPlant.step04.orientationsShort.${key}`, key),
+              accessibilityLabel: tr(`plantsModals.edit.orientations.${key}`, key),
               style: {
                 flex: 1,
                 minWidth: 0,
@@ -195,7 +196,7 @@ export default function Step04_Exposure({
                 paddingVertical: 4,
                 marginHorizontal: 0,
               },
-              labelStyle: { fontSize: 11, fontWeight: "800", color: isLight && state.orientation !== key ? "#000000" : "#FFFFFF" },
+              labelStyle: { fontSize: 14, fontWeight: "800", color: isLight && state.orientation !== key ? "#000000" : "#FFFFFF" },
             }))}
             density="small"
             style={{

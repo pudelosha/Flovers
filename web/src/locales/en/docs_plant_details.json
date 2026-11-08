@@ -15,7 +15,8 @@
         "body": [
           "At the top of the screen, the user can see the plant image, plant name, optional plant definition name, and assigned location.",
           "Below the image, detailed parameters provided during plant creation are displayed, such as purchase date, notes, light conditions, orientation, distance from window, pot type, and soil type.",
-          "These details help contextualize reminders, readings, and plant care decisions."
+          "These details help contextualize reminders, readings, and plant care decisions.",
+          "Returning from another screen opens Info. Its overlapping panel shows individual parameter boxes in two columns, with Notes across the full width. The linked Plant Definition loads with the screen data and is reused when switching tabs."
         ]
       },
       {

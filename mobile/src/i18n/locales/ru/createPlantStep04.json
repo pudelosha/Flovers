@@ -9,6 +9,12 @@
       "windowDirection": "Направление окна",
       "measureLightDirection": "Измерьте свет и направление",
       "distanceFromWindow": "Расстояние от окна",
+      "orientationsShort": {
+        "S": "Ю",
+        "E": "В",
+        "W": "З",
+        "N": "С"
+      },
       "orientations": {
         "S": "Юг",
         "E": "Восток",

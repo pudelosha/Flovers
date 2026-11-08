@@ -9,6 +9,12 @@
       "windowDirection": "창문 방향",
       "measureLightDirection": "빛과 방향 측정",
       "distanceFromWindow": "창문과의 거리",
+      "orientationsShort": {
+        "S": "남",
+        "E": "동",
+        "W": "서",
+        "N": "북"
+      },
       "orientations": {
         "S": "남",
         "E": "동",

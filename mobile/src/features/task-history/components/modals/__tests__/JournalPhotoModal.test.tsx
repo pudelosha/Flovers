@@ -14,10 +14,6 @@ jest.mock("../../../../../api/services/journal-photos.service", () => ({
   newJournalUploadKey: () => "12345678-1234-4234-8234-123456789abc",
 }));
 jest.mock("../../../../../shared/hooks/usePlantPhoto", () => ({ usePlantPhoto: jest.fn() }));
-jest.mock("../../../../../shared/ui/PlantPhotoFramingEditor", () => (props: any) => {
-  const React = require("react"); const { View } = require("react-native");
-  return React.createElement(View, { ...props, testID: "journal-framing" });
-});
 jest.mock("../../../../sharing/components/ContactModalFrame", () => ({ visible, children, onClose }: any) => {
   const React = require("react"); const { View, Pressable, Text } = require("react-native");
   return visible ? React.createElement(View, null, children,
@@ -89,14 +85,14 @@ it("locks the plant and allows metadata-only edits during cooldown", async () =>
 });
 it("replaces a photo with the same entry revision and new image dimensions", async () => {
   const { view } = await open({ entry }); await pick(view); await save(view);
-  expect(view.getByTestId("journal-framing").props).toMatchObject({ width: 600, height: 800 });
+  expect(view.getByTestId("journal-photo-preview").props).toMatchObject({ source: { uri: "file:///photo.jpg" }, resizeMode: "contain" });
   expect(update).toHaveBeenCalledWith(entry, expect.any(Object), expect.objectContaining({ uri: "file:///photo.jpg", uploadKey: expect.any(String) }));
 });
 
 it("previews a replacement camera image immediately while keeping notes and uploading only on Save", async () => {
   const { view } = await open({ entry });
   await act(async () => fireEvent.press(view.getByText("taskHistory.photo.takePhoto")));
-  expect(view.getByTestId("journal-framing").props).toMatchObject({ uri: "file:///camera-replacement.jpg", width: 900, height: 1200, value: framing });
+  expect(view.getByTestId("journal-photo-preview").props).toMatchObject({ source: { uri: "file:///camera-replacement.jpg" }, resizeMode: "contain" });
   expect(view.getByLabelText("taskHistory.photo.notes").props.value).toBe("Old note");
   expect(update).not.toHaveBeenCalled();
   await save(view);
@@ -130,7 +126,7 @@ it("freezes an uncertain submission so retry cannot silently discard changed fie
   const { view } = await open(); await pick(view);
   fireEvent.changeText(view.getByLabelText("taskHistory.photo.notes"), "Submitted note"); await save(view);
   expect(view.getByLabelText("taskHistory.photo.notes").props.editable).toBe(false);
-  expect(view.getByTestId("journal-framing").props.disabled).toBe(true);
+  expect(view.getByTestId("journal-photo-preview").props.resizeMode).toBe("contain");
   expect(view.getByLabelText("taskHistory.photo.choosePlant").props.accessibilityState.disabled).toBe(true);
   fireEvent.press(view.getByLabelText("taskHistory.photo.choosePlant"));
   expect(view.queryByText("Aloe")).toBeNull();
@@ -161,5 +157,11 @@ it("ignores a picker result after changing to another entry context", async () =
   const { view } = await open(); fireEvent.press(view.getByText("taskHistory.photo.chooseGallery"));
   view.rerender(<JournalPhotoModal visible entry={entry} plantOptions={plants} onSaved={jest.fn()} onClose={jest.fn()} />);
   await act(async () => finish({ assets: [{ uri: "file:///stale.jpg" }] }));
-  expect(view.getByTestId("journal-framing").props.uri).toContain("data:image");
+  expect(view.getByTestId("journal-photo-preview").props.source.uri).toContain("data:image");
+});
+
+it("uses a full-image preview without the tile framing editor", async () => {
+  const { view } = await open({ entry });
+  expect(view.getByTestId("journal-photo-preview").props.resizeMode).toBe("contain");
+  expect(view.queryByTestId("plant-photo-framing-editor")).toBeNull();
 });

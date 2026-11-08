@@ -2,7 +2,7 @@ import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFra
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Pressable, ActivityIndicator, ScrollView } from "../../../../shared/theme/native";
 
-import { Checkbox } from 'react-native-paper';
+import SupportCopyCheckbox from './SupportCopyCheckbox';
 import { useTranslation } from 'react-i18next';
 import { sendSupportContact } from '../../../../api/services/profile.service';
 import { prompts as pr } from '../../styles/profile.styles';
@@ -139,19 +139,11 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
             editable={!saving}
           />
 
-          <Pressable
-            onPress={() => setCopyToMe(v => !v)}
-            style={{ flexDirection: 'row', alignItems: 'center', marginTop: 6 }}
+          <SupportCopyCheckbox
+            checked={copyToMe}
             disabled={saving}
-          >
-            <Checkbox
-              status={copyToMe ? 'checked' : 'unchecked'}
-              onPress={undefined}
-              color="#FFFFFF"
-              uncheckedColor="#FFFFFF"
-            />
-            <Text style={{ color: '#FFFFFF' }}>{t('profileModals.support.copyToMe')}</Text>
-          </Pressable>
+            onToggle={() => setCopyToMe(value => !value)}
+          />
 
           <View style={pr.promptButtonsRow}>
             <Pressable style={pr.promptBtn} onPress={onClose}>

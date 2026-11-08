@@ -40,7 +40,8 @@
           "This step helps you capture the plant’s exposure context: direction, light level, and distance from the window.",
           "Direction can be measured using the phone compass if compass permissions are granted.",
           "Automatic light measurement is available only on supported Android devices. On iOS, select the light level manually. Compass readings also depend on compatible hardware.",
-          "Skipping this step keeps the defaults: bright indirect light, East and 20 cm. Leaving these defaults untouched does not by itself retune care intervals."
+          "Skipping this step keeps the defaults: bright indirect light, East and 20 cm. Leaving these defaults untouched does not by itself retune care intervals.",
+          "The wizard and Edit plant use short, localized compass labels so direction buttons fit on one line. Full direction names remain available in Plant details."
         ]
       },
       {

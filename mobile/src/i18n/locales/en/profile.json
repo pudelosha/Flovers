@@ -66,8 +66,8 @@
       "sharedHint": "Notify me when someone I share with completes a task.",
       "sharedEmailLabel": "Email me when someone I share a plant with completes a task",
       "sharedPushLabel": "Send me a push notification when someone I share a plant with completes a task",
-      "emailSharedDueLabel": "Email me about due tasks for plants shared with me",
-      "pushSharedDueLabel": "Notify me about due tasks for plants shared with me"
+      "emailSharedDueLabel": "Email me about due tasks for plants other users have shared with me",
+      "pushSharedDueLabel": "Send push reminders about due tasks for plants other users have shared with me"
     },
     "settings": {
       "title": "Settings",

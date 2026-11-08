@@ -7,7 +7,8 @@
         "body": [
           "Perfil reúne su nivel de cuenta y XP, contactos y uso compartido de plantas, preferencias de notificación, configuración de apariencia y soporte.",
           "Aquí puedes gestionar tus datos personales y adaptar Flovers a tu día a día.",
-          "El selector está dentro del encabezado con esquinas inferiores redondeadas y permanece visible al desplazarte. El encabezado se amplía para mostrarlo y se reduce en las pantallas sin selector. Cuenta muestra las tarjetas Cuenta, Compartir y Ayuda. Las otras pestañas muestran sus preferencias correspondientes. Los cambios sin guardar se conservan al cambiar de pestaña."
+          "El selector está dentro del encabezado con esquinas inferiores redondeadas y permanece visible al desplazarte. El encabezado se amplía para mostrarlo y se reduce en las pantallas sin selector. Cuenta muestra las tarjetas Cuenta, Compartir y Ayuda. Las otras pestañas muestran sus preferencias correspondientes. Los cambios sin guardar se conservan al cambiar de pestaña.",
+          "Al volver desde otra pantalla se abre Cuenta. Cambiar de pestaña en Perfil conserva los cambios sin guardar en notificaciones y ajustes hasta guardarlos o salir de la pantalla."
         ]
       },
       {
@@ -60,7 +61,8 @@
           "Correo electrónico y Teléfono incluyen además una casilla para las tareas previstas para hoy en plantas compartidas contigo. Estas opciones están desactivadas inicialmente, funcionan independientemente de los resúmenes de tus plantas y usan la misma hora del canal correspondiente. Si activas ambas opciones, las tareas de tus plantas y de las compartidas contigo se reúnen en un único mensaje diario por canal.",
           "Los avisos incluyen los accesos activos de solo lectura y los que permiten completar tareas. El acceso se comprueba de nuevo antes del envío. Si el acceso caduca, se revoca o se elimina el contacto, dejan de enviarse estos avisos.",
           "El recordatorio del día siguiente solo incluye tareas de tus propias plantas que siguen pendientes desde ayer. Se envía a la hora del canal correspondiente, no exactamente 24 horas después de la primera notificación.",
-          "Al final de Email y Teléfono puedes activar avisos cuando otra persona complete una tarea de una planta tuya. Estas opciones afectan a toda la cuenta, están desactivadas por defecto y envían avisos tras completar la tarea, independientemente del resumen diario."
+          "Al final de Email y Teléfono puedes activar avisos cuando otra persona complete una tarea de una planta tuya. Estas opciones afectan a toda la cuenta, están desactivadas por defecto y envían avisos tras completar la tarea, independientemente del resumen diario.",
+          "Correo y Teléfono siguen el mismo orden: recordatorios diarios de tus plantas, hora de envío, recordatorios de tareas sin completar del día anterior, tareas de plantas que otros han compartido contigo y avisos cuando alguien completa una tarea de una planta tuya. Confirma con Guardar."
         ]
       },
       {

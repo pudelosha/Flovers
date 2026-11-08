@@ -130,7 +130,7 @@ export default function PostponeTaskModal({ visible, task, onClose, onSaved, onC
 const s=StyleSheet.create({
  content:{marginHorizontal:16,gap:14},plant:{color:"#FFFFFF",fontSize:16,fontWeight:"800"},
  description:{color:"rgba(255,255,255,0.9)",fontSize:14,lineHeight:21},label:{color:"#FFFFFF",fontSize:14,fontWeight:"700"},
- row:{flexDirection:"row",gap:10},button:{minHeight:44,borderRadius:20,paddingVertical:12,paddingHorizontal:14,
+ row:{flexDirection:"row",gap:10},button:{borderRadius:16,paddingVertical:12,paddingHorizontal:14,
  backgroundColor:"rgba(255,255,255,0.14)",alignItems:"center",justifyContent:"center"},
  buttonText:{color:"#FFFFFF",fontWeight:"800",fontSize:14,textAlign:"center",flexShrink:1},
  half:{flex:1,minWidth:0},shortcut:{flex:1,minWidth:0,paddingHorizontal:6},primary:{backgroundColor:"#0B7285"},disabled:{opacity:0.4},

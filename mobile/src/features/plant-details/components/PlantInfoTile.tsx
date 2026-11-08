@@ -30,6 +30,23 @@ import { plantAccess } from '../../../shared/utils/plantAccess';
 
 export type PlantDetailsTab = 'info' | 'reminders' | 'readings';
 
+function ParameterValue({ children, compact, ...props }: React.ComponentProps<typeof Text> & { compact: boolean }) {
+  const [wrappedWord, setWrappedWord] = useState<string | null>(null);
+  const value = String(children ?? '');
+  const singleWord = compact && /^\S+$/.test(value.trim());
+  return (
+    <Text
+      {...props}
+      style={[props.style, singleWord && wrappedWord === value && { fontSize: 11 }]}
+      onTextLayout={event => {
+        if (singleWord && event.nativeEvent.lines.length > 1) setWrappedWord(value);
+      }}
+    >
+      {children}
+    </Text>
+  );
+}
+
 type Props = {
   segmentInHeader?: boolean;
   activeTab?: PlantDetailsTab;
@@ -745,7 +762,8 @@ export default function PlantInfoTile({
                       {it.label}
                     </Text>
                     <View style={styles.infoValueArea}>
-                      <Text
+                      <ParameterValue
+                        compact={!it.fullWidth}
                         style={styles.infoValue}
                         testID={`plant-info-value-${it.icon}`}
                         onLayout={
@@ -760,7 +778,7 @@ export default function PlantInfoTile({
                         }
                       >
                         {it.value}
-                      </Text>
+                      </ParameterValue>
                     </View>
                   </View>
                 </View>

@@ -67,15 +67,7 @@ export default function NotificationsCard({
         />
       )}
 
-      <Pressable style={controls.toggleRow} onPress={() => setEmailSharedDue((value: boolean) => !value)}
-        accessibilityRole="checkbox" accessibilityState={{ checked: emailSharedDue }}
-        accessibilityLabel={t("profile.notifications.emailSharedDueLabel", { defaultValue: "Email me about due tasks for plants shared with me" })}>
-        <MaterialCommunityIcons name={emailSharedDue ? "checkbox-marked-outline" : "checkbox-blank-outline"}
-          size={20} color="#FFFFFF" style={controls.toggleIcon} />
-        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.emailSharedDueLabel", {
-          defaultValue: "Email me about due tasks for plants shared with me",
-        })}</Text>
-      </Pressable>
+
 
 
       <Pressable
@@ -94,6 +86,16 @@ export default function NotificationsCard({
           <Text style={controls.toggleLabel}>{t("profile.notifications.email24hLabel")}</Text>
           <Text style={controls.toggleHint}>{t("profile.notifications.email24hHint")}</Text>
         </View>
+      </Pressable>
+
+      <Pressable style={controls.toggleRow} onPress={() => setEmailSharedDue((value: boolean) => !value)}
+        accessibilityRole="checkbox" accessibilityState={{ checked: emailSharedDue }}
+        accessibilityLabel={t("profile.notifications.emailSharedDueLabel", { defaultValue: "Email me about due tasks for plants other users have shared with me" })}>
+        <MaterialCommunityIcons name={emailSharedDue ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+          size={20} color="#FFFFFF" style={controls.toggleIcon} />
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.emailSharedDueLabel", {
+          defaultValue: "Email me about due tasks for plants other users have shared with me",
+        })}</Text>
       </Pressable>
 
       <Pressable style={controls.toggleRow}
@@ -136,15 +138,7 @@ export default function NotificationsCard({
         />
       )}
 
-      <Pressable style={controls.toggleRow} onPress={() => setPushSharedDue((value: boolean) => !value)}
-        accessibilityRole="checkbox" accessibilityState={{ checked: pushSharedDue }}
-        accessibilityLabel={t("profile.notifications.pushSharedDueLabel", { defaultValue: "Notify me about due tasks for plants shared with me" })}>
-        <MaterialCommunityIcons name={pushSharedDue ? "checkbox-marked-outline" : "checkbox-blank-outline"}
-          size={20} color="#FFFFFF" style={controls.toggleIcon} />
-        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.pushSharedDueLabel", {
-          defaultValue: "Notify me about due tasks for plants shared with me",
-        })}</Text>
-      </Pressable>
+
 
 
       <Pressable
@@ -163,6 +157,16 @@ export default function NotificationsCard({
           <Text style={controls.toggleLabel}>{t("profile.notifications.push24hLabel")}</Text>
           <Text style={controls.toggleHint}>{t("profile.notifications.push24hHint")}</Text>
         </View>
+      </Pressable>
+
+      <Pressable style={controls.toggleRow} onPress={() => setPushSharedDue((value: boolean) => !value)}
+        accessibilityRole="checkbox" accessibilityState={{ checked: pushSharedDue }}
+        accessibilityLabel={t("profile.notifications.pushSharedDueLabel", { defaultValue: "Send push reminders about due tasks for plants other users have shared with me" })}>
+        <MaterialCommunityIcons name={pushSharedDue ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+          size={20} color="#FFFFFF" style={controls.toggleIcon} />
+        <Text style={[controls.toggleLabel, { flex: 1 }]}>{t("profile.notifications.pushSharedDueLabel", {
+          defaultValue: "Send push reminders about due tasks for plants other users have shared with me",
+        })}</Text>
       </Pressable>
 
       <Pressable style={controls.toggleRow}

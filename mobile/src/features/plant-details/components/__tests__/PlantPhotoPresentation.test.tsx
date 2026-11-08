@@ -292,3 +292,15 @@ it('reveals the plant image and panel together after native image loading and pa
 });
 
 afterEach(() => configure({ defaultIncludeHiddenElements: false }));
+it('reduces only single-word parameter values that actually wrap by one point', () => {
+  const ui = render(<PlantInfoTile plant={{ ...plant, access, pot_material: 'Samopodlewanie', soil_mix: 'Long soil description' } as any} />);
+  const pot = () => ui.getByTestId('plant-info-value-pot-outline');
+  expect(StyleSheet.flatten(pot().props.style).fontSize).toBe(12);
+  fireEvent(pot(), 'textLayout', { nativeEvent: { lines: [{ text: 'Samopodlewani' }, { text: 'e' }] } });
+  expect(StyleSheet.flatten(pot().props.style).fontSize).toBe(11);
+  const soil = ui.getByTestId('plant-info-value-shovel');
+  fireEvent(soil, 'textLayout', { nativeEvent: { lines: [{ text: 'Long soil' }, { text: 'description' }] } });
+  expect(StyleSheet.flatten(soil.props.style).fontSize).toBe(12);
+  ui.rerender(<PlantInfoTile plant={{ ...plant, access, pot_material: 'Plastic' } as any} />);
+  expect(StyleSheet.flatten(pot().props.style).fontSize).toBe(12);
+});

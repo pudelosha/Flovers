@@ -9,6 +9,12 @@
       "windowDirection": "窗户方向",
       "measureLightDirection": "测量光线和方向",
       "distanceFromWindow": "离窗户的距离",
+      "orientationsShort": {
+        "S": "南",
+        "E": "东",
+        "W": "西",
+        "N": "北"
+      },
       "orientations": {
         "S": "南",
         "E": "东",

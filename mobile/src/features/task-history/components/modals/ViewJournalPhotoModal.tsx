@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 12,
-    borderRadius: 22,
+    borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.17)",
   },
   added: { color: "rgba(255,255,255,0.9)", fontSize: 14, textAlign: "center" },

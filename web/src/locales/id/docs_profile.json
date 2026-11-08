@@ -7,7 +7,8 @@
         "body": [
           "Profil menyatukan tingkat akun dan XP Anda, kontak dan berbagi tanaman, preferensi pemberitahuan, pengaturan tampilan dan dukungan.",
           "Hal ini memungkinkan pengguna untuk mengontrol data pribadi dan bagaimana aplikasi Flovers berperilaku setiap hari.",
-          "Pemilih berada di dalam header dengan sudut bawah membulat dan tetap terlihat saat halaman digulir. Header melebar ke bawah untuk menampilkan pemilih dan kembali mengecil pada layar tanpa pemilih. Akun menampilkan kartu Akun, Berbagi, dan Bantuan. Tab lainnya menampilkan preferensi masing-masing. Perubahan notifikasi dan pengaturan yang belum disimpan tetap tersimpan saat berpindah tab."
+          "Pemilih berada di dalam header dengan sudut bawah membulat dan tetap terlihat saat halaman digulir. Header melebar ke bawah untuk menampilkan pemilih dan kembali mengecil pada layar tanpa pemilih. Akun menampilkan kartu Akun, Berbagi, dan Bantuan. Tab lainnya menampilkan preferensi masing-masing. Perubahan notifikasi dan pengaturan yang belum disimpan tetap tersimpan saat berpindah tab.",
+          "Saat kembali dari layar lain, tab Akun terbuka. Berpindah tab di Profil mempertahankan perubahan notifikasi dan pengaturan yang belum disimpan sampai kamu menyimpan atau meninggalkan layar."
         ]
       },
       {
@@ -60,7 +61,8 @@
           "Email dan Seluler juga memiliki kotak centang untuk tugas hari ini pada tanaman yang dibagikan kepada Anda. Opsi ini awalnya nonaktif, terpisah dari ringkasan tanaman sendiri, dan memakai waktu pengiriman yang sama dengan saluran terkait. Jika keduanya diaktifkan, tugas tanaman sendiri dan tanaman yang dibagikan kepada Anda digabungkan dalam satu pesan harian per saluran.",
           "Pengingat mencakup akses berbagi yang aktif, baik hanya lihat maupun dengan izin menyelesaikan tugas. Akses diperiksa lagi sebelum pengiriman. Pengingat berhenti jika akses kedaluwarsa, dicabut, atau kontak dihapus.",
           "Pengingat hari berikutnya hanya mencakup tugas tanaman milik sendiri yang belum selesai sejak kemarin. Pengiriman mengikuti waktu saluran yang dipilih, bukan tepat 24 jam setelah notifikasi pertama.",
-          "Di bagian bawah Email dan Telepon, Anda dapat mengaktifkan peringatan saat orang lain menyelesaikan tugas untuk tanaman milik Anda. Opsi ini berlaku untuk seluruh akun, awalnya nonaktif, dan mengirim peringatan setelah tugas selesai, terpisah dari waktu ringkasan harian."
+          "Di bagian bawah Email dan Telepon, Anda dapat mengaktifkan peringatan saat orang lain menyelesaikan tugas untuk tanaman milik Anda. Opsi ini berlaku untuk seluruh akun, awalnya nonaktif, dan mengirim peringatan setelah tugas selesai, terpisah dari waktu ringkasan harian.",
+          "Email dan Telepon memakai urutan yang sama: pengingat harian untuk tanamanmu, waktu pengiriman, pengingat tugas kemarin yang belum selesai, tugas tanaman yang dibagikan pengguna lain kepadamu, lalu notifikasi saat orang lain menyelesaikan tugas tanaman milikmu. Tekan Simpan untuk menerapkan pilihan."
         ]
       },
       {

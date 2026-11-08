@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   Keyboard,
+  Image,
   PermissionsAndroid,
   Platform,
   Pressable,
@@ -16,7 +17,6 @@ import AppModalHost from '../../../../shared/ui/AppModalHost';
 import { useTranslation } from 'react-i18next';
 import ContactModalFrame from '../../../sharing/components/ContactModalFrame';
 import { s as reminderStyles } from '../../../reminders/styles/reminders.styles';
-import PlantPhotoFramingEditor from '../../../../shared/ui/PlantPhotoFramingEditor';
 import { usePlantPhoto } from '../../../../shared/hooks/usePlantPhoto';
 import {
   DEFAULT_PHOTO_FRAMING,
@@ -77,7 +77,6 @@ export default function JournalPhotoModal({
   const [notes, setNotes] = useState('');
   const [takenOn, setTakenOn] = useState('');
   const [dateOpen, setDateOpen] = useState(false);
-  const [interacting, setInteracting] = useState(false);
   const [busy, setBusy] = useState(false);
   const busyRef = useRef(false);
   const [loadedEntry, setLoadedEntry] = useState<JournalPhotoItem | null>(null);
@@ -122,7 +121,6 @@ export default function JournalPhotoModal({
     setTakenOn(entry?.recordedDate ?? '');
     setDateOpen(false);
     setPlantOpen(false);
-    setInteracting(false);
     setPlantId(
       entry?.plantId ??
         (plantOptions.some(
@@ -340,7 +338,6 @@ export default function JournalPhotoModal({
         onClose={close}
         fullScreen
         loading={loading}
-        scrollEnabled={!interacting}
       >
         {loading ? null : loadError || (entry && !selection && !!privatePhoto.error) ? (
           <View style={styles.form}>
@@ -425,16 +422,12 @@ export default function JournalPhotoModal({
               </Text>
             )}
             {!!uri && (
-              <PlantPhotoFramingEditor
+              <Image
                 key={selection?.uploadKey ?? activeEntry?.photo.id}
-                uri={uri}
-                width={selection ? selection.width : activeEntry?.photo.width}
-                height={selection ? selection.height : activeEntry?.photo.height}
-                value={framing}
-                onChange={setFraming}
-                disabled={fieldsDisabled}
-                onInteractionChange={setInteracting}
-                journalLabel={tr('journalGuide')}
+                testID="journal-photo-preview"
+                source={{ uri }}
+                resizeMode="contain"
+                style={styles.preview}
               />
             )}
             {button(
@@ -574,7 +567,7 @@ const styles = StyleSheet.create({
     minHeight: 44,
     paddingHorizontal: 14,
     paddingVertical: 12,
-    borderRadius: 22,
+    borderRadius: 16,
     backgroundColor: 'rgba(255,255,255,0.17)',
   },
   buttonText: {
@@ -594,10 +587,11 @@ const styles = StyleSheet.create({
   disabled: {
     opacity: 0.5,
   },
+  preview: { width: '100%', height: 240, borderRadius: 16 },
   input: {
     minHeight: 100,
     textAlignVertical: 'top',
-    borderRadius: 18,
+    borderRadius: 16,
     backgroundColor: 'rgba(255,255,255,0.14)',
     color: '#FFFFFF',
     fontSize: 14,
