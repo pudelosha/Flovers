@@ -5,7 +5,7 @@ from unittest.mock import patch
 import pytest
 from django.core.exceptions import ValidationError
 from django.core.management import call_command, CommandError
-from django.db import IntegrityError, transaction
+from django.db import DataError, IntegrityError, transaction
 from rest_framework.test import APIClient
 from django.urls import reverse
 
@@ -41,7 +41,9 @@ def test_definition_rejects_invalid_pruning_intervals_in_models_and_database(req
     definition.pruning_required, definition.pruning_interval_days = required, interval
     with pytest.raises(ValidationError):
         definition.full_clean()
-    with transaction.atomic(), pytest.raises(IntegrityError):
+    # PostgreSQL rejects 32768 at the smallint type boundary (DataError),
+    # before evaluating the check constraint. SQLite uses the constraint.
+    with transaction.atomic(), pytest.raises((DataError, IntegrityError)):
         definition.save()
 
 
