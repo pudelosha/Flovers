@@ -63,6 +63,8 @@ def validate_plant_payload(p: dict) -> None:
     if missing:
         raise CommandError(f"Missing required keys: {missing}")
 
+    pruning_seed_defaults(p)
+
     if not isinstance(p["traits"], list):
         raise CommandError("traits must be a list")
 
@@ -85,6 +87,21 @@ def validate_plant_payload(p: dict) -> None:
                     f"Trait '{trait['key']}' text too long for '{lang}' "
                     f"({len(txt)} > {MAX_TRAIT_TEXT_LEN}): '{txt}'"
                 )
+
+
+def pruning_seed_defaults(payload: dict) -> dict:
+    """Old seed files leave existing pruning guidance untouched until reviewed."""
+    if not {"pruning_required", "pruning_interval_days"}.intersection(payload):
+        return {}
+    required = payload.get("pruning_required", False)
+    interval = payload.get("pruning_interval_days")
+    if not isinstance(required, bool):
+        raise CommandError("pruning_required must be a boolean")
+    if interval is not None and (type(interval) is not int or not 1 <= interval <= 32767):
+        raise CommandError("pruning_interval_days must be a whole number from 1 to 32767, or null")
+    if required and interval is None:
+        raise CommandError("pruning_interval_days is required when pruning_required is true")
+    return {"pruning_required": required, "pruning_interval_days": interval}
 
 
 def _is_probably_bad_image_name(name: str) -> bool:
@@ -165,6 +182,7 @@ class Command(BaseCommand):
                             "moisture_interval_days": payload.get("moisture_interval_days"),
                             "fertilize_required": bool(payload.get("fertilize_required", False)),
                             "fertilize_interval_days": payload.get("fertilize_interval_days"),
+                            **pruning_seed_defaults(payload),
                             "repot_required": bool(payload.get("repot_required", False)),
                             "repot_interval_months": payload.get("repot_interval_months"),
                             "traits": payload.get("traits", []),

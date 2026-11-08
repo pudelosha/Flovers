@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 SUN_CHOICES = [
     ("low", "Low"),
@@ -46,6 +47,11 @@ class PlantDefinition(models.Model):
     fertilize_required = models.BooleanField(default=False)
     fertilize_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
 
+    pruning_required = models.BooleanField(default=False)
+    pruning_interval_days = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MinValueValidator(1), MaxValueValidator(32767)],
+    )
+
     repot_required = models.BooleanField(default=True)
     repot_interval_months = models.PositiveSmallIntegerField(null=True, blank=True)
 
@@ -54,6 +60,14 @@ class PlantDefinition(models.Model):
 
     class Meta:
         ordering = ["name", "latin"]
+        constraints = [
+            models.CheckConstraint(
+                condition=(models.Q(pruning_interval_days__isnull=True)
+                           | models.Q(pruning_interval_days__gte=1, pruning_interval_days__lte=32767))
+                          & (models.Q(pruning_required=False) | models.Q(pruning_interval_days__isnull=False)),
+                name="definition_pruning_interval_valid",
+            ),
+        ]
 
     def __str__(self):
         base = self.name.strip() or self.latin

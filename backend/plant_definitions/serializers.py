@@ -128,6 +128,7 @@ class PlantDefinitionProfileSerializer(serializers.ModelSerializer):
             "traits", "sun", "water", "difficulty", "recommended_pot_materials", "recommended_soil_mixes",
             "water_required", "water_interval_days", "moisture_required", "moisture_interval_days",
             "fertilize_required", "fertilize_interval_days", "repot_required", "repot_interval_months",
+            "pruning_required", "pruning_interval_days",
         ]
 
     def get_image(self, obj: PlantDefinition):

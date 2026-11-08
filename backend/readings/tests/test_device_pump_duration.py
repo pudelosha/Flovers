@@ -108,9 +108,9 @@ def test_upgrade_preserves_old_thirty_seconds_and_new_devices_default_to_twenty(
     before=[("readings","0009_reading_intervals_and_missing_alerts")]
     after=[("readings","0010_readingdevice_pump_duration_seconds")]
     executor=MigrationExecutor(connection)
-    account_targets=[target for target in executor.loader.graph.leaf_nodes() if target[0]=="accounts"]
-    before+=account_targets
-    after+=account_targets
+    support_targets=[target for target in executor.loader.graph.leaf_nodes() if target[0] in {"accounts", "plant_instances", "plant_definitions"}]
+    before+=support_targets
+    after+=support_targets
     executor.migrate(before)
     try:
         old=executor.loader.project_state(before).apps

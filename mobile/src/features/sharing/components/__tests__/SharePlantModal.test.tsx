@@ -95,7 +95,7 @@ describe("SharePlantModal", () => {
       expect(view.queryByLabelText("Email")).toBeNull();
       expect(view.queryByLabelText("Push notification")).toBeNull();
       expect(view.queryByText("Save sharing")).toBeNull();
-      expect(view.queryByText("Share selected plants")).toBeNull();
+      expect(view.queryByRole("button", { name: "Share" })).toBeNull();
     };
     expectLoading();
     await act(async () => { if (first === "plants") plants.resolve(apiPlants); else sharing.resolve(snapshot); });
@@ -157,7 +157,7 @@ describe("SharePlantModal", () => {
     await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird"));
     fireEvent.press(view.getByLabelText("Select Anna"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: { ...bird, latin: "Strelitzia alba", imageUrl: "https://example.test/bird.jpg" },
         recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
@@ -173,7 +173,7 @@ describe("SharePlantModal", () => {
     ]);
     const view = render(<SharePlantModal />);
     await loaded(view);
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: custom, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
     ]);
@@ -183,15 +183,15 @@ describe("SharePlantModal", () => {
     const view = render(<SharePlantModal />);
     expect(view.UNSAFE_getByType(ContactModalFrame)).toBeTruthy();
     expect(view.queryByText("Share plants")).toBeNull();
-    expect(view.queryByText("Share selected plants")).toBeNull();
+    expect(view.queryByRole("button", { name: "Share" })).toBeNull();
     await loaded(view);
     expect(view.getByText("Share plants")).toBeTruthy();
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
     fireEvent.press(view.getByLabelText("Select Bird"));
     fireEvent.press(view.getByLabelText("Select Anna"));
     expect(view.getByLabelText("Anna: View only").props.accessibilityState.checked).toBe(true);
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
     ]);
@@ -210,7 +210,7 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Anna"));
     fireEvent.press(view.getByLabelText("Select Bruno"));
     fireEvent.press(view.getByLabelText("Anna: Can complete tasks"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     const recipients = [
       { contactId: "anna", canCompleteTasks: true, endsOn: undefined },
       { contactId: "bruno", canCompleteTasks: false, endsOn: undefined },
@@ -227,7 +227,7 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Pilea"));
     fireEvent.press(view.getByLabelText("Select Anna"));
     fireEvent.press(view.getByLabelText("Select Bird"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: pilea, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
     ]);
@@ -244,7 +244,7 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Bruno"));
     fireEvent.press(view.getByLabelText("Select Bird"));
     expect(view.getByLabelText("Select Anna").props.accessibilityState.checked).toBe("mixed");
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: pilea, recipients: [{ contactId: "bruno", canCompleteTasks: false, endsOn: undefined }] },
       { plant: bird, recipients: [{ contactId: "anna", canCompleteTasks: true, endsOn: undefined }] },
@@ -265,7 +265,7 @@ describe("SharePlantModal", () => {
     expect(view.getByText("Permissions differ between the selected plants.")).toBeTruthy();
     expect(view.getByText("End dates differ between the selected plants.")).toBeTruthy();
     expect(view.getByLabelText("Select Bruno").props.accessibilityState.checked).toBe("mixed");
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [
         { contactId: "anna", canCompleteTasks: true, endsOn: "2030-05-01" },
@@ -286,7 +286,7 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Anna"));
     expect(view.getByLabelText("Select Anna").props.accessibilityState.checked).toBe(true);
     expect(view.getByText("Permissions differ between the selected plants.")).toBeTruthy();
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [{ contactId: "anna", canCompleteTasks: true, endsOn: "2030-05-01" }] },
       { plant: pilea, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: "2030-05-01" }] },
@@ -306,7 +306,7 @@ describe("SharePlantModal", () => {
     expect(view.getByLabelText("Anna: View only").props.accessibilityState.checked).toBe(false);
     expect(view.getByLabelText("Anna: Can complete tasks").props.accessibilityState.checked).toBe(false);
     fireEvent.press(view.getByLabelText("Anna: View only"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [
         { contactId: "anna", canCompleteTasks: false, endsOn: "2030-05-01" },
@@ -325,7 +325,7 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Pilea"));
     fireEvent.press(view.getByText("Choose a date"));
     fireEvent(view.getByTestId("end-date-picker"), "change", { type: "set" }, new Date(2030, 5, 12, 12));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [{ contactId: "anna", canCompleteTasks: true, endsOn: "2030-06-12" }] },
       { plant: pilea, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: "2030-06-12" }] },
@@ -340,7 +340,7 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Bird"));
     fireEvent.press(view.getByLabelText("Select Pilea"));
     fireEvent.press(view.getByText("No end date"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [{ contactId: "anna", canCompleteTasks: true, endsOn: undefined }] },
       { plant: pilea, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
@@ -355,10 +355,10 @@ describe("SharePlantModal", () => {
     fireEvent.press(view.getByLabelText("Select Bird"));
     fireEvent.press(view.getByLabelText("Select Anna"));
     fireEvent.press(view.getByLabelText("Select Pilea"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
     fireEvent.press(view.getByLabelText("Select Pilea"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([{ plant: bird, recipients: [] }]);
   });
 
@@ -368,7 +368,7 @@ describe("SharePlantModal", () => {
     await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird"));
     fireEvent.press(view.getByLabelText("Select Pilea"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(savedUpdates()).toEqual([
       { plant: bird, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
       { plant: pilea, recipients: [{ contactId: "anna", canCompleteTasks: false, endsOn: undefined }] },
@@ -396,7 +396,7 @@ describe("SharePlantModal", () => {
     mockSharing.savePlantsSharing.mockReturnValue(new Promise((resolve) => { finish = resolve; }));
     const view = render(<SharePlantModal />); await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird")); fireEvent.press(view.getByLabelText("Select Anna"));
-    fireEvent.press(view.getByText("Share selected plants")); expect(mockSharing.closeSharePlant).not.toHaveBeenCalled();
+    fireEvent.press(view.getByRole("button", { name: "Share" })); expect(mockSharing.closeSharePlant).not.toHaveBeenCalled();
     await act(async () => { finish({ ok: true }); }); expect(mockSharing.closeSharePlant).toHaveBeenCalledTimes(1);
   });
 
@@ -404,7 +404,7 @@ describe("SharePlantModal", () => {
     mockSharing.savePlantsSharing.mockResolvedValue({ ok: false, reason: "conflict" });
     const view = render(<SharePlantModal />); await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird")); fireEvent.press(view.getByLabelText("Select Anna"));
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     await view.findByText("Sharing changed elsewhere. Reload and try again.");
     expect(view.getByLabelText("Select Anna").props.accessibilityState.checked).toBe(true);
     expect(mockSharing.closeSharePlant).not.toHaveBeenCalled();
@@ -415,7 +415,7 @@ describe("SharePlantModal", () => {
     const view = render(<SharePlantModal />); await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird")); fireEvent.press(view.getByLabelText("Select Anna"));
     mockSharing.versions = { "1": 8 }; view.rerender(<SharePlantModal />);
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(mockSharing.savePlantsSharing.mock.calls[0][0][0].expectedRevision).toBe(5);
   });
 
@@ -424,14 +424,14 @@ describe("SharePlantModal", () => {
     mockSharing.savePlantsSharing.mockResolvedValueOnce({ ok: false, reason: "conflict" }).mockResolvedValue({ ok: true });
     const view = render(<SharePlantModal />); await loaded(view);
     fireEvent.press(view.getByLabelText("Select Bird")); fireEvent.press(view.getByLabelText("Select Anna"));
-    fireEvent.press(view.getByText("Share selected plants")); await view.findByText("Reload sharing");
-    fireEvent.press(view.getByText("Share selected plants")); expect(mockSharing.savePlantsSharing).toHaveBeenCalledTimes(1);
+    fireEvent.press(view.getByRole("button", { name: "Share" })); await view.findByText("Reload sharing");
+    fireEvent.press(view.getByRole("button", { name: "Share" })); expect(mockSharing.savePlantsSharing).toHaveBeenCalledTimes(1);
     mockSharing.versions = { "1": 8 }; mockSharing.shares = [existing(bird, "bruno", false)];
     await act(async () => { fireEvent.press(view.getByText("Reload sharing")); });
     await waitFor(() => expect(view.queryByText("Reload sharing")).toBeNull());
     expect(view.getByLabelText("Select Anna").props.accessibilityState.checked).toBe(false);
     expect(view.getByLabelText("Select Bruno").props.accessibilityState.checked).toBe(true);
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(mockSharing.savePlantsSharing.mock.calls[1][0][0]).toMatchObject({ expectedRevision: 8,
       recipients: [{ contactId: "bruno", canCompleteTasks: false }] });
   });
@@ -440,7 +440,7 @@ describe("SharePlantModal", () => {
     let finish!: (value: any) => void;
     mockSharing.savePlantsSharing.mockReturnValue(new Promise((resolve) => { finish = resolve; }));
     const view = render(<SharePlantModal />); await loaded(view);
-    fireEvent.press(view.getByLabelText("Select Bird")); fireEvent.press(view.getByLabelText("Select Anna")); fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByLabelText("Select Bird")); fireEvent.press(view.getByLabelText("Select Anna")); fireEvent.press(view.getByRole("button", { name: "Share" }));
     mockSharing.shareDraft = null; view.rerender(<SharePlantModal />);
     mockSharing.shareDraft = { plant: pilea }; view.rerender(<SharePlantModal />); await loaded(view);
     await act(async () => { finish({ ok: true }); }); expect(mockSharing.closeSharePlant).not.toHaveBeenCalled();
@@ -471,7 +471,7 @@ describe("SharePlantModal", () => {
     await view.findByText("Could not load your plants.");
     expect(view.queryByLabelText("Select Bird")).toBeNull();
     expect(view.queryByLabelText("Select Anna")).toBeNull();
-    expect(view.queryByText("Share selected plants")).toBeNull();
+    expect(view.queryByRole("button", { name: "Share" })).toBeNull();
     expect(view.queryByText("End date")).toBeNull();
     expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
   });
@@ -493,7 +493,7 @@ describe("SharePlantModal", () => {
     const view = render(<SharePlantModal />);
     await loaded(view);
     expect(view.getByText("Add and accept a contact before sharing a plant.")).toBeTruthy();
-    fireEvent.press(view.getByText("Share selected plants"));
+    fireEvent.press(view.getByRole("button", { name: "Share" }));
     expect(mockSharing.savePlantsSharing).not.toHaveBeenCalled();
     fireEvent.press(view.getByText("Cancel"));
     expect(mockSharing.closeSharePlant).toHaveBeenCalledTimes(1);

@@ -47,12 +47,14 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             "repot_task_enabled",
             "moisture_required",
             "fertilize_required",
+            "pruning_required",
             "care_required",
             "last_watered",
             "last_repotted",
             "water_interval_days",
             "moisture_interval_days",
             "fertilize_interval_days",
+            "pruning_interval_days",
             "care_interval_days",
             "repot_interval_months",
             "qr_code",
@@ -62,7 +64,7 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
         read_only_fields = ["id", "qr_code", "created_at", "updated_at"]
         extra_kwargs = {
             field: {"min_value": 1}
-            for field in ("water_interval_days", "moisture_interval_days", "fertilize_interval_days", "care_interval_days", "repot_interval_months")
+            for field in ("water_interval_days", "moisture_interval_days", "fertilize_interval_days", "pruning_interval_days", "care_interval_days", "repot_interval_months")
         }
 
     def validate(self, attrs):
@@ -88,6 +90,7 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
                 ("water_task_enabled", "water_interval_days"),
                 ("moisture_required", "moisture_interval_days"),
                 ("fertilize_required", "fertilize_interval_days"),
+                ("pruning_required", "pruning_interval_days"),
                 ("care_required", "care_interval_days"),
                 ("repot_task_enabled", "repot_interval_months"),
             ):
@@ -132,6 +135,11 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
         prototype = PlantInstance(user=user, **validated_data)
         writable = [field.field_name for field in self._writable_fields if field.field_name != "creation_key"]
         canonical = {name: getattr(prototype, name) for name in writable}
+        # Preserve hashes of pre-pruning creation receipts when the new fields
+        # are omitted or explicitly set to their defaults by a newer client.
+        if not canonical.get("pruning_required") and canonical.get("pruning_interval_days") is None:
+            canonical.pop("pruning_required", None)
+            canonical.pop("pruning_interval_days", None)
         request_hash = hashlib.sha256(json.dumps(canonical, cls=DjangoJSONEncoder, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
         receipt, created = PlantCreationRequest.objects.get_or_create(
             user=user, creation_key=creation_key, defaults={"request_hash": request_hash},
@@ -194,6 +202,9 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
 
             if obj.fertilize_required and obj.fertilize_interval_days:
                 _mk_reminder("fertilize", int(obj.fertilize_interval_days), "days")
+
+            if obj.pruning_required and obj.pruning_interval_days:
+                _mk_reminder("pruning", int(obj.pruning_interval_days), "days")
 
             if obj.care_required and obj.care_interval_days:
                 _mk_reminder("care", int(obj.care_interval_days), "days")
@@ -327,12 +338,14 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "repot_task_enabled",
             "moisture_required",
             "fertilize_required",
+            "pruning_required",
             "care_required",
             "last_watered",
             "last_repotted",
             "water_interval_days",
             "moisture_interval_days",
             "fertilize_interval_days",
+            "pruning_interval_days",
             "care_interval_days",
             "repot_interval_months",
             "qr_code",

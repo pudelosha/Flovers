@@ -146,7 +146,7 @@ class ReminderTaskExportEmailSerializer(serializers.Serializer):
     location = serializers.CharField(required=False, allow_blank=False)
     types = serializers.ListField(
         child=serializers.ChoiceField(
-            choices=["watering", "moisture", "fertilising", "care", "repot"]
+            choices=["watering", "moisture", "fertilising", "pruning", "care", "repot"]
         ),
         required=False,
         allow_empty=False,

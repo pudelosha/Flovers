@@ -8,7 +8,7 @@ def test_event_backfill_and_duplicate_pending_cleanup_preserve_completed_rows_an
     executor = MigrationExecutor(connection)
     final = executor.loader.graph.leaf_nodes()
     previous = [("reminders", "0004_positive_reminder_interval")]
-    previous += [target for target in final if target[0] == "accounts"]
+    previous += [target for target in final if target[0] in {"accounts", "plant_instances", "plant_definitions"}]
     try:
         executor.migrate(previous)
         old = executor.loader.project_state(previous).apps

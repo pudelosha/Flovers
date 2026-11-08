@@ -14,6 +14,7 @@ class Reminder(models.Model):
         ("water", "Watering"),
         ("moisture", "Misting"),
         ("fertilize", "Fertilising"),
+        ("pruning", "Pruning"),
         ("care", "General care"),
         ("repot", "Repotting"),
     ]

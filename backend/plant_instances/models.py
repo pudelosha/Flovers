@@ -53,6 +53,7 @@ class PlantInstance(models.Model):
     repot_task_enabled = models.BooleanField(default=False)
     moisture_required = models.BooleanField(default=False)
     fertilize_required = models.BooleanField(default=False)
+    pruning_required = models.BooleanField(default=False)
     care_required = models.BooleanField(default=False)
 
     last_watered = models.CharField(max_length=32, blank=True, default="")
@@ -61,6 +62,9 @@ class PlantInstance(models.Model):
     water_interval_days = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MinValueValidator(1)])
     moisture_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
     fertilize_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
+    pruning_interval_days = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MinValueValidator(1), MaxValueValidator(32767)],
+    )
     care_interval_days = models.PositiveSmallIntegerField(null=True, blank=True)
     repot_interval_months = models.PositiveSmallIntegerField(null=True, blank=True)
 

@@ -55,6 +55,7 @@ UI_TO_MODEL_TYPE = {
     "watering": "water",
     "moisture": "moisture",
     "fertilising": "fertilize",
+    "pruning": "pruning",
     "care": "care",
     "repot": "repot",
 }
@@ -423,14 +424,7 @@ class ReminderTaskBulkDeleteView(APIView):
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
-            mapping = {
-                "watering": "water",
-                "moisture": "moisture",
-                "fertilising": "fertilize",
-                "care": "care",
-                "repot": "repot",
-            }
-
+            mapping = UI_TO_MODEL_TYPE
             model_types = [mapping[t] for t in ui_types if t in mapping]
             if not model_types:
                 return Response(

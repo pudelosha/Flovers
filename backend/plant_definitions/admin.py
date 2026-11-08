@@ -30,7 +30,7 @@ class PlantDefinitionAdmin(admin.ModelAdmin):
         "water",
         "difficulty",
     )
-    list_filter = ("popular", "sun", "water", "difficulty")
+    list_filter = ("popular", "sun", "water", "difficulty", "pruning_required")
     search_fields = ("external_id", "name", "latin")
     inlines = [PlantDefinitionTranslationInline, PlantDefinitionTraitInline]
 
