@@ -35,7 +35,7 @@ jest.mock("../../../../api/services/profile.service", () => ({
 jest.mock("../../../../shared/ui/CenteredSpinner", () => (props: any) =>
   require("react").createElement(require("react-native").Text, { testID: "shared-spinner" }, "Loading"));
 jest.mock("../../../../shared/ui/GlassHeader", () => (props: any) =>
-  require("react").createElement(require("react-native").Text, null, props.title));
+  require("react").createElement(require("react-native").View, null, require("react").createElement(require("react-native").Text, null, props.title), props.segment));
 jest.mock("../../components/AccountCard", () => (props: any) => {
  const {View,Text,Pressable}=require('react-native');
  return <View><Text>{"Account level " + (props.levelProgress?.level ?? "unavailable")}</Text>

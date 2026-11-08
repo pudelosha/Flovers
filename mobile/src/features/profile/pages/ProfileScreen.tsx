@@ -1,3 +1,5 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
+import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import {
   View,
@@ -76,6 +78,7 @@ async function waitForFrames(count: number) {
 }
 
 export default function ProfileScreen() {
+  const headerReady = useHeaderContentReady();
   const { t } = useTranslation();
   const nav = useNavigation<any>();
 
@@ -93,7 +96,6 @@ export default function ProfileScreen() {
   const [activeSection, setActiveSection] = useState<
     'account' | 'notifications' | 'settings'
   >('account');
-  const [segmentHeight, setSegmentHeight] = useState(38);
   const scrollRef = useRef<ScrollView | null>(null);
   const scrollToTop = useCallback(() => {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
@@ -358,9 +360,11 @@ export default function ProfileScreen() {
   };
 
   // Reset only on navigation focus, not when the selected segment changes.
-  useFocusEffect(useCallback(() => {
-    setActiveSection('account');
-  }, []));
+  useFocusEffect(
+    useCallback(() => {
+      setActiveSection('account');
+    }, []),
+  );
 
   // enter/exit animation
   const entry = useRef(new Animated.Value(0)).current;
@@ -374,7 +378,11 @@ export default function ProfileScreen() {
     outputRange: [0.98, 1],
   });
   const isProfileLoading =
-    loading || settingsLoading || !formInitialized || accountLevel.loading;
+    loading ||
+    settingsLoading ||
+    !formInitialized ||
+    accountLevel.loading ||
+    !headerReady;
 
   useFocusEffect(
     useCallback(() => {
@@ -405,10 +413,55 @@ export default function ProfileScreen() {
     }, [entry, scrollToTop, isProfileLoading, activeSection]),
   );
 
+  const headerSegment = (
+    <SlidingSegments
+      testID="profile-segments"
+      selectedIndex={['account', 'notifications', 'settings'].indexOf(
+        activeSection,
+      )}
+      style={segmentStyles.bar}
+    >
+      {(['account', 'notifications', 'settings'] as const).map(section => (
+        <Pressable
+          key={section}
+          accessibilityRole="tab"
+          accessibilityState={{ selected: activeSection === section }}
+          testID={`profile-tab-${section}`}
+          style={segmentStyles.option}
+          onPress={() => {
+            if (activeSection === section) return;
+            restoreScrollYRef.current = null;
+            settingsTileViewportYRef.current = null;
+            scrollYRef.current = 0;
+            setLangOpen(false);
+            setDateOpen(false);
+            setTempOpen(false);
+            setMeasureOpen(false);
+            setThemeOpen(false);
+            setTileMotiveOpen(false);
+            setFabOpen(false);
+            setActiveSection(section);
+            scrollToTop();
+          }}
+        >
+          <Text
+            style={segmentStyles.label}
+            numberOfLines={1}
+            adjustsFontSizeToFit
+            minimumFontScale={0.75}
+          >
+            {t(`profile.segments.${section}`)}
+          </Text>
+        </Pressable>
+      ))}
+    </SlidingSegments>
+  );
+
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
         title={t('profile.header.title')}
+        segment={headerSegment}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         rightIconName="qrcode-scan"
@@ -420,58 +473,12 @@ export default function ProfileScreen() {
         <CenteredSpinner size={56} color="#FFFFFF" />
       ) : (
         <View style={{ flex: 1 }}>
-          <View
-            testID="profile-segments"
-            style={segmentStyles.bar}
-            onLayout={event =>
-              setSegmentHeight(Math.ceil(event.nativeEvent.layout.height))
-            }
-          >
-            {(['account', 'notifications', 'settings'] as const).map(
-              section => (
-                <Pressable
-                  key={section}
-                  accessibilityRole="tab"
-                  accessibilityState={{ selected: activeSection === section }}
-                  testID={`profile-tab-${section}`}
-                  style={[
-                    segmentStyles.option,
-                    activeSection === section && segmentStyles.active,
-                  ]}
-                  onPress={() => {
-                    if (activeSection === section) return;
-                    restoreScrollYRef.current = null;
-                    settingsTileViewportYRef.current = null;
-                    scrollYRef.current = 0;
-                    setLangOpen(false);
-                    setDateOpen(false);
-                    setTempOpen(false);
-                    setMeasureOpen(false);
-                    setThemeOpen(false);
-                    setTileMotiveOpen(false);
-                    setFabOpen(false);
-                    setActiveSection(section);
-                    scrollToTop();
-                  }}
-                >
-                  <Text
-                    style={segmentStyles.label}
-                    numberOfLines={1}
-                    adjustsFontSizeToFit
-                    minimumFontScale={0.75}
-                  >
-                    {t(`profile.segments.${section}`)}
-                  </Text>
-                </Pressable>
-              ),
-            )}
-          </View>
           <ScrollView
             ref={scrollRef}
             contentContainerStyle={[
               ly.content,
               {
-                paddingTop: segmentHeight + 24,
+                paddingTop: 21,
                 paddingBottom: insets.bottom + 120,
               },
             ]}
@@ -635,12 +642,6 @@ export default function ProfileScreen() {
 
 const segmentStyles = StyleSheet.create({
   bar: {
-    position: 'absolute',
-    top: 12,
-    left: 16,
-    right: 16,
-    zIndex: 60,
-    elevation: 60,
     flexDirection: 'row',
     backgroundColor: '#051F18',
     borderRadius: 20,

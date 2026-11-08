@@ -1,3 +1,4 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import {ThemeContrastScope} from "../../../shared/theme/ThemeContext";
 import { bottomNavigationHeight } from "../../../shared/constants/layout";
 import { useSettings } from "../../../app/providers/SettingsProvider";
@@ -157,6 +158,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsHistoryScreen() {
+  const headerReady = useHeaderContentReady();
   const { t, i18n } = useTranslation();
   const { settings } = useSettings();
 
@@ -531,13 +533,13 @@ export default function ReadingsHistoryScreen() {
   }, [contentReady]);
 
   useEffect(() => {
-    if (!pageReady) { entry.stopAnimation(); entry.setValue(0); return; }
+    if (!pageReady || !headerReady) { entry.stopAnimation(); entry.setValue(0); return; }
     const animation = Animated.timing(entry, {
       toValue: 1, duration: 220, easing: Easing.out(Easing.cubic), useNativeDriver: true,
     });
     animation.start();
     return () => animation.stop();
-  }, [pageReady, entry]);
+  }, [pageReady, headerReady, entry]);
 
   // --------- Derived helpers for labels & navigation limits ---------
   const today = new Date();

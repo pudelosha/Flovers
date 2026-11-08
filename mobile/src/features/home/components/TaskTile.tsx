@@ -181,6 +181,8 @@ export default function TaskTile({
         />
         {isOverdue && (
           <AnimatedLinearGradient
+            testID="overdue-task-pulse"
+            themeRole="warning"
             pointerEvents="none"
             start={{ x: 0, y: 0.5 }}
             end={{ x: 1, y: 0.5 }}

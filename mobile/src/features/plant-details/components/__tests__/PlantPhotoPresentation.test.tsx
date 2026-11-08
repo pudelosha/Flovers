@@ -3,7 +3,7 @@ import {ThemeContext} from "../../../../shared/theme/ThemeContext";
 import {LIGHT_COLORS} from "../../../../shared/theme/palette";
 import React from "react";
 import { ImageBackground, StyleSheet } from "react-native";
-import { act, fireEvent, render, waitFor } from "@testing-library/react-native";
+import { act, configure, fireEvent, render, waitFor } from "@testing-library/react-native";
 import PlantInfoTile from "../PlantInfoTile";
 import PlantInfoMenu from "../PlantInfoMenu";
 import PlantTile from "../../../plants/components/PlantTile";
@@ -26,6 +26,7 @@ const plant = { id: 7, display_name: "Fern", plant_definition: { id: 1, name: "F
 const callbacks = { onPressBody: jest.fn(), onPressMenu: jest.fn(), onDetails: jest.fn(), onEdit: jest.fn(),
   onReminders: jest.fn(), onJournal: jest.fn(), onDelete: jest.fn(), onShowQr: jest.fn() };
 beforeEach(() => {
+  configure({ defaultIncludeHiddenElements: true });
   jest.clearAllMocks();
   (getPlantPhotoUri as jest.Mock).mockResolvedValue("file:///owned-old.jpg");
   (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
@@ -181,7 +182,11 @@ it("shows an unmasked photo with a separate overlapping description panel",()=>{
 
 it('opens the plant menu by touching the description without adding a dots button',()=>{
  const view=render(<PlantTile plant={{id:'7',name:'Fern',latin:'Nephrolepis exaltata',location:'Kitchen',notes:''}} isMenuOpen={false} {...callbacks}/>);
+ jest.useFakeTimers();
+ fireEvent(view.getByTestId('plant-tile-description'), 'layout', { nativeEvent: { layout: { width: 150, height: 80 } } });
+ act(() => jest.runAllTimers());
  fireEvent.press(view.getByText('Fern'));
+ jest.useRealTimers();
  expect(callbacks.onPressBody).toHaveBeenCalledTimes(1);expect(callbacks.onPressMenu).toHaveBeenCalledTimes(1);
  expect(view.queryByText('dots-horizontal')).toBeNull();expect(view.getByText('Nephrolepis exaltata')).toBeTruthy();expect(view.getByText('Kitchen')).toBeTruthy();
 });
@@ -264,3 +269,26 @@ it('prefers the catalogue hero over the thumbnail in Plant Details',()=>{
  const ui=render(<PlantInfoTile plant={{...plant,photo:null,access,plant_definition:{...plant.plant_definition,image_thumb:'https://example.test/thumb.jpg'}} as any}/>);
  expect(ui.UNSAFE_getByType(ImageBackground).props.source).toEqual({uri:plant.plant_definition.image});
 });
+it('reveals the plant image and panel together after native image loading and panel layout', () => {
+  jest.useFakeTimers();
+  (usePlantPhoto as jest.Mock).mockReturnValue({ uri: null, loading: false, error: null });
+  const element = (imageUrl: string) => <PlantTile plant={{ id: '7', name: 'Fern', notes: '', imageUrl, access }} isMenuOpen={false} {...callbacks} />;
+  const ui = render(element('https://example.test/first.jpg'));
+  const opacity = () => StyleSheet.flatten(ui.getByTestId('plant-tile-body').props.style).opacity;
+  expect(opacity()).toBe(0);
+  fireEvent(ui.getByTestId('plant-tile-description'), 'layout', { nativeEvent: { layout: { width: 150, height: 80 } } });
+  act(() => jest.runAllTimers());
+  expect(opacity()).toBe(0);
+  fireEvent(ui.UNSAFE_getByType(ImageBackground), 'load');
+  act(() => jest.runAllTimers());
+  expect(opacity()).toBe(1);
+  ui.rerender(element('https://example.test/replacement.jpg'));
+  expect(opacity()).toBe(0);
+  fireEvent(ui.UNSAFE_getByType(ImageBackground), 'error');
+  act(() => jest.runAllTimers());
+  expect(opacity()).toBe(1);
+  ui.unmount();
+  jest.useRealTimers();
+});
+
+afterEach(() => configure({ defaultIncludeHiddenElements: false }));

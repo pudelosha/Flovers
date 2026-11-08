@@ -7,7 +7,7 @@
         "body": [
           "The Plant Details screen is the central place to view and manage a single plant instance created by the user.",
           "It combines plant-specific information, reminders, task actions, sensor readings (if available), and quick navigation tools related to that plant.",
-          "Use Info, Tasks and Readings above the overlapping panel. Info shows your plant details and, when linked, a separate Plant Definition tile. Readings shows the linked device values or a no-device message."
+          "The selector is inside the rounded header and stays visible while the page scrolls. The header expands to show the selector and contracts on screens without one."
         ]
       },
       {

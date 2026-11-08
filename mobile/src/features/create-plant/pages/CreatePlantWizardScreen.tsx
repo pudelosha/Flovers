@@ -1,3 +1,4 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 // screens/CreatePlantWizardScreen.tsx
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { View, ScrollView, Text, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
@@ -48,6 +49,7 @@ type StepKey = typeof STEPS_ORDER[number];
 const ASYNC_STEPS: readonly string[] = ["selectPlant", "traits", "location", "photo", "creating"];
 
 function WizardBody() {
+  const headerReady = useHeaderContentReady();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
@@ -150,7 +152,7 @@ function WizardBody() {
     }
     entry.stopAnimation();
     entry.setValue(0);
-    if (!stepReady) return;
+    if (!stepReady || !headerReady) return;
     const animation = Animated.timing(entry, {
       toValue: 1,
       duration: 260,
@@ -159,7 +161,7 @@ function WizardBody() {
     });
     animation.start();
     return () => animation.stop();
-  }, [stepKey, stepReady, entry]);
+  }, [stepKey, stepReady, headerReady, entry]);
 
   const translateX = entry.interpolate({
     inputRange: [0, 1],

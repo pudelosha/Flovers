@@ -31,6 +31,7 @@ import { plantAccess } from '../../../shared/utils/plantAccess';
 export type PlantDetailsTab = 'info' | 'reminders' | 'readings';
 
 type Props = {
+  segmentInHeader?: boolean;
   activeTab?: PlantDetailsTab;
   tabContent?: React.ReactNode;
   onTabChange?: (tab: PlantDetailsTab) => void;
@@ -157,6 +158,7 @@ function normalizeLightLevelKey(
 }
 
 export default function PlantInfoTile({
+  segmentInHeader = false,
   plant,
   activeTab = 'info',
   tabContent,
@@ -173,12 +175,26 @@ export default function PlantInfoTile({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
-  const [parameterTextHeights, setParameterTextHeights] = useState<Record<string, { label?: number; value?: number }>>({});
-  const parameterHeight = Math.max(58, ...Object.values(parameterTextHeights).map(height => (height.label ?? 14) + (height.value ?? 17) + 20));
-  const measureParameterText = (key: string, part: 'label' | 'value', height: number) => {
+  const [parameterTextHeights, setParameterTextHeights] = useState<
+    Record<string, { label?: number; value?: number }>
+  >({});
+  const parameterHeight = Math.max(
+    58,
+    ...Object.values(parameterTextHeights).map(
+      height => (height.label ?? 14) + (height.value ?? 17) + 20,
+    ),
+  );
+  const measureParameterText = (
+    key: string,
+    part: 'label' | 'value',
+    height: number,
+  ) => {
     const rounded = Math.ceil(height);
-    setParameterTextHeights(previous => previous[key]?.[part] === rounded
-      ? previous : { ...previous, [key]: { ...previous[key], [part]: rounded } });
+    setParameterTextHeights(previous =>
+      previous[key]?.[part] === rounded
+        ? previous
+        : { ...previous, [key]: { ...previous[key], [part]: rounded } },
+    );
   };
 
   const nav = useNavigation<any>();
@@ -415,7 +431,11 @@ export default function PlantInfoTile({
                     ) : (
                       <ImageMasked
                         uri={imageUrl}
-                        shiftUp={!plant.photo && (imageUrl === plant.plant_definition?.image || imageUrl === plant.plant_definition?.image_thumb)}
+                        shiftUp={
+                          !plant.photo &&
+                          (imageUrl === plant.plant_definition?.image ||
+                            imageUrl === plant.plant_definition?.image_thumb)
+                        }
                         onLoad={onImageLoad}
                         onError={onImageError}
                       />
@@ -442,7 +462,10 @@ export default function PlantInfoTile({
                   <View
                     style={[
                       styles.heroText,
-                      { paddingBottom: infoFadeHeight + 60 },
+                      {
+                        paddingBottom:
+                          infoFadeHeight + (segmentInHeader ? 16 : 60),
+                      },
                     ]}
                   >
                     <Text style={styles.h1} numberOfLines={1}>
@@ -488,42 +511,44 @@ export default function PlantInfoTile({
           </View>
         </Pressable>
 
-        <View
-          testID="plant-detail-segments"
-          style={[styles.segmentBar, { bottom: infoFadeHeight + 5 }]}
-        >
-          {(['info', 'reminders', 'readings'] as const).map(key => (
-            <Pressable
-              key={key}
-              accessibilityRole="tab"
-              accessibilityState={{ selected: activeTab === key }}
-              onPress={() => {
-                closeMenu();
-                onTabChange?.(key);
-              }}
-              style={[
-                styles.segment,
-                activeTab === key && styles.segmentActive,
-              ]}
-            >
-              <Text
-                style={styles.segmentText}
-                numberOfLines={1}
-                adjustsFontSizeToFit
-                minimumFontScale={0.8}
+        {!segmentInHeader && (
+          <View
+            testID="plant-detail-segments"
+            style={[styles.segmentBar, { bottom: infoFadeHeight + 5 }]}
+          >
+            {(['info', 'reminders', 'readings'] as const).map(key => (
+              <Pressable
+                key={key}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: activeTab === key }}
+                onPress={() => {
+                  closeMenu();
+                  onTabChange?.(key);
+                }}
+                style={[
+                  styles.segment,
+                  activeTab === key && styles.segmentActive,
+                ]}
               >
-                {tr(
-                  `plantDetails.segments.${key}`,
-                  key === 'info'
-                    ? 'Info'
-                    : key === 'reminders'
-                    ? 'Reminders'
-                    : 'Readings',
-                )}
-              </Text>
-            </Pressable>
-          ))}
-        </View>
+                <Text
+                  style={styles.segmentText}
+                  numberOfLines={1}
+                  adjustsFontSizeToFit
+                  minimumFontScale={0.8}
+                >
+                  {tr(
+                    `plantDetails.segments.${key}`,
+                    key === 'info'
+                      ? 'Info'
+                      : key === 'reminders'
+                      ? 'Reminders'
+                      : 'Readings',
+                  )}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+        )}
 
         {menuOpen && (
           <View style={styles.menuOverlay} pointerEvents="box-none">
@@ -550,7 +575,10 @@ export default function PlantInfoTile({
                     name: title,
                     location: locationName,
                     latin,
-                    imageUrl: plant.plant_definition?.image_thumb || plant.plant_definition?.image || undefined,
+                    imageUrl:
+                      plant.plant_definition?.image_thumb ||
+                      plant.plant_definition?.image ||
+                      undefined,
                     photo: plant.photo,
                   });
                 }}
@@ -683,10 +711,18 @@ export default function PlantInfoTile({
                 <View
                   key={it.icon}
                   testID={`plant-info-field-${it.icon}`}
-                  style={[styles.infoField, { minHeight: parameterHeight }, it.fullWidth && styles.infoFieldFull]}
+                  style={[
+                    styles.infoField,
+                    { minHeight: parameterHeight },
+                    it.fullWidth && styles.infoFieldFull,
+                  ]}
                 >
                   <View style={styles.infoIcon}>
-                    <MaterialCommunityIcons name={it.icon as any} size={20} color="#FFFFFF" />
+                    <MaterialCommunityIcons
+                      name={it.icon as any}
+                      size={20}
+                      color="#FFFFFF"
+                    />
                   </View>
                   <View
                     style={styles.infoText}
@@ -695,14 +731,36 @@ export default function PlantInfoTile({
                     <Text
                       style={styles.infoLabel}
                       testID={`plant-info-label-${it.icon}`}
-                      onLayout={it.fullWidth ? undefined : event => measureParameterText(it.icon, 'label', event.nativeEvent.layout.height)}
-                    >{it.label}</Text>
+                      onLayout={
+                        it.fullWidth
+                          ? undefined
+                          : event =>
+                              measureParameterText(
+                                it.icon,
+                                'label',
+                                event.nativeEvent.layout.height,
+                              )
+                      }
+                    >
+                      {it.label}
+                    </Text>
                     <View style={styles.infoValueArea}>
                       <Text
                         style={styles.infoValue}
                         testID={`plant-info-value-${it.icon}`}
-                        onLayout={it.fullWidth ? undefined : event => measureParameterText(it.icon, 'value', event.nativeEvent.layout.height)}
-                      >{it.value}</Text>
+                        onLayout={
+                          it.fullWidth
+                            ? undefined
+                            : event =>
+                                measureParameterText(
+                                  it.icon,
+                                  'value',
+                                  event.nativeEvent.layout.height,
+                                )
+                        }
+                      >
+                        {it.value}
+                      </Text>
                     </View>
                   </View>
                 </View>
@@ -904,7 +962,13 @@ const styles = StyleSheet.create({
   infoText: { flex: 1, minWidth: 0, alignSelf: 'stretch' },
   infoValueArea: { flexGrow: 1, justifyContent: 'center' },
   infoLabel: { color: 'rgba(255,255,255,0.85)', fontSize: 10, lineHeight: 14 },
-  infoValue: { color: '#FFFFFF', fontSize: 12, lineHeight: 17, fontWeight: '700', flexShrink: 1 },
+  infoValue: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    lineHeight: 17,
+    fontWeight: '700',
+    flexShrink: 1,
+  },
 
   // prompt sheet styles (copied from your ChangePlantImageModal approach)
   confirmOverlay: {

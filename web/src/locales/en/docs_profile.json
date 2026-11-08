@@ -7,7 +7,7 @@
         "body": [
           "Profile brings together your account level and XP, contacts and plant sharing, notification preferences, appearance settings and support.",
           "It allows the user to control both personal data and how the Flovers app behaves on a daily basis.",
-          "Use the fixed Account / Notifications / Settings selector below the Profile header. Account shows the Account, Sharing and Support tiles. Notifications and Settings show their respective tiles. The selector stays visible while scrolling. Switching tabs preserves unsaved notification and settings changes."
+          "The selector is inside the rounded header and stays visible while the page scrolls. The header expands to show the selector and contracts on screens without one. Account shows the Account, Sharing and Support tiles. Notifications and Settings show their respective tiles. The selector stays visible while scrolling. Switching tabs preserves unsaved notification and settings changes."
         ]
       },
       {

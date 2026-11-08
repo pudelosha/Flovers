@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Pressable,
@@ -59,6 +59,27 @@ export default function PlantTile({
     { variant: photoVariant, expiresAt: plant.access?.expires_at },
   );
   const imgUri = plant.photo ? syncedPhotoUri : plant.imageUrl;
+  const imageKey = `${plant.id}:${imgUri || ''}`;
+  const [decodedImage, setDecodedImage] = useState<string | null>(null);
+  const [panelLaidOut, setPanelLaidOut] = useState(false);
+  const [presentedImage, setPresentedImage] = useState<string | null>(null);
+  const imageReady = imgUri
+    ? decodedImage === imageKey
+    : !photoLoading;
+
+  useEffect(() => {
+    if (!imageReady || !panelLaidOut) return;
+    // Let the native gradient/mask finish painting before revealing the card.
+    let secondFrame: number | undefined;
+    const firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => setPresentedImage(imageKey));
+    });
+    return () => {
+      cancelAnimationFrame(firstFrame);
+      if (secondFrame !== undefined) cancelAnimationFrame(secondFrame);
+    };
+  }, [imageKey, imageReady, panelLaidOut]);
+  const cardReady = imageReady && presentedImage === imageKey;
   const access = plantAccess(plant.access);
   const label = [
     plant.name,
@@ -73,7 +94,11 @@ export default function PlantTile({
   return (
     <View style={[grid.wrap, isMenuOpen && { zIndex: 50 }]}>
       <Pressable
-        style={grid.body}
+        testID="plant-tile-body"
+        style={[grid.body, { opacity: cardReady ? 1 : 0 }]}
+        pointerEvents={cardReady ? 'auto' : 'none'}
+        accessibilityElementsHidden={!cardReady}
+        importantForAccessibility={cardReady ? 'auto' : 'no-hide-descendants'}
         accessibilityRole="button"
         accessibilityLabel={label}
         accessibilityState={{ expanded: isMenuOpen }}
@@ -89,6 +114,8 @@ export default function PlantTile({
               photo={plant.photo}
               style={StyleSheet.absoluteFillObject}
               testID="plant-tile-photo"
+              onLoad={() => setDecodedImage(imageKey)}
+              onError={() => setDecodedImage(imageKey)}
             />
           ) : plant.photo && photoLoading ? (
             <View style={grid.placeholder} testID="plant-tile-photo-loading">
@@ -96,7 +123,10 @@ export default function PlantTile({
             </View>
           ) : imgUri ? (
             <ImageBackground
+              key={imageKey}
               source={{ uri: imgUri }}
+              onLoad={() => setDecodedImage(imageKey)}
+              onError={() => setDecodedImage(imageKey)}
               resizeMode="cover"
               style={StyleSheet.absoluteFill}
             />
@@ -111,7 +141,8 @@ export default function PlantTile({
           )}
         </View>
         <View style={grid.image} pointerEvents="none" />
-        <View style={grid.panel} testID="plant-tile-description">
+        <View style={grid.panel} testID="plant-tile-description"
+          onLayout={() => setPanelLaidOut(true)}>
           <PlantDescriptionSurface />
           <View style={grid.titleRow}>
             <Text style={grid.name} numberOfLines={1}>

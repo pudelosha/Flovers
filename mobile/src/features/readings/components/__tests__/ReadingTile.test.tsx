@@ -4,6 +4,8 @@ import type { AppStateStatus } from "react-native";
 import { act, render } from "@testing-library/react-native";
 import ReadingTile from "../ReadingTile";
 import type { ReadingTileModel } from "../../types/readings.types";
+import { ThemeContext } from '../../../../shared/theme/ThemeContext';
+import { LIGHT_COLORS } from '../../../../shared/theme/palette';
 
 const data: ReadingTileModel = {
   id: "1", name: "Fern", status: "enabled", lastReadISO: "2026-10-29T10:00:00Z",
@@ -17,6 +19,17 @@ const callbacks = { isMenuOpen: false, onPressBody: jest.fn(), onPressMenu: jest
 
 beforeEach(() => { jest.useFakeTimers(); jest.setSystemTime(new Date("2026-10-29T10:59:59Z")); });
 afterEach(() => { jest.restoreAllMocks(); jest.useRealTimers(); });
+
+it('keeps the missing-readings warning red in light mode', () => {
+  jest.setSystemTime(new Date('2026-10-29T11:05:00Z'));
+  const view = render(<ThemeContext.Provider value={{ isLight: true, colors: LIGHT_COLORS }}>
+    <ReadingTile data={data} {...callbacks} />
+  </ThemeContext.Provider>);
+  expect(view.getByTestId('missing-readings-pulse').props.colors).toEqual([
+    'rgba(255, 59, 48, 0.55)', 'rgba(255, 59, 48, 0.18)', 'rgba(255, 59, 48, 0.00)',
+  ]);
+  view.unmount();
+});
 
 it("starts pulsing at the deadline without another server refresh and stops after a fresh reading", () => {
   const view = render(<ReadingTile data={data} {...callbacks} />);

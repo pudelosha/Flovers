@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { Animated, Easing } from 'react-native';
+import { useHeaderContentReady } from '../ui/HeaderPresentation';
 
 /** Start tile transitions after ready content commits; replay on screen entry. */
 export function useTileEntryAnimations(
@@ -7,6 +8,8 @@ export function useTileEntryAnimations(
   ready: boolean,
   focused: boolean,
 ) {
+  const headerReady = useHeaderContentReady();
+  ready = ready && headerReady;
   const values = useRef(new Map<string, Animated.Value>());
   const shown = useRef(new Set<string>());
   const valueFor = useCallback((id: string) => {

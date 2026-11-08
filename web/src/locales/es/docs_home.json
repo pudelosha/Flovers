@@ -16,7 +16,8 @@
           "Cada tarjeta representa una tarea de un recordatorio: riego, pulverización, fertilización, trasplante o cuidado general.",
           "Crear un recordatorio genera de inmediato una tarea pendiente, aunque sea para más adelante. Al completarla, se programa la siguiente.",
           "La tarjeta suele mostrar el tipo de cuidado, el nombre de la planta, la ubicación y si toca hoy o está atrasada.",
-          "El selector Todas, Atrasadas, Hoy y Próximas permanece fijo encima de la lista. Próximas muestra tareas posteriores a hoy. La lista agrupa las tareas por día de vencimiento, con el número de tareas y la fecha a la derecha. Las tarjetas compactas muestran planta y ubicación a la izquierda, y tipo y plazo relativo a la derecha. En el calendario muestran la fecha de vencimiento sin grupos. La ordenación por planta o ubicación se aplica dentro de cada día."
+          "El selector Todas, Atrasadas, Hoy y Próximas permanece fijo encima de la lista. Próximas muestra tareas posteriores a hoy. La lista agrupa las tareas por día de vencimiento, con el número de tareas y la fecha a la derecha. Las tarjetas compactas muestran planta y ubicación a la izquierda, y tipo y plazo relativo a la derecha. En el calendario muestran la fecha de vencimiento sin grupos. La ordenación por planta o ubicación se aplica dentro de cada día.",
+          "El selector está dentro del encabezado con esquinas inferiores redondeadas y permanece visible al desplazarte. El encabezado se amplía para mostrarlo y se reduce en las pantallas sin selector."
         ]
       },
       {

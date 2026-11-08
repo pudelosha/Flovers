@@ -1,3 +1,4 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, {
   useCallback,
   useMemo,
@@ -118,6 +119,7 @@ const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function PlantsScreen() {
+  const headerReady = useHeaderContentReady();
   const nav = useNavigation<any>();
   const route = useRoute<any>();
   const insets = useSafeAreaInsets();
@@ -674,13 +676,14 @@ export default function PlantsScreen() {
   }, []);
 
   useEffect(() => {
-    if (contentLoading) return;
+    if (contentLoading || !headerReady) return;
     const ids = derivedPlants.map(p => p.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
   }, [
     contentLoading,
+    headerReady,
     derivedPlants.length,
     primeAnimations,
     runStaggerIn,
@@ -689,7 +692,7 @@ export default function PlantsScreen() {
 
   const emptyAnim = useRef(new Animated.Value(0)).current;
   useEffect(() => {
-    if (contentLoading) {
+    if (contentLoading || !headerReady) {
       emptyAnim.setValue(0);
       return;
     }
@@ -704,7 +707,7 @@ export default function PlantsScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [contentLoading, derivedPlants.length, emptyAnim]);
+  }, [contentLoading, headerReady, derivedPlants.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],

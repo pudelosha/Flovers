@@ -1,3 +1,4 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,
@@ -66,6 +67,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function LocationsScreen() {
+  const headerReady = useHeaderContentReady();
   const nav = useNavigation<any>();
 
   const { t } = useTranslation();
@@ -252,18 +254,18 @@ export default function LocationsScreen() {
   }, []);
 
   useEffect(() => {
-    if (loading) return;
+    if (loading || !headerReady) return;
     const ids = derivedLocations.map((l) => l.id);
     primeAnimations(ids);
     const frameId = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(frameId);
-  }, [loading, derivedLocations, derivedLocations.length, primeAnimations, runStaggerIn]);
+  }, [loading, headerReady, derivedLocations, derivedLocations.length, primeAnimations, runStaggerIn]);
 
   // ---------- EMPTY-STATE ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (loading) {
+    if (loading || !headerReady) {
       emptyAnim.setValue(0);
       return;
     }
@@ -279,7 +281,7 @@ export default function LocationsScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, derivedLocations.length, emptyAnim]);
+  }, [loading, headerReady, derivedLocations.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],

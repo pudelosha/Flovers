@@ -1,4 +1,5 @@
 import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
+import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useMemo, useState, useRef, useCallback } from 'react';
 import {
   View,
@@ -10,6 +11,7 @@ import {
   StyleSheet,
   Animated,
   AnimatedView,
+  Pressable,
 } from '../../../shared/theme/native';
 import {
   useNavigation,
@@ -315,13 +317,18 @@ export default function PlantDetailsScreen() {
       try {
         definition.profile = await fetchPlantProfile(definitionId, {
           auth: true,
-          lang: String(currentLanguage || 'en').trim().toLowerCase().split('-')[0],
+          lang: String(currentLanguage || 'en')
+            .trim()
+            .toLowerCase()
+            .split('-')[0],
         });
       } catch (e: any) {
-        definition.error = e?.message || tr(
-          'plantDetailsModals.definition.loadFailed',
-          'Failed to load plant definition.',
-        );
+        definition.error =
+          e?.message ||
+          tr(
+            'plantDetailsModals.definition.loadFailed',
+            'Failed to load plant definition.',
+          );
       }
     }
     setDefinitionData(definition);
@@ -685,9 +692,11 @@ export default function PlantDetailsScreen() {
     setWateringScheduleLastPumpRunAt(null);
   }, []);
 
-  useFocusEffect(useCallback(() => {
-    setActiveTab('info');
-  }, []));
+  useFocusEffect(
+    useCallback(() => {
+      setActiveTab('info');
+    }, []),
+  );
 
   useFocusEffect(
     useCallback(() => {
@@ -887,6 +896,42 @@ export default function PlantDetailsScreen() {
         rightIconName="qrcode-scan"
         onPressRight={() => nav.navigate('Scanner')}
         showSeparator={false}
+        segment={
+          <SlidingSegments
+            testID="plant-detail-header-segments"
+            selectedIndex={['info', 'reminders', 'readings'].indexOf(activeTab)}
+            style={styles.headerSegments}
+          >
+            {(['info', 'reminders', 'readings'] as const).map(tab => (
+              <Pressable
+                key={tab}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: activeTab === tab }}
+                onPress={() => {
+                  dismissMenus();
+                  setActiveTab(tab);
+                }}
+                style={styles.headerSegment}
+              >
+                <Text
+                  style={styles.headerSegmentText}
+                  numberOfLines={1}
+                  adjustsFontSizeToFit
+                  minimumFontScale={0.8}
+                >
+                  {tr(
+                    `plantDetails.segments.${tab}`,
+                    tab === 'info'
+                      ? 'Info'
+                      : tab === 'reminders'
+                      ? 'Tasks'
+                      : 'Readings',
+                  )}
+                </Text>
+              </Pressable>
+            ))}
+          </SlidingSegments>
+        }
       />
 
       <View style={{ flex: 1 }}>
@@ -934,6 +979,7 @@ export default function PlantDetailsScreen() {
               <GlassFrame>
                 {details?.plant ? (
                   <PlantInfoTile
+                    segmentInHeader
                     plant={details.plant}
                     activeTab={activeTab}
                     tabContent={
@@ -980,46 +1026,62 @@ export default function PlantDetailsScreen() {
                         />
                       ) : activeTab === 'readings' ? (
                         <View style={{ gap: 16 }}>
-                        {(
-                        showLatestReadingsTile ? (
-                          <PlantLatestReadingsTile
-                            embedded
-                            latestReadings={latestReadSafe}
-                            sensors={details.sensors}
-                            onTileTouch={dismissMenus}
-                            onMetricPress={metric => goHistory(metric)}
-                            pumpIncluded={
-                              Boolean(details.readingDevice?.pumpIncluded) &&
-                              plantAccess(details.plant.access).isOwner
-                            }
-                            lastPumpLaunchDate={
-                              details.readingDevice?.lastPumpRunAt ?? null
-                            }
-                            hasPendingWatering={Boolean(
-                              details.readingDevice?.pendingPumpTask,
-                            )}
-                            onScheduleWatering={() =>
-                              openWateringSchedule(
-                                details.readingDevice?.id ?? null,
-                              )
-                            }
-                            isSchedulingWatering={wateringScheduleLoading}
-                          />
-                        ) : (
-                          <View>
-                            <Text style={styles.dim}>
-                              {tr(
-                                'plantDetails.tabsEmpty.device',
-                                'No device is linked to this plant.',
+                          {showLatestReadingsTile ? (
+                            <PlantLatestReadingsTile
+                              embedded
+                              latestReadings={latestReadSafe}
+                              sensors={details.sensors}
+                              onTileTouch={dismissMenus}
+                              onMetricPress={metric => goHistory(metric)}
+                              pumpIncluded={
+                                Boolean(details.readingDevice?.pumpIncluded) &&
+                                plantAccess(details.plant.access).isOwner
+                              }
+                              lastPumpLaunchDate={
+                                details.readingDevice?.lastPumpRunAt ?? null
+                              }
+                              hasPendingWatering={Boolean(
+                                details.readingDevice?.pendingPumpTask,
                               )}
-                            </Text>
-                          </View>
-                        ))}
-                          {!showLatestReadingsTile && <View style={{ gap: 12 }}>
-                            <Text style={styles.readingsHelp}>{tr('plantDetails.readingsHelp.device', 'In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device details, then Email code to request sample code configured for that device.')}</Text>
-                            <Text style={styles.readingsHelp}>{tr('plantDetails.readingsHelp.charts', 'Once readings arrive, tap a measurement icon or value to open its day, week or month chart.')}</Text>
-                            <Text style={styles.readingsHelp}>{tr('plantDetails.readingsHelp.pump', 'With a connected pump and relay, the owner can schedule watering for a chosen duration or enable automatic watering below a soil-moisture threshold. Pump support, runtime and the automatic-watering cooldown are configured in the device settings.')}</Text>
-                          </View>}
+                              onScheduleWatering={() =>
+                                openWateringSchedule(
+                                  details.readingDevice?.id ?? null,
+                                )
+                              }
+                              isSchedulingWatering={wateringScheduleLoading}
+                            />
+                          ) : (
+                            <View>
+                              <Text style={styles.dim}>
+                                {tr(
+                                  'plantDetails.tabsEmpty.device',
+                                  'No device is linked to this plant.',
+                                )}
+                              </Text>
+                            </View>
+                          )}
+                          {!showLatestReadingsTile && (
+                            <View style={{ gap: 12 }}>
+                              <Text style={styles.readingsHelp}>
+                                {tr(
+                                  'plantDetails.readingsHelp.device',
+                                  'In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device details, then Email code to request sample code configured for that device.',
+                                )}
+                              </Text>
+                              <Text style={styles.readingsHelp}>
+                                {tr(
+                                  'plantDetails.readingsHelp.charts',
+                                  'Once readings arrive, tap a measurement icon or value to open its day, week or month chart.',
+                                )}
+                              </Text>
+                              <Text style={styles.readingsHelp}>
+                                {tr(
+                                  'plantDetails.readingsHelp.pump',
+                                  'With a connected pump and relay, the owner can schedule watering for a chosen duration or enable automatic watering below a soil-moisture threshold. Pump support, runtime and the automatic-watering cooldown are configured in the device settings.',
+                                )}
+                              </Text>
+                            </View>
+                          )}
                         </View>
                       ) : undefined
                     }
@@ -1356,7 +1418,26 @@ function GlassFrame({
 }
 
 const styles = StyleSheet.create({
-  readingsHelp: { color: 'rgba(255,255,255,0.9)', fontSize: 12, lineHeight: 18 },
+  headerSegments: {
+    flexDirection: 'row',
+    backgroundColor: '#051F18',
+    borderRadius: 20,
+    padding: 3,
+  },
+  headerSegment: {
+    flex: 1,
+    paddingVertical: 8,
+    paddingHorizontal: 4,
+    borderRadius: 17,
+    alignItems: 'center',
+  },
+  headerSegmentActive: { backgroundColor: '#0B7285' },
+  headerSegmentText: { color: '#FFFFFF', fontSize: 10, fontWeight: '700' },
+  readingsHelp: {
+    color: 'rgba(255,255,255,0.9)',
+    fontSize: 12,
+    lineHeight: 18,
+  },
   centerBox: {
     padding: 16,
     alignItems: 'center',

@@ -1,3 +1,5 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
+import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, {
   useCallback,
   useMemo,
@@ -102,6 +104,7 @@ const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function HomeScreen() {
+  const headerReady = useHeaderContentReady();
   const { t } = useTranslation();
 
   const nav = useNavigation<any>();
@@ -122,7 +125,6 @@ export default function HomeScreen() {
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
   const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');
-  const [segmentHeight, setSegmentHeight] = useState(38);
   const [selectedDate, setSelectedDate] = useState(() => toYYYYMMDD());
 
   // Loading UX (match Plants behavior so entry/re-entry clears old list first)
@@ -525,18 +527,18 @@ export default function HomeScreen() {
   }, []);
 
   useEffect(() => {
-    if (loading) return;
+    if (loading || !headerReady) return;
     const ids = visibleTasks.map(tsk => tsk.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
-  }, [loading, visibleTasks, primeAnimations, runStaggerIn]);
+  }, [loading, headerReady, visibleTasks, primeAnimations, runStaggerIn]);
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (loading) {
+    if (loading || !headerReady) {
       emptyAnim.setValue(0);
       return;
     }
@@ -552,7 +554,46 @@ export default function HomeScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, visibleTasks.length, emptyAnim]);
+  }, [loading, headerReady, visibleTasks.length, emptyAnim]);
+
+  const headerSegment =
+    viewMode === 'list' ? (
+      <SlidingSegments
+        testID="home-segments"
+        selectedIndex={['all', 'overdue', 'today', 'upcoming'].indexOf(
+          viewFilter,
+        )}
+        style={s.segmentWrap}
+      >
+        {(['all', 'overdue', 'today', 'upcoming'] as ViewFilter[]).map(
+          value => (
+            <Pressable
+              key={value}
+              accessibilityRole="tab"
+              accessibilityState={{ selected: viewFilter === value }}
+              accessibilityLabel={String(t('home.segments.' + value))}
+              onPress={() => {
+                closeFloatingMenus();
+                setViewFilter(value);
+                listRef.current?.scrollToOffset({
+                  offset: 0,
+                  animated: false,
+                });
+              }}
+              style={s.segment}
+            >
+              <Text
+                style={s.segmentText}
+                numberOfLines={1}
+                adjustsFontSizeToFit
+              >
+                {t('home.segments.' + value)}
+              </Text>
+            </Pressable>
+          ),
+        )}
+      </SlidingSegments>
+    ) : undefined;
 
   // --- Spinner (match Plants: show whenever loading is true) ---
   if (loading) {
@@ -560,6 +601,7 @@ export default function HomeScreen() {
       <View style={{ flex: 1 }}>
         <GlassHeader
           title={t('home.header.title')}
+          segment={headerSegment}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
@@ -756,6 +798,7 @@ export default function HomeScreen() {
     >
       <GlassHeader
         title={t('home.header.title')}
+        segment={headerSegment}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
@@ -773,42 +816,6 @@ export default function HomeScreen() {
       )}
 
       <View style={{ flex: 1 }}>
-        {viewMode === 'list' && (
-          <View
-            style={s.segmentWrap}
-            onLayout={event =>
-              setSegmentHeight(event.nativeEvent.layout.height)
-            }
-          >
-            {(['all', 'overdue', 'today', 'upcoming'] as ViewFilter[]).map(
-              value => (
-                <Pressable
-                  key={value}
-                  accessibilityRole="tab"
-                  accessibilityState={{ selected: viewFilter === value }}
-                  accessibilityLabel={String(t('home.segments.' + value))}
-                  onPress={() => {
-                    closeFloatingMenus();
-                    setViewFilter(value);
-                    listRef.current?.scrollToOffset({
-                      offset: 0,
-                      animated: false,
-                    });
-                  }}
-                  style={[s.segment, viewFilter === value && s.segmentActive]}
-                >
-                  <Text
-                    style={s.segmentText}
-                    numberOfLines={1}
-                    adjustsFontSizeToFit
-                  >
-                    {t('home.segments.' + value)}
-                  </Text>
-                </Pressable>
-              ),
-            )}
-          </View>
-        )}
         <AnimatedFlatList
           ref={listRef}
           style={{ flex: 1 }}
@@ -839,7 +846,9 @@ export default function HomeScreen() {
                   (index === 0 ||
                     taskDateKey(visibleTasks[index - 1].dueDate) !==
                       taskDateKey(item.dueDate)) && (
-                    <View style={s.groupHeading}>
+                    <View
+                      style={[s.groupHeading, index === 0 && { marginTop: 0 }]}
+                    >
                       <MaterialCommunityIcons
                         name="calendar-blank-outline"
                         size={15}
@@ -940,11 +949,7 @@ export default function HomeScreen() {
             )
           }
           ListFooterComponent={<View style={{ height: 140 }} />}
-          contentContainerStyle={[
-            s.listContent,
-            { paddingBottom: 80 },
-            viewMode === 'list' && { paddingTop: segmentHeight + 24 },
-          ]}
+          contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
           ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
           showsVerticalScrollIndicator={false}
           onScrollBeginDrag={closeFloatingMenus}

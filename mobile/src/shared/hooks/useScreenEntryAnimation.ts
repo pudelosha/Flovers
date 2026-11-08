@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Animated, Easing } from "react-native";
+import { useHeaderContentReady } from '../ui/HeaderPresentation';
 
 /** The Profile fade/slide/scale transition, started only after content is ready. */
 export function useScreenEntryAnimation(ready: boolean, focused: boolean, replayKey?: string) {
+  const headerReady = useHeaderContentReady();
+  ready = ready && headerReady;
   const entry = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     entry.stopAnimation();

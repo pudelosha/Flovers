@@ -2,14 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export const s = StyleSheet.create({
   segmentWrap: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 60,
-    elevation: 60,
-    marginHorizontal: 16,
-    marginTop: 12,
     flexDirection: 'row',
     backgroundColor: '#051F18',
     borderRadius: 20,
@@ -47,7 +39,7 @@ export const s = StyleSheet.create({
   /* ---------- LIST / LAYOUT ---------- */
   listContent: {
     paddingHorizontal: 16,
-    paddingTop: 21, // match Reminders / Plants
+    paddingTop: 16,
     paddingBottom: 24,
   },
 

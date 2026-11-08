@@ -1,3 +1,4 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
@@ -91,6 +92,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsScreen() {
+  const headerReady = useHeaderContentReady();
   const nav = useNavigation();
 
   const { t, i18n } = useTranslation();
@@ -414,7 +416,7 @@ export default function ReadingsScreen() {
   }, [items, filters, filterQuery, sortKey, sortDir]);
 
   useEffect(() => {
-    if (loading) return;
+    if (loading || !headerReady) return;
 
     const ids = derivedItems.map((x) => x.id);
     primeAnimations(ids);
@@ -422,13 +424,13 @@ export default function ReadingsScreen() {
     const raf = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, derivedItems.length]);
+  }, [loading, headerReady, derivedItems.length]);
 
   // ---------- Empty-state animation ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (loading) {
+    if (loading || !headerReady) {
       emptyAnim.setValue(0);
       return;
     }
@@ -444,7 +446,7 @@ export default function ReadingsScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, derivedItems.length, emptyAnim]);
+  }, [loading, headerReady, derivedItems.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],

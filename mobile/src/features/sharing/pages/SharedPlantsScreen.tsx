@@ -1,4 +1,5 @@
 import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
+import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, {
   useCallback,
   useEffect,
@@ -14,7 +15,11 @@ import {
   View,
 } from '../../../shared/theme/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useFocusEffect, useIsFocused, useNavigation } from '@react-navigation/native';
+import {
+  useFocusEffect,
+  useIsFocused,
+  useNavigation,
+} from '@react-navigation/native';
 import MaterialCommunityIcons from '../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
 import FAB from '../../../shared/ui/FAB';
@@ -61,11 +66,12 @@ export default function SharedPlantsScreen() {
     pending,
     refresh,
   } = useSharingPreview();
-  const [selectorHeight, setSelectorHeight] = useState(36);
   const [filter, setFilter] = useState<ShareFilter>('all');
-  useFocusEffect(useCallback(() => {
-    setFilter('all');
-  }, []));
+  useFocusEffect(
+    useCallback(() => {
+      setFilter('all');
+    }, []),
+  );
   const [removing, setRemoving] = useState<PlantShare | null>(null);
   const [deleting, setDeleting] = useState<{
     plant: ShareablePlant;
@@ -240,10 +246,11 @@ export default function SharedPlantsScreen() {
       onPress: () => openSharePlant(),
     },
   ];
-  const selector = !contentLoading ? (
-    <View
+  const selector = (
+    <SlidingSegments
+      testID="sharing-segments"
+      selectedIndex={['all', 'outgoing', 'incoming'].indexOf(filter)}
       style={styles.selector}
-      onLayout={event => setSelectorHeight(event.nativeEvent.layout.height)}
     >
       {(
         [
@@ -260,10 +267,7 @@ export default function SharedPlantsScreen() {
           accessibilityRole="tab"
           accessibilityLabel={String(option.label)}
           accessibilityState={{ selected: filter === option.key }}
-          style={[
-            styles.segment,
-            filter === option.key && styles.selectedSegment,
-          ]}
+          style={styles.segment}
           onPress={() => {
             closeMenu();
             setFilter(option.key);
@@ -279,8 +283,8 @@ export default function SharedPlantsScreen() {
           </Text>
         </Pressable>
       ))}
-    </View>
-  ) : undefined;
+    </SlidingSegments>
+  );
 
   return (
     <View
@@ -295,7 +299,7 @@ export default function SharedPlantsScreen() {
         extraBottomPadding={64}
         contentReady={!contentLoading}
         fixedTopContent={selector}
-        contentTopPadding={contentLoading ? 21 : selectorHeight + 24}
+        contentTopPadding={24}
         scrollResetKey={filter}
       >
         {contentLoading ? (
@@ -776,12 +780,6 @@ export default function SharedPlantsScreen() {
 
 const styles = StyleSheet.create({
   selector: {
-    position: 'absolute',
-    top: 12,
-    left: 16,
-    right: 16,
-    zIndex: 60,
-    elevation: 60,
     flexDirection: 'row',
     padding: 3,
     borderRadius: 20,

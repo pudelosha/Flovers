@@ -7,7 +7,7 @@ const ThemedGradient = forwardRef<any, any>(
   ({ themeRole, taskAccent, ...props }, ref) => {
     const { isLight } = useAppTheme();
     const contrast = useContext(ContrastContext);
-    const scope = themeRole === 'photo' ? 'photo' : contrast;
+    const scope = themeRole === 'photo' || themeRole === 'warning' ? 'photo' : contrast;
     return (
       <Gradient
         {...props}
@@ -32,7 +32,7 @@ const ThemedGradient = forwardRef<any, any>(
 );
 export default ThemedGradient as React.ComponentType<
   React.ComponentProps<typeof Gradient> & {
-    themeRole?: 'photo' | 'header' | 'navigation';
+    themeRole?: 'photo' | 'header' | 'navigation' | 'warning';
     taskAccent?: string;
   }
 >;

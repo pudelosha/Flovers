@@ -15,7 +15,7 @@ jest.mock("react-native-safe-area-context", () => ({ useSafeAreaInsets: () => ({
 jest.mock("../../../../shared/hooks/useScreenEntryAnimation", () => ({ useScreenEntryAnimation: jest.fn(() => mockEntryStyle) }));
 jest.mock("../../../../shared/ui/GlassHeader", () => (props: any) =>
   require("react").createElement(require("react-native").View, { testID: "sharing-header" },
-    require("react").createElement(require("react-native").Text, null, props.title)));
+    require("react").createElement(require("react-native").Text, null, props.title), props.segment));
 jest.mock("../../state/SharingPreviewProvider", () => ({ useSharingPreview: jest.fn() }));
 
 beforeEach(() => { jest.clearAllMocks(); mockFocused = true; });

@@ -48,7 +48,11 @@ export function SharingPage({
   const focused = useIsFocused();
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
-  const entryStyle = useScreenEntryAnimation(contentReady, focused, scrollResetKey);
+  const entryStyle = useScreenEntryAnimation(
+    contentReady,
+    focused,
+    scrollResetKey,
+  );
   const scrollRef = React.useRef<ScrollView>(null);
   useEffect(() => {
     if (scrollResetKey !== undefined)
@@ -63,6 +67,7 @@ export function SharingPage({
         rightIconName="qrcode-scan"
         onPressRight={() => nav.navigate('Scanner')}
         showSeparator={false}
+        segment={fixedTopContent}
       >
         {showBack && (
           <Pressable
@@ -103,7 +108,6 @@ export function SharingPage({
             {children}
           </AnimatedView>
         </ScrollView>
-        {fixedTopContent}
       </View>
     </View>
   );

@@ -1,3 +1,4 @@
+import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
@@ -115,6 +116,7 @@ const INITIAL_FILTERS: Filters = {
 };
 
 export default function RemindersScreen() {
+  const headerReady = useHeaderContentReady();
   const nav = useNavigation();
   const route = useRoute<any>();
 
@@ -634,19 +636,19 @@ export default function RemindersScreen() {
 
   useEffect(() => {
     // Only animate list view after loading completes
-    if (loading) return;
+    if (loading || !headerReady) return;
     const ids = derivedReminders.map((r) => r.id);
     primeAnimations(ids);
     const raf = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, derivedReminders.length]);
+  }, [loading, headerReady, derivedReminders.length]);
 
   // ---------- EMPTY-STATE ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (loading) {
+    if (loading || !headerReady) {
       emptyAnim.setValue(0);
       return;
     }
@@ -662,7 +664,7 @@ export default function RemindersScreen() {
     } else {
       emptyAnim.setValue(0);
     }
-  }, [loading, derivedReminders.length, emptyAnim]);
+  }, [loading, headerReady, derivedReminders.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],

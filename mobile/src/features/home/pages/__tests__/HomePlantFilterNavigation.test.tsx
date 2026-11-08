@@ -29,7 +29,7 @@ jest.mock("../../components/TaskTile", () => (props: any) => require("react").cr
 jest.mock("../../components/modals/FilterHomeTasksModal", () => () => null);
 jest.mock("../../components/modals/SortHomeTasksModal", () => () => null);
 jest.mock("../../components/modals/CompleteTaskModal", () => () => null);
-jest.mock("../../../../shared/ui/GlassHeader", () => () => null);
+jest.mock("../../../../shared/ui/GlassHeader", () => (props: any) => require("react").createElement(require("react-native").View, null, props.segment));
 jest.mock("../../../../shared/ui/TopSnackbar", () => () => null);
 jest.mock("../../../../shared/ui/FAB", () => () => null);
 

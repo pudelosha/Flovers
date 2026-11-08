@@ -8,6 +8,7 @@ import CenteredSpinner from "../CenteredSpinner";
 import { usePlantPhotoPreload } from "../../hooks/usePlantPhotoPreload";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
 import { fetchPlantDetailsById } from "../../../api/services/plant-details.service";
+import { fetchPlantProfile } from "../../../api/services/plant-definitions.service";
 
 const mockT = (key: string, values?: any) => values?.defaultValue ?? key;
 const mockNavigation = { navigate: jest.fn(), setParams: jest.fn() };
@@ -29,6 +30,7 @@ jest.mock("../../../api/services/plant-instances.service", () => ({
   fetchPlantInstances: jest.fn(), fetchPlantInstanceForEdit: jest.fn(), updatePlantInstanceFromForm: jest.fn(), deletePlantInstance: jest.fn(),
 }));
 jest.mock("../../../api/services/plant-details.service", () => ({ fetchPlantDetailsById: jest.fn(), fetchPlantDetailsByQr: jest.fn() }));
+jest.mock("../../../api/services/plant-definitions.service", () => ({ fetchPlantProfile: jest.fn() }));
 jest.mock("../../utils/photoStorage", () => ({ getPlantPhotoUri: jest.fn(async () => null) }));
 jest.mock("react-native-fs", () => ({ DocumentDirectoryPath: "/documents" }));
 jest.mock("@react-native-camera-roll/camera-roll", () => ({ CameraRoll: { save: jest.fn() } }));
@@ -63,6 +65,7 @@ beforeEach(() => {
   jest.clearAllMocks(); mockPhotoLoading = true; mockNativeImageReady = false; mockRoute = { params: {} };
   (fetchPlantInstances as jest.Mock).mockResolvedValue([plant]);
   (fetchPlantDetailsById as jest.Mock).mockResolvedValue({ plant, latestReadings: null, deviceLinked: false, sensors: {}, reminders: [] });
+  (fetchPlantProfile as jest.Mock).mockResolvedValue({ id: 1, name: 'Bird of paradise', traits: [] });
 });
 
 it("waits for the Plants screen's custom photo after plant metadata arrives", async () => {

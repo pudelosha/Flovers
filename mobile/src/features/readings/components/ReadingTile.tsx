@@ -249,6 +249,7 @@ export default function ReadingTile({
 
         {isOverdue && <AnimatedLinearGradient
           testID="missing-readings-pulse"
+          themeRole="warning"
           pointerEvents="none"
           start={{ x: 0, y: 0.5 }} end={{ x: 1, y: 0.5 }}
           colors={["rgba(255, 59, 48, 0.55)", "rgba(255, 59, 48, 0.18)", "rgba(255, 59, 48, 0.00)"]}

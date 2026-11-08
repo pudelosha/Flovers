@@ -35,6 +35,11 @@ const light = (children: React.ReactNode) => (
     {children}
   </ThemeContext.Provider>
 );
+it('preserves red warning gradients and their transparency in light mode', () => {
+  const colors = ['rgba(255, 59, 48, 0.55)', 'rgba(255, 59, 48, 0.18)', 'rgba(255, 59, 48, 0.00)'];
+  const ui = render(light(<Gradient testID="warning" themeRole="warning" colors={colors} />));
+  expect(ui.getByTestId('warning').props.colors).toEqual(colors);
+});
 it('keeps Dark style identity, animated values and geometry', () => {
   const style = { color: '#fff', padding: 16, transform: [{ translateX: 2 }] };
   expect(resolveStyle(style, false, 'surface')).toBe(style);

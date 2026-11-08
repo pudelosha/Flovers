@@ -7,7 +7,8 @@
         "body": [
           "Profile → Account → Sharing → Shared plants. All / I share / Shared with me. + → Share plants.",
           "When adding sharing, select one or more plants and the contacts who should have access. Each contact can have view-only access or permission to complete tasks, with an optional end date. Existing permissions are shown before you save.",
-          "Changing or clearing the end date applies to every checked contact on every selected plant. Untouched differing dates are preserved. Unchecking an existing contact removes their access when you save."
+          "Changing or clearing the end date applies to every checked contact on every selected plant. Untouched differing dates are preserved. Unchecking an existing contact removes their access when you save.",
+          "The selector is inside the rounded header and stays visible while the page scrolls. The header expands to show the selector and contracts on screens without one."
         ]
       },
       {
