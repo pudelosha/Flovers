@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "Automatische Aufgaben",
-      "subtitle": "Wir können automatisch Erinnerungen (Gießen, Umtopfen, Besprühen, Düngen, Pflege) basierend auf dem Pflanzenprofil erstellen.",
+      "subtitle": "Wähle Erinnerungen passend zu deiner Pflanze und passe die Abstände an.",
       "createAutoTasks": "Automatische Aufgaben für diese Pflanze erstellen",
       "requiresPlantDefinition": "Erfordert eine Pflanzendefinition.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "Besprühaufgabe erstellen",
         "generateFertilisingTask": "Düngeaufgabe erstellen",
         "generateCareTask": "Pflegeaufgabe erstellen",
-        "generateRepottingTask": "Umtopfaufgabe erstellen"
+        "generateRepottingTask": "Umtopfaufgabe erstellen",
+        "generatePruningTask": "Aufgabe zum Rückschnitt erstellen"
       },
       "prompts": {
         "lastWatered": "Wann wurde zuletzt gegossen?",

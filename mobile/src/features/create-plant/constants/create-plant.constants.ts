@@ -211,6 +211,8 @@ export type SoilMixKey = string;
 
 type SoilMixOption = Readonly<{
   key: SoilMixKey;
+  // New specialist regimes use a local icon until dedicated thumbnails exist.
+  icon?: string;
   // optional legacy fields
   label?: string;
   description?: string;
@@ -231,6 +233,11 @@ export const SOIL_MIXES: readonly SoilMixOption[] = [
   { key: "acid-loving" },
   { key: "aroid" },
   { key: "peat-free" },
+  { key: "air-plant", icon: "leaf" },
+  { key: "aquatic", icon: "waves" },
+  { key: "carnivorous-bog", icon: "sprout" },
+  { key: "nepenthes", icon: "sprout" },
+  { key: "pinguicula", icon: "sprout" },
 ] as const;
 
 /** Step 6 – Auto tasks dropdown options */

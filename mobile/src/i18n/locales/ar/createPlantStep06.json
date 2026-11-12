@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "المهام التلقائية",
-      "subtitle": "يمكننا إنشاء تذكيرات تلقائية (الري، إعادة الزرع، الرش، التسميد، العناية) بناءً على ملف تعريف النبات.",
+      "subtitle": "اختر التذكيرات المناسبة لنباتك ثم اضبط الفواصل بينها.",
       "createAutoTasks": "إنشاء مهام تلقائية لهذا النبات",
       "requiresPlantDefinition": "يتطلب تعريف النبات.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "إنشاء مهمة رش",
         "generateFertilisingTask": "إنشاء مهمة تسميد",
         "generateCareTask": "إنشاء مهمة عناية",
-        "generateRepottingTask": "إنشاء مهمة إعادة الزرع"
+        "generateRepottingTask": "إنشاء مهمة إعادة الزرع",
+        "generatePruningTask": "إنشاء مهمة تقليم"
       },
       "prompts": {
         "lastWatered": "متى كانت آخر مرة تم ريها فيها؟",

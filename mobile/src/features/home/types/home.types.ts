@@ -1,4 +1,4 @@
-export type TaskType = "watering" | "moisture" | "fertilising" | "care" | "repot";
+export type TaskType = "watering" | "moisture" | "fertilising" | "pruning" | "care" | "repot";
 
 export type Task = {
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;

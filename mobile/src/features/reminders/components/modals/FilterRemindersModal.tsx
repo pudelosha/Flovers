@@ -36,7 +36,7 @@ type Props = {
   onClearAll: () => void;
 };
 
-const TYPE_OPTIONS: ReminderType[] = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
+const TYPE_OPTIONS: ReminderType[] = ['watering', 'moisture', 'fertilising', 'pruning', 'care', 'repot'];
 
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;

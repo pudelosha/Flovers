@@ -1,0 +1,275 @@
+{
+  "scope": "Read-only live public catalogue; compared by exact Latin identity with importer trait-key normalization. No user plants/personal data read or changed.",
+  "live_count": 734,
+  "draft_count": 734,
+  "difference_counts": {
+    "pruning_required": 13,
+    "pruning_interval_days": 13
+  },
+  "differences": [
+    {
+      "external_id": "gynura_aurantiaca",
+      "latin": "Gynura aurantiaca",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "hypoestes_phyllostachya",
+      "latin": "Hypoestes phyllostachya",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          60
+        ]
+      }
+    },
+    {
+      "external_id": "iresine_herbstii",
+      "latin": "Iresine herbstii",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "mentha_piperita",
+      "latin": "Mentha × piperita",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          30
+        ]
+      }
+    },
+    {
+      "external_id": "ocimum_basilicum",
+      "latin": "Ocimum basilicum",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          30
+        ]
+      }
+    },
+    {
+      "external_id": "pilea_involucrata",
+      "latin": "Pilea involucrata",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "scindapsus_pictus",
+      "latin": "Scindapsus pictus",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          180
+        ]
+      }
+    },
+    {
+      "external_id": "tradescantia_fluminensis",
+      "latin": "Tradescantia fluminensis",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "tradescantia_pallida",
+      "latin": "Tradescantia pallida",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "tradescantia_sillamontana",
+      "latin": "Tradescantia sillamontana",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          120
+        ]
+      }
+    },
+    {
+      "external_id": "tradescantia_zebrina",
+      "latin": "Tradescantia zebrina",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "acalypha_wilkesiana",
+      "latin": "Acalypha wilkesiana",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    },
+    {
+      "external_id": "fittonia_albivenis",
+      "latin": "Fittonia albivenis",
+      "changes": {
+        "pruning_required": [
+          false,
+          true
+        ],
+        "pruning_interval_days": [
+          null,
+          90
+        ]
+      }
+    }
+  ],
+  "expected_canonical_external_id_differences": [
+    {
+      "latin": "Hibiscus rosa-sinensis",
+      "seed_external_id": "hibiscus_rosa-sinensis",
+      "live_external_id": "hibiscus_rosa_sinensis"
+    },
+    {
+      "latin": "Kalanchoe gastonis-bonnieri",
+      "seed_external_id": "kalanchoe_gastonis-bonnieri",
+      "live_external_id": "kalanchoe_gastonis_bonnieri"
+    },
+    {
+      "latin": "Philodendron 'Pink Princess'",
+      "seed_external_id": "philodendron_'pink_princess'",
+      "live_external_id": "philodendron_pink_princess"
+    },
+    {
+      "latin": "Philodendron 'White Knight'",
+      "seed_external_id": "philodendron_'white_knight'",
+      "live_external_id": "philodendron_white_knight"
+    },
+    {
+      "latin": "Philodendron 'White Wizard'",
+      "seed_external_id": "philodendron_'white_wizard'",
+      "live_external_id": "philodendron_white_wizard"
+    },
+    {
+      "latin": "Philodendron burle-marxii",
+      "seed_external_id": "philodendron_burle-marxii",
+      "live_external_id": "philodendron_burle_marxii"
+    },
+    {
+      "latin": "Syngonium 'White Butterfly'",
+      "seed_external_id": "syngonium_'white_butterfly'",
+      "live_external_id": "syngonium_white_butterfly"
+    },
+    {
+      "latin": "Trigonella foenum-graecum",
+      "seed_external_id": "trigonella_foenum-graecum",
+      "live_external_id": "trigonella_foenum_graecum"
+    },
+    {
+      "latin": "Adiantum capillus-veneris",
+      "seed_external_id": "adiantum_capillus-veneris",
+      "live_external_id": "adiantum_capillus_veneris"
+    },
+    {
+      "latin": "Agave victoriae-reginae",
+      "seed_external_id": "agave_victoriae-reginae",
+      "live_external_id": "agave_victoriae_reginae"
+    },
+    {
+      "latin": "Begonia 'Escargot'",
+      "seed_external_id": "begonia_'escargot'",
+      "live_external_id": "begonia_escargot"
+    },
+    {
+      "latin": "Crassula ovata 'Gollum'",
+      "seed_external_id": "crassula_ovata_'gollum'",
+      "live_external_id": "crassula_ovata_gollum"
+    },
+    {
+      "latin": "Crassula ovata 'Hobbit'",
+      "seed_external_id": "crassula_ovata_'hobbit'",
+      "live_external_id": "crassula_ovata_hobbit"
+    },
+    {
+      "latin": "Echeveria 'Black Prince'",
+      "seed_external_id": "echeveria_'black_prince'",
+      "live_external_id": "echeveria_black_prince"
+    },
+    {
+      "latin": "Ficus elastica 'Ruby'",
+      "seed_external_id": "ficus_elastica_'ruby'",
+      "live_external_id": "ficus_elastica_ruby"
+    },
+    {
+      "latin": "Gasteria 'Little Warty'",
+      "seed_external_id": "gasteria_'little_warty'",
+      "live_external_id": "gasteria_little_warty"
+    }
+  ]
+}

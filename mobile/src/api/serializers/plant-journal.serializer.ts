@@ -4,6 +4,7 @@ export type JournalTypeUI =
   | "watering"
   | "moisture"
   | "fertilising"
+  | "pruning"
   | "care"
   | "repot";
 
@@ -22,6 +23,8 @@ function backendTypeToUI(t: ApiPlantJournalItem["type"]): JournalTypeUI {
       return "fertilising";
     case "moisture":
       return "moisture";
+    case "pruning":
+      return "pruning";
     case "care":
       return "care";
     case "repot":

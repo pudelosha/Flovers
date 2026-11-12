@@ -63,7 +63,12 @@ export type SoilMix =
   | "clay"
   | "sand-soil-1-1"
   | "sand-soil-2-1"
-  | "perlite-heavy";
+  | "perlite-heavy"
+  | "air-plant"
+  | "aquatic"
+  | "carnivorous-bog"
+  | "nepenthes"
+  | "pinguicula";
 
 /** Location kept in wizard state. NOTE: id is string in state. */
 export type UserLocation = {
@@ -127,14 +132,16 @@ export type WizardState = {
   repotTaskEnabled?: boolean;
   moistureRequired?: boolean;
   fertilizeRequired?: boolean;
+  pruningRequired?: boolean;
   careRequired?: boolean;
   lastWatered?: LastWatered;
   lastRepotted?: LastRepotted;
   waterIntervalDays?: number;     // 1..90
   moistureIntervalDays?: number;  // 1..90
-  fertilizeIntervalDays?: number; // 1..90
+  fertilizeIntervalDays?: number; // 1..32767
+  pruningIntervalDays?: number; // 1..365
   careIntervalDays?: number;      // 1..90
-  repotIntervalMonths?: number;   // 1..12
+  repotIntervalMonths?: number;   // 1..32767
 
   // Step 7 – Local selection, uploaded with its framing on creation.
   photoUri?: string;
@@ -193,7 +200,9 @@ export type PlantProfile = {
   moisture_required?: boolean;
   moisture_interval_days?: number | null;
   fertilize_required?: boolean;
+  pruning_required?: boolean;
   fertilize_interval_days?: number | null;
+  pruning_interval_days?: number | null;
   repot_required?: boolean;
   repot_interval_months?: number | null;
 };
@@ -212,12 +221,14 @@ export type PlantDefinition = {
   water_required?: boolean;
   moisture_required?: boolean;
   fertilize_required?: boolean;
+  pruning_required?: boolean;
   repot_required?: boolean;
 
   // Task intervals from plant definition
   water_interval_days?: number;
   moisture_interval_days?: number;
   fertilize_interval_days?: number;
+  pruning_interval_days?: number;
   repot_interval_months?: number;
 };
 
@@ -243,6 +254,7 @@ export type ApiPlantInstanceCreatePayload = {
   repot_task_enabled: boolean;
   moisture_required: boolean;
   fertilize_required: boolean;
+  pruning_required?: boolean;
   care_required: boolean;
 
   last_watered: LastWatered | "" | undefined;
@@ -251,6 +263,7 @@ export type ApiPlantInstanceCreatePayload = {
   water_interval_days: number | null;
   moisture_interval_days: number | null;
   fertilize_interval_days: number | null;
+  pruning_interval_days?: number | null;
   care_interval_days: number | null;
   repot_interval_months: number | null;
 };

@@ -10,7 +10,7 @@ import { useLanguage } from '../../../../app/providers/LanguageProvider';
 import { useSettings } from '../../../../app/providers/SettingsProvider';
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../../constants/reminders.constants';
 
-export type ReminderType = 'watering' | 'moisture' | 'fertilising' | 'care' | 'repot';
+export type ReminderType = 'watering' | 'moisture' | 'fertilising' | 'pruning' | 'care' | 'repot';
 
 let DateTimePicker: any = null;
 try {
@@ -43,7 +43,7 @@ type Props = {
   onSave: () => void;
 };
 
-const TYPE_OPTIONS: ReminderType[] = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
+const TYPE_OPTIONS: ReminderType[] = ['watering', 'moisture', 'fertilising', 'pruning', 'care', 'repot'];
 
 function unitForType(t: ReminderType): 'days' | 'months' {
   return t === 'repot' ? 'months' : 'days';
@@ -115,10 +115,10 @@ export default function EditReminderModal(props: Props) {
   const { settings } = useSettings();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: any): string => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
-      const isMissing = !txt || txt === key;
+      const isMissing = typeof txt !== 'string' || !txt || txt === key;
       return isMissing ? fallback ?? key.split('.').pop() ?? key : txt;
     },
     [t, currentLanguage],

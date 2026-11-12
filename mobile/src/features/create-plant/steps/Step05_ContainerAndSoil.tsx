@@ -398,15 +398,21 @@ export default function Step05_ContainerAndSoil() {
                     }}
                   >
                     <View style={optionStyles.iconColumn}>
-                      <Image
-                        source={{ uri: getSoilThumbUri(String(opt.key)) }}
-                        style={{
-                          width: THUMB_SIZE,
-                          height: THUMB_SIZE,
-                          borderRadius: THUMB_SIZE / 2,
-                        }}
-                        resizeMode="cover"
-                      />
+                      {opt.icon ? (
+                        <View style={{ width: THUMB_SIZE, height: THUMB_SIZE, borderRadius: THUMB_SIZE / 2, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,0.12)' }}>
+                          <MaterialCommunityIcons name={opt.icon} size={24} color="#FFFFFF" />
+                        </View>
+                      ) : (
+                        <Image
+                          source={{ uri: getSoilThumbUri(String(opt.key)) }}
+                          style={{
+                            width: THUMB_SIZE,
+                            height: THUMB_SIZE,
+                            borderRadius: THUMB_SIZE / 2,
+                          }}
+                          resizeMode="cover"
+                        />
+                      )}
                       {recommendedSoils.has(opt.key) && (
                         <Text
                           style={optionStyles.recommendedLabel}

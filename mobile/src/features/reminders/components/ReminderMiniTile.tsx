@@ -33,6 +33,7 @@ function toTypeKey(t: string) {
     return 'fertilising';
   if (x === 'moisture' || x === 'misting') return 'moisture';
   if (x === 'repot' || x === 'repotting') return 'repot';
+  if (x === 'pruning') return 'pruning';
   if (x === 'care') return 'care';
   return 'care';
 }

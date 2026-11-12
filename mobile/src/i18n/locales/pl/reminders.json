@@ -22,7 +22,8 @@
       "moisture": "Zraszanie",
       "fertilising": "Nawożenie",
       "care": "Pielęgnacja",
-      "repot": "Przesadzanie"
+      "repot": "Przesadzanie",
+      "pruning": "Przycinanie"
     },
     "fab": {
       "add": "Dodaj przypomnienie",
@@ -34,7 +35,7 @@
     },
     "empty": {
       "title": "Brak przypomnień",
-      "description": "Przypomnienia są powiązane z konkretnymi roślinami. Upewnij się, że masz utworzoną przynajmniej jedną roślinę.\n\nDotknij przycisku „+”, aby dodać przypomnienie. W oknie wybierzesz roślinę, typ (podlewanie, zraszanie, nawożenie, pielęgnacja lub przesadzanie), ustawisz pierwszą datę oraz częstotliwość powtarzania."
+      "description": "Najpierw dodaj roślinę, a potem naciśnij „+”, aby utworzyć przypomnienie. Wybierz roślinę, rodzaj zadania, pierwszy termin i częstotliwość."
     },
     "menu": {
       "edit": "Edytuj przypomnienie",

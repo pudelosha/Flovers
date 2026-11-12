@@ -18,7 +18,8 @@
       "moisture": "Pulverizar",
       "fertilising": "Fertilizar",
       "care": "Cuidar",
-      "repot": "Replantar"
+      "repot": "Replantar",
+      "pruning": "Poda"
     },
     "fab": {
       "add": "Adicionar lembrete",
@@ -30,7 +31,7 @@
     },
     "empty": {
       "title": "Sem lembretes",
-      "description": "Os lembretes estão ligados a plantas específicas. Certifique-se de que você tem pelo menos uma planta cadastrada.\n\nToque no botão \"+\" para adicionar um lembrete. Na janela, você escolherá a planta, o tipo (regar, pulverizar, fertilizar, cuidar ou replantar), definirá a primeira data e a frequência de repetição."
+      "description": "Adiciona primeiro uma planta e toca em «+» para criar um lembrete. Escolhe a planta, o tipo de tarefa, a primeira data e a frequência."
     },
     "menu": {
       "edit": "Editar lembrete",

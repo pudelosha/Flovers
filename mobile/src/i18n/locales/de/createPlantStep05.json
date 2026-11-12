@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Torffreies Substrat",
           "description": "Nachhaltiger; Zusammensetzung je nach Hersteller."
+        },
+        "air-plant": {
+          "label": "Aufgebunden (ohne Erde)",
+          "description": "Für erdlos wachsende Luftpflanzen auf einer Unterlage; keine Topferde."
+        },
+        "aquatic": {
+          "label": "Wasserpflanzenerde",
+          "description": "Wasserpflanzenerde oder geeigneter schwerer Lehm; keine gewöhnliche Zimmerpflanzenerde."
+        },
+        "carnivorous-bog": {
+          "label": "Karnivoren: Moor",
+          "description": "Ungedüngtes, saures und nährstoffarmes Substrat für fleischfressende Moorpflanzen."
+        },
+        "nepenthes": {
+          "label": "Nepenthes-Mix",
+          "description": "Luftiges, nährstoffarmes Nepenthes-Substrat ohne zugesetzten Dünger."
+        },
+        "pinguicula": {
+          "label": "Pinguicula-Mix",
+          "description": "Luftiges, mineralreiches und nährstoffarmes Substrat für tropisches Fettkraut, ohne Düngerzusatz."
         }
       }
     }

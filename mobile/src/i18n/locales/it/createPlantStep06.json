@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "Attività automatiche",
-      "subtitle": "Possiamo creare automaticamente promemoria (annaffiatura, rinvaso, nebulizzazione, fertilizzazione, cura) in base al profilo della pianta.",
+      "subtitle": "Scegli i promemoria in base alle esigenze della pianta e regola gli intervalli.",
       "createAutoTasks": "Crea attività automatiche per questa pianta",
       "requiresPlantDefinition": "Richiede la definizione della pianta.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "Crea attività di nebulizzazione",
         "generateFertilisingTask": "Crea attività di fertilizzazione",
         "generateCareTask": "Crea attività di cura",
-        "generateRepottingTask": "Crea attività di rinvaso"
+        "generateRepottingTask": "Crea attività di rinvaso",
+        "generatePruningTask": "Crea attività di potatura"
       },
       "prompts": {
         "lastWatered": "Quando è stata annaffiata l’ultima volta?",

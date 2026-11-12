@@ -18,7 +18,8 @@
       "moisture": "Besprühen",
       "fertilising": "Düngen",
       "care": "Pflege",
-      "repot": "Umtopfen"
+      "repot": "Umtopfen",
+      "pruning": "Rückschnitt"
     },
     "fab": {
       "add": "Erinnerung hinzufügen",
@@ -30,7 +31,7 @@
     },
     "empty": {
       "title": "Keine Erinnerungen",
-      "description": "Erinnerungen sind mit bestimmten Pflanzen verknüpft. Stelle sicher, dass du mindestens eine Pflanze erstellt hast.\n\nTippe auf die „+“-Schaltfläche, um eine Erinnerung hinzuzufügen. Im Fenster wählst du die Pflanze, den Typ (Gießen, Besprühen, Düngen, Pflege oder Umtopfen) aus und legst das erste Datum sowie die Wiederholungsfrequenz fest."
+      "description": "Füge zuerst eine Pflanze hinzu und tippe dann auf „+“. Wähle Pflanze, Aufgabenart, ersten Termin und Wiederholungsintervall."
     },
     "menu": {
       "edit": "Erinnerung bearbeiten",

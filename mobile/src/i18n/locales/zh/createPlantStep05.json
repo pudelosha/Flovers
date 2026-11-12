@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "无泥炭土壤",
           "description": "更加可持续；成分取决于生产商。"
+        },
+        "air-plant": {
+          "label": "空气凤梨（无土）",
+          "description": "适用于固定在支架上、无土生长的空气凤梨；不是盆栽土。"
+        },
+        "aquatic": {
+          "label": "水生植物基质",
+          "description": "水生植物专用基质或适合的黏重壤土，不是普通室内盆栽土。"
+        },
+        "carnivorous-bog": {
+          "label": "沼生食虫植物基质",
+          "description": "适用于沼生食虫植物的酸性、低养分、无添加肥料基质。"
+        },
+        "nepenthes": {
+          "label": "猪笼草基质",
+          "description": "适用于猪笼草的透气、低养分基质，不添加肥料。"
+        },
+        "pinguicula": {
+          "label": "热带捕虫堇基质",
+          "description": "适用于热带捕虫堇的透气、富含矿物颗粒的低养分基质，不添加肥料。"
         }
       }
     }

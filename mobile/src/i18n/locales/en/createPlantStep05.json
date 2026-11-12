@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Peat-free mix",
           "description": "More sustainable option; composition varies by brand."
+        },
+        "air-plant": {
+          "label": "Air plant (no soil)",
+          "description": "For soil-free air plants attached to a support; not a potting mix."
+        },
+        "aquatic": {
+          "label": "Aquatic medium",
+          "description": "Aquatic compost or suitable heavy loam for water plants; not ordinary indoor potting mix."
+        },
+        "carnivorous-bog": {
+          "label": "Bog carnivore mix",
+          "description": "Unfertilised, acidic, low-nutrient medium for bog carnivores."
+        },
+        "nepenthes": {
+          "label": "Nepenthes mix",
+          "description": "Airy, low-nutrient medium for Nepenthes, without added fertiliser."
+        },
+        "pinguicula": {
+          "label": "Pinguicula mix",
+          "description": "Airy mineral-rich, low-nutrient medium for tropical butterworts, without added fertiliser."
         }
       }
     }

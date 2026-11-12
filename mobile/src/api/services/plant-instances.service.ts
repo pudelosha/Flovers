@@ -39,6 +39,7 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
     repot_task_enabled: !!state.repotTaskEnabled,
     moisture_required: !!state.moistureRequired,
     fertilize_required: !!state.fertilizeRequired,
+    pruning_required: !!state.pruningRequired,
     care_required: !!state.careRequired,
 
     last_watered: (state as any).lastWatered ?? "",
@@ -47,6 +48,7 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
     water_interval_days: state.waterIntervalDays ?? null,
     moisture_interval_days: state.moistureIntervalDays ?? null,
     fertilize_interval_days: state.fertilizeIntervalDays ?? null,
+    pruning_interval_days: state.pruningRequired ? state.pruningIntervalDays ?? 90 : null,
     care_interval_days: state.careIntervalDays ?? null,
     repot_interval_months: state.repotIntervalMonths ?? null,
   };
@@ -156,6 +158,8 @@ export function buildUpdatePayloadFromForm(
   if ("repot_task_enabled" in form) out.repot_task_enabled = !!form.repot_task_enabled;
   if ("moisture_required" in form) out.moisture_required = !!form.moisture_required;
   if ("fertilize_required" in form) out.fertilize_required = !!form.fertilize_required;
+  if ("pruning_required" in form) out.pruning_required = !!form.pruning_required;
+  if ("pruning_interval_days" in form) out.pruning_interval_days = form.pruning_interval_days ?? null;
   if ("care_required" in form) out.care_required = !!form.care_required;
 
   if ("last_watered" in form) out.last_watered = (form.last_watered as any) ?? "";
@@ -220,11 +224,11 @@ export async function fetchPlantInstanceDetail(
  * Returns items like:
  *   { id, type, completed_at, note }
  *
- * type is backend reminder.type: "water" | "moisture" | "fertilize" | "care" | "repot"
+ * type is backend reminder.type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot"
  */
 export type ApiPlantJournalItem = {
   id: number;
-  type: "water" | "moisture" | "fertilize" | "care" | "repot";
+  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
   completed_at: string | null;
   note: string | null;
 };

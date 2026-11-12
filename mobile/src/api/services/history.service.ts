@@ -41,7 +41,7 @@ const invalidFeed = () =>
     { code: 'invalid_journal_feed' },
     'Invalid journal response',
   );
-const taskTypes = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
+const taskTypes = ['watering', 'moisture', 'fertilising', 'pruning', 'care', 'repot'];
 function parseEntry(entry: any): JournalEntry {
   if (entry?.kind === 'photo') return parseJournalPhoto(entry.data);
   const value = entry?.data;

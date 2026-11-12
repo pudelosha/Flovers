@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Substrat sans tourbe",
           "description": "Plus durable ; la composition dépend du fabricant."
+        },
+        "air-plant": {
+          "label": "Épiphyte sans terre",
+          "description": "Pour les plantes aériennes fixées sur un support, sans terre ; ce n’est pas un terreau."
+        },
+        "aquatic": {
+          "label": "Substrat aquatique",
+          "description": "Substrat pour plantes aquatiques ou terre argileuse lourde adaptée, pas un terreau d’intérieur classique."
+        },
+        "carnivorous-bog": {
+          "label": "Carnivores de tourbière",
+          "description": "Substrat acide, pauvre en nutriments et sans engrais pour les carnivores de tourbière."
+        },
+        "nepenthes": {
+          "label": "Mélange Nepenthes",
+          "description": "Substrat aéré et pauvre en nutriments pour Nepenthes, sans engrais ajouté."
+        },
+        "pinguicula": {
+          "label": "Mélange Pinguicula",
+          "description": "Substrat minéral aéré et pauvre en nutriments pour les grassettes tropicales, sans engrais ajouté."
         }
       }
     }

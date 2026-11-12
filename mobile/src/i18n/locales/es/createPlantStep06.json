@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "Tareas automáticas",
-      "subtitle": "Podemos crear automáticamente recordatorios (riego, trasplante, pulverización, fertilización, cuidado) en función del perfil de la planta.",
+      "subtitle": "Elige los recordatorios según las necesidades de tu planta y ajusta los intervalos.",
       "createAutoTasks": "Crear tareas automáticas para esta planta",
       "requiresPlantDefinition": "Requiere la definición de la planta.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "Crear tarea de pulverización",
         "generateFertilisingTask": "Crear tarea de fertilización",
         "generateCareTask": "Crear tarea de cuidado",
-        "generateRepottingTask": "Crear tarea de trasplante"
+        "generateRepottingTask": "Crear tarea de trasplante",
+        "generatePruningTask": "Crear tarea de poda"
       },
       "prompts": {
         "lastWatered": "¿Cuándo fue la última vez que se regó?",

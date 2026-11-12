@@ -40,6 +40,7 @@ const TYPE_OPTIONS: JournalFilterType[] = [
   'watering',
   'moisture',
   'fertilising',
+  'pruning',
   'care',
   'repot',
 ];

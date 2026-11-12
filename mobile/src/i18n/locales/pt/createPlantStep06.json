@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "Tarefas automáticas",
-      "subtitle": "Podemos criar lembretes automaticamente (rega, replantio, pulverização, adubação, cuidado) com base no perfil da planta.",
+      "subtitle": "Escolhe os lembretes de acordo com a tua planta e ajusta os intervalos.",
       "createAutoTasks": "Criar tarefas automáticas para esta planta",
       "requiresPlantDefinition": "Requer definição da planta.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "Criar tarefa de pulverização",
         "generateFertilisingTask": "Criar tarefa de adubação",
         "generateCareTask": "Criar tarefa de cuidado",
-        "generateRepottingTask": "Criar tarefa de replantio"
+        "generateRepottingTask": "Criar tarefa de replantio",
+        "generatePruningTask": "Criar tarefa de poda"
       },
       "prompts": {
         "lastWatered": "Quando foi regada pela última vez?",

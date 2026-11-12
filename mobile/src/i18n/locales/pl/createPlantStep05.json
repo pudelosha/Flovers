@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Podłoże bez torfu",
           "description": "Bardziej zrównoważone; skład zależy od producenta."
+        },
+        "air-plant": {
+          "label": "Bez podłoża (oplątwa)",
+          "description": "Dla oplątw rosnących bez ziemi, na podporze; to nie jest mieszanka do doniczek."
+        },
+        "aquatic": {
+          "label": "Podłoże wodne",
+          "description": "Podłoże do roślin wodnych lub odpowiednia ciężka glina; nie zwykła ziemia do roślin domowych."
+        },
+        "carnivorous-bog": {
+          "label": "Bagienne owadożerne",
+          "description": "Kwaśne, ubogie podłoże bez nawozu dla bagiennych roślin owadożernych."
+        },
+        "nepenthes": {
+          "label": "Dzbaneczniki",
+          "description": "Przewiewne, ubogie podłoże do dzbaneczników, bez dodatku nawozu."
+        },
+        "pinguicula": {
+          "label": "Tłustosze tropikalne",
+          "description": "Przewiewne podłoże mineralne dla tropikalnych tłustoszy, ubogie i bez dodatku nawozu."
         }
       }
     }

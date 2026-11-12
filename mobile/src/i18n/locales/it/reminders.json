@@ -18,7 +18,8 @@
       "moisture": "Nebulizzazione",
       "fertilising": "Concimazione",
       "care": "Cura",
-      "repot": "Rinvaso"
+      "repot": "Rinvaso",
+      "pruning": "Potatura"
     },
     "fab": {
       "add": "Aggiungi promemoria",
@@ -30,7 +31,7 @@
     },
     "empty": {
       "title": "Nessun promemoria",
-      "description": "I promemoria sono associati a piante specifiche. Assicurati di aver creato almeno una pianta.\n\nTocca il pulsante \"+\" per aggiungere un promemoria. Nella finestra sceglierai la pianta, il tipo (annaffiatura, nebulizzazione, concimazione, cura o rinvaso), imposterai la prima data e la frequenza di ripetizione."
+      "description": "Aggiungi prima una pianta, poi tocca “+” per creare un promemoria. Scegli pianta, attività, prima scadenza e frequenza."
     },
     "menu": {
       "edit": "Modifica promemoria",

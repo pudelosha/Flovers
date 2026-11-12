@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "Tâches automatiques",
-      "subtitle": "Nous pouvons créer automatiquement des rappels (arrosage, rempotage, brumisation, fertilisation, entretien) en fonction du profil de la plante.",
+      "subtitle": "Choisissez les rappels adaptés à votre plante, puis ajustez les intervalles.",
       "createAutoTasks": "Créer des tâches automatiques pour cette plante",
       "requiresPlantDefinition": "Nécessite une définition de la plante.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "Créer une tâche de brumisation",
         "generateFertilisingTask": "Créer une tâche de fertilisation",
         "generateCareTask": "Créer une tâche d’entretien",
-        "generateRepottingTask": "Créer une tâche de rempotage"
+        "generateRepottingTask": "Créer une tâche de rempotage",
+        "generatePruningTask": "Créer une tâche de taille"
       },
       "prompts": {
         "lastWatered": "Quand a-t-elle été arrosée pour la dernière fois ?",

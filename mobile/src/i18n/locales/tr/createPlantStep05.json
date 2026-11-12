@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Turba içermeyen karışım",
           "description": "Daha sürdürülebilir seçenek; kompozisyon markaya göre değişir."
+        },
+        "air-plant": {
+          "label": "Hava bitkisi, topraksız",
+          "description": "Bir desteğe tutturularak topraksız yetiştirilen hava bitkileri içindir; saksı harcı değildir."
+        },
+        "aquatic": {
+          "label": "Su bitkisi harcı",
+          "description": "Su bitkilerine uygun harç veya ağır tınlı toprak; sıradan iç mekân saksı harcı değildir."
+        },
+        "carnivorous-bog": {
+          "label": "Bataklık etçilleri",
+          "description": "Bataklık etçil bitkileri için gübresiz, asidik ve besince fakir harç."
+        },
+        "nepenthes": {
+          "label": "Nepenthes harcı",
+          "description": "Nepenthes için havadar ve besince fakir, ilave gübre içermeyen harç."
+        },
+        "pinguicula": {
+          "label": "Pinguicula harcı",
+          "description": "Tropik Pinguicula için havadar, mineral ağırlıklı ve besince fakir, ilave gübre içermeyen harç."
         }
       }
     }

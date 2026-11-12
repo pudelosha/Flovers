@@ -2,7 +2,7 @@ import type { ApiReminder, ApiReminderTask } from "../services/reminders.service
 import type { ApiPlantInstanceListItem } from "../services/plant-instances.service";
 
 /** UI type used by ReminderTile */
-export type ReminderTypeUI = "watering" | "moisture" | "fertilising" | "care" | "repot";
+export type ReminderTypeUI = "watering" | "moisture" | "fertilising" | "pruning" | "care" | "repot";
 
 export function mapBackendTypeToUI(
   t: ApiReminder["type"]
@@ -10,6 +10,7 @@ export function mapBackendTypeToUI(
   switch (t) {
     case "water": return "watering";
     case "fertilize": return "fertilising";
+    case "pruning":
     case "moisture":
     case "care":
     case "repot":

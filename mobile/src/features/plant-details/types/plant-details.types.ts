@@ -53,6 +53,7 @@ export type PlantReadingDeviceSummary = {
 export type PlantReminderType =
   | "watering"
   | "fertilising"
+  | "pruning"
   | "moisture"
   | "care"
   | "repot";

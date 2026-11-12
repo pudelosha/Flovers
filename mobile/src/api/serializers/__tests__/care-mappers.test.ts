@@ -16,6 +16,17 @@ const task: ApiReminderTask = {
 const plants = [{ id: 4, display_name: "Monstera", location: { id: 2, name: "Living room" } }];
 
 describe("care API mappers", () => {
+  it("preserves pruning recommendations, tasks, reminders and immutable history", () => {
+    const profile = serializePlantProfile({ id: 4, latin: "Coleus scutellarioides", pruning_required: true, pruning_interval_days: 180 });
+    expect(profile).toMatchObject({ pruning_required: true, pruning_interval_days: 180 });
+    expect(serializePlantProfile({ id: 5, latin: "Unknown plant" }).pruning_required).toBe(false);
+    const pruningReminder = { ...reminder, type: "pruning" as const };
+    expect(buildUITasks([task], [pruningReminder], plants)[0].type).toBe("pruning");
+    expect(buildUIReminders([task], [pruningReminder], plants)[0].type).toBe("pruning");
+    const completed = { ...task, status: "completed" as const, completed_at: "2026-11-08T10:00:00Z" };
+    expect(buildUIHistoryItems([completed], [pruningReminder], plants)[0].type).toBe("pruning");
+    expect(buildUITasks([{ ...task, plant: 4, type: "pruning" }], [], plants)[0].type).toBe("pruning");
+  });
   it("keeps shared pending tasks on Home without exposing reminder definitions", () => {
     const access = { is_owner: false, is_shared: true, can_edit: false, can_complete_tasks: true,
       owner: { id: "1", name: "Mom" }, expires_at: null };

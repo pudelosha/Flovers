@@ -13,7 +13,8 @@
         "wateringInterval": "Полив",
         "moistureInterval": "Проверка влажности",
         "fertilizeInterval": "Удобрять",
-        "repotInterval": "Пересадка"
+        "repotInterval": "Пересадка",
+        "pruningInterval": "Обрезка"
       },
       "values": {
         "everyDays": "Каждые {{count}} дней",

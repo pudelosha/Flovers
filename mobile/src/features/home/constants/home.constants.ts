@@ -12,6 +12,7 @@ export const ACCENT_BY_TYPE: Record<TaskType, string> = {
   watering:   "#4dabf7", // blue
   moisture:   "#20c997", // green
   fertilising:"#ffd43b", // yellow
+  pruning: "#ff922b",
   care:       "#e599f7", // purple
   repot:      "#8B5E3C", // brown (NEW)
 };
@@ -21,6 +22,7 @@ export const ICON_BY_TYPE: Record<TaskType, string> = {
   watering:   "water",
   moisture:   "spray",
   fertilising:"leaf",
+  pruning: "content-cut",
   care:       "flower",
   repot:      "pot",
 };

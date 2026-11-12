@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "Tugas otomatis",
-      "subtitle": "Kami dapat membuat pengingat secara otomatis (menyiram, merepoting, menyemprot, memupuk, merawat) berdasarkan profil tanaman hias Anda.",
+      "subtitle": "Pilih pengingat sesuai kebutuhan tanaman, lalu sesuaikan intervalnya.",
       "createAutoTasks": "Buat tugas otomatis untuk tanaman hias ini",
       "requiresPlantDefinition": "Ini memerlukan definisi tanaman hias.",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "Hasilkan tugas gerimis",
         "generateFertilisingTask": "Menghasilkan tugas pemupukan",
         "generateCareTask": "Hasilkan tugas perawatan",
-        "generateRepottingTask": "Hasilkan tugas repotting"
+        "generateRepottingTask": "Hasilkan tugas repotting",
+        "generatePruningTask": "Buat tugas pemangkasan"
       },
       "prompts": {
         "lastWatered": "Kapan terakhir kali disiram?",

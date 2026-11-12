@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Sustrato sin turba",
           "description": "Más sostenible; la composición depende del fabricante."
+        },
+        "air-plant": {
+          "label": "Planta aérea sin tierra",
+          "description": "Para plantas de aire sujetas a un soporte y cultivadas sin tierra; no es una mezcla para macetas."
+        },
+        "aquatic": {
+          "label": "Sustrato acuático",
+          "description": "Sustrato acuático o tierra arcillosa pesada adecuada; no una mezcla común para plantas de interior."
+        },
+        "carnivorous-bog": {
+          "label": "Carnívoras de turbera",
+          "description": "Sustrato ácido, pobre en nutrientes y sin fertilizante para carnívoras de turbera."
+        },
+        "nepenthes": {
+          "label": "Mezcla Nepenthes",
+          "description": "Sustrato aireado y pobre en nutrientes para Nepenthes, sin fertilizante añadido."
+        },
+        "pinguicula": {
+          "label": "Mezcla Pinguicula",
+          "description": "Sustrato mineral aireado y pobre en nutrientes para Pinguicula tropicales, sin fertilizante añadido."
         }
       }
     }

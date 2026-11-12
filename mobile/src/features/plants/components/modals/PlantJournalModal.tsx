@@ -30,6 +30,7 @@ const ACCENT_BY_TYPE: Record<JournalType, string> = {
   watering: "#4dabf7",
   moisture: "#20c997",
   fertilising: "#ffd43b",
+  pruning: "#ff922b",
   care: "#e599f7",
   repot: "#8B5E3C",
 };
@@ -38,6 +39,7 @@ const ICON_BY_TYPE: Record<JournalType, string> = {
   watering: "water",
   moisture: "spray",
   fertilising: "leaf",
+  pruning: "content-cut",
   care: "flower",
   repot: "pot",
 };

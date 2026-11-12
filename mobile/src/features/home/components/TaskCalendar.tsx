@@ -18,6 +18,7 @@ const ORDER: TaskType[] = [
   'watering',
   'moisture',
   'fertilising',
+  'pruning',
   'care',
   'repot',
 ];

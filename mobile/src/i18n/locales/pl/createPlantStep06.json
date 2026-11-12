@@ -2,35 +2,31 @@
   "createPlant": {
     "step06": {
       "title": "Zadania automatyczne",
-      "subtitle": "Możemy automatycznie utworzyć przypomnienia (podlewanie, przesadzanie, zraszanie, nawożenie, pielęgnacja) na podstawie profilu rośliny.",
+      "subtitle": "Wybierz przypomnienia na podstawie potrzeb rośliny i dopasuj odstępy między zadaniami.",
       "createAutoTasks": "Utwórz automatyczne zadania dla tej rośliny",
       "requiresPlantDefinition": "Wymaga definicji rośliny.",
-
       "labels": {
         "generateWateringTask": "Utwórz zadanie podlewania",
         "generateMistingTask": "Utwórz zadanie zraszania",
         "generateFertilisingTask": "Utwórz zadanie nawożenia",
         "generateCareTask": "Utwórz zadanie pielęgnacji",
-        "generateRepottingTask": "Utwórz zadanie przesadzania"
+        "generateRepottingTask": "Utwórz zadanie przesadzania",
+        "generatePruningTask": "Utwórz zadanie przycinania"
       },
-
       "prompts": {
         "lastWatered": "Kiedy ostatnio była podlewana?",
         "selectIntervalDays": "Wybierz odstęp (dni)",
         "recommendedInterval": "Zalecany odstęp",
         "lastRepotted": "Kiedy ostatnio była przesadzana?"
       },
-
       "notSpecified": "Nie określono",
       "notSpecifiedDesc": "Pomiń, jeśli nie jesteś pewien.",
-
       "units": {
         "day": "dzień",
         "days": "dni",
         "month": "miesiąc",
         "months": "miesiące"
       },
-
       "lastWatered": {
         "today": "Dzisiaj",
         "yesterday": "Wczoraj",
@@ -39,7 +35,6 @@
         "two-weeks": "2 tygodnie temu",
         "unknown": "Nie pamiętam"
       },
-
       "lastRepotted": {
         "this-week": "W tym tygodniu",
         "one-week-ago": "1 tydzień temu",

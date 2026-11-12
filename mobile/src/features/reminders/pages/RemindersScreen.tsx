@@ -165,7 +165,7 @@ export default function RemindersScreen() {
   const [editingId, setEditingId] = useState<string | null>(null); // null => CREATE mode
 
   const [fType, setFType] = useState<
-    "watering" | "moisture" | "fertilising" | "care" | "repot"
+    "watering" | "moisture" | "fertilising" | "pruning" | "care" | "repot"
   >("watering");
   const [fPlantId, setFPlantId] = useState<string | undefined>(undefined);
   const [fDueDate, setFDueDate] = useState<string>("");
@@ -211,8 +211,8 @@ export default function RemindersScreen() {
   }, []);
 
   const uiTypeToApi = (
-    tt: "watering" | "moisture" | "fertilising" | "care" | "repot"
-  ): "water" | "moisture" | "fertilize" | "care" | "repot" =>
+    tt: "watering" | "moisture" | "fertilising" | "pruning" | "care" | "repot"
+  ): "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot" =>
     tt === "watering" ? "water" : tt === "fertilising" ? "fertilize" : tt;
 
   const load = useCallback(async () => {

@@ -32,6 +32,12 @@ const task = {
   access: { can_edit: true },
 };
 describe('history.service', () => {
+  it('accepts pruning journal entries and sends the pruning filter to the server', async () => {
+    mockedRequest.mockResolvedValue({ results: [{ kind: 'task', data: { ...task, type: 'pruning' } }], next_cursor: null, can_manage_tasks: true });
+    const result = await fetchJournalPage({ types: ['pruning'] });
+    expect(result.items[0]).toMatchObject({ type: 'pruning', completedBy: { id: '1', name: 'Owner' } });
+    expect(mockedRequest.mock.calls[0][0]).toContain('types=pruning');
+  });
   beforeEach(() => {
     jest.clearAllMocks();
     mockedRequest.mockResolvedValue(undefined);

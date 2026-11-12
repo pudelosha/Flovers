@@ -11,7 +11,7 @@ from django.db import transaction
 from plant_definitions.models import PlantDefinition, PlantDefinitionTranslation
 from plant_definitions.utils import normalize_plant_key
 
-LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
+LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko", "id", "ru", "tr"]
 MAX_TRAIT_TEXT_LEN = 40
 
 # ---- Trait key normalization (consistency) ----

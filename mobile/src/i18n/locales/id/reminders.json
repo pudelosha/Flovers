@@ -18,7 +18,8 @@
       "moisture": "Penyemprotan",
       "fertilising": "Pemupukan",
       "care": "Perawatan",
-      "repot": "Ganti pot"
+      "repot": "Ganti pot",
+      "pruning": "Pemangkasan"
     },
     "fab": {
       "add": "Tambahkan pengingat",
@@ -30,7 +31,7 @@
     },
     "empty": {
       "title": "Belum ada pengingat",
-      "description": "Pengingat dikaitkan dengan tanaman hias tertentu. Harap pastikan Anda memiliki setidaknya satu tanaman hias yang dibuat terlebih dahulu.\n\nKetuk tombol “+” untuk menambahkan pengingat. Anda akan menggunakan cara sederhana untuk memetik tanaman hias, memilih jenisnya (penyiraman, pengaburan, pemupukan, perawatan, atau merepoting), menetapkan tanggal jatuh tempo pertama, dan menentukan seberapa sering tanaman harus diulang."
+      "description": "Tambahkan tanaman terlebih dahulu, lalu ketuk “+” untuk membuat pengingat. Pilih tanaman, jenis tugas, tanggal pertama, dan interval pengulangan."
     },
     "menu": {
       "edit": "Sunting pengingat",

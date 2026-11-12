@@ -30,6 +30,7 @@ export type ApiPlantInstanceCreatePayload = {
   repot_task_enabled: boolean;
   moisture_required: boolean;
   fertilize_required: boolean;
+  pruning_required?: boolean;
   care_required: boolean;
 
   last_watered: LastWatered | "" | undefined;
@@ -38,6 +39,7 @@ export type ApiPlantInstanceCreatePayload = {
   water_interval_days: number | null;
   moisture_interval_days: number | null;
   fertilize_interval_days: number | null;
+  pruning_interval_days?: number | null;
   care_interval_days: number | null;
   repot_interval_months: number | null;
 };
@@ -127,6 +129,7 @@ export type ApiPlantInstanceDetailFull = {
   repot_task_enabled?: boolean | null;
   moisture_required?: boolean | null;
   fertilize_required?: boolean | null;
+  pruning_required?: boolean | null;
   care_required?: boolean | null;
 
   last_watered?: LastWatered | "" | null;
@@ -135,6 +138,7 @@ export type ApiPlantInstanceDetailFull = {
   water_interval_days?: number | null;
   moisture_interval_days?: number | null;
   fertilize_interval_days?: number | null;
+  pruning_interval_days?: number | null;
   care_interval_days?: number | null;
   repot_interval_months?: number | null;
 
@@ -165,6 +169,7 @@ export type PlantEditForm = {
   repot_task_enabled?: boolean;
   moisture_required?: boolean;
   fertilize_required?: boolean;
+  pruning_required?: boolean;
   care_required?: boolean;
 
   last_watered?: LastWatered | "" | undefined;
@@ -173,6 +178,7 @@ export type PlantEditForm = {
   water_interval_days?: number | null;
   moisture_interval_days?: number | null;
   fertilize_interval_days?: number | null;
+  pruning_interval_days?: number | null;
   care_interval_days?: number | null;
   repot_interval_months?: number | null;
 };

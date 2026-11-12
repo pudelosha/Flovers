@@ -12,6 +12,7 @@ import {
   LAST_WATERED_OPTIONS,
 } from "../constants/create-plant.constants";
 import type { LastRepotted, LastWatered } from "../types/create-plant.types";
+import { taskIntervalChoices, taskIntervalControlMaximum } from "../utils/taskIntervals";
 
 import {
   tuneDaysInterval,
@@ -197,7 +198,7 @@ function DaysSlider({
         />
       ) : (
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
-          {Array.from({ length: max - min + 1 }, (_, i) => i + min).map((d) => (
+          {taskIntervalChoices(v, min, max).map((d) => (
             <Pressable
               key={d}
               onPress={() => onChange(d)}
@@ -256,7 +257,7 @@ function MonthsSlider({
         />
       ) : (
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
-          {Array.from({ length: max - min + 1 }, (_, i) => i + min).map((m) => (
+          {taskIntervalChoices(v, min, max).map((m) => (
             <Pressable
               key={m}
               onPress={() => onChange(m)}
@@ -306,6 +307,8 @@ export default function Step06_AutoTasks() {
   const waterRequired = plantDefinition?.water_required === true;
   const mistRequired = plantDefinition?.moisture_required === true;
   const fertilizeRequired = plantDefinition?.fertilize_required === true;
+  const pruningRequired = plantDefinition?.pruning_required === true;
+  const pruningIntervalBase = Math.max(1, Math.min(365, plantDefinition?.pruning_interval_days ?? 90));
   const repotRequired = plantDefinition?.repot_required === true;
 
   // Base intervals from definition
@@ -367,6 +370,7 @@ export default function Step06_AutoTasks() {
     if (typeof plantDefinition?.fertilize_interval_days === "number") {
       actions.setFertilizeInterval(plantDefinition.fertilize_interval_days);
     }
+    actions.setPruningInterval(pruningIntervalBase);
     if (typeof plantDefinition?.repot_interval_months === "number") {
       actions.setRepotIntervalMonths(plantDefinition.repot_interval_months);
     }
@@ -374,6 +378,7 @@ export default function Step06_AutoTasks() {
     if (plantDefinition?.water_required !== true) actions.setWaterTaskEnabled(false);
     if (plantDefinition?.moisture_required !== true) actions.setMoistureRequired(false);
     if (plantDefinition?.fertilize_required !== true) actions.setFertilizeRequired(false);
+    if (!pruningRequired) actions.setPruningRequired(false);
     if (plantDefinition?.repot_required !== true) actions.setRepotTaskEnabled(false);
   }, [
     plantDefinition,
@@ -381,6 +386,8 @@ export default function Step06_AutoTasks() {
     tuningCtx,
     tunedWaterSuggestion,
     waterIntervalBase,
+    pruningIntervalBase,
+    pruningRequired,
   ]);
 
   /**
@@ -489,7 +496,7 @@ export default function Step06_AutoTasks() {
         <Text style={wiz.subtitle}>
           {getTranslation(
             "createPlant.step06.subtitle",
-            "We can auto-create reminders (watering, repotting, misting, fertilising, care) based on your plant profile."
+            "We can auto-create reminders (watering, misting, fertilising, pruning, care, repotting) based on your plant profile."
           )}
         </Text>
 
@@ -637,7 +644,40 @@ export default function Step06_AutoTasks() {
                   value={state.fertilizeIntervalDays ?? fertilizeIntervalBase}
                   onChange={(d) => actions.setFertilizeInterval(d)}
                   min={1}
-                  max={90}
+                  max={taskIntervalControlMaximum(Math.max(fertilizeIntervalBase, state.fertilizeIntervalDays ?? 1), 365)}
+                  dayLabel={dayLabel}
+                  daysLabel={daysLabel}
+                />
+              </>
+            )}
+
+            {/* PRUNING */}
+            <SectionCheckbox
+              checked={!!state.pruningRequired}
+              onToggle={() => {
+                if (!pruningRequired) return;
+                actions.setPruningRequired(!state.pruningRequired);
+              }}
+              label={getTranslation(
+                "createPlant.step06.labels.generatePruningTask",
+                "Generate pruning task"
+              )}
+              disabled={!pruningRequired}
+            />
+
+            {state.pruningRequired && pruningRequired && (
+              <>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation(
+                    "createPlant.step06.prompts.selectIntervalDays",
+                    "Select interval (days)"
+                  )}
+                </Text>
+                <DaysSlider
+                  value={state.pruningIntervalDays ?? pruningIntervalBase}
+                  onChange={(d) => actions.setPruningInterval(d)}
+                  min={1}
+                  max={365}
                   dayLabel={dayLabel}
                   daysLabel={daysLabel}
                 />
@@ -700,7 +740,7 @@ export default function Step06_AutoTasks() {
                   value={state.repotIntervalMonths ?? repotIntervalBase}
                   onChange={(m) => actions.setRepotIntervalMonths(m)}
                   min={1}
-                  max={12}
+                  max={taskIntervalControlMaximum(Math.max(repotIntervalBase, state.repotIntervalMonths ?? 1), 48)}
                   monthLabel={monthLabel}
                   monthsLabel={monthsLabel}
                 />

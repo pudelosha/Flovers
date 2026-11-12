@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Substrato senza torba",
           "description": "Più sostenibile; la composizione dipende dal produttore."
+        },
+        "air-plant": {
+          "label": "Pianta aerea, senza terra",
+          "description": "Per piante aeree fissate a un supporto e coltivate senza terra; non è un terriccio."
+        },
+        "aquatic": {
+          "label": "Substrato acquatico",
+          "description": "Substrato per piante acquatiche o terreno argilloso pesante adatto; non comune terriccio da interni."
+        },
+        "carnivorous-bog": {
+          "label": "Carnivore palustri",
+          "description": "Substrato acido e povero di nutrienti, senza concime, per carnivore palustri."
+        },
+        "nepenthes": {
+          "label": "Substrato Nepenthes",
+          "description": "Substrato arioso e povero di nutrienti per Nepenthes, senza concime aggiunto."
+        },
+        "pinguicula": {
+          "label": "Substrato Pinguicula",
+          "description": "Substrato minerale arioso e povero di nutrienti per Pinguicula tropicali, senza concime aggiunto."
         }
       }
     }

@@ -26,6 +26,7 @@ import { createPlantInstance } from "../../../api/services/plant-instances.servi
 import { deleteLocalPhoto } from "../../../shared/utils/photoStorage";
 import { uploadPlantPhoto, updatePlantPhotoFraming, type PlantPhoto } from "../../../api/services/plant-photos.service";
 import { DEFAULT_PHOTO_FRAMING, normalizePhotoFraming, type PhotoFraming } from "../../../shared/utils/photoFraming";
+import { clampTaskInterval } from "../utils/taskIntervals";
 
 type Action =
   | { type: "SET_QUERY"; query: string }
@@ -53,6 +54,8 @@ type Action =
   | { type: "SET_MOISTURE_INTERVAL"; val: number }
   | { type: "SET_FERTILIZE_REQUIRED"; val: boolean }
   | { type: "SET_FERTILIZE_INTERVAL"; val: number }
+  | { type: "SET_PRUNING_REQUIRED"; val: boolean }
+  | { type: "SET_PRUNING_INTERVAL"; val: number }
   | { type: "SET_CARE_REQUIRED"; val: boolean }
   | { type: "SET_CARE_INTERVAL"; val: number }
   | { type: "SET_REPOT_INTERVAL_MONTHS"; val: number }
@@ -84,12 +87,14 @@ const initial: WizardState = {
   repotTaskEnabled: false,
   moistureRequired: false,
   fertilizeRequired: false,
+  pruningRequired: false,
   careRequired: false,
   lastWatered: undefined,
   lastRepotted: undefined,
   waterIntervalDays: 7,
   moistureIntervalDays: 7,
   fertilizeIntervalDays: 30,
+  pruningIntervalDays: 90,
   careIntervalDays: 30,
   repotIntervalMonths: 12,
   photoUri: undefined,
@@ -189,13 +194,17 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_FERTILIZE_REQUIRED":
       return { ...state, fertilizeRequired: action.val };
     case "SET_FERTILIZE_INTERVAL":
-      return { ...state, fertilizeIntervalDays: Math.max(1, Math.min(90, action.val)) };
+      return { ...state, fertilizeIntervalDays: clampTaskInterval(action.val) };
+    case "SET_PRUNING_REQUIRED":
+      return { ...state, pruningRequired: action.val };
+    case "SET_PRUNING_INTERVAL":
+      return { ...state, pruningIntervalDays: Math.max(1, Math.min(365, Math.round(action.val))) };
     case "SET_CARE_REQUIRED":
       return { ...state, careRequired: action.val };
     case "SET_CARE_INTERVAL":
       return { ...state, careIntervalDays: Math.max(1, Math.min(90, action.val)) };
     case "SET_REPOT_INTERVAL_MONTHS":
-      return { ...state, repotIntervalMonths: Math.max(1, Math.min(12, action.val)) };
+      return { ...state, repotIntervalMonths: clampTaskInterval(action.val) };
     case "SET_WATER_INTERVAL_DAYS":
       return { ...state, waterIntervalDays: Math.max(1, Math.min(90, action.val)) };
 
@@ -251,6 +260,8 @@ const Ctx = createContext<{
     setMoistureInterval: (d: number) => void;
     setFertilizeRequired: (v: boolean) => void;
     setFertilizeInterval: (d: number) => void;
+    setPruningRequired: (v: boolean) => void;
+    setPruningInterval: (d: number) => void;
     setCareRequired: (v: boolean) => void;
     setCareInterval: (d: number) => void;
     setRepotIntervalMonths: (m: number) => void;
@@ -418,6 +429,8 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setMoistureInterval: (d: number) => dispatch({ type: "SET_MOISTURE_INTERVAL", val: d }),
       setFertilizeRequired: (v: boolean) => dispatch({ type: "SET_FERTILIZE_REQUIRED", val: v }),
       setFertilizeInterval: (d: number) => dispatch({ type: "SET_FERTILIZE_INTERVAL", val: d }),
+      setPruningRequired: (v: boolean) => dispatch({ type: "SET_PRUNING_REQUIRED", val: v }),
+      setPruningInterval: (d: number) => dispatch({ type: "SET_PRUNING_INTERVAL", val: d }),
       setCareRequired: (v: boolean) => dispatch({ type: "SET_CARE_REQUIRED", val: v }),
       setCareInterval: (d: number) => dispatch({ type: "SET_CARE_INTERVAL", val: d }),
       setRepotIntervalMonths: (m: number) => dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),

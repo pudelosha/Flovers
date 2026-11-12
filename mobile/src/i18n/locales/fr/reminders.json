@@ -18,7 +18,8 @@
       "moisture": "Brumisation",
       "fertilising": "Fertilisation",
       "care": "Entretien",
-      "repot": "Rempotage"
+      "repot": "Rempotage",
+      "pruning": "Taille"
     },
     "fab": {
       "add": "Ajouter un rappel",
@@ -30,7 +31,7 @@
     },
     "empty": {
       "title": "Aucun rappel",
-      "description": "Les rappels sont liés à des plantes spécifiques. Assurez-vous d’avoir créé au moins une plante.\n\nAppuyez sur le bouton « + » pour ajouter un rappel. Dans la fenêtre, vous choisirez la plante, le type (arrosage, brumisation, fertilisation, entretien ou rempotage), définirez la première date ainsi que la fréquence de répétition."
+      "description": "Ajoutez d’abord une plante, puis touchez « + » pour créer un rappel. Choisissez la plante, le type de tâche, la première date et la fréquence."
     },
     "menu": {
       "edit": "Modifier le rappel",

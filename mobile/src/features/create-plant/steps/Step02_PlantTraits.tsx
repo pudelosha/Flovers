@@ -582,6 +582,24 @@ export default function Step02_PlantTraits({
       });
     }
 
+    if (p?.pruning_required && p?.pruning_interval_days != null) {
+      out.push({
+        key: 'pruning_interval_days',
+        label: getTranslation(
+          'createPlant.step02.labels.pruningInterval',
+          'Pruning',
+        ),
+        icon: 'content-cut',
+        value: getTranslation(
+          'createPlant.step02.values.everyDays',
+          'Every {{count}} days',
+          {
+            count: p.pruning_interval_days,
+          },
+        ),
+      });
+    }
+
     if (p?.repot_required && p?.repot_interval_months != null) {
       out.push({
         key: 'repot_interval_months',

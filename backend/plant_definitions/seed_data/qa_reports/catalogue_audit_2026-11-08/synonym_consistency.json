@@ -1,0 +1,110 @@
+{
+  "scope": "Four verified synonym spot checks; not an exhaustive taxonomic synonym audit. African-violet synonym conflict is separately in task_recommendations.json. No records merged or modified.",
+  "pairs": [
+    {
+      "names": [
+        "Haworthia fasciata",
+        "Haworthiopsis fasciata"
+      ],
+      "external_ids": [
+        "haworthia_fasciata",
+        "haworthiopsis_fasciata"
+      ],
+      "evidence": "https://plants.ces.ncsu.edu/plants/haworthiopsis-fasciata/",
+      "identity_evidence": "NC State profile explicitly lists the former name under Previously known as.",
+      "differences": {
+        "recommended_pot_materials": [
+          [
+            "ceramic",
+            "plastic"
+          ],
+          [
+            "terracotta",
+            "plastic"
+          ]
+        ]
+      },
+      "interpretation": "Contradictory toxicity assertions need correction; differing optional pot materials are not automatically errors. Care interval differences need a shared, context-aware profile."
+    },
+    {
+      "names": [
+        "Heptapleurum actinophyllum",
+        "Schefflera actinophylla"
+      ],
+      "external_ids": [
+        "heptapleurum_actinophyllum",
+        "schefflera_actinophylla"
+      ],
+      "evidence": "https://plants.ces.ncsu.edu/plants/heptapleurum-actinophyllum/",
+      "identity_evidence": "NC State profile explicitly lists the former name under Previously known as.",
+      "differences": {
+        "repot_interval_months": [
+          12,
+          24
+        ],
+        "toxicity_en": [
+          "Non-toxic",
+          "Toxic to pets"
+        ]
+      },
+      "interpretation": "Contradictory toxicity assertions need correction; differing optional pot materials are not automatically errors. Care interval differences need a shared, context-aware profile."
+    },
+    {
+      "names": [
+        "Rosmarinus officinalis",
+        "Salvia rosmarinus"
+      ],
+      "external_ids": [
+        "rosmarinus_officinalis",
+        "salvia_rosmarinus"
+      ],
+      "evidence": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "identity_evidence": "NC State profile explicitly lists the former name under Previously known as.",
+      "differences": {
+        "repot_interval_months": [
+          12,
+          24
+        ],
+        "toxicity_en": [
+          "Toxic to pets",
+          "Non-toxic"
+        ]
+      },
+      "interpretation": "Contradictory toxicity assertions need correction; differing optional pot materials are not automatically errors. Care interval differences need a shared, context-aware profile."
+    },
+    {
+      "names": [
+        "Yucca elephantipes",
+        "Yucca gigantea"
+      ],
+      "external_ids": [
+        "yucca_elephantipes",
+        "yucca_gigantea"
+      ],
+      "evidence": "https://plants.ces.ncsu.edu/plants/yucca-gigantea/",
+      "identity_evidence": "NC State profile explicitly lists the former name under Previously known as.",
+      "differences": {
+        "recommended_soil_mixes": [
+          [
+            "cactus-succulent",
+            "all-purpose"
+          ],
+          [
+            "cactus-succulent"
+          ]
+        ],
+        "recommended_pot_materials": [
+          [
+            "plastic",
+            "ceramic"
+          ],
+          [
+            "ceramic",
+            "terracotta"
+          ]
+        ]
+      },
+      "interpretation": "Contradictory toxicity assertions need correction; differing optional pot materials are not automatically errors. Care interval differences need a shared, context-aware profile."
+    }
+  ]
+}

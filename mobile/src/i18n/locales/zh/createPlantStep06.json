@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "自动任务",
-      "subtitle": "我们可以根据植物的配置文件自动创建提醒（浇水、换盆、喷雾、施肥、护理）。",
+      "subtitle": "根据植物的需求选择提醒，然后调整提醒间隔。",
       "createAutoTasks": "为这株植物创建自动任务",
       "requiresPlantDefinition": "需要植物定义。",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "创建喷雾任务",
         "generateFertilisingTask": "创建施肥任务",
         "generateCareTask": "创建护理任务",
-        "generateRepottingTask": "创建换盆任务"
+        "generateRepottingTask": "创建换盆任务",
+        "generatePruningTask": "创建修剪任务"
       },
       "prompts": {
         "lastWatered": "最后一次浇水是什么时候？",

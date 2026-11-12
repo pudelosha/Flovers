@@ -2,7 +2,7 @@
   "createPlant": {
     "step06": {
       "title": "自動タスク",
-      "subtitle": "植物のプロフィールに基づいて、リマインダー（灌水、植え替え、ミスト、 fertilizing、手入れ）を自動的に作成できます。",
+      "subtitle": "植物に合ったリマインダーを選び、間隔を調整してください。",
       "createAutoTasks": "この植物の自動タスクを作成",
       "requiresPlantDefinition": "植物の定義が必要です。",
       "labels": {
@@ -10,7 +10,8 @@
         "generateMistingTask": "ミストタスクを作成",
         "generateFertilisingTask": "肥料タスクを作成",
         "generateCareTask": "手入れタスクを作成",
-        "generateRepottingTask": "植え替えタスクを作成"
+        "generateRepottingTask": "植え替えタスクを作成",
+        "generatePruningTask": "剪定タスクを作成"
       },
       "prompts": {
         "lastWatered": "最後に水をやったのはいつですか？",

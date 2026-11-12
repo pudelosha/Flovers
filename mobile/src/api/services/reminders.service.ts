@@ -4,7 +4,7 @@ export type ApiReminder = {
   access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
   id: number;
   plant: number;
-  type: "water" | "moisture" | "fertilize" | "care" | "repot";
+  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
   start_date: string;           // YYYY-MM-DD
   interval_value: number;
   interval_unit: "days" | "months";
@@ -96,7 +96,7 @@ export async function completeReminderTask(
 
 export type ApiReminderCreatePayload = {
   plant: number;
-  type: "water" | "moisture" | "fertilize" | "care" | "repot";
+  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
   start_date: string;           // YYYY-MM-DD (anchor date)
   interval_value: number;
   interval_unit: "days" | "months";
@@ -117,7 +117,7 @@ export async function createReminder(
 
 export type ApiReminderUpdatePayload = Partial<{
   plant: number;                // FK
-  type: "water" | "moisture" | "fertilize" | "care" | "repot";
+  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
   start_date: string;           // YYYY-MM-DD (anchor date)
   interval_value: number;
   interval_unit: "days" | "months";

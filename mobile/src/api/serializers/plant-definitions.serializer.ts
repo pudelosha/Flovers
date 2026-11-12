@@ -55,7 +55,10 @@ export type ApiPlantProfile = {
   moisture_interval_days?: number | null;
 
   fertilize_required?: boolean;
+
+  pruning_required?: boolean;
   fertilize_interval_days?: number | null;
+  pruning_interval_days?: number | null;
 
   repot_required?: boolean;
   repot_interval_months?: number | null;
@@ -102,6 +105,8 @@ export function serializePlantProfile(p: ApiPlantProfile): PlantProfile {
 
     fertilize_required: p.fertilize_required,
     fertilize_interval_days: p.fertilize_interval_days,
+    pruning_required: p.pruning_required === true,
+    pruning_interval_days: p.pruning_interval_days,
 
     repot_required: p.repot_required,
     repot_interval_months: p.repot_interval_months,

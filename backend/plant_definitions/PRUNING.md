@@ -25,8 +25,11 @@ uses the model defaults. To update guidance, supply both fields explicitly:
 ```
 
 This is a schema example, not a recommendation for any particular species.
-To remove a recommendation, use `false` and `null`. No catalogue files have been
-reviewed or changed as part of this backend-only stage.
+To remove a recommendation, use `false` and `null`. The subsequent reviewed
+catalogue rollout is applied by migration `0005_reviewed_catalogue_corrections`.
+Its frozen leaf changes preserve unrelated administrator edits and never alter
+existing user plants or reminder schedules. See the catalogue audit application
+report for the corrections and remaining review cases.
 
 ## User plants and reminders
 

@@ -18,7 +18,8 @@
       "moisture": "Rociado",
       "fertilising": "Fertilización",
       "care": "Cuidado",
-      "repot": "Trasplante"
+      "repot": "Trasplante",
+      "pruning": "Poda"
     },
     "fab": {
       "add": "Añadir recordatorio",
@@ -30,7 +31,7 @@
     },
     "empty": {
       "title": "No hay recordatorios",
-      "description": "Los recordatorios están asociados a plantas específicas. Asegúrate de tener al menos una planta creada.\n\nToca el botón '+' para añadir un recordatorio. En la ventana seleccionarás la planta, el tipo (riego, rociado, fertilización, cuidado o trasplante), establecerás la primera fecha y la frecuencia de repetición."
+      "description": "Añade primero una planta y pulsa «+» para crear un recordatorio. Elige la planta, el tipo de tarea, la primera fecha y la frecuencia."
     },
     "menu": {
       "edit": "Editar recordatorio",

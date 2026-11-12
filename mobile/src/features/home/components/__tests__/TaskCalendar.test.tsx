@@ -9,6 +9,10 @@ jest.mock("react-native-calendars/src/calendar",()=> (props:any)=>require("react
 jest.mock("../../../../app/providers/LanguageProvider",()=>({useLanguage:()=>({currentLanguage:"en"})}));
 jest.mock("../../../../app/providers/SettingsProvider",()=>({useSettings:()=>({settings:{dateFormat:"YYYY-MM-DD"}})}));
 const task=(id:string,date:string,type="watering")=>({id,dueDate:new Date(`${date}T12:00:00`),type,plant:"Fern",location:"Room",due:"",intervalValue:7,intervalUnit:"days"} as any);
+it("shows pruning dots alongside other tasks on the same day",()=>{
+ const view=render(<TaskCalendar tasks={[task("1","2026-11-08","pruning"),task("2","2026-11-08")]} selectedDate="2026-11-08" onSelectDate={jest.fn()}/>);
+ expect(view.UNSAFE_getByType(Calendar).props.markedDates["2026-11-08"].dots).toEqual(expect.arrayContaining([expect.objectContaining({key:"pruning-1",color:"#ff922b"})]));
+});
 it("marks real task due dates only, including shared and postponed tasks without projecting recurrence",()=>{
  const shared={...task("3","2026-11-07","care"),access:{is_owner:false,can_complete_tasks:true}};
  const view=render(<TaskCalendar tasks={[task("1","2026-10-28"),task("2","2026-11-04"),shared,task("4","2026-11-04")]} selectedDate="2026-11-01" onSelectDate={jest.fn()}/>);

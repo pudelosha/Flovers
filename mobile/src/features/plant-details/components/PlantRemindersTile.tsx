@@ -20,6 +20,7 @@ function toDisplayType(t?: string) {
   if (x === "water" || x === "watering") return "watering";
   if (x === "fertilize" || x === "fertilising" || x === "fertilizing") return "fertilising";
   if (x === "moisture" || x === "misting") return "moisture";
+  if (x === "pruning") return "pruning";
   if (x === "care") return "care";
   if (x === "repot" || x === "repotting") return "repot";
   return "care";

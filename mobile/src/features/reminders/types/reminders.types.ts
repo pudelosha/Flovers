@@ -1,4 +1,4 @@
-export type ReminderType = "watering" | "moisture" | "fertilising" | "care" | "repot";
+export type ReminderType = "watering" | "moisture" | "fertilising" | "pruning" | "care" | "repot";
 
 export type Reminder = {
   access?: import("../../../shared/utils/plantAccess").ApiPlantAccess;

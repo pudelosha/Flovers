@@ -28,7 +28,7 @@ type Props = {
 };
 
 const DAYS_OPTIONS = [30, 60, 180];
-const TYPE_OPTIONS: TaskType[] = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
+const TYPE_OPTIONS: TaskType[] = ['watering', 'moisture', 'fertilising', 'pruning', 'care', 'repot'];
 
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(255,255,255,${alpha})`;

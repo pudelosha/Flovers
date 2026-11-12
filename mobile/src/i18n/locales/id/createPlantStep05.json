@@ -154,6 +154,26 @@
         "peat-free": {
           "label": "Campuran bebas gambut",
           "description": "Pilihan yang lebih berkelanjutan; komposisi bervariasi menurut merek."
+        },
+        "air-plant": {
+          "label": "Tanaman udara tanpa tanah",
+          "description": "Untuk tanaman udara yang ditempelkan pada penyangga tanpa tanah; bukan media pot."
+        },
+        "aquatic": {
+          "label": "Media tanaman air",
+          "description": "Media tanaman air atau tanah lempung berat yang sesuai; bukan media pot tanaman dalam ruangan biasa."
+        },
+        "carnivorous-bog": {
+          "label": "Karnivora rawa",
+          "description": "Media asam, miskin nutrisi, dan tanpa pupuk untuk tanaman karnivora rawa."
+        },
+        "nepenthes": {
+          "label": "Media Nepenthes",
+          "description": "Media berongga dan miskin nutrisi untuk Nepenthes, tanpa pupuk tambahan."
+        },
+        "pinguicula": {
+          "label": "Media Pinguicula",
+          "description": "Media mineral berongga dan miskin nutrisi untuk Pinguicula tropis, tanpa pupuk tambahan."
         }
       }
     }

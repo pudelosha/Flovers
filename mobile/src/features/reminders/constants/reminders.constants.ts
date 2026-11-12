@@ -15,6 +15,7 @@ export const ACCENT_BY_TYPE: Record<ReminderType, string> = {
   watering: "#4dabf7",
   moisture: "#20c997",
   fertilising: "#ffd43b",
+  pruning: "#ff922b",
   care: "#e599f7",
   repot: "#8B5E3C",
 };
@@ -24,6 +25,7 @@ export const ICON_BY_TYPE: Record<ReminderType, string> = {
   watering: "water",
   moisture: "spray",
   fertilising: "leaf",
+  pruning: "content-cut",
   care: "flower",
   repot: "pot",
 };

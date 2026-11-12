@@ -34,7 +34,7 @@ type Props = {
   onClearAll: () => void;
 };
 
-const TYPE_OPTIONS: TaskType[] = ['watering', 'moisture', 'fertilising', 'care', 'repot'];
+const TYPE_OPTIONS: TaskType[] = ['watering', 'moisture', 'fertilising', 'pruning', 'care', 'repot'];
 
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;
