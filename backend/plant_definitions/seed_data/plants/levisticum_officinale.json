@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "levisticum_officinale.jpg",
@@ -154,7 +156,10 @@
           "hi": "हल्का विषाक्त",
           "zh": "轻微有毒",
           "ja": "軽度毒性",
-          "ko": "약간 독성이 있음"
+          "ko": "약간 독성이 있음",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

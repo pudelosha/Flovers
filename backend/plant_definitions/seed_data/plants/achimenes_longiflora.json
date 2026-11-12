@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "achimenes_longiflora.jpg",
@@ -154,7 +156,10 @@
           "hi": "विषाक्तता अज्ञात",
           "zh": "毒性不明",
           "ja": "毒性不明",
-          "ko": "독성 불명"
+          "ko": "독성 불명",
+          "id": "Data toksisitas masih terbatas",
+          "ru": "Данных о токсичности недостаточно",
+          "tr": "Zehirliliğe dair veri sınırlı"
         }
       }
     },

@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 60,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 36,
   "image_hero": "ariocarpus_fissuratus.jpg",
@@ -152,7 +154,10 @@
           "hi": "खाने पर विषैली",
           "zh": "误食有毒",
           "ja": "摂取で有害",
-          "ko": "먹으면 유해"
+          "ko": "먹으면 유해",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

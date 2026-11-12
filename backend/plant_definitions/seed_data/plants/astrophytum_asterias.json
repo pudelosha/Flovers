@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 36,
   "image_hero": "astrophytum_asterias.jpg",
@@ -153,7 +155,10 @@
           "hi": "विषैला नहीं",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "무독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },

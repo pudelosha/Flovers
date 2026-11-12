@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "euphorbia_tirucalli.jpg",
@@ -154,7 +156,10 @@
           "hi": "रस जलनकारी",
           "zh": "汁液刺激性",
           "ja": "樹液が刺激性",
-          "ko": "수액 자극성"
+          "ko": "수액 자극성",
+          "id": "Getah beracun",
+          "ru": "Сок ядовит",
+          "tr": "Özsuyu zehirlidir"
         }
       }
     },

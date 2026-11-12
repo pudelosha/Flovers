@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "amorphophallus_konjac.jpg",
@@ -154,7 +156,10 @@
           "hi": "कच्चा विषैला",
           "zh": "生食有毒",
           "ja": "生食は有毒",
-          "ko": "생식 시 유독"
+          "ko": "생식 시 유독",
+          "id": "Beracun jika dimakan mentah",
+          "ru": "Ядовито в сыром виде",
+          "tr": "Çiğ yenirse zehirlidir"
         }
       }
     },

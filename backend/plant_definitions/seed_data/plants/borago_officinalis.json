@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "borago_officinalis.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Excess intake can harm the liver",
+          "pl": "Nadmiar może uszkadzać wątrobę",
+          "de": "Übermäßiger Verzehr schädigt die Leber",
+          "fr": "Un excès peut abîmer le foie",
+          "it": "Un eccesso può danneggiare il fegato",
+          "es": "El exceso puede dañar el hígado",
+          "pt": "O excesso pode lesar o fígado",
+          "ar": "الإفراط قد يضر الكبد",
+          "hi": "अधिक सेवन से यकृत को हानि",
+          "zh": "过量摄入可能损伤肝脏",
+          "ja": "過剰摂取で肝臓に害を及ぼすおそれ",
+          "ko": "과다 섭취 시 간 손상 우려",
+          "id": "Konsumsi berlebihan merusak hati",
+          "ru": "Избыток может повредить печень",
+          "tr": "Aşırı tüketim karaciğere zarar verebilir"
         }
       }
     },

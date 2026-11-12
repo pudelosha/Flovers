@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 21,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "antirrhinum_majus.jpg",
@@ -153,7 +155,10 @@
           "hi": "पालतू हेतु सुरक्षित",
           "zh": "对宠物无毒",
           "ja": "ペットに無害",
-          "ko": "반려동물 무독성"
+          "ko": "반려동물 무독성",
+          "id": "Tidak beracun bagi hewan peliharaan",
+          "ru": "Неядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirsiz"
         }
       }
     },

@@ -18,6 +18,8 @@
   "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 365,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 36,
   "image_hero": "cupressus_macrocarpa.jpg",
@@ -152,7 +154,10 @@
           "hi": "हल्की विषैली",
           "zh": "轻微有毒",
           "ja": "軽い毒性",
-          "ko": "약한 독성"
+          "ko": "약한 독성",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

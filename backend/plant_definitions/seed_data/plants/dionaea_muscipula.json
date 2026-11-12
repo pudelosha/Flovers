@@ -11,7 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acid-loving"
+    "carnivorous-bog"
   ],
   "water_required": true,
   "water_interval_days": 2,
@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 18,
   "image_hero": "dionaea_muscipula.jpg",
@@ -47,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, low-nutrient",
-          "pl": "Kwaśne, jałowe",
-          "de": "Sauer, nährstoffarm",
-          "fr": "Acide, pauvre",
-          "it": "Acido, povero",
-          "es": "Ácido, pobre",
-          "pt": "Ácido, pobre",
-          "ar": "حمضي فقير",
-          "hi": "अम्लीय, गरीब",
-          "zh": "酸性贫瘠",
-          "ja": "酸性で低栄養",
-          "ko": "산성, 저영양"
+          "en": "Acidic, nutrient-poor bog mix",
+          "pl": "Kwaśne, ubogie podłoże bagienne",
+          "de": "Saures, nährstoffarmes Moorsubstrat",
+          "fr": "Substrat de marais acide, peu nutritif",
+          "it": "Substrato acido e povero per palustri",
+          "es": "Mezcla ácida y pobre para palustres",
+          "pt": "Substrato ácido e pobre para palustres",
+          "ar": "وسط مستنقعي حمضي قليل المغذيات",
+          "hi": "अम्लीय, कम पोषक दलदली मिश्रण",
+          "zh": "酸性、低养分的沼泽植物基质",
+          "ja": "酸性で養分の少ない湿地性食虫植物用土",
+          "ko": "산성이며 영양분이 적은 습지용 배합토",
+          "id": "Media rawa asam, rendah hara",
+          "ru": "Кислая бедная смесь для болотных",
+          "tr": "Asidik, az besinli bataklık harcı"
         }
       }
     },
@@ -153,7 +158,10 @@
           "hi": "विषहीन",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "무독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },

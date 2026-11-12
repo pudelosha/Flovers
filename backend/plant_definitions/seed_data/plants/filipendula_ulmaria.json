@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "filipendula_ulmaria.jpg",
@@ -154,7 +156,10 @@
           "hi": "गैर-विषैली (रिप.)",
           "zh": "未见毒性报告",
           "ja": "毒性報告なし",
-          "ko": "독성 보고 없음"
+          "ko": "독성 보고 없음",
+          "id": "Dilaporkan tidak beracun",
+          "ru": "Считается неядовитым",
+          "tr": "Zehirsiz olduğu bildirilmiş"
         }
       }
     },

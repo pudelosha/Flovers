@@ -11,8 +11,7 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "acid-loving",
-    "green-plants"
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "vaccinium_myrtillus.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic soil",
-          "pl": "Kwaśna gleba",
-          "de": "Saurer Boden",
-          "fr": "Sol acide",
-          "it": "Terreno acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "अम्लीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土壌",
-          "ko": "산성 토양"
+          "en": "Acidic, well-draining mix",
+          "pl": "Kwaśne, przepuszczalne podłoże",
+          "de": "Saures, gut durchlässiges Substrat",
+          "fr": "Substrat acide et bien drainé",
+          "it": "Substrato acido e ben drenante",
+          "es": "Sustrato ácido y bien drenado",
+          "pt": "Substrato ácido e bem drenado",
+          "ar": "خليط حمضي جيد التصريف",
+          "hi": "अम्लीय, अच्छी निकासी वाला मिश्रण",
+          "zh": "酸性、排水良好的基质",
+          "ja": "酸性で水はけのよい用土",
+          "ko": "산성이며 배수가 좋은 배양토",
+          "id": "Media asam dengan drainase baik",
+          "ru": "Кислая, хорошо дренированная смесь",
+          "tr": "Asidik, iyi drene olan karışım"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "गैर विषैला",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "무독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },

@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "bellis_perennis.jpg",
@@ -153,7 +155,10 @@
           "hi": "हल्का विषैला",
           "zh": "轻微毒性",
           "ja": "軽度に有毒",
-          "ko": "경미하게 유독"
+          "ko": "경미하게 유독",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

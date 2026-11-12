@@ -20,6 +20,8 @@
   "moisture_interval_days": 1,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 30,
   "image_hero": "cissus_antarctica.jpg",
@@ -154,7 +156,10 @@
           "hi": "आमतौर पर गैर-विषैला",
           "zh": "通常无毒",
           "ja": "一般に無毒",
-          "ko": "대체로 무독성"
+          "ko": "대체로 무독성",
+          "id": "Umumnya tidak beracun",
+          "ru": "Обычно неядовито",
+          "tr": "Genellikle zehirsiz"
         }
       }
     },

@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "papaver_rhoeas.jpg",
@@ -154,7 +156,10 @@
           "hi": "उपभोग करने पर विषाक्त",
           "zh": "摄入后有毒",
           "ja": "摂取すると毒性がある",
-          "ko": "섭취 시 독성"
+          "ko": "섭취 시 독성",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

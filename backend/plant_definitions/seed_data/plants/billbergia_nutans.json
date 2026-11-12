@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 21,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "billbergia_nutans.jpg",
@@ -153,7 +155,10 @@
           "hi": "गैर-विषैली (रिपोर्ट)",
           "zh": "据称无毒",
           "ja": "無毒と報告",
-          "ko": "무독성(보고됨)"
+          "ko": "무독성(보고됨)",
+          "id": "Dilaporkan tidak beracun",
+          "ru": "Считается неядовитым",
+          "tr": "Zehirsiz olduğu bildirilmiş"
         }
       }
     },

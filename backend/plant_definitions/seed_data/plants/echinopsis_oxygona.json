@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 60,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "echinopsis_oxygona.jpg",
@@ -153,7 +155,10 @@
           "hi": "पालतुओं हेतु सुरक्षित",
           "zh": "对宠物无毒",
           "ja": "ペットに無毒",
-          "ko": "반려동물 무독성"
+          "ko": "반려동물 무독성",
+          "id": "Tidak beracun bagi hewan peliharaan",
+          "ru": "Неядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirsiz"
         }
       }
     },

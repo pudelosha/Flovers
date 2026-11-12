@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "fagus_sylvatica.jpg",
@@ -154,7 +156,10 @@
           "hi": "बीज अधिक में हानिकारक",
           "zh": "种子多食不适",
           "ja": "種子は多食で不調",
-          "ko": "씨앗 과다 섭취 주의"
+          "ko": "씨앗 과다 섭취 주의",
+          "id": "Kacangnya mengiritasi jika dimakan",
+          "ru": "Орехи раздражают при проглатывании",
+          "tr": "Yenirse yemişleri tahriş eder"
         }
       }
     },

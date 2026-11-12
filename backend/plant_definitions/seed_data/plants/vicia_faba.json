@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "vicia_faba.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "G6PD deficiency: favism risk",
+          "pl": "Niedobór G6PD: ryzyko fawizmu",
+          "de": "G6PD-Mangel: Favismusrisiko",
+          "fr": "Déficit en G6PD : risque de favisme",
+          "it": "Deficit di G6PD: rischio di favismo",
+          "es": "Déficit de G6PD: riesgo de favismo",
+          "pt": "Défice de G6PD: risco de favismo",
+          "ar": "نقص G6PD: خطر التفول",
+          "hi": "G6PD की कमी: फेविज़्म का जोखिम",
+          "zh": "G6PD缺乏者有蚕豆病风险",
+          "ja": "G6PD欠損者はソラマメ中毒に注意",
+          "ko": "G6PD 결핍 시 잠두중독 위험",
+          "id": "Defisiensi G6PD: risiko favisme",
+          "ru": "Дефицит G6PD: риск фавизма",
+          "tr": "G6PD eksikliğinde favizm riski"
         }
       }
     },

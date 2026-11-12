@@ -20,6 +20,8 @@
   "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": true,
+  "pruning_interval_days": 180,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "scindapsus_pictus.jpg",
@@ -154,7 +156,10 @@
           "hi": "पालतू जानवरों के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "애완 동물에게 유독"
+          "ko": "애완 동물에게 유독",
+          "id": "Beracun bagi hewan peliharaan",
+          "ru": "Ядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirli"
         }
       }
     },

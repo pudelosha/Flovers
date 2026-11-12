@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "mammillaria_elongata.jpg",
@@ -154,7 +156,10 @@
           "hi": "अविषाक्त",
           "zh": "无毒",
           "ja": "非毒性",
-          "ko": "비독성"
+          "ko": "비독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },

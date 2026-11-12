@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "euphorbia_ingens.jpg",
@@ -152,7 +154,10 @@
           "hi": "दूधिया रस विषैला",
           "zh": "乳汁有毒",
           "ja": "乳液は有毒",
-          "ko": "유액 독성"
+          "ko": "유액 독성",
+          "id": "Getah putih beracun",
+          "ru": "Млечный сок ядовит",
+          "tr": "Sütlü özsuyu zehirlidir"
         }
       }
     },

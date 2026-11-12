@@ -1,6 +1,6 @@
 {
   "external_id": "streptocarpus_ionanthus",
-  "name": "Cape Primrose",
+  "name": "African Violet",
   "latin": "Streptocarpus ionanthus",
   "sun": "medium",
   "water": "medium",
@@ -16,10 +16,12 @@
   ],
   "water_required": true,
   "water_interval_days": 7,
-  "moisture_required": true,
-  "moisture_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "streptocarpus_ionanthus.jpg",
@@ -154,7 +156,10 @@
           "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "무독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },
@@ -218,52 +223,64 @@
   ],
   "translations": {
     "en": {
-      "common_name": "Cape Primrose",
-      "description": "Streptocarpus ionanthus, commonly called Cape Primrose, is an ornamental plant grown for its ornamental growth. Place it in bright, indirect or filtered light. Use well-drained soil and water when the top layer of the potting mix begins to dry. It prefers higher humidity and temperatures around 18–24°C. Avoid overwatering."
+      "common_name": "African violet",
+      "description": "Streptocarpus ionanthus, also known as Saintpaulia ionantha or African violet, is a flowering houseplant. Give it bright, indirect light and a moist, well-drained potting medium. Keep water off its leaves and crown; provide humidity without routine foliar misting."
     },
     "pl": {
-      "common_name": "Pierwiosnek z Kapsztadu",
-      "description": "Streptocarpus ionanthus, znana jako Pierwiosnek z Kapsztadu, to roślina typu roślina ozdobna, uprawiana ze względu na walory ozdobne. Ustaw ją w jasnym, rozproszonym lub filtrowanym świetle. Zastosuj dobrze przepuszczalne podłoże i podlewaj, gdy wierzchnia warstwa podłoża zaczyna przesychać. Preferuje wyższą wilgotność powietrza i temperatury około 18–24°C. Unikaj przelania."
+      "common_name": "Fiołek afrykański",
+      "description": "Streptocarpus ionanthus, znany też jako Saintpaulia ionantha lub fiołek afrykański, to kwitnąca roślina doniczkowa. Potrzebuje jasnego, rozproszonego światła i wilgotnego, przepuszczalnego podłoża. Nie mocz liści ani środka rozety; zapewnij wilgotne powietrze bez regularnego zraszania liści."
     },
     "de": {
-      "common_name": "Kap-Primel",
-      "description": "Streptocarpus ionanthus, auch Kap-Primel genannt, ist eine Pflanze vom Typ Zierpflanze und wird vor allem für den Zierwert kultiviert. Stelle sie an einen Platz mit hellem, indirektem oder gefiltertem Licht. Verwende ein gut drainierendes Substrat und gieße, wenn die obere Substratschicht zu trocknen beginnt. Sie bevorzugt höhere Luftfeuchtigkeit und Temperaturen um 18–24°C. Vermeide Überwässerung."
+      "common_name": "Usambaraveilchen",
+      "description": "Streptocarpus ionanthus, auch Saintpaulia ionantha oder Usambaraveilchen, ist eine blühende Zimmerpflanze. Sie braucht helles indirektes Licht und feuchtes, gut drainiertes Substrat. Blätter und Pflanzenmitte nicht benetzen; Luftfeuchtigkeit ohne regelmäßiges Besprühen der Blätter schaffen."
     },
     "fr": {
-      "common_name": "Primevère du Cap",
-      "description": "Streptocarpus ionanthus, appelée Primevère du Cap, est une plante de type plante ornementale, cultivée pour son intérêt ornemental. Placez-la dans une lumière vive indirecte ou filtrée. Utilisez un substrat bien drainant et arrosez quand la surface du substrat commence à sécher. Elle préfère une humidité plus élevée et des températures autour de 18–24°C. Évitez les excès d’arrosage."
+      "common_name": "Violette africaine",
+      "description": "Streptocarpus ionanthus, aussi appelé Saintpaulia ionantha ou violette africaine, est une plante d’intérieur fleurie. Il demande une lumière vive indirecte et un substrat humide et drainant. Évitez de mouiller les feuilles et le cœur ; maintenez l’humidité sans brumisation régulière du feuillage."
     },
     "it": {
-      "common_name": "Primula del Capo",
-      "description": "Streptocarpus ionanthus, chiamata anche Primula del Capo, è una pianta di tipo pianta ornamentale, coltivata per il valore ornamentale. Tienila in luce intensa indiretta o filtrata. Usa un substrato ben drenante e annaffia quando lo strato superiore del substrato inizia ad asciugarsi. Preferisce umidità più alta e temperature intorno a 18–24°C. Evita l’eccesso d’acqua."
+      "common_name": "Violetta africana",
+      "description": "Streptocarpus ionanthus, noto anche come Saintpaulia ionantha o violetta africana, è una pianta d’appartamento fiorita. Richiede luce intensa indiretta e un substrato umido e drenante. Evita acqua sulle foglie e al centro della rosetta; aumenta l’umidità senza nebulizzare regolarmente le foglie."
     },
     "es": {
-      "common_name": "Prímula del Cabo",
-      "description": "Streptocarpus ionanthus, conocida como Prímula del Cabo, es una planta de tipo planta ornamental, cultivada principalmente por su valor ornamental. Colócala con luz brillante indirecta o filtrada. Usa un sustrato con buen drenaje y riega cuando la capa superior del sustrato empiece a secarse. Prefiere humedad más alta y temperaturas alrededor de 18–24°C. Evita el exceso de riego."
+      "common_name": "Violeta africana",
+      "description": "Streptocarpus ionanthus, también llamado Saintpaulia ionantha o violeta africana, es una planta de interior con flores. Necesita luz intensa indirecta y un medio húmedo y bien drenado. Evita mojar las hojas y el centro de la roseta; aporta humedad sin pulverizar regularmente el follaje."
     },
     "pt": {
-      "common_name": "Primula do Cabo",
-      "description": "Streptocarpus ionanthus, conhecida como Primula do Cabo, é uma planta do tipo planta ornamental, cultivada principalmente para o valor ornamental. Coloque-a em luz forte indireta ou filtrada. Use um substrato bem drenante e regue quando a camada superior do substrato começar a secar. Prefere umidade mais alta e temperaturas em torno de 18–24°C. Evite excesso de rega."
+      "common_name": "Violeta-africana",
+      "description": "Streptocarpus ionanthus, também chamado Saintpaulia ionantha ou violeta-africana, é uma planta de interior florida. Precisa de luz intensa indireta e de um substrato húmido e drenante. Evita molhar as folhas e o centro da roseta; proporciona humidade sem pulverizar regularmente a folhagem."
     },
     "ar": {
-      "common_name": "زهرة كيب",
-      "description": "Streptocarpus ionanthus، المعروفة باسم زهرة كيب، هي نبات زينة تُزرع من أجل قيمته الزخرفية. ضعها في ضوء ساطع غير مباشر أو مرشح. استخدم تربة جيدة التصريف واسقِ عندما تبدأ الطبقة العلوية من التربة بالجفاف. تفضل رطوبة أعلى ودرجات حرارة حول 18–24°C. تجنب الإفراط في الري."
+      "common_name": "البنفسج الإفريقي",
+      "description": "ستربتوكاربس إيونانثس، المعروف أيضًا باسم سانتبوليا إيونانثا أو البنفسج الإفريقي، نبات منزلي مزهر. يحتاج إلى ضوء ساطع غير مباشر ووسط رطب جيد التصريف. تجنب تبليل الأوراق وقلب النبات؛ وفّر الرطوبة دون رش الأوراق بانتظام."
     },
     "hi": {
-      "common_name": "केप प्राइमरोस",
-      "description": "Streptocarpus ionanthus, जिसे केप प्राइमरोस कहा जाता है, सजावटी पौधा है जिसे सजावटी गुणों के लिए उगाया जाता है। इसे तेज़, अप्रत्यक्ष या छनकर आने वाली रोशनी में रखें। अच्छी जलनिकासी वाला मिश्रण का उपयोग करें और ऊपरी परत सूखने लगे तो पानी दें। इसे अधिक आर्द्रता और लगभग 18–24°C तापमान पसंद है। अधिक पानी देने से बचें।"
+      "common_name": "अफ्रीकी वायलेट",
+      "description": "स्ट्रेप्टोकार्पस आयोनान्थस, जिसे सेंटपॉलिया आयोनान्था या अफ्रीकी वायलेट भी कहते हैं, फूल देने वाला घरेलू पौधा है। इसे तेज़ अप्रत्यक्ष रोशनी और नम, अच्छी निकासी वाला मिश्रण दें। पत्तियों और रोसेट के बीच पानी न डालें; नियमित पत्ती छिड़काव के बिना हवा में नमी बढ़ाएँ।"
     },
     "zh": {
-      "common_name": "开普长春花",
-      "description": "Streptocarpus ionanthus，通常称为开普长春花，是一种观赏植物，主要用于观赏价值。 放在明亮散射光或过滤光处。 使用排水良好的基质，并表层基质开始变干时再浇水。 它偏好较高空气湿度，温度约18–24°C。 避免过度浇水。"
+      "common_name": "非洲堇",
+      "description": "非洲堇的学名为 Streptocarpus ionanthus，旧名 Saintpaulia ionantha，是室内开花植物。需要明亮散射光和湿润、排水良好的基质。避免叶片和株心沾水；增加空气湿度时，不要依靠定期喷湿叶片。"
     },
     "ja": {
-      "common_name": "ケーププリムローズ",
-      "description": "Streptocarpus ionanthus（ケーププリムローズ）は、観賞価値を楽しむために育てる観賞植物です。 明るい間接光またはフィルター越しの光に置きます。 水はけの良い用土を使い、用土の表面が乾き始めたら水やりします。 高めの湿度と18–24°C前後の温度を好みます。 水のやり過ぎを避けます。"
+      "common_name": "セントポーリア",
+      "description": "ストレプトカルプス・イオナンタは旧名セントポーリア・イオナンタでも知られる室内向けの花きです。明るい間接光と湿り気のある水はけのよい用土を好みます。葉や株の中心に水をかけず、定期的な葉への霧吹き以外の方法で湿度を確保します。"
     },
     "ko": {
-      "common_name": "케이프 프림로즈",
-      "description": "Streptocarpus ionanthus(케이프 프림로즈)는 관상 가치을/를 위해 기르는 관상식물입니다. 밝은 간접광 또는 여과광에 두세요. 배수가 좋은 흙을 사용하고 겉흙이 마르기 시작하면 물을 주세요. 높은 습도와 약 18–24°C의 온도를 선호합니다. 과습을 피하세요."
+      "common_name": "아프리칸 바이올렛",
+      "description": "스트렙토카르푸스 이오난투스는 세인트폴리아 이오난타 또는 아프리칸 바이올렛이라고도 하는 실내 꽃식물입니다. 밝은 간접광과 촉촉하고 배수가 좋은 배양토가 필요합니다. 잎과 포기 중심에 물이 닿지 않게 하고, 잎에 정기적으로 분무하는 대신 공기 습도를 높여 주세요."
+    },
+    "id": {
+      "description": "Streptocarpus ionanthus, juga dikenal sebagai Saintpaulia ionantha atau violet Afrika, adalah tanaman hias berbunga. Berikan cahaya terang tidak langsung dan media lembap dengan drainase baik. Hindari air pada daun dan pusat roset; tingkatkan kelembapan tanpa rutin menyemprot dedaunan.",
+      "common_name": "Violet Afrika"
+    },
+    "ru": {
+      "description": "Стрептокарпус ионантус, также известный как сенполия ионанта или узамбарская фиалка, — цветущее комнатное растение. Ему нужны яркий рассеянный свет и влажный, хорошо дренированный субстрат. Не мочите листья и центр розетки; повышайте влажность воздуха без регулярного опрыскивания листвы.",
+      "common_name": "Узамбарская фиалка"
+    },
+    "tr": {
+      "description": "Streptocarpus ionanthus, Saintpaulia ionantha veya Afrika menekşesi olarak da bilinen çiçekli bir ev bitkisidir. Aydınlık dolaylı ışık ve nemli, iyi drene olan ortam ister. Yaprakları ve rozet merkezini ıslatmayın; yapraklara düzenli su püskürtmeden hava nemini artırın.",
+      "common_name": "Afrika menekşesi"
     }
   },
   "sources": {

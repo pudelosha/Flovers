@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "heliconia_psittacorum.jpg",
@@ -154,7 +156,10 @@
           "hi": "थोड़ा विषैला",
           "zh": "轻度有毒",
           "ja": "軽度毒性",
-          "ko": "약간 독성"
+          "ko": "약간 독성",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "agave_parryi.jpg",
@@ -152,7 +154,10 @@
           "hi": "रस से जलन",
           "zh": "汁液刺激性",
           "ja": "樹液は刺激性",
-          "ko": "수액 자극성"
+          "ko": "수액 자극성",
+          "id": "Getah mengiritasi",
+          "ru": "Сок раздражает",
+          "tr": "Özsuyu tahriş eder"
         }
       }
     },

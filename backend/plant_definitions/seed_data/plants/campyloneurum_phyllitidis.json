@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "campyloneurum_phyllitidis.jpg",
@@ -153,7 +155,10 @@
           "hi": "विषाक्तता अज्ञात",
           "zh": "毒性未知",
           "ja": "毒性は不明",
-          "ko": "독성 정보 없음"
+          "ko": "독성 정보 없음",
+          "id": "Data toksisitas masih terbatas",
+          "ru": "Данных о токсичности недостаточно",
+          "tr": "Zehirliliğe dair veri sınırlı"
         }
       }
     },

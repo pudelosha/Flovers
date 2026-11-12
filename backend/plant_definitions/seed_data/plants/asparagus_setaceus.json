@@ -19,6 +19,8 @@
   "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "asparagus_setaceus.jpg",
@@ -142,18 +144,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Für Haustiere giftig",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica p/ animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에 유독"
+          "en": "Fruit harmful; sap irritates skin",
+          "pl": "Owoce szkodliwe; sok drażni skórę",
+          "de": "Früchte schädlich; Saft reizt Haut",
+          "fr": "Fruits nocifs ; sève irritante",
+          "it": "Frutti nocivi; linfa irritante",
+          "es": "Frutos nocivos; savia irritante",
+          "pt": "Frutos nocivos; seiva irritante",
+          "ar": "ثمارها ضارة؛ عصارتها مهيجة",
+          "hi": "फल हानिकारक; रस से त्वचा में जलन",
+          "zh": "果实有害；汁液可刺激皮肤",
+          "ja": "果実は有害・樹液は刺激性",
+          "ko": "열매는 유해; 수액은 피부 자극",
+          "id": "Buah berbahaya; getah iritasi kulit",
+          "ru": "Плоды вредны; сок раздражает кожу",
+          "tr": "Meyvesi zararlı; özsuyu tahriş eder"
         }
       }
     },

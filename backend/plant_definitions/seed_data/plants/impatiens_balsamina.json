@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "impatiens_balsamina.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैले",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Harmful raw in large amounts",
+          "pl": "Surowa szkodliwa w dużych ilościach",
+          "de": "Roh in großen Mengen schädlich",
+          "fr": "Nocive crue en grande quantité",
+          "it": "Nociva cruda in grandi quantità",
+          "es": "Nociva cruda en grandes cantidades",
+          "pt": "Crua é nociva em grandes quantidades",
+          "ar": "ضارة نيئة بكميات كبيرة",
+          "hi": "कच्चा अधिक मात्रा में हानिकारक",
+          "zh": "大量生食有害",
+          "ja": "大量の生食は有害",
+          "ko": "생으로 다량 섭취 시 유해함",
+          "id": "Mentah berbahaya jika terlalu banyak",
+          "ru": "Сырое вредно в больших количествах",
+          "tr": "Çiğ olarak çok tüketilirse zararlı"
         }
       }
     },

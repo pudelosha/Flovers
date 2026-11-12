@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "all-purpose",
-    "acid-loving"
+    "all-purpose"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "helleborus_niger.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenato",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "جيد التصريف",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好的排水",
-          "ja": "よく排水される土",
-          "ko": "잘 배수된 토양"
+          "en": "Humus-rich; neutral to alkaline",
+          "pl": "Próchniczne; obojętne do zasadowego",
+          "de": "Humusreich; neutral bis alkalisch",
+          "fr": "Riche en humus ; neutre à alcalin",
+          "it": "Ricco di humus; neutro o alcalino",
+          "es": "Rico en humus; neutro a alcalino",
+          "pt": "Rico em húmus; neutro a alcalino",
+          "ar": "غني بالدبال؛ متعادل إلى قلوي",
+          "hi": "ह्यूमसयुक्त; उदासीन से क्षारीय",
+          "zh": "富含腐殖质；中性至碱性",
+          "ja": "腐植質に富む中性～アルカリ性の土",
+          "ko": "부식질이 풍부한 중성~알칼리성 토양",
+          "id": "Kaya humus; netral hingga basa",
+          "ru": "Гумусная; нейтральная или щелочная",
+          "tr": "Humuslu; nötrden alkaliye"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "अगर निगला जाए तो विषैला",
           "zh": "摄入有毒",
           "ja": "摂取すると有毒",
-          "ko": "섭취 시 유독"
+          "ko": "섭취 시 유독",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

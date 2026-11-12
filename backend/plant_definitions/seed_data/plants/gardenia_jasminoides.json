@@ -11,8 +11,7 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "acid-loving",
-    "all-purpose"
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,6 +19,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "gardenia_jasminoides.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic soil",
-          "pl": "Kwasna gleba",
-          "de": "Saurer Boden",
-          "fr": "Sol acide",
-          "it": "Terreno acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "क्षारीय मिट्टी",
-          "zh": "酸性土壤",
-          "ja": "酸性土壌",
-          "ko": "산성 토양"
+          "en": "Acidic, well-draining mix",
+          "pl": "Kwaśne, przepuszczalne podłoże",
+          "de": "Saures, gut durchlässiges Substrat",
+          "fr": "Substrat acide et bien drainé",
+          "it": "Substrato acido e ben drenante",
+          "es": "Sustrato ácido y bien drenado",
+          "pt": "Substrato ácido e bem drenado",
+          "ar": "خليط حمضي جيد التصريف",
+          "hi": "अम्लीय, अच्छी निकासी वाला मिश्रण",
+          "zh": "酸性、排水良好的基质",
+          "ja": "酸性で水はけのよい用土",
+          "ko": "산성이며 배수가 좋은 배양토",
+          "id": "Media asam dengan drainase baik",
+          "ru": "Кислая, хорошо дренированная смесь",
+          "tr": "Asidik, iyi drene olan karışım"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "पालतू जानवरों के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "애완 동물에 독성"
+          "ko": "애완 동물에 독성",
+          "id": "Beracun bagi hewan peliharaan",
+          "ru": "Ядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirli"
         }
       }
     },

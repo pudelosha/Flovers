@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "solanum_lycopersicum.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Trujące dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais",
-          "ar": "سامة للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에게 독성"
+          "en": "Green parts harmful; ripe fruit edible",
+          "pl": "Ziele szkodliwe; dojrzały owoc jadalny",
+          "de": "Grünteile schädlich; reife Frucht essbar",
+          "fr": "Vert nocif ; fruit mûr comestible",
+          "it": "Verde nocivo; frutto maturo edibile",
+          "es": "Partes verdes nocivas; fruto maduro apto",
+          "pt": "Partes verdes nocivas; fruto maduro apto",
+          "ar": "الخضرة ضارة؛ الثمرة الناضجة تؤكل",
+          "hi": "हरे भाग हानिकारक; पका फल खाने योग्य",
+          "zh": "绿色部分有害；熟果可食",
+          "ja": "緑の部分は有害・熟した果実は食用",
+          "ko": "녹색 부분 유해; 익은 열매는 식용",
+          "id": "Bagian hijau berbahaya; buah matang aman",
+          "ru": "Зелень вредна; спелые плоды съедобны",
+          "tr": "Yeşil kısım zararlı; olgun meyve yenir"
         }
       }
     },

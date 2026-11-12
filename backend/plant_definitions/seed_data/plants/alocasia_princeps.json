@@ -20,6 +20,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_princeps.jpg",
@@ -154,7 +156,10 @@
           "hi": "विषैला पौधा",
           "zh": "有毒植物",
           "ja": "有毒植物",
-          "ko": "독성 식물"
+          "ko": "독성 식물",
+          "id": "Tanaman beracun",
+          "ru": "Ядовитое растение",
+          "tr": "Zehirli bitki"
         }
       }
     },

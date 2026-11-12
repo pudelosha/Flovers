@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "allium_tuberosum.jpg",
@@ -142,18 +144,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt domowych",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali domestici",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais de estimação",
-          "ar": "سام للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에게 유독함"
+          "en": "Pets: toxic; excess harms people",
+          "pl": "Truje zwierzęta; nadmiar szkodzi ludziom",
+          "de": "Haustieren giftig; Menschen bei Übermaß",
+          "fr": "Animaux : toxique ; excès nocif",
+          "it": "Tossica per animali; eccesso nocivo",
+          "es": "Tóxica para mascotas; exceso nocivo",
+          "pt": "Tóxica para animais; excesso nocivo",
+          "ar": "سامة للحيوانات؛ الإفراط يضر البشر",
+          "hi": "पशु: विषाक्त; अधिक सेवन मानव को हानि",
+          "zh": "对宠物有毒；人大量摄入有害",
+          "ja": "ペットに有毒・人も大量摂取は有害",
+          "ko": "반려동물에 유독; 사람도 과량은 유해",
+          "id": "Beracun: hewan; manusia bila berlebih",
+          "ru": "Животным ядовито; людям вреден избыток",
+          "tr": "Hayvana zehirli; insana fazlası zararlı"
         }
       }
     },

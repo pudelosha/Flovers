@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "angelica_archangelica.jpg",
@@ -154,7 +156,10 @@
           "hi": "रस त्वचा चुभा सकता",
           "zh": "汁液可能刺激皮肤",
           "ja": "樹液で皮膚刺激あり",
-          "ko": "수액이 피부 자극"
+          "ko": "수액이 피부 자극",
+          "id": "Getah dapat mengiritasi kulit",
+          "ru": "Сок может раздражать кожу",
+          "tr": "Özsuyu cildi tahriş edebilir"
         }
       }
     },

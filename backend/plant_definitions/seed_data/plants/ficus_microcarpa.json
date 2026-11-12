@@ -19,6 +19,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 21,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 18,
   "image_hero": "ficus_microcarpa.jpg",
@@ -153,7 +155,10 @@
           "hi": "दूधिया रस विषाक्त",
           "zh": "乳汁有毒",
           "ja": "樹液は有毒",
-          "ko": "수액 유독"
+          "ko": "수액 유독",
+          "id": "Getah beracun",
+          "ru": "Сок ядовит",
+          "tr": "Özsuyu zehirlidir"
         }
       }
     },

@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "dypsis_lutescens.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic to pets",
-          "pl": "Nietoksyczna dla zwierząt",
-          "de": "Ungiftig für Haustiere",
-          "fr": "Non toxique animaux",
-          "it": "Non tossica animali",
-          "es": "No tóxica mascotas",
-          "pt": "Não tóxica pets",
-          "ar": "غير سامة للحيوانات",
-          "hi": "पालतू के लिए सुरक्षित",
-          "zh": "对宠物无毒",
-          "ja": "ペットに無毒",
-          "ko": "반려동물 무독성"
+          "en": "Pets: non-toxic; palm heart harmful",
+          "pl": "Dla zwierząt nietrująca; rdzeń szkodliwy",
+          "de": "Für Haustiere ungiftig; Palmherz schadet",
+          "fr": "Animaux : non toxique ; cœur nocif",
+          "it": "Non tossica per animali; cuore nocivo",
+          "es": "No tóxica para mascotas; cogollo nocivo",
+          "pt": "Não tóxica para animais; palmito nocivo",
+          "ar": "غير سامة للحيوانات؛ قلب النخلة ضار",
+          "hi": "पशु: गैर-विषाक्त; नई कोंपल हानिकारक",
+          "zh": "宠物无毒；棕榈心不可食用",
+          "ja": "ペットに無毒・新芽の芯は有害",
+          "ko": "반려동물 무독성; 야자 속심은 유해",
+          "id": "Hewan tidak beracun; umbut berbahaya",
+          "ru": "Животным неядовито; сердцевина вредна",
+          "tr": "Hayvanlara zehirsiz; palmiye özü zararlı"
         }
       }
     },

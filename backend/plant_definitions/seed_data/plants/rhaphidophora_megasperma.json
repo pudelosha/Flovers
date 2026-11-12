@@ -20,6 +20,8 @@
   "moisture_interval_days": 5,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "rhaphidophora_megasperma.jpg",
@@ -154,7 +156,10 @@
           "hi": "पेट्स के लिए विषैला",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "애완 동물에 독성"
+          "ko": "애완 동물에 독성",
+          "id": "Beracun bagi hewan peliharaan",
+          "ru": "Ядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirli"
         }
       }
     },

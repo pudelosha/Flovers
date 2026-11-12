@@ -19,6 +19,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "araucaria_heterophylla.jpg",
@@ -153,7 +155,10 @@
           "hi": "पालतू को नुकसान",
           "zh": "宠物误食不适",
           "ja": "ペット注意",
-          "ko": "반려동물 주의"
+          "ko": "반려동물 주의",
+          "id": "Risiko gangguan perut pada hewan",
+          "ru": "Риск расстройства ЖКТ у животных",
+          "tr": "Evcil hayvanda mide rahatsızlığı riski"
         }
       }
     },

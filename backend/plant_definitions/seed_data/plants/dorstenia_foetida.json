@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 90,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "dorstenia_foetida.jpg",
@@ -152,7 +154,10 @@
           "hi": "चुभने वाला लेटेक्स",
           "zh": "乳汁可能刺激",
           "ja": "乳液は刺激性",
-          "ko": "수액 자극 가능"
+          "ko": "수액 자극 가능",
+          "id": "Getah lateks mengiritasi",
+          "ru": "Млечный сок раздражает",
+          "tr": "Lateks özsuyu tahriş eder"
         }
       }
     },

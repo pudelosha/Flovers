@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "aeonium_arboreum.jpg",
@@ -152,7 +154,10 @@
           "hi": "अविषैली (रिपोर्ट)",
           "zh": "据报无毒",
           "ja": "無毒（報告）",
-          "ko": "무독(보고됨)"
+          "ko": "무독(보고됨)",
+          "id": "Dilaporkan tidak beracun",
+          "ru": "Считается неядовитым",
+          "tr": "Zehirsiz olduğu bildirilmiş"
         }
       }
     },

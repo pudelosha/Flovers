@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acid-loving",
-    "green-plants"
+    "acid-loving"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -20,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "rhododendron_ponticum.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, well-drained",
-          "pl": "Kwaśna, dobrze przepuszczalna",
-          "de": "Sauer, gut durchlässig",
-          "fr": "Acide, bien drainé",
-          "it": "Acido, ben drenato",
-          "es": "Ácida, bien drenada",
-          "pt": "Ácida, bem drenada",
-          "ar": "حمضي، جيد الصرف",
-          "hi": "अम्लीय, अच्छी जल निकासी",
-          "zh": "酸性，排水良好",
-          "ja": "酸性、良好な排水",
-          "ko": "산성, 배수가 잘 되는"
+          "en": "Acidic, well-draining mix",
+          "pl": "Kwaśne, przepuszczalne podłoże",
+          "de": "Saures, gut durchlässiges Substrat",
+          "fr": "Substrat acide et bien drainé",
+          "it": "Substrato acido e ben drenante",
+          "es": "Sustrato ácido y bien drenado",
+          "pt": "Substrato ácido e bem drenado",
+          "ar": "خليط حمضي جيد التصريف",
+          "hi": "अम्लीय, अच्छी निकासी वाला मिश्रण",
+          "zh": "酸性、排水良好的基质",
+          "ja": "酸性で水はけのよい用土",
+          "ko": "산성이며 배수가 좋은 배양토",
+          "id": "Media asam dengan drainase baik",
+          "ru": "Кислая, хорошо дренированная смесь",
+          "tr": "Asidik, iyi drene olan karışım"
         }
       }
     },
@@ -143,18 +147,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt",
-          "de": "Toxisch für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais de estimação",
-          "ar": "سام للحيوانات الأليفة",
-          "hi": "पेट्स के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에게 독성"
+          "en": "Toxic if eaten",
+          "pl": "Trująca po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند تناولها",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "食べると有毒",
+          "ko": "먹으면 독성 있음",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

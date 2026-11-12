@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "pachira_aquatica.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczna",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossica",
-          "es": "No tóxica",
-          "pt": "Não tóxica",
-          "ar": "غير سامة",
-          "hi": "गैर-विषैली",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Cats: digestive risk; avoid seeds",
+          "pl": "Dla kotów szkodliwa; nasiona ryzykowne",
+          "de": "Katzen: Magenrisiko; Samen meiden",
+          "fr": "Chats : risque digestif ; éviter graines",
+          "it": "Rischio digestivo gatti; evitare semi",
+          "es": "Gatos: riesgo digestivo; evitar semillas",
+          "pt": "Gatos: risco digestivo; evitar sementes",
+          "ar": "خطر هضمي للقطط؛ تجنب البذور",
+          "hi": "बिल्लियों को पेट का जोखिम; बीज न खाएँ",
+          "zh": "猫有消化道风险；勿食种子",
+          "ja": "猫は消化器症状のリスク・種子は避ける",
+          "ko": "고양이 소화기 위험; 씨앗 섭취 금지",
+          "id": "Kucing: risiko pencernaan; hindari biji",
+          "ru": "Кошкам риск для ЖКТ; семена не есть",
+          "tr": "Kedide sindirim riski; tohumu yemeyin"
         }
       }
     },

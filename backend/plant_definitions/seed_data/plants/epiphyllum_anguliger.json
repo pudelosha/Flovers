@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "epiphyllum_anguliger.jpg",
@@ -154,7 +156,10 @@
           "hi": "पालतू हेतु गैर-विषाक्त",
           "zh": "对宠物无毒",
           "ja": "ペットに無毒",
-          "ko": "반려동물에 무독"
+          "ko": "반려동물에 무독",
+          "id": "Tidak beracun bagi hewan peliharaan",
+          "ru": "Неядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirsiz"
         }
       }
     },

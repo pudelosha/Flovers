@@ -20,6 +20,8 @@
   "moisture_interval_days": 4,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "sparrmannia_africana.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Skin irritant",
+          "pl": "Drażni skórę",
+          "de": "Hautreizend",
+          "fr": "Irritant pour la peau",
+          "it": "Irritante per la pelle",
+          "es": "Irrita la piel",
+          "pt": "Irrita a pele",
+          "ar": "مهيجة للجلد",
+          "hi": "त्वचा में जलन पैदा कर सकती है",
+          "zh": "可刺激皮肤",
+          "ja": "皮膚への刺激性",
+          "ko": "피부 자극 가능",
+          "id": "Dapat mengiritasi kulit",
+          "ru": "Раздражает кожу",
+          "tr": "Cildi tahriş edebilir"
         }
       }
     },

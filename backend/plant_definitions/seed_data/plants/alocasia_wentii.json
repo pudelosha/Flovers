@@ -19,6 +19,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_wentii.jpg",
@@ -153,7 +155,10 @@
           "hi": "खाने पर विषाक्त",
           "zh": "误食有毒",
           "ja": "誤食で有毒",
-          "ko": "섭취 시 유독"
+          "ko": "섭취 시 유독",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

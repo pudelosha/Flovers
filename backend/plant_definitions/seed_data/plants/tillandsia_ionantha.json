@@ -6,13 +6,9 @@
   "water": "medium",
   "difficulty": "medium",
   "popular": false,
-  "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
-  ],
+  "recommended_pot_materials": [],
   "recommended_soil_mixes": [
-    "cactus-succulent",
-    "all-purpose"
+    "air-plant"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,8 +16,10 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
-  "repot_required": true,
-  "repot_interval_months": 12,
+  "pruning_required": false,
+  "pruning_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
   "image_hero": "tillandsia_ionantha.jpg",
   "image_thumb": "tillandsia_ionantha.jpg",
   "traits": [
@@ -48,18 +46,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-drained soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
-          "zh": "排水良好的土壤",
-          "ja": "排水性の良い土",
-          "ko": "배수가 잘 되는 토양"
+          "en": "No soil; mounted with airflow",
+          "pl": "Bez ziemi; na przewiewnej podporze",
+          "de": "Ohne Erde; luftig befestigen",
+          "fr": "Sans terre ; support bien aéré",
+          "it": "Senza terra; supporto arieggiato",
+          "es": "Sin tierra; soporte ventilado",
+          "pt": "Sem terra; suporte arejado",
+          "ar": "بلا تربة؛ تثبيت مع تهوية",
+          "hi": "बिना मिट्टी; हवादार सहारा",
+          "zh": "无土；固定在通风支架上",
+          "ja": "用土なし・風通しのよい支持材",
+          "ko": "흙 없이 통풍되는 지지대에 고정",
+          "id": "Tanpa tanah; penyangga berventilasi",
+          "ru": "Без грунта; опора с вентиляцией",
+          "tr": "Topraksız; hava alan destek"
         }
       }
     },
@@ -154,7 +155,10 @@
           "hi": "गैर विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "비독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },
@@ -219,51 +223,63 @@
   "translations": {
     "en": {
       "common_name": "Air Plant",
-      "description": "Tillandsia ionantha, commonly known as the air plant, thrives with minimal care. It requires bright, indirect light and weekly watering."
+      "description": "Tillandsia ionantha is an air plant that grows without potting soil. Give it bright, indirect light and a well-ventilated support. Wet or immerse the plant as conditions require, then let it drain and dry between waterings."
     },
     "pl": {
       "common_name": "Roślina powietrzna",
-      "description": "Tillandsia ionantha, znana jako roślina powietrzna, rośnie przy minimalnej pielęgnacji. Wymaga jasnego, pośredniego światła i cotygodniowego podlewania."
+      "description": "Tillandsia ionantha to oplątwa rosnąca bez ziemi. Potrzebuje jasnego, rozproszonego światła i przewiewnej podpory. Zwilżaj ją lub zanurzaj odpowiednio do warunków, a potem pozwól wodzie spłynąć i roślinie wyschnąć przed kolejnym podlewaniem."
     },
     "de": {
       "common_name": "Luftpflanze",
-      "description": "Tillandsia ionantha, auch als Luftpflanze bekannt, gedeiht mit minimaler Pflege. Sie benötigt helles, indirektes Licht und wöchentliche Bewässerung."
+      "description": "Tillandsia ionantha wächst als Luftpflanze ohne Blumenerde. Sie braucht helles, indirektes Licht und eine gut belüftete Halterung. Je nach Bedingungen benetzen oder tauchen, danach abtropfen und zwischen den Wassergaben trocknen lassen."
     },
     "fr": {
       "common_name": "Plante aérienne",
-      "description": "Tillandsia ionantha, connue sous le nom de plante aérienne, prospère avec peu de soins. Elle nécessite une lumière vive et indirecte et un arrosage hebdomadaire."
+      "description": "Tillandsia ionantha est une plante aérienne qui pousse sans terreau. Elle apprécie une lumière vive indirecte et un support bien ventilé. Mouillez-la ou immergez-la selon les conditions, puis laissez-la égoutter et sécher entre les arrosages."
     },
     "it": {
       "common_name": "Pianta aerea",
-      "description": "Tillandsia ionantha, conosciuta come pianta aerea, cresce con poca cura. Richiede luce indiretta e annaffiature settimanali."
+      "description": "Tillandsia ionantha è una pianta aerea che cresce senza terriccio. Richiede luce intensa ma indiretta e un supporto ben ventilato. Bagnala o immergila in base alle condizioni, poi lasciala scolare e asciugare tra le annaffiature."
     },
     "es": {
       "common_name": "Planta aérea",
-      "description": "Tillandsia ionantha, conocida como planta aérea, prospera con cuidados mínimos. Requiere luz brillante e indirecta y riego semanal."
+      "description": "Tillandsia ionantha es una planta aérea que crece sin tierra. Necesita luz abundante e indirecta y un soporte ventilado. Humedécela o sumérgela según las condiciones; después deja que escurra y se seque entre riegos."
     },
     "pt": {
       "common_name": "Planta aérea",
-      "description": "Tillandsia ionantha, conhecida como planta aérea, cresce com poucos cuidados. Necessita de luz indireta e rega semanal."
+      "description": "Tillandsia ionantha é uma planta aérea que cresce sem terra. Precisa de luz intensa indireta e de um suporte arejado. Molha-a ou mergulha-a conforme as condições, deixando-a escorrer e secar entre regas."
     },
     "ar": {
       "common_name": "النبات الهوائي",
-      "description": "Tillandsia ionantha، المعروف بالنبات الهوائي، يزدهر مع الحد الأدنى من الرعاية. يحتاج إلى ضوء غير مباشر ساطع وري أسبوعي."
+      "description": "تيلاندسيا أيونانثا نبات هوائي ينمو دون تربة أصص. يحتاج إلى ضوء ساطع غير مباشر ودعامة جيدة التهوية. بلّله أو اغمره حسب الظروف، ثم اترك الماء يتصفى والنبات يجف بين الريات."
     },
     "hi": {
       "common_name": "वायु पौधा",
-      "description": "Tillandsia ionantha, जिसे वायु पौधा कहा जाता है, न्यूनतम देखभाल के साथ बढ़ता है। इसे चमकीले, अप्रत्यक्ष प्रकाश की आवश्यकता होती है और साप्ताहिक पानी देना पड़ता है।"
+      "description": "टिलैंड्सिया आयोनान्था बिना गमले की मिट्टी के उगने वाला वायु पौधा है। इसे तेज़ पर अप्रत्यक्ष रोशनी और हवादार सहारा दें। परिस्थितियों के अनुसार भिगोएँ या पानी में डुबोएँ, फिर अगली सिंचाई से पहले पानी निकलने और पौधे को सूखने दें।"
     },
     "zh": {
       "common_name": "空气植物",
-      "description": "Tillandsia ionantha，通常被称为空气植物，需最少的护理。它需要明亮的间接光和每周浇水。"
+      "description": "小精灵空气凤梨无需盆土。应放在明亮的散射光下，并固定在通风良好的支架上。根据环境条件淋湿或浸水，随后充分沥水，两次浇水之间应让植株干燥。"
     },
     "ja": {
       "common_name": "エアプランツ",
-      "description": "Tillandsia ionantha、通称エアプランツは、最小限の手入れで成長します。明るい間接光と週に一度の水やりが必要です。"
+      "description": "チランジア・イオナンタは用土を使わず育つエアプランツです。明るい間接光と風通しのよい支持材を用意します。環境に合わせて水をかけるか浸水させ、その後は水を切り、次の水やりまでに乾かします。"
     },
     "ko": {
       "common_name": "에어 플랜트",
-      "description": "Tillandsia ionantha, 일반적으로 에어 플랜트로 알려진 이 식물은 최소한의 관리로 자랍니다. 밝은 간접광과 주간 물주기가 필요합니다."
+      "description": "틸란드시아 이오난사는 배양토 없이 자라는 공중식물입니다. 밝은 간접광과 통풍이 좋은 지지대가 필요합니다. 환경에 맞게 물을 적시거나 담근 뒤 물기를 빼고, 다음 물주기 전까지 말려 주세요."
+    },
+    "id": {
+      "description": "Tillandsia ionantha adalah tanaman udara yang tumbuh tanpa tanah pot. Berikan cahaya terang tidak langsung dan penyangga dengan sirkulasi udara baik. Basahi atau rendam sesuai kondisi, lalu tiriskan dan biarkan mengering di antara penyiraman.",
+      "common_name": "Tillandsia ionantha"
+    },
+    "ru": {
+      "description": "Тилландсия ионанта — воздушное растение, которому не нужен грунт. Ей подходят яркий рассеянный свет и хорошо проветриваемая опора. Смачивайте или замачивайте растение по условиям, затем дайте воде стечь и растению просохнуть до следующего полива.",
+      "common_name": "Tillandsia ionantha"
+    },
+    "tr": {
+      "description": "Tillandsia ionantha saksı toprağı olmadan yetişen bir hava bitkisidir. Aydınlık, dolaylı ışık ve iyi hava alan bir destek ister. Koşullara göre ıslatın veya suya daldırın; ardından suyunu süzdürüp sulamalar arasında kurumasını sağlayın.",
+      "common_name": "Tillandsia ionantha"
     }
   },
   "sources": {

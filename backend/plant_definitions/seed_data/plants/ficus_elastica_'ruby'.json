@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 21,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ficus_elastica_ruby.jpg",
@@ -153,7 +155,10 @@
           "hi": "दूधिया रस हानिकारक",
           "zh": "乳汁刺激性",
           "ja": "樹液は刺激性",
-          "ko": "수액 자극성"
+          "ko": "수액 자극성",
+          "id": "Getah beracun",
+          "ru": "Сок ядовит",
+          "tr": "Özsuyu zehirlidir"
         }
       }
     },

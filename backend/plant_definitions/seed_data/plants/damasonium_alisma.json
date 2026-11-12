@@ -10,7 +10,7 @@
     "plastic"
   ],
   "recommended_soil_mixes": [
-    "peat-free"
+    "aquatic"
   ],
   "water_required": true,
   "water_interval_days": 2,
@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "damasonium_alisma.jpg",
@@ -46,18 +48,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Muddy, pond soil",
-          "pl": "Mulista ziemia",
-          "de": "Schlammiger Boden",
-          "fr": "Sol vaseux",
-          "it": "Suolo fangoso",
-          "es": "Suelo fangoso",
-          "pt": "Solo lodoso",
-          "ar": "تربة طينية",
-          "hi": "कीचड़ वाली मिट्टी",
-          "zh": "泥质土",
-          "ja": "泥質の土",
-          "ko": "진흙 토양"
+          "en": "Aquatic compost or heavy loam",
+          "pl": "Podłoże wodne lub ciężka glina",
+          "de": "Wasserpflanzenerde oder Lehm",
+          "fr": "Substrat aquatique ou terre argileuse",
+          "it": "Terriccio acquatico o terra argillosa",
+          "es": "Sustrato acuático o tierra arcillosa",
+          "pt": "Substrato aquático ou terra argilosa",
+          "ar": "وسط مائي أو تربة طميية ثقيلة",
+          "hi": "जलीय मिश्रण या भारी दोमट मिट्टी",
+          "zh": "水生植物土或重壤土",
+          "ja": "水生植物用土または粘土質の土",
+          "ko": "수생식물 배양토 또는 무거운 양토",
+          "id": "Media akuatik atau tanah lempung",
+          "ru": "Водный субстрат или тяжёлый суглинок",
+          "tr": "Su bitkisi harcı veya ağır tın"
         }
       }
     },
@@ -152,7 +157,10 @@
           "hi": "विषाक्तता अज्ञात",
           "zh": "未见毒性资料",
           "ja": "毒性情報なし",
-          "ko": "독성 정보 없음"
+          "ko": "독성 정보 없음",
+          "id": "Belum diketahui beracun",
+          "ru": "Токсичность не установлена",
+          "tr": "Zehirli olduğu bilinmiyor"
         }
       }
     },

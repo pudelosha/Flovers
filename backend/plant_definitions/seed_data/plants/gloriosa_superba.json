@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "gloriosa_superba.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais",
-          "ar": "سامة للحيوانات الأليفة",
-          "hi": "पेट्स के लिए जहरीला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에게 유독"
+          "en": "Highly toxic if eaten",
+          "pl": "Silnie trująca po spożyciu",
+          "de": "Sehr giftig bei Verzehr",
+          "fr": "Très toxique si ingérée",
+          "it": "Molto tossica se ingerita",
+          "es": "Muy tóxica si se ingiere",
+          "pt": "Muito tóxica se ingerida",
+          "ar": "شديدة السمية عند تناولها",
+          "hi": "खाने पर अत्यधिक विषाक्त",
+          "zh": "误食有剧毒",
+          "ja": "食べると強い毒性",
+          "ko": "섭취 시 매우 유독함",
+          "id": "Sangat beracun jika tertelan",
+          "ru": "Очень ядовито при проглатывании",
+          "tr": "Yutulursa çok zehirlidir"
         }
       }
     },

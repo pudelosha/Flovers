@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "peat-free",
-    "acid-loving"
+    "nepenthes"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,6 +19,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "nepenthes_rafflesiana.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic, peat-based",
-          "pl": "Kwaśna, na bazie torfu",
-          "de": "Saures, torfhaltiges Substrat",
-          "fr": "Acide, à base de tourbe",
-          "it": "Acido, a base di torba",
-          "es": "Ácido, basado en turba",
-          "pt": "Ácido, à base de turfa",
-          "ar": "حمضي، يعتمد على الخث",
-          "hi": "तेजाबीय, पीट आधारित",
-          "zh": "酸性、基于泥炭",
-          "ja": "酸性、ピートベース",
-          "ko": "산성, 이탄 기반"
+          "en": "Airy, nutrient-poor sphagnum mix",
+          "pl": "Przewiewne podłoże z mchem torfowcem",
+          "de": "Luftige, nährstoffarme Sphagnummischung",
+          "fr": "Mélange aéré de sphaigne, peu nutritif",
+          "it": "Miscela ariosa di sfagno, poco nutritiva",
+          "es": "Esfagno aireado y bajo en nutrientes",
+          "pt": "Mistura arejada de esfagno, pouco rica",
+          "ar": "خليط سفاغنوم مهوّى قليل المغذيات",
+          "hi": "हवादार, कम पोषक मॉस मिश्रण",
+          "zh": "透气、低养分的水苔混合基质",
+          "ja": "通気性がよく養分の少ない水苔配合",
+          "ko": "통기성이 좋고 영양분이 적은 수태 배합",
+          "id": "Campuran sfagnum berpori, rendah hara",
+          "ru": "Воздушная смесь со сфагнумом, бедная",
+          "tr": "Havadar, az besinli sfagnum karışımı"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "पालतू जानवरों के लिए विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "애완동물에게 독성"
+          "ko": "애완동물에게 독성",
+          "id": "Beracun bagi hewan peliharaan",
+          "ru": "Ядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirli"
         }
       }
     },
@@ -219,51 +226,63 @@
   "translations": {
     "en": {
       "common_name": "Raffles' Pitcher Plant",
-      "description": "Nepenthes rafflesiana, commonly called Raffles' Pitcher Plant, is an ornamental plant grown for its foliage. Place it in bright, indirect or filtered light. Use an acidic, peat-based potting mix and keep the potting mix lightly moist without leaving it waterlogged. It prefers higher humidity. Avoid overwatering; keep it away from pets that chew plants."
+      "description": "Nepenthes rafflesiana is a tropical carnivorous pitcher plant. It needs warm, humid conditions, bright filtered light and an airy, low-nutrient sphagnum-based medium. Keep the medium moist with good drainage, use low-mineral water, and avoid ordinary pre-fertilized potting soil."
     },
     "pl": {
       "common_name": "Dzbanec Rafflesa",
-      "description": "Nepenthes rafflesiana, znana jako Dzbanec Rafflesa, to roślina typu roślina ozdobna, uprawiana ze względu na dekoracyjne liście. Ustaw ją w jasnym, rozproszonym lub filtrowanym świetle. Zastosuj lekko kwaśne, przepuszczalne podłoże i utrzymuj podłoże lekko wilgotne, ale nie mokre. Preferuje wyższą wilgotność powietrza. Unikaj przelania; trzymaj z dala od zwierząt, które podgryzają rośliny."
+      "description": "Nepenthes rafflesiana to tropikalny dzbanecznik owadożerny. Potrzebuje ciepła, wilgotnego powietrza, jasnego rozproszonego światła i przewiewnego, ubogiego podłoża z torfowcem. Utrzymuj je wilgotne przy dobrym odpływie wody; używaj wody o niskiej zawartości minerałów i unikaj zwykłej ziemi z nawozem."
     },
     "de": {
       "common_name": "Raffles' Kannenpflanze",
-      "description": "Nepenthes rafflesiana, auch Raffles' Kannenpflanze genannt, ist eine Pflanze vom Typ Zierpflanze und wird vor allem für das Laub kultiviert. Stelle sie an einen Platz mit hellem, indirektem oder gefiltertem Licht. Verwende ein leicht saures, gut drainierendes Substrat und halte das Substrat leicht feucht, aber nicht nass. Sie bevorzugt höhere Luftfeuchtigkeit. Vermeide Überwässerung; von Haustieren fernhalten, die Pflanzen anknabbern."
+      "description": "Nepenthes rafflesiana ist eine tropische fleischfressende Kannenpflanze. Sie braucht Wärme, feuchte Luft, helles gefiltertes Licht und ein luftiges, nährstoffarmes Sphagnumsubstrat. Feucht halten und gut drainieren; mineralarmes Wasser verwenden und gewöhnliche vorgedüngte Blumenerde vermeiden."
     },
     "fr": {
       "common_name": "Plante carnivore de Raffles",
-      "description": "Nepenthes rafflesiana, appelée Plante carnivore de Raffles, est une plante de type plante ornementale, cultivée pour son feuillage. Placez-la dans une lumière vive indirecte ou filtrée. Utilisez un substrat légèrement acide et drainant et gardez le substrat légèrement humide sans le détremper. Elle préfère une humidité plus élevée. Évitez les excès d’arrosage; gardez-la hors de portée des animaux qui mâchonnent les plantes."
+      "description": "Nepenthes rafflesiana est une plante carnivore tropicale à urnes. Elle demande de la chaleur, de l’humidité, une lumière vive filtrée et un substrat aéré et pauvre à base de sphaigne. Gardez-le humide et bien drainé, utilisez une eau peu minéralisée et évitez les terreaux préfertilisés."
     },
     "it": {
       "common_name": "Pianta carnivora di Raffles",
-      "description": "Nepenthes rafflesiana, chiamata anche Pianta carnivora di Raffles, è una pianta di tipo pianta ornamentale, coltivata per il fogliame. Tienila in luce intensa indiretta o filtrata. Usa un substrato leggermente acido e drenante e mantieni il substrato leggermente umido senza ristagni. Preferisce umidità più alta. Evita l’eccesso d’acqua; tienila lontana dagli animali che mordicchiano le piante."
+      "description": "Nepenthes rafflesiana è una pianta carnivora tropicale a brocche. Richiede caldo, aria umida, luce intensa filtrata e un substrato arioso e povero a base di sfagno. Mantienilo umido e ben drenato, usa acqua poco mineralizzata ed evita terricci comuni già concimati."
     },
     "es": {
       "common_name": "Planta carnívora de Raffles",
-      "description": "Nepenthes rafflesiana, conocida como Planta carnívora de Raffles, es una planta de tipo planta ornamental, cultivada principalmente por su follaje. Colócala con luz brillante indirecta o filtrada. Usa un sustrato ligeramente ácido y drenante y mantén el sustrato ligeramente húmedo sin encharcar. Prefiere humedad más alta. Evita el exceso de riego; mantenla lejos de mascotas que muerden plantas."
+      "description": "Nepenthes rafflesiana es una planta carnívora tropical de jarra. Necesita calor, aire húmedo, luz intensa filtrada y un medio aireado y pobre a base de esfagno. Mantenlo húmedo y bien drenado, usa agua poco mineralizada y evita sustratos comunes con abono añadido."
     },
     "pt": {
       "common_name": "Planta carnívora de Raffles",
-      "description": "Nepenthes rafflesiana, conhecida como Planta carnívora de Raffles, é uma planta do tipo planta ornamental, cultivada principalmente para a folhagem. Coloque-a em luz forte indireta ou filtrada. Use um substrato levemente ácido e drenante e mantenha o substrato levemente úmido sem encharcar. Prefere umidade mais alta. Evite excesso de rega; mantenha longe de animais que mordiscam plantas."
+      "description": "Nepenthes rafflesiana é uma planta carnívora tropical de jarros. Precisa de calor, ar húmido, luz intensa filtrada e um substrato arejado e pobre à base de esfagno. Mantém-no húmido e bem drenado, usa água pouco mineralizada e evita terra comum pré-adubada."
     },
     "ar": {
       "common_name": "نبات الرفليس",
-      "description": "Nepenthes rafflesiana، المعروفة باسم نبات الرفليس، هي نبات زينة تُزرع من أجل أوراقه الزخرفية. ضعها في ضوء ساطع غير مباشر أو مرشح. استخدم تربة خفيفة الحموضة وجيدة التصريف وحافظ على التربة رطبة قليلًا من دون إغراق. تفضل رطوبة أعلى. تجنب الإفراط في الري; أبعدها عن الحيوانات الأليفة التي تمضغ النباتات."
+      "description": "نابنط رافليسيانا نبات إبريقي لاحم استوائي. يحتاج إلى الدفء والهواء الرطب والضوء الساطع المرشح ووسط سفاغنوم مهوّى قليل المغذيات. حافظ على رطوبة الوسط مع تصريف جيد، واستخدم ماءً قليل المعادن وتجنب تربة الأصص العادية المضاف إليها سماد."
     },
     "hi": {
       "common_name": "रैफल्स की पिचर प्लांट",
-      "description": "Nepenthes rafflesiana, जिसे रैफल्स की पिचर प्लांट कहा जाता है, सजावटी पौधा है जिसे सजावटी पत्तियों के लिए उगाया जाता है। इसे तेज़, अप्रत्यक्ष या छनकर आने वाली रोशनी में रखें। हल्का अम्लीय और जलनिकासी वाला मिश्रण का उपयोग करें और मिट्टी को हल्का नम रखें, लेकिन पानी जमा न होने दें। इसे अधिक आर्द्रता पसंद है। अधिक पानी देने से बचें; इसे पौधे चबाने वाले पालतू जानवरों से दूर रखें।"
+      "description": "नेपेन्थीस रैफ्लेसियाना उष्णकटिबंधीय कीटभक्षी पिचर पौधा है। इसे गर्मी, नम हवा, तेज़ छनकर आने वाली रोशनी और हवादार, कम पोषक मॉस आधारित मिश्रण चाहिए। मिश्रण नम और अच्छी निकासी वाला रखें, कम खनिज वाला पानी लें और पहले से खाद मिली सामान्य मिट्टी से बचें।"
     },
     "zh": {
       "common_name": "拉斐尔瓶子植物",
-      "description": "Nepenthes rafflesiana，通常称为拉斐尔瓶子植物，是一种观赏植物，主要用于观赏叶片。 放在明亮散射光或过滤光处。 使用微酸且排水良好的基质，并保持基质微湿但避免积水。 它偏好较高空气湿度。 避免过度浇水; 请远离会啃咬植物的宠物。"
+      "description": "莱佛士猪笼草是热带食虫植物。它需要温暖湿润的环境、明亮过滤光和透气低养分的水苔基质。保持基质湿润并确保良好排水，使用低矿物质水，避免普通含预施肥料的盆土。"
     },
     "ja": {
       "common_name": "ラフレシア・ピッチャープラント",
-      "description": "Nepenthes rafflesiana（ラフレシア・ピッチャープラント）は、葉姿を楽しむために育てる観賞植物です。 明るい間接光またはフィルター越しの光に置きます。 弱酸性で水はけの良い用土を使い、用土を軽く湿らせつつ過湿にしません。 高めの湿度を好みます。 水のやり過ぎを避けます; 植物をかじるペットから離してください。"
+      "description": "ネペンテス・ラフレシアナは熱帯性の食虫植物です。暖かく湿った環境、明るいやわらかな光、通気性がよく養分の少ない水苔主体の培地を好みます。湿り気と排水を両立させ、低ミネラルの水を使い、元肥入りの一般培養土を避けます。"
     },
     "ko": {
       "common_name": "라플레시아 피처 식물",
-      "description": "Nepenthes rafflesiana(라플레시아 피처 식물)는 잎을/를 위해 기르는 관상식물입니다. 밝은 간접광 또는 여과광에 두세요. 약산성이고 배수가 좋은 흙을 사용하고 흙을 살짝 촉촉하게 유지하되 물이 고이지 않게 하세요. 높은 습도를 선호합니다. 과습을 피하세요; 식물을 씹는 반려동물에게서 멀리 두세요."
+      "description": "네펜데스 라플레시아나는 열대 식충식물입니다. 따뜻하고 습한 환경, 밝은 여과광, 통기성이 좋고 영양분이 적은 수태 기반 배지가 필요합니다. 배지를 촉촉하고 배수가 잘되게 유지하고, 미네랄이 적은 물을 쓰며 일반 비료 첨가 배양토는 피하세요."
+    },
+    "id": {
+      "description": "Nepenthes rafflesiana adalah kantong semar tropis. Tanaman ini memerlukan kondisi hangat dan lembap, cahaya terang tersaring, serta media sfagnum berpori dengan hara rendah. Jaga media lembap dan berdrainase baik, gunakan air rendah mineral, dan hindari tanah pot biasa yang sudah diberi pupuk.",
+      "common_name": "Nepenthes rafflesiana"
+    },
+    "ru": {
+      "description": "Непентес Раффлза — тропическое насекомоядное растение. Ему нужны тепло, влажный воздух, яркий рассеянный свет и рыхлая бедная смесь со сфагнумом. Сохраняйте влажность и хороший дренаж, используйте маломинерализованную воду и избегайте обычного заранее удобренного грунта.",
+      "common_name": "Nepenthes rafflesiana"
+    },
+    "tr": {
+      "description": "Nepenthes rafflesiana tropik bir etçil sürahi bitkisidir. Sıcak, nemli koşullar, aydınlık süzülmüş ışık ve havadar, az besinli sfagnum temelli ortam ister. Ortamı nemli ve iyi drene tutun, düşük mineralli su kullanın ve önceden gübrelenmiş sıradan saksı toprağından kaçının.",
+      "common_name": "Nepenthes rafflesiana"
     }
   },
   "sources": {

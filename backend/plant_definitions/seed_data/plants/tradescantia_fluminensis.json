@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": true,
+  "pruning_interval_days": 90,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "tradescantia_fluminensis.jpg",
@@ -154,7 +156,10 @@
           "hi": "थोड़ा जहरीला",
           "zh": "轻微有毒",
           "ja": "軽度の毒性",
-          "ko": "약간 독성"
+          "ko": "약간 독성",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "portulaca_grandiflora.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Ungiftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "비독성"
+          "en": "Toxic to pets",
+          "pl": "Trująca dla zwierząt domowych",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux domestiques",
+          "it": "Tossica per gli animali domestici",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para animais domésticos",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू पशुओं के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에게 유독함",
+          "id": "Beracun bagi hewan peliharaan",
+          "ru": "Ядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirli"
         }
       }
     },

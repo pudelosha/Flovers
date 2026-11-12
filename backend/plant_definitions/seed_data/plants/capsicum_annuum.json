@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "capsicum_annuum.jpg",
@@ -153,7 +155,10 @@
           "hi": "पालतू को चुभे",
           "zh": "对宠物有刺激",
           "ja": "ペット刺激性",
-          "ko": "반려동물 자극"
+          "ko": "반려동물 자극",
+          "id": "Mengiritasi hewan peliharaan",
+          "ru": "Раздражает домашних животных",
+          "tr": "Evcil hayvanlarda tahriş yapar"
         }
       }
     },

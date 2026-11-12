@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ceropegia_sandersonii.jpg",
@@ -152,7 +154,10 @@
           "hi": "विषाक्त नहीं ज्ञात",
           "zh": "未见毒性报告",
           "ja": "毒性報告なし",
-          "ko": "독성 보고 없음"
+          "ko": "독성 보고 없음",
+          "id": "Belum diketahui beracun",
+          "ru": "Токсичность не установлена",
+          "tr": "Zehirli olduğu bilinmiyor"
         }
       }
     },

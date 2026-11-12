@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 60,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "echinocactus_grusonii.jpg",
@@ -152,7 +154,10 @@
           "hi": "विषहीन; कांटे",
           "zh": "无毒; 刺伤风险",
           "ja": "無毒・トゲ注意",
-          "ko": "독성 낮음; 가시"
+          "ko": "독성 낮음; 가시",
+          "id": "Tidak beracun; berduri",
+          "ru": "Неядовито; есть колючки",
+          "tr": "Zehirsiz; dikenli"
         }
       }
     },

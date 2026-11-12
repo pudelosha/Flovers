@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ehretia_microphylla.jpg",
@@ -152,7 +154,10 @@
           "hi": "खाने पर सावधानी",
           "zh": "误食需谨慎",
           "ja": "誤食に注意",
-          "ko": "섭취 주의"
+          "ko": "섭취 주의",
+          "id": "Hati-hati jika tertelan",
+          "ru": "Осторожно при проглатывании",
+          "tr": "Yutulursa dikkat gerektirir"
         }
       }
     },

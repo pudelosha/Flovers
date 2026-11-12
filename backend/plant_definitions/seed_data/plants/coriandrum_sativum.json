@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "coriandrum_sativum.jpg",
@@ -152,7 +154,10 @@
           "hi": "गैर-विषाक्त",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "무독성"
+          "ko": "무독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },

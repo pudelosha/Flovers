@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "chelidonium_majus.jpg",
@@ -152,7 +154,10 @@
           "hi": "विषैला, चुभने वाला रस",
           "zh": "有毒刺激性汁液",
           "ja": "有毒で刺激性の乳液",
-          "ko": "독성, 자극성 수액"
+          "ko": "독성, 자극성 수액",
+          "id": "Getah beracun dan mengiritasi",
+          "ru": "Сок ядовит и раздражает",
+          "tr": "Özsuyu zehirli ve tahriş edici"
         }
       }
     },

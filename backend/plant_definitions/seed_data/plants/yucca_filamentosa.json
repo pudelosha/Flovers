@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "yucca_filamentosa.jpg",
@@ -154,7 +156,10 @@
           "hi": "अगर निगल लिया जाए तो जहरीला",
           "zh": "如果摄入有毒",
           "ja": "摂取すると有毒",
-          "ko": "삼킬 경우 독성"
+          "ko": "삼킬 경우 독성",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

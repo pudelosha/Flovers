@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "euphorbia_pulcherrima.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczna dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossica per gli animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica para animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पेट्स के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에 독성"
+          "en": "Toxic to pets; skin irritant",
+          "pl": "Trująca dla zwierząt; drażni skórę",
+          "de": "Für Haustiere giftig; reizt die Haut",
+          "fr": "Toxique pour animaux ; irritant cutané",
+          "it": "Tossica per animali; irrita la pelle",
+          "es": "Tóxica para mascotas; irrita la piel",
+          "pt": "Tóxica para animais; irrita a pele",
+          "ar": "سامة للحيوانات؛ مهيجة للجلد",
+          "hi": "पशुओं के लिए विषाक्त; त्वचा में जलन",
+          "zh": "对宠物有毒；可刺激皮肤",
+          "ja": "ペットに有毒・皮膚への刺激性",
+          "ko": "반려동물에게 유독; 피부 자극",
+          "id": "Beracun bagi hewan; iritasi kulit",
+          "ru": "Ядовито для животных; раздражает кожу",
+          "tr": "Hayvanlara zehirli; cildi tahriş eder"
         }
       }
     },

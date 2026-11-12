@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 30,
   "image_hero": "echinocereus_rigidissimus.jpg",
@@ -152,7 +154,10 @@
           "hi": "विषैला नहीं; कांटे",
           "zh": "无毒；有刺",
           "ja": "無毒; トゲ注意",
-          "ko": "무독; 가시 주의"
+          "ko": "무독; 가시 주의",
+          "id": "Tidak beracun; berduri",
+          "ru": "Неядовито; есть колючки",
+          "tr": "Zehirsiz; dikenli"
         }
       }
     },

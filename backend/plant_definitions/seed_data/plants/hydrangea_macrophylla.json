@@ -20,6 +20,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "hydrangea_macrophylla.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais",
-          "ar": "سامة للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에게 독성"
+          "en": "Harmful in large amounts",
+          "pl": "Szkodliwa w dużych ilościach",
+          "de": "In großen Mengen schädlich",
+          "fr": "Nocive en grande quantité",
+          "it": "Nociva in grandi quantità",
+          "es": "Nociva en grandes cantidades",
+          "pt": "Nociva em grandes quantidades",
+          "ar": "ضارة بكميات كبيرة",
+          "hi": "अधिक मात्रा में हानिकारक",
+          "zh": "大量摄入有害",
+          "ja": "大量摂取は有害",
+          "ko": "다량 섭취 시 유해함",
+          "id": "Berbahaya dalam jumlah banyak",
+          "ru": "Вредно в больших количествах",
+          "tr": "Çok miktarda tüketilirse zararlı"
         }
       }
     },

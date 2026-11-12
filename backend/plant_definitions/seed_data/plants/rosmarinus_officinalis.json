@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "rosmarinus_officinalis.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Trujący dla zwierząt",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali",
-          "es": "Tóxico para las mascotas",
-          "pt": "Tóxico para animais de estimação",
-          "ar": "سامة للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에게 독성"
+          "en": "Cats/dogs/horses: non-toxic",
+          "pl": "Nietrująca dla kotów, psów i koni",
+          "de": "Für Katzen, Hunde und Pferde ungiftig",
+          "fr": "Non toxique : chats, chiens, chevaux",
+          "it": "Non tossica per gatti, cani e cavalli",
+          "es": "No tóxica para gatos, perros y caballos",
+          "pt": "Não tóxica para gatos, cães e cavalos",
+          "ar": "غير سامة للقطط والكلاب والخيول",
+          "hi": "बिल्ली/कुत्ते/घोड़े: गैर-विषाक्त",
+          "zh": "对猫、狗和马无毒",
+          "ja": "猫・犬・馬には無毒",
+          "ko": "고양이·개·말에게 무독성",
+          "id": "Tidak beracun bagi kucing, anjing, kuda",
+          "ru": "Для кошек, собак и лошадей неядовито",
+          "tr": "Kedi, köpek ve atlar için zehirli değil"
         }
       }
     },

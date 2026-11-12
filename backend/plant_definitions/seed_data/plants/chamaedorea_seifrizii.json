@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 30,
   "image_hero": "chamaedorea_seifrizii.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic to pets",
-          "pl": "Nietoksyczna dla zwierząt",
-          "de": "Ungiftig für Tiere",
-          "fr": "Non toxique animaux",
-          "it": "Non tossica animali",
-          "es": "No tóxica mascotas",
-          "pt": "Não tóxica p/ pets",
-          "ar": "غير سامة للحيوانات",
-          "hi": "पालतू-सेफ",
-          "zh": "对宠物无毒",
-          "ja": "ペットに無毒",
-          "ko": "반려동물 무독성"
+          "en": "Pets: non-toxic; fruit sap irritant",
+          "pl": "Dla zwierząt nietrująca; sok drażniący",
+          "de": "Für Haustiere ungiftig; Fruchtsaft reizt",
+          "fr": "Animaux : non toxique ; suc irritant",
+          "it": "Non tossica per animali; succo irritante",
+          "es": "No tóxica para mascotas; jugo irritante",
+          "pt": "Não tóxica para animais; sumo irritante",
+          "ar": "غير سامة للحيوانات؛ عصارة الثمر مهيجة",
+          "hi": "पशु: गैर-विषाक्त; फल-रस से जलन",
+          "zh": "宠物无毒；果实汁液可致皮肤刺激",
+          "ja": "ペットに無毒・果汁は皮膚刺激性",
+          "ko": "반려동물 무독성; 열매즙은 피부 자극",
+          "id": "Hewan tidak beracun; getah buah iritasi",
+          "ru": "Для животных неядовито; сок раздражает",
+          "tr": "Hayvanlara zehirsiz; meyve suyu tahrişli"
         }
       }
     },

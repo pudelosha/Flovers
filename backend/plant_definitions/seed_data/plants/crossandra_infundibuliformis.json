@@ -19,6 +19,8 @@
   "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 14,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 36,
   "image_hero": "crossandra_infundibuliformis.jpg",
@@ -153,7 +155,10 @@
           "hi": "अ-विषाक्त",
           "zh": "对宠物无毒",
           "ja": "無毒(ペット)",
-          "ko": "무독성(반려동물)"
+          "ko": "무독성(반려동물)",
+          "id": "Tidak beracun bagi hewan peliharaan",
+          "ru": "Неядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirsiz"
         }
       }
     },

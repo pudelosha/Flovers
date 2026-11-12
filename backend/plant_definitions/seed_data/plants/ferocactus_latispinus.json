@@ -6,14 +6,20 @@
   "water": "low",
   "difficulty": "medium",
   "popular": false,
-  "recommended_pot_materials": ["terracotta"],
-  "recommended_soil_mixes": ["cactus-succulent"],
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus-succulent"
+  ],
   "water_required": true,
   "water_interval_days": 21,
   "moisture_required": false,
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 45,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "ferocactus_latispinus.jpg",
@@ -99,18 +105,18 @@
       "key": "temperature",
       "value": {
         "text": {
-          "en": "10-35\u00b0C",
-          "pl": "10-35\u00b0C",
-          "de": "10-35\u00b0C",
-          "fr": "10-35\u00b0C",
-          "it": "10-35\u00b0C",
-          "es": "10-35\u00b0C",
-          "pt": "10-35\u00b0C",
-          "ar": "10-35\u00b0C",
-          "hi": "10-35\u00b0C",
-          "zh": "10-35\u00b0C",
-          "ja": "10-35\u00b0C",
-          "ko": "10-35\u00b0C"
+          "en": "10-35°C",
+          "pl": "10-35°C",
+          "de": "10-35°C",
+          "fr": "10-35°C",
+          "it": "10-35°C",
+          "es": "10-35°C",
+          "pt": "10-35°C",
+          "ar": "10-35°C",
+          "hi": "10-35°C",
+          "zh": "10-35°C",
+          "ja": "10-35°C",
+          "ko": "10-35°C"
         }
       }
     },
@@ -148,7 +154,10 @@
           "hi": "विषैला नहीं; कांटे",
           "zh": "无毒; 有刺",
           "ja": "無毒; トゲあり",
-          "ko": "무독성; 가시"
+          "ko": "무독성; 가시",
+          "id": "Tidak beracun; berduri",
+          "ru": "Неядовито; есть колючки",
+          "tr": "Zehirsiz; dikenli"
         }
       }
     },

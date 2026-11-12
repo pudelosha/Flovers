@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 30,
   "image_hero": "dyckia_fosteriana.jpg",
@@ -152,7 +154,10 @@
           "hi": "विषाक्तता अज्ञात",
           "zh": "毒性不明确",
           "ja": "毒性は不明",
-          "ko": "독성 정보 없음"
+          "ko": "독성 정보 없음",
+          "id": "Belum diketahui beracun",
+          "ru": "Токсичность не установлена",
+          "tr": "Zehirli olduğu bilinmiyor"
         }
       }
     },

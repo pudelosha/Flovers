@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "cactus-succulent",
-    "acid-loving"
+    "pinguicula"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "pinguicula_moranensis.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczalna",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छा जल निकासी",
-          "zh": "良好排水",
-          "ja": "排水良好",
-          "ko": "배수 좋은"
+          "en": "Airy, low-nutrient mineral mix",
+          "pl": "Przewiewne, ubogie podłoże mineralne",
+          "de": "Luftiges, nährstoffarmes Mineralsubstrat",
+          "fr": "Mélange minéral aéré, peu nutritif",
+          "it": "Miscela minerale ariosa e poco nutritiva",
+          "es": "Mezcla mineral aireada y poco nutritiva",
+          "pt": "Mistura mineral arejada e pouco rica",
+          "ar": "خليط معدني مهوّى قليل المغذيات",
+          "hi": "हवादार, कम पोषक खनिज मिश्रण",
+          "zh": "透气、低养分的矿物基质",
+          "ja": "通気性がよく養分の少ない鉱物質用土",
+          "ko": "통기성이 좋고 영양분이 적은 무기질 배합",
+          "id": "Campuran mineral berpori, rendah hara",
+          "ru": "Воздушная бедная минеральная смесь",
+          "tr": "Havadar, az besinli mineral karışım"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "असाम",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "비독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },
@@ -219,51 +226,63 @@
   "translations": {
     "en": {
       "common_name": "Moran's Pinguicula",
-      "description": "Pinguicula moranensis, commonly called Moran's Pinguicula, is a succulent grown for its foliage. Place it in bright, indirect or filtered light. Use a well-draining potting mix and water when the top layer of the potting mix begins to dry. It prefers moderate humidity and temperatures around 15-30°C. Avoid overwatering."
+      "description": "Pinguicula moranensis is a Mexican carnivorous butterwort. It needs bright, filtered light and an airy, low-nutrient mineral-rich medium without added fertilizer. Keep it moist during carnivorous growth but avoid bog-like saturation. When smaller succulent leaves develop, reduce watering and allow longer dry periods."
     },
     "pl": {
       "common_name": "Pinguicula Morana",
-      "description": "Pinguicula moranensis, znana jako Pinguicula Morana, to roślina typu sukulent, uprawiana ze względu na dekoracyjne liście. Ustaw ją w jasnym, rozproszonym lub filtrowanym świetle. Zastosuj dobrze przepuszczalne podłoże i podlewaj, gdy wierzchnia warstwa podłoża zaczyna przesychać. Preferuje umiarkowaną wilgotność i temperatury około 15-30°C. Unikaj przelania."
+      "description": "Pinguicula moranensis to meksykański tłustosz owadożerny. Potrzebuje jasnego, rozproszonego światła i przewiewnego, ubogiego podłoża mineralnego bez dodatku nawozu. W fazie liści owadożernych utrzymuj je wilgotne, ale nie bagiennie mokre. Gdy pojawią się drobniejsze liście sukulentowe, ogranicz podlewanie i wydłuż okresy przesychania."
     },
     "de": {
       "common_name": "Moran's Pinguicula",
-      "description": "Pinguicula moranensis, auch Moran's Pinguicula genannt, ist eine Pflanze vom Typ Sukkulente und wird vor allem für das Laub kultiviert. Stelle sie an einen Platz mit hellem, indirektem oder gefiltertem Licht. Verwende ein gut drainierendes Substrat und gieße, wenn die obere Substratschicht zu trocknen beginnt. Sie bevorzugt mäßige Luftfeuchtigkeit und Temperaturen um 15-30°C. Vermeide Überwässerung."
+      "description": "Pinguicula moranensis ist ein mexikanisches fleischfressendes Fettkraut. Es braucht helles gefiltertes Licht und luftiges, nährstoffarmes Mineralsubstrat ohne zugesetzten Dünger. Während der fleischfressenden Wachstumsphase feucht, aber nicht moorig nass halten. Bei kleineren sukkulenten Blättern weniger gießen und längere Trockenphasen zulassen."
     },
     "fr": {
       "common_name": "Pinguicula de Moran",
-      "description": "Pinguicula moranensis, appelée Pinguicula de Moran, est une plante de type succulente, cultivée pour son feuillage. Placez-la dans une lumière vive indirecte ou filtrée. Utilisez un substrat bien drainant et arrosez quand la surface du substrat commence à sécher. Elle préfère une humidité modérée et des températures autour de 15-30°C. Évitez les excès d’arrosage."
+      "description": "Pinguicula moranensis est une grassette carnivore mexicaine. Elle demande une lumière vive filtrée et un substrat minéral aéré, pauvre et sans engrais ajouté. Gardez-le humide pendant la croissance carnivore, sans saturation de tourbière. À l’apparition de petites feuilles succulentes, réduisez les arrosages et prolongez les périodes sèches."
     },
     "it": {
       "common_name": "Pinguicula di Moran",
-      "description": "Pinguicula moranensis, chiamata anche Pinguicula di Moran, è una pianta di tipo succulenta, coltivata per il fogliame. Tienila in luce intensa indiretta o filtrata. Usa un substrato ben drenante e annaffia quando lo strato superiore del substrato inizia ad asciugarsi. Preferisce umidità moderata e temperature intorno a 15-30°C. Evita l’eccesso d’acqua."
+      "description": "Pinguicula moranensis è una carnivora messicana. Richiede luce intensa filtrata e un substrato minerale arioso, povero e senza fertilizzante aggiunto. Mantienilo umido durante la crescita carnivora, senza saturarlo come una palude. Quando compaiono foglie succulente più piccole, riduci l’acqua e allunga i periodi asciutti."
     },
     "es": {
       "common_name": "Pinguicula de Moran",
-      "description": "Pinguicula moranensis, conocida como Pinguicula de Moran, es una planta de tipo suculenta, cultivada principalmente por su follaje. Colócala con luz brillante indirecta o filtrada. Usa un sustrato con buen drenaje y riega cuando la capa superior del sustrato empiece a secarse. Prefiere humedad moderada y temperaturas alrededor de 15-30°C. Evita el exceso de riego."
+      "description": "Pinguicula moranensis es una carnívora mexicana. Necesita luz intensa filtrada y un medio mineral aireado, pobre y sin fertilizante añadido. Mantenlo húmedo durante el crecimiento carnívoro, sin saturarlo como una turbera. Cuando aparezcan hojas suculentas más pequeñas, reduce el riego y alarga los periodos secos."
     },
     "pt": {
       "common_name": "Pinguicula de Moran",
-      "description": "Pinguicula moranensis, conhecida como Pinguicula de Moran, é uma planta do tipo suculenta, cultivada principalmente para a folhagem. Coloque-a em luz forte indireta ou filtrada. Use um substrato bem drenante e regue quando a camada superior do substrato começar a secar. Prefere umidade moderada e temperaturas em torno de 15-30°C. Evite excesso de rega."
+      "description": "Pinguicula moranensis é uma carnívora mexicana. Precisa de luz intensa filtrada e de um substrato mineral arejado, pobre e sem adubo adicionado. Mantém-no húmido durante o crescimento carnívoro, sem encharcar como numa turfeira. Quando surgirem folhas suculentas mais pequenas, reduz a rega e prolonga os períodos secos."
     },
     "ar": {
       "common_name": "بينغويكولا مورانسيس",
-      "description": "Pinguicula moranensis، المعروفة باسم بينغويكولا مورانسيس، هي نبات عصاري تُزرع من أجل أوراقه الزخرفية. ضعها في ضوء ساطع غير مباشر أو مرشح. استخدم تربة جيدة التصريف واسقِ عندما تبدأ الطبقة العلوية من التربة بالجفاف. تفضل رطوبة معتدلة ودرجات حرارة حول 15-30°C. تجنب الإفراط في الري."
+      "description": "بينغويكولا موراننسيس نبات لاحم مكسيكي. يحتاج إلى ضوء ساطع مرشح ووسط معدني مهوّى قليل المغذيات بلا سماد مضاف. أبقه رطبًا خلال مرحلة النمو اللاحمة، دون إغراقه كوسط المستنقعات. عند ظهور أوراق عصارية أصغر، قلل الري وأطل فترات الجفاف."
     },
     "hi": {
       "common_name": "मोरान की पिंगुइक्युला",
-      "description": "Pinguicula moranensis, जिसे मोरान की पिंगुइक्युला कहा जाता है, रसीला पौधा है जिसे सजावटी पत्तियों के लिए उगाया जाता है। इसे तेज़, अप्रत्यक्ष या छनकर आने वाली रोशनी में रखें। अच्छी जलनिकासी वाला मिश्रण का उपयोग करें और ऊपरी परत सूखने लगे तो पानी दें। इसे मध्यम आर्द्रता और लगभग 15-30°C तापमान पसंद है। अधिक पानी देने से बचें।"
+      "description": "पिंग्विकुला मोरानेन्सिस मैक्सिको का कीटभक्षी बटरवर्ट है। इसे तेज़ छनकर आने वाली रोशनी और बिना खाद का हवादार, कम पोषक खनिज मिश्रण चाहिए। कीटभक्षी बढ़वार में नम रखें, दलदल जैसा भिगोएँ नहीं। छोटी रसीली पत्तियाँ आने पर पानी कम दें और सूखे अंतराल बढ़ाएँ।"
     },
     "zh": {
       "common_name": "莫兰猪笼草",
-      "description": "Pinguicula moranensis，通常称为莫兰猪笼草，是一种多肉植物，主要用于观赏叶片。 放在明亮散射光或过滤光处。 使用排水良好的基质，并表层基质开始变干时再浇水。 它偏好中等湿度，温度约15-30°C。 避免过度浇水。"
+      "description": "墨兰捕虫堇是墨西哥食虫植物。它需要明亮过滤光和透气、低养分、无预施肥料的矿物基质。捕虫叶生长期保持湿润，但不要像沼泽植物那样长期浸透。出现较小的多肉叶时，应减少浇水并延长干燥期。"
     },
     "ja": {
       "common_name": "モランのピンギキュラ",
-      "description": "Pinguicula moranensis（モランのピンギキュラ）は、葉姿を楽しむために育てる多肉植物です。 明るい間接光またはフィルター越しの光に置きます。 水はけの良い用土を使い、用土の表面が乾き始めたら水やりします。 中程度の湿度と15-30°C前後の温度を好みます。 水のやり過ぎを避けます。"
+      "description": "ピンギキュラ・モラネンシスはメキシコ産の食虫植物です。明るいやわらかな光と、肥料を加えない通気性のよい低養分の鉱物質培地を好みます。捕虫葉の生育期は湿り気を保ちますが、湿地状の過湿は避けます。小さな多肉質の葉が出たら水やりを減らし、乾く期間を長くします。"
     },
     "ko": {
       "common_name": "모란 핑귀큘라",
-      "description": "Pinguicula moranensis(모란 핑귀큘라)는 잎을/를 위해 기르는 다육식물입니다. 밝은 간접광 또는 여과광에 두세요. 배수가 좋은 흙을 사용하고 겉흙이 마르기 시작하면 물을 주세요. 중간 정도의 습도와 약 15-30°C의 온도를 선호합니다. 과습을 피하세요."
+      "description": "핑귀큘라 모라넨시스는 멕시코산 식충식물입니다. 밝은 여과광과 비료를 넣지 않은 통기성 좋은 저영양 무기질 배지가 필요합니다. 포충엽이 자랄 때는 촉촉하게 유지하되 늪처럼 포화시키지 마세요. 작은 다육질 잎이 나오면 물주기를 줄이고 마르는 기간을 늘리세요."
+    },
+    "id": {
+      "description": "Pinguicula moranensis adalah tanaman karnivora Meksiko. Tanaman ini memerlukan cahaya terang tersaring dan media mineral berpori, rendah hara, tanpa pupuk tambahan. Jaga tetap lembap selama pertumbuhan daun karnivora, tetapi jangan jenuh seperti rawa. Saat daun sukulen yang lebih kecil muncul, kurangi penyiraman dan perpanjang masa kering.",
+      "common_name": "Pinguicula moranensis"
+    },
+    "ru": {
+      "description": "Жирянка моранская — мексиканское насекомоядное растение. Ей нужны яркий рассеянный свет и рыхлая бедная минеральная смесь без добавленного удобрения. В фазе ловчих листьев сохраняйте влажность без болотного переувлажнения. При появлении мелких суккулентных листьев сократите полив и увеличьте сухие промежутки.",
+      "common_name": "Pinguicula moranensis"
+    },
+    "tr": {
+      "description": "Pinguicula moranensis Meksika kökenli etçil bir yağotu türüdür. Aydınlık süzülmüş ışık ve gübresiz, havadar, az besinli mineral ortam ister. Etçil büyüme döneminde nemli tutun ancak bataklık gibi suya doyurmayın. Küçük sukulent yapraklar gelişince sulamayı azaltıp kuru aralıkları uzatın.",
+      "common_name": "Pinguicula moranensis"
     }
   },
   "sources": {

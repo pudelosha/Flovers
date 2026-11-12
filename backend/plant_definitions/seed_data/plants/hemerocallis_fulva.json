@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "hemerocallis_fulva.jpg",
@@ -154,7 +156,10 @@
           "hi": "बिल्लियों के लिए विषैली",
           "zh": "对猫有毒",
           "ja": "猫に有毒",
-          "ko": "고양이에게 유독함"
+          "ko": "고양이에게 유독함",
+          "id": "Beracun bagi kucing",
+          "ru": "Ядовито для кошек",
+          "tr": "Kediler için zehirli"
         }
       }
     },

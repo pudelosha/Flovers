@@ -6,13 +6,9 @@
   "water": "medium",
   "difficulty": "easy",
   "popular": false,
-  "recommended_pot_materials": [
-    "plastic",
-    "ceramic"
-  ],
+  "recommended_pot_materials": [],
   "recommended_soil_mixes": [
-    "cactus-succulent",
-    "all-purpose"
+    "air-plant"
   ],
   "water_required": true,
   "water_interval_days": 14,
@@ -20,8 +16,10 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
-  "repot_required": true,
-  "repot_interval_months": 24,
+  "pruning_required": false,
+  "pruning_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
   "image_hero": "tillandsia_usneoides.jpg",
   "image_thumb": "tillandsia_usneoides.jpg",
   "traits": [
@@ -48,18 +46,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining soil",
-          "pl": "Dobrze przepuszczalna gleba",
-          "de": "Gut durchlässiger Boden",
-          "fr": "Sol bien drainé",
-          "it": "Terreno ben drenato",
-          "es": "Suelo bien drenado",
-          "pt": "Solo bem drenado",
-          "ar": "تربة جيدة التصريف",
-          "hi": "अच्छी जल निकासी वाली मिट्टी",
-          "zh": "良好的排水土壤",
-          "ja": "よく排水された土",
-          "ko": "잘 배수되는 토양"
+          "en": "No soil; mounted with airflow",
+          "pl": "Bez ziemi; na przewiewnej podporze",
+          "de": "Ohne Erde; luftig befestigen",
+          "fr": "Sans terre ; support bien aéré",
+          "it": "Senza terra; supporto arieggiato",
+          "es": "Sin tierra; soporte ventilado",
+          "pt": "Sem terra; suporte arejado",
+          "ar": "بلا تربة؛ تثبيت مع تهوية",
+          "hi": "बिना मिट्टी; हवादार सहारा",
+          "zh": "无土；固定在通风支架上",
+          "ja": "用土なし・風通しのよい支持材",
+          "ko": "흙 없이 통풍되는 지지대에 고정",
+          "id": "Tanpa tanah; penyangga berventilasi",
+          "ru": "Без грунта; опора с вентиляцией",
+          "tr": "Topraksız; hava alan destek"
         }
       }
     },
@@ -154,7 +155,10 @@
           "hi": "गैर विषैले",
           "zh": "无毒",
           "ja": "無毒",
-          "ko": "비독성"
+          "ko": "비독성",
+          "id": "Tidak beracun",
+          "ru": "Неядовито",
+          "tr": "Zehirsiz"
         }
       }
     },
@@ -219,51 +223,63 @@
   "translations": {
     "en": {
       "common_name": "Spanish moss",
-      "description": "Spanish moss is an epiphytic plant known for its long, wispy strands. It thrives in warm, humid conditions and requires moderate light and watering."
+      "description": "Tillandsia usneoides, or Spanish moss, is a hanging air plant grown without soil. It takes up water through its leaves and needs filtered light, humidity and good airflow. Wet the strands as needed and let them drain rather than remain continuously wet."
     },
     "pl": {
       "common_name": "Moss hiszpański",
-      "description": "Moss hiszpański to epifityczna roślina znana z długich, zwiewnych włókien. Rośnie w ciepłych, wilgotnych warunkach i wymaga umiarkowanego światła oraz podlewania."
+      "description": "Tillandsia usneoides, czyli oplątwa brodaczkowata, to zwisająca roślina powietrzna uprawiana bez ziemi. Pobiera wodę przez liście i potrzebuje rozproszonego światła, wilgotnego powietrza oraz przewiewu. Zwilżaj pędy według potrzeb i pozwalaj im odcieknąć, zamiast utrzymywać je stale mokre."
     },
     "de": {
       "common_name": "Spanisches Moos",
-      "description": "Spanisches Moos ist eine epiphytische Pflanze, die für ihre langen, zarten Stränge bekannt ist. Es gedeiht bei warmen, feuchten Bedingungen und benötigt mittleres Licht und Bewässerung."
+      "description": "Tillandsia usneoides, auch Spanisches Moos genannt, ist eine hängende Luftpflanze ohne Erde. Sie nimmt Wasser über die Blätter auf und braucht gefiltertes Licht, Luftfeuchtigkeit und gute Belüftung. Die Triebe bei Bedarf benetzen und abtropfen lassen, nicht ständig nass halten."
     },
     "fr": {
       "common_name": "Mousse espagnole",
-      "description": "La mousse espagnole est une plante épiphyte connue pour ses longs filaments souples. Elle pousse dans des conditions chaudes et humides et nécessite une lumière et un arrosage modérés."
+      "description": "Tillandsia usneoides, ou mousse espagnole, est une plante aérienne retombante cultivée sans terre. Elle absorbe l’eau par ses feuilles et demande une lumière filtrée, de l’humidité et une bonne aération. Mouillez les brins selon les besoins et laissez-les égoutter sans les garder constamment trempés."
     },
     "it": {
       "common_name": "Muschio spagnolo",
-      "description": "Il muschio spagnolo è una pianta epifita conosciuta per i suoi lunghi fili sottili. Cresce in condizioni calde e umide e richiede luce e annaffiatura moderate."
+      "description": "Tillandsia usneoides, o muschio spagnolo, è una pianta aerea ricadente coltivata senza terra. Assorbe acqua dalle foglie e richiede luce filtrata, umidità e buona circolazione d’aria. Bagna i filamenti quando serve e lasciali scolare, evitando che restino sempre bagnati."
     },
     "es": {
       "common_name": "Musgo español",
-      "description": "El musgo español es una planta epífita conocida por sus largos hilos. Crece en condiciones cálidas y húmedas y requiere luz y riego moderados."
+      "description": "Tillandsia usneoides, o musgo español, es una planta aérea colgante que se cultiva sin tierra. Absorbe agua por las hojas y necesita luz filtrada, humedad y buena ventilación. Humedece los tallos cuando lo necesiten y deja que escurran, sin mantenerlos siempre mojados."
     },
     "pt": {
       "common_name": "Musgo espanhol",
-      "description": "O musgo espanhol é uma planta epífita conhecida por seus longos fios finos. Cresce em condições quentes e úmidas, exigindo luz e rega moderadas."
+      "description": "Tillandsia usneoides, ou musgo-espanhol, é uma planta aérea pendente cultivada sem terra. Absorve água pelas folhas e precisa de luz filtrada, humidade e boa ventilação. Molha os fios conforme necessário e deixa-os escorrer, sem os manter constantemente encharcados."
     },
     "ar": {
       "common_name": "طحلب إسباني",
-      "description": "الطحلب الإسباني هو نبات زاحف معروف بخيوطه الطويلة والرفيعة. ينمو في ظروف دافئة ورطبة ويحتاج إلى ضوء معتدل وري معتدل."
+      "description": "تيلاندسيا أوسنيويدس، أو الطحلب الإسباني، نبات هوائي متدلٍ يُزرع بلا تربة. يمتص الماء عبر الأوراق ويحتاج إلى ضوء مرشح ورطوبة وتهوية جيدة. بلّل خيوطه عند الحاجة واتركها تتصفى بدل إبقائها مبللة باستمرار."
     },
     "hi": {
       "common_name": "स्पैनिश मॉस",
-      "description": "स्पैनिश मॉस एक एपिफाइटिक पौधा है जो अपनी लंबी, महीन लताओं के लिए जाना जाता है। यह गर्म, आर्द्र परिस्थितियों में पनपता है और इसे मध्यम प्रकाश और पानी की आवश्यकता होती है।"
+      "description": "टिलैंड्सिया उस्नियोइड्स, यानी स्पैनिश मॉस, बिना मिट्टी के उगने वाला लटकता वायु पौधा है। यह पत्तियों से पानी लेता है और इसे छनकर आने वाली रोशनी, नमी तथा अच्छा वायु संचार चाहिए। ज़रूरत पर रेशों को भिगोएँ और पानी निकलने दें; लगातार गीला न रखें।"
     },
     "zh": {
       "common_name": "西班牙苔藓",
-      "description": "西班牙苔藓是一种附生植物，以其长而柔软的丝状物而闻名。它在温暖湿润的环境中生长，需要适量的光照和浇水。"
+      "description": "松萝凤梨又称西班牙苔藓，是无需土壤的下垂空气植物。它通过叶片吸收水分，需要过滤光、空气湿度和良好通风。按需淋湿枝条后充分沥水，避免长期湿透。"
     },
     "ja": {
       "common_name": "スペインモス",
-      "description": "スペインモスは長い細い糸で知られる着生植物です。温暖で湿度の高い環境で育ち、中程度の光と水やりが必要です。"
+      "description": "チランジア・ウスネオイデスはスパニッシュモスとも呼ばれ、土を使わず吊り下げて育てます。葉から水を吸収し、やわらかな光、適度な湿度、良好な通風を好みます。必要に応じて濡らし、水を切って常に濡れた状態を避けます。"
     },
     "ko": {
       "common_name": "스페인 이끼",
-      "description": "스페인 이끼는 긴 실처럼 가느다란 줄기로 알려진 착생 식물입니다. 따뜻하고 습한 환경에서 자라며, 적당한 빛과 물주기가 필요합니다."
+      "description": "틸란드시아 우스네오이데스는 스패니시 모스라고도 하며 흙 없이 매달아 기르는 공중식물입니다. 잎으로 물을 흡수하며 여과된 빛, 습도, 좋은 통풍이 필요합니다. 필요할 때 줄기를 적시고 물기를 빼서 늘 젖어 있지 않게 해 주세요."
+    },
+    "id": {
+      "description": "Tillandsia usneoides, atau lumut Spanyol, adalah tanaman udara menggantung yang ditanam tanpa tanah. Air diserap melalui daun; tanaman ini membutuhkan cahaya tersaring, kelembapan, dan sirkulasi udara baik. Basahi untaiannya sesuai kebutuhan, lalu tiriskan agar tidak terus-menerus basah.",
+      "common_name": "Tillandsia usneoides"
+    },
+    "ru": {
+      "description": "Тилландсия уснеевидная, или испанский мох, растёт свисающими прядями без грунта. Она получает воду через листья и нуждается в рассеянном свете, влажности и вентиляции. Смачивайте пряди по необходимости и давайте воде стечь, не сохраняя их постоянно мокрыми.",
+      "common_name": "Tillandsia usneoides"
+    },
+    "tr": {
+      "description": "Tillandsia usneoides, yani İspanyol yosunu, topraksız yetiştirilen sarkıcı bir hava bitkisidir. Suyu yapraklarından alır; süzülmüş ışık, nem ve iyi hava dolaşımı ister. Dallarını gerektiğinde ıslatıp suyunu süzdürün; sürekli ıslak bırakmayın.",
+      "common_name": "Tillandsia usneoides"
     }
   },
   "sources": {

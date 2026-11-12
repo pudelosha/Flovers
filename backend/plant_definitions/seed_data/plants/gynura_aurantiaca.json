@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": true,
+  "pruning_interval_days": 90,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "gynura_aurantiaca.jpg",
@@ -154,7 +156,10 @@
           "hi": "हल्का विषैला",
           "zh": "轻微有毒",
           "ja": "やや有毒",
-          "ko": "약간 독성 있음"
+          "ko": "약간 독성 있음",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "euphorbia_lactea.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Trująca dla zwierząt",
-          "de": "Toxisch für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossica per gli animali",
-          "es": "Tóxica para las mascotas",
-          "pt": "Tóxica para animais",
-          "ar": "سامة للحيوانات",
-          "hi": "पालतू जानवरों के लिए विषाक्त",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "애완동물에게 유독"
+          "en": "Toxic if eaten; sap irritant",
+          "pl": "Trująca po spożyciu; sok drażni",
+          "de": "Giftig bei Verzehr; Saft reizt",
+          "fr": "Toxique si ingérée ; sève irritante",
+          "it": "Tossica se ingerita; linfa irritante",
+          "es": "Tóxica al ingerir; savia irritante",
+          "pt": "Tóxica se ingerida; seiva irritante",
+          "ar": "سامة عند تناولها؛ عصارتها مهيجة",
+          "hi": "खाने पर विषाक्त; रस से जलन",
+          "zh": "误食有毒；汁液可致刺激",
+          "ja": "食べると有毒・樹液は刺激性",
+          "ko": "섭취 시 독성; 수액은 자극성",
+          "id": "Beracun tertelan; getah mengiritasi",
+          "ru": "Ядовито при еде; сок раздражает",
+          "tr": "Yutulursa zehirli; özsuyu tahriş eder"
         }
       }
     },

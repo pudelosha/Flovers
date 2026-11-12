@@ -11,15 +11,16 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "acid-loving",
-    "peat-free"
+    "carnivorous-bog"
   ],
   "water_required": true,
   "water_interval_days": 7,
   "moisture_required": false,
   "moisture_interval_days": null,
-  "fertilize_required": true,
-  "fertilize_interval_days": 30,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "sarracenia_purpurea.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Acidic soil",
-          "pl": "Gleba kwaśna",
-          "de": "Saure Erde",
-          "fr": "Sol acide",
-          "it": "Terreno acido",
-          "es": "Suelo ácido",
-          "pt": "Solo ácido",
-          "ar": "تربة حمضية",
-          "hi": "खट्टे मृदा",
-          "zh": "酸性土壤",
-          "ja": "酸性土壌",
-          "ko": "산성 토양"
+          "en": "Acidic, nutrient-poor bog mix",
+          "pl": "Kwaśne, ubogie podłoże bagienne",
+          "de": "Saures, nährstoffarmes Moorsubstrat",
+          "fr": "Substrat de marais acide, peu nutritif",
+          "it": "Substrato acido e povero per palustri",
+          "es": "Mezcla ácida y pobre para palustres",
+          "pt": "Substrato ácido e pobre para palustres",
+          "ar": "وسط مستنقعي حمضي قليل المغذيات",
+          "hi": "अम्लीय, कम पोषक दलदली मिश्रण",
+          "zh": "酸性、低养分的沼泽植物基质",
+          "ja": "酸性で養分の少ない湿地性食虫植物用土",
+          "ko": "산성이며 영양분이 적은 습지용 배합토",
+          "id": "Media rawa asam, rendah hara",
+          "ru": "Кислая бедная смесь для болотных",
+          "tr": "Asidik, az besinli bataklık harcı"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "यदि निगला जाए तो विषैला",
           "zh": "食用时有毒",
           "ja": "摂取すると有毒",
-          "ko": "섭취 시 독성"
+          "ko": "섭취 시 독성",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },
@@ -219,51 +226,63 @@
   "translations": {
     "en": {
       "common_name": "Purple Pitcher Plant",
-      "description": "Sarracenia purpurea, commonly called Purple Pitcher Plant, is an ornamental plant grown for its foliage. Place it in very bright light with some direct sun. Use acidic soil and keep the potting mix lightly moist without leaving it waterlogged. It prefers higher humidity and temperatures around 18-24°C. Avoid overwatering; keep it away from pets that chew plants."
+      "description": "Sarracenia purpurea is a temperate carnivorous bog plant with pitcher traps. Grow it in strong light and an acidic, nutrient-poor specialist medium kept consistently wet with rainwater or distilled water. Do not add ordinary fertilizer. It needs a cool winter rest, not year-round tropical conditions."
     },
     "pl": {
-      "common_name": "Dzbanecznik purpurowy",
-      "description": "Sarracenia purpurea, znana jako Dzbanecznik purpurowy, to roślina typu roślina ozdobna, uprawiana ze względu na dekoracyjne liście. Ustaw ją w bardzo jasnym miejscu z odrobiną bezpośredniego słońca. Zastosuj lekko kwaśne, przepuszczalne podłoże i utrzymuj podłoże lekko wilgotne, ale nie mokre. Preferuje wyższą wilgotność powietrza i temperatury około 18-24°C. Unikaj przelania; trzymaj z dala od zwierząt, które podgryzają rośliny."
+      "common_name": "Kapturnica purpurowa",
+      "description": "Kapturnica purpurowa to owadożerna roślina bagienna klimatu umiarkowanego. Potrzebuje dużo światła oraz kwaśnego, ubogiego podłoża specjalistycznego, stale mokrego od deszczówki lub wody destylowanej. Nie stosuj zwykłego nawozu. Zimą wymaga chłodnego spoczynku, a nie całorocznych warunków tropikalnych."
     },
     "de": {
-      "common_name": "Purpur-Tropfblatt",
-      "description": "Sarracenia purpurea, auch Purpur-Tropfblatt genannt, ist eine Pflanze vom Typ Zierpflanze und wird vor allem für das Laub kultiviert. Stelle sie an einen sehr hellen Platz mit etwas direkter Sonne. Verwende ein leicht saures, gut drainierendes Substrat und halte das Substrat leicht feucht, aber nicht nass. Sie bevorzugt höhere Luftfeuchtigkeit und Temperaturen um 18-24°C. Vermeide Überwässerung; von Haustieren fernhalten, die Pflanzen anknabbern."
+      "common_name": "Rote Schlauchpflanze",
+      "description": "Sarracenia purpurea ist eine fleischfressende Moorpflanze der gemäßigten Zone mit Schlauchfallen. Sie braucht viel Licht und saures, nährstoffarmes Spezialsubstrat, das mit Regen- oder destilliertem Wasser ständig nass gehalten wird. Keinen gewöhnlichen Dünger geben. Sie benötigt eine kühle Winterruhe statt ganzjährig tropischer Bedingungen."
     },
     "fr": {
-      "common_name": "Plante à entonnoir pourpre",
-      "description": "Sarracenia purpurea, appelée Plante à entonnoir pourpre, est une plante de type plante ornementale, cultivée pour son feuillage. Placez-la dans une lumière très vive avec un peu de soleil direct. Utilisez un substrat légèrement acide et drainant et gardez le substrat légèrement humide sans le détremper. Elle préfère une humidité plus élevée et des températures autour de 18-24°C. Évitez les excès d’arrosage; gardez-la hors de portée des animaux qui mâchonnent les plantes."
+      "common_name": "Sarracénie pourpre",
+      "description": "Sarracenia purpurea est une carnivore de tourbière des climats tempérés, à pièges en urne. Offrez-lui beaucoup de lumière et un substrat spécialisé acide et pauvre, toujours mouillé par de l’eau de pluie ou distillée. N’ajoutez pas d’engrais ordinaire. Elle demande un repos hivernal frais, pas un climat tropical permanent."
     },
     "it": {
-      "common_name": "Pianta a imbuto viola",
-      "description": "Sarracenia purpurea, chiamata anche Pianta a imbuto viola, è una pianta di tipo pianta ornamentale, coltivata per il fogliame. Tienila in luce molto intensa con un po’ di sole diretto. Usa un substrato leggermente acido e drenante e mantieni il substrato leggermente umido senza ristagni. Preferisce umidità più alta e temperature intorno a 18-24°C. Evita l’eccesso d’acqua; tienila lontana dagli animali che mordicchiano le piante."
+      "common_name": "Sarracenia purpurea",
+      "description": "Sarracenia purpurea è una carnivora di palude dei climi temperati, con trappole a tubo. Richiede molta luce e un substrato specialistico acido e povero, sempre bagnato con acqua piovana o distillata. Non usare fertilizzante comune. Ha bisogno di riposo invernale fresco, non di condizioni tropicali tutto l’anno."
     },
     "es": {
-      "common_name": "Planta jarra morada",
-      "description": "Sarracenia purpurea, conocida como Planta jarra morada, es una planta de tipo planta ornamental, cultivada principalmente por su follaje. Colócala con luz muy intensa con algo de sol directo. Usa un sustrato ligeramente ácido y drenante y mantén el sustrato ligeramente húmedo sin encharcar. Prefiere humedad más alta y temperaturas alrededor de 18-24°C. Evita el exceso de riego; mantenla lejos de mascotas que muerden plantas."
+      "common_name": "Sarracenia púrpura",
+      "description": "Sarracenia purpurea es una carnívora de turbera de clima templado, con trampas de jarra. Necesita mucha luz y un medio especializado ácido y pobre, siempre mojado con agua de lluvia o destilada. No añadas fertilizante común. Requiere reposo invernal fresco, no condiciones tropicales todo el año."
     },
     "pt": {
-      "common_name": "Planta jarra roxa",
-      "description": "Sarracenia purpurea, conhecida como Planta jarra roxa, é uma planta do tipo planta ornamental, cultivada principalmente para a folhagem. Coloque-a em luz muito intensa com algum sol direto. Use um substrato levemente ácido e drenante e mantenha o substrato levemente úmido sem encharcar. Prefere umidade mais alta e temperaturas em torno de 18-24°C. Evite excesso de rega; mantenha longe de animais que mordiscam plantas."
+      "common_name": "Sarracenia purpurea",
+      "description": "Sarracenia purpurea é uma carnívora de turfeira de clima temperado, com armadilhas em forma de jarro. Precisa de muita luz e de um substrato especializado ácido e pobre, sempre molhado com água da chuva ou destilada. Não uses adubo comum. Necessita de repouso fresco no inverno, não de condições tropicais todo o ano."
     },
     "ar": {
-      "common_name": "نبات إبريق بنفسجي",
-      "description": "Sarracenia purpurea، المعروفة باسم نبات إبريق بنفسجي، هي نبات زينة تُزرع من أجل أوراقه الزخرفية. ضعها في ضوء قوي جدًا مع بعض الشمس المباشرة. استخدم تربة خفيفة الحموضة وجيدة التصريف وحافظ على التربة رطبة قليلًا من دون إغراق. تفضل رطوبة أعلى ودرجات حرارة حول 18-24°C. تجنب الإفراط في الري; أبعدها عن الحيوانات الأليفة التي تمضغ النباتات."
+      "common_name": "ساراسينيا أرجوانية",
+      "description": "ساراسينيا بوربوريا نبات لاحم من مستنقعات المناخ المعتدل وله مصائد إبريقية. يحتاج إلى ضوء قوي ووسط متخصص حمضي قليل المغذيات يبقى مبتلًا بماء المطر أو الماء المقطر. لا تضف سمادًا عاديًا. يحتاج إلى سكون شتوي بارد، لا إلى ظروف استوائية طوال السنة."
     },
     "hi": {
-      "common_name": "बैंगनी शिरप पौधा",
-      "description": "Sarracenia purpurea, जिसे बैंगनी शिरप पौधा कहा जाता है, सजावटी पौधा है जिसे सजावटी पत्तियों के लिए उगाया जाता है। इसे बहुत तेज रोशनी और थोड़ी सी सीधी धूप में रखें। हल्का अम्लीय और जलनिकासी वाला मिश्रण का उपयोग करें और मिट्टी को हल्का नम रखें, लेकिन पानी जमा न होने दें। इसे अधिक आर्द्रता और लगभग 18-24°C तापमान पसंद है। अधिक पानी देने से बचें; इसे पौधे चबाने वाले पालतू जानवरों से दूर रखें।"
+      "common_name": "बैंगनी सारासेनिया",
+      "description": "सारासेनिया परप्यूरिया समशीतोष्ण दलदलों का कीटभक्षी पिचर पौधा है। इसे तेज़ रोशनी और अम्लीय, कम पोषक विशेष मिश्रण दें, जो वर्षा या आसुत जल से लगातार गीला रहे। सामान्य खाद न दें। इसे ठंडा शीतकालीन विश्राम चाहिए, साल भर उष्णकटिबंधीय परिस्थितियाँ नहीं।"
     },
     "zh": {
-      "common_name": "紫瓶草",
-      "description": "Sarracenia purpurea，通常称为紫瓶草，是一种观赏植物，主要用于观赏叶片。 放在非常明亮并带少量直射光的位置。 使用微酸且排水良好的基质，并保持基质微湿但避免积水。 它偏好较高空气湿度，温度约18-24°C。 避免过度浇水; 请远离会啃咬植物的宠物。"
+      "common_name": "紫瓶子草",
+      "description": "紫瓶子草是温带沼泽食虫植物，具有瓶状捕虫叶。需要强光和酸性、低养分的专用基质，并用雨水或蒸馏水保持持续湿润。不要施用普通肥料。它需要凉爽的冬季休眠，而不是全年热带环境。"
     },
     "ja": {
-      "common_name": "ムラサキピッチャープラント",
-      "description": "Sarracenia purpurea（ムラサキピッチャープラント）は、葉姿を楽しむために育てる観賞植物です。 とても明るく少し直射日光が当たる場所に置きます。 弱酸性で水はけの良い用土を使い、用土を軽く湿らせつつ過湿にしません。 高めの湿度と18-24°C前後の温度を好みます。 水のやり過ぎを避けます; 植物をかじるペットから離してください。"
+      "common_name": "ムラサキヘイシソウ",
+      "description": "サラセニア・プルプレアは筒状の捕虫葉をもつ温帯の湿地性食虫植物です。強い光と酸性で養分の少ない専用培地を好み、雨水や蒸留水で常に十分湿らせます。一般肥料は使わず、冬は涼しい環境で休眠させます。通年の熱帯環境には向きません。"
     },
     "ko": {
-      "common_name": "자주빛 피처 식물",
-      "description": "Sarracenia purpurea(자주빛 피처 식물)는 잎을/를 위해 기르는 관상식물입니다. 매우 밝고 약간의 직사광이 드는 곳에 두세요. 약산성이고 배수가 좋은 흙을 사용하고 흙을 살짝 촉촉하게 유지하되 물이 고이지 않게 하세요. 높은 습도와 약 18-24°C의 온도를 선호합니다. 과습을 피하세요; 식물을 씹는 반려동물에게서 멀리 두세요."
+      "common_name": "사라세니아 푸르푸레아",
+      "description": "사라세니아 푸르푸레아는 통 모양의 포충엽을 가진 온대 습지 식충식물입니다. 강한 빛과 산성이며 영양분이 적은 전용 배지가 필요하고, 빗물이나 증류수로 늘 충분히 젖게 유지합니다. 일반 비료는 주지 마세요. 연중 열대 환경이 아니라 서늘한 겨울 휴면이 필요합니다."
+    },
+    "id": {
+      "description": "Sarracenia purpurea adalah tanaman karnivora rawa beriklim sedang dengan perangkap kantong. Berikan cahaya kuat dan media khusus yang asam serta rendah hara, selalu basah oleh air hujan atau air suling. Jangan tambahkan pupuk biasa. Tanaman ini perlu istirahat musim dingin yang sejuk, bukan kondisi tropis sepanjang tahun.",
+      "common_name": "Sarracenia purpurea"
+    },
+    "ru": {
+      "description": "Саррацения пурпурная — насекомоядное болотное растение умеренного климата с листьями-ловушками. Ей нужны яркий свет и кислая бедная специальная смесь, постоянно мокрая от дождевой или дистиллированной воды. Обычные удобрения не вносят. Нужен прохладный зимний покой, а не тропические условия круглый год.",
+      "common_name": "Саррацения пурпурная"
+    },
+    "tr": {
+      "description": "Sarracenia purpurea, ılıman iklim bataklıklarında yetişen etçil bir sürahi bitkisidir. Güçlü ışık ve yağmur ya da damıtılmış suyla sürekli ıslak tutulan asidik, az besinli özel ortam ister. Sıradan gübre eklemeyin. Yıl boyu tropik koşullar değil, serin kış dinlenmesi gerekir.",
+      "common_name": "Sarracenia purpurea"
     }
   },
   "sources": {

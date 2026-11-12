@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "tolmiea_menziesii.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "May cause allergic reactions",
+          "pl": "Może wywoływać alergię",
+          "de": "Kann allergische Reaktionen auslösen",
+          "fr": "Peut provoquer des allergies",
+          "it": "Può causare reazioni allergiche",
+          "es": "Puede causar reacciones alérgicas",
+          "pt": "Pode provocar reações alérgicas",
+          "ar": "قد تسبب تفاعلات تحسسية",
+          "hi": "एलर्जी हो सकती है",
+          "zh": "可能引起过敏反应",
+          "ja": "アレルギー反応を起こすことがある",
+          "ko": "알레르기 반응 가능",
+          "id": "Dapat memicu reaksi alergi",
+          "ru": "Может вызывать аллергию",
+          "tr": "Alerjik reaksiyonlara yol açabilir"
         }
       }
     },

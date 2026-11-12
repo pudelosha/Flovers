@@ -20,6 +20,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "mentha_aquatica.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषाक्त",
-          "zh": "无毒",
-          "ja": "非毒性",
-          "ko": "비독성"
+          "en": "Pets: risk with large intake",
+          "pl": "Duże ilości szkodliwe dla zwierząt",
+          "de": "Für Haustiere in großen Mengen riskant",
+          "fr": "Animaux : risque en grande quantité",
+          "it": "Rischio per animali in grandi quantità",
+          "es": "Mascotas: riesgo con grandes cantidades",
+          "pt": "Animais: risco em grandes quantidades",
+          "ar": "خطر على الحيوانات بكميات كبيرة",
+          "hi": "पशुओं के लिए अधिक मात्रा में जोखिम",
+          "zh": "宠物大量摄入有风险",
+          "ja": "ペットは大量摂取に注意",
+          "ko": "반려동물의 다량 섭취에 위험",
+          "id": "Hewan: berisiko jika makan banyak",
+          "ru": "Для животных опасно в больших дозах",
+          "tr": "Hayvanlar için çok tüketimde riskli"
         }
       }
     },

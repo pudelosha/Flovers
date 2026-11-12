@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "quercus_robur.jpg",
@@ -154,7 +156,10 @@
           "hi": "खाने पर हानिकारक",
           "zh": "误食有害",
           "ja": "誤食は有害",
-          "ko": "먹으면 유해"
+          "ko": "먹으면 유해",
+          "id": "Berbahaya jika tertelan",
+          "ru": "Вредно при проглатывании",
+          "tr": "Yutulursa zararlıdır"
         }
       }
     },

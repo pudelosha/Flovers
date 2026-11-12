@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "alocasia_lauterbachiana.jpg",
@@ -153,7 +155,10 @@
           "hi": "विषैला",
           "zh": "有毒",
           "ja": "有毒",
-          "ko": "독성"
+          "ko": "독성",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

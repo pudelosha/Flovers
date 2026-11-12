@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "crassula_muscosa.jpg",
@@ -152,7 +154,10 @@
           "hi": "संभावित विषाक्त",
           "zh": "可能有毒",
           "ja": "毒性の可能性",
-          "ko": "독성 가능"
+          "ko": "독성 가능",
+          "id": "Berpotensi beracun",
+          "ru": "Потенциально ядовито",
+          "tr": "Zehirli olabilir"
         }
       }
     },

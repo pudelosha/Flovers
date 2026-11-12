@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "senecio_serpens.jpg",
@@ -153,7 +155,10 @@
           "hi": "हल्के विषैले",
           "zh": "轻微毒性",
           "ja": "軽度の毒性",
-          "ko": "경미한 독성"
+          "ko": "경미한 독성",
+          "id": "Sedikit beracun",
+          "ru": "Слаботоксично",
+          "tr": "Hafif zehirli"
         }
       }
     },

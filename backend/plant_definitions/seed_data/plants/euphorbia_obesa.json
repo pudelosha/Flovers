@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 36,
   "image_hero": "euphorbia_obesa.jpg",
@@ -152,7 +154,10 @@
           "hi": "विषैला रस",
           "zh": "汁液有毒",
           "ja": "樹液は有毒",
-          "ko": "수액 유독"
+          "ko": "수액 유독",
+          "id": "Getah beracun",
+          "ru": "Сок ядовит",
+          "tr": "Özsuyu zehirlidir"
         }
       }
     },

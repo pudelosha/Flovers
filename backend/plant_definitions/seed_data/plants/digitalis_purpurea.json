@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "digitalis_purpurea.jpg",
@@ -152,7 +154,10 @@
           "hi": "बहुत विषैला",
           "zh": "误食剧毒",
           "ja": "誤食で強い毒",
-          "ko": "섭취 시 강독성"
+          "ko": "섭취 시 강독성",
+          "id": "Sangat beracun jika tertelan",
+          "ru": "Очень ядовито при проглатывании",
+          "tr": "Yutulursa çok zehirlidir"
         }
       }
     },

@@ -18,6 +18,8 @@
   "moisture_interval_days": null,
   "fertilize_required": false,
   "fertilize_interval_days": null,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "eschscholzia_californica.jpg",
@@ -152,7 +154,10 @@
           "hi": "हल्की विषाक्त",
           "zh": "误食轻度有毒",
           "ja": "誤食で軽い毒性",
-          "ko": "섭취 시 약독성"
+          "ko": "섭취 시 약독성",
+          "id": "Sedikit beracun jika tertelan",
+          "ru": "Слаботоксично при проглатывании",
+          "tr": "Yutulursa hafif zehirlidir"
         }
       }
     },

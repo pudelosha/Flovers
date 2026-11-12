@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "spinacia_oleracea.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "अ विषैला",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "무독성"
+          "en": "Excess intake: oxalate risk",
+          "pl": "Nadmiar: ryzyko związane ze szczawianami",
+          "de": "Bei Übermaß: Oxalatrisiko",
+          "fr": "Excès : risque lié aux oxalates",
+          "it": "Eccesso: rischio da ossalati",
+          "es": "Exceso: riesgo por oxalatos",
+          "pt": "Excesso: risco de oxalatos",
+          "ar": "الإفراط: خطر الأوكسالات",
+          "hi": "अधिक सेवन: ऑक्सलेट का जोखिम",
+          "zh": "过量摄入有草酸盐风险",
+          "ja": "過剰摂取はシュウ酸塩のリスク",
+          "ko": "과다 섭취 시 옥살산염 위험",
+          "id": "Berlebihan: risiko oksalat",
+          "ru": "При избытке: риск оксалатов",
+          "tr": "Aşırı tüketimde oksalat riski"
         }
       }
     },

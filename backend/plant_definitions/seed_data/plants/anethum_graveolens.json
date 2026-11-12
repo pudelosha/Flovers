@@ -19,6 +19,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": false,
   "repot_interval_months": null,
   "image_hero": "anethum_graveolens.jpg",
@@ -153,7 +155,10 @@
           "hi": "पालतू-सुरक्षित",
           "zh": "对宠物无毒",
           "ja": "ペット無害",
-          "ko": "반려동물 안전"
+          "ko": "반려동물 안전",
+          "id": "Tidak beracun bagi hewan peliharaan",
+          "ru": "Неядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirsiz"
         }
       }
     },

@@ -19,6 +19,8 @@
   "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 30,
   "image_hero": "dracaena_reflexa.jpg",
@@ -153,7 +155,10 @@
           "hi": "पालतू के लिए विषाक्त",
           "zh": "对宠物有毒",
           "ja": "ペットに有毒",
-          "ko": "반려동물에 유독"
+          "ko": "반려동물에 유독",
+          "id": "Beracun bagi hewan peliharaan",
+          "ru": "Ядовито для домашних животных",
+          "tr": "Evcil hayvanlar için zehirli"
         }
       }
     },

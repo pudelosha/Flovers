@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "kalanchoe_tomentosa.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczny dla zwierząt domowych",
-          "de": "Giftig für Haustiere",
-          "fr": "Toxique pour les animaux",
-          "it": "Tossico per gli animali domestici",
-          "es": "Tóxico para mascotas",
-          "pt": "Tóxico para animais de estimação",
-          "ar": "سام للحيوانات الأليفة",
-          "hi": "पालतू जानवरों के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペットに有毒",
-          "ko": "반려동물에게 유독함"
+          "en": "Toxic if eaten",
+          "pl": "Trująca po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سامة عند تناولها",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "食べると有毒",
+          "ko": "먹으면 독성 있음",
+          "id": "Beracun jika tertelan",
+          "ru": "Ядовито при проглатывании",
+          "tr": "Yutulursa zehirlidir"
         }
       }
     },

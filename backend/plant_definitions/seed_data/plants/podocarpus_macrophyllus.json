@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "podocarpus_macrophyllus.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Non-toxic",
-          "pl": "Nietoksyczny",
-          "de": "Nicht giftig",
-          "fr": "Non toxique",
-          "it": "Non tossico",
-          "es": "No tóxico",
-          "pt": "Não tóxico",
-          "ar": "غير سام",
-          "hi": "गैर विषाक्त",
-          "zh": "无毒",
-          "ja": "無毒",
-          "ko": "비독성"
+          "en": "Seeds harmful if eaten",
+          "pl": "Nasiona szkodliwe po spożyciu",
+          "de": "Samen bei Verzehr schädlich",
+          "fr": "Graines nocives si ingérées",
+          "it": "Semi nocivi se ingeriti",
+          "es": "Semillas nocivas al ingerirlas",
+          "pt": "Sementes nocivas se ingeridas",
+          "ar": "بذورها ضارة عند تناولها",
+          "hi": "बीज खाने पर हानिकारक",
+          "zh": "误食种子有害",
+          "ja": "種子は食べると有害",
+          "ko": "씨앗을 먹으면 유해함",
+          "id": "Biji berbahaya jika tertelan",
+          "ru": "Семена вредны при проглатывании",
+          "tr": "Tohumları yutulursa zararlıdır"
         }
       }
     },

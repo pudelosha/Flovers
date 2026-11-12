@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 21,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 18,
   "image_hero": "curcuma_alismatifolia.jpg",
@@ -154,7 +156,10 @@
           "hi": "विषाक्तता अस्पष्ट",
           "zh": "毒性不明确",
           "ja": "毒性は不明",
-          "ko": "독성 불명확"
+          "ko": "독성 불명확",
+          "id": "Toksisitas belum jelas",
+          "ru": "Токсичность неясна",
+          "tr": "Zehirliliği belirsiz"
         }
       }
     },

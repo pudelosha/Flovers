@@ -20,6 +20,8 @@
   "moisture_interval_days": 7,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "epipremnum_aureum.jpg",
@@ -143,18 +145,21 @@
       "key": "toxic",
       "value": {
         "text": {
-          "en": "Toxic to pets",
-          "pl": "Toksyczne dla zwierząt",
-          "de": "Giftig für Tiere",
-          "fr": "Toxique animaux",
-          "it": "Tossica per animali",
-          "es": "Tóxica para mascotas",
-          "pt": "Tóxica p/ pets",
-          "ar": "سام للحيوانات",
-          "hi": "पालतू के लिए विषैला",
-          "zh": "对宠物有毒",
-          "ja": "ペット有毒",
-          "ko": "반려동물 유독"
+          "en": "Toxic if eaten; sap irritant",
+          "pl": "Trująca po spożyciu; sok drażni",
+          "de": "Giftig bei Verzehr; Saft reizt",
+          "fr": "Toxique si ingérée ; sève irritante",
+          "it": "Tossica se ingerita; linfa irritante",
+          "es": "Tóxica al ingerir; savia irritante",
+          "pt": "Tóxica se ingerida; seiva irritante",
+          "ar": "سامة عند تناولها؛ عصارتها مهيجة",
+          "hi": "खाने पर विषाक्त; रस से जलन",
+          "zh": "误食有毒；汁液可致刺激",
+          "ja": "食べると有毒・樹液は刺激性",
+          "ko": "섭취 시 독성; 수액은 자극성",
+          "id": "Beracun tertelan; getah mengiritasi",
+          "ru": "Ядовито при еде; сок раздражает",
+          "tr": "Yutulursa zehirli; özsuyu tahriş eder"
         }
       }
     },

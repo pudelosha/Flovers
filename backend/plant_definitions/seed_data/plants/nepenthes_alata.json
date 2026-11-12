@@ -11,8 +11,7 @@
     "ceramic"
   ],
   "recommended_soil_mixes": [
-    "peat-free",
-    "cactus-succulent"
+    "nepenthes"
   ],
   "water_required": true,
   "water_interval_days": 7,
@@ -20,6 +19,8 @@
   "moisture_interval_days": 3,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 24,
   "image_hero": "nepenthes_alata.jpg",
@@ -48,18 +49,21 @@
       "key": "soil",
       "value": {
         "text": {
-          "en": "Well-draining",
-          "pl": "Dobrze przepuszczający",
-          "de": "Gut durchlässig",
-          "fr": "Bien drainé",
-          "it": "Ben drenante",
-          "es": "Bien drenado",
-          "pt": "Bem drenado",
-          "ar": "تصريف جيد",
-          "hi": "अच्छी जल निकासी",
-          "zh": "良好排水",
-          "ja": "排水性が良い",
-          "ko": "배수가 좋은"
+          "en": "Airy, nutrient-poor sphagnum mix",
+          "pl": "Przewiewne podłoże z mchem torfowcem",
+          "de": "Luftige, nährstoffarme Sphagnummischung",
+          "fr": "Mélange aéré de sphaigne, peu nutritif",
+          "it": "Miscela ariosa di sfagno, poco nutritiva",
+          "es": "Esfagno aireado y bajo en nutrientes",
+          "pt": "Mistura arejada de esfagno, pouco rica",
+          "ar": "خليط سفاغنوم مهوّى قليل المغذيات",
+          "hi": "हवादार, कम पोषक मॉस मिश्रण",
+          "zh": "透气、低养分的水苔混合基质",
+          "ja": "通気性がよく養分の少ない水苔配合",
+          "ko": "통기성이 좋고 영양분이 적은 수태 배합",
+          "id": "Campuran sfagnum berpori, rendah hara",
+          "ru": "Воздушная смесь со сфагнумом, бедная",
+          "tr": "Havadar, az besinli sfagnum karışımı"
         }
       }
     },
@@ -154,7 +158,10 @@
           "hi": "गैर-विषैली (रिपोर्ट)",
           "zh": "据报无毒",
           "ja": "無毒と報告",
-          "ko": "무독성 보고됨"
+          "ko": "무독성 보고됨",
+          "id": "Dilaporkan tidak beracun",
+          "ru": "Считается неядовитым",
+          "tr": "Zehirsiz olduğu bildirilmiş"
         }
       }
     },
@@ -219,51 +226,63 @@
   "translations": {
     "en": {
       "common_name": "Winged Pitcher Plant",
-      "description": "Nepenthes alata, commonly called Winged Pitcher Plant, is a succulent grown for its foliage. Place it in bright, indirect or filtered light. Use a well-draining potting mix and keep the potting mix lightly moist without leaving it waterlogged. It prefers higher humidity and temperatures around 25-30°C. Avoid overwatering."
+      "description": "Nepenthes alata is a tropical carnivorous pitcher plant, not a succulent. Grow it in bright, indirect light, humid air and an airy, low-nutrient sphagnum-based medium. Keep the medium moist but freely draining; use low-mineral water and avoid ordinary pre-fertilized potting soil."
     },
     "pl": {
       "common_name": "Roczna dzbaneczna roślina",
-      "description": "Nepenthes alata, znana jako Roczna dzbaneczna roślina, to roślina typu sukulent, uprawiana ze względu na dekoracyjne liście. Ustaw ją w jasnym, rozproszonym lub filtrowanym świetle. Zastosuj dobrze przepuszczalne podłoże i utrzymuj podłoże lekko wilgotne, ale nie mokre. Preferuje wyższą wilgotność powietrza i temperatury około 25-30°C. Unikaj przelania."
+      "description": "Nepenthes alata to tropikalny dzbanecznik owadożerny, a nie sukulent. Potrzebuje jasnego, rozproszonego światła, wilgotnego powietrza i przewiewnego, ubogiego podłoża z torfowcem. Utrzymuj je wilgotne, ale przepuszczalne; używaj wody o niskiej zawartości minerałów i unikaj zwykłej ziemi z nawozem."
     },
     "de": {
       "common_name": "Geflügelte Kannenpflanze",
-      "description": "Nepenthes alata, auch Geflügelte Kannenpflanze genannt, ist eine Pflanze vom Typ Sukkulente und wird vor allem für das Laub kultiviert. Stelle sie an einen Platz mit hellem, indirektem oder gefiltertem Licht. Verwende ein gut drainierendes Substrat und halte das Substrat leicht feucht, aber nicht nass. Sie bevorzugt höhere Luftfeuchtigkeit und Temperaturen um 25-30°C. Vermeide Überwässerung."
+      "description": "Nepenthes alata ist eine tropische fleischfressende Kannenpflanze, keine Sukkulente. Sie braucht helles indirektes Licht, feuchte Luft und ein luftiges, nährstoffarmes Sphagnumsubstrat. Gleichmäßig feucht, aber gut drainiert halten; mineralarmes Wasser und keine vorgedüngte Blumenerde verwenden."
     },
     "fr": {
       "common_name": "Plante à pichet ailé",
-      "description": "Nepenthes alata, appelée Plante à pichet ailé, est une plante de type succulente, cultivée pour son feuillage. Placez-la dans une lumière vive indirecte ou filtrée. Utilisez un substrat bien drainant et gardez le substrat légèrement humide sans le détremper. Elle préfère une humidité plus élevée et des températures autour de 25-30°C. Évitez les excès d’arrosage."
+      "description": "Nepenthes alata est une plante carnivore tropicale à urnes, pas une succulente. Elle demande une lumière vive indirecte, de l’air humide et un substrat aéré et pauvre à base de sphaigne. Gardez-le humide mais drainant ; utilisez une eau peu minéralisée et évitez les terreaux préfertilisés."
     },
     "it": {
       "common_name": "Pianta a brocca alata",
-      "description": "Nepenthes alata, chiamata anche Pianta a brocca alata, è una pianta di tipo succulenta, coltivata per il fogliame. Tienila in luce intensa indiretta o filtrata. Usa un substrato ben drenante e mantieni il substrato leggermente umido senza ristagni. Preferisce umidità più alta e temperature intorno a 25-30°C. Evita l’eccesso d’acqua."
+      "description": "Nepenthes alata è una pianta carnivora tropicale a trappole a brocca, non una succulenta. Richiede luce intensa indiretta, aria umida e un substrato arioso e povero a base di sfagno. Mantienilo umido ma drenante; usa acqua poco mineralizzata ed evita terricci comuni già concimati."
     },
     "es": {
       "common_name": "Planta carnívora alada",
-      "description": "Nepenthes alata, conocida como Planta carnívora alada, es una planta de tipo suculenta, cultivada principalmente por su follaje. Colócala con luz brillante indirecta o filtrada. Usa un sustrato con buen drenaje y mantén el sustrato ligeramente húmedo sin encharcar. Prefiere humedad más alta y temperaturas alrededor de 25-30°C. Evita el exceso de riego."
+      "description": "Nepenthes alata es una planta carnívora tropical con trampas en forma de jarra, no una suculenta. Necesita luz intensa indirecta, aire húmedo y un medio aireado y pobre a base de esfagno. Mantenlo húmedo pero drenado; usa agua poco mineralizada y evita sustratos comunes con abono añadido."
     },
     "pt": {
       "common_name": "Planta carnívora alada",
-      "description": "Nepenthes alata, conhecida como Planta carnívora alada, é uma planta do tipo suculenta, cultivada principalmente para a folhagem. Coloque-a em luz forte indireta ou filtrada. Use um substrato bem drenante e mantenha o substrato levemente úmido sem encharcar. Prefere umidade mais alta e temperaturas em torno de 25-30°C. Evite excesso de rega."
+      "description": "Nepenthes alata é uma planta carnívora tropical com armadilhas em forma de jarro, não uma suculenta. Precisa de luz intensa indireta, ar húmido e um substrato arejado e pobre à base de esfagno. Mantém-no húmido mas drenante; usa água pouco mineralizada e evita terra comum pré-adubada."
     },
     "ar": {
       "common_name": "نبات الجرة الجناحية",
-      "description": "Nepenthes alata، المعروفة باسم نبات الجرة الجناحية، هي نبات عصاري تُزرع من أجل أوراقه الزخرفية. ضعها في ضوء ساطع غير مباشر أو مرشح. استخدم تربة جيدة التصريف وحافظ على التربة رطبة قليلًا من دون إغراق. تفضل رطوبة أعلى ودرجات حرارة حول 25-30°C. تجنب الإفراط في الري."
+      "description": "نابنط ألاتا نبات إبريقي لاحم استوائي وليس نباتًا عصاريًا. يحتاج إلى ضوء ساطع غير مباشر وهواء رطب ووسط سفاغنوم مهوّى قليل المغذيات. حافظ على رطوبة الوسط مع تصريف جيد، واستخدم ماءً قليل المعادن وتجنب تربة الأصص العادية المضاف إليها سماد."
     },
     "hi": {
       "common_name": "पंखदार पिचर पौधा",
-      "description": "Nepenthes alata, जिसे पंखदार पिचर पौधा कहा जाता है, रसीला पौधा है जिसे सजावटी पत्तियों के लिए उगाया जाता है। इसे तेज़, अप्रत्यक्ष या छनकर आने वाली रोशनी में रखें। अच्छी जलनिकासी वाला मिश्रण का उपयोग करें और मिट्टी को हल्का नम रखें, लेकिन पानी जमा न होने दें। इसे अधिक आर्द्रता और लगभग 25-30°C तापमान पसंद है। अधिक पानी देने से बचें।"
+      "description": "नेपेन्थीस अलाटा उष्णकटिबंधीय कीटभक्षी पिचर पौधा है, रसीला पौधा नहीं। इसे तेज़ अप्रत्यक्ष रोशनी, नम हवा और हवादार, कम पोषक मॉस आधारित मिश्रण चाहिए। मिश्रण नम रखें पर पानी निकलने दें; कम खनिज वाला पानी लें और पहले से खाद मिली सामान्य मिट्टी से बचें।"
     },
     "zh": {
       "common_name": "翼形瓶子植物",
-      "description": "Nepenthes alata，通常称为翼形瓶子植物，是一种多肉植物，主要用于观赏叶片。 放在明亮散射光或过滤光处。 使用排水良好的基质，并保持基质微湿但避免积水。 它偏好较高空气湿度，温度约25-30°C。 避免过度浇水。"
+      "description": "翼状猪笼草是热带食虫植物，并非多肉植物。它需要明亮的散射光、湿润空气及透气低养分的水苔基质。基质应保持湿润且排水通畅；使用低矿物质水，避免普通含预施肥料的盆土。"
     },
     "ja": {
       "common_name": "翼のあるピッチャープラント",
-      "description": "Nepenthes alata（翼のあるピッチャープラント）は、葉姿を楽しむために育てる多肉植物です。 明るい間接光またはフィルター越しの光に置きます。 水はけの良い用土を使い、用土を軽く湿らせつつ過湿にしません。 高めの湿度と25-30°C前後の温度を好みます。 水のやり過ぎを避けます。"
+      "description": "ネペンテス・アラタは熱帯性の食虫植物で、多肉植物ではありません。明るい間接光、湿った空気、通気性がよく養分の少ない水苔主体の培地を好みます。湿り気を保ちつつ水をよく切り、低ミネラルの水を使い、元肥入りの一般培養土を避けます。"
     },
     "ko": {
       "common_name": "날개 달린 피쳐 식물",
-      "description": "Nepenthes alata(날개 달린 피쳐 식물)는 잎을/를 위해 기르는 다육식물입니다. 밝은 간접광 또는 여과광에 두세요. 배수가 좋은 흙을 사용하고 흙을 살짝 촉촉하게 유지하되 물이 고이지 않게 하세요. 높은 습도와 약 25-30°C의 온도를 선호합니다. 과습을 피하세요."
+      "description": "네펜데스 알라타는 열대 식충식물이며 다육식물이 아닙니다. 밝은 간접광, 습한 공기, 통기성이 좋고 영양분이 적은 수태 기반 배지가 필요합니다. 배지는 촉촉하게 유지하되 배수가 잘되게 하고, 미네랄이 적은 물을 쓰며 일반 비료 첨가 배양토는 피하세요."
+    },
+    "id": {
+      "description": "Nepenthes alata adalah kantong semar tropis, bukan sukulen. Tanaman ini memerlukan cahaya terang tidak langsung, udara lembap, dan media sfagnum berpori dengan hara rendah. Jaga media tetap lembap tetapi mudah mengalirkan air; gunakan air rendah mineral dan hindari tanah pot biasa yang sudah diberi pupuk.",
+      "common_name": "Nepenthes alata"
+    },
+    "ru": {
+      "description": "Непентес крылатый — тропическое насекомоядное растение, а не суккулент. Ему нужны яркий рассеянный свет, влажный воздух и рыхлая бедная смесь со сфагнумом. Поддерживайте влажность без застоя воды, используйте маломинерализованную воду и не сажайте в обычный заранее удобренный грунт.",
+      "common_name": "Nepenthes alata"
+    },
+    "tr": {
+      "description": "Nepenthes alata tropik bir etçil sürahi bitkisidir, sukulent değildir. Aydınlık dolaylı ışık, nemli hava ve havadar, az besinli sfagnum temelli ortam ister. Ortamı nemli ama iyi drene tutun; düşük mineralli su kullanın ve önceden gübrelenmiş sıradan saksı toprağından kaçının.",
+      "common_name": "Nepenthes alata"
     }
   },
   "sources": {

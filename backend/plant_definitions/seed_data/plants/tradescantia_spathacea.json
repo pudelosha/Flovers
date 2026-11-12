@@ -20,6 +20,8 @@
   "moisture_interval_days": null,
   "fertilize_required": true,
   "fertilize_interval_days": 30,
+  "pruning_required": false,
+  "pruning_interval_days": null,
   "repot_required": true,
   "repot_interval_months": 12,
   "image_hero": "tradescantia_spathacea.jpg",
@@ -154,7 +156,10 @@
           "hi": "हल्का उत्तेजक",
           "zh": "轻微刺激",
           "ja": "軽い刺激性",
-          "ko": "경미한 자극"
+          "ko": "경미한 자극",
+          "id": "Iritan ringan",
+          "ru": "Слабый раздражитель",
+          "tr": "Hafif tahriş edici"
         }
       }
     },
