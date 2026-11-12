@@ -1,3 +1,4 @@
+import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, {
   useCallback,
@@ -325,6 +326,8 @@ export default function PlantsScreen() {
     return results;
   }, []);
 
+  const [loadError, setLoadError] = useState(false);
+
   const load = useCallback(async () => {
     try {
       const data = await fetchPlantInstances({ auth: true });
@@ -332,8 +335,10 @@ export default function PlantsScreen() {
       const mapped = data.map(it => mapApiToPlant(it, unnamedFallback));
       const withLocal = await attachLocalPhotos(mapped);
 
+      setLoadError(false);
       setPlants(withLocal);
     } catch (e: any) {
+      setLoadError(true);
       showToast(
         e?.message ||
           t('plants.toast.loadFailed', {
@@ -858,7 +863,7 @@ export default function PlantsScreen() {
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
-        ListEmptyComponent={() => (
+        ListEmptyComponent={() => loadError ? <ListLoadError message={String(t('plants.toast.loadFailed', { defaultValue: 'Failed to load plants' }))} onRetry={() => void onRefresh()} /> : (
           <AnimatedView
             style={[
               s.emptyWrap,

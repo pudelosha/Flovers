@@ -1,3 +1,4 @@
+import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
@@ -138,7 +139,7 @@ export default function RemindersScreen() {
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [fabCloseSignal, setFabCloseSignal] = useState(0);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
   const [uiReminders, setUiReminders] = useState<UIReminder[]>([]);
@@ -215,6 +216,8 @@ export default function RemindersScreen() {
   ): "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot" =>
     tt === "watering" ? "water" : tt === "fertilising" ? "fertilize" : tt;
 
+  const [loadError, setLoadError] = useState(false);
+
   const load = useCallback(async () => {
     setLoading(true);
     try {
@@ -225,6 +228,7 @@ export default function RemindersScreen() {
       ]);
       const ownPlants = plants.filter((plant) => plantAccess(plant.access).isOwner);
       const ui = buildUIReminders(tasks, reminders.filter((reminder) => plantAccess(reminder.access).isOwner), ownPlants);
+      setLoadError(false);
       setUiReminders(ui);
       setPlantOptions(
         mapPlantOptions(
@@ -233,6 +237,7 @@ export default function RemindersScreen() {
         )
       );
     } catch (e: any) {
+      setLoadError(true);
       const msg =
         e?.message ||
         tr("reminders.toast.loadFailed", "Failed to load reminders");
@@ -789,6 +794,7 @@ export default function RemindersScreen() {
             <RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />
           }
           ListEmptyComponent={
+            loadError ? <ListLoadError message={tr("reminders.toast.loadFailed", "Failed to load reminders")} onRetry={() => void onPullRefresh()} /> :
             !loading ? (
               <AnimatedView
                 style={[

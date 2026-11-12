@@ -19,7 +19,6 @@ import { wiz } from '../../styles/wizard.styles';
 import type { LightLevel, Orientation } from '../../types/create-plant.types';
 import { Sensors } from '../../services/Sensors';
 import { ThemeContrastScope } from '../../../../shared/theme/ThemeContext';
-import { s as remindersStyles } from '../../../reminders/styles/reminders.styles';
 
 const MEASURE_GREEN = 'rgba(16,80,63,0.92)';
 
@@ -86,6 +85,7 @@ export default function MeasureExposureModal({
   const headingCleanupRef = useRef<(() => void) | null>(null);
 
   const [isTestRunning, setIsTestRunning] = useState(false);
+  const [measurementComplete, setMeasurementComplete] = useState(false);
   const timerRef = useRef<number | null>(null);
   const [remainMs, setRemainMs] = useState(0);
   const testMaxLuxRef = useRef<number | null>(null);
@@ -197,6 +197,9 @@ export default function MeasureExposureModal({
 
   useEffect(() => {
     if (!visible) {
+      if (timerRef.current != null) clearInterval(timerRef.current);
+      timerRef.current = null;
+      setMeasurementComplete(false);
       stopSensors();
       setLux(null);
       setHeadingDeg(null);
@@ -212,12 +215,17 @@ export default function MeasureExposureModal({
 
     startSensors();
 
-    return () => stopSensors();
+    return () => {
+      stopSensors();
+      if (timerRef.current != null) clearInterval(timerRef.current);
+      timerRef.current = null;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
 
   const endTest = useCallback(() => {
     setIsTestRunning(false);
+    setMeasurementComplete(true);
 
     if (timerRef.current != null) {
       clearInterval(timerRef.current);
@@ -252,6 +260,7 @@ export default function MeasureExposureModal({
   const start5sTest = useCallback(() => {
     if (isTestRunning) return;
 
+    setMeasurementComplete(false);
     setIsTestRunning(true);
     setFinalLuxMax(null);
     setFinalOrientation(null);
@@ -397,29 +406,6 @@ export default function MeasureExposureModal({
               <Text style={rowVal}>{orientationLabelLive}</Text>
             </View>
 
-            <View
-              style={[
-                rowStyle,
-                {
-                  borderBottomWidth: 0,
-                },
-              ]}
-            >
-              <View style={rowLeft}>
-                <MaterialCommunityIcons name="timer-sand" size={18} color="#FFFFFF" />
-                <Text style={rowTitle}>
-                  {tr('createPlant.step04.modal.testLabel', '5-second measurement')}{' '}
-                  {isTestRunning
-                    ? tr('createPlant.step04.modal.running', '(running…)')
-                    : tr('createPlant.step04.modal.last', '(last)')}
-                </Text>
-              </View>
-
-              <Text style={rowVal}>
-                {isTestRunning ? `~${countdownSec}s` : tr('createPlant.step04.modal.done', 'done')}
-              </Text>
-            </View>
-
             <View style={{ paddingVertical: 2 }}>
               <Text style={styles.resultText}>
                 {tr('createPlant.step04.modal.bestLight', 'Light (best in 5s)')} {lightLabelFinal}
@@ -439,8 +425,32 @@ export default function MeasureExposureModal({
             </View>
           </View>
 
+          <View style={styles.measurementProgress} testID="exposure-measurement-progress">
+            <View style={styles.progressLabels}>
+              <Text style={[rowTitle, styles.progressTitle]}>
+                {tr('createPlant.step04.modal.testLabel', '5-second measurement')}
+              </Text>
+              <Text style={[rowVal, styles.countdown]}>
+                {measurementComplete
+                  ? tr('createPlant.step04.modal.done', 'done')
+                  : `${isTestRunning ? countdownSec : 5}s`}
+              </Text>
+            </View>
+            <View
+              accessible
+              accessibilityRole="progressbar"
+              accessibilityLabel={tr('createPlant.step04.modal.testLabel', '5-second measurement')}
+              accessibilityValue={{ min: 0, max: 5, now: measurementComplete ? 5 : isTestRunning ? (5000 - remainMs) / 1000 : 0 }}
+              style={styles.progressTrack}
+            >
+              <View style={[styles.progressFill, {
+                width: `${measurementComplete ? 100 : isTestRunning ? (1 - remainMs / 5000) * 100 : 0}%`,
+              }]} />
+            </View>
+          </View>
+
           <View style={styles.buttonsRow}>
-            <Pressable style={wiz.btn} onPress={onClose}>
+            <Pressable style={[wiz.btn, styles.button]} onPress={onClose}>
               <Text style={wiz.btnText}>{tr('createPlant.step04.modal.close', 'Close')}</Text>
             </Pressable>
 
@@ -448,6 +458,7 @@ export default function MeasureExposureModal({
             <Pressable
               style={[
                 wiz.btn,
+                styles.button,
                 styles.measureButton,
                 isTestRunning ? styles.measureButtonDisabled : undefined,
               ]}
@@ -455,9 +466,7 @@ export default function MeasureExposureModal({
               disabled={isTestRunning}
             >
               <Text style={wiz.btnText}>
-                {isTestRunning
-                  ? tr('createPlant.step04.modal.measuring', 'Measuring…')
-                  : tr('createPlant.step04.modal.measure5s', 'Measure (5s)')}
+                {tr('createPlant.step04.modal.measure5s', 'Measure')}
               </Text>
             </Pressable>
             </ThemeContrastScope>
@@ -466,14 +475,15 @@ export default function MeasureExposureModal({
               style={[
                 wiz.btn,
                 wiz.btnPrimary,
-                !canApply
+                styles.button,
+                !canApply || isTestRunning
                   ? {
                       opacity: 0.5,
                     }
                   : undefined,
               ]}
               onPress={apply}
-              disabled={!canApply}
+              disabled={!canApply || isTestRunning}
             >
               <Text style={wiz.btnText}>{tr('createPlant.step04.modal.apply', 'Apply')}</Text>
             </Pressable>
@@ -535,12 +545,25 @@ const styles = StyleSheet.create({
   },
   buttonsRow: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    alignSelf: 'stretch',
     gap: 10,
     marginTop: 12,
   },
+  button: {
+    flex: 1,
+    minWidth: 0,
+    minHeight: 44,
+    paddingHorizontal: 6,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  measurementProgress: { marginTop: 14, gap: 8 },
+  progressLabels: { flexDirection: 'row', alignItems: 'center' },
+  progressTitle: { flex: 1 },
+  countdown: { minWidth: 44, textAlign: 'right', fontVariant: ['tabular-nums'] },
+  progressTrack: { height: 8, borderRadius: 4, overflow: 'hidden', backgroundColor: 'rgba(255,255,255,0.18)' },
+  progressFill: { height: '100%', borderRadius: 4, backgroundColor: '#0B7285' },
   measureButton: {
-    minWidth: 110,
     backgroundColor: MEASURE_GREEN,
   },
   measureButtonDisabled: {

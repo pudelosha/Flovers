@@ -7,17 +7,23 @@ export function useTileEntryAnimations(
   ids: string[],
   ready: boolean,
   focused: boolean,
+  replayKey?: string,
 ) {
   const headerReady = useHeaderContentReady();
   ready = ready && headerReady;
   const values = useRef(new Map<string, Animated.Value>());
   const shown = useRef(new Set<string>());
+  const previousReplayKey = useRef(replayKey);
   const valueFor = useCallback((id: string) => {
     if (!values.current.has(id)) values.current.set(id, new Animated.Value(0));
     return values.current.get(id)!;
   }, []);
   const signature = JSON.stringify(ids);
   useEffect(() => {
+    if (previousReplayKey.current !== replayKey) {
+      previousReplayKey.current = replayKey;
+      shown.current.clear();
+    }
     if (!ready || !focused) {
       shown.current.clear();
       values.current.forEach(value => {
@@ -54,7 +60,7 @@ export function useTileEntryAnimations(
       // An interrupted page append must never leave existing tiles invisible.
       fresh.forEach(id => valueFor(id).setValue(1));
     };
-  }, [signature, ready, focused, valueFor]);
+  }, [signature, ready, focused, valueFor, replayKey]);
   const styleFor = useCallback(
     (id: string) => {
       const value = valueFor(id);

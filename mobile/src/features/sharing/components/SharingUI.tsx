@@ -34,6 +34,7 @@ export function SharingPage({
   fixedTopContent,
   contentTopPadding = 21,
   scrollResetKey,
+  animateContent = true,
 }: {
   title: string;
   children: React.ReactNode;
@@ -43,13 +44,14 @@ export function SharingPage({
   fixedTopContent?: React.ReactNode;
   contentTopPadding?: number;
   scrollResetKey?: string;
+  animateContent?: boolean;
 }) {
   const nav = useNavigation<any>();
   const focused = useIsFocused();
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
   const entryStyle = useScreenEntryAnimation(
-    contentReady,
+    contentReady && animateContent,
     focused,
     scrollResetKey,
   );
@@ -103,7 +105,7 @@ export function SharingPage({
         >
           <AnimatedView
             testID="sharing-page-content"
-            style={[{ gap: 16 }, contentReady && entryStyle]}
+            style={[{ gap: 16 }, contentReady && animateContent && entryStyle]}
           >
             {children}
           </AnimatedView>

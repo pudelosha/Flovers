@@ -1,3 +1,4 @@
+import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -153,11 +154,15 @@ export default function LocationsScreen() {
   // Hide FAB when any modal is open
   const showFAB = !editOpen && !confirmDeleteId && !sortOpen;
 
+  const [loadError, setLoadError] = useState(false);
+
   const load = useCallback(async () => {
     try {
       const data = await fetchUserLocations({ auth: true });
+      setLoadError(false);
       setLocations(data.map(mapApiToLocation));
     } catch (e: any) {
+      setLoadError(true);
       showToast(
         e?.message ||
           tr("locations.toast.loadFailed", "Failed to load locations"),
@@ -468,7 +473,7 @@ export default function LocationsScreen() {
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
-        ListEmptyComponent={() => (
+        ListEmptyComponent={() => loadError ? <ListLoadError message={tr("locations.toast.loadFailed", "Failed to load locations")} onRetry={() => void onRefresh()} /> : (
           <AnimatedView
             style={[
               s.emptyWrap,

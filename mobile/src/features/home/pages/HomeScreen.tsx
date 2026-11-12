@@ -1,3 +1,4 @@
+import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, {
@@ -218,6 +219,8 @@ export default function HomeScreen() {
     closeFloatingMenus,
   ]);
 
+  const [loadError, setLoadError] = useState(false);
+
   const load = useCallback(async () => {
     if (loadInFlightRef.current) {
       return loadInFlightRef.current;
@@ -226,8 +229,10 @@ export default function HomeScreen() {
     const request = (async () => {
       try {
         const data = await fetchHomeTasks();
+        setLoadError(false);
         setTasks(data);
       } catch (e: any) {
+        setLoadError(true);
         showToast(e?.message || t('home.toasts.failedToLoadTasks'), 'error');
         setTasks([]);
       }
@@ -585,7 +590,6 @@ export default function HomeScreen() {
               <Text
                 style={s.segmentText}
                 numberOfLines={1}
-                adjustsFontSizeToFit
               >
                 {t('home.segments.' + value)}
               </Text>
@@ -957,6 +961,7 @@ export default function HomeScreen() {
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
           }
           ListEmptyComponent={() => {
+            if (loadError) return <ListLoadError message={String(t('home.toasts.failedToLoadTasks'))} onRetry={() => void onRefresh()} />;
             if (viewMode === 'calendar')
               return (
                 <View style={[s.emptyGlass, { padding: 22, marginTop: 12 }]}>

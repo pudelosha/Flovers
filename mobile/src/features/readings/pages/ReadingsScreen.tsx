@@ -1,3 +1,4 @@
+import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
@@ -204,6 +205,8 @@ export default function ReadingsScreen() {
   const listRef = useRef<AnimatedFlatList<any>>(null);
 
   // ===== Load devices and plant instances =====
+  const [loadError, setLoadError] = useState(false);
+
   const load = useCallback(async () => {
     try {
       const [devices, plantsList] = await Promise.all([
@@ -215,8 +218,10 @@ export default function ReadingsScreen() {
       setPlantInstances(Array.isArray(plantsList) ? plantsList : []);
 
       const tiles = devices.map(toReadingTile);
+      setLoadError(false);
       setItems(tiles);
     } catch {
+      setLoadError(true);
       showToast(
         tr("readings.toasts.loadFailed", "Failed to load devices"),
         "error"
@@ -1210,6 +1215,7 @@ export default function ReadingsScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ListEmptyComponent={
+            loadError ? <ListLoadError message={tr("readings.toasts.loadFailed", "Failed to load devices")} onRetry={() => void onRefresh()} /> :
           !loading ? (
             <AnimatedView
               style={[

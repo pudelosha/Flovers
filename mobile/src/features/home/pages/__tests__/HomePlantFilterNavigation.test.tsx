@@ -8,6 +8,7 @@ import PostponeTaskModal from "../../components/modals/PostponeTaskModal";
 import FilterHomeTasksModal from "../../components/modals/FilterHomeTasksModal";
 import FAB from "../../../../shared/ui/FAB";
 import { fetchHomeTasks } from "../../../../api/services/home.service";
+import CenteredSpinner from '../../../../shared/ui/CenteredSpinner';
 
 let mockFocused = true;
 let mockParams: any;
@@ -41,6 +42,21 @@ const tasks = () => {
   ];
 };
 const allFilters = { plantId: undefined, location: undefined, types: [], dueFrom: "", dueTo: "" };
+
+it('waits for Home data and lets a failed load retry without claiming the list is empty', async () => {
+  jest.clearAllMocks(); mockFocused = true; mockParams = undefined;
+  let reject!: (error: Error) => void;
+  (fetchHomeTasks as jest.Mock).mockReturnValueOnce(new Promise((_, fail) => { reject = fail; }));
+  const view = render(<HomeScreen />);
+  expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
+  await act(async () => { reject(new Error('offline')); });
+  expect(view.getByRole('alert')).toBeTruthy();
+  expect(view.queryByText('home.empty.all.title')).toBeNull();
+  (fetchHomeTasks as jest.Mock).mockResolvedValue(tasks());
+  fireEvent.press(view.getByText('inbox.retry'));
+  await view.findByText('Bird task');
+  expect(view.queryByRole('alert')).toBeNull();
+});
 const filterProps = (view: ReturnType<typeof render>) => view.UNSAFE_getByType(FilterHomeTasksModal).props;
 function applyFilters(view: ReturnType<typeof render>, value: any) { act(() => filterProps(view).onApply(value)); }
 function requestPlant(view: ReturnType<typeof render>, plantId: string, filterRequestId?: string) {

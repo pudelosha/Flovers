@@ -1,5 +1,6 @@
 import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
+import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, {
   useCallback,
   useEffect,
@@ -9,6 +10,7 @@ import React, {
 } from 'react';
 import {
   BackHandler,
+  AnimatedView,
   Pressable,
   StyleSheet,
   Text,
@@ -208,6 +210,12 @@ export default function SharedPlantsScreen() {
   // for its own bytes before the replacement tiles are rendered.
   const photoPreload = usePlantPhotoPreload(photoTargets, loaded && isFocused);
   const contentLoading = !loaded || photoPreload.loading;
+  const { styleFor } = useTileEntryAnimations(
+    groups.map(group => `${group[0].direction}:${group[0].plant.id}`),
+    !contentLoading,
+    isFocused,
+    filter,
+  );
   const menuGroup = groups.find(
     group => `${group[0].direction}:${group[0].plant.id}` === menuId,
   );
@@ -301,6 +309,7 @@ export default function SharedPlantsScreen() {
         fixedTopContent={selector}
         contentTopPadding={24}
         scrollResetKey={filter}
+        animateContent={false}
       >
         {contentLoading ? (
           <View style={styles.loading}>
@@ -383,8 +392,8 @@ export default function SharedPlantsScreen() {
                 const outgoing = first.direction === 'outgoing';
                 const groupId = `${first.direction}:${plant.id}`;
                 return (
+                  <AnimatedView key={groupId} style={styleFor(groupId)}>
                   <GlassCard
-                    key={first.direction + ':' + plant.id}
                     background={<PlantDescriptionSurface solid />}
                   >
                     <SharedPlantHero
@@ -508,6 +517,7 @@ export default function SharedPlantsScreen() {
                       />
                     )}
                   </GlassCard>
+                  </AnimatedView>
                 );
               })
             )}
