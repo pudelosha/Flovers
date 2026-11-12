@@ -25,10 +25,10 @@ const screenshots = {
 const featureScreenshots = {
   intervals: "create",
   tasks: "plants",
-  notifications: "plants",
+  notifications: "details",
   qr: "details",
-  sharing: "details",
-  levels: "plants",
+  sharing: "readings",
+  levels: "readings",
   iot: "readings",
 };
 
@@ -141,7 +141,7 @@ export default function FeatureGrid() {
           if (entry.isIntersecting) visible.add(entry.target);
           else visible.delete(entry.target);
         }
-        const center = window.innerHeight * 0.45;
+        const center = window.innerHeight * 0.6;
         const nearest = Array.from(visible).sort((a, b) => {
           const first = a.getBoundingClientRect();
           const second = b.getBoundingClientRect();
@@ -150,7 +150,7 @@ export default function FeatureGrid() {
         })[0];
         if (nearest) setActiveScreenshot(featureScreenshots[nearest.dataset.feature]);
       },
-      { rootMargin: "-20% 0px -30% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
+      { rootMargin: "-20% 0px 0px 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
     );
     featureRefs.current.forEach(element => observer.observe(element));
     return () => observer.disconnect();
