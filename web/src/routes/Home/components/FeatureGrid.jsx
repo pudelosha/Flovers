@@ -5,7 +5,6 @@ import {
   IconBell,
   IconQR,
   IconRepeat,
-  IconClipboardCheck,
   IconTimer,
   IconActivity,
   IconUsers,
@@ -13,7 +12,25 @@ import {
 } from "./common/Icons";
 import createPlantImg from "../../../assets/create_plant.png";
 import readingsHistoryImg from "../../../assets/readings_history.png";
+import plantDetailsImg from "../../../assets/plant_details.png";
+import plantsImg from "../../../assets/plants.png";
 import "./FeatureGrid.css";
+
+const screenshots = {
+  create: createPlantImg,
+  plants: plantsImg,
+  details: plantDetailsImg,
+  readings: readingsHistoryImg,
+};
+const featureScreenshots = {
+  intervals: "create",
+  tasks: "plants",
+  notifications: "plants",
+  qr: "details",
+  sharing: "details",
+  levels: "plants",
+  iot: "readings",
+};
 
 function BigFeature({ title, text, icon, tone = "glass" }) {
   return (
@@ -98,7 +115,7 @@ export default function FeatureGrid() {
         title: t("featureGrid.tiles.levels.title"),
         text: t("featureGrid.tiles.levels.text"), tone: "glass"
       },
-      // IoT stays last to anchor the existing screenshot animation.
+      // Finish the walkthrough with the readings chart.
       {
         key: "iot",
         icon: <IconActivity />,
@@ -113,31 +130,31 @@ export default function FeatureGrid() {
     [t]
   );
 
-  const iotTriggerRef = useRef(null);
-  const [showReadings, setShowReadings] = useState(false);
+  const featureRefs = useRef(new Map());
+  const [activeScreenshot, setActiveScreenshot] = useState("create");
 
   useEffect(() => {
-    const el = iotTriggerRef.current;
-    if (!el) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        setShowReadings(entry.isIntersecting);
+    const visible = new Set();
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+        }
+        const center = window.innerHeight * 0.45;
+        const nearest = Array.from(visible).sort((a, b) => {
+          const first = a.getBoundingClientRect();
+          const second = b.getBoundingClientRect();
+          return Math.abs(first.top + first.height / 2 - center) -
+            Math.abs(second.top + second.height / 2 - center);
+        })[0];
+        if (nearest) setActiveScreenshot(featureScreenshots[nearest.dataset.feature]);
       },
-      {
-        root: null,
-        rootMargin: "0px 0px -25% 0px",
-        threshold: 0.01
-      }
+      { rootMargin: "-20% 0px -30% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
     );
-
-    obs.observe(el);
-    return () => obs.disconnect();
+    featureRefs.current.forEach(element => observer.observe(element));
+    return () => observer.disconnect();
   }, []);
-
-  const createAlt = t("featureGrid.images.createPlantAlt", { defaultValue: "" });
-  const readingsAlt = t("featureGrid.images.readingsHistoryAlt", { defaultValue: "" });
 
   return (
     <section className="home-section home-flow">
@@ -150,10 +167,15 @@ export default function FeatureGrid() {
 
           <div className="home-flow-stack">
             {features.map((f, idx) => {
-              const isLast = f.key === "iot";
               return (
                 <Reveal key={f.key} delay={0.03 * idx} y={18}>
-                  <div ref={isLast ? iotTriggerRef : undefined}>
+                  <div
+                    data-feature={f.key}
+                    ref={element => {
+                      if (element) featureRefs.current.set(f.key, element);
+                      else featureRefs.current.delete(f.key);
+                    }}
+                  >
                     <BigFeature title={f.title} text={f.text} icon={f.icon} tone={f.tone} />
                   </div>
                 </Reveal>
@@ -166,18 +188,16 @@ export default function FeatureGrid() {
         <div className="home-flow-right" aria-hidden="true">
           <div className="home-flow-phone">
             <div className="home-flow-phone-swap">
-              <img
-                src={createPlantImg}
-                alt={createAlt}
-                className={`home-flow-phone-img ${showReadings ? "is-hidden" : "is-visible"}`}
-                loading="lazy"
-              />
-              <img
-                src={readingsHistoryImg}
-                alt={readingsAlt}
-                className={`home-flow-phone-img ${showReadings ? "is-visible" : "is-hidden"}`}
-                loading="lazy"
-              />
+              {Object.entries(screenshots).map(([key, source]) => (
+                <img
+                  key={key}
+                  src={source}
+                  alt=""
+                  className={`home-flow-phone-img ${activeScreenshot === key ? "is-visible" : "is-hidden"}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ))}
             </div>
           </div>
         </div>
