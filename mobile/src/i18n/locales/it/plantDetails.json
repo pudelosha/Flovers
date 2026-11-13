@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "Ultima lettura: —",
         "value": "Ultima lettura: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "Ultime letture",
+      "historyHint": "Tocca una lettura per vedere cronologia e dettagli.",
+      "last24Hours": "Ultime 24 ore",
+      "watering": "Annaffiatura",
+      "avg": "Media",
+      "min": "Min",
+      "max": "Max",
+      "summaryUnavailable": "Il riepilogo delle ultime 24 ore non è al momento disponibile."
     },
     "qr": {
       "title": "Codice QR",

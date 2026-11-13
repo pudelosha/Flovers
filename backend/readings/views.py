@@ -8,7 +8,8 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 from django.shortcuts import get_object_or_404
 from django.db import DatabaseError, transaction
-from django.db.models import F, Q
+from django.db.models import F, Q, Avg, Min, Max
+from django.db.models.functions import Coalesce
 from django.utils import timezone
 
 from rest_framework import viewsets, permissions, status
@@ -1334,6 +1335,34 @@ def feed(request):
 
 
 # ---------- New: Authenticated history endpoint for charts ----------
+
+@api_view(["GET"])
+@permission_classes([permissions.IsAuthenticated])
+def summary_24h(request):
+    try:
+        device_id = int(request.query_params.get("device_id", ""))
+        if device_id <= 0:
+            raise ValueError
+    except (TypeError, ValueError):
+        return Response({"detail": "A positive device_id is required"}, status=400)
+    device = get_object_or_404(
+        ReadingDevice.objects.filter(user_id=F("plant__user_id"),
+                                     plant_id__in=visible_plant_ids(request.user)), pk=device_id,
+    )
+    end = timezone.now()
+    start = end - timedelta(hours=24)
+    metrics = ("temperature", "humidity", "light", "moisture")
+    values = device.readings.annotate(recorded_at=Coalesce("observed_at", "timestamp")).filter(
+        recorded_at__gte=start, recorded_at__lte=end,
+    ).aggregate(**{
+        f"{metric}_{stat}": aggregate(metric)
+        for metric in metrics for stat, aggregate in (("avg", Avg), ("min", Min), ("max", Max))
+    })
+    return Response({"from": start.isoformat(), "to": end.isoformat(), "metrics": {
+        metric: {stat: values[f"{metric}_{stat}"] for stat in ("avg", "min", "max")}
+        for metric in metrics
+    }})
+
 
 @api_view(["GET"])
 @permission_classes([permissions.IsAuthenticated])

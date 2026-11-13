@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "Last read: —",
         "value": "Last read: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "Latest results",
+      "historyHint": "Tap any reading to see its history and details.",
+      "last24Hours": "Last 24 hours",
+      "watering": "Watering",
+      "avg": "Avg",
+      "min": "Min",
+      "max": "Max",
+      "summaryUnavailable": "The 24-hour summary is currently unavailable."
     },
     "qr": {
       "title": "QR Code",

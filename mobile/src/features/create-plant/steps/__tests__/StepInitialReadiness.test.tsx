@@ -28,7 +28,7 @@ jest.mock("@react-navigation/native", () => ({
 jest.mock("../../hooks/useCreatePlantWizard", () => ({ useCreatePlantWizard: () => ({ state: mockState, actions: mockActions }) }));
 jest.mock("../../hooks/useWizardImagePreload", () => ({
   useWizardImagePreload: jest.fn(() => ({ loading: mockImagesLoading })),
-}), { virtual: true });
+}));
 jest.mock("../../../../api/services/plant-definitions.service", () => ({ fetchPopularPlants: jest.fn(), fetchPlantSearchIndex: jest.fn() }));
 jest.mock("../../../../api/services/locations.service", () => ({ fetchUserLocations: jest.fn(), createLocation: jest.fn() }));
 jest.mock("../../components/PlantSearchBox", () => (props: any) =>
@@ -130,3 +130,4 @@ it("does not merge a location response after its wizard step has unmounted", asy
   await act(async () => { locations.resolve([{ id: 4, name: "Kitchen", category: "indoor" }]); });
   expect(mockActions.addLocation).not.toHaveBeenCalled();
 });
+jest.mock('../../../../shared/ui/PlantDescriptionSurface', () => () => null);

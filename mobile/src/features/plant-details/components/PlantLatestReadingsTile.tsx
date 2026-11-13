@@ -16,6 +16,7 @@ import { s } from '../styles/plant-details.styles';
 
 import type {
   LatestReadings,
+  PlantReadingSummary,
   PlantMetricKey,
   PlantSensorsConfig,
 } from '../types/plant-details.types';
@@ -28,6 +29,7 @@ import {
 type Props = {
   embedded?: boolean;
   latestReadings: LatestReadings;
+  summary24h?: PlantReadingSummary | null;
   sensors?: PlantSensorsConfig;
   onTileTouch?: () => void;
   onMetricPress: (metric: PlantMetricKey) => void;
@@ -107,6 +109,7 @@ function MetricColPressable({
 
 export default function PlantLatestReadingsTile({
   latestReadings,
+  summary24h,
   embedded = false,
   sensors,
   onTileTouch,
@@ -141,6 +144,22 @@ export default function PlantLatestReadingsTile({
   const showHum = sensors ? !!sensors.humidity : true;
   const showLight = sensors ? !!sensors.light : true;
   const showMoist = sensors ? !!sensors.moisture : true;
+
+  const metrics = ([
+    { key: 'temperature', icon: 'thermometer', color: ICON_BG.temperature, shown: showTemp },
+    { key: 'humidity', icon: 'water-percent', color: ICON_BG.humidity, shown: showHum },
+    { key: 'light', icon: 'white-balance-sunny', color: ICON_BG.light, shown: showLight },
+    { key: 'moisture', icon: 'water', color: ICON_BG.moisture, shown: showMoist },
+  ] as const).filter(metric => metric.shown);
+  const summaryValue = (metric: PlantMetricKey, stat: 'avg' | 'min' | 'max') => {
+    const value = summary24h?.metrics[metric]?.[stat];
+    if (value == null || !Number.isFinite(value)) return '\u2014';
+    if (metric === 'temperature') {
+      const converted = getDisplayTemperature(value, settings);
+      return `${converted.value?.toFixed(converted.decimals)}${converted.unit}`;
+    }
+    return `${Number(value.toFixed(metric === 'light' ? 0 : 1))}${METRIC_UNITS[metric]}`;
+  };
 
   const displayTemperature = useMemo(() => {
     return getDisplayTemperature(temperature, settings);
@@ -223,13 +242,9 @@ export default function PlantLatestReadingsTile({
       )}
 
       <View style={[styles.body, embedded && { paddingTop: 8 }]}>
-        {!embedded && (
-          <View style={styles.topRow}>
-            <Text style={styles.title}>
-              {tr('plantDetails.latestReadings.title', 'Latest readings')}
-            </Text>
-          </View>
-        )}
+        <View style={styles.topRow}>
+          <Text style={styles.title}>{tr('plantDetails.latestReadings.latestResults', 'Latest results')}</Text>
+        </View>
 
         <View style={styles.metricsRow}>
           {showTemp && (
@@ -284,20 +299,43 @@ export default function PlantLatestReadingsTile({
           />
           <Text style={styles.lastText}>{lastText}</Text>
         </View>
+        <View style={styles.hintRow}>
+          <MaterialCommunityIcons name="information-outline" size={14} color="rgba(255,255,255,0.88)" />
+          <Text style={styles.hint}>{tr('plantDetails.latestReadings.historyHint', 'Tap any reading to see its history and details.')}</Text>
+        </View>
+        <View style={styles.line} />
+        <View style={styles.topRow}>
+          <Text style={styles.title}>{tr('plantDetails.latestReadings.last24Hours', 'Last 24 hours')}</Text>
+        </View>
+        <View style={styles.table}>
+          <View style={styles.tableRow}>
+            <View style={styles.statLabel} />
+            {metrics.map(metric => (
+              <Pressable key={metric.key} style={styles.statCell} onPress={() => onMetricPress(metric.key)}>
+                <View style={[styles.smallCircle, { backgroundColor: metric.color }]}>
+                  <MaterialCommunityIcons name={metric.icon} size={16} color="#FFFFFF" />
+                </View>
+              </Pressable>
+            ))}
+          </View>
+          {(['avg', 'min', 'max'] as const).map(stat => (
+            <View key={stat} style={styles.tableRow}>
+              <Text style={styles.statLabel}>{tr(`plantDetails.latestReadings.${stat}`, stat === 'avg' ? 'Avg' : stat === 'min' ? 'Min' : 'Max')}</Text>
+              {metrics.map(metric => (
+                <Text key={metric.key} style={styles.statValue}>{summaryValue(metric.key, stat)}</Text>
+              ))}
+            </View>
+          ))}
+        </View>
+        {!summary24h && <Text style={styles.summaryNotice}>{tr('plantDetails.latestReadings.summaryUnavailable', 'The 24-hour summary is currently unavailable.')}</Text>}
       </View>
 
       {pumpIncluded && (
         <>
           <View style={styles.line} />
 
-          <View style={styles.lastPumpRow}>
-            <MaterialCommunityIcons
-              name="timer-cog-outline"
-              size={14}
-              color="rgba(255,255,255,0.88)"
-              style={styles.infoIcon}
-            />
-            <Text style={styles.lastPumpText}>{lastPumpText}</Text>
+          <View style={styles.topRow}>
+            <Text style={styles.title}>{tr('plantDetails.latestReadings.watering', 'Watering')}</Text>
           </View>
 
           <Pressable
@@ -323,6 +361,15 @@ export default function PlantLatestReadingsTile({
                   )}
             </Text>
           </Pressable>
+          <View style={styles.lastPumpRow}>
+            <MaterialCommunityIcons
+              name="timer-cog-outline"
+              size={14}
+              color="rgba(255,255,255,0.88)"
+              style={styles.infoIcon}
+            />
+            <Text style={styles.lastPumpText}>{lastPumpText}</Text>
+          </View>
         </>
       )}
     </View>
@@ -349,6 +396,15 @@ const styles = StyleSheet.create({
     paddingTop: 16,
   },
 
+  hintRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 18, paddingBottom: 12 },
+  hint: { flex: 1, fontSize: 12, fontStyle: 'italic', color: 'rgba(255,255,255,0.88)' },
+  table: { paddingHorizontal: 16, paddingBottom: 10, gap: 4 },
+  tableRow: { flexDirection: 'row', alignItems: 'center', minHeight: 20 },
+  statLabel: { width: 36, fontSize: 12, fontWeight: '700', color: '#FFFFFF' },
+  statCell: { flex: 1, alignItems: 'center', paddingVertical: 4 },
+  statValue: { flex: 1, minWidth: 0, textAlign: 'center', fontSize: 11, color: '#FFFFFF' },
+  smallCircle: { width: 26, height: 26, borderRadius: 13, alignItems: 'center', justifyContent: 'center' },
+  summaryNotice: { fontSize: 12, paddingHorizontal: 18, paddingBottom: 10, color: 'rgba(255,255,255,0.88)' },
   topRow: {
     flexDirection: 'row',
     alignItems: 'center',

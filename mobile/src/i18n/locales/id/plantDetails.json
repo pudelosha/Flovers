@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "Terakhir dibaca: —",
         "value": "Terakhir dibaca: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "Pembacaan terbaru",
+      "historyHint": "Ketuk pembacaan untuk melihat riwayat dan detailnya.",
+      "last24Hours": "24 jam terakhir",
+      "watering": "Penyiraman",
+      "avg": "Rata²",
+      "min": "Min",
+      "max": "Maks",
+      "summaryUnavailable": "Ringkasan 24 jam terakhir sedang tidak tersedia."
     },
     "qr": {
       "title": "Kode QR",

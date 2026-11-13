@@ -1030,6 +1030,7 @@ export default function PlantDetailsScreen() {
                             <PlantLatestReadingsTile
                               embedded
                               latestReadings={latestReadSafe}
+                              summary24h={details.summary24h}
                               sensors={details.sensors}
                               onTileTouch={dismissMenus}
                               onMetricPress={metric => goHistory(metric)}

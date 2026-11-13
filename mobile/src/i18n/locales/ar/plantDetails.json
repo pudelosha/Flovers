@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "آخر قراءة: —",
         "value": "آخر قراءة: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "أحدث القراءات",
+      "historyHint": "اضغط على أي قراءة لعرض السجل والتفاصيل.",
+      "last24Hours": "آخر 24 ساعة",
+      "watering": "الري",
+      "avg": "المعدل",
+      "min": "الأدنى",
+      "max": "الأعلى",
+      "summaryUnavailable": "ملخص آخر 24 ساعة غير متاح حاليًا."
     },
     "qr": {
       "title": "رمز QR",

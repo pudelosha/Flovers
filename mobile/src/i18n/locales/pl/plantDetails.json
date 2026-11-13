@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "Ostatni odczyt: —",
         "value": "Ostatni odczyt: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "Ostatnie odczyty",
+      "historyHint": "Dotknij odczytu, aby zobaczyć historię i szczegóły.",
+      "last24Hours": "Ostatnie 24 godziny",
+      "watering": "Podlewanie",
+      "avg": "Śr.",
+      "min": "Min",
+      "max": "Maks",
+      "summaryUnavailable": "Podsumowanie ostatnich 24 godzin jest chwilowo niedostępne."
     },
     "qr": {
       "title": "Kod QR",

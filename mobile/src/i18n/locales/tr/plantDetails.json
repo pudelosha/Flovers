@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "Son okuma: —",
         "value": "Son okuma: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "Son ölçümler",
+      "historyHint": "Geçmişi ve ayrıntıları görmek için bir ölçüme dokunun.",
+      "last24Hours": "Son 24 saat",
+      "watering": "Sulama",
+      "avg": "Ort.",
+      "min": "Min",
+      "max": "Maks",
+      "summaryUnavailable": "Son 24 saatin özeti şu anda kullanılamıyor."
     },
     "qr": {
       "title": "QR Kodu",

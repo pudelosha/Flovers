@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "마지막 측정: —",
         "value": "마지막 측정: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "최근 측정값",
+      "historyHint": "측정값을 누르면 기록과 상세 정보를 볼 수 있어요.",
+      "last24Hours": "최근 24시간",
+      "watering": "물주기",
+      "avg": "평균",
+      "min": "최소",
+      "max": "최대",
+      "summaryUnavailable": "최근 24시간 요약을 일시적으로 불러올 수 없어요."
     },
     "qr": {
       "title": "QR 코드",

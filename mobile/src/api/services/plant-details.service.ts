@@ -14,6 +14,7 @@ import {
   type PlantSensorsConfig,
   type PlantReminderType,
   type PlantReadingDeviceSummary,
+  type PlantReadingSummary,
 } from "../../features/plant-details/types/plant-details.types";
 
 import type {
@@ -207,6 +208,17 @@ async function buildCompositeForPlant(
   const sensors = mapSensorsConfig(device?.sensors || null);
   const deviceLinked = !!device;
   const readingDevice = mapReadingDeviceSummary(device);
+  let summary24h: PlantReadingSummary | null = null;
+  if (device) {
+    try {
+      const summary = await request<PlantReadingSummary>(
+        `/readings/summary-24h/?device_id=${device.id}`, 'GET', undefined, { auth: true },
+      );
+      if (summary?.metrics && typeof summary.to === 'string') summary24h = summary;
+    } catch {
+      // A temporarily unavailable summary must not hide the latest readings.
+    }
+  }
 
   const activity = (Array.isArray(plant.recent_activity) ? plant.recent_activity : [])
     .filter(item => item && Number.isFinite(Date.parse(item.completed_at)))
@@ -222,6 +234,7 @@ async function buildCompositeForPlant(
     deviceName: device?.device_name ?? null,
     sensors,
     readingDevice,
+    summary24h,
     reminders,
   };
 }

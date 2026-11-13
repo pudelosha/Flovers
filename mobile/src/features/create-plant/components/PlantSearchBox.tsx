@@ -1,16 +1,10 @@
-import {useAppTheme,ThemeContrastScope} from "../../../shared/theme/ThemeContext";
-import React, { useRef, useState, useMemo, useEffect, useCallback } from "react";
-import { 
-  View, 
-  Pressable, 
-  Animated, 
-  ViewStyle,
-  Text, AnimatedText } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { TextInput } from "react-native-paper";
-import { wiz } from "../styles/wizard.styles";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
+import React, { useMemo } from 'react';
+import { View, Pressable, Text, ViewStyle } from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { TextInput } from 'react-native-paper';
+import { useAppTheme } from '../../../shared/theme/ThemeContext';
+import { useTranslation } from 'react-i18next';
+import { wiz } from '../styles/wizard.styles';
 
 type Suggestion = { id: string; name: string; latin: string };
 
@@ -26,215 +20,64 @@ type Props = {
   placeholder?: string;
 };
 
-const TranslatedText = ({ tKey, children, style }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any 
-}) => {
-  const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
-  
-  React.useMemo(() => {}, [currentLanguage]);
-  
-  try {
-    const text = t(tKey);
-    return <Text style={style}>{text}</Text>;
-  } catch (error) {
-    const fallbackText = tKey.split('.').pop() || tKey;
-    return <Text style={style}>{fallbackText}</Text>;
-  }
-};
-
 export default function PlantSearchBox({
-  value,
-  onChange,
-  showSuggestions,
-  setShowSuggestions,
-  onSelectSuggestion,
-  suggestions,
-  compact = false,
-  style,
-  placeholder,
+  value, onChange, showSuggestions, setShowSuggestions,
+  onSelectSuggestion, suggestions, style, placeholder,
 }: Props) {
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage();
-
-  const {isLight}=useAppTheme();
-  const ink=isLight?"#000000":"#FFFFFF";
-  const safeValue = typeof value === "string" ? value : "";
-
-  const data = useMemo(
-    () =>
-      safeValue.trim().length === 0
-        ? []
-        : (suggestions ?? []).filter((s) => {
-            const name = (s?.name ?? "").toLowerCase();
-            const latin = (s?.latin ?? "").toLowerCase();
-            const formattedLatin = latin.replace(/_/g, ' ');
-            const q = safeValue.toLowerCase();
-            return formattedLatin.includes(q) || name.includes(q);
-          }),
-    [safeValue, suggestions]
-  );
-
-  const [isFocused, setIsFocused] = useState(false);
-  const animatedLabel = useRef(new Animated.Value(safeValue ? 1 : 0)).current;
-
-  const animateLabel = (to: number) => {
-    Animated.timing(animatedLabel, {
-      toValue: to,
-      duration: 200,
-      useNativeDriver: false,
-    }).start();
-  };
-
-  useEffect(() => {
-    if (safeValue && animatedLabel) {
-      animateLabel(1);
-    } else if (!isFocused) {
-      animateLabel(0);
-    }
-  }, [safeValue, isFocused]);
-
-  const getTranslation = useCallback((key: string, fallback?: string): string => {
-    try {
-      const lang = currentLanguage;
-      const translation = t(key);
-      return translation || fallback || key.split('.').pop() || key;
-    } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return fallback || key.split('.').pop() || key;
-    }
-  }, [t, currentLanguage]);
-
-  React.useEffect(() => {
-    console.log('PlantSearchBox rendering with language:', currentLanguage);
-  }, [currentLanguage]);
-
-  const handleFocus = () => {
-    setIsFocused(true);
-    animateLabel(1);
-    setShowSuggestions(!!safeValue.trim());
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-    if (!safeValue) animateLabel(0);
-  };
-
-  const handleChangeText = (t: string) => {
-    const next = typeof t === "string" ? t : "";
-    if (!isFocused && next) animateLabel(1);
-    onChange(next);
-  };
-
-  const labelTop = animatedLabel.interpolate({
-    inputRange: [0, 1],
-    outputRange: [22, 8],
-  });
-  const labelFontSize = animatedLabel.interpolate({
-    inputRange: [0, 1],
-    outputRange: [16, 12],
-  });
-  const labelColor = animatedLabel.interpolate({
-    inputRange: [0, 1],
-    outputRange: ["rgba(255,255,255,0.6)", "#FFFFFF"],
-  });
-
-  const containerStyle = [
-    wiz.inputRow,
-    {
-      height: 64,
-      paddingVertical: 0,
-      paddingHorizontal: 12,
-      position: "relative" as const,
-    },
-    style,
-  ];
-
-  const labelLeft = 12 + 18 + 10;
-  const suggestTop = 64;
-
-  const placeholderText = placeholder || getTranslation('createPlant.step01.searchPlaceholder', 'Search plant');
+  const { isLight } = useAppTheme();
+  const ink = isLight ? '#000000' : '#FFFFFF';
+  const safeValue = typeof value === 'string' ? value : '';
+  const placeholderText = placeholder || String(t('createPlant.step01.searchPlaceholder', { defaultValue: 'Search plant' }));
+  const data = useMemo(() => {
+    const query = safeValue.trim().toLowerCase();
+    if (!query) return [];
+    return (suggestions ?? []).filter(item =>
+      (item.name ?? '').toLowerCase().includes(query) ||
+      (item.latin ?? '').toLowerCase().replace(/_/g, ' ').includes(query),
+    );
+  }, [safeValue, suggestions]);
 
   return (
-    <View style={{ marginTop: 0, marginBottom: 0 }}>
-      <View style={containerStyle}>
+    <View>
+      <View style={[wiz.inputRow, { height: 46, paddingVertical: 0, paddingHorizontal: 12 }, style]}>
         <MaterialCommunityIcons name="magnify" size={18} color="#FFFFFF" />
-
-        <ThemeContrastScope kind="dark"><AnimatedText
-          style={{
-            position: "absolute",
-            left: labelLeft,
-            top: labelTop as any,
-            zIndex: 10,
-            fontWeight: "500",
-            fontSize: labelFontSize as any,
-            color: isLight ? "#000000" : labelColor as any,
-          }}
-        >
-          {placeholderText}
-        </AnimatedText></ThemeContrastScope>
-
         <TextInput
           mode="flat"
           value={safeValue}
-          onChangeText={handleChangeText}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          placeholder=""
+          onChangeText={text => onChange(typeof text === 'string' ? text : '')}
+          onFocus={() => setShowSuggestions(!!safeValue.trim())}
+          placeholder={placeholderText}
+          accessibilityLabel={placeholderText}
+          placeholderTextColor={isLight ? '#000000' : 'rgba(255,255,255,0.6)'}
           underlineColor="transparent"
           activeUnderlineColor="transparent"
-          style={{
-            flex: 1,
-            backgroundColor: "transparent",
-            height: 64,
-            marginLeft: 0,
+          style={{ flex: 1, backgroundColor: 'transparent', height: 46 }}
+          contentStyle={{
+            height: 46, paddingTop: 0, paddingBottom: 0, paddingLeft: 0,
+            textAlign: safeValue ? 'auto' : 'center',
+            textAlignVertical: 'center', includeFontPadding: false,
           }}
-          contentStyle={{ paddingTop: 20, paddingBottom: 8, paddingLeft: 0 }}
           selectionColor={ink}
           cursorColor={ink}
           textColor={ink}
-          theme={{
-            colors: {
-              primary: ink,
-              onSurfaceVariant: ink,
-            },
-          }}
+          theme={{ colors: { primary: ink, onSurfaceVariant: ink } }}
           onSubmitEditing={() => setShowSuggestions(false)}
           autoCorrect={false}
           autoCapitalize="none"
         />
-
         {!!safeValue && (
-          <Pressable
-            onPress={() => {
-              onChange("");
-              animateLabel(0);
-              setShowSuggestions(false);
-            }}
-            hitSlop={8}
-          >
-            <MaterialCommunityIcons
-              name="close-circle"
-              size={18}
-              color="rgba(255,255,255,0.9)"
-            />
+          <Pressable onPress={() => { onChange(''); setShowSuggestions(false); }} hitSlop={8}>
+            <MaterialCommunityIcons name="close-circle" size={18} color="rgba(255,255,255,0.9)" />
           </Pressable>
         )}
       </View>
-
       {showSuggestions && data.length > 0 && (
-        <View style={[wiz.suggestBox, { top: suggestTop }]}>
-          {data.map((item) => (
-            <Pressable
-              key={item.id}
-              style={wiz.suggestItem}
-              onPress={() => {
-                onSelectSuggestion(item);
-                setShowSuggestions(false);
-              }}
-            >
+        <View style={[wiz.suggestBox, { top: 46 }]}>
+          {data.map(item => (
+            <Pressable key={item.id} style={wiz.suggestItem} onPress={() => {
+              onSelectSuggestion(item); setShowSuggestions(false);
+            }}>
               <Text style={wiz.suggestName}>{item.name}</Text>
               <Text style={wiz.suggestLatin}>{item.latin}</Text>
             </Pressable>

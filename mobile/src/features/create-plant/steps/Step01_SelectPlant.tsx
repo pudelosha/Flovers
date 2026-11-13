@@ -4,9 +4,8 @@ import {
   Pressable,
   Text,
   Animated,
-  Easing, AnimatedView } from "../../../shared/theme/native";
+  Easing, AnimatedView, StyleSheet } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useNavigation } from "@react-navigation/native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -21,14 +20,9 @@ import SafeImage from "../../../shared/ui/SafeImage";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { useWizardImagePreload } from "../hooks/useWizardImagePreload";
 
-import {
-  SUN_ICON_BY_LEVEL,
-  WATER_ICON_BY_LEVEL,
-  DIFFICULTY_ICON_BY_LEVEL,
-  SUN_LABEL_BY_LEVEL,
-  WATER_LABEL_BY_LEVEL,
-  DIFFICULTY_LABEL_BY_LEVEL,
-} from "../constants/create-plant.constants";
+import PlantDescriptionSurface from '../../../shared/ui/PlantDescriptionSurface';
+import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
+import { PHOTO_PLANTS_GRID_ASPECT_RATIO } from '../../../shared/utils/photoFraming';
 
 // EXACT SAME green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -83,9 +77,8 @@ export default function Step01_SelectPlant({
   onRegisterScanResultHandler,
   onReadyChange,
 }: Props) {
-  const { t, i18n } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage();
-  const navigation = useNavigation<any>();
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
 
   const initialQuery = useMemo(() => {
@@ -237,6 +230,7 @@ export default function Step01_SelectPlant({
       predefined: true,
     });
     onScrollToTop();
+    actions.goTo("traits");
   };
 
   const onScanPlantDetected = useCallback(
@@ -265,7 +259,8 @@ export default function Step01_SelectPlant({
   if (!ready) return <CenteredSpinner />;
 
   return (
-    <View style={wiz.cardWrap}>
+    <View>
+      <View style={[wiz.cardWrap, styles.mainTile]}>
       <View style={wiz.cardGlass} pointerEvents="none">
         <LinearGradient
           pointerEvents="none"
@@ -293,78 +288,31 @@ export default function Step01_SelectPlant({
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
-      <View style={wiz.cardInner}>
-        <TranslatedText tKey="createPlant.step01.title" style={wiz.title} />
-        <TranslatedText tKey="createPlant.step01.subtitle" style={wiz.subtitle} />
-
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            gap: 10,
-            marginTop: 12,
-            marginBottom: 6,
-          }}
-        >
-          <Pressable
-            onPress={onOpenScanner}
-            style={{
-              width: 64,
-              height: 64,
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 14,
-              backgroundColor: "rgba(255,255,255,0.16)",
-              overflow: "hidden",
-              position: "relative",
-            }}
-            android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
-            accessibilityRole="button"
-            accessibilityLabel={getTranslation("createPlant.step01.scanButton", "Scan plant")}
-          >
-            <AnimatedView
-              pointerEvents="none"
-              style={{
-                position: "absolute",
-                inset: 0,
-                borderRadius: 14,
-                backgroundColor: CTA_BLUE,
-                opacity: scanPulse.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0.18, 0.75],
-                }),
-                transform: [
-                  {
-                    scale: scanPulse.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [1, 1.06],
-                    }),
-                  },
-                ],
-              }}
-            />
-
-            <AnimatedView
-              pointerEvents="none"
-              style={{
-                position: "absolute",
-                inset: 0,
-                borderRadius: 14,
-                opacity: scanPulse.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0.35, 0.9],
-                }),
-              }}
-            />
-
-            <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
-          </Pressable>
-
-          <View style={{ flex: 1 }}>
+        <View style={wiz.cardInner}>
+          <TranslatedText tKey="createPlant.step01.title" style={wiz.title} />
+          <TranslatedText tKey="createPlant.step01.subtitle" style={wiz.subtitle} />
+          <View style={styles.controls}>
+            <ThemeContrastScope kind="accent">
+              <Pressable
+                onPress={onOpenScanner}
+                style={styles.scanButton}
+                accessibilityRole="button"
+                accessibilityLabel={getTranslation("createPlant.step01.scanButton", "Scan a plant")}
+              >
+                <AnimatedView pointerEvents="none" style={[StyleSheet.absoluteFill, {
+                  backgroundColor: '#168498',
+                  opacity: scanPulse.interpolate({ inputRange: [0, 1], outputRange: [0.18, 0.75] }),
+                }]} />
+                <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
+                <Text style={styles.scanText}>
+                  {getTranslation("createPlant.step01.scanButton", "Scan a plant")}
+                </Text>
+              </Pressable>
+            </ThemeContrastScope>
             <PlantSearchBox
               value={query}
-              onChange={(t) => {
-                const next = typeof t === "string" ? t : "";
+              onChange={text => {
+                const next = typeof text === "string" ? text : "";
                 setQuery(next);
                 setShowSuggestions(!!next.trim());
                 if (!next.trim()) actions.setSelectedPlant(undefined);
@@ -373,110 +321,63 @@ export default function Step01_SelectPlant({
               setShowSuggestions={setShowSuggestions}
               onSelectSuggestion={onSelectFromSearch}
               suggestions={searchIndex}
-              placeholder={getTranslation(
-                "createPlant.step01.searchPlaceholder",
-                "Search for a plant..."
-              )}
+              placeholder={getTranslation("createPlant.step01.searchPlaceholder", "Search plant")}
             />
           </View>
+          {!!errorSearch && <Text style={[wiz.subtitle, styles.error]}>{errorSearch}</Text>}
         </View>
-
-        <TranslatedText tKey="createPlant.step01.popularPlants" style={wiz.sectionTitle} />
-
-        {errorPopular ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd" }]}>{errorPopular}</Text>
-        ) : popular.length > 0 ? (
-          <View style={{ paddingTop: 6, paddingBottom: 6 }}>
-            {popular.map((item, idx) => {
-              const displayName = pickName(item);
-              return (
-                <View
-                  key={(item as any).id ?? `${idx}`}
-                  style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}
-                >
-                  <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
-                    <SafeImage uri={(item as any).image} style={wiz.thumb} resizeMode="cover" />
-
-                    <View style={{ flex: 1 }}>
-                      <Text style={wiz.rowName} numberOfLines={1}>
-                        {displayName}
-                      </Text>
-                      <Text style={wiz.rowLatin} numberOfLines={1}>
-                        {(item as any).latin}
-                      </Text>
-
-                      {/*
-                      <View style={[wiz.tagRow, { gap: 12 }]}>
-                        <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                          <MaterialCommunityIcons
-                            name={SUN_ICON_BY_LEVEL[(item as any).sun]}
-                            size={16}
-                            color="rgba(255,255,255,0.95)"
-                          />
-                          <Text
-                            style={{
-                              color: "rgba(255,255,255,0.95)",
-                              fontWeight: "700",
-                              fontSize: 12,
-                            }}
-                          >
-                            {SUN_LABEL_BY_LEVEL[(item as any).sun]}
-                          </Text>
-                        </View>
-
-                        <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                          <MaterialCommunityIcons
-                            name={WATER_ICON_BY_LEVEL[(item as any).water]}
-                            size={16}
-                            color="rgba(255,255,255,0.95)"
-                          />
-                          <Text
-                            style={{
-                              color: "rgba(255,255,255,0.95)",
-                              fontWeight: "700",
-                              fontSize: 12,
-                            }}
-                          >
-                            {WATER_LABEL_BY_LEVEL[(item as any).water]}
-                          </Text>
-                        </View>
-
-                        <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                          <MaterialCommunityIcons
-                            name={DIFFICULTY_ICON_BY_LEVEL[(item as any).difficulty]}
-                            size={16}
-                            color="rgba(255,255,255,0.95)"
-                          />
-                          <Text
-                            style={{
-                              color: "rgba(255,255,255,0.95)",
-                              fontWeight: "700",
-                              fontSize: 12,
-                            }}
-                          >
-                            {DIFFICULTY_LABEL_BY_LEVEL[(item as any).difficulty]}
-                          </Text>
-                        </View>
-                      </View>
-                      */}
-                    </View>
-                  </Pressable>
-                </View>
-              );
-            })}
-          </View>
-        ) : (
-          <Text style={[wiz.subtitle, { color: "rgba(255,255,255,0.7)" }]}>
-            {getTranslation("createPlant.step01.noPlantsAvailable", "No plants available")}
-          </Text>
-        )}
-
-        {errorSearch ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>
-            {errorSearch}
-          </Text>
-        ) : null}
       </View>
+
+      <TranslatedText tKey="createPlant.step01.popularPlants" style={[wiz.sectionTitle, styles.popularHeading]} />
+      {errorPopular ? (
+        <Text style={[wiz.subtitle, styles.error]}>{errorPopular}</Text>
+      ) : popular.length ? (
+        <View style={styles.grid}>
+          {popular.map(item => (
+            <Pressable
+              key={String(item.id)}
+              testID={`popular-plant-${item.id}`}
+              accessibilityRole="button"
+              accessibilityLabel={pickName(item)}
+              onPress={() => onPickPopular(item)}
+              style={styles.plantTile}
+            >
+              <SafeImage uri={item.image} style={StyleSheet.absoluteFillObject} resizeMode="cover" />
+              <View pointerEvents="none" style={styles.imageSpace} />
+              <View style={styles.plantDescription}>
+                <PlantDescriptionSurface />
+                <Text style={styles.plantName} numberOfLines={2}>{pickName(item)}</Text>
+                <Text style={styles.plantLatin} numberOfLines={2}>{formatPlantName(item.latin)}</Text>
+              </View>
+            </Pressable>
+          ))}
+        </View>
+      ) : (
+        <Text style={wiz.subtitle}>{getTranslation("createPlant.step01.noPlantsAvailable", "No plants available")}</Text>
+      )}
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  mainTile: { zIndex: 10 },
+  controls: { gap: 12, marginTop: 12 },
+  scanButton: {
+    width: '100%', height: 46, paddingHorizontal: 14, gap: 10,
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'center',
+    borderRadius: 14, backgroundColor: CTA_BLUE, overflow: 'hidden',
+  },
+  scanText: { color: '#FFFFFF', fontSize: 14, fontWeight: '800', flexShrink: 1 },
+  popularHeading: { marginTop: 0, marginBottom: 12, marginLeft: 10 },
+  grid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', rowGap: 12 },
+  plantTile: { width: '48.5%', borderRadius: 22, overflow: 'hidden' },
+  imageSpace: { width: '100%', aspectRatio: PHOTO_PLANTS_GRID_ASPECT_RATIO },
+  plantDescription: {
+    marginTop: -26, paddingHorizontal: 11, paddingTop: 9, paddingBottom: 10,
+    minHeight: 66, flexGrow: 1, justifyContent: 'center', borderTopLeftRadius: 19, borderTopRightRadius: 19,
+    borderBottomLeftRadius: 22, borderBottomRightRadius: 22, overflow: 'hidden',
+  },
+  plantName: { color: '#FFFFFF', fontSize: 14, lineHeight: 18, fontWeight: '800' },
+  plantLatin: { color: 'rgba(255,255,255,0.9)', fontSize: 11, lineHeight: 15, fontStyle: 'italic', marginTop: 2 },
+  error: { color: '#FFDDDD' },
+});

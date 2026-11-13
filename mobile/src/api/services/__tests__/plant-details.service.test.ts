@@ -119,6 +119,21 @@ describe("plant-details.service", () => {
     expect(mockedFetchByQr).toHaveBeenCalledWith("QR123", { auth: true });
     expect(mockedFetchPlant).toHaveBeenCalledWith(4);
   });
+
+  it('loads the linked device summary with the screen dataset and tolerates its failure', async () => {
+    const devices = await mockedRequest.getMockImplementation()!();
+    const summary = { from: '2026-11-12T12:00:00Z', to: '2026-11-13T12:00:00Z', metrics: {
+      temperature: { avg: 22, min: 20, max: 24 },
+    } };
+    mockedRequest.mockImplementation((url: string) => Promise.resolve(url === '/readings/devices/' ? devices : summary));
+    expect((await fetchPlantDetailsById(4)).summary24h).toEqual(summary);
+    expect(mockedRequest).toHaveBeenCalledWith('/readings/summary-24h/?device_id=8', 'GET', undefined, { auth: true });
+    mockedRequest.mockImplementation((url: string) => url === '/readings/devices/'
+      ? Promise.resolve(devices) : Promise.reject(new Error('unavailable')));
+    const result = await fetchPlantDetailsById(4);
+    expect(result.summary24h).toBeNull();
+    expect(result.latestReadings?.temperature).toBe(22);
+  });
 });
 
 it("maps the bounded activity returned with detail without an extra activity request",async()=>{

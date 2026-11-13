@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "Zuletzt gelesen: —",
         "value": "Zuletzt gelesen: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "Aktuelle Werte",
+      "historyHint": "Tippe auf einen Messwert, um Verlauf und Details zu sehen.",
+      "last24Hours": "Letzte 24 Stunden",
+      "watering": "Bewässerung",
+      "avg": "Ø",
+      "min": "Min",
+      "max": "Max",
+      "summaryUnavailable": "Die 24-Stunden-Zusammenfassung ist derzeit nicht verfügbar."
     },
     "qr": {
       "title": "QR-Code",

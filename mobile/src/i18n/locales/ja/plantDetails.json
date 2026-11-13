@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "最終読み取り: —",
         "value": "最終読み取り: {{date}} {{time}}"
-      }
+      },
+      "latestResults": "最新の測定値",
+      "historyHint": "測定値をタップすると履歴と詳細を確認できます。",
+      "last24Hours": "過去24時間",
+      "watering": "水やり",
+      "avg": "平均",
+      "min": "最低",
+      "max": "最高",
+      "summaryUnavailable": "過去24時間の集計は現在利用できません。"
     },
     "qr": {
       "title": "QRコード",

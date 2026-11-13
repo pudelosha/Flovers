@@ -94,6 +94,7 @@ export type PlantActivity = {
   actor: string | null;
 };
 export type PlantDetailsComposite = {
+  summary24h?: PlantReadingSummary | null;
   activity: PlantActivity[];
   plant: ApiPlantInstanceDetailFull;
 
@@ -105,4 +106,10 @@ export type PlantDetailsComposite = {
   readingDevice?: PlantReadingDeviceSummary | null;
 
   reminders: PlantReminderSummary[];
+};
+
+export type PlantReadingSummary = {
+  from: string;
+  to: string;
+  metrics: Record<PlantMetricKey, { avg: number | null; min: number | null; max: number | null }>;
 };

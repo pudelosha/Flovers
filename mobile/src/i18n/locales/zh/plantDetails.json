@@ -110,7 +110,15 @@
       "lastRead": {
         "empty": "上次读取：—",
         "value": "上次读取：{{date}} {{time}}"
-      }
+      },
+      "latestResults": "最新读数",
+      "historyHint": "点击任意读数查看历史记录和详情。",
+      "last24Hours": "过去24小时",
+      "watering": "浇水",
+      "avg": "平均",
+      "min": "最低",
+      "max": "最高",
+      "summaryUnavailable": "暂时无法获取过去24小时的汇总。"
     },
     "qr": {
       "title": "二维码",
