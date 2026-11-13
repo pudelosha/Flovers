@@ -320,6 +320,7 @@ class TaskCompleteView(APIView):
         return Response(
             {
                 "completed_task": ReminderTaskSerializer(task, context={"request": request}).data,
+                "xp_awarded": getattr(task, "_completion_xp_awarded", 0),
                 "next_task": ReminderTaskSerializer(new_task, context={"request": request}).data if new_task else None,
             },
             status=status.HTTP_200_OK,

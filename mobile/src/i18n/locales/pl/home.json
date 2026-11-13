@@ -40,11 +40,12 @@
     },
     "toasts": {
       "failedToLoadTasks": "Nie udało się załadować zadań",
-      "taskCompleted": "Zadanie ukończone",
-      "tasksCompleted": "Zadania ukończone",
+      "taskCompleted": "Zadanie wykonane",
+      "tasksCompleted": "Zadania wykonane",
       "completeFailed": "Nie udało się ukończyć",
       "completeSomeFailed": "Ukończono {{ok}} z {{total}} zadań",
-      "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną."
+      "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną.",
+      "xpGained": "+{{xp}} XP"
     },
     "empty": {
       "all": {

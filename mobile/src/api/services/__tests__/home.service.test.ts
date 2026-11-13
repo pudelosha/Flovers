@@ -29,6 +29,15 @@ const mockedFetchPlants = fetchPlantInstances as jest.Mock;
 const mockedComplete = completeReminderTask as jest.Mock;
 const mockedDeleteReminder = deleteReminder as jest.Mock;
 
+it('returns only the XP reported by the backend, including zero for old responses', async () => {
+  mockedComplete.mockResolvedValueOnce({ xp_awarded: 50 });
+  await expect(markHomeTaskComplete('11')).resolves.toBe(50);
+  mockedComplete.mockResolvedValueOnce({ xp_awarded: 0 });
+  await expect(markHomeTaskComplete('12')).resolves.toBe(0);
+  mockedComplete.mockResolvedValueOnce({});
+  await expect(markHomeTaskComplete('13')).resolves.toBe(0);
+});
+
 describe("home.service", () => {
   beforeEach(() => {
     jest.useFakeTimers();

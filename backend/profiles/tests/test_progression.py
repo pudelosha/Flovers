@@ -105,6 +105,7 @@ def test_progression_reads_only_authenticated_account_and_is_not_writable(scene)
 def test_real_completion_rewards_first_task_and_duplicate_requests_only_once(scene):
     task = make_task(scene)
     data = complete(scene, task)
+    assert data["xp_awarded"] == 100
     assert data["next_task"]["status"] == "pending"
     assert progression(scene) == {
         "total_xp": 100, "level": 2, "rank_key": "seedling",
@@ -112,7 +113,7 @@ def test_real_completion_rewards_first_task_and_duplicate_requests_only_once(sce
         "daily_xp": 100, "daily_cap": 250,
     }
     for _ in range(3):
-        complete(scene, task)
+        assert complete(scene, task)["xp_awarded"] == 0
     assert TaskXPAward.objects.filter(user=scene.user, source_task_id=task.pk).count() == 1
     assert progression(scene)["total_xp"] == 100
     assert task.reminder.tasks.filter(status="pending").count() == 1
@@ -122,7 +123,7 @@ def test_daily_diminishing_rewards_and_cap_are_shared_across_plants(scene):
     expected = [100, 50, 30, 20, 10, 10, 10, 10, 10, 0, 0, 0]
     for xp in expected:
         task = make_task(scene)
-        complete(scene, task)
+        assert complete(scene, task)["xp_awarded"] == xp
         assert TaskXPAward.objects.get(source_task_id=task.pk).xp == xp
     data = progression(scene)
     assert data["total_xp"] == data["daily_xp"] == data["daily_cap"] == 250
@@ -135,7 +136,9 @@ def test_non_due_recurring_tasks_cannot_be_farmed_or_advance_daily_reward_slot(s
     for _ in range(5):
         current = ReminderTask.objects.get(pk=next_id)
         assert current.due_date > scene.clock[0].date()
-        next_id = complete(scene, current)["next_task"]["id"]
+        result = complete(scene, current)
+        assert result["xp_awarded"] == 0
+        next_id = result["next_task"]["id"]
         assert TaskXPAward.objects.get(source_task_id=current.pk).xp == 0
     another = make_task(scene)
     complete(scene, another)

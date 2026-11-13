@@ -82,6 +82,7 @@ export async function completeReminderTask(
   payload?: { note?: string; completedDate?: string }
 ): Promise<{
   completed_task: ApiReminderTask;
+  xp_awarded?: number;
   next_task: ApiReminderTask | null;
 }> {
   return await request(

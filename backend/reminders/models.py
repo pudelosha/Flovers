@@ -266,6 +266,8 @@ class ReminderTask(models.Model):
             return self._complete_with_access(plant, actor, note, completed_date)
 
     def _complete_with_access(self, plant, actor, note, completed_date):
+        # Report only XP earned by this transition, never an earlier request.
+        self._completion_xp_awarded = 0
         # All recurrence transitions lock parent first, then the task. Never use
         # status or recurrence settings cached by an earlier HTTP request.
         reminder = Reminder.objects.select_for_update().get(pk=self.reminder_id)
@@ -298,7 +300,8 @@ class ReminderTask(models.Model):
         current.completed_event = current.current_event()
         current.save(update_fields=["status", "completed_at", "completed_by", "updated_at", "note", "completed_event"])
         from profiles.progression import award_task_completion
-        award_task_completion(current, receipt_now, actor=actor)
+        award = award_task_completion(current, receipt_now, actor=actor)
+        self._completion_xp_awarded = award.xp
         from sharing.notifications import queue_shared_care_notification
         queue_shared_care_notification(current, plant, actor)
         self.__dict__.update(current.__dict__)

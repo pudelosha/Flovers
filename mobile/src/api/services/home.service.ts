@@ -37,7 +37,7 @@ export async function markHomeTaskComplete(
   taskId: string,
   note?: string,
   completedDate?: string
-): Promise<void> {
+): Promise<number> {
   const payload: { note?: string; completedDate?: string } = {};
 
   if (note && note.trim().length > 0) {
@@ -48,11 +48,13 @@ export async function markHomeTaskComplete(
     payload.completedDate = completedDate;
   }
 
-  await completeReminderTask(
+  const result = await completeReminderTask(
     Number(taskId),
     { auth: true },
     Object.keys(payload).length > 0 ? payload : undefined
   );
+  const xp = result?.xp_awarded;
+  return typeof xp === 'number' && Number.isFinite(xp) && xp > 0 ? xp : 0;
 }
 
 export async function deleteHomeTask(reminderId: string): Promise<void> {

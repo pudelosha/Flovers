@@ -1,3 +1,4 @@
+import { taskCompletionToast } from '../../../shared/utils/taskCompletionToast';
 import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useMemo, useState, useRef, useCallback } from 'react';
@@ -824,8 +825,9 @@ export default function PlantDetailsScreen() {
       setLoading(true);
 
       const r = details.reminders.find(x => x.taskId === completeReminderId);
+      let xpGained = 0;
       if (r?.taskId) {
-        await markHomeTaskComplete(r.taskId, completeNote, completeDate);
+        xpGained = await markHomeTaskComplete(r.taskId, completeNote, completeDate);
       }
 
       closeCompleteModal();
@@ -834,10 +836,7 @@ export default function PlantDetailsScreen() {
       setRefreshCounter(c => c + 1);
 
       showToast(
-        tr(
-          'plantDetails.toasts.reminderCompleted',
-          'Reminder marked as complete.',
-        ),
+        taskCompletionToast(t, xpGained),
         'success',
       );
     } catch (e: any) {

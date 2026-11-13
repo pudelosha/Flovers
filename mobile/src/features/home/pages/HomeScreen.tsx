@@ -1,4 +1,5 @@
 import ListLoadError from '../../../shared/ui/ListLoadError';
+import { taskCompletionToast, withCompletionXP } from '../../../shared/utils/taskCompletionToast';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, {
@@ -684,20 +685,20 @@ export default function HomeScreen() {
 
       const okCount = results.filter(r => r.status === 'fulfilled').length;
       const failCount = results.length - okCount;
+      const xpGained = results.reduce((total, result) =>
+        total + (result.status === 'fulfilled' && Number.isFinite(result.value) ? result.value : 0), 0);
 
       if (failCount === 0) {
         showToast(
-          completeMode === 'bulk'
-            ? t('home.toasts.tasksCompleted')
-            : t('home.toasts.taskCompleted'),
+          taskCompletionToast(t, xpGained, completeMode === 'bulk'),
           'success',
         );
       } else if (okCount > 0) {
         showToast(
-          t('home.toasts.completeSomeFailed', {
+          withCompletionXP(String(t('home.toasts.completeSomeFailed', {
             ok: okCount,
             total: results.length,
-          }),
+          })), xpGained, t),
           'error',
         );
       } else {
