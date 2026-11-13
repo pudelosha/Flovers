@@ -241,7 +241,7 @@ export default function PlantLatestReadingsTile({
         </View>
       )}
 
-      <View style={[styles.body, embedded && { paddingTop: 8 }]}>
+      <View style={[styles.body, embedded && { paddingTop: 0 }]}>
         <View style={styles.topRow}>
           <Text style={styles.title}>{tr('plantDetails.latestReadings.latestResults', 'Latest results')}</Text>
         </View>
@@ -386,6 +386,7 @@ const styles = StyleSheet.create({
   },
 
   embedded: {
+    marginTop: -4,
     marginHorizontal: -16,
     marginBottom: 0,
     borderRadius: 0,
@@ -424,8 +425,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
     paddingHorizontal: 16,
-    marginTop: 4,
-    marginBottom: 4,
+    marginTop: 10,
+    marginBottom: 10,
   },
 
   col: {
