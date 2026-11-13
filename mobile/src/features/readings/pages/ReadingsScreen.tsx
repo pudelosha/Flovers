@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
@@ -14,7 +15,6 @@ import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import LinearGradient from "../../../shared/theme/Gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 import FAB from "../../../shared/ui/FAB";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
@@ -1109,7 +1109,7 @@ export default function ReadingsScreen() {
           onPressRight={() => nav.navigate("Scanner" as never)}
           showSeparator={false}
         />
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
       </View>
     );
   }

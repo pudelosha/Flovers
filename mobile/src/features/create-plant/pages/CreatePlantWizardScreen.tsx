@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 // screens/CreatePlantWizardScreen.tsx
 import React, { useRef, useState, useEffect, useCallback } from "react";
@@ -9,7 +10,6 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/create-plant.constants";
 import { wiz } from "../styles/wizard.styles";
 
@@ -176,7 +176,7 @@ function WizardBody() {
 
   return (
     <>
-      {!stepReady && <CenteredSpinner size={56} color="#FFFFFF" />}
+      {!stepReady && <ScreenLoadingSpinner size={56} color="#FFFFFF" />}
       <ScrollView
         ref={scrollRef}
         style={!stepReady ? { display: "none" } : undefined}

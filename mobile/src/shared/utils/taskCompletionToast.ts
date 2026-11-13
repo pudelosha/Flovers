@@ -2,7 +2,7 @@ import type { TFunction } from 'i18next';
 
 export function withCompletionXP(message: string, xp: number, t: TFunction): string {
   if (!Number.isFinite(xp) || xp <= 0) return message;
-  return `${message} · ${t('home.toasts.xpGained', { xp, defaultValue: '+{{xp}} XP' })}`;
+  return `${message} ${t('home.toasts.xpGained', { xp, defaultValue: '+{{xp}} XP' })}`;
 }
 
 export function taskCompletionToast(t: TFunction, xp: number, multiple = false): string {

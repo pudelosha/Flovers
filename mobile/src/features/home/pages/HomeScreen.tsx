@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { taskCompletionToast, withCompletionXP } from '../../../shared/utils/taskCompletionToast';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
@@ -33,7 +34,6 @@ import LinearGradient from '../../../shared/theme/Gradient';
 
 import GlassHeader from '../../../shared/ui/GlassHeader';
 import FAB from '../../../shared/ui/FAB';
-import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
 import { plantAccess } from '../../../shared/utils/plantAccess';
 import TopSnackbar from '../../../shared/ui/TopSnackbar';
 
@@ -613,7 +613,7 @@ export default function HomeScreen() {
           rightIconName="qrcode-scan"
           onPressRight={() => nav.navigate('Scanner' as never)}
         />
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
       </View>
     );
   }

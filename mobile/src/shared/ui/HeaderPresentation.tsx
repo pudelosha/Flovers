@@ -8,12 +8,26 @@ export const HeaderHeightContext = createContext<Animated.Value | null>(null);
 export const HeaderTargetHeightContext = createContext(0);
 export const useHeaderContentReady = () =>
   useContext(HeaderContentReadyContext);
+const ScreenLoadingContext = createContext<((loading: boolean) => void) | null>(null);
+
+/** Let the route keep one indicator alive across header and data loading. */
+export function ScreenLoadingSpinner(props: React.ComponentProps<typeof CenteredSpinner>) {
+  const setLoading = useContext(ScreenLoadingContext);
+  React.useLayoutEffect(() => {
+    setLoading?.(true);
+    return () => setLoading?.(false);
+  }, [setLoading]);
+  if (!setLoading) return <CenteredSpinner {...props} />;
+  return props.overlay ? null : <View style={{ flex: 1 }} />;
+}
 
 /** Keep native layout and data fetching active while header preparation finishes. */
 export function HeaderContentGate({ children }: { children: React.ReactNode }) {
   const ready = useHeaderContentReady();
   const startupComplete = useContext(HeaderStartupCompleteContext);
   const targetHeight = useContext(HeaderTargetHeightContext);
+  const [pageLoading, setPageLoading] = React.useState(false);
+  const showSpinner = ready ? pageLoading : startupComplete;
   return (
     <View style={{ flex: 1 }}>
       <View
@@ -23,9 +37,11 @@ export function HeaderContentGate({ children }: { children: React.ReactNode }) {
         accessibilityElementsHidden={!ready}
         importantForAccessibility={ready ? 'auto' : 'no-hide-descendants'}
       >
-        {children}
+        <ScreenLoadingContext.Provider value={setPageLoading}>
+          {children}
+        </ScreenLoadingContext.Provider>
       </View>
-      {!ready && startupComplete && (
+      {showSpinner && (
         <View
           testID="header-transition-spinner"
           pointerEvents="none"

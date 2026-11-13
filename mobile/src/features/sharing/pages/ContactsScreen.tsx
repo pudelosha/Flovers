@@ -1,8 +1,8 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { BackHandler, Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import Clipboard from "@react-native-clipboard/clipboard";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useIsFocused } from "@react-navigation/native";
@@ -147,7 +147,7 @@ export default function ContactsScreen() {
     <View ref={pageRef} testID="contacts-screen" collapsable={false} style={local.page}>
       <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false} extraBottomPadding={64} contentReady={!!snapshot}>
         {!snapshot ? (
-          loading ? <View testID="contacts-loading" style={local.loading}><CenteredSpinner /></View> :
+          loading ? <View testID="contacts-loading" style={local.loading}><ScreenLoadingSpinner /></View> :
             <GlassCard>
               <Text accessibilityRole="alert" style={s.error}>{t("sharing.contacts.loadFailed", { defaultValue: "Could not load contacts." })}</Text>
               <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} />

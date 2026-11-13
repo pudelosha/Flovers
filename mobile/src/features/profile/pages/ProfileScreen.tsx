@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useEffect, useState, useRef, useCallback } from 'react';
@@ -470,7 +471,7 @@ export default function ProfileScreen() {
       />
 
       {isProfileLoading ? (
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
       ) : (
         <View style={{ flex: 1 }}>
           <ScrollView

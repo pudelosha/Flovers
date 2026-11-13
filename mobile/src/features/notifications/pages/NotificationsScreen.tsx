@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
@@ -228,7 +229,7 @@ export default function NotificationsScreen() {
       />
       {loading ? (
         <View testID="inbox-loading" style={{ flex: 1 }}>
-          <CenteredSpinner />
+          <ScreenLoadingSpinner />
         </View>
       ) : (
         <FlatList

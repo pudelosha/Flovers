@@ -9,9 +9,9 @@ it.each([
 ])('formats the same completion message with or without an actual XP award in %s', async (language, single, multiple) => {
   const instance = i18next.createInstance();
   await instance.init({ lng: language, resources: { en: { translation: en }, pl: { translation: pl } } });
-  expect(taskCompletionToast(instance.t, 100)).toBe(`${single} · +100 XP`);
-  expect(taskCompletionToast(instance.t, 150, true)).toBe(`${multiple} · +150 XP`);
+  expect(taskCompletionToast(instance.t, 100)).toBe(`${single} +100 XP`);
+  expect(taskCompletionToast(instance.t, 150, true)).toBe(`${multiple} +150 XP`);
   expect(taskCompletionToast(instance.t, 0)).toBe(single);
   expect(taskCompletionToast(instance.t, Number.NaN)).toBe(single);
-  expect(withCompletionXP('2/3', 50, instance.t)).toBe('2/3 · +50 XP');
+  expect(withCompletionXP('2/3', 50, instance.t)).toBe('2/3 +50 XP');
 });

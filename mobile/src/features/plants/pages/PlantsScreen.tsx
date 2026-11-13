@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, {
@@ -735,7 +736,7 @@ export default function PlantsScreen() {
           onPressRight={() => nav.navigate('Scanner')}
           showSeparator={false}
         />
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
       </View>
     );
   }

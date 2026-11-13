@@ -6,7 +6,7 @@ import {
   NavigationRouteContext,
 } from '@react-navigation/native';
 import GlassHeader, { SharedHeaderProvider } from '../GlassHeader';
-import { HeaderContentGate } from '../HeaderPresentation';
+import { HeaderContentGate, ScreenLoadingSpinner } from '../HeaderPresentation';
 import CenteredSpinner from '../CenteredSpinner';
 import AppModalFrame from '../AppModalFrame';
 
@@ -329,7 +329,7 @@ it('keeps cold launch hidden but shows a spinner across navigation and pending d
       <HeaderContentGate>
         {loading ? (
           <View testID="page-data-loading">
-            <CenteredSpinner />
+            <ScreenLoadingSpinner />
           </View>
         ) : (
           <Text>Loaded tiles</Text>
@@ -342,6 +342,7 @@ it('keeps cold launch hidden but shows a spinner across navigation and pending d
   expect(view.queryByTestId('header-transition-spinner')).toBeNull();
   act(() => completions.splice(0).forEach(complete => complete()));
   expect(view.getByTestId('page-data-loading')).toBeVisible();
+  const continuousSpinner = view.UNSAFE_getByType(CenteredSpinner);
   view.rerender(screen(true, true));
   fireEvent(view.getByTestId('header-segment'), 'layout', {
     nativeEvent: { layout: { height: 44 } },
@@ -358,9 +359,12 @@ it('keeps cold launch hidden but shows a spinner across navigation and pending d
   act(() => heightAnimation[0].setValue(105));
   expect(spinnerStyle().top).toBe(127);
   act(() => completions.splice(0).forEach(complete => complete()));
-  expect(view.queryByTestId('header-transition-spinner')).toBeNull();
+  expect(view.getByTestId('header-transition-spinner')).toBeVisible();
+  expect(view.UNSAFE_getAllByType(CenteredSpinner)).toHaveLength(1);
+  expect(view.UNSAFE_getByType(CenteredSpinner)).toBe(continuousSpinner);
   expect(view.getByTestId('page-data-loading')).toBeVisible();
   view.rerender(screen(true, false));
   expect(view.queryByTestId('page-data-loading')).toBeNull();
   expect(view.getByText('Loaded tiles')).toBeVisible();
+  expect(view.queryByTestId('header-transition-spinner')).toBeNull();
 });

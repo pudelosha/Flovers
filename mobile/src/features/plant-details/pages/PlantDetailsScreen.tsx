@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { taskCompletionToast } from '../../../shared/utils/taskCompletionToast';
 import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
@@ -1132,7 +1133,7 @@ export default function PlantDetailsScreen() {
             </ScrollView>
           )}
         </AnimatedView>
-        {isInitialLoading && <CenteredSpinner overlay />}
+        {isInitialLoading && <ScreenLoadingSpinner overlay />}
       </View>
 
       {(editLoading || saving) && (

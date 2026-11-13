@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -20,7 +21,6 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import {
@@ -408,7 +408,7 @@ export default function LocationsScreen() {
           onPressRight={() => nav.navigate("Scanner")}
           showSeparator={false}
         />
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
       </View>
     );
   }

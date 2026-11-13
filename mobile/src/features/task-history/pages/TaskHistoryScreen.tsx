@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, {
   useCallback,
@@ -643,7 +644,7 @@ export default function TaskHistoryScreen() {
 
       {/* Keep editors mounted when camera/gallery foregrounding revalidates photos. */}
       {contentLoading ? (
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
       ) : (
         <>
           {/* Backdrop to dismiss menus (kept under FlatList so menus stay above) */}

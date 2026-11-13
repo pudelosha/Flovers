@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import {ThemeContrastScope} from "../../../shared/theme/ThemeContext";
 import { bottomNavigationHeight } from "../../../shared/constants/layout";
@@ -21,7 +22,6 @@ import { useTranslation } from "react-i18next";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { plantAccess } from "../../../shared/utils/plantAccess";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
@@ -592,7 +592,7 @@ export default function ReadingsHistoryScreen() {
           onPressRight={() => navTo("Scanner")}
           showSeparator={false}
         />
-        <CenteredSpinner size={56} color="#FFFFFF" />
+        <ScreenLoadingSpinner size={56} color="#FFFFFF" />
         <TopSnackbar
           visible={toastVisible}
           message={toastMsg}
@@ -931,7 +931,7 @@ export default function ReadingsHistoryScreen() {
         </ScrollView>
       </AnimatedView>
 
-      {(!pageReady || loadingHistory || (!!device && loadedHistoryKey !== historyKey)) && <CenteredSpinner overlay size={56} color="#FFFFFF" />}
+      {(!pageReady || loadingHistory || (!!device && loadedHistoryKey !== historyKey)) && <ScreenLoadingSpinner overlay size={56} color="#FFFFFF" />}
 
       <DeleteReadingsModal
         visible={deleteModalVisible}

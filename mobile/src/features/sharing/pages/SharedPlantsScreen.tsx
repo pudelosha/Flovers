@@ -1,3 +1,4 @@
+import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { ThemeContrastScope } from '../../../shared/theme/ThemeContext';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
@@ -26,7 +27,6 @@ import MaterialCommunityIcons from '../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
 import FAB from '../../../shared/ui/FAB';
 import AppModalHost from '../../../shared/ui/AppModalHost';
-import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
 import { usePlantPhotoPreload } from '../../../shared/hooks/usePlantPhotoPreload';
 import type { FabAction } from '../../../shared/ui/FAB';
 import { useSettings } from '../../../app/providers/SettingsProvider';
@@ -314,7 +314,7 @@ export default function SharedPlantsScreen() {
         {contentLoading ? (
           <View style={styles.loading}>
             {photoPreload.loading || loading || !error ? (
-              <CenteredSpinner />
+              <ScreenLoadingSpinner />
             ) : (
               <>
                 <Text accessibilityRole="alert" style={shared.error}>
