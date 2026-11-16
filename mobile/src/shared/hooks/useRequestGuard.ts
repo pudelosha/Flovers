@@ -5,6 +5,9 @@ export function createRequestGuard() {
   let generation = 0;
   let active = true;
   return {
+    cancelPending() {
+      generation++;
+    },
     activate() {
       active = true;
       generation++;

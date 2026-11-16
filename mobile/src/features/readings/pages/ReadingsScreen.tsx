@@ -1,3 +1,4 @@
+import { useWateringSchedule } from '../../readings/hooks/useWateringSchedule';
 import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import type { AppTabParamList } from '../../../app/navigation/AppTabs';
 import type { FlatList } from 'react-native';
@@ -58,14 +59,11 @@ import {
   sendDeviceCodeByEmail,
   sendReadingsExportEmail,
   toggleAutoPump,
-  fetchPumpStatus,
-  schedulePumpWatering,
-  recallPumpWatering,
   type ReadingsExportEmailRequest,
 } from "../../../api/services/readings.service";
 
 // Pull the API type from centralized readings types
-import { ApiReadingDevice, ApiPumpTask } from "../types/readings.types";
+import { ApiReadingDevice } from "../types/readings.types";
 
 // === Services (plants → Plant Instances) ===
 import {
@@ -165,16 +163,6 @@ export default function ReadingsScreen() {
   const [deviceDetailsSecret, setDeviceDetailsSecret] = useState<string>("");
 
   // Watering schedule modal state
-  const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
-  const [wateringDurationSupported, setWateringDurationSupported] = useState(false);
-  const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(null);
-  const [wateringScheduleName, setWateringScheduleName] = useState<string>("");
-  const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
-  const [wateringScheduleWorking, setWateringScheduleWorking] = useState(false);
-  const [wateringSchedulePendingTask, setWateringSchedulePendingTask] =
-    useState<ApiPumpTask | null>(null);
-  const [wateringScheduleLastPumpRunAt, setWateringScheduleLastPumpRunAt] =
-    useState<string | null>(null);
 
   // Upsert modal state
   const [upsertVisible, setUpsertVisible] = useState(false);
@@ -210,6 +198,20 @@ export default function ReadingsScreen() {
   const listRef = useRef<FlatList<ReadingTileModel>>(null);
 
   // ===== Load devices and plant instances =====
+  const watering = useWateringSchedule({
+    translationScope: 'readings',
+    onBeforeOpen: closeFloatingMenus,
+    onNotify: showToast,
+    onStatusChanged: (id, status) => {
+      setDevicesRaw(previous => previous.map(device => String(device.id) === id ? { ...device, ...status } : device));
+      setItems(previous => previous.map(item => item.id === id ? {
+        ...item, lastPumpRunAt: status.last_pump_run_at ?? null,
+        pendingPumpTask: status.pending_pump_task ?? null,
+      } : item));
+    },
+  });
+  const { open: openWateringSchedule, visible: wateringScheduleVisible } = watering;
+
   const [loadError, setLoadError] = useState(false);
 
   const load = useCallback(async () => {
@@ -279,7 +281,7 @@ export default function ReadingsScreen() {
       setDeleteVisible(false);
       setDeviceSetupVisible(false);
       setDeviceDetailsVisible(false);
-      setWateringScheduleVisible(false);
+
       setUpsertVisible(false);
       setSortSheetOpen(false);
       setFilterSheetOpen(false);
@@ -290,12 +292,11 @@ export default function ReadingsScreen() {
       setDeviceDetailsLoading(false);
       setDeviceDetailsSending(false);
 
-      setWateringScheduleId(null);
-      setWateringScheduleName("");
-      setWateringScheduleLoading(false);
-      setWateringScheduleWorking(false);
-      setWateringSchedulePendingTask(null);
-      setWateringScheduleLastPumpRunAt(null);
+
+
+
+
+
 
       closeFloatingMenus();
 
@@ -651,181 +652,7 @@ export default function ReadingsScreen() {
     }
   }, [deviceDetailsId, showToast, tr]);
 
-  const openWateringSchedule = useCallback(
-    async (id: string) => {
-      closeFloatingMenus();
 
-      const item = items.find((x) => x.id === id);
-
-      setWateringScheduleId(id);
-      setWateringScheduleName(item?.name ?? "");
-      setWateringSchedulePendingTask(null);
-      setWateringScheduleLastPumpRunAt(null);
-      setWateringScheduleLoading(true);
-      setWateringScheduleWorking(false);
-
-      try {
-        const res = await fetchPumpStatus(Number(id));
-        setWateringDurationSupported(Boolean(res.supports_manual_duration));
-
-        setWateringSchedulePendingTask(res.pending_pump_task ?? null);
-        setWateringScheduleLastPumpRunAt(res.last_pump_run_at ?? null);
-
-        setDevicesRaw((curr) =>
-          curr.map((d) =>
-            String(d.id) === id
-              ? {
-                  ...d,
-                  pending_pump_task: res.pending_pump_task ?? null,
-                  last_pump_run_at: res.last_pump_run_at ?? null,
-                  last_pump_run_source: res.last_pump_run_source ?? null,
-                }
-              : d
-          )
-        );
-
-        setItems((curr) =>
-          curr.map((x) =>
-            x.id === id
-              ? {
-                  ...x,
-                  lastPumpRunAt: res.last_pump_run_at ?? null,
-                  pendingPumpTask: res.pending_pump_task ?? null,
-                }
-              : x
-          )
-        );
-
-        setWateringScheduleVisible(true);
-      } catch {
-        showToast(
-          tr(
-            "readings.toasts.pumpStatusLoadFailed",
-            "Failed to load watering schedule"
-          ),
-          "error"
-        );
-      } finally {
-        setWateringScheduleLoading(false);
-      }
-    },
-    [closeFloatingMenus, items, showToast, tr]
-  );
-
-  const handleScheduleWatering = useCallback(async (durationSeconds?: number) => {
-    if (!wateringScheduleId) {
-      showToast(
-        tr("readings.toasts.missingDeviceId", "Missing device ID"),
-        "error"
-      );
-      return;
-    }
-
-    try {
-      setWateringScheduleWorking(true);
-
-      const res = await schedulePumpWatering(Number(wateringScheduleId), { durationSeconds });
-      const pendingTask = res.pending_pump_task ?? null;
-
-      setWateringSchedulePendingTask(pendingTask);
-
-      setDevicesRaw((curr) =>
-        curr.map((d) =>
-          String(d.id) === wateringScheduleId
-            ? {
-                ...d,
-                pending_pump_task: pendingTask,
-              }
-            : d
-        )
-      );
-
-      setItems((curr) =>
-        curr.map((x) =>
-          x.id === wateringScheduleId
-            ? {
-                ...x,
-                pendingPumpTask: pendingTask,
-              }
-            : x
-        )
-      );
-
-      showToast(
-        tr("readings.toasts.wateringScheduled", "Watering scheduled"),
-        "success"
-      );
-    } catch {
-      showToast(
-        tr("readings.toasts.wateringScheduleFailed", "Failed to schedule watering"),
-        "error"
-      );
-    } finally {
-      setWateringScheduleWorking(false);
-    }
-  }, [wateringScheduleId, showToast, tr]);
-
-  const handleRecallWatering = useCallback(async () => {
-    if (!wateringScheduleId) {
-      showToast(
-        tr("readings.toasts.missingDeviceId", "Missing device ID"),
-        "error"
-      );
-      return;
-    }
-
-    try {
-      setWateringScheduleWorking(true);
-
-      await recallPumpWatering(Number(wateringScheduleId));
-
-      setWateringSchedulePendingTask(null);
-
-      setDevicesRaw((curr) =>
-        curr.map((d) =>
-          String(d.id) === wateringScheduleId
-            ? {
-                ...d,
-                pending_pump_task: null,
-              }
-            : d
-        )
-      );
-
-      setItems((curr) =>
-        curr.map((x) =>
-          x.id === wateringScheduleId
-            ? {
-                ...x,
-                pendingPumpTask: null,
-              }
-            : x
-        )
-      );
-
-      showToast(
-        tr("readings.toasts.wateringRecalled", "Scheduled watering recalled"),
-        "success"
-      );
-    } catch {
-      showToast(
-        tr("readings.toasts.wateringRecallFailed", "Failed to recall watering"),
-        "error"
-      );
-    } finally {
-      setWateringScheduleWorking(false);
-    }
-  }, [wateringScheduleId, showToast, tr]);
-
-  const closeWateringSchedule = useCallback(() => {
-    setWateringScheduleVisible(false);
-    setWateringScheduleId(null);
-    setWateringScheduleName("");
-    setWateringScheduleLoading(false);
-    setWateringScheduleWorking(false);
-    setWateringSchedulePendingTask(null);
-    setWateringScheduleLastPumpRunAt(null);
-  }, []);
 
   const handleUpsertSave = useCallback(
     async (payload: {
@@ -1418,53 +1245,7 @@ export default function ReadingsScreen() {
         onEmailCode={handleEmailCodeFromDeviceDetails}
       />
 
-      <WateringScheduleModal
-        visible={wateringScheduleVisible}
-        loading={wateringScheduleLoading}
-        working={wateringScheduleWorking}
-        deviceId={wateringScheduleId}
-        deviceName={wateringScheduleName}
-        plantName={
-          (() => {
-            const dev = devicesRaw.find(
-              (d) => String(d.id) === wateringScheduleId
-            );
-            return dev?.plant_name ?? "—";
-          })()
-        }
-        location={
-          (() => {
-            const dev = devicesRaw.find(
-              (d) => String(d.id) === wateringScheduleId
-            );
-            return dev?.plant_location ?? "—";
-          })()
-        }
-        pumpIncluded={
-          (() => {
-            const dev = devicesRaw.find(
-              (d) => String(d.id) === wateringScheduleId
-            );
-            return Boolean(dev?.pump_included);
-          })()
-        }
-        lastPumpRunAt={
-          wateringScheduleLastPumpRunAt ??
-          (() => {
-            const dev = devicesRaw.find(
-              (d) => String(d.id) === wateringScheduleId
-            );
-            return dev?.last_pump_run_at ?? "—";
-          })()
-        }
-        pendingPumpTask={wateringSchedulePendingTask}
-        durationSupported={wateringDurationSupported}
-        scheduledJobExists={Boolean(wateringSchedulePendingTask)}
-        scheduledJobCreatedAt={wateringSchedulePendingTask?.requested_at ?? null}
-        onScheduleWatering={handleScheduleWatering}
-        onRecallWatering={handleRecallWatering}
-        onClose={closeWateringSchedule}
-      />
+      <WateringScheduleModal {...watering.modalProps} />
 
       <UpsertReadingDeviceModal
         visible={upsertVisible}

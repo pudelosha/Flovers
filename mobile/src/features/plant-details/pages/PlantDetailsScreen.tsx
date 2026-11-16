@@ -1,3 +1,5 @@
+import { useWateringSchedule } from '../../readings/hooks/useWateringSchedule';
+import { usePlantEditor } from '../../plants/hooks/usePlantEditor';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { taskCompletionToast } from '../../../shared/utils/taskCompletionToast';
 import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
@@ -62,29 +64,18 @@ import ChangePlantImageModal from '../components/modals/ChangePlantImageModal';
 import EditPlantModal from '../../plants/components/modals/EditPlantModal';
 
 import {
-  fetchPlantInstanceForEdit,
-  updatePlantInstanceFromForm,
 } from '../../../api/services/plant-instances.service';
 
 import WateringScheduleModal from '../../readings/components/modals/WateringScheduleModal';
 import {
-  fetchPumpStatus,
-  schedulePumpWatering,
-  recallPumpWatering,
 } from '../../../api/services/readings.service';
-import type { ApiPumpTask } from '../../readings/types/readings.types';
 
 import { PUBLIC_BASE_URL_NORM } from '../../../config';
 
 const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
-type LightLevel5 =
-  | 'very-low'
-  | 'low'
-  | 'medium'
-  | 'bright-indirect'
-  | 'bright-direct';
+
 
 function toYYYYMMDD(d: Date = new Date()) {
   const Y = d.getFullYear();
@@ -198,45 +189,7 @@ export default function PlantDetailsScreen() {
     setChangeImgPlantId(null);
   }, []);
 
-  const [editOpen, setEditOpen] = useState(false);
-  const [editingId, setEditingId] = useState<string | null>(null);
 
-  const [fName, setFName] = useState('');
-  const [fLatinQuery, setFLatinQuery] = useState('');
-  const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(
-    undefined,
-  );
-  const [fLocation, setFLocation] = useState<string | undefined>(undefined);
-  const [fNotes, setFNotes] = useState('');
-
-  const [fPurchaseDateISO, setFPurchaseDateISO] = useState<
-    string | null | undefined
-  >(null);
-  const [fLightLevel, setFLightLevel] = useState<LightLevel5>('medium');
-  const [fOrientation, setFOrientation] = useState<'N' | 'E' | 'S' | 'W'>('S');
-  const [fDistanceCm, setFDistanceCm] = useState<number>(0);
-  const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(
-    undefined,
-  );
-  const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
-
-  const [editLoading, setEditLoading] = useState(false);
-  const editRequestRef = useRef(0);
-  const [saving, setSaving] = useState(false);
-
-  const [wateringScheduleVisible, setWateringScheduleVisible] = useState(false);
-  const [wateringDurationSupported, setWateringDurationSupported] =
-    useState(false);
-  const [wateringScheduleId, setWateringScheduleId] = useState<string | null>(
-    null,
-  );
-  const [wateringScheduleName, setWateringScheduleName] = useState('');
-  const [wateringScheduleLoading, setWateringScheduleLoading] = useState(false);
-  const [wateringScheduleWorking, setWateringScheduleWorking] = useState(false);
-  const [wateringSchedulePendingTask, setWateringSchedulePendingTask] =
-    useState<ApiPumpTask | null>(null);
-  const [wateringScheduleLastPumpRunAt, setWateringScheduleLastPumpRunAt] =
-    useState<string | null>(null);
 
   const showToast = (
     message: string,
@@ -399,293 +352,34 @@ export default function PlantDetailsScreen() {
     });
   };
 
-  const openEditModal = useCallback(
-    async (plantId: string) => {
-      const request = ++editRequestRef.current;
-      setDismissMenusTick(t => t + 1);
-      setEditingId(plantId);
-      setEditLoading(true);
-
-      try {
-        const detail = await fetchPlantInstanceForEdit(Number(plantId), {
-          auth: true,
-        });
-        if (request !== editRequestRef.current) return;
-        if (!plantAccess(detail.access).canEdit) return;
-
-        const resolvedName =
-          detail.display_name?.trim() ||
-          detail.plant_definition?.name?.trim() ||
-          tr('plants.list.unnamed', 'Unnamed plant');
-
-        setFName(resolvedName);
-        setFLatinQuery(detail.plant_definition?.name || '');
-        setFLatinSelected(detail.plant_definition?.name || undefined);
-        setFLocation(detail.location?.name || undefined);
-        setFNotes(detail.notes || '');
-
-        setFPurchaseDateISO(
-          detail.purchase_date === undefined ? null : detail.purchase_date,
-        );
-
-        setFLightLevel((detail.light_level as LightLevel5) || 'medium');
-        setFOrientation((detail.orientation as any) || 'S');
-        setFDistanceCm(detail.distance_cm ?? 0);
-
-        setFPotMaterial(detail.pot_material ?? undefined);
-        setFSoilMix(detail.soil_mix ?? undefined);
-
-        setEditOpen(true);
-      } catch (e: any) {
-        if (request !== editRequestRef.current) return;
-        Alert.alert(
-          t('plants.alert.loadFailedTitle', { defaultValue: 'Load failed' }),
-          e?.message ||
-            t('plants.alert.loadFailedMsg', {
-              defaultValue: 'Could not load plant details.',
-            }),
-        );
-      } finally {
-        if (request === editRequestRef.current) setEditLoading(false);
-      }
-    },
-    [t, tr],
-  );
-
-  const closeEdit = useCallback(() => {
-    editRequestRef.current += 1;
-    setEditLoading(false);
-    setEditOpen(false);
-    setEditingId(null);
-  }, []);
-
-  const onUpdate = useCallback(async () => {
-    if (!editingId) return;
-    if (!fName.trim()) return;
-
-    setSaving(true);
-    try {
-      const form = {
-        display_name: fName.trim(),
-        notes: fNotes ?? '',
-        purchase_date: fPurchaseDateISO ?? null,
-        light_level: fLightLevel,
-        orientation: fOrientation,
-        distance_cm: fDistanceCm,
-        pot_material: fPotMaterial ?? '',
-        soil_mix: fSoilMix ?? '',
-      } as const;
-
-      await updatePlantInstanceFromForm(Number(editingId), form, {
-        auth: true,
-      });
-
-      closeEdit();
+  const plantEditor = usePlantEditor({
+    onBeforeOpen: dismissMenus,
+    onSaved: async () => {
       await loadDetails();
-      setRefreshCounter(c => c + 1);
-
-      showToast(
-        t('plants.toast.updated', { defaultValue: 'Plant updated' }),
-        'success',
-      );
-    } catch (e: any) {
-      Alert.alert(
-        t('plants.alert.updateFailedTitle', { defaultValue: 'Update failed' }),
-        e?.message ||
-          t('plants.alert.updateFailedMsg', {
-            defaultValue: 'Could not update this plant.',
-          }),
-      );
-    } finally {
-      setSaving(false);
-    }
-  }, [
-    editingId,
-    fName,
-    fNotes,
-    fPurchaseDateISO,
-    fLightLevel,
-    fOrientation,
-    fDistanceCm,
-    fPotMaterial,
-    fSoilMix,
-    closeEdit,
-    loadDetails,
-    t,
-  ]);
-
-  const openWateringSchedule = useCallback(
-    async (deviceId?: string | number | null) => {
-      const resolvedDeviceId = deviceId ?? details?.readingDevice?.id;
-
-      if (!resolvedDeviceId) {
-        showToast(
-          tr('plantDetails.toasts.missingDeviceId', 'Missing reading device.'),
-          'error',
-        );
-        return;
-      }
-
-      setDismissMenusTick(x => x + 1);
-      setWateringScheduleId(String(resolvedDeviceId));
-      setWateringScheduleName(
-        details?.readingDevice?.deviceName ?? details?.deviceName ?? '',
-      );
-      setWateringSchedulePendingTask(
-        details?.readingDevice?.pendingPumpTask ?? null,
-      );
-      setWateringScheduleLastPumpRunAt(
-        details?.readingDevice?.lastPumpRunAt ?? null,
-      );
-      setWateringScheduleLoading(true);
-      setWateringScheduleWorking(false);
-
-      try {
-        const res = await fetchPumpStatus(Number(resolvedDeviceId));
-        setWateringDurationSupported(Boolean(res.supports_manual_duration));
-
-        setWateringSchedulePendingTask(res.pending_pump_task ?? null);
-        setWateringScheduleLastPumpRunAt(res.last_pump_run_at ?? null);
-
-        setDetails(curr => {
-          if (!curr?.readingDevice) return curr;
-
-          return {
-            ...curr,
-            readingDevice: {
-              ...curr.readingDevice,
-              pumpIncluded: res.pump_included,
-              lastPumpRunAt: res.last_pump_run_at ?? null,
-              lastPumpRunSource: res.last_pump_run_source ?? null,
-              pendingPumpTask: res.pending_pump_task ?? null,
-            },
-          };
-        });
-
-        setWateringScheduleVisible(true);
-      } catch {
-        showToast(
-          tr(
-            'plantDetails.toasts.pumpStatusLoadFailed',
-            'Failed to load watering schedule.',
-          ),
-          'error',
-        );
-      } finally {
-        setWateringScheduleLoading(false);
-      }
+      setRefreshCounter(counter => counter + 1);
+      showToast(t('plants.toast.updated', { defaultValue: 'Plant updated' }), 'success');
     },
-    [details, tr],
-  );
+  });
+  const { open: openEditModal, close: closeEdit, loading: editLoading, saving } = plantEditor;
 
-  const handleScheduleWatering = useCallback(
-    async (durationSeconds?: number) => {
-      if (!wateringScheduleId) {
-        showToast(
-          tr('plantDetails.toasts.missingDeviceId', 'Missing reading device.'),
-          'error',
-        );
-        return;
-      }
-
-      try {
-        setWateringScheduleWorking(true);
-
-        const res = await schedulePumpWatering(Number(wateringScheduleId), {
-          durationSeconds,
-        });
-        const pendingTask = res.pending_pump_task ?? null;
-
-        setWateringSchedulePendingTask(pendingTask);
-
-        setDetails(curr => {
-          if (!curr?.readingDevice) return curr;
-
-          return {
-            ...curr,
-            readingDevice: {
-              ...curr.readingDevice,
-              pendingPumpTask: pendingTask,
-            },
-          };
-        });
-
-        showToast(
-          tr('plantDetails.toasts.wateringScheduled', 'Watering scheduled.'),
-          'success',
-        );
-      } catch {
-        showToast(
-          tr(
-            'plantDetails.toasts.wateringScheduleFailed',
-            'Failed to schedule watering.',
-          ),
-          'error',
-        );
-      } finally {
-        setWateringScheduleWorking(false);
-      }
-    },
-    [wateringScheduleId, tr],
-  );
-
-  const handleRecallWatering = useCallback(async () => {
-    if (!wateringScheduleId) {
-      showToast(
-        tr('plantDetails.toasts.missingDeviceId', 'Missing reading device.'),
-        'error',
-      );
-      return;
-    }
-
-    try {
-      setWateringScheduleWorking(true);
-
-      await recallPumpWatering(Number(wateringScheduleId));
-
-      setWateringSchedulePendingTask(null);
-
-      setDetails(curr => {
-        if (!curr?.readingDevice) return curr;
-
-        return {
-          ...curr,
-          readingDevice: {
-            ...curr.readingDevice,
-            pendingPumpTask: null,
-          },
-        };
+  const watering = useWateringSchedule({
+    translationScope: 'plantDetails',
+    onBeforeOpen: dismissMenus,
+    onNotify: showToast,
+    onStatusChanged: (id, status) => {
+      setDetails(previous => {
+        if (!previous?.readingDevice || String(previous.readingDevice.id) !== id) return previous;
+        return { ...previous, readingDevice: {
+          ...previous.readingDevice, pumpIncluded: status.pump_included,
+          lastPumpRunAt: status.last_pump_run_at ?? null,
+          lastPumpRunSource: status.last_pump_run_source ?? null,
+          pendingPumpTask: status.pending_pump_task ?? null,
+        } };
       });
+    },
+  });
+  const { open: openWateringSchedule, close: closeWateringSchedule, loading: wateringScheduleLoading } = watering;
 
-      showToast(
-        tr(
-          'plantDetails.toasts.wateringRecalled',
-          'Scheduled watering recalled.',
-        ),
-        'success',
-      );
-    } catch {
-      showToast(
-        tr(
-          'plantDetails.toasts.wateringRecallFailed',
-          'Failed to recall watering.',
-        ),
-        'error',
-      );
-    } finally {
-      setWateringScheduleWorking(false);
-    }
-  }, [wateringScheduleId, tr]);
-
-  const closeWateringSchedule = useCallback(() => {
-    setWateringScheduleVisible(false);
-    setWateringScheduleId(null);
-    setWateringScheduleName('');
-    setWateringScheduleLoading(false);
-    setWateringScheduleWorking(false);
-    setWateringSchedulePendingTask(null);
-    setWateringScheduleLastPumpRunAt(null);
-  }, []);
 
   useFocusEffect(
     useCallback(() => {
@@ -1234,33 +928,9 @@ export default function PlantDetailsScreen() {
       />
 
       <EditPlantModal
-        visible={editOpen}
+        {...plantEditor.modalProps}
         latinCatalog={latinOptions}
         locations={locationOptions}
-        fName={fName}
-        setFName={setFName}
-        fLatinQuery={fLatinQuery}
-        setFLatinQuery={setFLatinQuery}
-        fLatinSelected={fLatinSelected}
-        setFLatinSelected={setFLatinSelected}
-        fLocation={fLocation}
-        setFLocation={setFLocation}
-        fNotes={fNotes}
-        setFNotes={setFNotes}
-        fPurchaseDateISO={fPurchaseDateISO ?? null}
-        setFPurchaseDateISO={setFPurchaseDateISO}
-        fLightLevel={fLightLevel}
-        setFLightLevel={setFLightLevel}
-        fOrientation={fOrientation}
-        setFOrientation={setFOrientation}
-        fDistanceCm={fDistanceCm}
-        setFDistanceCm={setFDistanceCm}
-        fPotMaterial={fPotMaterial}
-        setFPotMaterial={setFPotMaterial}
-        fSoilMix={fSoilMix}
-        setFSoilMix={setFSoilMix}
-        onCancel={closeEdit}
-        onSave={onUpdate}
       />
 
       <PostponeTaskModal
@@ -1327,39 +997,7 @@ export default function PlantDetailsScreen() {
         intervalText={completeIntervalText}
       />
 
-      <WateringScheduleModal
-        visible={wateringScheduleVisible}
-        loading={wateringScheduleLoading}
-        working={wateringScheduleWorking}
-        deviceId={wateringScheduleId}
-        deviceName={
-          wateringScheduleName ||
-          details?.readingDevice?.deviceName ||
-          details?.deviceName ||
-          '—'
-        }
-        plantName={
-          details?.plant?.display_name ||
-          details?.plant?.plant_definition?.name ||
-          '—'
-        }
-        location={details?.plant?.location?.name ?? '—'}
-        pumpIncluded={Boolean(details?.readingDevice?.pumpIncluded)}
-        lastPumpRunAt={
-          wateringScheduleLastPumpRunAt ??
-          details?.readingDevice?.lastPumpRunAt ??
-          '—'
-        }
-        pendingPumpTask={wateringSchedulePendingTask}
-        durationSupported={wateringDurationSupported}
-        scheduledJobExists={Boolean(wateringSchedulePendingTask)}
-        scheduledJobCreatedAt={
-          wateringSchedulePendingTask?.requested_at ?? null
-        }
-        onScheduleWatering={handleScheduleWatering}
-        onRecallWatering={handleRecallWatering}
-        onClose={closeWateringSchedule}
-      />
+      <WateringScheduleModal {...watering.modalProps} />
 
       <TopSnackbar
         visible={toastVisible}

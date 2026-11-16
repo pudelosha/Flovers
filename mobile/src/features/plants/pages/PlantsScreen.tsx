@@ -1,3 +1,4 @@
+import { usePlantEditor } from '../../plants/hooks/usePlantEditor';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
@@ -66,8 +67,6 @@ import {
   fetchPlantInstances,
   deletePlantInstance,
   ApiPlantInstanceListItem,
-  fetchPlantInstanceForEdit,
-  updatePlantInstanceFromForm,
 } from '../../../api/services/plant-instances.service';
 
 import { getPlantPhotoUri } from '../../../shared/utils/photoStorage';
@@ -76,12 +75,7 @@ import { plantAccess } from '../../../shared/utils/plantAccess';
 import { CameraRoll } from '@react-native-camera-roll/camera-roll';
 import { sendQrCodeByEmail } from '../../../api/services/qr-code.service';
 
-type LightLevel5 =
-  | 'very-low'
-  | 'low'
-  | 'medium'
-  | 'bright-indirect'
-  | 'bright-direct';
+
 
 function mapApiToPlant(
   item: ApiPlantInstanceListItem,
@@ -154,31 +148,6 @@ export default function PlantsScreen() {
     setToastVisible(true);
   };
 
-  const [editOpen, setEditOpen] = useState(false);
-  const [editingId, setEditingId] = useState<string | null>(null);
-
-  const [fName, setFName] = useState('');
-  const [fLatinQuery, setFLatinQuery] = useState('');
-  const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(
-    undefined,
-  );
-  const [fLocation, setFLocation] = useState<string | undefined>(undefined);
-  const [fNotes, setFNotes] = useState('');
-
-  const [fPurchaseDateISO, setFPurchaseDateISO] = useState<
-    string | null | undefined
-  >(null);
-  const [fLightLevel, setFLightLevel] = useState<LightLevel5>('medium');
-  const [fOrientation, setFOrientation] = useState<'N' | 'E' | 'S' | 'W'>('S');
-  const [fDistanceCm, setFDistanceCm] = useState<number>(0);
-  const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(
-    undefined,
-  );
-  const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
-
-  const [editLoading, setEditLoading] = useState(false);
-  const editRequestRef = useRef(0);
-  const [saving, setSaving] = useState(false);
 
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
@@ -287,10 +256,6 @@ export default function PlantsScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      editRequestRef.current += 1;
-      setEditLoading(false);
-      setEditOpen(false);
-      setEditingId(null);
       closeFloatingMenus();
       setSortOpen(false);
       setFilterOpen(false);
@@ -300,9 +265,6 @@ export default function PlantsScreen() {
       setQrPlantId('');
       qrModalRef.current = null;
 
-      return () => {
-        editRequestRef.current += 1;
-      };
     }, [closeFloatingMenus]),
   );
 
@@ -376,79 +338,18 @@ export default function PlantsScreen() {
     nav.navigate('TaskHistory', { plantId: String(p.id) });
   };
 
-  const openEditModal = useCallback(
-    async (p: Plant) => {
-      const request = ++editRequestRef.current;
-      closeFloatingMenus();
-      setEditingId(p.id);
-      setEditLoading(true);
-
-      try {
-        setFName(p.name);
-        setFLatinQuery(p.latin || '');
-        setFLatinSelected(p.latin);
-        setFLocation(p.location);
-        setFNotes(p.notes || '');
-
-        const detail = await fetchPlantInstanceForEdit(Number(p.id), {
-          auth: true,
-        });
-        if (request !== editRequestRef.current) return;
-        if (!plantAccess(detail.access).canEdit) return;
-
-        if (detail.display_name !== undefined && detail.display_name !== null)
-          setFName(detail.display_name || '');
-        if (detail.notes !== undefined && detail.notes !== null)
-          setFNotes(detail.notes || '');
-        setFPurchaseDateISO(
-          detail.purchase_date === undefined ? null : detail.purchase_date,
-        );
-
-        setFLightLevel((detail.light_level as LightLevel5) || 'medium');
-        setFOrientation((detail.orientation as any) || 'S');
-        setFDistanceCm(detail.distance_cm ?? 0);
-
-        setFPotMaterial(detail.pot_material ?? undefined);
-        setFSoilMix(detail.soil_mix ?? undefined);
-
-        setFLatinQuery(detail.plant_definition?.name || p.latin || '');
-        setFLatinSelected(
-          detail.plant_definition?.name || p.latin || undefined,
-        );
-        setFLocation(detail.location?.name || p.location);
-
-        setEditOpen(true);
-      } catch (e: any) {
-        if (request !== editRequestRef.current) return;
-        Alert.alert(
-          t('plants.alert.loadFailedTitle', { defaultValue: 'Load failed' }),
-          e?.message ||
-            t('plants.alert.loadFailedMsg', {
-              defaultValue: 'Could not load plant details.',
-            }),
-        );
-      } finally {
-        if (request === editRequestRef.current) setEditLoading(false);
-      }
+  const plantEditor = usePlantEditor({
+    onBeforeOpen: closeFloatingMenus,
+    onSaved: async updated => {
+      const mapped = mapApiToPlant(updated, unnamedFallback);
+      const withLocal = await attachLocalPhotos([mapped]);
+      setPlants(previous => previous.map(plant => plant.id === String(updated.id) ? withLocal[0] : plant));
+      showToast(t('plants.toast.updated', { defaultValue: 'Plant updated' }), 'success');
     },
-    [closeFloatingMenus, t],
-  );
-
-  const openEditModalById = useCallback(
-    async (id: string) => {
-      const stub: Plant = {
-        id: String(id),
-        name: '',
-        latin: undefined,
-        location: undefined,
-        notes: '',
-        imageUrl: undefined,
-        qrCode: undefined,
-      };
-      await openEditModal(stub);
-    },
-    [openEditModal],
-  );
+  });
+  const { visible: editOpen, loading: editLoading, saving } = plantEditor;
+  const openEditModalById = plantEditor.open;
+  const openEditModal = useCallback((plant: Plant) => openEditModalById(plant.id), [openEditModalById]);
 
   useFocusEffect(
     useCallback(() => {
@@ -497,58 +398,6 @@ export default function PlantsScreen() {
     }, [load, route, nav, openEditModalById, requestGuard]),
   );
 
-  const closeEdit = () => {
-    editRequestRef.current += 1;
-    setEditLoading(false);
-    setEditOpen(false);
-    setEditingId(null);
-  };
-
-  const onUpdate = async () => {
-    if (!editingId) return;
-    if (!fName.trim()) return;
-
-    setSaving(true);
-    try {
-      const form = {
-        display_name: fName.trim(),
-        notes: fNotes ?? '',
-        purchase_date: fPurchaseDateISO ?? null,
-        light_level: fLightLevel,
-        orientation: fOrientation,
-        distance_cm: fDistanceCm,
-        pot_material: fPotMaterial ?? '',
-        soil_mix: fSoilMix ?? '',
-      } as const;
-
-      const updatedListItem = await updatePlantInstanceFromForm(
-        Number(editingId),
-        form,
-        { auth: true },
-      );
-
-      const mapped = mapApiToPlant(updatedListItem, unnamedFallback);
-      const withLocal = await attachLocalPhotos([mapped]);
-
-      setPlants(prev => prev.map(p => (p.id === editingId ? withLocal[0] : p)));
-
-      closeEdit();
-      showToast(
-        t('plants.toast.updated', { defaultValue: 'Plant updated' }),
-        'success',
-      );
-    } catch (e: any) {
-      Alert.alert(
-        t('plants.alert.updateFailedTitle', { defaultValue: 'Update failed' }),
-        e?.message ||
-          t('plants.alert.updateFailedMsg', {
-            defaultValue: 'Could not update this plant.',
-          }),
-      );
-    } finally {
-      setSaving(false);
-    }
-  };
 
   const askDelete = (p: Plant) => {
     closeFloatingMenus();
@@ -1029,33 +878,9 @@ export default function PlantsScreen() {
       />
 
       <EditPlantModal
-        visible={editOpen}
+        {...plantEditor.modalProps}
         latinCatalog={latinOptions}
         locations={locationOptions}
-        fName={fName}
-        setFName={setFName}
-        fLatinQuery={fLatinQuery}
-        setFLatinQuery={setFLatinQuery}
-        fLatinSelected={fLatinSelected}
-        setFLatinSelected={setFLatinSelected}
-        fLocation={fLocation}
-        setFLocation={setFLocation}
-        fNotes={fNotes}
-        setFNotes={setFNotes}
-        fPurchaseDateISO={fPurchaseDateISO ?? null}
-        setFPurchaseDateISO={setFPurchaseDateISO}
-        fLightLevel={fLightLevel}
-        setFLightLevel={setFLightLevel}
-        fOrientation={fOrientation}
-        setFOrientation={setFOrientation}
-        fDistanceCm={fDistanceCm}
-        setFDistanceCm={setFDistanceCm}
-        fPotMaterial={fPotMaterial}
-        setFPotMaterial={setFPotMaterial}
-        fSoilMix={fSoilMix}
-        setFSoilMix={setFSoilMix}
-        onCancel={closeEdit}
-        onSave={onUpdate}
       />
 
       <ConfirmDeleteModal
