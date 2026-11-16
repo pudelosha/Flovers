@@ -1,10 +1,10 @@
-# Code quality cleanup: stages 1–4
+# Code quality cleanup: stages 1–5
 
 Branch: `maintenance/code-quality-2026-11-16`.
 
 Starting revision: `6fc386168654d2e0b57097e7ef50291972fbfc25`.
 
-The [review](CODE_QUALITY_REVIEW_2026-11-15.md) records the source findings. Stages 1–3 address the baseline, concrete defects, obsolete code, TypeScript errors, and lint errors. Stage 4 adds the workflow and backend module refactors below. Theme migration, dependency locking, and website payload optimization remain later work.
+The [review](CODE_QUALITY_REVIEW_2026-11-15.md) records the source findings. Stages 1–3 address the baseline, concrete defects, obsolete code, TypeScript errors, and lint errors. Stage 4 adds the workflow and backend module refactors below. Stage 5 locks backend dependencies and validates the CPU recognition stack. Theme migration and website payload optimization remain later work.
 
 ## Recorded baseline
 
@@ -95,3 +95,32 @@ No backend application files, database models, or migrations changed. The prior 
 The Plants screen decreased from 1,169 to 994 lines, Plant Details from 1,465 to 1,103, and Readings from 1,730 to 1,511. Backend readings views decreased from 1,657 to 808 lines. Responsibilities moved to the shared hooks/services rather than being hidden in a single replacement controller.
 
 The backend run used the same isolated SQLite/inference-mocked environment as the baseline. PostgreSQL-specific skipped tests remain covered by the existing CI workflow. No push, server deployment, or device installation is included in stage 4.
+
+## Stage 5: reproducible backend builds
+
+- Split direct dependencies into `backend/requirements.in` and a generated, fully pinned `requirements.txt` with SHA-256 hashes. Preserved all 82 package versions recorded by the successful CI/image build for `4aa974e`; the universal lock also includes two Windows-specific packages.
+- CI and Docker now use the same hash-enforced, binary-wheel-only install command and run `pip check`. Removed the independent unpinned Torch/TorchVision installation. Only those two official CPU package pages are used as wheel sources; other packages resolve from PyPI.
+- Pinned Python 3.12.16 in `.python-version` and the Docker tag/digest. Production image builds explicitly target Linux AMD64.
+- Both CI and the final image build execute `scripts/check_recognition.py`: reject GPU builds/packages, exercise TorchVision's native CPU operators, load the real model/class mapping, and run image preprocessing and prediction. Added seven regression cases for CPU/GPU package validation.
+- Preserved the required full PostgreSQL suite, model/migration checks and deployment safeguards before image publication/deployment. No changes to mobile publication triggers, API contracts or database schema.
+- Added [dependency maintenance instructions](backend/DEPENDENCIES.md) and updated the deployment/quality documentation.
+
+### Stage 5 verification
+
+| Check | Result |
+| --- | --- |
+| Isolated Python 3.12.16 locked install and `pip check` | Passed |
+| Working deployment package versions preserved | All 82 matched |
+| Linux AMD64 wheels and SHA-256 hashes | Download/compatibility check passed |
+| Actual CPU recognition model | Passed; 734 classes, native operator, preprocessing and prediction |
+| Full backend suite with real recognition stack | 1,088 passed; 36 skipped |
+| Django model/migration checks | Passed; no missing migrations |
+| Deployment safeguards | 24 passed |
+
+Local tests used Windows/Python 3.12.16 and the isolated SQLite fallback, with
+the actual recognition stack installed rather than the earlier global inference
+stub. PostgreSQL-specific tests remain CI checks. Docker is unavailable locally;
+Linux wheel/hash validation is not a substitute for executing the Linux image.
+The image build repeats recognition validation before publication. Pushing this
+stage to `main` starts those release checks and the automatic VPS deployment;
+no mobile rebuild or database migration is required.

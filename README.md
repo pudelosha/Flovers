@@ -176,15 +176,15 @@ From the repository root:
 docker compose up --build
 ```
 
-The development API is available at `http://localhost:8000`, and MailHog's email viewer at `http://localhost:8025`. The web service applies migrations at startup. The Docker image uses Python 3.12.
+The development API is available at `http://localhost:8000`, and MailHog's email viewer at `http://localhost:8025`. The web service applies migrations at startup. CI and the Docker image use Python 3.12.16 and the same hashed dependency lock; see [backend dependency maintenance](backend/DEPENDENCIES.md).
 
 Production uses a separate VPS Compose configuration. See the [deployment guide](deployment/README.md) for environment variables, trusted proxy settings, migrations, firmware compatibility and backup requirements.
 
 ## Delivery and maintenance
 
-- **Backend:** relevant pushes to `main` must pass the full Django suite on PostgreSQL, migration checks and deployment tests before building an image or deploying to the VPS. The rollout applies migrations before starting the updated application services.
-- **Website:** content/translation tests and a production build must pass before publishing through GitHub Pages.
-- **Mobile checks:** mobile pushes and pull requests run Jest and release-metadata tests without signing or publishing.
+- **Backend:** relevant pushes to `main` must pass locked-dependency checks, a real CPU plant-recognition prediction, the full Django suite on PostgreSQL, migration checks and deployment tests before building an image or deploying to the VPS. The image repeats recognition validation before publication. The rollout applies migrations before starting the updated application services.
+- **Website:** lint, content/translation tests and a production build must pass before publishing through GitHub Pages.
+- **Mobile checks:** mobile pushes and pull requests run strict TypeScript, lint, Jest and release-metadata tests without signing or publishing.
 - **Android testing builds:** the Google Play internal-test workflow is **manually triggered in GitHub Actions** and requires mobile checks to pass, so routine commits do not create mobile releases.
 - **VPS storage:** CPU-only recognition dependencies and bounded backend-image retention reduce image accumulation while preserving the previous image for rollback.
 - **Private media:** uploaded photos use persistent private storage; backups must include the database and private media together.

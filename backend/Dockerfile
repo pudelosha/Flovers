@@ -1,4 +1,5 @@
-﻿FROM python:3.12-slim
+# Keep the Python patch version aligned with .python-version (used by CI).
+FROM python:3.12.16-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
 
 WORKDIR /app
 
@@ -13,12 +14,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/
-# Recognition runs on the CPU. The default Linux PyPI wheels also pull in
-# several gigabytes of CUDA libraries, which can exhaust the VPS during pulls.
-RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu \
-    && pip install -r requirements.txt \
-    && python -c "import importlib.metadata as m; import torch, torchvision; assert torch.version.cuda is None, 'CPU-only PyTorch required'; assert not any(d.metadata['Name'].lower().startswith('nvidia-') for d in m.distributions()), 'Unexpected NVIDIA packages'; model = torchvision.models.resnet18(weights=None).eval(); output = model(torch.zeros(1, 3, 224, 224)); assert output.shape == (1, 1000)"
+# Use the same hashed lock and wheel-only installation as backend CI.
+# Torch/TorchVision are pinned CPU builds; there is no floating install step.
+RUN python -m pip install --require-hashes --only-binary=:all: -r requirements.txt \
+    && python -m pip check
 
 COPY . /app
+
+RUN python scripts/check_recognition.py
 
 RUN mkdir -p /app/staticfiles /app/media
