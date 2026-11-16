@@ -171,22 +171,14 @@ export default function GlassHeader(props: Props) {
     focusSnapshot,
     focusSnapshot,
   );
-  // Publish changed labels, callbacks and segment state without restarting the height animation.
-  React.useLayoutEffect(() => {
-    if (controller && focused) controller.publish({ owner, props });
-  }, [
-    controller,
-    focused,
-    owner,
-    props.title,
-    props.gradientColors,
-    props.solidFallback,
-    props.rightIconName,
-    props.onPressRight,
-    props.showSeparator,
-    props.children,
-    props.segment,
+  const { title, gradientColors, solidFallback, rightIconName, onPressRight, showSeparator, children, segment } = props;
+  const publishedProps = React.useMemo(() => ({ title, gradientColors, solidFallback, rightIconName, onPressRight, showSeparator, children, segment }), [
+    title, gradientColors, solidFallback, rightIconName, onPressRight, showSeparator, children, segment,
   ]);
+  // Publish changed labels and segment state without changing the animation lifetime.
+  React.useLayoutEffect(() => {
+    if (controller && focused) controller.publish({ owner, props: publishedProps });
+  }, [controller, focused, owner, publishedProps]);
   React.useLayoutEffect(() => {
     if (!controller || !focused) return;
     return () => controller.release(owner);

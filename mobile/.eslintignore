@@ -1,0 +1,6 @@
+# Generated native and test artifacts; application, test and build scripts remain checked.
+**/build/
+**/.cxx/
+ios/Pods/
+coverage/
+*.jsbundle

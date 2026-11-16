@@ -152,7 +152,7 @@ export default function ReadingTile({
   }, [isOverdue, pulse]);
 
   const tr = React.useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
 
       const txt = t(key, {

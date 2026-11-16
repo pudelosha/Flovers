@@ -78,7 +78,7 @@ export default function DeviceDetailsModal({
   const [revealSecret, setRevealSecret] = React.useState(false);
 
   const tr = React.useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;

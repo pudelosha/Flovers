@@ -129,7 +129,7 @@ export default function RemindersScreen() {
 
   // Safe t() (treat key-echo as missing)
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
@@ -495,7 +495,7 @@ export default function RemindersScreen() {
         type: uiTypeToApi(fType),
         start_date: fDueDate,
         interval_value: Number(fIntervalValue),
-        interval_unit: (fType === "repot" ? "months" : "days") as const,
+        interval_unit: fType === "repot" ? "months" as const : "days" as const,
       };
 
       if (isCreate) {

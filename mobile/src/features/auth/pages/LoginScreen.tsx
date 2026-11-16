@@ -100,7 +100,6 @@ const AnimatedFloatingLabel = ({
 // Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
   tKey,
-  children,
   style,
 }: {
   tKey: string;
@@ -108,10 +107,8 @@ const TranslatedText = ({
   style?: any;
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = t(tKey);

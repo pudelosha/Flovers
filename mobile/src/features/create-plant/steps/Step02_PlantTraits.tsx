@@ -206,7 +206,7 @@ const TranslatedText = ({
 }: {
   tKey: string;
   style?: any;
-  values?: any;
+  values?: Record<string, unknown>;
 }) => {
   const { t } = useTranslation();
 
@@ -273,7 +273,7 @@ export default function Step02_PlantTraits({
   ]);
 
   const getTranslation = useCallback(
-    (key: string, fallback?: string, values?: any): string => {
+    (key: string, fallback?: string, values?: Record<string, unknown>): string => {
       try {
         const translation = t(
           key,

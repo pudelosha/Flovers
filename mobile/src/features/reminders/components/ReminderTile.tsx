@@ -84,7 +84,7 @@ export default function ReminderTile({
   const access = plantAccess(reminder.access);
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
@@ -93,9 +93,9 @@ export default function ReminderTile({
     [t, currentLanguage],
   );
 
-  const displayType = toDisplayType(reminder.type as any);
-  const accent = ACCENT_BY_TYPE[displayType as any];
-  const icon = ICON_BY_TYPE[displayType as any] ?? 'calendar';
+  const displayType = toDisplayType(reminder.type);
+  const accent = ACCENT_BY_TYPE[displayType];
+  const icon = ICON_BY_TYPE[displayType] ?? 'calendar';
 
   const typeLabel = tr(
     `reminders.types.${displayType}`,

@@ -20,14 +20,18 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
   const [nameInvalid, setNameInvalid] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const revision = useRef(0);
+  const initialContact = useRef(contact);
+  initialContact.current = contact;
+  const contactId = contact?.id;
 
   useEffect(() => {
     revision.current += 1;
-    setName(contact?.name || "");
+    // Seed a new editor; background contact updates must not replace unsaved text.
+    setName(initialContact.current?.name || "");
     setNameInvalid(false);
     setError(null);
-  }, [contact?.id]);
-  useEffect(() => { if (contact) void refresh(); }, [contact?.id, refresh]);
+  }, [contactId]);
+  useEffect(() => { if (contactId) void refresh(); }, [contactId, refresh]);
 
   const renderShares = (direction: PlantShare["direction"]) => {
     const items = shares.filter((share) => share.contactId === contact?.id && share.direction === direction);

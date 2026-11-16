@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react-native";
 import JournalPhotoTile from "../JournalPhotoTile";
 import FramedPlantImage from "../../../../shared/ui/FramedPlantImage";
-import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
+
 import { usePlantPhoto } from "../../../../shared/hooks/usePlantPhoto";
 import type { JournalPhotoItem } from "../../types/task-history.types";
 

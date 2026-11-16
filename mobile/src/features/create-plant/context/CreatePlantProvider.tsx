@@ -130,7 +130,7 @@ function reducer(state: WizardState, action: Action): WizardState {
         selectedPlant: action.plant
           ? {
               ...action.plant,
-              latin: action.plant.latin.replace(/_/g, " "),
+              latin: action.plant.latin?.replace(/_/g, " "),
             }
           : undefined,
       };

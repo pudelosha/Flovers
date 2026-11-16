@@ -28,6 +28,8 @@ jobs:
           cache-dependency-path: web/package-lock.json
       - name: Install locked dependencies
         run: npm ci
+      - name: Check website lint errors
+        run: npm run lint
       - name: Test website content and translations
         run: npm test
       - name: Check production build

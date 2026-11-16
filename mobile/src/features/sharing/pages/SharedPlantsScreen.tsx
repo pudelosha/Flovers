@@ -144,6 +144,9 @@ export default function SharedPlantsScreen() {
     setRemoving(null);
     setDeleting(null);
   };
+  const removingOpen = !!removing;
+  const deletingOpen = !!deleting;
+  const sharingOpen = !!shareDraft;
   useEffect(() => {
     if (!isFocused) return;
     void refresh();
@@ -163,7 +166,7 @@ export default function SharedPlantsScreen() {
     }
     setFabCloseSignal(previous => previous + 1);
     closeMenu();
-  }, [isFocused, !!removing, !!deleting, !!shareDraft, filter, closeMenu]);
+  }, [isFocused, removingOpen, deletingOpen, sharingOpen, filter, closeMenu]);
   useEffect(
     () => () => {
       menuRequest.current += 1;

@@ -33,6 +33,10 @@ jobs:
           cache-dependency-path: mobile/package-lock.json
       - name: Install locked dependencies
         run: npm ci
+      - name: Check strict TypeScript contracts
+        run: npm run typecheck
+      - name: Check mobile lint errors
+        run: npm run lint
       - name: Run full mobile Jest suite
         run: npm test -- --ci --maxWorkers=2 --json --outputFile=jest-results.json
       - name: Test release metadata generation

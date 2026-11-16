@@ -1,6 +1,6 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
-import { Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
+import { Pressable, StyleSheet, Text } from "../../../shared/theme/native";
 import type { LayoutChangeEvent, StyleProp, ViewStyle } from "react-native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
@@ -32,7 +32,7 @@ export default function ReminderMiniTileMenu({
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;

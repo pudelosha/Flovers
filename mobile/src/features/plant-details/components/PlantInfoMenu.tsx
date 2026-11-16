@@ -38,7 +38,7 @@ export default function PlantInfoMenu({
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       if (typeof txt === 'string' && txt && txt !== key) return txt;

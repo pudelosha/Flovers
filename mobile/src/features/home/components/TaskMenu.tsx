@@ -1,6 +1,6 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React from "react";
-import { View, Pressable, Text } from "../../../shared/theme/native";
+import { Pressable, Text } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { s } from "../styles/home.styles";
 import { useTranslation } from "react-i18next";

@@ -75,7 +75,7 @@ export default function ReminderMiniTile({
   const access = plantAccess(reminder.access);
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
@@ -85,7 +85,7 @@ export default function ReminderMiniTile({
   );
 
   const typeKey = toTypeKey(reminder.type);
-  const color = ACCENT_BY_TYPE[typeKey as any];
+  const color = ACCENT_BY_TYPE[typeKey];
   const typeLabel = tr(
     `reminders.types.${typeKey}`,
     typeKey === 'fertilising'
@@ -135,7 +135,7 @@ export default function ReminderMiniTile({
             { backgroundColor: color + '22', borderColor: color + '66' },
           ]}
         >
-          <Icon name={ICON_BY_TYPE[typeKey as any]} size={20} color={color} />
+          <Icon name={ICON_BY_TYPE[typeKey]} size={20} color={color} />
         </View>
 
         <View style={s.miniContent}>

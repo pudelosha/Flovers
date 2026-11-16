@@ -127,19 +127,19 @@ function mapHomeTaskToReminderSummary(task: HomeTask): PlantReminderSummary | nu
 /* ------------------------------------------------------------------ */
 
 async function fetchReadingDevices(): Promise<ApiReadingDevice[]> {
-    const resp = await request<ApiReadingDevice[] | { results: ApiReadingDevice[] }>(
-      "/readings/devices/",
-      "GET",
-      undefined,
-      { auth: true }
-    );
+  const resp = await request<ApiReadingDevice[] | { results: ApiReadingDevice[] }>(
+    "/readings/devices/",
+    "GET",
+    undefined,
+    { auth: true }
+  );
 
-    if (Array.isArray(resp)) return resp;
-    if (resp && Array.isArray(resp.results)) {
-      return resp.results;
-    }
+  if (Array.isArray(resp)) return resp;
+  if (resp && Array.isArray(resp.results)) {
+    return resp.results;
+  }
 
-    throw new Error('Invalid device list response');
+  throw new Error('Invalid device list response');
 }
 
 async function findDeviceForPlant(
@@ -163,23 +163,23 @@ async function findDeviceForPlant(
 async function fetchRemindersForPlant(
   plantId: number
 ): Promise<PlantReminderSummary[]> {
-    const tasks = await fetchHomeTasks();
-    const plantIdStr = String(plantId);
+  const tasks = await fetchHomeTasks();
+  const plantIdStr = String(plantId);
 
-    const relevant = tasks.filter((t) => {
-      const tPlantId = (t as any).plantId;
-      if (!tPlantId) return false;
-      return String(tPlantId) === plantIdStr;
-    });
+  const relevant = tasks.filter((t) => {
+    const tPlantId = (t as any).plantId;
+    if (!tPlantId) return false;
+    return String(tPlantId) === plantIdStr;
+  });
 
-    const summaries: PlantReminderSummary[] = [];
+  const summaries: PlantReminderSummary[] = [];
 
-    for (const t of relevant) {
-      const mapped = mapHomeTaskToReminderSummary(t);
-      if (mapped) summaries.push(mapped);
-    }
+  for (const t of relevant) {
+    const mapped = mapHomeTaskToReminderSummary(t);
+    if (mapped) summaries.push(mapped);
+  }
 
-    return summaries;
+  return summaries;
 }
 
 /* ------------------------------------------------------------------ */

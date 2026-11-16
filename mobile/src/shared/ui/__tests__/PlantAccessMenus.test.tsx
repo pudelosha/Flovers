@@ -26,7 +26,7 @@ it("permits caregiver task completion without exposing reminder editing", () => 
   fireEvent.press(view.getByText("home.menu.markAsComplete")); expect(complete).toHaveBeenCalledTimes(1); expect(view.queryByText("home.menu.editReminder")).toBeNull();
 });
 it("hides image, edit, and sharing controls in shared plant details", () => {
-  const view = render(<PlantInfoMenu canEdit={false} onPlantDefinition={noop} onEditPlant={noop} onChangeImage={noop} onShowReminders={noop} onShare={noop} />);
+  const view = render(<PlantInfoMenu canEdit={false} onEditPlant={noop} onChangeImage={noop} onShowReminders={noop} onShare={noop} />);
   expect(view.queryByText("Edit plant")).toBeNull(); expect(view.queryByText("Change image")).toBeNull(); expect(view.queryByText("Share plant")).toBeNull(); expect(view.queryByText("Show reminders")).toBeNull();
 });
 it("keeps shared reminder history available without completion or edits", () => {

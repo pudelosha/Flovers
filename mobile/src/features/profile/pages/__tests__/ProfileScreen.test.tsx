@@ -32,7 +32,7 @@ jest.mock("../../../../api/services/profile.service", () => ({
   updateProfileNotifications: jest.fn(),
   updateProfileSettings: jest.fn(),
 }));
-jest.mock("../../../../shared/ui/CenteredSpinner", () => (props: any) =>
+jest.mock("../../../../shared/ui/CenteredSpinner", () => (_props: any) =>
   require("react").createElement(require("react-native").Text, { testID: "shared-spinner" }, "Loading"));
 jest.mock("../../../../shared/ui/GlassHeader", () => (props: any) =>
   require("react").createElement(require("react-native").View, null, require("react").createElement(require("react-native").Text, null, props.title), props.segment));

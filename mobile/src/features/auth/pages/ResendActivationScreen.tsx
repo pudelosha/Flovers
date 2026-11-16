@@ -96,7 +96,6 @@ const AnimatedFloatingLabel = ({
 // Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
   tKey,
-  children,
   style,
   variant,
 }: {
@@ -106,11 +105,8 @@ const TranslatedText = ({
   variant?: "headlineMedium" | "bodyMedium" | "bodySmall";
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  
 
-  // Use currentLanguage to force re-render when language changes
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = t(tKey);

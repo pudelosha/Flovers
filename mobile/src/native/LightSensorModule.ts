@@ -8,9 +8,6 @@ type NativeLightModule = {
   stop: () => void;
 };
 
-const LINKING_ERROR =
-  `LightSensorModule native module not found. Did you rebuild the app?`;
-
 const M = (NativeModules.LightSensorModule ?? null) as NativeLightModule | null;
 
 // We emit via DeviceEventManagerModule from Android native, so do NOT pass a module here.

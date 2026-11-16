@@ -101,7 +101,6 @@ const AnimatedFloatingLabel = ({
 // Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
   tKey,
-  children,
   style,
   variant,
 }: {
@@ -111,11 +110,8 @@ const TranslatedText = ({
   variant?: "headlineMedium" | "bodyMedium" | "bodySmall";
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  
 
-  // Use currentLanguage to force re-render when language changes
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = t(tKey);
@@ -194,9 +190,9 @@ export default function ResetPasswordScreen({ navigation }: any) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
-  const params = route.params || {};
+  const params = route.params;
   const derived = useMemo(() => {
-    const { token, uid, email, url } = params;
+    const { token, uid, email, url } = params ?? {};
     if (token || uid) return { token, uid, email };
     if (url) {
       const qs = parseQuery(url);

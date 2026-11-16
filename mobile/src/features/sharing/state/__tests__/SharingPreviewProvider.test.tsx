@@ -1,6 +1,6 @@
 import React from "react";
 import { AppState, Text } from "react-native";
-import { act, render, waitFor } from "@testing-library/react-native";
+import { act, render } from "@testing-library/react-native";
 import { SharingPreviewProvider, useSharingPreview } from "../SharingPreviewProvider";
 import * as api from "../../../../api/services/sharing.service";
 

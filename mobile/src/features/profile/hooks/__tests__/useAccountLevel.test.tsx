@@ -8,7 +8,8 @@ let mockSession = 1;
 jest.mock("@react-navigation/native", () => ({
   useFocusEffect: (callback: () => void | (() => void)) => {
     const React = require("react");
-    React.useEffect(() => mockFocused ? callback() : undefined, [callback, mockFocused]);
+    const focused = mockFocused;
+    React.useEffect(() => focused ? callback() : undefined, [callback, focused]);
   },
 }));
 jest.mock("../../../../api/client", () => ({ getAuthSessionId: () => mockSession }));
@@ -81,7 +82,7 @@ describe("live account level", () => {
 
   it("refreshes when returning to Profile after completing tasks", async () => {
     mockFetch.mockResolvedValueOnce(payload(2, 0)).mockResolvedValueOnce(payload(3, 30));
-    const { result, rerender } = renderHook(({ userId }) => useAccountLevel(userId), { initialProps: { userId: "12" } });
+    const { result, rerender } = renderHook(({ userId }: { userId: string | null }) => useAccountLevel(userId), { initialProps: { userId: "12" } });
     await waitFor(() => expect(result.current.progress?.level).toBe(2));
     mockFocused = false;
     rerender({ userId: "12" });
@@ -94,7 +95,7 @@ describe("live account level", () => {
   it("does not show an old account's delayed balance after switching users", async () => {
     const first = pending(), second = pending();
     mockFetch.mockReturnValueOnce(first.promise).mockReturnValueOnce(second.promise);
-    const { result, rerender } = renderHook(({ userId }) => useAccountLevel(userId), { initialProps: { userId: "12" } });
+    const { result, rerender } = renderHook(({ userId }: { userId: string | null }) => useAccountLevel(userId), { initialProps: { userId: "12" } });
     mockSession = 2;
     rerender({ userId: "34" });
     expect(result.current.progress).toBeNull();
@@ -107,7 +108,7 @@ describe("live account level", () => {
   it("discards a response if logout invalidates its session before the UI rerenders", async () => {
     const first = pending();
     mockFetch.mockReturnValueOnce(first.promise);
-    const { result, rerender } = renderHook(({ userId }) => useAccountLevel(userId), { initialProps: { userId: "12" as string | null } });
+    const { result, rerender } = renderHook(({ userId }: { userId: string | null }) => useAccountLevel(userId), { initialProps: { userId: "12" as string | null } });
     mockSession = 2;
     await act(async () => first.resolve(payload(80, 200)));
     expect(result.current.progress).toBeNull();

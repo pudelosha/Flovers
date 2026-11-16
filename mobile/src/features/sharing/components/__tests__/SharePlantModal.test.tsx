@@ -40,7 +40,7 @@ async function loaded(view: ReturnType<typeof render>) {
 }
 function savedUpdates() {
   const calls = mockSharing.savePlantsSharing.mock.calls;
-  return calls[calls.length - 1]?.[0].map(({ expectedRevision, ...update }: any) => update);
+  return calls[calls.length - 1]?.[0].map(({ expectedRevision: _expectedRevision, ...update }: any) => update);
 }
 function deferred<T>() {
   let resolve!: (value: T) => void;

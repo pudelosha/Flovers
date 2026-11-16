@@ -56,7 +56,7 @@ export default function TaskCalendar({
   );
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       const txt = t(
         key,
         values ? { ...values, lng: activeLanguage } : { lng: activeLanguage },

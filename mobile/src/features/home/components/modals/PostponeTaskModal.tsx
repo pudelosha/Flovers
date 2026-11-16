@@ -38,7 +38,8 @@ export default function PostponeTaskModal({ visible, task, onClose, onSaved, onC
   const afterDue=new Date(`${dueISO}T12:00:00`);afterDue.setDate(afterDue.getDate()+1);afterDue.setHours(0,0,0,0);
   const minimum=Number.isFinite(afterDue.getTime()) && afterDue>today ? afterDue : today;
   const initial=minimum>tomorrow ? minimum : tomorrow;
-  const [dateText,setDateText]=useState(()=>formatPostponeDate(isoDate(initial),pattern));
+  const initialISO=isoDate(initial);
+  const [dateText,setDateText]=useState(()=>formatPostponeDate(initialISO,pattern));
   const [picker,setPicker]=useState(false);
   const [working,setWorking]=useState(false);
   const [error,setError]=useState("");
@@ -47,9 +48,9 @@ export default function PostponeTaskModal({ visible, task, onClose, onSaved, onC
   activeTarget.current=visible && task ? `${task.id}:${dueISO}` : "";
   useEffect(()=>{
     generation.current+=1;
-    if(visible){setDateText(formatPostponeDate(isoDate(initial),pattern));setWorking(false);setPicker(false);setError("");}
+    if(visible){setDateText(formatPostponeDate(initialISO,pattern));setWorking(false);setPicker(false);setError("");}
     return ()=>{generation.current+=1;};
-  },[visible,task?.id,dueISO,pattern]);
+  },[visible,task?.id,dueISO,pattern,initialISO]);
   const selected=parsePostponeDate(dateText,pattern);
   const selectedISO=selected ? isoDate(selected) : "";
   const valid=!!task && /^\d{4}-\d{2}-\d{2}$/.test(dueISO) && !!selected && selectedISO>dueISO && selectedISO>=isoDate(today);

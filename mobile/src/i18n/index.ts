@@ -658,7 +658,8 @@ type AnyObj = Record<string, any>;
 
 function stripCreatePlant(obj: AnyObj): AnyObj {
   if (!obj || typeof obj !== "object") return {};
-  const { createPlant, ...rest } = obj;
+  const rest = { ...obj };
+  delete rest.createPlant;
   return rest;
 }
 
@@ -1384,7 +1385,7 @@ if (!i18n.isInitialized) {
     fallbackLng: "en",
     defaultNS: "translation",
     ns: ["translation"],
-    compatibilityJSON: "v3",
+    compatibilityJSON: "v4",
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
   });

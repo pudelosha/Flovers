@@ -20,6 +20,7 @@ import { fetchPlantProfile } from '../../../../api/services/plant-definitions.se
 import { wiz } from '../../styles/wizard.styles';
 import { s as remindersStyles } from '../../../reminders/styles/reminders.styles';
 import type { Suggestion } from '../../types/create-plant.types';
+import type { Permission } from 'react-native';
 import {
   recognizePlantFromUri,
   type ApiRecognitionResult,
@@ -36,12 +37,12 @@ type Props = {
 async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   if (Platform.OS !== 'android') return true;
 
-  const perms: string[] = [
+  const perms: Permission[] = [
     PermissionsAndroid.PERMISSIONS.CAMERA,
     Number(Platform.Version) >= 33
-      ? (PermissionsAndroid.PERMISSIONS as any).READ_MEDIA_IMAGES
+      ? PermissionsAndroid.PERMISSIONS.READ_MEDIA_IMAGES
       : PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
-  ].filter(Boolean) as string[];
+  ];
 
   const results = await PermissionsAndroid.requestMultiple(perms);
   return perms.every(p => results[p] === PermissionsAndroid.RESULTS.GRANTED);
@@ -72,10 +73,10 @@ function toPercentNumber(prob01: number | undefined | null): number {
 
 function toSuggestion(item: ApiRecognitionResult): Suggestion {
   return {
-    id: item.id ?? `ml:${item.latin}`,
+    id: String(item.id ?? `ml:${item.latin}`),
     name: item.name,
     latin: item.latin,
-  } as Suggestion;
+  };
 }
 
 function formatPlantDisplayName(value: string | undefined | null): string {
@@ -233,8 +234,9 @@ export default function PlantScannerModal({ visible, onClose, onPlantDetected }:
 
       onPlantDetected?.({
         ...plant,
-        latin: plantProfile.latin,
         ...plantProfile,
+        id: String(plantProfile.id ?? plant.id),
+        latin: plantProfile.latin || plant.latin,
       });
 
       onClose();
@@ -270,7 +272,7 @@ export default function PlantScannerModal({ visible, onClose, onPlantDetected }:
       const res = await launchCamera({
         mediaType: 'photo',
         includeBase64: false,
-        quality: 0.92,
+        quality: 0.9,
       });
 
       if (res.didCancel) return;
@@ -310,7 +312,7 @@ export default function PlantScannerModal({ visible, onClose, onPlantDetected }:
         mediaType: 'photo',
         selectionLimit: 1,
         includeBase64: false,
-        quality: 0.92,
+        quality: 0.9,
       });
 
       if (res.didCancel) return;

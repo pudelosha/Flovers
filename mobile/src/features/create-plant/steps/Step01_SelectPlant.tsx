@@ -50,7 +50,6 @@ function formatPlantName(name: string): string {
 
 const TranslatedText = ({
   tKey,
-  children,
   style,
 }: {
   tKey: string;
@@ -58,9 +57,8 @@ const TranslatedText = ({
   style?: any;
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  
 
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = t(tKey);
@@ -144,8 +142,7 @@ export default function Step01_SelectPlant({
 
   const getTranslation = useCallback((key: string, fallback?: string): string => {
     try {
-      const lang = currentLanguage;
-      const translation = t(key);
+      const translation = t(key, { lng: currentLanguage });
       return translation || fallback || key.split(".").pop() || key;
     } catch (error) {
       console.warn("Translation error for key:", key, error);

@@ -103,8 +103,12 @@ export default function JournalPhotoModal({
     }
   }, [onClose, retryPending]);
 
+  // Snapshot defaults per opening so collection refreshes do not reset an edited form.
+  const openingInputs = useRef({ entry, plantOptions });
+  openingInputs.current = { entry, plantOptions };
   useEffect(() => {
     if (!visible) return;
+    const { entry: initialEntry, plantOptions: initialPlants } = openingInputs.current;
     let cancelled = false;
     busyRef.current = false;
     setBusy(false);
@@ -116,22 +120,22 @@ export default function JournalPhotoModal({
     setError('');
     setLoadError(false);
     setSelection(null);
-    setFraming(normalizePhotoFraming(entry?.photo.framing));
-    setNotes(entry?.note ?? '');
-    setTakenOn(entry?.recordedDate ?? '');
+    setFraming(normalizePhotoFraming(initialEntry?.photo.framing));
+    setNotes(initialEntry?.note ?? '');
+    setTakenOn(initialEntry?.recordedDate ?? '');
     setDateOpen(false);
     setPlantOpen(false);
     setPlantId(
-      entry?.plantId ??
-        (plantOptions.some(
+      initialEntry?.plantId ??
+        (initialPlants.some(
           plant => plant.id === preferredPlantId && plantAccess(plant.access).canEdit,
         )
           ? preferredPlantId!
-          : plantOptions.filter(plant => plantAccess(plant.access).canEdit)[0]?.id ?? ''),
+          : initialPlants.filter(plant => plantAccess(plant.access).canEdit)[0]?.id ?? ''),
     );
     Promise.all([
       fetchJournalPhotoAvailability(),
-      entry ? fetchJournalPhoto(entry.id) : Promise.resolve(null),
+      initialEntry ? fetchJournalPhoto(initialEntry.id) : Promise.resolve(null),
     ])
       .then(([result, fresh]) => {
         if (!cancelled) {
@@ -155,7 +159,7 @@ export default function JournalPhotoModal({
     return () => {
       cancelled = true;
     };
-  }, [visible, entry?.id, preferredPlantId, retry]);
+  }, [visible, entry?.id, preferredPlantId, retry, context]);
 
   const choose = async (camera: boolean) => {
     if (busyRef.current || retryPending) return;

@@ -1,6 +1,6 @@
 import React from "react";
 import { BackHandler, ScrollView, StyleSheet, View } from "react-native";
-import { act, fireEvent, render, waitFor, within } from "@testing-library/react-native";
+import { act, fireEvent, render, within } from "@testing-library/react-native";
 import SharedPlantsScreen from "../SharedPlantsScreen";
 import FAB from "../../../../shared/ui/FAB";
 import ContactModalFrame from "../../components/ContactModalFrame";

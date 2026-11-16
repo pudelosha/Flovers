@@ -393,7 +393,7 @@ export default function EditPlantModal(props: Props) {
                 value={fPurchaseDateISO ? new Date(fPurchaseDateISO + 'T00:00:00') : new Date()}
                 mode="date"
                 display={Platform.OS === 'ios' ? 'inline' : 'default'}
-                onChange={(_, date?: Date) => {
+                onChange={(_event: unknown, date?: Date) => {
                   if (Platform.OS === 'android') setNativePickerOpen(false);
                   if (date) setFPurchaseDateISO?.(toISODate(date));
                 }}

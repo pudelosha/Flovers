@@ -94,7 +94,6 @@ function AuthNavigator() {
       screenOptions={{
         headerShown: false,
         animation: "none",
-        detachPreviousScreen: true,
         contentStyle: { backgroundColor: "transparent" },
       }}
     >

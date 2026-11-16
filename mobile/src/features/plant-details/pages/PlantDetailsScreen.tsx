@@ -4,18 +4,7 @@ import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
 import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useMemo, useState, useRef, useCallback } from 'react';
-import {
-  View,
-  Text,
-  Alert,
-  ScrollView,
-  PermissionsAndroid,
-  Platform,
-  StyleSheet,
-  Animated,
-  AnimatedView,
-  Pressable,
-} from '../../../shared/theme/native';
+import { View, Text, Alert, ScrollView, PermissionsAndroid, Platform, StyleSheet, AnimatedView, Pressable } from '../../../shared/theme/native';
 import {
   useNavigation,
   useRoute,
@@ -51,7 +40,7 @@ import PlantLatestReadingsTile from '../components/PlantLatestReadingsTile';
 import PlantTasksTile from '../components/PlantTasksTile';
 import PlantQrModal from '../../plants/components/modals/PlantQrModal';
 import PlantInfoTile from '../components/PlantInfoTile';
-import PlantActivityTile from '../components/PlantActivityTile';
+
 import { plantAccess } from '../../../shared/utils/plantAccess';
 
 import PostponeTaskModal, {
@@ -110,7 +99,7 @@ export default function PlantDetailsScreen() {
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = typeof txt !== 'string' || !txt || txt === key;

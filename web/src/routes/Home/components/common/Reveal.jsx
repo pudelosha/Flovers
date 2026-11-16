@@ -1,5 +1,5 @@
 import React, { useMemo, useRef } from "react";
-import { motion, useAnimation, useInView, useReducedMotion } from "framer-motion";
+import { motion as Motion, useAnimation, useInView, useReducedMotion } from "framer-motion";
 
 export default function Reveal({ children, className = "", delay = 0, y = 18, amount = 0.28 }) {
   const reduce = useReducedMotion();
@@ -19,7 +19,7 @@ export default function Reveal({ children, className = "", delay = 0, y = 18, am
   }, [controls, inView, reduce, shown, hidden]);
 
   return (
-    <motion.div
+    <Motion.div
       ref={ref}
       className={className}
       initial={hidden}
@@ -31,6 +31,6 @@ export default function Reveal({ children, className = "", delay = 0, y = 18, am
       }}
     >
       {children}
-    </motion.div>
+    </Motion.div>
   );
 }

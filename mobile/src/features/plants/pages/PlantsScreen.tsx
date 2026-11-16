@@ -229,7 +229,7 @@ export default function PlantsScreen() {
   }, []);
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
       return (

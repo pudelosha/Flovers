@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { NativeModules, Platform } from 'react-native';
 import { useAppTheme } from './ThemeContext';
 export default function SystemBars() {

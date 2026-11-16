@@ -6,7 +6,6 @@ import { PanGestureHandler, State as GHState } from "react-native-gesture-handle
 
 // language FAB shown on all auth screens
 import LanguageFAB from "../../../shared/ui/LanguageFAB";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 type Props = PropsWithChildren;
 
@@ -19,9 +18,6 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function AuthCard({ children }: Props) {
   const insets = useSafeAreaInsets();
-
-  // language state (available on all auth screens)
-  const { currentLanguage, changeLanguage } = useLanguage();
 
   // mount-in effect
   const opacity = useRef(new Animated.Value(0)).current;

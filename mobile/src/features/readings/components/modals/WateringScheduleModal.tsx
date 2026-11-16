@@ -88,12 +88,8 @@ export default function WateringScheduleModal({
   loading = false,
   working = false,
   deviceId,
-  deviceName,
-  plantName,
-  location,
   pumpIncluded,
   durationSupported = false,
-  lastPumpRunAt,
   pendingPumpTask,
   scheduledJobExists = false,
   scheduledJobCreatedAt,
@@ -419,41 +415,6 @@ export default function WateringScheduleModal({
         </ScrollView>
       </AppModalFrame>
     </>
-  );
-}
-
-function InfoRow({ icon, label, value }: { icon: string; label: string; value: string }) {
-  return (
-    <View style={{ gap: 6 }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-        <MaterialCommunityIcons name={icon as any} size={18} color="#fff" />
-        <Text style={s.dropdownValue}>{label}</Text>
-      </View>
-
-      <View
-        style={{
-          padding: 12,
-          borderRadius: 12,
-          backgroundColor: 'rgba(255,255,255,0.10)',
-        }}
-      >
-        <Text
-          style={[
-            s.codeBlockText,
-            {
-              fontVariant: ['tabular-nums'],
-              fontSize: 12,
-              lineHeight: 18,
-            },
-          ]}
-          selectable
-          numberOfLines={1}
-          ellipsizeMode="tail"
-        >
-          {value}
-        </Text>
-      </View>
-    </View>
   );
 }
 

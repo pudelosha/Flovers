@@ -1,4 +1,4 @@
-import React,{useEffect,useRef,useState} from "react";
+import React,{useCallback,useEffect,useRef,useState} from "react";
 import {View,Text,Pressable,StyleSheet} from "../../../../shared/theme/native";
 import {useTranslation} from "react-i18next";
 import AppModalFrame from "../../../../shared/ui/AppModalFrame";
@@ -10,7 +10,8 @@ export default function UndoTaskCompletionModal({visible,item,onClose,onSaved,on
 }){
  const {t}=useTranslation();const [busy,setBusy]=useState(false);const [error,setError]=useState("");
  const generation=useRef(0);const active=useRef("");active.current=visible && item ? `${item.id}:${item.undoCompletion}` : "";
- useEffect(()=>{generation.current++;setBusy(false);setError("");return()=>{generation.current++;};},[visible,item?.id,item?.undoCompletion]);
+  const invalidateRequests=useCallback(()=>{generation.current++;},[]);
+ useEffect(()=>{invalidateRequests();setBusy(false);setError("");return invalidateRequests;},[visible,item?.id,item?.undoCompletion,invalidateRequests]);
  const close=()=>{if(!busy)onClose();};
  const confirm=async()=>{
   if(busy || !item?.undoCompletion)return;

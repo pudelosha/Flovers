@@ -1,16 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-  Animated,
-  BackHandler,
-  KeyboardAvoidingView,
-  Platform,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  AnimatedView,
-} from '../../../shared/theme/native';
+import { BackHandler, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View, AnimatedView } from '../../../shared/theme/native';
 import type { StyleProp, ViewStyle } from 'react-native';
 import { useIsFocused, useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';

@@ -96,6 +96,6 @@ export async function fetchPlantProfile(idOrExternalId: string | number, opts: {
 
   } catch (error) {
     console.error("Error while fetching plant profile:", error);
-    throw new Error(`Failed to fetch plant profile: ${error.message || 'Unknown error'}`);
+    throw new Error(`Failed to fetch plant profile: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }

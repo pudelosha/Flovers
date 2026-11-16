@@ -1,5 +1,5 @@
 import React from "react";
-import {act,fireEvent,render} from "@testing-library/react-native";
+import { fireEvent, render } from "@testing-library/react-native";
 import SearchPlantsModal from "../SearchPlantsModal";
 it("applies a trimmed draft without changing results while typing",()=>{
  const apply=jest.fn(),cancel=jest.fn();const view=render(<SearchPlantsModal visible query="Fern" onApply={apply} onCancel={cancel}/>);

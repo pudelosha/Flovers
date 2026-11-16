@@ -1,6 +1,6 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BackHandler, Pressable, StyleSheet, Text, View } from "../../../shared/theme/native";
 import Clipboard from "@react-native-clipboard/clipboard";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
@@ -35,7 +35,7 @@ export default function ContactsScreen() {
   const { settings } = useSettings();
   const { notify } = useSharingPreview();
   const { snapshot, loading, error, pending, refresh, acceptInvitation, dismissInvitation } = useContacts();
-  const contacts = snapshot?.contacts ?? [];
+  const contacts = useMemo(() => snapshot?.contacts ?? [], [snapshot?.contacts]);
   const invitations = snapshot?.invitations ?? [];
   const currentUser = snapshot?.currentUser;
   const [actionError, setActionError] = useState<string | null>(null);

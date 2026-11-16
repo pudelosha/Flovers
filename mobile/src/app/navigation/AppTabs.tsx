@@ -113,7 +113,7 @@ export type AppTabParamList = {
 
   // Hidden
   Scanner: undefined;
-  PlantDetails: undefined;
+  PlantDetails: { id?: string; qrCode?: string } | undefined;
   CreatePlantWizard: undefined;
   AddReminder: undefined;
 
@@ -414,12 +414,6 @@ function AppTabsNavigator() {
         sceneStyle: { backgroundColor: 'transparent' },
       }}
       tabBar={props => <GlassTabBar {...props} />}
-      sceneContainerStyle={{
-        paddingTop: 16,
-        paddingHorizontal: 16,
-        paddingBottom: 112,
-        backgroundColor: 'transparent',
-      }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Plants" component={PlantsScreen} />

@@ -27,48 +27,54 @@ export type LightLevel = "bright-direct" | "bright-indirect" | "medium" | "low" 
 export type Orientation = "N" | "E" | "S" | "W";
 
 /** container & soil types */
-export type PotMaterial =
-  | "unspecified"
+export type PotMaterialKey =
   | "plastic"
-  | "ceramic-glazed"
+  | "ceramic"
   | "terracotta"
+  | "clay"
+  | "cement"
   | "concrete"
   | "metal"
+  | "stainless"
+  | "aluminum"
+  | "iron"
+  | "copper"
   | "wood"
+  | "bamboo"
+  | "rattan"
   | "glass"
   | "stone"
-  | "fabric-grow-bag"
-  | "self-watering"
-  | "hanging-basket"
-  | "hydro-net-pot"
+  | "resin"
+  | "fiberglass"
   | "biodegradable"
-  | "3d-printed";
+  | "fabric"
+  | "grow-bag"
+  | "self-watering";
 
-export type SoilMix =
-  | "unspecified"
+export type PotMaterial = PotMaterialKey | "unspecified";
+
+export type SoilMixKey =
   | "all-purpose"
-  | "peat-based"
-  | "coco-coir"
+  | "green-plants"
+  | "balcony-flowers"
   | "cactus-succulent"
-  | "orchid-bark"
-  | "aroid-chunky"
-  | "african-violet"
+  | "orchid"
+  | "bonsai"
+  | "herbs-vegetables"
   | "seed-starting"
-  | "bonsai-akadama"
-  | "leca"
-  | "pon-inorganic"
-  | "sphagnum-moss"
-  | "loam"
-  | "sandy"
-  | "clay"
-  | "sand-soil-1-1"
-  | "sand-soil-2-1"
-  | "perlite-heavy"
+  | "citrus"
+  | "fern"
+  | "conifers"
+  | "acid-loving"
+  | "aroid"
+  | "peat-free"
   | "air-plant"
   | "aquatic"
   | "carnivorous-bog"
   | "nepenthes"
   | "pinguicula";
+
+export type SoilMix = SoilMixKey | "unspecified";
 
 /** Location kept in wizard state. NOTE: id is string in state. */
 export type UserLocation = {
@@ -216,6 +222,9 @@ export type PlantDefinition = {
   water: WaterRequirement;
   difficulty: DifficultyLevel;
   popular: boolean;           // popular items come as true from the endpoint
+
+  recommended_pot_materials?: string[];
+  recommended_soil_mixes?: string[];
 
   // Task flags from plant definition
   water_required?: boolean;

@@ -25,7 +25,7 @@ const TranslatedText = ({
 }: {
   tKey: string;
   style?: any;
-  values?: any;
+  values?: Record<string, unknown>;
 }) => {
   const { t } = useTranslation();
 
@@ -65,7 +65,7 @@ export default function Step03_SelectLocation({
   }, [locations]);
 
   const getTranslation = useCallback(
-    (key: string, fallback?: string, values?: any): string => {
+    (key: string, fallback?: string, values?: Record<string, unknown>): string => {
       try {
         void currentLanguage;
         const translation = values ? t(key, values) : t(key);

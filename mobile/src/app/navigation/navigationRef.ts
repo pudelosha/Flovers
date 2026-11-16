@@ -1,11 +1,12 @@
 import { createNavigationContainerRef } from "@react-navigation/native";
+import type { ParamListBase } from '@react-navigation/native';
 
-export const navigationRef = createNavigationContainerRef<any>();
+export const navigationRef = createNavigationContainerRef<ParamListBase>();
 let pendingNavigation: { name: string; params?: any } | null = null;
 
 export function navTo(name: string, params?: any) {
   if (navigationRef.isReady()) {
-    navigationRef.navigate(name as never, params as never);
+    navigationRef.navigate(name, params);
   } else {
     pendingNavigation = { name, params };
   }

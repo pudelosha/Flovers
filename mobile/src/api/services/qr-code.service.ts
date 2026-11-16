@@ -65,13 +65,14 @@ export async function sendQrCodeByEmail(
 export async function getQrCodeBase64(
   qrRef: QrCodeSvgRef | null | undefined
 ): Promise<string> {
-  if (!qrRef || typeof qrRef.toDataURL !== "function") {
+  const toDataURL = qrRef?.toDataURL;
+  if (typeof toDataURL !== "function") {
     throw new Error("QR reference is unavailable.");
   }
 
   return await new Promise<string>((resolve, reject) => {
     try {
-      qrRef.toDataURL((base64: string) => {
+      toDataURL.call(qrRef, (base64: string) => {
         if (!base64 || !base64.trim()) {
           reject(new Error("Failed to generate QR image."));
           return;

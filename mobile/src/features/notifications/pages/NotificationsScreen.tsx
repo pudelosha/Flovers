@@ -100,6 +100,7 @@ export default function NotificationsScreen() {
     },
     [query],
   );
+  const invalidateRequests = useCallback(() => { request.current++; }, []);
   useEffect(() => {
     if (!focused) {
       setModal(null);
@@ -108,10 +109,8 @@ export default function NotificationsScreen() {
       return;
     }
     void load();
-    return () => {
-      request.current++;
-    };
-  }, [focused, load]);
+    return invalidateRequests;
+  }, [focused, load, invalidateRequests]);
   const more = async () => {
     if (moreBusy.current || loading || !cursor || !active.current) return;
     const generation = request.current;

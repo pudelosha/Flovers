@@ -1,4 +1,4 @@
-import type { SunRequirement, WaterRequirement, DifficultyLevel } from "../types/create-plant.types";
+import type { SunRequirement, WaterRequirement, DifficultyLevel, PotMaterialKey, SoilMixKey } from "../types/create-plant.types";
 
 // Header tint (consistent with your app)
 export const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
@@ -149,29 +149,7 @@ export const ORIENTATIONS = [
 // Step 5 – Container & Soil constants
 // ===================================================================
 
-export type PotMaterialKey =
-  | "plastic"
-  | "ceramic"
-  | "terracotta"
-  | "clay"
-  | "cement"
-  | "concrete"
-  | "metal"
-  | "stainless"
-  | "aluminum"
-  | "iron"
-  | "copper"
-  | "wood"
-  | "bamboo"
-  | "rattan"
-  | "glass"
-  | "stone"
-  | "resin"
-  | "fiberglass"
-  | "biodegradable"
-  | "fabric"
-  | "grow-bag"
-  | "self-watering";
+export type { PotMaterialKey, SoilMixKey } from "../types/create-plant.types";
 
 type PotMaterialOption = Readonly<{
   key: PotMaterialKey;
@@ -206,8 +184,6 @@ export const POT_MATERIALS: readonly PotMaterialOption[] = [
   { key: "self-watering" },
 ] as const;
 
-// Soil: keep it permissive so backend can send new keys without TS breaking.
-export type SoilMixKey = string;
 
 type SoilMixOption = Readonly<{
   key: SoilMixKey;

@@ -1,6 +1,6 @@
 import AppModalFrame from './AppModalFrame';
 import React, { useCallback, useMemo, useState } from 'react';
-import { View, Text, Pressable, StyleSheet, Platform, ScrollView } from "../theme/native";
+import { View, Text, Pressable, StyleSheet, Platform } from "../theme/native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTranslation } from 'react-i18next';
@@ -57,7 +57,7 @@ export default function LanguageFAB({
   // i18n (same translation approach as your modals)
   const { t } = useTranslation();
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       if (typeof txt === 'string' && txt && txt !== key) return txt;

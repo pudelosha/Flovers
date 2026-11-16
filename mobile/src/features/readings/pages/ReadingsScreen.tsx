@@ -1,3 +1,6 @@
+import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import type { AppTabParamList } from '../../../app/navigation/AppTabs';
+import type { FlatList } from 'react-native';
 import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
@@ -96,14 +99,14 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function ReadingsScreen() {
   const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
-  const nav = useNavigation();
+  const nav = useNavigation<BottomTabNavigationProp<AppTabParamList>>();
 
   const { t, i18n } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;
@@ -204,7 +207,7 @@ export default function ReadingsScreen() {
   }, []);
 
   // FlatList ref to force scroll-to-top on focus
-  const listRef = useRef<AnimatedFlatList<any>>(null);
+  const listRef = useRef<FlatList<ReadingTileModel>>(null);
 
   // ===== Load devices and plant instances =====
   const [loadError, setLoadError] = useState(false);
@@ -1176,14 +1179,14 @@ export default function ReadingsScreen() {
                 }}
                 onHistory={() => {
                   closeFloatingMenus();
-                  nav.navigate("ReadingsHistory" as never, { id: item.id } as never);
+                  nav.navigate("ReadingsHistory", { id: item.id });
                 }}
                 onPlantDetails={() => {
                   closeFloatingMenus();
                   if (dev?.plant) {
                     nav.navigate(
-                      "PlantDetails" as never,
-                      { id: String(dev.plant) } as never
+                      "PlantDetails",
+                      { id: String(dev.plant) }
                     );
                   }
                 }}
@@ -1193,8 +1196,8 @@ export default function ReadingsScreen() {
                 onMetricPress={(metric) => {
                   closeFloatingMenus();
                   nav.navigate(
-                    "ReadingsHistory" as never,
-                    { metric, range: "day", id: item.id } as never
+                    "ReadingsHistory",
+                    { metric, range: "day", id: item.id }
                   );
                 }}
                 deviceName={dev?.device_name}

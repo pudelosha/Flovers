@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text as RawText,
-  View as RawView,
-  TextInput as RawInput,
-  ActivityIndicator as RawSpinner,
-} from 'react-native';
+import { StyleSheet } from 'react-native';
 import { render } from '@testing-library/react-native';
 import {
   View,

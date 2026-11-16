@@ -45,3 +45,29 @@ Each stage is committed separately. Nothing is pushed or deployed as part of thi
 - Home, Plants, Plant Details, Reminders, Readings, and Locations invalidate data requests on loss of focus and ignore superseded responses. Home retains in-flight deduplication within a visit.
 - Added permission-action, unavailable-data, unmount, revisit, and out-of-order response regression coverage.
 - Targeted verification: six Jest suites, 36 tests passed.
+
+## Stage 3: static checking and obsolete code
+
+- Removed the unused PopularPlantsList, StepperHeader, WizardFooter, and former PlantJournalModal, including stale test mocks/exclusions.
+- Replaced untyped translation interpolation arguments with typed records, preserving runtime translation behavior. Corrected wizard option contracts, scanner IDs/permissions, navigation arguments, QR callback narrowing, and test prop types.
+- Removed unused imports, helpers, state, and destructured inputs. Removed unsupported navigation/checkbox props that the installed component APIs do not expose.
+- Made hook inputs explicit. Dialog defaults are captured per opening so contact/plant-list refreshes do not overwrite unsaved form input; the private-photo loader remains keyed by photo identity/URL rather than object allocation. Header labels/segments use a stable presentation object.
+- Added `npm run typecheck`. Existing mobile CI now requires strict TypeScript and mobile lint; website CI requires website lint. Mobile publication triggers are unchanged.
+- ESLint ignores generated native/build/test artifacts and recognizes the modern JavaScript runtime. No source-wide rule suppression or weakening of TypeScript strict mode was added.
+
+### Verification
+
+| Check | Result after cleanup |
+| --- | --- |
+| Mobile TypeScript (`npm run typecheck`) | Passed; zero errors |
+| Mobile ESLint (`npm run lint`) | Passed; zero errors |
+| Mobile Jest | 130 suites; 953 tests passed |
+| Release-metadata tests | 5 passed |
+| Website ESLint | Passed; zero errors |
+| Website tests | 66 passed |
+| Website production build | Passed |
+| Android production JavaScript bundle (Metro) | Passed |
+
+Existing non-blocking mobile lint warnings remain, primarily inline styles and other style conventions, with additional warnings for nested render callbacks and some assigned-then-awaited test assertions. This stage establishes an error-free gate; it does not claim warning-free code. Website bundle-size optimization remains a later stage.
+
+No backend application files, database models, or migrations changed. The prior backend baseline remains recorded above. Native APK/iOS builds and physical-device validation were not part of these local checks.

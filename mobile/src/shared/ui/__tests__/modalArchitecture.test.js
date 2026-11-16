@@ -11,7 +11,7 @@ function sources(dir) {
 
 it("routes every active application modal through the shared frame", () => {
   const files = sources(path.join(process.cwd(), "src", "features"));
-  const modals = files.filter(file => file.endsWith("Modal.tsx") && !file.endsWith("PlantJournalModal.tsx"));
+  const modals = files.filter(file => file.endsWith("Modal.tsx"));
   expect(modals.length).toBeGreaterThan(0);
   for (const file of modals) {
     const source = fs.readFileSync(file, "utf8");

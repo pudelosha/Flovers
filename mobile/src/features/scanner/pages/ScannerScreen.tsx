@@ -21,7 +21,7 @@ import {
 } from "react-native-vision-camera";
 
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
+
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import {
@@ -86,7 +86,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ScannerScreen() {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  
 
   const { height: screenHeight } = useWindowDimensions();
   const isFocused = useIsFocused();
@@ -105,7 +105,7 @@ export default function ScannerScreen() {
   // Keep memo stable but also refresh when language changes
   const instructionText = useMemo(() => {
     return t("scanner.instruction", { defaultValue: SCANNER_INSTRUCTION });
-  }, [t, currentLanguage]);
+  }, [t]);
 
   useEffect(() => {
     (async () => {

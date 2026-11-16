@@ -41,7 +41,9 @@ jest.mock("../../../features/plants/components/PlantTile", () => (props: any) =>
   require("react").createElement(require("react-native").Text, { testID: "plant-tile" }, props.plant.name));
 jest.mock("../../../features/plant-details/components/PlantInfoTile", () => (props: any) => {
   const React = require("react");
-  React.useEffect(() => { props.onImageReadyChange?.(mockNativeImageReady); }, [props.onImageReadyChange, mockNativeImageReady]);
+  const { onImageReadyChange } = props;
+  const ready = mockNativeImageReady;
+  React.useEffect(() => { onImageReadyChange?.(ready); }, [onImageReadyChange, ready]);
   return React.createElement(require("react-native").Text, { testID: "plant-details-tile" }, props.plant.display_name);
 });
 jest.mock("../../../features/plant-details/components/PlantLatestReadingsTile", () => () => null);
@@ -52,7 +54,6 @@ jest.mock("../../../features/plant-details/components/modals/ChangePlantImageMod
 jest.mock("../../../features/plants/components/modals/EditPlantModal", () => () => null);
 jest.mock("../../../features/plants/components/modals/ConfirmDeleteModal", () => () => null);
 jest.mock("../../../features/plants/components/modals/PlantQrModal", () => () => null);
-jest.mock("../../../features/plants/components/modals/PlantJournalModal", () => () => null);
 jest.mock("../../../features/plants/components/modals/SortPlantsModal", () => () => null);
 jest.mock("../../../features/plants/components/modals/FilterPlantsModal", () => () => null);
 jest.mock("../../../features/home/components/modals/CompleteTaskModal", () => () => null);

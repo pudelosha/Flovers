@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AppState } from "react-native";
 import { getAuthSessionId, hasAuthToken, onAuthSessionChanged } from "../../api/client";
 import { getCachedPlantPhotoUri, loadPlantPhoto, onPlantPhotoCacheInvalidated } from "../../api/services/plant-photos.service";
@@ -23,20 +23,24 @@ export function usePlantPhoto(photo: PlantPhoto | null | undefined, options: Opt
     setSessionId(next);
   }), []);
 
+  // URL/id keys control reloads; a new metadata object alone must not blank the image.
+  const latestPhoto = useRef(photo);
+  latestPhoto.current = photo;
   useEffect(() => {
+    const selectedPhoto = latestPhoto.current;
     let active = true;
     let attempt = 0;
     const expired = () => !!options.expiresAt && Date.parse(options.expiresAt) <= Date.now();
     const update = async (conceal = false) => {
       const current = ++attempt;
-      if (!photo || !hasAuthToken() || expired()) {
+      if (!selectedPhoto || !hasAuthToken() || expired()) {
         setState({ key, uri: null, loading: false, error: null });
         return;
       }
-      setState(previous => ({ key, uri: conceal ? null : previous.key === key ? previous.uri : getCachedPlantPhotoUri(photo, variant),
+      setState(previous => ({ key, uri: conceal ? null : previous.key === key ? previous.uri : getCachedPlantPhotoUri(selectedPhoto, variant),
         loading: true, error: null }));
       try {
-        const uri = await loadPlantPhoto(photo, variant, true);
+        const uri = await loadPlantPhoto(selectedPhoto, variant, true);
         if (active && current === attempt && !expired()) setState({ key, uri, loading: false, error: null });
       } catch (error) {
         if (active && current === attempt) setState({ key, uri: null, loading: false, error });
@@ -44,8 +48,8 @@ export function usePlantPhoto(photo: PlantPhoto | null | undefined, options: Opt
     };
     // A screen may have just preloaded and authorized these bytes. Keep them
     // visible while rechecking rather than blanking the first rendered frame.
-    void update(!photo || !getCachedPlantPhotoUri(photo, variant));
-    if (!photo || !hasAuthToken()) return () => { active = false; attempt += 1; };
+    void update(!selectedPhoto || !getCachedPlantPhotoUri(selectedPhoto, variant));
+    if (!selectedPhoto || !hasAuthToken()) return () => { active = false; attempt += 1; };
     const timer = setInterval(() => {
       if (AppState.currentState === "active") void update();
     }, 60_000);

@@ -9,7 +9,7 @@ import {
 import { Text, Button, ActivityIndicator } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
-import { ApiError } from "../../../api/client";
+
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -43,7 +43,6 @@ function parseQuery(url: string): Record<string, string> {
 
 const TranslatedText = ({
   tKey,
-  children,
   style,
   variant,
 }: {
@@ -53,9 +52,8 @@ const TranslatedText = ({
   variant?: "headlineMedium" | "bodyMedium" | "bodySmall";
 }) => {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  
 
-  React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = t(tKey);
@@ -141,9 +139,9 @@ export default function ConfirmEmailScreen({ navigation }: any) {
     setMessage(getTranslation("confirmEmail.confirming", "Confirming..."));
   }, [getTranslation]);
 
-  const params = route.params || {};
+  const params = route.params;
   const derived = useMemo(() => {
-    const { token, uid, email, url } = params;
+    const { token, uid, email, url } = params ?? {};
     if (token || uid) return { token, uid, email };
     if (url) {
       const qs = parseQuery(url);

@@ -34,25 +34,7 @@ function toDisplayType(t?: string) {
   return 'care';
 }
 
-function hexToRgba(hex?: string, alpha = 1) {
-  const fallback = `rgba(0,0,0,${alpha})`;
-  if (!hex || typeof hex !== 'string') return fallback;
-  let h = hex.trim();
-  if (!h.startsWith('#')) h = `#${h}`;
-  h = h.replace('#', '');
-  if (h.length === 3)
-    h = h
-      .split('')
-      .map(c => c + c)
-      .join('');
-  if (h.length !== 6) return fallback;
-  const bigint = parseInt(h, 16);
-  if (Number.isNaN(bigint)) return fallback;
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  return `rgba(${r},${g},${b},${alpha})`;
-}
+
 
 function formatDateBySettings(
   d: string | Date | null | undefined,
@@ -121,7 +103,7 @@ export default function PlantTasksTile({
   const { settings } = useSettings();
   const [menuId, setMenuId] = useState<string | null>(null);
   useEffect(() => setMenuId(null), [collapseMenusSignal]);
-  const tr = (key: string, fallback: string, values?: any) =>
+  const tr = (key: string, fallback: string, values?: Record<string, unknown>) =>
     String(t(key, { ...values, defaultValue: fallback }));
   const pending = [...reminders]
     .filter(row => row.taskId && row.dueDate)

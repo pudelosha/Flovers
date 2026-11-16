@@ -51,9 +51,10 @@ export default function SharedPlantHero({
   const needsLocalPhoto =
     !plant.photo && preferLocalPhoto && /^[1-9]\d*$/.test(plant.id);
   const localPhotoLoading = needsLocalPhoto && localPhoto?.plantId !== plant.id;
+  const hasPhoto = !!plant.photo;
   useEffect(() => {
     let active = true;
-    if (!preferLocalPhoto || plant.photo || !/^[1-9]\d*$/.test(plant.id)) {
+    if (!preferLocalPhoto || hasPhoto || !/^[1-9]\d*$/.test(plant.id)) {
       setLocalPhoto(null);
       return;
     }
@@ -67,7 +68,7 @@ export default function SharedPlantHero({
     return () => {
       active = false;
     };
-  }, [plant.id, plant.photo?.id, preferLocalPhoto]);
+  }, [plant.id, hasPhoto, preferLocalPhoto]);
 
   const localUri =
     !plant.photo && preferLocalPhoto && localPhoto?.plantId === plant.id

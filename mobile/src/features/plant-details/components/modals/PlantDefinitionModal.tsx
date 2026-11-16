@@ -183,7 +183,7 @@ export default function PlantDefinitionModal({
   const [profile, setProfile] = React.useState<any | null>(definitionData?.profile ?? null);
 
   const tr = React.useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = typeof txt !== 'string' || !txt || txt === key;

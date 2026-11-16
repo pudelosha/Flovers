@@ -1,6 +1,6 @@
 import FloatingTileMenu from "../../../shared/ui/FloatingTileMenu";
 import React, { useCallback } from "react";
-import { View, Pressable, Text } from "../../../shared/theme/native";
+import { Pressable, Text } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -21,7 +21,7 @@ export default function PlantReminderMenu({ onMarkComplete, onPostpone, onEdit, 
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = !txt || txt === key;

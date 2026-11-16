@@ -759,7 +759,9 @@ function getInitialLanguage() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (LANGS.includes(saved)) return saved;
-  } catch (_) {}
+  } catch {
+    // Storage may be unavailable; use the default language.
+  }
   return DEFAULT_LANG;
 }
 
@@ -806,7 +808,9 @@ i18n.use(initReactI18next).init({
 i18n.on("languageChanged", (lng) => {
   try {
     localStorage.setItem(STORAGE_KEY, lng);
-  } catch (_) {}
+  } catch {
+    // Language selection still works when persistent storage is unavailable.
+  }
 });
 
 export default i18n;

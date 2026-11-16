@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useMemo } from 'react';
-import { LIGHT_COLORS, DARK_COLORS, type ThemeContrast } from './palette';
+import React, { createContext, useContext } from 'react';
+import { DARK_COLORS, type ThemeContrast } from './palette';
 export const ThemeContext = createContext({
   isLight: false,
   colors: DARK_COLORS,

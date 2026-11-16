@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  View,
-  Text,
-  Pressable,
-  TextInput,
-  StyleSheet,
-  Platform,
-} from '../../../shared/theme/native';
+import { View, Text, Pressable, StyleSheet, Platform } from '../../../shared/theme/native';
 import { useTranslation } from 'react-i18next';
 import AppModalFrame from '../../../shared/ui/AppModalFrame';
 import Dropdown from '../../profile/components/Dropdown';

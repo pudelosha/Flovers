@@ -24,7 +24,7 @@ export default function InviteByEmailModal({ visible, onClose }: Props) {
   useEffect(() => {
     revision.current += 1;
     if (visible) { setEmail(""); setLanguage(settings.language); setOpen(false); setError(null); }
-  }, [visible]);
+  }, [visible, settings.language]);
   const submit = async () => {
     if (busy) return;
     const request = revision.current;

@@ -41,6 +41,13 @@ export default function Layout() {
   // Language dropdown (custom)
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef(null);
+  const [menuPath, setMenuPath] = useState(location.pathname);
+  // Reset route-scoped menus before painting the next page.
+  if (menuPath !== location.pathname) {
+    setMenuPath(location.pathname);
+    setMenuOpen(false);
+    setLangOpen(false);
+  }
 
   // Ensure URL has a valid lang, and keep i18n in sync with URL
   useEffect(() => {
@@ -124,11 +131,6 @@ export default function Layout() {
   const currentLangLabel =
     currentLangObj?.label ?? currentLang.toUpperCase();
   const currentLangFlag = currentLangObj?.flag ?? "";
-
-  useEffect(() => {
-    setMenuOpen(false);
-    setLangOpen(false);
-  }, [location.pathname]);
 
   useEffect(() => {
     function onKeyDown(e) {

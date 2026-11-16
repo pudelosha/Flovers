@@ -546,7 +546,7 @@ export default function ReadingsHistoryScreen() {
 
   const displayValues = useMemo(() => metric === "temperature"
     ? values.map((value) => getDisplayTemperature(value, settings).value) : values,
-  [values, metric, settings.temperatureUnit]);
+   [values, metric, settings]);
   const displayUnit = metric === "temperature" ? getDisplayTemperature(null, settings).unit : metric === "light" ? "lx" : "%";
 
   // Is currently selected span the "current" day/week/month (contains today)?

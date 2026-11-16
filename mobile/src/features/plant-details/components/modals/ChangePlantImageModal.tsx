@@ -90,7 +90,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   const { currentLanguage } = useLanguage();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any): string => {
+    (key: string, fallback?: string, values?: Record<string, unknown>): string => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       if (typeof txt === 'string' && txt && txt !== key) return txt;
@@ -237,7 +237,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   }, [visible, currentPhoto, privatePhoto.uri, privatePhoto.error, pending.kind, tr]);
 
   const showOnlySpinner =
-    !error && (loading || (currentPhoto && !privatePhoto.uri && !privatePhoto.error));
+    !error && (loading || (!!currentPhoto && !privatePhoto.uri && !privatePhoto.error));
 
   const setPendingSet = useCallback((uri: string) => {
     const busted = withCacheBuster(uri);

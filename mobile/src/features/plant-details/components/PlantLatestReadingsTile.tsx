@@ -125,7 +125,7 @@ export default function PlantLatestReadingsTile({
   const { settings } = useSettings();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
 
       const txt = t(key, {

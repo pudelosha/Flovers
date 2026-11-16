@@ -385,9 +385,10 @@ export default function ProfileScreen() {
     accountLevel.loading ||
     !headerReady;
 
+  const readySection = isProfileLoading ? null : activeSection;
   useFocusEffect(
     useCallback(() => {
-      if (isProfileLoading) {
+      if (readySection === null) {
         entry.stopAnimation();
         entry.setValue(0);
         return;
@@ -411,7 +412,7 @@ export default function ProfileScreen() {
           useNativeDriver: true,
         }).start();
       };
-    }, [entry, scrollToTop, isProfileLoading, activeSection]),
+    }, [entry, scrollToTop, readySection]),
   );
 
   const headerSegment = (

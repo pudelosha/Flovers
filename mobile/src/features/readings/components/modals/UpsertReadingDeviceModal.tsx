@@ -3,7 +3,6 @@ import React from 'react';
 import { View, Text, Pressable, TextInput, ScrollView, Switch, StyleSheet } from "../../../../shared/theme/native";
 
 import MaterialCommunityIcons from "../../../../shared/theme/Icon";
-import Clipboard from '@react-native-clipboard/clipboard';
 import { useTranslation } from 'react-i18next';
 
 // Match the Edit Plant modal styling:
@@ -130,12 +129,8 @@ export default function UpsertReadingDeviceModal({
   initialPumpThresholdPct = 30,
   initialSendEmailWateringNotifications = false,
   initialSendPushWateringNotifications = false,
-  deviceKey,
-  authSecret,
   onCancel,
   onSave,
-  onSendCodeByEmail,
-  onSaveCodeAsText,
 }: Props) {
   const { t } = useTranslation();
 
@@ -206,9 +201,6 @@ export default function UpsertReadingDeviceModal({
     initialSendPushWateringNotifications,
   );
 
-  // show/hide secret
-  const [showSecret, setShowSecret] = React.useState(false);
-
   // Close dropdown when modal opens
   React.useEffect(() => {
     if (visible) setPlantOpen(false);
@@ -254,7 +246,6 @@ export default function UpsertReadingDeviceModal({
     setSendEmailWateringNotifications(Boolean(initialSendEmailWateringNotifications));
     setSendPushWateringNotifications(Boolean(initialSendPushWateringNotifications));
 
-    setShowSecret(false);
   }, [
     visible,
     mode,
@@ -288,11 +279,6 @@ export default function UpsertReadingDeviceModal({
     const loc = p.location ? ` – ${p.location}` : '';
     return `${p.name}${loc}`;
   };
-
-  const copyToClipboard = React.useCallback((value?: string | null) => {
-    if (!value) return;
-    Clipboard.setString(value);
-  }, []);
 
   // Required: both plantId and non-empty device name
   const pumpDuration = Number(pumpDurationSeconds);

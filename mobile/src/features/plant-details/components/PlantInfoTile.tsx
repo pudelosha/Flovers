@@ -120,7 +120,7 @@ function cmToInches(cm: number) {
 function formatDistanceBySettings(
   cm: number | null | undefined,
   measureUnit: 'metric' | 'imperial' | undefined,
-  tr: (key: string, fallback?: string, values?: any) => string,
+  tr: (key: string, fallback?: string, values?: Record<string, unknown>) => string,
 ) {
   if (cm == null) return tr('plantDetails.common.dash', '—');
 
@@ -183,7 +183,6 @@ export default function PlantInfoTile({
   onShowQr,
   collapseMenusSignal,
   onTileTouch,
-  onOpenDefinition,
   onOpenEditPlant,
   onOpenChangeImage,
   photoReloadSignal,
@@ -219,7 +218,7 @@ export default function PlantInfoTile({
   const access = plantAccess(plant?.access);
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any) => {
+    (key: string, fallback?: string, values?: Record<string, unknown>) => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       if (typeof txt === 'string' && txt && txt !== key) return txt;
@@ -397,15 +396,6 @@ export default function PlantInfoTile({
     settings?.measureUnit,
     tr,
   );
-
-  const plantDefinitionId =
-    (plant.plant_definition?.id ?? (plant as any).plant_definition_id) != null
-      ? Number(plant.plant_definition?.id ?? (plant as any).plant_definition_id)
-      : null;
-
-  const plantDefinitionIdSafe = Number.isFinite(plantDefinitionId as any)
-    ? (plantDefinitionId as number)
-    : null;
 
   const DOTS_TOP = 10;
   const DOTS_RIGHT = 10;

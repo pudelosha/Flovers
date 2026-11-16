@@ -1,3 +1,4 @@
+import type { FlatList } from 'react-native';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, {
@@ -140,7 +141,7 @@ export default function TaskHistoryScreen() {
     'default' | 'success' | 'error'
   >('default');
 
-  const listRef = useRef<AnimatedFlatList<JournalEntry>>(null);
+  const listRef = useRef<FlatList<JournalEntry>>(null);
   const loadRequestRef = useRef(0);
 
   const showToast = (
@@ -335,7 +336,7 @@ export default function TaskHistoryScreen() {
     }
   }, [closeFloatingMenus, load]);
 
-  const plantOptions = options?.plants ?? [];
+  const plantOptions = useMemo(() => options?.plants ?? [], [options?.plants]);
   const locationOptions = options?.locations ?? [];
 
   const effectiveExportFilters = useMemo<HistoryExportEmailRequest>(() => {

@@ -115,7 +115,7 @@ export default function EditReminderModal(props: Props) {
   const { settings } = useSettings();
 
   const tr = useCallback(
-    (key: string, fallback?: string, values?: any): string => {
+    (key: string, fallback?: string, values?: Record<string, unknown>): string => {
       void currentLanguage;
       const txt = values ? t(key, values) : t(key);
       const isMissing = typeof txt !== 'string' || !txt || txt === key;
