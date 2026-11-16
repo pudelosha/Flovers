@@ -204,7 +204,7 @@ def test_automatic_completion_is_idempotent_with_claim_task_id(device, django_ca
     client = APIClient()
     claimed = client.post(reverse("pump-auto-claim"), {**credentials(device), "moisture": 10}, format="json")
     payload = {**credentials(device), "task_id": claimed.data["task_id"], "source": "automatic", "success": True}
-    with patch("readings.views.send_watering_completed_notifications") as notify, django_capture_on_commit_callbacks(execute=True):
+    with patch("readings.pump_service.send_watering_completed_notifications") as notify, django_capture_on_commit_callbacks(execute=True):
         assert client.post(reverse("pump-complete"), payload, format="json").status_code == 200
         assert client.post(reverse("pump-complete"), payload, format="json").status_code == 200
     assert notify.call_count == 1

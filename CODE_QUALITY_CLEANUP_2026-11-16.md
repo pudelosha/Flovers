@@ -1,10 +1,10 @@
-# Code quality cleanup: stages 1–3
+# Code quality cleanup: stages 1–4
 
 Branch: `maintenance/code-quality-2026-11-16`.
 
 Starting revision: `6fc386168654d2e0b57097e7ef50291972fbfc25`.
 
-The [review](CODE_QUALITY_REVIEW_2026-11-15.md) records the source findings. This cleanup addresses the agreed baseline, concrete defects, obsolete code, TypeScript errors, and lint errors. Larger workflow refactors, theme migration, dependency locking, and website payload optimization remain outside these stages.
+The [review](CODE_QUALITY_REVIEW_2026-11-15.md) records the source findings. Stages 1–3 address the baseline, concrete defects, obsolete code, TypeScript errors, and lint errors. Stage 4 adds the workflow and backend module refactors below. Theme migration, dependency locking, and website payload optimization remain later work.
 
 ## Recorded baseline
 
@@ -71,3 +71,27 @@ Each stage is committed separately. Nothing is pushed or deployed as part of thi
 Existing non-blocking mobile lint warnings remain, primarily inline styles and other style conventions, with additional warnings for nested render callbacks and some assigned-then-awaited test assertions. This stage establishes an error-free gate; it does not claim warning-free code. Website bundle-size optimization remains a later stage.
 
 No backend application files, database models, or migrations changed. The prior backend baseline remains recorded above. Native APK/iOS builds and physical-device validation were not part of these local checks.
+
+## Stage 4: shared workflows and backend responsibilities
+
+- `usePlantEditor` now owns the edit form, initial fetch, access check, validation, submission, duplicate-submit protection, and request cancellation for both Plants and Plant Details. The screens retain their list/detail refresh behavior and existing modal UI.
+- `useWateringSchedule` now owns status loading, duration support, scheduling, recall, status merging, toast messages, and request cancellation for Readings and Plant Details. Both use the same modal contract.
+- The shared request guard can cancel a dialog operation without ending the current screen visit. Closing, replacing, or leaving an editor invalidates outstanding results.
+- Backend `readings/views.py` delegates pump policy/transactions to `pump_service.py`, history queries/deletion to `history.py`, and spreadsheet/export construction to `exports.py`. Device HTTP endpoints retain authorization and response mapping.
+- API URLs, response formats, firmware protocol, data models, migrations, lock order, cooldown policy, and post-commit notification behavior are preserved. The [readings module notes](backend/readings/README.md) document these boundaries.
+- Added 12 workflow regression tests covering form mapping, saves, permissions, errors/retries, duplicate submissions, and stale responses after closing or replacing a target.
+
+### Stage 4 verification
+
+| Check | Result |
+| --- | --- |
+| Mobile strict TypeScript and ESLint | Passed |
+| Mobile Jest | 132 suites; 965 tests passed |
+| Backend readings tests | 233 passed; 23 skipped |
+| Full backend suite | 1,081 passed; 36 skipped |
+| Django system/migration checks | Passed; no missing migrations |
+| Android production JavaScript bundle | Passed |
+
+The Plants screen decreased from 1,169 to 994 lines, Plant Details from 1,465 to 1,103, and Readings from 1,730 to 1,511. Backend readings views decreased from 1,657 to 808 lines. Responsibilities moved to the shared hooks/services rather than being hidden in a single replacement controller.
+
+The backend run used the same isolated SQLite/inference-mocked environment as the baseline. PostgreSQL-specific skipped tests remain covered by the existing CI workflow. No push, server deployment, or device installation is included in stage 4.

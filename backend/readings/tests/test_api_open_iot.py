@@ -125,7 +125,7 @@ def test_pump_next_task_delivers_pending_manual_task():
 
 
 @pytest.mark.django_db
-@patch("readings.views.send_watering_completed_notifications")
+@patch("readings.pump_service.send_watering_completed_notifications")
 def test_pump_complete_records_manual_execution(mock_notify, django_capture_on_commit_callbacks):
     user, device, secret = _device_with_secret(pump_included=True)
     task = PumpTask.objects.create(device=device, status=PumpTask.STATUS_DELIVERED)

@@ -161,7 +161,7 @@ def test_retry_capable_poll_does_not_return_expired_or_cancelled_tasks():
 
 
 @pytest.mark.parametrize("success", [True, False])
-@patch("readings.views.send_watering_completed_notifications")
+@patch("readings.pump_service.send_watering_completed_notifications")
 def test_replayed_completion_is_idempotent(mock_notify, success, django_capture_on_commit_callbacks):
     device, credentials = pump_device()
     task = PumpTask.objects.create(device=device, source="manual", status="delivered")
