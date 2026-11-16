@@ -3,6 +3,7 @@ import {
   View,
   StyleSheet,
   Platform,
+  Linking,
   Pressable,
   Animated,
   Easing,
@@ -90,7 +91,7 @@ export default function ScannerScreen() {
   const { height: screenHeight } = useWindowDimensions();
   const isFocused = useIsFocused();
   const navigation = useNavigation<any>();
-  const { hasPermission, requestPermission, openSettings } = useCameraPermission();
+  const { hasPermission, requestPermission } = useCameraPermission();
 
   const [active, setActive] = useState(true);
   const [lastScanned, setLastScanned] = useState<string>("");
@@ -354,7 +355,7 @@ export default function ScannerScreen() {
                             "Enable camera access in system settings to scan QR codes.",
                         })}
                       </Text>
-                      <Pressable onPress={openSettings} style={{ marginTop: 12 }}>
+                      <Pressable onPress={() => Linking.openSettings()} style={{ marginTop: 12 }}>
                         <Text
                           style={[
                             styles.placeholderHint,

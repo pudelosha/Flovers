@@ -1,5 +1,6 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
+import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import { taskCompletionToast, withCompletionXP } from '../../../shared/utils/taskCompletionToast';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
@@ -106,6 +107,7 @@ const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function HomeScreen() {
+  const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
   const { t } = useTranslation();
 
@@ -227,12 +229,15 @@ export default function HomeScreen() {
       return loadInFlightRef.current;
     }
 
+    const isCurrent = requestGuard.begin();
     const request = (async () => {
       try {
         const data = await fetchHomeTasks();
+        if (!isCurrent()) return;
         setLoadError(false);
         setTasks(data);
       } catch (e: any) {
+        if (!isCurrent()) return;
         setLoadError(true);
         showToast(e?.message || t('home.toasts.failedToLoadTasks'), 'error');
         setTasks([]);
@@ -244,15 +249,16 @@ export default function HomeScreen() {
     try {
       await request;
     } finally {
-      loadInFlightRef.current = null;
+      if (loadInFlightRef.current === request) loadInFlightRef.current = null;
     }
-  }, [t]);
+  }, [t, requestGuard]);
 
   // Refresh data on entry and every later return to the screen,
   // matching Plants: clear old list first, then load, then animate tiles
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
+      requestGuard.activate();
 
       (async () => {
         setViewFilter('all');
@@ -268,8 +274,10 @@ export default function HomeScreen() {
 
       return () => {
         mounted = false;
+        requestGuard.invalidate();
+        loadInFlightRef.current = null;
       };
-    }, [load]),
+    }, [load, requestGuard]),
   );
 
   // On every focus — close any open menu/modals and scroll list to top

@@ -1,3 +1,4 @@
+import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
@@ -117,6 +118,7 @@ const INITIAL_FILTERS: Filters = {
 };
 
 export default function RemindersScreen() {
+  const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
   const nav = useNavigation();
   const route = useRoute<any>();
@@ -219,6 +221,7 @@ export default function RemindersScreen() {
   const [loadError, setLoadError] = useState(false);
 
   const load = useCallback(async () => {
+    const isCurrent = requestGuard.begin();
     setLoading(true);
     try {
       const [tasks, reminders, plants] = await Promise.all([
@@ -227,6 +230,7 @@ export default function RemindersScreen() {
         fetchPlantInstances({ auth: true }),
       ]);
       const ownPlants = plants.filter((plant) => plantAccess(plant.access).isOwner);
+      if (!isCurrent()) return;
       const ui = buildUIReminders(tasks, reminders.filter((reminder) => plantAccess(reminder.access).isOwner), ownPlants);
       setLoadError(false);
       setUiReminders(ui);
@@ -237,6 +241,7 @@ export default function RemindersScreen() {
         )
       );
     } catch (e: any) {
+      if (!isCurrent()) return;
       setLoadError(true);
       const msg =
         e?.message ||
@@ -246,27 +251,23 @@ export default function RemindersScreen() {
       // toast on unauthorized / any load error
       showToast(msg, "error");
     } finally {
-      setLoading(false);
+      if (isCurrent()) setLoading(false);
     }
-  }, [tr]);
+  }, [tr, requestGuard]);
 
   /** Keep existing data refresh on focus, but clear stale tiles immediately so none are visible */
   useFocusEffect(
     useCallback(() => {
-      let mounted = true;
+      requestGuard.activate();
       (async () => {
         setLoading(true);
         setUiReminders([]); // clear stale list before fetching
-        try {
-          await load();
-        } finally {
-          if (!mounted) return;
-        }
+        await load();
       })();
       return () => {
-        mounted = false;
+        requestGuard.invalidate();
       };
-    }, [load])
+    }, [load, requestGuard])
   );
 
   /**

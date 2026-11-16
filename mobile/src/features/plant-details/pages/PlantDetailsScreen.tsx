@@ -1,6 +1,7 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { taskCompletionToast } from '../../../shared/utils/taskCompletionToast';
 import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
+import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useMemo, useState, useRef, useCallback } from 'react';
 import {
@@ -104,6 +105,7 @@ function toYYYYMMDD(d: Date = new Date()) {
 }
 
 export default function PlantDetailsScreen() {
+  const requestGuard = useRequestGuard();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -304,6 +306,7 @@ export default function PlantDetailsScreen() {
   );
 
   const loadDetails = useCallback(async () => {
+    const isCurrent = requestGuard.begin();
     if (!qrFromNav && !idFromNav) {
       throw new Error(
         tr('plantDetails.errors.noId', 'No plant id or QR code provided.'),
@@ -333,10 +336,11 @@ export default function PlantDetailsScreen() {
           );
       }
     }
+    if (!isCurrent()) return;
     setDefinitionData(definition);
     setDetails(full);
     setDetailsRevision(value => value + 1);
-  }, [qrFromNav, idFromNav, tr, currentLanguage]);
+  }, [qrFromNav, idFromNav, tr, currentLanguage, requestGuard]);
 
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || '';
@@ -703,6 +707,7 @@ export default function PlantDetailsScreen() {
   useFocusEffect(
     useCallback(() => {
       let isActive = true;
+      requestGuard.activate();
 
       const run = async () => {
         try {
@@ -735,6 +740,7 @@ export default function PlantDetailsScreen() {
 
       return () => {
         isActive = false;
+        requestGuard.invalidate();
 
         setDismissMenusTick(t => t + 1);
 
@@ -757,6 +763,7 @@ export default function PlantDetailsScreen() {
       };
     }, [
       loadDetails,
+      requestGuard,
       tr,
       closeDefinition,
       closeChangeImage,

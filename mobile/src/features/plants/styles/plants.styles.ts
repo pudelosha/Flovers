@@ -1,6 +1,20 @@
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
+  suggestBox: {
+    borderRadius: 12,
+    backgroundColor: '#111111',
+    overflow: 'hidden',
+    marginBottom: 12,
+  },
+  suggestItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  suggestText: { flex: 1, color: '#FFFFFF', fontWeight: '600' },
   // LIST / LAYOUT
   listContent: {
     paddingHorizontal: 16,

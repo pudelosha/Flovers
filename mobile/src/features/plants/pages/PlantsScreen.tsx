@@ -1,5 +1,6 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
+import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, {
   useCallback,
@@ -121,6 +122,7 @@ const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function PlantsScreen() {
+  const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
   const nav = useNavigation<any>();
   const route = useRoute<any>();
@@ -330,15 +332,18 @@ export default function PlantsScreen() {
   const [loadError, setLoadError] = useState(false);
 
   const load = useCallback(async () => {
+    const isCurrent = requestGuard.begin();
     try {
       const data = await fetchPlantInstances({ auth: true });
 
       const mapped = data.map(it => mapApiToPlant(it, unnamedFallback));
       const withLocal = await attachLocalPhotos(mapped);
+      if (!isCurrent()) return;
 
       setLoadError(false);
       setPlants(withLocal);
     } catch (e: any) {
+      if (!isCurrent()) return;
       setLoadError(true);
       showToast(
         e?.message ||
@@ -349,7 +354,7 @@ export default function PlantsScreen() {
       );
       setPlants([]);
     }
-  }, [t, unnamedFallback, attachLocalPhotos]);
+  }, [t, unnamedFallback, attachLocalPhotos, requestGuard]);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -448,6 +453,7 @@ export default function PlantsScreen() {
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
+      requestGuard.activate();
 
       (async () => {
         const params = (route as any)?.params;
@@ -486,8 +492,9 @@ export default function PlantsScreen() {
 
       return () => {
         mounted = false;
+        requestGuard.invalidate();
       };
-    }, [load, route, nav, openEditModalById]),
+    }, [load, route, nav, openEditModalById, requestGuard]),
   );
 
   const closeEdit = () => {

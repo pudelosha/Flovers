@@ -36,3 +36,12 @@ The backend baseline used SQLite and mocked recognition inference. It does not r
 - Relevant existing suites continue to pass.
 
 Each stage is committed separately. Nothing is pushed or deployed as part of this cleanup request.
+
+## Stage 2: concrete defects
+
+- Scanner denied-permission action now opens system settings through React Native.
+- Edit-plant suggestions use defined styles.
+- Plant Details preserves device/task request failures and rejects malformed device collections. Successful empty results and the optional 24-hour-summary fallback remain supported.
+- Home, Plants, Plant Details, Reminders, Readings, and Locations invalidate data requests on loss of focus and ignore superseded responses. Home retains in-flight deduplication within a visit.
+- Added permission-action, unavailable-data, unmount, revisit, and out-of-order response regression coverage.
+- Targeted verification: six Jest suites, 36 tests passed.

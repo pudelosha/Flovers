@@ -1,3 +1,4 @@
+import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
@@ -93,6 +94,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsScreen() {
+  const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
   const nav = useNavigation();
 
@@ -208,12 +210,14 @@ export default function ReadingsScreen() {
   const [loadError, setLoadError] = useState(false);
 
   const load = useCallback(async () => {
+    const isCurrent = requestGuard.begin();
     try {
       const [devices, plantsList] = await Promise.all([
         listReadingDevices(),
         fetchPlantInstances(),
       ]);
 
+      if (!isCurrent()) return;
       setDevicesRaw(devices);
       setPlantInstances(Array.isArray(plantsList) ? plantsList : []);
 
@@ -221,6 +225,7 @@ export default function ReadingsScreen() {
       setLoadError(false);
       setItems(tiles);
     } catch {
+      if (!isCurrent()) return;
       setLoadError(true);
       showToast(
         tr("readings.toasts.loadFailed", "Failed to load devices"),
@@ -230,12 +235,13 @@ export default function ReadingsScreen() {
       setPlantInstances([]);
       setItems([]);
     }
-  }, [showToast, tr]);
+  }, [showToast, tr, requestGuard]);
 
   // Clear stale tiles on entry so only spinner is visible
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
+      requestGuard.activate();
 
       (async () => {
         setLoading(true);
@@ -250,8 +256,9 @@ export default function ReadingsScreen() {
 
       return () => {
         mounted = false;
+        requestGuard.invalidate();
       };
-    }, [load])
+    }, [load, requestGuard])
   );
 
   const applyReadingRefresh = useCallback((devices: ApiReadingDevice[]) => {

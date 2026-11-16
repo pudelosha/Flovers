@@ -120,6 +120,31 @@ describe("plant-details.service", () => {
     expect(mockedFetchPlant).toHaveBeenCalledWith(4);
   });
 
+  it('preserves device request failures instead of reporting an unlinked device', async () => {
+    const failure = new Error('Device service unavailable');
+    mockedRequest.mockRejectedValueOnce(failure);
+    await expect(fetchPlantDetailsById(4)).rejects.toBe(failure);
+  });
+
+  it('preserves task request failures instead of reporting no tasks', async () => {
+    const failure = new Error('Task service unavailable');
+    mockedFetchHomeTasks.mockRejectedValueOnce(failure);
+    await expect(fetchPlantDetailsById(4)).rejects.toBe(failure);
+  });
+
+  it('reports empty sections only after successful empty responses', async () => {
+    mockedRequest.mockResolvedValueOnce([]);
+    mockedFetchHomeTasks.mockResolvedValueOnce([]);
+    await expect(fetchPlantDetailsById(4)).resolves.toMatchObject({
+      deviceLinked: false, reminders: [], latestReadings: null,
+    });
+  });
+
+  it('rejects a malformed device response instead of treating it as an empty collection', async () => {
+    mockedRequest.mockResolvedValueOnce({ detail: 'Unexpected response' });
+    await expect(fetchPlantDetailsById(4)).rejects.toThrow('Invalid device list response');
+  });
+
   it('loads the linked device summary with the screen dataset and tolerates its failure', async () => {
     const devices = await mockedRequest.getMockImplementation()!();
     const summary = { from: '2026-11-12T12:00:00Z', to: '2026-11-13T12:00:00Z', metrics: {

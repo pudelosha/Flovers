@@ -1,3 +1,4 @@
+import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
@@ -68,6 +69,7 @@ const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
 const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function LocationsScreen() {
+  const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
   const nav = useNavigation<any>();
 
@@ -157,11 +159,14 @@ export default function LocationsScreen() {
   const [loadError, setLoadError] = useState(false);
 
   const load = useCallback(async () => {
+    const isCurrent = requestGuard.begin();
     try {
       const data = await fetchUserLocations({ auth: true });
+      if (!isCurrent()) return;
       setLoadError(false);
       setLocations(data.map(mapApiToLocation));
     } catch (e: any) {
+      if (!isCurrent()) return;
       setLoadError(true);
       showToast(
         e?.message ||
@@ -170,11 +175,12 @@ export default function LocationsScreen() {
       );
       setLocations([]);
     }
-  }, [tr]);
+  }, [tr, requestGuard]);
 
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
+      requestGuard.activate();
 
       // reset modal/menu state when screen comes into focus
       setEditOpen(false);
@@ -198,8 +204,9 @@ export default function LocationsScreen() {
 
       return () => {
         mounted = false;
+        requestGuard.invalidate();
       };
-    }, [closeFloatingMenus, load])
+    }, [closeFloatingMenus, load, requestGuard])
   );
 
   const onRefresh = async () => {

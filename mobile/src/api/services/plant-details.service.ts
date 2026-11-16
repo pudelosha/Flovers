@@ -126,31 +126,26 @@ function mapHomeTaskToReminderSummary(task: HomeTask): PlantReminderSummary | nu
 /*  Internal fetch helpers                                            */
 /* ------------------------------------------------------------------ */
 
-async function fetchReadingDevicesSafe(): Promise<ApiReadingDevice[]> {
-  try {
-    const resp = await request<any>(
+async function fetchReadingDevices(): Promise<ApiReadingDevice[]> {
+    const resp = await request<ApiReadingDevice[] | { results: ApiReadingDevice[] }>(
       "/readings/devices/",
       "GET",
       undefined,
       { auth: true }
     );
 
-    if (Array.isArray(resp)) return resp as ApiReadingDevice[];
+    if (Array.isArray(resp)) return resp;
     if (resp && Array.isArray(resp.results)) {
-      return resp.results as ApiReadingDevice[];
+      return resp.results;
     }
 
-    return [];
-  } catch (err) {
-    console.warn("[plant-details] fetchReadingDevicesSafe failed:", err);
-    return [];
-  }
+    throw new Error('Invalid device list response');
 }
 
 async function findDeviceForPlant(
   plantId: number
 ): Promise<ApiReadingDevice | null> {
-  const devices = await fetchReadingDevicesSafe();
+  const devices = await fetchReadingDevices();
 
   const activeMatch = devices.find(
     (d) => d.is_active && d.plant != null && Number(d.plant) === plantId
@@ -168,7 +163,6 @@ async function findDeviceForPlant(
 async function fetchRemindersForPlant(
   plantId: number
 ): Promise<PlantReminderSummary[]> {
-  try {
     const tasks = await fetchHomeTasks();
     const plantIdStr = String(plantId);
 
@@ -186,10 +180,6 @@ async function fetchRemindersForPlant(
     }
 
     return summaries;
-  } catch (err) {
-    console.warn("[plant-details] fetchRemindersForPlant failed:", err);
-    return [];
-  }
 }
 
 /* ------------------------------------------------------------------ */

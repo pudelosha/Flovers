@@ -81,6 +81,38 @@ it("waits for the Plants screen's custom photo after plant metadata arrives", as
   expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
 });
 
+it('does not let a previous Plants visit overwrite the latest collection', async () => {
+  mockPhotoLoading = false;
+  let finishOld!: (plants: unknown[]) => void;
+  (fetchPlantInstances as jest.Mock).mockImplementationOnce(
+    () => new Promise(resolve => { finishOld = resolve; }),
+  ).mockResolvedValueOnce([{ ...plant, display_name: 'Latest plant' }]);
+  const view = render(<PlantsScreen />);
+  await waitFor(() => expect(fetchPlantInstances).toHaveBeenCalledTimes(1));
+  mockRoute = { params: {} };
+  view.rerender(<PlantsScreen />);
+  await waitFor(() => expect(view.getByTestId('plant-tile').props.children).toBe('Latest plant'));
+  await act(async () => { finishOld([{ ...plant, display_name: 'Stale plant' }]); });
+  expect(view.getByTestId('plant-tile').props.children).toBe('Latest plant');
+});
+
+it('does not replace the selected plant when a previous detail request finishes late', async () => {
+  mockPhotoLoading = false;
+  mockNativeImageReady = true;
+  mockRoute = { params: { id: 7 } };
+  let finishOld!: (details: unknown) => void;
+  (fetchPlantDetailsById as jest.Mock).mockImplementationOnce(
+    () => new Promise(resolve => { finishOld = resolve; }),
+  ).mockResolvedValueOnce({ plant: { ...plant, id: 8, display_name: 'Latest plant' }, reminders: [] });
+  const view = render(<PlantDetailsScreen />);
+  await waitFor(() => expect(fetchPlantDetailsById).toHaveBeenCalledWith(7));
+  mockRoute = { params: { id: 8 } };
+  view.rerender(<PlantDetailsScreen />);
+  await waitFor(() => expect(view.getByTestId('plant-details-tile').props.children).toBe('Latest plant'));
+  await act(async () => { finishOld({ plant: { ...plant, display_name: 'Stale plant' }, reminders: [] }); });
+  expect(view.getByTestId('plant-details-tile').props.children).toBe('Latest plant');
+});
+
 it("waits for Plant Details metadata, private bytes and native image decoding before showing the screen", async () => {
   mockRoute = { params: { id: 7 } };
   const view = render(<PlantDetailsScreen />);
