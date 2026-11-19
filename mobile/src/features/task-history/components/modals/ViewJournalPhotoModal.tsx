@@ -31,9 +31,18 @@ export default function ViewJournalPhotoModal({
   const [readyUri, setReadyUri] = useState<string | null>(null);
   const [failedUri, setFailedUri] = useState<string | null>(null);
   // A new opening must not reveal metadata or bytes retained by a previous one.
-  const opening = useRef({ visible, id: entry?.id, sequence: 0 });
-  if (opening.current.visible !== visible || opening.current.id !== entry?.id) {
-    opening.current = { visible, id: entry?.id, sequence: opening.current.sequence + 1 };
+  const opening = useRef({ visible, id: entry?.id, plantId: entry?.plantId, sequence: 0 });
+  if (
+    opening.current.visible !== visible ||
+    opening.current.id !== entry?.id ||
+    opening.current.plantId !== entry?.plantId
+  ) {
+    opening.current = {
+      visible,
+      id: entry?.id,
+      plantId: entry?.plantId,
+      sequence: opening.current.sequence + 1,
+    };
   }
   const selectedId = selection?.opening === opening.current.sequence ? selection.id : entry?.id;
   const context = `${opening.current.sequence}:${selectedId ?? "none"}:${retry}`;
