@@ -8,7 +8,7 @@ import redis
 from django.core.management import call_command
 from django.db import connection
 
-from .harness import Runtime, mailpit, wait_redis
+from .harness import Runtime, app, mailpit, wait_redis
 from .safety import validate_container, validate_environment
 
 
@@ -21,6 +21,9 @@ def django_db_setup(django_db_blocker):
     The database/server checks run before any migrations or writes.
     """
     run = validate_environment(os.environ)
+    assert app.conf.broker_url == "redis://127.0.0.1:6379/0"
+    assert app.conf.result_backend == "redis://127.0.0.1:6379/1"
+    assert app.conf.task_always_eager is False
     if platform.system() != "Linux":
         pytest.fail("This real prefork/service lane requires Linux; it must not silently skip")
     for role in ("postgres", "redis", "mailpit"):

@@ -14,6 +14,11 @@ CELERY_TASK_ALWAYS_EAGER = False
 CELERY_TASK_EAGER_PROPAGATES = False
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/1"
+# Celery reads these environment overrides before Django's configured values.
+# ci_settings deliberately sets memory://, so replace both after importing it.
+os.environ.update(CELERY_BROKER_URL=CELERY_BROKER_URL, CELERY_RESULT_BACKEND=CELERY_RESULT_BACKEND)
+for _name in ("CELERY_BROKER_READ_URL", "CELERY_BROKER_WRITE_URL"):
+    os.environ.pop(_name, None)
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_BROKER_CONNECTION_MAX_RETRIES = 10
 CELERY_BROKER_TRANSPORT_OPTIONS = {

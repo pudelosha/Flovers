@@ -1,4 +1,7 @@
 import json
+import os
+import subprocess
+import sys
 import socket
 from types import SimpleNamespace
 import unittest
@@ -12,6 +15,14 @@ from integration.celery.safety import (
 class SafetyTests(unittest.TestCase):
     env = {"FLOVERS_INTEGRATION": "1", "FLOVERS_INTEGRATION_RUN": "123-1",
            "CI_DATABASE_URL": "postgres://flovers_ci:flovers_ci@127.0.0.1:5432/flovers_ci"}
+
+    def test_effective_celery_settings_cannot_fall_back_to_eager_memory_transport(self):
+        env = {**os.environ, **self.env, "DJANGO_SETTINGS_MODULE": "integration.celery.settings"}
+        code = ("import json; from integration.celery.worker_app import app; "
+                "print(json.dumps([app.conf.broker_url,app.conf.result_backend,app.conf.task_always_eager]))")
+        result = subprocess.run([sys.executable, "-c", code], env=env,
+                                capture_output=True, text=True, timeout=20, check=True)
+        self.assertEqual(json.loads(result.stdout), ["redis://127.0.0.1:6379/0", "redis://127.0.0.1:6379/1", False])
 
     def test_explicit_opt_in_and_run_namespace_are_required(self):
         for key in ("FLOVERS_INTEGRATION", "FLOVERS_INTEGRATION_RUN"):
