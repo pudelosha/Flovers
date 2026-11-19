@@ -102,9 +102,24 @@ class Runtime:
 
     def start_beat(self):
         assert self.beat is None
-        self.beat = self.spawn("beat", ["beat", "--loglevel=INFO", "--max-interval=0.5",
+        self.beat = self.spawn("beat", ["beat", "--loglevel=INFO", "--max-interval=1",
             "--schedule", str(Path(self.temp.name) / "schedule"),
             "--pidfile", str(Path(self.temp.name) / "beat.pid")])
+
+    @contextmanager
+    def frozen_worker(self):
+        # Freeze the producer's real consumer before publishing, rather than
+        # accidentally testing a prefetched/unacknowledged message as "queued".
+        process = self.worker[0]
+        os.killpg(process.pid, signal.SIGSTOP)
+        try:
+            wait_until(lambda: any(line.startswith("State:") and "T" in line
+                                   for line in Path(f"/proc/{process.pid}/status").read_text().splitlines()),
+                       description="stopped consumer before queue publication")
+            yield
+        finally:
+            if process.poll() is None:
+                os.killpg(process.pid, signal.SIGCONT)
 
     def send(self, name, *, args=None, kwargs=None, **options):
         return app.send_task(name, args=args or [], kwargs=kwargs or {}, queue=self.queue, **options)

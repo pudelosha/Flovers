@@ -17,11 +17,11 @@ dependency and does not change existing fast tests or deployment workflows.
 | Celery retry | A test-only probe uses actual `self.retry`, Redis state and worker re-execution. |
 | SMTP retry | Pause only this run's capture container, observe real SMTP timeout/backoff, then restore it and deliver the retry once. |
 | Worker loss and lease recovery | Kill the entire worker process group after its durable claim while SMTP is paused. A fresh worker cannot reclaim a live lease; after the synthetic row's lease expires, it recovers and sends once. |
-| Broker restart | Gate the prefork child, enqueue a real invitation task behind it, snapshot/restart only this run's Redis container, release the gate, and prove the same live worker reconnects and consumes the persisted message. |
+| Broker restart | Freeze the worker process group before publishing; assert the real task is queued in Redis (not prefetched), snapshot/restart this run's Redis, resume the same worker and prove automatic reconnect/delivery. |
 | Revoked notification consent | Queue the real daily-notification task with the worker stopped, revoke email consent in PostgreSQL, restart worker, and verify the queued delivery is skipped with no captured email. |
 | Beat | Start a separate Celery Beat process with a one-second test-only schedule for the existing invitation-drain task. No explicit producer dispatch in the test; Beat/Redis/worker deliver the outbox. |
 
-The probe/retry/gate tasks provide transport evidence and deterministic barriers;
+The probe/retry tasks provide transport evidence and deterministic barriers;
 they do not replace invitation/notification business functions. The SMTP subclass
 uses Django's real SMTP backend and adds recipient/endpoint safety checks only.
 Worker/capture failure is induced by process/container controls, not mocks.
