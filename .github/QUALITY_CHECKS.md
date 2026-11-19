@@ -165,3 +165,13 @@ the loopback database named `flovers_ci`, never an existing application database
 Use a dedicated disposable PostgreSQL instance and user with permission to create
 the Django test database. Backend tests require the application dependencies and
 checked-in recognition weights described in the main README.
+
+## Provider-verified API compatibility
+
+`test-api-contracts.yml` adds an isolated PostgreSQL 16 provider job and a dependent
+current/previous mobile adapter job. Both consume the same provider-verified response
+artifact, pinned to the workflow commit. Required scenarios cannot silently skip.
+See [contract design, matrix and local commands](../contracts/api/README.md).
+The previous mobile baseline is `6f698097ddb17f7740dada6ce37beba1a28ff34e`.
+This standalone check does not modify deployment workflows or branch protection.
+
