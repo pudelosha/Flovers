@@ -1,0 +1,17 @@
+{
+  "format": 1,
+  "allowed_skips": [],
+  "required_passed": [
+    "integration.celery.test_delivery::test_json_serialization_and_registered_worker",
+    "integration.celery.test_delivery::test_contact_invitation_reaches_smtp_capture",
+    "integration.celery.test_delivery::test_worker_observes_only_committed_invitation_data",
+    "integration.celery.test_delivery::test_rolled_back_invitation_is_never_delivered",
+    "integration.celery.test_delivery::test_duplicate_delivery_does_not_send_twice",
+    "integration.celery.test_delivery::test_real_celery_retry_executes_again_in_worker",
+    "integration.celery.test_delivery::test_smtp_failure_retries_durable_outbox",
+    "integration.celery.test_delivery::test_worker_crash_recovers_after_lease_expiration",
+    "integration.celery.test_delivery::test_broker_restart_preserves_queued_delivery_and_worker_recovers",
+    "integration.celery.test_delivery::test_notification_consent_revoked_before_worker_delivery",
+    "integration.celery.test_delivery::test_celery_beat_dispatches_real_invitation_task"
+  ]
+}
