@@ -146,3 +146,7 @@ translations/*/
 ############################
 backend/secrets/firebase.json
 backend/secrets/*.json
+
+# Disposable native/browser test outputs (never application assets).
+/e2e-results/
+/e2e/browser/node_modules/
