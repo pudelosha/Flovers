@@ -1,0 +1,254 @@
+name: Native and browser E2E smoke
+
+on:
+  push:
+    paths:
+      - "e2e/**"
+      - "mobile/**"
+      - "backend/**"
+      - "web/**"
+      - "translations/**"
+      - "contracts/**"
+      - ".github/workflows/test-e2e.yml"
+      - ".github/scripts/report_tests.py"
+      - ".github/test-policies/no-skips.json"
+  pull_request:
+    paths:
+      - "e2e/**"
+      - "mobile/**"
+      - "backend/**"
+      - "web/**"
+      - "translations/**"
+      - "contracts/**"
+      - ".github/workflows/test-e2e.yml"
+      - ".github/scripts/report_tests.py"
+      - ".github/test-policies/no-skips.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android-build:
+    name: Build standalone Android smoke APK
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "24.20.0"
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - uses: actions/setup-java@v6.3.0
+        with:
+          distribution: temurin
+          java-version: "17.0.17+10"
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Prepare disposable runner storage
+        run: |
+          echo "ANDROID_HOME=$RUNNER_TEMP/flovers-android" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$RUNNER_TEMP/flovers-android" >> "$GITHUB_ENV"
+          mkdir -p e2e-results/android e2e-results/apk
+          df -h
+          # Unused preinstalled language SDKs, on this ephemeral CI runner only.
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android/sdk/ndk /opt/ghc /usr/local/.ghcup
+      - name: Provision pinned Android build tools
+        run: python e2e/provision_android.py build 2>&1 | tee e2e-results/android/build-provision.log
+      - name: Install locked application dependencies
+        working-directory: mobile
+        run: npm ci
+      - name: Build actual bundled React Native APK without release secrets
+        working-directory: mobile/android
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleE2e -PfloversE2E=true -PreactNativeArchitectures=x86_64 \
+            --no-daemon --max-workers=2 --stacktrace 2>&1 | tee ../../e2e-results/android/gradle.log
+      - name: Verify package identity and retain the exact APK
+        run: |
+          apk=mobile/android/app/build/outputs/apk/e2e/app-e2e.apk
+          test -s "$apk"
+          "$ANDROID_HOME/cmdline-tools/19.0/bin/apkanalyzer" manifest application-id "$apk" | grep -x 'com.flovers.mobile.e2e'
+          cp "$apk" e2e-results/apk/app-e2e.apk
+          sha256sum e2e-results/apk/app-e2e.apk > e2e-results/apk/sha256.txt
+      - name: Upload smoke APK
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: android-smoke-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          path: e2e-results/apk/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload native build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: android-build-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            e2e-results/android/
+            mobile/android/app/build/reports/
+            mobile/android/build/reports/
+          if-no-files-found: warn
+          retention-days: 7
+
+  android:
+    name: Android Maestro smoke
+    needs: android-build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: flovers_ci
+          POSTGRES_USER: flovers_ci
+          POSTGRES_PASSWORD: flovers_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U flovers_ci -d flovers_ci"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      MAESTRO_CLI_NO_ANALYTICS: "true"
+      MAESTRO_DISABLE_UPDATE_CHECK: "true"
+      MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED: "true"
+      PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/backend
+      DJANGO_SETTINGS_MODULE: e2e.android.settings
+      CI_DATABASE_URL: postgres://flovers_ci:flovers_ci@127.0.0.1:5432/flovers_ci
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Isolate emulator and server storage
+        run: |
+          echo "ANDROID_HOME=$RUNNER_TEMP/flovers-android" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$RUNNER_TEMP/flovers-android" >> "$GITHUB_ENV"
+          echo "ANDROID_AVD_HOME=$RUNNER_TEMP/flovers-avd" >> "$GITHUB_ENV"
+          echo "ANDROID_USER_HOME=$RUNNER_TEMP/flovers-android-user" >> "$GITHUB_ENV"
+          echo "E2E_STORAGE_ROOT=$RUNNER_TEMP/flovers-e2e-media" >> "$GITHUB_ENV"
+          mkdir -p e2e-results/android
+      - uses: actions/setup-java@v6.3.0
+        with:
+          distribution: temurin
+          java-version: "17.0.17+10"
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+          cache: pip
+          cache-dependency-path: |
+            backend/requirements.txt
+            backend/requirements-ci.txt
+      - uses: actions/download-artifact@v8
+        with:
+          name: android-smoke-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          path: e2e-results/apk
+      - name: Require KVM and provision pinned emulator and Maestro
+        run: |
+          test -e /dev/kvm
+          sudo chmod 666 /dev/kvm
+          mkdir -p "$ANDROID_AVD_HOME" "$ANDROID_USER_HOME" e2e-results/android
+          python e2e/provision_android.py emulator 2>&1 | tee e2e-results/android/emulator-provision.log
+      - name: Install locked isolated backend
+        run: >-
+          python -m pip install --require-hashes --only-binary=:all:
+          -r backend/requirements.txt -r backend/requirements-ci.txt
+      - name: Test fixture isolation and fail-closed guards
+        run: |
+          python -m unittest discover -s e2e/tests -p 'test_*.py'
+          python -m pytest -c backend/pytest.ini e2e/android/test_seed.py --junitxml=e2e-results/android/fixture-tests.xml
+          python .github/scripts/report_tests.py --title "E2E fixture safeguards" \
+            --junit e2e-results/android/fixture-tests.xml --policy .github/test-policies/no-skips.json \
+            --output e2e-results/android/fixture-summary.md
+      - name: Migrate, seed and start disposable Django API
+        run: |
+          python backend/manage.py migrate --noinput
+          python e2e/android/seed.py seed
+          python backend/manage.py runserver 127.0.0.1:8000 --noreload > e2e-results/android/backend.log 2>&1 &
+          python e2e/android/wait_api.py
+      - name: Run actual native journeys exactly once
+        run: python e2e/android/run_smoke.py 2>&1 | tee e2e-results/android/smoke.log
+      - name: Require both native flows and reject skips
+        if: always()
+        run: |
+          python e2e/check_reports.py android e2e-results/android/results.xml
+          python .github/scripts/report_tests.py --title "Native Android Maestro" \
+            --junit e2e-results/android/results.xml --policy .github/test-policies/no-skips.json \
+            --output e2e-results/android/summary.md
+      - name: Upload native JUnit screenshots hierarchy logs and traces
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: android-e2e-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            e2e-results/android/
+            ~/.maestro/tests/
+          if-no-files-found: warn
+          retention-days: 7
+
+  browser:
+    name: Browser Playwright smoke
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "24.20.0"
+          cache: npm
+          cache-dependency-path: |
+            web/package-lock.json
+            e2e/browser/package-lock.json
+      - name: Install exact browser test dependencies
+        working-directory: e2e/browser
+        run: npm ci
+      - name: Install pinned Chromium and OS dependencies
+        working-directory: e2e/browser
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Build the actual website locally
+        working-directory: web
+        env:
+          VITE_API_BASE: http://127.0.0.1:4173
+        run: |
+          npm ci
+          npm run build
+      - name: Verify reporting safeguards
+        run: python3 -m unittest discover -s e2e/tests -p 'test_*.py'
+      - name: Run real browser smoke cases without retries
+        working-directory: e2e/browser
+        run: npm test
+      - name: Require all browser scenarios in both viewports
+        if: always()
+        run: |
+          python3 e2e/check_reports.py browser e2e-results/browser/results.xml
+          python3 .github/scripts/report_tests.py --title "Browser Playwright" \
+            --junit e2e-results/browser/results.xml --policy .github/test-policies/no-skips.json \
+            --output e2e-results/browser/summary.md
+      - name: Upload browser JUnit screenshots videos traces and HTML report
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: browser-e2e-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: e2e-results/browser/
+          if-no-files-found: warn
+          retention-days: 7
+
+  gate:
+    name: Required native and browser E2E
+    if: always()
+    needs: [android-build, android, browser]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Missing or skipped required jobs fail the gate
+        env:
+          BUILD: ${{ needs.android-build.result }}
+          ANDROID: ${{ needs.android.result }}
+          BROWSER: ${{ needs.browser.result }}
+        run: |
+          test "$BUILD" = success
+          test "$ANDROID" = success
+          test "$BROWSER" = success

@@ -1,0 +1,21 @@
+appId: com.flovers.mobile.e2e
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      id: auth-login-email
+    timeout: 30000
+- tapOn:
+    id: auth-login-email
+- inputText: ${EMAIL}
+- tapOn:
+    id: auth-login-password
+- inputText: E2e-only-password-2026
+- hideKeyboard
+- tapOn:
+    id: auth-login-submit
+- extendedWaitUntil:
+    visible:
+      id: ${TASK_ID}
+    timeout: 30000
