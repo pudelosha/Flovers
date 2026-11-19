@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "start": "react-native start",
     "test": "jest",
+    "test:ci": "jest --ci --maxWorkers=2 --coverage --json --outputFile=jest-results.json",
     "test:build-info": "node --test scripts/tests/*.cjs",
     "prestart": "node scripts/generate-build-info.js",
     "prebuild": "node scripts/generate-build-info.js",

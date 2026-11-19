@@ -1,11 +1,21 @@
 name: Website quality checks
 
 on:
+  # Website pushes to main already call this workflow through deploy-web.
+  # These additional inputs must run checks without publishing the website.
+  push:
+    paths:
+      - "mobile/src/i18n/locales/**"
+      - "backend/i18n/locales/**"
+      - ".github/scripts/**"
   pull_request:
     paths:
       - "web/**"
       - ".github/workflows/test-web.yml"
       - ".github/workflows/deploy-web.yml"
+      - "mobile/src/i18n/locales/**"
+      - "backend/i18n/locales/**"
+      - ".github/scripts/**"
   workflow_call:
   workflow_dispatch:
 
@@ -27,10 +37,31 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - name: Install locked dependencies
+        id: dependencies
         run: npm ci
       - name: Check website lint errors
         run: npm run lint
       - name: Test website content and translations
-        run: npm test
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        env:
+          NODE_V8_COVERAGE: test-results/v8-coverage
+        run: npm run test:ci
       - name: Check production build
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
         run: npm run build
+      - name: Summarize tests and skipped cases
+        if: always()
+        run: >-
+          python3 ../.github/scripts/report_tests.py
+          --title "Website tests"
+          --junit test-results/web.xml
+          --coverage-scope "Node coverage in the job log and V8 artifact covers imported config/contact JavaScript only, not React routes, browser UI or the whole website."
+          --output test-results/summary.md
+      - name: Upload test results and imported-module coverage
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: web-test-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: web/test-results/
+          if-no-files-found: ignore
+          retention-days: 7

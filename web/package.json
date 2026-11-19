@@ -9,6 +9,8 @@
     "build:github": "vite build --mode github",
     "lint": "eslint .",
     "test": "node --test tests/*.test.js",
+    "pretest:ci": "node -e \"require('node:fs').mkdirSync('test-results', {recursive:true})\"",
+    "test:ci": "node --test --experimental-test-coverage --test-coverage-include=**/web/src/** --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=test-results/web.xml tests/*.test.js",
     "preview": "vite preview"
   },
   "dependencies": {
