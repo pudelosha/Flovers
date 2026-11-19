@@ -41,6 +41,20 @@ class MainApplication : Application(), ReactApplication {
 
   override fun onCreate() {
     super.onCreate()
+    // Fail closed before DNS/HTTP for any accidental external URL in the CI APK.
+    // Default debug/release behavior is unchanged.
+    if (BuildConfig.BUILD_TYPE == "e2e") {
+      com.facebook.react.modules.network.OkHttpClientProvider.setOkHttpClientFactory {
+        com.facebook.react.modules.network.OkHttpClientProvider.createClientBuilder()
+          .addInterceptor { chain ->
+            val host = chain.request().url.host
+            if (host != "127.0.0.1" && host != "localhost") {
+              throw java.io.IOException("E2E network policy denied external host: $host")
+            }
+            chain.proceed(chain.request())
+          }.build()
+      }
+    }
     com.facebook.react.ReactNativeApplicationEntryPoint.loadReactNative(this)
   }
 }

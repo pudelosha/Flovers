@@ -1,4 +1,5 @@
 import { Platform, PermissionsAndroid, Linking } from "react-native";
+import Config from "react-native-config";
 import messaging, { AuthorizationStatus } from "@react-native-firebase/messaging";
 import notifee, { AndroidImportance, EventType } from "@notifee/react-native";
 import { request, requestWithAccessToken } from "../client";
@@ -129,6 +130,8 @@ function handleOpenFromData(data?: Record<string, string>) {
 }
 
 export function startPushNotifications(): Promise<void> {
+  // The isolated native smoke build has no Firebase project or real push provider.
+  if (Config.E2E_MODE === "true") return Promise.resolve();
   if (started) return Promise.resolve();
   if (startInFlight) return startInFlight;
   const generation = lifecycleGeneration;
@@ -241,6 +244,7 @@ async function beforeDeadline<T>(operation: () => Promise<T>, deadline: number):
 
 /** Best-effort teardown uses only the old access snapshot and has a fixed deadline. */
 export function unregisterPushNotifications(accessToken: string | null): Promise<void> {
+  if (Config.E2E_MODE === "true") return Promise.resolve();
   stopPushNotifications();
   const previousToken = currentPushToken;
   currentPushToken = null;

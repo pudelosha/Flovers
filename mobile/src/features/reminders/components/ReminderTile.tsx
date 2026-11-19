@@ -178,6 +178,7 @@ export default function ReminderTile({
         {/* Content */}
         <View style={s.cardRow}>
           <Pressable
+            testID={`reminder-tile-${reminder.id}`}
             accessible={false}
             style={s.cardBodyPressable}
             onPress={() => {

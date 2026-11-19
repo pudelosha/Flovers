@@ -1,7 +1,11 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
-apply plugin: "com.google.gms.google-services"
+// The separately named, debug-signed smoke APK has no Firebase project.
+def floversE2E = project.findProperty("floversE2E") == "true"
+if (!floversE2E) {
+    apply plugin: "com.google.gms.google-services"
+}
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
@@ -16,6 +20,9 @@ project.ext.envConfigFiles = [
 
 react {
     autolinkLibrariesWithApp()
+    if (floversE2E) {
+        entryFile = file("../../e2e.index.js")
+    }
 }
 
 // Cover direct Gradle/Android Studio builds as well as npm commands.
@@ -98,6 +105,20 @@ android {
                 getDefaultProguardFile("proguard-android.txt"),
                 "proguard-rules.pro"
             )
+        }
+        if (floversE2E) {
+            e2e {
+                initWith debug
+                matchingFallbacks = ["debug"]
+                applicationIdSuffix ".e2e"
+                signingConfig signingConfigs.debug
+                // Bundle actual JS/Hermes into the APK; no Metro dependency.
+                debuggable false
+                buildConfigField "String", "API_BASE", '"http://127.0.0.1:8000"'
+                buildConfigField "String", "PUBLIC_BASE_URL", '"http://127.0.0.1:8000"'
+                buildConfigField "String", "E2E_MODE", '"true"'
+                resValue "string", "build_config_package", "com.flovers.mobile"
+            }
         }
     }
 }
