@@ -10,7 +10,7 @@ export default defineConfig({
   outputDir: '../../e2e-results/browser/artifacts',
   reporter: [
     ['list'],
-    ['junit', { outputFile: '../../e2e-results/browser/results.xml' }],
+    ['junit', { outputFile: '../../e2e-results/browser/results.xml', includeProjectInTestName: true }],
     ['html', { outputFolder: '../../e2e-results/browser/report', open: 'never' }],
   ],
   use: {

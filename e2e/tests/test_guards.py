@@ -34,8 +34,8 @@ class SmokeGuardTests(unittest.TestCase):
                 self.report('<testsuite>'+body+'</testsuite>')
 
     def test_both_browser_projects_and_all_scenarios_are_required(self):
-        cases = ''.join('<testcase name="'+name+'"/>' for name in reports.BROWSER)
-        complete = '<testsuites>'+''.join('<testsuite hostname="'+name+'">'+cases+'</testsuite>' for name in ['desktop', 'mobile'])+'</testsuites>'
+        complete = '<testsuites>'+''.join('<testsuite hostname="'+project+'">'+''.join(
+            '<testcase name="['+project+'] '+name+'"/>' for name in reports.BROWSER)+'</testsuite>' for project in ['desktop', 'mobile'])+'</testsuites>'
         self.assertEqual(self.report(complete, "browser"), 10)
         with self.assertRaises(ValueError):
             self.report(complete.replace('hostname="mobile"', 'hostname="tablet"'), "browser")

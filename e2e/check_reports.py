@@ -24,8 +24,8 @@ def validate(kind, path):
         projects = {suite.get("hostname"): suite for suite in root.iter("testsuite")}
         if set(projects) != {"desktop", "mobile"} or len(cases) != 10:
             raise ValueError("Exactly five browser cases in both required viewports are mandatory")
-        for suite in projects.values():
-            if Counter(c.get("name") for c in suite.iter("testcase")) != Counter(BROWSER):
+        for project, suite in projects.items():
+            if Counter(c.get("name") for c in suite.iter("testcase")) != Counter(f"[{project}] {name}" for name in BROWSER):
                 raise ValueError("A required browser scenario is missing or duplicated")
     else:
         if len(cases) != 2:

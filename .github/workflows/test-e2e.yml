@@ -28,6 +28,10 @@ on:
 permissions:
   contents: read
 
+defaults:
+  run:
+    shell: bash
+
 concurrency:
   group: e2e-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -70,8 +74,10 @@ jobs:
         working-directory: mobile/android
         run: |
           chmod +x gradlew
+          curl --fail --silent --show-error --head https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.9.1/gson-2.9.1.pom \
+            > ../../e2e-results/android/maven-preflight.log
           ./gradlew :app:assembleE2e -PfloversE2E=true -PreactNativeArchitectures=x86_64 \
-            --no-daemon --max-workers=2 --stacktrace 2>&1 | tee ../../e2e-results/android/gradle.log
+            --no-daemon --max-workers=2 --stacktrace --info 2>&1 | tee ../../e2e-results/android/gradle.log
       - name: Verify package identity and retain the exact APK
         run: |
           apk=mobile/android/app/build/outputs/apk/e2e/app-e2e.apk
