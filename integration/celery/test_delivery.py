@@ -150,11 +150,16 @@ def test_worker_crash_recovers_after_lease_expiration(runtime):
 def test_broker_restart_preserves_queued_delivery_and_worker_recovers(runtime):
     job, recipient = invitation()
     worker_pid = runtime.worker[0].pid
+    key = runtime.queue + ":gate"
+    gate = runtime.send("flovers.integration.gate", args=[key])
+    wait_until(lambda: runtime.redis.get(key + ":started"), description="late-ack prefetch barrier")
     with runtime.frozen_worker():
         runtime.send(INVITATIONS)
         assert runtime.queued_count() == 1
         runtime.restart_redis()
         assert runtime.queued_count() == 1
+        runtime.redis.set(key + ":release", "1", ex=120)
+    gate.get(timeout=40)
     wait_until(lambda: status(job, "sent"), description="queued invitation after broker restart")
     runtime.drain()
     assert runtime.worker[0].pid == worker_pid and runtime.worker[0].poll() is None
