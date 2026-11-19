@@ -2,9 +2,9 @@
 
 | Workflow | Automatic execution | Checks | Publication |
 | --- | --- | --- | --- |
-| Backend quality checks | Backend/deployment PRs; shared CI-tool pushes/PRs; called by every backend deploy | Hashed dependency locks, compatibility check, real CPU recognition smoke test, full pytest suite with branch coverage on PostgreSQL 16, model/migration checks, deployment safeguards | None |
-| Website quality checks | Website PRs; mobile/backend translation and shared CI-tool pushes/PRs; called by every website deploy | ESLint, Node content/translation tests with imported-module coverage and Vite production build | None |
-| Mobile quality checks | Mobile and shared CI-tool pushes/PRs; called before a manual Play release | Strict TypeScript, ESLint, full Jest suite with coverage and build-info Node tests | None |
+| Backend quality checks | Backend/deployment PRs; mobile API/type and shared CI-tool/policy pushes/PRs; called by every backend deploy | Hashed dependency locks, real PostgreSQL/compiler preflight, CPU recognition smoke test, full pytest/branch coverage, 13 required concurrency cases, skip policy, migration checks and deployment safeguards | None |
+| Website quality checks | Website PRs; backend, mobile translations and shared CI-tool/policy pushes/PRs; called by every website deploy | ESLint, Node content/translation tests with imported-module coverage, no-skips policy and Vite production build | None |
+| Mobile quality checks | Mobile/backend and shared CI-tool/policy pushes/PRs; called before a manual Play release | Strict TypeScript, ESLint, full Jest/coverage, no-skips policy and build-info Node tests | None |
 
 Each check workflow can also be run manually with `workflow_dispatch`. Backend
 and website image/artifact builds depend on their successful quality job. Manual
@@ -70,17 +70,33 @@ The seven-day diagnostic artifacts contain:
 | Mobile | `jest-results.json`, `coverage/` (JSON, Cobertura XML, HTML), `test-results/summary.md` |
 | Website | `test-results/web.xml`, `v8-coverage/`, `summary.md` |
 
-Skipped cases are visible, not silently counted as passes. Local SQLite skips
-PostgreSQL concurrency checks. Firmware host checks require a C++ compiler and
-ESP32 compilation requires `FLOVERS_TEST_ARDUINO_CLI`; this reporting change does
-not provision those tools or add a skip allowlist. No new coverage-percentage
-threshold is enforced yet. Review the reported baseline before adding gates.
+Skipped cases are visible and governed by [.github/test-policies](test-policies/README.md).
+Backend CI verifies a live connection to its isolated PostgreSQL service and
+checks that `g++` is available. All 13 PostgreSQL concurrency cases must be
+present and passed in the JUnit report; skipped, missing, renamed, deselected,
+failed or errored required cases fail the job. Host C++ checks receive
+`FLOVERS_TEST_CPP=g++`, so a missing compiler cannot silently skip them.
 
-Website consistency tests read `mobile/src/i18n/locales/**` and
-`backend/i18n/locales/**`, so changes there now trigger website checks as well.
-Shared `.github/scripts/**` changes trigger all three quality workflows. These
+The only allowed backend skips are the exact two ESP32 compilation cases with
+their known missing-toolchain reason and documented justification. This preserves
+the existing optional Arduino tests until the dedicated firmware-build lane is
+implemented. No other backend skip is accepted. Mobile and website CI reject all
+skipped/TODO cases. Local SQLite runs can still generate diagnostics without
+`--policy`; applying the backend CI policy to SQLite deliberately fails. No new
+coverage-percentage threshold is enforced until the Linux/PostgreSQL baseline is
+verified. Do not delete required cases or broaden exceptions to make CI green.
+
+Website consistency tests read mobile/backend translations, and its contact
+adapter depends on the API. All `backend/**` changes now trigger mobile and
+website quality checks; mobile API adapters and feature types trigger backend
+checks. Mobile translation changes also trigger website consistency checks.
+Shared `.github/scripts/**` and `.github/test-policies/**` changes trigger all
+three quality workflows. These
 extra triggers do not start VPS/Pages deployment or Play publication. Existing
 deployment triggers and the manual-only mobile publication workflow are unchanged.
+The reciprocal checks exercise existing suites; they are not yet a shared
+consumer/provider wire-contract suite. Changes spanning several inputs may run
+both standalone checks and the existing reusable deployment gates.
 
 `report_tests.py` uses only the Python standard library; mobile/website jobs use
 the Python 3 provided by the pinned Ubuntu 24.04 hosted runner. Its own unit tests
@@ -105,6 +121,8 @@ DJANGO_SETTINGS_MODULE=app.ci_settings python -m pytest -ra --cov=. --cov-config
 python ../.github/scripts/report_tests.py --title 'Backend pytest' \
   --junit test-results/backend.xml --coverage test-results/coverage.json \
   --coverage-kind python --output test-results/summary.md
+# Enforce the CI policy only with a dedicated PostgreSQL instance and host compiler:
+# add --policy ../.github/test-policies/backend.json to the summary command.
 # To exercise PostgreSQL, set CI_DATABASE_URL to a disposable local instance:
 # postgres://flovers_ci:flovers_ci@127.0.0.1:5432/flovers_ci
 
@@ -116,7 +134,8 @@ npm run test:ci
 npm run test:build-info
 python ../.github/scripts/report_tests.py --title 'Mobile Jest tests' \
   --jest jest-results.json --coverage coverage/coverage-summary.json \
-  --coverage-kind jest --output test-results/summary.md
+  --coverage-kind jest --policy ../.github/test-policies/no-skips.json \
+  --output test-results/summary.md
 
 # From web
 npm ci
@@ -126,7 +145,8 @@ npm test
 npm run test:ci
 npm run build
 python ../.github/scripts/report_tests.py --title 'Website tests' \
-  --junit test-results/web.xml --output test-results/summary.md
+  --junit test-results/web.xml --policy ../.github/test-policies/no-skips.json \
+  --output test-results/summary.md
 
 # From the repository root: reporting-tool unit tests
 python -m unittest discover -s .github/scripts/tests -p 'test_*.py'

@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import report_tests
+from collections import Counter
 
 
 class ReportTests(unittest.TestCase):
@@ -110,6 +111,71 @@ class ReportTests(unittest.TestCase):
         with patch.dict(os.environ, {"GITHUB_STEP_SUMMARY": ""}):
             status = report_tests.main(["--title", "Tests", "--junit", str(junit), "--output", str(self.root / "summary.md")])
         self.assertEqual(status, 1)
+
+    def policy(self, allowed=None, required=None):
+        return self.write("policy.json", json.dumps({
+            "format": 1, "allowed_skips": allowed or [], "required_passed": required or [],
+        }))
+
+    def test_policy_requires_the_exact_skip_identity_and_reason(self):
+        policy = self.policy(allowed=[{
+            "test": "firmware::optional", "reason": "Arduino toolchain not installed",
+            "justification": "Pending dedicated firmware-build lane",
+        }])
+        counts = Counter(skipped=1)
+        expected = [("firmware", "optional", "Arduino toolchain not installed")]
+        self.assertEqual(report_tests.policy_violations(policy, counts, expected, {})[0], [])
+        for skip in [("firmware", "different", expected[0][2]), ("firmware", "optional", "Unexpected failure")]:
+            with self.subTest(skip=skip):
+                self.assertIn("Unexpected skipped", report_tests.policy_violations(policy, counts, [skip], {})[0][0])
+
+    def test_missing_skipped_failed_or_error_required_cases_cannot_pass_policy(self):
+        policy = self.policy(required=["locks::race"])
+        for outcome in [None, "skipped", "failed", "error"]:
+            with self.subTest(outcome=outcome):
+                outcomes = {} if outcome is None else {"locks::race": outcome}
+                violations, required_count = report_tests.policy_violations(policy, Counter(), [], outcomes)
+                self.assertEqual(required_count, 1)
+                self.assertIn("Required test did not pass", violations[0])
+        self.assertEqual(report_tests.policy_violations(policy, Counter(passed=1), [], {"locks::race": "passed"})[0], [])
+
+    def test_policy_cannot_allow_a_required_case_to_skip(self):
+        policy = self.policy(required=["locks::race"], allowed=[{
+            "test": "locks::race", "reason": "PostgreSQL required", "justification": "Not acceptable in CI",
+        }])
+        with self.assertRaisesRegex(ValueError, "required test cannot also"):
+            report_tests.policy_violations(policy, Counter(), [], {})
+
+    def test_policy_rejects_todo_cases_and_incomplete_skip_records(self):
+        policy = self.policy()
+        violations, _ = report_tests.policy_violations(policy, Counter(todo=1), [("a.test.ts", "unfinished", "TODO")], {})
+        self.assertIn("Unexpected skipped/TODO", violations[0])
+        violations, _ = report_tests.policy_violations(policy, Counter(skipped=2), [], {})
+        self.assertIn("do not match", violations[0])
+
+    def test_skip_exceptions_need_a_justification_and_unique_identity(self):
+        entry = {"test": "case::one", "reason": "known", "justification": "Tracked follow-up"}
+        for entries in [[{**entry, "justification": ""}], [entry, entry]]:
+            with self.subTest(entries=entries):
+                with self.assertRaises(ValueError):
+                    report_tests.policy_violations(self.policy(allowed=entries), Counter(), [], {})
+
+    def test_main_preserves_counts_and_writes_the_policy_failure_to_the_summary(self):
+        junit = self.write("skip.xml", '<testsuite><testcase classname="locks" name="race"><skipped message="PostgreSQL required"/></testcase></testsuite>')
+        output = self.root / "summary.md"
+        with patch.dict(os.environ, {"GITHUB_STEP_SUMMARY": ""}):
+            status = report_tests.main(["--title", "CI", "--junit", str(junit),
+                                       "--policy", str(self.policy(required=["locks::race"])), "--output", str(output)])
+        self.assertEqual(status, 1)
+        summary = output.read_text(encoding="utf-8")
+        self.assertIn("| 0 | 0 | 0 | 1 | 0 |", summary)
+        self.assertIn("Policy failed", summary)
+        self.assertIn("Required test did not pass", summary)
+
+    def test_duplicate_junit_identities_cannot_satisfy_required_cases_ambiguously(self):
+        junit = self.write("duplicate.xml", '<testsuite><testcase name="same"/><testcase name="same"/></testsuite>')
+        with self.assertRaisesRegex(ValueError, "Duplicate JUnit"):
+            report_tests.junit_results(junit, {})
 
 
 if __name__ == "__main__":

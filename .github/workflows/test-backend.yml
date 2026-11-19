@@ -2,10 +2,13 @@ name: Backend quality checks
 
 on:
   # Application pushes to main already call this workflow through deploy-backend.
-  # Shared reporting-tool changes need checks without starting a deployment.
+  # Client API/type and shared CI changes also need provider checks, without deploying.
   push:
     paths:
+      - "mobile/src/api/**"
+      - "mobile/src/features/**/types/**"
       - ".github/scripts/**"
+      - ".github/test-policies/**"
   pull_request:
     paths:
       - "backend/**"
@@ -14,6 +17,9 @@ on:
       - ".github/workflows/test-backend.yml"
       - ".github/workflows/deploy-backend.yml"
       - ".github/scripts/**"
+      - ".github/test-policies/**"
+      - "mobile/src/api/**"
+      - "mobile/src/features/**/types/**"
   workflow_call:
   workflow_dispatch:
 
@@ -63,6 +69,11 @@ jobs:
           python -m pip check
       - name: Validate CPU wheels and real recognition model
         run: python scripts/check_recognition.py
+      - name: Require the isolated PostgreSQL service and host compiler
+        working-directory: .
+        run: |
+          python .github/scripts/check_ci_postgres.py
+          g++ --version
       - name: Validate models and migration consistency
         run: |
           python manage.py check --tag models
@@ -71,6 +82,8 @@ jobs:
         working-directory: .
         run: python -m unittest discover -s deployment -p 'test_deploy_backend.py'
       - name: Run full application suite on PostgreSQL
+        env:
+          FLOVERS_TEST_CPP: g++
         run: >-
           python -m pytest -ra --durations=10
           --junitxml=test-results/backend.xml
@@ -86,6 +99,7 @@ jobs:
           --title "Backend pytest"
           --junit test-results/backend.xml
           --coverage test-results/coverage.json --coverage-kind python
+          --policy ../.github/test-policies/backend.json
           --coverage-scope "All backend Python source; tests, fixtures, migrations and manage.py excluded. Separate subprocess checks are not merged."
           --output test-results/summary.md
       - name: Upload test results

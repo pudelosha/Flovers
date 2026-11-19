@@ -4,15 +4,19 @@ on:
   push:
     paths:
       - "mobile/**"
+      - "backend/**"
       - ".github/workflows/test-mobile.yml"
       - ".github/workflows/mobile-android-play-internal.yml"
       - ".github/scripts/**"
+      - ".github/test-policies/**"
   pull_request:
     paths:
       - "mobile/**"
+      - "backend/**"
       - ".github/workflows/test-mobile.yml"
       - ".github/workflows/mobile-android-play-internal.yml"
       - ".github/scripts/**"
+      - ".github/test-policies/**"
   workflow_call:
   workflow_dispatch:
 
@@ -53,6 +57,7 @@ jobs:
           --title "Mobile Jest tests"
           --jest jest-results.json
           --coverage coverage/coverage-summary.json --coverage-kind jest
+          --policy ../.github/test-policies/no-skips.json
           --coverage-scope "All src TypeScript/TSX and App.tsx, including unimported files; tests, declarations and generated buildInfo excluded. Native platform code is not measured."
           --output test-results/summary.md
       - name: Upload test results

@@ -6,16 +6,18 @@ on:
   push:
     paths:
       - "mobile/src/i18n/locales/**"
-      - "backend/i18n/locales/**"
+      - "backend/**"
       - ".github/scripts/**"
+      - ".github/test-policies/**"
   pull_request:
     paths:
       - "web/**"
       - ".github/workflows/test-web.yml"
       - ".github/workflows/deploy-web.yml"
       - "mobile/src/i18n/locales/**"
-      - "backend/i18n/locales/**"
+      - "backend/**"
       - ".github/scripts/**"
+      - ".github/test-policies/**"
   workflow_call:
   workflow_dispatch:
 
@@ -55,6 +57,7 @@ jobs:
           python3 ../.github/scripts/report_tests.py
           --title "Website tests"
           --junit test-results/web.xml
+          --policy ../.github/test-policies/no-skips.json
           --coverage-scope "Node coverage in the job log and V8 artifact covers imported config/contact JavaScript only, not React routes, browser UI or the whole website."
           --output test-results/summary.md
       - name: Upload test results and imported-module coverage
