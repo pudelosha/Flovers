@@ -4,6 +4,7 @@ import shlex
 import shutil
 import subprocess
 import ssl
+import json
 
 import pytest
 
@@ -67,15 +68,19 @@ def test_generated_pump_retries_do_not_repeat_physical_execution(tmp_path):
     assert "checks passed" in result.stdout
 
 
+@pytest.mark.firmware_compile
 @pytest.mark.parametrize("pump_enabled", [False, True], ids=["sensors-only", "with-pump"])
 def test_generated_sketch_compiles_with_arduino_preprocessing(tmp_path, pump_enabled):
     cli = os.environ.get("FLOVERS_TEST_ARDUINO_CLI")
     if not cli:
-        pytest.skip("Set FLOVERS_TEST_ARDUINO_CLI to run the ESP32 Arduino build check")
+        pytest.fail("Firmware compilation requires the pinned Arduino CLI; run firmware/ci/provision.py first")
     # Arduino generates prototypes before compiling .ino files. A direct C++
     # compile misses errors caused by prototypes referring to later types.
-    sketch = tmp_path / "flovers_firmware"
-    sketch.mkdir()
+    variant = "with-pump" if pump_enabled else "sensors-only"
+    artifacts = Path(os.environ.get("FLOVERS_TEST_ARDUINO_ARTIFACTS", str(tmp_path))) / variant
+    artifacts.mkdir(parents=True, exist_ok=True)
+    sketch = artifacts / "flovers_firmware"
+    sketch.mkdir(exist_ok=True)
     (sketch / "flovers_firmware.ino").write_text(
         generate_arduino_code(
             base_url="https://api.example.com", secret="not-a-real-secret",
@@ -83,15 +88,32 @@ def test_generated_sketch_compiles_with_arduino_preprocessing(tmp_path, pump_ena
         ),
         encoding="utf-8",
     )
-    result = subprocess.run(
-        [
-            cli, "compile", "--fqbn",
+    output = artifacts / "output"
+    command = [cli]
+    config = os.environ.get("FLOVERS_TEST_ARDUINO_CONFIG")
+    if config:
+        command += ["--config-file", config]
+    command += [
+            "compile", "--fqbn",
             os.environ.get("FLOVERS_TEST_ARDUINO_FQBN", "esp32:esp32:esp32c3:CDCOnBoot=cdc"),
-            "--build-path", str(tmp_path / "build"), str(sketch),
-        ],
-        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=600,
-    )
-    assert result.returncode == 0, result.stdout + result.stderr
+            "--jobs", "2", "--warnings", "all",
+            "--build-path", str(tmp_path / "build"), "--output-dir", str(output), str(sketch),
+        ]
+    (artifacts / "command.json").write_text(json.dumps(command, indent=2), encoding="utf-8")
+    with (artifacts / "compiler.stdout.log").open("wb") as stdout, (artifacts / "compiler.stderr.log").open("wb") as stderr:
+        try:
+            environment = {key: value for key, value in os.environ.items() if not key.startswith("ARDUINO_")}
+            result = subprocess.run(command, env=environment, stdout=stdout, stderr=stderr, timeout=600, check=False)
+        except (OSError, subprocess.TimeoutExpired) as error:
+            (artifacts / "result.json").write_text(json.dumps({"variant":variant,"success":False,"error":str(error)}), encoding="utf-8")
+            raise
+    binaries = [path.name for path in output.glob("*.bin")]
+    success = result.returncode == 0 and bool(binaries) and any(output.glob("*.elf"))
+    (artifacts / "result.json").write_text(json.dumps({"variant":variant,"success":success,
+        "returncode":result.returncode,"fqbn":command[command.index("--fqbn")+1],"binaries":binaries}, indent=2), encoding="utf-8")
+    errors = (artifacts / "compiler.stderr.log").read_text(encoding="utf-8", errors="replace")
+    assert result.returncode == 0, errors[-16000:]
+    assert success, "A successful compile must also produce firmware .bin and .elf artifacts"
 
 
 def test_generated_https_verifies_server_using_valid_trust_anchors():
