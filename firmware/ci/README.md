@@ -82,6 +82,10 @@ The Celery workflow now explicitly selects its existing `test_delivery.py` file.
 Its old repository-wide collection visited the contract suite's unrelated session
 hook: all 11 real-service tests passed but the process then failed at session end.
 Explicit selection preserves all required cases while isolating suite lifecycle hooks.
+The broker-restart test also polls the durable gate result before its existing
+`get`: a pre-restart Pub/Sub subscription could miss the completion event even
+though the worker and invitation had completed. The original 40-second bound and
+all queue, process, delivery and idempotency assertions are preserved.
 
 ## Local commands
 
