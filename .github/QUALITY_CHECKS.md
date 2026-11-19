@@ -175,3 +175,18 @@ See [contract design, matrix and local commands](../contracts/api/README.md).
 The previous mobile baseline is `6f698097ddb17f7740dada6ce37beba1a28ff34e`.
 This standalone check does not modify deployment workflows or branch protection.
 
+## Required ESP32-C3 target compilation
+
+`test-firmware.yml` installs a checksum-verified Arduino CLI 1.6.0, ESP32 core
+3.3.12 and four exact direct/transitive sensor library versions. It compiles both
+generated firmware variants using the existing C3/USB CDC target. Both exact JUnit
+identities and `.bin`/`.elf` outputs are required; no skip exception remains.
+Compiler/installation logs, sketches, binaries and target/lock provenance are uploaded.
+See [pins, target configuration, commands and limitations](../firmware/ci/README.md).
+
+The two Arduino cases run in the dedicated lane. The backend lane selects all
+other tests with `-m "not firmware_compile"` and permits no skips. Its exact
+required-case list now includes the 21 existing host C++ checks as well as the
+13 PostgreSQL concurrency cases. No test was removed or weakened, and production
+deployment workflows and mobile publication remain unchanged.
+

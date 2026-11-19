@@ -70,11 +70,18 @@ The existing **21 host C++ checks** remain in the normal backend suite and are
 unchanged. They test payload and pump retry/execution semantics; target compilation
 adds preprocessing/linking evidence and does not replace those behavioral checks.
 
-The initial review commit retains the two historical backend skip exceptions until
-both hosted firmware variants pass. A follow-up commit removes them after hosted
-verification, with the normal backend lane selecting non-firmware cases and the
-dedicated lane requiring the two target builds. No production deployment workflow
-or required host C++ setting is changed.
+Both historical Arduino skip exceptions were removed **after two independent clean
+hosted firmware runs passed both variants**. The backend lane selects
+`-m "not firmware_compile"`; the dedicated lane requires the two target builds.
+No tests are deleted. Both lanes allow zero skips; the backend additionally requires
+all 21 existing host C++ cases by their exact JUnit identities, alongside the 13
+PostgreSQL concurrency cases. No production deployment workflow or host compiler
+setting is changed.
+
+The Celery workflow now explicitly selects its existing `test_delivery.py` file.
+Its old repository-wide collection visited the contract suite's unrelated session
+hook: all 11 real-service tests passed but the process then failed at session end.
+Explicit selection preserves all required cases while isolating suite lifecycle hooks.
 
 ## Local commands
 
@@ -86,8 +93,7 @@ python firmware/ci/provision.py --root /tmp/flovers-esp32 --results /tmp/flovers
 ```
 
 Set the four `FLOVERS_TEST_ARDUINO_*` values from the generated
-`environment.json`, set `FLOVERS_REQUIRE_FIRMWARE=1` and
-`DJANGO_SETTINGS_MODULE=app.ci_settings`, then from `backend` run:
+`environment.json` and set `DJANGO_SETTINGS_MODULE=app.ci_settings`, then from `backend` run:
 
 ```sh
 python -m pytest readings/tests/test_codegen.py -m firmware_compile -ra --junitxml=/tmp/flovers-firmware-results/firmware.xml
@@ -96,6 +102,10 @@ python -m pytest readings/tests/test_codegen.py -m firmware_compile -ra --junitx
 Use a fresh dedicated directory and sufficient free space. Do not point this
 provisioner at your Arduino IDE profile. The CI workflow exports the environment
 automatically through `GITHUB_ENV`.
+
+Run the normal local backend suite with `python -m pytest -m "not firmware_compile"`
+when the target compiler is not provisioned. Selecting a firmware case without its
+compiler now fails rather than skipping.
 
 ## Limits
 

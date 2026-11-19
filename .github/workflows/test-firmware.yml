@@ -9,6 +9,7 @@ on:
       - "backend/.python-version"
       - "backend/pytest.ini"
       - "backend/app/ci_settings.py"
+      - "backend/app/urls.py"
       - "web/src/assets/firmware-example.ino"
       - "mobile/src/api/services/readings.service.ts"
       - "mobile/src/features/readings/types/**"
@@ -24,6 +25,7 @@ on:
       - "backend/.python-version"
       - "backend/pytest.ini"
       - "backend/app/ci_settings.py"
+      - "backend/app/urls.py"
       - "web/src/assets/firmware-example.ino"
       - "mobile/src/api/services/readings.service.ts"
       - "mobile/src/features/readings/types/**"
@@ -36,6 +38,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: firmware-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   compile:
     name: Required ESP32-C3 sketches
@@ -43,7 +49,6 @@ jobs:
     timeout-minutes: 45
     env:
       DJANGO_SETTINGS_MODULE: app.ci_settings
-      FLOVERS_REQUIRE_FIRMWARE: "1"
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7

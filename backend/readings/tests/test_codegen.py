@@ -73,9 +73,7 @@ def test_generated_pump_retries_do_not_repeat_physical_execution(tmp_path):
 def test_generated_sketch_compiles_with_arduino_preprocessing(tmp_path, pump_enabled):
     cli = os.environ.get("FLOVERS_TEST_ARDUINO_CLI")
     if not cli:
-        if os.environ.get("FLOVERS_REQUIRE_FIRMWARE") == "1":
-            pytest.fail("The mandatory firmware lane requires a provisioned Arduino CLI")
-        pytest.skip("Set FLOVERS_TEST_ARDUINO_CLI to run the ESP32 Arduino build check")
+        pytest.fail("Firmware compilation requires the pinned Arduino CLI; run firmware/ci/provision.py first")
     # Arduino generates prototypes before compiling .ino files. A direct C++
     # compile misses errors caused by prototypes referring to later types.
     variant = "with-pump" if pump_enabled else "sensors-only"
@@ -104,7 +102,8 @@ def test_generated_sketch_compiles_with_arduino_preprocessing(tmp_path, pump_ena
     (artifacts / "command.json").write_text(json.dumps(command, indent=2), encoding="utf-8")
     with (artifacts / "compiler.stdout.log").open("wb") as stdout, (artifacts / "compiler.stderr.log").open("wb") as stderr:
         try:
-            result = subprocess.run(command, stdout=stdout, stderr=stderr, timeout=600, check=False)
+            environment = {key: value for key, value in os.environ.items() if not key.startswith("ARDUINO_")}
+            result = subprocess.run(command, env=environment, stdout=stdout, stderr=stderr, timeout=600, check=False)
         except (OSError, subprocess.TimeoutExpired) as error:
             (artifacts / "result.json").write_text(json.dumps({"variant":variant,"success":False,"error":str(error)}), encoding="utf-8")
             raise
