@@ -176,6 +176,13 @@ See [contract design, matrix and local commands](../contracts/api/README.md).
 The previous mobile baseline is `6f698097ddb17f7740dada6ce37beba1a28ff34e`.
 This standalone check does not modify deployment workflows or branch protection.
 
+## High-risk behavior coverage
+
+P1-A adds adapter and screen behavior coverage to the existing backend/mobile
+jobs, plus expired-token and revoked-sharing provider/client cases. See the
+[coverage matrix and boundaries](P1_A_COVERAGE.md). No deployment workflow or
+coverage threshold changes are involved.
+
 ## Required ESP32-C3 target compilation
 
 `test-firmware.yml` installs a checksum-verified Arduino CLI 1.6.0, ESP32 core
