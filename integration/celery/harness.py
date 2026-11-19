@@ -151,9 +151,11 @@ class Runtime:
 
     def queued_count(self):
         # Kombu accounts for Redis transport prefixes and priority-list keys.
-        # Use its public passive declaration metadata instead of guessing a key.
+        # Use its public declaration metadata instead of guessing a key. The
+        # pinned Redis prefix wrapper omits EXISTS, so passive probes are wrong;
+        # idempotent declaration reports the real LLEN without that EXISTS probe.
         with app.connection_for_write() as connection:
-            return connection.default_channel.queue_declare(queue=self.queue, passive=True).message_count
+            return connection.default_channel.queue_declare(queue=self.queue).message_count
 
     @staticmethod
     def messages(recipient):
