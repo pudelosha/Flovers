@@ -149,6 +149,12 @@ class Runtime:
         self.redis.connection_pool.disconnect()
         wait_redis(self.redis)
 
+    def queued_count(self):
+        # Kombu accounts for Redis transport prefixes and priority-list keys.
+        # Use its public passive declaration metadata instead of guessing a key.
+        with app.connection_for_write() as connection:
+            return connection.default_channel.queue_declare(queue=self.queue, passive=True).message_count
+
     @staticmethod
     def messages(recipient):
         return [m for m in mailpit("messages?limit=1000")["messages"]

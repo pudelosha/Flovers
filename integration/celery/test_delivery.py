@@ -150,12 +150,11 @@ def test_worker_crash_recovers_after_lease_expiration(runtime):
 def test_broker_restart_preserves_queued_delivery_and_worker_recovers(runtime):
     job, recipient = invitation()
     worker_pid = runtime.worker[0].pid
-    key = f"flovers-it-{runtime.run}:" + runtime.queue
     with runtime.frozen_worker():
         runtime.send(INVITATIONS)
-        assert runtime.redis.llen(key) == 1
+        assert runtime.queued_count() == 1
         runtime.restart_redis()
-        assert runtime.redis.llen(key) == 1
+        assert runtime.queued_count() == 1
     wait_until(lambda: status(job, "sent"), description="queued invitation after broker restart")
     runtime.drain()
     assert runtime.worker[0].pid == worker_pid and runtime.worker[0].poll() is None
