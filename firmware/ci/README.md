@@ -115,3 +115,8 @@ power-loss recovery or TLS/server interoperability. Hardware tests remain a
 separately approved activity. The standalone workflow fails on compilation errors;
 making its check mandatory for merging requires repository branch protection,
 which this change does not alter.
+
+The existing generated code redefines the sensor library's `BME280_ADDRESS` macro
+to select address `0x76`; `--warnings all` makes that pre-existing warning visible.
+Both variants compile successfully with it. The address and generated device logic
+are deliberately unchanged; physical sensor addressing still depends on wiring.

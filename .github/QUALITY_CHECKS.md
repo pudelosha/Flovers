@@ -9,9 +9,10 @@ execution and the covered failure/recovery boundaries.
 
 | Workflow | Automatic execution | Checks | Publication |
 | --- | --- | --- | --- |
-| Backend quality checks | Backend/deployment PRs; mobile API/type and shared CI-tool/policy pushes/PRs; called by every backend deploy | Hashed dependency locks, real PostgreSQL/compiler preflight, CPU recognition smoke test, full pytest/branch coverage, 13 required concurrency cases, skip policy, migration checks and deployment safeguards | None |
+| Backend quality checks | Backend/deployment PRs; firmware, mobile API/type and shared CI-tool/policy pushes/PRs; called by every backend deploy | Hashed dependency locks, PostgreSQL/compiler preflight, CPU recognition, non-firmware pytest/coverage, 34 required concurrency/host C++ cases, zero skips, migrations and deployment safeguards | None |
 | Website quality checks | Website PRs; backend, mobile translations and shared CI-tool/policy pushes/PRs; called by every website deploy | ESLint, Node content/translation tests with imported-module coverage, no-skips policy and Vite production build | None |
 | Mobile quality checks | Mobile/backend and shared CI-tool/policy pushes/PRs; called before a manual Play release | Strict TypeScript, ESLint, full Jest/coverage, no-skips policy and build-info Node tests | None |
+| ESP32 firmware compilation | Generator/protocol, firmware lock, dependency, target and CI changes | Pinned isolated CLI/core/libraries, both generated C3 sketches, exact required test identities, zero skips, `.bin`/`.elf` artifacts | None |
 
 Each check workflow can also be run manually with `workflow_dispatch`. Backend
 and website image/artifact builds depend on their successful quality job. Manual
@@ -84,10 +85,10 @@ present and passed in the JUnit report; skipped, missing, renamed, deselected,
 failed or errored required cases fail the job. Host C++ checks receive
 `FLOVERS_TEST_CPP=g++`, so a missing compiler cannot silently skip them.
 
-The only allowed backend skips are the exact two ESP32 compilation cases with
-their known missing-toolchain reason and documented justification. This preserves
-the existing optional Arduino tests until the dedicated firmware-build lane is
-implemented. No other backend skip is accepted. Mobile and website CI reject all
+No backend skip is accepted. The two ESP32 target cases are required in the
+dedicated firmware lane, while the normal backend lane selects non-firmware cases.
+The exact 21 host C++ checks are required alongside the concurrency cases.
+Mobile and website CI reject all
 skipped/TODO cases. Local SQLite runs can still generate diagnostics without
 `--policy`; applying the backend CI policy to SQLite deliberately fails. No new
 coverage-percentage threshold is enforced until the Linux/PostgreSQL baseline is
@@ -118,11 +119,11 @@ python -m pip install --require-hashes --only-binary=:all: -r requirements.txt
 python -m pip check
 python scripts/check_recognition.py
 DJANGO_SETTINGS_MODULE=app.ci_settings python manage.py makemigrations --check --dry-run --skip-checks
-DJANGO_SETTINGS_MODULE=app.ci_settings python -m pytest
+DJANGO_SETTINGS_MODULE=app.ci_settings python -m pytest -m "not firmware_compile"
 # For CI-equivalent reporting (application dependencies must already be installed):
 python -m pip install --require-hashes --only-binary=:all: -r requirements-ci.txt
 python -m pip check
-DJANGO_SETTINGS_MODULE=app.ci_settings python -m pytest -ra --cov=. --cov-config=.coveragerc \
+DJANGO_SETTINGS_MODULE=app.ci_settings python -m pytest -m "not firmware_compile" -ra --cov=. --cov-config=.coveragerc \
   --junitxml=test-results/backend.xml --cov-report=json:test-results/coverage.json \
   --cov-report=xml:test-results/coverage.xml --cov-report=html:test-results/coverage-html
 python ../.github/scripts/report_tests.py --title 'Backend pytest' \

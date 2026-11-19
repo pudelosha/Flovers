@@ -3,14 +3,15 @@
 Quality summaries enforce these policies after reading the real test reports.
 No coverage percentage threshold is introduced.
 
-- `backend.json` requires all 13 PostgreSQL concurrency cases to be collected and
+- `backend.json` requires all 13 PostgreSQL concurrency cases and 21 host C++ cases to be collected and
   pass. Missing, renamed, deselected, skipped, failed or errored required cases
   make the job fail. The preflight also checks a live connection to the isolated
   `flovers_ci` PostgreSQL database, so SQLite cannot silently replace it.
-- Every backend skip must match an exact test identity **and** exact reason.
-  The only current exceptions are the two Arduino preprocessing builds, pending
-  their dedicated ESP32 toolchain lane. Each exception states its justification.
-  No PostgreSQL or host C++ skip is allowed. The existing tests remain unchanged.
+- `backend.json` allows no skips. The backend lane selects non-firmware cases;
+  no existing test is deleted.
+- `firmware.json` requires both generated ESP32-C3 Arduino preprocessing builds
+  and allows no skips. Their historical exceptions were removed after successful
+  independent hosted builds. See [firmware setup and evidence](../../firmware/ci/README.md).
 - `no-skips.json` rejects all skipped and TODO cases in mobile and website CI.
 
 These checks do not claim that mocks are full-stack tests or replace a real
@@ -26,5 +27,6 @@ avoid broad patterns or blanket permission to skip database/compiler cases.
 Changes to policies or reporting tools trigger all quality workflows, without
 starting a deployment or mobile publication. Backend changes also trigger client
 checks; mobile API/type changes trigger backend checks. This catches regressions
-in the existing independent suites, but is not yet a provider-verified wire
-contract suite (that remains later work).
+in the existing independent suites. The additional
+[provider-verified contract lane](../../contracts/api/README.md) verifies current
+and previous-supported mobile adapters against actual Django responses.
