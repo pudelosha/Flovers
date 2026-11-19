@@ -25,7 +25,7 @@ class ToolchainSafetyTests(unittest.TestCase):
         (data / "library_index.json").write_text(json.dumps({"libraries":self.lock["libraries"]}), encoding="utf-8")
 
     def installed(self):
-        cores = {"platforms":[{"id":"esp32:esp32","installed":self.lock["board"]["platform"]["version"]}]}
+        cores = {"platforms":[{"id":"esp32:esp32","installed_version":self.lock["board"]["platform"]["version"]}]}
         libraries = {"installed_libraries":[{"library":{"name":item["name"],"version":item["version"]}} for item in self.lock["libraries"]]}
         return cores,libraries
 
@@ -72,7 +72,7 @@ class ToolchainSafetyTests(unittest.TestCase):
     def test_missing_or_wrong_core_is_rejected(self):
         cores,libraries=self.installed()
         provision.verify_installed(self.lock,cores,libraries)
-        for bad in [{}, {"platforms":[{"id":"esp32:esp32","installed":"wrong"}]}]:
+        for bad in [{}, {"platforms":[{"id":"esp32:esp32","installed_version":"wrong"}]}]:
             with self.assertRaisesRegex(ValueError,"core"):
                 provision.verify_installed(self.lock,bad,libraries)
 
@@ -93,6 +93,7 @@ class ToolchainSafetyTests(unittest.TestCase):
                 provision.Provisioner(root,root/"results")
             self.assertEqual(existing.read_text(),"keep")
             self.assertFalse((root/"arduino-cli.json").exists())
+            self.assertEqual({p.name for p in root.iterdir()},{"personal-file"})
 
     def test_personal_arduino_environment_cannot_override_isolation(self):
         with tempfile.TemporaryDirectory() as folder, patch.dict(os.environ,{"ARDUINO_DIRECTORIES_DATA":"personal-profile"}):

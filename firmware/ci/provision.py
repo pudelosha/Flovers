@@ -83,7 +83,7 @@ def verify_indexes(lock, data):
 
 def verify_installed(lock, cores, libraries):
     expected_core = lock["board"]["platform"]["version"]
-    if not any(p["id"] == "esp32:esp32" and p["installed"] == expected_core for p in cores.get("platforms", [])):
+    if not any(p["id"] == "esp32:esp32" and p.get("installed_version") == expected_core for p in cores.get("platforms", [])):
         raise ValueError("The pinned ESP32 core is not installed")
     actual = {item["library"]["name"]: item["library"]["version"] for item in libraries.get("installed_libraries", [])}
     expected = {item["name"]: item["version"] for item in lock["libraries"]}
@@ -95,11 +95,11 @@ class Provisioner:
     def __init__(self, root, results):
         self.root = root.resolve()
         self.results = results.resolve()
-        self.results.mkdir(parents=True, exist_ok=True)
         marker = self.root / "flovers-firmware-ci.json"
         if self.root.exists() and any(self.root.iterdir()) and not marker.is_file():
             raise ValueError("Refusing to provision into an existing non-CI directory")
         self.root.mkdir(parents=True, exist_ok=True)
+        self.results.mkdir(parents=True, exist_ok=True)
         marker.write_text('{"purpose":"isolated Flovers firmware CI"}\n', encoding="utf-8")
         self.config = self.root / "arduino-cli.json"
         self.data = self.root / "data"
