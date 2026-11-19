@@ -138,7 +138,7 @@ def test_invalid_token_is_retired_but_transient_error_and_other_users_are_preser
     assert not InboxNotification.objects.filter(channel="push").exists()
 
 
-@pytest.mark.parametrize("language", ["en", "unsupported-locale"])
+@pytest.mark.parametrize("language", ["en", "xx"])
 def test_unsupported_locale_falls_back_to_english(delivery, language):
     ProfileSettings.objects.filter(user=delivery.owner).update(language=language)
     send("moisture_alert", delivery.device)
