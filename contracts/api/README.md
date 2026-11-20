@@ -32,6 +32,7 @@ into the business layer; this lane does not mount a React screen.
 | --- | --- |
 | Completion and XP | Due/overdue/future; metadata present/absent; duplicate completion; caregiver, view-only, expired, unrelated and anonymous access; invalid dates; awarded/zero XP and next task. |
 | Progression | Initial account, completion crossing a level boundary, maximum level, anonymous rejection; actual `/profile/progression/` envelope. |
+| Authentication and revocation (P1-A) | Expired JWTs on completion, progression, plant and device details; revoked grants on completion, device details and pump scheduling. Both client generations preserve the provider's status and complete error body. |
 | Photos | Definition fallback, no definition/photo, real upload/framing update, actual authenticated JPEG bytes/headers, shared viewing and revoked/expired/anonymous access, replacement conflict. |
 | Journal | Mixed task/photo feed, empty, two-page traversal with stable ordering/no duplicates, server filtering, shared/revoked access, invalid cursor; photo create/edit, seven-day admission limit, detail with/without navigation; previous client's three-endpoint history path. |
 | Sharing | Direction, roles, expiry, owner revision update and stale revision error; recipients cannot update owner grants. |

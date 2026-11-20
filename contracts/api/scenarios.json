@@ -1556,6 +1556,119 @@
         "current"
       ],
       "error": 409
+    },
+    {
+      "id": "plant-expired-token",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-expired-token",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "progression-expired-token",
+      "operation": "progression",
+      "request": {
+        "method": "GET",
+        "path": "/profile/progression/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "complete-expired-token",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-revoked-access",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "revoked"
+      },
+      "error": 404,
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "complete-revoked-access",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "revoked"
+      },
+      "error": 404,
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "pump-revoked-access",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "revoked"
+      },
+      "error": 404,
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ]
     }
   ]
 }

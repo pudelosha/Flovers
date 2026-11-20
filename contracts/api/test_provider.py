@@ -71,8 +71,11 @@ def scene(settings, tmp_path):
 def client_for(s, actor):
     client = APIClient()
     if actor != "anonymous":
-        user = s.users["viewer" if actor == "revoked" else actor]
-        client.credentials(HTTP_AUTHORIZATION="Bearer " + str(AccessToken.for_user(user)))
+        user = s.users["viewer" if actor == "revoked" else "owner" if actor == "expired-token" else actor]
+        token = AccessToken.for_user(user)
+        if actor == "expired-token":
+            token.set_exp(lifetime=timedelta(seconds=-1))
+        client.credentials(HTTP_AUTHORIZATION="Bearer " + str(token))
     return client
 
 

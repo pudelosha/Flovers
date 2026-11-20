@@ -136,7 +136,12 @@ for (const edition of Object.keys(clients)) {
           expect(failure).toBeInstanceOf(Error);
           if (['contacts','invite','invite-cancel','contact-invite','sharing','share-update'].includes(c.operation)) {
             expect(failure.reason).toBe(c.expect.code || (c.error === 404 ? 'notFound' : 'unavailable'));
-          } else expect(failure.status).toBe(c.error);
+          } else {
+            expect(failure.status).toBe(c.error);
+            if (c.id.endsWith('-expired-token') || c.id.endsWith('-revoked-access')) {
+              expect(failure.body).toEqual(bundle.cases[c.id].exchanges[0].response.body);
+            }
+          }
         } else {
           const result = await execute(c, edition, api);
           const wire = bundle.cases[c.id].exchanges[0].response.body;
