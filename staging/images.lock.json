@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "images": {
+    "postgres": {
+      "tag": "postgres:16-alpine",
+      "reference": "postgres@sha256:1d5b02d3a9941fbd52437db4107f8c52d6297dac553ca1e5c299ebb3756b4857"
+    },
+    "redis": {
+      "tag": "redis:7.4.7-alpine",
+      "reference": "redis@sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf"
+    }
+  }
+}
