@@ -1,0 +1,126 @@
+x-environment: &environment
+  FLOVERS_STAGING: "1"
+  FLOVERS_STAGING_RUN: ${FLOVERS_STAGING_RUN:?Unique GitHub run required}
+  DJANGO_SETTINGS_MODULE: staging.settings
+  PYTHONPATH: /verification:/app
+  LOAD_DOTENV: "False"
+  DATABASE_URL: postgresql://flovers_stage:synthetic-only@postgres:5432/flovers_stage
+  CELERY_BROKER_URL: redis://redis:6379/0
+  CELERY_RESULT_BACKEND: redis://redis:6379/1
+  THROTTLE_CACHE_URL: redis://redis:6379/2
+  PRIVATE_MEDIA_ROOT: /app/private-media
+  FCM_SERVICE_ACCOUNT_PATH: ""
+  GOOGLE_APPLICATION_CREDENTIALS: ""
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUNBUFFERED: "1"
+x-labels: &labels
+  flovers.staging: disposable
+  flovers.staging.run: ${FLOVERS_STAGING_RUN}
+x-app: &app
+  image: ${FLOVERS_STAGE_IMAGE:?Immutable application image ID required}
+  pull_policy: never
+  environment: *environment
+  user: "10001:10001"
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: [/tmp]
+  networks: [isolated]
+  volumes:
+    - ./../staging:/verification/staging:ro
+    - ./../deployment:/verification/deployment:ro
+    - private:/app/private-media
+    - media:/app/media
+    - static:/app/staticfiles
+    - state:/state
+    - ${FLOVERS_STAGE_RESULTS:?Results directory required}:/results
+x-health: &health
+  interval: 5s
+  timeout: 8s
+  retries: 10
+  start_period: 15s
+services:
+  postgres:
+    image: ${FLOVERS_STAGE_POSTGRES:?Pinned PostgreSQL digest required}
+    pull_policy: never
+    environment:
+      POSTGRES_DB: flovers_stage
+      POSTGRES_USER: flovers_stage
+      POSTGRES_PASSWORD: synthetic-only
+    networks: [isolated]
+    volumes: [database:/var/lib/postgresql/data]
+    labels:
+      <<: *labels
+      flovers.staging.role: postgres
+    healthcheck:
+      <<: *health
+      test: [CMD-SHELL, "pg_isready -U flovers_stage -d flovers_stage"]
+  redis:
+    image: ${FLOVERS_STAGE_REDIS:?Pinned Redis digest required}
+    pull_policy: never
+    command: [redis-server, --appendonly, "yes"]
+    networks: [isolated]
+    labels:
+      <<: *labels
+      flovers.staging.role: redis
+    healthcheck:
+      <<: *health
+      test: [CMD, redis-cli, ping]
+  init:
+    <<: *app
+    user: "0:0"
+    cap_add: [CHOWN, DAC_OVERRIDE, FOWNER]
+    profiles: [tools]
+    command: [python, -m, staging.init_storage]
+    labels:
+      <<: *labels
+      flovers.staging.role: init
+  verify:
+    <<: *app
+    profiles: [tools]
+    entrypoint: [python]
+    labels:
+      <<: *labels
+      flovers.staging.role: verify
+  web:
+    <<: *app
+    command: [gunicorn, app.wsgi:application, --bind, "0.0.0.0:8000", --workers, "2", --threads, "2", --timeout, "20", --access-logfile, "-", --error-logfile, "-"]
+    labels:
+      <<: *labels
+      flovers.staging.role: web
+    healthcheck:
+      <<: *health
+      test: [CMD, python, -m, staging.health, web]
+  worker:
+    <<: *app
+    command: [celery, -A, app, worker, --loglevel=INFO, --hostname=staging@worker, --concurrency=1]
+    labels:
+      <<: *labels
+      flovers.staging.role: worker
+    healthcheck:
+      <<: *health
+      test: [CMD, python, -m, staging.health, worker]
+  beat:
+    <<: *app
+    command: [celery, -A, app, beat, --loglevel=INFO, --schedule=/tmp/staging-beat]
+    labels:
+      <<: *labels
+      flovers.staging.role: beat
+    healthcheck:
+      <<: *health
+      test: [CMD, python, -m, staging.health, beat]
+networks:
+  isolated:
+    internal: true
+    labels: *labels
+volumes:
+  database:
+    labels: *labels
+  private:
+    labels: *labels
+  media:
+    labels: *labels
+  static:
+    labels: *labels
+  state:
+    labels: *labels
