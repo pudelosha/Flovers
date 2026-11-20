@@ -1,5 +1,12 @@
 # Automated quality checks
 
+The separate [real Celery integration lane](../integration/celery/README.md)
+adds disposable PostgreSQL 16, Redis, a non-eager prefork worker, Beat and SMTP
+capture. It requires all 11 integration cases to pass with no skips and uploads
+worker/Beat/service diagnostics. It does not change the fast suites, production
+deployment gates or manual-only Play publication. See its README for safe local
+execution and the covered failure/recovery boundaries.
+
 | Workflow | Automatic execution | Checks | Publication |
 | --- | --- | --- | --- |
 | Backend quality checks | Backend/deployment PRs; mobile API/type and shared CI-tool/policy pushes/PRs; called by every backend deploy | Hashed dependency locks, real PostgreSQL/compiler preflight, CPU recognition smoke test, full pytest/branch coverage, 13 required concurrency cases, skip policy, migration checks and deployment safeguards | None |
