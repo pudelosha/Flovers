@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "allowed_skips": [],
+  "required_passed": [
+    "staging.rehearsal::exact_image_build",
+    "staging.rehearsal::isolated_services",
+    "staging.rehearsal::previous_schema_fixture",
+    "staging.rehearsal::backup_restore",
+    "staging.rehearsal::existing_media_checkpoint",
+    "staging.rehearsal::forward_migrations",
+    "staging.rehearsal::constraints_and_indexes",
+    "staging.rehearsal::idempotent_startup",
+    "staging.rehearsal::web_worker_beat_readiness",
+    "staging.rehearsal::api_permission_boundaries",
+    "staging.rehearsal::media_integrity",
+    "staging.rehearsal::read_only_smoke",
+    "staging.rehearsal::dependency_outage_recovery",
+    "staging.rehearsal::same_image_redeployment",
+    "staging.rehearsal::runtime_isolation",
+    "staging.rehearsal::cleanup"
+  ]
+}
