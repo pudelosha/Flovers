@@ -108,8 +108,11 @@ android {
         }
         if (floversE2E) {
             e2e {
-                initWith debug
-                matchingFallbacks = ["debug"]
+                // Native app code and prebuilt React/SVG libraries must agree on
+                // release/debug C++ layouts. A bundled, non-debuggable app cannot
+                // consume debug fallback libraries safely under Fabric.
+                initWith release
+                matchingFallbacks = ["release"]
                 applicationIdSuffix ".e2e"
                 signingConfig signingConfigs.debug
                 // Bundle actual JS/Hermes into the APK; no Metro dependency.

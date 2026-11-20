@@ -18,7 +18,7 @@ and checksum-verified before extraction. Unexpected installed revisions fail.
   revision 9, Pixel 2 profile, two cores, 2 GB RAM, headless SwiftShader/KVM.
 - Maestro CLI **2.12.1**, no Cloud account, analytics or AI analysis.
 - Playwright **1.65.1**, bundled Chromium **159.0.8154.6**, revision **1255**.
-  Projects: desktop 1280Ă—900 and mobile Chromium 390Ă—844 with touch emulation.
+  Projects: desktop 1280x900 and mobile Chromium 390x844 with touch emulation.
 
 ## Required native journeys
 
@@ -44,7 +44,7 @@ readiness, with explicit deadlines.
 ## Isolation
 
 The opt-in Gradle `-PfloversE2E=true` creates `assembleE2e` only, with application
-ID `com.flovers.mobile.e2e`, known debug signing and bundled real JS/Hermes. It
+ID `com.flovers.mobile.e2e`, known debug signing, release-matched native libraries and bundled real JS/Hermes. It
 does not require Metro, release keys or Google services configuration. Default
 debug and release behavior remains unchanged.
 
@@ -73,8 +73,8 @@ No external test reset/seed endpoints are exposed.
 Five scenarios run in **both** viewport projects against the actual Vite build:
 
 1. Homepage, root redirect, branding and every rendered hero image.
-2. Real desktop/mobile menu navigation: Documentation â†’ Schemas â†’ FAQ â†’ Home.
-3. EN â†’ PL â†’ EN language switching preserves the documentation route.
+2. Real desktop/mobile menu navigation: Documentation -> Schemas -> FAQ -> Home.
+3. EN -> PL -> EN language switching preserves the documentation route.
 4. Terms, Privacy Policy and Contact navigation; contact email control; the
    current intentionally disabled store badges have no navigable destinations.
 5. Responsive header/content, mobile menu and no horizontal page overflow across
