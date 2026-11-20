@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "allowed_skips": [
+    {
+      "test": "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[sensors-only]",
+      "reason": "Set FLOVERS_TEST_ARDUINO_CLI to run the ESP32 Arduino build check",
+      "justification": "ESP32 Arduino CLI, board core and sensor libraries are not provisioned yet; the dedicated firmware-build lane is follow-up work. Host C++ checks remain required."
+    },
+    {
+      "test": "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[with-pump]",
+      "reason": "Set FLOVERS_TEST_ARDUINO_CLI to run the ESP32 Arduino build check",
+      "justification": "ESP32 Arduino CLI, board core and sensor libraries are not provisioned yet; the dedicated firmware-build lane is follow-up work. Host C++ checks remain required."
+    }
+  ],
+  "required_passed": [
+    "contacts.tests.test_concurrency::test_reversed_initial_invitations_create_exactly_one_pair",
+    "contacts.tests.test_concurrency::test_simultaneous_acceptance_is_idempotent",
+    "contacts.tests.test_concurrency::test_simultaneous_private_alias_updates_preserve_both_names",
+    "contacts.tests.test_concurrency::test_concurrent_senders_cannot_exceed_recipient_queue_budget",
+    "contacts.tests.test_concurrency::test_concurrent_requests_cannot_exceed_sender_queue_budget",
+    "contacts.tests.test_concurrency::test_concurrent_workers_claim_one_invitation_delivery",
+    "plant_instances.tests.test_journal_photos::test_concurrent_admission_has_one_weekly_slot_and_idempotent_retry[False]",
+    "plant_instances.tests.test_journal_photos::test_concurrent_admission_has_one_weekly_slot_and_idempotent_retry[True]",
+    "plant_instances.tests.test_journal_photos::test_concurrent_edits_cannot_overwrite_each_other",
+    "profiles.tests.test_progression::test_simultaneous_completions_share_one_account_reward_order",
+    "reminders.tests.test_shared_tasks::test_owner_and_caregiver_simultaneously_complete_one_canonical_task",
+    "reminders.tests.test_undo_completion::test_concurrent_undo_reverses_xp_only_once_on_postgresql",
+    "sharing.tests.test_concurrency::test_simultaneous_forms_with_the_same_revision_cannot_overwrite_each_other"
+  ]
+}
