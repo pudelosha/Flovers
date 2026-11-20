@@ -61,13 +61,13 @@ def migrate_to(targets):
     return executor.loader.project_state([node for node in requested if node[1] is not None]).apps
 
 
-def snapshot(registry):
+def snapshot(registry, *, migration_projection=False):
     """Every existing application PK and row, with explicitly mutable migration fields excluded."""
     records = {}
     allowed_changes = {
         "profiles.profilesettings": {"background"},
         "reminders.remindertask": {"completed_by_id"},
-    }
+    } if migration_projection else {}
     for model in registry.get_models():
         if model._meta.app_label not in APPLICATIONS or not model._meta.managed:
             continue
@@ -146,7 +146,7 @@ def legacy():
         status="executed", executed_at=FIXED, created_by_user_id=501, duration_seconds=20)
     jpeg(Path(settings.MEDIA_ROOT) / "plants/thumb/staging.jpg", (64, 64))
     jpeg(Path(settings.MEDIA_ROOT) / "plants/hero/staging.jpg")
-    save(STATE / "legacy.json", snapshot(registry))
+    save(STATE / "legacy.json", snapshot(registry, migration_projection=True))
     save(RESULTS / "legacy-schema.json", {"source_commit": baseline["commit"],
         "application_migrations": len(expected_nodes), "applied_migrations": len(applied),
         "accounts": 3, "plants": 1, "tasks": 2, "readings": 1, "schema": "previous-supported"})
@@ -183,7 +183,7 @@ def media_checkpoint():
     get("plant_instances", "PlantImage").objects.create(pk=missing_image, plant_id=701,
         journal_entry_id=missing_entry, purpose="journal", upload_key=missing_image,
         directory=f"plants/701/{missing_image.hex}", width=240, height=320, byte_size=1700)
-    save(STATE / "media-checkpoint.json", snapshot(registry))
+    save(STATE / "media-checkpoint.json", snapshot(registry, migration_projection=True))
     save(STATE / "media-files.json", media_files())
     save(RESULTS / "media-checkpoint.json", {"targets": MEDIA_TARGETS,
         "existing_files": len(media_files()), "cover_photos": 1, "journal_photos": 1,
