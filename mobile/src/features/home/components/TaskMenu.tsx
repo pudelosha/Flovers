@@ -46,6 +46,7 @@ export default function TaskMenu({
   return (
     <FloatingTileMenu style={s.menuSheet} pointerEvents="auto">
       {canComplete && <Pressable
+        testID="task-menu-complete"
         style={s.menuItem}
         onPress={onMarkComplete}
         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
@@ -80,6 +81,7 @@ export default function TaskMenu({
       </Pressable>}
 
       <Pressable
+        testID="task-menu-plant-details"
         style={s.menuItem}
         onPress={onGoToPlant}
         android_ripple={{ color: "rgba(255,255,255,0.12)" }}

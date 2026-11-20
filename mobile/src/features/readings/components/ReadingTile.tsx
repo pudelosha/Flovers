@@ -289,6 +289,7 @@ export default function ReadingTile({
         </Pressable>
 
         <Pressable
+          testID={`reading-menu-${data.id}`}
           onPress={onPressMenu}
           style={[s.dotsBtn, localStyles.dotsBtnTop]}
           android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}

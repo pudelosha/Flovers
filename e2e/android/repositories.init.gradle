@@ -1,0 +1,13 @@
+// CI-only alternate canonical Maven Central endpoint for the existing Foojay
+// classpath. Keep all requested Gson versions and project repositories intact.
+// https://central.sonatype.org/faq/ssl/
+gradle.beforeSettings { settings ->
+    settings.pluginManagement.repositories {
+        maven {
+            name = "FloversE2ECanonicalCentral"
+            url = uri("https://repo1.maven.org/maven2")
+            content { includeGroup("com.google.code.gson") }
+        }
+        gradlePluginPortal()
+    }
+}
