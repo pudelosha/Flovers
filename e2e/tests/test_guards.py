@@ -3,6 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import zipfile
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).parents[1]
 
@@ -47,6 +48,20 @@ class SmokeGuardTests(unittest.TestCase):
                 with self.subTest(name=name):
                     with zipfile.ZipFile(path, 'w') as package: package.writestr(name, b'bad')
                     with self.assertRaises(RuntimeError): provision.extract(path, Path(temporary)/"out", "tool/")
+
+    def test_emulator_registration_requires_the_verified_revision(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            properties = root / "source.properties"
+            properties.write_text("Pkg.Revision=37.3.10\n")
+            provision.register_emulator(root, "37.3.10")
+            package = ET.parse(root / "package.xml").getroot().find("localPackage")
+            self.assertEqual(package.get("path"), "emulator")
+            self.assertEqual([package.find("revision/" + key).text for key in ("major", "minor", "micro")], ["37", "3", "10"])
+            (root / "package.xml").unlink()
+            properties.write_text("Pkg.Revision=37.4.1\n")
+            with self.assertRaises(RuntimeError): provision.register_emulator(root, "37.3.10")
+            self.assertFalse((root / "package.xml").exists())
 
     def test_missing_reports_fail(self):
         with self.assertRaises(FileNotFoundError): reports.validate("android", ROOT/"does-not-exist.xml")

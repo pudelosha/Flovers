@@ -10,6 +10,7 @@ import tempfile
 import urllib.request
 import zipfile
 import re
+import xml.etree.ElementTree as ET
 
 LOCK = json.loads((Path(__file__).parent / "toolchain.lock.json").read_text())
 
@@ -68,6 +69,30 @@ def install_archive(spec, destination, prefix, cache):
     extract(path, destination, prefix)
 
 
+
+def register_emulator(root, version):
+    """Register the checksum-verified archive just as sdkmanager does.
+
+    Unlike legacy system images, avdmanager requires emulator/package.xml;
+    source.properties alone does not register this generic SDK package.
+    """
+    require_revision(root / "source.properties", version)
+    common = "http://schemas.android.com/repository/android/common/02"
+    generic = "http://schemas.android.com/repository/android/generic/02"
+    xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    ET.register_namespace("common", common)
+    ET.register_namespace("xsi", xsi)
+    repository = ET.Element("{" + common + "}repository", {"xmlns:generic": generic})
+    package = ET.SubElement(repository, "localPackage", {"path": "emulator", "obsolete": "false"})
+    ET.SubElement(package, "type-details", {"{" + xsi + "}type": "generic:genericDetailsType"})
+    revision = ET.SubElement(package, "revision")
+    for name, value in zip(("major", "minor", "micro"), version.split("."), strict=True):
+        ET.SubElement(revision, name).text = value
+    ET.SubElement(package, "display-name").text = "Android Emulator"
+    ET.SubElement(package, "uses-license", {"ref": "android-sdk-license"})
+    ET.ElementTree(repository).write(root / "package.xml", encoding="utf-8", xml_declaration=True)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=["build", "emulator"])
@@ -96,8 +121,13 @@ def main():
         install_archive(android["emulator"], root / "emulator", "emulator/", cache)
         install_archive(android["system_image"], root / "system-images/android-35/google_apis/x86_64", "x86_64/", cache)
         install_archive(LOCK["maestro"], temporary / "maestro", "maestro/", cache)
-        require_revision(root/"emulator/source.properties", android["emulator"]["version"])
+        register_emulator(root/"emulator", android["emulator"]["version"])
         require_revision(root/"system-images/android-35/google_apis/x86_64/source.properties", "9")
+        installed = subprocess.check_output([str(sdk), "--sdk_root="+str(root), "--list_installed"], text=True, env=env)
+        result = Path("e2e-results/android"); result.mkdir(parents=True, exist_ok=True)
+        (result / "installed-sdk-packages.txt").write_text(installed)
+        if not re.search(r"(?m)^\s*emulator\s*\|\s*" + re.escape(android["emulator"]["version"]) + r"\s*\|", installed):
+            raise RuntimeError("SDK manager did not register the pinned emulator")
         (temporary / "maestro/bin/maestro").chmod(0o755)
         version = subprocess.check_output([str(temporary / "maestro/bin/maestro"), "--version"], text=True, env=env)
         print(version, flush=True)
