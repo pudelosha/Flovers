@@ -75,6 +75,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew :app:assembleE2e -PfloversE2E=true -PreactNativeArchitectures=x86_64 \
+            --init-script ../../e2e/android/repositories.init.gradle \
             --no-daemon --max-workers=2 --stacktrace --info 2>&1 | tee ../../e2e-results/android/gradle.log
       - name: Verify package identity and retain the exact APK
         run: |

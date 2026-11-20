@@ -71,10 +71,15 @@ env:
     timeout: 30000
 - tapOn:
     id: tab-Profile
+- extendedWaitUntil:
+    visible:
+      id: profile-animated-tiles
+    timeout: 30000
 - scrollUntilVisible:
     element:
       id: account-logout
     direction: DOWN
+    centerElement: true
     timeout: 20000
 - tapOn:
     id: account-logout

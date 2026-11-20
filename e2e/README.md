@@ -106,6 +106,12 @@ Maestro JUnit/step artifacts, screenshots, final hierarchy/logcat, and browser
 JUnit/HTML reports plus failure screenshots/videos/traces. No retry is configured.
 Timings and hosted verification results are recorded in the review PR.
 
+The E2E Gradle invocation supplies `android/repositories.init.gradle`. It adds
+Maven Central's alternate canonical HTTPS endpoint only for the existing Gson
+plugin classpath group, retaining requested versions and all standard project
+repositories. This addresses observed false 404s without dependency upgrades,
+HTTP retries, or changes to normal Android/deployment builds.
+
 ## Local browser and safeguard checks
 
 ```sh
