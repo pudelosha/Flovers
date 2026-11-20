@@ -37,6 +37,8 @@ def isolated():
     assert settings.SETTINGS_MODULE == "staging.settings"
     assert connection.vendor == "postgresql" and connection.settings_dict["NAME"] == "flovers_stage"
     assert connection.settings_dict["HOST"] == "postgres"
+    for root in [settings.MEDIA_ROOT, settings.PRIVATE_MEDIA_ROOT, settings.STATIC_ROOT, STATE]:
+        assert Path(root).stat().st_uid == os.getuid() == 10001, f"Unexpected disposable volume owner: {root}"
 
 
 def save(path, data):

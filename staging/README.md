@@ -24,7 +24,9 @@ All services share one `internal: true` Compose network. No host ports are
 published. App processes run as UID/GID 10001 with a read-only root filesystem,
 all capabilities dropped and no privilege escalation. Disposable named volumes
 hold PostgreSQL, private media, public catalogue media, static files and private
-test state. A short-lived, run-owned initializer sets volume ownership. Only
+test state. App volumes use `nocopy` so an empty mount cannot be reinitialized
+with the image directory's root ownership. A short-lived, run-owned initializer
+sets volume ownership; verification checks it again as the app user. Only
 synthetic reports are written into the host artifact directory.
 
 Test settings require explicit staging/run markers and exact PostgreSQL/Redis

@@ -29,10 +29,22 @@ x-app: &app
   volumes:
     - ./../staging:/verification/staging:ro
     - ./../deployment:/verification/deployment:ro
-    - private:/app/private-media
-    - media:/app/media
-    - static:/app/staticfiles
-    - state:/state
+    - type: volume
+      source: private
+      target: /app/private-media
+      volume: {nocopy: true}
+    - type: volume
+      source: media
+      target: /app/media
+      volume: {nocopy: true}
+    - type: volume
+      source: static
+      target: /app/staticfiles
+      volume: {nocopy: true}
+    - type: volume
+      source: state
+      target: /state
+      volume: {nocopy: true}
     - ${FLOVERS_STAGE_RESULTS:?Results directory required}:/results
 x-health: &health
   interval: 5s
