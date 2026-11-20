@@ -1,10 +1,13 @@
 name: Website quality checks
 
 on:
-  # Website pushes to main already call this workflow through deploy-web.
-  # These additional inputs must run checks without publishing the website.
+  # Automatic validation never publishes the website.
   push:
     paths:
+      - "web/**"
+      - "translations/**"
+      - ".github/workflows/deploy-web.yml"
+      - ".github/workflows/test-web.yml"
       - "mobile/src/i18n/locales/**"
       - "backend/**"
       - ".github/scripts/**"
