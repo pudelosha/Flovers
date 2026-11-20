@@ -74,6 +74,9 @@ def validate(coordinator, suites):
     policy_commands = "\n".join(step.get("run", "") for step in policy.get("steps", []))
     _require("ci_workflow_policy.py" in policy_commands and "scripts/tests" in policy_commands and "coordinator_tests" in policy_commands,
              "Policy and gate regression tests must execute")
+    for directory in (".github/scripts/tests", ".github/scripts/coordinator_tests"):
+        _require("python .github/scripts/run_ci_unit_tests.py " + directory in policy_commands,
+                 "Policy unit tests must reject skips and zero-test runs")
     for execution, (filename, inner) in SUITES.items():
         job = jobs[execution]
         _require(job.get("uses") == "./.github/workflows/" + filename, "Wrong reusable test workflow")
