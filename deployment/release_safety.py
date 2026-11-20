@@ -73,9 +73,15 @@ def confined_file(root, name):
 
 
 def recent(value, maximum_hours, now):
-    timestamp = datetime.fromisoformat(value.replace("Z","+00:00"))
+    timestamp = parse_timestamp(value)
     if timestamp.tzinfo is None or not 0 <= (now-timestamp).total_seconds() <= maximum_hours*3600:
         raise ValueError("Backup or restore verification is stale or future-dated")
+
+
+def parse_timestamp(value):
+    # Docker emits nanoseconds; Python 3.8 accepts microseconds, unlike 3.12+.
+    text=re.sub(r"(\.\d{6})\d+(?=[+-]\d{2}:\d{2}$)",r"\1",value.replace("Z","+00:00"))
+    return datetime.fromisoformat(text)
 
 
 def verify_backups(manifest_path, config_hash, now=None):
@@ -277,7 +283,7 @@ class Safety:
                     if "beat: Starting" not in text or any(word in text for word in ("Traceback", "CRITICAL", "ERROR")):
                         raise ValueError("Beat did not initialize cleanly")
                     self.execute([*compose,"exec","-T",service,"python","-c",DEPENDENCIES],capture=True)
-                    started=datetime.fromisoformat(info["State"]["StartedAt"].replace("Z","+00:00")).timestamp()
+                    started=parse_timestamp(info["State"]["StartedAt"]).timestamp()
                     self.execute([*compose,"exec","-T",service,"python","-c",BEAT,self.policy.get("beat_schedule_path","/app/celerybeat-schedule"),str(started)],capture=True)
                 elif role=="other":
                     self.execute([*compose,"exec","-T",service,"python","-c",DEPENDENCIES],capture=True)

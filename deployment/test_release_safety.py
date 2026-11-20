@@ -162,6 +162,10 @@ class HostSafetyTests(BackupFixture):
 
 
 class RuntimeTests(unittest.TestCase):
+    def test_docker_nanosecond_timestamps_have_python_38_compatible_precision(self):
+        self.assertEqual(safety.parse_timestamp("2026-11-20T20:00:00.123456789Z"),
+                         datetime(2026,11,20,20,0,0,123456,tzinfo=timezone.utc))
+
     def guard(self, command):
         guard=safety.Safety(Path("."),command,{},"web",["web"],SHA)
         guard.policy={"readiness_url":"http://127.0.0.1:8000/api/locations/"}

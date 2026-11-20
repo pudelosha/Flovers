@@ -94,7 +94,8 @@ restore a database, or certify off-server storage automatically**. Before releas
    custom-format dump, private-media archive (plant and journal photos), public
    catalogue-media archive, and the canonical current rendered Compose hash.
    Keep DB, Redis and proxy running. Account for any external writers. Restart
-   only after the snapshot is complete if the release is not immediate.
+   the previous application services after the snapshot: the release workflow
+   requires a healthy current deployment and takes its own later downtime.
 2. Copy the cohort encrypted off-server and verify its bytes. Restore the dump
    into a separate disposable PostgreSQL 16 instance, verify record/relationship
    counts, restore media into scratch storage and verify photo references/access.
@@ -145,6 +146,23 @@ receipt. Missing, corrupt, mismatched, stale or inconsistent backups block befor
 pulling an image or pausing writers. A valid receipt remains an operator trust
 boundary; this is deliberately documented rather than represented as an automated
 production restore check.
+
+A separately approved backup session can stream the dump from the existing DB
+container using `pg_dump -Fc --no-owner --no-acl` with its existing credentials;
+do not place the password in a command argument. For media from a stopped web
+container, use a read-only helper with `--network none --pull never
+--volumes-from <old-web-container>:ro --entrypoint tar <recorded-old-image-id>`.
+Archive only `/app/private-media` and `/app/media` into the private cohort; do
+not archive credentials or use `docker compose exec web` while web is stopped.
+Verify these commands against actual mount/service names before approval.
+
+To calculate the canonical configuration hash without printing secrets, save
+the rendered JSON in the private cohort (umask 077) and run this local-only
+calculation with its filename:
+
+```sh
+python3 -c 'import hashlib,json,sys; c=json.load(open(sys.argv[1])); print(hashlib.sha256(json.dumps(c,sort_keys=True,separators=(",",":")).encode()).hexdigest())' /private/cohort/compose.json
+```
 
 ## Approved backend release
 

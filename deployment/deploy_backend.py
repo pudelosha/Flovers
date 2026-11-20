@@ -166,7 +166,7 @@ def perform_deploy(commit_sha,app_dir,base,execute,configuration,backend,apps,sa
     execute(["docker", "pull", image])
     # Resolve the pulled tag to its immutable digest for migration/start parity.
     digests = json.loads(execute(["docker", "image", "inspect", "--format", "{{json .RepoDigests}}", image], capture=True).stdout)
-    pinned_image = next((digest for digest in (digests or []) if digest.startswith(f"{IMAGE_REPOSITORY}@sha256:")), None)
+    pinned_image = next((digest for digest in (digests or []) if re.fullmatch(re.escape(IMAGE_REPOSITORY)+r"@sha256:[0-9a-f]{64}",digest)), None)
     if pinned_image is None:
         raise ValueError("The pulled backend image has no registry digest; refusing an unpinned deployment.")
     if expected_image is not None and pinned_image != expected_image:
