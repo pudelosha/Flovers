@@ -12,17 +12,11 @@ on:
       - ".github/workflows/test-e2e.yml"
       - ".github/scripts/report_tests.py"
       - ".github/test-policies/no-skips.json"
-  pull_request:
-    paths:
-      - "e2e/**"
-      - "mobile/**"
-      - "backend/**"
-      - "web/**"
-      - "translations/**"
-      - "contracts/**"
-      - ".github/workflows/test-e2e.yml"
-      - ".github/scripts/report_tests.py"
-      - ".github/test-policies/no-skips.json"
+  workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:

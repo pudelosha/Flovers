@@ -9,16 +9,11 @@ on:
       - "backend/**"
       - ".github/scripts/**"
       - ".github/test-policies/**"
-  pull_request:
-    paths:
-      - "web/**"
-      - ".github/workflows/test-web.yml"
-      - ".github/workflows/deploy-web.yml"
-      - "mobile/src/i18n/locales/**"
-      - "backend/**"
-      - ".github/scripts/**"
-      - ".github/test-policies/**"
   workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:
@@ -26,6 +21,7 @@ permissions:
 
 jobs:
   tests:
+    name: Website test suite
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     defaults:

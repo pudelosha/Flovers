@@ -17,22 +17,11 @@ on:
       - ".github/workflows/test-backend.yml"
       - ".github/scripts/**"
       - ".github/test-policies/**"
-  pull_request:
-    paths:
-      - "firmware/**"
-      - "backend/readings/**"
-      - "backend/requirements*"
-      - "backend/.python-version"
-      - "backend/pytest.ini"
-      - "backend/app/ci_settings.py"
-      - "backend/app/urls.py"
-      - "web/src/assets/firmware-example.ino"
-      - "mobile/src/api/services/readings.service.ts"
-      - "mobile/src/features/readings/types/**"
-      - ".github/workflows/test-firmware.yml"
-      - ".github/workflows/test-backend.yml"
-      - ".github/scripts/**"
-      - ".github/test-policies/**"
+  workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:

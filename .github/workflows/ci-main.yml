@@ -1,0 +1,260 @@
+name: Mandatory CI coordinator
+
+# Every PR, including main and stacked/docs-only validation PRs. No path filters.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: required-ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  coordinator-policy:
+    name: Coordinator policy verification
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+          cache: pip
+          cache-dependency-path: .github/scripts/requirements-coordinator.txt
+      - name: Install pinned workflow-policy parser
+        run: >-
+          python -m pip install --require-hashes --only-binary=:all:
+          -r .github/scripts/requirements-coordinator.txt
+      - name: Test reporting and fail-closed gates
+        run: python .github/scripts/run_ci_unit_tests.py .github/scripts/tests
+      - name: Test workflow graph and trigger safeguards
+        run: python .github/scripts/run_ci_unit_tests.py .github/scripts/coordinator_tests
+      - name: Validate the mandatory workflow graph
+        run: python .github/scripts/ci_workflow_policy.py
+
+  backend-execution:
+    name: backend-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-backend.yml
+    permissions:
+      contents: read
+
+  mobile-execution:
+    name: mobile-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-mobile.yml
+    permissions:
+      contents: read
+
+  web-execution:
+    name: web-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-web.yml
+    permissions:
+      contents: read
+
+  contracts-execution:
+    name: contracts-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-api-contracts.yml
+    permissions:
+      contents: read
+
+  celery-execution:
+    name: celery-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-celery-integration.yml
+    permissions:
+      contents: read
+
+  firmware-execution:
+    name: firmware-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-firmware.yml
+    permissions:
+      contents: read
+
+  e2e-execution:
+    name: e2e-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-e2e.yml
+    permissions:
+      contents: read
+
+  staging-execution:
+    name: staging-execution
+    needs: coordinator-policy
+    uses: ./.github/workflows/test-staging.yml
+    permissions:
+      contents: read
+
+  gate-backend:
+    name: ci/backend
+    if: always()
+    needs: [coordinator-policy, backend-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane backend
+
+  gate-mobile:
+    name: ci/mobile
+    if: always()
+    needs: [coordinator-policy, mobile-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane mobile
+
+  gate-web:
+    name: ci/web
+    if: always()
+    needs: [coordinator-policy, web-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane web
+
+  gate-contracts:
+    name: ci/contracts
+    if: always()
+    needs: [coordinator-policy, contracts-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane contracts
+
+  gate-celery:
+    name: ci/celery
+    if: always()
+    needs: [coordinator-policy, celery-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane celery
+
+  gate-firmware:
+    name: ci/firmware
+    if: always()
+    needs: [coordinator-policy, firmware-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane firmware
+
+  gate-browser:
+    name: ci/browser
+    if: always()
+    needs: [coordinator-policy, e2e-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane browser
+
+  gate-android:
+    name: ci/android
+    if: always()
+    needs: [coordinator-policy, e2e-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane android
+
+  gate-staging:
+    name: ci/staging
+    if: always()
+    needs: [coordinator-policy, staging-execution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Reject missing failed cancelled or skipped mandatory work
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane staging
+
+  release-readiness:
+    name: ci/release-readiness
+    if: always()
+    needs: [coordinator-policy, gate-backend, gate-mobile, gate-web, gate-contracts, gate-celery, gate-firmware, gate-browser, gate-android, gate-staging]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Require every mandatory gate
+        env:
+          CI_NEEDS: ${{ toJSON(needs) }}
+        run: python .github/scripts/ci_gate.py --lane release-readiness --output ci-results/required-gates.json
+      - name: Retain final gate evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: required-ci-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ci-results/
+          if-no-files-found: error
+          retention-days: 14
