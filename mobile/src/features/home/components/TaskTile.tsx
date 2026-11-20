@@ -206,6 +206,7 @@ export default function TaskTile({
 
       {/* Content row */}
       <Pressable
+        testID={`home-task-${task.id}`}
         accessible={false}
         style={[s.cardRow, s.cardBodyPressable, { paddingVertical: 4 }]}
         onPress={onPressBody}

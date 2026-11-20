@@ -1,0 +1,34 @@
+appId: com.flovers.mobile.e2e
+name: completion-smoke
+env:
+  EMAIL: completion@example.test
+  TASK_ID: home-task-902
+---
+- runFlow: ../helpers/login.yaml
+- tapOn:
+    id: home-task-902
+- tapOn:
+    id: task-menu-complete
+- extendedWaitUntil:
+    visible:
+      id: task-complete-confirm
+    timeout: 10000
+- takeScreenshot: e2e-results/android/completion-dialog
+- tapOn:
+    id: task-complete-confirm
+- extendedWaitUntil:
+    notVisible:
+      id: home-task-902
+    timeout: 30000
+- assertNotVisible:
+    id: task-complete-confirm
+- tapOn:
+    id: fab-toggle
+- tapOn:
+    id: fab-action-history
+- extendedWaitUntil:
+    visible:
+      id: task-history-tile-body
+    timeout: 30000
+- assertVisible: Smoke fern
+- takeScreenshot: e2e-results/android/completed-journal

@@ -86,6 +86,9 @@ export default function FAB({
             {actions.map((a) => (
               <Pressable
                 key={a.key}
+                testID={`fab-action-${a.key}`}
+                accessibilityRole="button"
+                accessibilityLabel={a.label}
                 onPress={() => {
                   onInteraction?.();
                   setOpen(false);
@@ -137,6 +140,8 @@ export default function FAB({
 
         {/* Main FAB */}
         <Pressable
+          testID="fab-toggle"
+          accessibilityRole="button"
           onPress={() => {
             onInteraction?.();
             setOpen((v) => !v);

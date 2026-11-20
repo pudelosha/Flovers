@@ -1,0 +1,92 @@
+appId: com.flovers.mobile.e2e
+name: navigation-smoke
+env:
+  EMAIL: navigation@example.test
+  TASK_ID: home-task-901
+---
+- runFlow: ../helpers/login.yaml
+- takeScreenshot: e2e-results/android/home
+- tapOn:
+    id: home-task-901
+- tapOn:
+    id: task-menu-plant-details
+- extendedWaitUntil:
+    visible:
+      id: plant-details-content
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      text: Isolated native smoke fixture
+    direction: DOWN
+    timeout: 15000
+- assertVisible: Isolated native smoke fixture
+- tapOn:
+    id: tab-Plants
+- extendedWaitUntil:
+    visible:
+      id: plant-tile-body
+    timeout: 30000
+- tapOn:
+    id: plant-tile-body
+- tapOn:
+    id: plant-menu-details
+- assertVisible:
+    id: plant-details-content
+- tapOn:
+    id: tab-Reminders
+- extendedWaitUntil:
+    visible:
+      id: reminder-tile-reminder-801
+    timeout: 30000
+- tapOn:
+    id: tab-Readings
+- extendedWaitUntil:
+    visible:
+      id: reading-menu-1001
+    timeout: 30000
+- tapOn:
+    id: reading-menu-1001
+- tapOn:
+    id: reading-menu-details
+- extendedWaitUntil:
+    visible:
+      id: device-details-title
+    timeout: 30000
+- takeScreenshot: e2e-results/android/device-details
+- tapOn:
+    id: app-modal-close
+- tapOn:
+    id: tab-Plants
+- extendedWaitUntil:
+    visible:
+      id: plant-tile-body
+    timeout: 30000
+- tapOn:
+    id: fab-toggle
+- tapOn:
+    id: fab-action-locations
+- extendedWaitUntil:
+    visible:
+      id: location-tile-601
+    timeout: 30000
+- tapOn:
+    id: tab-Profile
+- extendedWaitUntil:
+    visible:
+      id: profile-animated-tiles
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: account-logout
+    direction: DOWN
+    centerElement: true
+    timeout: 20000
+- tapOn:
+    id: account-logout
+- extendedWaitUntil:
+    visible:
+      id: auth-login-submit
+    timeout: 30000
+- assertNotVisible:
+    id: tab-Home
+- takeScreenshot: e2e-results/android/logged-out

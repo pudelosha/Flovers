@@ -107,6 +107,7 @@ export default function LocationTile({
       </View>
 
       <Pressable
+        testID={`location-tile-${location.id}`}
         style={s.cardRow}
         onPress={() => {
           onPressBody();
