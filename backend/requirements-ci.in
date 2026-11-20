@@ -1,0 +1,4 @@
+# Reporting tools only; application dependency versions stay constrained by the production lock.
+# Regenerate requirements-ci.txt with the command in DEPENDENCIES.md.
+-c requirements.txt
+pytest-cov==7.1.0

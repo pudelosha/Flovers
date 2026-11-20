@@ -130,7 +130,7 @@ export default function DeviceDetailsModal({
             appModalStyles.scrollContent,
           ]}
         >
-          <Text style={s.promptTitle}>
+          <Text testID="device-details-title" style={s.promptTitle}>
             {tr('readingsModals.deviceDetails.title', 'Device details')}
           </Text>
 

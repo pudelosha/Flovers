@@ -1,0 +1,124 @@
+name: Celery integration checks
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - "integration/celery/**"
+      - "integration/__init__.py"
+      - ".github/workflows/test-celery-integration.yml"
+      - ".github/scripts/report_tests.py"
+      - ".github/test-policies/**"
+  pull_request:
+    paths:
+      - "backend/**"
+      - "integration/celery/**"
+      - "integration/__init__.py"
+      - ".github/workflows/test-celery-integration.yml"
+      - ".github/scripts/report_tests.py"
+      - ".github/test-policies/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  real-delivery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: flovers_ci
+          POSTGRES_USER: flovers_ci
+          POSTGRES_PASSWORD: flovers_ci
+        ports:
+          - "127.0.0.1:5432:5432"
+        options: >-
+          --label flovers.integration=celery
+          --label flovers.integration.run=${{ github.run_id }}-${{ github.run_attempt }}
+          --label flovers.integration.role=postgres
+          --health-cmd "pg_isready -U flovers_ci -d flovers_ci"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+      redis:
+        image: redis:7.4.7-alpine
+        ports:
+          - "127.0.0.1:6379:6379"
+        options: >-
+          --label flovers.integration=celery
+          --label flovers.integration.run=${{ github.run_id }}-${{ github.run_attempt }}
+          --label flovers.integration.role=redis
+          --health-cmd "redis-cli ping"
+          --health-interval 5s --health-timeout 3s --health-retries 12
+      mailpit:
+        image: axllent/mailpit:v1.34.0
+        ports:
+          - "127.0.0.1:1025:1025"
+          - "127.0.0.1:8025:8025"
+        options: >-
+          --label flovers.integration=celery
+          --label flovers.integration.run=${{ github.run_id }}-${{ github.run_attempt }}
+          --label flovers.integration.role=mailpit
+    env:
+      DJANGO_SETTINGS_MODULE: integration.celery.settings
+      FLOVERS_INTEGRATION: "1"
+      FLOVERS_INTEGRATION_RUN: ${{ github.run_id }}-${{ github.run_attempt }}
+      CI_DATABASE_URL: postgres://flovers_ci:flovers_ci@127.0.0.1:5432/flovers_ci
+      PYTHONPATH: ${{ github.workspace }}:${{ github.workspace }}/backend
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version-file: backend/.python-version
+          cache: pip
+          cache-dependency-path: |
+            backend/requirements.txt
+            backend/requirements-ci.txt
+      - name: Install the existing locked application and test tools
+        run: |
+          python -m pip install --require-hashes --only-binary=:all: -r backend/requirements.txt -r backend/requirements-ci.txt
+          python -m pip check
+      - name: Verify integration isolation guards
+        run: python -m unittest discover -s integration/celery/checks -p 'test_*.py' -v
+      - name: Run real cross-process integration tests
+        env:
+          FLOVERS_POSTGRES_CONTAINER: ${{ job.services.postgres.id }}
+          FLOVERS_REDIS_CONTAINER: ${{ job.services.redis.id }}
+          FLOVERS_MAILPIT_CONTAINER: ${{ job.services.mailpit.id }}
+        run: >-
+          python -m pytest -c integration/celery/pytest.ini integration/celery/test_delivery.py
+          --junitxml=test-results/celery/results.xml
+      - name: Restore any paused disposable services
+        if: always()
+        env:
+          FLOVERS_REDIS_CONTAINER: ${{ job.services.redis.id }}
+          FLOVERS_MAILPIT_CONTAINER: ${{ job.services.mailpit.id }}
+        run: python -m integration.celery.cleanup
+      - name: Capture service logs
+        if: always()
+        env:
+          REDIS_CONTAINER: ${{ job.services.redis.id }}
+          MAILPIT_CONTAINER: ${{ job.services.mailpit.id }}
+          POSTGRES_CONTAINER: ${{ job.services.postgres.id }}
+        run: |
+          mkdir -p test-results/celery/services
+          docker logs "$REDIS_CONTAINER" > test-results/celery/services/redis.log 2>&1
+          docker logs "$MAILPIT_CONTAINER" > test-results/celery/services/mailpit.log 2>&1
+          docker logs "$POSTGRES_CONTAINER" > test-results/celery/services/postgres.log 2>&1
+      - name: Report results and enforce required integration cases
+        if: always()
+        run: >-
+          python .github/scripts/report_tests.py --title "Real Celery integration"
+          --junit test-results/celery/results.xml
+          --policy .github/test-policies/celery-integration.json
+          --coverage-scope "Real PostgreSQL/Redis/prefork worker/Beat/SMTP capture. Separate from fast-suite coverage; no production providers."
+          --output test-results/celery/summary.md
+      - name: Upload integration diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: celery-integration-${{ github.run_id }}-${{ github.run_attempt }}
+          path: test-results/celery/
+          retention-days: 7
+          if-no-files-found: error

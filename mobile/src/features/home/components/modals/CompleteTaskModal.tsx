@@ -199,7 +199,7 @@ export default function CompleteTaskModal({
               <Text style={s.promptBtnText}>{t('homeModals.common.cancel')}</Text>
             </Pressable>
 
-            <Pressable style={[s.promptBtn, s.promptPrimary]} onPress={confirm}>
+            <Pressable testID="task-complete-confirm" style={[s.promptBtn, s.promptPrimary]} onPress={confirm}>
               <Text style={[s.promptBtnText, s.promptPrimaryText]}>
                 {isBulk ? t('homeModals.completeBulk.confirm') : t('homeModals.complete.confirm')}
               </Text>
