@@ -68,12 +68,6 @@ def main():
         else:
             raise RuntimeError("ADB did not remain ready for ten seconds within the 60-second deadline")
         adb("shell", "input", "keyevent", "82")
-        # 10.0.2.2 is Android Emulator's alias for this runner's loopback, not LAN/VPS.
-        response = adb("shell", "printf 'OPTIONS /auth/login/ HTTP/1.0\\r\\nHost: 10.0.2.2\\r\\n\\r\\n' | toybox nc -w 5 10.0.2.2 8000",
-                       capture_output=True, timeout=15).stdout
-        (RESULTS/"emulator-api-preflight.txt").write_text(response)
-        if "200 OK" not in response.split("\n", 1)[0]:
-            raise RuntimeError("Emulator could not reach the disposable API before native tests")
         adb("install", "-r", str(apk), timeout=120)
         with (RESULTS/"android-properties.txt").open("w") as output:
             adb("shell", "getprop", stdout=output)
@@ -90,11 +84,14 @@ def main():
         log = (RESULTS/"logcat.log").read_text(errors="replace")
         if "Isolation verified: emulator host API; external request blocked before DNS" not in log:
             raise RuntimeError("The installed APK did not prove its loopback endpoint and network isolation")
-        if "E2E network policy denied" in log or "Isolation verification failed" in log:
+        if "Disposable backend verified: HTTP 200" not in log:
+            raise RuntimeError("The installed APK did not verify HTTP connectivity to disposable Django")
+        if "E2E network policy denied" in log or "Isolation verification failed" in log or "Backend verification failed" in log:
             raise RuntimeError("The smoke app attempted an unexpected external request or failed isolation; see logcat")
         (RESULTS/"network-isolation.json").write_text(json.dumps({
             "api_base": "http://10.0.2.2:8000", "redirects_enabled": False,
             "runtime_external_request_rejected_before_dns": True,
+            "runtime_disposable_backend_http_status": 200,
         }, indent=2))
     finally:
         # Diagnostics are attempted once; missing/failed tests still fail the job.

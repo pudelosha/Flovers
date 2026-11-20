@@ -83,6 +83,19 @@ class MainApplication : Application(), ReactApplication {
         } catch (error: Exception) {
           android.util.Log.e("FloversE2E", "Isolation verification failed", error)
         }
+        try {
+          val call = smokeClientFactory.createNewNetworkModuleClient().newCall(
+            okhttp3.Request.Builder().url("http://10.0.2.2:8000/auth/login/")
+              .method("OPTIONS", null).build()
+          )
+          call.timeout().timeout(10, java.util.concurrent.TimeUnit.SECONDS)
+          call.execute().use { response ->
+            check(response.code == 200) { "Unexpected disposable API status: ${response.code}" }
+            android.util.Log.i("FloversE2E", "Disposable backend verified: HTTP 200")
+          }
+        } catch (error: Exception) {
+          android.util.Log.e("FloversE2E", "Backend verification failed", error)
+        }
       }, "FloversE2E-isolation").start()
     }
     com.facebook.react.ReactNativeApplicationEntryPoint.loadReactNative(this)
