@@ -1,0 +1,81 @@
+name: Validation only - required CI negative guards
+on:
+  push:
+    branches: [validation/mandatory-ci-guards]
+permissions:
+  contents: read
+jobs:
+  policy:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: 'true'
+  success:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: 'true'
+  failure:
+    name: Intentionally failing dependency
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Real failing assertion
+        run: python3 -c "raise AssertionError('Intentional validation dependency failure')"
+  skipped:
+    if: false
+    runs-on: ubuntu-24.04
+    steps:
+      - run: 'true'
+  timeout:
+    name: Intentionally timed out dependency
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - run: sleep 90
+  positive:
+    name: Positive gate control
+    needs: [policy, success]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Evaluate successful actual producers
+        env:
+          CI_RAW_NEEDS: ${{ toJSON(needs) }}
+        run: python3 ci-validation/guard_fixture.py positive
+  negative-gates:
+    name: Negative gate - ${{ matrix.case }}
+    if: always()
+    needs: [policy, success, failure, skipped, timeout]
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [failure, skipped, timed_out, cancelled, missing, missing-output, inner-missing]
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Gate must return failure
+        env:
+          CI_RAW_NEEDS: ${{ toJSON(needs) }}
+        run: python3 ci-validation/guard_fixture.py ${{ matrix.case }}
+      - name: Retain negative evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: guard-fixture-${{ matrix.case }}-${{ github.run_id }}
+          path: fixture-results/
+          if-no-files-found: error
+  aggregate:
+    name: Aggregate must reject failed gate
+    if: always()
+    needs: [policy, success, negative-gates]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Evaluate actual failed gate dependency
+        env:
+          CI_RAW_NEEDS: ${{ toJSON(needs) }}
+        run: python3 ci-validation/guard_fixture.py aggregate
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: guard-fixture-aggregate-${{ github.run_id }}
+          path: fixture-results/
+          if-no-files-found: error
