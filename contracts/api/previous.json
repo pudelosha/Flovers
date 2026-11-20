@@ -1,0 +1,66 @@
+{
+  "commit": "6f698097ddb17f7740dada6ce37beba1a28ff34e",
+  "selection": "User-selected previous supported mobile API baseline",
+  "files": [
+    {
+      "source": "mobile/src/api/client.ts",
+      "path": "previous/api/client.ts",
+      "git_blob": "6f47fd48b4d5b28b6040a1633cce4f544ca3c894",
+      "sha256": "bf230c6054026a09c247fbf258851abbc5eb153740d0d8f66d5191ff6523fefe"
+    },
+    {
+      "source": "mobile/src/api/services/home.service.ts",
+      "path": "previous/api/services/home.service.ts",
+      "git_blob": "01b8fadc15ad5328f1b24c9d39040dff8f4b9e16",
+      "sha256": "a7dcb6e768488baadc20f25a347fe3f7e485f782d86fe890c0e2e5138588d4c9"
+    },
+    {
+      "source": "mobile/src/api/services/reminders.service.ts",
+      "path": "previous/api/services/reminders.service.ts",
+      "git_blob": "8b41205fafd89200c2025d0b40c113d23b1c82a7",
+      "sha256": "243d22d7bf64364e416e6035e4756bdb333d90d5b049038c92dac9293e4ea5f3"
+    },
+    {
+      "source": "mobile/src/api/services/profile.service.ts",
+      "path": "previous/api/services/profile.service.ts",
+      "git_blob": "2711e26ad7e5e09776d008bd400c85e0c71f5461",
+      "sha256": "57759cf27404ee7ec6ac488f823345f1f313fcb1c8f04a76881be6d976eee424"
+    },
+    {
+      "source": "mobile/src/api/services/readings.service.ts",
+      "path": "previous/api/services/readings.service.ts",
+      "git_blob": "96c72cb75081fedc6c7d1776bdf0b2349a761a79",
+      "sha256": "1ae7de28f83c7f4605406fb3cd8a74f4895db160510c96edf38ee7a0b3db007c"
+    },
+    {
+      "source": "mobile/src/api/services/plant-instances.service.ts",
+      "path": "previous/api/services/plant-instances.service.ts",
+      "git_blob": "f30c5b66937afee8a3db6c27790f3d8552165109",
+      "sha256": "0f4a853480249d490c139825808904971a9704ee748f88a8a4b941c038e153fb"
+    },
+    {
+      "source": "mobile/src/api/services/history.service.ts",
+      "path": "previous/api/services/history.service.ts",
+      "git_blob": "6e4aa1236ebf898ccc58d259b64880485297758e",
+      "sha256": "5bf0b7c5c553a0b0240a22cbc696bd18b643c2d0aa11551e058dd0da1da8d4c4"
+    },
+    {
+      "source": "mobile/src/api/serializers/home.serializer.ts",
+      "path": "previous/api/serializers/home.serializer.ts",
+      "git_blob": "067616f6736c29dd4b68741f3e3f55abfd114c37",
+      "sha256": "0505d69bf7e61621ca351388485f7865e13f2662006925b256f5271d62390ec8"
+    },
+    {
+      "source": "mobile/src/api/serializers/history.serializer.ts",
+      "path": "previous/api/serializers/history.serializer.ts",
+      "git_blob": "1be632c34aa467bc29f4f1c6fcca658e189580e7",
+      "sha256": "2c4add86718f22fbb0414fc8b95a65c8ab630543e51d0c537251aec044e2b863"
+    }
+  ],
+  "unsupported_features": [
+    "private plant photos",
+    "journal photo preview/pagination",
+    "sharing and contact invitations",
+    "XP return from markHomeTaskComplete (previous returns void)"
+  ]
+}

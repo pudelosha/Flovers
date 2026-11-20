@@ -5,12 +5,16 @@ on:
   # Client API/type and shared CI changes also need provider checks, without deploying.
   push:
     paths:
+      - "contracts/**"
+      - ".github/workflows/test-api-contracts.yml"
       - "mobile/src/api/**"
       - "mobile/src/features/**/types/**"
       - ".github/scripts/**"
       - ".github/test-policies/**"
   pull_request:
     paths:
+      - "contracts/**"
+      - ".github/workflows/test-api-contracts.yml"
       - "backend/**"
       - "deployment/**"
       - "docker-compose.yml"

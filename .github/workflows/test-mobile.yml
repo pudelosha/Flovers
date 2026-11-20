@@ -3,6 +3,8 @@ name: Mobile quality checks
 on:
   push:
     paths:
+      - "contracts/**"
+      - ".github/workflows/test-api-contracts.yml"
       - "mobile/**"
       - "backend/**"
       - ".github/workflows/test-mobile.yml"
@@ -11,6 +13,8 @@ on:
       - ".github/test-policies/**"
   pull_request:
     paths:
+      - "contracts/**"
+      - ".github/workflows/test-api-contracts.yml"
       - "mobile/**"
       - "backend/**"
       - ".github/workflows/test-mobile.yml"
