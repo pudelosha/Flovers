@@ -5,6 +5,8 @@ on:
   # Client API/type and shared CI changes also need provider checks, without deploying.
   push:
     paths:
+      - "firmware/**"
+      - ".github/workflows/test-firmware.yml"
       - "contracts/**"
       - ".github/workflows/test-api-contracts.yml"
       - "mobile/src/api/**"
@@ -13,6 +15,8 @@ on:
       - ".github/test-policies/**"
   pull_request:
     paths:
+      - "firmware/**"
+      - ".github/workflows/test-firmware.yml"
       - "contracts/**"
       - ".github/workflows/test-api-contracts.yml"
       - "backend/**"
@@ -89,7 +93,7 @@ jobs:
         env:
           FLOVERS_TEST_CPP: g++
         run: >-
-          python -m pytest -ra --durations=10
+          python -m pytest -m "not firmware_compile" -ra --durations=10
           --junitxml=test-results/backend.xml
           --cov=. --cov-config=.coveragerc
           --cov-report=term:skip-covered

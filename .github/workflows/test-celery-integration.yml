@@ -87,7 +87,7 @@ jobs:
           FLOVERS_REDIS_CONTAINER: ${{ job.services.redis.id }}
           FLOVERS_MAILPIT_CONTAINER: ${{ job.services.mailpit.id }}
         run: >-
-          python -m pytest -c integration/celery/pytest.ini
+          python -m pytest -c integration/celery/pytest.ini integration/celery/test_delivery.py
           --junitxml=test-results/celery/results.xml
       - name: Restore any paused disposable services
         if: always()

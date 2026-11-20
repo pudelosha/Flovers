@@ -159,6 +159,9 @@ def test_broker_restart_preserves_queued_delivery_and_worker_recovers(runtime):
         runtime.restart_redis()
         assert runtime.queued_count() == 1
         runtime.redis.set(key + ":release", "1", ex=120)
+    # A Pub/Sub subscription may miss the completion event across Redis restart.
+    # Poll the persisted result with the same 40-second bound before reading it.
+    wait_until(gate.ready, description="durable barrier result after broker restart")
     gate.get(timeout=40)
     wait_until(lambda: status(job, "sent"), description="queued invitation after broker restart")
     runtime.drain()
