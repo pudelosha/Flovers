@@ -18,7 +18,7 @@ and checksum-verified before extraction. Unexpected installed revisions fail.
   revision 9, Pixel 2 profile, two cores, 2 GB RAM, headless SwiftShader/KVM.
 - Maestro CLI **2.12.1**, no Cloud account, analytics or AI analysis.
 - Playwright **1.65.1**, bundled Chromium **159.0.8154.6**, revision **1255**.
-  Projects: desktop 1280×900 and mobile Chromium 390×844 with touch emulation.
+  Projects: desktop 1280Ă—900 and mobile Chromium 390Ă—844 with touch emulation.
 
 ## Required native journeys
 
@@ -52,6 +52,10 @@ The E2E entry mounts the same App/navigation; Firebase background initialization
 is omitted. E2E native manifest removes automatic Firebase initialization, and
 the E2E-only config causes push registration/teardown to return before calling
 Firebase. An Android OkHttp interceptor rejects external hosts before DNS/HTTP.
+Redirect following is disabled for this isolated APK. A native runtime probe
+checks the generated API endpoint and uses the actual client factory to reject
+a non-routable `.invalid` URL before DNS. The native lane requires its log marker
+and retains `network-isolation.json`; a missing/failed probe fails the lane.
 The native API is fixed to `127.0.0.1:8000`; `adb reverse` forwards only that port
 to the disposable server. This configuration cannot silently fall back to a
 production API if environment injection fails: external requests fail closed.
@@ -69,8 +73,8 @@ No external test reset/seed endpoints are exposed.
 Five scenarios run in **both** viewport projects against the actual Vite build:
 
 1. Homepage, root redirect, branding and every rendered hero image.
-2. Real desktop/mobile menu navigation: Documentation → Schemas → FAQ → Home.
-3. EN → PL → EN language switching preserves the documentation route.
+2. Real desktop/mobile menu navigation: Documentation â†’ Schemas â†’ FAQ â†’ Home.
+3. EN â†’ PL â†’ EN language switching preserves the documentation route.
 4. Terms, Privacy Policy and Contact navigation; contact email control; the
    current intentionally disabled store badges have no navigable destinations.
 5. Responsive header/content, mobile menu and no horizontal page overflow across

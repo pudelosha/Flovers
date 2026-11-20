@@ -66,8 +66,15 @@ def main():
         command("maestro", "--device", "emulator-5554", "test", "--format", "JUNIT", "--output",
                 str(RESULTS/"results.xml"), "--test-output-dir", str(RESULTS/"maestro"), "e2e/android/flows", timeout=600)
         command("python", "e2e/android/seed.py", "verify")
-        if "E2E network policy denied" in (RESULTS/"logcat.log").read_text(errors="replace"):
-            raise RuntimeError("The smoke app attempted an external request; see logcat")
+        log = (RESULTS/"logcat.log").read_text(errors="replace")
+        if "Isolation verified: loopback API; external request blocked before DNS" not in log:
+            raise RuntimeError("The installed APK did not prove its loopback endpoint and network isolation")
+        if "E2E network policy denied" in log or "Isolation verification failed" in log:
+            raise RuntimeError("The smoke app attempted an unexpected external request or failed isolation; see logcat")
+        (RESULTS/"network-isolation.json").write_text(json.dumps({
+            "api_base": "http://127.0.0.1:8000", "redirects_enabled": False,
+            "runtime_external_request_rejected_before_dns": True,
+        }, indent=2))
     finally:
         # Diagnostics are attempted once; missing/failed tests still fail the job.
         with (RESULTS/"last-screen.png").open("wb") as output:
