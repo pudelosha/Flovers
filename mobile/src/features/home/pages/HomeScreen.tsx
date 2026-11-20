@@ -1148,6 +1148,8 @@ export default function HomeScreen() {
 
       {showFAB && (
         <View
+          pointerEvents="box-none"
+          style={StyleSheet.absoluteFill}
           onStartShouldSetResponderCapture={() => {
             setMenuOpenId(null);
             return false;
