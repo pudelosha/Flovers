@@ -29,9 +29,9 @@ jobs:
           python -m pip install --require-hashes --only-binary=:all:
           -r .github/scripts/requirements-coordinator.txt
       - name: Test reporting and fail-closed gates
-        run: python -m unittest discover -s .github/scripts/tests -p 'test_*.py'
+        run: python .github/scripts/run_ci_unit_tests.py .github/scripts/tests
       - name: Test workflow graph and trigger safeguards
-        run: python -m unittest discover -s .github/scripts/coordinator_tests -p 'test_*.py'
+        run: python .github/scripts/run_ci_unit_tests.py .github/scripts/coordinator_tests
       - name: Validate the mandatory workflow graph
         run: python .github/scripts/ci_workflow_policy.py
 
