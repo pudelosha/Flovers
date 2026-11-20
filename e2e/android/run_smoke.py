@@ -51,8 +51,29 @@ def main():
             time.sleep(2)
         else:
             raise RuntimeError("Android did not finish booting within 240 seconds")
+        # Cold-boot background setup can briefly reconnect ADB after boot_completed.
+        # Require a continuous ready window before installing drivers/running tests.
+        stable_since = None
+        deadline = time.monotonic() + 60
+        while time.monotonic() < deadline:
+            probe = subprocess.run(["adb", "-s", "emulator-5554", "get-state"],
+                                   capture_output=True, text=True, timeout=10)
+            if probe.returncode == 0 and probe.stdout.strip() == "device":
+                stable_since = stable_since or time.monotonic()
+                if time.monotonic() - stable_since >= 10:
+                    break
+            else:
+                stable_since = None
+            time.sleep(1)
+        else:
+            raise RuntimeError("ADB did not remain ready for ten seconds within the 60-second deadline")
         adb("shell", "input", "keyevent", "82")
-        adb("reverse", "tcp:8000", "tcp:8000")
+        # 10.0.2.2 is Android Emulator's alias for this runner's loopback, not LAN/VPS.
+        response = adb("shell", "printf 'OPTIONS /auth/login/ HTTP/1.0\\r\\nHost: 10.0.2.2\\r\\n\\r\\n' | toybox nc -w 5 10.0.2.2 8000",
+                       capture_output=True, timeout=15).stdout
+        (RESULTS/"emulator-api-preflight.txt").write_text(response)
+        if "200 OK" not in response.split("\n", 1)[0]:
+            raise RuntimeError("Emulator could not reach the disposable API before native tests")
         adb("install", "-r", str(apk), timeout=120)
         with (RESULTS/"android-properties.txt").open("w") as output:
             adb("shell", "getprop", stdout=output)
@@ -67,16 +88,20 @@ def main():
                 str(RESULTS/"results.xml"), "--test-output-dir", str(RESULTS/"maestro"), "e2e/android/flows", timeout=600)
         command("python", "e2e/android/seed.py", "verify")
         log = (RESULTS/"logcat.log").read_text(errors="replace")
-        if "Isolation verified: loopback API; external request blocked before DNS" not in log:
+        if "Isolation verified: emulator host API; external request blocked before DNS" not in log:
             raise RuntimeError("The installed APK did not prove its loopback endpoint and network isolation")
         if "E2E network policy denied" in log or "Isolation verification failed" in log:
             raise RuntimeError("The smoke app attempted an unexpected external request or failed isolation; see logcat")
         (RESULTS/"network-isolation.json").write_text(json.dumps({
-            "api_base": "http://127.0.0.1:8000", "redirects_enabled": False,
+            "api_base": "http://10.0.2.2:8000", "redirects_enabled": False,
             "runtime_external_request_rejected_before_dns": True,
         }, indent=2))
     finally:
         # Diagnostics are attempted once; missing/failed tests still fail the job.
+        with (RESULTS/"adb-state.txt").open("w") as output:
+            diagnostic("adb", "devices", "-l", stdout=output)
+            diagnostic("adb", "server-status", stdout=output)
+            diagnostic("adb", "-s", "emulator-5554", "reverse", "--list", stdout=output)
         with (RESULTS/"last-screen.png").open("wb") as output:
             diagnostic("adb", "-s", "emulator-5554", "exec-out", "screencap", "-p", stdout=output)
         diagnostic("adb", "-s", "emulator-5554", "shell", "uiautomator", "dump", "/sdcard/window.xml")

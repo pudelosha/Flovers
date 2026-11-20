@@ -51,10 +51,16 @@ class MainApplication : Application(), ReactApplication {
           .followSslRedirects(false)
           .addInterceptor { chain ->
             val host = chain.request().url.host
-            if (host != "127.0.0.1" && host != "localhost") {
+            if (host != "10.0.2.2" || chain.request().url.port != 8000 || chain.request().url.scheme != "http") {
               throw java.io.IOException("E2E network policy denied external host: $host")
             }
-            chain.proceed(chain.request())
+            android.util.Log.i("FloversE2E", "HTTP ${chain.request().method} ${chain.request().url.encodedPath}")
+            try {
+              chain.proceed(chain.request())
+            } catch (error: java.io.IOException) {
+              android.util.Log.e("FloversE2E", "Disposable API connection failed", error)
+              throw error
+            }
           }.build()
       }
       com.facebook.react.modules.network.OkHttpClientProvider.setOkHttpClientFactory(smokeClientFactory)
@@ -64,13 +70,13 @@ class MainApplication : Application(), ReactApplication {
         val forbidden = "http://flovers-e2e-forbidden.invalid/"
         try {
           val apiBase = BuildConfig::class.java.getField("API_BASE").get(null)
-          check(apiBase == "http://127.0.0.1:8000") { "Unexpected E2E API_BASE: $apiBase" }
+          check(apiBase == "http://10.0.2.2:8000") { "Unexpected E2E API_BASE: $apiBase" }
           smokeClientFactory.createNewNetworkModuleClient().newCall(
             okhttp3.Request.Builder().url(forbidden).build()
           ).execute().use { throw IllegalStateException("E2E external request was not blocked") }
         } catch (error: java.io.IOException) {
           if (error.message == "E2E network policy denied external host: flovers-e2e-forbidden.invalid") {
-            android.util.Log.i("FloversE2E", "Isolation verified: loopback API; external request blocked before DNS")
+            android.util.Log.i("FloversE2E", "Isolation verified: emulator host API; external request blocked before DNS")
           } else {
             android.util.Log.e("FloversE2E", "Isolation verification failed", error)
           }

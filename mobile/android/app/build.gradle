@@ -117,8 +117,8 @@ android {
                 signingConfig signingConfigs.debug
                 // Bundle actual JS/Hermes into the APK; no Metro dependency.
                 debuggable false
-                buildConfigField "String", "API_BASE", '"http://127.0.0.1:8000"'
-                buildConfigField "String", "PUBLIC_BASE_URL", '"http://127.0.0.1:8000"'
+                buildConfigField "String", "API_BASE", '"http://10.0.2.2:8000"'
+                buildConfigField "String", "PUBLIC_BASE_URL", '"http://10.0.2.2:8000"'
                 buildConfigField "String", "E2E_MODE", '"true"'
                 resValue "string", "build_config_package", "com.flovers.mobile"
             }

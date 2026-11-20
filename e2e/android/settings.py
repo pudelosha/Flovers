@@ -7,9 +7,9 @@ from pathlib import Path
 from app.ci_settings import *  # noqa: F403
 
 DEBUG = False
-SITE_URL = PUBLIC_WEB_BASE = PUBLIC_BASE_URL = "http://127.0.0.1:8000"
+SITE_URL = PUBLIC_WEB_BASE = PUBLIC_BASE_URL = "http://10.0.2.2:8000"
 EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "testserver"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "testserver", "10.0.2.2"]
 _storage = Path(os.environ.get("E2E_STORAGE_ROOT", str(Path(tempfile.gettempdir()) / "flovers-e2e-local"))).resolve()
 _temp_root = Path(os.environ.get("RUNNER_TEMP", tempfile.gettempdir())).resolve()
 if not _storage.is_relative_to(_temp_root) or _storage == _temp_root:

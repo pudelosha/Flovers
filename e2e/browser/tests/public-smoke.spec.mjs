@@ -37,6 +37,8 @@ test('homepage renders real assets', async ({ page }) => {
   // Hidden mobile/desktop variants and offscreen lazy screenshots are not
   // supposed to load on initial entry. Check every rendered hero image.
   const images = page.locator('.home-hero img:visible');
+  // Reveal/media-query layout can settle after the heading's first frame.
+  await expect(images.first()).toBeVisible();
   expect(await images.count()).toBeGreaterThan(0);
   await expect.poll(() => images.evaluateAll(nodes => nodes.filter(n => !n.complete || n.naturalWidth === 0).length)).toBe(0);
 });

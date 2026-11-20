@@ -56,8 +56,11 @@ Redirect following is disabled for this isolated APK. A native runtime probe
 checks the generated API endpoint and uses the actual client factory to reject
 a non-routable `.invalid` URL before DNS. The native lane requires its log marker
 and retains `network-isolation.json`; a missing/failed probe fails the lane.
-The native API is fixed to `127.0.0.1:8000`; `adb reverse` forwards only that port
-to the disposable server. This configuration cannot silently fall back to a
+The native API is fixed to `http://10.0.2.2:8000`, Android Emulator's documented
+alias for the runner's loopback. It is not a LAN/VPS address and does not depend
+on ADB reverse forwarding surviving a transport reconnect. The host API still
+binds only `127.0.0.1:8000`; a required HTTP preflight runs from inside Android.
+The policy allows only that exact HTTP origin and disables redirects. This configuration cannot silently fall back to a
 production API if environment injection fails: external requests fail closed.
 
 The server imports isolated CI settings and permits only the loopback
