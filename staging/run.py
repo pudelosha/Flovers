@@ -160,6 +160,13 @@ class Runner:
     def collect(self):
         # Diagnostics are best effort; collection failure is itself recorded, never a false test pass.
         try:
+            for role in ["postgres", "redis", "web", "worker", "beat"]:
+                ids = self.dc("ps", "--all", "--quiet", role, capture=True).split()
+                if ids:
+                    info = self.container(role)
+                    (RESULTS / f"health-{role}.json").write_text(json.dumps({
+                        "image_id": info["Image"], "state": info["State"],
+                    }, indent=2), encoding="utf8")
             self.dc("logs", "--no-color", "--timestamps", timeout=30)
             self.dc("ps", "--all", "--format", "json", timeout=30)
         except Exception:

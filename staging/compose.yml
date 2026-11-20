@@ -13,6 +13,7 @@ x-environment: &environment
   GOOGLE_APPLICATION_CREDENTIALS: ""
   PYTHONDONTWRITEBYTECODE: "1"
   PYTHONUNBUFFERED: "1"
+  HOME: /tmp
 x-labels: &labels
   flovers.staging: disposable
   flovers.staging.run: ${FLOVERS_STAGING_RUN}
@@ -72,6 +73,7 @@ services:
     pull_policy: never
     command: [redis-server, --appendonly, "yes"]
     networks: [isolated]
+    volumes: [redis-data:/data]
     labels:
       <<: *labels
       flovers.staging.role: redis
@@ -127,6 +129,8 @@ networks:
     labels: *labels
 volumes:
   database:
+    labels: *labels
+  redis-data:
     labels: *labels
   private:
     labels: *labels

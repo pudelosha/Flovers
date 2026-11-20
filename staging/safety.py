@@ -1,8 +1,6 @@
 """Fail closed before settings import or Docker operations."""
-import os
 import re
 import socket
-from urllib.parse import urlsplit
 
 
 def validate_environment(env):
@@ -73,11 +71,3 @@ def validate_container(info, *, project, role):
             or labels.get("flovers.staging.run") != project.removeprefix("flovers-stage-")
             or role not in {"postgres", "redis", "web", "worker", "beat", "verify", "init"}):
         raise RuntimeError("Refusing to control a container outside this staging run")
-
-
-def safe_base_url(value):
-    url = urlsplit(value)
-    if (url.scheme not in {"http", "https"} or not url.hostname or url.username or url.password
-            or url.path not in {"", "/"} or url.query or url.fragment):
-        raise ValueError("Provide an explicit origin without credentials, path, query or fragment")
-    return value.rstrip("/")

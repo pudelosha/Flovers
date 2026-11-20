@@ -142,7 +142,8 @@ def legacy():
         latest_snapshot={"temperature": 23, "moisture": 40}, sensors={"temperature": True, "moisture": True})
     get("readings", "Reading").objects.create(pk=1201, device_id=1001, timestamp=FIXED, observed_at=FIXED,
         temperature=23, humidity=45, light=200, moisture=40)
-    get("readings", "PumpTask").objects.create(pk=1101, device_id=1001, status="done", duration_seconds=20)
+    get("readings", "PumpTask").objects.create(pk=1101, device_id=1001, source="manual",
+        status="executed", executed_at=FIXED, created_by_user_id=501, duration_seconds=20)
     jpeg(Path(settings.MEDIA_ROOT) / "plants/thumb/staging.jpg", (64, 64))
     jpeg(Path(settings.MEDIA_ROOT) / "plants/hero/staging.jpg")
     save(STATE / "legacy.json", snapshot(registry))
