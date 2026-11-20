@@ -351,11 +351,11 @@ def media():
 
 
 def celery():
-    from app.celery import app
+    from app.celery import celery_app
     from .tasks import heartbeat
     from redis import Redis
     assert settings.CELERY_TASK_ALWAYS_EAGER is False
-    registered = app.control.inspect(destination=["staging@worker"], timeout=5).registered()
+    registered = celery_app.control.inspect(destination=["staging@worker"], timeout=5).registered()
     names = registered["staging@worker"]
     assert "staging.tasks.heartbeat" in names and "contacts.tasks.deliver_invitation_emails" in names
     # The marker exists before our explicit task, proving Beat dispatched it.

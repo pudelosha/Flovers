@@ -43,8 +43,8 @@ def probe(role):
         with urlopen("http://127.0.0.1:8000/__staging__/ready/", timeout=6) as response:
             assert response.status == 200
     elif role == "worker":
-        from app.celery import app
-        result = app.control.inspect(destination=["staging@worker"], timeout=3).ping()
+        from app.celery import celery_app
+        result = celery_app.control.inspect(destination=["staging@worker"], timeout=3).ping()
         assert result and result.get("staging@worker") == {"ok": "pong"}, result
     elif role == "beat":
         import time
