@@ -11,17 +11,11 @@ on:
       - ".github/workflows/mobile-android-play-internal.yml"
       - ".github/scripts/**"
       - ".github/test-policies/**"
-  pull_request:
-    paths:
-      - "contracts/**"
-      - ".github/workflows/test-api-contracts.yml"
-      - "mobile/**"
-      - "backend/**"
-      - ".github/workflows/test-mobile.yml"
-      - ".github/workflows/mobile-android-play-internal.yml"
-      - ".github/scripts/**"
-      - ".github/test-policies/**"
   workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:
@@ -29,6 +23,7 @@ permissions:
 
 jobs:
   tests:
+    name: Mobile test suite
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     defaults:

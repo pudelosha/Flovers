@@ -13,22 +13,11 @@ on:
       - "mobile/src/features/**/types/**"
       - ".github/scripts/**"
       - ".github/test-policies/**"
-  pull_request:
-    paths:
-      - "firmware/**"
-      - ".github/workflows/test-firmware.yml"
-      - "contracts/**"
-      - ".github/workflows/test-api-contracts.yml"
-      - "backend/**"
-      - "deployment/**"
-      - "docker-compose.yml"
-      - ".github/workflows/test-backend.yml"
-      - ".github/workflows/deploy-backend.yml"
-      - ".github/scripts/**"
-      - ".github/test-policies/**"
-      - "mobile/src/api/**"
-      - "mobile/src/features/**/types/**"
   workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:
@@ -36,6 +25,7 @@ permissions:
 
 jobs:
   tests:
+    name: Backend test suite
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     services:

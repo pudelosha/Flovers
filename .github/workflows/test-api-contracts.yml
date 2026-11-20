@@ -12,17 +12,11 @@ on:
       - ".github/scripts/**"
       - ".github/test-policies/**"
       - ".github/workflows/test-api-contracts.yml"
-  pull_request:
-    paths:
-      - "contracts/**"
-      - "backend/**"
-      - "mobile/src/**"
-      - "mobile/package*.json"
-      - "mobile/*config*"
-      - "translations/**"
-      - ".github/scripts/**"
-      - ".github/test-policies/**"
-      - ".github/workflows/test-api-contracts.yml"
+  workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:

@@ -198,3 +198,10 @@ required-case list now includes the 21 existing host C++ checks as well as the
 13 PostgreSQL concurrency cases. No test was removed or weakened, and production
 deployment workflows and mobile publication remain unchanged.
 
+
+## Mandatory PR coordinator
+
+All pull requests now run the full matrix through `ci-main.yml`, without PR path
+filters. The ten unique `ci/*` gates reject failed, cancelled, skipped or missing
+work. Standalone push/manual suites and production deployment definitions are
+preserved. See [the coordinator contract and ruleset proposal](CI_COORDINATOR.md).

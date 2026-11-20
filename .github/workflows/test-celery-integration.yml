@@ -9,14 +9,11 @@ on:
       - ".github/workflows/test-celery-integration.yml"
       - ".github/scripts/report_tests.py"
       - ".github/test-policies/**"
-  pull_request:
-    paths:
-      - "backend/**"
-      - "integration/celery/**"
-      - "integration/__init__.py"
-      - ".github/workflows/test-celery-integration.yml"
-      - ".github/scripts/report_tests.py"
-      - ".github/test-policies/**"
+  workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:
