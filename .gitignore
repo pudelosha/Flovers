@@ -51,6 +51,10 @@ Thumbs.db
 **/.pytest_cache/
 **/.coverage
 **/.coverage.*
+**/test-results/
+**/coverage/
+**/coverage-html/
+mobile/jest-results.json
 
 ############################
 # React Native (mobile)
@@ -142,3 +146,7 @@ translations/*/
 ############################
 backend/secrets/firebase.json
 backend/secrets/*.json
+
+# Disposable native/browser test outputs (never application assets).
+/e2e-results/
+/e2e/browser/node_modules/

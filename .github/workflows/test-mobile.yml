@@ -3,15 +3,19 @@ name: Mobile quality checks
 on:
   push:
     paths:
+      - "contracts/**"
+      - ".github/workflows/test-api-contracts.yml"
       - "mobile/**"
+      - "backend/**"
       - ".github/workflows/test-mobile.yml"
       - ".github/workflows/mobile-android-play-internal.yml"
-  pull_request:
-    paths:
-      - "mobile/**"
-      - ".github/workflows/test-mobile.yml"
-      - ".github/workflows/mobile-android-play-internal.yml"
+      - ".github/scripts/**"
+      - ".github/test-policies/**"
   workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:
@@ -19,6 +23,7 @@ permissions:
 
 jobs:
   tests:
+    name: Mobile test suite
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     defaults:
@@ -32,20 +37,36 @@ jobs:
           cache: npm
           cache-dependency-path: mobile/package-lock.json
       - name: Install locked dependencies
+        id: dependencies
         run: npm ci
       - name: Check strict TypeScript contracts
         run: npm run typecheck
       - name: Check mobile lint errors
         run: npm run lint
       - name: Run full mobile Jest suite
-        run: npm test -- --ci --maxWorkers=2 --json --outputFile=jest-results.json
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        run: npm run test:ci
       - name: Test release metadata generation
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
         run: npm run test:build-info
+      - name: Summarize tests, coverage and skipped cases
+        if: always()
+        run: >-
+          python3 ../.github/scripts/report_tests.py
+          --title "Mobile Jest tests"
+          --jest jest-results.json
+          --coverage coverage/coverage-summary.json --coverage-kind jest
+          --policy ../.github/test-policies/no-skips.json
+          --coverage-scope "All src TypeScript/TSX and App.tsx, including unimported files; tests, declarations and generated buildInfo excluded. Native platform code is not measured."
+          --output test-results/summary.md
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: mobile-test-results-${{ github.run_id }}-${{ github.run_attempt }}
-          path: mobile/jest-results.json
+          path: |
+            mobile/jest-results.json
+            mobile/coverage/
+            mobile/test-results/
           if-no-files-found: ignore
           retention-days: 7

@@ -212,6 +212,7 @@ export default function LoginScreen({ navigation }: any) {
 
         <AnimatedFloatingLabel
           label={getTranslation("login.email")}
+          testID="auth-login-email"
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
@@ -224,6 +225,7 @@ export default function LoginScreen({ navigation }: any) {
 
         <AnimatedFloatingLabel
           label={getTranslation("login.password")}
+          testID="auth-login-password"
           value={password}
           onChangeText={setPassword}
           secureTextEntry={!showPwd}
@@ -241,7 +243,7 @@ export default function LoginScreen({ navigation }: any) {
           }
         />
 
-        <Button mode="contained" onPress={onSubmit} loading={loading} disabled={loading} style={s.button}>
+        <Button testID="auth-login-submit" mode="contained" onPress={onSubmit} loading={loading} disabled={loading} style={s.button}>
           {getTranslation("login.signIn")}
         </Button>
 

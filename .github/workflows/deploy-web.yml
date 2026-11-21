@@ -1,62 +1,103 @@
 name: Deploy web (GitHub Pages)
 
 on:
-  push:
-    branches: ["main"]
-    paths:
-      - "web/**"
-      - ".github/workflows/deploy-web.yml"
-      - ".github/workflows/test-web.yml"
   workflow_dispatch:
+    inputs:
+      revision:
+        description: Full 40-character main revision selected for publication
+        required: true
+        type: string
+      confirmation:
+        description: Type PUBLISH WEBSITE followed by a space and the exact revision
+        required: true
+        type: string
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
+  authorize:
+    name: Authorize owner-requested website publication
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/production_gate.py website
+
   quality:
+    needs: authorize
     uses: ./.github/workflows/test-web.yml
     permissions:
       contents: read
 
   build:
-    needs: quality
+    name: Build and verify website revision
+    needs: [authorize, quality]
     runs-on: ubuntu-24.04
-    defaults:
-      run:
-        working-directory: web
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v7
-
-      - name: Setup Node
-        uses: actions/setup-node@v7
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
         with:
-          node-version: 24
+          node-version: "24.20.0"
           cache: npm
           cache-dependency-path: web/package-lock.json
-
-      - name: Install
+      - name: Install locked dependencies
+        working-directory: web
         run: npm ci
-
-      - name: Build
+      - name: Build website
+        working-directory: web
         run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
+      - name: Verify entry assets and record revision and hashes
+        run: python3 .github/scripts/web_release.py build web/dist "$GITHUB_SHA" "$GITHUB_RUN_ID"
+      - name: Retain verified website for recovery
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: website-release-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: web/dist/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Stage Pages artifact without publishing
         uses: actions/upload-pages-artifact@v3
         with:
           path: web/dist
 
-  deploy:
+  release:
+    name: Approved website publication
+    needs: [authorize, quality, build]
     runs-on: ubuntu-24.04
-    needs: build
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      actions: read
+      pages: write
+      id-token: write
     steps:
-      - name: Deploy
+      - uses: actions/checkout@v7.0.1
+      - name: Recheck authorization after environment review
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/production_gate.py website
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: false
+      - name: Publish verified Pages artifact
+        id: deployment
         uses: actions/deploy-pages@v4
+      - name: Record published revision
+        run: echo "Published website revision $GITHUB_SHA from run $GITHUB_RUN_ID" >> "$GITHUB_STEP_SUMMARY"
+      - name: Verify published revision receipt
+        env:
+          PUBLISHED_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python3 .github/scripts/web_release.py verify "$PUBLISHED_URL" "$GITHUB_SHA"

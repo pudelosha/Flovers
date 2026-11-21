@@ -110,7 +110,7 @@ export default function AccountCard({
         </Text>
       </Pressable>
 
-      <Pressable style={[controls.actionBtnFull, controls.secondaryFull]} onPress={onLogout}>
+      <Pressable testID="account-logout" style={[controls.actionBtnFull, controls.secondaryFull]} onPress={onLogout}>
         <MaterialCommunityIcons name="logout" size={18} color="#FFFFFF" />
         <Text style={[controls.actionBtnFullText, { color: "#FFFFFF" }]}>
           {t("profile.account.logout")}

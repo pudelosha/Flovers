@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: flovers_ci
+      POSTGRES_USER: flovers_ci
+      POSTGRES_PASSWORD: flovers_ci
+    ports: ["127.0.0.1:5432:5432"]
+    labels:
+      flovers.integration: celery
+      flovers.integration.run: ${FLOVERS_INTEGRATION_RUN:?Set a unique integration run ID}
+      flovers.integration.role: postgres
+  redis:
+    image: redis:7.4.7-alpine
+    ports: ["127.0.0.1:6379:6379"]
+    labels:
+      flovers.integration: celery
+      flovers.integration.run: ${FLOVERS_INTEGRATION_RUN:?Set a unique integration run ID}
+      flovers.integration.role: redis
+  mailpit:
+    image: axllent/mailpit:v1.34.0
+    ports: ["127.0.0.1:1025:1025", "127.0.0.1:8025:8025"]
+    labels:
+      flovers.integration: celery
+      flovers.integration.run: ${FLOVERS_INTEGRATION_RUN:?Set a unique integration run ID}
+      flovers.integration.role: mailpit

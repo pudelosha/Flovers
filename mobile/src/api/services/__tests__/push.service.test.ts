@@ -3,6 +3,7 @@ import { startPushNotifications, stopPushNotifications, unregisterPushNotificati
 import messaging from "@react-native-firebase/messaging";
 import notifee from "@notifee/react-native";
 import { Linking } from "react-native";
+import Config from "react-native-config";
 
 jest.mock("@react-native-firebase/messaging", () => {
   const api = {
@@ -34,6 +35,19 @@ describe("push.service", () => {
     mockedTeardownRequest.mockReset().mockResolvedValue(undefined);
     native.deleteToken.mockReset().mockResolvedValue(undefined);
     stopPushNotifications();
+  });
+
+  it("never initializes Firebase or registers a token in the isolated native smoke build", async () => {
+    Config.E2E_MODE = "true";
+    try {
+      await startPushNotifications();
+      await unregisterPushNotifications("synthetic-access");
+      expect(native.requestPermission).not.toHaveBeenCalled();
+      expect(native.getToken).not.toHaveBeenCalled();
+      expect(native.deleteToken).not.toHaveBeenCalled();
+      expect(mockedRequest).not.toHaveBeenCalled();
+      expect(mockedTeardownRequest).not.toHaveBeenCalled();
+    } finally { delete Config.E2E_MODE; }
   });
 
   it("retries after registration failure and shares concurrent initialization", async () => {

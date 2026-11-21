@@ -374,6 +374,7 @@ function GlassTabBar({ state, navigation }: any) {
             return (
               <Pressable
                 key={route.key}
+                testID={`tab-${route.name}`}
                 onPress={onPress}
                 onLongPress={onLongPress}
                 accessibilityRole="button"

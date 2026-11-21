@@ -23,13 +23,14 @@ Deploy migration `plant_instances.0007_plantimage_framing` before enabling frami
 
 ## Deployment and persistent storage
 
-The deployment script automatically creates `/opt/app/docker-compose.private-media.json`. This non-secret Compose overlay mounts the project-scoped `<project>_private_media` Docker volume at `/app/private-media` in the backend application services. It remains on the VPS after the temporary image-pinning overlay is removed, so subsequent deployments reuse the same files. It is not mounted into Caddy or Traefik and must never be exposed through a public `/media/` file-server mapping.
+The hardened deployment requires an existing consistent private-media mount and preserves its volume or bind mapping. Initial provisioning is a separate approved operation. `/opt/app/docker-compose.private-media.json` and the persistent pinned-image overlay `/opt/app/docker-compose.release.json` remain on the VPS. Neither private media nor these configuration files are exposed through the proxy.
 
-Use the same overlay for manual service recreation and recovery:
+Use both overlays for manual service recreation, and follow [the ordered release/recovery procedure](PRODUCTION_RELEASE.md):
 
 ```sh
 cd /opt/app
-docker compose -f docker-compose.prod.yml -f docker-compose.private-media.json up -d
+docker compose -f docker-compose.prod.yml -f docker-compose.private-media.json \
+  -f docker-compose.release.json up -d --no-deps --no-build --pull never web
 ```
 
 Production upload handling requires the private storage path to be a mounted filesystem. This prevents uploads from silently being saved into an ephemeral container layer if a manual restart omits the overlay. Local development may disable the mount requirement; the checked-in development Compose stack already mounts a private volume.

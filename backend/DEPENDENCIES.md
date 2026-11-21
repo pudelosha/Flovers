@@ -54,6 +54,34 @@ floating dependencies afterward.
 
 ## Required release checks
 
+### CI reporting tools
+
+`requirements-ci.in` and its generated hashed `requirements-ci.txt` lock add
+pytest-cov/coverage.py only to test environments. Their pytest and shared
+dependency versions are constrained by `requirements.txt`, so adding reporting
+cannot silently upgrade application dependencies. CI installs both locks in a
+single wheel-only, hash-checked command, then runs `pip check`:
+
+```sh
+python -m pip install --require-hashes --only-binary=:all: -r requirements.txt -r requirements-ci.txt
+python -m pip check
+```
+
+The Docker image continues to install only `requirements.txt`; coverage tools are
+not runtime dependencies. After updating the application lock, regenerate the CI
+overlay with the same uv version and review both locks for consistency:
+
+```sh
+uv pip compile requirements-ci.in --python-version 3.12.16 --universal \
+  --generate-hashes --emit-index-url --no-build --output-file requirements-ci.txt
+```
+
+Use `uv --system-certs` where the workstation requires its OS certificate trust
+store. Do not disable TLS verification. Coverage is configured in `.coveragerc`;
+see [quality checks](../.github/QUALITY_CHECKS.md) for report commands and scope.
+
+### Application and image validation
+
 The backend quality workflow installs the lock, checks dependency compatibility,
 then runs `scripts/check_recognition.py`. The script rejects GPU builds and
 NVIDIA/CUDA/Triton packages, executes a compiled TorchVision CPU operator, loads

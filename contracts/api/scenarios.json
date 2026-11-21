@@ -1,0 +1,1674 @@
+{
+  "format": 1,
+  "previous_mobile_commit": "6f698097ddb17f7740dada6ce37beba1a28ff34e",
+  "scenarios": [
+    {
+      "id": "completion-today",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "owner",
+        "body": {
+          "note": "Contract note",
+          "completedDate": "2026-11-19"
+        }
+      },
+      "expect": {
+        "xp_awarded": 100,
+        "completed_task.status": "completed",
+        "completed_task.completed_by.id": "101",
+        "next_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "today"
+    },
+    {
+      "id": "completion-overdue",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "owner",
+        "body": {
+          "note": "Contract note",
+          "completedDate": "2026-11-19"
+        }
+      },
+      "expect": {
+        "xp_awarded": 100,
+        "completed_task.status": "completed",
+        "completed_task.completed_by.id": "101",
+        "next_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "overdue"
+    },
+    {
+      "id": "completion-future",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "owner",
+        "body": {
+          "note": "Contract note",
+          "completedDate": "2026-11-19"
+        }
+      },
+      "expect": {
+        "xp_awarded": 0,
+        "completed_task.status": "completed",
+        "completed_task.completed_by.id": "101",
+        "next_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "future"
+    },
+    {
+      "id": "completion-no-metadata",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "owner"
+      },
+      "expect": {
+        "xp_awarded": 100,
+        "completed_task.note": null,
+        "next_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "today"
+    },
+    {
+      "id": "completion-idempotent",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "owner"
+      },
+      "expect": {
+        "xp_awarded": 0,
+        "completed_task.status": "completed"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "already-completed"
+    },
+    {
+      "id": "completion-caregiver",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "caregiver"
+      },
+      "expect": {
+        "completed_task.completed_by.id": "102"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "completion-viewer",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "viewer"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 404
+    },
+    {
+      "id": "completion-stranger",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "stranger"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 404
+    },
+    {
+      "id": "completion-expired",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "expired"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 404
+    },
+    {
+      "id": "completion-anonymous",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "anonymous"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 401
+    },
+    {
+      "id": "completion-invalid-date",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "owner",
+        "body": {
+          "completedDate": "invalid"
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 400
+    },
+    {
+      "id": "progression-initial",
+      "operation": "progression",
+      "request": {
+        "method": "GET",
+        "path": "/profile/progression/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "success",
+        "data.level": 1,
+        "data.xp_into_level": 0,
+        "data.xp_for_next_level": 100
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "initial"
+    },
+    {
+      "id": "progression-level-up",
+      "operation": "progression",
+      "request": {
+        "method": "GET",
+        "path": "/profile/progression/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "success",
+        "data.level": 2,
+        "data.xp_into_level": 90,
+        "data.xp_for_next_level": 200
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "level-up"
+    },
+    {
+      "id": "progression-maximum",
+      "operation": "progression",
+      "request": {
+        "method": "GET",
+        "path": "/profile/progression/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "success",
+        "data.level": 100,
+        "data.xp_into_level": 0,
+        "data.xp_for_next_level": 0
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "maximum"
+    },
+    {
+      "id": "progression-anonymous",
+      "operation": "progression",
+      "request": {
+        "method": "GET",
+        "path": "/profile/progression/",
+        "actor": "anonymous"
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 401
+    },
+    {
+      "id": "plant-definition",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": 201,
+        "display_name": "Contract fern",
+        "photo": null
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "definition"
+    },
+    {
+      "id": "plant-empty",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": 201,
+        "display_name": "Contract fern",
+        "photo": null
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "empty"
+    },
+    {
+      "id": "plant-uploaded",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": 201,
+        "photo.width": 96,
+        "photo.height": 64
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "photo-owner",
+      "operation": "photo",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "owner"
+      },
+      "expect": {
+        "photo.width": 96,
+        "photo.framing.focal_x": 0.4
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "photo-caregiver",
+      "operation": "photo",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "caregiver"
+      },
+      "expect": {
+        "photo.width": 96,
+        "photo.framing.focal_x": 0.4
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "photo-viewer",
+      "operation": "photo",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "viewer"
+      },
+      "expect": {
+        "photo.width": 96,
+        "photo.framing.focal_x": 0.4
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "photo-stranger",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "stranger"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 404
+    },
+    {
+      "id": "photo-expired",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "expired"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 404
+    },
+    {
+      "id": "photo-anonymous",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "anonymous"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 401
+    },
+    {
+      "id": "photo-bytes-owner",
+      "operation": "bytes",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/photo/{photo_id}/",
+        "actor": "owner"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "photo-bytes-viewer",
+      "operation": "bytes",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/photo/{photo_id}/",
+        "actor": "viewer"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "photo-bytes-revoked",
+      "operation": "bytes",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/photo/{photo_id}/",
+        "actor": "revoked"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 404
+    },
+    {
+      "id": "photo-bytes-stranger",
+      "operation": "bytes",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/photo/{photo_id}/",
+        "actor": "stranger"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 404
+    },
+    {
+      "id": "photo-bytes-anonymous",
+      "operation": "bytes",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/photo/{photo_id}/",
+        "actor": "anonymous"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 401
+    },
+    {
+      "id": "photo-stale-replacement",
+      "operation": "photo-replace",
+      "request": {
+        "method": "PUT",
+        "path": "/plant-instances/201/photo/",
+        "actor": "owner",
+        "body": {
+          "expected_photo_id": "none"
+        }
+      },
+      "expect": {
+        "code": "photo_conflict"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded",
+      "error": 409
+    },
+    {
+      "id": "photo-upload-framing",
+      "operation": "cover-upload",
+      "request": {
+        "method": "PUT",
+        "path": "/plant-instances/201/photo/",
+        "actor": "owner",
+        "body": {
+          "upload_key": "00000000-0000-4000-8000-000000000804",
+          "expected_photo_id": "none",
+          "framing": "{\"focal_x\":0.4,\"focal_y\":0.6,\"zoom\":1.5}"
+        }
+      },
+      "expect": {
+        "width": 96,
+        "height": 64,
+        "framing.focal_x": 0.4,
+        "framing_revision": 0
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "photo-reframe",
+      "operation": "reframe",
+      "request": {
+        "method": "PATCH",
+        "path": "/plant-instances/201/photo/",
+        "actor": "owner",
+        "body": {
+          "framing": {
+            "focal_x": 0.7,
+            "focal_y": 0.5,
+            "zoom": 2
+          },
+          "expected_framing_revision": 0
+        }
+      },
+      "expect": {
+        "framing.focal_x": 0.7,
+        "framing_revision": 1
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "uploaded"
+    },
+    {
+      "id": "journal-photo-create",
+      "operation": "journal-create",
+      "request": {
+        "method": "POST",
+        "path": "/journal/photos/",
+        "actor": "owner",
+        "body": {
+          "plant_id": "201",
+          "upload_key": "00000000-0000-4000-8000-000000000805",
+          "notes": "New growth",
+          "taken_on": "",
+          "framing": "{\"focal_x\":0.5,\"focal_y\":0.5,\"zoom\":1}"
+        }
+      },
+      "expect": {
+        "plant_id": "201",
+        "notes": "New growth",
+        "taken_on": null,
+        "revision": 0
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "journal-photo-edit",
+      "operation": "journal-edit",
+      "request": {
+        "method": "PATCH",
+        "path": "/journal/photos/00000000-0000-4000-8000-000000000501/",
+        "actor": "owner",
+        "body": {
+          "notes": "Updated",
+          "taken_on": null,
+          "framing": {
+            "focal_x": 0.5,
+            "focal_y": 0.5,
+            "zoom": 1
+          },
+          "expected_revision": 0
+        }
+      },
+      "expect": {
+        "notes": "Updated",
+        "revision": 1
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "journal-photo-too-soon",
+      "operation": "journal-create",
+      "request": {
+        "method": "POST",
+        "path": "/journal/photos/",
+        "actor": "owner",
+        "body": {
+          "plant_id": "201",
+          "upload_key": "00000000-0000-4000-8000-000000000805",
+          "notes": "New growth",
+          "taken_on": "",
+          "framing": "{\"focal_x\":0.5,\"focal_y\":0.5,\"zoom\":1}"
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "journal",
+      "error": 429
+    },
+    {
+      "id": "journal-mixed",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?limit=30",
+        "actor": "owner"
+      },
+      "expect": {
+        "can_manage_tasks": true,
+        "next_cursor": null
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "journal-empty",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?limit=30",
+        "actor": "owner"
+      },
+      "expect": {
+        "can_manage_tasks": false,
+        "results": [],
+        "next_cursor": null
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "empty-journal"
+    },
+    {
+      "id": "journal-pagination",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?limit=30",
+        "actor": "owner"
+      },
+      "expect": {
+        "can_manage_tasks": true,
+        "next_cursor": {
+          "$type": "string"
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "pagination"
+    },
+    {
+      "id": "journal-shared",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?limit=30",
+        "actor": "viewer"
+      },
+      "expect": {
+        "can_manage_tasks": false,
+        "next_cursor": null
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "journal-revoked",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?limit=30",
+        "actor": "revoked"
+      },
+      "expect": {
+        "can_manage_tasks": false,
+        "results": [],
+        "next_cursor": null
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "journal-filter",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?plantId=201&types=watering&limit=30",
+        "actor": "owner"
+      },
+      "expect": {
+        "can_manage_tasks": true,
+        "next_cursor": null
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "journal-invalid-cursor",
+      "operation": "journal",
+      "request": {
+        "method": "GET",
+        "path": "/journal/entries/?limit=30&cursor=bad",
+        "actor": "owner"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 400
+    },
+    {
+      "id": "journal-photo-plain",
+      "operation": "preview",
+      "request": {
+        "method": "GET",
+        "path": "/journal/photos/00000000-0000-4000-8000-000000000501/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": "00000000-0000-4000-8000-000000000501",
+        "plant_id": "201",
+        "notes": "Growth"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "journal-photo-navigation",
+      "operation": "preview",
+      "request": {
+        "method": "GET",
+        "path": "/journal/photos/00000000-0000-4000-8000-000000000501/?navigation=1",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": "00000000-0000-4000-8000-000000000501",
+        "plant_id": "201",
+        "notes": "Growth"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "legacy-history",
+      "operation": "history",
+      "request": {
+        "method": "GET",
+        "path": "/reminders/tasks/?status=completed",
+        "actor": "owner"
+      },
+      "expect": {},
+      "clients": [
+        "previous"
+      ],
+      "setup": "journal"
+    },
+    {
+      "id": "sharing-owner",
+      "operation": "sharing",
+      "request": {
+        "method": "GET",
+        "path": "/sharing/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "success"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "sharing-caregiver",
+      "operation": "sharing",
+      "request": {
+        "method": "GET",
+        "path": "/sharing/",
+        "actor": "caregiver"
+      },
+      "expect": {
+        "status": "success"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "sharing-viewer",
+      "operation": "sharing",
+      "request": {
+        "method": "GET",
+        "path": "/sharing/",
+        "actor": "viewer"
+      },
+      "expect": {
+        "status": "success"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "sharing-expired",
+      "operation": "sharing",
+      "request": {
+        "method": "GET",
+        "path": "/sharing/",
+        "actor": "expired"
+      },
+      "expect": {
+        "status": "success"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "sharing-stranger",
+      "operation": "sharing",
+      "request": {
+        "method": "GET",
+        "path": "/sharing/",
+        "actor": "stranger"
+      },
+      "expect": {
+        "status": "success"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "sharing-update",
+      "operation": "share-update",
+      "request": {
+        "method": "PUT",
+        "path": "/sharing/",
+        "actor": "owner",
+        "body": {
+          "updates": [
+            {
+              "plant_id": 201,
+              "expected_revision": 0,
+              "recipients": [
+                {
+                  "contact_id": "102",
+                  "can_complete_tasks": true,
+                  "ends_on": null
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expect": {
+        "status": "success",
+        "data.versions.201": 1
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "sharing-stale",
+      "operation": "share-update",
+      "request": {
+        "method": "PUT",
+        "path": "/sharing/",
+        "actor": "owner",
+        "body": {
+          "updates": [
+            {
+              "plant_id": 201,
+              "expected_revision": 9,
+              "recipients": []
+            }
+          ]
+        }
+      },
+      "expect": {
+        "code": "conflict"
+      },
+      "clients": [
+        "current"
+      ],
+      "error": 409
+    },
+    {
+      "id": "sharing-not-owner",
+      "operation": "share-update",
+      "request": {
+        "method": "PUT",
+        "path": "/sharing/",
+        "actor": "viewer",
+        "body": {
+          "updates": [
+            {
+              "plant_id": 201,
+              "expected_revision": 0,
+              "recipients": []
+            }
+          ]
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 404
+    },
+    {
+      "id": "device-zero",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": 601,
+        "pump_duration_seconds": 20,
+        "interval_minutes": 60,
+        "latest.moisture": 0
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "zero"
+    },
+    {
+      "id": "device-missing",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": 601,
+        "pump_duration_seconds": 20,
+        "interval_minutes": 60,
+        "latest": null
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "missing"
+    },
+    {
+      "id": "device-hours",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "owner"
+      },
+      "expect": {
+        "id": 601,
+        "pump_duration_seconds": 20,
+        "interval_minutes": 120,
+        "latest": null
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "hours"
+    },
+    {
+      "id": "device-shared",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "viewer"
+      },
+      "expect": {
+        "id": 601,
+        "access.can_edit": false,
+        "device_key": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "device-stranger",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "stranger"
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 404
+    },
+    {
+      "id": "device-update-minutes",
+      "operation": "device-update",
+      "request": {
+        "method": "PATCH",
+        "path": "/readings/devices/601/",
+        "actor": "owner",
+        "body": {
+          "interval_minutes": 45,
+          "pump_duration_seconds": 27
+        }
+      },
+      "expect": {
+        "interval_minutes": 45
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-update-aliases",
+      "operation": "device-update",
+      "request": {
+        "method": "PATCH",
+        "path": "/readings/devices/601/",
+        "actor": "owner",
+        "body": {
+          "intervalHours": 2
+        }
+      },
+      "expect": {
+        "interval_minutes": 120
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-update-camel-minutes",
+      "operation": "device-update",
+      "request": {
+        "method": "PATCH",
+        "path": "/readings/devices/601/",
+        "actor": "owner",
+        "body": {
+          "intervalMinutes": 30
+        }
+      },
+      "expect": {
+        "interval_minutes": 30
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-bad-interval",
+      "operation": "device-update",
+      "request": {
+        "method": "PATCH",
+        "path": "/readings/devices/601/",
+        "actor": "owner",
+        "body": {
+          "interval_minutes": 0
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 400
+    },
+    {
+      "id": "device-bad-pump-duration",
+      "operation": "device-update",
+      "request": {
+        "method": "PATCH",
+        "path": "/readings/devices/601/",
+        "actor": "owner",
+        "body": {
+          "pump_duration_seconds": 301
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 400
+    },
+    {
+      "id": "pump-explicit",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "owner",
+        "body": {
+          "duration_seconds": 20
+        }
+      },
+      "expect": {
+        "pending_pump_task.duration_seconds": 20,
+        "pending_pump_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "pump-minimum",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "owner",
+        "body": {
+          "duration_seconds": 1
+        }
+      },
+      "expect": {
+        "pending_pump_task.duration_seconds": 1,
+        "pending_pump_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "pump-maximum",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "owner",
+        "body": {
+          "duration_seconds": 300
+        }
+      },
+      "expect": {
+        "pending_pump_task.duration_seconds": 300,
+        "pending_pump_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "pump-firmware-default",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "owner"
+      },
+      "expect": {
+        "pending_pump_task.duration_seconds": null,
+        "pending_pump_task.status": "pending"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "pump-invalid-0",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "owner",
+        "body": {
+          "duration_seconds": 0
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 400
+    },
+    {
+      "id": "pump-invalid-301",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "owner",
+        "body": {
+          "duration_seconds": 301
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "error": 400
+    },
+    {
+      "id": "pump-viewer",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "viewer",
+        "body": {
+          "duration_seconds": 20
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "error": 404
+    },
+    {
+      "id": "readings-history-avg",
+      "operation": "reading-history",
+      "request": {
+        "method": "GET",
+        "path": "/readings/history/?device_id=601&range=week&metric=moisture&stat=avg&anchor=2026-11-19T12%3A00%3A00Z",
+        "actor": "owner"
+      },
+      "expect": {
+        "stat": "avg",
+        "metric": "moisture",
+        "points": {
+          "$type": "array"
+        }
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "zero"
+    },
+    {
+      "id": "readings-history-min",
+      "operation": "reading-history",
+      "request": {
+        "method": "GET",
+        "path": "/readings/history/?device_id=601&range=week&metric=moisture&stat=min&anchor=2026-11-19T12%3A00%3A00Z",
+        "actor": "owner"
+      },
+      "expect": {
+        "stat": "min",
+        "metric": "moisture",
+        "points": {
+          "$type": "array"
+        }
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "zero"
+    },
+    {
+      "id": "readings-history-max",
+      "operation": "reading-history",
+      "request": {
+        "method": "GET",
+        "path": "/readings/history/?device_id=601&range=week&metric=moisture&stat=max&anchor=2026-11-19T12%3A00%3A00Z",
+        "actor": "owner"
+      },
+      "expect": {
+        "stat": "max",
+        "metric": "moisture",
+        "points": {
+          "$type": "array"
+        }
+      },
+      "clients": [
+        "current",
+        "previous"
+      ],
+      "setup": "zero"
+    },
+    {
+      "id": "contacts-snapshot",
+      "operation": "contacts",
+      "request": {
+        "method": "GET",
+        "path": "/contacts/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "success",
+        "data.counts.contacts": 3
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "contacts-pending",
+      "operation": "contacts",
+      "request": {
+        "method": "GET",
+        "path": "/contacts/",
+        "actor": "owner"
+      },
+      "expect": {
+        "data.counts.incoming": 1,
+        "data.counts.outgoing": 1
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "pending-contacts"
+    },
+    {
+      "id": "invitation-send",
+      "operation": "invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/email-invitations/",
+        "actor": "owner",
+        "body": {
+          "email": "new@contract.invalid",
+          "language": "pl"
+        }
+      },
+      "expect": {
+        "status": "success",
+        "data.email_invitations.0.email": "new@contract.invalid",
+        "data.email_invitations.0.language": "pl"
+      },
+      "clients": [
+        "current"
+      ]
+    },
+    {
+      "id": "invitation-cancel",
+      "operation": "invite-cancel",
+      "request": {
+        "method": "DELETE",
+        "path": "/contacts/email-invitations/701/",
+        "actor": "owner"
+      },
+      "expect": {
+        "data.email_invitations": []
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "invited"
+    },
+    {
+      "id": "invitation-registered",
+      "operation": "invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/email-invitations/",
+        "actor": "owner",
+        "body": {
+          "email": "viewer@contract.invalid",
+          "language": "en"
+        }
+      },
+      "expect": {
+        "code": "alreadyRegistered"
+      },
+      "clients": [
+        "current"
+      ],
+      "error": 409
+    },
+    {
+      "id": "invitation-invalid",
+      "operation": "invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/email-invitations/",
+        "actor": "owner",
+        "body": {
+          "email": "bad",
+          "language": "en"
+        }
+      },
+      "expect": {
+        "code": "invalid"
+      },
+      "clients": [
+        "current"
+      ],
+      "error": 400
+    },
+    {
+      "id": "invitation-duplicate",
+      "operation": "invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/email-invitations/",
+        "actor": "owner",
+        "body": {
+          "email": "new@contract.invalid",
+          "language": "en"
+        }
+      },
+      "expect": {
+        "code": "alreadyPending"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "invited",
+      "error": 409
+    },
+    {
+      "id": "invitation-throttled",
+      "operation": "invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/email-invitations/",
+        "actor": "owner",
+        "body": {
+          "email": "new@contract.invalid",
+          "language": "en"
+        }
+      },
+      "expect": {
+        "code": "throttled"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "throttled",
+      "error": 429
+    },
+    {
+      "id": "contact-self",
+      "operation": "contact-invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/invitations/",
+        "actor": "owner",
+        "body": {
+          "identifier": "owner@contract.invalid"
+        }
+      },
+      "expect": {
+        "code": "self"
+      },
+      "clients": [
+        "current"
+      ],
+      "error": 400
+    },
+    {
+      "id": "contact-missing",
+      "operation": "contact-invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/invitations/",
+        "actor": "owner",
+        "body": {
+          "identifier": "absent@contract.invalid"
+        }
+      },
+      "expect": {
+        "code": "notFound"
+      },
+      "clients": [
+        "current"
+      ],
+      "error": 404
+    },
+    {
+      "id": "contact-contact",
+      "operation": "contact-invite",
+      "request": {
+        "method": "POST",
+        "path": "/contacts/invitations/",
+        "actor": "owner",
+        "body": {
+          "identifier": "viewer@contract.invalid"
+        }
+      },
+      "expect": {
+        "code": "alreadyContact"
+      },
+      "clients": [
+        "current"
+      ],
+      "error": 409
+    },
+    {
+      "id": "plant-expired-token",
+      "operation": "plant",
+      "request": {
+        "method": "GET",
+        "path": "/plant-instances/201/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-expired-token",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "progression-expired-token",
+      "operation": "progression",
+      "request": {
+        "method": "GET",
+        "path": "/profile/progression/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "complete-expired-token",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "expired-token"
+      },
+      "error": 401,
+      "expect": {
+        "code": "token_not_valid"
+      },
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "device-revoked-access",
+      "operation": "device",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/",
+        "actor": "revoked"
+      },
+      "error": 404,
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "complete-revoked-access",
+      "operation": "complete",
+      "request": {
+        "method": "POST",
+        "path": "/reminders/tasks/401/complete/",
+        "actor": "revoked"
+      },
+      "error": 404,
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ]
+    },
+    {
+      "id": "pump-revoked-access",
+      "operation": "pump",
+      "request": {
+        "method": "POST",
+        "path": "/readings/devices/601/pump-schedule/",
+        "actor": "revoked"
+      },
+      "error": 404,
+      "expect": {},
+      "clients": [
+        "current",
+        "previous"
+      ]
+    }
+  ]
+}

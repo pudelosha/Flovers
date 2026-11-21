@@ -1,79 +1,103 @@
 name: Deploy backend (VPS)
 
 on:
-  push:
-    branches: ["main"]
-    paths:
-      - "backend/**"
-      - "docker-compose.yml"
-      - "deployment/**"
-      - ".github/workflows/deploy-backend.yml"
-      - ".github/workflows/test-backend.yml"
   workflow_dispatch:
+    inputs:
+      revision:
+        description: Full 40-character main revision selected for this release
+        required: true
+        type: string
+      confirmation:
+        description: Type DEPLOY BACKEND followed by a space and the exact revision
+        required: true
+        type: string
 
-# Serialize builds and deployments, including manual runs on other branches.
 concurrency:
   group: backend-production
   cancel-in-progress: false
 
 permissions:
   contents: read
-  packages: write
 
 jobs:
+  authorize:
+    name: Authorize owner-requested backend release
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Require owner confirmation and existing environment protection
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/production_gate.py backend
+
   quality:
+    needs: authorize
     uses: ./.github/workflows/test-backend.yml
     permissions:
       contents: read
 
-  build:
-    needs: quality
+  release:
+    name: Approved backend build and deployment
+    needs: [authorize, quality]
     runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    environment:
+      name: production-backend
+    permissions:
+      contents: read
+      actions: read
+      packages: write
+    env:
+      DEPLOY_SHA: ${{ github.sha }}
+      DEPLOY_APPROVED_SHA: ${{ github.sha }}
+      DEPLOY_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+      BACKEND_SERVICE: ${{ vars.BACKEND_SERVICE }}
     steps:
-      - uses: actions/checkout@v7
-
+      - uses: actions/checkout@v7.0.1
+      - name: Recheck authorization after environment review
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VPS_HOST_FINGERPRINT: ${{ vars.VPS_HOST_FINGERPRINT }}
+        run: |
+          python3 .github/scripts/production_gate.py backend
+          test -n "$VPS_HOST_FINGERPRINT"
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push image
+      - name: Build and push immutable release revision
+        id: image
         uses: docker/build-push-action@v6
         with:
           context: ./backend
           platforms: linux/amd64
           push: true
-          tags: |
-            ghcr.io/pudelosha/flovers:latest
-            ghcr.io/pudelosha/flovers:${{ github.sha }}
-
-  deploy:
-    runs-on: ubuntu-24.04
-    needs: build
-    env:
-      DEPLOY_SHA: ${{ github.sha }}
-      BACKEND_SERVICE: ${{ vars.BACKEND_SERVICE }}
-    steps:
-      - uses: actions/checkout@v7
-
-      - name: Prepare deployment script
+          tags: ghcr.io/pudelosha/flovers:${{ github.sha }}
+      - name: Prepare versioned deployment bundle
         id: deployment-script
-        shell: bash
-        run: echo "payload=$(base64 -w 0 deployment/deploy_backend.py)" >> "$GITHUB_OUTPUT"
-
-      - name: Deploy to VPS
+        run: python3 deployment/package_release.py >> "$GITHUB_OUTPUT"
+      - name: Deploy approved digest to VPS
         uses: appleboy/ssh-action@v1.0.3
         env:
+          DEPLOY_IMAGE: ghcr.io/pudelosha/flovers@${{ steps.image.outputs.digest }}
           DEPLOY_SCRIPT: ${{ steps.deployment-script.outputs.payload }}
         with:
           host: ${{ secrets.VPS_HOST }}
           username: deploy
           key: ${{ secrets.VPS_SSH_KEY }}
-          envs: DEPLOY_SHA,BACKEND_SERVICE,DEPLOY_SCRIPT
-          command_timeout: 30m
+          fingerprint: ${{ vars.VPS_HOST_FINGERPRINT }}
+          envs: DEPLOY_SHA,DEPLOY_APPROVED_SHA,DEPLOY_RUN_ID,DEPLOY_IMAGE,BACKEND_SERVICE,DEPLOY_SCRIPT
+          command_timeout: 40m
           script: |
             set -eu
             cd /opt/app
-            python3 -c 'import base64, os; exec(compile(base64.b64decode(os.environ["DEPLOY_SCRIPT"], validate=True), "<deployment>", "exec"))'
+            python3 -c 'import base64, os; exec(compile(base64.b64decode(os.environ["DEPLOY_SCRIPT"], validate=True), "<approved-deployment>", "exec"))'
+      - name: Record approved release identity
+        run: |
+          echo "Backend revision: $DEPLOY_SHA" >> "$GITHUB_STEP_SUMMARY"
+          echo "Rollback metadata: /opt/app/.flovers-deployments/$DEPLOY_RUN_ID-$DEPLOY_SHA/manifest.json" >> "$GITHUB_STEP_SUMMARY"
