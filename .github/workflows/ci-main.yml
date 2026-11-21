@@ -34,6 +34,8 @@ jobs:
         run: python .github/scripts/run_ci_unit_tests.py .github/scripts/coordinator_tests
       - name: Validate the mandatory workflow graph
         run: python .github/scripts/ci_workflow_policy.py
+      - name: Verify production release gates and failure safeguards without production
+        run: python .github/scripts/run_ci_unit_tests.py deployment
 
   backend-execution:
     name: backend-execution

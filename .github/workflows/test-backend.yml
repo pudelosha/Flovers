@@ -1,10 +1,14 @@
 name: Backend quality checks
 
 on:
-  # Application pushes to main already call this workflow through deploy-backend.
-  # Client API/type and shared CI changes also need provider checks, without deploying.
+  # Validation remains automatic; production release is a separate manual workflow.
   push:
     paths:
+      - "backend/**"
+      - "deployment/**"
+      - "docker-compose.yml"
+      - ".github/workflows/deploy-backend.yml"
+      - ".github/workflows/test-backend.yml"
       - "firmware/**"
       - ".github/workflows/test-firmware.yml"
       - "contracts/**"
@@ -78,7 +82,7 @@ jobs:
           python manage.py makemigrations --check --dry-run --skip-checks
       - name: Test deployment safeguards
         working-directory: .
-        run: python -m unittest discover -s deployment -p 'test_deploy_backend.py'
+        run: python .github/scripts/run_ci_unit_tests.py deployment
       - name: Run full application suite on PostgreSQL
         env:
           FLOVERS_TEST_CPP: g++

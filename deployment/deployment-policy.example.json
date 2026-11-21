@@ -1,0 +1,8 @@
+{
+  "backup_manifest": "/var/backups/flovers/release-ready/manifest.json",
+  "readiness_url": "http://127.0.0.1:8000/api/locations/",
+  "min_free_bytes": 2147483648,
+  "min_free_inodes": 20000,
+  "worker_node": "celery@{hostname}",
+  "beat_schedule_path": "/app/celerybeat-schedule"
+}

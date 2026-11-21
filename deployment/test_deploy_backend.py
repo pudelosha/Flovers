@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
-from contextlib import redirect_stderr, redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout, nullcontext
 from unittest.mock import patch
 
 import deploy_backend
@@ -41,6 +41,11 @@ class DeploymentTests(unittest.TestCase):
         self.stdout = io.StringIO()
         self.addCleanup(patch.stopall)
         patch("deploy_backend.subprocess.run", side_effect=self.docker).start()
+        # Core orchestration tests isolate prerequisites; test_release_safety
+        # exercises the real backup/capacity/readiness guards independently.
+        self.safety = patch("deploy_backend.Safety").start().return_value
+        patch("deploy_backend.host_lock",return_value=nullcontext()).start()
+        self.safety.metadata = {}
         self.previous = patch("deploy_backend.previous_backend_images", return_value={"old-image"}).start()
         self.cleanup = patch("deploy_backend.cleanup_backend_images").start()
 
@@ -90,17 +95,20 @@ class DeploymentTests(unittest.TestCase):
 
     def test_success_pins_migration_and_startup_and_preserves_infrastructure(self):
         self.deploy()
-        self.assertEqual(self.actions(), ["config", "ps", "help", "pull", "inspect", "check", "stop", "migrate", "up"])
+        self.assertEqual(self.actions(), ["config", "ps", "help", "pull", "inspect", "check", "stop", "migrate", "up", "up", "up"])
         self.cleanup.assert_called_once()
         self.assertEqual(self.cleanup.call_args.args[0], {"old-image"})
         self.assertEqual(self.command("pull"), ["docker", "pull", f"{REPOSITORY}:{SHA}"])
         expected = {"services": {name: {"image": DIGEST} for name in ("beat", "web", "worker")}}
         self.assertTrue(self.overrides)
         self.assertTrue(all(override == expected for override in self.overrides))
-        for action in ("stop", "up"):
-            command = self.command(action)
-            self.assertEqual(command[-3:], ["beat", "web", "worker"])
-            self.assertTrue({"db", "redis", "proxy"}.isdisjoint(command))
+        self.assertEqual(self.command("stop")[-3:],["beat","web","worker"])
+        starts=[command for action,command,_ in self.calls if action=="up"]
+        self.assertEqual([command[-1] for command in starts],["web","worker","beat"])
+        self.assertTrue(all({"db","redis","proxy"}.isdisjoint(command) for command in starts))
+        self.assertEqual([c.args[2] for c in self.safety.ready.call_args_list],["web","worker","beat","beat","web","worker"])
+        self.safety.preflight.assert_called_once()
+        self.assertEqual(json.loads((self.app_dir/deploy_backend.RELEASE_OVERRIDE).read_text()),expected)
         self.assertEqual(self.command("migrate")[-4:], ["web", "manage.py", "migrate", "--noinput"])
         self.assertEqual(self.command("check")[-4:], ["manage.py", "check", "--tag", "models"])
         for action in ("check", "migrate"):
@@ -145,6 +153,17 @@ class DeploymentTests(unittest.TestCase):
     def test_private_volume_is_scoped_to_the_resolved_compose_project(self):
         override = deploy_backend.private_media_configuration({"name": "flovers-staging"}, ["web"], self.app_dir)
         self.assertEqual(override["volumes"]["flovers_private_media"]["name"], "flovers-staging_private_media")
+
+    def test_existing_private_mount_is_preserved_instead_of_replaced_by_an_empty_volume(self):
+        for kind,source in [("volume","existing_uploads"),("bind","/srv/flovers/uploads")]:
+            mount={"type":kind,"source":source,"target":"/app/private-media"}
+            configuration={"services":{name:{"volumes":[mount]} for name in ("web","worker","beat")},
+                           "volumes":{"existing_uploads":{"name":"important_existing_data","external":True}}}
+            result=deploy_backend.private_media_configuration(configuration,["web","worker","beat"],self.app_dir)
+            self.assertTrue(all(s["volumes"]==[mount] for s in result["services"].values()))
+            self.assertEqual(result["volumes"],configuration["volumes"] if kind=="volume" else {})
+        configuration["services"]["beat"]["volumes"]=[]
+        with self.assertRaises(ValueError):deploy_backend.private_media_configuration(configuration,["web","worker","beat"],self.app_dir)
 
     def test_invalid_private_volume_project_fails_before_pull_or_downtime(self):
         with self.assertRaises(ValueError):
@@ -244,7 +263,7 @@ class DeploymentTests(unittest.TestCase):
         self.fail_at = "up"
         with self.assertRaises(subprocess.CalledProcessError):
             self.deploy()
-        self.assertEqual(self.actions()[-2:], ["migrate", "up"])
+        self.assertEqual(self.actions()[-3:], ["migrate", "up", "stop"])
         self.cleanup.assert_not_called()
         self.assert_override_removed()
 
@@ -260,7 +279,49 @@ class DeploymentTests(unittest.TestCase):
         stderr = io.StringIO()
         with patch("deploy_backend.deploy", side_effect=ValueError("Invalid configuration")), redirect_stderr(stderr):
             self.assertEqual(deploy_backend.main(), 1)
-        self.assertIn("Backend deployment failed: Invalid configuration", stderr.getvalue())
+        self.assertIn("Backend deployment failed (ValueError)", stderr.getvalue())
+        self.assertNotIn("Invalid configuration", stderr.getvalue())
+
+    def test_preflight_and_capacity_failure_never_stop_writers(self):
+        for guard in (self.safety.preflight,self.safety.capacity):
+            with self.subTest(guard=guard):
+                self.calls.clear()
+                guard.side_effect=ValueError("unsafe release")
+                with self.assertRaises(ValueError): self.deploy()
+                self.assertNotIn("stop",self.actions())
+                self.assertNotIn("migrate",self.actions())
+                guard.side_effect=None
+
+    def test_worker_and_beat_readiness_failure_stops_partial_new_writers(self):
+        for role in ("worker","beat"):
+            with self.subTest(role=role):
+                self.calls.clear()
+                self.safety.ready.side_effect=lambda compose,service,kind: (_ for _ in ()).throw(ValueError("not ready")) if kind==role else None
+                with self.assertRaises(ValueError): self.deploy()
+                self.assertEqual(self.actions()[-1],"stop")
+                self.cleanup.assert_not_called()
+                self.assertTrue((self.app_dir/deploy_backend.RELEASE_OVERRIDE).is_file())
+                self.safety.failed.assert_called()
+
+    def test_worker_failure_on_final_check_after_beat_start_is_detected(self):
+        count=0
+        def ready(compose,service,kind):
+            nonlocal count
+            if kind=="worker":
+                count+=1
+                if count==2:raise ValueError("worker crashed after Beat startup")
+        self.safety.ready.side_effect=ready
+        with self.assertRaises(ValueError):self.deploy()
+        self.assertEqual([cmd[-1] for name,cmd,_ in self.calls if name=="up"],["web","worker","beat"])
+        self.assertEqual(self.actions()[-1],"stop")
+        self.cleanup.assert_not_called()
+
+    def test_approved_digest_mismatch_never_stops_writers(self):
+        with self.assertRaisesRegex(ValueError,"approved build"):
+            with redirect_stdout(self.stdout):
+                deploy_backend.deploy(SHA,self.app_dir,expected_image=f"{REPOSITORY}@sha256:{'c'*64}")
+        self.assertNotIn("stop",self.actions())
+        self.assertNotIn("migrate",self.actions())
 
 
 class ImageRetentionTests(unittest.TestCase):
