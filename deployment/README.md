@@ -1,5 +1,10 @@
 # Backend rollout configuration
 
+Production supports manual **LIGHT** (migration-free, no mandatory recovery
+manifests) and **FULL** (existing backup/restore-aware migration deployment).
+Read [the mode contract and approval procedure](../docs/deployment/PRODUCTION_HARDENING.md)
+before dispatching. FULL-only instructions below do not apply to LIGHT.
+
 Private plant-photo storage, its automatically generated Compose overlay, upload limits and backup requirements are described in [PRIVATE_PHOTOS.md](PRIVATE_PHOTOS.md).
 
 The checked-in `docker-compose.yml` is a development stack. The deployment workflow uses `/opt/app/docker-compose.prod.yml` on the VPS; that file and the live proxy configuration are not in this checkout. Verify the current Compose configuration and proxy topology before an approved production release; historical inspection results are not a current readiness check.
@@ -30,7 +35,7 @@ Backend and website publication now require explicit owner dispatch on `main`, a
 
 Follow [the production release and recovery runbook](PRODUCTION_RELEASE.md) for required GitHub settings, database/media backup evidence, capacity checks, controlled web/worker/Beat startup, durable rollback metadata and website artifact recovery. Preparing this code does not activate settings or authorize release.
 
-The backend release bundles reviewed deployment/safety modules over the existing fingerprint-verified SSH path. It checks current readiness, consistent recent backup/restore evidence and filesystem capacity before downtime; validates and deploys the approved immutable image digest; stops writers before migrations; then requires web, worker and Beat readiness in order. Failed startup stops partially started application writers, retains recovery metadata and never automatically restores data or starts an old image against a changed schema. Database, Redis, proxy and data volumes are not removed.
+Both backend modes bundle reviewed deployment/safety modules over the existing fingerprint-verified SSH path, require exact-main CI, protected approval and runtime readiness, and retain private recovery metadata. FULL additionally requires recent backup/restore evidence before migration downtime. LIGHT refuses pending migrations and uses migration-free direct startup commands. Neither automatically reverses migrations or restores data. Database, Redis, proxy and data volumes are not removed.
 
 CI and the Linux AMD64 Docker image use Python 3.12.16 and the same hashed Python dependency lock. CPU-only Torch/TorchVision wheels come from their official package pages; installs require hashes and binary wheels and run `pip check`. The shared recognition smoke check rejects GPU packages, exercises native CPU operators, and runs an actual prediction with Flovers' checked-in model and class mapping. It runs before the full PostgreSQL backend suite in CI and again inside the image build. Failed checks block publication/deployment. See [dependency maintenance](../backend/DEPENDENCIES.md) before changing versions.
 
@@ -38,7 +43,7 @@ The VPS still needs room for the incoming image alongside the active and previou
 
 The VPS needs Python 3.8+, Docker Compose with `up --wait --wait-timeout` support, and its existing GHCR pull credentials. PostgreSQL and Redis must already be running. The Django service is normally detected as `web`, `backend`, `api`, or `django`, or from a unique non-Celery application command. If detection is ambiguous, set the GitHub repository variable `BACKEND_SERVICE` to its actual Compose service name. All web/worker/beat writers must use the same backend image repository to be included; differently packaged or external writers require separate coordination. Optional profile services are included only when already running or explicitly selected as the Django service.
 
-Before an approved rollout, verify the runtime configuration and paired database/media backup and restore receipt. The approved workflow applies pending migrations, including earlier unapplied migrations, before starting web, worker and Beat. There is planned backend downtime during migration/startup. Pushes alone do not deploy.
+Before an approved FULL rollout, verify the runtime configuration and paired database/media backup and restore receipt. FULL applies pending migrations before starting web, worker and Beat. LIGHT blocks those migrations instead. Both have planned startup downtime. Pushes alone do not deploy.
 
 A pull or settings-check failure leaves the current application running. A stop, migration, or startup failure fails the workflow and prevents subsequent deployment steps. In particular, failed migrations do not restart old application writers against a potentially changed schema; the backend can remain unavailable until the failure is resolved and the workflow is rerun. Migrations are not automatically reversed. Identity collisions described below are an example of data that needs an operator decision before retrying.
 

@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import re
+import signal
 import subprocess
 import sys
 import tempfile
@@ -118,7 +119,9 @@ def cleanup_backend_images(previous, execute):
         execute(["docker", "image", "rm", *tags])
 
 
-def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None, expected_image=None):
+def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None, expected_image=None, mode="FULL"):
+    if mode not in {"LIGHT","FULL"}:
+        raise ValueError("Explicit supported deployment mode required")
     if not re.fullmatch(r"[0-9a-f]{40}", commit_sha):
         raise ValueError("DEPLOY_SHA must be the full Git commit SHA.")
     app_dir = Path(app_dir).resolve()
@@ -126,10 +129,10 @@ def deploy(commit_sha, app_dir=Path("/opt/app"), requested_backend=None, expecte
     if not compose_file.is_file():
         raise ValueError("The existing /opt/app/docker-compose.prod.yml is required.")
     with host_lock(app_dir):
-        return deploy_locked(commit_sha,app_dir,requested_backend,expected_image)
+        return deploy_locked(commit_sha,app_dir,requested_backend,expected_image,mode)
 
 
-def deploy_locked(commit_sha,app_dir,requested_backend,expected_image):
+def deploy_locked(commit_sha,app_dir,requested_backend,expected_image,mode="FULL"):
     compose_file=app_dir/"docker-compose.prod.yml"
     base = ["docker", "compose", "-f", str(compose_file)]
     for name in (PRIVATE_MEDIA_OVERRIDE, RELEASE_OVERRIDE):
@@ -145,9 +148,11 @@ def deploy_locked(commit_sha,app_dir,requested_backend,expected_image):
     configuration = json.loads(execute([*base, "config", "--format", "json"], capture=True).stdout)
     running = set(execute([*base, "ps", "--status", "running", "--services"], capture=True).stdout.split())
     backend, apps = application_services(configuration["services"], running, requested_backend)
-    safety = Safety(app_dir,execute,configuration,backend,apps,commit_sha)
+    safety = Safety(app_dir,execute,configuration,backend,apps,commit_sha,mode=mode)
     try:
         safety.preflight(base)
+        if mode == "LIGHT":
+            return perform_light_deploy(commit_sha,app_dir,base,execute,configuration,backend,apps,safety,expected_image)
         return perform_deploy(commit_sha,app_dir,base,execute,configuration,backend,apps,safety,expected_image)
     except BaseException:
         safety.failed()
@@ -232,16 +237,154 @@ def perform_deploy(commit_sha,app_dir,base,execute,configuration,backend,apps,sa
         override_path.unlink(missing_ok=True)
 
 
+def inspect_light_migrations(compose, execute, backend):
+    from light_runtime import MIGRATION_CHECK, READ_ONLY_OPTIONS, migration_result
+    result=execute([*compose,"run","--rm","--no-deps","--pull","never","-T",
+                    "--label","traefik.enable=false","-e","PGOPTIONS="+READ_ONLY_OPTIONS,
+                    "--entrypoint","python",backend,"-c",MIGRATION_CHECK],capture=True)
+    return migration_result(result.stdout)
+
+
+def light_unchanged(base, execute, configuration, apps, safety):
+    from light_runtime import identity
+    current=json.loads(execute([*base,"config","--format","json"],capture=True).stdout)
+    from release_safety import configuration_hash
+    if configuration_hash(current)!=configuration_hash(configuration):
+        raise ValueError("Compose configuration changed during preflight")
+    ids=execute([*base,"ps","--all","--quiet",*apps],capture=True).stdout.split()
+    records=json.loads(execute(["docker","inspect",*ids],capture=True).stdout)
+    if identity(records)!=safety.initial_identity:
+        raise ValueError("Application container identities changed during preflight")
+    return records
+
+
+def light_start(compose, execute, apps, roles, safety):
+    for role in ("web","worker","beat"):
+        for name in apps:
+            if roles[name]!=role: continue
+            safety.record("starting-"+role)
+            execute([*compose,"up","-d","--no-deps","--no-build","--pull","never",
+                     "--wait","--wait-timeout","120",name],capture=True)
+            safety.ready(compose,name,role)
+    for name in apps: safety.ready(compose,name,roles[name])
+
+
+def light_stop(compose, execute, apps, roles):
+    # Beat stops producing first; web drains HTTP work; Celery then gets a warm
+    # SIGTERM shutdown. Detect Docker's timeout/SIGKILL rather than claiming drain.
+    for role in ("beat","web","worker"):
+        for name in apps:
+            if roles[name]!=role: continue
+            execute([*compose,"stop","--timeout","120",name],capture=True)
+    ids=execute([*compose,"ps","--all","--quiet",*apps],capture=True).stdout.split()
+    records=json.loads(execute(["docker","inspect",*ids],capture=True).stdout)
+    if (len(records)!=len(apps) or any(r["State"].get("Status")!="exited"
+            or r["State"].get("OOMKilled") or r["State"].get("ExitCode")==137 for r in records)):
+        raise ValueError("Application writers did not stop cleanly; recovery required")
+
+
+def perform_light_deploy(commit_sha,app_dir,base,execute,configuration,backend,apps,safety,expected_image):
+    from light_runtime import runtime_services, validate_running_configuration
+    if not expected_image:
+        raise ValueError("LIGHT requires the approved immutable build digest")
+    runtime,roles=runtime_services(configuration,backend,apps,{name:expected_image for name in apps})
+    private_media_configuration(configuration,apps,app_dir)  # Validate shared persistent storage; do not replace it.
+    if "--wait-timeout" not in execute(["docker","compose","up","--help"],capture=True).stdout:
+        raise ValueError("Docker Compose --wait support required")
+    records=light_unchanged(base,execute,configuration,apps,safety)
+    validate_running_configuration(configuration,records,runtime)
+    previous_images={row["service"]:row["image_id"] for row in safety.metadata["previous"]}
+    previous_runtime,_=runtime_services(configuration,backend,apps,previous_images)
+    previous_path=safety.directory/"previous-runtime.json"
+    candidate_path=safety.directory/"candidate-runtime.json"
+    private_json(previous_path,{"services":previous_runtime})
+    private_json(candidate_path,{"services":runtime})
+    previous_compose=["docker","compose","-f",str(safety.directory/"previous-compose.json"),"-f",str(previous_path)]
+    compose=[*base,"-f",str(candidate_path)]
+    for name in apps: safety.ready(base,name,roles[name])
+    baseline=inspect_light_migrations(previous_compose,execute,backend)
+    safety.record("pulling-image",image=expected_image,migration_baseline=baseline,
+                  recovery_runtime="previous-runtime.json",candidate_runtime="candidate-runtime.json")
+    print("LIGHT: validating approved image and read-only migration plan; backups are not verified.",flush=True)
+    execute(["docker","pull",expected_image],capture=True)
+    image=json.loads(execute(["docker","image","inspect",expected_image],capture=True).stdout)
+    if (len(image)!=1 or expected_image not in (image[0].get("RepoDigests") or [])
+            or image[0].get("Config",{}).get("Labels",{}).get("org.opencontainers.image.revision")!=commit_sha
+            or image[0].get("Config",{}).get("Entrypoint") not in (None,[])
+            or image[0].get("Os")!="linux" or image[0].get("Architecture")!="amd64"):
+        raise ValueError("Pulled image identity, revision or entrypoint did not match the approved build")
+    safety.capacity()
+    checked=inspect_light_migrations(compose,execute,backend)
+    if checked!=baseline:
+        raise ValueError("Applied migration history changed during inspection")
+    safety.record("migration-free",migration_check=checked)
+    light_unchanged(base,execute,configuration,apps,safety)
+    stopping=False
+    try:
+        safety.record("stopping-writers")
+        stopping=True
+        light_stop(base,execute,apps,roles)
+        # Recheck after the old writers stop. Never execute migrate, even when
+        # the initial plan was empty; post_migrate itself can write to the DB.
+        if inspect_light_migrations(compose,execute,backend)!=baseline:
+            raise ValueError("Applied migration history changed before startup")
+        private_json(app_dir/RELEASE_OVERRIDE,{"services":runtime})
+        light_start(compose,execute,apps,roles,safety)
+        safety.record("healthy",migration_execution=False)
+        print("LIGHT: migration-free deployment is healthy.",flush=True)
+    except BaseException:
+        if stopping:
+            failure_phase=safety.metadata.get("phase")
+            try:
+                # New tasks/HTTP writes are not undone. Only restart old code if
+                # its own plan is empty and the applied migration receipt matches.
+                light_stop(compose,execute,apps,roles)
+                if inspect_light_migrations(previous_compose,execute,backend)!=baseline:
+                    raise ValueError("Automatic recovery refused changed migration history")
+                private_json(app_dir/RELEASE_OVERRIDE,{"services":previous_runtime})
+                safety.metadata["expected_images"]=previous_images
+                light_start(previous_compose,execute,apps,roles,safety)
+                safety.record("recovered-previous",recovery_result="healthy",original_failure_phase=failure_phase)
+            except BaseException as recovery_error:
+                safety.record("recovery-required",recovery_result="failed",recovery_failure_type=type(recovery_error).__name__,
+                              original_failure_phase=failure_phase)
+        raise  # A recovered release still fails CI; never hide the original error.
+    try:
+        cleanup_backend_images(set(previous_images.values()),execute)
+    except (ValueError,OSError,subprocess.CalledProcessError):
+        print("WARNING: image retention maintenance failed after successful LIGHT deployment.",file=sys.stderr)
+
+
 def main():
+    handlers = {}
     try:
         sha=os.environ.get("DEPLOY_SHA", "")
         if not sha or os.environ.get("DEPLOY_APPROVED_SHA")!=sha or not os.environ.get("DEPLOY_IMAGE"):
             raise ValueError("Explicit approved revision and build digest are required")
-        deploy(sha, requested_backend=os.environ.get("BACKEND_SERVICE") or None,expected_image=os.environ["DEPLOY_IMAGE"])
+        mode=os.environ.get("DEPLOY_MODE")
+        if mode not in {"LIGHT","FULL"}:
+            raise ValueError("Explicit LIGHT or FULL mode required; no implicit fallback")
+        if mode == "LIGHT":
+            def interrupted(signum, frame):
+                # Catch SSH disconnect / normal cancellation while writers are
+                # stopped. A second signal or SIGKILL still requires operator
+                # recovery from the durable previous-runtime snapshot.
+                for number, handler in handlers.items():
+                    signal.signal(number, handler)
+                raise RuntimeError("LIGHT deployment interrupted")
+            for name in ("SIGTERM", "SIGHUP"):
+                number = getattr(signal, name, None)
+                if number is not None:
+                    handlers[number] = signal.getsignal(number)
+                    signal.signal(number, interrupted)
+        deploy(sha, requested_backend=os.environ.get("BACKEND_SERVICE") or None,expected_image=os.environ["DEPLOY_IMAGE"],mode=mode)
     except Exception as exc:
         # Rendered configuration and service errors may contain runtime secrets.
         print(f"Backend deployment failed ({type(exc).__name__}); inspect private host-side release metadata.", file=sys.stderr)
         return 1
+    finally:
+        for number, handler in handlers.items():
+            signal.signal(number, handler)
     return 0
 
 

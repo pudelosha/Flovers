@@ -17,6 +17,13 @@ from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_ope
 GIB = 1024 ** 3
 
 
+def memory_available():
+    for line in Path("/proc/meminfo").read_text().splitlines():
+        if line.startswith("MemAvailable:"):
+            return int(line.split()[1])*1024
+    raise ValueError("Available memory could not be determined")
+
+
 @contextmanager
 def host_lock(app_dir):
     import fcntl
@@ -188,20 +195,29 @@ assert any(p.is_file() and p.stat().st_mtime>=started-2 for p in root.parent.glo
 
 
 class Safety:
-    def __init__(self, app_dir, execute, configuration, backend, apps, commit_sha):
+    def __init__(self, app_dir, execute, configuration, backend, apps, commit_sha, mode="FULL"):
+        if mode not in {"LIGHT", "FULL"}:
+            raise ValueError("Unknown deployment mode")
+        self.mode=mode
         self.app_dir=Path(app_dir); self.execute=execute; self.configuration=configuration
         self.backend=backend; self.apps=apps; self.sha=commit_sha
         self.directory=None; self.metadata={}
 
     def preflight(self, base):
-        policy_path=self.app_dir/"deployment-policy.json"
-        if policy_path.is_symlink() or not policy_path.is_file() or policy_path.stat().st_size>65536:
-            raise ValueError("An owner-reviewed deployment-policy.json is required")
-        if os.name=="posix" and policy_path.stat().st_mode & (stat.S_IWGRP|stat.S_IWOTH):
-            raise ValueError("Deployment policy must not be group/world writable")
-        self.policy=json.loads(policy_path.read_text(encoding="utf-8"))
-        if not Path(self.policy["backup_manifest"]).is_absolute():
-            raise ValueError("An absolute backup-manifest path is required")
+        if self.mode == "FULL":
+            policy_path=self.app_dir/"deployment-policy.json"
+            if policy_path.is_symlink() or not policy_path.is_file() or policy_path.stat().st_size>65536:
+                raise ValueError("An owner-reviewed deployment-policy.json is required")
+            if os.name=="posix" and policy_path.stat().st_mode & (stat.S_IWGRP|stat.S_IWOTH):
+                raise ValueError("Deployment policy must not be group/world writable")
+            self.policy=json.loads(policy_path.read_text(encoding="utf-8"))
+            if not Path(self.policy["backup_manifest"]).is_absolute():
+                raise ValueError("An absolute backup-manifest path is required")
+        else:
+            # Versioned defaults, not a fake FULL policy or fabricated receipt.
+            self.policy={"readiness_url":"https://api.flovers.app/api/locations/",
+                         "min_free_bytes":2*GIB,"min_free_inodes":20000,
+                         "worker_node":"celery@{hostname}","beat_schedule_path":"/app/celerybeat-schedule"}
         for service in self.apps:
             mounts=self.configuration["services"][service].get("volumes",[])
             if not any(isinstance(m,dict) and m.get("type") in {"volume","bind"} and m.get("target")=="/app/private-media" for m in mounts):
@@ -210,8 +226,9 @@ class Safety:
         if not any("celery" in c and "worker" in c for c in commands) or not any("celery" in c and "beat" in c for c in commands):
             raise ValueError("Both a Celery worker and Beat must be included in the production application services")
         self.capacity()
-        backup=verify_backups(self.policy["backup_manifest"],configuration_hash(self.configuration))
-        self.execute([*base,"exec","-T",self.backend,"python","-c",DEPENDENCIES],capture=True)
+        backup=(verify_backups(self.policy["backup_manifest"],configuration_hash(self.configuration))
+                if self.mode == "FULL" else {"required":False,"verified":False,"reason":"LIGHT owner-selected no-backup deployment"})
+        self.dependencies(base,self.backend)
         http_ready(self.policy["readiness_url"])
         run=os.environ.get("DEPLOY_RUN_ID","")
         if not re.fullmatch(r"[0-9]+-[0-9]+",run):
@@ -227,12 +244,15 @@ class Safety:
         if not containers:
             raise ValueError("Existing application containers required; bootstrap is a separate operation")
         records=json.loads(self.execute(["docker","inspect",*containers],capture=True).stdout)
+        if self.mode == "LIGHT":
+            from light_runtime import identity
+            self.initial_identity=identity(records)
         previous=[{"id":r["Id"],"image_id":r["Image"],"configured_image":r["Config"]["Image"],"name":r["Name"],
                    "service":r["Config"].get("Labels",{}).get("com.docker.compose.service")} for r in records]
         if len(previous)!=len(self.apps) or {r["service"] for r in previous}!=set(self.apps):
             raise ValueError("Exactly one previous container per application service is required")
         images=json.loads(self.execute(["docker","image","inspect",*sorted({r["image_id"] for r in previous})],capture=True).stdout)
-        self.metadata={"revision":self.sha,"run":run,"started_at":datetime.now(timezone.utc).isoformat(),
+        self.metadata={"revision":self.sha,"run":run,"mode":self.mode,"started_at":datetime.now(timezone.utc).isoformat(),
                        "previous":previous,"configuration_sha256":configuration_hash(self.configuration),
                        "configuration_snapshot":"previous-compose.json","backup":backup,"phase":"preflight",
                        "previous_images":[{"id":i["Id"],"digests":i.get("RepoDigests",[])} for i in images]}
@@ -243,15 +263,25 @@ class Safety:
         inodes=self.policy.get("min_free_inodes",20000)
         if not isinstance(required,int) or required<2*GIB or not isinstance(inodes,int) or inodes<20000:
             raise ValueError("Capacity floors cannot be lower than 2 GiB and 20000 free inodes")
+        if self.mode == "LIGHT" and memory_available() < 512*1024**2:
+            raise ValueError("LIGHT requires at least 512 MiB available memory")
         docker_root=self.execute(["docker","info","--format","{{.DockerRootDir}}"],capture=True).stdout.strip()
         if not Path(docker_root).is_absolute():
             raise ValueError("Docker storage root could not be verified")
-        paths=[self.app_dir,Path(docker_root),Path(self.policy["backup_manifest"]).parent]
+        paths=[self.app_dir,Path(docker_root)]
+        if self.mode == "FULL": paths.append(Path(self.policy["backup_manifest"]).parent)
         if Path("/var/lib/containerd").exists(): paths.append(Path("/var/lib/containerd"))
         for path in paths:
             free=os.statvfs(path)
             if free.f_bavail*free.f_frsize<required or free.f_favail<inodes:
                 raise ValueError("Insufficient disk space or inodes; no automatic data/volume deletion is permitted")
+
+    def dependencies(self, compose, service):
+        args=[*compose,"exec","-T"]
+        if self.mode == "LIGHT":
+            from light_runtime import READ_ONLY_OPTIONS
+            args += ["-e","PGOPTIONS="+READ_ONLY_OPTIONS]
+        self.execute([*args,service,"python","-c",DEPENDENCIES],capture=True)
 
     def record(self, phase, **extra):
         self.metadata.update(extra); self.metadata["phase"]=phase
@@ -265,7 +295,8 @@ class Safety:
                 ids=self.execute([*compose,"ps","--quiet",service],capture=True).stdout.split()
                 if len(ids)!=1: raise ValueError("Exactly one running service container required")
                 info=json.loads(self.execute(["docker","inspect",ids[0]],capture=True).stdout)[0]
-                if self.metadata.get("image") and info.get("Config",{}).get("Image")!=self.metadata["image"]:
+                expected=self.metadata.get("expected_images",{}).get(service,self.metadata.get("image"))
+                if expected and info.get("Config",{}).get("Image")!=expected:
                     raise ValueError("Running service does not use the approved immutable image")
                 state=info["State"]
                 if state.get("Status")!="running" or state.get("Restarting") or state.get("OOMKilled"):
@@ -273,7 +304,7 @@ class Safety:
                 if state.get("Health",{}).get("Status","healthy")!="healthy":
                     raise ValueError("Application healthcheck has not passed")
                 if role=="web":
-                    self.execute([*compose,"exec","-T",service,"python","-c",DEPENDENCIES],capture=True)
+                    self.dependencies(compose,service)
                     http_ready(self.policy["readiness_url"])
                 elif role=="worker":
                     self.execute([*compose,"exec","-T",service,"python","-c",WORKER,self.policy.get("worker_node","celery@{hostname}")],capture=True)

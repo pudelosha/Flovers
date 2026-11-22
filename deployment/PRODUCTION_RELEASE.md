@@ -1,5 +1,13 @@
 # Explicitly approved production releases
 
+## LIGHT and FULL modes
+
+This runbook describes **FULL recovery-aware deployment**. For the available
+migration-free LIGHT path, exact confirmation syntax and accepted no-backup risk,
+see [PRODUCTION_HARDENING.md](../docs/deployment/PRODUCTION_HARDENING.md).
+Backend confirmation is now `DEPLOY BACKEND FULL <sha>` for this procedure.
+Existing website publication remains independent.
+
 This is a reviewed-code preparation, not permission to release. No environment,
 branch rule, secret, production service or data is changed by the PR or its CI.
 Production workflows are manual only. CI remains automatic on PRs and relevant
@@ -7,13 +15,11 @@ pushes. Merging the final combined tree does not itself deploy backend or Pages.
 
 ## Integration boundary
 
-The current, unmodified main still has automatic production workflows. Do not
-sequentially merge the older stack before this hardening is included. During a
-separately approved window, prepare one integration candidate containing the
-testing stack, coordinator and this hardening; require its complete CI; then
-merge that complete tree atomically. Cancel any previously queued automatic
-production runs with approval. Never rerun legacy deployment runs: they retain
-their old workflow and do not gain these guards retroactively.
+Main already contains the integrated CI/CD hardening. Its backend and website
+workflows are manual-only and remain disabled until separately approved. Merging
+this mode change does not enable or dispatch either workflow. Never rerun legacy
+deployment runs: they retain their original workflow and do not gain new guards
+retroactively. Existing environments, secrets and branch protection are preserved.
 
 ## GitHub configuration: requires separate approval
 

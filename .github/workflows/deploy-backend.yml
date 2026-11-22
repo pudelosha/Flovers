@@ -3,12 +3,18 @@ name: Deploy backend (VPS)
 on:
   workflow_dispatch:
     inputs:
+      deployment_mode:
+        description: LIGHT refuses migrations; FULL requires verified recovery prerequisites
+        required: true
+        type: choice
+        default: LIGHT
+        options: [LIGHT, FULL]
       revision:
         description: Full 40-character main revision selected for this release
         required: true
         type: string
       confirmation:
-        description: Type DEPLOY BACKEND followed by a space and the exact revision
+        description: Type DEPLOY BACKEND then the mode and exact revision (separated by spaces)
         required: true
         type: string
 
@@ -53,6 +59,7 @@ jobs:
     env:
       DEPLOY_SHA: ${{ github.sha }}
       DEPLOY_APPROVED_SHA: ${{ github.sha }}
+      DEPLOY_MODE: ${{ inputs.deployment_mode }}
       DEPLOY_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}
       BACKEND_SERVICE: ${{ vars.BACKEND_SERVICE }}
     steps:
@@ -78,9 +85,14 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ghcr.io/pudelosha/flovers:${{ github.sha }}
+          labels: org.opencontainers.image.revision=${{ github.sha }}
       - name: Prepare versioned deployment bundle
         id: deployment-script
         run: python3 deployment/package_release.py >> "$GITHUB_OUTPUT"
+      - name: Revalidate approved main revision and complete CI immediately before SSH
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/production_gate.py backend
       - name: Deploy approved digest to VPS
         uses: appleboy/ssh-action@v1.0.3
         env:
@@ -91,7 +103,7 @@ jobs:
           username: deploy
           key: ${{ secrets.VPS_SSH_KEY }}
           fingerprint: ${{ vars.VPS_HOST_FINGERPRINT }}
-          envs: DEPLOY_SHA,DEPLOY_APPROVED_SHA,DEPLOY_RUN_ID,DEPLOY_IMAGE,BACKEND_SERVICE,DEPLOY_SCRIPT
+          envs: DEPLOY_SHA,DEPLOY_APPROVED_SHA,DEPLOY_MODE,DEPLOY_RUN_ID,DEPLOY_IMAGE,BACKEND_SERVICE,DEPLOY_SCRIPT
           command_timeout: 40m
           script: |
             set -eu

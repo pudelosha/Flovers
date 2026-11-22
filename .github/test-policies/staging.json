@@ -17,6 +17,8 @@
     "staging.rehearsal::dependency_outage_recovery",
     "staging.rehearsal::same_image_redeployment",
     "staging.rehearsal::runtime_isolation",
-    "staging.rehearsal::cleanup"
+    "staging.rehearsal::cleanup",
+    "staging.rehearsal::light_pending_migrations_rejected",
+    "staging.rehearsal::light_current_schema_readonly"
   ]
 }

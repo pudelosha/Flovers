@@ -18,7 +18,8 @@ RESULTS = ROOT / "test-results/staging"
 REQUIRED = ["exact_image_build", "isolated_services", "previous_schema_fixture", "backup_restore",
     "existing_media_checkpoint", "forward_migrations", "constraints_and_indexes", "idempotent_startup",
     "web_worker_beat_readiness", "api_permission_boundaries", "media_integrity", "read_only_smoke",
-    "dependency_outage_recovery", "same_image_redeployment", "runtime_isolation", "cleanup"]
+    "dependency_outage_recovery", "same_image_redeployment", "runtime_isolation", "cleanup",
+    "light_pending_migrations_rejected", "light_current_schema_readonly"]
 
 
 class Runner:
@@ -215,12 +216,16 @@ class Runner:
                 self.dc("run", "--rm", "--no-deps", "-T", "init")
             with self.case("previous_schema_fixture"):
                 self.verify("legacy")
+            with self.case("light_pending_migrations_rejected"):
+                self.verify("light_pending")
             with self.case("backup_restore"):
                 self.backup_restore()
             with self.case("existing_media_checkpoint"):
                 self.verify("media_checkpoint")
             with self.case("forward_migrations"):
                 self.verify("forward")
+            with self.case("light_current_schema_readonly"):
+                self.verify("light_current")
             with self.case("constraints_and_indexes"):
                 self.verify("constraints")
             with self.case("idempotent_startup"):

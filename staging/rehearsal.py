@@ -350,6 +350,43 @@ def media():
         "journal_references_valid": True, "private_root_mode": "0700"})
 
 
+def light_pending():
+    light_migration_probe(expect_pending=True)
+
+
+def light_current():
+    light_migration_probe(expect_pending=False)
+
+
+def light_migration_probe(*, expect_pending):
+    """Run the shipped deployment probe in another process against real PG16."""
+    import subprocess
+    from deployment.light_runtime import MIGRATION_CHECK, READ_ONLY_OPTIONS, migration_result
+    before = sorted(MigrationRecorder(connection).applied_migrations())
+    env = {**os.environ, "PGOPTIONS": READ_ONLY_OPTIONS}
+    child = subprocess.run([sys.executable, "-c", MIGRATION_CHECK], env=env,
+                           capture_output=True, text=True, timeout=60)
+    if expect_pending:
+        assert child.returncode != 0 and "LIGHT refuses pending migrations" in child.stderr, child.stderr
+    else:
+        assert child.returncode == 0, child.stderr
+        assert migration_result(child.stdout)["read_only"] is True
+    assert sorted(MigrationRecorder(connection).applied_migrations()) == before
+    # Prove PGOPTIONS also prevents application-startup SQL writes; this is not
+    # a mocked assertion about the text of the migration inspector.
+    denied = subprocess.run([sys.executable, "-c",
+        "import django; django.setup(); from django.db import connection; "
+        "connection.cursor().execute('CREATE TABLE light_forbidden_probe (id integer)')"],
+        env=env, capture_output=True, text=True, timeout=60)
+    assert denied.returncode != 0 and "read-only" in denied.stderr, denied.stderr
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT to_regclass('public.light_forbidden_probe')")
+        assert cursor.fetchone() == (None,)
+    save(RESULTS / ("light-pending.json" if expect_pending else "light-current.json"), {
+        "pending_rejected": expect_pending, "migration_records_unchanged": True,
+        "startup_write_rejected_by_postgresql": True, "inspector_success": child.returncode == 0})
+
+
 def celery():
     from app.celery import celery_app
     from .tasks import heartbeat
@@ -411,5 +448,5 @@ def isolation():
 if __name__ == "__main__":
     isolated()
     commands = {function.__name__: function for function in [legacy, media_checkpoint, forward,
-        constraints, idempotent, readonly, api, media, celery, failure, isolation]}
+        constraints, idempotent, readonly, api, media, celery, failure, isolation, light_pending, light_current]}
     commands[sys.argv[1]]()
