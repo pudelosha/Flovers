@@ -1,7 +1,10 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
-import { taskCompletionToast, withCompletionXP } from '../../../shared/utils/taskCompletionToast';
+import {
+  taskCompletionToast,
+  withCompletionXP,
+} from '../../../shared/utils/taskCompletionToast';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, {
@@ -37,6 +40,8 @@ import GlassHeader from '../../../shared/ui/GlassHeader';
 import FAB from '../../../shared/ui/FAB';
 import { plantAccess } from '../../../shared/utils/plantAccess';
 import TopSnackbar from '../../../shared/ui/TopSnackbar';
+import LevelUpModal from '../../profile/components/modals/LevelUpModal';
+import { useLevelUpCelebration } from '../../profile/hooks/useLevelUpCelebration';
 
 import { s } from '../styles/home.styles';
 import TaskTile from '../components/TaskTile';
@@ -107,6 +112,7 @@ const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
 
 export default function HomeScreen() {
+  const levelUp = useLevelUpCelebration();
   const requestGuard = useRequestGuard();
   const headerReady = useHeaderContentReady();
   const { t } = useTranslation();
@@ -496,7 +502,11 @@ export default function HomeScreen() {
     );
   }, [closeFloatingMenus]);
   const gestureBlocked =
-    sortOpen || filterOpen || !!postponeTask || completeModalVisible;
+    sortOpen ||
+    filterOpen ||
+    !!postponeTask ||
+    completeModalVisible ||
+    !!levelUp.celebration;
   const panResponder = useMemo(
     () =>
       PanResponder.create({
@@ -596,10 +606,7 @@ export default function HomeScreen() {
               }}
               style={s.segment}
             >
-              <Text
-                style={s.segmentText}
-                numberOfLines={1}
-              >
+              <Text style={s.segmentText} numberOfLines={1}>
                 {t('home.segments.' + value)}
               </Text>
             </Pressable>
@@ -636,7 +643,8 @@ export default function HomeScreen() {
   });
   const emptyOpacity = emptyAnim;
 
-  const showFAB = !sortOpen && !filterOpen && !postponeTask;
+  const showFAB =
+    !sortOpen && !filterOpen && !postponeTask && !levelUp.celebration;
 
   // open / close / confirm handlers for complete-with-note (single + bulk)
   const openCompleteModal = (selectedTasks: HomeTask[], mode: CompleteMode) => {
@@ -674,6 +682,7 @@ export default function HomeScreen() {
 
     const ids = [...completeTaskIds]; // capture before we clear state
     const completionDate = completeDate;
+    const finishFeedback = levelUp.begin();
 
     try {
       // Show spinner + avoid broken intermediate list
@@ -693,8 +702,27 @@ export default function HomeScreen() {
 
       const okCount = results.filter(r => r.status === 'fulfilled').length;
       const failCount = results.length - okCount;
-      const xpGained = results.reduce((total, result) =>
-        total + (result.status === 'fulfilled' && Number.isFinite(result.value) ? result.value : 0), 0);
+      const successful = results.flatMap(result =>
+        result.status === 'fulfilled' ? [result.value] : [],
+      );
+      const xpGained = successful.reduce(
+        (total, result) => total + result.xpGained,
+        0,
+      );
+      const partialMessage =
+        failCount > 0 && okCount > 0
+          ? String(
+              t('home.toasts.completeSomeFailed', {
+                ok: okCount,
+                total: results.length,
+              }),
+            )
+          : undefined;
+      const feedback = finishFeedback(successful, partialMessage);
+      if (feedback !== 'toast') {
+        if (feedback === 'modal') setToastVisible(false);
+        return;
+      }
 
       if (failCount === 0) {
         showToast(
@@ -702,13 +730,7 @@ export default function HomeScreen() {
           'success',
         );
       } else if (okCount > 0) {
-        showToast(
-          withCompletionXP(String(t('home.toasts.completeSomeFailed', {
-            ok: okCount,
-            total: results.length,
-          })), xpGained, t),
-          'error',
-        );
+        showToast(withCompletionXP(partialMessage!, xpGained, t), 'error');
       } else {
         showToast(t('home.toasts.completeFailed'), 'error');
       }
@@ -970,7 +992,13 @@ export default function HomeScreen() {
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
           }
           ListEmptyComponent={() => {
-            if (loadError) return <ListLoadError message={String(t('home.toasts.failedToLoadTasks'))} onRetry={() => void onRefresh()} />;
+            if (loadError)
+              return (
+                <ListLoadError
+                  message={String(t('home.toasts.failedToLoadTasks'))}
+                  onRetry={() => void onRefresh()}
+                />
+              );
             if (viewMode === 'calendar')
               return (
                 <View style={[s.emptyGlass, { padding: 22, marginTop: 12 }]}>
@@ -1244,6 +1272,10 @@ export default function HomeScreen() {
         intervalText={completeIntervalText}
       />
 
+      <LevelUpModal
+        celebration={levelUp.celebration}
+        onClose={levelUp.dismiss}
+      />
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}

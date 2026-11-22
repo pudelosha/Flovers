@@ -4,10 +4,11 @@ from unittest.mock import Mock, patch
 import pytest
 from django.db import transaction
 from django.http import Http404
+from django.urls import reverse
 from django.utils import timezone
 
 from core.i18n import load_email_scope
-from profiles.models import ProfileNotifications, ProfileSettings, PushDevice
+from profiles.models import AccountProgression, ProfileNotifications, ProfileSettings, PushDevice
 from sharing.identity import care_actor_identity
 from reminders.models import Reminder, ReminderTask
 from sharing.models import SharedCareNotification
@@ -35,6 +36,15 @@ def providers(monkeypatch):
 
 def complete(scene, actor=None):
     scene.task.mark_complete_and_spawn_next(actor=actor or scene.viewer)
+
+
+def test_shared_completion_reports_caregiver_level_up_without_advancing_owner(scene):
+    enable(scene, email=False, push=False)
+    response = scene.b.post(reverse("reminder-task-complete", args=[scene.task.pk]), {}, format="json")
+    assert response.status_code == 200
+    assert response.data["level_up"] == {"previous_level": 1, "level": 2}
+    assert AccountProgression.objects.get(user=scene.viewer).total_xp == 100
+    assert not AccountProgression.objects.filter(user=scene.owner).exists()
 
 
 def test_preferences_live_in_owner_profile_and_sharing_cannot_change_them(scene):

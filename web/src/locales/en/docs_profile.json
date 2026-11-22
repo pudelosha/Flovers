@@ -23,7 +23,8 @@
         "heading": "Account level and XP",
         "body": [
           "The Account tile shows your current level, rank and progress towards the next level. Levels run from 1 to 100. A rank’s name and badge stay the same for each group of ten levels.",
-          "Completing eligible care tasks earns XP. Early levels need less XP, while higher levels require progressively more. Profile refreshes the current balance; there is no separate XP pop-up after every task."
+          "Completing eligible care tasks earns XP. Early levels need less XP, while higher levels require progressively more. Profile refreshes the current balance; there is no separate XP pop-up after every task.",
+          "After a task raises your account level, a growing-plant animation and your new level and rank appear in a modal instead of the completion toast. Other completions keep the usual toast, including earned XP when applicable. Completing several tasks together shows one celebration for the highest level reached."
         ]
       },
       {

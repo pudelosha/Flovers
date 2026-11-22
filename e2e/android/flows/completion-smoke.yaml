@@ -22,6 +22,16 @@ env:
     timeout: 30000
 - assertNotVisible:
     id: task-complete-confirm
+- extendedWaitUntil:
+    visible:
+      id: level-up-message
+    timeout: 10000
+- assertVisible: You reached level 2!
+- takeScreenshot: e2e-results/android/level-up-celebration
+- tapOn:
+    id: level-up-continue
+- assertNotVisible:
+    id: level-up-message
 - tapOn:
     id: fab-toggle
 - tapOn:

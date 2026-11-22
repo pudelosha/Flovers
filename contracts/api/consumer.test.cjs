@@ -145,7 +145,16 @@ for (const edition of Object.keys(clients)) {
         } else {
           const result = await execute(c, edition, api);
           const wire = bundle.cases[c.id].exchanges[0].response.body;
-          if (c.operation === 'complete') expect(result).toBe(edition === 'current' ? wire.xp_awarded : undefined);
+          if (c.operation === 'complete') {
+            if (edition === 'previous') expect(result).toBeUndefined();
+            else expect(result).toEqual({
+              xpGained: wire.xp_awarded,
+              levelUp: wire.level_up ? {
+                previousLevel: wire.level_up.previous_level,
+                level: wire.level_up.level,
+              } : null,
+            });
+          }
           if (c.operation === 'progression') expect(result).toEqual(wire.data);
           if (['device-update','pump','reading-history','plant'].includes(c.operation)) expect(result).toEqual(wire);
           if (c.operation === 'contacts') expect(result.counts.contacts).toBe(wire.data.contacts.length);

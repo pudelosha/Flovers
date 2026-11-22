@@ -23,7 +23,8 @@
         "heading": "Livello dell'account e XP",
         "body": [
           "Il riquadro Account mostra il tuo livello attuale, la tua posizione e i progressi verso il livello successivo. I livelli vanno da 1 a 100. Il nome e il badge di un grado rimangono gli stessi per ogni gruppo di dieci livelli.",
-          "Il completamento delle attività di assistenza idonee fa guadagnare XP. I primi livelli richiedono meno XP, mentre i livelli più alti ne richiedono progressivamente di più. Il profilo aggiorna il saldo attuale; non è presente un popup XP separato dopo ogni attività."
+          "Il completamento delle attività di assistenza idonee fa guadagnare XP. I primi livelli richiedono meno XP, mentre i livelli più alti ne richiedono progressivamente di più. Il profilo aggiorna il saldo attuale; non è presente un popup XP separato dopo ogni attività.",
+          "Quando un’attività completata fa salire il livello del tuo account, al posto del messaggio di conferma appare una finestra con una pianta che cresce, il nuovo livello e il titolo. Negli altri casi resta il normale messaggio, con gli XP guadagnati quando previsti. Completando più attività insieme, appare una sola celebrazione per il livello più alto raggiunto."
         ]
       },
       {

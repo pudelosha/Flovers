@@ -57,11 +57,13 @@ Both clients execute against the same current provider responses. The previous
 client predates sharing, contacts and private journal photos/pagination; those
 features have current-client cases rather than fabricated old implementations.
 It uses the old completed-task/reminder/plant history requests. Its completion
-helper intentionally returns `void`; today's helper returns awarded XP. Both
+helper intentionally returns `void`; today's helper returns awarded XP and the
+optional level transition from the verified completion response. Both
 consume progression including level transitions. New device fields remain additive.
 
-The uncommitted level-up celebration is excluded. Level-up coverage uses the
-committed completion and progression endpoints, without adding celebration fields.
+Completion contracts verify `level_up` for eligible level transitions and `null`
+for early or duplicate completions. The previous client ignores this additive
+field while continuing to consume the same provider-verified response.
 
 ## Running locally
 

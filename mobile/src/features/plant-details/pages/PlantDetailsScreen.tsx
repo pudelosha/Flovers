@@ -6,7 +6,17 @@ import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
 import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useMemo, useState, useRef, useCallback } from 'react';
-import { View, Text, Alert, ScrollView, PermissionsAndroid, Platform, StyleSheet, AnimatedView, Pressable } from '../../../shared/theme/native';
+import {
+  View,
+  Text,
+  Alert,
+  ScrollView,
+  PermissionsAndroid,
+  Platform,
+  StyleSheet,
+  AnimatedView,
+  Pressable,
+} from '../../../shared/theme/native';
 import {
   useNavigation,
   useRoute,
@@ -55,6 +65,8 @@ import RNFS from 'react-native-fs';
 import { CameraRoll } from '@react-native-camera-roll/camera-roll';
 
 import TopSnackbar from '../../../shared/ui/TopSnackbar';
+import LevelUpModal from '../../profile/components/modals/LevelUpModal';
+import { useLevelUpCelebration } from '../../profile/hooks/useLevelUpCelebration';
 import CenteredSpinner from '../../../shared/ui/CenteredSpinner';
 import { usePlantPhotoPreload } from '../../../shared/hooks/usePlantPhotoPreload';
 import { useScreenEntryAnimation } from '../../../shared/hooks/useScreenEntryAnimation';
@@ -63,19 +75,15 @@ import PlantDefinitionModal from '../components/modals/PlantDefinitionModal';
 import ChangePlantImageModal from '../components/modals/ChangePlantImageModal';
 import EditPlantModal from '../../plants/components/modals/EditPlantModal';
 
-import {
-} from '../../../api/services/plant-instances.service';
+import {} from '../../../api/services/plant-instances.service';
 
 import WateringScheduleModal from '../../readings/components/modals/WateringScheduleModal';
-import {
-} from '../../../api/services/readings.service';
+import {} from '../../../api/services/readings.service';
 
 import { PUBLIC_BASE_URL_NORM } from '../../../config';
 
 const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
 const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
-
-
 
 function toYYYYMMDD(d: Date = new Date()) {
   const Y = d.getFullYear();
@@ -85,6 +93,7 @@ function toYYYYMMDD(d: Date = new Date()) {
 }
 
 export default function PlantDetailsScreen() {
+  const levelUp = useLevelUpCelebration();
   const requestGuard = useRequestGuard();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -188,8 +197,6 @@ export default function PlantDetailsScreen() {
     setChangeImgVisible(false);
     setChangeImgPlantId(null);
   }, []);
-
-
 
   const showToast = (
     message: string,
@@ -357,10 +364,18 @@ export default function PlantDetailsScreen() {
     onSaved: async () => {
       await loadDetails();
       setRefreshCounter(counter => counter + 1);
-      showToast(t('plants.toast.updated', { defaultValue: 'Plant updated' }), 'success');
+      showToast(
+        t('plants.toast.updated', { defaultValue: 'Plant updated' }),
+        'success',
+      );
     },
   });
-  const { open: openEditModal, close: closeEdit, loading: editLoading, saving } = plantEditor;
+  const {
+    open: openEditModal,
+    close: closeEdit,
+    loading: editLoading,
+    saving,
+  } = plantEditor;
 
   const watering = useWateringSchedule({
     translationScope: 'plantDetails',
@@ -368,18 +383,29 @@ export default function PlantDetailsScreen() {
     onNotify: showToast,
     onStatusChanged: (id, status) => {
       setDetails(previous => {
-        if (!previous?.readingDevice || String(previous.readingDevice.id) !== id) return previous;
-        return { ...previous, readingDevice: {
-          ...previous.readingDevice, pumpIncluded: status.pump_included,
-          lastPumpRunAt: status.last_pump_run_at ?? null,
-          lastPumpRunSource: status.last_pump_run_source ?? null,
-          pendingPumpTask: status.pending_pump_task ?? null,
-        } };
+        if (
+          !previous?.readingDevice ||
+          String(previous.readingDevice.id) !== id
+        )
+          return previous;
+        return {
+          ...previous,
+          readingDevice: {
+            ...previous.readingDevice,
+            pumpIncluded: status.pump_included,
+            lastPumpRunAt: status.last_pump_run_at ?? null,
+            lastPumpRunSource: status.last_pump_run_source ?? null,
+            pendingPumpTask: status.pending_pump_task ?? null,
+          },
+        };
       });
     },
   });
-  const { open: openWateringSchedule, close: closeWateringSchedule, loading: wateringScheduleLoading } = watering;
-
+  const {
+    open: openWateringSchedule,
+    close: closeWateringSchedule,
+    loading: wateringScheduleLoading,
+  } = watering;
 
   useFocusEffect(
     useCallback(() => {
@@ -512,13 +538,20 @@ export default function PlantDetailsScreen() {
       return;
     }
 
+    const finishFeedback = levelUp.begin();
     try {
       setLoading(true);
 
       const r = details.reminders.find(x => x.taskId === completeReminderId);
-      let xpGained = 0;
+      let result = { xpGained: 0, levelUp: null } as Awaited<
+        ReturnType<typeof markHomeTaskComplete>
+      >;
       if (r?.taskId) {
-        xpGained = await markHomeTaskComplete(r.taskId, completeNote, completeDate);
+        result = await markHomeTaskComplete(
+          r.taskId,
+          completeNote,
+          completeDate,
+        );
       }
 
       closeCompleteModal();
@@ -526,10 +559,10 @@ export default function PlantDetailsScreen() {
       await loadDetails();
       setRefreshCounter(c => c + 1);
 
-      showToast(
-        taskCompletionToast(t, xpGained),
-        'success',
-      );
+      const feedback = finishFeedback([result]);
+      if (feedback === 'modal') setToastVisible(false);
+      else if (feedback === 'toast')
+        showToast(taskCompletionToast(t, result.xpGained), 'success');
     } catch (e: any) {
       closeCompleteModal();
       Alert.alert(
@@ -999,6 +1032,10 @@ export default function PlantDetailsScreen() {
 
       <WateringScheduleModal {...watering.modalProps} />
 
+      <LevelUpModal
+        celebration={levelUp.celebration}
+        onClose={levelUp.dismiss}
+      />
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}

@@ -109,7 +109,12 @@ def award_task_completion(task, receipt_now, actor=None):
             setattr(previous, key, value)
         previous.save(update_fields=list(values))
         award = previous
+    previous_level = level_progress(progression.total_xp)["level"]
     if xp:
         progression.total_xp += xp
         progression.save(update_fields=["total_xp", "updated_at"])
+    new_level = level_progress(progression.total_xp)["level"]
+    # Response-only metadata belongs to this locked XP transition, not a
+    # persisted award that could replay a celebration on a completion retry.
+    award.level_up = {"previous_level": previous_level, "level": new_level} if xp and new_level > previous_level else None
     return award
