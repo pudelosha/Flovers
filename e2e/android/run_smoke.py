@@ -16,6 +16,14 @@ def adb(*args, **kwargs):
     return command("adb", "-s", "emulator-5554", *args, **kwargs)
 
 
+def maestro(*args, **kwargs):
+    # Use this disposable emulator's loopback adbd socket directly. Maestro's
+    # dadb host:transport selection can report offline while adb shell is ready.
+    # The emulator launched below reserves console 5554 / adbd 5555. This is not
+    # the app API endpoint and never connects to a physical or remote device.
+    return command("maestro", "--host", "127.0.0.1", "--port", "5555", *args, **kwargs)
+
+
 def diagnostic(*args, **kwargs):
     try:
         subprocess.run(list(args), timeout=15, **kwargs)
@@ -100,10 +108,9 @@ def main():
         # Maestro's first connection installs/starts its instrumentation server.
         # Settle that cold-start before either required journey; failures still fail CI.
         with (RESULTS/"maestro-preflight-hierarchy.txt").open("w") as output:
-            command("maestro", "--device", "emulator-5554", "hierarchy",
-                    stdout=output, timeout=120)
+            maestro("hierarchy", stdout=output, timeout=120)
         wait_for_transport_stability()
-        command("maestro", "--device", "emulator-5554", "test", "--format", "JUNIT", "--output",
+        maestro("test", "--format", "JUNIT", "--output",
                 str(RESULTS/"results.xml"), "--test-output-dir", str(RESULTS/"maestro"), "e2e/android/flows", timeout=600)
         command("python", "e2e/android/seed.py", "verify")
         log = (RESULTS/"logcat.log").read_text(errors="replace")
@@ -124,6 +131,9 @@ def main():
             diagnostic("adb", "devices", "-l", stdout=output)
             diagnostic("adb", "server-status", stdout=output)
             diagnostic("adb", "-s", "emulator-5554", "reverse", "--list", stdout=output)
+        adb_log = Path("/tmp") / f"adb.{os.getuid()}.log"
+        if adb_log.is_file():
+            (RESULTS/"adb-server.log").write_bytes(adb_log.read_bytes())
         with (RESULTS/"last-screen.png").open("wb") as output:
             diagnostic("adb", "-s", "emulator-5554", "exec-out", "screencap", "-p", stdout=output)
         diagnostic("adb", "-s", "emulator-5554", "shell", "uiautomator", "dump", "/sdcard/window.xml")

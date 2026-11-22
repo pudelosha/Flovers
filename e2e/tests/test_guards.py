@@ -1,6 +1,7 @@
 import importlib.util
 from pathlib import Path
 import tempfile
+import subprocess
 import unittest
 from unittest.mock import patch
 from types import SimpleNamespace
@@ -22,6 +23,21 @@ smoke = module("smoke", "android/run_smoke.py")
 
 
 class SmokeGuardTests(unittest.TestCase):
+    def test_maestro_uses_only_reserved_loopback_adbd_port(self):
+        with patch.object(smoke, "command") as execute:
+            smoke.maestro("test", "e2e/android/flows", timeout=600)
+        execute.assert_called_once_with(
+            "maestro", "--host", "127.0.0.1", "--port", "5555",
+            "test", "e2e/android/flows", timeout=600,
+        )
+
+    def test_maestro_failure_is_propagated_without_retry(self):
+        failure = subprocess.CalledProcessError(1, ["maestro", "test"])
+        with patch.object(smoke, "command", side_effect=failure) as execute, \
+             self.assertRaises(subprocess.CalledProcessError):
+            smoke.maestro("test", "e2e/android/flows", timeout=600)
+        self.assertEqual(execute.call_count, 1)
+
     def test_transport_disconnect_resets_continuous_readiness_window(self):
         clock = [0]
         probes = [SimpleNamespace(returncode=0, stdout="1"),
