@@ -175,7 +175,7 @@ python3 -c 'import hashlib,json,sys; c=json.load(open(sys.argv[1])); print(hashl
 Only after separate release approval:
 
 1. Select **Deploy backend (VPS)**, ref **main**. Enter its full 40-character SHA
-   in `revision` and `DEPLOY BACKEND <same-sha>` in `confirmation`. A ref other
+   in `revision` and `DEPLOY BACKEND FULL <same-sha>` in `confirmation`. A ref other
    than main, changed SHA or non-owner initiator/rerunner is rejected.
 2. Wait for the full backend quality suite; review/approve `production-backend`.
    The protected job revalidates authorization before registry/SSH operations.
