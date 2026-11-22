@@ -81,6 +81,7 @@ export default function PlantMenu({
         ]}
       >
         <MenuItem
+          testID="plant-menu-details"
           label={tr('plants.menu.details', 'Plant details')}
           icon="sprout-outline"
           onPress={onDetails}
@@ -143,18 +144,20 @@ export default function PlantMenu({
 }
 
 function MenuItem({
+  testID,
   label,
   icon,
   danger,
   onPress,
 }: {
+  testID?: string;
   label: string;
   icon: string;
   danger?: boolean;
   onPress: () => void;
 }) {
   return (
-    <Pressable style={s.menuItem} onPress={onPress}>
+    <Pressable testID={testID} style={s.menuItem} onPress={onPress}>
       <MaterialCommunityIcons
         name={icon as any}
         size={16}

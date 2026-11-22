@@ -1,0 +1,8 @@
+{
+  "format": 1,
+  "allowed_skips": [],
+  "required_passed": [
+    "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[sensors-only]",
+    "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[with-pump]"
+  ]
+}

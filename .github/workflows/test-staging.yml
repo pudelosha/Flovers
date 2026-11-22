@@ -1,0 +1,64 @@
+name: Disposable staging and migration safety
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - "staging/**"
+      - "deployment/**"
+      - "docker-compose.yml"
+      - ".github/workflows/test-staging.yml"
+      - ".github/scripts/report_tests.py"
+      - ".github/test-policies/**"
+  workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: staging-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release-rehearsal:
+    name: Exact-image migration and staging safety
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      FLOVERS_STAGING_RUN: ${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version-file: backend/.python-version
+      - name: Test fail-closed guards and read-only smoke behavior
+        run: python -m unittest discover -s staging/checks -p 'test_*.py' -v
+      - name: Build one immutable image and rehearse staging deployment
+        run: python -m staging.run
+      - name: Always remove this run's containers networks and volumes
+        if: always()
+        run: python -m staging.cleanup
+      - name: Require every staging phase and reject skips
+        if: always()
+        run: >-
+          python .github/scripts/report_tests.py --title "Staging and migration safety"
+          --junit test-results/staging/results.xml
+          --policy .github/test-policies/staging.json
+          --output test-results/staging/summary.md
+      - name: Upload image digests migration output database media and service evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: staging-verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: test-results/staging/
+          if-no-files-found: error
+          retention-days: 7

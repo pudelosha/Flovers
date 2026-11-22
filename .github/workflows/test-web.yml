@@ -1,12 +1,22 @@
 name: Website quality checks
 
 on:
-  pull_request:
+  # Automatic validation never publishes the website.
+  push:
     paths:
       - "web/**"
-      - ".github/workflows/test-web.yml"
+      - "translations/**"
       - ".github/workflows/deploy-web.yml"
+      - ".github/workflows/test-web.yml"
+      - "mobile/src/i18n/locales/**"
+      - "backend/**"
+      - ".github/scripts/**"
+      - ".github/test-policies/**"
   workflow_call:
+    outputs:
+      job_results:
+        description: Actual results of every mandatory job in this reusable suite
+        value: ${{ toJSON(jobs) }}
   workflow_dispatch:
 
 permissions:
@@ -14,6 +24,7 @@ permissions:
 
 jobs:
   tests:
+    name: Website test suite
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     defaults:
@@ -27,10 +38,32 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - name: Install locked dependencies
+        id: dependencies
         run: npm ci
       - name: Check website lint errors
         run: npm run lint
       - name: Test website content and translations
-        run: npm test
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        env:
+          NODE_V8_COVERAGE: test-results/v8-coverage
+        run: npm run test:ci
       - name: Check production build
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
         run: npm run build
+      - name: Summarize tests and skipped cases
+        if: always()
+        run: >-
+          python3 ../.github/scripts/report_tests.py
+          --title "Website tests"
+          --junit test-results/web.xml
+          --policy ../.github/test-policies/no-skips.json
+          --coverage-scope "Node coverage in the job log and V8 artifact covers imported config/contact JavaScript only, not React routes, browser UI or the whole website."
+          --output test-results/summary.md
+      - name: Upload test results and imported-module coverage
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: web-test-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: web/test-results/
+          if-no-files-found: ignore
+          retention-days: 7

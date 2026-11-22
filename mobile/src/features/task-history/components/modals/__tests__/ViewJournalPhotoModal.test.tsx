@@ -224,3 +224,44 @@ it("reopens on the originally selected photo and ignores a late navigation respo
     view.getByTestId("journal-full-photo", { includeHiddenElements: true }).props.source.uri
   ).toContain("fresh-image");
 });
+
+it("preserves the selected photo when an equivalent entry object is rendered", async () => {
+  fetchPhoto
+    .mockResolvedValueOnce({ entry: freshEntry, previousId: "older", nextId: null })
+    .mockResolvedValueOnce({
+      entry: { ...freshEntry, id: "older", photo: { ...freshEntry.photo, id: "older-image" } },
+      previousId: null,
+      nextId: "entry",
+    });
+  const { view } = await open();
+  fireEvent(view.getByTestId("journal-full-photo", { includeHiddenElements: true }), "load");
+  await act(async () => fireEvent.press(view.getByText("Previous")));
+  fireEvent(view.getByTestId("journal-full-photo", { includeHiddenElements: true }), "load");
+  const calls = fetchPhoto.mock.calls.length;
+  view.rerender(<ViewJournalPhotoModal visible entry={{ ...tileEntry }} onClose={jest.fn()} />);
+  await act(async () => {});
+  expect(fetchPhoto).toHaveBeenCalledTimes(calls);
+  expect(view.getByTestId("journal-full-photo").props.source.uri).toContain("older-image");
+  expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
+});
+
+it("discards stale private metadata when the same entry changes plant context", async () => {
+  const { view } = await open();
+  fireEvent(view.getByTestId("journal-full-photo", { includeHiddenElements: true }), "load");
+  let finish: any;
+  fetchPhoto.mockReturnValueOnce(new Promise(resolve => { finish = resolve; }));
+  view.rerender(
+    <ViewJournalPhotoModal visible entry={{ ...tileEntry, plantId: "10" }} onClose={jest.fn()} />
+  );
+  expect(view.queryByTestId("journal-full-photo")).toBeNull();
+  expect(view.UNSAFE_getByType(CenteredSpinner)).toBeTruthy();
+  expect(fetchPhoto).toHaveBeenCalledTimes(2);
+  await act(async () => finish(preview({
+    ...freshEntry,
+    plantId: "10",
+    photo: { ...freshEntry.photo, id: "new-context-image" },
+  })));
+  expect(
+    view.getByTestId("journal-full-photo", { includeHiddenElements: true }).props.source.uri
+  ).toContain("new-context-image");
+});

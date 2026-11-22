@@ -1,0 +1,41 @@
+{
+  "format": 1,
+  "maestro": {
+    "version": "2.12.1",
+    "url": "https://github.com/mobile-dev-inc/Maestro/releases/download/cli-2.12.1/maestro.zip",
+    "sha256": "54dbb0716425626604973cbb374c585ca30272375d9ce15177a1152765ddd9d7"
+  },
+  "android": {
+    "api": 35,
+    "abi": "x86_64",
+    "target": "google_apis",
+    "profile": "pixel_2",
+    "command_line_tools": {
+      "version": "19.0",
+      "url": "https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip",
+      "sha1": "5fdcc763663eefb86a5b8879697aa6088b041e70"
+    },
+    "platform_tools": {
+      "version": "37.0.3",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.3-linux.zip",
+      "sha1": "e1579b288a7ae4e9bc28dedec6a154d78b3c04ed"
+    },
+    "emulator": {
+      "version": "37.3.10",
+      "url": "https://dl.google.com/android/repository/emulator-linux_x64-16970787.zip",
+      "sha1": "5f7314368fc6c05c937f6991bb4106214dc389e7"
+    },
+    "system_image": {
+      "revision": "9",
+      "url": "https://dl.google.com/android/repository/sys-img/google_apis/x86_64-35_r09.zip",
+      "sha1": "0103e6dab21290c4b9d16550a3ce99476f884eef"
+    },
+    "compile_sdk": 36,
+    "build_tools": "36.0.0",
+    "ndk": "27.1.12297006",
+    "cmake": "3.22.1",
+    "java": "17.0.17+10",
+    "gradle": "8.14.3"
+  },
+  "browser": { "playwright": "1.65.1", "chromium_revision": "1255", "chromium": "159.0.8154.6" }
+}

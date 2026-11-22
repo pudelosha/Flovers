@@ -18,14 +18,15 @@ type Props = {
 };
 
 type ItemProps = {
+  testID?: string;
   icon: string;
   label: string;
   onPress: () => void;
   danger?: boolean;
 };
 
-const Item = ({ icon, label, onPress, danger }: ItemProps) => (
-  <Pressable style={s.menuItem} onPress={onPress}>
+const Item = ({ testID, icon, label, onPress, danger }: ItemProps) => (
+  <Pressable testID={testID} style={s.menuItem} onPress={onPress}>
     <MaterialCommunityIcons
       name={icon}
       size={16}
@@ -73,6 +74,7 @@ export default function ReadingMenu({
 
       {canEdit && <Item
         icon="information-outline"
+        testID="reading-menu-details"
         label={tr("readings.menu.deviceDetails", "Device details")}
         onPress={onDeviceDetails}
       />}
