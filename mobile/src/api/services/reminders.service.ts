@@ -1,13 +1,13 @@
-import { ApiError, request } from "../client";
+import { ApiError, request } from '../client';
 
 export type ApiReminder = {
-  access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
+  access?: import('../../shared/utils/plantAccess').ApiPlantAccess;
   id: number;
   plant: number;
-  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
-  start_date: string;           // YYYY-MM-DD
+  type: 'water' | 'moisture' | 'fertilize' | 'pruning' | 'care' | 'repot';
+  start_date: string; // YYYY-MM-DD
   interval_value: number;
-  interval_unit: "days" | "months";
+  interval_unit: 'days' | 'months';
   is_active: boolean;
   created_at: string;
   updated_at: string;
@@ -15,12 +15,12 @@ export type ApiReminder = {
 
 export type ApiReminderTask = {
   plant?: number;
-  type?: ApiReminder["type"];
-  access?: import("../../shared/utils/plantAccess").ApiPlantAccess;
+  type?: ApiReminder['type'];
+  access?: import('../../shared/utils/plantAccess').ApiPlantAccess;
   id: number;
   reminder: number;
-  due_date: string;             // YYYY-MM-DD
-  status: "pending" | "completed" | "skipped";
+  due_date: string; // YYYY-MM-DD
+  status: 'pending' | 'completed' | 'skipped';
   completed_at: string | null;
   completed_by?: { id: string; name: string } | null;
   created_at: string;
@@ -28,68 +28,86 @@ export type ApiReminderTask = {
   note?: string | null;
   completed_event?: {
     plant_id: number;
-    type: ApiReminder["type"];
+    type: ApiReminder['type'];
     plant_name: string;
     location_name: string;
     interval_value: number;
-    interval_unit: "days" | "months";
+    interval_unit: 'days' | 'months';
     start_date: string;
   } | null;
 };
 
 export async function listReminders(
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<ApiReminder[]> {
-  return await request<ApiReminder[]>(
-    "/reminders/",
-    "GET",
-    undefined,
-    { auth: opts.auth ?? true }
-  );
+  return await request<ApiReminder[]>('/reminders/', 'GET', undefined, {
+    auth: opts.auth ?? true,
+  });
 }
 
 /** list tasks (optionally filter by status: pending|completed|skipped) */
-export async function listReminderTasks(
-  params?: { status?: "pending" | "completed" | "skipped"; auth?: boolean }
-): Promise<ApiReminderTask[]> {
-  const q = params?.status ? `?status=${encodeURIComponent(params.status)}` : "";
+export async function listReminderTasks(params?: {
+  status?: 'pending' | 'completed' | 'skipped';
+  auth?: boolean;
+}): Promise<ApiReminderTask[]> {
+  const q = params?.status
+    ? `?status=${encodeURIComponent(params.status)}`
+    : '';
   return await request<ApiReminderTask[]>(
     `/reminders/tasks/${q}`,
-    "GET",
+    'GET',
     undefined,
-    { auth: params?.auth ?? true }
+    { auth: params?.auth ?? true },
   );
 }
 
 /** Postpone one occurrence without updating the recurring reminder. */
-export async function postponeReminderTask(taskId: number, dueDate: string, expectedDueDate: string): Promise<ApiReminderTask> {
-  if (!Number.isSafeInteger(taskId) || taskId < 1) throw new ApiError(400, { code: "invalid_task" });
-  return request(`/reminders/tasks/${taskId}/postpone/`, "POST",
-    { due_date: dueDate, expected_due_date: expectedDueDate }, { auth: true });
+export async function postponeReminderTask(
+  taskId: number,
+  dueDate: string,
+  expectedDueDate: string,
+): Promise<ApiReminderTask> {
+  if (!Number.isSafeInteger(taskId) || taskId < 1)
+    throw new ApiError(400, { code: 'invalid_task' });
+  return request(
+    `/reminders/tasks/${taskId}/postpone/`,
+    'POST',
+    { due_date: dueDate, expected_due_date: expectedDueDate },
+    { auth: true },
+  );
 }
 
 /** Server rechecks eligibility and the exact completion generation. */
-export async function undoReminderTask(taskId: number, expectedCompletion: string): Promise<ApiReminderTask> {
-  if (!Number.isSafeInteger(taskId) || taskId < 1) throw new ApiError(400, {code:"invalid_task"});
-  return request(`/reminders/tasks/${taskId}/undo-completion/`, "POST",
-    {expected_completion:expectedCompletion}, {auth:true});
+export async function undoReminderTask(
+  taskId: number,
+  expectedCompletion: string,
+): Promise<ApiReminderTask> {
+  if (!Number.isSafeInteger(taskId) || taskId < 1)
+    throw new ApiError(400, { code: 'invalid_task' });
+  return request(
+    `/reminders/tasks/${taskId}/undo-completion/`,
+    'POST',
+    { expected_completion: expectedCompletion },
+    { auth: true },
+  );
 }
 
 // Accepts optional completion metadata while keeping old call signatures working.
 export async function completeReminderTask(
   taskId: number,
   opts: { auth?: boolean } = { auth: true },
-  payload?: { note?: string; completedDate?: string }
+  payload?: { note?: string; completedDate?: string },
 ): Promise<{
   completed_task: ApiReminderTask;
   xp_awarded?: number;
+  level_up?: { previous_level: number; level: number } | null;
   next_task: ApiReminderTask | null;
 }> {
   return await request(
     `/reminders/tasks/${taskId}/complete/`,
-    "POST",
+    'POST',
     payload ?? undefined,
-    { auth: opts.auth ?? true }
+    { auth: opts.auth ?? true },
   );
 }
 
@@ -97,71 +115,62 @@ export async function completeReminderTask(
 
 export type ApiReminderCreatePayload = {
   plant: number;
-  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
-  start_date: string;           // YYYY-MM-DD (anchor date)
+  type: 'water' | 'moisture' | 'fertilize' | 'pruning' | 'care' | 'repot';
+  start_date: string; // YYYY-MM-DD (anchor date)
   interval_value: number;
-  interval_unit: "days" | "months";
+  interval_unit: 'days' | 'months';
   is_active?: boolean;
 };
 
 export async function createReminder(
   payload: ApiReminderCreatePayload,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<ApiReminder> {
-  return await request<ApiReminder>(
-    `/reminders/`,
-    "POST",
-    payload,
-    { auth: opts.auth ?? true }
-  );
+  return await request<ApiReminder>(`/reminders/`, 'POST', payload, {
+    auth: opts.auth ?? true,
+  });
 }
 
 export type ApiReminderUpdatePayload = Partial<{
-  plant: number;                // FK
-  type: "water" | "moisture" | "fertilize" | "pruning" | "care" | "repot";
-  start_date: string;           // YYYY-MM-DD (anchor date)
+  plant: number; // FK
+  type: 'water' | 'moisture' | 'fertilize' | 'pruning' | 'care' | 'repot';
+  start_date: string; // YYYY-MM-DD (anchor date)
   interval_value: number;
-  interval_unit: "days" | "months";
+  interval_unit: 'days' | 'months';
   is_active: boolean;
 }>;
 
 export async function updateReminder(
   id: number,
   payload: ApiReminderUpdatePayload,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<ApiReminder> {
-  return await request<ApiReminder>(
-    `/reminders/${id}/`,
-    "PATCH",
-    payload,
-    { auth: opts.auth ?? true }
-  );
+  return await request<ApiReminder>(`/reminders/${id}/`, 'PATCH', payload, {
+    auth: opts.auth ?? true,
+  });
 }
 
 export async function pauseReminder(
   id: number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<ApiReminder> {
   return await updateReminder(id, { is_active: false }, opts);
 }
 
 export async function resumeReminder(
   id: number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<ApiReminder> {
   return await updateReminder(id, { is_active: true }, opts);
 }
 
 export async function deleteReminder(
   id: number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<void> {
-  await request<void>(
-    `/reminders/${id}/`,
-    "DELETE",
-    undefined,
-    { auth: opts.auth ?? true }
-  );
+  await request<void>(`/reminders/${id}/`, 'DELETE', undefined, {
+    auth: opts.auth ?? true,
+  });
 }
 
 /* ---------------------- HISTORY-TASK DELETION ---------------------- */
@@ -174,14 +183,11 @@ export async function deleteReminder(
  */
 export async function deleteReminderTask(
   id: number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<void> {
-  await request<void>(
-    `/reminders/tasks/${id}/`,
-    "DELETE",
-    undefined,
-    { auth: opts.auth ?? true }
-  );
+  await request<void>(`/reminders/tasks/${id}/`, 'DELETE', undefined, {
+    auth: opts.auth ?? true,
+  });
 }
 
 /**
@@ -192,19 +198,16 @@ export async function deleteReminderTask(
  *   POST /reminders/tasks/bulk-delete/
  */
 export type ApiBulkDeleteReminderTasksPayload =
-  | { mode: "plant"; plantId: string }
-  | { mode: "location"; location: string }
-  | { mode: "types"; types: string[] }
-  | { mode: "olderThan"; days: number };
+  | { mode: 'plant'; plantId: string }
+  | { mode: 'location'; location: string }
+  | { mode: 'types'; types: string[] }
+  | { mode: 'olderThan'; days: number };
 
 export async function bulkDeleteReminderTasks(
   payload: ApiBulkDeleteReminderTasksPayload,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
 ): Promise<void> {
-  await request<void>(
-    `/reminders/tasks/bulk-delete/`,
-    "POST",
-    payload,
-    { auth: opts.auth ?? true }
-  );
+  await request<void>(`/reminders/tasks/bulk-delete/`, 'POST', payload, {
+    auth: opts.auth ?? true,
+  });
 }

@@ -23,7 +23,8 @@
         "heading": "Niveau de compte et XP",
         "body": [
           "La vignette Compte affiche votre niveau actuel, votre classement et votre progression vers le niveau suivant. Les niveaux vont de 1 à 100. Le nom et le badge d’un rang restent les mêmes pour chaque groupe de dix niveaux.",
-          "Accomplir des tâches de soins éligibles rapporte de l'XP. Les premiers niveaux nécessitent moins d’XP, tandis que les niveaux plus élevés en nécessitent progressivement plus. Le profil actualise le solde actuel ; il n'y a pas de pop-up XP distinct après chaque tâche."
+          "Accomplir des tâches de soins éligibles rapporte de l'XP. Les premiers niveaux nécessitent moins d’XP, tandis que les niveaux plus élevés en nécessitent progressivement plus. Le profil actualise le solde actuel ; il n'y a pas de pop-up XP distinct après chaque tâche.",
+          "Lorsqu’une tâche terminée augmente le niveau de ton compte, une fenêtre avec une plante qui pousse, ton nouveau niveau et ton rang remplace le message de confirmation. Les autres tâches gardent le message habituel, avec les XP gagnés le cas échéant. Plusieurs tâches terminées ensemble donnent lieu à une seule célébration du niveau le plus élevé atteint."
         ]
       },
       {

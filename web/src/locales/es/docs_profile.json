@@ -23,7 +23,8 @@
         "heading": "Nivel de cuenta y XP",
         "body": [
           "El mosaico de Cuenta muestra su nivel actual, rango y progreso hacia el siguiente nivel. Los niveles van del 1 al 100. El nombre y la insignia de un rango permanecen iguales para cada grupo de diez niveles.",
-          "Completar tareas de cuidado elegibles genera XP. Los primeros niveles necesitan menos XP, mientras que los niveles más altos requieren progresivamente más. El perfil actualiza el saldo actual; no aparece una ventana emergente de XP separada después de cada tarea."
+          "Completar tareas de cuidado elegibles genera XP. Los primeros niveles necesitan menos XP, mientras que los niveles más altos requieren progresivamente más. El perfil actualiza el saldo actual; no aparece una ventana emergente de XP separada después de cada tarea.",
+          "Cuando una tarea completada sube el nivel de tu cuenta, una ventana con una planta creciendo, tu nuevo nivel y rango sustituye al mensaje de confirmación. Las demás tareas mantienen el mensaje habitual, con los XP ganados cuando corresponda. Al completar varias tareas a la vez, solo se celebra el nivel más alto alcanzado."
         ]
       },
       {

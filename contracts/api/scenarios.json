@@ -18,7 +18,9 @@
         "xp_awarded": 100,
         "completed_task.status": "completed",
         "completed_task.completed_by.id": "101",
-        "next_task.status": "pending"
+        "next_task.status": "pending",
+        "level_up.previous_level": 1,
+        "level_up.level": 2
       },
       "clients": [
         "current",
@@ -42,7 +44,9 @@
         "xp_awarded": 100,
         "completed_task.status": "completed",
         "completed_task.completed_by.id": "101",
-        "next_task.status": "pending"
+        "next_task.status": "pending",
+        "level_up.previous_level": 1,
+        "level_up.level": 2
       },
       "clients": [
         "current",
@@ -66,7 +70,8 @@
         "xp_awarded": 0,
         "completed_task.status": "completed",
         "completed_task.completed_by.id": "101",
-        "next_task.status": "pending"
+        "next_task.status": "pending",
+        "level_up": null
       },
       "clients": [
         "current",
@@ -85,7 +90,9 @@
       "expect": {
         "xp_awarded": 100,
         "completed_task.note": null,
-        "next_task.status": "pending"
+        "next_task.status": "pending",
+        "level_up.previous_level": 1,
+        "level_up.level": 2
       },
       "clients": [
         "current",
@@ -103,7 +110,8 @@
       },
       "expect": {
         "xp_awarded": 0,
-        "completed_task.status": "completed"
+        "completed_task.status": "completed",
+        "level_up": null
       },
       "clients": [
         "current",
@@ -120,7 +128,9 @@
         "actor": "caregiver"
       },
       "expect": {
-        "completed_task.completed_by.id": "102"
+        "completed_task.completed_by.id": "102",
+        "level_up.previous_level": 1,
+        "level_up.level": 2
       },
       "clients": [
         "current"

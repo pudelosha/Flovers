@@ -23,7 +23,8 @@
         "heading": "Kontoebene und XP",
         "body": [
           "Die Kontokachel zeigt Ihr aktuelles Level, Ihren Rang und Ihren Fortschritt zum nächsten Level. Die Stufen reichen von 1 bis 100. Der Name und das Abzeichen eines Ranges bleiben für jede Gruppe von zehn Stufen gleich.",
-          "Für die Erledigung anspruchsberechtigter Pflegeaufgaben erhältst du XP. Frühe Level benötigen weniger XP, während höhere Level immer mehr erfordern. Das Profil aktualisiert den aktuellen Kontostand; Es gibt kein separates XP-Popup nach jeder Aufgabe."
+          "Für die Erledigung anspruchsberechtigter Pflegeaufgaben erhältst du XP. Frühe Level benötigen weniger XP, während höhere Level immer mehr erfordern. Das Profil aktualisiert den aktuellen Kontostand; Es gibt kein separates XP-Popup nach jeder Aufgabe.",
+          "Erhöht eine erledigte Aufgabe dein Kontolevel, erscheint statt der Abschlussmeldung ein Dialog mit einer wachsenden Pflanze, deinem neuen Level und Rang. Sonst bleibt die übliche Meldung mit den erhaltenen XP, sofern welche vergeben wurden. Bei mehreren Aufgaben erscheint eine einzige Feier für das höchste erreichte Level."
         ]
       },
       {
