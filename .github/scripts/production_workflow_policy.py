@@ -7,8 +7,13 @@ def validate(workflow,target):
     call=workflow.get("on",{})
     _require(set(call)=={"workflow_dispatch"},"Production must never deploy from push, PR or workflow-call events")
     inputs=call["workflow_dispatch"].get("inputs",{})
-    _require(set(inputs)=={"revision","confirmation"},"Explicit revision and confirmation are mandatory")
-    _require(all(i.get("required")=="true" and i.get("type")=="string" and "default" not in i for i in inputs.values()),"Approval inputs cannot be defaulted")
+    _require(set(inputs)==({"revision","confirmation","deployment_mode"} if target=="backend" else {"revision","confirmation"}),"Explicit revision, mode and confirmation are mandatory")
+    _require(all(inputs[k].get("required")=="true" and inputs[k].get("type")=="string" and "default" not in inputs[k] for k in ("revision","confirmation")),"Approval inputs cannot be defaulted")
+    if target=="backend":
+        mode=inputs["deployment_mode"]
+        _require(mode.get("required")=="true" and mode.get("type")=="choice" and mode.get("default")=="LIGHT"
+                 and mode.get("options")==["LIGHT","FULL"],"Explicit LIGHT/FULL selection required")
+        _require(workflow["jobs"]["release"].get("env",{}).get("DEPLOY_MODE")=="${{ inputs.deployment_mode }}","Approved deployment mode must reach the release")
     _require(workflow.get("permissions")=={"contents":"read"},"No workflow-wide publication credentials")
     _require(workflow.get("concurrency",{}).get("cancel-in-progress")=="false","A running production release must not be auto-cancelled")
     _no_soft_fail(workflow)
@@ -31,4 +36,12 @@ def validate(workflow,target):
             for step in job.get("steps",[]):
                 action=step.get("uses","")
                 _require(not any(x in action for x in ["ssh-action","build-push-action","deploy-pages","configure-pages"]),"Production side effect outside approved job")
+    if target=="backend":
+        steps=release["steps"]
+        ssh=[(i,s) for i,s in enumerate(steps) if "ssh-action" in s.get("uses","")]
+        _require(len(ssh)==1,"Exactly one protected SSH release step required")
+        i,step=ssh[0]
+        _require(steps[i-1].get("run")==gate,"Authorization and CI must be rechecked immediately before SSH")
+        _require(step.get("with",{}).get("fingerprint")=="${{ vars.VPS_HOST_FINGERPRINT }}","SSH host pin required")
+        _require("DEPLOY_MODE" in step.get("with",{}).get("envs","").split(","),"SSH mode forwarding required")
     return True

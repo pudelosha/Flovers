@@ -22,7 +22,7 @@ OWNER=12345
 class ApprovalTests(unittest.TestCase):
     def setUp(self):
         self.event={"repository":{"full_name":"pudelosha/Flovers","owner":{"login":"pudelosha","id":OWNER}},
-                    "inputs":{"revision":SHA,"confirmation":"DEPLOY BACKEND "+SHA}}
+                    "inputs":{"revision":SHA,"deployment_mode":"FULL","confirmation":"DEPLOY BACKEND FULL "+SHA}}
         self.env={"GITHUB_EVENT_NAME":"workflow_dispatch","GITHUB_REPOSITORY":"pudelosha/Flovers",
                   "GITHUB_REF":"refs/heads/main","GITHUB_SHA":SHA,"GITHUB_ACTOR":"pudelosha",
                   "GITHUB_TRIGGERING_ACTOR":"pudelosha","GITHUB_ACTOR_ID":str(OWNER)}
@@ -104,7 +104,8 @@ class BundleTests(unittest.TestCase):
     def test_bundle_loads_all_modules_but_cannot_deploy_without_approved_identity(self):
         program=base64.b64decode(package_release.payload(),validate=True).decode()
         self.assertLess(len(program.encode()),90000)
-        result=subprocess.run([sys.executable,"-c",program],env={"PATH":os.defpath},capture_output=True,text=True,timeout=20)
+        # Feed the exact program through stdin, avoiding Windows' 32 KiB argv cap.
+        result=subprocess.run([sys.executable,"-"],input=program,env={"PATH":os.defpath},capture_output=True,text=True,timeout=20)
         self.assertEqual(result.returncode,1)
         self.assertIn("Backend deployment failed (ValueError)",result.stderr)
 

@@ -7,6 +7,7 @@ import re
 import sys
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from ci_gate import CHECK_NAMES
 
 REPOSITORY = "pudelosha/Flovers"
 TARGETS = {"backend": ("production-backend", "DEPLOY BACKEND"),
@@ -22,6 +23,11 @@ def authorize(event, env, target):
     owner = event.get("repository", {}).get("owner", {})
     sha = env.get("GITHUB_SHA", "")
     inputs = event.get("inputs", {})
+    mode = inputs.get("deployment_mode") if target == "backend" else None
+    if target == "backend":
+        if mode not in {"LIGHT", "FULL"}:
+            raise ApprovalError("An explicit LIGHT or FULL deployment mode is required")
+        phrase += " " + mode
     if (env.get("GITHUB_EVENT_NAME") != "workflow_dispatch"
             or env.get("GITHUB_REPOSITORY") != REPOSITORY
             or event.get("repository", {}).get("full_name") != REPOSITORY
@@ -34,7 +40,61 @@ def authorize(event, env, target):
             or inputs.get("revision") != sha
             or inputs.get("confirmation") != f"{phrase} {sha}"):
         raise ApprovalError("Owner dispatch from main, exact revision and explicit release confirmation are required")
-    return {"environment": environment, "revision": sha, "owner": owner["login"], "owner_id": owner["id"]}
+    return {"environment": environment, "revision": sha, "owner": owner["login"], "owner_id": owner["id"], "mode": mode}
+
+
+def require_main_ci(revision, read):
+    """Verify the exact main commit, effective protection and one complete CI run."""
+    branch = read("/branches/main")
+    if branch.get("protected") is not True or branch.get("commit", {}).get("sha") != revision:
+        raise ApprovalError("Approved revision must still be the protected main tip")
+    rules = read("/rules/branches/main")
+    required = set(CHECK_NAMES)
+    status_rules = [r.get("parameters", {}) for r in rules if r.get("type") == "required_status_checks"]
+    if (not any(r.get("type") == "pull_request" for r in rules)
+            or not any(r.get("type") == "non_fast_forward" for r in rules)
+            or not any(r.get("type") == "deletion" for r in rules)
+            or not any(p.get("strict_required_status_checks_policy") is True and
+                       {(c.get("context"), c.get("integration_id")) for c in p.get("required_status_checks", [])}
+                       >= {(name, 15368) for name in required} for p in status_rules)):
+        raise ApprovalError("Main must retain its PR, strict CI, force-push and deletion protections")
+    response = read(f"/commits/{revision}/check-runs?per_page=100&filter=latest")
+    checks = response.get("check_runs", [])
+    if response.get("total_count") != len(checks):
+        raise ApprovalError("Incomplete CI check listing")
+    checks = [c for c in checks if c.get("name") in required and c.get("app", {}).get("id") == 15368]
+    if (len(checks) != len(required) or {c["name"] for c in checks} != required
+            or any(c.get("head_sha") != revision or c.get("status") != "completed" or c.get("conclusion") != "success" for c in checks)):
+        raise ApprovalError("All ten GitHub Actions CI checks must pass for this exact revision")
+    run_ids = set()
+    for check in checks:
+        match = re.fullmatch(r"https://github\.com/pudelosha/Flovers/actions/runs/([0-9]+)/job/([0-9]+)", check.get("details_url", ""))
+        if not match:
+            raise ApprovalError("Unverified CI check provenance")
+        run_ids.add(match.group(1))
+    if len(run_ids) != 1:
+        raise ApprovalError("Required checks must belong to one complete coordinator run")
+    run_id = run_ids.pop()
+    run = read("/actions/runs/" + run_id)
+    if (run.get("head_sha") != revision or run.get("head_branch") != "main"
+            or run.get("event") not in {"push", "workflow_dispatch"}
+            or run.get("path") != ".github/workflows/ci-main.yml"
+            or run.get("status") != "completed" or run.get("conclusion") != "success"):
+        raise ApprovalError("Successful exact-main coordinator execution is required")
+    recent = read(f"/actions/workflows/ci-main.yml/runs?branch=main&head_sha={revision}&per_page=100").get("workflow_runs", [])
+    recent = [r for r in recent if r.get("head_sha") == revision and r.get("head_branch") == "main"
+              and r.get("event") in {"push", "workflow_dispatch"}]
+    if (not recent or str(max(recent,key=lambda r:(r["run_number"],r["run_attempt"]))["id"]) != run_id):
+        raise ApprovalError("A newer coordinator run must finish before release")
+    response = read(f"/actions/runs/{run_id}/jobs?per_page=100")
+    jobs = response.get("jobs", [])
+    if (response.get("total_count") != len(jobs) or len(jobs) < 24
+            or any(j.get("status") != "completed" or j.get("conclusion") != "success" for j in jobs)):
+        raise ApprovalError("Full CI matrix must pass without cancelled, missing or skipped jobs")
+    names = {j.get("name") for j in jobs}
+    if not required.issubset(names):
+        raise ApprovalError("Coordinator jobs are incomplete")
+    return run_id
 
 
 def require_environment(configuration, policies, owner_id):
@@ -78,6 +138,8 @@ def main(argv=None):
             raise ApprovalError("Read-only environment inspection token is required")
         path = "/environments/" + result["environment"]
         require_environment(github(path,token), github(path+"/deployment-branch-policies",token),result["owner_id"])
+        if args.target == "backend":
+            require_main_ci(result["revision"], lambda path: github(path, token))
         print(f"Owner authorization and protected environment verified for {result['revision']}")
         return 0
     except (ApprovalError, KeyError, OSError, ValueError) as error:

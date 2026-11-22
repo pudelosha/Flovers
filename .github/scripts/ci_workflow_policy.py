@@ -57,7 +57,9 @@ def _no_soft_fail(node):
 
 def validate(coordinator, suites):
     triggers = coordinator.get("on", {})
-    _require(set(triggers) == {"pull_request"}, "Coordinator must run unfiltered on pull_request")
+    _require(set(triggers) == {"pull_request", "push", "workflow_dispatch"}, "PR and exact-main release verification triggers are required")
+    _require(triggers["push"] == {"branches": ["main"]}, "Main verification must have no path filters")
+    _require(triggers["workflow_dispatch"] in (None, "", {}), "Manual CI cannot accept skip inputs")
     event = triggers["pull_request"]
     _require(isinstance(event, dict) and set(event) == {"types"}, "PR path/branch filters or skip controls are forbidden")
     _require(set(event["types"]) == {"opened", "synchronize", "reopened", "edited", "ready_for_review"}, "Missing PR lifecycle event")

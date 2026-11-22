@@ -23,6 +23,14 @@ class WorkflowContractTests(unittest.TestCase):
             with self.subTest(key=key), self.assertRaises(policy.PolicyError):
                 policy.validate(changed, self.suites)
 
+    def test_exact_main_verification_has_no_path_filter_and_manual_has_no_skip_inputs(self):
+        for trigger in ({"branches":["main"],"paths":["backend/**"]}, {"branches":["*"]}):
+            changed=copy.deepcopy(self.coordinator);changed["on"]["push"]=trigger
+            with self.assertRaises(policy.PolicyError):policy.validate(changed,self.suites)
+        changed=copy.deepcopy(self.coordinator)
+        changed["on"]["workflow_dispatch"]={"inputs":{"skip_android":{"default":"true"}}}
+        with self.assertRaises(policy.PolicyError):policy.validate(changed,self.suites)
+
     def test_missing_lane_and_dependency_are_rejected(self):
         for job in ("mobile-execution", "gate-android", "release-readiness"):
             changed = copy.deepcopy(self.coordinator)
