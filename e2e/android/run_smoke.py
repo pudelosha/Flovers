@@ -16,12 +16,39 @@ def adb(*args, **kwargs):
     return command("adb", "-s", "emulator-5554", *args, **kwargs)
 
 
+def maestro(*args, **kwargs):
+    # Use this disposable emulator's loopback adbd socket directly. Maestro's
+    # dadb host:transport selection can report offline while adb shell is ready.
+    # The emulator launched below reserves console 5554 / adbd 5555. This is not
+    # the app API endpoint and never connects to a physical or remote device.
+    return command("maestro", "--host", "127.0.0.1", "--port", "5555", *args, **kwargs)
+
+
 def diagnostic(*args, **kwargs):
     try:
         subprocess.run(list(args), timeout=15, **kwargs)
     except (OSError, subprocess.TimeoutExpired) as error:
         with (RESULTS/"diagnostic-errors.log").open("a") as output:
             output.write(type(error).__name__ + ": " + str(error) + "\n")
+
+
+def wait_for_transport_stability(timeout=90, stable_seconds=15):
+    """Wait for transport AND framework after driver installation, never retry a flow."""
+    deadline = time.monotonic() + timeout
+    stable_since = None
+    while time.monotonic() < deadline:
+        probe = subprocess.run(
+            ["adb", "-s", "emulator-5554", "shell", "getprop", "sys.boot_completed"],
+            capture_output=True, text=True, timeout=10,
+        )
+        if probe.returncode == 0 and probe.stdout.strip() == "1":
+            stable_since = stable_since if stable_since is not None else time.monotonic()
+            if time.monotonic() - stable_since >= stable_seconds:
+                return
+        else:
+            stable_since = None
+        time.sleep(1)
+    raise RuntimeError("Android transport/framework did not stabilize after Maestro initialization")
 
 
 def main():
@@ -78,7 +105,12 @@ def main():
         flows = sorted(Path("e2e/android/flows").glob("*.yaml"))
         if [p.stem for p in flows] != ["completion-smoke", "navigation-smoke"]:
             raise RuntimeError("Both required native smoke flows must be present")
-        command("maestro", "--device", "emulator-5554", "test", "--format", "JUNIT", "--output",
+        # Maestro's first connection installs/starts its instrumentation server.
+        # Settle that cold-start before either required journey; failures still fail CI.
+        with (RESULTS/"maestro-preflight-hierarchy.txt").open("w") as output:
+            maestro("hierarchy", stdout=output, timeout=120)
+        wait_for_transport_stability()
+        maestro("test", "--format", "JUNIT", "--output",
                 str(RESULTS/"results.xml"), "--test-output-dir", str(RESULTS/"maestro"), "e2e/android/flows", timeout=600)
         command("python", "e2e/android/seed.py", "verify")
         log = (RESULTS/"logcat.log").read_text(errors="replace")
@@ -99,6 +131,9 @@ def main():
             diagnostic("adb", "devices", "-l", stdout=output)
             diagnostic("adb", "server-status", stdout=output)
             diagnostic("adb", "-s", "emulator-5554", "reverse", "--list", stdout=output)
+        adb_log = Path("/tmp") / f"adb.{os.getuid()}.log"
+        if adb_log.is_file():
+            (RESULTS/"adb-server.log").write_bytes(adb_log.read_bytes())
         with (RESULTS/"last-screen.png").open("wb") as output:
             diagnostic("adb", "-s", "emulator-5554", "exec-out", "screencap", "-p", stdout=output)
         diagnostic("adb", "-s", "emulator-5554", "shell", "uiautomator", "dump", "/sdcard/window.xml")

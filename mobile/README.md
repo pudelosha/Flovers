@@ -1,97 +1,58 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Flovers mobile
 
-# Getting Started
+React Native/TypeScript client for Flovers. See the [project README](../README.md)
+for product features, environment configuration and the full development stack.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Local development
 
-## Step 1: Start Metro
-
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
+Use Node.js 24 (as in CI), npm, and the Android or iOS native toolchain. From `mobile/`:
 
 ```sh
-# Using npm
+npm ci
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
+In a second terminal, also from `mobile/`:
 
 ```sh
-# Using npm
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+Select the intended API environment before building. The checked-in Android mapping
+uses `.env.production` for debug and release; see the root README before using a
+local backend. Do not put signing keys or provider credentials in Git.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+For iOS, use macOS/Xcode and install pods before building:
 
 ```sh
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
+cd ios
 bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+cd ..
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Maintainer guides
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+- [Automated quality checks and local test commands](../.github/QUALITY_CHECKS.md)
+- [Native Android and browser smoke tests](../e2e/README.md)
+- [Account levels and XP](docs/ACCOUNT_LEVELS.md)
+- [Appearance and themes](docs/APPEARANCE.md)
+- [Secure authentication storage](docs/SECURE_AUTH_STORAGE.md)
+- [Shared modal layout](src/shared/ui/MODALS.md)
 
-## Step 3: Modify your app
+## iOS release validation
 
-Now that you have successfully run the app, let's make changes!
+Hosted native smoke coverage is Android-only. Before an iOS release, build with
+Xcode and verify signing/app identity, Firebase/APNs setup, secure storage, camera
+and photo-library permissions, deep links, notification opens, keyboard access and
+small-screen/large-text layouts on an iPhone. Sensor availability and compass errors
+need real-device checks; ambient-light measurement must retain manual input where
+unsupported. A dated source audit or mocked unit test is not native release evidence.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Publication
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Changes go through a PR and the mandatory CI checks before merging to `main`.
+Merging does not publish an app. The manual Google Play workflow runs mobile checks,
+builds a signed bundle and uploads a draft internal-test release; publication is
+completed in Play Console. Native test APKs are isolated from production services.

@@ -178,10 +178,30 @@ This standalone check does not modify deployment workflows or branch protection.
 
 ## High-risk behavior coverage
 
-P1-A adds adapter and screen behavior coverage to the existing backend/mobile
-jobs, plus expired-token and revoked-sharing provider/client cases. See the
-[coverage matrix and boundaries](P1_A_COVERAGE.md). No deployment workflow or
-coverage threshold changes are involved.
+The backend and mobile suites cover these behaviors without contacting real providers:
+
+- `backend/readings/tests/test_notification_adapters.py`: moisture/pump email and
+  push payloads, locale and consent, invalid tokens, provider errors, missing-reading
+  retries, inbox deduplication and private-data isolation.
+- `AccountRecoveryBehavior.test.tsx`: activation/recovery links, expired tokens,
+  form validation, pending requests, API failures and retry/navigation behavior.
+- `ReadingsBehavior.test.tsx` and `LocationsBehavior.test.tsx`: loading/empty/error
+  states, create/update/delete interactions, permissions and stale list requests.
+- Provider-verified contracts: expired authentication and revoked sharing replayed
+  against current and pinned previous mobile adapters.
+
+Screen unit tests use deterministic native/navigation boundaries; they do not prove
+native modal geometry or physical-device behavior. See the [native/browser E2E
+guide](../e2e/README.md) for the actual smoke journeys and their limits.
+
+Existing behavior still has boundaries: moisture/pump sends are best-effort without
+a durable delivery retry queue, and their push adapters target Android tokens. Inbox
+deduplication does not guarantee provider-send deduplication. Leaving an auth form
+does not abort every request, and mutation/device-detail callbacks do not all share
+the list-load stale-request guard. Passing tests do not imply these gaps were fixed.
+
+Run the focused tests with the existing suite commands, or use pytest/Jest file
+selection for the paths above. No global coverage threshold is imposed.
 
 ## Required ESP32-C3 target compilation
 

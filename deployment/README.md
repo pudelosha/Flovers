@@ -2,13 +2,13 @@
 
 Private plant-photo storage, its automatically generated Compose overlay, upload limits and backup requirements are described in [PRIVATE_PHOTOS.md](PRIVATE_PHOTOS.md).
 
-The checked-in `docker-compose.yml` is a development stack. The deployment workflow uses `/opt/app/docker-compose.prod.yml` on the VPS; that file and the live proxy configuration are not in this checkout. A [read-only VPS inspection on 2026-10-15](VPS_CHECK_2026-10-15.md) confirmed host Caddy with a loopback backend and identified the remaining production configuration changes. No production deployment or configuration changes were performed during that inspection.
+The checked-in `docker-compose.yml` is a development stack. The deployment workflow uses `/opt/app/docker-compose.prod.yml` on the VPS; that file and the live proxy configuration are not in this checkout. Verify the current Compose configuration and proxy topology before an approved production release; historical inspection results are not a current readiness check.
 
 ## Runtime configuration
 
 Copy the relevant entries from `backend.production.env.example` into the existing private runtime environment for **web, worker and beat**. Keep existing database, SMTP and Firebase settings. Do not replace an existing private signing key with an example value: changing either key invalidates its signed data/tokens. If a previously public development key was used, generate a new private key and require users to sign in again. Production is the default `APP_ENV`; both signing keys must be explicitly supplied, private and at least 32 characters. `APP_ENV=development` or `APP_ENV=test` enables development defaults only for those environments. `LOAD_DOTENV=False` uses injected environment variables without reading an image-local `.env`.
 
-On 2026-10-15, the VPS's existing `/opt/app/.env` was configured with a new random JWT signing key and restricted to mode `0600`. Compose verification confirmed that web, worker, and beat will share it without changing other settings. It activates when the next deployment recreates the containers; no restart was performed during configuration. Preserve this key on subsequent deployments. See the [inspection follow-up](VPS_CHECK_2026-10-15.md).
+Keep the production runtime environment file restricted to mode `0600`, and preserve its signing keys across deployments. Web, worker and Beat must receive the same configured values.
 
 `EMAIL_TIMEOUT` defaults to 30 seconds and accepts 1–120 seconds, keeping an individual SMTP operation bounded below the notification delivery lease. Configure `THROTTLE_CACHE_URL` to a shared Redis database, such as `redis://redis:6379/2`, for all web workers. Its database must be distinct from Celery's broker/result databases. Without it, Django's local memory cache applies quotas separately in each process; DRF throttles also use non-atomic cache operations and are not a strict distributed admission limit.
 
