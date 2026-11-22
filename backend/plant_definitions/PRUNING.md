@@ -28,8 +28,8 @@ This is a schema example, not a recommendation for any particular species.
 To remove a recommendation, use `false` and `null`. The subsequent reviewed
 catalogue rollout is applied by migration `0005_reviewed_catalogue_corrections`.
 Its frozen leaf changes preserve unrelated administrator edits and never alter
-existing user plants or reminder schedules. See the catalogue audit application
-report for the corrections and remaining review cases.
+existing user plants or reminder schedules. The retained correction manifests
+below document the reviewed changes and deferred cases.
 
 ## User plants and reminders
 
@@ -55,3 +55,24 @@ email and push messages have pruning labels in all 15 backend languages.
 Deploy migrations before importing reviewed species guidance. Expose the new
 task type in mobile only after backend support is deployed. No board firmware
 changes are required.
+
+## Reviewed catalogue data
+
+The reviewed rollout is frozen in migration
+`0005_reviewed_catalogue_corrections` and its adjacent JSON payload. Do not delete or
+regenerate that migration data: it is required when applying the migration to an
+existing database. Before/after guards preserve unrelated administrator edits.
+
+The seed catalogue and frozen migration cover 3,571 leaf changes across 734
+definitions, including scoped toxicity translations, specialist media, confirmed
+task conflicts and reviewed pruning suggestions. Supporting evidence and deferred
+cases remain in the field-level manifests:
+
+- [Toxicity, translations and source scope](seed_data/catalogue_corrections_2026-11-09_toxicity.json)
+- [Soils, containers and task guidance](seed_data/catalogue_corrections_2026-11-09_soil_tasks.json)
+
+Uncertain source identities and season-dependent schedules remain review candidates.
+Translating an existing safety label is not independent certification, and a reviewed
+interval is not a universal schedule. Full description/trait backfills for Indonesian,
+Russian and Turkish were not part of this correction set. Historical audit snapshots
+and duplicate generated reports remain recoverable from Git history.

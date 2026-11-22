@@ -79,7 +79,7 @@ Device settings embedded in generated firmware require regenerating and uploadin
 - Earn XP from completed care tasks and progress through **levels 1–100 and ten gardening ranks**, from Seedling to Plant Legend.
 - Reach early levels quickly, with increasing XP requirements for later levels.
 - Keep progression fair through daily limits, diminishing rewards and per-plant care checks.
-- See your current level and progress in Profile without XP pop-ups interrupting care.
+- See your current level and progress in Profile, with [server-owned XP rules](mobile/docs/ACCOUNT_LEVELS.md) and XP feedback in task-completion toasts.
 - Personalise language, temperature units, date format and FAB position. Dark is the default theme and uses background 5 after login; signed-out screens keep the floral background 1. Choose Light for mint surfaces, dark green text and teal accents. Theme changes preview immediately and can be saved to your account.
 
 ### Choose the notifications you need
@@ -182,10 +182,10 @@ Production uses a separate VPS Compose configuration. See the [deployment guide]
 
 ## Delivery and maintenance
 
-- **Backend:** relevant pushes to `main` must pass locked-dependency checks, a real CPU plant-recognition prediction, the full Django suite on PostgreSQL, migration checks and deployment tests before building an image or deploying to the VPS. The image repeats recognition validation before publication. The rollout applies migrations before starting the updated application services.
-- **Website:** lint, content/translation tests and a production build must pass before publishing through GitHub Pages.
-- **Mobile checks:** mobile pushes and pull requests run strict TypeScript, lint, Jest and release-metadata tests without signing or publishing.
-- **Android testing builds:** the Google Play internal-test workflow is **manually triggered in GitHub Actions** and requires mobile checks to pass, so routine commits do not create mobile releases.
+- **PRs and main:** push a feature branch, open a PR, pass the complete mandatory CI matrix, then merge to protected `main`. Relevant pushes also run component checks. Merging runs validation, not production deployment.
+- **Backend:** explicit owner dispatch from `main`, revision confirmation, component CI and protected-environment approval are required to build and deploy a release. Locked dependencies, CPU recognition, PostgreSQL tests, capacity/readiness checks and migration safeguards remain enforced.
+- **Website:** publication requires explicit owner dispatch, revision confirmation, website checks/build and protected-environment approval.
+- **Android testing builds:** the Google Play internal-test workflow is **manually triggered in GitHub Actions** and requires mobile checks to pass. It uploads a draft internal-test release for publication in Play Console.
 - **VPS storage:** CPU-only recognition dependencies and bounded backend-image retention reduce image accumulation while preserving the previous image for rollback.
 - **Private media:** uploaded photos use persistent private storage; backups must include the database and private media together.
 

@@ -1,6 +1,6 @@
-**Account levels and XP — implemented rules**
+# Account levels and XP
 
-XP is awarded by the backend when an eligible care task is completed. The mobile profile reads the live balance and level; it does not calculate or submit rewards and does not show XP award popups. There are no weekly bonuses and no automatic historical backfill. New progression starts at level 1 with zero XP. Apply the progression migration and deploy the backend before installing the updated mobile build.
+XP is awarded by the backend when an eligible care task is completed. The mobile profile reads the live balance and level; it does not calculate or submit rewards. Home and Plant details append server-awarded XP to completion toasts only when the award is positive. There are no weekly bonuses and no automatic historical backfill. New progression starts at level 1 with zero XP. Apply the progression migration and deploy the backend before installing the updated mobile build.
 
 **Ranks**
 
@@ -17,7 +17,7 @@ XP is awarded by the backend when an eligible care task is completed. The mobile
 | 81–90 | Master Grower | 🏵️ |
 | 91–100 | Plant Legend | 🏆 |
 
-Titles and badges stay fixed inside each band. Level 100 is the maximum; there is no level 101 target. Labels and rank titles are localized in all 12 app languages.
+Titles and badges stay fixed inside each band. Level 100 is the maximum; there is no level 101 target. Labels and rank titles are localized in all 15 supported app languages.
 
 **Earning rules**
 
@@ -58,14 +58,14 @@ These are uninterrupted earning days, not guaranteed calendar timelines. Someone
 3. Use server receipt time for the UTC earning day, daily ordinal and cap, never the user-supplied completion date. Due-date eligibility uses the server's configured care calendar (currently Europe/Warsaw), matching the existing task schedule. Profile timezone edits do not reset the quota.
 4. Keep the ledger when task history, reminders or plants are deleted. Those models currently cascade, so a cascade-only task counter is insufficient. Preserve deduplication identities without retaining deleted display content; account deletion should still erase the account's XP data.
 5. Task completion, unique-award insertion, daily quota and balance updates must be atomic under an account progression lock. Concurrent completions must not bypass 250 XP/day.
-6. If undo is added, reverse the original award once and preserve its identity; completing again must not create a new daily reward. Define how reversals interact with daily quota before shipping undo.
+6. Eligible undo reverses the original award once and excludes it from the active daily quota. Re-completion reuses the same decision row and reevaluates current caps; it cannot create duplicate active awards. See the [undo completion contract](../../backend/reminders/UNDO_COMPLETION_API.md).
 7. Do not backfill historical completions automatically. Historical data is deletable and backdateable, so any later backfill needs a separate bounded policy.
 
 The existing completion method already locks tasks and ignores duplicate completion, but it immediately spawns the next occurrence and permits early completion. XP therefore must not be based only on the count of completed rows.
 
 **API and storage**
 
-An account progression row stores total XP and an award ledger retains task decisions and daily care slots. The authenticated, read-only GET /profile/progression/ endpoint returns the existing profile API envelope with total_xp, level, rank_key, xp_into_level, xp_for_next_level, daily_xp and daily_cap. It returns only the authenticated account's data. Clients cannot PATCH/POST a balance or choose an account ID. The mobile profile refreshes on focus and foreground return without XP notifications.
+An account progression row stores total XP and an award ledger retains task decisions and daily care slots. The authenticated, read-only GET /profile/progression/ endpoint returns the existing profile API envelope with total_xp, level, rank_key, xp_into_level, xp_for_next_level, daily_xp and daily_cap. It returns only the authenticated account's data. Clients cannot PATCH/POST a balance or choose an account ID. The mobile profile refreshes on focus and foreground return. Task completion feedback uses the award returned by the server; early completions show no XP suffix.
 
 **Verification**
 
