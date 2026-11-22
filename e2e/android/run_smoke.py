@@ -24,6 +24,25 @@ def diagnostic(*args, **kwargs):
             output.write(type(error).__name__ + ": " + str(error) + "\n")
 
 
+def wait_for_transport_stability(timeout=90, stable_seconds=15):
+    """Wait for transport AND framework after driver installation, never retry a flow."""
+    deadline = time.monotonic() + timeout
+    stable_since = None
+    while time.monotonic() < deadline:
+        probe = subprocess.run(
+            ["adb", "-s", "emulator-5554", "shell", "getprop", "sys.boot_completed"],
+            capture_output=True, text=True, timeout=10,
+        )
+        if probe.returncode == 0 and probe.stdout.strip() == "1":
+            stable_since = stable_since if stable_since is not None else time.monotonic()
+            if time.monotonic() - stable_since >= stable_seconds:
+                return
+        else:
+            stable_since = None
+        time.sleep(1)
+    raise RuntimeError("Android transport/framework did not stabilize after Maestro initialization")
+
+
 def main():
     if not Path("/dev/kvm").exists():
         raise RuntimeError("KVM is required: do not substitute mocked or software-only Android tests")
@@ -78,6 +97,12 @@ def main():
         flows = sorted(Path("e2e/android/flows").glob("*.yaml"))
         if [p.stem for p in flows] != ["completion-smoke", "navigation-smoke"]:
             raise RuntimeError("Both required native smoke flows must be present")
+        # Maestro's first connection installs/starts its instrumentation server.
+        # Settle that cold-start before either required journey; failures still fail CI.
+        with (RESULTS/"maestro-preflight-hierarchy.txt").open("w") as output:
+            command("maestro", "--device", "emulator-5554", "hierarchy",
+                    stdout=output, timeout=120)
+        wait_for_transport_stability()
         command("maestro", "--device", "emulator-5554", "test", "--format", "JUNIT", "--output",
                 str(RESULTS/"results.xml"), "--test-output-dir", str(RESULTS/"maestro"), "e2e/android/flows", timeout=600)
         command("python", "e2e/android/seed.py", "verify")

@@ -2,6 +2,8 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 import zipfile
 import xml.etree.ElementTree as ET
 
@@ -16,9 +18,31 @@ def module(name, filename):
 
 reports = module("reports", "check_reports.py")
 provision = module("provision", "provision_android.py")
+smoke = module("smoke", "android/run_smoke.py")
 
 
 class SmokeGuardTests(unittest.TestCase):
+    def test_transport_disconnect_resets_continuous_readiness_window(self):
+        clock = [0]
+        probes = [SimpleNamespace(returncode=0, stdout="1"),
+                  SimpleNamespace(returncode=1, stdout=""),
+                  *[SimpleNamespace(returncode=0, stdout="1") for _ in range(4)]]
+        with patch.object(smoke.time, "monotonic", side_effect=lambda: clock[0]), \
+             patch.object(smoke.time, "sleep", side_effect=lambda value: clock.__setitem__(0, clock[0] + value)), \
+             patch.object(smoke.subprocess, "run", side_effect=probes) as probe:
+            smoke.wait_for_transport_stability(timeout=10, stable_seconds=3)
+        self.assertEqual(clock[0], 5)
+        self.assertEqual(probe.call_count, 6)
+
+    def test_unavailable_framework_fails_with_bounded_deadline(self):
+        clock = [0]
+        with patch.object(smoke.time, "monotonic", side_effect=lambda: clock[0]), \
+             patch.object(smoke.time, "sleep", side_effect=lambda value: clock.__setitem__(0, clock[0] + value)), \
+             patch.object(smoke.subprocess, "run", return_value=SimpleNamespace(returncode=0, stdout="0")), \
+             self.assertRaisesRegex(RuntimeError, "did not stabilize"):
+            smoke.wait_for_transport_stability(timeout=3, stable_seconds=2)
+        self.assertEqual(clock[0], 3)
+
     def report(self, content, kind="android"):
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary)/"results.xml"; path.write_text(content)
