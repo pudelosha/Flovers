@@ -124,8 +124,13 @@ def complete_pairing(session_id, claim, signature):
         raise PermissionDenied("Invalid pairing proof.")
     try:
         device = ReadingDevice.objects.select_for_update().get(pk=initial.device_id)
-        session = DevicePairingSession.objects.select_for_update().select_related("physical_device", "user").get(pk=initial.pk)
-        physical = PhysicalDevice.objects.select_for_update().get(pk=session.physical_device_id)
+        # Every writer uses logical device -> physical board -> session. Locking a
+        # session's joined board first deadlocks when the winning claim cancels
+        # another claimant's already-locked session while that claimant waits
+        # for the board. Do not lock unrelated joined account rows either.
+        physical = PhysicalDevice.objects.select_for_update().get(pk=initial.physical_device_id)
+        session = DevicePairingSession.objects.select_for_update(of=("self",)).select_related("user").get(pk=initial.pk)
+        session.physical_device = physical
     except (ReadingDevice.DoesNotExist, DevicePairingSession.DoesNotExist, PhysicalDevice.DoesNotExist):
         raise PermissionDenied("Invalid pairing proof.")
     if (session.status != "pending" or session.expires_at <= timezone.now() or
