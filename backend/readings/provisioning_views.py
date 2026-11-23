@@ -6,7 +6,7 @@ from rest_framework import permissions, serializers
 from rest_framework.decorators import api_view, authentication_classes, permission_classes, throttle_classes
 from rest_framework.exceptions import NotFound, PermissionDenied, ValidationError
 from rest_framework.response import Response
-from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+from rest_framework.throttling import AnonRateThrottle, BaseThrottle, UserRateThrottle
 
 from .device_auth import resolve_device
 from .models import DevicePairingSession, PhysicalDevice, PumpTask
@@ -29,6 +29,16 @@ class PairingStatusThrottle(UserRateThrottle):
     # Read/cancel polling must not consume the much smaller session-creation budget.
     rate = "120/minute"
     scope = "iot_pair_status"
+
+
+class DeviceIdentityThrottle(BaseThrottle):
+    """Frequent GET polling must not consume the mutation/claim admission budget."""
+    def allow_request(self, request, view):
+        self.delegate = PairingOwnerThrottle() if request.method == "DELETE" else PairingStatusThrottle()
+        return self.delegate.allow_request(request, view)
+
+    def wait(self):
+        return self.delegate.wait()
 
 
 class DeviceControlThrottle(AnonRateThrottle):
@@ -153,7 +163,7 @@ def configuration_ack(request):
 @transaction.atomic
 @api_view(["GET", "DELETE"])
 @permission_classes([permissions.IsAuthenticated])
-@throttle_classes([PairingOwnerThrottle])
+@throttle_classes([DeviceIdentityThrottle])
 def device_identity(request, device_id):
     device = owned_device(request.user, device_id, lock=True)
     if request.method == "DELETE":

@@ -72,6 +72,7 @@ def test_mobile_pairing_polling_has_separate_budget_from_creating_sessions(setup
     url = reverse("iot-pairing-status", args=[begun.data["session_id"]])
     for _ in range(40):
         assert setup[5].get(url).status_code == 200
+        assert setup[5].get(reverse("iot-device-identity", args=[setup[2].pk])).status_code == 200
     assert start(setup).status_code == 201
     cache.clear()
 
