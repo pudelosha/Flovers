@@ -88,6 +88,7 @@ jobs:
     uses: ./.github/workflows/test-e2e.yml
     permissions:
       contents: read
+      actions: read
 
   staging-execution:
     name: staging-execution

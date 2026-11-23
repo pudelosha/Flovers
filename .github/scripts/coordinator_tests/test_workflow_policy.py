@@ -8,6 +8,31 @@ import ci_workflow_policy as policy
 
 
 class WorkflowContractTests(unittest.TestCase):
+    def test_apk_retry_binding_keeps_run_commit_provenance_and_required_native_lane(self):
+        coordinator, suites = policy.current()
+        suite = suites["test-e2e.yml"]
+        build = suite["jobs"]["android-build"]
+        native = suite["jobs"]["android"]
+        upload = next(s for s in build["steps"] if s.get("name") == "Upload smoke APK")
+        self.assertEqual(upload["with"]["name"], "android-smoke-apk-${{ github.run_id }}-${{ github.sha }}")
+        self.assertEqual(upload["with"]["overwrite"], "true")
+        self.assertIn("apk_artifact.py create", "\n".join(s.get("run", "") for s in build["steps"]))
+        resolve = next(s for s in native["steps"] if s.get("id") == "smoke-apk")
+        self.assertEqual(resolve["run"], "python e2e/android/apk_artifact.py resolve")
+        self.assertEqual(resolve["env"]["GH_TOKEN"], "${{ github.token }}")
+        download = next(s for s in native["steps"] if s.get("uses", "").startswith("actions/download-artifact@"))
+        self.assertEqual(download["with"]["artifact-ids"], "${{ steps.smoke-apk.outputs.artifact_id }}")
+        self.assertNotIn("name", download["with"])
+        self.assertEqual(download["with"]["digest-mismatch"], "error")
+        verify = next(i for i, s in enumerate(native["steps"]) if s.get("run") == "python e2e/android/apk_artifact.py verify")
+        emulator = next(i for i, s in enumerate(native["steps"]) if s.get("name") == "Require KVM and provision pinned emulator and Maestro")
+        self.assertLess(verify, emulator)
+        for job in (build, native):
+            self.assertEqual(job["env"]["E2E_SOURCE_SHA"], "${{ github.event.pull_request.head.sha || github.sha }}")
+        self.assertEqual(native["permissions"]["actions"], "read")
+        self.assertEqual(coordinator["jobs"]["e2e-execution"]["permissions"]["actions"], "read")
+        policy.validate(coordinator, suites)
+
     def setUp(self):
         self.coordinator, self.suites = policy.current()
 

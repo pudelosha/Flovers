@@ -22,6 +22,18 @@ and checksum-verified before extraction. Unexpected installed revisions fail.
 
 ## Required native journeys
 
+The smoke APK has one stable artifact identity per workflow run and checked-out
+commit (`android-smoke-apk-<run-id>-<checkout-sha>`). A full rerun overwrites that
+same scoped artifact; a failed-job retry reuses the successful producer's APK,
+even when the consumer's attempt number is newer. Diagnostics remain separate
+per-attempt artifacts. Retrieval lists only the current run, requires exactly one
+matching artifact and checks GitHub's source-commit/repository metadata before
+downloading its immutable artifact ID. The archive digest, APK SHA-256 and embedded
+build provenance must pass before emulator setup. A PR's tested merge commit and
+its source head are recorded separately. Missing, expired, ambiguous, foreign or
+corrupt artifacts fail the lane; there is no fallback to another run or commit.
+
+
 `navigation-smoke` launches a freshly cleared app, signs in with a synthetic
 account, checks Home and opens plant details through the task menu. It then
 checks the Plants list and opens details from a plant tile, visits Reminders,
