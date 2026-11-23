@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
+import uuid
 
 
 def _generate_device_key(length: int = 8) -> str:
@@ -83,6 +84,7 @@ class ReadingDevice(models.Model):
 
     last_read_at = models.DateTimeField(null=True, blank=True)
     latest_snapshot = models.JSONField(null=True, blank=True)
+    desired_config_version = models.PositiveIntegerField(default=1, editable=False)
 
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
@@ -117,6 +119,60 @@ class ReadingDevice(models.Model):
             self.device_key = _generate_device_key(8)
         self._cache_plant_display()
         super().save(*args, **kwargs)
+
+
+class PhysicalDevice(models.Model):
+    """Factory-enrolled identity. No private bootstrap key or BLE PoP on server."""
+
+    hardware_id = models.CharField(max_length=64, unique=True)
+    bootstrap_public_key = models.CharField(max_length=64, unique=True)
+    provisioning_pop_digest = models.CharField(max_length=64, unique=True)
+    hardware_profile = models.CharField(max_length=64)
+    hardware_revision = models.CharField(max_length=32)
+    logical_device = models.OneToOneField(
+        ReadingDevice, null=True, blank=True, on_delete=models.SET_NULL,
+        related_name="physical_device",
+    )
+    disabled = models.BooleanField(default=False)
+    binding_generation = models.PositiveIntegerField(default=0)
+    firmware_version = models.CharField(max_length=64, blank=True)
+    last_seen_at = models.DateTimeField(null=True, blank=True)
+    applied_config_version = models.PositiveIntegerField(default=0)
+    config_error = models.CharField(max_length=64, blank=True)
+    config_error_version = models.PositiveIntegerField(default=0)
+    last_config_sync_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+
+class DevicePairingSession(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    device = models.ForeignKey(ReadingDevice, on_delete=models.CASCADE, related_name="pairing_sessions")
+    physical_device = models.ForeignKey(PhysicalDevice, on_delete=models.CASCADE)
+    challenge = models.CharField(max_length=64)
+    claim_digest = models.CharField(max_length=64)
+    binding_generation = models.PositiveIntegerField()
+    replaces_hardware_id = models.CharField(max_length=64, blank=True)
+    status = models.CharField(max_length=16, default="pending", choices=[
+        ("pending", "Pending"), ("bound", "Bound"), ("confirmed", "Confirmed"), ("cancelled", "Cancelled"),
+    ])
+    expires_at = models.DateTimeField()
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    class Meta:
+        indexes = [models.Index(fields=["status", "expires_at"], name="iot_pairing_expiry_idx")]
+
+
+class DeviceCredential(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    physical_device = models.ForeignKey(PhysicalDevice, on_delete=models.CASCADE, related_name="credentials")
+    token_digest = models.CharField(max_length=64, unique=True)
+    binding_generation = models.PositiveIntegerField()
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    revoked_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["physical_device"], condition=models.Q(revoked_at__isnull=True), name="iot_one_active_credential")]
 
 
 class MissingReadingNotification(models.Model):

@@ -41,12 +41,6 @@ type Props = {
   // legacy back-compat (ignored if the above provided)
   initialHumidityAlertPct?: number;
 
-  // Minute interval; the hour value remains a fallback for older callers.
-  initialIntervalMinutes?: number;
-  initialIntervalHours?: number;
-  initialPumpCooldownMinutes?: number;
-  initialPumpDurationSeconds?: number;
-
   // notifications / pump initial values
   initialSendEmailNotifications?: boolean;
   initialSendPushNotifications?: boolean;
@@ -59,10 +53,6 @@ type Props = {
   // watering completed notifications
   initialSendEmailWateringNotifications?: boolean;
   initialSendPushWateringNotifications?: boolean;
-
-  // read-only (edit only)
-  deviceKey?: string;
-  authSecret?: string;
 
   // callbacks
   onCancel: () => void;
@@ -80,9 +70,6 @@ type Props = {
       moistureAlertEnabled?: boolean;
       moistureAlertPct?: number;
     };
-    intervalMinutes: number;
-    pumpCooldownMinutes: number;
-    pumpDurationSeconds: number;
     sendEmailNotifications?: boolean;
     sendPushNotifications?: boolean;
     sendEmailMissingReadings?: boolean;
@@ -94,9 +81,6 @@ type Props = {
     sendPushWateringNotifications?: boolean;
   }) => void;
 
-  // edit-only convenience actions
-  onSendCodeByEmail?: () => void;
-  onSaveCodeAsText?: () => void;
 };
 
 let Slider: any = null;
@@ -116,10 +100,6 @@ export default function UpsertReadingDeviceModal({
   initialMoistureAlertEnabled,
   initialMoistureAlertPct,
   initialHumidityAlertPct, // legacy
-  initialIntervalHours = 1,
-  initialIntervalMinutes,
-  initialPumpCooldownMinutes = 60,
-  initialPumpDurationSeconds = 20,
   initialSendEmailNotifications = false,
   initialSendPushNotifications = false,
   initialSendEmailMissingReadings = false,
@@ -162,16 +142,6 @@ export default function UpsertReadingDeviceModal({
   );
   const [moistAlertPct, setMoistAlertPct] = React.useState<number>(
     Math.max(0, Math.min(100, defaultMoistPct)),
-  );
-
-  const [intervalMinutes, setIntervalMinutes] = React.useState<string>(
-    String(initialIntervalMinutes ?? initialIntervalHours * 60),
-  );
-
-  const [pumpDurationSeconds, setPumpDurationSeconds] = React.useState(String(initialPumpDurationSeconds));
-
-  const [pumpCooldownMinutes, setPumpCooldownMinutes] = React.useState(
-    String(initialPumpCooldownMinutes),
   );
 
   // Additional state for notifications and pump control
@@ -231,9 +201,6 @@ export default function UpsertReadingDeviceModal({
     setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
     setMoistAlertPct(Math.max(0, Math.min(100, nextDefaultMoistPct)));
 
-    setIntervalMinutes(String(initialIntervalMinutes ?? initialIntervalHours * 60));
-    setPumpCooldownMinutes(String(initialPumpCooldownMinutes));
-    setPumpDurationSeconds(String(initialPumpDurationSeconds));
 
     setSendEmailNotifications(Boolean(initialSendEmailNotifications));
     setSendPushNotifications(Boolean(initialSendPushNotifications));
@@ -257,10 +224,6 @@ export default function UpsertReadingDeviceModal({
     initialMoistureAlertEnabled,
     initialMoistureAlertPct,
     initialHumidityAlertPct,
-    initialIntervalHours,
-    initialIntervalMinutes,
-    initialPumpCooldownMinutes,
-    initialPumpDurationSeconds,
     initialSendEmailNotifications,
     initialSendPushNotifications,
     initialSendEmailMissingReadings,
@@ -281,25 +244,7 @@ export default function UpsertReadingDeviceModal({
   };
 
   // Required: both plantId and non-empty device name
-  const pumpDuration = Number(pumpDurationSeconds);
-  const validPumpDuration = /^\d+$/.test(pumpDurationSeconds) && Number.isInteger(pumpDuration) && pumpDuration >= 1 && pumpDuration <= 300;
-  const cooldown = Number(pumpCooldownMinutes);
-  const interval = Number(intervalMinutes);
-  const validInterval =
-    /^\d+$/.test(intervalMinutes) &&
-    Number.isInteger(interval) &&
-    interval >= 1 &&
-    interval <= 1440;
-  const validCooldown =
-    /^\d+$/.test(pumpCooldownMinutes) &&
-    Number.isInteger(cooldown) &&
-    cooldown >= 1 &&
-    cooldown <= 32767;
-  const canSave =
-    Boolean(plantId) &&
-    Boolean((name || '').trim()) &&
-    validInterval &&
-    (!pumpIncluded || (validCooldown && validPumpDuration));
+  const canSave = Boolean(plantId) && Boolean((name || '').trim());
 
   const handleSave = () => {
     if (!canSave) return;
@@ -325,9 +270,6 @@ export default function UpsertReadingDeviceModal({
         moistureAlertEnabled: sensorMoist ? shouldEnableMoistureAlert : false,
         moistureAlertPct: sensorMoist && shouldEnableMoistureAlert ? moistAlertPct : undefined,
       },
-      intervalMinutes: interval,
-      pumpCooldownMinutes: validCooldown ? cooldown : initialPumpCooldownMinutes,
-      pumpDurationSeconds: validPumpDuration ? pumpDuration : initialPumpDurationSeconds,
 
       // Soil moisture notifications are only applied when Soil Moisture sensor is enabled.
       // Their checkbox state is preserved locally even while locked.
@@ -456,37 +398,6 @@ export default function UpsertReadingDeviceModal({
             multiline
           />
 
-          <View style={{ marginHorizontal: 16, gap: 8 }}>
-            <Text style={[styles.sectionHeader, { marginLeft: 0 }]}>
-              {t('readingsModals.upsert.intervalMinutes', {
-                defaultValue: 'Reading interval (minutes)',
-              })}
-            </Text>
-            <TextInput
-              testID="reading-interval-minutes"
-              style={[pr.input, styles.nestedInput]}
-              accessibilityLabel={t('readingsModals.upsert.intervalMinutes', {
-                defaultValue: 'Reading interval (minutes)',
-              })}
-              keyboardType="number-pad"
-              value={intervalMinutes}
-              onChangeText={setIntervalMinutes}
-            />
-            {!validInterval && (
-              <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>
-                {t('readingsModals.upsert.intervalMinutesValidation', {
-                  defaultValue: 'Enter a whole number from 1 to 1440.',
-                })}
-              </Text>
-            )}
-            <Text style={styles.sectionInfoTextNoMargin}>
-              {t('readingsModals.upsert.intervalFirmwareHint', {
-                defaultValue:
-                  'Choose 1–1440 minutes. After changing this interval, generate and upload the updated board code.',
-              })}
-            </Text>
-          </View>
-
           {/* Sensors Section */}
           <View style={styles.separatorLine} />
 
@@ -534,57 +445,6 @@ export default function UpsertReadingDeviceModal({
               onValueChange={setPumpIncluded}
               weight="600"
             />
-
-            {pumpIncluded && <View style={{ gap: 8, marginVertical: 10 }}>
-              <Text style={sp.dropdownItemText}>
-                {t('readingsModals.upsert.pumpDurationLabel', { defaultValue: 'Pump run time (seconds)' })}
-              </Text>
-              <TextInput
-                style={[pr.input, styles.nestedInput]}
-                value={pumpDurationSeconds}
-                onChangeText={setPumpDurationSeconds}
-                keyboardType="number-pad"
-                accessibilityLabel={t('readingsModals.upsert.pumpDurationLabel', { defaultValue: 'Pump run time (seconds)' })}
-              />
-              {!validPumpDuration && <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>
-                {t('readingsModals.upsert.pumpDurationInvalid', { defaultValue: 'Enter a whole number from 1 to 300.' })}
-              </Text>}
-              <Text style={styles.sectionInfoTextNoMargin}>
-                {t('readingsModals.upsert.pumpDurationHint', { defaultValue: 'Choose 1–300 seconds (default 20). This sets the duration in generated device code. Generate and upload the code again to apply a change. Scheduled watering can use a different duration.' })}
-              </Text>
-            </View>}
-
-            {pumpIncluded && (
-              <View style={{ gap: 8, marginVertical: 10 }}>
-                <Text style={sp.dropdownItemText}>
-                  {t('readingsModals.upsert.pumpCooldownMinutes', {
-                    defaultValue: 'Automatic watering cooldown (minutes)',
-                  })}
-                </Text>
-                <TextInput
-                  style={[pr.input, styles.nestedInput]}
-                  value={pumpCooldownMinutes}
-                  onChangeText={setPumpCooldownMinutes}
-                  keyboardType="number-pad"
-                  accessibilityLabel={t('readingsModals.upsert.pumpCooldownMinutes', {
-                    defaultValue: 'Automatic watering cooldown (minutes)',
-                  })}
-                />
-                {!validCooldown && (
-                  <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>
-                    {t('readingsModals.upsert.pumpCooldownInvalid', {
-                      defaultValue: 'Enter a whole number from 1 to 32767.',
-                    })}
-                  </Text>
-                )}
-                <Text style={styles.sectionInfoTextNoMargin}>
-                  {t('readingsModals.upsert.pumpCooldownHint', {
-                    defaultValue:
-                      'Choose 1–32767 minutes (default 60). The server applies this value when the board next checks for watering tasks. It does not change watering duration.',
-                  })}
-                </Text>
-              </View>
-            )}
 
             <CheckRow
               label={t('readingsModals.upsert.automaticPumpLaunch')}
@@ -889,7 +749,6 @@ function CheckRow({
 
 const styles = StyleSheet.create({
   // These fields already sit inside the standard 16dp form inset.
-  nestedInput: { marginHorizontal: 0 },
   // Separator line - white for testing, matches the visual style
   separatorLine: {
     borderBottomWidth: 1,

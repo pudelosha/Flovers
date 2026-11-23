@@ -34,7 +34,7 @@ from .serializers import (
     PumpTaskSerializer,
     PumpScheduleSerializer,
 )
-from .device_auth import resolve_device
+from .device_auth import resolve_device, device_request_atomic
 from .utils import parse_ts_or_now
 from sharing.permissions import visible_plant_ids
 from .throttles import (
@@ -406,6 +406,7 @@ def readings_export_email(request):
 # ---------- IoT endpoints (no JWT) ----------
 
 
+@device_request_atomic
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([AnonRateThrottle, IngestPerDeviceThrottle])
@@ -529,6 +530,7 @@ def ingest(request):
     )
 
 
+@device_request_atomic
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([AnonRateThrottle, PumpPollPerDeviceThrottle])
@@ -554,6 +556,9 @@ def pump_next_task(request):
     device, error = _resolve_device_from_secret_and_key(request)
     if error is not None:
         return error
+    physical = getattr(request, "_authenticated_physical_device", None)
+    if physical and (physical.applied_config_version != device.desired_config_version or physical.config_error):
+        return Response({"detail": "Apply and acknowledge the current configuration before pump execution."}, status=409)
     return Response(
         pump_service.next_manual_task(
             device,
@@ -569,6 +574,7 @@ def pump_next_task(request):
     )
 
 
+@device_request_atomic
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([AnonRateThrottle, PumpCompletePerDeviceThrottle])
@@ -577,6 +583,9 @@ def pump_auto_claim(request):
     device, error = _resolve_device_from_secret_and_key(request)
     if error is not None:
         return error
+    physical = getattr(request, "_authenticated_physical_device", None)
+    if physical and (physical.applied_config_version != device.desired_config_version or physical.config_error):
+        return Response({"detail": "Apply and acknowledge the current configuration before pump execution."}, status=409)
     duration = PumpScheduleSerializer(data=request.data)
     duration.is_valid(raise_exception=True)
     measurement = ReadingIngestSerializer(
@@ -593,6 +602,7 @@ def pump_auto_claim(request):
     )
 
 
+@device_request_atomic
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([AnonRateThrottle, PumpCompletePerDeviceThrottle])
@@ -641,6 +651,7 @@ def pump_complete(request):
     return Response(result)
 
 
+@device_request_atomic
 @api_view(["GET"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([AnonRateThrottle, FeedPerDeviceThrottle])

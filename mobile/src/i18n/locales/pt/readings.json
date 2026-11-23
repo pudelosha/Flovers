@@ -20,12 +20,12 @@
       "history": "Histórico de leituras",
       "plantDetails": "Detalhes da planta",
       "editDevice": "Editar dispositivo",
-      "deviceDetails": "Detalhes do dispositivo",
+      "deviceDetails": "Configuração do dispositivo",
       "deleteDevice": "Excluir dispositivo"
     },
     "fab": {
-      "linkDevice": "Vincular dispositivo",
-      "deviceSetup": "Configuração do dispositivo",
+      "linkDevice": "Adicionar dispositivo",
+      "deviceSetup": "Informações",
       "sort": "Ordenar",
       "filter": "Filtrar",
       "sendExport": "Enviar exportação",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Ainda não há dispositivos",
-      "description": "Os dispositivos permitem coletar leituras de temperatura, umidade, luz e umidade do solo para uma planta.\n\nToque na ação “+ Vincular dispositivo” para adicionar um. Escolha uma planta, nomeie o dispositivo, escolha os sensores e defina um intervalo de amostragem. Em seguida, você pode abrir a Configuração do dispositivo para ver o segredo da sua conta, alterá-lo e enviar por e-mail um sketch Arduino/ESP pronto para colar."
+      "description": "Adicione um dispositivo à planta. O menu do cartão abre a configuração e o código DIY. Informações contém a documentação API e a gestão do segredo dos dispositivos DIY antigos."
     },
     "toasts": {
       "unauthorized": "Não autorizado. Faça login novamente.",

@@ -20,12 +20,12 @@
       "history": "Readings history",
       "plantDetails": "Plant details",
       "editDevice": "Edit device",
-      "deviceDetails": "Device details",
+      "deviceDetails": "Device setup",
       "deleteDevice": "Delete device"
     },
     "fab": {
-      "linkDevice": "Link device",
-      "deviceSetup": "Device setup",
+      "linkDevice": "Add device",
+      "deviceSetup": "Information",
       "sort": "Sort",
       "filter": "Filter",
       "sendExport": "Send export",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "No devices yet",
-      "description": "Devices let you ingest temperature, humidity, light, and soil moisture readings for a plant.\n\nTap the “+ Link device” action to add one. Pick a plant, name the device, choose sensors, and set a sampling interval. You can then open Device setup to view your account secret, rotate it, and email a ready-to-paste Arduino/ESP sketch."
+      "description": "Add a device for your plant. Its tile menu opens Device setup for configuration and DIY code. Information contains API documentation and legacy account-secret management."
     },
     "toasts": {
       "unauthorized": "Unauthorized. Please log in again.",

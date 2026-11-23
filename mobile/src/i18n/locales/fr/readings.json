@@ -20,12 +20,12 @@
       "history": "Historique des relevés",
       "plantDetails": "Détails de la plante",
       "editDevice": "Modifier l’appareil",
-      "deviceDetails": "Détails de l’appareil",
+      "deviceDetails": "Configuration de l’appareil",
       "deleteDevice": "Supprimer l’appareil"
     },
     "fab": {
-      "linkDevice": "Associer un appareil",
-      "deviceSetup": "Configuration de l’appareil",
+      "linkDevice": "Ajouter un appareil",
+      "deviceSetup": "Informations",
       "sort": "Trier",
       "filter": "Filtrer",
       "sendExport": "Envoyer l’exportation",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Aucun appareil pour le moment",
-      "description": "Les appareils vous permettent d’importer les relevés de température, d’humidité, de luminosité et d’humidité du sol pour une plante.\n\nAppuyez sur l’action « + Associer un appareil » pour en ajouter un. Choisissez une plante, nommez l’appareil, sélectionnez les capteurs et définissez un intervalle d’échantillonnage. Vous pouvez ensuite ouvrir Configuration de l’appareil pour afficher le secret de votre compte, le faire pivoter et envoyer par e-mail un croquis Arduino/ESP prêt à coller."
+      "description": "Ajoutez un appareil à votre plante. Le menu de sa fiche donne accès à la configuration et au code DIY. Informations contient la documentation API et la gestion du secret des anciens appareils DIY."
     },
     "toasts": {
       "unauthorized": "Non autorisé. Veuillez vous reconnecter.",

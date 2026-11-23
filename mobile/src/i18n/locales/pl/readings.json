@@ -20,12 +20,12 @@
       "history": "Historia odczytów",
       "plantDetails": "Szczegóły rośliny",
       "editDevice": "Edytuj urządzenie",
-      "deviceDetails": "Szczegóły urządzenia",
+      "deviceDetails": "Konfiguracja urządzenia",
       "deleteDevice": "Usuń urządzenie"
     },
     "fab": {
-      "linkDevice": "Połącz urządzenie",
-      "deviceSetup": "Konfiguracja urządzenia",
+      "linkDevice": "Dodaj urządzenie",
+      "deviceSetup": "Informacje",
       "sort": "Sortuj",
       "filter": "Filtruj",
       "sendExport": "Wyślij eksport",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Nie ma jeszcze urządzeń",
-      "description": "Urządzenia pozwalają zbierać odczyty temperatury, wilgotności, światła i wilgotności gleby dla rośliny.\n\nStuknij akcję „+ Połącz urządzenie”, aby dodać urządzenie. Wybierz roślinę, nazwij urządzenie, wybierz czujniki i ustaw interwał próbkowania. Następnie możesz otworzyć Konfigurację urządzenia, aby zobaczyć sekret konta, odnowić go i wysłać e-mailem gotowy do wklejenia szkic Arduino/ESP."
+      "description": "Dodaj urządzenie do rośliny. W menu jego kafelka znajdziesz konfigurację oraz kod DIY. Sekcja Informacje zawiera opis API i zarządzanie kluczem starszych urządzeń DIY."
     },
     "toasts": {
       "unauthorized": "Brak autoryzacji. Zaloguj się ponownie.",

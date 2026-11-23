@@ -431,6 +431,11 @@ class ReadingDeviceSerializer(serializers.ModelSerializer):
         return attrs
 
     def update(self, instance, validated_data):
+        from .provisioning import RUNTIME_FIELDS
+        changed = any(field in RUNTIME_FIELDS and getattr(instance, field) != value
+                      for field, value in validated_data.items())
+        if changed:
+            validated_data["desired_config_version"] = instance.desired_config_version + 1
         if validated_data.get("moisture_alert_enabled") is False:
             validated_data["moisture_alert_active"] = False
 

@@ -15,6 +15,8 @@ if linkage != nil
 end
 
 target 'mobile' do
+  # Match the reviewed official Espressif SDK used by the RN BLE bridge.
+  pod 'ESPProvision', '3.2.0'
   config = use_native_modules!
 
   use_react_native!(

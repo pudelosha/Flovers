@@ -151,7 +151,7 @@
       "line": "{{actor}} · {{task}}"
     },
     "readingsHelp": {
-      "device": "In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device details, then Email code to request sample code configured for that device.",
+      "device": "In Readings, the plant owner can add a device and select its sensors. To request Arduino/ESP code, open the device tile menu and choose: Device setup → Advanced / DIY integration → Email code.",
       "charts": "Once readings arrive, tap a measurement icon or value to open its day, week or month chart.",
       "pump": "With a connected pump and relay, the owner can schedule watering for a chosen duration or enable automatic watering below a soil-moisture threshold. Pump support, runtime and the automatic-watering cooldown are configured in the device settings."
     }

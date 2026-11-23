@@ -1,6 +1,7 @@
 # Mandatory generated ESP32-C3 compilation (P0-C3)
 
-`test-firmware.yml` compiles both **real generated** `.ino` variants with Arduino's
+`test-firmware.yml` compiles four **real generated** `.ino` variants (DIY and
+universal, each sensors-only and with pump) with Arduino's
 preprocessing and RISC-V toolchain. It never uploads, opens a serial port, connects
 to a board, starts firmware, actuates a relay or calls a Flovers service. Generated
 sketches contain only synthetic test identifiers and placeholder Wi-Fi credentials.
@@ -15,6 +16,8 @@ sketches contain only synthetic test identifiers and placeholder Wi-Fi credentia
 | Adafruit BME280 Library | **2.3.0** |
 | Adafruit BusIO (transitive) | **1.17.4** |
 | Adafruit Unified Sensor (transitive) | **1.1.15** |
+| ArduinoJson (universal) | **7.4.2** |
+| Crypto / Ed25519 (universal) | **0.4.0** |
 
 Target: the **ESP32C3 Dev Module** configuration used with Flovers'
 **Olimex ESP32-C3-DevKit-Lipo**. The board has an ESP32-C3-MINI-1-N4, 160 MHz CPU
@@ -26,15 +29,17 @@ The pinned FQBN makes the existing CPU/flash/partition defaults explicit:
 esp32:esp32:esp32c3:CDCOnBoot=cdc,CPUFreq=160,FlashSize=4M,PartitionScheme=default
 ```
 
-The generator, pins, TLS trust anchors, protocol, pump timing, cooldown, persistence,
-claims/retries and safety logic are unchanged. This lane covers compilation for
+Universal uses the same target with `PartitionScheme=huge_app` (3 MB, no OTA),
+because BLE/TLS exceeds the DIY slot. Both existing DIY cases and partition settings
+remain unchanged. See [universal firmware](../README.md) before physical flashing.
+This lane covers compilation for
 this exact board/core configuration, not every ESP32 or Arduino model.
 
 ## Reproducibility and isolation
 
 `toolchain.lock.json` records exact CLI release archive hashes for Linux x86-64 and
 Windows x64, the selected core's archive metadata, all 18 vendor-pinned tool/SDK
-dependencies and all four direct/transitive libraries. The CLI archive is checked
+dependencies and all six direct/transitive libraries. The CLI archive is checked
 before extraction. The official indexes' selected archive URLs/checksums/versions
 are checked against the lock before installing. Arduino CLI performs its normal
 archive checksum validation; signature/checksum safeguards are not disabled.
@@ -53,9 +58,10 @@ accepting an unverified globally installed compiler.
 
 ## Execution and evidence
 
-The existing two parametrized cases in `backend/readings/tests/test_codegen.py`
-carry the `firmware_compile` marker. Their names and compilation assertions remain.
-The dedicated job requires these exact two identities in JUnit and permits **zero
+The existing two cases in `backend/readings/tests/test_codegen.py` and two new
+cases in `test_universal_firmware.py` carry the `firmware_compile` marker.
+Existing names and assertions remain. The job requires all four exact identities
+in JUnit, plus the native configuration/storage failure test, and permits **zero
 skips**. A missing CLI/core/library, failed provision, wrong target, compile timeout,
 compiler error, missing `.bin`/`.elf`, missing JUnit or deselected case fails the lane.
 Both variants run even when the first test fails (no `-x` or matrix fail-fast).
@@ -72,7 +78,10 @@ adds preprocessing/linking evidence and does not replace those behavioral checks
 
 Both historical Arduino skip exceptions were removed **after two independent clean
 hosted firmware runs passed both variants**. The backend lane selects
-`-m "not firmware_compile"`; the dedicated lane requires the two target builds.
+`-m "not firmware_compile"`; the dedicated lane requires four target builds and
+the native configuration/storage safety test. That test executes the actual C++
+validator using runtime configuration produced by the Django service, including
+invalid/boundary values and NVS open/write/readback failures.
 No tests are deleted. Both lanes allow zero skips; the backend additionally requires
 all 21 existing host C++ cases by their exact JUnit identities, alongside the 13
 PostgreSQL concurrency cases. No production deployment workflow or host compiler
@@ -100,7 +109,7 @@ Set the four `FLOVERS_TEST_ARDUINO_*` values from the generated
 `environment.json` and set `DJANGO_SETTINGS_MODULE=app.ci_settings`, then from `backend` run:
 
 ```sh
-python -m pytest readings/tests/test_codegen.py -m firmware_compile -ra --junitxml=/tmp/flovers-firmware-results/firmware.xml
+python -m pytest readings/tests/test_codegen.py readings/tests/test_universal_firmware.py -m firmware_compile -ra --junitxml=/tmp/flovers-firmware-results/firmware.xml
 ```
 
 Use a fresh dedicated directory and sufficient free space. Do not point this

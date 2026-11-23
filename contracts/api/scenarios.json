@@ -1679,6 +1679,343 @@
         "current",
         "previous"
       ]
+    },
+    {
+      "id": "iot-identity-legacy",
+      "operation": "identity",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "owner"
+      },
+      "expect": {
+        "pairing": "legacy-or-not-paired",
+        "synchronization": "unknown",
+        "hardware_id": {
+          "$absent": true
+        },
+        "device_token": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-unbound"
+    },
+    {
+      "id": "iot-identity-applied",
+      "operation": "identity",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "owner"
+      },
+      "expect": {
+        "pairing": "paired",
+        "synchronization": "applied",
+        "hardware_id": "CONTRACT_BOARD_0001",
+        "online": true,
+        "desired_config_version": 2,
+        "applied_config_version": 2,
+        "firmware_version": "synthetic-universal-1",
+        "device_token": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-confirmed"
+    },
+    {
+      "id": "iot-identity-pending",
+      "operation": "identity",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "owner"
+      },
+      "expect": {
+        "synchronization": "pending",
+        "desired_config_version": 3,
+        "applied_config_version": 2
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-pending-config"
+    },
+    {
+      "id": "iot-identity-rejected",
+      "operation": "identity",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "owner"
+      },
+      "expect": {
+        "synchronization": "rejected",
+        "config_error": "storage_failed"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-rejected"
+    },
+    {
+      "id": "iot-identity-shared-denied",
+      "operation": "identity",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "viewer"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-confirmed",
+      "error": 404
+    },
+    {
+      "id": "iot-identity-anonymous",
+      "operation": "identity",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "anonymous"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-unbound",
+      "error": 401
+    },
+    {
+      "id": "iot-start",
+      "operation": "pairing-start",
+      "request": {
+        "method": "POST",
+        "path": "/readings/pairing/",
+        "actor": "owner",
+        "body": {
+          "device_id": 601,
+          "hardware_id": "CONTRACT_BOARD_0001"
+        }
+      },
+      "expect": {
+        "protocol": "flovers-pair-v1",
+        "claim": {
+          "$type": "string"
+        },
+        "session_id": {
+          "$type": "string"
+        },
+        "proof_payload": {
+          "$type": "string"
+        },
+        "expires_at": {
+          "$type": "string"
+        },
+        "device_token": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-unbound"
+    },
+    {
+      "id": "iot-start-shared-denied",
+      "operation": "pairing-start",
+      "request": {
+        "method": "POST",
+        "path": "/readings/pairing/",
+        "actor": "caregiver",
+        "body": {
+          "device_id": 601,
+          "hardware_id": "CONTRACT_BOARD_0001"
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-unbound",
+      "error": 404
+    },
+    {
+      "id": "iot-start-invalid",
+      "operation": "pairing-start",
+      "request": {
+        "method": "POST",
+        "path": "/readings/pairing/",
+        "actor": "owner",
+        "body": {
+          "device_id": 0,
+          "hardware_id": "bad"
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-unbound",
+      "error": 400
+    },
+    {
+      "id": "iot-start-already-bound",
+      "operation": "pairing-start",
+      "request": {
+        "method": "POST",
+        "path": "/readings/pairing/",
+        "actor": "owner",
+        "body": {
+          "device_id": 601,
+          "hardware_id": "CONTRACT_BOARD_0001"
+        }
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-confirmed",
+      "error": 409
+    },
+    {
+      "id": "iot-status-bound",
+      "operation": "pairing-status",
+      "request": {
+        "method": "GET",
+        "path": "/readings/pairing/{session_id}/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "bound",
+        "device_token": {
+          "$absent": true
+        },
+        "claim": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-bound"
+    },
+    {
+      "id": "iot-status-confirmed",
+      "operation": "pairing-status",
+      "request": {
+        "method": "GET",
+        "path": "/readings/pairing/{session_id}/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "confirmed",
+        "device_token": {
+          "$absent": true
+        },
+        "claim": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-confirmed"
+    },
+    {
+      "id": "iot-status-expired",
+      "operation": "pairing-status",
+      "request": {
+        "method": "GET",
+        "path": "/readings/pairing/{session_id}/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "expired",
+        "device_token": {
+          "$absent": true
+        },
+        "claim": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-expired"
+    },
+    {
+      "id": "iot-status-cancelled",
+      "operation": "pairing-status",
+      "request": {
+        "method": "GET",
+        "path": "/readings/pairing/{session_id}/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "cancelled",
+        "device_token": {
+          "$absent": true
+        },
+        "claim": {
+          "$absent": true
+        }
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-cancelled"
+    },
+    {
+      "id": "iot-cancel-pending",
+      "operation": "pairing-cancel",
+      "request": {
+        "method": "DELETE",
+        "path": "/readings/pairing/{session_id}/",
+        "actor": "owner"
+      },
+      "expect": {
+        "status": "cancelled"
+      },
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-pending"
+    },
+    {
+      "id": "iot-cancel-bound",
+      "operation": "pairing-cancel",
+      "request": {
+        "method": "DELETE",
+        "path": "/readings/pairing/{session_id}/",
+        "actor": "owner"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ],
+      "setup": "iot-bound",
+      "error": 409
+    },
+    {
+      "id": "iot-pair-through-mobile",
+      "operation": "iot-pair-flow",
+      "request": {
+        "method": "GET",
+        "path": "/readings/devices/601/identity/",
+        "actor": "owner"
+      },
+      "expect": {},
+      "clients": [
+        "current"
+      ]
     }
   ]
 }

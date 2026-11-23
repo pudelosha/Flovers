@@ -151,7 +151,7 @@
       "line": "{{actor}} · {{task}}"
     },
     "readingsHelp": {
-      "device": "Dans Relevés, le propriétaire peut associer une carte Arduino ou ESP et choisir les capteurs. Ouvrez le menu de l’appareil, puis Détails de l’appareil et Envoyer le code par e-mail pour recevoir un exemple adapté.",
+      "device": "Dans Mesures, le propriétaire de la plante peut ajouter un appareil et choisir les capteurs. Pour recevoir le code Arduino/ESP, ouvrez le menu de sa fiche et choisissez : Configuration de l’appareil → Avancé / intégration DIY → Envoyer le code par e-mail.",
       "charts": "Une fois les relevés reçus, touchez l’icône ou la valeur d’une mesure pour ouvrir son graphique par jour, semaine ou mois.",
       "pump": "Avec une pompe et un relais raccordés, le propriétaire peut programmer un arrosage pour la durée souhaitée ou l’activer automatiquement sous un seuil d’humidité du sol. La prise en charge de la pompe, sa durée de fonctionnement et le délai entre arrosages automatiques se règlent dans les paramètres de l’appareil."
     }

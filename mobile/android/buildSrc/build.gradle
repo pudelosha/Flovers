@@ -1,0 +1,7 @@
+plugins { id 'java' }
+repositories { google(); mavenCentral() }
+dependencies {
+    // Same AGP as RN 0.81.4. The visitor is applied in debug AND release builds.
+    implementation 'com.android.tools.build:gradle:8.11.0'
+    testImplementation 'junit:junit:4.13.2'
+}

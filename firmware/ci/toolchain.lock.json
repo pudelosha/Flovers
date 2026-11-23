@@ -1334,6 +1334,49 @@
       "archiveFileName": "Adafruit_Unified_Sensor-1.1.15.zip",
       "size": 15418,
       "checksum": "SHA-256:d64cdec0b817535f568fc3b8b8d44e7e097749f5ab8040aea573f412a3cbaec6"
+    },
+    {
+      "name": "ArduinoJson",
+      "version": "7.4.2",
+      "author": "Benoit Blanchon <blog.benoitblanchon.fr>",
+      "maintainer": "Benoit Blanchon <blog.benoitblanchon.fr>",
+      "license": "MIT",
+      "sentence": "A simple and efficient JSON library for embedded C++.",
+      "paragraph": "\u2b50 6953 stars on GitHub! Supports serialization, deserialization, MessagePack, streams, filtering, and more. Fully tested and documented.",
+      "website": "https://arduinojson.org/?utm_source=meta&utm_medium=library.properties",
+      "category": "Data Processing",
+      "architectures": [
+        "*"
+      ],
+      "types": [
+        "Contributed"
+      ],
+      "repository": "https://github.com/bblanchon/ArduinoJson.git",
+      "url": "https://downloads.arduino.cc/libraries/github.com/bblanchon/ArduinoJson-7.4.2.zip",
+      "archiveFileName": "ArduinoJson-7.4.2.zip",
+      "size": 516957,
+      "checksum": "SHA-256:5848dbc2a2eca7eb469710f64106195e90e6788a2365859f88c491214a108230"
+    },
+    {
+      "name": "Crypto",
+      "version": "0.4.0",
+      "author": "Rhys Weatherley rhys.weatherley@gmail.com",
+      "maintainer": "Dr. Brandon Wiley brandon@operatorfoundation.org",
+      "sentence": "Rhys Weatherley's arduinolibs Crypto library.",
+      "paragraph": "All cryptographic algorithms have been optimized for 8-bit Arduino platforms like the Uno.",
+      "website": "https://rweather.github.io/arduinolibs/crypto.html",
+      "category": "Other",
+      "architectures": [
+        "*"
+      ],
+      "types": [
+        "Contributed"
+      ],
+      "repository": "https://github.com/OperatorFoundation/Crypto.git",
+      "url": "https://downloads.arduino.cc/libraries/github.com/OperatorFoundation/Crypto-0.4.0.zip",
+      "archiveFileName": "Crypto-0.4.0.zip",
+      "size": 294856,
+      "checksum": "SHA-256:87dad2075e8c92b8599a501d23d7b5d887d212ef177b9da127eb6d28958a5f26"
     }
   ]
 }

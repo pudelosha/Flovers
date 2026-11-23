@@ -3,6 +3,9 @@
   "allowed_skips": [],
   "required_passed": [
     "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[sensors-only]",
-    "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[with-pump]"
+    "readings.tests.test_codegen::test_generated_sketch_compiles_with_arduino_preprocessing[with-pump]",
+    "readings.tests.test_universal_firmware::test_universal_sketch_compiles_for_esp32c3[sensors-only]",
+    "readings.tests.test_universal_firmware::test_universal_sketch_compiles_for_esp32c3[with-pump]",
+    "readings.tests.test_universal_firmware::test_native_configuration_and_storage_failure_paths"
   ]
 }

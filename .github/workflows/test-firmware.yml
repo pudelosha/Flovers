@@ -57,12 +57,12 @@ jobs:
         run: >-
           python firmware/ci/provision.py --root "$RUNNER_TEMP/flovers-esp32"
           --results "$GITHUB_WORKSPACE/firmware-results" --github-env "$GITHUB_ENV"
-      - name: Compile real generated sensors-only and pump sketches
+      - name: Compile real DIY and universal sensors-only and pump sketches
         working-directory: backend
         run: >-
-          python -m pytest readings/tests/test_codegen.py -m firmware_compile
+          python -m pytest readings/tests/test_codegen.py readings/tests/test_universal_firmware.py -m firmware_compile
           -ra --junitxml=../firmware-results/firmware.xml
-      - name: Require both compilation identities and reject any skipped test
+      - name: Require four target builds and native safety checks; reject skips
         if: always()
         run: >-
           python .github/scripts/report_tests.py --title "Required ESP32-C3 firmware compilation"

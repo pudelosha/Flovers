@@ -20,12 +20,12 @@
       "history": "读数历史",
       "plantDetails": "植物详情",
       "editDevice": "编辑设备",
-      "deviceDetails": "设备详情",
+      "deviceDetails": "设备设置",
       "deleteDevice": "删除设备"
     },
     "fab": {
-      "linkDevice": "关联设备",
-      "deviceSetup": "设备设置",
+      "linkDevice": "添加设备",
+      "deviceSetup": "信息",
       "sort": "排序",
       "filter": "筛选",
       "sendExport": "发送导出",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "尚无设备",
-      "description": "设备可让你采集某株植物的温度、湿度、光照和土壤湿度读数。\n\n点击“+ 关联设备”操作来添加一个设备。选择一株植物，为设备命名，选择传感器，并设置采样间隔。之后你可以打开设备设置来查看你的账户密钥、轮换密钥，并通过电子邮件发送可直接粘贴的 Arduino/ESP 草图代码。"
+      "description": "为植物添加设备。从卡片菜单打开设置或获取 DIY 代码。“信息”提供 API 文档和旧版 DIY 账户密钥管理。"
     },
     "toasts": {
       "unauthorized": "未授权。请重新登录。",

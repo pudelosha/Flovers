@@ -151,7 +151,7 @@
       "line": "{{actor}} · {{task}}"
     },
     "readingsHelp": {
-      "device": "W Odczytach właściciel rośliny może przypisać płytkę Arduino lub ESP i wybrać czujniki. Aby otrzymać dopasowany przykładowy kod, otwórz menu urządzenia, wybierz Szczegóły urządzenia, a potem Wyślij kod e-mailem.",
+      "device": "W Odczytach właściciel rośliny może dodać urządzenie i wybrać czujniki. Aby otrzymać kod Arduino/ESP, otwórz menu kafelka urządzenia i wybierz: Konfiguracja urządzenia → Zaawansowane / integracja DIY → Wyślij kod e-mailem.",
       "charts": "Gdy pojawią się odczyty, dotknij ikony lub wartości pomiaru, aby zobaczyć wykres dzienny, tygodniowy lub miesięczny.",
       "pump": "Po podłączeniu pompy i przekaźnika właściciel może zaplanować podlewanie na wybrany czas albo włączyć automatyczne podlewanie, gdy wilgotność gleby spadnie poniżej progu. Obsługę pompy, czas jej pracy i przerwę między automatycznymi podlewaniami ustawia się w ustawieniach urządzenia."
     }
