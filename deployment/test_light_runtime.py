@@ -75,7 +75,7 @@ class RuntimeTests(unittest.TestCase):
             with self.subTest(command=command), self.assertRaises(ValueError):
                 runtime.runtime_services(config, "web", APPS)
 
-    def test_migration_receipt_cannot_be_missing_duplicated_pending_or_writable(self):
+    def test_migration_receipt_rejects_missing_duplicate_invalid_count_or_writable(self):
         marker = "FLOVERS_MIGRATIONS=" + json.dumps(RECEIPT)
         self.assertEqual(runtime.migration_result(marker), RECEIPT)
         self.assertEqual(runtime.migration_result("FLOVERS_MIGRATIONS=" + json.dumps({**RECEIPT,"pending":1}))["pending"],1)
@@ -150,9 +150,9 @@ class ReleaseTests(unittest.TestCase):
         self.assertNotIn("migrate", saved["services"]["web"]["command"])
         self.guard.record.assert_any_call("healthy", migration_execution=False)
 
-    def test_pending_candidate_migrations_abort_before_stopping_old_services(self):
-        self.plan.side_effect = [RECEIPT, ValueError("pending migrations")]
-        with self.assertRaisesRegex(ValueError, "pending"):
+    def test_conflicting_candidate_history_aborts_before_stopping_old_services(self):
+        self.plan.side_effect = [RECEIPT, ValueError("conflicting migrations")]
+        with self.assertRaisesRegex(ValueError, "conflicting"):
             self.run_release()
         self.stop.assert_not_called()
         self.start.assert_not_called()
