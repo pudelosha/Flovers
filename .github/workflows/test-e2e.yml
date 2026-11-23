@@ -35,6 +35,8 @@ jobs:
     name: Build standalone Android smoke APK
     runs-on: ubuntu-24.04
     timeout-minutes: 45
+    env:
+      E2E_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
       - uses: actions/checkout@v7.0.1
         with:
@@ -77,11 +79,12 @@ jobs:
           test -s "$apk"
           "$ANDROID_HOME/cmdline-tools/19.0/bin/apkanalyzer" manifest application-id "$apk" | grep -x 'com.flovers.mobile.e2e'
           cp "$apk" e2e-results/apk/app-e2e.apk
-          sha256sum e2e-results/apk/app-e2e.apk > e2e-results/apk/sha256.txt
+          python e2e/android/apk_artifact.py create
       - name: Upload smoke APK
         uses: actions/upload-artifact@v7.0.2
         with:
-          name: android-smoke-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          name: android-smoke-apk-${{ github.run_id }}-${{ github.sha }}
+          overwrite: true
           path: e2e-results/apk/
           if-no-files-found: error
           retention-days: 7
@@ -102,6 +105,9 @@ jobs:
     needs: android-build
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
     services:
       postgres:
         image: postgres:16-alpine
@@ -115,6 +121,7 @@ jobs:
           --health-cmd "pg_isready -U flovers_ci -d flovers_ci"
           --health-interval 5s --health-timeout 5s --health-retries 12
     env:
+      E2E_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
       MAESTRO_CLI_NO_ANALYTICS: "true"
       MAESTRO_DISABLE_UPDATE_CHECK: "true"
       MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED: "true"
@@ -142,10 +149,18 @@ jobs:
           cache-dependency-path: |
             backend/requirements.txt
             backend/requirements-ci.txt
+      - name: Resolve the unique APK from this run and commit
+        id: smoke-apk
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python e2e/android/apk_artifact.py resolve
       - uses: actions/download-artifact@v8
         with:
-          name: android-smoke-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          artifact-ids: ${{ steps.smoke-apk.outputs.artifact_id }}
+          digest-mismatch: error
           path: e2e-results/apk
+      - name: Verify APK build provenance and checksum before emulator setup
+        run: python e2e/android/apk_artifact.py verify
       - name: Require KVM and provision pinned emulator and Maestro
         run: |
           test -e /dev/kvm
