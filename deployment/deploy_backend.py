@@ -303,6 +303,8 @@ def perform_light_deploy(commit_sha,app_dir,base,execute,configuration,backend,a
     compose=[*base,"-f",str(candidate_path)]
     for name in apps: safety.ready(base,name,roles[name])
     baseline=inspect_light_migrations(previous_compose,execute,backend)
+    if baseline["pending"]:
+        raise ValueError("Current release has unapplied migrations; resolve existing drift first")
     safety.record("pulling-image",image=expected_image,migration_baseline=baseline,
                   recovery_runtime="previous-runtime.json",candidate_runtime="candidate-runtime.json")
     print("LIGHT: validating approved image and read-only migration plan; backups are not verified.",flush=True)
@@ -315,23 +317,36 @@ def perform_light_deploy(commit_sha,app_dir,base,execute,configuration,backend,a
         raise ValueError("Pulled image identity, revision or entrypoint did not match the approved build")
     safety.capacity()
     checked=inspect_light_migrations(compose,execute,backend)
-    if checked!=baseline:
+    if checked["applied_sha256"]!=baseline["applied_sha256"]:
         raise ValueError("Applied migration history changed during inspection")
-    safety.record("migration-free",migration_check=checked)
+    safety.record("validated-migration-plan",migration_check=checked)
     light_unchanged(base,execute,configuration,apps,safety)
     stopping=False
+    migration_started=False
+    migration_completed=False
     try:
         safety.record("stopping-writers")
         stopping=True
         light_stop(base,execute,apps,roles)
-        # Recheck after the old writers stop. Never execute migrate, even when
-        # the initial plan was empty; post_migrate itself can write to the DB.
-        if inspect_light_migrations(compose,execute,backend)!=baseline:
-            raise ValueError("Applied migration history changed before startup")
+        # The plan and applied history must remain unchanged until all writers stop.
+        if inspect_light_migrations(compose,execute,backend)!=checked:
+            raise ValueError("Migration plan changed before startup")
+        if checked["pending"]:
+            migration_started=True
+            safety.record("migrating",migration_execution=True,pending_migrations=checked["pending"])
+            execute([*compose,"run","--rm","--no-deps","--pull","never","-T",
+                     "--label","traefik.enable=false","-e",
+                     "PGOPTIONS=-c lock_timeout=10000 -c statement_timeout=300000",
+                     "--entrypoint","python",backend,"manage.py","migrate","--noinput"],capture=True)
+            migrated=inspect_light_migrations(compose,execute,backend)
+            if migrated["pending"]:
+                raise ValueError("Migrations completed with a nonempty pending plan")
+            migration_completed=True
+            safety.record("migrated",migration_result=migrated)
         private_json(app_dir/RELEASE_OVERRIDE,{"services":runtime})
         light_start(compose,execute,apps,roles,safety)
-        safety.record("healthy",migration_execution=False)
-        print("LIGHT: migration-free deployment is healthy.",flush=True)
+        safety.record("healthy",migration_execution=migration_started)
+        print("LIGHT: approved migrations and deployment are healthy.",flush=True)
     except BaseException:
         if stopping:
             failure_phase=safety.metadata.get("phase")
@@ -339,6 +354,10 @@ def perform_light_deploy(commit_sha,app_dir,base,execute,configuration,backend,a
                 # New tasks/HTTP writes are not undone. Only restart old code if
                 # its own plan is empty and the applied migration receipt matches.
                 light_stop(compose,execute,apps,roles)
+                # A failed/non-atomic migration can modify schema without updating
+                # django_migrations. Never infer safety from the ledger alone.
+                if migration_started and not migration_completed:
+                    raise ValueError("Migration failure requires operator recovery; no automatic rollback")
                 if inspect_light_migrations(previous_compose,execute,backend)!=baseline:
                     raise ValueError("Automatic recovery refused changed migration history")
                 private_json(app_dir/RELEASE_OVERRIDE,{"services":previous_runtime})

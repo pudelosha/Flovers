@@ -8,7 +8,7 @@ remain available. No GPIO, pump duration, cooldown or offline-watering policy ch
 ## User flow
 
 1. Create a logical device in Readings and associate it with an owned plant.
-2. Open Device Setup → Pair device. This opens the existing Scanner in device-only
+2. Open Device Setup â†’ Pair device. This opens the existing Scanner in device-only
    mode. Its regular mode still recognizes plant QRs and also accepts device QRs.
 3. Scan the factory JSON QR. Choose an owned logical device if scanning normally.
 4. Power on the board to open its five-minute BLE window. Enter a 2.4 GHz SSID and
@@ -94,7 +94,7 @@ Android/iOS discovery, permission denial/regrant, bad Wi-Fi, app termination, Wi
 change, interrupted token persistence, replacement/revocation, cold boot, sensor reads
 and pump safety. No OTA or autonomous offline watering is introduced.
 
-The Phase 2 migration remains pending in production. LIGHT deployment must refuse it;
+The Phase 2 migration must be applied by the approved deployment before new pairing is used;
 the APK alone cannot enable pairing against a backend without these endpoints.
 
 ## Phase 5 release acceptance
@@ -116,8 +116,8 @@ board, power interruption during flash/NVS writes, sensor accuracy, actual relay
 timing and iOS build/device behavior remain mandatory physical acceptance checks.
 Passing software simulation cannot turn these into hardware passes.
 
-The new schema is migration `readings.0011_physical_device_foundations`. An approved
-LIGHT release must refuse it when pending. Keep production deployment blocked until
-the owner approves a migration-capable release with its real prerequisites. Do not
-remove the migration gate, fabricate recovery evidence, or interpret an APK install
-as approval to flash a board or run production migrations.
+The new schema is migration `readings.0011_physical_device_foundations`. The owner-
+approved LIGHT deployment runs pending forward migrations after stopping writers
+and verifies completion before starting the candidate. It does not require FULL
+backup evidence and never rolls migrations back automatically. APK installation
+alone does not apply this schema or authorize flashing a board.

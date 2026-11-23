@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       deployment_mode:
-        description: LIGHT refuses migrations; FULL requires verified recovery prerequisites
+        description: LIGHT runs forward migrations; FULL also requires verified recovery prerequisites
         required: true
         type: choice
         default: LIGHT

@@ -1,6 +1,6 @@
 # Backend rollout configuration
 
-Production supports manual **LIGHT** (migration-free, no mandatory recovery
+Production supports manual **LIGHT** (forward migrations, no mandatory recovery
 manifests) and **FULL** (existing backup/restore-aware migration deployment).
 Read [the mode contract and approval procedure](../docs/deployment/PRODUCTION_HARDENING.md)
 before dispatching. FULL-only instructions below do not apply to LIGHT.
@@ -15,7 +15,7 @@ Copy the relevant entries from `backend.production.env.example` into the existin
 
 Keep the production runtime environment file restricted to mode `0600`, and preserve its signing keys across deployments. Web, worker and Beat must receive the same configured values.
 
-`EMAIL_TIMEOUT` defaults to 30 seconds and accepts 1–120 seconds, keeping an individual SMTP operation bounded below the notification delivery lease. Configure `THROTTLE_CACHE_URL` to a shared Redis database, such as `redis://redis:6379/2`, for all web workers. Its database must be distinct from Celery's broker/result databases. Without it, Django's local memory cache applies quotas separately in each process; DRF throttles also use non-atomic cache operations and are not a strict distributed admission limit.
+`EMAIL_TIMEOUT` defaults to 30 seconds and accepts 1â€“120 seconds, keeping an individual SMTP operation bounded below the notification delivery lease. Configure `THROTTLE_CACHE_URL` to a shared Redis database, such as `redis://redis:6379/2`, for all web workers. Its database must be distinct from Celery's broker/result databases. Without it, Django's local memory cache applies quotas separately in each process; DRF throttles also use non-atomic cache operations and are not a strict distributed admission limit.
 
 The Docker build context excludes `.env` files and the `secrets` directory. Mount credentials at runtime, preserve restrictive permissions and keep secrets outside the repository. Existing images may still contain previously copied credentials; rebuild and rotate any credentials that were exposed.
 
@@ -35,7 +35,7 @@ Backend and website publication now require explicit owner dispatch on `main`, a
 
 Follow [the production release and recovery runbook](PRODUCTION_RELEASE.md) for required GitHub settings, database/media backup evidence, capacity checks, controlled web/worker/Beat startup, durable rollback metadata and website artifact recovery. Preparing this code does not activate settings or authorize release.
 
-Both backend modes bundle reviewed deployment/safety modules over the existing fingerprint-verified SSH path, require exact-main CI, protected approval and runtime readiness, and retain private recovery metadata. FULL additionally requires recent backup/restore evidence before migration downtime. LIGHT refuses pending migrations and uses migration-free direct startup commands. Neither automatically reverses migrations or restores data. Database, Redis, proxy and data volumes are not removed.
+Both backend modes bundle reviewed deployment/safety modules over the existing fingerprint-verified SSH path, require exact-main CI, protected approval and runtime readiness, and retain private recovery metadata. FULL additionally requires recent backup/restore evidence before migration downtime. LIGHT runs pending forward migrations once after draining writers, verifies completion, and uses direct startup commands without a second migration. Neither automatically reverses migrations or restores data. Database, Redis, proxy and data volumes are not removed.
 
 CI and the Linux AMD64 Docker image use Python 3.12.16 and the same hashed Python dependency lock. CPU-only Torch/TorchVision wheels come from their official package pages; installs require hashes and binary wheels and run `pip check`. The shared recognition smoke check rejects GPU packages, exercises native CPU operators, and runs an actual prediction with Flovers' checked-in model and class mapping. It runs before the full PostgreSQL backend suite in CI and again inside the image build. Failed checks block publication/deployment. See [dependency maintenance](../backend/DEPENDENCIES.md) before changing versions.
 

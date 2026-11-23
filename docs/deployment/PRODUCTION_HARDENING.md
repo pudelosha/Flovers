@@ -15,7 +15,7 @@ Website publication and mobile publication keep their existing independent gates
 | SSH fingerprint, host lock and workflow concurrency | Required | Required |
 | Capacity, existing persistent media, dependencies and readiness | Required | Required |
 | Matching running configuration/container identities | Required | Existing FULL preflight |
-| Read-only migration-plan inspection; pending migrations refused | Required | Migrations permitted after backup gates |
+| Read-only migration-plan inspection and forward migration execution | Required when pending | Permitted after backup gates |
 | Host `deployment-policy.json` and recent coherent backup cohort | Not read or required | Required |
 | Real off-server copy and isolated successful restore receipt | Not required | Required |
 | Automatic reverse migrations / database restore | Never | Never |
@@ -65,17 +65,17 @@ rerun without deploying. Stable required-check names and branch rules are unchan
 5. Require exactly one healthy web, worker and Beat; verify project/service labels,
    startup commands, environment and media mount sources/permissions match Compose.
    Capture IDs, image IDs, restart counts and start times; refuse drift before stop.
-6. Inspect the previous and candidate migration plans in separate containers with
-   PostgreSQL `default_transaction_read_only=on` before Django initializes. Reject
-   pending/conflicting/inconsistent migration history. Fingerprint applied rows.
-7. Stop Beat, then drain web, then warm-stop worker (120-second grace per process).
-   Reject OOM, non-exited containers or forced SIGKILL. Reinspect the candidate's
-   read-only migration plan/history after writers stop. **Never invoke migrate.**
-8. Start direct Gunicorn, worker, then Beat, using the approved digest and explicit
-   cleared entrypoints. Require web HTTPS/auth boundary and DB/Redis, worker ping,
-   and Beat startup/schedule probes; repeat readiness for all services at the end.
-9. Persist the migration-free release override and healthy receipt. Retain previous
-   images; existing scoped obsolete-image maintenance never removes volumes/media.
+6. Inspect migration plans in read-only containers. Reject inconsistent/conflicting
+   history, reverse plans, or unapplied migrations belonging to the currently running
+   image. Pending forward migrations in the approved candidate are allowed.
+7. Verify container/configuration identity again. Stop Beat, drain web, then stop
+   the worker. Recheck the candidate plan and applied-history fingerprint.
+8. If pending, run `python manage.py migrate --noinput` once from the exact approved
+   image with a 10-second lock timeout and a five-minute per-statement timeout.
+   Verify the candidate now has zero pending migrations. With no pending migrations,
+   skip migrate to avoid unnecessary `post_migrate` writes.
+9. Start direct Gunicorn, worker and Beat commands in that order; verify all readiness
+   checks again, persist the release override and retain the previous image.
 
 LIGHT removes only the known legacy `python manage.py migrate [--noinput] &&`
 prefix from supported Gunicorn startup; it never executes that shell. Unknown
@@ -89,6 +89,10 @@ Before stopping writers, any failed check leaves the old deployment running.
 After stopping starts, failure attempts to stop partial new writers and recover
 the **old image IDs using migration-free direct commands**, only if the old image
 also has no pending migrations and the applied-history fingerprint is unchanged.
+If migration execution failed, automatic old-code recovery is refused even when
+the ledger is unchanged: non-atomic DDL/data changes may already have occurred.
+After a successful schema change, old-code recovery is likewise refused unless
+the complete previous migration receipt matches. No reverse migration is attempted.
 Readiness is checked again. A successful recovery still fails the release run.
 Failed recovery is recorded as `recovery-required`; it requires an operator.
 
@@ -111,8 +115,8 @@ data after startup. Reviewed current Django app startup registers signals withou
 writing rows; imports and future hooks remain executable code and require review.
 The probe prevents PostgreSQL startup writes, but cannot sandbox arbitrary Python
 filesystem/network effects. The legacy `migrate` command can emit `post_migrate`
-and write permissions/content types even with an empty plan, hence LIGHT bypasses
-it entirely. Model checks do not prove absence of manual schema drift or unsafe
+and write permissions/content types even with an empty plan, hence LIGHT runs
+it only for a nonempty approved forward plan. Model checks do not prove absence of manual schema drift or unsafe
 SQL embedded in future application code. Avoid concurrent operator DDL/releases.
 
 ## Activating FULL later
@@ -140,10 +144,14 @@ restore planning. This change performs no new backup preparation.
 2. Obtain approval to enable the backend workflow. Keep website/mobile publication
    separate. Verify live environment reviewer/branch restrictions and SSH pin.
 3. Obtain approval for the exact SHA and LIGHT's no-verified-backup risk. Perform
-   fresh authorized production preflight; unknown pending migrations may block it.
+   fresh authorized production preflight and review the pending migration plan.
 4. Owner dispatches the backend workflow from `main` with mode/SHA/confirmation,
    then explicitly approves the protected environment. This PR does not do so.
 
-If migrations are pending, LIGHT is **NO-GO**: prepare genuine FULL prerequisites
-or approve a separate reviewed migration plan. Do not fake migrations, mark them
-applied, weaken CI or bypass environment review to make LIGHT proceed.
+LIGHT now executes reviewed pending forward migrations under explicit owner approval.
+Backups and restore evidence remain optional in LIGHT; deploying without them can
+make a failed/destructive migration unrecoverable. The owner accepts this risk for
+Flovers. Conflicts, inconsistent history, failed migrations, configuration drift,
+failed readiness, missing CI or missing environment approval remain hard failures.
+FULL and its real backup/restore prerequisites remain unchanged. Never fake applied
+migrations, automatically reverse migrations, weaken CI or bypass environment review.
