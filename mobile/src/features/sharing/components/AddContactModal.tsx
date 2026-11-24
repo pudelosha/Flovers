@@ -63,7 +63,7 @@ export default function AddContactModal({ visible, onClose }: Props) {
         {t("sharing.invite.realHint", { defaultValue: "Invite an existing Flovers account. Invitations appear in the app; no email is sent." })}
       </Text>
       {!!error && <Text style={[s.error, local.hint]} accessibilityRole="alert">{error}</Text>}
-      <View style={pr.promptButtonsRow}>
+      <View style={[pr.promptButtonsRow, { marginTop: 16, flexWrap: "wrap" }]}>
         <Pressable accessibilityRole="button" style={pr.promptBtn} onPress={onClose}>
           <Text style={pr.promptBtnText}>{t("sharing.common.cancel", { defaultValue: "Cancel" })}</Text>
         </Pressable>

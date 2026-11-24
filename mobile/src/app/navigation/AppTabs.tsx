@@ -494,14 +494,21 @@ function AppTabsNavigator() {
   );
 }
 
-export default function AppTabs() {
-  const { loading: settingsLoading } = useSettings();
+export default function AppTabs({
+  onPrepared,
+  transitionReady = true,
+}: { onPrepared?: () => void; transitionReady?: boolean }) {
+  const { hydrated: settingsHydrated } = useSettings();
   const { isReady: languageReady } = useLanguage();
   return (
     <SharingPreviewProvider>
       <ContactsProvider>
         <View style={{ flex: 1 }}>
-          <SharedHeaderProvider inputsReady={!settingsLoading && languageReady}>
+          <SharedHeaderProvider
+            inputsReady={settingsHydrated && languageReady}
+            onPrepared={onPrepared}
+            transitionReady={transitionReady}
+          >
             <AppTabsNavigator />
             <AppModalHost>
               <SharePlantModal />

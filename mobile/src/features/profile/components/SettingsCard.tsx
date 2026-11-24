@@ -1,24 +1,24 @@
-import React from "react";
-import { Text, Pressable } from "../../../shared/theme/native";
-import { useTranslation } from "react-i18next";
-import GlassCard from "./../components/GlassCard";
-import Dropdown from "./../components/Dropdown";
-import { card, controls } from "../styles/profile.styles";
+import React from 'react';
+import { Text, Pressable } from '../../../shared/theme/native';
+import { useTranslation } from 'react-i18next';
+import GlassCard from './../components/GlassCard';
+import Dropdown from './../components/Dropdown';
+import { controls } from '../styles/profile.styles';
 import {
   LANG_OPTIONS,
   DATE_OPTIONS,
   FAB_POSITION_OPTIONS,
-} from "../constants/profile.constants";
-import {THEME_OPTIONS} from "../../../app/settings/themes";
+} from '../constants/profile.constants';
+import { THEME_OPTIONS } from '../../../app/settings/themes';
 import type {
   LangCode,
   FabPosition,
   ThemeMode,
   TileMotive,
-} from "../types/profile.types";
+} from '../types/profile.types';
 
-type TempUnit = "C" | "F" | "K";
-type MeasureUnit = "metric" | "imperial";
+type TempUnit = 'C' | 'F' | 'K';
+type MeasureUnit = 'metric' | 'imperial';
 
 export default function SettingsCard({
   language,
@@ -99,32 +99,30 @@ export default function SettingsCard({
   const currentLang = LANG_OPTIONS.find(l => l.code === language);
 
   const TEMP_OPTIONS: { key: TempUnit; label: string }[] = [
-    { key: "C", label: t("profile.settings.temperatureOptions.C") },
-    { key: "F", label: t("profile.settings.temperatureOptions.F") },
-    { key: "K", label: t("profile.settings.temperatureOptions.K") },
+    { key: 'C', label: t('profile.settings.temperatureOptions.C') },
+    { key: 'F', label: t('profile.settings.temperatureOptions.F') },
+    { key: 'K', label: t('profile.settings.temperatureOptions.K') },
   ];
 
   const MEASURE_OPTIONS: { key: MeasureUnit; label: string }[] = [
-    { key: "metric", label: t("profile.settings.measureOptions.metric") },
-    { key: "imperial", label: t("profile.settings.measureOptions.imperial") },
+    { key: 'metric', label: t('profile.settings.measureOptions.metric') },
+    { key: 'imperial', label: t('profile.settings.measureOptions.imperial') },
   ];
 
-  const fabLabel = (k: "left" | "right") => {
-    return k === "left"
-      ? t("profile.settings.fabPositionOptions.left")
-      : t("profile.settings.fabPositionOptions.right");
+  const fabLabel = (k: 'left' | 'right') => {
+    return k === 'left'
+      ? t('profile.settings.fabPositionOptions.left')
+      : t('profile.settings.fabPositionOptions.right');
   };
 
   return (
     <GlassCard>
-      <Text style={card.cardTitle}>{t("profile.settings.title")}</Text>
-
       <Text style={[controls.sectionTitle, controls.sectionTitleFirst]}>
-        {t("profile.settings.language")}
+        {t('profile.settings.language')}
       </Text>
       <Dropdown
         open={langOpen}
-        valueText={`${currentLang?.flag ?? ""} ${currentLang?.label ?? ""}`}
+        valueText={`${currentLang?.flag ?? ''} ${currentLang?.label ?? ''}`}
         onToggle={() => setLangOpen((o: boolean) => !o)}
         items={LANG_OPTIONS.map(opt => ({
           key: opt.code,
@@ -138,7 +136,7 @@ export default function SettingsCard({
       />
 
       <Text style={controls.sectionTitle}>
-        {t("profile.settings.dateTimeFormat")}
+        {t('profile.settings.dateTimeFormat')}
       </Text>
       <Dropdown
         open={dateOpen}
@@ -156,13 +154,13 @@ export default function SettingsCard({
       />
 
       <Text style={controls.sectionTitle}>
-        {t("profile.settings.temperatureUnits")}
+        {t('profile.settings.temperatureUnits')}
       </Text>
       <Dropdown
         open={tempOpen}
         valueText={
           TEMP_OPTIONS.find(tu => tu.key === temperatureUnit)?.label ??
-          t("profile.settings.temperatureOptions.C")
+          t('profile.settings.temperatureOptions.C')
         }
         onToggle={() => setTempOpen((o: boolean) => !o)}
         items={TEMP_OPTIONS.map(opt => ({
@@ -177,13 +175,13 @@ export default function SettingsCard({
       />
 
       <Text style={controls.sectionTitle}>
-        {t("profile.settings.measurementUnits")}
+        {t('profile.settings.measurementUnits')}
       </Text>
       <Dropdown
         open={measureOpen}
         valueText={
           MEASURE_OPTIONS.find(m => m.key === measureUnit)?.label ??
-          t("profile.settings.measureOptions.metric")
+          t('profile.settings.measureOptions.metric')
         }
         onToggle={() => setMeasureOpen((o: boolean) => !o)}
         items={MEASURE_OPTIONS.map(opt => ({
@@ -198,13 +196,13 @@ export default function SettingsCard({
       />
 
       <Text style={controls.sectionTitle}>
-        {t("profile.settings.fabPosition")}
+        {t('profile.settings.fabPosition')}
       </Text>
       <Dropdown
         open={fabOpen}
-        valueText={
-          fabLabel(FAB_POSITION_OPTIONS.find(f => f.key === fabPosition)?.key ?? "right")
-        }
+        valueText={fabLabel(
+          FAB_POSITION_OPTIONS.find(f => f.key === fabPosition)?.key ?? 'right',
+        )}
         onToggle={() => setFabOpen((o: boolean) => !o)}
         items={FAB_POSITION_OPTIONS.map(opt => ({
           key: opt.key,
@@ -217,20 +215,40 @@ export default function SettingsCard({
         }))}
       />
 
-      <Text style={controls.sectionTitle}>{t("profile.settings.theme",{defaultValue:"Theme"})}</Text>
-      <Dropdown open={themeOpen}
-        valueText={String(t(`profile.settings.themeOptions.${theme}`,{defaultValue:"Dark"}))}
-        onToggle={()=>setThemeOpen(open=>!open)}
-        items={THEME_OPTIONS.map(option=>({
-          key:option.key,
-          text:String(t(`profile.settings.themeOptions.${option.key}`,{defaultValue:option.key==="dark" ? "Dark" : "Light"}))
-            + (option.available ? "" : ` (${t("profile.settings.comingSoon",{defaultValue:"coming soon"})})`),
-          selected:theme===option.key,disabled:!option.available,
-          onPress:()=>{if(!option.available)return;setTheme(option.key);setThemeOpen(false);},
-        }))}/>
+      <Text style={controls.sectionTitle}>
+        {t('profile.settings.theme', { defaultValue: 'Theme' })}
+      </Text>
+      <Dropdown
+        open={themeOpen}
+        valueText={String(
+          t(`profile.settings.themeOptions.${theme}`, { defaultValue: 'Dark' }),
+        )}
+        onToggle={() => setThemeOpen(open => !open)}
+        items={THEME_OPTIONS.map(option => ({
+          key: option.key,
+          text:
+            String(
+              t(`profile.settings.themeOptions.${option.key}`, {
+                defaultValue: option.key === 'dark' ? 'Dark' : 'Light',
+              }),
+            ) +
+            (option.available
+              ? ''
+              : ` (${t('profile.settings.comingSoon', {
+                  defaultValue: 'coming soon',
+                })})`),
+          selected: theme === option.key,
+          disabled: !option.available,
+          onPress: () => {
+            if (!option.available) return;
+            setTheme(option.key);
+            setThemeOpen(false);
+          },
+        }))}
+      />
 
       <Pressable style={controls.saveBtn} onPress={onSave}>
-        <Text style={controls.saveBtnText}>{t("profile.common.save")}</Text>
+        <Text style={controls.saveBtnText}>{t('profile.common.save')}</Text>
       </Pressable>
     </GlassCard>
   );

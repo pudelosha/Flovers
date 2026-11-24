@@ -490,6 +490,7 @@ export default function ProfileScreen() {
             showsVerticalScrollIndicator={false}
           >
             <AnimatedView
+              needsOffscreenAlphaCompositing
               testID="profile-animated-tiles"
               style={{
                 gap: 16,

@@ -914,6 +914,7 @@ export default function ReadingsHistoryScreen() {
                 labels={labels}
                 values={displayValues}
                 unit={displayUnit}
+                statisticLabel={t(`readingsHistory.statShort.${historyStat}`)}
                 color={METRIC_COLORS[metric]}
                 yTicks={4}
                 height={chartHeight}

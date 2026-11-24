@@ -48,6 +48,22 @@ describe("real Contacts screen", () => {
     jest.spyOn(View.prototype, "measureInWindow").mockImplementation(function (this: any, callback: any) { this.props.testID === "contacts-screen" ? callback(0, 0, 360, 780) : callback(280, 500, 34, 34); });
   });
   afterEach(() => jest.restoreAllMocks());
+  it("waits for the entry refresh before animating cached contacts on return", async () => {
+    const view = await setup();
+    mockFocused = false;
+    view.rerender(tree());
+    let finish!: (value: any) => void;
+    (api.fetchContacts as jest.Mock).mockReturnValueOnce(new Promise(resolve => { finish = resolve; }));
+    mockFocused = true;
+    view.rerender(tree());
+    expect(view.getByTestId('contacts-loading')).toBeTruthy();
+    expect(view.queryByText('Bob')).toBeNull();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(false);
+    await act(async () => finish(snapshot()));
+    expect(view.queryByTestId('contacts-loading')).toBeNull();
+    expect(view.getByText('Bob')).toBeTruthy();
+    expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(true);
+  });
   it("waits for real data behind the shared spinner without displaying demo contacts", async () => {
     let resolve: any; (api.fetchContacts as jest.Mock).mockReturnValue(new Promise((done) => { resolve = done; }));
     const view = render(tree()); expect(view.getByTestId("contacts-loading")).toBeTruthy(); expect(view.queryByText("Your Flovers ID")).toBeNull();
@@ -89,7 +105,7 @@ describe("real Contacts screen", () => {
   });
   it("saves a private alias without exposing demo sharing grants", async () => {
     (api.renameContact as jest.Mock).mockResolvedValue(snapshot([{ ...bob, name: "Mom" }])); const view = await setup(); fireEvent.press(view.getByRole("button", { name: "Actions for Bob" })); fireEvent.press(view.getByRole("button", { name: "Edit" }));
-    expect(view.queryByText(/Plant sharing is still a preview/)).toBeNull(); expect(view.queryByText("Golden pothos")).toBeNull(); fireEvent.changeText(view.getByLabelText("Contact name"), "Mom"); fireEvent.press(view.getByRole("button", { name: "Save" })); await view.findByRole("button", { name: "Actions for Mom" }); expect(api.renameContact).toHaveBeenCalledWith("2", "Mom");
+    await view.findByLabelText("Contact name"); expect(view.queryByText(/Plant sharing is still a preview/)).toBeNull(); expect(view.queryByText("Golden pothos")).toBeNull(); fireEvent.changeText(view.getByLabelText("Contact name"), "Mom"); fireEvent.press(view.getByRole("button", { name: "Save" })); await view.findByRole("button", { name: "Actions for Mom" }); expect(api.renameContact).toHaveBeenCalledWith("2", "Mom");
   });
   it("keeps the delete dialog open on failure and deletes after server confirmation", async () => {
     (api.deleteContact as jest.Mock).mockRejectedValueOnce(new Error("offline")).mockResolvedValueOnce(snapshot([], [])); const view = await setup(); fireEvent.press(view.getByRole("button", { name: "Actions for Bob" })); fireEvent.press(view.getByRole("button", { name: "Delete" })); fireEvent.press(view.getByRole("button", { name: "Delete" }));

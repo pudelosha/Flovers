@@ -62,6 +62,16 @@ describe("SharedPlantHero", () => {
     expect(view.getByText("Living room")).toBeTruthy();
     expect(view.getByText("map-marker-outline")).toBeTruthy();
     expect(view.UNSAFE_getByType(ImageBackground).props.source).toEqual({ uri: plant.imageUrl });
+    expect(view.UNSAFE_getByType(ImageBackground).props.fadeDuration).toBe(0);
+  });
+
+  it("disables the separate native fade for private framed photos as well", () => {
+    const metadata = { id: "photo-id", url: "/image/", thumbnail_url: "/thumb/", width: 800, height: 600, byte_size: 90000 };
+    (usePlantPhoto as jest.Mock).mockReturnValue({ uri: "data:image/jpeg;base64,SYNCED", loading: false, error: null });
+    const view = render(<SharedPlantHero plant={{ ...plant, photo: metadata }} />);
+    const image = view.getByTestId("shared-plant-image");
+    fireEvent(image, "layout", { nativeEvent: { layout: { width: 360, height: 240 } } });
+    expect(view.UNSAFE_getByType(ImageBackground).props.fadeDuration).toBe(0);
   });
 
 

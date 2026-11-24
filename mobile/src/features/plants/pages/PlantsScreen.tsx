@@ -46,6 +46,7 @@ import TopSnackbar from '../../../shared/ui/TopSnackbar';
 import { s } from '../styles/plants.styles';
 import PlantTile from '../components/PlantTile';
 import EditPlantModal from '../components/modals/EditPlantModal';
+import ChangePlantImageModal from '../../plant-details/components/modals/ChangePlantImageModal';
 import ConfirmDeleteModal from '../components/modals/ConfirmDeleteModal';
 import PlantQrModal from '../components/modals/PlantQrModal';
 
@@ -163,6 +164,7 @@ export default function PlantsScreen() {
   }>({});
 
   const [qrVisible, setQrVisible] = useState(false);
+  const [imagePlantId, setImagePlantId] = useState<string | null>(null);
   const [qrValue, setQrValue] = useState('');
   const [qrPlantName, setQrPlantName] = useState('');
   const [qrPlantId, setQrPlantId] = useState<string>('');
@@ -262,6 +264,7 @@ export default function PlantsScreen() {
       setConfirmDeleteId(null);
       setConfirmDeleteName('');
       setQrVisible(false);
+      setImagePlantId(null);
       setQrPlantId('');
       qrModalRef.current = null;
 
@@ -635,6 +638,9 @@ export default function PlantsScreen() {
 
           return (
             <AnimatedView
+              // Fade the composed photo and panel together, keeping the
+              // panel's translucency constant throughout entry in both themes.
+              needsOffscreenAlphaCompositing
               style={[
                 {
                   width: '48.5%',
@@ -655,6 +661,10 @@ export default function PlantsScreen() {
                   nav.navigate('PlantDetails', { id: item.id });
                 }}
                 onEdit={() => openEditModal(item)}
+                onChangeImage={() => {
+                  closeFloatingMenus();
+                  setImagePlantId(String(item.id));
+                }}
                 onReminders={() => {
                   closeFloatingMenus();
                   nav.navigate('Reminders', {
@@ -883,6 +893,21 @@ export default function PlantsScreen() {
         {...plantEditor.modalProps}
         latinCatalog={latinOptions}
         locations={locationOptions}
+      />
+
+      <ChangePlantImageModal
+        visible={imagePlantId !== null}
+        plantId={imagePlantId ?? ''}
+        onClose={() => setImagePlantId(null)}
+        onChanged={photo => {
+          void load();
+          showToast(
+            photo
+              ? t('plantDetails.toasts.photoUpdated', { defaultValue: 'Plant photo updated.' })
+              : t('plantDetails.toasts.photoRemoved', { defaultValue: 'Plant photo removed.' }),
+            'success',
+          );
+        }}
       />
 
       <ConfirmDeleteModal

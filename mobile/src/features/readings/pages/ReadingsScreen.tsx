@@ -956,6 +956,7 @@ export default function ReadingsScreen() {
 
           return (
             <AnimatedView
+              needsOffscreenAlphaCompositing
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
                 isOpen && { zIndex: 50 },

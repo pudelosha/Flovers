@@ -49,9 +49,13 @@ const RouteContextOrFallback =
 export function SharedHeaderProvider({
   children,
   inputsReady = true,
+  transitionReady = true,
+  onPrepared: onShellPrepared,
 }: {
   children: React.ReactNode;
   inputsReady?: boolean;
+  transitionReady?: boolean;
+  onPrepared?: () => void;
 }) {
   const insets = useSafeAreaInsets();
   const modalVisible = useModalNavigationBackdropVisible();
@@ -68,7 +72,10 @@ export function SharedHeaderProvider({
     owner: HeaderOwner;
     expanded: boolean;
   } | null>(null);
-  const onPrepared = React.useCallback(() => setInitialPrepared(true), []);
+  const onPrepared = React.useCallback(() => {
+    setInitialPrepared(true);
+    onShellPrepared?.();
+  }, [onShellPrepared]);
   const onEntered = React.useCallback(
     (owner: HeaderOwner, expanded: boolean) => {
       setCompleted({ owner, expanded });
@@ -80,6 +87,7 @@ export function SharedHeaderProvider({
     entry?.props.segment != null && entry.props.segment !== false;
   const contentReady =
     inputsReady &&
+    transitionReady &&
     completed?.owner === entry?.owner &&
     completed?.expanded === expanded;
   const controller = React.useMemo<Controller>(
@@ -129,6 +137,7 @@ export function SharedHeaderProvider({
                 height={height}
                 owner={entry.owner}
                 inputsReady={inputsReady}
+                transitionReady={transitionReady}
                 onPrepared={onPrepared}
                 onEntered={onEntered}
                 onTargetHeight={onTargetHeight}
@@ -202,6 +211,7 @@ function HeaderSurface({
   height,
   owner,
   inputsReady = true,
+  transitionReady = true,
   onPrepared,
   onEntered,
   onTargetHeight,
@@ -209,6 +219,7 @@ function HeaderSurface({
   height: Animated.Value;
   owner: HeaderOwner;
   inputsReady?: boolean;
+  transitionReady?: boolean;
   onPrepared?: () => void;
   onEntered?: (owner: HeaderOwner, expanded: boolean) => void;
   onTargetHeight?: (target: number) => void;
@@ -236,7 +247,7 @@ function HeaderSurface({
   React.useEffect(() => {
     opacity.stopAnimation();
     opacity.setValue(0);
-    if (!prepared) return;
+    if (!prepared || !transitionReady) return;
     const target = baseHeight + (hasSegment ? segmentHeight : 0);
     const heightChanges = previousTarget.current !== target;
     previousTarget.current = target;
@@ -281,6 +292,7 @@ function HeaderSurface({
     opacity,
     owner,
     prepared,
+    transitionReady,
     onEntered,
   ]);
   return (

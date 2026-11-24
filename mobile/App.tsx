@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Provider as PaperProvider, MD3LightTheme } from 'react-native-paper';
 import { AuthProvider } from './src/app/providers/AuthContext';
+import { AppStartupProvider } from './src/app/providers/AppStartupProvider';
 import { SettingsProvider } from './src/app/providers/SettingsProvider';
 import { LanguageProvider } from './src/app/providers/LanguageProvider';
 import { FloatingTileMenuProvider } from './src/shared/ui/FloatingTileMenu';
@@ -54,17 +55,19 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <I18nextProvider i18n={i18n}>
-        <AuthProvider>
-          <LanguageProvider>
-            <SettingsProvider>
-              <AppThemeProvider>
-                <ThemedApplication />
-              </AppThemeProvider>
-            </SettingsProvider>
-          </LanguageProvider>
-        </AuthProvider>
-      </I18nextProvider>
+      <AppStartupProvider>
+        <I18nextProvider i18n={i18n}>
+          <AuthProvider>
+            <LanguageProvider>
+              <SettingsProvider>
+                <AppThemeProvider>
+                  <ThemedApplication />
+                </AppThemeProvider>
+              </SettingsProvider>
+            </LanguageProvider>
+          </AuthProvider>
+        </I18nextProvider>
+      </AppStartupProvider>
     </GestureHandlerRootView>
   );
 }

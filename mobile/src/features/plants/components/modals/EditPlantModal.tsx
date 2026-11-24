@@ -13,6 +13,7 @@ import {
 
 import MaterialCommunityIcons from "../../../../shared/theme/Icon";
 import Slider from '../../../../shared/theme/Slider';
+import SegmentedChoice from '../../../../shared/ui/SegmentedChoice';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../../app/providers/LanguageProvider';
 
@@ -538,54 +539,18 @@ export default function EditPlantModal(props: Props) {
             {tr('plantsModals.edit.windowDirectionLabel', 'Window direction')}
           </Text>
 
-          <View
-            style={{
-              flexDirection: 'row',
-              gap: 8,
-              marginBottom: 6,
-              marginHorizontal: 16,
-            }}
-          >
-            {ORIENTATIONS.map(({ key, label }) => {
-              const active = fOrientation === key;
-              const translated = tr(`createPlant.step04.orientationsShort.${key}`, label);
-
-              return (
-                <Pressable
-                  key={key}
-                  accessibilityRole="button"
-                  accessibilityLabel={tr(`plantsModals.edit.orientations.${key}`, label)}
-                  accessibilityState={{ selected: active }}
-                  onPress={() => setFOrientation?.(key as any)}
-                  style={[
-                    {
-                      flex: 1,
-                      paddingHorizontal: 4,
-                      minWidth: 0,
-                      paddingVertical: 10,
-                      borderRadius: 12,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    },
-                    {
-                      backgroundColor: active ? 'rgba(11,114,133,0.9)' : 'rgba(255,255,255,0.12)',
-                    },
-                  ]}
-                >
-                  <Text
-                    numberOfLines={1}
-                    style={{
-                      color: '#FFFFFF',
-                      fontWeight: '800',
-                      fontSize: 14,
-                    }}
-                  >
-                    {translated}
-                  </Text>
-                </Pressable>
-              );
-            })}
-          </View>
+          <SegmentedChoice
+            testID="edit-plant-orientations"
+            borderRadius={pr.promptBtn.borderRadius}
+            value={fOrientation}
+            onChange={setFOrientation}
+            options={ORIENTATIONS.map(({ key, label }) => ({
+              value: key,
+              label: tr(`createPlant.step04.orientationsShort.${key}`, label),
+              accessibilityLabel: tr(`plantsModals.edit.orientations.${key}`, label),
+            }))}
+            style={{ marginBottom: 6, marginHorizontal: 16 }}
+          />
 
           <View style={{ marginHorizontal: 16, marginBottom: 6 }}>
             <Pressable
@@ -822,7 +787,7 @@ export default function EditPlantModal(props: Props) {
             </View>
           )}
 
-          <View style={pr.promptButtonsRow}>
+          <View style={[pr.promptButtonsRow, styles.footerSpacing]}>
             <Pressable style={pr.promptBtn} onPress={closeModal}>
               <Text style={pr.promptBtnText}>{tr('plantsModals.common.cancel', 'Cancel')}</Text>
             </Pressable>
@@ -863,6 +828,7 @@ export default function EditPlantModal(props: Props) {
 }
 
 const styles = {
+  footerSpacing: { marginTop: 16 },
   sectionLabel: {
     color: '#FFFFFF',
     fontWeight: '800' as const,

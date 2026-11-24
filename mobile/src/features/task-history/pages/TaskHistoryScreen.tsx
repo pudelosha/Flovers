@@ -162,6 +162,7 @@ export default function TaskHistoryScreen() {
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
   const [photoOpen, setPhotoOpen] = useState(false);
   const [editingPhoto, setEditingPhoto] = useState<JournalPhotoItem | null>(
     null,
@@ -268,6 +269,7 @@ export default function TaskHistoryScreen() {
     setPhotoOpen(false);
     setEditingPhoto(null);
     setViewingPhoto(null);
+    setGalleryOpen(false);
     setDeletingPhoto(null);
     setUndoTask(null);
     optionsRef.current = null;
@@ -421,7 +423,8 @@ export default function TaskHistoryScreen() {
     !undoTask &&
     !photoOpen &&
     !deletingPhoto &&
-    !viewingPhoto;
+    !viewingPhoto &&
+    !galleryOpen;
 
   // FAB actions
   const canManageVisibleHistory = canManageTasks;
@@ -445,6 +448,16 @@ export default function TaskHistoryScreen() {
           },
         ]
       : []),
+    {
+      key: 'gallery',
+      label: t('taskHistory.photo.gallery', { defaultValue: 'Gallery' }),
+      icon: 'image-multiple-outline',
+      onPress: () => {
+        closeFloatingMenus();
+        setViewingPhoto(null);
+        setGalleryOpen(true);
+      },
+    },
     {
       key: 'sort',
       label: t('taskHistory.fab.sort'),
@@ -971,9 +984,13 @@ export default function TaskHistoryScreen() {
       />
 
       <ViewJournalPhotoModal
-        visible={!!viewingPhoto}
+        visible={galleryOpen || !!viewingPhoto}
         entry={viewingPhoto}
-        onClose={() => setViewingPhoto(null)}
+        plants={plantOptions}
+        onClose={() => {
+          setViewingPhoto(null);
+          setGalleryOpen(false);
+        }}
       />
 
       <TopSnackbar
