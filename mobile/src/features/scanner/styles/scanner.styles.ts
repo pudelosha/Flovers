@@ -37,6 +37,14 @@ export const scannerStyles = StyleSheet.create({
   exampleUrl: { color: "#FFFFFF", fontWeight: "800", flexShrink: 1 },
   infoHint: { color: "rgba(255,255,255,0.9)", fontWeight: "200", marginTop: 8 },
 
+  guideRow: { flexDirection: "row", gap: 10, marginTop: 10 },
+  guideDivider: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: "rgba(255,255,255,0.14)", paddingTop: 10 },
+  guideIcon: { width: 34, height: 34, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.12)", alignItems: "center", justifyContent: "center" },
+  guideCopy: { flex: 1, minWidth: 0 },
+  guideTitle: { color: "#FFFFFF", fontWeight: "700", fontSize: 14, marginBottom: 3 },
+  guidePath: { color: "rgba(255,255,255,0.85)", fontSize: 12, lineHeight: 16, marginTop: 4 },
+  scanError: { color: "#FFFFFF", paddingHorizontal: 16, paddingBottom: 12 },
+
   // ===== Camera frame =====
   camWrap: { paddingHorizontal: 16, paddingTop: 16 },
   camGlass: {

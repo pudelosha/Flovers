@@ -14,6 +14,19 @@
     "permissionRequired": "Permiso requerido para la cámara",
     "permissionHint": "Habilita el acceso a la cámara en la configuración del sistema para escanear códigos QR.",
     "openSettings": "Abrir configuraciones",
-    "initializingCamera": "Inicializando cámara…"
+    "initializingCamera": "Inicializando cámara…",
+    "guide": {
+      "intro": "Escanea un código QR de Flovers para abrir una planta o configurar un dispositivo.",
+      "plant": {
+        "title": "Códigos QR de plantas",
+        "body": "Escanea la etiqueta de la maceta para abrir los detalles de la planta.",
+        "path": "Está en Detalles de la planta → ⋯ → Código QR."
+      },
+      "device": {
+        "title": "Códigos QR de dispositivos",
+        "body": "Escanea el código QR de fábrica del dispositivo Flovers para vincularlo.",
+        "path": "O abre Lecturas → menú del dispositivo → Configuración → Vincular dispositivo."
+      }
+    }
   }
 }
