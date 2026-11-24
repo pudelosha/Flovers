@@ -20,12 +20,12 @@
       "history": "Messwerteverlauf",
       "plantDetails": "Pflanzendetails",
       "editDevice": "Gerät bearbeiten",
-      "deviceDetails": "Gerätedetails",
+      "deviceDetails": "Gerät einrichten",
       "deleteDevice": "Gerät löschen"
     },
     "fab": {
-      "linkDevice": "Gerät verknüpfen",
-      "deviceSetup": "Geräteeinrichtung",
+      "linkDevice": "Gerät hinzufügen",
+      "deviceSetup": "Informationen",
       "sort": "Sortieren",
       "filter": "Filtern",
       "sendExport": "Export senden",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Noch keine Geräte",
-      "description": "Mit Geräten kannst du Temperatur-, Luftfeuchtigkeits-, Licht- und Bodenfeuchtigkeitsmesswerte für eine Pflanze erfassen.\n\nTippe auf die Aktion „+ Gerät verknüpfen“, um eines hinzuzufügen. Wähle eine Pflanze aus, benenne das Gerät, wähle Sensoren aus und lege ein Abtastintervall fest. Anschließend kannst du die Geräteeinrichtung öffnen, um dein Kontogeheimnis anzusehen, es zu rotieren und dir einen einfügebereiten Arduino-/ESP-Sketch per E-Mail zusenden zu lassen."
+      "description": "Fügen Sie ein Gerät zur Pflanze hinzu. Im Kachelmenü finden Sie Einrichtung und DIY-Code. Unter Informationen stehen API-Dokumentation und Verwaltung des bisherigen Kontoschlüssels."
     },
     "toasts": {
       "unauthorized": "Nicht autorisiert. Bitte melde dich erneut an.",

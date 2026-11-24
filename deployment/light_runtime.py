@@ -37,12 +37,13 @@ executor=MigrationExecutor(connection)
 executor.loader.check_consistent_history(connection)
 if executor.loader.detect_conflicts():
     raise RuntimeError("Conflicting migration graph")
-if executor.migration_plan(executor.loader.graph.leaf_nodes()):
-    raise RuntimeError("LIGHT refuses pending migrations; use FULL after recovery preparation")
+plan=executor.migration_plan(executor.loader.graph.leaf_nodes())
+if any(backwards for _,backwards in plan):
+    raise RuntimeError("Reverse migrations are refused")
 applied=sorted([list(key) for key in executor.loader.applied_migrations])
 fingerprint=hashlib.sha256(json.dumps(applied,separators=(",",":")).encode()).hexdigest()
 connection.close()
-print("FLOVERS_MIGRATIONS="+json.dumps({"pending":0,"applied_sha256":fingerprint,"read_only":True}))
+print("FLOVERS_MIGRATIONS="+json.dumps({"pending":len(plan),"applied_sha256":fingerprint,"read_only":True}))
 '''
 
 
@@ -52,9 +53,9 @@ def migration_result(output):
     if len(lines) != 1 or len(lines[0]) > 1024:
         raise ValueError("A single bounded migration inspection result is required")
     result = json.loads(lines[0])
-    if (result.get("pending") != 0 or result.get("read_only") is not True
+    if (type(result.get("pending")) is not int or not 0 <= result["pending"] <= 10000 or result.get("read_only") is not True
             or not re.fullmatch(r"[0-9a-f]{64}", result.get("applied_sha256", ""))):
-        raise ValueError("Migration-free read-only inspection did not pass")
+        raise ValueError("Read-only migration inspection did not pass")
     return result
 
 

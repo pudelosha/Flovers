@@ -20,12 +20,12 @@
       "history": "Riwayat pembacaan sensor",
       "plantDetails": "Detail tanaman",
       "editDevice": "Sunting perangkat",
-      "deviceDetails": "Detail perangkat",
+      "deviceDetails": "Pengaturan perangkat",
       "deleteDevice": "Hapus perangkat"
     },
     "fab": {
-      "linkDevice": "Hubungkan perangkat",
-      "deviceSetup": "Penyiapan perangkat",
+      "linkDevice": "Tambah perangkat",
+      "deviceSetup": "Informasi",
       "sort": "Urutkan",
       "filter": "Filter",
       "sendExport": "Kirim ekspor",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Belum ada perangkat",
-      "description": "Perangkat memungkinkan Anda menyerap pembacaan sensor suhu, kelembapan, cahaya, dan kelembapan tanah untuk tanaman hias.\n\nKetuk tindakan “+ Tautkan perangkat” untuk menambahkannya. Pilih tanaman hias, beri nama perangkat, pilih sensor, dan atur interval pengambilan sampel. Anda kemudian dapat membuka Pengaturan perangkat untuk melihat rahasia akun Anda, memutarnya, dan mengirimkan sketsa Arduino/ESP yang siap ditempel melalui email."
+      "description": "Tambahkan perangkat untuk tanaman. Menu kartu membuka pengaturan dan kode DIY. Informasi berisi dokumentasi API dan pengelolaan rahasia perangkat DIY lama."
     },
     "toasts": {
       "unauthorized": "Tidak sah. Silakan masuk lagi.",

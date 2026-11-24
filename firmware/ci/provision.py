@@ -25,7 +25,7 @@ def read_lock():
     if any((item["packager"], item["name"], item["version"]) not in pinned_tools for item in lock["board"]["platform"]["toolsDependencies"]):
         raise ValueError("The ESP32 compiler dependency closure must be pinned")
     names = {item["name"] for item in lock["libraries"]}
-    if names != {"BH1750", "Adafruit BME280 Library", "Adafruit BusIO", "Adafruit Unified Sensor"}:
+    if names != {"BH1750", "Adafruit BME280 Library", "Adafruit BusIO", "Adafruit Unified Sensor", "ArduinoJson", "Crypto"}:
         raise ValueError("The complete sensor dependency closure must be pinned")
     return lock
 
@@ -168,6 +168,10 @@ class Provisioner:
         (self.results / "target-board.json").write_text(json.dumps(board, indent=2), encoding="utf-8")
         values = {"FLOVERS_TEST_ARDUINO_CLI": str(self.cli), "FLOVERS_TEST_ARDUINO_CONFIG": str(self.config),
                   "FLOVERS_TEST_ARDUINO_FQBN": lock["board"]["fqbn"], "FLOVERS_TEST_ARDUINO_ARTIFACTS": str(self.results)}
+        headers = list((self.user / "libraries").glob("ArduinoJson*/src/ArduinoJson.h"))
+        if len(headers) != 1:
+            raise ValueError("Expected exactly one pinned ArduinoJson include directory")
+        values["FLOVERS_TEST_ARDUINO_JSON_INCLUDE"] = str(headers[0].parent)
         (self.results / "environment.json").write_text(json.dumps(values, indent=2), encoding="utf-8")
         return values
 

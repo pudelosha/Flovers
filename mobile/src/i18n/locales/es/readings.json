@@ -20,12 +20,12 @@
       "history": "Historial de lecturas",
       "plantDetails": "Detalles de la planta",
       "editDevice": "Editar dispositivo",
-      "deviceDetails": "Detalles del dispositivo",
+      "deviceDetails": "Configuración del dispositivo",
       "deleteDevice": "Eliminar dispositivo"
     },
     "fab": {
-      "linkDevice": "Vincular dispositivo",
-      "deviceSetup": "Configuración del dispositivo",
+      "linkDevice": "Añadir dispositivo",
+      "deviceSetup": "Información",
       "sort": "Ordenar",
       "filter": "Filtrar",
       "sendExport": "Enviar exportación",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Aún no hay dispositivos",
-      "description": "Los dispositivos te permiten ingerir lecturas de temperatura, humedad, luz y humedad del suelo para una planta.\n\nToca la acción “+ Vincular dispositivo” para añadir uno. Elige una planta, nombra el dispositivo, selecciona sensores y establece un intervalo de muestreo. Luego puedes abrir Configuración del dispositivo para ver el secreto de tu cuenta, rotarlo y enviar por correo electrónico un sketch de Arduino/ESP listo para pegar."
+      "description": "Añade un dispositivo a tu planta. El menú de la tarjeta abre la configuración y el código DIY. Información contiene la documentación API y la gestión del secreto de los dispositivos DIY antiguos."
     },
     "toasts": {
       "unauthorized": "No autorizado. Inicia sesión de nuevo.",

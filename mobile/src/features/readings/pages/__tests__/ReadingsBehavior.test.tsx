@@ -5,6 +5,7 @@ import Screen from '../ReadingsScreen';
 import * as api from '../../../../api/services/readings.service';
 import { fetchPlantInstances } from '../../../../api/services/plant-instances.service';
 import { ApiError } from '../../../../api/client';
+import { devicePairingApi } from '../../../../api/services/device-pairing.service';
 
 const mockT = (key: string) => key;
 const mockNav = { navigate: jest.fn() };
@@ -15,6 +16,9 @@ jest.mock('@react-navigation/native', () => ({ useNavigation: () => mockNav,
 }));
 jest.mock('@react-native-clipboard/clipboard', () => ({ __esModule: true, default: { setString: jest.fn() } }));
 jest.mock('../../../../api/services/plant-instances.service', () => ({ fetchPlantInstances: jest.fn() }));
+jest.mock('../../../../api/services/device-pairing.service', () => ({ devicePairingApi: {
+  identity: jest.fn(), revoke: jest.fn(),
+} }));
 jest.mock('../../../../api/services/readings.service', () => ({
   ...jest.requireActual('../../../../api/services/readings.service'),
   listReadingDevices: jest.fn(), getReadingDevice: jest.fn(), createReadingDevice: jest.fn(),
@@ -27,7 +31,10 @@ jest.mock('../../../../shared/ui/HeaderPresentation', () => ({ useHeaderContentR
   ScreenLoadingSpinner: () => require('react').createElement(require('react-native').Text, { testID: 'loading' }, 'Loading'),
 }));
 jest.mock('../../../../shared/ui/AppModalFrame', () => ({ __esModule: true, appModalStyles: {},
-  default: ({ visible, children }: any) => visible ? children : null,
+  default: ({ visible, loading, loadingTestID, children, onClose }: any) => visible
+    ? require('react').createElement(require('react-native').View, null,
+      require('react').createElement(require('react-native').Text, { testID: 'modal-dismiss', onPress: onClose }, 'Dismiss'),
+      loading ? require('react').createElement(require('react-native').Text, { testID: loadingTestID }, 'Loading') : children) : null,
 }));
 jest.mock('../../../../shared/ui/FloatingTileMenu', () => ({ children }: any) => children);
 jest.mock('../../../../shared/ui/FAB', () => ({ actions }: any) => require('react').createElement(require('react-native').View, null,
@@ -55,9 +62,11 @@ function deferred<T>() {
 }
 beforeEach(() => {
   jest.useFakeTimers(); jest.setSystemTime(new Date('2026-11-19T12:00:00Z'));
-  jest.clearAllMocks(); mockFocused = true;
+  jest.clearAllMocks(); mockNav.navigate.mockClear(); mockFocused = true;
   [list, api.createReadingDevice, api.updateReadingDevice, api.deleteReadingDevice, api.toggleAutoPump].forEach(fn => jest.mocked(fn).mockReset());
   list.mockResolvedValue([device]);
+  jest.mocked(devicePairingApi.identity).mockResolvedValue({ pairing: 'legacy-or-not-paired', synchronization: 'unknown' });
+  jest.mocked(api.getReadingDevice).mockReset().mockResolvedValue(device);
   jest.mocked(fetchPlantInstances).mockResolvedValue([{ id: 21, display_name: 'Fern' }] as any);
   jest.mocked(api.fetchDeviceSetup).mockResolvedValue({ secret: 'synthetic', endpoints: {} } as any);
 });
@@ -85,17 +94,18 @@ it.each([401, 403, 500])('shows an actionable error rather than empty UI after H
   expect(view.getByText('Fern board')).toBeTruthy(); expect(view.queryByRole('alert')).toBeNull();
 });
 
-it('links a device using the real plant selector and interval input, then displays the refreshed device', async () => {
+it('adds a logical device without pairing or overwriting runtime defaults', async () => {
   jest.mocked(api.createReadingDevice).mockResolvedValueOnce({ ...device, device_name: 'New board' });
   const view = await loaded();
-  await act(async () => fireEvent.press(view.getByText('Link device')));
+  await act(async () => fireEvent.press(view.getByText('Add device')));
   fireEvent.press(view.getByText('readingsModals.upsert.selectPlant'));
   fireEvent.press(view.getByText('Fern'));
   fireEvent.changeText(view.getByPlaceholderText('readingsModals.upsert.deviceNameRequired'), 'New board');
-  fireEvent.changeText(view.getByTestId('reading-interval-minutes'), '90');
   list.mockResolvedValueOnce([{ ...device, device_name: 'New board' }]);
   await act(async () => fireEvent.press(view.getByText('readingsModals.common.save')));
-  expect(api.createReadingDevice).toHaveBeenCalledWith(expect.objectContaining({ plant: 21, device_name: 'New board', interval_minutes: 90 }));
+  expect(api.createReadingDevice).toHaveBeenCalledWith(expect.objectContaining({ plant: 21, device_name: 'New board' }));
+  expect(jest.mocked(api.createReadingDevice).mock.calls[0][0]).not.toHaveProperty('interval_minutes');
+  expect(mockNav.navigate).not.toHaveBeenCalled();
   expect(view.getByText('New board')).toBeTruthy(); expect(view.getByTestId('toast').props.children).toBe('Device added');
 });
 
@@ -106,7 +116,10 @@ it('edits an existing device, preserves minute and pump settings, and reloads se
   fireEvent.changeText(view.getByDisplayValue('Fern board'), 'Updated board');
   list.mockResolvedValueOnce([{ ...device, device_name: 'Updated board' }]);
   await act(async () => fireEvent.press(view.getByText('readingsModals.common.save')));
-  expect(api.updateReadingDevice).toHaveBeenCalledWith(11, expect.objectContaining({ device_name: 'Updated board', interval_minutes: 60, pump_duration_seconds: 20 }));
+  expect(api.updateReadingDevice).toHaveBeenCalledWith(11, expect.objectContaining({ device_name: 'Updated board' }));
+  expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('interval_minutes');
+  expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('pump_duration_seconds');
+  expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('pump_cooldown_minutes');
   expect(view.getByText('Updated board')).toBeTruthy(); expect(view.getByTestId('toast').props.children).toBe('Device updated');
 });
 
@@ -172,4 +185,49 @@ it('does not publish a previous visit response after blur and return', async () 
   mockFocused = false; view.rerender(<Screen />); mockFocused = true; view.rerender(<Screen />);
   await act(async () => {}); await act(async () => old.resolve([{ ...device, device_name: 'Previous visit' }]));
   expect(view.getByText('Return visit')).toBeTruthy(); expect(view.queryByText('Previous visit')).toBeNull();
+});
+
+
+it('loads Device Setup before showing controls and fetches secrets only on explicit DIY expansion', async () => {
+  const pending = deferred<any>(); jest.mocked(api.getReadingDevice).mockReturnValueOnce(pending.promise);
+  const view = await loaded(); menu(view);
+  await act(async () => fireEvent.press(view.getByText('readings.menu.deviceDetails')));
+  expect(view.getByTestId('device-setup-loading')).toBeTruthy();
+  expect(view.queryByTestId('reading-interval-minutes')).toBeNull();
+  expect(api.fetchDeviceSetup).not.toHaveBeenCalled();
+  await act(async () => pending.resolve(device));
+  expect(view.getByTestId('reading-interval-minutes').props.value).toBe('60');
+  await act(async () => fireEvent.press(view.getByText('readingsModals.configuration.advanced')));
+  expect(api.fetchDeviceSetup).toHaveBeenCalledTimes(1);
+});
+
+it('saves runtime settings with the existing PATCH API without touching other device fields', async () => {
+  jest.mocked(api.updateReadingDevice).mockResolvedValueOnce({ ...device, interval_minutes: 80 });
+  const view = await loaded(); menu(view);
+  await act(async () => fireEvent.press(view.getByText('readings.menu.deviceDetails')));
+  fireEvent.changeText(view.getByTestId('reading-interval-minutes'), '80');
+  await act(async () => fireEvent.press(view.getByText('readingsModals.configuration.saveConfiguration')));
+  expect(api.updateReadingDevice).toHaveBeenCalledWith(11, { interval_minutes: 80,
+    pump_duration_seconds: 20, pump_cooldown_minutes: 60, automatic_pump_launch: false, pump_threshold_pct: null });
+  expect(view.getByText('readingsModals.configuration.legacySaved')).toBeTruthy();
+  expect(view.queryByText('readingsModals.configuration.applied')).toBeNull();
+});
+
+it('ignores Device Setup responses after the user closes its loading modal', async () => {
+  const pending = deferred<any>(); jest.mocked(api.getReadingDevice).mockReturnValueOnce(pending.promise);
+  const view = await loaded(); menu(view);
+  await act(async () => fireEvent.press(view.getByText('readings.menu.deviceDetails')));
+  fireEvent.press(view.getByTestId('modal-dismiss'));
+  await act(async () => pending.resolve(device));
+  expect(view.queryByTestId('device-details-title')).toBeNull();
+  expect(view.queryByTestId('reading-interval-minutes')).toBeNull();
+});
+
+it('handles an owner permission failure without rendering configuration or secrets', async () => {
+  jest.mocked(api.getReadingDevice).mockRejectedValueOnce(new ApiError(404, {}));
+  const view = await loaded(); menu(view);
+  await act(async () => fireEvent.press(view.getByText('readings.menu.deviceDetails')));
+  expect(view.getByTestId('toast').props.children).toBe('Failed to load device setup');
+  expect(view.queryByTestId('reading-interval-minutes')).toBeNull();
+  expect(api.fetchDeviceSetup).not.toHaveBeenCalled();
 });

@@ -16,11 +16,18 @@ from .views import (
     pump_auto_claim,
 )
 from .views_open import open_readings
+from . import provisioning_views
 
 router = DefaultRouter()
 router.register(r"devices", ReadingDeviceViewSet, basename="reading-device")
 
 urlpatterns = [
+    path("pairing/", provisioning_views.pairing_start, name="iot-pairing-start"),
+    path("pairing/complete/", provisioning_views.pairing_complete, name="iot-pairing-complete"),
+    path("pairing/<uuid:session_id>/", provisioning_views.pairing_status, name="iot-pairing-status"),
+    path("devices/<int:device_id>/identity/", provisioning_views.device_identity, name="iot-device-identity"),
+    path("configuration/", provisioning_views.configuration, name="iot-configuration"),
+    path("configuration/ack/", provisioning_views.configuration_ack, name="iot-configuration-ack"),
     path("", include(router.urls)),
     path("rotate-secret/", rotate_secret, name="rotate-secret"),
     path("device-setup/", device_setup, name="device-setup"),

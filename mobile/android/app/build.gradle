@@ -1,6 +1,12 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+
+// Scope to the provisioning SDK; never persist PoP/Wi-Fi credentials via its Log calls.
+androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+    variant.instrumentation.transformClassesWith(FloversProvisioningLogsFactory,
+        com.android.build.api.instrumentation.InstrumentationScope.ALL) {}
+}
 // The separately named, debug-signed smoke APK has no Firebase project.
 def floversE2E = project.findProperty("floversE2E") == "true"
 if (!floversE2E) {

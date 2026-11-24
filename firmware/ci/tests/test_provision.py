@@ -34,7 +34,9 @@ class ToolchainSafetyTests(unittest.TestCase):
         self.assertEqual(self.lock["board"]["platform"]["version"],"3.3.12")
         self.assertIn("FlashSize=4M",self.lock["board"]["fqbn"])
         self.assertIn("CDCOnBoot=cdc",self.lock["board"]["fqbn"])
-        self.assertEqual(len(self.lock["libraries"]),4)
+        self.assertEqual(len(self.lock["libraries"]),6)
+        self.assertEqual({item["name"]: item["version"] for item in self.lock["libraries"] if item["name"] in {"ArduinoJson", "Crypto"}},
+                         {"ArduinoJson": "7.4.2", "Crypto": "0.4.0"})
 
     def test_archive_checksum_mismatch_fails_closed(self):
         raw=b"pinned executable"

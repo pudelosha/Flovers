@@ -37,6 +37,7 @@ into the business layer; this lane does not mount a React screen.
 | Journal | Mixed task/photo feed, empty, two-page traversal with stable ordering/no duplicates, server filtering, shared/revoked access, invalid cursor; photo create/edit, seven-day admission limit, detail with/without navigation; previous client's three-endpoint history path. |
 | Sharing | Direction, roles, expiry, owner revision update and stale revision error; recipients cannot update owner grants. |
 | Devices/pump | Actual zero versus missing values, shared credential redaction, minutes and legacy hours/aliases, settings validation, pump duration 1/20/300 and firmware default, invalid values/ownership, chart average/minimum/maximum with sample counts. |
+| Factory IoT (Phase 5) | Owner-only identity, unbound/confirmed/pending/rejected configuration, session creation/status/expiry/cancellation, shared and anonymous rejection, already-bound conflict; actual mobile pairing controller consumes the same Django responses from signed factory binding through applied acknowledgement. The BLE radio is explicitly substituted, not claimed as hardware coverage. |
 | Invitations | Contact snapshot/counts, incoming/outgoing requests, email queue/cancellation, language, registered/invalid/duplicate/throttled/self/missing/existing-contact errors. No invitation delivery occurs. |
 
 Relevant routes return actual 400/401/404/409/429 errors. Object permissions often

@@ -112,7 +112,7 @@ export type AppTabParamList = {
     | undefined;
 
   // Hidden
-  Scanner: undefined;
+  Scanner: { deviceId?: number; deviceOnly?: boolean; action?: 'pair' | 'wifi' | 'replace' } | undefined;
   PlantDetails: { id?: string; qrCode?: string } | undefined;
   CreatePlantWizard: undefined;
   AddReminder: undefined;

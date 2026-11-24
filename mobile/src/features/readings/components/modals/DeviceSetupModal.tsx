@@ -1,299 +1,288 @@
-import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
-import React from 'react';
-import { View, Text, Pressable, ScrollView, Platform, Linking, StyleSheet } from "../../../../shared/theme/native";
-
-import MaterialCommunityIcons from "../../../../shared/theme/Icon";
-import Clipboard from '@react-native-clipboard/clipboard';
+import React, { useEffect, useRef, useState } from 'react';
+import { View, Text, Pressable } from '../../../../shared/theme/native';
 import { useTranslation } from 'react-i18next';
-import { useLanguage } from '../../../../app/providers/LanguageProvider';
-import { LANGS } from '../../../../i18n/locales/index';
-
-// Reuse Reminders modal styles
+import Clipboard from '@react-native-clipboard/clipboard';
+import MaterialCommunityIcons from '../../../../shared/theme/Icon';
+import AppModalFrame from '../../../../shared/ui/AppModalFrame';
+import { useRequestGuard } from '../../../../shared/hooks/useRequestGuard';
+import { prompts as pr } from '../../../profile/styles/profile.styles';
 import { s } from '../../../reminders/styles/reminders.styles';
+import type { ApiReadingDevice, ApiReadingDeviceUpdatePayload } from '../../types/readings.types';
+import DeviceRuntimeSettings, { runtimeValuesValid, type DeviceRuntimeValues } from './DeviceRuntimeSettings';
+import { devicePairingApi, type DeviceIdentity } from '../../../../api/services/device-pairing.service';
+import type { PairingMode } from '../../pairing/pairingController';
+
+/** Owner-only status evidence from the authenticated pairing API.
+ * Missing evidence is legacy/unknown, never inferred from last_read_at.
+ * Supplied status remains available for consumers which already loaded that evidence.
+ */
+export type DeviceSetupStatus = {
+  pairing: 'not-paired' | 'pairing' | 'paired';
+  online?: boolean;
+  hardwareId?: string;
+  firmwareVersion?: string;
+  lastSeen?: string | null;
+  synchronization: 'unknown' | 'pending' | 'applied' | 'rejected';
+};
 
 type Props = {
   visible: boolean;
-
-  // Content props you can pass from screen (or hardcode for now)
-  writeEndpoint?: string; // POST add reading
-  readEndpoint?: string; // GET/POST read readings
-  authSecret?: string;
-
+  loading?: boolean;
+  sending?: boolean;
+  device: ApiReadingDevice | null;
+  status?: DeviceSetupStatus;
   onClose: () => void;
-
-  // Optional hook to wire later
-  onRotateSecret?: () => Promise<void> | void;
+  onSave: (payload: ApiReadingDeviceUpdatePayload) => Promise<void>;
+  onLoadLegacySecret: () => Promise<string>;
+  onEmailCode: () => Promise<void> | void;
+  onPair?: (mode: PairingMode) => void;
 };
 
-const WEB_BASE = 'https://flovers.app';
-
-function normalizeLang(lang: any) {
-  if (!lang) return 'en';
-
-  const raw = String(lang).toLowerCase();
-  const base = raw.split('-')[0];
-
-  return (LANGS as readonly string[]).includes(base) ? base : 'en';
+function initialValues(device: ApiReadingDevice | null): DeviceRuntimeValues {
+  return {
+    intervalMinutes: String(device?.interval_minutes ?? (device?.interval_hours ?? 1) * 60),
+    pumpDurationSeconds: String(device?.pump_duration_seconds ?? 20),
+    pumpCooldownMinutes: String(device?.pump_cooldown_minutes ?? 60),
+    pumpThresholdPct: String(device?.pump_threshold_pct ?? 30),
+    automaticPumpLaunch: device?.automatic_pump_launch ?? false,
+  };
 }
 
-function buildSchemasUrl(lang: any) {
-  const safeLang = normalizeLang(lang);
-  return `${WEB_BASE}/${safeLang}/schemas`;
-}
-
-export default function DeviceSetupModal({
-  visible,
-  writeEndpoint = 'https://api.example.com/readings/add',
-  readEndpoint = 'https://api.example.com/readings',
-  authSecret = '••••••••••••••',
-  onClose,
-  onRotateSecret,
-}: Props) {
+export default function DeviceSetupModal({ visible, loading = false, sending = false, device, status: suppliedStatus,
+  onClose, onSave, onLoadLegacySecret, onEmailCode, onPair }: Props) {
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage();
+  const [values, setValues] = useState(() => initialValues(device));
+  const [dirty, setDirty] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState(false);
+  const [advanced, setAdvanced] = useState(false);
+  const [secret, setSecret] = useState('');
+  const [secretLoading, setSecretLoading] = useState(false);
+  const [secretError, setSecretError] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+  const saveRequests = useRequestGuard();
+  const secretRequests = useRequestGuard();
+  const savingRef = useRef(false);
+  const [identity, setIdentity] = useState<DeviceIdentity>();
+  const [identityRefresh, setIdentityRefresh] = useState(0);
+  const [confirmRevoke, setConfirmRevoke] = useState(false);
+  const [identityLoadedFor, setIdentityLoadedFor] = useState<number>();
+  const identityDeviceId = device?.id;
+  const pairingAvailable = !!onPair;
+  useEffect(() => {
+    if (!visible || !identityDeviceId || !pairingAvailable) return;
+    let current = true;
+    let timer: ReturnType<typeof setTimeout>;
+    const poll = async () => {
+      try {
+        const value = await devicePairingApi.identity(identityDeviceId);
+        if (current) setIdentity(value);
+      } catch { /* Older API: keep the explicit legacy/unknown state. Never infer pairing. */ }
+      if (current) setIdentityLoadedFor(identityDeviceId);
+      if (current) timer = setTimeout(() => { void poll(); }, 10000);
+    };
+    void poll();
+    return () => { current = false; clearTimeout(timer); };
+  }, [visible, identityDeviceId, identityRefresh, pairingAvailable]);
+  useEffect(() => { setIdentity(undefined); setIdentityLoadedFor(undefined); }, [identityDeviceId, visible]);
+  const identityReady = !pairingAvailable || identityLoadedFor === identityDeviceId;
+  const status = suppliedStatus ?? (identity?.hardware_id ? {
+    pairing: identity.pairing === 'paired' ? 'paired' as const : 'not-paired' as const,
+    online: identity.online, hardwareId: identity.hardware_id, firmwareVersion: identity.firmware_version ?? undefined,
+    lastSeen: identity.last_seen_at, synchronization: identity.synchronization,
+  } : undefined);
+  useEffect(() => {
+    saveRequests.activate(); secretRequests.activate();
+    setValues(initialValues(device));
+    setDirty(false); setSaved(false); setSaving(false); setError(false);
+    setConfirmRevoke(false);
+    setAdvanced(false); setSecret(''); setSecretLoading(false); setSecretError(false); setRevealed(false);
+    savingRef.current = false;
+    return () => { saveRequests.invalidate(); secretRequests.invalidate(); };
+  }, [visible, device, saveRequests, secretRequests]);
 
-  const [showConfirmRotate, setShowConfirmRotate] = React.useState(false);
-  const [revealSecret, setRevealSecret] = React.useState(false);
-
-  const masked = React.useMemo(() => {
-    const len = Math.max(10, (authSecret || '').replace(/\s/g, '').length || 12);
-    return '•'.repeat(len);
-  }, [authSecret]);
-
-  const openSchemas = React.useCallback(async () => {
-    const url = buildSchemasUrl(currentLanguage);
-
+  const legacy = !status;
+  const pumpIncluded = !!device?.pump_included;
+  const valid = runtimeValuesValid(values, pumpIncluded) &&
+    (!values.automaticPumpLaunch || device?.sensors.moisture !== false);
+  const pairingLabel = !status ? 'legacy' : status.pairing === 'paired' && !status.online ? 'offline' : status.pairing;
+  // A PATCH is not a device acknowledgement. Only later server evidence may say applied.
+  const syncLabel = saved && legacy ? 'legacySaved' : saved && !identity ? 'pending' : status?.synchronization ?? 'unknown';
+  const text = (key: string) => String(t(`readingsModals.configuration.${key}`));
+  const revoke = async () => {
+    if (!device || savingRef.current || !confirmRevoke) return;
+    savingRef.current = true; setSaving(true); setError(false);
+    const current = saveRequests.begin();
     try {
-      await Linking.openURL(url);
-    } catch (error) {
-      console.warn('Failed to open schemas URL:', url, error);
+      await devicePairingApi.revoke(device.id);
+      if (current()) { setIdentity(undefined); setConfirmRevoke(false); setIdentityRefresh(value => value + 1); }
+    } catch { if (current()) setError(true); }
+    finally { if (current()) { savingRef.current = false; setSaving(false); } }
+  };
+  const close = () => { if (!savingRef.current) { saveRequests.cancelPending(); secretRequests.cancelPending(); onClose(); } };
+  const change = (next: DeviceRuntimeValues) => { setValues(next); setDirty(true); setSaved(false); setError(false); };
+  const save = async () => {
+    if (!device || !valid || !dirty || savingRef.current) return;
+    savingRef.current = true; setSaving(true); setError(false);
+    const isCurrent = saveRequests.begin();
+    const payload: ApiReadingDeviceUpdatePayload = { interval_minutes: Number(values.intervalMinutes) };
+    if (pumpIncluded) Object.assign(payload, {
+      pump_duration_seconds: Number(values.pumpDurationSeconds),
+      pump_cooldown_minutes: Number(values.pumpCooldownMinutes),
+      automatic_pump_launch: values.automaticPumpLaunch,
+      pump_threshold_pct: values.automaticPumpLaunch ? Number(values.pumpThresholdPct) : null,
+    });
+    try {
+      await onSave(payload);
+      if (isCurrent()) {
+        setDirty(false); setSaved(true);
+        setIdentity(previous => previous ? { ...previous, synchronization: 'pending' } : previous);
+        setIdentityRefresh(value => value + 1);
+      }
+    } catch {
+      if (isCurrent()) setError(true);
+    } finally {
+      if (isCurrent()) { savingRef.current = false; setSaving(false); }
     }
-  }, [currentLanguage]);
-
-  const copyToClipboard = React.useCallback((value?: string | null) => {
-    if (!value) return;
-    Clipboard.setString(value);
-  }, []);
-
-  React.useEffect(() => {
-    if (!visible) {
-      setRevealSecret(false);
-      setShowConfirmRotate(false);
+  };
+  const loadSecret = async () => {
+    if (!legacy || secretLoading || secret) return;
+    const isCurrent = secretRequests.begin();
+    setSecretLoading(true); setSecretError(false);
+    try {
+      const value = await onLoadLegacySecret();
+      if (isCurrent()) setSecret(value);
+    } catch {
+      if (isCurrent()) setSecretError(true);
+    } finally {
+      if (isCurrent()) setSecretLoading(false);
     }
-  }, [visible]);
-
+  };
+  const toggleAdvanced = () => {
+    setAdvanced(value => !value);
+    setRevealed(false);
+    if (!advanced && legacy) void loadSecret();
+  };
   if (!visible) return null;
+  return <AppModalFrame visible loading={loading || (!!device && !identityReady)} loadingTestID="device-setup-loading" onClose={close}
+    closeLabel={t('readingsModals.common.close')}>
+    {!loading && identityReady && device && <>
+      {/* Keep the established automation identifier while renaming the visible UI. */}
+      <Text testID="device-details-title" style={pr.promptTitle}>{text('title')}</Text>
+      <View style={{ gap: 16, marginHorizontal: 16 }}>
+        <InfoRow label={t('readingsModals.deviceDetails.deviceName')} value={device.device_name} />
+        <InfoRow label={t('readingsModals.deviceDetails.deviceKey')} value={device.device_key || '—'}
+          onCopy={device.device_key ? () => Clipboard.setString(device.device_key) : undefined}
+          copyAccessibilityLabel={t('readingsModals.deviceDetails.copyDeviceKey')} />
+        <InfoRow label={t('readingsModals.deviceDetails.plant')} value={device.plant_name || '—'} />
+        <InfoRow label={text('pairingStatus')} value={text(pairingLabel)} />
+        <InfoRow label={text('hardwareId')} value={status?.hardwareId || text('notReported')} />
+        <InfoRow label={text('firmwareVersion')} value={status?.firmwareVersion || text('notReported')} />
+        <InfoRow label={text('lastSeen')} value={status?.lastSeen || text('notReported')} />
+        <InfoRow label={t('readings.tile.lastReadPrefix')} value={device.last_read_at || '—'} />
+        <InfoRow label={text('synchronization')} value={text(syncLabel)} />
+        <DeviceRuntimeSettings values={values} onChange={change} pumpIncluded={pumpIncluded}
+          moistureEnabled={device.sensors.moisture !== false} disabled={saving} />
+        {legacy && <Text style={s.confirmText}>{text('legacyConfigurationHint')}</Text>}
+        {error && <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>{text('saveFailed')}</Text>}
+        <Pressable accessibilityRole="button" disabled={!valid || !dirty || saving}
+          accessibilityState={{ disabled: !valid || !dirty || saving }}
+          onPress={() => { void save(); }} style={[pr.promptBtn, pr.promptPrimary, { alignItems: 'center', opacity: !valid || !dirty || saving ? 0.5 : 1 }]}>
+          <Text style={pr.promptPrimaryText}>{saving ? text('saving') : status?.pairing === 'paired' && status.online
+            ? t('readingsModals.pairing.saveSync') : text('saveConfiguration')}</Text>
+        </Pressable>
 
-  const sampleWritePayload = `{
-  "deviceId": "YOUR_DEVICE_KEY",
-  "secret":   "YOUR_AUTH_SECRET",
-  "temperature": 23.5,
-  "humidity": 58.0,
-  "light": 512,
-  "moisture": 41,
-  "timestamp": "2025-01-01T12:34:56Z"
-}`;
-
-  const sampleReadQuery = `{
-  "deviceId": "YOUR_DEVICE_KEY",
-  "secret":   "YOUR_AUTH_SECRET",
-  "from": "2025-01-01T00:00:00Z",
-  "to":   "2025-01-02T00:00:00Z"
-}`;
-
-  return (
-    <>
-      <AppModalFrame
-        visible
-        onClose={onClose}
-        closeLabel={t('readingsModals.common.close', 'Close')}
-        scrollable={false}
-        closeButtonRight={8}
-      >
-        <ScrollView
-          keyboardDismissMode="on-drag"
-          nestedScrollEnabled
-          style={appModalStyles.scroll}
-          keyboardShouldPersistTaps="handled"
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={[
-            {
-              gap: 12,
-            },
-            appModalStyles.scrollContent,
-          ]}
-        >
-          <Text style={s.promptTitle}>{t('readingsModals.deviceSetup.title')}</Text>
-
-          <Text style={styles.sampleCodeHint}>
-            {String(
-              t('readingsModals.deviceSetup.sampleCodeHint', {
-                deviceDetails: t('readings.menu.deviceDetails'),
-                emailCode: t('readingsModals.deviceDetails.emailCode'),
-              }),
-            )}
-          </Text>
-
-          <View style={{ marginHorizontal: 16, gap: 12 }}>
-            {/* Endpoints */}
-            <Text style={styles.inputLabel}>{t('readingsModals.deviceSetup.httpEndpoints')}</Text>
-
-            <InfoRow
-              icon="cloud-upload-outline"
-              label={t('readingsModals.deviceSetup.addReadingPost')}
-              value={writeEndpoint}
-            />
-
-            <InfoRow
-              icon="cloud-download-outline"
-              label={t('readingsModals.deviceSetup.readReadingsGetPost')}
-              value={readEndpoint}
-            />
-
-            {/* Sample payloads */}
-            <Text
-              style={[
-                styles.inputLabel,
-                {
-                  marginTop: 4,
-                },
-              ]}
-            >
-              {t('readingsModals.deviceSetup.samplePayloads')}
-            </Text>
-
-            <Block label={t('readingsModals.deviceSetup.addReadingBody')}>
-              <CodeBlock text={sampleWritePayload} />
-            </Block>
-
-            <Block label={t('readingsModals.deviceSetup.readRequestBody')}>
-              <CodeBlock text={sampleReadQuery} />
-            </Block>
-
-            {/* Current secret + rotate */}
-            <Text
-              style={[
-                styles.inputLabel,
-                {
-                  marginTop: 4,
-                },
-              ]}
-            >
-              {t('readingsModals.deviceSetup.currentAuthSecret')}
-            </Text>
-
-            <SecretRow
-              value={revealSecret ? authSecret : masked}
-              selectable={revealSecret}
-              isRevealActive={revealSecret}
-              onToggleReveal={() => setRevealSecret(v => !v)}
-              onCopy={() => copyToClipboard(authSecret)}
-              revealAccessibilityLabel={
-                revealSecret
-                  ? t('readingsModals.deviceSetup.hideAuthSecret')
-                  : t('readingsModals.deviceSetup.showAuthSecret')
-              }
-              copyAccessibilityLabel={t(
-                'readingsModals.deviceSetup.copyAuthSecret',
-                'Copy Auth Secret Key',
-              )}
-            />
-
-            <Pressable
-              onPress={() => setShowConfirmRotate(true)}
-              style={{
-                marginTop: 8,
-                paddingVertical: 12,
-                borderRadius: 16,
-                backgroundColor: 'rgba(255,255,255,0.12)',
-                alignItems: 'center',
-              }}
-            >
-              <Text style={s.promptBtnText}>
-                {t('readingsModals.deviceSetup.generateNewSecret')}
-              </Text>
-            </Pressable>
-
-            {/* Open website docs */}
-            <Pressable
-              onPress={openSchemas}
-              style={{
-                marginTop: 12,
-                paddingVertical: 12,
-                borderRadius: 16,
-                backgroundColor: 'rgba(11,114,133,0.92)',
-                alignItems: 'center',
-              }}
-            >
-              <Text style={s.promptPrimaryText}>
-                {t('readingsModals.deviceSetup.openSchemasDocumentation')}
-              </Text>
-            </Pressable>
-
-            {/* Footer buttons */}
-            <View
-              style={[
-                s.promptButtonsRow,
-                {
-                  marginTop: 4,
-                  paddingHorizontal: 0,
-                },
-              ]}
-            >
-              <Pressable style={s.promptBtn} onPress={onClose}>
-                <Text style={s.promptBtnText}>{t('readingsModals.common.close')}</Text>
-              </Pressable>
-            </View>
-          </View>
-        </ScrollView>
-      </AppModalFrame>
-      {/* Confirm rotate secret */}
-      <AppModalFrame
-        visible={showConfirmRotate}
-        centerContent
-        title={t('readingsModals.deviceSetup.rotateConfirmTitle')}
-        onClose={() => setShowConfirmRotate(false)}
-        closeLabel={t('readingsModals.common.close')}
-      >
-        <Text style={s.confirmText}>{t('readingsModals.deviceSetup.rotateConfirmText')}</Text>
-
-        <View style={s.promptButtonsRow}>
-          <Pressable style={s.promptBtn} onPress={() => setShowConfirmRotate(false)}>
-            <Text style={s.promptBtnText}>{t('readingsModals.common.cancel')}</Text>
+        {!onPair && <Text style={s.confirmText}>{text('pairingUnavailable')}</Text>}
+        <Pressable accessibilityRole="button" accessibilityState={{ disabled: !onPair || saving }} disabled={!onPair || saving}
+          onPress={() => onPair?.(status?.pairing === 'paired' ? 'wifi' : 'pair')} style={[pr.promptBtn, { alignItems: 'center', opacity: !onPair || saving ? 0.5 : 1 }]}>
+          <Text style={pr.promptBtnText}>{text(status?.pairing === 'pairing' ? 'continuePairing' : status?.pairing === 'paired' ? 'reconfigureWifi' : 'pairDevice')}</Text>
+        </Pressable>
+        {status?.pairing === 'paired' && <Pressable accessibilityRole="button" accessibilityState={{ disabled: !onPair || saving }} disabled={!onPair || saving}
+          onPress={() => onPair?.('replace')} style={[pr.promptBtn, { alignItems: 'center', opacity: !onPair || saving ? 0.5 : 1 }]}>
+          <Text style={pr.promptBtnText}>{text('replaceHardware')}</Text>
+        </Pressable>}
+        {status?.hardwareId && onPair && <>
+          {confirmRevoke && <Text accessibilityRole="alert">{t('readingsModals.pairing.revokeHint')}</Text>}
+          <Pressable accessibilityRole="button" disabled={saving} onPress={() => {
+            if (confirmRevoke) void revoke(); else setConfirmRevoke(true);
+          }} style={pr.promptBtn}>
+            <Text style={pr.promptBtnText}>{t(`readingsModals.pairing.${confirmRevoke ? 'confirmRevoke' : 'revoke'}`)}</Text>
           </Pressable>
+          {confirmRevoke && <Pressable accessibilityRole="button" disabled={saving} onPress={() => setConfirmRevoke(false)} style={pr.promptBtn}>
+            <Text style={pr.promptBtnText}>{t('readingsModals.common.cancel')}</Text>
+          </Pressable>}
+        </>}
 
-          <Pressable
-            style={[s.promptBtn, s.promptPrimary]}
-            onPress={async () => {
-              try {
-                await onRotateSecret?.();
-              } finally {
-                setShowConfirmRotate(false);
-                setRevealSecret(false);
-              }
-            }}
-          >
-            <Text style={s.promptPrimaryText}>{t('readingsModals.deviceSetup.rotate')}</Text>
+        {legacy && <>
+          <Pressable accessibilityRole="button" accessibilityState={{ expanded: advanced }} onPress={toggleAdvanced}
+            style={[pr.promptBtn, { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }]}>
+            <Text style={[pr.promptBtnText, { flex: 1 }]}>{text('advanced')}</Text>
+            <MaterialCommunityIcons name={advanced ? 'chevron-up' : 'chevron-down'} size={22} color="#fff" />
           </Pressable>
-        </View>
-      </AppModalFrame>
-    </>
-  );
+          {advanced && <View style={{ gap: 14 }}>
+            <Text style={s.confirmText}>{text('legacySecretHint')}</Text>
+            <InfoRow label={t('readingsModals.deviceDetails.accountSecret')}
+              value={revealed && secret ? secret : '••••••••••••••'} smallValueText
+              onCopy={secret ? () => Clipboard.setString(secret) : undefined}
+              copyAccessibilityLabel={t('readingsModals.deviceDetails.copyAuthSecret')}
+              onToggleReveal={secret ? () => setRevealed(value => !value) : undefined}
+              revealAccessibilityLabel={t(revealed ? 'readingsModals.deviceDetails.hideAuthSecret' : 'readingsModals.deviceDetails.showAuthSecret')}
+              isRevealActive={revealed} />
+            {secretLoading && <Text>{text('loadingSecret')}</Text>}
+            {secretError && <Pressable accessibilityRole="button" onPress={() => { void loadSecret(); }}>
+              <Text accessibilityRole="alert" style={pr.promptBtnText}>{text('retrySecret')}</Text>
+            </Pressable>}
+            <Block label={t('readingsModals.deviceDetails.sensors')}>
+              {(['temperature', 'humidity', 'light', 'moisture'] as const).filter(key => device.sensors[key]).map(key =>
+                <Text key={key} style={s.dropdownValue}>{t(`readingsModals.deviceDetails.sensor${key === 'moisture' ? 'Moisture' : key[0].toUpperCase() + key.slice(1)}`)}</Text>)}
+            </Block>
+            {dirty && <Text style={s.confirmText}>{text('saveBeforeCode')}</Text>}
+            <Pressable accessibilityRole="button" onPress={onEmailCode} disabled={sending || saving || dirty || !device.device_key}
+              style={[pr.promptBtn, pr.promptPrimary, { alignItems: 'center', opacity: sending || saving || dirty || !device.device_key ? 0.5 : 1 }]}>
+              <Text style={pr.promptPrimaryText}>{t(sending ? 'readingsModals.deviceDetails.emailingCode' : 'readingsModals.deviceDetails.emailCode')}</Text>
+            </Pressable>
+          </View>}
+        </>}
+        <Pressable accessibilityRole="button" style={[pr.promptBtn, { alignItems: 'center' }]} onPress={close} disabled={saving}>
+          <Text style={pr.promptBtnText}>{t('readingsModals.common.close')}</Text>
+        </Pressable>
+      </View>
+    </>}
+  </AppModalFrame>;
 }
 
-function InfoRow({ icon, label, value }: { icon: string; label: string; value: string }) {
+function InfoRow({
+  label,
+  value,
+  onCopy,
+  copyAccessibilityLabel,
+  onToggleReveal,
+  revealAccessibilityLabel,
+  isRevealActive,
+  smallValueText = false,
+}: {
+  label: string;
+  value: string;
+  onCopy?: () => void;
+  copyAccessibilityLabel?: string;
+  onToggleReveal?: () => void;
+  revealAccessibilityLabel?: string;
+  isRevealActive?: boolean;
+  smallValueText?: boolean;
+}) {
   return (
     <View style={{ gap: 6 }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-        <MaterialCommunityIcons name={icon as any} size={18} color="#fff" />
-        <Text style={s.dropdownValue}>{label}</Text>
-      </View>
+      <Text style={s.dropdownValue}>{label}</Text>
 
       <View
         style={{
           padding: 12,
           borderRadius: 12,
           backgroundColor: 'rgba(255,255,255,0.10)',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: 8,
         }}
       >
         <Text
@@ -301,88 +290,47 @@ function InfoRow({ icon, label, value }: { icon: string; label: string; value: s
             s.codeBlockText,
             {
               fontVariant: ['tabular-nums'],
-              fontSize: 12,
-              lineHeight: 18,
+              flex: 1,
+              minWidth: 0,
+              fontSize: smallValueText ? 10 : undefined,
+              lineHeight: smallValueText ? 20 : undefined,
             },
           ]}
           selectable
+          numberOfLines={1}
+          ellipsizeMode="tail"
         >
           {value}
         </Text>
+
+        {!!onToggleReveal && (
+          <Pressable
+            onPress={onToggleReveal}
+            accessibilityRole="button"
+            accessibilityLabel={revealAccessibilityLabel}
+            hitSlop={10}
+            style={{ padding: 4 }}
+          >
+            <MaterialCommunityIcons
+              name={isRevealActive ? 'eye-off-outline' : 'eye-outline'}
+              size={20}
+              color="#fff"
+            />
+          </Pressable>
+        )}
+
+        {!!onCopy && (
+          <Pressable
+            onPress={onCopy}
+            accessibilityRole="button"
+            accessibilityLabel={copyAccessibilityLabel}
+            hitSlop={10}
+            style={{ padding: 4 }}
+          >
+            <MaterialCommunityIcons name="content-copy" size={20} color="#fff" />
+          </Pressable>
+        )}
       </View>
-    </View>
-  );
-}
-
-function SecretRow({
-  value,
-  selectable,
-  isRevealActive,
-  onToggleReveal,
-  onCopy,
-  revealAccessibilityLabel,
-  copyAccessibilityLabel,
-}: {
-  value: string;
-  selectable?: boolean;
-  isRevealActive?: boolean;
-  onToggleReveal: () => void;
-  onCopy: () => void;
-  revealAccessibilityLabel?: string;
-  copyAccessibilityLabel?: string;
-}) {
-  return (
-    <View
-      style={{
-        padding: 12,
-        borderRadius: 12,
-        backgroundColor: 'rgba(255,255,255,0.10)',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 8,
-      }}
-    >
-      <Text
-        style={[
-          s.codeBlockText,
-          {
-            fontVariant: ['tabular-nums'],
-            flex: 1,
-            minWidth: 0,
-            fontSize: 10,
-            lineHeight: 20,
-          },
-        ]}
-        selectable={selectable}
-        numberOfLines={1}
-        ellipsizeMode="tail"
-      >
-        {value}
-      </Text>
-
-      <Pressable
-        onPress={onToggleReveal}
-        accessibilityRole="button"
-        accessibilityLabel={revealAccessibilityLabel}
-        hitSlop={10}
-        style={{ padding: 4 }}
-      >
-        <MaterialCommunityIcons
-          name={isRevealActive ? 'eye-off-outline' : 'eye-outline'}
-          size={20}
-          color="#fff"
-        />
-      </Pressable>
-
-      <Pressable
-        onPress={onCopy}
-        accessibilityRole="button"
-        accessibilityLabel={copyAccessibilityLabel}
-        hitSlop={10}
-        style={{ padding: 4 }}
-      >
-        <MaterialCommunityIcons name="content-copy" size={20} color="#fff" />
-      </Pressable>
     </View>
   );
 }
@@ -395,49 +343,3 @@ function Block({ label, children }: { label: string; children: React.ReactNode }
     </View>
   );
 }
-
-function CodeBlock({ text }: { text: string }) {
-  return (
-    <View
-      style={{
-        padding: 12,
-        borderRadius: 12,
-        backgroundColor: 'rgba(0,0,0,0.35)',
-      }}
-    >
-      <Text
-        style={[
-          s.codeBlockText,
-          {
-            fontFamily: Platform.select({
-              ios: 'Menlo',
-              android: 'monospace',
-            }) as any,
-            fontSize: 10,
-            lineHeight: 15,
-          },
-        ]}
-        selectable
-      >
-        {text}
-      </Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  sampleCodeHint: {
-    marginHorizontal: 16,
-    color: 'rgba(255,255,255,0.9)',
-    fontSize: 13,
-    lineHeight: 19,
-  },
-  inputLabel: {
-    marginTop: 8,
-    marginBottom: 6,
-    color: 'rgba(255,255,255,0.92)',
-    fontWeight: '800',
-    letterSpacing: 0.2,
-    fontSize: 12,
-  },
-});

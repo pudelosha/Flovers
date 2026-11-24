@@ -40,8 +40,8 @@ import SortReadingsModal, {
 } from "../components/modals/SortReadingsModal";
 import FilterReadingsModal from "../components/modals/FilterReadingsModal";
 import ConfirmDeleteReadingModal from "../components/modals/ConfirmDeleteReadingModal";
+import DeviceInformationModal from "../components/modals/DeviceInformationModal";
 import DeviceSetupModal from "../components/modals/DeviceSetupModal";
-import DeviceDetailsModal from "../components/modals/DeviceDetailsModal";
 import WateringScheduleModal from "../components/modals/WateringScheduleModal";
 import UpsertReadingDeviceModal from "../components/modals/UpsertReadingDeviceModal";
 import SendReadingsExportModal from "../components/modals/SendReadingsExportModal";
@@ -96,6 +96,13 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsScreen() {
   const requestGuard = useRequestGuard();
+  const setupRequestGuard = useRequestGuard();
+  const informationRequestGuard = useRequestGuard();
+  useFocusEffect(useCallback(() => {
+    setupRequestGuard.activate(); informationRequestGuard.activate();
+    return () => { setupRequestGuard.invalidate(); informationRequestGuard.invalidate(); };
+  }, [setupRequestGuard, informationRequestGuard]));
+  const [informationLoading, setInformationLoading] = useState(false);
   const headerReady = useHeaderContentReady();
   const nav = useNavigation<BottomTabNavigationProp<AppTabParamList>>();
 
@@ -147,20 +154,19 @@ export default function ReadingsScreen() {
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [deleteName, setDeleteName] = useState<string>("");
 
-  // Device setup modal state + fetched data
-  const [deviceSetupVisible, setDeviceSetupVisible] = useState(false);
+  // General Information modal and owner-only legacy integration data
+  const [deviceInformationVisible, setDeviceInformationVisible] = useState(false);
   const [setupSecret, setSetupSecret] = useState<string | null>(null);
   const [setupIngest, setSetupIngest] = useState<string>("");
   const [setupRead, setSetupRead] = useState<string>("");
 
-  // Device details modal state
-  const [deviceDetailsVisible, setDeviceDetailsVisible] = useState(false);
-  const [deviceDetailsId, setDeviceDetailsId] = useState<string | null>(null);
-  const [deviceDetailsLoading, setDeviceDetailsLoading] = useState(false);
-  const [deviceDetailsSending, setDeviceDetailsSending] = useState(false);
-  const [deviceDetailsData, setDeviceDetailsData] =
+  // Per-device setup modal; fresh data is loaded before controls are shown
+  const [deviceSetupVisible, setDeviceSetupVisible] = useState(false);
+  const [deviceSetupId, setDeviceSetupId] = useState<string | null>(null);
+  const [deviceSetupLoading, setDeviceSetupLoading] = useState(false);
+  const [deviceSetupSending, setDeviceSetupSending] = useState(false);
+  const [deviceSetupData, setDeviceSetupData] =
     useState<ApiReadingDevice | null>(null);
-  const [deviceDetailsSecret, setDeviceDetailsSecret] = useState<string>("");
 
   // Watering schedule modal state
 
@@ -270,7 +276,7 @@ export default function ReadingsScreen() {
     setDevicesRaw(devices);
     setItems(devices.map(toReadingTile));
   }, []);
-  useReadingDevicesRefresh(applyReadingRefresh, upsertVisible);
+  useReadingDevicesRefresh(applyReadingRefresh, upsertVisible || deviceSetupVisible || deviceInformationVisible);
 
   // On focus: reset page state
   useFocusEffect(
@@ -279,18 +285,17 @@ export default function ReadingsScreen() {
       setFilterModalVisible(false);
       setExportModalVisible(false);
       setDeleteVisible(false);
+      setDeviceInformationVisible(false);
       setDeviceSetupVisible(false);
-      setDeviceDetailsVisible(false);
 
       setUpsertVisible(false);
       setSortSheetOpen(false);
       setFilterSheetOpen(false);
 
-      setDeviceDetailsId(null);
-      setDeviceDetailsData(null);
-      setDeviceDetailsSecret("");
-      setDeviceDetailsLoading(false);
-      setDeviceDetailsSending(false);
+      setDeviceSetupId(null);
+      setDeviceSetupData(null);
+      setDeviceSetupLoading(false);
+      setDeviceSetupSending(false);
 
 
 
@@ -483,8 +488,8 @@ export default function ReadingsScreen() {
     !filterModalVisible &&
     !exportModalVisible &&
     !deleteVisible &&
+    !deviceInformationVisible &&
     !deviceSetupVisible &&
-    !deviceDetailsVisible &&
     !wateringScheduleVisible &&
     !upsertVisible;
 
@@ -574,58 +579,55 @@ export default function ReadingsScreen() {
     setUpsertVisible(true);
   }, [closeFloatingMenus, plantInstances]);
 
-  const openEditDevice = useCallback(
-    async (id: string) => {
-      closeFloatingMenus();
+  const openEditDevice = useCallback((id: string) => {
+    closeFloatingMenus();
+    setUpsertMode("edit");
+    setUpsertReadingId(id);
+    setUpsertVisible(true);
+  }, [closeFloatingMenus]);
 
-      try {
-        const data = await fetchDeviceSetup();
-        setSetupSecret(data.secret);
-        setSetupIngest(data.endpoints?.ingest || "");
-        setSetupRead(data.endpoints?.read || "");
-      } catch {
-        setSetupSecret(null);
-      }
+  const closeDeviceSetup = useCallback(() => {
+    setupRequestGuard.cancelPending();
+    setDeviceSetupVisible(false);
+    setDeviceSetupId(null);
+    setDeviceSetupData(null);
+    setDeviceSetupLoading(false);
+  }, [setupRequestGuard]);
 
-      setUpsertMode("edit");
-      setUpsertReadingId(id);
-      setUpsertVisible(true);
-    },
-    [closeFloatingMenus]
-  );
+  const openDeviceSetup = useCallback(async (id: string) => {
+    closeFloatingMenus();
+    const isCurrent = setupRequestGuard.begin();
+    setDeviceSetupId(id);
+    setDeviceSetupData(null);
+    setDeviceSetupLoading(true);
+    setDeviceSetupVisible(true);
+    try {
+      const device = await getReadingDevice(Number(id));
+      if (!isCurrent()) return;
+      if (!plantAccess(device.access).canEdit) throw new Error("Owner access required");
+      setDeviceSetupData(device);
+    } catch {
+      if (!isCurrent()) return;
+      setDeviceSetupVisible(false);
+      showToast(tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device setup"), "error");
+    } finally {
+      if (isCurrent()) setDeviceSetupLoading(false);
+    }
+  }, [closeFloatingMenus, setupRequestGuard, showToast, tr]);
 
-  const openDeviceDetails = useCallback(
-    async (id: string) => {
-      closeFloatingMenus();
+  const saveDeviceConfiguration = useCallback(async (payload: import("../types/readings.types").ApiReadingDeviceUpdatePayload) => {
+    if (!deviceSetupId || !deviceSetupData || !plantAccess(deviceSetupData.access).canEdit) throw new Error("Owner access required");
+    const isCurrent = setupRequestGuard.begin();
+    const updated = await updateReadingDevice(Number(deviceSetupId), payload);
+    if (!isCurrent()) return;
+    setDevicesRaw(previous => previous.map(device => device.id === updated.id ? updated : device));
+    setItems(previous => previous.map(item => item.id === String(updated.id) ? toReadingTile(updated) : item));
+  }, [deviceSetupId, deviceSetupData, setupRequestGuard]);
 
-      setDeviceDetailsId(id);
-      setDeviceDetailsLoading(true);
-      setDeviceDetailsData(null);
-      setDeviceDetailsSecret("");
+  const loadLegacySecret = useCallback(async () => (await fetchDeviceSetup()).secret, []);
 
-      try {
-        const [device, setup] = await Promise.all([
-          getReadingDevice(Number(id)),
-          fetchDeviceSetup(),
-        ]);
-
-        setDeviceDetailsData(device);
-        setDeviceDetailsSecret(setup?.secret || "");
-        setDeviceDetailsVisible(true);
-      } catch {
-        showToast(
-          tr("readings.toasts.deviceDetailsLoadFailed", "Failed to load device details"),
-          "error"
-        );
-      } finally {
-        setDeviceDetailsLoading(false);
-      }
-    },
-    [closeFloatingMenus, showToast, tr]
-  );
-
-  const handleEmailCodeFromDeviceDetails = useCallback(async () => {
-    if (!deviceDetailsId) {
+  const handleEmailCodeFromDeviceSetup = useCallback(async () => {
+    if (!deviceSetupId) {
       showToast(
         tr("readings.toasts.missingDeviceId", "Missing device ID"),
         "error"
@@ -634,9 +636,9 @@ export default function ReadingsScreen() {
     }
 
     try {
-      setDeviceDetailsSending(true);
+      setDeviceSetupSending(true);
 
-      await sendDeviceCodeByEmail(Number(deviceDetailsId));
+      await sendDeviceCodeByEmail(Number(deviceSetupId));
 
       showToast(
         tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
@@ -648,9 +650,9 @@ export default function ReadingsScreen() {
         "error"
       );
     } finally {
-      setDeviceDetailsSending(false);
+      setDeviceSetupSending(false);
     }
-  }, [deviceDetailsId, showToast, tr]);
+  }, [deviceSetupId, showToast, tr]);
 
 
 
@@ -669,9 +671,6 @@ export default function ReadingsScreen() {
         moistureAlertEnabled?: boolean;
         moistureAlertPct?: number;
       };
-      intervalMinutes: number;
-      pumpCooldownMinutes: number;
-      pumpDurationSeconds: number;
       sendEmailNotifications?: boolean;
       sendPushNotifications?: boolean;
       sendEmailMissingReadings?: boolean;
@@ -702,11 +701,8 @@ export default function ReadingsScreen() {
             plant: Number(payload.plantId),
             device_name: payload.name,
             notes: payload.notes,
-            interval_minutes: payload.intervalMinutes,
             send_email_missing_readings: !!payload.sendEmailMissingReadings,
             send_push_missing_readings: !!payload.sendPushMissingReadings,
-            pump_cooldown_minutes: payload.pumpCooldownMinutes,
-            pump_duration_seconds: payload.pumpDurationSeconds,
             sensors: {
               temperature: payload.sensors.temperature,
               humidity: payload.sensors.humidity,
@@ -742,11 +738,8 @@ export default function ReadingsScreen() {
             notes: payload.notes ?? null,
             is_active:
               typeof payload.enabled === "boolean" ? payload.enabled : undefined,
-            interval_minutes: payload.intervalMinutes,
             send_email_missing_readings: !!payload.sendEmailMissingReadings,
             send_push_missing_readings: !!payload.sendPushMissingReadings,
-            pump_cooldown_minutes: payload.pumpCooldownMinutes,
-            pump_duration_seconds: payload.pumpDurationSeconds,
             sensors: {
               temperature: payload.sensors.temperature,
               humidity: payload.sensors.humidity,
@@ -800,30 +793,6 @@ export default function ReadingsScreen() {
     },
     [upsertReadingId, load, showToast, tr]
   );
-
-  const handleSendCodeByEmail = useCallback(async () => {
-    if (!upsertReadingId) {
-      showToast(
-        tr("readings.toasts.missingDeviceId", "Missing device ID"),
-        "error"
-      );
-      return;
-    }
-
-    try {
-      await sendDeviceCodeByEmail(Number(upsertReadingId));
-
-      showToast(
-        tr("readings.toasts.codeSentByEmail", "Code sent to your email"),
-        "success"
-      );
-    } catch {
-      showToast(
-        tr("readings.toasts.sendCodeEmailFailed", "Send email failed"),
-        "error"
-      );
-    }
-  }, [upsertReadingId, showToast, tr]);
 
   const handleToggleAutoPump = useCallback(
     async (id: string, enabled: boolean) => {
@@ -914,26 +883,25 @@ export default function ReadingsScreen() {
     [closeFloatingMenus, items, devicesRaw, showToast, tr]
   );
 
-  const openDeviceSetup = useCallback(async () => {
+  const openDeviceInformation = useCallback(async () => {
     closeFloatingMenus();
-
+    const isCurrent = informationRequestGuard.begin();
+    setInformationLoading(true);
+    setDeviceInformationVisible(true);
     try {
       const data = await fetchDeviceSetup();
+      if (!isCurrent()) return;
       setSetupSecret(data.secret);
       setSetupIngest(data.endpoints?.ingest || "");
       setSetupRead(data.endpoints?.read || "");
     } catch {
-      showToast(
-        tr("readings.toasts.setupLoadFailed", "Failed to load setup"),
-        "error"
-      );
-      setSetupSecret(null);
-      setSetupIngest("");
-      setSetupRead("");
+      if (!isCurrent()) return;
+      setDeviceInformationVisible(false);
+      showToast(tr("readings.toasts.setupLoadFailed", "Failed to load information"), "error");
     } finally {
-      setDeviceSetupVisible(true);
+      if (isCurrent()) setInformationLoading(false);
     }
-  }, [closeFloatingMenus, showToast, tr]);
+  }, [closeFloatingMenus, informationRequestGuard, showToast, tr]);
 
   if (loading) {
     return (
@@ -1002,7 +970,7 @@ export default function ReadingsScreen() {
                   openEditDevice(item.id);
                 }}
                 onDeviceDetails={() => {
-                  openDeviceDetails(item.id);
+                  openDeviceSetup(item.id);
                 }}
                 onHistory={() => {
                   closeFloatingMenus();
@@ -1104,7 +1072,7 @@ export default function ReadingsScreen() {
                     <Text style={s.emptyText}>
                       {tr(
                         "readings.empty.description",
-                        'Devices let you ingest temperature, humidity, light, and soil moisture readings for a plant.\n\nTap the “+ Link device” action to add one. Pick a plant, name the device, choose sensors, and set a sampling interval. You can then open Device setup to view your account secret, rotate it, and email a ready-to-paste Arduino/ESP sketch.'
+                        'Devices let you ingest temperature, humidity, light, and soil moisture readings for a plant.\n\nTap “+ Add device” to choose a plant and sensors. Open Device setup from its tile menu to set the reading interval and pump options or email Arduino/ESP code. Information contains API documentation and legacy account-secret management.'
                       )}
                     </Text>
                   </View>
@@ -1130,14 +1098,14 @@ export default function ReadingsScreen() {
               {
                 key: "link-device",
                 icon: "link-variant",
-                label: tr("readings.fab.linkDevice", "Link device"),
+                label: tr("readings.fab.linkDevice", "Add device"),
                 onPress: openAddDevice,
               },
               {
                 key: "device-setup",
                 icon: "key-variant",
-                label: tr("readings.fab.deviceSetup", "Device setup"),
-                onPress: openDeviceSetup,
+                label: tr("readings.fab.deviceSetup", "Information"),
+                onPress: openDeviceInformation,
               },
               {
                 key: "sort",
@@ -1198,12 +1166,13 @@ export default function ReadingsScreen() {
         onConfirm={confirmDelete}
       />
 
-      <DeviceSetupModal
-        visible={deviceSetupVisible}
+      <DeviceInformationModal
+        visible={deviceInformationVisible}
+        loading={informationLoading}
         writeEndpoint={setupIngest || "—"}
         readEndpoint={setupRead || "—"}
         authSecret={setupSecret ?? "••••••••••••••"}
-        onClose={() => setDeviceSetupVisible(false)}
+        onClose={() => { informationRequestGuard.cancelPending(); setDeviceInformationVisible(false); setSetupSecret(null); }}
         onRotateSecret={async () => {
           try {
             const { secret } = await rotateAccountSecret();
@@ -1222,27 +1191,21 @@ export default function ReadingsScreen() {
         }}
       />
 
-      <DeviceDetailsModal
-        visible={deviceDetailsVisible}
-        loading={deviceDetailsLoading}
-        sending={deviceDetailsSending}
-        accountSecret={deviceDetailsSecret || "—"}
-        deviceId={deviceDetailsData?.id ?? deviceDetailsId}
-        deviceKey={deviceDetailsData?.device_key ?? "—"}
-        deviceName={deviceDetailsData?.device_name ?? "—"}
-        plantName={deviceDetailsData?.plant_name ?? "—"}
-        location={deviceDetailsData?.plant_location ?? "—"}
-        sensors={deviceDetailsData?.sensors ?? null}
-        pumpIncluded={Boolean(deviceDetailsData?.pump_included)}
-        onClose={() => {
-          setDeviceDetailsVisible(false);
-          setDeviceDetailsId(null);
-          setDeviceDetailsData(null);
-          setDeviceDetailsSecret("");
-          setDeviceDetailsLoading(false);
-          setDeviceDetailsSending(false);
+      <DeviceSetupModal
+        visible={deviceSetupVisible}
+        loading={deviceSetupLoading}
+        sending={deviceSetupSending}
+        device={deviceSetupData}
+        onClose={closeDeviceSetup}
+        onSave={saveDeviceConfiguration}
+        onLoadLegacySecret={loadLegacySecret}
+        onEmailCode={handleEmailCodeFromDeviceSetup}
+        onPair={(action) => {
+          const id = deviceSetupData?.id;
+          if (!id || !plantAccess(deviceSetupData?.access).canEdit) return;
+          closeDeviceSetup();
+          nav.navigate('Scanner', { deviceId: id, deviceOnly: true, action });
         }}
-        onEmailCode={handleEmailCodeFromDeviceDetails}
       />
 
       <WateringScheduleModal {...watering.modalProps} />
@@ -1290,20 +1253,6 @@ export default function ReadingsScreen() {
                 return dev ? !!dev.is_active : true;
               })()
             : true
-        }
-        initialPumpDurationSeconds={upsertMode === "edit"
-          ? devicesRaw.find((device) => String(device.id) === upsertReadingId)?.pump_duration_seconds ?? 30 : 20}
-        initialPumpCooldownMinutes={upsertMode === "edit"
-          ? devicesRaw.find((device) => String(device.id) === upsertReadingId)?.pump_cooldown_minutes ?? 60 : 60}
-        initialIntervalMinutes={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(
-                  (d) => String(d.id) === upsertReadingId
-                );
-                return dev?.interval_minutes ?? (dev?.interval_hours ?? 1) * 60;
-              })()
-            : 60
         }
         initialSendEmailMissingReadings={upsertMode === "edit"
           ? !!devicesRaw.find((device) => String(device.id) === upsertReadingId)?.send_email_missing_readings : false}
@@ -1428,22 +1377,8 @@ export default function ReadingsScreen() {
               })()
             : false
         }
-        authSecret={
-          upsertMode === "edit" ? setupSecret ?? "••••••••••••••" : undefined
-        }
-        deviceKey={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(
-                  (d) => String(d.id) === upsertReadingId
-                );
-                return dev?.device_key ?? "—";
-              })()
-            : undefined
-        }
         onCancel={() => setUpsertVisible(false)}
         onSave={handleUpsertSave}
-        onSendCodeByEmail={handleSendCodeByEmail}
       />
 
       <SortReadingsModal

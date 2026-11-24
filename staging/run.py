@@ -19,7 +19,7 @@ REQUIRED = ["exact_image_build", "isolated_services", "previous_schema_fixture",
     "existing_media_checkpoint", "forward_migrations", "constraints_and_indexes", "idempotent_startup",
     "web_worker_beat_readiness", "api_permission_boundaries", "media_integrity", "read_only_smoke",
     "dependency_outage_recovery", "same_image_redeployment", "runtime_isolation", "cleanup",
-    "light_pending_migrations_rejected", "light_current_schema_readonly"]
+    "light_pending_migrations_inspected_readonly", "light_current_schema_readonly"]
 
 
 class Runner:
@@ -216,7 +216,7 @@ class Runner:
                 self.dc("run", "--rm", "--no-deps", "-T", "init")
             with self.case("previous_schema_fixture"):
                 self.verify("legacy")
-            with self.case("light_pending_migrations_rejected"):
+            with self.case("light_pending_migrations_inspected_readonly"):
                 self.verify("light_pending")
             with self.case("backup_restore"):
                 self.backup_restore()

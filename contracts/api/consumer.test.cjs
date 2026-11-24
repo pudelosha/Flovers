@@ -52,6 +52,37 @@ async function execute(c, edition, api) {
   const args = Object.fromEntries(new URL(c.request.path, 'http://testserver').searchParams);
   const body = c.request.body;
   switch (c.operation) {
+    case 'identity': return service('device-pairing').devicePairingApi.identity(601);
+    case 'pairing-start': return service('device-pairing').devicePairingApi.start(body.device_id, body.hardware_id, body.replaces_hardware_id);
+    case 'pairing-status': case 'pairing-cancel': {
+      const id = bundle.cases[c.id].exchanges[0].request.path.split('/')[3];
+      return service('device-pairing').devicePairingApi[c.operation === 'pairing-status' ? 'status' : 'cancel'](id);
+    }
+    case 'iot-pair-flow': {
+      const {PairingController} = require('../../mobile/src/features/readings/pairing/pairingController.ts');
+      const qr = {version: 1, type: 'flovers-device', hardware_id: 'CONTRACT_BOARD_0001',
+        name: 'FLOVERS_ARD_0001', transport: 'ble', pop: 'S'.repeat(43)};
+      const ble = {connect: jest.fn(async () => {}), disconnect: jest.fn(), send: jest.fn(async command => ({
+        hardware_id: qr.hardware_id, accepted: command.action === 'pair', state: 'queued',
+        in_progress: false, operation_id: 1, operation_state: 'pending',
+      }))};
+      const progress = jest.fn();
+      const controller = new PairingController(service('device-pairing').devicePairingApi, ble, {timeoutMs: 2000, pollMs: 1});
+      // Replay at the same frozen clock as Django; do not disable expiry validation.
+      const session = bundle.cases[c.id].exchanges[1].response.body;
+      const clock = jest.spyOn(Date, 'now').mockReturnValue(Date.parse(session.expires_at) - 600000);
+      let result;
+      try {
+        result = await controller.run({deviceId: 601, qr, mode: 'pair', ssid: 'synthetic-network',
+          password: 'synthetic-password', replacementConfirmed: false}, progress);
+      } finally { clock.mockRestore(); }
+      expect(progress.mock.calls.flat()).toEqual(['connecting', 'sending', 'verifying', 'complete']);
+      expect(ble.send).toHaveBeenCalledWith(expect.objectContaining({action: 'pair', session_id: expect.any(String),
+        claim: expect.any(String), proof_payload: expect.any(String)}));
+      expect(ble.disconnect).toHaveBeenCalledTimes(1);
+      expect(result.synchronization).toBe('applied');
+      return result;
+    }
     case 'complete': return service('home').markHomeTaskComplete('401', body?.note, body?.completedDate);
     case 'progression': return service('profile').fetchProfileProgression();
     case 'plant': case 'photo': {
@@ -156,7 +187,7 @@ for (const edition of Object.keys(clients)) {
             });
           }
           if (c.operation === 'progression') expect(result).toEqual(wire.data);
-          if (['device-update','pump','reading-history','plant'].includes(c.operation)) expect(result).toEqual(wire);
+          if (['device-update','pump','reading-history','plant','identity','pairing-start','pairing-status','pairing-cancel'].includes(c.operation)) expect(result).toEqual(wire);
           if (c.operation === 'contacts') expect(result.counts.contacts).toBe(wire.data.contacts.length);
           if (c.operation === 'history') expect(result[0]).toMatchObject({plant: 'Contract fern', type: 'watering'});
         }

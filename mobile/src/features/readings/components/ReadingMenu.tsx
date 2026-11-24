@@ -75,7 +75,7 @@ export default function ReadingMenu({
       {canEdit && <Item
         icon="information-outline"
         testID="reading-menu-details"
-        label={tr("readings.menu.deviceDetails", "Device details")}
+        label={tr("readings.menu.deviceDetails", "Device setup")}
         onPress={onDeviceDetails}
       />}
 

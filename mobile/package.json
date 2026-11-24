@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@notifee/react-native": "^9.1.8",
+    "@orbital-systems/react-native-esp-idf-provisioning": "0.7.1",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-native-camera-roll/camera-roll": "^7.10.2",
     "@react-native-clipboard/clipboard": "^1.16.3",

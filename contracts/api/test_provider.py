@@ -108,6 +108,9 @@ def exchange(s, actor, method, path, body=None, multipart=False):
 
 def prepare(s, case):
     setup = case.get("setup")
+    if setup and setup.startswith("iot-"):
+        from contracts.api.iot_scene import prepare as prepare_iot
+        prepare_iot(s, setup, client_for(s, "owner"))
     if setup in ["overdue", "future"]:
         s.task.due_date = NOW.date() + timedelta(days=-3 if setup=="overdue" else 3)
         s.task.save()
@@ -157,9 +160,15 @@ def prepare(s, case):
 
 @pytest.mark.parametrize("case",manifest()["scenarios"],ids=lambda case:case["id"])
 def test_contract(scene,case,recorder):
+    if case["operation"] == "iot-pair-flow":
+        from contracts.api.iot_scene import pairing_flow
+        recorder[case["id"]] = {"exchanges": pairing_flow(scene, exchange)}
+        return
     prepare(scene,case)
     request=case["request"]
     path=request["path"].replace("{photo_id}",str(scene.photo_id))
+    if "{session_id}" in path:
+        path = path.replace("{session_id}", scene.iot_session_id)
     body=request.get("body")
     multipart=case["operation"] in ["photo-replace","cover-upload","journal-create"]
     if multipart:
@@ -167,7 +176,7 @@ def test_contract(scene,case,recorder):
         if case["operation"]=="photo-replace":body["upload_key"]="00000000-0000-4000-8000-000000000803"
     if case["operation"]=="reframe":body={**body,"expected_photo_id":scene.photo_id}
     result=exchange(scene,request["actor"],request["method"],path,body,multipart)
-    expected=case.get("error") or (201 if case["operation"] in ["pump","invite","journal-create"] else 200)
+    expected=case.get("error") or (201 if case["operation"] in ["pump","invite","journal-create","pairing-start"] else 200)
     assert result["response"]["status"]==expected,result["response"]
     data=result["response"]["body"]
     assert_contract(data,case["expect"])

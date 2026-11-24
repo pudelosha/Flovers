@@ -146,6 +146,7 @@ def recall_manual_watering(device, user):
 
 def configure_automatic_watering(device, enabled, threshold=None):
     """Update an authorized device already row-locked by the caller transaction."""
+    previous = (device.automatic_pump_launch, device.pump_threshold_pct)
     moisture_sensor_enabled = bool((device.sensors or {}).get("moisture", True))
     if enabled:
         if not device.pump_included:
@@ -165,8 +166,10 @@ def configure_automatic_watering(device, enabled, threshold=None):
                 "Pump threshold must be configured before enabling automatic pump launch."
             )
     device.automatic_pump_launch = enabled
+    if previous != (device.automatic_pump_launch, device.pump_threshold_pct):
+        device.desired_config_version += 1
     device.save(
-        update_fields=["automatic_pump_launch", "pump_threshold_pct", "updated_at"]
+        update_fields=["automatic_pump_launch", "pump_threshold_pct", "desired_config_version", "updated_at"]
     )
 
 

@@ -200,7 +200,10 @@ def media_files():
 
 
 def forward():
-    call_command("migrate", interactive=False, verbosity=1)
+    import subprocess
+    subprocess.run([sys.executable,"manage.py","migrate","--noinput"],
+                   env={**os.environ,"PGOPTIONS":"-c lock_timeout=10000 -c statement_timeout=300000"},
+                   check=True,timeout=300)
     from reminders.models import ReminderTask
     from readings.models import ReadingDevice
     from profiles.models import InboxNotification
@@ -366,11 +369,10 @@ def light_migration_probe(*, expect_pending):
     env = {**os.environ, "PGOPTIONS": READ_ONLY_OPTIONS}
     child = subprocess.run([sys.executable, "-c", MIGRATION_CHECK], env=env,
                            capture_output=True, text=True, timeout=60)
-    if expect_pending:
-        assert child.returncode != 0 and "LIGHT refuses pending migrations" in child.stderr, child.stderr
-    else:
-        assert child.returncode == 0, child.stderr
-        assert migration_result(child.stdout)["read_only"] is True
+    assert child.returncode == 0, child.stderr
+    receipt=migration_result(child.stdout)
+    assert receipt["read_only"] is True
+    assert (receipt["pending"] > 0) is expect_pending
     assert sorted(MigrationRecorder(connection).applied_migrations()) == before
     # Prove PGOPTIONS also prevents application-startup SQL writes; this is not
     # a mocked assertion about the text of the migration inspector.
@@ -383,7 +385,7 @@ def light_migration_probe(*, expect_pending):
         cursor.execute("SELECT to_regclass('public.light_forbidden_probe')")
         assert cursor.fetchone() == (None,)
     save(RESULTS / ("light-pending.json" if expect_pending else "light-current.json"), {
-        "pending_rejected": expect_pending, "migration_records_unchanged": True,
+        "pending_detected": expect_pending, "pending_count": receipt["pending"], "migration_records_unchanged": True,
         "startup_write_rejected_by_postgresql": True, "inspector_success": child.returncode == 0})
 
 

@@ -20,12 +20,12 @@
       "history": "측정 기록",
       "plantDetails": "식물 세부정보",
       "editDevice": "기기 수정",
-      "deviceDetails": "기기 세부정보",
+      "deviceDetails": "기기 설정",
       "deleteDevice": "기기 삭제"
     },
     "fab": {
-      "linkDevice": "기기 연결",
-      "deviceSetup": "기기 설정",
+      "linkDevice": "기기 추가",
+      "deviceSetup": "정보",
       "sort": "정렬",
       "filter": "필터",
       "sendExport": "내보내기 전송",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "아직 기기가 없습니다",
-      "description": "기기를 사용하면 식물의 온도, 습도, 조도 및 토양 수분 측정값을 수집할 수 있습니다.\n\n기기를 추가하려면 “+ Link device” 작업을 탭하세요. 식물을 선택하고, 기기 이름을 지정하고, 센서를 선택한 다음 샘플링 간격을 설정하세요. 그런 다음 기기 설정을 열어 계정 비밀 키를 확인하고, 교체하고, 바로 붙여넣을 수 있는 Arduino/ESP 스케치를 이메일로 보낼 수 있습니다."
+      "description": "식물에 기기를 추가하세요. 카드 메뉴에서 설정과 DIY 코드를 이용할 수 있습니다. 정보에는 API 문서와 기존 DIY 키 관리가 있습니다."
     },
     "toasts": {
       "unauthorized": "권한이 없습니다. 다시 로그인하세요.",

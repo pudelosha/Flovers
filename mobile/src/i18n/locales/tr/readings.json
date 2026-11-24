@@ -20,12 +20,12 @@
       "history": "Sensör okuma geçmişi",
       "plantDetails": "Bitki ayrıntıları",
       "editDevice": "Cihazı düzenle",
-      "deviceDetails": "Cihaz ayrıntıları",
+      "deviceDetails": "Cihaz kurulumu",
       "deleteDevice": "Cihazı sil"
     },
     "fab": {
-      "linkDevice": "Cihazı bağla",
-      "deviceSetup": "Cihaz kurulumu",
+      "linkDevice": "Cihaz ekle",
+      "deviceSetup": "Bilgi",
       "sort": "Sırala",
       "filter": "Filtrele",
       "sendExport": "Dışa aktarma gönder",
@@ -33,7 +33,7 @@
     },
     "empty": {
       "title": "Henüz cihaz yok",
-      "description": "Cihazlar, bir ev bitkisinin sıcaklık, nem, ışık ve toprak nemi sensörü okumalarını almanızı sağlar.\n\nBir tane eklemek için “+ Cihaza bağlan” işlemine dokunun. Bir ev bitkisi seçin, cihazı adlandırın, sensörleri seçin ve bir örnekleme aralığı ayarlayın. Daha sonra hesap sırrınızı görüntülemek, döndürmek ve yapıştırmaya hazır bir Arduino/ESP taslağını e-postayla göndermek için Cihaz kurulumunu açabilirsiniz."
+      "description": "Bitkiniz için cihaz ekleyin. Kart menüsünden kurulum ve DIY koduna ulaşabilirsiniz. Bilgi bölümünde API belgeleri ve eski DIY anahtar yönetimi bulunur."
     },
     "toasts": {
       "unauthorized": "Yetkisiz. Lütfen tekrar giriş yapın.",

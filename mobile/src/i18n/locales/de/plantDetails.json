@@ -151,7 +151,7 @@
       "line": "{{actor}} · {{task}}"
     },
     "readingsHelp": {
-      "device": "Unter Messwerte kann der Pflanzenbesitzer ein Arduino- oder ESP-Board verknüpfen und die Sensoren auswählen. Öffne das Gerätemenü, wähle Gerätedetails und dann Code per E-Mail, um passenden Beispielcode anzufordern.",
+      "device": "Unter Messwerte kann der Pflanzenbesitzer ein Gerät hinzufügen und Sensoren auswählen. Öffnen Sie für Arduino/ESP-Code das Kachelmenü und wählen Sie: Gerät einrichten → Erweitert / DIY-Integration → Code per E-Mail senden.",
       "charts": "Sobald Messwerte vorliegen, tippe auf ein Messsymbol oder einen Wert, um das Tages-, Wochen- oder Monatsdiagramm zu öffnen.",
       "pump": "Mit angeschlossener Pumpe und Relais kann der Besitzer eine Bewässerung mit gewünschter Laufzeit planen oder sie automatisch bei Unterschreiten einer Bodenfeuchtegrenze starten lassen. Pumpenunterstützung, Laufzeit und Pause zwischen automatischen Bewässerungen werden in den Geräteeinstellungen festgelegt."
     }

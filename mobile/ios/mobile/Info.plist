@@ -17,6 +17,8 @@
 	<string>We save photos to your library if you ask us to.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We use the camera to scan QR codes attached to your plants.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Flovers uses Bluetooth to securely pair your ESP32 and configure its Wi-Fi.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

@@ -789,7 +789,7 @@ export default function PlantDetailsScreen() {
                               <Text style={styles.readingsHelp}>
                                 {tr(
                                   'plantDetails.readingsHelp.device',
-                                  'In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device details, then Email code to request sample code configured for that device.',
+                                  'In Readings, the plant owner can link an Arduino or ESP board and choose its sensors. Open the device menu, select Device setup, expand Advanced / DIY integration, then tap Email code to request sample code configured for that device.',
                                 )}
                               </Text>
                               <Text style={styles.readingsHelp}>

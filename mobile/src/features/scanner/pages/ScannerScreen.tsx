@@ -8,7 +8,7 @@ import {
   Animated,
   Easing,
   useWindowDimensions, AnimatedView } from "../../../shared/theme/native";
-import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useIsFocused, useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { Text } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import LinearGradient from "../../../shared/theme/Gradient";
@@ -32,53 +32,12 @@ import {
 import { scannerStyles as styles } from "../styles/scanner.styles";
 import { SCANNER_INSTRUCTION } from "../constants/scanner.constants";
 import ScannerOverlay from "../components/ScannerOverlay";
+import { parseFloversQr, type DeviceQr } from '../../readings/pairing/deviceQr';
+import type { PairingMode } from '../../readings/pairing/pairingController';
+import PairDeviceModal from '../../readings/components/modals/PairDeviceModal';
 
 // dev/prod aware public URL
 import { PUBLIC_BASE_URL_NORM } from "../../../config";
-
-function getHostnameSafe(maybeUrl: string): string {
-  if (!maybeUrl) return "";
-  try {
-    const url = new URL(maybeUrl);
-    return url.hostname || "";
-  } catch {
-    return "";
-  }
-}
-
-function extractToken(raw: string): string {
-  if (!raw) return "";
-
-  // Accept raw tokens as-is
-  if (/^[A-Za-z0-9\-_]{8,64}$/.test(raw)) return raw;
-
-  // Build allowed hosts list: prod + whatever PUBLIC_BASE_URL_NORM points to in this build
-  const devHost = getHostnameSafe(PUBLIC_BASE_URL_NORM);
-  const allowedHosts = new Set<string>([
-    "flovers.app",
-    ...(devHost ? [devHost] : []),
-  ]);
-
-  try {
-    // If QR contains URL, parse it
-    const maybeUrl = raw.startsWith("http") ? raw : `https://${raw}`;
-    const url = new URL(maybeUrl);
-
-    const host = url.hostname;
-    const hostOk =
-      allowedHosts.has(host) ||
-      host.endsWith(".flovers.app"); // keep prod subdomain support
-
-    if (hostOk) {
-      const token = url.searchParams.get("code") || url.searchParams.get("qr") || "";
-      if (token) return token;
-    }
-  } catch {
-    // ignore parsing errors
-  }
-
-  return "";
-}
 
 // Same green tones as PlantTile / AuthCard
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -91,6 +50,12 @@ export default function ScannerScreen() {
   const { height: screenHeight } = useWindowDimensions();
   const isFocused = useIsFocused();
   const navigation = useNavigation<any>();
+  const route = useRoute();
+  const params = route.params as { deviceId?: number; deviceOnly?: boolean; action?: PairingMode } | undefined;
+  const [deviceQr, setDeviceQr] = useState<DeviceQr | null>(null);
+  const [scanError, setScanError] = useState('');
+  const processing = useRef(false);
+  const closePairing = useCallback(() => { setDeviceQr(null); processing.current = false; setActive(true); }, []);
   const { hasPermission, requestPermission } = useCameraPermission();
 
   const [active, setActive] = useState(true);
@@ -116,12 +81,15 @@ export default function ScannerScreen() {
   useFocusEffect(
     useCallback(() => {
       setLastScanned("");
+      setScanError(''); setDeviceQr(null); processing.current = false;
       setActive(true);
       return () => {
         setLastScanned("");
+        setDeviceQr(null); processing.current = false;
         setActive(false);
+        navigation.setParams?.({ deviceId: undefined, deviceOnly: false, action: undefined });
       };
-    }, [])
+    }, [navigation])
   );
 
   const onValidToken = useCallback(
@@ -136,14 +104,15 @@ export default function ScannerScreen() {
     codeTypes: ["qr"],
     onCodeScanned: (codes) => {
       const value = codes[0]?.value ?? "";
-      if (!value) return;
-
-      setLastScanned((prev) => (prev === value ? prev : value));
-
-      const token = extractToken(value);
-      if (token) {
-        onValidToken(token);
+      if (!value || processing.current || !active || !isFocused) return;
+      const parsed = parseFloversQr(value, PUBLIC_BASE_URL_NORM);
+      if (parsed.kind === 'device') {
+        processing.current = true; setLastScanned(''); setScanError(''); setActive(false); setDeviceQr(parsed.device);
+      } else if (parsed.kind === 'plant' && !params?.deviceOnly) {
+        processing.current = true; setLastScanned(parsed.token); onValidToken(parsed.token);
       } else {
+        setLastScanned('');
+        setScanError(t(`readingsModals.pairing.${params?.deviceOnly ? 'deviceQrRequired' : 'invalidQr'}`));
         setActive(true);
       }
     },
@@ -241,8 +210,11 @@ export default function ScannerScreen() {
                 {t("scanner.howItWorks.title", { defaultValue: "How it works" })}
               </Text>
 
-              <Text style={styles.infoText}>{instructionText}</Text>
+              <Text style={styles.infoText}>{params?.deviceOnly ? t('readingsModals.pairing.scanHint') : instructionText}</Text>
+              {!params?.deviceOnly && <Text style={styles.infoHint}>{t('readingsModals.pairing.scanHint')}</Text>}
+              {scanError !== '' && <Text accessibilityRole="alert">{scanError}</Text>}
 
+              {!params?.deviceOnly && <>
               <Text
                 style={[
                   styles.infoHint,
@@ -289,6 +261,7 @@ export default function ScannerScreen() {
                   })}
                 </Text>
               </Text>
+              </>}
             </View>
           </View>
         </View>
@@ -381,6 +354,7 @@ export default function ScannerScreen() {
 
         <View style={{ height: BOTTOM_SPACER }} />
       </AnimatedView>
+      {deviceQr && isFocused && <PairDeviceModal qr={deviceQr} deviceId={params?.deviceId} mode={params?.action} onClose={closePairing} />}
     </View>
   );
 }

@@ -75,11 +75,13 @@ class RuntimeTests(unittest.TestCase):
             with self.subTest(command=command), self.assertRaises(ValueError):
                 runtime.runtime_services(config, "web", APPS)
 
-    def test_migration_receipt_cannot_be_missing_duplicated_pending_or_writable(self):
+    def test_migration_receipt_rejects_missing_duplicate_invalid_count_or_writable(self):
         marker = "FLOVERS_MIGRATIONS=" + json.dumps(RECEIPT)
         self.assertEqual(runtime.migration_result(marker), RECEIPT)
+        self.assertEqual(runtime.migration_result("FLOVERS_MIGRATIONS=" + json.dumps({**RECEIPT,"pending":1}))["pending"],1)
         for output in ["", marker + "\n" + marker,
-                       "FLOVERS_MIGRATIONS=" + json.dumps({**RECEIPT, "pending": 1}),
+                       "FLOVERS_MIGRATIONS=" + json.dumps({**RECEIPT, "pending": -1}),
+                       "FLOVERS_MIGRATIONS=" + json.dumps({**RECEIPT, "pending": True}),
                        "FLOVERS_MIGRATIONS=" + json.dumps({**RECEIPT, "read_only": False})]:
             with self.subTest(output=output), self.assertRaises(ValueError):
                 runtime.migration_result(output)
@@ -125,6 +127,11 @@ class ReleaseTests(unittest.TestCase):
                 "Config": {"Labels": {"org.opencontainers.image.revision": SHA}, "Entrypoint": []}}]))
         if command[:2] == ["docker", "pull"]:
             return SimpleNamespace(stdout="")
+        if command[-3:] == ["manage.py","migrate","--noinput"]:
+            self.assertTrue(self.stop.called)
+            self.assertFalse(self.start.called)
+            self.assertIn("--entrypoint",command)
+            return SimpleNamespace(stdout="Synthetic forward migration applied")
         self.fail("Unexpected command: " + str(command))
 
     def run_release(self):
@@ -143,12 +150,47 @@ class ReleaseTests(unittest.TestCase):
         self.assertNotIn("migrate", saved["services"]["web"]["command"])
         self.guard.record.assert_any_call("healthy", migration_execution=False)
 
-    def test_pending_candidate_migrations_abort_before_stopping_old_services(self):
-        self.plan.side_effect = [RECEIPT, ValueError("pending migrations")]
-        with self.assertRaisesRegex(ValueError, "pending"):
+    def test_conflicting_candidate_history_aborts_before_stopping_old_services(self):
+        self.plan.side_effect = [RECEIPT, ValueError("conflicting migrations")]
+        with self.assertRaisesRegex(ValueError, "conflicting"):
             self.run_release()
         self.stop.assert_not_called()
         self.start.assert_not_called()
+
+    def test_pending_migrations_run_once_after_writers_stop_before_startup(self):
+        pending={**RECEIPT,"pending":1}
+        migrated={**RECEIPT,"applied_sha256":"d"*64}
+        self.plan.side_effect=[RECEIPT,pending,pending,migrated]
+        self.run_release()
+        commands=[c.args[0] for c in self.execute.call_args_list]
+        self.assertEqual(sum(c[-3:]==["manage.py","migrate","--noinput"] for c in commands),1)
+        self.start.assert_called_once()
+        self.guard.record.assert_any_call("healthy",migration_execution=True)
+
+    def test_migration_failure_does_not_restart_old_code_or_reverse_schema(self):
+        pending={**RECEIPT,"pending":1}
+        self.plan.side_effect=[RECEIPT,pending,pending]
+        original=self.execute.side_effect
+        def fail(command,**kwargs):
+            if command[-3:]==["manage.py","migrate","--noinput"]:
+                raise RuntimeError("synthetic migration failure")
+            return original(command,**kwargs)
+        self.execute.side_effect=fail
+        with self.assertRaisesRegex(RuntimeError,"migration failure"):
+            self.run_release()
+        self.start.assert_not_called()
+        self.assertEqual(self.guard.record.call_args.args[0],"recovery-required")
+        self.assertEqual(self.plan.call_count,3)
+
+    def test_successful_migration_then_unhealthy_start_refuses_old_schema_recovery(self):
+        pending={**RECEIPT,"pending":1}
+        migrated={**RECEIPT,"applied_sha256":"d"*64}
+        self.plan.side_effect=[RECEIPT,pending,pending,migrated,migrated]
+        self.start.side_effect=RuntimeError("candidate unhealthy")
+        with self.assertRaisesRegex(RuntimeError,"candidate"):
+            self.run_release()
+        self.assertEqual(self.start.call_count,1)
+        self.assertEqual(self.guard.record.call_args.args[0],"recovery-required")
 
     def test_configuration_drift_before_stopping_aborts_without_restart(self):
         self.unchanged.side_effect = [[], ValueError("configuration drift")]

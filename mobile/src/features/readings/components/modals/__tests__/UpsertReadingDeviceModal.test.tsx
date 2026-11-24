@@ -5,44 +5,28 @@ import UpsertReadingDeviceModal from "../UpsertReadingDeviceModal";
 jest.mock("@react-native-clipboard/clipboard", () => ({ __esModule: true, default: { setString: jest.fn() } }));
 
 const props = { visible: true, mode: "edit" as const, plants: [{ id: "1", name: "Fern" }], initialPlantId: "1",
-  initialName: "Board", initialPumpIncluded: true, initialIntervalHours: 4, initialPumpCooldownMinutes: 90,
+  initialName: "Board", initialPumpIncluded: true,
   onCancel: jest.fn(), onSave: jest.fn() };
 beforeEach(() => jest.clearAllMocks());
 
-it("loads legacy hours as minutes and saves exact minute intervals and cooldown", () => {
+it("keeps runtime settings out of Add/Edit and omits them from saves", () => {
   const view = render(<UpsertReadingDeviceModal {...props} />);
-  expect(view.getByTestId("reading-interval-minutes").props.value).toBe("240");
-  fireEvent.changeText(view.getByLabelText("Reading interval (minutes)"), "45");
-  fireEvent.changeText(view.getByLabelText("Automatic watering cooldown (minutes)"), "120");
+  expect(view.queryByTestId("reading-interval-minutes")).toBeNull();
+  expect(view.queryByLabelText("Pump run time (seconds)")).toBeNull();
+  expect(view.queryByLabelText("Automatic watering cooldown (minutes)")).toBeNull();
   fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({ intervalMinutes: 45, pumpCooldownMinutes: 120 }));
-  expect(props.onSave.mock.calls[0][0]).not.toHaveProperty("intervalHours");
-});
-it.each(["", "0", "32768", "1.5", "1e3"])("blocks invalid cooldown %s without truncating it", (value) => {
-  const view = render(<UpsertReadingDeviceModal {...props} />);
-  fireEvent.changeText(view.getByLabelText("Automatic watering cooldown (minutes)"), value);
-  fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).not.toHaveBeenCalled();
-  expect(view.getByText("Enter a whole number from 1 to 32767.")).toBeTruthy();
-});
-it.each([1, 90, 1440])("loads and preserves valid minute interval %s", (intervalMinutes) => {
-  const view = render(<UpsertReadingDeviceModal {...props} initialIntervalMinutes={intervalMinutes} />);
-  expect(view.getByTestId("reading-interval-minutes").props.value).toBe(String(intervalMinutes));
-  fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({ intervalMinutes, pumpCooldownMinutes: 90 }));
+  const payload = props.onSave.mock.calls[0][0];
+  expect(payload).not.toHaveProperty("intervalMinutes");
+  expect(payload).not.toHaveProperty("pumpCooldownMinutes");
+  expect(payload).not.toHaveProperty("pumpDurationSeconds");
+  expect(payload).toEqual(expect.objectContaining({ name: "Board", plantId: "1" }));
 });
 
-it.each(["", "0", "1441", "1.5", "1e3", "-2"])("blocks invalid interval %s", (value) => {
-  const view = render(<UpsertReadingDeviceModal {...props} />);
-  fireEvent.changeText(view.getByLabelText("Reading interval (minutes)"), value);
+it("requires a plant and non-empty name before creating a device", () => {
+  const onSave = jest.fn();
+  const view = render(<UpsertReadingDeviceModal visible mode="add" onCancel={jest.fn()} onSave={onSave} />);
   fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).not.toHaveBeenCalled();
-  expect(view.getByText("Enter a whole number from 1 to 1440.")).toBeTruthy();
-});
-
-it("defaults a new device to 60 minutes", () => {
-  const view = render(<UpsertReadingDeviceModal visible mode="add" onCancel={jest.fn()} onSave={jest.fn()} />);
-  expect(view.getByTestId("reading-interval-minutes").props.value).toBe("60");
+  expect(onSave).not.toHaveBeenCalled();
 });
 
 it("saves missing-reading email/push preferences independently of pump and moisture sensor", () => {
@@ -69,26 +53,3 @@ it("loads and changes existing missing-reading preferences", () => {
 });
 
 
-it("defaults pump run time to 20 seconds and saves a selected value", () => {
-  const view = render(<UpsertReadingDeviceModal {...props} />);
-  const input = view.getByLabelText("Pump run time (seconds)");
-  expect(input.props.value).toBe("20");
-  fireEvent.changeText(input, "300");
-  fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({pumpDurationSeconds:300}));
-});
-it.each(["", "0", "301", "-1", "1.5", "2e2", "abc"])("blocks invalid pump run time %s", (value) => {
-  const view = render(<UpsertReadingDeviceModal {...props} />);
-  fireEvent.changeText(view.getByLabelText("Pump run time (seconds)"), value);
-  fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).not.toHaveBeenCalled();
-  expect(view.getByText("Enter a whole number from 1 to 300.")).toBeTruthy();
-});
-it("reloads each device's saved duration and preserves the minimum boundary", () => {
-  const view=render(<UpsertReadingDeviceModal {...props} initialPumpDurationSeconds={45}/>);
-  expect(view.getByLabelText("Pump run time (seconds)").props.value).toBe("45");
-  view.rerender(<UpsertReadingDeviceModal {...props} initialPumpDurationSeconds={1}/>);
-  expect(view.getByLabelText("Pump run time (seconds)").props.value).toBe("1");
-  fireEvent.press(view.getByText("readingsModals.common.save"));
-  expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({pumpDurationSeconds:1}));
-});

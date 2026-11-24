@@ -151,7 +151,7 @@
       "line": "{{actor}} · {{task}}"
     },
     "readingsHelp": {
-      "device": "En Lecturas, el propietario puede vincular una placa Arduino o ESP y elegir los sensores. Abre el menú del dispositivo, selecciona Detalles del dispositivo y después Enviar código por correo para solicitar un ejemplo configurado para ese dispositivo.",
+      "device": "En Lecturas, el propietario de la planta puede añadir un dispositivo y elegir sensores. Para recibir código Arduino/ESP, abre el menú de la tarjeta y selecciona: Configuración del dispositivo → Avanzado / integración DIY → Enviar código por correo.",
       "charts": "Cuando lleguen las lecturas, toca el icono o el valor de una medición para abrir su gráfico diario, semanal o mensual.",
       "pump": "Con una bomba y un relé conectados, el propietario puede programar el riego durante el tiempo elegido o activarlo automáticamente por debajo de un umbral de humedad del suelo. La compatibilidad con la bomba, su duración y la pausa entre riegos automáticos se configuran en los ajustes del dispositivo."
     }

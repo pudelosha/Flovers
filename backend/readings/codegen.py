@@ -570,8 +570,8 @@ def _section_reading_payload() -> str:
     )
 
 
-def _section_http_helpers() -> str:
-    return _clean_section(
+def _section_http_helpers(*, device_scoped: bool = False) -> str:
+    section = _clean_section(
         """
         // ========================================================
         // HTTP
@@ -634,6 +634,12 @@ def _section_http_helpers() -> str:
         }
         """
     )
+    if device_scoped:
+        section = section.replace('http.addHeader("Content-Type", "application/json");',
+            'http.addHeader("Content-Type", "application/json");\n'
+            '    if (deviceToken.length()) http.addHeader("X-Flovers-Device-Token", deviceToken);')
+        section = section.replace('Serial.println(responseBody);', '// Never log pairing responses or device credentials.')
+    return section
 
 
 def _section_json_helpers() -> str:
@@ -764,8 +770,8 @@ def _section_json_helpers() -> str:
     )
 
 
-def _section_pump_helpers() -> str:
-    return _clean_section(
+def _section_pump_helpers(*, hardware_cooldown: bool = False) -> str:
+    section = _clean_section(
         """
         // ========================================================
         // PUMP
@@ -1177,6 +1183,15 @@ def _section_pump_helpers() -> str:
         }
         """
     )
+
+
+    if hardware_cooldown:
+        # A universal board retains its physical cooldown across an authorized logical rebind.
+        section = section.replace('String(record.deviceKey) == String(deviceKey) && record.notBefore > now',
+                                  'record.notBefore > now')
+        section = section.replace('String(record.deviceKey) != String(deviceKey) || record.notBefore < until',
+                                  'record.notBefore < until')
+    return section
 
 
 def _section_send_reading() -> str:
