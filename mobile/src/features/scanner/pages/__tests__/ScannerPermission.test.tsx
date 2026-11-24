@@ -45,14 +45,16 @@ it('explains both QR types with the current plant menu path in a scrollable scre
   const view = render(<ScannerScreen />);
   expect(view.getByText('Plant QR codes')).toBeOnTheScreen();
   expect(view.getByText('Device QR codes')).toBeOnTheScreen();
-  expect(view.getByText('Find it in Plant details \u2192 \u22ef \u2192 QR Code.')).toBeOnTheScreen();
+  expect(view.getByText(/Find it in Plant details/)).toHaveTextContent(/Plants.*tile menu.*Show QR code/);
+  expect(view.queryByText(/Or open Readings/)).toBeNull();
   expect(view.getByTestId('scanner-content')).toBeTruthy();
 });
-it('shows only device instructions when opened for pairing', () => {
+it('shows the same dual-purpose instructions when opened for pairing', () => {
   mockRoute.params = { deviceOnly: true, deviceId: 12 };
   const view = render(<ScannerScreen />);
   expect(view.getByText('Device QR codes')).toBeOnTheScreen();
-  expect(view.queryByText('Plant QR codes')).toBeNull();
+  expect(view.getByText('Plant QR codes')).toBeOnTheScreen();
+  expect(view.getByText('Scan a Flovers QR code to open a plant or set up a device.')).toBeOnTheScreen();
 });
 it('preserves plant QR navigation in universal scanner mode', () => {
   render(<ScannerScreen />);

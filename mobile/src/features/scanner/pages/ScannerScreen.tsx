@@ -202,7 +202,7 @@ export default function ScannerScreen() {
             <View pointerEvents="none" style={styles.frostTint} />
             <View pointerEvents="none" style={styles.frameBorder} />
 
-            <ScannerInstructions deviceOnly={params?.deviceOnly} />
+            <ScannerInstructions />
             {scanError !== '' && <Text style={styles.scanError} accessibilityRole="alert">{scanError}</Text>}
           </View>
         </View>
