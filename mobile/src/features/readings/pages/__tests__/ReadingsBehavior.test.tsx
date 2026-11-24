@@ -120,6 +120,8 @@ it('edits an existing device, preserves minute and pump settings, and reloads se
   expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('interval_minutes');
   expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('pump_duration_seconds');
   expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('pump_cooldown_minutes');
+  expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('automatic_pump_launch');
+  expect(jest.mocked(api.updateReadingDevice).mock.calls[0][1]).not.toHaveProperty('pump_threshold_pct');
   expect(view.getByText('Updated board')).toBeTruthy(); expect(view.getByTestId('toast').props.children).toBe('Device updated');
 });
 
@@ -209,6 +211,7 @@ it('saves runtime settings with the existing PATCH API without touching other de
   await act(async () => fireEvent.press(view.getByText('readingsModals.configuration.saveConfiguration')));
   expect(api.updateReadingDevice).toHaveBeenCalledWith(11, { interval_minutes: 80,
     pump_duration_seconds: 20, pump_cooldown_minutes: 60, automatic_pump_launch: false, pump_threshold_pct: null });
+  await act(async () => fireEvent.press(view.getByText('readingsModals.configuration.advanced')));
   expect(view.getByText('readingsModals.configuration.legacySaved')).toBeTruthy();
   expect(view.queryByText('readingsModals.configuration.applied')).toBeNull();
 });

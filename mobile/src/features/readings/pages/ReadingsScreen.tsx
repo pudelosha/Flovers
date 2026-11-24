@@ -676,8 +676,6 @@ export default function ReadingsScreen() {
       sendEmailMissingReadings?: boolean;
       sendPushMissingReadings?: boolean;
       pumpIncluded?: boolean;
-      automaticPumpLaunch?: boolean;
-      pumpThresholdPct?: number;
       sendEmailWateringNotifications?: boolean;
       sendPushWateringNotifications?: boolean;
     }) => {
@@ -693,7 +691,6 @@ export default function ReadingsScreen() {
           : null;
 
       const pumpIncluded = !!payload.pumpIncluded;
-      const automaticPumpLaunch = pumpIncluded && !!payload.automaticPumpLaunch;
 
       try {
         if (isCreate) {
@@ -718,10 +715,6 @@ export default function ReadingsScreen() {
               ? !!payload.sendPushNotifications
               : false,
             pump_included: pumpIncluded,
-            automatic_pump_launch: automaticPumpLaunch,
-            pump_threshold_pct: automaticPumpLaunch
-              ? payload.pumpThresholdPct ?? 30
-              : null,
             send_email_watering_notifications: pumpIncluded
               ? !!payload.sendEmailWateringNotifications
               : false,
@@ -755,10 +748,6 @@ export default function ReadingsScreen() {
               ? !!payload.sendPushNotifications
               : false,
             pump_included: pumpIncluded,
-            automatic_pump_launch: automaticPumpLaunch,
-            pump_threshold_pct: automaticPumpLaunch
-              ? payload.pumpThresholdPct ?? 30
-              : null,
             send_email_watering_notifications: pumpIncluded
               ? !!payload.sendEmailWateringNotifications
               : false,
@@ -1335,28 +1324,6 @@ export default function ReadingsScreen() {
                 return Boolean(dev?.pump_included);
               })()
             : false
-        }
-        initialAutomaticPumpLaunch={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(
-                  (d) => String(d.id) === upsertReadingId
-                );
-                return Boolean(dev?.automatic_pump_launch);
-              })()
-            : false
-        }
-        initialPumpThresholdPct={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(
-                  (d) => String(d.id) === upsertReadingId
-                );
-                return typeof dev?.pump_threshold_pct === "number"
-                  ? dev.pump_threshold_pct
-                  : 30;
-              })()
-            : 30
         }
         initialSendEmailWateringNotifications={
           upsertMode === "edit"

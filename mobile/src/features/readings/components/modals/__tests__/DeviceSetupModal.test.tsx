@@ -51,6 +51,7 @@ it('loads legacy hours as minutes and saves exact runtime fields without claimin
   await save(view);
   expect(props.onSave).toHaveBeenCalledWith({ interval_minutes: 45, pump_duration_seconds: 20,
     pump_cooldown_minutes: 120, automatic_pump_launch: false, pump_threshold_pct: null });
+  await act(async () => fireEvent.press(view.getByText('Advanced / DIY integration')));
   expect(view.getByText('Saved in Flovers; device application not confirmed')).toBeTruthy();
   expect(view.queryByText('Applied by device')).toBeNull();
 });
@@ -91,10 +92,12 @@ it('uses defaults of 60/20/60 without enabling automatic watering', () => {
   expect(view.getByLabelText('Automatic watering cooldown (minutes)').props.value).toBe('60');
   expect(view.getByRole('switch').props.value).toBe(false);
 });
-it('hides pump-only controls and never writes pump settings for a sensor-only device', async () => {
+it('shows disabled pump controls and never writes pump settings for a sensor-only device', async () => {
   const view = render(<DeviceSetupModal {...props} device={{ ...device, pump_included: false }} />);
-  expect(view.queryByLabelText('Pump run time (seconds)')).toBeNull();
-  expect(view.queryByRole('switch')).toBeNull();
+  expect(view.getByLabelText('Pump run time (seconds)').props.editable).toBe(false);
+  expect(view.getByLabelText('Automatic watering cooldown (minutes)').props.editable).toBe(false);
+  expect(view.getByLabelText('Automatic watering threshold (%)').props.editable).toBe(false);
+  expect(view.getByRole('switch').props.disabled).toBe(true);
   fireEvent.changeText(view.getByLabelText('Reading interval (minutes)'), '60'); await save(view);
   expect(props.onSave).toHaveBeenCalledWith({ interval_minutes: 60 });
 });
@@ -105,6 +108,29 @@ it('updates the existing automatic-watering threshold field and rejects invalid 
   expect(props.onSave).not.toHaveBeenCalled();
   fireEvent.changeText(view.getByLabelText('Automatic watering threshold (%)'), '35'); await save(view);
   expect(props.onSave).toHaveBeenCalledWith(expect.objectContaining({ automatic_pump_launch: true, pump_threshold_pct: 35 }));
+});
+it('keeps the threshold below its toggle and disables editing until automatic watering is enabled', () => {
+  const view = render(<DeviceSetupModal {...props} />);
+  const threshold = view.getByLabelText('Automatic watering threshold (%)');
+  expect(threshold.props.editable).toBe(false);
+  const json = JSON.stringify(view.toJSON());
+  expect(json.indexOf('device-automatic-pump')).toBeLessThan(json.indexOf('device-field-pumpThresholdPct'));
+  fireEvent(view.getByRole('switch'), 'valueChange', true);
+  expect(view.getByLabelText('Automatic watering threshold (%)').props.editable).toBe(true);
+  fireEvent.changeText(view.getByLabelText('Automatic watering threshold (%)'), '28');
+  fireEvent(view.getByRole('switch'), 'valueChange', false);
+  expect(view.getByLabelText('Automatic watering threshold (%)').props.value).toBe('28');
+  expect(view.getByLabelText('Automatic watering threshold (%)').props.editable).toBe(false);
+});
+it('keeps plant and technical metadata out of the main form', async () => {
+  const view = render(<DeviceSetupModal {...props} />);
+  expect(view.queryByText('Fern')).toBeNull();
+  expect(view.queryByText('SYNTHETIC')).toBeNull();
+  expect(view.queryByText(device.last_read_at!)).toBeNull();
+  expect(view.getByLabelText('Reading interval (minutes)')).toBeTruthy();
+  await act(async () => fireEvent.press(view.getByText('Advanced / DIY integration')));
+  expect(view.getByText('SYNTHETIC')).toBeTruthy();
+  expect(view.getByText(device.last_read_at!)).toBeTruthy();
 });
 it('preserves a valid fractional threshold already accepted by Django', async () => {
   const view = render(<DeviceSetupModal {...props} device={{ ...device, automatic_pump_launch: true, pump_threshold_pct: 25.5 }} />);
@@ -135,11 +161,13 @@ it('retrieves the legacy secret only after explicit expansion and clears it on c
   view.rerender(<DeviceSetupModal {...props} />);
   expect(view.queryByText('synthetic-legacy-secret')).toBeNull();
 });
-it('does not expose legacy credentials for a reported paired device, even when it is offline', () => {
+it('shows technical details in Advanced but never exposes legacy credentials for a paired device', async () => {
   const view = render(<DeviceSetupModal {...props} status={{ pairing: 'paired', online: false, synchronization: 'pending', hardwareId: 'hw-test' }} />);
   expect(view.getByText('Paired · Offline')).toBeTruthy();
+  expect(view.queryByText('hw-test')).toBeNull();
+  await act(async () => fireEvent.press(view.getByText('Advanced / DIY integration')));
   expect(view.getByText('hw-test')).toBeTruthy();
-  expect(view.queryByText('Advanced / DIY integration')).toBeNull();
+  expect(view.queryByLabelText('Show Auth Secret Key')).toBeNull();
   expect(props.onLoadLegacySecret).not.toHaveBeenCalled();
 });
 it('does not let a late secret response leak into another device setup visit', async () => {
@@ -179,8 +207,10 @@ it('waits for authenticated identity evidence and wires real pairing actions', a
   expect(view.getByTestId('device-setup-loading')).toBeTruthy();
   expect(view.queryByText('Device setup')).toBeNull();
   await act(async () => pending.resolve(pairedIdentity));
-  expect(view.getByText('Applied by device')).toBeTruthy();
+  expect(view.queryByText('Applied by device')).toBeNull();
   expect(view.getByText('Save & sync')).toBeTruthy();
+  fireEvent.press(view.getByText('Advanced / DIY integration'));
+  expect(view.getByText('Applied by device')).toBeTruthy();
   fireEvent.press(view.getByText('Reconfigure Wi-Fi')); expect(onPair).toHaveBeenCalledWith('wifi');
   fireEvent.press(view.getByText('Replace / re-pair device')); expect(onPair).toHaveBeenCalledWith('replace');
   expect(props.onLoadLegacySecret).not.toHaveBeenCalled();
