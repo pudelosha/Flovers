@@ -30,7 +30,7 @@ import {
   HEADER_SOLID_FALLBACK,
 } from "../../plants/constants/plants.constants";
 
-import { scannerStyles as styles } from "../styles/scanner.styles";
+import { scannerStyles as styles, SCANNER_CAMERA_OVERLAP } from "../styles/scanner.styles";
 import ScannerInstructions from "../components/ScannerInstructions";
 import ScannerOverlay from "../components/ScannerOverlay";
 import { parseFloversQr, type DeviceQr } from '../../readings/pairing/deviceQr';
@@ -144,14 +144,14 @@ export default function ScannerScreen() {
 
   // ----- Dynamic camera frame height based on real layout -----
   const TOP_SPACER = 5;
-  const CAM_WRAP_PADDING_TOP = 16; // from styles.camWrap
   const BOTTOM_SPACER = 130;
 
   const available =
-    contentHeight - infoHeight - TOP_SPACER - CAM_WRAP_PADDING_TOP - BOTTOM_SPACER;
+    contentHeight - infoHeight - TOP_SPACER - BOTTOM_SPACER;
 
   // min 200, expand if there's more room, cap a bit so it doesn't dominate huge screens
-  const cameraHeight = Math.max(200, Math.min(available, 320));
+  // The hidden upper strip sits behind the instruction card; keep at least 200dp visible.
+  const cameraHeight = Math.max(200, Math.min(available, 320)) + SCANNER_CAMERA_OVERLAP;
 
   return (
     <View style={{ flex: 1 }}>
@@ -163,6 +163,7 @@ export default function ScannerScreen() {
       />
 
       <AnimatedView
+        testID="scanner-layout"
         style={{ flex: 1, opacity, transform: [{ translateY }, { scale }] }}
         onLayout={(e) => setContentHeight(e.nativeEvent.layout.height)}
       >
@@ -171,6 +172,7 @@ export default function ScannerScreen() {
 
         {/* Instruction card */}
         <View
+          testID="scanner-instructions-card"
           style={styles.infoWrap}
           onLayout={(e) => setInfoHeight(e.nativeEvent.layout.height)}
         >
@@ -209,7 +211,7 @@ export default function ScannerScreen() {
 
         {/* Camera frame */}
         <View style={styles.camWrap}>
-          <View style={[styles.camGlass, { height: cameraHeight }]}>
+          <View testID="scanner-camera-frame" style={[styles.camGlass, { height: cameraHeight }]}>
             {/* Base green gradient */}
             <LinearGradient
               pointerEvents="none"
@@ -240,6 +242,7 @@ export default function ScannerScreen() {
               {showCamera ? (
                 <>
                   <Camera
+                    androidPreviewViewType="texture-view"
                     style={styles.qrCamera}
                     device={device!}
                     isActive={active && isFocused}

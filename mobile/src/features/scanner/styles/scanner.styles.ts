@@ -1,8 +1,11 @@
 import { StyleSheet } from "react-native";
 
+// Two corner radii keep the camera's complete upper curve behind the instruction card.
+export const SCANNER_CAMERA_OVERLAP = 56;
+
 export const scannerStyles = StyleSheet.create({
   // ===== Info card =====
-  infoWrap: { paddingHorizontal: 16, paddingTop: 16 },
+  infoWrap: { paddingHorizontal: 16, paddingTop: 16, zIndex: 2 },
   infoGlass: {
     borderRadius: 28,
     overflow: "hidden",
@@ -46,17 +49,17 @@ export const scannerStyles = StyleSheet.create({
   scanError: { color: "#FFFFFF", paddingHorizontal: 16, paddingBottom: 12 },
 
   // ===== Camera frame =====
-  camWrap: { paddingHorizontal: 16, paddingTop: 16 },
+  camWrap: { paddingHorizontal: 16, marginTop: -SCANNER_CAMERA_OVERLAP, zIndex: 1 },
   camGlass: {
     borderRadius: 28,
     overflow: "hidden",
-    minHeight: 200, // lower bound; actual height comes from ScannerScreen
+    minHeight: 200 + SCANNER_CAMERA_OVERLAP,
 
     // elevation only to avoid inner-rectangle artifacts
-    elevation: 8,
+    elevation: 0,
   },
 
-  camInner: { flex: 1, position: "relative" },
+  camInner: { flex: 1, position: "relative", paddingTop: SCANNER_CAMERA_OVERLAP },
   qrCamera: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0 },
 
   roundedMask: {

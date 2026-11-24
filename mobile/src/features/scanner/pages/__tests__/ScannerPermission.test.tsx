@@ -1,7 +1,8 @@
 import React from 'react';
 import { act, fireEvent, render } from '@testing-library/react-native';
-import { Linking } from 'react-native';
+import { Linking, StyleSheet } from 'react-native';
 import ScannerScreen from '../ScannerScreen';
+import { SCANNER_CAMERA_OVERLAP } from '../../styles/scanner.styles';
 
 const mockRequestPermission = jest.fn(async () => false);
 const mockNavigation = { navigate: jest.fn() };
@@ -55,6 +56,15 @@ it('shows the same dual-purpose instructions when opened for pairing', () => {
   expect(view.getByText('Device QR codes')).toBeOnTheScreen();
   expect(view.getByText('Plant QR codes')).toBeOnTheScreen();
   expect(view.getByText('Scan a Flovers QR code to open a plant or set up a device.')).toBeOnTheScreen();
+});
+it('preserves a usable camera area when long instructions exceed a small viewport', () => {
+  const view = render(<ScannerScreen />);
+  fireEvent(view.getByTestId('scanner-layout'), 'layout', { nativeEvent: { layout: { height: 420 } } });
+  fireEvent(view.getByTestId('scanner-instructions-card'), 'layout', { nativeEvent: { layout: { height: 390 } } });
+  const frame = StyleSheet.flatten(view.getByTestId('scanner-camera-frame').props.style);
+  expect(frame.height - SCANNER_CAMERA_OVERLAP).toBeGreaterThanOrEqual(200);
+  expect(view.getByTestId('scanner-content')).toBeTruthy();
+  expect(view.getByText('Device QR codes')).toBeOnTheScreen();
 });
 it('preserves plant QR navigation in universal scanner mode', () => {
   render(<ScannerScreen />);
