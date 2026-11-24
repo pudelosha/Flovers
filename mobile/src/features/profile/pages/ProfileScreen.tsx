@@ -2,16 +2,8 @@ import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import {
-  View,
-  ScrollView,
-  Pressable,
-  Text,
-  StyleSheet,
-  Animated,
-  Easing,
-  AnimatedView,
-} from '../../../shared/theme/native';
+import { View, Pressable, Text, StyleSheet, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import type {
   LayoutChangeEvent,
   NativeScrollEvent,

@@ -16,6 +16,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import MaterialCommunityIcons from '../theme/Icon';
 import LinearGradientView from '../theme/Gradient';
 import { useModalNavigationBackdropVisible } from './modalNavigationBackdrop';
+import { HEADER_CORNER_RADIUS } from './headerLayoutContext';
+import { useAppTheme } from '../theme/ThemeContext';
 import {
   HeaderContentReadyContext,
   HeaderHeightContext as HeightContext,
@@ -226,6 +228,7 @@ function HeaderSurface({
 }) {
   const insets = useSafeAreaInsets();
   const [baseHeight, setBaseHeight] = React.useState(insets.top + 59);
+  const { colors } = useAppTheme();
   const [segmentHeight, setSegmentHeight] = React.useState(44);
   const opacity = React.useRef(new Animated.Value(0)).current;
   const [baseMeasured, setBaseMeasured] = React.useState(false);
@@ -298,7 +301,10 @@ function HeaderSurface({
   return (
     <AnimatedView
       testID="glass-header"
-      style={[styles.headerClip, { height, opacity: prepared ? 1 : 0 }]}
+      style={[
+        styles.headerClip,
+        { height, opacity: prepared ? 1 : 0, backgroundColor: colors.surface },
+      ]}
     >
       <LinearGradientView
         themeRole="header"
@@ -386,8 +392,8 @@ const styles = StyleSheet.create({
     elevation: 500,
   },
   headerClip: {
-    borderBottomLeftRadius: 28,
-    borderBottomRightRadius: 28,
+    borderBottomLeftRadius: HEADER_CORNER_RADIUS,
+    borderBottomRightRadius: HEADER_CORNER_RADIUS,
     overflow: 'hidden',
   },
   headerBar: { paddingBottom: 8, paddingHorizontal: 16 },

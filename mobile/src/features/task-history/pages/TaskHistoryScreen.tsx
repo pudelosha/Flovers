@@ -8,16 +8,8 @@ import React, {
   useEffect,
   useMemo,
 } from 'react';
-import {
-  View,
-  Text,
-  RefreshControl,
-  Pressable,
-  Animated,
-  StyleSheet,
-  AnimatedView,
-  AnimatedFlatList,
-} from '../../../shared/theme/native';
+import { View, Text, RefreshControl, Pressable, Animated, StyleSheet, AnimatedView } from "../../../shared/theme/native";
+import { AnimatedFlatList } from "../../../shared/ui/HeaderScrollView";
 import {
   useNavigation,
   useRoute,

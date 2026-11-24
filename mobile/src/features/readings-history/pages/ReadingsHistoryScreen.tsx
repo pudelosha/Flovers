@@ -6,15 +6,8 @@ import { useSettings } from "../../../app/providers/SettingsProvider";
 import { getDisplayTemperature } from "../../../shared/utils/temperature";
 import { historyValue } from "../utils/historyValue";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  View,
-  ScrollView,
-  LayoutChangeEvent,
-  Text,
-  Pressable,
-  Animated,
-  Easing,
-  StyleSheet, AnimatedView } from "../../../shared/theme/native";
+import { View, LayoutChangeEvent, Text, Pressable, Animated, Easing, StyleSheet, AnimatedView } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import LinearGradient from "../../../shared/theme/Gradient";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";

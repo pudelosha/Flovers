@@ -10,20 +10,8 @@ import React, {
   useRef,
   useEffect,
 } from 'react';
-import {
-  View,
-  Pressable,
-  RefreshControl,
-  Alert,
-  Text,
-  StyleSheet,
-  Animated,
-  Easing,
-  PermissionsAndroid,
-  Platform,
-  AnimatedView,
-  AnimatedFlatList,
-} from '../../../shared/theme/native';
+import { View, Pressable, RefreshControl, Alert, Text, StyleSheet, Animated, Easing, PermissionsAndroid, Platform, AnimatedView } from "../../../shared/theme/native";
+import { AnimatedFlatList } from "../../../shared/ui/HeaderScrollView";
 import { PUBLIC_BASE_URL_NORM } from '../../../config';
 import {
   useNavigation,

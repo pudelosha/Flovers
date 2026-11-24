@@ -3,15 +3,8 @@ import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  View,
-  Animated,
-  RefreshControl,
-  StyleSheet,
-  Text,
-  Pressable,
-  Easing,
-  Alert, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
+import { View, Animated, RefreshControl, StyleSheet, Text, Pressable, Easing, Alert, AnimatedView } from "../../../shared/theme/native";
+import { AnimatedFlatList } from "../../../shared/ui/HeaderScrollView";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import { useTranslation } from "react-i18next";

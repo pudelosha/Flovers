@@ -1,15 +1,8 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useTileEntryAnimations } from '../../../shared/hooks/useTileEntryAnimations';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import {
-  View,
-  Text,
-  Pressable,
-  FlatList,
-  RefreshControl,
-  StyleSheet,
-  AnimatedView,
-} from '../../../shared/theme/native';
+import { View, Text, Pressable, RefreshControl, StyleSheet, AnimatedView } from "../../../shared/theme/native";
+import { FlatList } from "../../../shared/ui/HeaderScrollView";
 import { useIsFocused, useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import GlassHeader from '../../../shared/ui/GlassHeader';

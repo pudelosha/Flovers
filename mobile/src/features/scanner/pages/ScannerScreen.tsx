@@ -1,18 +1,11 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import {
-  View,
-  ScrollView,
-  StyleSheet,
-  Platform,
-  Linking,
-  Pressable,
-  Animated,
-  Easing,
-  useWindowDimensions, AnimatedView } from "../../../shared/theme/native";
+import { View, StyleSheet, Platform, Linking, Pressable, Animated, Easing, useWindowDimensions, AnimatedView } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import { useIsFocused, useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { Text } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import LinearGradient from "../../../shared/theme/Gradient";
+import { useAppTheme } from "../../../shared/theme/ThemeContext";
 
 import {
   Camera,
@@ -46,6 +39,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ScannerScreen() {
   const { t } = useTranslation();
+  const { colors } = useAppTheme();
   
 
   const { height: screenHeight } = useWindowDimensions();
@@ -176,7 +170,7 @@ export default function ScannerScreen() {
           style={styles.infoWrap}
           onLayout={(e) => setInfoHeight(e.nativeEvent.layout.height)}
         >
-          <View style={styles.infoGlass}>
+          <View style={[styles.infoGlass, { backgroundColor: colors.surface }]}>
             {/* Base green gradient */}
             <LinearGradient
               pointerEvents="none"

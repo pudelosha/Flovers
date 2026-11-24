@@ -114,7 +114,7 @@ it('retains the two-section layout with light-theme surfaces', () => {
 });
 
 it('keeps the missing-readings warning red in light mode', () => {
-  jest.setSystemTime(new Date('2026-10-29T11:05:00Z'));
+  jest.setSystemTime(new Date('2026-10-29T12:05:00Z'));
   const view = render(
     <ThemeContext.Provider value={{ isLight: true, colors: LIGHT_COLORS }}>
       <ReadingTile data={data} {...callbacks} />
@@ -128,10 +128,12 @@ it('keeps the missing-readings warning red in light mode', () => {
   view.unmount();
 });
 
-it('starts pulsing at the deadline without another server refresh and stops after a fresh reading', () => {
+it('waits two intervals before pulsing without a server refresh and stops after a fresh reading', () => {
   const view = render(<ReadingTile data={data} {...callbacks} />);
   expect(view.queryByTestId('missing-readings-pulse')).toBeNull();
   act(() => jest.advanceTimersByTime(1000));
+  expect(view.queryByTestId('missing-readings-pulse')).toBeNull();
+  act(() => jest.advanceTimersByTime(3600_000));
   expect(view.getByTestId('missing-readings-pulse')).toBeTruthy();
   expect(view.getByText('Readings overdue')).toBeTruthy();
   view.rerender(
@@ -165,7 +167,7 @@ it('rechecks the clock on foreground and removes its listener on unmount', () =>
     });
   const view = render(<ReadingTile data={data} {...callbacks} />);
   act(() => {
-    jest.setSystemTime(new Date('2026-10-29T11:05:00Z'));
+    jest.setSystemTime(new Date('2026-10-29T12:05:00Z'));
     activate?.('active');
   });
   expect(view.getByTestId('missing-readings-pulse')).toBeTruthy();

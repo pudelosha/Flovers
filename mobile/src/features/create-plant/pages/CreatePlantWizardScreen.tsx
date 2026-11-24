@@ -2,7 +2,8 @@ import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import { useScreenEntryAnimation } from '../../../shared/hooks/useScreenEntryAnimation';
 // screens/CreatePlantWizardScreen.tsx
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { View, ScrollView, Text, AnimatedView } from "../../../shared/theme/native";
+import { View, Text, AnimatedView } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect, useIsFocused } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
