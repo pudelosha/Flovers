@@ -33,6 +33,12 @@ Both vendor layouts keep NVS at `0x9000`, size `0x5000`; universal changes app/S
 allocation. Do not blindly flash partition tables over existing devices or erase
 NVS. Physical factory flashing needs a separately reviewed procedure. No OTA exists.
 
+## Manufacturing inventory and labels
+
+See [the manufacturing runbook](../docs/devices/MANUFACTURING.md) for batch inventory,
+offline encrypted kits, PNG/SVG/PDF labels, explicit new-board programming and public
+verification receipts. Private factory identities stay off the VPS.
+
 ## Unique factory records
 
 An empty universal board refuses operation without its unique factory NVS identity.

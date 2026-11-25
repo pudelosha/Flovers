@@ -125,8 +125,20 @@ class PhysicalDevice(models.Model):
     """Factory-enrolled identity. No private bootstrap key or BLE PoP on server."""
 
     hardware_id = models.CharField(max_length=64, unique=True)
-    bootstrap_public_key = models.CharField(max_length=64, unique=True)
-    provisioning_pop_digest = models.CharField(max_length=64, unique=True)
+    bootstrap_public_key = models.CharField(max_length=64, unique=True, null=True, blank=True)
+    provisioning_pop_digest = models.CharField(max_length=64, unique=True, null=True, blank=True)
+    serial_number = models.CharField(max_length=80, unique=True, null=True, blank=True)
+    manufacturing_batch = models.ForeignKey("ManufacturingBatch", null=True, blank=True,
+        on_delete=models.PROTECT, related_name="devices")
+    manufacturing_status = models.CharField(max_length=16, default="registered", choices=[
+        ("registered", "Registered"), ("programmed", "Programmed"), ("verified", "Verified"),
+        ("ready", "Ready for distribution"), ("retired", "Retired"),
+    ])
+    programmed_at = models.DateTimeField(null=True, blank=True)
+    verified_at = models.DateTimeField(null=True, blank=True)
+    ready_at = models.DateTimeField(null=True, blank=True)
+    activated_at = models.DateTimeField(null=True, blank=True)
+    factory_receipt = models.JSONField(default=dict, blank=True)
     hardware_profile = models.CharField(max_length=64)
     hardware_revision = models.CharField(max_length=32)
     logical_device = models.OneToOneField(
@@ -142,6 +154,35 @@ class PhysicalDevice(models.Model):
     config_error_version = models.PositiveIntegerField(default=0)
     last_config_sync_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+
+class ManufacturingBatch(models.Model):
+    code = models.CharField(max_length=32, unique=True)
+    operation_id = models.UUIDField(unique=True, default=uuid.uuid4)
+    hardware_profile = models.CharField(max_length=64, default="esp32-c3-flovers-v1", choices=[("esp32-c3-flovers-v1", "Flovers ESP32-C3 v1")])
+    hardware_revision = models.CharField(max_length=32, default="1", choices=[("1", "Revision 1")])
+    firmware_variant = models.CharField(max_length=16, default="sensors", choices=[("sensors", "Sensors"), ("pump", "Sensors + pump")])
+    requested_quantity = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(1000)])
+    notes = models.TextField(blank=True, max_length=4000)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True,
+        on_delete=models.SET_NULL, related_name="manufacturing_batches")
+
+    class Meta:
+        permissions = [("operate_manufacturing", "Operate manufacturing inventory and public enrollment")]
+        constraints = [models.CheckConstraint(condition=models.Q(requested_quantity__gte=1, requested_quantity__lte=1000), name="iot_batch_quantity_range")]
+
+    def __str__(self):
+        return self.code
+
+
+class ManufacturingEvent(models.Model):
+    batch = models.ForeignKey(ManufacturingBatch, on_delete=models.PROTECT, related_name="events")
+    device = models.ForeignKey(PhysicalDevice, null=True, blank=True, on_delete=models.PROTECT, related_name="manufacturing_events")
+    action = models.CharField(max_length=32)
+    actor = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    detail = models.CharField(max_length=256, blank=True)
 
 
 class DevicePairingSession(models.Model):
