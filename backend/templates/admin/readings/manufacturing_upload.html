@@ -1,0 +1,8 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<p>Import public enrollment data or a signed factory verification receipt. Private bootstrap keys, NVS data and QR label secrets must remain at the factory station.</p>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Import public record">
+</form>
+{% endblock %}

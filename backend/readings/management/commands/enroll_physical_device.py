@@ -1,13 +1,12 @@
 """Offline factory enrollment of PUBLIC identity data, never private board keys."""
-import base64
 import json
-import re
 from pathlib import Path
 
-from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 from django.core.management.base import BaseCommand, CommandError
 from django.db import IntegrityError
 from readings.models import PhysicalDevice
+from readings.manufacturing import validate_public_record
+from django.core.exceptions import ValidationError
 
 
 class Command(BaseCommand):
@@ -18,21 +17,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
-            record = json.loads(Path(options["record"]).read_text(encoding="utf-8"))
-            required = {"hardware_id", "bootstrap_public_key", "provisioning_pop_digest", "hardware_profile", "hardware_revision"}
-            if not isinstance(record, dict) or set(record) != required or not all(isinstance(v, str) for v in record.values()):
-                raise ValueError()
-            if not re.fullmatch(r"[A-Za-z0-9_-]{8,64}", record["hardware_id"]):
-                raise ValueError()
-            if not re.fullmatch(r"[0-9a-f]{64}", record["provisioning_pop_digest"]):
-                raise ValueError()
-            for key, limit in (("hardware_profile", 64), ("hardware_revision", 32)):
-                if not re.fullmatch(r"[A-Za-z0-9._-]{1," + str(limit) + r"}", record[key]):
-                    raise ValueError()
-            raw = base64.b64decode(record["bootstrap_public_key"], validate=True)
-            Ed25519PublicKey.from_public_bytes(raw)
-            record["bootstrap_public_key"] = base64.b64encode(raw).decode("ascii")
-        except (OSError, ValueError, TypeError):
+            record = validate_public_record(json.loads(Path(options["record"]).read_text(encoding="utf-8")))
+
+        except (OSError, ValueError, TypeError, ValidationError):
             raise CommandError("Invalid public enrollment record; no identity was enrolled.")
         try:
             PhysicalDevice.objects.create(**record)

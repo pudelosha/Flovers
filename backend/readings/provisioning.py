@@ -91,6 +91,9 @@ def start_pairing(user, device_id, hardware_id, replaces_hardware_id=""):
         physical = PhysicalDevice.objects.select_for_update().get(hardware_id=hardware_id, disabled=False)
     except PhysicalDevice.DoesNotExist:
         raise NotFound()
+    if not physical.bootstrap_public_key or not physical.provisioning_pop_digest or (
+            physical.manufacturing_batch_id and physical.manufacturing_status != "ready"):
+        raise Conflict("Hardware is not ready for pairing.")
     if physical.logical_device_id is not None:
         raise Conflict("Hardware is already bound; use Wi-Fi reconfiguration for network changes.")
     current = PhysicalDevice.objects.filter(logical_device=device).first()
@@ -136,6 +139,8 @@ def complete_pairing(session_id, claim, signature):
     if (session.status != "pending" or session.expires_at <= timezone.now() or
             not session.user.is_active or device.user_id != session.user_id or
             device.plant.user_id != session.user_id or not device.is_active or physical.disabled or
+            not physical.bootstrap_public_key or not physical.provisioning_pop_digest or
+            (physical.manufacturing_batch_id and physical.manufacturing_status != "ready") or
             physical.logical_device_id is not None or physical.binding_generation != session.binding_generation or
             not secrets.compare_digest(session.claim_digest, digest(claim))):
         raise PermissionDenied("Invalid or expired pairing proof.")
@@ -196,7 +201,9 @@ def authenticate_token(request, token):
             not device.user.is_active or device.plant.user_id != device.user_id):
         raise PermissionDenied("Invalid device credential.")
     physical.last_seen_at = timezone.now()
-    physical.save(update_fields=["last_seen_at"])
+    if physical.activated_at is None:
+        physical.activated_at = physical.last_seen_at
+    physical.save(update_fields=["last_seen_at", "activated_at"])
     DevicePairingSession.objects.filter(physical_device=physical, device=device, status="bound").update(status="confirmed")
     request._authenticated_physical_device = physical
     return device
