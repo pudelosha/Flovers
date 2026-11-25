@@ -24,5 +24,12 @@
     "requestTimedOut": "Request timed out. Please try again.",
     "unauthorizedLoginAgain": "Session expired. Please log in again.",
     "missingApiBase": "API base URL is not configured."
+  },
+  "deletion": {
+    "title": "Delete your Flovers account",
+    "instructions": "To request deletion of your Flovers account and associated data, use the form below or email info@flovers.app from your registered email address. Use the subject ‘Delete my Flovers account’. You do not need to install or sign in to the app.",
+    "scope": "Deletion removes your account, owned plants, tasks, journal entries and uploaded photos from the live service. Photo-file cleanup may take longer; any recovery-backup copies expire under the retention policy. Deletion cannot be undone in the app.",
+    "verification": "We may verify account ownership before deletion. Never send your password. We will confirm receipt and explain the expected processing time and any applicable retention exceptions.",
+    "email": "Request deletion by email"
   }
 }

@@ -24,5 +24,12 @@
     "requestTimedOut": "Die Anfrage hat zu lange gedauert. Bitte versuche es noch einmal.",
     "unauthorizedLoginAgain": "Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.",
     "missingApiBase": "Der Kontaktservice ist noch nicht eingerichtet."
+  },
+  "deletion": {
+    "title": "Flovers-Konto löschen",
+    "instructions": "Um dein Flovers-Konto und die zugehörigen Daten löschen zu lassen, nutze das Formular unten oder schreibe von deiner registrierten E-Mail-Adresse an info@flovers.app. Betreff: „Mein Flovers-Konto löschen“. Du musst die App weder installieren noch dich anmelden.",
+    "scope": "Gelöscht werden dein Konto, deine eigenen Pflanzen, Aufgaben, Journaleinträge und hochgeladenen Fotos im aktiven Dienst. Das Entfernen der Fotodateien kann länger dauern; mögliche Sicherungskopien verfallen gemäß der Aufbewahrungsrichtlinie. Die Löschung lässt sich in der App nicht rückgängig machen.",
+    "verification": "Wir können vor der Löschung prüfen, ob das Konto dir gehört. Sende niemals dein Passwort. Wir bestätigen den Eingang und informieren über die voraussichtliche Bearbeitungszeit und mögliche Aufbewahrungsausnahmen.",
+    "email": "Löschung per E-Mail beantragen"
   }
 }

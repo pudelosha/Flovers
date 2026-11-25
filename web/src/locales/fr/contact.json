@@ -24,5 +24,12 @@
     "requestTimedOut": "La demande a pris trop de temps. Réessaie.",
     "unauthorizedLoginAgain": "Ta session a expiré. Connecte-toi à nouveau.",
     "missingApiBase": "Le service de contact n’est pas encore configuré."
+  },
+  "deletion": {
+    "title": "Supprimer votre compte Flovers",
+    "instructions": "Pour demander la suppression de votre compte Flovers et des données associées, utilisez le formulaire ci-dessous ou écrivez à info@flovers.app depuis votre adresse enregistrée. Objet : « Supprimer mon compte Flovers ». Aucune installation ni connexion à l’application n’est nécessaire.",
+    "scope": "La suppression retire du service actif votre compte, vos plantes, tâches, entrées du journal et photos importées. La suppression des fichiers photo peut prendre plus de temps ; les éventuelles sauvegardes expirent selon la politique de conservation. La suppression ne peut pas être annulée dans l’application.",
+    "verification": "Nous pouvons vérifier que le compte vous appartient avant de le supprimer. N’envoyez jamais votre mot de passe. Nous confirmerons la réception et préciserons le délai prévu ainsi que les éventuelles exceptions de conservation.",
+    "email": "Demander la suppression par e-mail"
   }
 }

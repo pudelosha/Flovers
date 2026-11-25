@@ -24,5 +24,12 @@
     "requestTimedOut": "O tempo limite foi atingido. Tente novamente.",
     "unauthorizedLoginAgain": "Sua sessão expirou. Entre novamente.",
     "missingApiBase": "O endereço da API não está configurado."
+  },
+  "deletion": {
+    "title": "Eliminar a tua conta Flovers",
+    "instructions": "Para pedir a eliminação da conta Flovers e dos dados associados, usa o formulário abaixo ou escreve para info@flovers.app a partir do teu endereço registado. Assunto: «Eliminar a minha conta Flovers». Não precisas de instalar a aplicação nem de iniciar sessão.",
+    "scope": "A eliminação remove do serviço ativo a conta, as tuas plantas, tarefas, entradas do diário e fotografias carregadas. A remoção dos ficheiros de fotografias pode demorar mais; eventuais cópias de segurança expiram segundo a política de conservação. Não é possível anular a eliminação na aplicação.",
+    "verification": "Podemos verificar se a conta te pertence antes de a eliminar. Nunca envies a tua palavra-passe. Confirmaremos a receção e indicaremos o prazo previsto e eventuais exceções de conservação.",
+    "email": "Pedir eliminação por e-mail"
   }
 }
