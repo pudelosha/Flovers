@@ -35,7 +35,7 @@ export default function DeleteContactModal({ contact, onClose }: {
             name: contact.name,
           })}</Text>
           {!!error && <Text accessibilityRole="alert" style={[s.error, local.body]}>{error}</Text>}
-          <View style={pr.promptButtonsRow}>
+          <View style={[pr.promptButtonsRow, { marginTop: 16, flexWrap: "wrap" }]}>
             <Pressable accessibilityRole="button" style={pr.promptBtn} onPress={onClose}>
               <Text style={pr.promptBtnText}>{t("sharing.common.cancel", { defaultValue: "Cancel" })}</Text>
             </Pressable>

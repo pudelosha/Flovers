@@ -1,17 +1,11 @@
-import React, { useMemo, useState, useEffect, useCallback, useRef } from "react";
-import {
-  View,
-  StyleSheet,
-  Platform,
-  Linking,
-  Pressable,
-  Animated,
-  Easing,
-  useWindowDimensions, AnimatedView } from "../../../shared/theme/native";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { View, StyleSheet, Platform, Linking, Pressable, Animated, Easing, useWindowDimensions, AnimatedView } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import { useIsFocused, useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { Text } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import LinearGradient from "../../../shared/theme/Gradient";
+import { useAppTheme } from "../../../shared/theme/ThemeContext";
 
 import {
   Camera,
@@ -29,8 +23,8 @@ import {
   HEADER_SOLID_FALLBACK,
 } from "../../plants/constants/plants.constants";
 
-import { scannerStyles as styles } from "../styles/scanner.styles";
-import { SCANNER_INSTRUCTION } from "../constants/scanner.constants";
+import { scannerStyles as styles, SCANNER_CAMERA_OVERLAP } from "../styles/scanner.styles";
+import ScannerInstructions from "../components/ScannerInstructions";
 import ScannerOverlay from "../components/ScannerOverlay";
 import { parseFloversQr, type DeviceQr } from '../../readings/pairing/deviceQr';
 import type { PairingMode } from '../../readings/pairing/pairingController';
@@ -45,6 +39,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ScannerScreen() {
   const { t } = useTranslation();
+  const { colors } = useAppTheme();
   
 
   const { height: screenHeight } = useWindowDimensions();
@@ -66,11 +61,6 @@ export default function ScannerScreen() {
   const [infoHeight, setInfoHeight] = useState(0);
 
   const device = useCameraDevice("back");
-
-  // Keep memo stable but also refresh when language changes
-  const instructionText = useMemo(() => {
-    return t("scanner.instruction", { defaultValue: SCANNER_INSTRUCTION });
-  }, [t]);
 
   useEffect(() => {
     (async () => {
@@ -148,14 +138,14 @@ export default function ScannerScreen() {
 
   // ----- Dynamic camera frame height based on real layout -----
   const TOP_SPACER = 5;
-  const CAM_WRAP_PADDING_TOP = 16; // from styles.camWrap
   const BOTTOM_SPACER = 130;
 
   const available =
-    contentHeight - infoHeight - TOP_SPACER - CAM_WRAP_PADDING_TOP - BOTTOM_SPACER;
+    contentHeight - infoHeight - TOP_SPACER - BOTTOM_SPACER;
 
   // min 200, expand if there's more room, cap a bit so it doesn't dominate huge screens
-  const cameraHeight = Math.max(200, Math.min(available, 320));
+  // The hidden upper strip sits behind the instruction card; keep at least 200dp visible.
+  const cameraHeight = Math.max(200, Math.min(available, 320)) + SCANNER_CAMERA_OVERLAP;
 
   return (
     <View style={{ flex: 1 }}>
@@ -167,17 +157,20 @@ export default function ScannerScreen() {
       />
 
       <AnimatedView
+        testID="scanner-layout"
         style={{ flex: 1, opacity, transform: [{ translateY }, { scale }] }}
         onLayout={(e) => setContentHeight(e.nativeEvent.layout.height)}
       >
+        <ScrollView testID="scanner-content" style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
         <View style={{ height: TOP_SPACER }} />
 
         {/* Instruction card */}
         <View
+          testID="scanner-instructions-card"
           style={styles.infoWrap}
           onLayout={(e) => setInfoHeight(e.nativeEvent.layout.height)}
         >
-          <View style={styles.infoGlass}>
+          <View style={[styles.infoGlass, { backgroundColor: colors.surface }]}>
             {/* Base green gradient */}
             <LinearGradient
               pointerEvents="none"
@@ -205,70 +198,14 @@ export default function ScannerScreen() {
             <View pointerEvents="none" style={styles.frostTint} />
             <View pointerEvents="none" style={styles.frameBorder} />
 
-            <View style={styles.infoInner}>
-              <Text style={styles.infoTitle}>
-                {t("scanner.howItWorks.title", { defaultValue: "How it works" })}
-              </Text>
-
-              <Text style={styles.infoText}>{params?.deviceOnly ? t('readingsModals.pairing.scanHint') : instructionText}</Text>
-              {!params?.deviceOnly && <Text style={styles.infoHint}>{t('readingsModals.pairing.scanHint')}</Text>}
-              {scanError !== '' && <Text accessibilityRole="alert">{scanError}</Text>}
-
-              {!params?.deviceOnly && <>
-              <Text
-                style={[
-                  styles.infoHint,
-                  {
-                    marginTop: 8,
-                    color: "#FFFFFF",
-                    fontWeight: "300",
-                    fontSize: 13,
-                    lineHeight: 18,
-                    textAlign: "justify",
-                  },
-                ]}
-              >
-                {t("scanner.hint1", {
-                  defaultValue:
-                    "Each plant has its own QR code. You can save it, print it as a small label, attach it to the pot, and scan it here to open the plant instantly.",
-                })}
-              </Text>
-
-              <Text
-                style={[
-                  styles.infoHint,
-                  {
-                    marginTop: 8,
-                    color: "#FFFFFF",
-                    fontWeight: "300",
-                    fontSize: 13,
-                    lineHeight: 18,
-                    textAlign: "justify",
-                  },
-                ]}
-              >
-                {t("scanner.qrAvailableIn", { defaultValue: "QR codes are available in:" })}
-                {"\n"}•{" "}
-                <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
-                  {t("scanner.qrPath1", {
-                    defaultValue: "Plant details → ⋯ → QR Code",
-                  })}
-                </Text>
-                {"\n"}•{" "}
-                <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
-                  {t("scanner.qrPath2", {
-                    defaultValue: "Plants → tile menu → Show QR code",
-                  })}
-                </Text>
-              </Text>
-              </>}
-            </View>
+            <ScannerInstructions />
+            {scanError !== '' && <Text style={styles.scanError} accessibilityRole="alert">{scanError}</Text>}
           </View>
         </View>
 
         {/* Camera frame */}
         <View style={styles.camWrap}>
-          <View style={[styles.camGlass, { height: cameraHeight }]}>
+          <View testID="scanner-camera-frame" style={[styles.camGlass, { height: cameraHeight }]}>
             {/* Base green gradient */}
             <LinearGradient
               pointerEvents="none"
@@ -299,6 +236,7 @@ export default function ScannerScreen() {
               {showCamera ? (
                 <>
                   <Camera
+                    androidPreviewViewType="texture-view"
                     style={styles.qrCamera}
                     device={device!}
                     isActive={active && isFocused}
@@ -353,6 +291,7 @@ export default function ScannerScreen() {
         </View>
 
         <View style={{ height: BOTTOM_SPACER }} />
+        </ScrollView>
       </AnimatedView>
       {deviceQr && isFocused && <PairDeviceModal qr={deviceQr} deviceId={params?.deviceId} mode={params?.action} onClose={closePairing} />}
     </View>

@@ -369,7 +369,7 @@ export default function MeasureExposureModal({
           nestedScrollEnabled
           style={appModalStyles.scroll}
           keyboardShouldPersistTaps="handled"
-          contentContainerStyle={[styles.contentInner, appModalStyles.scrollContent]}
+          contentContainerStyle={[styles.contentInner, appModalStyles.scrollContent, appModalStyles.centeredContent]}
           showsVerticalScrollIndicator={false}
         >
           <Text style={wiz.promptTitle}>

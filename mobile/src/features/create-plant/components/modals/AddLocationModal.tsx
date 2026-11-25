@@ -1,4 +1,5 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import SegmentedChoice from '../../../../shared/ui/SegmentedChoice';
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { View, Pressable, Text, TextInput, ScrollView, StyleSheet, Keyboard } from "../../../../shared/theme/native";
 
@@ -100,24 +101,17 @@ export default function AddLocationModal({
             onChangeText={setName}
           />
 
-          <View style={wiz.segmentRow}>
-            {(['indoor', 'outdoor', 'other'] as LocationCategory[]).map(k => (
-              <Pressable
-                key={k}
-                style={[
-                  wiz.segBtn,
-                  cat === k && wiz.segActive,
-                  {
-                    flex: 1,
-                    borderWidth: 0,
-                  },
-                ]}
-                onPress={() => setCat(k)}
-              >
-                <Text style={wiz.segText}>{tr(`createPlant.step03.categories.${k}`, k)}</Text>
-              </Pressable>
-            ))}
-          </View>
+          <SegmentedChoice
+            testID="wizard-location-categories"
+            borderRadius={remindersStyles.promptBtn.borderRadius}
+            value={cat}
+            onChange={setCat}
+            options={(['indoor', 'outdoor', 'other'] as LocationCategory[]).map(value => ({
+              value,
+              label: tr(`createPlant.step03.categories.${value}`, value),
+            }))}
+            style={styles.categorySegment}
+          />
 
           <View style={remindersStyles.promptButtonsRow}>
             <Pressable style={remindersStyles.promptBtn} onPress={closeModal}>
@@ -269,6 +263,7 @@ export default function AddLocationModal({
 }
 
 const styles = StyleSheet.create({
+  categorySegment: { marginBottom: 12 },
   scrollContent: {
     paddingHorizontal: 16,
   },

@@ -14,6 +14,18 @@
     "permissionRequired": "Autorizzazione della fotocamera richiesta",
     "permissionHint": "Abilita l’accesso alla fotocamera nelle impostazioni di sistema per scansionare i codici QR.",
     "openSettings": "Apri impostazioni",
-    "initializingCamera": "Inizializzazione della fotocamera…"
+    "initializingCamera": "Inizializzazione della fotocamera…",
+    "guide": {
+      "intro": "Scansiona un codice QR Flovers per aprire una pianta o configurare un dispositivo.",
+      "plant": {
+        "title": "Codici QR delle piante",
+        "body": "Scansiona l’etichetta sul vaso per aprire i dettagli della pianta.",
+        "path": "Lo trovi in Dettagli pianta → ⋯ → Codice QR."
+      },
+      "device": {
+        "title": "Codici QR dei dispositivi",
+        "body": "Scansiona il codice QR di fabbrica del dispositivo Flovers per associarlo."
+      }
+    }
   }
 }

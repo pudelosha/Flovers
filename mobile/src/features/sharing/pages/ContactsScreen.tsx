@@ -53,6 +53,12 @@ export default function ContactsScreen() {
   const menuRequest = useRef(0);
   const focusedRef = useRef(isFocused);
   focusedRef.current = isFocused;
+  const focusEntry = useRef({ focused: isFocused, sequence: 0 });
+  if (focusEntry.current.focused !== isFocused) {
+    focusEntry.current = { focused: isFocused, sequence: focusEntry.current.sequence + 1 };
+  }
+  const [settledEntry, setSettledEntry] = useState(-1);
+  const entryLoading = isFocused && settledEntry !== focusEntry.current.sequence;
   const selectedContact = contacts.find((contact) => contact.id === selectedContactId) || null;
   const deletingContact = contacts.find((contact) => contact.id === deletingContactId) || null;
   const menuContact = contacts.find((contact) => contact.id === menuOpenId) || null;
@@ -92,9 +98,14 @@ export default function ContactsScreen() {
   useEffect(() => setCopied(false), [currentUser?.floversId]);
   useEffect(() => {
     if (!isFocused) return;
-    void refresh();
+    let active = true;
+    const sequence = focusEntry.current.sequence;
+    const settle = () => {
+      if (active && focusEntry.current.sequence === sequence) setSettledEntry(sequence);
+    };
+    void refresh().then(settle, settle);
     const timer = setInterval(() => { if (focusedRef.current) void refresh(); }, 30000);
-    return () => clearInterval(timer);
+    return () => { active = false; clearInterval(timer); };
   }, [isFocused, refresh]);
   const perform = async (operation: () => Promise<ContactsMutationResult>) => {
     setActionError(null);
@@ -145,9 +156,9 @@ export default function ContactsScreen() {
 
   return (
     <View ref={pageRef} testID="contacts-screen" collapsable={false} style={local.page}>
-      <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false} extraBottomPadding={64} contentReady={!!snapshot}>
-        {!snapshot ? (
-          loading ? <View testID="contacts-loading" style={local.loading}><ScreenLoadingSpinner /></View> :
+      <SharingPage title={t("sharing.contacts.title", { defaultValue: "Contacts" })} showBack={false} extraBottomPadding={64} contentReady={!!snapshot && !entryLoading}>
+        {entryLoading || !snapshot ? (
+          entryLoading || loading ? <View testID="contacts-loading" style={local.loading}><ScreenLoadingSpinner /></View> :
             <GlassCard>
               <Text accessibilityRole="alert" style={s.error}>{t("sharing.contacts.loadFailed", { defaultValue: "Could not load contacts." })}</Text>
               <SharingButton label={t("sharing.contacts.retry", { defaultValue: "Try again" })} onPress={() => { void refresh(); }} />
@@ -263,7 +274,7 @@ export default function ContactsScreen() {
         </GlassCard>}
         </>}
       </SharingPage>
-      {isFocused && !!snapshot && !emailInviteVisible && !addVisible && !selectedContact && !deletingContact && (
+      {isFocused && !entryLoading && !!snapshot && !emailInviteVisible && !addVisible && !selectedContact && !deletingContact && (
         <FAB
           position={settings.fabPosition}
           closeSignal={fabCloseSignal}

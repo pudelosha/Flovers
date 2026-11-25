@@ -8,6 +8,7 @@ type Props = {
   values: (number | null)[];
   color: string;
   unit?: string;
+  statisticLabel?: string;
   yTicks?: number;
   height: number;
   maxY?: number;
@@ -15,7 +16,7 @@ type Props = {
   labelMode?: "latest" | "hidden" | "all";
 };
 
-export default function HistoryChart({ labels, values, color, unit = "", yTicks = 4, height, maxY,
+export default function HistoryChart({ labels, values, color, unit = "", statisticLabel = "", yTicks = 4, height, maxY,
   fixedLabelIndex, labelMode = "latest" }: Props) {
   const scale = useMemo(() => {
     const present = values.filter((value): value is number => typeof value === "number" && Number.isFinite(value));
@@ -33,7 +34,7 @@ export default function HistoryChart({ labels, values, color, unit = "", yTicks 
   };
 
   return <View style={s.chartBox}>
-    {!!unit && <Text testID="history-chart-unit" style={[s.xLabel, { alignSelf: "flex-end", marginBottom: 8 }]}>{unit}</Text>}
+    {!!unit && <Text testID="history-chart-unit" style={[s.xLabel, { alignSelf: "flex-end", marginBottom: 8 }]}>{[statisticLabel, unit].filter(Boolean).join(" ")}</Text>}
     <View style={{ position: "relative" }}>
       <View style={[s.yGuides, { height }]}>{Array.from({ length: yTicks + 1 }, (_, index) =>
         <View key={index} style={[s.guideLine, { top: `${index / yTicks * 100}%` }]} />

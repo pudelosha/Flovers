@@ -1,18 +1,17 @@
-import {useAppTheme, ThemeContrastScope} from "../../../shared/theme/ThemeContext";
+import { ThemeContrastScope } from "../../../shared/theme/ThemeContext";
 import React, { useMemo, useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "../../../shared/theme/native";
 import MaterialCommunityIcons from "../../../shared/theme/Icon";
 import Slider from "../../../shared/theme/Slider";
-import { SegmentedButtons, useTheme } from "react-native-paper";
+import { useTheme } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import LinearGradient from "../../../shared/theme/Gradient";
+import SegmentedChoice from "../../../shared/ui/SegmentedChoice";
+import { ORIENTATIONS } from '../constants/create-plant.constants';
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-
-// We only need keys; labels come from i18n
-const ORIENTATION_KEYS = ["S", "E", "W", "N"] as const;
 
 // EXACT SAME green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -38,7 +37,6 @@ export default function Step04_Exposure({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const {isLight}=useAppTheme();
   const { state, actions } = useCreatePlantWizard();
   const theme = useTheme();
 
@@ -163,59 +161,17 @@ export default function Step04_Exposure({
           {tr("createPlant.step04.windowDirection", "Window direction")}
         </Text>
 
-        <View
-          style={{
-            borderRadius: 12,
-            borderWidth: 0,
-            backgroundColor: "rgba(255,255,255,0.12)",
-            overflow: "hidden",
-          }}
-        >
-          <View
-            pointerEvents="none"
-            style={{
-              position: "absolute",
-              left: 0,
-              right: 0,
-              top: 0,
-              height: 18,
-              backgroundColor: "rgba(255,255,255,0.06)",
-            }}
-          />
-          <SegmentedButtons
-            value={state.orientation}
-            onValueChange={(v) => actions.setOrientation(v as any)}
-            buttons={ORIENTATION_KEYS.map((key) => ({
-              value: key,
-              label: tr(`createPlant.step04.orientationsShort.${key}`, key),
-              accessibilityLabel: tr(`plantsModals.edit.orientations.${key}`, key),
-              style: {
-                flex: 1,
-                minWidth: 0,
-                paddingHorizontal: 4,
-                paddingVertical: 4,
-                marginHorizontal: 0,
-              },
-              labelStyle: { fontSize: 14, fontWeight: "800", color: isLight && state.orientation !== key ? "#000000" : "#FFFFFF" },
-            }))}
-            density="small"
-            style={{
-              backgroundColor: "transparent",
-              borderWidth: 0,
-              marginHorizontal: -6,
-              marginVertical: -6,
-            }}
-            theme={{
-              colors: {
-                secondaryContainer: "rgba(11,114,133,0.9)",
-                onSecondaryContainer: "#FFFFFF",
-                surface: "transparent",
-                onSurface: "#FFFFFF",
-                outline: "transparent",
-              },
-            }}
-          />
-        </View>
+        <SegmentedChoice
+          testID="wizard-orientations"
+          borderRadius={wiz.actionFull.borderRadius}
+          value={state.orientation}
+          onChange={actions.setOrientation}
+          options={ORIENTATIONS.map(({ key, label }) => ({
+            value: key,
+            label: tr(`createPlant.step04.orientationsShort.${key}`, label),
+            accessibilityLabel: tr(`plantsModals.edit.orientations.${key}`, label),
+          }))}
+        />
 
         <ThemeContrastScope kind="accent">
         <Pressable

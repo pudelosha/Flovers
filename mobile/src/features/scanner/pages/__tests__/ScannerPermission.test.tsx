@@ -1,12 +1,22 @@
 import React from 'react';
 import { act, fireEvent, render } from '@testing-library/react-native';
-import { Linking } from 'react-native';
+import { Linking, StyleSheet } from 'react-native';
 import ScannerScreen from '../ScannerScreen';
+import { SCANNER_CAMERA_OVERLAP } from '../../styles/scanner.styles';
 
 const mockRequestPermission = jest.fn(async () => false);
 const mockNavigation = { navigate: jest.fn() };
 const mockRoute = { params: undefined as { deviceOnly?: boolean; deviceId?: number } | undefined };
 let mockScan: (codes: { value: string }[]) => void;
+jest.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key: string, options?: { defaultValue?: string }) => {
+      const resource = require('../../../../i18n/locales/en/scanner.json');
+      return key.split('.').reduce((value: any, part: string) => value?.[part], resource)
+        ?? options?.defaultValue ?? key;
+    },
+  }),
+}));
 jest.mock('../../../readings/components/modals/PairDeviceModal', () => ({
   __esModule: true, default: ({ qr }: any) => require('react').createElement(require('react-native').Text, null, qr.hardware_id),
 }));
@@ -31,6 +41,30 @@ it('opens system settings when camera access has been denied', () => {
   fireEvent.press(view.getByText('Open Settings'));
   expect(settings).toHaveBeenCalledTimes(1);
   settings.mockRestore();
+});
+it('explains both QR types with the current plant menu path in a scrollable screen', () => {
+  const view = render(<ScannerScreen />);
+  expect(view.getByText('Plant QR codes')).toBeOnTheScreen();
+  expect(view.getByText('Device QR codes')).toBeOnTheScreen();
+  expect(view.getByText(/Find it in Plant details/)).toHaveTextContent(/Plants.*tile menu.*Show QR code/);
+  expect(view.queryByText(/Or open Readings/)).toBeNull();
+  expect(view.getByTestId('scanner-content')).toBeTruthy();
+});
+it('shows the same dual-purpose instructions when opened for pairing', () => {
+  mockRoute.params = { deviceOnly: true, deviceId: 12 };
+  const view = render(<ScannerScreen />);
+  expect(view.getByText('Device QR codes')).toBeOnTheScreen();
+  expect(view.getByText('Plant QR codes')).toBeOnTheScreen();
+  expect(view.getByText('Scan a Flovers QR code to open a plant or set up a device.')).toBeOnTheScreen();
+});
+it('preserves a usable camera area when long instructions exceed a small viewport', () => {
+  const view = render(<ScannerScreen />);
+  fireEvent(view.getByTestId('scanner-layout'), 'layout', { nativeEvent: { layout: { height: 420 } } });
+  fireEvent(view.getByTestId('scanner-instructions-card'), 'layout', { nativeEvent: { layout: { height: 390 } } });
+  const frame = StyleSheet.flatten(view.getByTestId('scanner-camera-frame').props.style);
+  expect(frame.height - SCANNER_CAMERA_OVERLAP).toBeGreaterThanOrEqual(200);
+  expect(view.getByTestId('scanner-content')).toBeTruthy();
+  expect(view.getByText('Device QR codes')).toBeOnTheScreen();
 });
 it('preserves plant QR navigation in universal scanner mode', () => {
   render(<ScannerScreen />);

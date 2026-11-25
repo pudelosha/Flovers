@@ -1,22 +1,34 @@
-import { getDisplayTemperature } from "../../../shared/utils/temperature";
-import React, { useEffect, useMemo, useRef } from "react";
-import { View, Pressable, Text, StyleSheet, Switch, Animated, Easing } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import LinearGradient from "../../../shared/theme/Gradient";
+import { getDisplayTemperature } from '../../../shared/utils/temperature';
+import React, { useEffect, useMemo, useRef } from 'react';
+import {
+  View,
+  Pressable,
+  Text,
+  StyleSheet,
+  Switch,
+  Animated,
+  Easing,
+} from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import LinearGradient from '../../../shared/theme/Gradient';
 
-import { s } from "../styles/readings.styles";
-import { ReadingTileModel } from "../types/readings.types";
-import { ICON_BG, METRIC_UNITS } from "../constants/readings.constants";
-import ReadingMenu from "./ReadingMenu";
-import SharedPlantBadge from "../../../shared/ui/SharedPlantBadge";
-import { plantAccess, SHARED_PLANT_TINT } from "../../../shared/utils/plantAccess";
+import { s } from '../styles/readings.styles';
+import { ReadingTileModel } from '../types/readings.types';
+import { ICON_BG, METRIC_UNITS } from '../constants/readings.constants';
+import ReadingMenu from './ReadingMenu';
+import SharedPlantBadge from '../../../shared/ui/SharedPlantBadge';
+import {
+  plantAccess,
+  SHARED_PLANT_TINT,
+} from '../../../shared/utils/plantAccess';
 
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider";
-import { useReadingOverdue } from "../hooks/useReadingOverdue";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../app/providers/LanguageProvider';
+import { useSettings } from '../../../app/providers/SettingsProvider';
+import { useReadingOverdue } from '../hooks/useReadingOverdue';
+import OverlappingCardSurface from '../../../shared/ui/OverlappingCardSurface';
 
-type MetricKey = "temperature" | "humidity" | "light" | "moisture";
+type MetricKey = 'temperature' | 'humidity' | 'light' | 'moisture';
 
 type Props = {
   data: ReadingTileModel;
@@ -49,24 +61,24 @@ type Props = {
 };
 
 function formatDateBySettings(d: Date, settings?: any) {
-  const dd = String(d.getDate()).padStart(2, "0");
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
   const yyyy = String(d.getFullYear());
 
   const fmt = settings?.dateFormat;
 
-  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
-    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+  if (fmt === 'mdy' || fmt === 'MM/DD/YYYY' || fmt === 'MM-DD-YYYY') {
+    const sep = fmt === 'MM-DD-YYYY' ? '-' : '/';
     return `${mm}${sep}${dd}${sep}${yyyy}`;
   }
 
-  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
-    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+  if (fmt === 'ymd' || fmt === 'YYYY-MM-DD' || fmt === 'YYYY/MM/DD') {
+    const sep = fmt === 'YYYY/MM/DD' ? '/' : '-';
     return `${yyyy}${sep}${mm}${sep}${dd}`;
   }
 
-  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
-  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+  if (fmt === 'DD/MM/YYYY') return `${dd}/${mm}/${yyyy}`;
+  if (fmt === 'DD-MM-YYYY') return `${dd}-${mm}-${yyyy}`;
 
   return `${dd}.${mm}.${yyyy}`;
 }
@@ -90,7 +102,7 @@ function MetricColPressable({
     <Pressable
       style={s.col}
       onPress={onPress}
-      android_ripple={{ color: "rgba(255,255,255,0.10)" }}
+      android_ripple={{ color: 'rgba(255,255,255,0.10)' }}
     >
       <View style={[s.iconCircle, { backgroundColor: color }]}>
         <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
@@ -98,16 +110,18 @@ function MetricColPressable({
 
       <Text style={s.metricValue}>
         {value === null || value === undefined
-          ? "—"
-          : `${typeof decimals === "number" ? value.toFixed(decimals) : value}${unit}`}
+          ? '—'
+          : `${
+              typeof decimals === 'number' ? value.toFixed(decimals) : value
+            }${unit}`}
       </Text>
     </Pressable>
   );
 }
 
-const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
-const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
-const PUMP_BLUE = "rgba(11,114,133,0.92)";
+const TAB_GREEN_DARK = 'rgba(5, 31, 24, 0.9)';
+const TAB_GREEN_LIGHT = 'rgba(16, 80, 63, 0.9)';
+const PUMP_BLUE = 'rgba(11,114,133,0.92)';
 const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
 
 export default function ReadingTile({
@@ -141,12 +155,22 @@ export default function ReadingTile({
       pulse.setValue(0);
       return;
     }
-    const loop = Animated.loop(Animated.sequence([
-      Animated.timing(pulse, { toValue: 1, duration: 1400,
-        easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
-      Animated.timing(pulse, { toValue: 0, duration: 1400,
-        easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
-    ]));
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(pulse, {
+          toValue: 1,
+          duration: 1400,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(pulse, {
+          toValue: 0,
+          duration: 1400,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true,
+        }),
+      ]),
+    );
     loop.start();
     return () => loop.stop();
   }, [isOverdue, pulse]);
@@ -157,12 +181,12 @@ export default function ReadingTile({
 
       const txt = t(key, {
         ...(values || {}),
-        defaultValue: fallback ?? key.split(".").pop() ?? key,
+        defaultValue: fallback ?? key.split('.').pop() ?? key,
       });
 
-      return txt || fallback || key.split(".").pop() || key;
+      return txt || fallback || key.split('.').pop() || key;
     },
-    [t, currentLanguage]
+    [t, currentLanguage],
   );
 
   const access = plantAccess(data.access);
@@ -179,15 +203,18 @@ export default function ReadingTile({
 
   const lastText = useMemo(() => {
     const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
-    if (!dt) return `${tr("readings.tile.lastReadPrefix", "Last read")}: —`;
+    if (!dt) return `${tr('readings.tile.lastReadPrefix', 'Last read')}: —`;
 
     const date = formatDateBySettings(dt, settings);
     const time = dt.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
+      hour: '2-digit',
+      minute: '2-digit',
     });
 
-    return `${tr("readings.tile.lastReadPrefix", "Last read")}: ${date} ${time}`;
+    return `${tr(
+      'readings.tile.lastReadPrefix',
+      'Last read',
+    )}: ${date} ${time}`;
   }, [data.lastReadISO, tr, settings]);
 
   const displayTemperature = useMemo(() => {
@@ -201,24 +228,27 @@ export default function ReadingTile({
 
   const lastPumpText = useMemo(() => {
     if (!effectiveLastPumpLaunchDate) {
-      return `${tr("readings.tile.lastPumpRunPrefix", "Last pump run")}: —`;
+      return `${tr('readings.tile.lastPumpRunPrefix', 'Last pump run')}: —`;
     }
 
     const pumpDate = new Date(effectiveLastPumpLaunchDate);
     const date = formatDateBySettings(pumpDate, settings);
     const time = pumpDate.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
+      hour: '2-digit',
+      minute: '2-digit',
     });
 
-    return `${tr("readings.tile.lastPumpRunPrefix", "Last pump run")}: ${date} ${time}`;
+    return `${tr(
+      'readings.tile.lastPumpRunPrefix',
+      'Last pump run',
+    )}: ${date} ${time}`;
   }, [effectiveLastPumpLaunchDate, settings, tr]);
 
   const autoPumpThresholdText = useMemo(() => {
     return tr(
-      "readings.tile.automaticPumpThreshold",
+      'readings.tile.automaticPumpThreshold',
       `When soil moisture < ${effectiveSoilMoistureThreshold}%`,
-      { value: effectiveSoilMoistureThreshold }
+      { value: effectiveSoilMoistureThreshold },
     );
   }, [effectiveSoilMoistureThreshold, tr]);
 
@@ -226,6 +256,7 @@ export default function ReadingTile({
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       <View style={s.cardGlass}>
         <LinearGradient
+          testID="device-base-surface"
           pointerEvents="none"
           start={{ x: 0, y: 0.5 }}
           end={{ x: 1, y: 0.5 }}
@@ -239,148 +270,158 @@ export default function ReadingTile({
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
+            'rgba(255, 255, 255, 0.06)',
+            'rgba(255, 255, 255, 0.02)',
+            'rgba(255, 255, 255, 0.08)',
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {isOverdue && <AnimatedLinearGradient
-          testID="missing-readings-pulse"
-          themeRole="warning"
-          pointerEvents="none"
-          start={{ x: 0, y: 0.5 }} end={{ x: 1, y: 0.5 }}
-          colors={["rgba(255, 59, 48, 0.55)", "rgba(255, 59, 48, 0.18)", "rgba(255, 59, 48, 0.00)"]}
-          locations={[0, 0.28, 0.7]}
-          style={[StyleSheet.absoluteFill, { opacity: pulse }]}
-        />}
         <View pointerEvents="none" style={s.cardTint} />
-        {access.isShared && <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: SHARED_PLANT_TINT }]} />}
+        {access.isShared && (
+          <View
+            pointerEvents="none"
+            style={[
+              StyleSheet.absoluteFill,
+              { backgroundColor: SHARED_PLANT_TINT },
+            ]}
+          />
+        )}
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      <View style={[s.topRow, localStyles.topRow]}>
-        <Pressable
-          accessible={false}
-          style={{ flex: 1, paddingRight: 8 }}
-          onPress={onPressBody}
-          android_ripple={{ color: "rgba(255,255,255,0.08)" }}
-        >
-          <Text style={s.name} numberOfLines={1}>
-            {deviceName ?? data.name}
-          </Text>
-          <SharedPlantBadge access={data.access} compact />
+      <View
+        testID="device-readings-section"
+        style={
+          effectivePumpIncluded
+            ? localStyles.readingsPanel
+            : localStyles.readingsContent
+        }
+      >
+        {effectivePumpIncluded && (
+          <OverlappingCardSurface testID="device-readings-surface" />
+        )}
+        <View style={[s.topRow, localStyles.topRow]}>
+          <Pressable
+            accessible={false}
+            style={{ flex: 1, paddingRight: 8 }}
+            onPress={onPressBody}
+            android_ripple={{ color: 'rgba(255,255,255,0.08)' }}
+          >
+            <Text style={s.name} numberOfLines={1}>
+              {deviceName ?? data.name}
+            </Text>
+            <SharedPlantBadge access={data.access} compact />
 
-          {!!effectiveLocation && (
-            <View style={localStyles.locationRow}>
-              <MaterialCommunityIcons
-                name="map-marker"
-                size={12}
-                color="#FFFFFF"
-                style={localStyles.locationIcon}
-              />
-              <Text style={localStyles.location} numberOfLines={1}>
-                {effectiveLocation}
-              </Text>
-            </View>
-          )}
-        </Pressable>
+            {!!effectiveLocation && (
+              <View style={localStyles.locationRow}>
+                <MaterialCommunityIcons
+                  name="map-marker"
+                  size={12}
+                  color="#FFFFFF"
+                  style={localStyles.locationIcon}
+                />
+                <Text style={localStyles.location} numberOfLines={1}>
+                  {effectiveLocation}
+                </Text>
+              </View>
+            )}
+          </Pressable>
 
-        <Pressable
-          testID={`reading-menu-${data.id}`}
-          onPress={onPressMenu}
-          style={[s.dotsBtn, localStyles.dotsBtnTop]}
-          android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
-          hitSlop={8}
-        >
-          <MaterialCommunityIcons
-            name="dots-horizontal"
-            size={20}
-            color="#FFFFFF"
-          />
-        </Pressable>
-      </View>
-
-      {isMenuOpen && (
-        <ReadingMenu
-          canEdit={access.canEdit}
-          onEdit={onEdit}
-          onDeviceDetails={onDeviceDetails}
-          onHistory={onHistory}
-          onPlantDetails={onPlantDetails}
-          onDelete={onDelete}
-        />
-      )}
-
-      <View style={s.metricsFrame}>
-        <View style={s.metricsRow}>
-          {showTemp && (
-            <MetricColPressable
-              icon="thermometer"
-              color={ICON_BG.temperature}
-              value={displayTemperature.value}
-              unit={displayTemperature.unit}
-              decimals={displayTemperature.decimals}
-              onPress={() => onMetricPress("temperature")}
+          <Pressable
+            testID={`reading-menu-${data.id}`}
+            onPress={onPressMenu}
+            style={[s.dotsBtn, localStyles.dotsBtnTop]}
+            android_ripple={{
+              color: 'rgba(255,255,255,0.16)',
+              borderless: true,
+            }}
+            hitSlop={8}
+          >
+            <MaterialCommunityIcons
+              name="dots-horizontal"
+              size={20}
+              color="#FFFFFF"
             />
-          )}
-
-          {showHum && (
-            <MetricColPressable
-              icon="water-percent"
-              color={ICON_BG.humidity}
-              value={data.metrics.humidity}
-              unit={METRIC_UNITS.humidity}
-              decimals={1}
-              onPress={() => onMetricPress("humidity")}
-            />
-          )}
-
-          {showLight && (
-            <MetricColPressable
-              icon="white-balance-sunny"
-              color={ICON_BG.light}
-              value={data.metrics.light}
-              unit={METRIC_UNITS.light}
-              onPress={() => onMetricPress("light")}
-            />
-          )}
-
-          {showMoist && (
-            <MetricColPressable
-              icon="water"
-              color={ICON_BG.moisture}
-              value={data.metrics.moisture}
-              unit={METRIC_UNITS.moisture}
-              onPress={() => onMetricPress("moisture")}
-            />
-          )}
+          </Pressable>
         </View>
-      </View>
 
-      <View style={localStyles.lastReadRow}>
-        <MaterialCommunityIcons
-          name="update"
-          size={14}
-          color="rgba(255,255,255,0.88)"
-          style={localStyles.infoIcon}
-        />
-        <Text style={s.lastText}>{lastText}</Text>
-      </View>
+        <View style={[s.metricsFrame, localStyles.metricsFrame]}>
+          <View style={s.metricsRow}>
+            {showTemp && (
+              <MetricColPressable
+                icon="thermometer"
+                color={ICON_BG.temperature}
+                value={displayTemperature.value}
+                unit={displayTemperature.unit}
+                decimals={displayTemperature.decimals}
+                onPress={() => onMetricPress('temperature')}
+              />
+            )}
 
-      {isOverdue && <View style={[localStyles.lastReadRow, { gap: 8 }]} accessibilityLiveRegion="polite">
-        <MaterialCommunityIcons name="alert-circle-outline" size={14} color="#FF9088" />
-        <Text style={[s.lastText, { color: "#FF9088" }]}>
-          {String(tr("readings.tile.missingReadings", "Readings overdue"))}
-        </Text>
-      </View>}
+            {showHum && (
+              <MetricColPressable
+                icon="water-percent"
+                color={ICON_BG.humidity}
+                value={data.metrics.humidity}
+                unit={METRIC_UNITS.humidity}
+                decimals={1}
+                onPress={() => onMetricPress('humidity')}
+              />
+            )}
+
+            {showLight && (
+              <MetricColPressable
+                icon="white-balance-sunny"
+                color={ICON_BG.light}
+                value={data.metrics.light}
+                unit={METRIC_UNITS.light}
+                onPress={() => onMetricPress('light')}
+              />
+            )}
+
+            {showMoist && (
+              <MetricColPressable
+                icon="water"
+                color={ICON_BG.moisture}
+                value={data.metrics.moisture}
+                unit={METRIC_UNITS.moisture}
+                onPress={() => onMetricPress('moisture')}
+              />
+            )}
+          </View>
+        </View>
+
+        <View style={localStyles.lastReadRow}>
+          <MaterialCommunityIcons
+            name="update"
+            size={14}
+            color="rgba(255,255,255,0.88)"
+            style={localStyles.infoIcon}
+          />
+          <Text style={s.lastText}>{lastText}</Text>
+        </View>
+
+        {isOverdue && (
+          <View
+            style={[localStyles.lastReadRow, { gap: 8 }]}
+            accessibilityLiveRegion="polite"
+          >
+            <MaterialCommunityIcons
+              name="alert-circle-outline"
+              size={14}
+              color="#FF9088"
+            />
+            <Text style={[s.lastText, { color: '#FF9088' }]}>
+              {String(tr('readings.tile.missingReadings', 'Readings overdue'))}
+            </Text>
+          </View>
+        )}
+      </View>
 
       {effectivePumpIncluded && (
-        <>
-          <View style={horizontalLineStyles.line} />
-
+        <View testID="device-pump-section" style={pumpStyles.panel}>
           <View style={pumpStyles.autoPumpContainer}>
             <Pressable
               accessible={false}
@@ -388,7 +429,7 @@ export default function ReadingTile({
               onPress={onPressBody}
             >
               <Text style={pumpStyles.autoPumpLabel}>
-                {tr("readings.tile.automaticPump", "Automatic pump")}
+                {tr('readings.tile.automaticPump', 'Automatic pump')}
               </Text>
               <Text style={pumpStyles.autoPumpSubtext}>
                 {autoPumpThresholdText}
@@ -397,11 +438,11 @@ export default function ReadingTile({
 
             <Switch
               value={!!effectiveAutoPumpEnabled}
-              onValueChange={(enabled) => {
+              onValueChange={enabled => {
                 onPressBody();
                 onAutoPumpToggle?.(enabled);
               }}
-              trackColor={{ false: "rgba(255,255,255,0.3)", true: PUMP_BLUE }}
+              trackColor={{ false: 'rgba(255,255,255,0.3)', true: PUMP_BLUE }}
               thumbColor="#FFFFFF"
             />
           </View>
@@ -433,32 +474,60 @@ export default function ReadingTile({
           >
             <Text style={pumpStyles.launchButtonText}>
               {isLaunchingPump
-                ? tr("readings.tile.opening", "Opening...")
+                ? tr('readings.tile.opening', 'Opening...')
                 : hasPendingWatering
-                ? tr("readings.tile.unscheduleWatering", "Unschedule watering")
-                : tr("readings.tile.scheduleWatering", "Schedule watering")}
+                ? tr('readings.tile.unscheduleWatering', 'Unschedule watering')
+                : tr('readings.tile.scheduleWatering', 'Schedule watering')}
             </Text>
           </Pressable>
-        </>
+        </View>
+      )}
+      {isOverdue && (
+        <View
+          pointerEvents="none"
+          style={[s.cardGlass, localStyles.warningLayer]}
+        >
+          <AnimatedLinearGradient
+            testID="missing-readings-pulse"
+            themeRole="warning"
+            pointerEvents="none"
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
+            colors={[
+              'rgba(255, 59, 48, 0.55)',
+              'rgba(255, 59, 48, 0.18)',
+              'rgba(255, 59, 48, 0.00)',
+            ]}
+            locations={[0, 0.28, 0.7]}
+            style={[StyleSheet.absoluteFill, { opacity: pulse }]}
+          />
+        </View>
+      )}
+      {isMenuOpen && (
+        <ReadingMenu
+          canEdit={access.canEdit}
+          onEdit={onEdit}
+          onDeviceDetails={onDeviceDetails}
+          onHistory={onHistory}
+          onPlantDetails={onPlantDetails}
+          onDelete={onDelete}
+        />
       )}
     </View>
   );
 }
 
-const horizontalLineStyles = StyleSheet.create({
-  line: {
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.2)",
-    marginHorizontal: 18,
-    marginVertical: 6,
-  },
-});
-
 const pumpStyles = StyleSheet.create({
+  panel: {
+    marginTop: -26,
+    paddingTop: 34,
+    paddingBottom: 2,
+    zIndex: 1,
+  },
   autoPumpContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     paddingHorizontal: 18,
     paddingVertical: 8,
   },
@@ -466,25 +535,25 @@ const pumpStyles = StyleSheet.create({
     flex: 1,
   },
   autoPumpLabel: {
-    color: "#FFFFFF",
-    fontWeight: "600",
+    color: '#FFFFFF',
+    fontWeight: '600',
     fontSize: 15,
   },
   autoPumpSubtext: {
-    color: "rgba(255,255,255,0.7)",
+    color: 'rgba(255,255,255,0.7)',
     fontSize: 11,
     marginTop: 2,
   },
   lastPumpRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 18,
     paddingVertical: 6,
     gap: 8,
   },
   lastPumpText: {
-    color: "rgba(255,255,255,0.88)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.88)',
+    fontWeight: '600',
     fontSize: 10,
   },
   launchButton: {
@@ -494,50 +563,61 @@ const pumpStyles = StyleSheet.create({
     marginHorizontal: 18,
     marginTop: 10,
     marginBottom: 12,
-    alignItems: "center",
+    alignItems: 'center',
   },
   unscheduleButton: {
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
   launchButtonPressed: {
     opacity: 0.85,
   },
   launchButtonText: {
-    color: "#FFFFFF",
-    fontWeight: "700",
+    color: '#FFFFFF',
+    fontWeight: '700',
     fontSize: 14,
     letterSpacing: 0.5,
   },
 });
 
 const localStyles = StyleSheet.create({
+  readingsPanel: {
+    borderRadius: 28,
+    overflow: 'hidden',
+    paddingBottom: 8,
+    zIndex: 2,
+  },
+  readingsContent: { paddingBottom: 8 },
+  metricsFrame: {
+    backgroundColor: 'transparent',
+    marginTop: 8,
+    marginHorizontal: 12,
+    paddingHorizontal: 6,
+  },
+  warningLayer: { zIndex: 3 },
   topRow: {
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
   },
   dotsBtnTop: {
-    alignSelf: "flex-start",
+    alignSelf: 'flex-start',
   },
   locationRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     marginTop: 2,
-    marginBottom: 10,
+    marginBottom: 0,
   },
   locationIcon: {
     marginRight: 4,
-    marginBottom: 10,
-    transform: [{ translateY: 2 }],
   },
   location: {
-    color: "rgba(255,255,255,0.9)",
-    fontWeight: "600",
+    color: 'rgba(255,255,255,0.9)',
+    fontWeight: '600',
     fontSize: 12,
     flexShrink: 1,
-    marginBottom: 5,
   },
   lastReadRow: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 18,
     paddingVertical: 6,
   },

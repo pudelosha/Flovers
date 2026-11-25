@@ -47,8 +47,6 @@ type Props = {
   initialSendEmailMissingReadings?: boolean;
   initialSendPushMissingReadings?: boolean;
   initialPumpIncluded?: boolean;
-  initialAutomaticPumpLaunch?: boolean;
-  initialPumpThresholdPct?: number;
 
   // watering completed notifications
   initialSendEmailWateringNotifications?: boolean;
@@ -75,8 +73,6 @@ type Props = {
     sendEmailMissingReadings?: boolean;
     sendPushMissingReadings?: boolean;
     pumpIncluded?: boolean;
-    automaticPumpLaunch?: boolean;
-    pumpThresholdPct?: number;
     sendEmailWateringNotifications?: boolean;
     sendPushWateringNotifications?: boolean;
   }) => void;
@@ -105,8 +101,6 @@ export default function UpsertReadingDeviceModal({
   initialSendEmailMissingReadings = false,
   initialSendPushMissingReadings = false,
   initialPumpIncluded = false,
-  initialAutomaticPumpLaunch = false,
-  initialPumpThresholdPct = 30,
   initialSendEmailWateringNotifications = false,
   initialSendPushWateringNotifications = false,
   onCancel,
@@ -158,12 +152,6 @@ export default function UpsertReadingDeviceModal({
     initialSendPushMissingReadings,
   );
   const [pumpIncluded, setPumpIncluded] = React.useState<boolean>(initialPumpIncluded);
-  const [automaticPumpLaunch, setAutomaticPumpLaunch] = React.useState<boolean>(
-    initialAutomaticPumpLaunch,
-  );
-  const [pumpThresholdPct, setPumpThresholdPct] = React.useState<number>(
-    Math.max(0, Math.min(100, initialPumpThresholdPct)),
-  );
 
   const [sendEmailWateringNotifications, setSendEmailWateringNotifications] =
     React.useState<boolean>(initialSendEmailWateringNotifications);
@@ -207,8 +195,6 @@ export default function UpsertReadingDeviceModal({
     setSendEmailMissingReadings(Boolean(initialSendEmailMissingReadings));
     setSendPushMissingReadings(Boolean(initialSendPushMissingReadings));
     setPumpIncluded(Boolean(initialPumpIncluded));
-    setAutomaticPumpLaunch(Boolean(initialAutomaticPumpLaunch));
-    setPumpThresholdPct(Math.max(0, Math.min(100, initialPumpThresholdPct)));
 
     setSendEmailWateringNotifications(Boolean(initialSendEmailWateringNotifications));
     setSendPushWateringNotifications(Boolean(initialSendPushWateringNotifications));
@@ -229,8 +215,6 @@ export default function UpsertReadingDeviceModal({
     initialSendEmailMissingReadings,
     initialSendPushMissingReadings,
     initialPumpIncluded,
-    initialAutomaticPumpLaunch,
-    initialPumpThresholdPct,
     initialSendEmailWateringNotifications,
     initialSendPushWateringNotifications,
   ]);
@@ -252,7 +236,6 @@ export default function UpsertReadingDeviceModal({
     const shouldEnableMoistureAlert =
       sensorMoist && (sendEmailNotifications || sendPushNotifications || moistAlertEnabled);
 
-    const shouldUseAutomaticPumpLaunch = pumpIncluded && automaticPumpLaunch;
 
     onSave({
       mode,
@@ -279,11 +262,6 @@ export default function UpsertReadingDeviceModal({
       sendPushMissingReadings,
 
       pumpIncluded,
-
-      // Auto pump launch is only applied when Include Water Pump is enabled.
-      // Its checkbox state is preserved locally even while locked.
-      automaticPumpLaunch: shouldUseAutomaticPumpLaunch,
-      pumpThresholdPct: shouldUseAutomaticPumpLaunch ? pumpThresholdPct : undefined,
 
       // Watering-complete notifications are only applied when Include Water Pump is enabled.
       // Their checkbox state is preserved locally even while locked.
@@ -322,12 +300,17 @@ export default function UpsertReadingDeviceModal({
           <View style={sp.dropdown}>
             <Pressable
               style={sp.dropdownHeader}
+              accessibilityRole="button"
+              accessibilityState={{ expanded: plantOpen }}
               onPress={() => setPlantOpen(o => !o)}
               android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
             >
-              <Text style={sp.dropdownValue}>
-                {selectedPlant ? selectedPlant.name : t('readingsModals.upsert.selectPlant')}
-              </Text>
+              <View style={{ flex: 1, minWidth: 0, gap: 3 }}>
+                <Text style={sp.dropdownValue}>
+                  {selectedPlant ? selectedPlant.name : t('readingsModals.upsert.selectPlant')}
+                </Text>
+                {!!selectedPlant?.location && <Text style={[sp.dropdownItemText, styles.plantLocation]}>{selectedPlant.location}</Text>}
+              </View>
 
               <MaterialCommunityIcons
                 name={plantOpen ? 'chevron-up' : 'chevron-down'}
@@ -351,7 +334,10 @@ export default function UpsertReadingDeviceModal({
                       }
                     }}
                   >
-                    <Text style={sp.dropdownItemText}>{p.name}</Text>
+                    <View style={{ flex: 1, minWidth: 0, gap: 3 }}>
+                      <Text style={sp.dropdownItemText}>{p.name}</Text>
+                      {!!p.location && <Text style={[sp.dropdownItemText, styles.plantLocation]}>{p.location}</Text>}
+                    </View>
 
                     {plantId === p.id && (
                       <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
@@ -361,16 +347,6 @@ export default function UpsertReadingDeviceModal({
               </View>
             )}
           </View>
-
-          {/* 2) Location (read-only) */}
-          <TextInput
-            style={pr.input}
-            value={selectedPlant?.location ?? ''}
-            placeholder={t('readingsModals.upsert.locationPlaceholder')}
-            placeholderTextColor="rgba(255,255,255,0.7)"
-            editable={false}
-            pointerEvents="none"
-          />
 
           {/* 3) Device name (mandatory) */}
           <TextInput
@@ -446,52 +422,7 @@ export default function UpsertReadingDeviceModal({
               weight="600"
             />
 
-            <CheckRow
-              label={t('readingsModals.upsert.automaticPumpLaunch')}
-              checked={automaticPumpLaunch}
-              disabled={!pumpIncluded}
-              onToggle={() => setAutomaticPumpLaunch(v => !v)}
-            />
 
-            {Slider ? (
-              <View
-                style={[
-                  {
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    marginLeft: 16,
-                    marginRight: 16,
-                  },
-                  !pumpIncluded || !automaticPumpLaunch
-                    ? {
-                        opacity: 0.45,
-                      }
-                    : null,
-                ]}
-              >
-                <Slider
-                  minimumValue={0}
-                  maximumValue={100}
-                  step={1}
-                  value={pumpThresholdPct}
-                  disabled={!pumpIncluded || !automaticPumpLaunch}
-                  onValueChange={(v: number) =>
-                    setPumpThresholdPct(Math.max(0, Math.min(100, Math.round(v))))
-                  }
-                  style={{ flex: 1 }}
-                />
-
-                <Text
-                  style={{
-                    color: '#fff',
-                    fontWeight: '600',
-                    marginLeft: 8,
-                  }}
-                >
-                  {pumpThresholdPct}%
-                </Text>
-              </View>
-            ) : null}
           </View>
 
           {/* Notifications Section */}
@@ -672,6 +603,8 @@ function RowSwitch({
           sp.dropdownItemText,
           {
             fontWeight: weight as any,
+            flex: 1,
+            minWidth: 0,
           },
         ]}
       >
@@ -748,6 +681,7 @@ function CheckRow({
 }
 
 const styles = StyleSheet.create({
+  plantLocation: { fontSize: 12, fontWeight: "400", opacity: 0.75 },
   // These fields already sit inside the standard 16dp form inset.
   // Separator line - white for testing, matches the visual style
   separatorLine: {

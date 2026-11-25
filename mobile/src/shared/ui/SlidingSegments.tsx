@@ -15,11 +15,13 @@ export default function SlidingSegments({
   selectedIndex,
   children,
   style,
+  indicatorStyle,
   testID,
 }: {
   selectedIndex: number;
   children: React.ReactNode;
   style?: StyleProp<ViewStyle>;
+  indicatorStyle?: StyleProp<ViewStyle>;
   testID?: string;
 }) {
   const count = React.Children.count(children);
@@ -49,6 +51,7 @@ export default function SlidingSegments({
           pointerEvents="none"
           style={[
             styles.indicator,
+            indicatorStyle,
             {
               width: slotWidth,
               transform: [

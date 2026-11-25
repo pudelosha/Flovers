@@ -505,3 +505,9 @@ it('opens Undo for the eligible task and refreshes the Journal after confirmatio
  expect(view.UNSAFE_getByType(UndoTaskCompletionModal).props.visible).toBe(false);
  expect(view.UNSAFE_queryByType(TaskHistoryTile)).toBeNull();expect(view.UNSAFE_getByType(JournalPhotoTile)).toBeTruthy();
 });
+
+it('opens Gallery with all plants independently of the current journal filter', async () => {
+  const view = await renderScreen();
+  act(() => actions(view).find((action: any) => action.key === 'gallery').onPress());
+  expect(view.UNSAFE_getByType(ViewJournalPhotoModal).props).toMatchObject({ visible: true, entry: null });
+});

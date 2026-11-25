@@ -17,6 +17,7 @@ type Props = {
   align?: 'left' | 'right';
   onDetails: () => void;
   onEdit: () => void;
+  onChangeImage?: () => void;
   onReminders: () => void;
   onJournal: () => void;
   onDelete: () => void;
@@ -29,6 +30,7 @@ type Props = {
 export default function PlantMenu({
   onDetails,
   onEdit,
+  onChangeImage,
   onReminders,
   onJournal,
   onDelete,
@@ -92,6 +94,14 @@ export default function PlantMenu({
             label={tr('plants.menu.edit', 'Edit plant')}
             icon="pencil-outline"
             onPress={onEdit}
+          />
+        )}
+
+        {canEdit && onChangeImage && (
+          <MenuItem
+            label={tr('plantDetails.infoMenu.items.changeImage', 'Change image')}
+            icon="image-edit-outline"
+            onPress={onChangeImage}
           />
         )}
 

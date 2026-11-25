@@ -3,14 +3,8 @@ import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
 import ListLoadError from '../../../shared/ui/ListLoadError';
 import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
-import {
-  View,
-  Pressable,
-  Text,
-  RefreshControl,
-  StyleSheet,
-  Animated,
-  Easing, AnimatedView, AnimatedFlatList } from "../../../shared/theme/native";
+import { View, Pressable, Text, RefreshControl, StyleSheet, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
+import { AnimatedFlatList } from "../../../shared/ui/HeaderScrollView";
 import {
   useNavigation,
   useFocusEffect,

@@ -1,24 +1,32 @@
-import React, { useMemo } from "react";
-import { View, Text, Pressable } from "../../../shared/theme/native";
-import MaterialCommunityIcons from "../../../shared/theme/Icon";
-import { useTranslation } from "react-i18next";
-import GlassCard from "./../components/GlassCard";
-import { card, controls } from "../styles/profile.styles";
-import { BUILD_INFO } from "../../../buildInfo";
-import { useSettings } from "../../../app/providers/SettingsProvider";
+import React, { useMemo } from 'react';
+import { View, Text, Pressable } from '../../../shared/theme/native';
+import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useTranslation } from 'react-i18next';
+import GlassCard from './../components/GlassCard';
+import { card, controls } from '../styles/profile.styles';
+import { BUILD_INFO } from '../../../buildInfo';
+import { useSettings } from '../../../app/providers/SettingsProvider';
 
 function pad2(n: number) {
   return n < 10 ? `0${n}` : String(n);
 }
 
 function formatDateBySettings(value?: string | Date | null, settings?: any) {
-  if (!value) return "—";
+  if (!value) return '—';
 
   // Commit dates are calendar dates; do not shift them through UTC parsing.
-  const calendar = typeof value === "string" ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
-  const d = value instanceof Date ? value : calendar
-    ? new Date(Number(calendar[1]), Number(calendar[2]) - 1, Number(calendar[3]))
-    : new Date(value);
+  const calendar =
+    typeof value === 'string' ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(value) : null;
+  const d =
+    value instanceof Date
+      ? value
+      : calendar
+      ? new Date(
+          Number(calendar[1]),
+          Number(calendar[2]) - 1,
+          Number(calendar[3]),
+        )
+      : new Date(value);
   if (Number.isNaN(d.getTime())) return String(value);
 
   const dd = pad2(d.getDate());
@@ -27,18 +35,18 @@ function formatDateBySettings(value?: string | Date | null, settings?: any) {
 
   const fmt = settings?.dateFormat;
 
-  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
-    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+  if (fmt === 'mdy' || fmt === 'MM/DD/YYYY' || fmt === 'MM-DD-YYYY') {
+    const sep = fmt === 'MM-DD-YYYY' ? '-' : '/';
     return `${mm}${sep}${dd}${sep}${yyyy}`;
   }
 
-  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
-    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+  if (fmt === 'ymd' || fmt === 'YYYY-MM-DD' || fmt === 'YYYY/MM/DD') {
+    const sep = fmt === 'YYYY/MM/DD' ? '/' : '-';
     return `${yyyy}${sep}${mm}${sep}${dd}`;
   }
 
-  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
-  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+  if (fmt === 'DD/MM/YYYY') return `${dd}/${mm}/${yyyy}`;
+  if (fmt === 'DD-MM-YYYY') return `${dd}-${mm}-${yyyy}`;
 
   return `${dd}.${mm}.${yyyy}`;
 }
@@ -55,44 +63,58 @@ export default function SupportCard({
 
   const releaseDateText = useMemo(
     () => formatDateBySettings(BUILD_INFO.releaseDate, settings),
-    [settings]
+    [settings],
   );
 
   return (
     <GlassCard>
-      <Text style={card.cardTitle}>{t("profile.support.title")}</Text>
+      <Text style={card.cardTitle}>{t('profile.support.title')}</Text>
 
       {/* Contact Us */}
-      <Pressable style={[controls.actionBtnFull, controls.actionPrimary]} onPress={onContact}>
-        <MaterialCommunityIcons name="email-outline" size={18} color="#FFFFFF" />
-        <Text style={[controls.actionBtnFullText, { color: "#FFFFFF" }]}>
-          {t("profile.support.contactUs")}
+      <Pressable
+        style={[controls.actionBtnFull, controls.actionPrimary]}
+        onPress={onContact}
+      >
+        <MaterialCommunityIcons
+          name="email-outline"
+          size={18}
+          color="#FFFFFF"
+        />
+        <Text style={[controls.actionBtnFullText, { color: '#FFFFFF' }]}>
+          {t('profile.support.contactUs')}
         </Text>
       </Pressable>
 
       {/* Report a bug */}
-      <Pressable style={[controls.actionBtnFull, controls.secondaryFull]} onPress={onBug}>
+      <Pressable
+        style={[controls.actionBtnFull, controls.secondaryFull]}
+        onPress={onBug}
+      >
         <MaterialCommunityIcons name="bug-outline" size={18} color="#FFFFFF" />
-        <Text style={[controls.actionBtnFullText, { color: "#FFFFFF" }]}>
-          {t("profile.support.reportBug")}
+        <Text style={[controls.actionBtnFullText, { color: '#FFFFFF' }]}>
+          {t('profile.support.reportBug')}
         </Text>
       </Pressable>
 
       {/* About (moved from Settings) */}
-      <View style={controls.sectionDivider} />
-      <View style={controls.aboutBox}>
-        <Text style={controls.aboutTitle}>{t("profile.support.aboutTitle")}</Text>
-        <Text style={controls.aboutLine}>
-          {t("profile.support.versionLabel")}: <Text style={controls.aboutStrong}>{BUILD_INFO.version}</Text>
+      <View style={{ marginTop: 12, gap: 4 }}>
+        <Text style={controls.aboutTitle}>
+          {t('profile.support.aboutTitle')}
         </Text>
         <Text style={controls.aboutLine}>
-          {t("profile.support.releaseDateLabel")}: <Text style={controls.aboutStrong}>{releaseDateText}</Text>
+          {t('profile.support.versionLabel')}:{' '}
+          <Text style={controls.aboutStrong}>{BUILD_INFO.version}</Text>
+        </Text>
+        <Text style={controls.aboutLine}>
+          {t('profile.support.releaseDateLabel')}:{' '}
+          <Text style={controls.aboutStrong}>{releaseDateText}</Text>
         </Text>
         <Text style={controls.aboutLine}>
           Tag: <Text style={controls.aboutStrong}>{BUILD_INFO.releaseTag}</Text>
         </Text>
         <Text style={controls.aboutLine}>
-          {t("profile.support.contactLabel")}: <Text style={controls.aboutStrong}>hello@flovers.app</Text>
+          {t('profile.support.contactLabel')}:{' '}
+          <Text style={controls.aboutStrong}>hello@flovers.app</Text>
         </Text>
       </View>
     </GlassCard>

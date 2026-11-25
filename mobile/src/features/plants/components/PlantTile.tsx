@@ -29,6 +29,7 @@ type Props = {
   onPressMenu: () => void;
   onDetails: () => void;
   onEdit: () => void;
+  onChangeImage?: () => void;
   onReminders: () => void;
   onJournal: () => void;
   onDelete: () => void;
@@ -42,6 +43,7 @@ export default function PlantTile({
   onPressMenu,
   onDetails,
   onEdit,
+  onChangeImage,
   onReminders,
   onJournal,
   onDelete,
@@ -112,6 +114,7 @@ export default function PlantTile({
             <FramedPlantImage
               uri={syncedPhotoUri}
               photo={plant.photo}
+              fadeDuration={0}
               style={StyleSheet.absoluteFillObject}
               testID="plant-tile-photo"
               onLoad={() => setDecodedImage(imageKey)}
@@ -125,6 +128,7 @@ export default function PlantTile({
             <ImageBackground
               key={imageKey}
               source={{ uri: imgUri }}
+              fadeDuration={0}
               onLoad={() => setDecodedImage(imageKey)}
               onError={() => setDecodedImage(imageKey)}
               resizeMode="cover"
@@ -182,6 +186,7 @@ export default function PlantTile({
           align={menuAlign}
           onDetails={onDetails}
           onEdit={onEdit}
+          onChangeImage={onChangeImage}
           onReminders={onReminders}
           onJournal={onJournal}
           onDelete={onDelete}

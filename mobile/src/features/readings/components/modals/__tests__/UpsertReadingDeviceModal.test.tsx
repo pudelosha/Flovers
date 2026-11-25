@@ -19,7 +19,24 @@ it("keeps runtime settings out of Add/Edit and omits them from saves", () => {
   expect(payload).not.toHaveProperty("intervalMinutes");
   expect(payload).not.toHaveProperty("pumpCooldownMinutes");
   expect(payload).not.toHaveProperty("pumpDurationSeconds");
+  expect(payload).not.toHaveProperty("automaticPumpLaunch");
+  expect(payload).not.toHaveProperty("pumpThresholdPct");
   expect(payload).toEqual(expect.objectContaining({ name: "Board", plantId: "1" }));
+});
+
+it("shows plant names with locations in dropdown rows and removes the separate location field", () => {
+  const onSave = jest.fn();
+  const view = render(<UpsertReadingDeviceModal visible mode="add" initialName="Board"
+    plants={[{ id: "1", name: "Fern", location: "Bedroom" }, { id: "2", name: "Fern", location: "Balcony" }]}
+    onCancel={jest.fn()} onSave={onSave} />);
+  expect(view.queryByPlaceholderText("readingsModals.upsert.locationPlaceholder")).toBeNull();
+  fireEvent.press(view.getByText("readingsModals.upsert.selectPlant"));
+  expect(view.getByText("Bedroom")).toBeTruthy();
+  expect(view.getByText("Balcony")).toBeTruthy();
+  fireEvent.press(view.getByText("Balcony"));
+  fireEvent.press(view.getByText("readingsModals.common.save"));
+  expect(onSave).toHaveBeenCalledWith(expect.objectContaining({ plantId: "2" }));
+  expect(view.queryByText("readingsModals.upsert.automaticPumpLaunch")).toBeNull();
 });
 
 it("requires a plant and non-empty name before creating a device", () => {

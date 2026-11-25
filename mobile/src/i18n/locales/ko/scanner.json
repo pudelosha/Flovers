@@ -14,6 +14,18 @@
     "permissionRequired": "카메라 권한이 필요합니다",
     "permissionHint": "QR 코드를 스캔하려면 시스템 설정에서 카메라 접근을 활성화하세요.",
     "openSettings": "설정 열기",
-    "initializingCamera": "카메라 초기화 중..."
+    "initializingCamera": "카메라 초기화 중...",
+    "guide": {
+      "intro": "Flovers QR 코드를 스캔해 식물을 열거나 기기를 설정하세요.",
+      "plant": {
+        "title": "식물 QR 코드",
+        "body": "화분의 라벨을 스캔하면 식물 상세 정보를 볼 수 있어요.",
+        "path": "식물 상세 정보 → ⋯ → QR 코드에서 찾을 수 있어요."
+      },
+      "device": {
+        "title": "기기 QR 코드",
+        "body": "Flovers 기기의 출고 QR 코드를 스캔해 페어링을 시작하세요."
+      }
+    }
   }
 }

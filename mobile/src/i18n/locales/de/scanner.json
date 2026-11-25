@@ -14,6 +14,18 @@
     "permissionRequired": "Kameraberechtigung erforderlich",
     "permissionHint": "Aktiviere den Kamerazugriff in den Systemeinstellungen, um QR-Codes scannen zu können.",
     "openSettings": "Einstellungen öffnen",
-    "initializingCamera": "Kamera wird initialisiert…"
+    "initializingCamera": "Kamera wird initialisiert…",
+    "guide": {
+      "intro": "Scanne einen Flovers-QR-Code, um eine Pflanze zu öffnen oder ein Gerät einzurichten.",
+      "plant": {
+        "title": "Pflanzen-QR-Codes",
+        "body": "Scanne das Etikett am Topf, um die Pflanzendetails zu öffnen.",
+        "path": "Zu finden unter Pflanzendetails → ⋯ → QR-Code."
+      },
+      "device": {
+        "title": "Geräte-QR-Codes",
+        "body": "Scanne den werkseitigen QR-Code deines Flovers-Geräts zum Koppeln."
+      }
+    }
   }
 }

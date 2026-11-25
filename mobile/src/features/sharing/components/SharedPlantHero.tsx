@@ -97,6 +97,7 @@ export default function SharedPlantHero({
                 testID="shared-plant-image"
                 uri={syncedPhotoUri}
                 photo={plant.photo}
+                fadeDuration={0}
                 style={StyleSheet.absoluteFill}
                 onError={() => setFailedSource(sourceKey)}
               />
@@ -104,6 +105,7 @@ export default function SharedPlantHero({
               <ImageBackground
                 testID="shared-plant-image"
                 source={source}
+                fadeDuration={0}
                 resizeMode="cover"
                 style={StyleSheet.absoluteFill}
                 onError={() => setFailedSource(sourceKey)}

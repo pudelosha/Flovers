@@ -14,6 +14,18 @@
     "permissionRequired": "需要相机权限",
     "permissionHint": "在系统设置中启用相机访问权限以扫描二维码。",
     "openSettings": "打开设置",
-    "initializingCamera": "初始化相机…"
+    "initializingCamera": "初始化相机…",
+    "guide": {
+      "intro": "扫描 Flovers 二维码，打开植物详情或设置设备。",
+      "plant": {
+        "title": "植物二维码",
+        "body": "扫描花盆上的标签，打开植物详情。",
+        "path": "在“植物详情 → ⋯ → 二维码”中查看。"
+      },
+      "device": {
+        "title": "设备二维码",
+        "body": "扫描 Flovers 设备的出厂二维码，开始配对。"
+      }
+    }
   }
 }

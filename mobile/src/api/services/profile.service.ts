@@ -102,13 +102,13 @@ export type ApiProfileSettings = {
 export type ApiProfileSettingsUpdatePayload = Partial<ApiProfileSettings>;
 
 export async function fetchProfileSettings(
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean; timeoutMs?: number } = { auth: true }
 ): Promise<ApiProfileSettings> {
   const res = await request<ApiEnvelope<ApiProfileSettings>>(
     "/profile/settings/",
     "GET",
     undefined,
-    { auth: opts.auth ?? true }
+    { auth: opts.auth ?? true, timeoutMs: opts.timeoutMs }
   );
   return res.data;
 }

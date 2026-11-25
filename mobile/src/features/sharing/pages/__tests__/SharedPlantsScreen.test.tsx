@@ -8,6 +8,8 @@ import GlassCard from "../../../profile/components/GlassCard";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import { usePlantPhotoPreload } from "../../../../shared/hooks/usePlantPhotoPreload";
 import { SharingPage } from "../../components/SharingUI";
+import { ThemeContext } from "../../../../shared/theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "../../../../shared/theme/palette";
 
 const mockT = (_key: string, values: any = {}) => String(values.defaultValue ?? _key).replace(/{{(\w+)}}/g, (_, key) => String(values[key] ?? ""));
 let mockSharing: any;
@@ -115,6 +117,24 @@ describe("SharedPlantsScreen", () => {
     expect(view.getByText("Bird")).toBeTruthy();
     expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
     expect(view.UNSAFE_getByType(SharingPage).props.contentReady).toBe(true);
+  });
+
+  it.each([false, true])("fades each complete card as one composited layer (light theme: %s)", async isLight => {
+    const view = render(
+      <ThemeContext.Provider value={{ isLight, colors: isLight ? LIGHT_COLORS : DARK_COLORS }}>
+        <SharedPlantsScreen />
+      </ThemeContext.Provider>,
+    );
+    await act(async () => {});
+    for (const [id, name] of [["outgoing:1", "Bird"], ["incoming:2", "Peace lily"]]) {
+      const card = view.getByTestId(`shared-plant-card-${id}`);
+      expect(card.props.needsOffscreenAlphaCompositing).toBe(true);
+      // Image, description and recipients share the same animated parent.
+      expect(within(card).getByTestId("shared-plant-image")).toBeTruthy();
+      expect(within(card).getByTestId("shared-plant-description")).toBeTruthy();
+      expect(within(card).getByText(name)).toBeTruthy();
+      expect(within(card).getByText("Anna")).toBeTruthy();
+    }
   });
 
   it("opens a floating plant menu and navigates to the selected plant", async () => {
