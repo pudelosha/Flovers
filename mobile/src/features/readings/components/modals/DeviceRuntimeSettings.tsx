@@ -38,38 +38,44 @@ export default function DeviceRuntimeSettings({ values, onChange, pumpIncluded, 
   const fields: Array<{ key: keyof Omit<DeviceRuntimeValues, 'automaticPumpLaunch'>; label: string; min: number; max: number; error: string }> = [
     { key: 'intervalMinutes', label: t('readingsModals.upsert.intervalMinutes', { defaultValue: 'Reading interval (minutes)' }), min: 1, max: 1440,
       error: t('readingsModals.upsert.intervalMinutesValidation', { defaultValue: 'Enter a whole number from 1 to 1440.' }) },
-    ...(pumpIncluded ? [
-      { key: 'pumpDurationSeconds' as const, label: t('readingsModals.upsert.pumpDurationLabel', { defaultValue: 'Pump run time (seconds)' }), min: 1, max: 300,
+      { key: 'pumpDurationSeconds', label: t('readingsModals.upsert.pumpDurationLabel', { defaultValue: 'Pump run time (seconds)' }), min: 1, max: 300,
         error: t('readingsModals.upsert.pumpDurationInvalid', { defaultValue: 'Enter a whole number from 1 to 300.' }) },
-      { key: 'pumpCooldownMinutes' as const, label: t('readingsModals.upsert.pumpCooldownMinutes', { defaultValue: 'Automatic watering cooldown (minutes)' }), min: 1, max: 32767,
+      { key: 'pumpCooldownMinutes', label: t('readingsModals.upsert.pumpCooldownMinutes', { defaultValue: 'Automatic watering cooldown (minutes)' }), min: 1, max: 32767,
         error: t('readingsModals.upsert.pumpCooldownInvalid', { defaultValue: 'Enter a whole number from 1 to 32767.' }) },
-    ] : []),
-    ...(pumpIncluded && values.automaticPumpLaunch ? [
-      { key: 'pumpThresholdPct' as const, label: t('readingsModals.configuration.threshold'), min: 0, max: 100,
+      { key: 'pumpThresholdPct', label: t('readingsModals.configuration.threshold'), min: 0, max: 100,
         error: t('readingsModals.configuration.thresholdInvalid') },
-    ] : []),
   ];
-  return <View style={{ gap: 14 }}>
-    {fields.map(field => <View key={field.key} style={{ gap: 6 }}>
-      <Text style={pr.promptBtnText}>{field.label}</Text>
+  const field = (item: typeof fields[number]) => {
+    const locked = disabled || (item.key !== 'intervalMinutes' && !pumpIncluded) ||
+      (item.key === 'pumpThresholdPct' && (!values.automaticPumpLaunch || !moistureEnabled));
+    const invalid = item.key === 'pumpThresholdPct' ? !validThreshold(values[item.key]) :
+      !wholeNumberInRange(values[item.key], item.min, item.max);
+    return <View key={item.key} testID={`device-field-${item.key}`} style={{ gap: 6, opacity: locked ? 0.45 : 1 }}>
+      <Text style={pr.promptBtnText}>{item.label}</Text>
       <TextInput
-        testID={field.key === 'intervalMinutes' ? 'reading-interval-minutes' : `device-${field.key}`}
-        style={[pr.input, { marginHorizontal: 0, width: '100%' }]}
-        accessibilityLabel={field.label}
-        keyboardType={field.key === 'pumpThresholdPct' ? 'decimal-pad' : 'number-pad'}
-        value={values[field.key]}
-        editable={!disabled}
-        onChangeText={value => onChange({ ...values, [field.key]: value })}
+        testID={item.key === 'intervalMinutes' ? 'reading-interval-minutes' : `device-${item.key}`}
+        style={[pr.input, { marginHorizontal: 0, marginBottom: 0, width: '100%' }]}
+        accessibilityLabel={item.label}
+        accessibilityState={{ disabled: locked }}
+        keyboardType={item.key === 'pumpThresholdPct' ? 'decimal-pad' : 'number-pad'}
+        value={values[item.key]}
+        editable={!locked}
+        onChangeText={locked ? undefined : value => onChange({ ...values, [item.key]: value })}
       />
-      {!(field.key === 'pumpThresholdPct' ? validThreshold(values[field.key]) : wholeNumberInRange(values[field.key], field.min, field.max)) &&
-        <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>{field.error}</Text>}
-    </View>)}
-    {pumpIncluded && <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+      {!locked && invalid && <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>{item.error}</Text>}
+    </View>;
+  };
+  const automaticLocked = disabled || !pumpIncluded || !moistureEnabled;
+  return <View style={{ gap: 14 }}>
+    {fields.filter(item => item.key !== 'pumpThresholdPct').map(field)}
+    <View testID="device-automatic-pump" style={{ flexDirection: 'row', alignItems: 'center', gap: 12, opacity: automaticLocked ? 0.45 : 1 }}>
       <Text style={[pr.promptBtnText, { flex: 1 }]}>{t('readingsModals.upsert.automaticPumpLaunch')}</Text>
       <Switch accessibilityLabel={t('readingsModals.upsert.automaticPumpLaunch')}
-        value={values.automaticPumpLaunch}
-        disabled={disabled || !moistureEnabled}
-        onValueChange={value => onChange({ ...values, automaticPumpLaunch: value })} />
-    </View>}
+        value={pumpIncluded && values.automaticPumpLaunch}
+        disabled={automaticLocked}
+        accessibilityState={{ disabled: automaticLocked }}
+        onValueChange={automaticLocked ? undefined : value => onChange({ ...values, automaticPumpLaunch: value })} />
+    </View>
+    {fields.filter(item => item.key === 'pumpThresholdPct').map(field)}
   </View>;
 }

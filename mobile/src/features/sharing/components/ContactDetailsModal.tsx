@@ -3,7 +3,6 @@ import { Pressable, StyleSheet, Text, TextInput, View } from "../../../shared/th
 import { useTranslation } from "react-i18next";
 import { useContacts } from "../state/ContactsProvider";
 import { useSharingPreview } from "../state/SharingPreviewProvider";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { CONTACT_ERROR_MESSAGES } from "../types/contacts.types";
 import type { PlantShare, SharingContact } from "../types/sharing.types";
 import { SharingButton, sharingStyles as s } from "./SharingUI";
@@ -23,6 +22,9 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
   const initialContact = useRef(contact);
   initialContact.current = contact;
   const contactId = contact?.id;
+  const [readyContactId, setReadyContactId] = useState<string | null>(null);
+  const [retrying, setRetrying] = useState(false);
+  const formLoading = !!contactId && (readyContactId !== contactId || retrying);
 
   useEffect(() => {
     revision.current += 1;
@@ -31,7 +33,23 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
     setNameInvalid(false);
     setError(null);
   }, [contactId]);
-  useEffect(() => { if (contactId) void refresh(); }, [contactId, refresh]);
+  useEffect(() => {
+    let active = true;
+    setReadyContactId(null);
+    setRetrying(false);
+    if (contactId) {
+      const settle = () => { if (active) setReadyContactId(contactId); };
+      void refresh().then(settle, settle);
+    }
+    return () => { active = false; };
+  }, [contactId, refresh]);
+
+  const retry = async () => {
+    const request = revision.current;
+    setRetrying(true);
+    try { await refresh(); }
+    finally { if (request === revision.current) setRetrying(false); }
+  };
 
   const renderShares = (direction: PlantShare["direction"]) => {
     const items = shares.filter((share) => share.contactId === contact?.id && share.direction === direction);
@@ -70,8 +88,11 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
       visible={!!contact}
       title={t("sharing.contacts.editTitle", { defaultValue: "Edit contact" })}
       onClose={onClose}
+      centerContent
+      loading={formLoading}
+      loadingTestID="edit-contact-loading"
     >
-      {!!contact && (
+      {!!contact && !formLoading && (
         <>
           <Text style={[s.text, local.fieldLabel]}>{t("sharing.contacts.nameLabel", { defaultValue: "Contact name" })}</Text>
           <TextInput
@@ -92,10 +113,9 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
             {!!contact.email && <Text selectable style={s.hint}>{contact.email}</Text>}
             {!!contact.floversId && <Text selectable style={s.hint}>{contact.floversId}</Text>}
             <View style={s.divider} />
-            {!loaded && !sharingError && <View style={{ height: 56 }}><CenteredSpinner size={28} /></View>}
             {!!sharingError && <>
               <Text accessibilityRole="alert" style={s.error}>{t("sharing.accessErrors.unavailable", { defaultValue: "Could not load or update sharing. Please try again." })}</Text>
-              <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" disabled={loading} onPress={() => { void refresh(); }} />
+              <SharingButton label={t("sharing.form.retry", { defaultValue: "Try again" })} variant="secondary" disabled={loading} onPress={() => { void retry(); }} />
             </>}
             {loaded && <>
               <Text style={s.title}>{t("sharing.contacts.sharedByYou", { defaultValue: "Plants you share" })}</Text>
@@ -108,7 +128,7 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
               icon="share-variant-outline" disabled={!loaded || !!sharingError || loading}
               onPress={() => { onClose(); openSharePlant(undefined, contact.id); }} />
           </View>
-          <View style={pr.promptButtonsRow}>
+          <View style={[pr.promptButtonsRow, local.actions]}>
             <Pressable accessibilityRole="button" style={pr.promptBtn} onPress={onClose}>
               <Text style={pr.promptBtnText}>{t("sharing.common.cancel", { defaultValue: "Cancel" })}</Text>
             </Pressable>
@@ -123,6 +143,7 @@ export default function ContactDetailsModal({ contact, onClose }: Props) {
 }
 
 const local = StyleSheet.create({
+  actions: { marginTop: 16, flexWrap: "wrap" },
   fieldLabel: { marginHorizontal: 16, marginBottom: 8 },
   hint: { marginHorizontal: 16, marginBottom: 10 },
   section: { marginHorizontal: 16, marginTop: 8, marginBottom: 16, gap: 4 },

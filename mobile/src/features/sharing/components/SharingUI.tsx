@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import MaterialCommunityIcons from '../../../shared/theme/Icon';
 import { useTranslation } from 'react-i18next';
 import GlassHeader from '../../../shared/ui/GlassHeader';
+import { ScrollView as HeaderScrollView } from '../../../shared/ui/HeaderScrollView';
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
@@ -80,7 +81,7 @@ export function SharingPage({
         )}
       </GlassHeader>
       <View style={s.body}>
-        <ScrollView
+        <HeaderScrollView
           ref={scrollRef}
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}
@@ -98,7 +99,7 @@ export function SharingPage({
           >
             {children}
           </AnimatedView>
-        </ScrollView>
+        </HeaderScrollView>
       </View>
     </View>
   );

@@ -14,18 +14,8 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import {
-  View,
-  Pressable,
-  RefreshControl,
-  PanResponder,
-  Animated,
-  Easing,
-  StyleSheet,
-  Text,
-  AnimatedView,
-  AnimatedFlatList,
-} from '../../../shared/theme/native';
+import { View, Pressable, RefreshControl, PanResponder, Animated, Easing, StyleSheet, Text, AnimatedView } from "../../../shared/theme/native";
+import { AnimatedFlatList } from "../../../shared/ui/HeaderScrollView";
 import {
   useNavigation,
   useFocusEffect,

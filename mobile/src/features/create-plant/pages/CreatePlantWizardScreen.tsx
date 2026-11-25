@@ -1,10 +1,11 @@
 import { ScreenLoadingSpinner } from '../../../shared/ui/HeaderPresentation';
-import { useHeaderContentReady } from '../../../shared/ui/HeaderPresentation';
+import { useScreenEntryAnimation } from '../../../shared/hooks/useScreenEntryAnimation';
 // screens/CreatePlantWizardScreen.tsx
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { View, ScrollView, Text, Animated, Easing, AnimatedView } from "../../../shared/theme/native";
+import { View, Text, AnimatedView } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useIsFocused } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
@@ -49,7 +50,7 @@ type StepKey = typeof STEPS_ORDER[number];
 const ASYNC_STEPS: readonly string[] = ["selectPlant", "traits", "location", "photo", "creating"];
 
 function WizardBody() {
-  const headerReady = useHeaderContentReady();
+  const isFocused = useIsFocused();
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const { settings } = useSettings();
@@ -139,37 +140,7 @@ function WizardBody() {
     if (state.step !== "selectPlant") setScannerModalOpen(false);
   }, [state.step]);
 
-  const entry = useRef(new Animated.Value(0)).current;
-  const prevStepRef = useRef<StepKey>("selectPlant");
-  const dirRef = useRef<1 | -1>(1);
-
-  useEffect(() => {
-    if (prevStepRef.current !== stepKey) {
-      const prevIdx = STEPS_ORDER.indexOf(prevStepRef.current);
-      const nextIdx = STEPS_ORDER.indexOf(stepKey);
-      dirRef.current = nextIdx > prevIdx ? 1 : -1;
-      prevStepRef.current = stepKey;
-    }
-    entry.stopAnimation();
-    entry.setValue(0);
-    if (!stepReady || !headerReady) return;
-    const animation = Animated.timing(entry, {
-      toValue: 1,
-      duration: 260,
-      easing: Easing.out(Easing.cubic),
-      useNativeDriver: true,
-    });
-    animation.start();
-    return () => animation.stop();
-  }, [stepKey, stepReady, headerReady, entry]);
-
-  const translateX = entry.interpolate({
-    inputRange: [0, 1],
-    outputRange: [24 * dirRef.current, 0],
-  });
-
-  const opacity = entry.interpolate({ inputRange: [0, 1], outputRange: [0, 1] });
-  const scale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+  const entryStyle = useScreenEntryAnimation(stepReady, isFocused, stepKey);
 
   const floatingBottomOffset = 80;
   const extraBottomSpace = insets.bottom + floatingBottomOffset + 45;
@@ -186,7 +157,11 @@ function WizardBody() {
         contentContainerStyle={[wiz.pageContent, { paddingBottom: extraBottomSpace }]}
         keyboardShouldPersistTaps="handled"
       >
-        <AnimatedView style={{ opacity, transform: [{ translateX }, { scale }] }}>
+        <AnimatedView
+          testID="wizard-animated-tiles"
+          needsOffscreenAlphaCompositing
+          style={entryStyle}
+        >
           {state.step === "selectPlant" && (
             <Step01_SelectPlant
               onScrollToTop={scrollTop}

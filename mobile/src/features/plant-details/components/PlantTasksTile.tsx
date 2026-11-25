@@ -6,6 +6,7 @@ import {
   StyleSheet,
 } from '../../../shared/theme/native';
 import MaterialCommunityIcons from '../../../shared/theme/Icon';
+import { useAppTheme } from '../../../shared/theme/ThemeContext';
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../../../app/providers/SettingsProvider';
 import {
@@ -100,6 +101,7 @@ export default function PlantTasksTile({
   onShowHistory,
 }: Props) {
   const { t } = useTranslation();
+  const { isLight } = useAppTheme();
   const { settings } = useSettings();
   const [menuId, setMenuId] = useState<string | null>(null);
   useEffect(() => setMenuId(null), [collapseMenusSignal]);
@@ -115,7 +117,7 @@ export default function PlantTasksTile({
     const display = toDisplayType(type);
     const accent = ACCENT_BY_TYPE[display] || '#7DE2A7';
     return (
-      <View style={styles.bubble}>
+      <View style={[styles.bubble, isLight && { backgroundColor: '#CDE9DF' }]}>
         <MaterialCommunityIcons
           name={ICON_BY_TYPE[display] || 'calendar'}
           size={22}

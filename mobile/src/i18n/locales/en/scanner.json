@@ -14,6 +14,18 @@
     "permissionRequired": "Camera permission required",
     "permissionHint": "Enable camera access in system settings to scan QR codes.",
     "openSettings": "Open Settings",
-    "initializingCamera": "Initializing camera…"
+    "initializingCamera": "Initializing camera…",
+    "guide": {
+      "intro": "Scan a Flovers QR code to open a plant or set up a device.",
+      "plant": {
+        "title": "Plant QR codes",
+        "body": "Scan a label on a pot to open plant details.",
+        "path": "Find it in Plant details → ⋯ → QR Code."
+      },
+      "device": {
+        "title": "Device QR codes",
+        "body": "Scan the factory QR on your Flovers device to start pairing."
+      }
+    }
   }
 }

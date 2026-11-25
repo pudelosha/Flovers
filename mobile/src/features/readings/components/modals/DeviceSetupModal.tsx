@@ -105,7 +105,7 @@ export default function DeviceSetupModal({ visible, loading = false, sending = f
   const legacy = !status;
   const pumpIncluded = !!device?.pump_included;
   const valid = runtimeValuesValid(values, pumpIncluded) &&
-    (!values.automaticPumpLaunch || device?.sensors.moisture !== false);
+    (!pumpIncluded || !values.automaticPumpLaunch || device?.sensors.moisture !== false);
   const pairingLabel = !status ? 'legacy' : status.pairing === 'paired' && !status.online ? 'offline' : status.pairing;
   // A PATCH is not a device acknowledgement. Only later server evidence may say applied.
   const syncLabel = saved && legacy ? 'legacySaved' : saved && !identity ? 'pending' : status?.synchronization ?? 'unknown';
@@ -172,19 +172,10 @@ export default function DeviceSetupModal({ visible, loading = false, sending = f
       <Text testID="device-details-title" style={pr.promptTitle}>{text('title')}</Text>
       <View style={{ gap: 16, marginHorizontal: 16 }}>
         <InfoRow label={t('readingsModals.deviceDetails.deviceName')} value={device.device_name} />
-        <InfoRow label={t('readingsModals.deviceDetails.deviceKey')} value={device.device_key || '—'}
-          onCopy={device.device_key ? () => Clipboard.setString(device.device_key) : undefined}
-          copyAccessibilityLabel={t('readingsModals.deviceDetails.copyDeviceKey')} />
-        <InfoRow label={t('readingsModals.deviceDetails.plant')} value={device.plant_name || '—'} />
         <InfoRow label={text('pairingStatus')} value={text(pairingLabel)} />
-        <InfoRow label={text('hardwareId')} value={status?.hardwareId || text('notReported')} />
-        <InfoRow label={text('firmwareVersion')} value={status?.firmwareVersion || text('notReported')} />
-        <InfoRow label={text('lastSeen')} value={status?.lastSeen || text('notReported')} />
-        <InfoRow label={t('readings.tile.lastReadPrefix')} value={device.last_read_at || '—'} />
-        <InfoRow label={text('synchronization')} value={text(syncLabel)} />
         <DeviceRuntimeSettings values={values} onChange={change} pumpIncluded={pumpIncluded}
           moistureEnabled={device.sensors.moisture !== false} disabled={saving} />
-        {legacy && <Text style={s.confirmText}>{text('legacyConfigurationHint')}</Text>}
+        {legacy && <Text style={[s.confirmText, { paddingHorizontal: 0, marginBottom: 0 }]}>{text('legacyConfigurationHint')}</Text>}
         {error && <Text accessibilityRole="alert" style={{ color: '#FF9090' }}>{text('saveFailed')}</Text>}
         <Pressable accessibilityRole="button" disabled={!valid || !dirty || saving}
           accessibilityState={{ disabled: !valid || !dirty || saving }}
@@ -193,7 +184,7 @@ export default function DeviceSetupModal({ visible, loading = false, sending = f
             ? t('readingsModals.pairing.saveSync') : text('saveConfiguration')}</Text>
         </Pressable>
 
-        {!onPair && <Text style={s.confirmText}>{text('pairingUnavailable')}</Text>}
+        {!onPair && <Text style={[s.confirmText, { paddingHorizontal: 0, marginBottom: 0 }]}>{text('pairingUnavailable')}</Text>}
         <Pressable accessibilityRole="button" accessibilityState={{ disabled: !onPair || saving }} disabled={!onPair || saving}
           onPress={() => onPair?.(status?.pairing === 'paired' ? 'wifi' : 'pair')} style={[pr.promptBtn, { alignItems: 'center', opacity: !onPair || saving ? 0.5 : 1 }]}>
           <Text style={pr.promptBtnText}>{text(status?.pairing === 'pairing' ? 'continuePairing' : status?.pairing === 'paired' ? 'reconfigureWifi' : 'pairDevice')}</Text>
@@ -214,14 +205,23 @@ export default function DeviceSetupModal({ visible, loading = false, sending = f
           </Pressable>}
         </>}
 
-        {legacy && <>
+        <>
           <Pressable accessibilityRole="button" accessibilityState={{ expanded: advanced }} onPress={toggleAdvanced}
             style={[pr.promptBtn, { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }]}>
             <Text style={[pr.promptBtnText, { flex: 1 }]}>{text('advanced')}</Text>
             <MaterialCommunityIcons name={advanced ? 'chevron-up' : 'chevron-down'} size={22} color="#fff" />
           </Pressable>
-          {advanced && <View style={{ gap: 14 }}>
-            <Text style={s.confirmText}>{text('legacySecretHint')}</Text>
+          {advanced && <View testID="device-setup-advanced" style={{ gap: 14 }}>
+        <InfoRow label={t('readingsModals.deviceDetails.deviceKey')} value={device.device_key || '—'}
+          onCopy={device.device_key ? () => Clipboard.setString(device.device_key) : undefined}
+          copyAccessibilityLabel={t('readingsModals.deviceDetails.copyDeviceKey')} />
+        <InfoRow label={text('hardwareId')} value={status?.hardwareId || text('notReported')} />
+        <InfoRow label={text('firmwareVersion')} value={status?.firmwareVersion || text('notReported')} />
+        <InfoRow label={text('lastSeen')} value={status?.lastSeen || text('notReported')} />
+        <InfoRow label={t('readings.tile.lastReadPrefix')} value={device.last_read_at || '—'} />
+        <InfoRow label={text('synchronization')} value={text(syncLabel)} />
+            {legacy && <>
+            <Text style={[s.confirmText, { paddingHorizontal: 0, marginBottom: 0 }]}>{text('legacySecretHint')}</Text>
             <InfoRow label={t('readingsModals.deviceDetails.accountSecret')}
               value={revealed && secret ? secret : '••••••••••••••'} smallValueText
               onCopy={secret ? () => Clipboard.setString(secret) : undefined}
@@ -237,13 +237,14 @@ export default function DeviceSetupModal({ visible, loading = false, sending = f
               {(['temperature', 'humidity', 'light', 'moisture'] as const).filter(key => device.sensors[key]).map(key =>
                 <Text key={key} style={s.dropdownValue}>{t(`readingsModals.deviceDetails.sensor${key === 'moisture' ? 'Moisture' : key[0].toUpperCase() + key.slice(1)}`)}</Text>)}
             </Block>
-            {dirty && <Text style={s.confirmText}>{text('saveBeforeCode')}</Text>}
+            {dirty && <Text style={[s.confirmText, { paddingHorizontal: 0, marginBottom: 0 }]}>{text('saveBeforeCode')}</Text>}
             <Pressable accessibilityRole="button" onPress={onEmailCode} disabled={sending || saving || dirty || !device.device_key}
               style={[pr.promptBtn, pr.promptPrimary, { alignItems: 'center', opacity: sending || saving || dirty || !device.device_key ? 0.5 : 1 }]}>
               <Text style={pr.promptPrimaryText}>{t(sending ? 'readingsModals.deviceDetails.emailingCode' : 'readingsModals.deviceDetails.emailCode')}</Text>
             </Pressable>
+            </>}
           </View>}
-        </>}
+        </>
         <Pressable accessibilityRole="button" style={[pr.promptBtn, { alignItems: 'center' }]} onPress={close} disabled={saving}>
           <Text style={pr.promptBtnText}>{t('readingsModals.common.close')}</Text>
         </Pressable>

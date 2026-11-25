@@ -395,7 +395,14 @@ export default function SharedPlantsScreen() {
                 const outgoing = first.direction === 'outgoing';
                 const groupId = `${first.direction}:${plant.id}`;
                 return (
-                  <AnimatedView key={groupId} style={styleFor(groupId)}>
+                  <AnimatedView
+                    key={groupId}
+                    testID={`shared-plant-card-${groupId}`}
+                    // Composite the photo and translucent panel before fading
+                    // the card, so their relative opacity remains unchanged.
+                    needsOffscreenAlphaCompositing
+                    style={styleFor(groupId)}
+                  >
                   <GlassCard
                     background={<PlantDescriptionSurface solid />}
                   >

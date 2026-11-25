@@ -14,6 +14,18 @@
     "permissionRequired": "Autorisation d’accès à l’appareil photo requise",
     "permissionHint": "Activez l’accès à l’appareil photo dans les paramètres du système afin de scanner les codes QR.",
     "openSettings": "Ouvrir les paramètres",
-    "initializingCamera": "Initialisation de l’appareil photo…"
+    "initializingCamera": "Initialisation de l’appareil photo…",
+    "guide": {
+      "intro": "Scannez un code QR Flovers pour ouvrir une plante ou configurer un appareil.",
+      "plant": {
+        "title": "Codes QR des plantes",
+        "body": "Scannez l’étiquette du pot pour ouvrir les détails de la plante.",
+        "path": "Dans Détails de la plante → ⋯ → Code QR."
+      },
+      "device": {
+        "title": "Codes QR des appareils",
+        "body": "Scannez le code QR d’usine de votre appareil Flovers pour l’associer."
+      }
+    }
   }
 }

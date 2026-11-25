@@ -6,17 +6,8 @@ import useStableScrollHeight from '../../../shared/hooks/useStableScrollHeight';
 import { useRequestGuard } from '../../../shared/hooks/useRequestGuard';
 import SlidingSegments from '../../../shared/ui/SlidingSegments';
 import React, { useMemo, useState, useRef, useCallback } from 'react';
-import {
-  View,
-  Text,
-  Alert,
-  ScrollView,
-  PermissionsAndroid,
-  Platform,
-  StyleSheet,
-  AnimatedView,
-  Pressable,
-} from '../../../shared/theme/native';
+import { View, Text, Alert, PermissionsAndroid, Platform, StyleSheet, AnimatedView, Pressable } from "../../../shared/theme/native";
+import { ScrollView } from "../../../shared/ui/HeaderScrollView";
 import {
   useNavigation,
   useRoute,

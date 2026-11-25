@@ -1,6 +1,7 @@
 import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import SegmentedChoice from '../../../../shared/ui/SegmentedChoice';
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { View, Text, Pressable, TextInput, Keyboard, ScrollView } from "../../../../shared/theme/native";
+import { View, Text, Pressable, TextInput, Keyboard, ScrollView, StyleSheet } from "../../../../shared/theme/native";
 
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../../app/providers/LanguageProvider';
@@ -123,28 +124,17 @@ export default function EditLocationModal({
 
           <Text style={s.inputLabel}>{tr('locationsModals.edit.categoryLabel', 'Category')}</Text>
 
-          <View style={s.segmentRow}>
-            {(['indoor', 'outdoor', 'other'] as LocationCategory[]).map(k => {
-              const isActive = cat === k;
-
-              return (
-                <Pressable
-                  key={k}
-                  style={[
-                    s.segBtn,
-                    isActive ? s.segActive : s.segInactive,
-                    {
-                      borderWidth: 0,
-                    },
-                  ]}
-                  onPress={() => setCat(k)}
-                  android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
-                >
-                  <Text style={s.segText}>{categoryLabel(k)}</Text>
-                </Pressable>
-              );
-            })}
-          </View>
+          <SegmentedChoice
+            testID="location-categories"
+            borderRadius={s.promptBtn.borderRadius}
+            value={cat}
+            onChange={setCat}
+            options={(['indoor', 'outdoor', 'other'] as LocationCategory[]).map(value => ({
+              value,
+              label: categoryLabel(value),
+            }))}
+            style={styles.categorySegment}
+          />
 
           <View style={s.promptButtonsRow}>
             <Pressable style={s.promptBtn} onPress={closeModal}>
@@ -246,3 +236,7 @@ export default function EditLocationModal({
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  categorySegment: { marginHorizontal: 16, marginBottom: 6 },
+});

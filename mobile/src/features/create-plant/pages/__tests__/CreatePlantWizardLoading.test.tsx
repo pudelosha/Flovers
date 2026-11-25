@@ -4,9 +4,11 @@ import { act, fireEvent, render } from "@testing-library/react-native";
 import CreatePlantWizardScreen from "../CreatePlantWizardScreen";
 import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 import PreviousNextBar from "../../components/PreviousNextBar";
+import { HeaderContentReadyContext } from "../../../../shared/ui/HeaderPresentation";
 
 let mockState: any;
 let mockLanguage = "en";
+let mockFocused = true;
 const mockActions = { setLightLevel: jest.fn(), setOrientation: jest.fn() };
 function mockStep(name: string, props: any) {
   const React = require("react"); const { View, Text } = require("react-native");
@@ -17,6 +19,7 @@ jest.mock("../../hooks/useCreatePlantWizard", () => ({ useCreatePlantWizard: () 
 jest.mock("../../../../app/providers/LanguageProvider", () => ({ useLanguage: () => ({ currentLanguage: mockLanguage }) }));
 jest.mock("../../../../app/providers/SettingsProvider", () => ({ useSettings: () => ({ settings: { measureUnit: "metric" } }) }));
 jest.mock("@react-navigation/native", () => ({
+  useIsFocused: () => mockFocused,
   useFocusEffect: (callback: any) => require("react").useEffect(() => callback(), [callback]),
 }));
 jest.mock("react-native-safe-area-context", () => ({ useSafeAreaInsets: () => ({ top: 0, bottom: 0, left: 0, right: 0 }) }));
@@ -38,7 +41,7 @@ jest.mock("../../steps/Step08_NameAndNotes", () => (props: any) => mockStep("nam
 jest.mock("../../steps/Step09_Creating", () => (props: any) => mockStep("creating", props));
 
 beforeEach(() => {
-  jest.clearAllMocks(); mockLanguage = "en"; mockState = { step: "selectPlant" };
+  jest.clearAllMocks(); mockLanguage = "en"; mockFocused = true; mockState = { step: "selectPlant" };
   jest.spyOn(Animated, "timing").mockImplementation((value, config) => ({
     start: jest.fn(() => (value as Animated.Value).setValue(Number(config.toValue))), stop: jest.fn(), reset: jest.fn(),
   }));
@@ -62,7 +65,7 @@ it("keeps the fetching step mounted but hides the card and navigation behind the
   expect(view.UNSAFE_queryByType(CenteredSpinner)).toBeNull();
   expect(view.UNSAFE_getByType(PreviousNextBar).props.hidden).toBe(false);
   expect(Animated.timing).toHaveBeenCalledTimes(1);
-  expect(Animated.timing).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({ toValue: 1, duration: 260 }));
+  expect(Animated.timing).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({ toValue: 1, duration: 220 }));
 });
 
 it("does not let a completed old step reveal a new step that is still loading", () => {
@@ -104,4 +107,54 @@ it.each([
   expect(scrollDisplay(view)).toBe("none");
   fireEvent(currentStep(view, step), "readyChange", true);
   expect(scrollDisplay(view)).toBeUndefined();
+});
+
+it("uses the same entry transition throughout forward and backward navigation without replaying for input changes", () => {
+  const steps = ["selectPlant", "traits", "location", "exposure", "potType", "autoTasks", "photo", "name", "creating"];
+  const asyncSteps = ["selectPlant", "traits", "location", "photo", "creating"];
+  const view = render(<CreatePlantWizardScreen />);
+  let entries = 0;
+  for (const step of [...steps, ...steps.slice(0, -1).reverse()]) {
+    mockState = { step, selectedPlant: { id: "1" } };
+    view.rerender(<CreatePlantWizardScreen />);
+    if (asyncSteps.includes(step)) {
+      expect(Animated.timing).toHaveBeenCalledTimes(entries);
+      fireEvent(currentStep(view, step), "readyChange", true);
+    }
+    entries += 1;
+    expect(Animated.timing).toHaveBeenCalledTimes(entries);
+    expect(Animated.timing).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
+      toValue: 1, duration: 220, useNativeDriver: true,
+    }));
+    const animated = view.getByTestId("wizard-animated-tiles");
+    expect(StyleSheet.flatten(animated.props.style).transform?.map((transform: any) => Object.keys(transform)[0]))
+      .toEqual(["translateY", "scale"]);
+    expect(animated.props.needsOffscreenAlphaCompositing).toBe(true);
+    mockState = { ...mockState, notes: "Updated notes" };
+    view.rerender(<CreatePlantWizardScreen />);
+    expect(Animated.timing).toHaveBeenCalledTimes(entries);
+  }
+});
+
+it("waits for the header animation even when step data and images are ready", () => {
+  const view = render(<HeaderContentReadyContext.Provider value={false}>
+    <CreatePlantWizardScreen />
+  </HeaderContentReadyContext.Provider>);
+  fireEvent(currentStep(view, "selectPlant"), "readyChange", true);
+  expect(Animated.timing).not.toHaveBeenCalled();
+  view.rerender(<HeaderContentReadyContext.Provider value>
+    <CreatePlantWizardScreen />
+  </HeaderContentReadyContext.Provider>);
+  expect(Animated.timing).toHaveBeenCalledTimes(1);
+});
+
+it("replays the entry on return to the wizard", () => {
+  mockState = { step: "exposure" };
+  const view = render(<CreatePlantWizardScreen />);
+  mockFocused = false;
+  view.rerender(<CreatePlantWizardScreen />);
+  expect(Animated.timing).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({ toValue: 0, duration: 160 }));
+  mockFocused = true;
+  view.rerender(<CreatePlantWizardScreen />);
+  expect(Animated.timing).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({ toValue: 1, duration: 220 }));
 });

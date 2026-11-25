@@ -28,6 +28,7 @@ it('moves one pill between equal-width slots while preserving button actions', (
   });
   const indicator = view.getByTestId('segments-indicator');
   expect(StyleSheet.flatten(indicator.props.style).width).toBe(100);
+  expect(StyleSheet.flatten(indicator.props.style).borderRadius).toBe(17);
   view.rerender(bar(2));
   expect(view.getByTestId('segments-indicator')).toBe(indicator);
   expect(Animated.timing).toHaveBeenLastCalledWith(

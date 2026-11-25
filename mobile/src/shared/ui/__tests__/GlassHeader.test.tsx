@@ -72,6 +72,36 @@ function prepare(view: ReturnType<typeof render>, segment = true) {
     });
 }
 
+it('measures the shell behind the launch screen and starts its animation only after handoff', () => {
+  const completions: Array<() => void> = [];
+  (Animated.timing as jest.Mock).mockImplementation((value: any, config: any) => ({
+    start: (done?: any) => completions.push(() => {
+      value.setValue(config.toValue);
+      done?.({ finished: true });
+    }),
+    stop: jest.fn(), reset: jest.fn(),
+  }));
+  const onPrepared = jest.fn();
+  const screen = (transitionReady: boolean) => (
+    <SharedHeaderProvider onPrepared={onPrepared} transitionReady={transitionReady}>
+      <GlassHeader {...common} title="Home" segment={<Text>All Today</Text>} />
+      <HeaderContentGate><ScreenLoadingSpinner /></HeaderContentGate>
+    </SharedHeaderProvider>
+  );
+  const view = render(screen(false));
+  prepare(view);
+  expect(onPrepared).toHaveBeenCalledTimes(1);
+  expect(Animated.timing).not.toHaveBeenCalled();
+  expect(view.queryByTestId('header-transition-spinner')).toBeNull();
+  view.rerender(screen(true));
+  expect(Animated.timing).toHaveBeenCalled();
+  expect(onPrepared).toHaveBeenCalledTimes(1);
+  expect(view.queryByTestId('header-transition-spinner')).toBeNull();
+  act(() => completions.splice(0).forEach(complete => complete()));
+  expect(view.getByTestId('header-transition-spinner')).toBeVisible();
+  expect(view.UNSAFE_getAllByType(CenteredSpinner)).toHaveLength(1);
+});
+
 it('keeps one header surface while animating between expanded and normal routes', () => {
   const screen = (expanded: boolean) => (
     <SharedHeaderProvider>

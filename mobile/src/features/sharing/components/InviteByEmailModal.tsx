@@ -50,7 +50,7 @@ export default function InviteByEmailModal({ visible, onClose }: Props) {
         onPress: () => { if (!busy) { setLanguage(item.code); setOpen(false); } } }))} />
     </View>
     {!!error && <Text accessibilityRole="alert" style={[s.error, { marginHorizontal: 16 }]}>{error}</Text>}
-    <View style={pr.promptButtonsRow}>
+    <View style={[pr.promptButtonsRow, { marginTop: 16, flexWrap: "wrap" }]}>
       <Pressable accessibilityRole="button" style={[pr.promptBtn, { flex: 1, minWidth: 0, alignItems: "center" }]} onPress={onClose}><Text style={[pr.promptBtnText, { textAlign: "center" }]}>{t("sharing.common.cancel")}</Text></Pressable>
       <Pressable accessibilityRole="button" disabled={!email.trim() || busy} onPress={submit}
         style={[pr.promptBtn, pr.promptPrimary, { flex: 1, minWidth: 0, alignItems: "center" }, (!email.trim() || busy) && { opacity: 0.45 }]}>

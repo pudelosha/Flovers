@@ -14,6 +14,18 @@
     "permissionRequired": "Izin kamera diperlukan",
     "permissionHint": "Aktifkan akses kamera di pengaturan sistem untuk memindai kode QR.",
     "openSettings": "Buka Pengaturan",
-    "initializingCamera": "Menginisialisasi kamera…"
+    "initializingCamera": "Menginisialisasi kamera…",
+    "guide": {
+      "intro": "Pindai kode QR Flovers untuk membuka tanaman atau menyiapkan perangkat.",
+      "plant": {
+        "title": "Kode QR tanaman",
+        "body": "Pindai label pada pot untuk membuka detail tanaman.",
+        "path": "Temukan di Detail tanaman → ⋯ → Kode QR."
+      },
+      "device": {
+        "title": "Kode QR perangkat",
+        "body": "Pindai kode QR bawaan perangkat Flovers untuk mulai memasangkan."
+      }
+    }
   }
 }
