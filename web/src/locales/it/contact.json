@@ -24,5 +24,12 @@
     "requestTimedOut": "La richiesta ha impiegato troppo tempo. Riprova.",
     "unauthorizedLoginAgain": "La sessione è scaduta. Accedi di nuovo.",
     "missingApiBase": "Indirizzo API non configurato."
+  },
+  "deletion": {
+    "title": "Elimina il tuo account Flovers",
+    "instructions": "Per richiedere l’eliminazione dell’account Flovers e dei dati associati, usa il modulo qui sotto oppure scrivi a info@flovers.app dal tuo indirizzo registrato. Oggetto: «Elimina il mio account Flovers». Non serve installare l’app né accedere.",
+    "scope": "L’eliminazione rimuove dal servizio attivo l’account, le tue piante, le attività, le voci del diario e le foto caricate. La rimozione dei file fotografici può richiedere più tempo; eventuali backup scadono secondo la politica di conservazione. Nell’app non è possibile annullare l’eliminazione.",
+    "verification": "Potremmo verificare che l’account ti appartenga. Non inviare mai la password. Confermeremo la ricezione indicando i tempi previsti e le eventuali eccezioni alla cancellazione.",
+    "email": "Richiedi l’eliminazione via email"
   }
 }

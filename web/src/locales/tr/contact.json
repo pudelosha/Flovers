@@ -24,5 +24,12 @@
     "requestTimedOut": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
     "unauthorizedLoginAgain": "Oturumun süresi doldu. Lütfen tekrar giriş yapın.",
     "missingApiBase": "API temel URL'si yapılandırılmamış."
+  },
+  "deletion": {
+    "title": "Flovers hesabını sil",
+    "instructions": "Flovers hesabının ve ilgili verilerin silinmesini istemek için aşağıdaki formu kullan veya kayıtlı e-posta adresinden info@flovers.app adresine yaz. Konu: ‘Flovers hesabımı sil’. Uygulamayı yüklemen veya giriş yapman gerekmez.",
+    "scope": "Silme işlemi hesabını, sana ait bitkileri, görevleri, günlük kayıtlarını ve yüklenen fotoğrafları aktif hizmetten kaldırır. Fotoğraf dosyalarının silinmesi daha uzun sürebilir; varsa yedekler saklama politikasına göre sona erer. Silme işlemi uygulamada geri alınamaz.",
+    "verification": "Silmeden önce hesabın sana ait olduğunu doğrulayabiliriz. Şifreni asla gönderme. Talebin alındığını onaylayıp tahmini işlem süresini ve varsa saklama istisnalarını bildireceğiz.",
+    "email": "E-posta ile silme talebi gönder"
   }
 }

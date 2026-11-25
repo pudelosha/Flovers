@@ -127,6 +127,16 @@ export default function Contact() {
         <h1 className="h1 h1-auth">{t("contact:title")}</h1>
         <p className="muted muted-center">{t("contact:subtitle")}</p>
 
+        <section id="account-deletion" aria-labelledby="account-deletion-title">
+          <h2 id="account-deletion-title" className="h2">{t("contact:deletion.title")}</h2>
+          <p>{t("contact:deletion.instructions")}</p>
+          <p>{t("contact:deletion.scope")}</p>
+          <p className="muted">{t("contact:deletion.verification")}</p>
+          <a className="btn" href={`mailto:info@flovers.app?subject=${encodeURIComponent(t("contact:deletion.title"))}`}>
+            {t("contact:deletion.email")}
+          </a>
+        </section>
+
         <form onSubmit={handleSubmit} className="form">
           <div className="field">
             <label className="label" htmlFor="contact-email">{t("contact:form.emailLabel")}</label>
