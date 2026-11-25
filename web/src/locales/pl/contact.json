@@ -24,5 +24,12 @@
     "requestTimedOut": "Serwer nie odpowiedział na czas. Spróbuj ponownie.",
     "unauthorizedLoginAgain": "Sesja wygasła. Zaloguj się ponownie.",
     "missingApiBase": "Nie skonfigurowano adresu API."
+  },
+  "deletion": {
+    "title": "Usuń konto Flovers",
+    "instructions": "Aby poprosić o usunięcie konta Flovers i powiązanych danych, skorzystaj z formularza poniżej lub napisz na info@flovers.app z adresu przypisanego do konta. W temacie wpisz „Usuń moje konto Flovers”. Nie musisz instalować aplikacji ani się logować.",
+    "scope": "Usunięcie obejmuje konto, Twoje rośliny, zadania, wpisy w dzienniku i przesłane zdjęcia w działającej usłudze. Usunięcie plików zdjęć może potrwać dłużej, a ewentualne kopie zapasowe wygasają zgodnie z zasadami przechowywania. W aplikacji nie można cofnąć usunięcia.",
+    "verification": "Przed usunięciem możemy zweryfikować, czy konto należy do Ciebie. Nigdy nie wysyłaj hasła. Potwierdzimy otrzymanie prośby i podamy przewidywany czas realizacji oraz ewentualne wyjątki dotyczące przechowywania danych.",
+    "email": "Poproś o usunięcie e-mailem"
   }
 }

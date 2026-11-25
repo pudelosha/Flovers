@@ -24,5 +24,12 @@
     "requestTimedOut": "请求超时。请重试。",
     "unauthorizedLoginAgain": "会话已过期。请重新登录。",
     "missingApiBase": "未配置 API 地址。"
+  },
+  "deletion": {
+    "title": "删除 Flovers 账户",
+    "instructions": "如需删除 Flovers 账户及相关数据，请使用下方表单，或通过账户注册邮箱发送邮件至 info@flovers.app，主题为“删除我的 Flovers 账户”。无需安装应用或登录。",
+    "scope": "删除操作会从在线服务中移除账户、您拥有的植物、任务、日记记录及上传的照片。照片文件清理可能需要更长时间；如有恢复备份，将按保留政策到期清除。无法在应用中撤销删除。",
+    "verification": "删除前，我们可能需要验证账户归属。请勿发送密码。我们会确认收到请求，并说明预计处理时间及适用的数据保留例外。",
+    "email": "通过邮件申请删除"
   }
 }

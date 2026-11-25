@@ -24,5 +24,12 @@
     "requestTimedOut": "La solicitud ha tardado demasiado. Vuelve a intentarlo.",
     "unauthorizedLoginAgain": "Tu sesión ha caducado. Inicia sesión de nuevo.",
     "missingApiBase": "El servicio de contacto aún no está configurado."
+  },
+  "deletion": {
+    "title": "Eliminar tu cuenta de Flovers",
+    "instructions": "Para solicitar la eliminación de tu cuenta de Flovers y los datos asociados, usa el formulario de abajo o escribe a info@flovers.app desde tu correo registrado. Asunto: «Eliminar mi cuenta de Flovers». No necesitas instalar la app ni iniciar sesión.",
+    "scope": "Se eliminan del servicio activo tu cuenta, tus plantas, tareas, entradas del diario y fotos subidas. El borrado de archivos de fotos puede tardar más; las posibles copias de seguridad caducan según la política de conservación. La eliminación no se puede deshacer en la app.",
+    "verification": "Podemos verificar que la cuenta te pertenece antes de eliminarla. Nunca envíes tu contraseña. Confirmaremos la recepción e indicaremos el plazo previsto y las posibles excepciones de conservación.",
+    "email": "Solicitar eliminación por correo"
   }
 }

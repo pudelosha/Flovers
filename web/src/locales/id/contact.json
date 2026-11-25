@@ -24,5 +24,12 @@
     "requestTimedOut": "Waktu permintaan habis. Silakan coba lagi.",
     "unauthorizedLoginAgain": "Sesi berakhir. Silakan masuk lagi.",
     "missingApiBase": "URL dasar API tidak dikonfigurasi."
+  },
+  "deletion": {
+    "title": "Hapus akun Flovers",
+    "instructions": "Untuk meminta penghapusan akun Flovers dan data terkait, gunakan formulir di bawah atau kirim email ke info@flovers.app dari alamat yang terdaftar. Subjek: ‘Hapus akun Flovers saya’. Tidak perlu memasang aplikasi atau masuk.",
+    "scope": "Penghapusan menghapus akun, tanaman milikmu, tugas, catatan jurnal, dan foto unggahan dari layanan aktif. Penghapusan berkas foto bisa memerlukan waktu lebih lama; cadangan yang ada kedaluwarsa sesuai kebijakan penyimpanan. Penghapusan tidak dapat dibatalkan di aplikasi.",
+    "verification": "Kami dapat memverifikasi kepemilikan akun sebelum menghapusnya. Jangan pernah mengirim kata sandi. Kami akan mengonfirmasi penerimaan serta menjelaskan perkiraan waktu dan pengecualian penyimpanan yang berlaku.",
+    "email": "Minta penghapusan melalui email"
   }
 }
