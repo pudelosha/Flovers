@@ -14,6 +14,18 @@
     "permissionRequired": "Wymagane uprawnienie do aparatu",
     "permissionHint": "Włącz dostęp do aparatu w ustawieniach systemu, aby skanować kody QR.",
     "openSettings": "Otwórz ustawienia",
-    "initializingCamera": "Inicjalizacja aparatu…"
+    "initializingCamera": "Inicjalizacja aparatu…",
+    "guide": {
+      "intro": "Zeskanuj kod QR Flovers, aby otworzyć roślinę lub skonfigurować urządzenie.",
+      "plant": {
+        "title": "Kody QR roślin",
+        "body": "Zeskanuj etykietę na doniczce, aby otworzyć szczegóły rośliny.",
+        "path": "Kod znajdziesz w Szczegółach rośliny → ⋯ → Kod QR."
+      },
+      "device": {
+        "title": "Kody QR urządzeń",
+        "body": "Zeskanuj fabryczny kod QR urządzenia Flovers, aby rozpocząć parowanie."
+      }
+    }
   }
 }

@@ -404,6 +404,7 @@ export default function WateringScheduleModal({
                 s.promptButtonsRow,
                 {
                   marginTop: 4,
+                  paddingHorizontal: 0,
                 },
               ]}
             >

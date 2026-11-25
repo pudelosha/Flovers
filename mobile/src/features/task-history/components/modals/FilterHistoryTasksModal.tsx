@@ -1,18 +1,30 @@
-import AppModalFrame, { appModalStyles } from '../../../../shared/ui/AppModalFrame';
+import AppModalFrame, {
+  appModalStyles,
+} from '../../../../shared/ui/AppModalFrame';
 import React from 'react';
-import { View, Text, Pressable, TextInput, Platform, ScrollView } from "../../../../shared/theme/native";
+import {
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  Platform,
+  ScrollView,
+} from '../../../../shared/theme/native';
 
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../../../../app/providers/SettingsProvider';
 
 import { s } from '../../styles/task-history.styles';
 import type { JournalFilterType } from '../../types/task-history.types';
-import { ACCENT_BY_TYPE, ICON_BY_TYPE } from '../../../home/constants/home.constants';
-import MaterialCommunityIcons from "../../../../shared/theme/Icon";
+import {
+  ACCENT_BY_TYPE,
+  ICON_BY_TYPE,
+} from '../../../home/constants/home.constants';
+import MaterialCommunityIcons from '../../../../shared/theme/Icon';
 
 let DateTimePicker: any = null;
 try {
-  DateTimePicker = require("../../../../shared/theme/DateTimePicker").default;
+  DateTimePicker = require('../../../../shared/theme/DateTimePicker').default;
 } catch {}
 
 type PlantOption = { id: string; name: string };
@@ -36,7 +48,6 @@ type Props = {
 };
 
 const TYPE_OPTIONS: JournalFilterType[] = [
-  'photo',
   'watering',
   'moisture',
   'fertilising',
@@ -54,7 +65,11 @@ function isValidDateYYYYMMDD(v?: string) {
 
   const [Y, M, D] = v.split('-').map(Number);
 
-  return d.getUTCFullYear() === Y && d.getUTCMonth() + 1 === M && d.getUTCDate() === D;
+  return (
+    d.getUTCFullYear() === Y &&
+    d.getUTCMonth() + 1 === M &&
+    d.getUTCDate() === D
+  );
 }
 
 function toYYYYMMDD(d: Date) {
@@ -115,13 +130,23 @@ export default function FilterHistoryTasksModal({
 
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
-  const [types, setTypes] = React.useState<JournalFilterType[]>(filters.types || []);
+  const [types, setTypes] = React.useState<JournalFilterType[]>(
+    (filters.types || []).filter(type => type !== 'photo'),
+  );
 
-  const [plantId, setPlantId] = React.useState<string | undefined>(filters.plantId);
-  const [location, setLocation] = React.useState<string | undefined>(filters.location);
+  const [plantId, setPlantId] = React.useState<string | undefined>(
+    filters.plantId,
+  );
+  const [location, setLocation] = React.useState<string | undefined>(
+    filters.location,
+  );
 
-  const [completedFrom, setCompletedFrom] = React.useState(filters.completedFrom || '');
-  const [completedTo, setCompletedTo] = React.useState(filters.completedTo || '');
+  const [completedFrom, setCompletedFrom] = React.useState(
+    filters.completedFrom || '',
+  );
+  const [completedTo, setCompletedTo] = React.useState(
+    filters.completedTo || '',
+  );
   const [showFromPicker, setShowFromPicker] = React.useState(false);
   const [showToPicker, setShowToPicker] = React.useState(false);
 
@@ -131,7 +156,7 @@ export default function FilterHistoryTasksModal({
       setLocOpen(false);
       setShowFromPicker(false);
       setShowToPicker(false);
-      setTypes(filters.types || []);
+      setTypes((filters.types || []).filter(type => type !== 'photo'));
       setPlantId(filters.plantId);
       setLocation(filters.location);
       setCompletedFrom(filters.completedFrom || '');
@@ -140,7 +165,9 @@ export default function FilterHistoryTasksModal({
   }, [visible, filters]);
 
   const toggleType = (tt: JournalFilterType) => {
-    setTypes(curr => (curr.includes(tt) ? curr.filter(x => x !== tt) : [...curr, tt]));
+    setTypes(curr =>
+      curr.includes(tt) ? curr.filter(x => x !== tt) : [...curr, tt],
+    );
   };
 
   const handleClearAll = () => {
@@ -174,9 +201,13 @@ export default function FilterHistoryTasksModal({
           showsVerticalScrollIndicator={false}
           contentContainerStyle={appModalStyles.scrollContent}
         >
-          <Text style={s.promptTitle}>{t('taskHistoryModals.filter.title')}</Text>
+          <Text style={s.promptTitle}>
+            {t('taskHistoryModals.filter.title')}
+          </Text>
 
-          <Text style={s.inputLabel}>{t('taskHistoryModals.filter.plantLabel')}</Text>
+          <Text style={s.inputLabel}>
+            {t('taskHistoryModals.filter.plantLabel')}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -212,9 +243,17 @@ export default function FilterHistoryTasksModal({
                     setPlantOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>{t('taskHistoryModals.filter.anyPlant')}</Text>
+                  <Text style={s.dropdownItemText}>
+                    {t('taskHistoryModals.filter.anyPlant')}
+                  </Text>
 
-                  {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                  {!plantId && (
+                    <MaterialCommunityIcons
+                      name="check"
+                      size={18}
+                      color="#FFFFFF"
+                    />
+                  )}
                 </Pressable>
 
                 {plants.map(p => (
@@ -229,7 +268,11 @@ export default function FilterHistoryTasksModal({
                     <Text style={s.dropdownItemText}>{p.name}</Text>
 
                     {plantId === p.id && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                      <MaterialCommunityIcons
+                        name="check"
+                        size={18}
+                        color="#FFFFFF"
+                      />
                     )}
                   </Pressable>
                 ))}
@@ -237,7 +280,9 @@ export default function FilterHistoryTasksModal({
             )}
           </View>
 
-          <Text style={s.inputLabel}>{t('taskHistoryModals.filter.locationLabel')}</Text>
+          <Text style={s.inputLabel}>
+            {t('taskHistoryModals.filter.locationLabel')}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -250,7 +295,9 @@ export default function FilterHistoryTasksModal({
               android_ripple={{ color: 'rgba(255,255,255,0.12)' }}
             >
               <Text style={s.dropdownValue}>
-                {location ? location : t('taskHistoryModals.filter.anyLocation')}
+                {location
+                  ? location
+                  : t('taskHistoryModals.filter.anyLocation')}
               </Text>
 
               <MaterialCommunityIcons
@@ -274,7 +321,13 @@ export default function FilterHistoryTasksModal({
                     {t('taskHistoryModals.filter.anyLocation')}
                   </Text>
 
-                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                  {!location && (
+                    <MaterialCommunityIcons
+                      name="check"
+                      size={18}
+                      color="#FFFFFF"
+                    />
+                  )}
                 </Pressable>
 
                 {locations.map(loc => (
@@ -289,7 +342,11 @@ export default function FilterHistoryTasksModal({
                     <Text style={s.dropdownItemText}>{loc}</Text>
 
                     {location === loc && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                      <MaterialCommunityIcons
+                        name="check"
+                        size={18}
+                        color="#FFFFFF"
+                      />
                     )}
                   </Pressable>
                 ))}
@@ -297,7 +354,9 @@ export default function FilterHistoryTasksModal({
             )}
           </View>
 
-          <Text style={s.inputLabel}>{t('taskHistoryModals.filter.taskTypesLabel')}</Text>
+          <Text style={s.inputLabel}>
+            {t('taskHistoryModals.filter.taskTypesLabel')}
+          </Text>
           <View
             style={[
               s.chipRow,
@@ -328,8 +387,12 @@ export default function FilterHistoryTasksModal({
                       justifyContent: 'center',
                       gap: 8,
                       borderWidth: 0,
-                      borderColor: selected ? hexToRgba(tint, 0.95) : hexToRgba(tint, 0.45),
-                      backgroundColor: selected ? hexToRgba(tint, 0.24) : hexToRgba(tint, 0.14),
+                      borderColor: selected
+                        ? hexToRgba(tint, 0.95)
+                        : hexToRgba(tint, 0.45),
+                      backgroundColor: selected
+                        ? hexToRgba(tint, 0.24)
+                        : hexToRgba(tint, 0.14),
                     },
                   ]}
                 >
@@ -344,7 +407,9 @@ export default function FilterHistoryTasksModal({
                     ]}
                   >
                     {tt === 'photo'
-                      ? t('taskHistory.photo.filterType', { defaultValue: 'Photo' })
+                      ? t('taskHistory.photo.filterType', {
+                          defaultValue: 'Photo',
+                        })
                       : t(`home.taskTypes.${tt}`)}
                   </Text>
                 </Pressable>
@@ -378,7 +443,10 @@ export default function FilterHistoryTasksModal({
                   style={[s.input, s.inputInline]}
                   placeholder={settings.dateFormat || 'DD.MM.YYYY'}
                   placeholderTextColor="rgba(255,255,255,0.7)"
-                  value={formatDateForDisplay(completedFrom, settings.dateFormat)}
+                  value={formatDateForDisplay(
+                    completedFrom,
+                    settings.dateFormat,
+                  )}
                   editable={false}
                   pointerEvents="none"
                 />
@@ -491,7 +559,10 @@ export default function FilterHistoryTasksModal({
               },
             ]}
           >
-            <Pressable onPress={handleClearAll} style={[s.promptBtn, s.promptDanger]}>
+            <Pressable
+              onPress={handleClearAll}
+              style={[s.promptBtn, s.promptDanger]}
+            >
               <Text
                 style={[
                   s.promptBtnText,
@@ -506,7 +577,9 @@ export default function FilterHistoryTasksModal({
             </Pressable>
 
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>{t('taskHistoryModals.common.cancel')}</Text>
+              <Text style={s.promptBtnText}>
+                {t('taskHistoryModals.common.cancel')}
+              </Text>
             </Pressable>
 
             <Pressable
@@ -521,7 +594,9 @@ export default function FilterHistoryTasksModal({
               }
               style={[s.promptBtn, s.promptPrimary]}
             >
-              <Text style={s.promptPrimaryText}>{t('taskHistoryModals.common.apply')}</Text>
+              <Text style={s.promptPrimaryText}>
+                {t('taskHistoryModals.common.apply')}
+              </Text>
             </Pressable>
           </View>
         </ScrollView>

@@ -14,6 +14,18 @@
     "permissionRequired": "Kamera izni gerekli",
     "permissionHint": "QR kodlarını taramak için sistem ayarlarında kamera erişimini etkinleştirin.",
     "openSettings": "Ayarları Aç",
-    "initializingCamera": "Kamera başlatılıyor…"
+    "initializingCamera": "Kamera başlatılıyor…",
+    "guide": {
+      "intro": "Bir bitkiyi açmak veya cihaz kurmak için Flovers QR kodunu tarayın.",
+      "plant": {
+        "title": "Bitki QR kodları",
+        "body": "Bitki ayrıntılarını açmak için saksıdaki etiketi tarayın.",
+        "path": "Bitki ayrıntıları → ⋯ → QR kodu bölümünde bulabilirsiniz."
+      },
+      "device": {
+        "title": "Cihaz QR kodları",
+        "body": "Eşleştirmeyi başlatmak için Flovers cihazının fabrika QR kodunu tarayın."
+      }
+    }
   }
 }

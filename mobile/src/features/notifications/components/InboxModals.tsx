@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Pressable, StyleSheet, Platform } from '../../../shared/theme/native';
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  Platform,
+} from '../../../shared/theme/native';
 import { useTranslation } from 'react-i18next';
 import AppModalFrame from '../../../shared/ui/AppModalFrame';
 import Dropdown from '../../profile/components/Dropdown';
@@ -83,135 +89,149 @@ export default function InboxModals({
       onClose={() => {
         if (!busy) onClose();
       }}
-      centerContent={mode !== 'filter'}
+      centerContent
       loading={busy}
     >
-      {mode === 'sort' && (
-        <>
-          {dropdown('sort', ['date', 'source', 'channel'], v => tr(v))}
-          {dropdown('direction', ['desc', 'asc'], v =>
-            tr(v === 'desc' ? 'newest' : 'oldest'),
-          )}
-        </>
-      )}
-      {mode === 'filter' && (
-        <>
-          {dropdown('source', ['', 'task', 'pump', 'device', 'user'], v =>
-            v ? tr('sources.' + v) : tr('all'),
-          )}
-          {dropdown('channel', ['', 'email', 'push', 'in_app'], v =>
-            v ? tr('channels.' + v) : tr('all'),
-          )}
-          {(['from_date', 'to_date'] as const).map(key => (
-            <View key={key} style={s.field}>
-              <Text style={s.label}>
-                {tr(key === 'from_date' ? 'from' : 'to')}
-              </Text>
-              <View style={s.dateRow}>
-                <Pressable
-                  accessibilityRole="button"
-                  accessibilityLabel={tr(key === 'from_date' ? 'from' : 'to')}
-                  style={[s.dateField, { flex: 1 }]}
-                  onPress={() => setPicker(key)}
-                >
-                  <Text style={s.text}>{draft[key] || tr('all')}</Text>
-                </Pressable>
-                {!!draft[key] && (
+      <View testID="inbox-modal-fields" style={s.content}>
+        {mode === 'sort' && (
+          <>
+            {dropdown('sort', ['date', 'source', 'channel'], v => tr(v))}
+            {dropdown('direction', ['desc', 'asc'], v =>
+              tr(v === 'desc' ? 'newest' : 'oldest'),
+            )}
+          </>
+        )}
+        {mode === 'filter' && (
+          <>
+            {dropdown('source', ['', 'task', 'pump', 'device', 'user'], v =>
+              v ? tr('sources.' + v) : tr('all'),
+            )}
+            {dropdown('channel', ['', 'email', 'push', 'in_app'], v =>
+              v ? tr('channels.' + v) : tr('all'),
+            )}
+            {(['from_date', 'to_date'] as const).map(key => (
+              <View key={key} style={s.field}>
+                <Text style={s.label}>
+                  {tr(key === 'from_date' ? 'from' : 'to')}
+                </Text>
+                <View style={s.dateRow}>
                   <Pressable
-                    style={s.clear}
-                    accessibilityLabel={tr('reset')}
-                    onPress={() => setDraft({ ...draft, [key]: undefined })}
+                    accessibilityRole="button"
+                    accessibilityLabel={tr(key === 'from_date' ? 'from' : 'to')}
+                    style={[s.dateField, { flex: 1 }]}
+                    onPress={() => setPicker(key)}
                   >
-                    <Text style={s.text}>×</Text>
+                    <Text style={s.text}>{draft[key] || tr('all')}</Text>
                   </Pressable>
-                )}
+                  {!!draft[key] && (
+                    <Pressable
+                      style={s.clear}
+                      accessibilityLabel={tr('reset')}
+                      onPress={() => setDraft({ ...draft, [key]: undefined })}
+                    >
+                      <Text style={s.text}>×</Text>
+                    </Pressable>
+                  )}
+                </View>
               </View>
-            </View>
-          ))}
-          {picker && (
-            <DateTimePicker
-              value={initialDate(draft[picker])}
-              mode="date"
-              display={Platform.OS === 'ios' ? 'spinner' : 'default'}
-              onChange={(_, selected) => {
-                if (selected)
-                  setDraft({ ...draft, [picker]: dateKey(selected) });
-                setPicker(null);
-              }}
-            />
-          )}
-          {invalid && <Text style={s.error}>{tr('invalidDates')}</Text>}
-          <Pressable
-            style={[s.button, s.reset]}
-            onPress={() => {
-              setDraft({
-                ...draft,
-                source: undefined,
-                channel: undefined,
-                from_date: undefined,
-                to_date: undefined,
-              });
-              setOpen(null);
-            }}
-          >
-            <Text style={s.text}>{tr('reset')}</Text>
-          </Pressable>
-        </>
-      )}
-      {mode === 'delete' && (
-        <>
-          <Text style={s.description}>{tr('deleteDescription')}</Text>
-          {!single && (
-            <View style={s.field}>
-              <Dropdown
-                open={open === 'scope'}
-                onToggle={() => setOpen(open === 'scope' ? null : 'scope')}
-                valueText={tr(scope === 'all' ? 'deleteAll' : 'deleteFiltered')}
-                items={(['filtered', 'all'] as const).map(value => ({
-                  key: value,
-                  text: tr(value === 'all' ? 'deleteAll' : 'deleteFiltered'),
-                  selected: scope === value,
-                  onPress: () => {
-                    setScope(value);
-                    setOpen(null);
-                  },
-                }))}
+            ))}
+            {picker && (
+              <DateTimePicker
+                value={initialDate(draft[picker])}
+                mode="date"
+                display={Platform.OS === 'ios' ? 'spinner' : 'default'}
+                onChange={(_, selected) => {
+                  if (selected)
+                    setDraft({ ...draft, [picker]: dateKey(selected) });
+                  setPicker(null);
+                }}
               />
-            </View>
-          )}
-        </>
-      )}
-      <View style={s.buttons}>
-        <Pressable disabled={busy} style={s.button} onPress={onClose}>
-          <Text style={s.text}>{tr('cancel')}</Text>
-        </Pressable>
-        <Pressable
-          disabled={busy || invalid}
-          style={[
-            s.button,
-            mode === 'delete' ? s.danger : s.primary,
-            (busy || invalid) && { opacity: 0.5 },
-          ]}
-          onPress={() => (mode === 'delete' ? onDelete(scope) : onApply(draft))}
-        >
-          <Text style={s.text}>
-            {tr(mode === 'delete' ? 'delete' : 'apply')}
-          </Text>
-        </Pressable>
+            )}
+            {invalid && <Text style={s.error}>{tr('invalidDates')}</Text>}
+            <Pressable
+              style={[s.button, s.reset]}
+              onPress={() => {
+                setDraft({
+                  ...draft,
+                  source: undefined,
+                  channel: undefined,
+                  from_date: undefined,
+                  to_date: undefined,
+                });
+                setOpen(null);
+              }}
+            >
+              <Text style={s.text}>{tr('reset')}</Text>
+            </Pressable>
+          </>
+        )}
+        {mode === 'delete' && (
+          <>
+            <Text style={s.description}>{tr('deleteDescription')}</Text>
+            {!single && (
+              <View style={s.field}>
+                <Dropdown
+                  open={open === 'scope'}
+                  onToggle={() => setOpen(open === 'scope' ? null : 'scope')}
+                  valueText={tr(
+                    scope === 'all' ? 'deleteAll' : 'deleteFiltered',
+                  )}
+                  items={(['filtered', 'all'] as const).map(value => ({
+                    key: value,
+                    text: tr(value === 'all' ? 'deleteAll' : 'deleteFiltered'),
+                    selected: scope === value,
+                    onPress: () => {
+                      setScope(value);
+                      setOpen(null);
+                    },
+                  }))}
+                />
+              </View>
+            )}
+          </>
+        )}
+        <View testID="inbox-modal-actions" style={s.buttons}>
+          <Pressable disabled={busy} style={s.button} onPress={onClose}>
+            <Text style={s.text}>{tr('cancel')}</Text>
+          </Pressable>
+          <Pressable
+            disabled={busy || invalid}
+            style={[
+              s.button,
+              mode === 'delete' ? s.danger : s.primary,
+              (busy || invalid) && { opacity: 0.5 },
+            ]}
+            onPress={() =>
+              mode === 'delete' ? onDelete(scope) : onApply(draft)
+            }
+          >
+            <Text style={s.text}>
+              {tr(mode === 'delete' ? 'delete' : 'apply')}
+            </Text>
+          </Pressable>
+        </View>
       </View>
     </AppModalFrame>
   );
 }
 const s = StyleSheet.create({
+  content: { marginHorizontal: 16 },
   field: { marginBottom: 16 },
-  label: { color: '#FFFFFF', fontSize: 13, fontWeight: '700', marginBottom: 8 },
-  text: { color: '#FFFFFF', fontWeight: '700', fontSize: 14 },
-  buttons: { flexDirection: 'row', gap: 12, marginTop: 20 },
+  label: { color: '#FFFFFF', fontSize: 14, fontWeight: '800', marginBottom: 8 },
+  text: { color: '#FFFFFF', fontWeight: '800', fontSize: 14 },
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginTop: 16,
+    paddingTop: 6,
+    paddingBottom: 16,
+  },
   button: {
-    flex: 1,
     minHeight: 44,
     borderRadius: 16,
-    paddingHorizontal: 12,
+    paddingHorizontal: 16,
     paddingVertical: 12,
     alignItems: 'center',
     justifyContent: 'center',
@@ -233,5 +253,5 @@ const s = StyleSheet.create({
   },
   clear: { padding: 14 },
   error: { color: '#FF6B6B' },
-  reset: { flex: 0, marginBottom: 8 },
+  reset: { alignSelf: 'flex-start', marginBottom: 8 },
 });

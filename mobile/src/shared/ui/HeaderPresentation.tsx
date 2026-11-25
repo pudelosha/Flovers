@@ -1,10 +1,10 @@
 import React, { createContext, useContext } from 'react';
-import { Animated, StyleSheet, View } from '../theme/native';
+import { StyleSheet, View } from '../theme/native';
 import CenteredSpinner from './CenteredSpinner';
 
 export const HeaderContentReadyContext = createContext(true);
 export const HeaderStartupCompleteContext = createContext(true);
-export const HeaderHeightContext = createContext<Animated.Value | null>(null);
+export { HeaderHeightContext } from './headerLayoutContext';
 export const HeaderTargetHeightContext = createContext(0);
 export const useHeaderContentReady = () =>
   useContext(HeaderContentReadyContext);

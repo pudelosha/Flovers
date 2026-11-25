@@ -1,5 +1,6 @@
 import React from 'react';
 import { act, fireEvent, render } from '@testing-library/react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import MeasureExposureModal from '../MeasureExposureModal';
 
 const mockT = (key: string) => key;
@@ -8,7 +9,11 @@ jest.mock('../../../../../app/providers/LanguageProvider', () => ({ useLanguage:
 jest.mock('../../../../../shared/ui/AppModalFrame', () => ({
   __esModule: true,
   default: (props: any) => props.visible ? require('react').createElement(require('react-native').View, {}, props.children) : null,
-  appModalStyles: {},
+  appModalStyles: {
+    scroll: { flex: 1 },
+    scrollContent: { flexGrow: 1, paddingTop: 44, paddingBottom: 20 },
+    centeredContent: { justifyContent: 'center', paddingTop: 44, paddingBottom: 44 },
+  },
 }));
 jest.mock('../../../services/Sensors', () => ({ Sensors: {
   startLight: jest.fn(async (sample: any) => { sample(500); return { remove: jest.fn() }; }),
@@ -22,6 +27,12 @@ it('reserves the progress area before starting and counts down five seconds with
   const apply = jest.fn();
   const view = render(<MeasureExposureModal visible onClose={jest.fn()} onApply={apply} />);
   await act(async () => { await Promise.resolve(); });
+  const scroll = view.UNSAFE_getByType(ScrollView);
+  const content = StyleSheet.flatten(scroll.props.contentContainerStyle);
+  expect(content.justifyContent).toBe('center');
+  expect(content.flexGrow).toBe(1);
+  expect(content.paddingTop).toBe(content.paddingBottom);
+  expect(scroll.props.nestedScrollEnabled).toBe(true);
   expect(view.getByTestId('exposure-measurement-progress')).toBeTruthy();
   expect(view.getByRole('progressbar').props.accessibilityValue.now).toBe(0);
   fireEvent.press(view.getByText('Measure'));

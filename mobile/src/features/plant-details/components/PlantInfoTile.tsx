@@ -658,6 +658,7 @@ export default function PlantInfoTile({
           style={[
             styles.infoBody,
             activeTab === 'info' && styles.infoBodyParameters,
+            activeTab === 'reminders' && styles.infoBodyTasks,
             activeTab === 'readings' && { minHeight: infoFadeHeight + 56 },
             { marginTop: -infoFadeHeight },
           ]}
@@ -947,6 +948,8 @@ const styles = StyleSheet.create({
     marginTop: 0,
   },
   infoBodyParameters: { paddingTop: 16, paddingBottom: 16 },
+  // Task rows already inset their contents; avoid stacking a full panel inset above them.
+  infoBodyTasks: { paddingTop: 4 },
   infoField: {
     width: '48.8%',
     flexDirection: 'row',

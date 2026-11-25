@@ -14,6 +14,18 @@
     "permissionRequired": "カメラのアクセス許可が必要です",
     "permissionHint": "QRコードをスキャンするには、システム設定でカメラアクセスを有効にしてください。",
     "openSettings": "設定を開く",
-    "initializingCamera": "カメラの初期化中..."
+    "initializingCamera": "カメラの初期化中...",
+    "guide": {
+      "intro": "FloversのQRコードを読み取り、植物を開くかデバイスを設定します。",
+      "plant": {
+        "title": "植物のQRコード",
+        "body": "鉢のラベルを読み取ると、植物の詳細が開きます。",
+        "path": "植物の詳細 → ⋯ → QRコードから表示できます。"
+      },
+      "device": {
+        "title": "デバイスのQRコード",
+        "body": "Floversデバイスの工場出荷時QRコードを読み取り、ペアリングを開始します。"
+      }
+    }
   }
 }

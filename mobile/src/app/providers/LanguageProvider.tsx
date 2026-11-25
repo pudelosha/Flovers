@@ -84,7 +84,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
 
   // Optional: Show loading while i18n initializes
   if (!isReady) {
-    return null; // or a loading indicator
+    return null; // The app-root startup host keeps the same logo mounted.
   }
 
   return (
