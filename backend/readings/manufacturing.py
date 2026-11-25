@@ -139,7 +139,9 @@ def record_verification(receipt, *, actor=None):
     if not isinstance(receipt, dict) or set(receipt) != required:
         raise ValidationError("Invalid factory verification receipt.")
     try:
-        d = PhysicalDevice.objects.select_for_update().select_related("manufacturing_batch").get(hardware_id=receipt["hardware_id"])
+        # Legacy identities have no batch. PostgreSQL cannot lock the nullable
+        # side of this outer join; only the physical identity is being mutated.
+        d = PhysicalDevice.objects.select_for_update(of=("self",)).select_related("manufacturing_batch").get(hardware_id=receipt["hardware_id"])
         unsigned = {k: v for k, v in receipt.items() if k != "signature"}
         if (receipt["version"] != 1 or receipt["readback_verified"] is not True or
                 not d.manufacturing_batch or d.serial_number != receipt["serial_number"] or
